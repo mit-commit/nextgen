@@ -38,7 +38,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for all 151 `data/idmap.json` entries with an id into `harvest/citations/<bibtexKey>.json`; 23,154 merged citing works. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) is blocked (403). See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
-| **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). |
+| **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
@@ -169,6 +169,51 @@ raise it to the setup lane.
   commit_member}`. Dry-run by default; `--write` to write, `--report` to
   summarize what exists. HTTP responses are cached under
   `harvest/authors/cache/` (gitignored).
+- **Part 2** (`enrich_openalex.py`): resolves each of the 369
+  `harvest/authors/authors.json` people against their own OpenAlex author
+  entity — ORCID first (a direct `authors/orcid:<orcid>` lookup, not the
+  filter-search form — see below), else a shared-work match: every one of
+  the person's papers with an OpenAlex work id (from `data/idmap.json`) has
+  its authorship list fetched and checked for the *single* authorship whose
+  folded surname + first initial matches the person; people with no
+  idmap-anchored paper fall back to an OpenAlex title search. Two or more
+  papers pointing at different OpenAlex author ids, or an authorship list
+  with two+ matches at the same coarse key, is ambiguous and never
+  auto-resolved. For a resolved author: `works_count`,
+  `summary_stats.h_index`, and current/last-known affiliation (scored by
+  years-persisted across the author's affiliation history, not OpenAlex's
+  own "last known" pick, which is known to mis-rank e.g. "Moscow Institute
+  of Thermal Technology" above the real MIT on common/ambiguous names) come
+  from the author entity; any homepage comes from the *public* ORCID
+  record's researcher-urls. Writes `harvest/authors/enriched.json`
+  (`{person_id, name, openalex_id, resolution_method, resolution_evidence,
+  orcid, affiliation, works_count, h_index, homepage}`, one stub row per
+  person including unresolved ones) and appends ambiguous/unresolved/
+  affiliation-conflict rows to `harvest/authors/review.json` (tagged
+  `openalex_ambiguous` / `openalex_unresolved` /
+  `openalex_search_unavailable` / `openalex_affiliation_conflict`) —
+  nothing is guessed. Dry-run by default; `--write` to write, `--report` to
+  summarize what exists, `--retries N` to cap HTTP backoff attempts.
+  - Discovered mid-run that OpenAlex meters *filtered/search* endpoints
+    (`authors?filter=...`, `works?search=...`) on a separate, much smaller
+    daily USD-credit budget than plain by-ID GETs (`authors/{id}`,
+    `works/{id}`) — and that budget was already exhausted (`retry-after`
+    ~10h) by the day's citations/artifacts search-endpoint usage before
+    this script ran. Fixed the ORCID step to use the direct-ID form
+    (`authors/orcid:<orcid>`), which is unaffected and works even now.
+    The title-search fallback has no by-ID equivalent and stayed blocked;
+    rather than let a person fail there read as a genuine no-match, those
+    are now tagged `openalex_search_unavailable` (distinct from
+    `openalex_unresolved`) so a rerun after the quota resets retargets
+    exactly them, not everyone.
+  - First `--write` pass (this exhausted-quota window): 263/369 resolved
+    (143 via ORCID, 120 via shared-work); 259 with affiliation, 40 with
+    homepage; 5 ambiguous, 22 genuinely unresolved, 79
+    `openalex_search_unavailable` pending a rerun once OpenAlex's search
+    quota resets; 111 flagged `openalex_affiliation_conflict` (kept in
+    `enriched.json` but unverified — mostly a real known-affiliation-at-
+    publication-time vs. current-affiliation divergence, not a resolution
+    error).
 
 ### fulltext
 

@@ -14,6 +14,9 @@ harvest/citations/cache/
 harvest/authors/cache/
 
 # Fulltext lane: cached publisher-fetched PDFs' extracted text must not be
-# pushed. Only the aggregate manifest is committed.
+# pushed. Only the aggregate manifest is committed. Abstracts (metadata, not
+# publisher text) are the exception -- they're committed in full.
 harvest/fulltext/*/
 !harvest/fulltext/manifest.json
+!harvest/fulltext/abstracts/
+!harvest/fulltext/abstracts/**

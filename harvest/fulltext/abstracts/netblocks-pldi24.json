@@ -1,0 +1,30 @@
+{
+ "10.1109_fccm68464.2026.00023": {
+  "abstract": "With network requirements diverging across emerging applications, latency-critical services demand minimal logic delay, while hyperscale training and collectives require sustained line-rate throughput for synchronized bulk transfers. This divergence creates an urgent need for custom network switches tailored to specialized protocols and application-specific traffic patterns. This paper presents SPAC (Switch and Protocol Adaptive Customization), a novel approach that automates the generation of FPGA-based network switches co-optimized for custom protocols and application-specific traffic patterns. SPAC introduces a unified workflow with a domain-specific language (DSL) for protocol-architecture co-design, a library of modular HLS-based adaptive switch components, and a trace-aware Design Space Exploration (DSE) engine. By providing a multi-fidelity simulation stack, SPAC enables rapid identification of Pareto-optimal designs prior to deployment. We demonstrate the efficacy of the domain-specific adaptation of SPAC across a spectrum of real-world scenarios, spanning from latency-sensitive sensor and HFT networks to hyperscale datacenter fabrics. Experimental results show that by tailoring the micro-architecture and protocol to the specific workload, SPAC-generated designs reduce LUT and BRAM usage by 55% and 53%, respectively. Compared to fixed-architecture counterparts, SPAC delivers latency reductions ranging from 7.8% to 38.4% across various tasks while maintaining adequate resource consumption and packet drop rate.1",
+  "doi": "10.1109/fccm68464.2026.00023",
+  "openalex": "W7164157517",
+  "status": "ok",
+  "title": "SPAC: Automating FPGA-based Network Switches with Protocol Adaptive Customization"
+ },
+ "10.1145_3656396": {
+  "abstract": "Modern network applications and environments, ranging from data centers and IoT devices to AR/VR headsets and underwater robotics, present diverse requirements that cannot be satisfied by the all-or-nothing approach of TCP and UDP protocols. Network researchers and engineers need to create highly tailored protocols targeting individual problem domains. Existing library-based approaches either fall short on the flexibility in features or offer them at a significant performance overhead. To address this challenge, we present NetBlocks, a domain-specific language, and compiler for designing ad-hoc protocols and generating their highly optimized host network stack implementations. NetBlocks DSL input allows users to configure protocols by selecting and customizing features. Unlike other DSL compilers, NetBlocks also allows network researchers to extend the system and add more features easily without any prior compiler knowledge. Our design and implementation employ a high-performance Aspect-Oriented Programming framework written with the staging framework BuildIt. We also introduce a novel Layout Customization Layer that allows \"staging packet layouts\" alongside the implementation, which is critical for getting the best performance out of the protocol when possible, while allowing the practitioners to maintain compatibility with existing protocol layers where needed. Our evaluations on three applications ranging across deployments in data centers and underwater acoustic networks demonstrate a trade-off between performance (both latency and throughput) and selected features allowing the user to only pay-for-what-they-use.",
+  "doi": "10.1145/3656396",
+  "openalex": "W4399851254",
+  "status": "ok",
+  "title": "NetBlocks: Staging Layouts for High-Performance Custom Host Network Stacks"
+ },
+ "10.1145_3713082.3730375": {
+  "abstract": "Fast and efficient RPCs are key to the performance of applications based on microservices. But RPC communication suffers from significant overhead today because it relies on the standard, layered protocol stack and loose coupling between the end host and in-network proxies that process RPCs. We propose delayering the RPC communication stack and tightly coupling the end host and in-network processing using high-level abstractions. This approach leads to more efficient and performant RPC communication because it eliminates many sources of overhead.",
+  "doi": "10.1145/3713082.3730375",
+  "openalex": "W4411091859",
+  "status": "ok",
+  "title": "Rethinking RPC Communication for Microservices-based Applications"
+ },
+ "10.1145_3828676": {
+  "abstract": null,
+  "doi": "10.1145/3828676",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Let It Be Optimized: Building Multi-stage Evaluators with Let-Insertion and Optimizations in Small Pieces (Functional Pearl)"
+ }
+}

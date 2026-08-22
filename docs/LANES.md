@@ -197,6 +197,23 @@ raise it to the setup lane.
   and ACM DL 403 on scripted requests even for Unpaywall-flagged-OA links;
   no evasion attempted). Full results in `harvest/fulltext/manifest.json`.
 - Did not touch `harvest/citations/` (owned by another lane).
+- **Abstracts pass** (task `fulltext-abstracts`): for every citing work in
+  the same population `harvest_fulltext.py` attempts (all citing works for
+  the 5 low-cited pilots, the fixed 300-sample for the 3 high-cited ones)
+  that has no cached full text (`status != "ok"`, or never attempted),
+  `harvest/fulltext/harvest_abstracts.py` fetches the OpenAlex work record
+  and inverts `abstract_inverted_index` into plain text. Written to
+  `harvest/fulltext/abstracts/<bibtexKey>.json`, one dict per pilot paper
+  keyed by the same slug `harvest_fulltext.py` uses, so it joins by key
+  against `harvest/fulltext/<key>/`. Unlike the cached full text, this is
+  metadata (title + abstract), so it's committed -- `.gitignore` gained a
+  `!harvest/fulltext/abstracts/**` exception to the fulltext lane's
+  blanket subdirectory ignore.
+  - 982 citing works needed an abstract across the 8 pilots; 528 landed one
+    (OpenAlex has no abstract for the rest, or the citing work has neither
+    a DOI nor an OpenAlex id to look up at all).
+  - Idempotent/resumable like the full-text pass: an already-written slug
+    in the output file is skipped on rerun.
 
 ## Cross-lane requests
 

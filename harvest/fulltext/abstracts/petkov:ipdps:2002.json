@@ -1,0 +1,289 @@
+{
+ "10.1007_11823285_32": {
+  "abstract": null,
+  "doi": "10.1007/11823285_32",
+  "openalex": "W1560270381",
+  "status": "no_abstract",
+  "title": "Multi-dimensional Kernel Generation for Loop Nest Software Pipelining"
+ },
+ "10.1007_978-1-4899-7797-7": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4899-7797-7",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Instruction Level Parallelism"
+ },
+ "10.1007_978-1-4899-7797-7_7": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4899-7797-7_7",
+  "openalex": "W2558075066",
+  "status": "no_abstract",
+  "title": "Software Pipelining by Kernel Recognition"
+ },
+ "10.1007_978-3-540-92990-1_8": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-92990-1_8",
+  "openalex": "W1485882819",
+  "status": "no_abstract",
+  "title": "Software Pipelining in Nested Loops with Prolog-Epilog Merging"
+ },
+ "10.1007_s11265-006-0004-y": {
+  "abstract": null,
+  "doi": "10.1007/s11265-006-0004-y",
+  "openalex": "W2000293130",
+  "status": "no_abstract",
+  "title": "Scheduling of Iterative Algorithms with Matrix Operations for Efficient FPGA Design—Implementation of Finite Interval Constant Modulus Algorithm"
+ },
+ "10.1016_j.jpdc.2007.07.003": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2007.07.003",
+  "openalex": "W2121188877",
+  "status": "no_abstract",
+  "title": "Enhancing self-scheduling algorithms via synchronization and weighting"
+ },
+ "10.1016_j.sysarc.2004.06.001": {
+  "abstract": null,
+  "doi": "10.1016/j.sysarc.2004.06.001",
+  "openalex": "W1985475904",
+  "status": "no_abstract",
+  "title": "Exploitation of parallelism to nested loops with dependence cycles"
+ },
+ "10.1109_acssc.2017.8335152": {
+  "abstract": "Loop pipelining is an important optimization in high-level synthesis (HLS) because it allows successive loop iterations to be overlapped during execution. While current HLS pipelining approach achieves high performance for loops with regular and statically analyzable program patterns, it remains challenging to pipeline loops with irregular memory accesses, irregular dependence patterns, and unbalanced workload. The lack of support for dynamic program behaviors results in conservatively synthesized pipelines that sacrifice performance for maintaining presumed regularity. In this paper, we survey some of our recent work that addresses these challenges using a coordinated dynamic-static approach for enabling high-throughput pipelining of irregular loops. We propose to augment the HLS pipeline with dynamic scheduling to adapt to data-dependent behaviors, while employing static compile-time optimizations to minimize the hardware overhead associated with runtime optimization. Experimental results demonstrate that our proposed techniques can significantly improve effective pipeline throughput while conserving hardware resources.",
+  "doi": "10.1109/acssc.2017.8335152",
+  "openalex": "W2798338492",
+  "status": "ok",
+  "title": "Enabling adaptive loop pipelining in high-level synthesis"
+ },
+ "10.1109_cgo.2004.1281672": {
+  "abstract": "Traditionally, software pipelining is applied either to the innermost loop of a given loop nest or from the innermost loop to outer loops. We propose a three-step approach, called single-dimension software pipelining (SSP), to software pipeline a loop nest at an arbitrary loop level. The first step identifies the most profitable loop level for software pipelining in terms of initiation rate or data reuse potential. The second step simplifies the multidimensional data-dependence graph (DDG) into a 1-dimensional DDG and constructs a 1-dimensional schedule for the selected loop level. The third step derives a simple mapping function which specifies the schedule time for the operations of the multidimensional loop, based on the 1-dimensional schedule. We prove that the SSP method is correct and at least as efficient as other modulo scheduling methods. We establish the feasibility and correctness of our approach by implementing it on the IA-64 architecture. Experimental results on a small number of loops show significant performance improvements over existing modulo scheduling methods that software pipeline a loop nest from the innermost loop.",
+  "doi": "10.1109/cgo.2004.1281672",
+  "openalex": "W4247312607",
+  "status": "ok",
+  "title": "Single-dimension software pipelining for multi-dimensional loops"
+ },
+ "10.1109_iccad.2015.7372553": {
+  "abstract": "Modern high-level synthesis (HLS) tools commonly employ pipelining to achieve efficient loop acceleration by overlapping the execution of successive loop iterations. However, existing HLS techniques provide inadequate support for pipelining irregular loop nests that contain dynamic-bound inner loops, where unrolling is either very expensive or not even applicable. To overcome this major limitation, we propose ElasticFlow, a novel architectural synthesis approach capable of dynamically distributing inner loops to an array of loop processing units (LPUs) in a complexity-effective manner. These LPUs can be either specialized to execute an individual loop or shared amongst multiple inner loops for area reduction. We evaluate ElasticFlow using a variety of real-life applications and demonstrate significant performance improvements over a widely used commercial HLS tool for Xilinx FPGAs.",
+  "doi": "10.1109/iccad.2015.7372553",
+  "openalex": "W4253128333",
+  "status": "ok",
+  "title": "ElasticFlow: A complexity-effective approach for pipelining irregular loop nests"
+ },
+ "10.1109_icoin.2011.5723161": {
+  "abstract": "This paper presents a low-complexity hardware design and implementation of the Skipjack algorithm using the Two Instruction Set Computer (TISC) on a Xilinx Spartan-3 FPGA. The proposed low-complexity design makes use of the TISC processor architecture with only Adder and XOR hardware ALU blocks to perform the complete Skipjack encryption onto plaintext data. The hardware architecture was verified using the Handel-C hardware description language uses only a single memory block RAM and only 129 instructions for a complete 32 rounds of encryption. The TISC Skipjack processor occupies only 1% of the Spartan-3 available chip area, which are 116 occupied slices in total, making it a suitable choice for implementation in sensor networks for embedded security where hardware resources are scarce.",
+  "doi": "10.1109/icoin.2011.5723161",
+  "openalex": "W2150868180",
+  "status": "ok",
+  "title": "Low-complexity Two Instruction Set Computer architecture for sensor network using Skipjack encryption"
+ },
+ "10.1109_idaacs.2007.4488418": {
+  "abstract": "This paper describes algorithm to parallelize loop with loop-carried dependency between iterations in the specific case. This algorithm can be used for hardware compilation and allows increase performance of synthesized devices. The paper represents case and condition when the suggested algorithm should be applied and introduces criterion for algorithm parameters chosen to keep up optimal balance between performance and hardware overhead. The hardware realization of ZP-coder on the base of investigated algorithm and its comparison with analogical devices are also represented.",
+  "doi": "10.1109/idaacs.2007.4488418",
+  "openalex": "W2143618652",
+  "status": "ok",
+  "title": "Loop Parallelization Algorithm for Specific Case of Loop-carried Dependence for Hardware Compilation"
+ },
+ "10.1109_ies.2006.357480": {
+  "abstract": "This paper deals with the optimization of iterative algorithms with matrix operations or nested loops for hardware implementation in Field Programmable Gate Arrays (FPGA), using Integer Linear Programming (ILP). The method is demonstrated on an implementation of the Finite Interval Constant Modulus Algorithm, proposed for 4G communication systems. We used two pipelined arithmetic ibraries based on the logarithmic number system or the floating-point number system, using the widely known IEEE format for the floating-point calculations required in the algorithm. Traditional approaches to the scheduling of nested loops lead to a relatively large code, which is unsuitable for FPGA implementation. This paper presents a new high-level synthesis methodology, which models both, iterative loops and imperfectly nested loops, by means of the system of linear inequalities. Moreover, memory access is considered as an additional resource constraint. Since the solutionns of ILP formulated problems are known to be computationally intensive, important part of the article is devoted to the reduction of the problem size.",
+  "doi": "10.1109/ies.2006.357480",
+  "openalex": "W3147010179",
+  "status": "ok",
+  "title": "Efficient FPGA Implementation of Equalizer for Finite Interval Constant Modulus Algorithm"
+ },
+ "10.1109_ies.2006.357484": {
+  "abstract": "This paper deals with the optimization of iterative algorithms with matrix operations or nested loops for hardware implementation in Field Programmable Gate Arrays (FPGA), using Integer Linear Programming (ILP). The method is demonstrated on an implementation of the Finite Interval Constant Modulus Algorithm, proposed for 4G communication systems. We used two pipelined arithmetic ibraries based on the logarithmic number system or the floating-point number system, using the widely known IEEE format for the floating-point calculations required in the algorithm. Traditional approaches to the scheduling of nested loops lead to a relatively large code, which is unsuitable for FPGA implementation. This paper presents a new high-level synthesis methodology, which models both, iterative loops and imperfectly nested loops, by means of the system of linear inequalities. Moreover, memory access is considered as an additional resource constraint. Since the solutionns of ILP formulated problems are known to be computationally intensive, important part of the article is devoted to the reduction of the problem size.",
+  "doi": "10.1109/ies.2006.357484",
+  "openalex": "W1971455805",
+  "status": "ok",
+  "title": "Efficient FPGA Implementation of Equalizer for Finite Interval Constant Modulus Algorithm"
+ },
+ "10.1109_ipdps.2002.1015491": {
+  "abstract": "The size and complexity of current custom VLSI have forced the use of high-level programming languages to describe hardware, and compiler and synthesis technology to map abstract designs into silicon. Since streaming data processing in DSP applications is typically described by loop constructs in a high-level language, loops are the most critical portions of the hardware description and special techniques are developed to optimally synthesize them. We introduce a new method for mapping and pipelining nested loops efficiently into hardware. It achieves fine-grain parallelism even on strong intra- and inter-iteration data-dependent inner loops and, by sharing resources economically, improves performance at the expense of a small amount of additional area. We implemented the transformation within the Nimble Compiler environment and evaluated its performance on several signal processing benchmarks. The method achieves up to 2× improvement in the area efficiency compared to the best known optimization techniques.",
+  "doi": "10.1109/ipdps.2002.1015491",
+  "openalex": "W2215244614",
+  "status": "ok",
+  "title": "Efficient pipelining of nested loops: unroll-and-squash"
+ },
+ "10.1109_ipdps.2009.5161215": {
+  "abstract": "Many image and signal processing kernels can be optimized for performance consuming a reasonable area by doing loops parallelization with extensive use of pipelining. This paper presents an automated flexible pipeline design algorithm for our unique acceleration technique called Recursive Variable Expansion. The preliminary experimental results on a kernel of real life application shows comparable performance to hand optimized implementation in reduced design time. This make it a good choice for generating high performance code for kernels which satisfy the given constraints, for which hand optimized codes are not available.",
+  "doi": "10.1109/ipdps.2009.5161215",
+  "openalex": "W2110880189",
+  "status": "ok",
+  "title": "Flexible pipelining design for recursive variable expansion"
+ },
+ "10.1109_nssmic.2014.7430790": {
+  "abstract": "Despite the total variation gradient descent (TV-GD) algorithm has revealed a good performance for photoacoustic imaging (PAI), fast or real-time imaging remains a challenge. In this paper, a dependence graph was introduced to help to exploit the data dependencies that exist in the TV-GD algorithm, and a general expression was then for the first time derived to unroll the inner loop that occupied the majority of the entire running time of the algorithm. Thus all the terms consisting of the system matrices or the projections were extracted and preprocessed rather than being calculated along with reconstruction, and the reconstruction time was then expected to be linear to the iteration steps decided by the outer loop. For implementation, we adopted a low cost preprocessing method to avoid directly calculating the compute-intensive matrix chain products carried by the general expression itself. For simplicity, we accessed the CUBLAS library to parallelize the execution of the matrix-vector multiplication and the vector addition generated by the general expression. The under-sampled data with 30, 60, 90 and 120 projections were adopted to reconstruct a 128×128 Shepp-Logan Phantom. As expected, the simulation results revealed that the reconstruction time of the proposed scheme almost increased linearly with the iteration steps. Similarly, once the iteration steps was determined, the reconstruction time appeared independent of the sampling points and almost kept still. In addition, the mean squared errors (MSEs) of reconstruction were kept lower than 10-5in each case with the iteration steps set as 30, and a maximum speedup of 179X was then achieved from the 120-view data with 30 iterations.",
+  "doi": "10.1109/nssmic.2014.7430790",
+  "openalex": "W2555585156",
+  "status": "ok",
+  "title": "General expression based loop unrolling scheme for real-time implementation of PAI"
+ },
+ "10.1109_tcad.2017.2664067": {
+  "abstract": "Modern high-level synthesis (HLS) tools commonly employ pipelining to achieve efficient loop acceleration by overlapping the execution of successive loop iterations. While existing HLS pipelining techniques obtain good performance with low complexity for regular loop nests, they provide inadequate support for effectively synthesizing irregular loop nests. For loop nests with dynamic-bound inner loops, current pipelining techniques require unrolling of the inner loops, which is either very expensive in resource or even inapplicable due to dynamic loop bounds. To address this major limitation, this paper proposes ElasticFlow, a novel architecture capable of dynamically distributing inner loops to an array of processing units (LPUs) in an area-efficient manner. The proposed LPUs can be either specialized to execute an individual inner loop or shared among multiple inner loops to balance the tradeoff between performance and area. A customized banked memory architecture is proposed to coordinate memory accesses among different LPUs to maximize memory bandwidth without significantly increasing memory footprint. We evaluate ElasticFlow using a variety of real-life applications and demonstrate significant performance improvements over a state-of-the-art commercial HLS tool for Xilinx FPGAs.",
+  "doi": "10.1109/tcad.2017.2664067",
+  "openalex": "W2587503684",
+  "status": "ok",
+  "title": "Architecture and Synthesis for Area-Efficient Pipelining of Irregular Loop Nests"
+ },
+ "10.1109_trustcom.2013.112": {
+  "abstract": "Pipelining is an effective technique to improve the performance of a loop by overlapping the execution of several iterations. We consider the pipeline scheduling of loops on reconfigurable platform in this paper. A loop is abstracted as a weighted data flow graph (WDFG), where nodes represent tasks while edges stand for inter-task dependencies. The weights of nodes and edges indicate task execution times and communication overheads respectively. Based on the abstraction, we design a novel and flexible technique for scheduling loops running on reconfigurable platforms using loop pipelining. This results in good parallelism for the loops. To evaluate the performance of the proposed technique, we have demonstrated experiments both with software simulation and hardware evaluation on FPGA-based reconfigurable platform. The experimental results show that our approach has satisfactory performance.",
+  "doi": "10.1109/trustcom.2013.112",
+  "openalex": "W2145724786",
+  "status": "ok",
+  "title": "Automatic Loop-Based Pipeline Optimization on Reconfigurable Platform"
+ },
+ "10.1145_1216544.1216550": {
+  "abstract": "Traditionally, software pipelining is applied either to the innermost loop of a given loop nest or from the innermost loop to outer loops. This paper proposes a three-step approach, called single-dimension software pipelining (SSP) , to software pipeline a loop nest at an arbitrary loop level that has a rectangular iteration space and contains no sibling inner loops in it. The first step identifies the most profitable loop level for software pipelining in terms of initiation rate, data reuse potential, or any other optimization criteria. The second step simplifies the multidimensional data-dependence graph (DDG) of the selected loop level into a one-dimensional DDG and constructs a one-dimensional (1D) schedule. Based on the one-dimensional schedule, the third step derives a simple mapping function that specifies the schedule time for the operation instances in the multidimensional loop. The classical modulo scheduling is subsumed by SSP as a special case. SSP is also closely related to hyperplane scheduling, and, in fact, extends it to be resource constrained. We prove that SSP schedules are correct and at least as efficient as those schedules generated by traditional modulo scheduling methods. We extend SSP to schedule imperfect loop nests, which are most common at the instruction level. Multiple initiation intervals are naturally allowed to improve execution efficiency. Feasibility and correctness of our approach are verified by a prototype implementation in the ORC compiler for the IA-64 architecture, tested with loop nests from Livermore and SPEC2000 floating-point benchmarks. Preliminary experimental results reveal that, compared to modulo scheduling, software pipelining at an appropriate loop level results in significant performance improvement. Software pipelining is beneficial even with prior loop transformations.",
+  "doi": "10.1145/1216544.1216550",
+  "openalex": "W2135234700",
+  "status": "ok",
+  "title": "Single-dimension software pipelining for multidimensional loops"
+ },
+ "10.1145_2086696.2086711": {
+  "abstract": "Pipelining algorithms are typically concerned with improving only the steady-state performance, or the kernel time. The pipeline setup time happens only once and therefore can be negligible compared to the kernel time. However, for Coarse-Grained Reconfigurable Architectures (CGRAs) used as a coprocessor to a main processor, pipeline setup can take much longer due to the communication delay between the two processors, and can become significant if it is repeated in an outer loop of a loop nest. In this paper we evaluate the overhead of such non-kernel execution times when mapping nested loops for CGRAs, and propose a novel architecture-compiler cooperative scheme to reduce the overhead, while also minimizing the number of extra configurations required. Our experimental results using loops from multimedia and scientific domains demonstrate that our proposed techniques can greatly increase the performance of nested loops by up to 2.87 times compared to the conventional approach of accelerating only the innermost loops. Moreover, the mappings generated by our techniques require only a modest number of configurations that can fit in recent reconfigurable architectures.",
+  "doi": "10.1145/2086696.2086711",
+  "openalex": "W2018348175",
+  "status": "ok",
+  "title": "Improving performance of nested loops on reconfigurable array processors"
+ },
+ "10.1145_2872362.2872415": {
+  "abstract": "In recent years the computing landscape has seen an increasing shift towards specialized accelerators. Field programmable gate arrays (FPGAs) are particularly promising for the implementation of these accelerators, as they offer significant performance and energy improvements over CPUs for a wide class of applications and are far more flexible than fixed-function ASICs. However, FPGAs are difficult to program. Traditional programming models for reconfigurable logic use low-level hardware description languages like Verilog and VHDL, which have none of the productivity features of modern software languages but produce very efficient designs, and low-level software languages like C and OpenCL coupled with high-level synthesis (HLS) tools that typically produce designs that are far less efficient. Functional languages with parallel patterns are a better fit for hardware generation because they provide high-level abstractions to programmers with little experience in hardware design and avoid many of the problems faced when generating hardware from imperative languages. In this paper, we identify two important optimizations for using parallel patterns to generate efficient hardware: tiling and metapipelining. We present a general representation of tiled parallel patterns, and provide rules for automatically tiling patterns and generating metapipelines. We demonstrate experimentally that these optimizations result in speedups up to 39.4× on a set of benchmarks from the data analytics domain.",
+  "doi": "10.1145/2872362.2872415",
+  "openalex": "W2263852834",
+  "status": "ok",
+  "title": "Generating Configurable Hardware from Parallel Patterns"
+ },
+ "10.1145_2954679.2872415": {
+  "abstract": "In recent years the computing landscape has seen an increasing shift towards specialized accelerators. Field programmable gate arrays (FPGAs) are particularly promising for the implementation of these accelerators, as they offer significant performance and energy improvements over CPUs for a wide class of applications and are far more flexible than fixed-function ASICs. However, FPGAs are difficult to program. Traditional programming models for reconfigurable logic use low-level hardware description languages like Verilog and VHDL, which have none of the productivity features of modern software languages but produce very efficient designs, and low-level software languages like C and OpenCL coupled with high-level synthesis (HLS) tools that typically produce designs that are far less efficient. Functional languages with parallel patterns are a better fit for hardware generation because they provide high-level abstractions to programmers with little experience in hardware design and avoid many of the problems faced when generating hardware from imperative languages. In this paper, we identify two important optimizations for using parallel patterns to generate efficient hardware: tiling and metapipelining. We present a general representation of tiled parallel patterns, and provide rules for automatically tiling patterns and generating metapipelines. We demonstrate experimentally that these optimizations result in speedups up to 39.4× on a set of benchmarks from the data analytics domain.",
+  "doi": "10.1145/2954679.2872415",
+  "openalex": "W4293432176",
+  "status": "ok",
+  "title": "Generating Configurable Hardware from Parallel Patterns"
+ },
+ "10.1145_2954680.2872415": {
+  "abstract": "In recent years the computing landscape has seen an increasing shift towards specialized accelerators. Field programmable gate arrays (FPGAs) are particularly promising for the implementation of these accelerators, as they offer significant performance and energy improvements over CPUs for a wide class of applications and are far more flexible than fixed-function ASICs. However, FPGAs are difficult to program. Traditional programming models for reconfigurable logic use low-level hardware description languages like Verilog and VHDL, which have none of the productivity features of modern software languages but produce very efficient designs, and low-level software languages like C and OpenCL coupled with high-level synthesis (HLS) tools that typically produce designs that are far less efficient. Functional languages with parallel patterns are a better fit for hardware generation because they provide high-level abstractions to programmers with little experience in hardware design and avoid many of the problems faced when generating hardware from imperative languages. In this paper, we identify two important optimizations for using parallel patterns to generate efficient hardware: tiling and metapipelining. We present a general representation of tiled parallel patterns, and provide rules for automatically tiling patterns and generating metapipelines. We demonstrate experimentally that these optimizations result in speedups up to 39.4× on a set of benchmarks from the data analytics domain.",
+  "doi": "10.1145/2954680.2872415",
+  "openalex": "W2952545399",
+  "status": "ok",
+  "title": "Generating Configurable Hardware from Parallel Patterns"
+ },
+ "10.1145_2980024.2872415": {
+  "abstract": "In recent years the computing landscape has seen an increasing shift towards specialized accelerators. Field programmable gate arrays (FPGAs) are particularly promising for the implementation of these accelerators, as they offer significant performance and energy improvements over CPUs for a wide class of applications and are far more flexible than fixed-function ASICs. However, FPGAs are difficult to program. Traditional programming models for reconfigurable logic use low-level hardware description languages like Verilog and VHDL, which have none of the productivity features of modern software languages but produce very efficient designs, and low-level software languages like C and OpenCL coupled with high-level synthesis (HLS) tools that typically produce designs that are far less efficient. Functional languages with parallel patterns are a better fit for hardware generation because they provide high-level abstractions to programmers with little experience in hardware design and avoid many of the problems faced when generating hardware from imperative languages. In this paper, we identify two important optimizations for using parallel patterns to generate efficient hardware: tiling and metapipelining. We present a general representation of tiled parallel patterns, and provide rules for automatically tiling patterns and generating metapipelines. We demonstrate experimentally that these optimizations result in speedups up to 39.4× on a set of benchmarks from the data analytics domain.",
+  "doi": "10.1145/2980024.2872415",
+  "openalex": "W4299426995",
+  "status": "ok",
+  "title": "Generating Configurable Hardware from Parallel Patterns"
+ },
+ "10.1145_3377555.3377890": {
+  "abstract": "Loop unrolling is a widely adopted loop transformation, commonly used for enabling subsequent optimizations. Straight-line-code vectorization (SLP) is an optimization that benefits from unrolling. SLP converts isomorphic instruction sequences into vector code. Since unrolling generates repeatead isomorphic instruction sequences, it enables SLP to vectorize more code. However, most production compilers apply these optimizations independently and uncoordinated. Unrolling is commonly tuned to avoid code bloat, not maximizing the potential for vectorization, leading to missed vectorization opportunities.",
+  "doi": "10.1145/3377555.3377890",
+  "openalex": "W3008658471",
+  "status": "ok",
+  "title": "Vectorization-aware loop unrolling with seed forwarding"
+ },
+ "10.1201_9781420043839.ch20": {
+  "abstract": null,
+  "doi": "10.1201/9781420043839.ch20",
+  "openalex": "W2400007256",
+  "status": "no_abstract",
+  "title": "Advances in Software Pipelining"
+ },
+ "10.25560_5577": {
+  "abstract": null,
+  "doi": "10.25560/5577",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Datapath and memory co-optimization for FPGA-based computation"
+ },
+ "10.3182_20080706-5-kr-1001.00973": {
+  "abstract": null,
+  "doi": "10.3182/20080706-5-kr-1001.00973",
+  "openalex": "W2070397557",
+  "status": "no_abstract",
+  "title": "Scheduling of a LQ Control Algorithm for Efficient FPGA Implementation"
+ },
+ "10.5555_977395.977657": {
+  "abstract": "Traditionally, software pipelining is applied either to the innermost loop of a given loop nest or from the innermost loop to outer loops. This paper proposes a three-step approach, called single-dimension software pipelining (SSP), to software pipeline a loop nest at an arbitrary loop level that has a rectangular iteration space and contains no sibling inner loops in it. The first step identifies the most profitable loop level for software pipelining in terms of initiation rate, data reuse potential, or any other optimization criteria. The second step simplifies the multidimensional data-dependence graph (DDG) of the selected loop level into a one-dimensional DDG and constructs a one-dimensional (1D) schedule. Based on the one-dimensional schedule, the third step derives a simple mapping function that specifies the schedule time for the operation instances in the multidimensional loop. The classical modulo scheduling is subsumed by SSP as a special case. SSP is also closely related to hyperplane scheduling, and, in fact, extends it to be resource constrained. We prove that SSP schedules are correct and at least as efficient as those schedules generated by traditional modulo scheduling methods. We extend SSP to schedule imperfect loop nests, which are most common at the instruction level. Multiple initiation intervals are naturally allowed to improve execution efficiency. Feasibility and correctness of our approach are verified by a prototype implementation in the ORC compiler for the IA-64 architecture, tested with loop nests from Livermore and SPEC2000 floating-point benchmarks. Preliminary experimental results reveal that, compared to modulo scheduling, software pipelining at an appropriate loop level results in significant performance improvement. Software pipelining is beneficial even with prior loop transformations.",
+  "doi": "10.5555/977395.977657",
+  "openalex": "W2042766074",
+  "status": "ok",
+  "title": "Single-dimension software pipelining for multi-dimensional loops"
+ },
+ "oa-W2060569848": {
+  "abstract": "Modern high-level synthesis (HLS) tools commonly employ pipelin-ing to achieve efficient loop acceleration by overlapping the exe-cution of successive loop iterations. However, existing HLS tech-niques provide inadequate support for pipelining irregular loop nests that contain dynamic-bound inner loops, where unrolling is either very expensive or not even applicable. To overcome this ma-jor limitation, we propose ElasticFlow, a novel architectural syn-thesis approach capable of dynamically distributing inner loops to an array of loop processing units (LPUs) in a complexity-effective manner. These LPUs can be either specialized to execute an indi-vidual loop or shared amongst multiple inner loops for area reduc-tion. We evaluate ElasticFlow using a variety of real-life applica-tions and demonstrate significant performance improvements over a widely used commercial HLS tool for Xilinx FPGAs. 1.",
+  "doi": null,
+  "openalex": "W2060569848",
+  "status": "ok",
+  "title": "ElasticFlow: A Complexity-Effective Approach for Pipelining Irregular Loop Nests"
+ },
+ "oa-W2400282579": {
+  "abstract": "Single-dimension Software Pipelining (SSP) has been proposed as an effective software pipelining technique for multidimensional loops [18]. However, the scheduling methods that actually produce the kernel code have not been published yet. Because of the multi-dimensional nature of SSP kernels, the scheduling problem is more complex and challenging than with modulo scheduling. The scheduler must handle multiple subkernels and initiation rates, scheduling constraints specific to SSP while producing a solution that minimizes the execution time of the final schedule. In this paper three approaches are proposed: the flat method, which schedules operations from different loop levels with the same priority, the level-by-level method, which schedules innermost operations first and does not let other operations interfere with the already scheduled levels, and the hybrid method, which uses the level-by-level mechanism for the innermost level and the flat solution for the other levels. We also break a scheduling constraint introduced in earlier publications and allow for a more compact kernel. The proposed approaches, combined with different sets of heuristics, have been implemented in the Open64/ORC compiler, compared on loop nests from the Livermore and NAS benchmarks.",
+  "doi": null,
+  "openalex": "W2400282579",
+  "status": "ok",
+  "title": "University of Delaware Department of Electrical and Computer Engineering Computer Architecture and Parallel Systems Laboratory Multidimensional Kernel Generation for Loop Nest Software Pipelining"
+ },
+ "s2-0e55a620e428ceca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallélisme des nids de boucles pour l'optimisation du temps d'exécution et de la taille du code. (Nested loop parallelism to optimize execution time and code size)"
+ },
+ "s2-4ab4b2dc0a8240db": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "University of Delaware Department of Electrical and Computer Engineering Computer Architecture and Parallel Systems Laboratory Multidimensional Kernel Generation for Loop Nest Software Pipelining"
+ },
+ "s2-88510d30a087deb5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "c-level programming of parallel coprocessor accelerators"
+ },
+ "s2-936295d41f89aa05": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SIMPLE NEAR OPTIMAL PARTITIONING APPROACH TO PERFECT TRIANGULAR ITERATION SPACE"
+ },
+ "s2-94d1187bbc8a2980": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Outerloop pipelining in FFT using single dimension software pipelining"
+ },
+ "s2-963172655fdd9bf5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Nested Loop Pipelining in C Descriptions for System LSI Design"
+ },
+ "s2-b96a6e192779c215": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "for Nested Loops"
+ },
+ "s2-c4cd6925f113794b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploitation of parallelism to nested loops with dependence cycles"
+ },
+ "s2-d1eabf088f5092a8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "High level compilation for gate reconfigurable architectures"
+ }
+}

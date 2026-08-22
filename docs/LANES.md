@@ -35,7 +35,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | Lane | Claimed paths | Status |
 |---|---|---|
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — ID map built for all 327 entries of `data/publications.json`; `data/idmap.json` and `data/idmap-review.json` landed. |
-| **citations** | `harvest/citations/` | **active** — `harvest_citations.py` harvests OpenAlex `cited_by` and Semantic Scholar `/citations` metadata for every `data/idmap.json` entry with an id, into `harvest/citations/<bibtexKey>.json`. |
+| **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for all 151 `data/idmap.json` entries with an id into `harvest/citations/<bibtexKey>.json`; 23,154 merged citing works. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) is blocked (403). See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | unclaimed |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). |
@@ -64,15 +64,27 @@ raise it to the setup lane.
 
 ### citations
 
-- `harvest/citations/harvest_citations.py`: for every `data/idmap.json` entry
-  carrying an OpenAlex or Semantic Scholar id, pages through OpenAlex
-  `works?filter=cites:<id>` and S2 `/paper/<id>/citations` (fields include
-  `isInfluential`, `intents`, `contexts`) and writes
-  `harvest/citations/<bibtexKey>.json` with `{counts, citing}`. Citing works
-  found by both sources are merged on DOI. Keyless at 1 req/s with 429
-  backoff by default; reads `OPENALEX_API_KEY` / `S2_API_KEY` from env.
-  Resumable — skips any bibtexKey that already has an output file. HTTP
-  responses are cached under `harvest/citations/cache/` (gitignored).
+- `harvest/citations/harvest_citations.py` runs as two independent passes so
+  the fast OpenAlex side never blocks on the slower, more rate-limited S2
+  side:
+  - `--pass openalex`: for every entry with an OpenAlex id, pages
+    `works?filter=cites:<id>` and writes `harvest/citations/<bibtexKey>.json`
+    fresh — `{counts: {openalex, s2: 0}, citing: [...]}`. Skips a key whose
+    file already exists.
+  - `--pass s2`: for every entry with an S2 id, pages
+    `/paper/<id>/citations` (fields include `isInfluential`, `intents`,
+    `contexts`) and merges into the *existing* file by DOI, filling in `s2`
+    plus those three fields on matched records and appending s2-only
+    records otherwise. Completion is tracked per key in
+    `harvest/citations/.s2_state.json`, separately from the file's
+    existence, so a merge that fails partway (429s exhausting retries) is
+    retried whole next run rather than marked done on partial data.
+  - Both keyless at 1 req/s with 429 backoff by default; read
+    `OPENALEX_API_KEY` / `S2_API_KEY` from the environment on every request.
+    HTTP responses are cached under `harvest/citations/cache/` (gitignored).
+  - All 151 entries with an id are harvested: 14,851 OpenAlex citing works,
+    18,156 S2 citing works, 23,154 after merging on DOI. 2 papers (both
+    2025/2026) have zero citations so far.
 
 ### artifacts
 

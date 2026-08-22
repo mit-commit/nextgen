@@ -1,0 +1,1213 @@
+{
+  "counts": {
+    "openalex": 41,
+    "s2": 49
+  },
+  "citing": [
+    {
+      "title": "Sidecar: Leveraging Debugging Extensions in Commodity Processors to Secure Software",
+      "year": 2024,
+      "doi": "10.1109/acsac63791.2024.00053",
+      "openalex": "W4408565886",
+      "s2": "947682107f20eb10cb1a81aa1228a3c87e8cc3fc",
+      "venue": "Asia-Pacific Computer Systems Architecture Conference",
+      "authors": [
+        "Konstantinos Kleftogiorgos",
+        "Patrick Zielinski",
+        "Shan Huang",
+        "Jun Xu",
+        "Georgios Portokalidis"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "Software-only approaches [25], [26], [27], [28], [29] in this direction involve modestly instrumenting applications to relay runtime state to a parallel-running monitor process.",
+        "Prior work in this area can be classified in software [25], [26], [27], [28], [29] and hardware [34], [32], [35], [30], [31], [48], [33] approaches.",
+        "Such approaches [25], [26], [27], [28], [29] instrument applications using dynamic binary instrumentation (DBI) frameworks like Pin [82] or DynamoRIO [83] to inject code that will log runtime data to shared buffers that can be accessed by separate monitor threads or processes.",
+        "Some works have focused on expensive dynamic analyses like dynamic taint tracking [25], [26], [27], while others have aimed to provide a more general framework for dynamic analysis [28], [29], sacrificing performance for adaptability."
+      ]
+    },
+    {
+      "title": "Communication for programmability and performance on multi-core processors",
+      "year": 2021,
+      "doi": "10.48456/tr-831",
+      "openalex": "W2507674012",
+      "s2": null,
+      "venue": "CL Technical Reports",
+      "authors": [
+        "Meredydd Luff"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Analysis of cache behaviour and software optimizations for faster on-chip network simulations",
+      "year": 2019,
+      "doi": "10.1007/s13198-019-00799-5",
+      "openalex": "W2945981973",
+      "s2": "7c53275b6422b565c8ed6e6e5555364652ea643e",
+      "venue": "International Journal of Systems Assurance Engineering and Management",
+      "authors": [
+        "B. M. Prabhu Prasad",
+        "Khyamling Parane",
+        "Basavaraj Talawar"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Pipelined Profiling and Analysis on Multi-core Systems-PiPA (Zhao et al. 2008) aims to reduce the cost of user-defined analysis tools in instrumentation by parallelizing dynamic program profiling in multi-core systems."
+      ]
+    },
+    {
+      "title": "Evaluating the effectiveness of program data features for guiding memory management",
+      "year": 2019,
+      "doi": "10.1145/3357526.3357537",
+      "openalex": "W2983621075",
+      "s2": "81fcc2c577b399a9c13398cb16f18717f017bd80",
+      "venue": "Proceedings of the International Symposium on Memory Systems",
+      "authors": [
+        "T. Chad Effler",
+        "Brandon Kammerdiener",
+        "Michael R. Jantz",
+        "Saikat Sengupta",
+        "Prasad A. Kulkarni",
+        "Kshitij Doshi",
+        "Terry Jones"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Several others have developed online profiling tools that employ under-utilized computing cores or other architectural features to reduce the overhead of online profiling [32, 42, 62, 67, 69]."
+      ]
+    },
+    {
+      "title": "SHIM and Its Applications",
+      "year": 2019,
+      "doi": "10.25911/5dc92b0c30999",
+      "openalex": null,
+      "s2": "e2e1cdadac8ce0e5670f3ecdcfae4eb11683f5d9",
+      "venue": null,
+      "authors": [
+        "Xi Yang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "The alternative approach directly measures code by adding instrumentation automatically or by hand [Linux, 2014a; Demme and Sethumadhavan, 2011; Zhao et al., 2008; Ha et al., 2009].",
+        "Direct Measurement Directly reading hardware performance counters is also a widely used approach [Ammons et al., 1997; Pettersson, 2003; Linux, 2014a; Demme and Sethumadhavan, 2011; Zhao et al., 2008; Ha et al., 2009].",
+        "Instrumentation Profilers Instrumentation profiling tools such as PiPA and CAB insert code into applications that records software events of interest in a buffer, such as paths and method identifiers, for online or offline processing [Ha et al., 2009; Zhao et al., 2008]."
+      ]
+    },
+    {
+      "title": "Towards Cross-Framework Workload Analysis via Flexible Event-Driven Interfaces",
+      "year": 2018,
+      "doi": "10.1109/ispass.2018.00030",
+      "openalex": "W2805103555",
+      "s2": "ce861f81fd18ecea6295858774f49ca181614385",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "authors": [
+        "Michael Lui",
+        "Karthik Sangaiah",
+        "Mark Hempstead",
+        "Barış Taşkın"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Speed up is consistently achieved due to asynchronicity between event generation and analysis, and parallelization of the analysis, which is also shown for DynamoRIO and PIN [33], [34].",
+        "Asynchronous event generation and event analysis has been shown to have substantial performance benefits within DBI frameworks [33], [34].",
+        "A similar approach was later applied to the PIN framework [34].",
+        "Figure 5a shows a speed-up of at least 2x for each workload, with a maximum of 5.6x. Speed up is consistently achieved due to asynchronicity between event generation and analysis, and parallelization of the analysis, which is also shown for DynamoRIO and PIN [33], [34].",
+        "Previous works have used basic blocks to detect loops via PIN and LLVM IR via static instrumentation to track both memory and register dependencies for datadependency analysis [42], [45].",
+        "PiPa [33] reduced analysis overhead by decoupling and parallelizing instrumented code and analysis code within DynamoRIO."
+      ]
+    },
+    {
+      "title": "QDIME: QoS-Aware Dynamic Binary Instrumentation",
+      "year": 2017,
+      "doi": "10.1109/mascots.2017.19",
+      "openalex": null,
+      "s2": "3db98850ad40dd5d778e8045f145f8dcd540131d",
+      "venue": "IEEE/ACM International Symposium on Modeling, Analysis, and Simulation On Computer and Telecommunication Systems",
+      "authors": [
+        "Pansy Arafa",
+        "G. M. Tchamgoue",
+        "H. Kashif",
+        "S. Fischmeister"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Thus, many works [30], [41] leverage parallelism to reduce the overhead of DBI frameworks.",
+        "Unfortunately, while much has been done to lower the instrumentation overhead, less attention has so far been paid to that of the user-defined code [13], [41]."
+      ]
+    },
+    {
+      "title": "Runtime Optimization of Binary Through Vectorization Transformations. (Optimisation de binaire à l'exécution par la vectorisation)",
+      "year": 2017,
+      "doi": "10.70675/95d71994z104dz4d0dz9835zf4a7adab2954",
+      "openalex": null,
+      "s2": "e21223ae99c24900281f774ef8d579bd4f6e28cd",
+      "venue": null,
+      "authors": [
+        "Nabil Hallou"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Impact of Intrinsic Profiling Limitations on Effectiveness of Adaptive Optimizations",
+      "year": 2016,
+      "doi": "10.1145/3008661",
+      "openalex": "W2564747820",
+      "s2": "e1a40093e6b113a3569b2f7b5bc92d05229abba3",
+      "venue": "ACM Transactions on Architecture and Code Optimization",
+      "authors": [
+        "Michael R. Jantz",
+        "Forrest J. Robinson",
+        "Prasad A. Kulkarni"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "The PiPA approach performs low-overhead profiling in the same thread but conducts the more heavyweight profile analysis in separate threads [Zhao et al. 2008].",
+        "Researchers are developing mechanisms to increase the accuracy of online proﬁling while reducing overhead using unutilized hardware [Yang et al. 2015; Moseley et al. 2007; Zhao et al. 2008; Whaley 2000].",
+        "Researchers are developing mechanisms to increase the accuracy of online profiling while reducing overhead using unutilized hardware [Yang et al. 2015; Moseley et al. 2007; Zhao et al. 2008; Whaley 2000].",
+        "The PiPA approach performs low-overhead proﬁling in the same thread but conducts the more heavyweight proﬁle analysis in separate threads [Zhao et al. 2008]."
+      ]
+    },
+    {
+      "title": "Spectral profiling: Observer-effect-free profiling by monitoring EM emanations",
+      "year": 2016,
+      "doi": "10.1109/micro.2016.7783762",
+      "openalex": "W4253642498",
+      "s2": "341a907ab03ebd072baa2ee9e4fec5b6443df41d",
+      "venue": "Micro",
+      "authors": [
+        "Nader Sehatbakhsh",
+        "Alireza Nazari",
+        "Alenka Zajić",
+        "Milos Prvulović"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Profilers typically use instrumentation [49], [50], [1], [3], [5], [6] to count how often each part of the code is executed, or even to account for actual execution time, e.",
+        "by counting how many times a particular point in the code was encountered during execution[1], [3], [5], [6]."
+      ]
+    },
+    {
+      "title": "Spectral profiling: observer-effect-free profiling by monitoring EM emanations",
+      "year": 2016,
+      "doi": "10.5555/3195638.3195710",
+      "openalex": "W2564479312",
+      "s2": null,
+      "venue": "International Symposium on Microarchitecture",
+      "authors": [
+        "Nader Sehatbakhsh",
+        "Alireza Nazari",
+        "Alenka Zajić",
+        "Milos Prvulović"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "UROBOROS: Instrumenting Stripped Binaries with Static Reassembling",
+      "year": 2016,
+      "doi": "10.1109/saner.2016.106",
+      "openalex": "W2407989913",
+      "s2": "b03d47f2b10edde3d4f9c82b4420d44681037a7e",
+      "venue": "IEEE International Conference on Software Analysis, Evolution, and Reengineering",
+      "authors": [
+        "Shuai Wang",
+        "Pei Wang",
+        "Dinghao Wu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Dynamic binary instrumentation has been widely used for program performance profiling [35] and securityoriented execution monitoring tasks [17], [22]."
+      ]
+    },
+    {
+      "title": "Collecting and representing parallel programs with high performance instrumentation",
+      "year": 2015,
+      "doi": null,
+      "openalex": null,
+      "s2": "83c4701525c8bd2c730334d0861bc8a537b19d81",
+      "venue": null,
+      "authors": [
+        "Brian P. Railing"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "7x x x [65] PiPA 5x x x [135] [136] Cilkview 2x-10x b x [55] ParaMeter 3x-200x b x [75] Peregrine 2x-35x x x [34] [129] Pin Task Graph 16x x x x [100] ParaOPs n/a x x x [102] [103] Contech 1x-5x x x x Chapter 4",
+        "For example, PiPA [135] is an instrumentation system focused on reducing the cost of the instrumentation events.",
+        "35 3.3.2 Valgrind . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37 3.3.3 DynamoRIO and PiPA . . . . . . . . . . . . . . . . . . . . .",
+        "PiPA [135] uses DynamoRIO to collect a control-flow and memory operation trace; however, it requires additional software threads to process the trace, to quote “PiPA essentially obtained good performance at the expense of additional resources.",
+        "While other instrumentation approaches have proposed canary values [135] or guard pages [117], the additional gains would be minimal versus the added complexity, particularly when additional refinements to the check locations could further reduce the number in instrumented code.",
+        "PiPA [135] and Shadow Replica [65] demonstrated the capability of identifying when multiple memory accesses use the same or similar address calculations and emphasized this feature as part of reducing their total trace size for lower overhead.",
+        "I searched prior work and found several tools that collect subsets of the data recorded by Contech (the full list is in Table 1): the overhead of recording a memory trace alone (ignoring basic blocks, as well as attributes of the memory accesses) ranged between 2x and 9x [9] [80], recording the memory trace with attributes and basic block information averaged a 16x slowdown [135], and recording the program’s DAG and instruction count incurs 2x - 10x slowdown [55]."
+      ]
+    },
+    {
+      "title": "Computer performance microscopy with S him",
+      "year": 2015,
+      "doi": "10.1145/2749469.2750401",
+      "openalex": "W1973718751",
+      "s2": "4318a7c3bfdbd34efb5df805a55eee6da20c60f1",
+      "venue": "International Symposium on Computer Architecture",
+      "authors": [
+        "Xi Yang",
+        "Stephen M. Blackburn",
+        "Kathryn S. McKinley"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Computer performance microscopy with S him",
+      "year": 2015,
+      "doi": "10.1145/2872887.2750401",
+      "openalex": "W4230043734",
+      "s2": null,
+      "venue": "ACM SIGARCH Computer Architecture News",
+      "authors": [
+        "Xi Yang",
+        "Stephen M. Blackburn",
+        "Kathryn S. McKinley"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Contech",
+      "year": 2015,
+      "doi": "10.1145/2776893",
+      "openalex": "W1037867572",
+      "s2": "78603f88bd172d2c428c7255c28fbe97e64df7d5",
+      "venue": "ACM Transactions on Architecture and Code Optimization",
+      "authors": [
+        "Brian P. Railing",
+        "Eric R. Hein",
+        "Thomas M. Conte"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Contech can currently generate task graphs from arbitrary parallel programs across the following combinations of language (C, C++, or Fortran), parallelization library (pthreads, OpenMP, or MPI), and ISA (×86 or ARM).",
+        "While other instrumentation approaches have proposed canary values [Zhao et al. 2008] or guard pages [Upton et al. 2009], the additional gains would be minimal versus the added complexity.",
+        "PiPA [Zhao et al. 2008] uses DynamoRIO to collect a control-flow and memory operation trace; however, it requires additional software threads to process the trace.",
+        "…accesses) ranged between 2× and 9× slowdown [Bach et al. 2010; Laurenzano et al. 2012], recording the memory trace with attributes and basic block information averaged a 16× slowdown [Zhao et al. 2008], and recording the program’s DAG and instruction count incurs 2×– 10× slowdown [He et al. 2010]."
+      ]
+    },
+    {
+      "title": "Contech : Parallel Program Representation and High Performance Instrumentation",
+      "year": 2015,
+      "doi": null,
+      "openalex": null,
+      "s2": "f385607bd321ea232f5050827e6e91a588c024c3",
+      "venue": null,
+      "authors": [
+        "Brian P. Railing"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Based on several tools previously published [5] [13] [16] [23], we developed an optimized Pin plugin that was comparable to Contech’s data collection."
+      ]
+    },
+    {
+      "title": "Emulating cache organizations on real hardware using performance cloning",
+      "year": 2015,
+      "doi": "10.1109/ispass.2015.7095815",
+      "openalex": "W2014208552",
+      "s2": "c7e64ac67a5d8140c53bfe4840263d4231646a98",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "authors": [
+        "Yipeng Wang",
+        "Yan Solihin"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Researches on speeding up simulation include [15, 16, 17, 18], which mainly focusing on instrumentation and sampling techniques."
+      ]
+    },
+    {
+      "title": "On Efficiency and Accuracy of Data Flow Tracking Systems",
+      "year": 2015,
+      "doi": "10.7916/d8mg7p9d",
+      "openalex": "W2279560118",
+      "s2": "06d250e2aa6c017721b6f4b367991760d1091525",
+      "venue": "Columbia Academic Commons (Columbia University)",
+      "authors": [
+        "Kangkook Jee"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "result",
+        "background"
+      ],
+      "contexts": [
+        "This is one of our main contributions, and problems for previous works [Nightingale et al., 2008; Wallace and Hazelwood, 2007; Zhao et al., 2008].",
+        "The idea of decoupling dynamic program analyses from execution, to run them in parallel, has been studied in past in various contexts [Wallace and Hazelwood, 2007; Chow et al., 2008; Nightingale et al., 2008; Zhao et al., 2008; Ha et al., 2009; Portokalidis et al., 2010; Chen and Chen, 2013].",
+        "To mitigate the problem, we switched to a N -way buffering scheme [Zhao et al., 2008], where the ring-buffer is divided into N separate sub-buffers, and primary and secondary threads work on different sub-buffers at any point of time, maintaining a distance of least as much as the size of a single sub-buffer.",
+        "To mitigate the problem, we switched to a N -way buffering scheme [Zhao et al., 2008], where the ring-buffer is divided into N separate sub-buffers, and primary and secondary threads work on different sub-buffers at any point of time, maintaining a distance of least as much as the size of a single…",
+        "We adopt a lock-free ring buffer structure, consisting of multiple buffers (N-way buffering scheme [Zhao et al., 2008])."
+      ]
+    },
+    {
+      "title": "Performance Analysis for Object-Oriented Software: A Systematic Mapping",
+      "year": 2015,
+      "doi": "10.1109/tse.2015.2396514",
+      "openalex": null,
+      "s2": "e989d9d14639a1f05344c854ef90961cd6e7a991",
+      "venue": "IEEE Transactions on Software Engineering",
+      "authors": [
+        "David Maplesden",
+        "E. Tempero",
+        "J. Hosking",
+        "J. Grundy"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "TaintPipe: Pipelined Symbolic Taint Analysis",
+      "year": 2015,
+      "doi": null,
+      "openalex": null,
+      "s2": "2784864964db743a1d666704b75e5455b880edeb",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Jiang Ming",
+        "Dinghao Wu",
+        "Gaoyao Xiao",
+        "Jun Wang",
+        "Peng Liu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "To mitigate this bottleneck, we employed “one producer, multiple consumers” model and N-way buffering scheme [46]."
+      ]
+    },
+    {
+      "title": "TaintPipe: pipelined symbolic taint analysis",
+      "year": 2015,
+      "doi": null,
+      "openalex": "W1610688982",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Jiang Ming",
+        "Dinghao Wu",
+        "Gaoyao Xiao",
+        "Wang Jun",
+        "Peng Liu"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Exploiting Hardware Monitoring in Software Engineering",
+      "year": 2014,
+      "doi": "10.1016/b978-0-12-800162-2.00002-6",
+      "openalex": null,
+      "s2": "35f32f0b0c6ee0fdc49e7fc989836c7c8194e5c9",
+      "venue": "Advances in Computing",
+      "authors": [
+        "Kristen Walcott-Justice"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Intelligent Management of Inter-Thread Synchronization Dependencies for Concurrent Programs",
+      "year": 2014,
+      "doi": null,
+      "openalex": null,
+      "s2": "214de24e545c4ac0abdc994aad6b33311476c0f0",
+      "venue": null,
+      "authors": [
+        "H. Cho"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Leveraging Optimization Methods for Dynamically Assisted Control-Flow Integrity Mechanisms",
+      "year": 2014,
+      "doi": "10.1109/sbac-pad.2014.35",
+      "openalex": "W1999299814",
+      "s2": "8fa4d0c24ff9abecd547079a3084a3e55545bdb9",
+      "venue": "2014 IEEE 26th International Symposium on Computer Architecture and High Performance Computing",
+      "authors": [
+        "João Moreira",
+        "Lucas Teixeira",
+        "Edson Borin",
+        "Sandro Rigo"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "On the existence of probe effect in multi-threaded embedded programs",
+      "year": 2014,
+      "doi": "10.1145/2656045.2656062",
+      "openalex": null,
+      "s2": "573fc20071317ed6ebda877ad8fa1a4e84bb6e3d",
+      "venue": "International Conference on Embedded Software",
+      "authors": [
+        "Y. Song",
+        "Yann-Hang Lee"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "intelligent management of inter-thread synchronization dependencies for concurrent programs",
+      "year": 2014,
+      "doi": null,
+      "openalex": "W2525728793",
+      "s2": null,
+      "venue": "Deep Blue (University of Michigan)",
+      "authors": [
+        "Hyoun Kyu Cho"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Communication for programmability and performance on multi-core processors",
+      "year": 2013,
+      "doi": null,
+      "openalex": null,
+      "s2": "9a5718d0541be125337a8558ae868454e9959a27",
+      "venue": null,
+      "authors": [
+        "William Meredydd Frank Luff"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Parallelising the collection and computation of profiling data has the potential to reduce these overheads, but the communication cost has proven challenging or prohibitive on cache-coherent systems [56, 137].",
+        "These proposals include Distributed Software Pipelining for automatic parallelisation [106], dynamic information flow tracking for security auditing [97, 112], dynamic program analysis [56, 137], MMT for offloading memory management overheads [131], and HeapMon for memory debugging [117].",
+        "Particularly demanding applications include high-frequency streaming techniques such as decoupled software pipelining [106], dynamic program analysis for debugging [56, 137] and security [97, 112], and distributed operating systems [11]."
+      ]
+    },
+    {
+      "title": "DIME: Time-aware dynamic binary instrumentation using rate-based resource allocation",
+      "year": 2013,
+      "doi": "10.1109/emsoft.2013.6658603",
+      "openalex": null,
+      "s2": "2d30fd8b1679a108fbf7f31c95caa5d719616613",
+      "venue": "International Conference on Embedded Software",
+      "authors": [
+        "Pansy Arafa",
+        "H. Kashif",
+        "S. Fischmeister"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Instant Proﬁling: Instrumentation Sampling for Proﬁling Datacenter Applications",
+      "year": 2013,
+      "doi": null,
+      "openalex": "W2898991513",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Hyoun Kyu Cho",
+        "Tipp Moseley",
+        "Rick Hank",
+        "Derek Bruening",
+        "Scott Mahlke"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Instant Proﬁling: Instrumentation Sampling for Proﬁling Datacenter Applications",
+      "year": 2013,
+      "doi": null,
+      "openalex": null,
+      "s2": "65a3cb0faa1a76cfc59993f575abc4dc64e4700a",
+      "venue": null,
+      "authors": [
+        "H. Cho",
+        "Tipp Moseley",
+        "R. Hank",
+        "Derek Bruening",
+        "S. Mahlke"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Instant profiling: Instrumentation sampling for profiling datacenter applications",
+      "year": 2013,
+      "doi": "10.1109/cgo.2013.6494982",
+      "openalex": "W2022666100",
+      "s2": "458115121531dccf605c6063a205be307051984d",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Hyoun Kyu Cho",
+        "Tipp Moseley",
+        "Rick Hank",
+        "Derek Bruening",
+        "Scott Mahlke"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "ShadowReplica",
+      "year": 2013,
+      "doi": "10.1145/2508859.2516704",
+      "openalex": "W2019641142",
+      "s2": "becd91dbba8b2d2bcb702bbc4d961e74c5d41050",
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Kangkook Jee",
+        "Vasileios P. Kemerlis",
+        "Angelos D. Keromytis",
+        "Georgios Portokalidis"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "PiPA: pipelined profiling and analysis on multi-core systems.",
+        "The idea of decoupling dynamic program analyses from execution, to run them in parallel, has been studied in past in various contexts [31, 8, 25, 33, 14, 26, 6].",
+        "The third category aims at offloading the analysis code alone to another execution thread [14, 33].",
+        "Decoupling analysis from execution to run it in parallel is by no means a novel concept [14, 8, 31, 25, 33, 6, 26].",
+        "This is one of our main contributions, and problems of previous work [25, 33] that failed to satisfy equation (1).",
+        "a N -way buffering scheme [33], where the ring-buffer is divided into N separate sub-buffers, and primary and secondary threads work on different sub-buffers at any point of time, maintaining a distance of least as much as the size of a single sub-buffer.",
+        "We adopt a lock-free ring buffer structure, consisting of multiple buffers (N-way buffering scheme [33]).",
+        "CAB [14] and PiPA [33] aim at offloading the analysis code alone to another execution thread, and they are the closest to ShadowReplica."
+      ]
+    },
+    {
+      "title": "ShadowVM",
+      "year": 2013,
+      "doi": "10.1145/2517208.2517219",
+      "openalex": "W2114257355",
+      "s2": "1a60b3cb05832b8c5c695a5f3c4d3846377bc36f",
+      "venue": "International Conference on Generative Programming: Concepts and Experiences",
+      "authors": [
+        "Lukáš Marek",
+        "Stephen Kell",
+        "Yudi Zheng",
+        "Lubomír Bulej",
+        "Walter Binder",
+        "Petr Tůma",
+        "Danilo Ansaloni",
+        "Aibek Sarimbekov",
+        "Andreas Sewe"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "ShadowVM",
+      "year": 2013,
+      "doi": "10.1145/2637365.2517219",
+      "openalex": "W4231677933",
+      "s2": null,
+      "venue": "ACM SIGPLAN Notices",
+      "authors": [
+        "Lukáš Marek",
+        "Stephen Kell",
+        "Yudi Zheng",
+        "Lubomír Bulej",
+        "Walter Binder",
+        "Petr Tůma",
+        "Danilo Ansaloni",
+        "Aibek Sarimbekov",
+        "Andreas Sewe"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "A Comparison of the Influence of Different Multi-core Processors on the Runtime Overhead for Application-Level Monitoring",
+      "year": 2012,
+      "doi": "10.1007/978-3-642-31202-1_5",
+      "openalex": "W1906860997",
+      "s2": "5be29ad6dc32767c14be70519302b819074da19c",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Jan Waller",
+        "Wilhelm Hasselbring"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Despite the fact that reports on monitoring frameworks often include an overhead evaluation, a detailed description of the experimental design and a detailed analysis of the results, including confidence intervals, is often missing (see for instance [1, 11, 13, 14, 18, 22])."
+      ]
+    },
+    {
+      "title": "Deferred methods",
+      "year": 2012,
+      "doi": "10.1145/2259016.2259048",
+      "openalex": "W2032282161",
+      "s2": "cbf5158bd7a0919e2a1d93ea9f7a10bf486d441b",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Danilo Ansaloni",
+        "Walter Binder",
+        "Abbas Heydarnoori",
+        "Lydia Y. Chen"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Deferred Methods: Accelerating Dynamic Program Analysis on Multicores  Danilo Ansaloni University of \nLugano Lugano, Switzerland danilo.ansaloni@usi.ch Abbas Heydarnoori University of Lugano Lugano, Switzerland \n abbas.heydarnoori@usi.ch ABSTRACT Parallelization is attractive for speeding up dynamic program anal­ysis \non multicores.",
+        "PiPA (Pipelined Profiling and Analysis) [15] is a technique for parallelizing dynamic analysis by associating an analysis pipeline with each application thread.",
+        "Analysis data is collected within the appli­cation thread and stored in a thread-local buffer.",
+        "PiPA(Pipelined Pro.ling and Analysis)[15] is a technique \nfor par­allelizing dynamic analysis by associating an analysis pipeline with each application thread.",
+        "Additionally, based on the deferred interface provided 1 public interface DefMethods \nextends Deferred { 2 void profCall(MethodID caller, MethodID callee); 3 void profAlloc(MethodID mid, \nObject allocObj); 4 } 5 public class DefMethodsImpl implements DefMethods { 6 static final Profile profTS \n= new ProfileTS(); 7 public void profCall(MethodID caller, MethodID callee) { 8 profTS.profCall(caller, \ncallee); 9 } 10 public void profAlloc(MethodID mid, Object allocObj) { 11 profTS.profAlloc(mid, allocObj); \n12 } 13 } 14 public class DefBlueprintAnalysis { 15 private static final int NUM_THREADS = 4; 16 private \nstatic final DefMethods def = 17 (DefMethods)DeferredExecution.createDeferredEnv( 18 DefMethods.class, \nDefMethodsImpl.class, 19 new ThreadPoolProc(NUM_THREADS)); 20 private final ThreadLocal",
+        "A possible solution to reduce communication overhead is to aggregate the invocations of analysis methods in thread-local buffers that are processed by helper threads when full [15, 7, 13, 2].",
+        "1 public interface Profile { 2 void profCall(MethodID caller, MethodID callee); \n3 void profAlloc(MethodID mid, Object allocObj); 4 void integrate(Profile prof); // used in coalescing \n5 // (see Section 3.5) 6 ... 7 } 8 public class ProfileTS implements Profile { 9 ... // Perform the analysis \nusing thread-safe 10 // data structures 11 } 12 public class BlueprintAnalysis { 13 private final ThreadLocal",
+        "BlueprintAnalysis keeps a shadow stack \nof calls for each thread in the thread-local variable stackTL."
+      ]
+    },
+    {
+      "title": "Fast loop-level data dependence profiling",
+      "year": 2012,
+      "doi": "10.1145/2304576.2304584",
+      "openalex": "W2018931757",
+      "s2": "f823279dcd52c0635cdce41bbbf37b94fa13b064",
+      "venue": "International Conference on Supercomputing",
+      "authors": [
+        "Hongtao Yu",
+        "Zhiyuan Li"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "PiPA [36] parallelizes profiling in a pipelined style."
+      ]
+    },
+    {
+      "title": "Multi-slicing: a compiler-supported parallel approach to data dependence profiling",
+      "year": 2012,
+      "doi": "10.1145/2338965.2336756",
+      "openalex": "W2140242465",
+      "s2": "b13da4edd7029915b42a578bb7d9a310e4db676e",
+      "venue": "International Symposium on Software Testing and Analysis",
+      "authors": [
+        "Hongtao Yu",
+        "Zhiyuan Li"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "PiPA [37], the Pipelined Profiling and Analysis, parallelizes profiling in a pipelined style."
+      ]
+    },
+    {
+      "title": "Potential of Dynamic Binary Parallelization",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "074382026c2f66977255509a5f73fe8b6dba8da6",
+      "venue": null,
+      "authors": [
+        "Jing Yang",
+        "Kevin Skadron",
+        "M. Soffa",
+        "K. Whitehouse"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Recording the complete execution sequence of the program produces a large amount of information and so we use double buffering to reduce the runtime overhead [27] and apply the VPC3 algorithm to compress the collected information [4]."
+      ]
+    },
+    {
+      "title": "Rapid Development of Flexible and Efficient Dynamic Program Analysis Tools",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "3006a679c782e3e90db29f613eb2decf1d369d94",
+      "venue": null,
+      "authors": [
+        "Danilo Ansaloni"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Pipelined Profiling and Analysis (PiPA) [45] is a technique for parallelizing dynamic analysis by associating an anal-"
+      ]
+    },
+    {
+      "title": "SD3: An Efficient Dynamic Data-Dependence Profiling Mechanism",
+      "year": 2012,
+      "doi": "10.1109/tc.2012.182",
+      "openalex": "W2015974582",
+      "s2": "7b1ff12fb39f2894fec9ea10f2e55161a8c7aedb",
+      "venue": "IEEE Transactions on Computers",
+      "authors": [
+        "Minjang Kim",
+        "Nagesh B. Lakshminarayana",
+        "Hyesoon Kim",
+        "Chi-Keung Luk"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Shadow Profiling [23], SuperPin [33], PiPA [37], and Ha et al."
+      ]
+    },
+    {
+      "title": "Transparent dynamic instrumentation",
+      "year": 2012,
+      "doi": "10.1145/2151024.2151043",
+      "openalex": "W2133692747",
+      "s2": "f0d19c7e123c0160f2535e561c2955df99d4f993",
+      "venue": "International Conference on Virtual Execution Environments",
+      "authors": [
+        "Derek Bruening",
+        "Qin Zhao",
+        "Saman Amarasinghe"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "The provided layer of control can be used for various purposes including security enforcement [14, 22], software debugging [8, 43], dynamic analysis [42, 45], and many others [40, 41, 44]."
+      ]
+    },
+    {
+      "title": "Transparent dynamic instrumentation",
+      "year": 2012,
+      "doi": "10.1145/2365864.2151043",
+      "openalex": "W2996990589",
+      "s2": null,
+      "venue": "ACM SIGPLAN Notices",
+      "authors": [
+        "Derek Bruening",
+        "Qin Zhao",
+        "Saman Amarasinghe"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "CONCURRENCY AND COMPUTATION : PRACTICE AND EXPERIENCE Concurrency Computat",
+      "year": 2011,
+      "doi": null,
+      "openalex": null,
+      "s2": "0b1082fec27ec38f1ba47e0e8b141f3ab92621f9",
+      "venue": null,
+      "authors": [
+        "Walter Binder",
+        "Danilo Ansaloni",
+        "A. Villazón",
+        "Philippe Moret"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "The framework relies on extensions to the Jikes RVM [34] PiPA [40] parallelizes profiling on multicores using pipelining.",
+        "In PiPA, threads form a pipeline for collecting and processing profiling data.",
+        "The framework relies on extensions to the Jikes RVM [34]\nPiPA [40] parallelizes profiling on multicores using pipelining.",
+        "PiPA is based on the dynamic binary instrumentation framework DynamoRIO [41]."
+      ]
+    },
+    {
+      "title": "Enabling efficient online profiling of homogeneous and heterogeneous multicore systems",
+      "year": 2011,
+      "doi": null,
+      "openalex": null,
+      "s2": "3ad0d32ef7b0cdbdc94ac25cd2deab68e563aa34",
+      "venue": null,
+      "authors": [
+        "K. Hazelwood",
+        "Dan Upton"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "presented Pipelined Profiling and Analysis, or PiPA [117], implemented on DynamoRIO."
+      ]
+    },
+    {
+      "title": "Flexible and efficient profiling with aspect‐oriented programming",
+      "year": 2011,
+      "doi": "10.1002/cpe.1760",
+      "openalex": "W2100052503",
+      "s2": null,
+      "venue": "Concurrency and Computation Practice and Experience",
+      "authors": [
+        "Walter Binder",
+        "Danilo Ansaloni",
+        "Alex Villazón",
+        "Philippe Moret"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "MT-Profiler: A Parallel Dynamic Analysis Framework Based on Two-Stage Sampling",
+      "year": 2011,
+      "doi": "10.1007/978-3-642-24151-2_13",
+      "openalex": "W112476737",
+      "s2": "970f6a848df4b1425b4f252334136de9f42b6508",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Zhibin Yu",
+        "Weifu Zhang",
+        "Xuping Tu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Machine learning based mapping of data and streaming parallelism to multi-cores",
+      "year": 2011,
+      "doi": null,
+      "openalex": "W2122107598",
+      "s2": null,
+      "venue": "ERA",
+      "authors": [
+        "Zheng Wang"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Machine learning based mapping of data and streaming parallelism to multi-cores",
+      "year": 2011,
+      "doi": null,
+      "openalex": null,
+      "s2": "2e3f24f115c734cab391b0acf3472bc32cf72dab",
+      "venue": null,
+      "authors": [
+        "Zheng Wang"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Optimization of naïve dynamic binary instrumentation Tools",
+      "year": 2011,
+      "doi": null,
+      "openalex": null,
+      "s2": "4ed4f40468206c647651182d870fcdfadef25972",
+      "venue": null,
+      "authors": [
+        "R. Kleckner"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Another building block we could provide is general purpose buffer filling similar to what was done in PiPa.[15] With a general purpose buffering facility, tool authors do not need to worry about whether their calls were inlined, and can be confident that DynamoRIO has inserted the most efficient instrumentation possible."
+      ]
+    },
+    {
+      "title": "Trace-Based Dynamic Binary Parallelization",
+      "year": 2011,
+      "doi": "10.18130/v3479c",
+      "openalex": "W2181332314",
+      "s2": "186e42003b3b2696990b153006143a04251843ca",
+      "venue": null,
+      "authors": [
+        "Jing Yang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Recording the complete execution sequence of the program produces a large amount of information and so we use double buffering [89] to reduce runtime overhead and apply the VPC3 algorithm [90] to compress the collected information."
+      ]
+    },
+    {
+      "title": "Exploiting Under-Utilized Cores with Deferred Methods",
+      "year": 2010,
+      "doi": null,
+      "openalex": "W2171430165",
+      "s2": null,
+      "venue": "reroDoc Digital Library",
+      "authors": [
+        "Danilo Ansaloni",
+        "Walter Binder",
+        "Abbas Heydarnoori",
+        "Lydia Y. Chen"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "PiPA",
+      "year": 2010,
+      "doi": "10.1145/1880037.1880038",
+      "openalex": "W1964104501",
+      "s2": "d7cd36e94170b920d5091b0429d01808f42b4bb4",
+      "venue": "ACM Transactions on Architecture and Code Optimization",
+      "authors": [
+        "Qin Zhao",
+        "Ioana Cutcutache",
+        "Weng‐Fai Wong"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "SD3: A Scalable Approach to Dynamic Data-Dependence Profiling",
+      "year": 2010,
+      "doi": "10.1109/micro.2010.49",
+      "openalex": "W2147801215",
+      "s2": "07f3965cb6906c6da87c41ecbf2afb4b9ef2e856",
+      "venue": "Micro",
+      "authors": [
+        "Minjang Kim",
+        "Hyesoon Kim",
+        "Chi-Keung Luk"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Shadow Profiling [20], SuperPin [28], PiPA [32], and Ha et al.",
+        "Shadow Profiling [20], SuperPin [28], PiPA [32], and Ha et al. [8] employed parallelization techniques to reduce the time overhead of instrumentation-based dynamic analyses.",
+        "Two strides will be created: (1) [20, 32] with the distance of 2 from line 2, and (2) [21, 39] with the distance of 3 from line 3."
+      ]
+    },
+    {
+      "title": "A concurrent dynamic analysis framework for multicore hardware",
+      "year": 2009,
+      "doi": "10.1145/1639949.1640101",
+      "openalex": "W2168874123",
+      "s2": null,
+      "venue": "ACM SIGPLAN Notices",
+      "authors": [
+        "Jung-Woo Ha",
+        "Matthew Arnold",
+        "Stephen M. Blackburn",
+        "Kathryn S. McKinley"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "A concurrent dynamic analysis framework for multicore hardware",
+      "year": 2009,
+      "doi": "10.1145/1640089.1640101",
+      "openalex": "W4232090211",
+      "s2": "589d463d31d9c70e31ff26df7a6afee7c28f1b0f",
+      "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+      "authors": [
+        "Jung-Woo Ha",
+        "Matthew Arnold",
+        "Stephen M. Blackburn",
+        "Kathryn S. McKinley"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "PiPA (Pipelined Profiling and Analysis) describes a technique for parallelizing dynamic analysis on multicore systems and uses multiple profiling threads per application thread [33].",
+        "We show that compared to two highly optimized state-of-the-art alternative buffering mechanisms: N-way buffering [33] and FastForward concurrent lock-free queues [13], that CAB reduces overhead for path profiling on average by 8 and 41% respectively.",
+        "Our implementation of N-way buffering improves in two ways over PiPA [33].",
+        "If large buffers cause performance degradations, as reported for PiPA [33], the increased headroom of the larger buffer will come at the cost of degraded average performance.",
+        "Performance of N-way buffering [33] and FastForward [13] relative to CAB."
+      ]
+    },
+    {
+      "title": "Improving instrumentation speed via buffering",
+      "year": 2009,
+      "doi": "10.1145/1791194.1791202",
+      "openalex": "W2011847291",
+      "s2": "0f9681ab16505cab01487ac39c990d258db95413",
+      "venue": "WBIA '09",
+      "authors": [
+        "Dan Upton",
+        "Kim Hazelwood",
+        "Robert Cohn",
+        "Greg Lueck"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "For instance, \nPiPA [15] sought to overlap analysis with application execution and data collec­tion by collecting small \nchunks of data and processing them in one or more separate threads.",
+        "This multi-bu.ering can be used with a technique like PiPA \n[15] as well to break data up into smaller chunks to be processed further by other threads.",
+        "PiPA is a technique for reducing the over­head of analysis \nby collecting data in a lightweight manner and passing it to one or more external threads for processing.",
+        "For instance, PiPA [15] sought to overlap analysis with application execution and data collection by collecting small chunks of data and processing them in one or more separate threads.",
+        "This multi-buffering can be used with a technique like PiPA [15] as well to break data up into smaller chunks to be processed further by other threads.",
+        "The work most similar to \nours is PiPA, presented by Zhao et al. [15]."
+      ]
+    },
+    {
+      "title": "Mapping parallelism to multi-cores",
+      "year": 2009,
+      "doi": "10.1145/1504176.1504189",
+      "openalex": "W2166536280",
+      "s2": "043b307af412fc7f9005822e6dabbe4f9d983472",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "authors": [
+        "Zheng Wang",
+        "Michael O’Boyle"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Mapping parallelism to multi-cores",
+      "year": 2009,
+      "doi": "10.1145/1594835.1504189",
+      "openalex": "W2998249817",
+      "s2": null,
+      "venue": "ACM SIGPLAN Notices",
+      "authors": [
+        "Zheng Wang",
+        "Michael O’Boyle"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Scaling managed runtime systems for future multicore hardware",
+      "year": 2009,
+      "doi": null,
+      "openalex": null,
+      "s2": "cfb80e7fc9216fdde77238a31631a37bc8c4853d",
+      "venue": null,
+      "authors": [
+        "J. Ha"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Our implementation of N-way buffering improves in two ways over\nPiPA [57].",
+        "PiPA is implemented in a dynamic binary translator and collects execution profiles to drive a parallel cache simulator.",
+        "Our work focuses on efficiently transferring data between cores, and we believe that PiPA would benefit from using CAB.",
+        "13\nPiPA (Pipelined Profiling and Analysis) describes a technique for par-\nallelizing dynamic analysis on multicore systems and uses multiple profiling threads per application thread [57].",
+        "PiPA uses symmetric N-way buffering and locks to exchange buffers between producers and consumers.",
+        "PiPA (Pipelined Profiling and Analysis) describes a technique for parallelizing dynamic analysis on multicore systems and uses multiple profiling threads per application thread [57].",
+        "We show that compared to two highly optimized state-of-the-art alternative buffering mechanisms: N-way buffering [57] and FastForward concurrent lock-free queues [22], that CAB reduces overhead for path profiling on average by 8 and 41% respectively.",
+        "If large buffers cause performance degradations, as reported for PiPA [57], the increased headroom of the larger buffer will come at the cost of degraded average performance.",
+        "In our work, the analysis is concurrent (runs in parallel with the application) and parallel (multiple analysis threads run at the same time), but is different from PiPA in that we currently support at most one analysis thread per application thread.",
+        "Our implementation of N-way buffering improves in two ways over PiPA [57]."
+      ]
+    },
+    {
+      "title": "Università Della Svizzera Italiana Usi Technical Report Series in Informatics Exploiting Under-utilized Cores with Deferred Methods",
+      "year": null,
+      "doi": null,
+      "openalex": null,
+      "s2": "a1aedcbba8b136ffae437849c8dc9e73cf193999",
+      "venue": null,
+      "authors": [
+        "Danilo Ansaloni",
+        "Walter Binder",
+        "A. Heydarnoori",
+        "L. Chen"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "However, collecting dynamic profiles not only imposes some overheads on the base program, but also the overhead attributable to user-specific analyses may significantly reduce the performance [7]."
+      ]
+    }
+  ]
+}

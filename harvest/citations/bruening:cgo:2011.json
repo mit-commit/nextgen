@@ -1,0 +1,4237 @@
+{
+  "counts": {
+    "openalex": 95,
+    "s2": 203
+  },
+  "citing": [
+    {
+      "title": "DeepSanitizer: Combining Heuristic Rules and Deep Learning Models to Spot Silent Buffer Overflows in Binary",
+      "year": 2026,
+      "doi": "10.1109/tdsc.2025.3626483",
+      "openalex": null,
+      "s2": "0d271948fca869d90ba40d33609c6017c89aa283",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "authors": [
+        "Zhilong Wang",
+        "Chen Cao",
+        "Li Yu",
+        "Suhang Wang",
+        "Xiaoyan Sun",
+        "Peng Liu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "In cases where the source code is not accessible, memory sanitizers resort to dynamic binary translation or static binary instrumentation to inject checks [23], [29] for each memory access.",
+        "Since the ability of ASan cannot be ported to binaries, binary-program-oriented sanitizers (e.g., Dr. Memory [23], QASan [24], ASan-Retrowrite [25]) were proposed."
+      ]
+    },
+    {
+      "title": "QuickSafe: Targeted Hardening Against Memory Corruption",
+      "year": 2026,
+      "doi": "10.1109/sp63933.2026.00085",
+      "openalex": "W7166853997",
+      "s2": "72775c26696aa765ee3751803d72b576aa81be88",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Johannes Blaser",
+        "Floris Gorter",
+        "Klaus von Gleissenthall",
+        "Herbert Bos"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Bug detectors such as AddressSanitizer (ASan) and its many alternatives [8], [9], [10], [11], [12] help developers discover bugs during testing, prior to release.",
+        "To harden multi-page objects against exploitation through temporal errors, we provide a conﬁgurable ring-based quarantine — a well-established strategy in memory safety tools [8], [19], [51], [52]."
+      ]
+    },
+    {
+      "title": "The Canary in The Embedding Mine: Detecting Retrieval Poisoning Attacks on LLM Code Generation with Canary Functions",
+      "year": 2026,
+      "doi": "10.1007/978-3-032-23335-6_5",
+      "openalex": "W7161754394",
+      "s2": null,
+      "venue": "Lecture notes on data engineering and communications technologies",
+      "authors": [
+        "Murray Dunne",
+        "Kylee Schram",
+        "Thien Dan Balsdon",
+        "Aman Dutt Bhagat",
+        "Bohan Yao",
+        "Jitao Hu",
+        "Tina Pu",
+        "Pan Liu",
+        "Ali Syed",
+        "Lexie Stapleton",
+        "Yifei Zhang",
+        "Sebastian Fischmeister"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Anota: Identifying Business Logic Vulnerabilities via Annotation-Based Sanitization",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2512.20705",
+      "openalex": null,
+      "s2": "67502bf30b7a94378487adc5f6478ee982e0c729",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Meng Wang",
+        "Philipp Görz",
+        "Joschua Schilling",
+        "Keno Hassler",
+        "Liwei Guo",
+        "Thorsten Holz",
+        "Ali Abbasi"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "To examine the extend to which these recent sanitizers are capable of detecting the most prevalent vulnerabilities, we analyzed the 40 most dangerous software weaknesses (CWE Top 40) [22]."
+      ]
+    },
+    {
+      "title": "BSan: A Powerful Identifier-Based Hardware-Independent Memory Error Detector for COTS Binaries",
+      "year": 2025,
+      "doi": "10.1109/icse55347.2025.00020",
+      "openalex": "W4411552584",
+      "s2": "8474e9d48b9e3a28667eb9aa82d256bee199ee5a",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Wen Zhang",
+        "Botang Xiao",
+        "Qingchen Kong",
+        "Le Guan",
+        "Wenwen Wang"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "Notable examples include Dr. Memory [8], QASan [18], Undangle [9], Memcheck [32], RetroWrite [15], and MTSan [10].",
+        "Notable examples include RetroWrite [15], MTSan [10], Dr. Memory [8], Memcheck [32], QASan [18], and Undan-gle [9].",
+        "The shadow-memory-based detection approach is extensively used in state-of-the-art memory error detectors, including binary-level detectors, such as Dr. Memory [8], Memcheck [32], RetroWrite [15], and QASan [18], as well as source-level detectors, e.g., AddressSanitizer [31].",
+        "…4 q = malloc( sizeof ( int )); // reusing the memory of p 5 *p = ...; // a use-after-free error To mitigate this problem, existing binary-level detectors often adopt a heuristic quarantine mechanism [8], which places deallocated objects in a quarantine queue to delay the reuse of the memory.",
+        "We also compare BSan with four state-of-the-art binary-level detectors, including DynamoRIO-based Dr. Memory [8], Valgrind [27]-based Memcheck [32], RetroWrite [15], and MTSan [10]."
+      ]
+    },
+    {
+      "title": "D-LiFT: Improving LLM-based Decompiler Backend via Code Quality-driven Fine-tuning",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2506.10125",
+      "openalex": null,
+      "s2": "0d9895b4f3b18974b466a59d21369124bc8a5327",
+      "venue": "arXiv.org",
+      "authors": [
+        "Muqi Zou",
+        "Hongyu Cai",
+        "Hongwei Wu",
+        "Zion Leonahenahe Basque",
+        "Arslan Khan",
+        "B. Çelik",
+        "Dave Tian",
+        "Antonio Bianchi",
+        "Ruoyu Wang",
+        "Dongyan Xu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "The other aspects of reverse engineering are better supported by other specialized reverse engineering tools [48], [10], [57], [42], [16], [9], [71] to complement decompilation."
+      ]
+    },
+    {
+      "title": "Evaluating the Effectiveness of Memory Safety Sanitizers",
+      "year": 2025,
+      "doi": "10.1109/sp61157.2025.00088",
+      "openalex": "W4411337387",
+      "s2": "da276f392e706608168be37b9fd5e7584f57404c",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Emanuel Q. Vintila",
+        "Philipp Zieris",
+        "Julian Horsch"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "While Memcheck successfully reaches its potentials of 53.3% for linear and type confusion OOBAs and 25% for non-linear OOBAs, Dr. Memory fails to detect linear underflows be-tween two heap objects and faces challenges detecting non-object OOBAs, achieving detection rates of 48.9% for linear and 46.7% for type confusion OOBAs.",
+        "How-TABLE Electric Fence [8] ’93 G I ✓ ✓ PageHeap [9] ’00 G I D&A Dangling [10] ’06 G O Scudo [11] ’16 G I ✓ ✓ FreeGuard [12] ’17 G I ✓ ✓ ✓ Oscar [13] ’17 G O Purify [14] ’92 R I Memcheck [15] ’05 R I ✓ ✓ ✓ * Dr. Memory [16] ’11 R I ✓ ✓ ✓ * LBC [17] ’12 R ✓ 869 B,R,S 90.3% ✓ ASan [18] ’12 R I ✓ ✓ ✓ * QASan [19] ’20 R I ✓ ✓ 12515 J 77.5% ✓ RetroWrite [20] ’20 R I ✓ 5871 J 55.45% ASan--[21] ’22 R I ✓ ✓ 5644 J 100% ✓ J&K [22] ’97 O ✓ * CRED [23] ’04 O 20 W 100% ✓ D&A Bounds [24] ’06 O 14 Z 100% BBC [25] ’09 O 18 W 94.4% PAriCheck [26] ’10 O LowFat [27], [28], [29] ’17 O ✓ ✓ 87 C,R,W 96.5% ✓ CUP [30] ’18 O L 4038 J 100% HWASAN [31] ’18 O L ✓ ✓ RedFat [32] ’21 O I ✓ ✓ 484 C,J 100% PACMem [33] ’22 O L 11531 J 99.4% ✓ CryptSan [34] ’23 O L ✓ 5364 J 98.7% ✓ MTSan [35] ’23 O L 11378 J 75.83% ✓ CAMP [36] ’24 O T ✓ 5372 C,J 100% ✓ RTCC [37] ’92 P ✓ * P&F [38] ’97 P L ✓ * MSCC [39] ’04 P L ✓ * SoftBound [40] ’09 P ✓ ✓ 33 B,W 100% ✓ IPC [41] ’12 P T Delta Pointers [42] ’18 P ✓ ✓ 8 C 87.5% EffectiveSan [43] ’18 P I ✓ ✓ ✓ * SoftBound+CETS [44] ’24 P L ✓ ✓ 5438 J 100% FFmalloc [45] ’21 O ✓ ✓ DangZero [46] ’22 O ✓ n/a J 100% ✓ PUMM [47] ’23 O ✓ 33 C,U 100% ✓ Undangle [48] ’12 T ✓ * DangNull [49] ’15 T ✓ FreeSentry [50] ’15 T ✓ 5 C 100% ✓ * DangSan [51] ’17 T ✓ MarkUs [52] ’20 T ✓ CETS [53] ’10 L ✓ ✓ 30 S 100% PTAuth [54] ’22 ever, in practice, we found that no particular test suite has been used for more than 12 sanitizers.",
+        "…[10] ’06 G O Scudo [11] ’16 G I ✓ ✓ FreeGuard [12] ’17 G I ✓ ✓ ✓ Oscar [13] ’17 G O Purify [14] ’92 R I Memcheck [15] ’05 R I ✓ ✓ ✓ * Dr. Memory [16] ’11 R I ✓ ✓ ✓ * LBC [17] ’12 R ✓ 869 B,R,S 90.3% ✓ ASan [18] ’12 R I ✓ ✓ ✓ * QASan [19] ’20 R I ✓ ✓ 12515 J 77.5% ✓ RetroWrite [20] ’20 R I ✓…",
+        "Dr. Memory [16] and Memcheck [15] are heap-only sanitizers that ensure spatial and temporal memory safety by inserting red-zones between heap objects and invalidating deallocated memory.",
+        "Other approaches use red-zones [14], [15], [16], [17], [18], [19], [20], [21], which are small chunks of memory marked inaccessible and placed between objects.",
+        "Implementation bugs or oversights lead to false negatives for FreeGuard, QASan, EffectiveSan, Dr. Memory, and the revised version of SoftBound+CETS.",
+        "Location-based san-itizers can either invalidate deallocated memory for a certain duration to delay its reuse [8], [9], [11], [12], [14], [15], [16], [18], [19], [20], [21] or invalidate it indefinitely, thereby creating one-time allocation schemes [8], [10], [13], [45], [46], [47]."
+      ]
+    },
+    {
+      "title": "Exploiting Undefined Behavior in C/C++ Programs for Optimization: A Study on the Performance Impact",
+      "year": 2025,
+      "doi": "10.1145/3729260",
+      "openalex": "W4411260208",
+      "s2": "c8c67200246cf7ffde17267b8f28caa6319eebca",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Lucian Popescu",
+        "Nuno P. Lopes"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "In particular, for the q1_8 function, we observe that the number of add/lea instructions increases from 137 to 169 (+32), but the total number of moves decreases from 1,296 to 1,013 (-283), far outstripping the small increase in arithmetic operations."
+      ]
+    },
+    {
+      "title": "Fully Randomized Pointers",
+      "year": 2025,
+      "doi": "10.1145/3735950.3735959",
+      "openalex": "W4398230069",
+      "s2": "d0ef1460125417823c95854df5771766da79bcc2",
+      "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
+      "authors": [
+        "Sai Dhawal Phaye",
+        "Gregory J. Duck",
+        "Roland H. C. Yap",
+        "Trevor E. Carlson"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "As discussed, memory poisoning is a very common approach implemented by many tools [3, 6, 16, 20, 21, 24, 38, 47, 50, 51].",
+        "For [41] page permissions b - ✗ n.a. Valgrind [38] mem. poisoning b - ✗ n.a. DrMemory [6] mem. poisoning b - ✗ n.a. ASAN [47] mem. poisoning - - ✗ n.a. LowFat [13, 15] low fat ptrs - ✗ ✗ n.a. EffectiveSan [14] low fat ptrs - ✗ ✗ n.a. SoftBound+CETS [35, 36] ptr metadata - - - n.a. RedFat [16] low…",
+        "Many different tools and techniques have been proposed to defend against memory errors both in software and hardware [4, 6, 13– 16, 28, 29, 35, 36, 38, 40, 46, 47, 53, 54, 56].",
+        "Indeed, other memory safety tools, such as Valgrind [38] and DrMem-ory [6], are vulnerable to precisely this kind of bypass attack.",
+        "Some tools (e.g., [6, 14, 38, 47]) are primarily designed for software testing rather than security.",
+        "(Jul.) = Juliet benchmarks (480 tests); (*) = ported to strong attacker tools, such as Valgrind [38] and DrMemory [6].",
+        "Other defenses, such as Val-grind [38], DrMemory [6], and ASAN [47], target derefer-ence ( Atk.Deref ) using memory poisoning , e.g., poisoned red-zones inserted between objects.",
+        "Like other tools [6, 16, 38], BlueFat and GreenFat Table 4.",
+        "We also tested DrMemory [6], with deepsjeng reporting a heap allocation failure, but with the other benchmarks running, albeit much slower than Valgrind."
+      ]
+    },
+    {
+      "title": "Janitizer: Rethinking Binary Tools for Practical and Comprehensive Security",
+      "year": 2025,
+      "doi": "10.1145/3696443.3708930",
+      "openalex": null,
+      "s2": "d2544a1373bc08a61defa215401adfc14ea67a19",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Mahwish Arif",
+        "S. Ainsworth",
+        "Timothy M. Jones"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Other dynamic translation and instrumentation frameworks, such as Pin [36] and DynamoRIO [14], have also been a popular choice to detect security vulnerabilities and build defenses against memory corruption and control-flow hijacking attacks [15, 20, 22].",
+        "These use underlying binary analysis and rewriting frameworks [5, 9, 10, 14, 26, 35, 36, 39, 40, 50, 51, 54, 55, 60, 61] to either statically analyze and rewrite the binary to insert security monitoring code [18, 19, 23, 41] or do so dynamically [15, 48, 59] by observing code at run-time.",
+        "Dr Memory [15], based on DynamoRIO, improves on memory and performance overhead compared to Memcheck, but still with high performance overheads up to 10 × ."
+      ]
+    },
+    {
+      "title": "LAMeD: LLM-generated Annotations for Memory Leak Detection",
+      "year": 2025,
+      "doi": "10.1145/3756681.3756999",
+      "openalex": "W7117137318",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Ekaterina Shemetova",
+        "Ivan Smirnov",
+        "Anton Alekseev",
+        "Ilya Shenbin",
+        "Alexey Rukhovich",
+        "Sergey Nikolenko",
+        "Vadim Lomshakov",
+        "Irina Piontkovskaya"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "LeakGuard: Detecting Memory Leaks Accurately and Scalably",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2504.04422",
+      "openalex": null,
+      "s2": "f09af0bdecffcc169ca70434c84e996c0d70f584",
+      "venue": "arXiv.org",
+      "authors": [
+        "Hongliang Liang",
+        "Luming Yin",
+        "Guohao Wu",
+        "Yuxiang Li",
+        "Qi-Jian Yi",
+        "Lei Wang"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Dr.Memory (Bruening and Zhao, 2011) employs binary instrumentation to detect memory-related errors on both Windows and Linux platforms.",
+        "Some tools (Nethercote and Seward, 2007; Bruening and Zhao, 2011) exploits binary code instrumentation for memory leak detection."
+      ]
+    },
+    {
+      "title": "Memory Safety Instrumentations in Practice: Usability, Performance, and Security Guarantees",
+      "year": 2025,
+      "doi": "10.1145/3696443.3708926",
+      "openalex": "W4407857938",
+      "s2": "713f0cabc08cf861d4591a3e2ac6e78c5c42f77f",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Tina Jung",
+        "Fabian Ritter",
+        "Sebastian Hack"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Various tools have been proposed to guarantee the spatial memory safety of C programs [1, 3, 9, 10, 13, 16, 17, 19, 24, 27, 31–33].",
+        "While they are highly compatible as no recompilation is required, Bruening and Zhao [3] report a mean runtime slowdown of 10 .",
+        "Address Sanitizer [32], Valgrind’s Memcheck [33] and Dr. Memory [3] belong to this class."
+      ]
+    },
+    {
+      "title": "Practical Object-Level Sanitizer with Aggregated Memory Access and Custom Allocator",
+      "year": 2025,
+      "doi": "10.1109/icse55347.2025.00213",
+      "openalex": "W4411551673",
+      "s2": "e8aacff3c0e69471835c916724ed0a6e63b20904",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Xiaolei Wang",
+        "Ruilin Li",
+        "Bin Zhang",
+        "Chao Feng",
+        "Chaojing Tang"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing",
+      "year": 2025,
+      "doi": "10.14722/ndss.2025.241133",
+      "openalex": null,
+      "s2": "bbc3f532b39dd3e007ac91a14b45ecbc4c9167d2",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Matteo Marini",
+        "Daniele Cono D'Elia",
+        "Mathias Payer",
+        "Leonardo Querzoni"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Traditional sanitizers like Memcheck [15] and Dr. Memory [16] use dynamic binary instrumentation to rewrite a program while it executes with machinery apt to intercept various memory safety problems, such as spatial or temporal violations of heap memory safety, and UUM errors that are the focus of…",
+        "In their study, the authors of MSan report how developers were often reluctant to use binary-level UUM sanitizers like Memcheck [15] and Dr. Memory [16] due to their high overheads, measured in the 10-20x range.",
+        "With many code patterns, such as copying partially initialized buffers (or padding bytes) or optimizations in library code, reading and copying uninitialized data is a legitimate action [8], [15], [16]."
+      ]
+    },
+    {
+      "title": "RangeSanitizer: Detecting Memory Errors with Efficient Range Checks",
+      "year": 2025,
+      "doi": null,
+      "openalex": null,
+      "s2": "e28feefcd365a3dea2415ff3c29e7d1f2abfee40",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Floris Gorter",
+        "Cristiano Giuffrida"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Despite many dedicated optimizations [33,39,42,62,63,67,69], solutions that detect both bug categories [8,28,51,56] remain expensive in terms of runtime overhead or require special hardware features [40,70]."
+      ]
+    },
+    {
+      "title": "A Binary-level Thread Sanitizer or Why Sanitizing on the Binary Level is Hard",
+      "year": 2024,
+      "doi": null,
+      "openalex": null,
+      "s2": "c37ceb3effa146a2dfada412e257b27da0ce900f",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Joschua Schilling",
+        "André Wendler",
+        "Philipp Görz",
+        "Nils Bars",
+        "Moritz Schloegel",
+        "Thorsten Holz"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Crucially, most existing binary-only sani-tizing approaches [6, 11, 35, 50] often rely on slow dynamic instrumentation approaches."
+      ]
+    },
+    {
+      "title": "A Dynamic Memory Leak Detection Method for Linux Based on eBPF Uprobe and LKM",
+      "year": 2024,
+      "doi": "10.1109/iccs62594.2024.10795839",
+      "openalex": "W4405602709",
+      "s2": "3f05d7367c22587f80215ee7aeeb339d9540e894",
+      "venue": "International Conference on Conceptual Structures",
+      "authors": [
+        "Dong Xu",
+        "Lijun Chen"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Dynamic Binary Instrumentation for Memory Bugs: Frameworks like Valgrind and Dr. Memory use dynamic binary instrumentation to detect various memory bugs by monitoring heap states [12], [13]."
+      ]
+    },
+    {
+      "title": "A Survey of Software Dynamic Analysis Methods",
+      "year": 2024,
+      "doi": "10.1134/s0361768824010079",
+      "openalex": "W4398225335",
+      "s2": "d1a08b8302fef486b80fa17e328f8ccb2eb01ab8",
+      "venue": "Programming and Computer Software",
+      "authors": [
+        "В. В. Кулямин"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "AddressWatcher: Sanitizer-Based Localization of Memory Leak Fixes",
+      "year": 2024,
+      "doi": "10.1109/tse.2024.3438119",
+      "openalex": "W4401328698",
+      "s2": "88ab1c1ef69cfc472fbc0c9a6014812af302f20f",
+      "venue": "IEEE Transactions on Software Engineering",
+      "authors": [
+        "Aniruddhan Murali",
+        "Mahmoud Alfadel",
+        "Meiyappan Nagappan",
+        "Meng Xu",
+        "C. P. Sun"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "result",
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Several tools (e.g., ASAN [75], Dr. Memory [56]) have been proposed to detect such scenarios by utilizing shadow memory to encode the location of inserted red zone regions.",
+        "We note that unlike previous approaches [56], [71], [75], [77] that utilize shadow memory to detect memory errors, Ad-dressWatcher utilizes shadow memory to tag leaks on different executions and to ﬁnally suggest leak ﬁxes.",
+        "It can be used to store any kind of information about the state of process memory [56], [71], [75], [77]."
+      ]
+    },
+    {
+      "title": "Chain-of-Thought Prompting of Large Language Models for Discovering and Fixing Software Vulnerabilities",
+      "year": 2024,
+      "doi": "10.48550/arxiv.2402.17230",
+      "openalex": null,
+      "s2": "6cf79b4f069debcb060683d3a58457580fc506a4",
+      "venue": "arXiv.org",
+      "authors": [
+        "Yu Nong",
+        "Mohammed Aldeen",
+        "Long Cheng",
+        "Hongxin Hu",
+        "Feng Chen",
+        "Haipeng Cai"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "…types of vulnerabilities [3] (e.g., memory leaks [13, 43], use-after-free [10,57,71,79], double-free [10], XSS [73], and buffer overflow [26,40,67]), discovery of vulnerabilities of various types [9,20,22,27,30,38,44,47,53,56,68,81,86], and patching the detected vulnerabilities [12,21,24,51,65,85].",
+        "Purely dynamic (e.g., [9,27,56] and hybrid (e.g., [68]) techniques have their capabilities constrained by the coverage of existing program inputs, which is usually insufficient, hence missing potentially critical vulnerabilities (i.e., low recall [60]).",
+        "More broadly, Intent-Droid [27] detects eight types of inter-app communication (IAC) vulnerabilities as a result of unsafe handling of incoming IAC messages, while DrMemory [9] and Valgrind [56] discover memory-safety vulnerabilities through memory shad-owing."
+      ]
+    },
+    {
+      "title": "Concretely Mapped Symbolic Memory Locations for Memory Error Detection",
+      "year": 2024,
+      "doi": "10.1109/tse.2024.3395412",
+      "openalex": "W4396528212",
+      "s2": "4c60abb078cd2b92453b7e831f970513592b1312",
+      "venue": "IEEE Transactions on Software Engineering",
+      "authors": [
+        "Haoxin Tu",
+        "Lingxiao Jiang",
+        "Jiaqi Hong",
+        "Xuhua Ding",
+        "He Jiang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "result",
+        "methodology"
+      ],
+      "contexts": [
+        "Dr. Memory [4] applies a copy-and-annotate technique to copy the incoming instructions verbatim.",
+        "However, previous studies [3], [4], [5], [6], [7] show that memory errors such as buffer overﬂow and use-after-free caused by misuse of such allocation functions are common and can have catastrophic consequences [8]."
+      ]
+    },
+    {
+      "title": "DMTI: Accelerating Memory Error Detection in Precompiled C/C++ Binaries with ARM Memory Tagging Extension",
+      "year": 2024,
+      "doi": "10.1145/3634737.3637655",
+      "openalex": null,
+      "s2": "ba99c541d04fe3f89b1920f5a8dbe17261b76b7c",
+      "venue": "ACM Asia Conference on Computer and Communications Security",
+      "authors": [
+        "Andreas Hager-Clukas",
+        "Konrad Hohentanner"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "This way, we DrMemory [5] >10 × >10 × Memcheck [28] >10 × >10 × Retrowrite [9] ∼ 3 × ∼ 5 × DMTI 2 × 1.6 × : Only overflows outside of stack frame : Dependent on object recovery during static analysis achieve significant improvements both in terms of error detection and performance overhead.",
+        "Based on the dynamic instrumentation framework DynamoRIO [11], DrMemory [5] utilizes a shadow memory mapping to monitor each memory reference in a program to detect unsafe memory accesses.",
+        "Since DrMemory experiences large slowdowns on 64-bit systems due to missing optimizations, we depicted the performance overhead values measured on a 32-bit system taken from the DrMemory publication [5].",
+        "Anothersimilar tool is DrMemory [5]."
+      ]
+    },
+    {
+      "title": "Detection, exploitation and mitigation of memory errors",
+      "year": 2024,
+      "doi": "10.1093/jigpal/jzae008",
+      "openalex": "W4392875561",
+      "s2": "a6c06db2a3376a0639862826b4bcc1b68ac52fdb",
+      "venue": "Logic Journal of IGPL",
+      "authors": [
+        "Oscar Llorente-Vazquez",
+        "Igor Santos-Grueiro",
+        "Iker Pastor-López",
+        "Pablo G. Bringas"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Mon CHERI: Mitigating Uninitialized Memory Access with Conditional Capabilities",
+      "year": 2024,
+      "doi": "10.1109/sp61157.2025.00133",
+      "openalex": null,
+      "s2": "d027f55304beaac28fa80c92bced981b7b3913d9",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Merve Gülmez",
+        "Håkan Englund",
+        "J. Mühlberg",
+        "Thomas Nyman"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "In § 6, we suggest Write-before-Read CPs could emulate automatic initialization, avoiding its drawbacks."
+      ]
+    },
+    {
+      "title": "Proceedings of the 23rd ACM SIGPLAN International Workshop on Erlang",
+      "year": 2024,
+      "doi": "10.1145/3677995",
+      "openalex": "W4401943856",
+      "s2": null,
+      "venue": null,
+      "authors": [],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Reorder Pointer Flow in Sound Concurrency Bug Prediction",
+      "year": 2024,
+      "doi": "10.1145/3597503.3623300",
+      "openalex": null,
+      "s2": "8db3e32063f38528a01d471db5a8b1f4c63e4477",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Yuqi Guo",
+        "Shihao Zhu",
+        "Yan Cai",
+        "Liang He",
+        "Jian Zhang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "The former ones [7, 14, 18, 24] monitor the program execution and report a bug when witnessing a bug pattern."
+      ]
+    },
+    {
+      "title": "Runtime Annotation Checking with Frama-C: The E-ACSL Plug-in",
+      "year": 2024,
+      "doi": "10.1007/978-3-031-55608-1_5",
+      "openalex": "W4400468727",
+      "s2": null,
+      "venue": "Computer science foundations and applied logic",
+      "authors": [
+        "Thibaut Benjamin",
+        "Julien Signoles"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Survey of techniques to detect common weaknesses in program binaries",
+      "year": 2024,
+      "doi": "10.1016/j.csa.2024.100061",
+      "openalex": null,
+      "s2": "9d9e778555570bddf966c1c3587f571d8bc80184",
+      "venue": "Cyber Security and Applications",
+      "authors": [
+        "A. Adhikari",
+        "Prasad Kulkarni"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "UBFuzz: Finding Bugs in Sanitizer Implementations",
+      "year": 2024,
+      "doi": "10.1145/3617232.3624874",
+      "openalex": null,
+      "s2": "ae66bd06b65d06ad8d429043e3d484db94fcee55",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Shaohua Li",
+        "Zhendong Su"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Dynamic tools such as Dr. Memory [1] and Valgrind [25] can detect memory errors including buffer overflows, use of uninitialized memory, improper free, etc. Static tools such as CppCheck [3] and Infer [23] can detect null pointer deref-erences, integer overflows, etc."
+      ]
+    },
+    {
+      "title": "Unsafe Impedance: Safe Languages and Safe by Design Software",
+      "year": 2024,
+      "doi": "10.1145/3677995.3678196",
+      "openalex": "W4401943965",
+      "s2": "38ecdf66e2e44c3e90f6f683a9d6a9184bf61ea3",
+      "venue": "Erlang Workshop",
+      "authors": [
+        "Lee S. Barney",
+        "Adolfo Gustavo Serra Seca Neto"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "It is true, however, that each"
+      ]
+    },
+    {
+      "title": "A Smart Status Based Monitoring Algorithm for the Dynamic Analysis of Memory Safety",
+      "year": 2023,
+      "doi": "10.1145/3637227",
+      "openalex": null,
+      "s2": "4a32316275028e279f3014695d8ee4c1e062829c",
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "authors": [
+        "Zhe Chen",
+        "Rui Yan",
+        "Ying-jeou Ma",
+        "Yulei Sui",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Automatic discovery of stateful variables in network protocol software based on replay analysis",
+      "year": 2023,
+      "doi": "10.1631/fitee.2200275",
+      "openalex": "W4360994962",
+      "s2": "fb99a336b5e976b8dfdc97580a535443092961dd",
+      "venue": "Frontiers of Information Technology & Electronic Engineering",
+      "authors": [
+        "Jianxin Huang",
+        "Bo Yu",
+        "Runhao Liu",
+        "Jinshu Su"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "In addition, there are some systems that implement methods combining static and dynamic analysis (Bruening and Zhao, 2011; Stepanov and Serebryany, 2015)."
+      ]
+    },
+    {
+      "title": "Benchmarking Software Vulnerability Detection Techniques: A Survey",
+      "year": 2023,
+      "doi": "10.48550/arxiv.2303.16362",
+      "openalex": null,
+      "s2": "cc3c69b90ee1934e62e6cdb662584d6bd0c57bbe",
+      "venue": "arXiv.org",
+      "authors": [
+        "Yingzhou Bi",
+        "Jiangtao Huang",
+        "Penghui Liu",
+        "Lianmei Wang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "PCA [28], Valgrind [14], DrMemory [29], MemorySanitizer [30], and AddressSanitizer [22] were evaluated on SPEC CPU2000 [31] and SPEC CPU2006 [32] to test the running time and memory usage of the vulnerability detection on real-world projects.",
+        "PCA [28], Valgrind [14], DrMemory [29], MemorySanitizer [30], and AddressSanitizer [22] were evaluated on SPEC CPU2000 [31]\nand SPEC CPU2006 [32] to test the running time and memory usage of the vulnerability detection on real-world projects."
+      ]
+    },
+    {
+      "title": "BiRFIA: Selective Binary Rewriting for Function Interception on ARM",
+      "year": 2023,
+      "doi": "10.1145/3577193.3593701",
+      "openalex": null,
+      "s2": "28f1aa8310476d7987b6893e67786a1098681b3c",
+      "venue": "International Conference on Supercomputing",
+      "authors": [
+        "Kelun Lei",
+        "Xin You",
+        "Hailong Yang",
+        "Zhongzhi Luan",
+        "D. Qian"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "result"
+      ],
+      "contexts": [
+        "Programs running with Valgrind even result in several times slower than DynamoRIO [17]."
+      ]
+    },
+    {
+      "title": "Boosting Symbolic Execution for Heap-based Vulnerability Detection and Exploit Generation",
+      "year": 2023,
+      "doi": "10.1109/icse-companion58688.2023.00059",
+      "openalex": "W4384009676",
+      "s2": "dfad6eb0e8f8d67717e7d7efa57850abb4abf108",
+      "venue": "2023 IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
+      "authors": [
+        "Haoxin Tu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [26]) or leverage compiletime instrumentation which adds memory safety checks while the program compiles (e."
+      ]
+    },
+    {
+      "title": "CryptSan: Leveraging ARM Pointer Authentication for Memory Safety in C/C++",
+      "year": 2023,
+      "doi": "10.1145/3555776.3577635",
+      "openalex": "W4376309393",
+      "s2": "00a1e1761a4aba1b66680458f4443df1e6592d4d",
+      "venue": "ACM Symposium on Applied Computing",
+      "authors": [
+        "Konrad Hohentanner",
+        "Philipp Zieris",
+        "Julian Horsch"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        ", red-zones, between objects [5, 32, 35, 37] or track the bounds of allocated objects or their pointers [4, 7, 13, 14, 19, 29, 30, 36, 39, 43].",
+        "To achieve temporal memory safety, solutions typically delay the reuse of freed memory [5, 7, 32, 35, 37], perform ar X iv :2 20 2.",
+        "The least precise memory safety solutions protect objects by interleaving them with guard pages [12, 32] or red-zones [5, 16, 17, 35, 37]."
+      ]
+    },
+    {
+      "title": "Evaluating the Impact of Optimizations for Dynamic Binary Modification on 64-bit RISC-V",
+      "year": 2023,
+      "doi": "10.1109/ispass57527.2023.00017",
+      "openalex": "W4381886085",
+      "s2": "26a8dc76c3e6381500c3c077b04f8bf8502234fa",
+      "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+      "authors": [
+        "John Alistair Kressel",
+        "Guillermo Callaghan",
+        "Cosmin Gorgovan",
+        "Mikel Luján"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Dynamic Binary Modification frameworks are an essential part of the software development ecosystem, they enable powerful applications, such as binary instrumentation (DBI) [1] [2], error detection [3] [4], virtualization [5] and binary translation [6] [7]."
+      ]
+    },
+    {
+      "title": "Finding Unstable Code via Compiler-Driven Differential Testing",
+      "year": 2023,
+      "doi": "10.1145/3582016.3582053",
+      "openalex": null,
+      "s2": "03e0d8d1839045a6fd25080bbfa945b2801a2f3f",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Shaohua Li",
+        "Z. Su"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Other dynamic tools such as Valgrind [33] and Dr.Memory [6] do not have better detection ability than sanitizers when source code is available [16].",
+        "Wehaveintroduced compiler-drivendifferentialtesting (CompDiff), a simple, straightforward, yet effective approach for finding unstable code in C/C++ programs."
+      ]
+    },
+    {
+      "title": "FloatZone: Accelerating Memory Error Detection using the Floating Point Unit",
+      "year": 2023,
+      "doi": null,
+      "openalex": null,
+      "s2": "eaaaf4397d6cd0cb0ba29534ae50406ede784bb4",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Floris Gorter",
+        "Enrico Barberis",
+        "Raphael Isemann",
+        "E. V. D. Kouwe",
+        "Cristiano Giuffrida",
+        "H. Bos"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Finally, heap quarantines are common in temporal safety designs [7,15,17,36,39], and our implementation is similar.",
+        "Heap quarantines are a common technique to detect temporal memory errors, as seen in related work [7,15,17,36,39].",
+        "In contrast, there exist sanitizers that by design provide both spatial and temporal detection guarantees, such as ASan [39], MEDS [17], DrMemory [7], and Memcheck [36].",
+        "Driven by the many security incidents involving memory errors in system software, many bug detectors have been proposed [7,15,17--19,27,36,43,50], with the most widespread (compiler-based) sanitizer being Address-Sanitizer (ASan) [39]."
+      ]
+    },
+    {
+      "title": "HWASanIO: Detecting C/C++ Intra-object Overflows with Memory Shading",
+      "year": 2023,
+      "doi": "10.1145/3589250.3596139",
+      "openalex": null,
+      "s2": "d71a99dc93b1bec493b1e538d18ff35bc2c5730d",
+      "venue": "SOAP@PLDI",
+      "authors": [
+        "Konrad Hohentanner",
+        "Florian Kasten",
+        "Lukas Auer"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Interleaving guard pages [7, 20] or red-zones [4, 11, 12, 22, 24] between objects allows detection of linear over ows."
+      ]
+    },
+    {
+      "title": "Informed Memory Access Monitoring",
+      "year": 2023,
+      "doi": "10.1007/978-981-99-4366-1_4",
+      "openalex": "W4386576581",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Jidong Zhai",
+        "Yuyang Jin",
+        "Wenguang Chen",
+        "Weimin Zheng"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Learning to Detect Memory-related Vulnerabilities",
+      "year": 2023,
+      "doi": "10.1145/3624744",
+      "openalex": "W4386830545",
+      "s2": "7da9d224071003bef6642d06c02b623082e1008f",
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "authors": [
+        "Sicong Cao",
+        "Xiaobing Sun",
+        "Lili Bo",
+        "Rongxin Wu",
+        "Bin Li",
+        "Xiaoxue Wu",
+        "Chuanqi Tao",
+        "Tao Zhang",
+        "Wei Liu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "M EMORY [8], and A DDRESS S ANITIZER [70], tracked memory allocation and deallocation during a program’s execution, and detected leaks by scanning the program’s heap for memory blocks that no pointer points to."
+      ]
+    },
+    {
+      "title": "MPIGDB: A Flexible Debugging Infrastructure for MPI Programs",
+      "year": 2023,
+      "doi": "10.1145/3589013.3596675",
+      "openalex": null,
+      "s2": "af2bd83ab8cae93b3da41fc1e587abddf52e24d0",
+      "venue": "FlexScience@HPDC",
+      "authors": [
+        "Robert Underwood",
+        "Bogdan Nicolae"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory provides a faster alternative [12], but it lacks some of the more advanced features such as the vgdb capabilities, and would not build on our system.",
+        "Memory[12] which provides memory access debugging and/or race"
+      ]
+    },
+    {
+      "title": "MTSan: A Feasible and Practical Memory Sanitizer for Fuzzing COTS Binaries",
+      "year": 2023,
+      "doi": null,
+      "openalex": null,
+      "s2": "f1beed8559df92c6da8392437282de12b87251ac",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Xingman Chen",
+        "Yinghao Shi",
+        "Zheyue Jiang",
+        "Yuan Li",
+        "Ruoyu Wang",
+        "Haixin Duan",
+        "Hao Wang",
+        "Chao Zhang"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Proceedings of the 12th ACM SIGPLAN International Workshop on the State Of the Art in Program Analysis",
+      "year": 2023,
+      "doi": "10.1145/3589250",
+      "openalex": "W2914940321",
+      "s2": null,
+      "venue": null,
+      "authors": [],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Sound Runtime Assertion Checking for Memory Properties via Program Transformation",
+      "year": 2023,
+      "doi": "10.1145/3605951",
+      "openalex": "W4365143277",
+      "s2": "cf97caf3537568af9bb5180b2153ee94f448a273",
+      "venue": "Formal Aspects of Computing",
+      "authors": [
+        "Dara Ly",
+        "Nikolaï Kosmatov",
+        "Frédéric Loulergue",
+        "Julien Signoles"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Recent tools addressing memory safety of C programs at runtime, such as Valgrind andMemCheck [36, 42], DrMemory [10] or AddressSanitizer [41], have become very popular and successful in detecting bugs when the program is running."
+      ]
+    },
+    {
+      "title": "Survey of Software Dynamic Analysis Methods",
+      "year": 2023,
+      "doi": "10.15514/ispras-2023-35(4)-1",
+      "openalex": "W4390924077",
+      "s2": null,
+      "venue": "Proceedings of the Institute for System Programming of RAS",
+      "authors": [
+        "В. В. Кулямин"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Survey of Techniques to Detect Cwes in Program Binaries",
+      "year": 2023,
+      "doi": "10.2139/ssrn.4637378",
+      "openalex": "W4389402747",
+      "s2": null,
+      "venue": "SSRN Electronic Journal",
+      "authors": [
+        "Ashish Adhikari",
+        "Prasad A. Kulkarni"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Discovery and Identification of Memory Corruption Vulnerabilities on Bare-Metal Embedded Devices",
+      "year": 2022,
+      "doi": "10.1109/tdsc.2022.3149371",
+      "openalex": "W4210883097",
+      "s2": "8f578b658a7bb1b346a1dbcc34da78616bef914e",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "authors": [
+        "Majid Salehi",
+        "Luca Degani",
+        "Marco Roveri",
+        "Danny Hughes",
+        "Bruno Crispo"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Dynamic binary sanitization tools [12], [15], [16] transform binaries as they are executing.",
+        "Sanitization techniques [11], [12], [13], [14], [15] can be combined with fuzzing methods to improve fault detection capability of fuzzer and discover memory corruptions as they happen."
+      ]
+    },
+    {
+      "title": "Dynamic Binary Translation for SGX Enclaves",
+      "year": 2022,
+      "doi": "10.1145/3532862",
+      "openalex": "W3148536947",
+      "s2": "e8141583a5f35f20dc216b3d90c6647729a2999c",
+      "venue": "ACM Transactions on Privacy and Security",
+      "authors": [
+        "Jinhua Cui",
+        "Shweta Shinde",
+        "Satyaki Sen",
+        "Prateek Saxena",
+        "Pinghai Yuan"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "These are commonly reported to be used as evaluations target for DynamoRIO and prior enclave-based systems [16, 25, 30, 34, 47, 76, 77] that we surveyed for our study."
+      ]
+    },
+    {
+      "title": "Efficient Greybox Fuzzing to Detect Memory Errors",
+      "year": 2022,
+      "doi": "10.1145/3551349.3561161",
+      "openalex": "W4294959093",
+      "s2": "d4862ae4ac61b18add62783fc1bef6427ac628ce",
+      "venue": "International Conference on Automated Software Engineering",
+      "authors": [
+        "Jinsheng Ba",
+        "Gregory J. Duck",
+        "Abhik Roychoudhury"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "This approach has been implemented by many tools [6, 15, 16, 24, 29, 31, 32]."
+      ]
+    },
+    {
+      "title": "Fast Fuzzing for Memory Errors",
+      "year": 2022,
+      "doi": "10.48550/arxiv.2204.02773",
+      "openalex": null,
+      "s2": "bb580939a4ae6b054f8cedd7ef71b92a455e6e24",
+      "venue": "arXiv.org",
+      "authors": [
+        "Jinsheng Ba",
+        "Gregory J. Duck",
+        "Abhik Roychoudhury"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Forward-Mode Automatic Differentiation of Compiled Programs",
+      "year": 2022,
+      "doi": "10.1145/3716309",
+      "openalex": null,
+      "s2": "11d05c116aed65ee0e259236d75434eebda238ad",
+      "venue": "ACM Transactions on Mathematical Software",
+      "authors": [
+        "M. Aehle",
+        "Johannes Blühdorn",
+        "M. Sagebaum",
+        "N. Gauger"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Hardening binaries against more memory errors",
+      "year": 2022,
+      "doi": "10.1145/3492321.3519580",
+      "openalex": "W4221031794",
+      "s2": "5e122eb09009ccf8ae8312738c89b884078477ec",
+      "venue": "European Conference on Computer Systems",
+      "authors": [
+        "Gregory J. Duck",
+        "Yuntong Zhang",
+        "Roland H. C. Yap"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "For example, tools such as [5, 8, 25] detect out-of-bounds errors (e.",
+        "Most [5, 8, 15, 25, 29] are based on some variant of redzone protection, but others are based on (low) fat pointers [10, 13, 24] or some other metadata tracking scheme [2, 12, 14, 23, 24, 38].",
+        "As such, most existing binary instrumentation tools [5, 8, 25] have one or more limitations, such as high overheads, limited programming language support (e.",
+        "Heavyweight Dynamic Binary Instrumentation tools, such as DrMemory [5] and Valgrind Memcheck [25, 30], compete with RedFat in terms of scalability."
+      ]
+    },
+    {
+      "title": "HeapCheck: Low-cost Hardware Support for Memory Safety",
+      "year": 2022,
+      "doi": "10.1145/3495152",
+      "openalex": "W4206959453",
+      "s2": "3fec73f276ce43d859a80e37b5be68777a9eb627",
+      "venue": "ACM Transactions on Architecture and Code Optimization",
+      "authors": [
+        "Gururaj Saileshwar",
+        "Rick Boivie",
+        "Tong Chen",
+        "Benjamin M. Segal",
+        "Alper Buyuktosunoglu"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Program Memory Layout.",
+        "Memory Tagging -based solutions like SPARC’s SSM [29] or ARM’s MTE [4, 38], assign a tag or “color” for an object-pointer pair, maintain these tags separately for both, and check if the tags of a pointer and the accessed memory match on a pointer dereference.",
+        "Similar sandboxing can also be achieved using Intel’s Memory Protection Keys (MPK) [31] with negligible overhead (as it changes permissions without relying on modifying the page table).",
+        "For example, Google recently announced Android support [38] for ARM’s Memory Tagging [4] feature, which provides probabilistic detection of bugs at negligible performance overheads, with the goal of enabling in-production detection of bugs [39].",
+        "Memory leakage and corruption due to such errors has been exploited by attacks that break data confidentiality [1], attempt privilege escalation [34], break system integrity [12], and so on.",
+        "In recent years, numerous software tools such as ASAN [37], Valgrind [27], Dr Memory [6], and so on, have been proposed to detect memory-safety errors without invasive changes to the source code or compatibility issues.",
+        "Memory-safety bugs in C/C++ programs have been a leading cause of vulnerabilities for over three decades; yet an effective and practical-to-adopt memory-safety solution has thus far been elusive."
+      ]
+    },
+    {
+      "title": "MVD",
+      "year": 2022,
+      "doi": "10.1145/3510003.3510219",
+      "openalex": "W4221033043",
+      "s2": "8668537082f97b85a9fdb02a61e5fa9526d06f82",
+      "venue": "Proceedings of the 44th International Conference on Software Engineering",
+      "authors": [
+        "Sicong Cao",
+        "Xiaobing Sun",
+        "Lili Bo",
+        "Rongxin Wu",
+        "Bin Li",
+        "Chuanqi Tao"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Odin: on-demand instrumentation with on-the-fly recompilation",
+      "year": 2022,
+      "doi": "10.1145/3519939.3523428",
+      "openalex": "W4281741991",
+      "s2": "e87c67ba2787bde2ae00f9bc23fb8e135c4d9508",
+      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+      "authors": [
+        "Mingzhe Wang",
+        "Jie Liang",
+        "Chijin Zhou",
+        "Zhiyong Wu",
+        "Xinyi Xu",
+        "Yu Jiang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "There also exists bug detectors for binaries, for example, DynamoRIO-based DrMemory [11] and Valgrind-based MemCheck [49]."
+      ]
+    },
+    {
+      "title": "Open Science in Software Engineering: A Study on Deep Learning-Based Vulnerability Detection",
+      "year": 2022,
+      "doi": "10.1109/tse.2022.3207149",
+      "openalex": "W4296079499",
+      "s2": "011f04db83aea1f46e2a95408d5dfbd13fe096b1",
+      "venue": "IEEE Transactions on Software Engineering",
+      "authors": [
+        "Yu Nong",
+        "Rainy Sharma",
+        "Abdelwahab Hamou‐Lhadj",
+        "Xiapu Luo",
+        "Haipeng Cai"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Two other evaluated detectors, DrMemory [101] and Valgrind [102], used different benchmarks (datasets) in their original performance evaluation."
+      ]
+    },
+    {
+      "title": "PACSafe: Leveraging ARM Pointer Authentication for Memory Safety in C/C++",
+      "year": 2022,
+      "doi": null,
+      "openalex": null,
+      "s2": "b7368b20b76fa9697661e8d65710014ced33af56",
+      "venue": "arXiv.org",
+      "authors": [
+        "Konrad Hohentanner",
+        "Philipp Zieris",
+        "Julian Horsch"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Similar memory safety solutions with better precision and less memory consumption substitute guard pages with allocating red-zones between memory objects [6, 18, 19, 35, 37], such as ASan [35], the best-known and most-adopted memory safety solution today.",
+        "To achieve spatial memory safety, instrumentation-based solutions either insert protected memory regions between objects [6,12,32,35,37] or track the bounds of allocated objects and their pointers [5, 8, 15, 16, 20, 28, 30, 36, 45].",
+        "To achieve temporal memory safety, solutions typically delay the reuse of freed memory [6, 8, 12, 32, 35, 37], perform garbage collection [20, 30], bind pointers to the lifespan of their objects [5, 29, 36], or invalidate pointers on object deallocation [24, 42, 44]."
+      ]
+    },
+    {
+      "title": "PINT: Parallel INTerval-Based Race Detector",
+      "year": 2022,
+      "doi": "10.1109/ipdps53621.2022.00087",
+      "openalex": "W4285503917",
+      "s2": "52c082d8cdb448215155316dbd52130a3be554c3",
+      "venue": "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
+      "authors": [
+        "Yifan Xu",
+        "Anchengcheng Zhou",
+        "Kunal Agrawal",
+        "I-Ting Angelina Lee"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Understanding and mitigating memory corruption attacks",
+      "year": 2022,
+      "doi": "10.17760/d20467218",
+      "openalex": "W4319950061",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Reza Mirzazade Farkhani"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Automated Use-After-Free Detection and Exploit Mitigation: How Far Have We Gone?",
+      "year": 2021,
+      "doi": "10.1109/tse.2021.3121994",
+      "openalex": "W3215234832",
+      "s2": "a7cb23cbd49a7e83979726d6ecf7d0fcbc61a73b",
+      "venue": "IEEE Transactions on Software Engineering",
+      "authors": [
+        "Binfa Gui",
+        "Wei Song",
+        "Hailong Xiong",
+        "Jeff Huang"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "To answer RQ2 and RQ4, we evaluate seven publicly-available dynamic detectors: Valgrind [18], Dr : Memory [15], ASan [10], TSan [11], [12], DoubleTake [17], Frama (cid",
+        "Purify [16], Valgrind [18] and Dr : Memory [15] instrument binary programs at execution time.",
+        "Dr : Memory [15] differs from Valgrind in that Dr : Memory is based on DynamoRIO [108] and performs multiple memory check optimizations.",
+        "In terms of detection, most existing solutions rely exclusively on dynamic analysis by instrumenting programs at the IR-level [6], [7], [8], [9], [10], [11], [12] or binary level [13], [14], [15], [16], [17], [18], [19].",
+        "Dynamic binary translation (DBT) [15], [18] instruments the program during execution, and there is no need to prepare the program in any way."
+      ]
+    },
+    {
+      "title": "Breaking Through Binaries: Compiler-quality Instrumentation for Better Binary-only Fuzzing",
+      "year": 2021,
+      "doi": null,
+      "openalex": null,
+      "s2": "ac67d5cb691ab748a4e826e577ac11dbd197177b",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Stefan Nagy",
+        "A. Nguyen-Tuong",
+        "Jason Hiser",
+        "J. Davidson",
+        "Matthew Hicks"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Memory [17]), we compare the time-to-discovery (TTD) for five closed-source binary bugs found by FIBRE, AFL-Dyninst, or AFL-QEMU: a heap overflow in nconvert, a stack overflow in unrar, a heap use-after-free and heap overflow in pngout, and a heap overread in idat64’s libida64."
+      ]
+    },
+    {
+      "title": "Cinnamon: A Domain-Specific Language for Binary Profiling and Monitoring",
+      "year": 2021,
+      "doi": "10.1109/cgo51591.2021.9370313",
+      "openalex": "W3137263380",
+      "s2": "85de3a3af39ed39dc73bc41e021f21edd5e45792",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Mahwish Arif",
+        "Ruoyu Zhou",
+        "Hsi-Ming Ho",
+        "Timothy M. Jones"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Tools built using these frameworks carry out a variety of functions, such as performance analysis [43], memory debugging [22], taint checking [44], [45] and protection against control-ﬂow attacks [21].",
+        "These can also be used to identify security vulnerabilities [9], [22]–[25] that can be exploited by malicious attackers."
+      ]
+    },
+    {
+      "title": "Efficient Access History for Race Detection",
+      "year": 2021,
+      "doi": "10.1145/3409964.3461825",
+      "openalex": null,
+      "s2": "7187513ca87d588d336342b8329021798615d618",
+      "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+      "authors": [
+        "Yifan Xu",
+        "Anchengcheng Zhou",
+        "Grace Q. Yin",
+        "Kunal Agrawal",
+        "I. Lee",
+        "T. Schardl"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Evaluating and comparing memory error vulnerability detectors",
+      "year": 2021,
+      "doi": null,
+      "openalex": null,
+      "s2": "72be401d3c45606cc4ff8222436621d13149d808",
+      "venue": "Information and Software Technology",
+      "authors": [
+        "Yu Nong",
+        "Haipeng Cai",
+        "Pengfei Ye",
+        "Li Li",
+        "Feng Chen"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "result",
+        "background"
+      ],
+      "contexts": [
+        "…with D R M EMORY was due to its special detection strategy: It only checks memory leaks in the middle (as opposed to the boundaries) of the heap [9], in order to avoid false positives with C++ programs that allocate memory via the new[] operator and std::string objects, or with pointers…",
+        "Figures 12 and 13 show the scalability of the ﬁve detectors against individual samples in SV-Benchmark in terms of time costs and peak memory usage, in the same format as Figures 8 and 9, respectively.",
+        "D R M EMORY [9] Copying of uninitialized memory would result in the propagation of uninitialized status bits in the shadow memory.",
+        "Toﬁll this gap, we conducted an extensive study of ﬁve state-of-the-art, open-source memory error vulnerability detectors [27, 9, 35, 40, 20].",
+        "More speciﬁcally, it can be used to track allocation and deallocation operations in heap and stack memory to detect uninitialized access [27, 9, 35].",
+        "Contextualizing our eﬃciency results, we found that earlier eﬃciency evaluations of the four dynamic detectors [27, 9, 35, 40] against the SPEC 2006 benchmark [17] had results consistent with ours in terms of the relative ranking of these tools in eﬃciency.",
+        "A main reason is that these detectors chose to prioritize precision over recall in their design [27, 9, 35, 40, 20], which is justiﬁable with respect to the earlier ﬁnding that users (e.g., developers) tended to seek for tools that give fewer false positives hence save defect inspection/conﬁrmation…"
+      ]
+    },
+    {
+      "title": "MESH: A Memory-Efficient Safe Heap for C/C++",
+      "year": 2021,
+      "doi": "10.1145/3465481.3465760",
+      "openalex": "W3194364184",
+      "s2": "7b07891521681302121e329f177540ffa8367896",
+      "venue": "ARES",
+      "authors": [
+        "Emanuel Q. Vintila",
+        "Philipp Zieris",
+        "Julian Horsch"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Using this shadow, objects are surrounded by red-zones [5, 19, 36, 38] or interleaved by guard pages [15, 26, 32] to detect spatial memory violations."
+      ]
+    },
+    {
+      "title": "Mitigating Memory-Safety Bugs with Efficient Out-of-Process Integrity Checking",
+      "year": 2021,
+      "doi": "10.1184/r1/16920076.v1",
+      "openalex": null,
+      "s2": "2ced5de5d71aafecf1019c08fa0e782d2b9e7982",
+      "venue": null,
+      "authors": [
+        "Daming D. Chen"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "PICO",
+      "year": 2021,
+      "doi": "10.1145/3460434",
+      "openalex": "W3185662757",
+      "s2": "13ff9f89686f583a70ad9eb86fd876d56e47f84d",
+      "venue": "ACM Transactions on Architecture and Code Optimization",
+      "authors": [
+        "Tina Jung",
+        "Fabian Ritter",
+        "Sebastian Hack"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Binary instrumentations such as Dr. Memory [Bruening and Zhao 2011] and Valgrind [Nether-cote and Seward 2007] do not even require recompilation of the program.",
+        "To find memory errors or memory leaks, these tools have proven to be helpful, but they come with slowdowns of 10.2 × in case of Dr. Memory and 20.4 × for Valgrind on average [Bruening and Zhao 2011]."
+      ]
+    },
+    {
+      "title": "PyPANDA: Taming the PANDAmonium of Whole System Dynamic Analysis",
+      "year": 2021,
+      "doi": "10.14722/bar.2021.23001",
+      "openalex": "W3186014654",
+      "s2": "c3aaa87ffb71eb084bb4a92dc52006ce15dcacf6",
+      "venue": "Proceedings 2021 Workshop on Binary Analysis Research",
+      "authors": [
+        "Luke Craig",
+        "Andrew Fasano",
+        "Tiemoko Ballo",
+        "Tim Leek",
+        "Brendan Dolan-Gavitt",
+        "William Robertson"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "For example, Valgrind [41], Dr. Memory [3], and other systems monitor calls related to heap allocations (e.g., malloc, free, __kmalloc, kfree, etc.) in order to identify memory errors."
+      ]
+    },
+    {
+      "title": "Runtime detection of memory errors with smart status",
+      "year": 2021,
+      "doi": "10.1145/3460319.3464807",
+      "openalex": null,
+      "s2": "04e7220072ed264a7b5416d3ccb73b6ef560a82f",
+      "venue": "International Symposium on Software Testing and Analysis",
+      "authors": [
+        "Zhe Chen",
+        "Chong Wang",
+        "Junqi Yan",
+        "Yulei Sui",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "1 typedef struct 2 { char buf [10]; 3 int i; } st; 4 int main() 5 { st arr [5]; 6 st *p = arr; 7 p[2].",
+        "Memory [2] in runtime overheads, and has been integrated into popular compilers such as GCC and Clang."
+      ]
+    },
+    {
+      "title": "Spotting Silent Buffer Overflows in Execution Trace through Graph Neural Network Assisted Data Flow Analysis",
+      "year": 2021,
+      "doi": null,
+      "openalex": null,
+      "s2": "19a7ada6962a6384e2de3870f30bcc4e17d7d6ae",
+      "venue": "arXiv.org",
+      "authors": [
+        "Zhilong Wang",
+        "Li Yu",
+        "Suhang Wang",
+        "Peng Liu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "As mentioned in [11], Memcheck and some other tools (Dr. Memory [24], Purify [25] and Intel Parallel Inspector [26]) that adopt similar approaches are not capable to ﬁnd out-of-bounds bugs in the stack (other than beyond the top of the stack frame), global and in heap if the overwrite does not…",
+        "The literature review shows that all the existing works [15], [16], [24], [25], [26] can only identify silent heap BOFs which overﬂow cross the boundary of allocated memory chunks."
+      ]
+    },
+    {
+      "title": "The Neverending Story: Memory Corruption 30 Years Later",
+      "year": 2021,
+      "doi": "10.1007/978-3-030-87872-6_14",
+      "openalex": "W3201292269",
+      "s2": null,
+      "venue": "Advances in intelligent systems and computing",
+      "authors": [
+        "Oscar Llorente-Vazquez",
+        "Igor Santos",
+        "Iker Pastor-López",
+        "Pablo G. Bringas"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "UAFSan: an object-identifier-based dynamic approach for detecting use-after-free vulnerabilities",
+      "year": 2021,
+      "doi": "10.1145/3460319.3464835",
+      "openalex": "W3177718407",
+      "s2": "abe9e3ad52dc6ecb0a8d5d9d27dafe2815912b00",
+      "venue": "International Symposium on Software Testing and Analysis",
+      "authors": [
+        "Binfa Gui",
+        "Wei Song",
+        "Jeff Huang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "result",
+        "background"
+      ],
+      "contexts": [
+        "As a result, similar to existing dynamic detection approaches [7, 28, 35, 40],UAFSan cannot instrument the C libraries and the third-party libraries that are not open-source, and thus may miss some UAFs.",
+        "Memory [7] leverage different DBI frameworks to dynamically instrument programs and thus incur heavy runtime overhead.",
+        "Memory [7], TSan [41, 42], CETS [32], EffectiveSan [16], QASan [19], ASan [29] and DoubleTake [8]."
+      ]
+    },
+    {
+      "title": "A Preliminary Study on Open-Source Memory Vulnerability Detectors",
+      "year": 2020,
+      "doi": "10.1109/saner48275.2020.9054851",
+      "openalex": "W3014251208",
+      "s2": "4f48f3caa2b58fcb28ef3f01578f5abfea7d07ca",
+      "venue": "IEEE International Conference on Software Analysis, Evolution, and Reengineering",
+      "authors": [
+        "Yu Nong",
+        "Haipeng Cai"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "• DRMEMORY [22] is a memory monitoring tool that"
+      ]
+    },
+    {
+      "title": "An instrumentation based algorithm for stack overflow detection",
+      "year": 2020,
+      "doi": "10.1007/s11416-020-00359-7",
+      "openalex": null,
+      "s2": "ddf249a3432595a077704dc4f4fb287c4871d575",
+      "venue": "Journal of Computer Virology and Hacking Techniques",
+      "authors": [
+        "Javier Carrillo Mondéjar",
+        "J. Gómez",
+        "José Roldán Gómez",
+        "José Luis Martínez"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "This value is important since most attacks try to overwrite their memory location, with the aim of redirecting the execution ﬂow towards memory areas controlled by the malicious user or parts of the program not visible to the end user [12].",
+        "For the detection of errors in the heap area, [35] and [12] insert instrumentation code in the functions related to the management of the heap, adding marks before and after each assigned memory block to check whether any reading or writing of memory is performed in those memory zones."
+      ]
+    },
+    {
+      "title": "Balancing performance and productivity for the development of dynamic binary instrumentation tools: a case study on Arm systems",
+      "year": 2020,
+      "doi": "10.1145/3377555.3377895",
+      "openalex": null,
+      "s2": "a5c47a805e8e2cfb57ac0cca9ca9a5e143cdb462",
+      "venue": "International Conference on Compiler Construction",
+      "authors": [
+        "Cosmin Gorgovan",
+        "G. Callaghan",
+        "M. Luján"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Further examples of tools implemented using DBI frameworks include microarchitectural simulators [6, 14, 15], development tools such as memory error checkers [2, 18] and application analysis tools such as taint tracers [7].",
+        "Memory [2] (commit bcb36073a2c from July 2017)."
+      ]
+    },
+    {
+      "title": "Binary Compatibility For SGX Enclaves",
+      "year": 2020,
+      "doi": null,
+      "openalex": null,
+      "s2": "5379177c4bc3e22907fb15c57d967c7e1edbe688",
+      "venue": "arXiv.org",
+      "authors": [
+        "Shweta Shinde",
+        "Jinhua Cui",
+        "Satyaki Sen",
+        "Pinghai Yuan",
+        "Prateek Saxena"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "They comprise commonly used evaluations target for DynamoRIO and enclave-based systems [3], [10], [17], [21], [33], [65], [66] that we surveyed for our study."
+      ]
+    },
+    {
+      "title": "Binary rewriting without control flow recovery",
+      "year": 2020,
+      "doi": "10.1145/3385412.3385972",
+      "openalex": "W3033117380",
+      "s2": "b7f67996659ddbe5bbe8bdbec8f3b2ffdf10e138",
+      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+      "authors": [
+        "Gregory J. Duck",
+        "Xiang Gao",
+        "Abhik Roychoudhury"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "CIMA: Compiler-Enforced Resilience Against Memory Safety Attacks in Cyber-Physical Systems",
+      "year": 2020,
+      "doi": "10.1016/j.cose.2020.101832",
+      "openalex": null,
+      "s2": "7d28fd894a4e069801fc6ee95ab9569476372ce8",
+      "venue": "Computers & security",
+      "authors": [
+        "Eyasu Getahun Chekole",
+        "Sudipta Chattopadhyay",
+        "Martín Ochoa",
+        "Huaqun Guo",
+        "Unnikrishnan Cheramangalath"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "It is the novel mitigation strategy and the evaluatuon on realistic CPS testbeds that sets our CIMA approach apart from existing related works [9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]."
+      ]
+    },
+    {
+      "title": "Detecting Struct Member-Related Memory Leaks Using Error Code Analysis in Linux Kernel",
+      "year": 2020,
+      "doi": "10.1109/issrew51248.2020.00097",
+      "openalex": "W3120182765",
+      "s2": "7d78f29d330e8d9976e6b31a1ead87237fc74895",
+      "venue": "2020 IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)",
+      "authors": [
+        "Keita Suzuki",
+        "Takafumi Kubota",
+        "Kenji Kono"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Some of the previous work use dynamic analysis approach to ﬁnd memory leak bugs [11], [24], [25], [26]."
+      ]
+    },
+    {
+      "title": "Detecting Uninitialized Variables in C++ with the Clang Static Analyzer",
+      "year": 2020,
+      "doi": "10.14232/actacyb.282900",
+      "openalex": "W3107212594",
+      "s2": "f56eee47c673b2c15645c24f4b97baf1774b6310",
+      "venue": "Acta Cybernetica",
+      "authors": [
+        "Kristóf Umann",
+        "Zoltán Porkoláb"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Dr. Memory [4] works similarly to MemCheck but is more modern, better optimized and multi-threaded."
+      ]
+    },
+    {
+      "title": "EM-Fuzz: Augmented Firmware Fuzzing via Memory Checking",
+      "year": 2020,
+      "doi": "10.1109/tcad.2020.3013046",
+      "openalex": "W3090745156",
+      "s2": "3e7be9d61bc8e7b021e627c8e3f9415557ce498b",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "authors": [
+        "Jian Gao",
+        "Yiwen Xu",
+        "Yu Jiang",
+        "Zhe Liu",
+        "Wanli Chang",
+        "Xun Jiao",
+        "Jiaguang Sun"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "EM-Fuzz achieves this goal through the library wrapping technique [8], which preserves the original heap layout.",
+        "Memory [8]) require to be installed in the same environment as the firmware under test and run existing test",
+        "Memory [8], have dominated the field of binary memory vulnerability checking through binary",
+        "Memory [8], both of which run on the server with the X64 architecture as described in Section IV-A."
+      ]
+    },
+    {
+      "title": "FuZZan: Efficient Sanitizer Metadata Design for Fuzzing",
+      "year": 2020,
+      "doi": null,
+      "openalex": null,
+      "s2": "8e45ea6b864ba828d80235a76f17a18a1b2c8a7e",
+      "venue": "USENIX Annual Technical Conference",
+      "authors": [
+        "Yuseok Jeon",
+        "Wookhyun Han",
+        "N. Burow",
+        "Mathias Payer"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Fuzzing Binaries for Memory Safety Errors with QASan",
+      "year": 2020,
+      "doi": "10.1109/secdev45635.2020.00019",
+      "openalex": "W3093824853",
+      "s2": "500610daac21e23637b31728a1655e6ef90f9643",
+      "venue": "IEEE Cybersecurity Development",
+      "authors": [
+        "Andrea Fioraldi",
+        "Daniele Cono D’Elia",
+        "Leonardo Querzoni"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Memory tool [29]."
+      ]
+    },
+    {
+      "title": "Instrew: leveraging LLVM for high performance dynamic binary instrumentation",
+      "year": 2020,
+      "doi": "10.1145/3381052.3381319",
+      "openalex": null,
+      "s2": "936253b015ae7b9abab512b1e3256839e91d04a2",
+      "venue": "International Conference on Virtual Execution Environments",
+      "authors": [
+        "A. Engelke",
+        "M. Schulz"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [13], can enhance the already compiled code with bounds checks and therefore detect invalidmemory accesses at run-time."
+      ]
+    },
+    {
+      "title": "IoTSIT: A Static Instrumentation Tool for IoT Devices",
+      "year": 2020,
+      "doi": "10.1109/access.2020.2991782",
+      "openalex": "W3022618462",
+      "s2": "8e11ebf7c604c08f054906463580a24d862ade05",
+      "venue": "IEEE Access",
+      "authors": [
+        "Chen Chen",
+        "Jing Zhe",
+        "Jinxin Ma",
+        "Baojiang Cui",
+        "Han Xu",
+        "Quanchen Zou"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "This approach can be utilized to analyze data and behaviors [6], [7], precisely identify performance bottlenecks [8] when running a program, or obtain run-time information [9]–[11] to support other testing techniques for discovering exceptions and vulnerabilities in a program."
+      ]
+    },
+    {
+      "title": "PTAuth: Temporal Memory Safety via Robust Points-to Authentication",
+      "year": 2020,
+      "doi": null,
+      "openalex": null,
+      "s2": "721c1785c35ffb64a20d8c13edf18cc25339d9f2",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Reza Mirzazade Farkhani",
+        "Mansour Ahmadi",
+        "Long Lu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Practical dynamic reconstruction of control flow graphs",
+      "year": 2020,
+      "doi": "10.1002/spe.2907",
+      "openalex": null,
+      "s2": "d32c1eb6a8e4b5b09a97474a34fa6e31a3de4196",
+      "venue": "Software, Practice & Experience",
+      "authors": [
+        "A. Rimsa",
+        "J. N. Amaral",
+        "F. Pereira"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "RetroWrite: Statically Instrumenting COTS Binaries for Fuzzing and Sanitization",
+      "year": 2020,
+      "doi": "10.1109/sp40000.2020.00009",
+      "openalex": "W3015291177",
+      "s2": "845cafb153b0e4b9943c6d9b6a7e42c14845a0d6",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "S. Dinesh",
+        "Nathan Burow",
+        "Dongyan Xu",
+        "Mathias Payer"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory checkers [10], [18], [7] are a class of software",
+        "terms of performance and bug detection rate when compared to existing binary-only solutions [18], [10]."
+      ]
+    },
+    {
+      "title": "Risk-Aware Leak Detection at Binary Level",
+      "year": 2020,
+      "doi": "10.1109/prdc50213.2020.00028",
+      "openalex": "W3123129499",
+      "s2": "019a29963604d8a97b57ecd25d53cb97fd7e8125",
+      "venue": "Pacific Rim International Symposium on Dependable Computing",
+      "authors": [
+        "Yuta Koizumi",
+        "Yoshitaka Arahori"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "The Taint Rabbit: Optimizing Generic Taint Analysis with Dynamic Fast Path Generation",
+      "year": 2020,
+      "doi": "10.1145/3320269.3384764",
+      "openalex": null,
+      "s2": "765bc3dc79f1eeb142332847e1f9aa39007cc1af",
+      "venue": "ACM Asia Conference on Computer and Communications Security",
+      "authors": [
+        "J. Galea",
+        "D. Kroening"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Although previous work [4, 12] take a similar approach, their instruction handlers are coded for bitwise tainting, using simple or operations, rather than for generic taint analysis.",
+        "1797215 [4] debugger builds on DynamoRIO to check the addressability of memory using bitwise tainting.",
+        "4 Other Optimizations We also adopt previously proposed optimizations [4, 28, 39].",
+        "Memory [4], DECAF [24] and Dytan [14]."
+      ]
+    },
+    {
+      "title": "Verified Runtime Assertion Checking for Memory Properties",
+      "year": 2020,
+      "doi": "10.1007/978-3-030-50995-8_6",
+      "openalex": "W3036452339",
+      "s2": "f797ce3ff401bfcfcfee61b690666701d9cca387",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Dara Ly",
+        "Nikolaï Kosmatov",
+        "Frédéric Loulergue",
+        "Julien Signoles"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "μSBS: Static Binary Sanitization of Bare-metal Embedded Devices for Fault Observability",
+      "year": 2020,
+      "doi": null,
+      "openalex": null,
+      "s2": "3d72088630df8bd74acda34a8d3ffaa68d9a9aeb",
+      "venue": "International Symposium on Recent Advances in Intrusion Detection",
+      "authors": [
+        "Majid Salehi",
+        "Daniel Hughes",
+        "Bruno Crispo"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Thus, binary sanitization [23,34,48] is the only viable option for enforcing memory safety in bare-metal ﬁrmware."
+      ]
+    },
+    {
+      "title": "Binary Debloating for Security via Demand Driven Loading",
+      "year": 2019,
+      "doi": null,
+      "openalex": null,
+      "s2": "0d1b0c1860f354a3be64e1c4ce173d08c7f860a0",
+      "venue": "arXiv.org",
+      "authors": [
+        "Girish Mururu",
+        "C. Porter",
+        "Prithayan Barua",
+        "S. Pande"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "ently [13,17,50]. Memory safety mechanisms can safeguard against 2X slower in case of source based memory safety techniques like CETS [38] and 10X slower in case of binary based ones like Dr.Memory [8]. There has been work on control pointer integrity (CPI) checking [5,28], Address Space Layout Randomization [49], as well as control ﬂow integrity (CFI) checking [1,10,22,30,63]. In spite of such adv"
+      ]
+    },
+    {
+      "title": "CSOD: Context-Sensitive Overflow Detection",
+      "year": 2019,
+      "doi": "10.1109/cgo.2019.8661198",
+      "openalex": "W4255962053",
+      "s2": "9f2e72e84ccfbfcd1cb4ccf5c2a63d6aa0a76a80",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Hongyu Liu",
+        "Sam Silvestro",
+        "Xiaoyin Wang",
+        "Lide Duan",
+        "Tongping Liu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Different is Good: Detecting the Use of Uninitialized Variables through Differential Replay",
+      "year": 2019,
+      "doi": "10.1145/3319535.3345654",
+      "openalex": null,
+      "s2": "e439ef79e4ce31934d91043ba47af656f1a6f91e",
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Mengchen Cao",
+        "Xiantong Hou",
+        "Tao Wang",
+        "Hunter Qu",
+        "Yajin Zhou",
+        "Xiaolong Bai",
+        "Fuwei Wang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Some other tools [11, 58] employ dynamic analysis or hybrid analysis [24, 25, 62, 66] to detect such vulnerabilities."
+      ]
+    },
+    {
+      "title": "Generation of In-Bounds Inputs for Arrays in Memory-Unsafe Languages",
+      "year": 2019,
+      "doi": "10.1109/cgo.2019.8661178",
+      "openalex": "W4237606848",
+      "s2": "820aa10278e7da2c1d3679aacd870ffb7643a521",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Marcus Rodrigues",
+        "Breno Campos Ferreira Guimarães",
+        "Fernando Magno Quintão Pereira"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Memory [12] to ensure correctness of tests."
+      ]
+    },
+    {
+      "title": "Interactive Runtime Verification: Formal Models, Algorithms, and Implementation",
+      "year": 2019,
+      "doi": null,
+      "openalex": null,
+      "s2": "1907614dc977fc04a159b67c5e859478dde1125f",
+      "venue": null,
+      "authors": [
+        "R. Jakse",
+        "Yliès Falcone",
+        "Jean-François Méhaut"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Memory [3] is another similar tool based on DynamoRIO [4]."
+      ]
+    },
+    {
+      "title": "Locating vulnerabilities in binaries via memory layout recovering",
+      "year": 2019,
+      "doi": "10.1145/3338906.3338966",
+      "openalex": null,
+      "s2": "947931e899ceddcb40cfae4ed08dd9ffc2b9d0d3",
+      "venue": "ESEC/SIGSOFT FSE",
+      "authors": [
+        "Haijun Wang",
+        "Xiaofei Xie",
+        "Shang-Wei Lin",
+        "Yun Lin",
+        "Yuekang Li",
+        "S. Qin",
+        "Yang Liu",
+        "Ting Liu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Memory [59] is similar to Valgrind Memchecks in many ways."
+      ]
+    },
+    {
+      "title": "Memory access integrity: detecting fine-grained memory access errors in binary code",
+      "year": 2019,
+      "doi": "10.1186/s42400-019-0035-x",
+      "openalex": "W2959540566",
+      "s2": "878d000a4b9b670ae93fed705b9328d9f04fac78",
+      "venue": "Cybersecurity",
+      "authors": [
+        "Wenjie Li",
+        "Dongpeng Xu",
+        "Wei Wu",
+        "Xiaorui Gong",
+        "Xiaobo Xiang",
+        "Yan Wang",
+        "Fangming Gu",
+        "Qianxiang Zeng"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Dr. Memory (Bruening and Zhao 2011) is a method introducing a feature called “nudge” to allow users to request a leak scan at any point. it mainly utlizes shadow memory to maintain the status of each memory bytes and cannot detect fine-grained memory access errors."
+      ]
+    },
+    {
+      "title": "Method for Reducing Overhead of Shared Memory Access Instrumentation",
+      "year": 2019,
+      "doi": "10.1145/3331453.3361323",
+      "openalex": null,
+      "s2": "7bbc28a7f7c405e2f3b593f82e74f32465935d87",
+      "venue": "International Conference on Computer Science and Application Engineering",
+      "authors": [
+        "Qianyu Liu",
+        "Naijie Gu",
+        "Junjie Su"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Due to the dynamic nature of the program execution, compared to conservative static techniques tending to report many false positives [4-5], dynamic techniques provide accuracy but severely incur runtime overhead [6-7]."
+      ]
+    },
+    {
+      "title": "NLP-EYE: Detecting Memory Corruptions via Semantic-Aware Memory Operation Function Identification",
+      "year": 2019,
+      "doi": null,
+      "openalex": null,
+      "s2": "b0ff6986f44b7dc90cb24e1f13345f81c8b4e9f7",
+      "venue": "International Symposium on Recent Advances in Intrusion Detection",
+      "authors": [
+        "Jianqiang Wang",
+        "Siqi Ma",
+        "Yuanyuan Zhang",
+        "Juanru Li",
+        "Zheyu Ma",
+        "Long Mai",
+        "Tiancheng Chen",
+        "Dawu Gu"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Instead of analyzing source code, binary code can also be adopted to identify memory corruption vulnerabilities on stacks and allocated memories [22], [36], [41], [26], [44], [25], [23].",
+        "Dr.Memory [22] conducts memory checking on Windows and Linux.",
+        "Previous works, such as CRED [45], Pin-point [42] and Dr. Memory [22], only consider the memory operation functions deﬁned in the standard library.",
+        "Some tools such as AddressSanitizer [41], Dr. Memory [22] can also detect memory corruptions in binary code by instrumentation."
+      ]
+    },
+    {
+      "title": "On the Runtime Enforcement of Timed Properties",
+      "year": 2019,
+      "doi": "10.1007/978-3-030-32079-9_4",
+      "openalex": "W2977986977",
+      "s2": "ee4b49dfa8a4302639062b6b7bcb95f865bfdc56",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Ylìès Falcone",
+        "Srinivas Pinisetty"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "…of secrets in [46, 55, 109], access control policies in [76–78], conﬁdentiality in [28, 53], information-ﬂow policies [28, 49, 64, 64], security and authorization policies in [22, 38], privacy policies in [28, 56, 65], control-ﬂow integrity in [2,34,52,57,62], and memory safety in [24,25,35,100]."
+      ]
+    },
+    {
+      "title": "SMOKE: Scalable Path-Sensitive Memory Leak Detection for Millions of Lines of Code",
+      "year": 2019,
+      "doi": "10.1109/icse.2019.00025",
+      "openalex": "W2954121408",
+      "s2": "d0e23baf655713857e7eef0cf9b6320a8cad5c55",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Gang Fan",
+        "Rongxin Wu",
+        "Qingkai Shi",
+        "Xiao Xiao",
+        "Jinguo Zhou",
+        "Charles Zhang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Dynamic approaches [24], [30]–[36] detect memory leaks by instrumenting and running a program."
+      ]
+    },
+    {
+      "title": "SoK: Sanitizing for Security",
+      "year": 2019,
+      "doi": "10.1109/sp.2019.00010",
+      "openalex": "W2963934162",
+      "s2": "be60cd79a3b9d48ba1de71d4fc5df3edfc68a646",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "authors": [
+        "Dokyung Song",
+        "Julian Lettner",
+        "Prabhu Rajasekaran",
+        "Yeoul Na",
+        "Stijn Volckaert",
+        "Per Larsen",
+        "Michael Franz"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [29] ’11 n/a LBC [30] ’12 ASan [31] ’12 Electric Fence [32] ’93 n/a PageHeap [33] ’00 n/a D&A Dangling [35] ’06 n/a Oscar [36] ’17 RTCC [45] ’92 n/a Safe-C [46] ’94 P&F [47] ’97 MSCC [52] ’04 SoftBound+CETS [48], [56] ’10 Intel Pointer Checker [49] ’12 SGXBounds [54] ’17 CUP [55] ’18 n/a J&K [34] ’97 n/a CRED [37] ’04 n/a D&A Bounds [38] ’06 n/a BBC [39] ’09 PAriCheck [41] ’10 n/a Low-fat Pointer [42], [43] ’17 Undangle [57] ’12 FreeSentry [59] ’15 n/a DangNull [58] ’15 DangSan [60] ’17 MSan [66] ’15 CaVer [69] ’15 TypeSan [70] ’16 HexType [71] ’17 Loginov et al.",
+        "Either of these techniques can be combined with reuse delay to additionally detect temporal safety violations [27]–[29], [31]–[36].",
+        "Some reuse delay-based tools reduce the chance of such detection failures by delaying the reuse of memory regions or identities until they have “aged” [27]–[29], [31], [34], [55].",
+        "2) Temporal Memory Safety Violations: Reuse Delay: Location-based access checkers can mark recently deallocated objects as invalid in the metadata store by replacing them with red-zones [27]–[29], [31], [34] or with guard pages [32], [33], [35], [36]."
+      ]
+    },
+    {
+      "title": "Static Detection of Uninitialized Stack Variables in Binary Code",
+      "year": 2019,
+      "doi": "10.1007/978-3-030-29962-0_4",
+      "openalex": "W2972616440",
+      "s2": "0b8b06f1004a50342459b4b6cc7453bb1a4d7bee",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Behrad Garmany",
+        "Martin Stoffel",
+        "Robert Gawlik",
+        "Thorsten Holz"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "TASE: Reducing latency of symbolic execution with transactional memory",
+      "year": 2019,
+      "doi": "10.14722/ndss.2021.24327",
+      "openalex": null,
+      "s2": "09e7b113aa7ee9302a12c481520f7aa43b5586e3",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "A. Humphries",
+        "Kartik Cating-Subramanian",
+        "M. Reiter"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        ", [15], [42], [37], [8], [44]) or that use specialized memory allocators to achieve similar protections using page-level permissions (e."
+      ]
+    },
+    {
+      "title": "Vulnerability detection on web browsers",
+      "year": 2019,
+      "doi": "10.32657/10356/143063",
+      "openalex": "W3118592480",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Haiwan Yu"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "ATPG Binning and SAT-Based Approach to Hardware Trojan Detection for Safety-Critical Systems",
+      "year": 2018,
+      "doi": "10.1007/978-3-030-02744-5_29",
+      "openalex": "W2904088339",
+      "s2": "2f9a5e56dd156dea26e2e5bb35acb6a19a40481a",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Animesh BasakChowdhury",
+        "Ansuman Banerjee",
+        "Bhargab B. Bhattacharya"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "For example, binary-instrumentation tools such as Valgrind [18] and Dr. Memory [3] cannot reliably determine the size of buﬀers located on the stack."
+      ]
+    },
+    {
+      "title": "An Analysis of x86-64 Inline Assembly in C Programs",
+      "year": 2018,
+      "doi": "10.1145/3186411.3186418",
+      "openalex": null,
+      "s2": "39605c9c1ba6d1e1aa797a35cb3b1d9347f03b12",
+      "venue": "International Conference on Virtual Execution Environments",
+      "authors": [
+        "Manuel Rigger",
+        "Stefan Marr",
+        "Stephen Kell",
+        "David Leopoldseder",
+        "H. Mössenböck"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Tools that analyze or process binaries are widely established [3, 4, 11, 35, 46, 56] and could analyze C projects after they have been compiled to machine code."
+      ]
+    },
+    {
+      "title": "Context-Aware Failure-Oblivious Computing as a Means of Preventing Buffer Overflows",
+      "year": 2018,
+      "doi": "10.1007/978-3-030-02744-5_28",
+      "openalex": "W2811384401",
+      "s2": null,
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Manuel Rigger",
+        "Daniel Pekarek",
+        "Hanspeter Mössenböck"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Detection of Security Vulnerabilities in C Code Using Runtime Verification: An Experience Report",
+      "year": 2018,
+      "doi": "10.1007/978-3-319-92994-1_8",
+      "openalex": "W2806563891",
+      "s2": "135fe8289eabf06335ca1fc5dad9d0cf99108499",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Kostyantyn Vorobyov",
+        "Nikolaï Kosmatov",
+        "Julien Signoles"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Since the execution overhead used to be an important barrier to their application, many prior experimental studies [42,41,29,37,31,4] focused primarily on tools’ performance and often conducted experiments us-ing computationally-intensive programs rather than investigated the detection power.",
+        "More recent techniques, such as MemCheck [31], SGCheck [32], or Dr. Memory [4] achieve a similar task using dynamic binary instrumentation, an approach that injects memory monitors to binary programs at execution time.",
+        "Consequently we reject binary monitors such as MemCheck [31] or Dr Memory [4]."
+      ]
+    },
+    {
+      "title": "Developing Theoretical Foundations for Runtime Enforcement",
+      "year": 2018,
+      "doi": null,
+      "openalex": null,
+      "s2": "921286f4a5c9417484d469d5f73b326d1db874b7",
+      "venue": "arXiv.org",
+      "authors": [
+        "I. Cassar",
+        "A. Francalanza",
+        "L. Aceto",
+        "A. Ingólfsdóttir"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Enforcing Abstract Immutability",
+      "year": 2018,
+      "doi": null,
+      "openalex": null,
+      "s2": "f39880610a1d7f3185494a67e4c732fb7f02e4ab",
+      "venue": null,
+      "authors": [
+        "Jon Eyolfson"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Enforcing Full-Stack Memory-Safety in Cyber-Physical Systems",
+      "year": 2018,
+      "doi": "10.1007/978-3-319-94496-8_2",
+      "openalex": "W2809074708",
+      "s2": "ff1cecb6464b35f6cfbbb5cb59b289e489f25cd6",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Eyasu Getahun Chekole",
+        "Sudipta Chattopadhyay",
+        "Martín Ochoa",
+        "Guo Huaqun"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Evaluation of Dynamic Analysis Tools for Software Security",
+      "year": 2018,
+      "doi": "10.4018/ijsssp.2018070102",
+      "openalex": "W2914627611",
+      "s2": "1a9beb24129f6dcfe45b53b344fe54bc569ed81d",
+      "venue": "International Journal of Systems and Software Security and Protection",
+      "authors": [
+        "Michael Lescisin",
+        "Qusay H. Mahmoud"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "FreeDA: deploying incompatible stock dynamic analyses in production via multi-version execution",
+      "year": 2018,
+      "doi": "10.1145/3203217.3203237",
+      "openalex": null,
+      "s2": "7bd73ddce9eb9aaefd70f3a5ef5374ab9ff5f20a",
+      "venue": "ACM International Conference on Computing Frontiers",
+      "authors": [
+        "Luís Pina",
+        "A. Andronidis",
+        "Cristian Cadar"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Both the research community and industry have put a lot of effort into designing many types of dynamic analysis techniques [18, 26, 32, 38, 39, 41]."
+      ]
+    },
+    {
+      "title": "OPT+Graph: Detection of Graph Data Structure on Program Visualization Tool to Support Learning",
+      "year": 2018,
+      "doi": "10.1109/icodse.2018.8705794",
+      "openalex": "W2943947317",
+      "s2": "70a11f45cbb001a632fa683da52d9479abdf7b20",
+      "venue": "International Conference on Data and Software Engineering",
+      "authors": [
+        "Habibie Ed Dien",
+        "Yudistira Asnar"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Preventing Buffer Overflows by Context-aware Failure-oblivious Computing",
+      "year": 2018,
+      "doi": null,
+      "openalex": null,
+      "s2": "39713bdb34d1fcc1f3638ac6b1fe9d20c21bbb28",
+      "venue": null,
+      "authors": [
+        "Manuel Rigger",
+        "Daniel Pekarek",
+        "H. Mössenböck"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [3] cannot reliably determine the size of buffers located on the stack."
+      ]
+    },
+    {
+      "title": "PwIN – Pwning Intel piN: Why DBI is Unsuitable for Security Applications",
+      "year": 2018,
+      "doi": "10.1007/978-3-319-99073-6_18",
+      "openalex": "W2886034072",
+      "s2": "9ebbd97028a5b4c283f6e2e587692b1f4c9be18a",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Julian Kirsch",
+        "Zhechko Zhechev",
+        "Bruno Bierbaumer",
+        "Thomas Kittel"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "STATIC ENFORCEMENT OF TERMINATION-SENSITIVE NONINTERFERENCE USING THE C++ TEMPLATE TYPE SYSTEM",
+      "year": 2018,
+      "doi": null,
+      "openalex": null,
+      "s2": "6bfd66001f69bb73405ead7406f4be97c1359097",
+      "venue": null,
+      "authors": [
+        "Scott D. Constable"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Sampler: PMU-Based Sampling to Detect Memory Errors Latent in Production Software",
+      "year": 2018,
+      "doi": "10.1109/micro.2018.00027",
+      "openalex": "W2903681992",
+      "s2": "089aaf8775c37306aef09691fe5d2e86d6f2a506",
+      "venue": "Micro",
+      "authors": [
+        "Sam Silvestro",
+        "Hongyu Liu",
+        "Tong Zhang",
+        "Changhee Jung",
+        "Dongyoon Lee",
+        "Tongping Liu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Many tools incur significant performance overhead [2], [6]–[15].",
+        "Memory [6], Purify [7], Intel Inspector [8], and Sun Discover [10].",
+        "Memory introduces around 10× runtime overhead [6]."
+      ]
+    },
+    {
+      "title": "Sandboxed execution of C and other unsafe languages on the Java virtual machine",
+      "year": 2018,
+      "doi": "10.1145/3191697.3213795",
+      "openalex": null,
+      "s2": "adb23124666735f417a0fcad0caa283199d75cea",
+      "venue": "International Conference on the Art, Science and Engineering of Programming",
+      "authors": [
+        "Manuel Rigger"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Relying on them when accessing the abstracted C data structures is more robust than instrumentation-based checks [1, 3, 11] on a conceptual level, because checks cannot simply be missed."
+      ]
+    },
+    {
+      "title": "Spatio-Temporal Context Reduction: A Pointer-Analysis-Based Static Approach for Detecting Use-After-Free Vulnerabilities",
+      "year": 2018,
+      "doi": "10.1145/3180155.3180178",
+      "openalex": null,
+      "s2": "a44ac88f4494b61bc0b5e29c71449ced608c3738",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Hua Yan",
+        "Yulei Sui",
+        "Shiping Chen",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Spindle: Informed Memory Access Monitoring",
+      "year": 2018,
+      "doi": null,
+      "openalex": null,
+      "s2": "18fe8658832b4b71d48f2b1a360a72d2a71a7fd5",
+      "venue": "USENIX Annual Technical Conference",
+      "authors": [
+        "Haojie Wang",
+        "Jidong Zhai",
+        "Xiongchao Tang",
+        "Bowen Yu",
+        "Xiaosong Ma",
+        "Wenguang Chen"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "S-Detector runtime overhead We compare S-Detector with two popular memory bug detection tools: Google’s AddressSanitizer (ASan) [33] and DynamoRIO [6]- based Dr. Memory (DrMem) [5].",
+        "Such runtime processing brings substantial performance overhead (typically bringing 2 × or more application slow-down [5, 33] for online memory access checking and much higher for memory trace collection [6, 22, 26])."
+      ]
+    },
+    {
+      "title": "Sulong, and Thanks for All the Bugs: Finding Errors in C Programs by Abstracting from the Native Execution Model",
+      "year": 2018,
+      "doi": "10.1145/3173162.3173174",
+      "openalex": null,
+      "s2": "bbd8f8e111a738dbb4cd9c9fecdf411e4d4a33da",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Manuel Rigger",
+        "Roland Schatz",
+        "R. Mayrhofer",
+        "Matthias Grimmer",
+        "H. Mössenböck"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Taming the War in Memory: A Resilient Mitigation Strategy Against Memory Safety Attacks in CPS",
+      "year": 2018,
+      "doi": null,
+      "openalex": null,
+      "s2": "721eec720f4b06609829b4047867f346bf12a44b",
+      "venue": "arXiv.org",
+      "authors": [
+        "Eyasu Getahun Chekole",
+        "Unnikrishnan Cheramangalath",
+        "Sudipta Chattopadhyay",
+        "Martín Ochoa",
+        "Huaqun Guo"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "ompilers. This makes CIMA a proactive mitigation strategy against a large class of memory-safety attacks. It is the novel mitigation strategy that sets our CIMA approach apart from the existing works [10,11,12,13,14,15,16,17,18,19,20,21]. Most of the existing mitigation schemes against memory-safety attacks are primarily programmed to abort or restart the victim system when an attack or a memory-safety violation is detected. Other sc"
+      ]
+    },
+    {
+      "title": "UFO: Predictive Concurrency Use-After-Free Detection",
+      "year": 2018,
+      "doi": "10.1145/3180155.3180225",
+      "openalex": null,
+      "s2": "39269dc3a5087e06105ac4a9061f801a833f2f10",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Jeff Huang"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "UFO detected many UAF vulnerabilities that industrial-strength tools such as AddressSanitizer [5], Dr.Memory [18] and Valgrind [21] all fail to detect.",
+        "Suppose that the program is executed following the schedule S0 denoted by lines: S0: 1-10-11-12-13-14-2-3-4-5-6-7-8-9 , the evidence-based UAF detectors [5, 7, 18, 21] cannot ﬁnd the real UAF ∂ , because it does not occur in the observed schedule.",
+        "We also tested these two benchmarks with AddressSanitizer [5], Dr.Memory [18] and Valgrind [21]."
+      ]
+    },
+    {
+      "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly",
+      "year": 2018,
+      "doi": "10.1145/3297858.3304068",
+      "openalex": null,
+      "s2": "4c2d6e7037ba8c4118eb1d2fe25de910871314c9",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Daniel Lehmann",
+        "Michael Pradel"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "iReplayer: in-situ and identical record-and-replay for multithreaded applications",
+      "year": 2018,
+      "doi": "10.1145/3192366.3192380",
+      "openalex": null,
+      "s2": "5a205155805349df29ee116b17d2e3c2e2ad8d64",
+      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+      "authors": [
+        "Hongyu Liu",
+        "Sam Silvestro",
+        "Wei Wang",
+        "Chen Tian",
+        "Tongping Liu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Analyzing and securing binaries through static disassembly",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "4a1067e593ce408e88a3689ef0727c1ffaf36f17",
+      "venue": null,
+      "authors": [
+        "Dennis Andriesse"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background",
+        "methodology"
+      ],
+      "contexts": [
+        "Protection from temporal attacks Prior work explores protection against heapbased use-after-free vulnerabilities, through garbage collection [36; 148], secure allocation [17; 30; 80; 122; 134], and dynamic memory checking [43; 47; 129; 162].",
+        "Memory [43] often incur performance overheads of an order of magnitude or more.",
+        "Some dynamic tools can detect uninitialized reads on the stack [43; 47; 129; 162], but they incur very high overhead."
+      ]
+    },
+    {
+      "title": "AutoFix: an automated approach to memory leak fixing on value-flow slices for C programs",
+      "year": 2017,
+      "doi": "10.1145/3040575.3040579",
+      "openalex": null,
+      "s2": "17ac8f7a0e95484df69ae4f3cd3db5ac943fd947",
+      "venue": "SIAP",
+      "authors": [
+        "Hua Yan",
+        "Yulei Sui",
+        "Shiping Chen",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Checked C for Safety , Gradually",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "52541c3ce990b0b9c81551d29915975d0d80494b",
+      "venue": null,
+      "authors": [
+        "Andrew Ruef",
+        "A. Elliott",
+        "M. Hicks",
+        "D. Tarditi"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [9, 18], Intel Inspector [14], Oracle Solaris Studio Code Analyzer [38], Valgrind Memcheck [35, 52], Insure++ [39], and AddressSanitizer (ASAN) [44]."
+      ]
+    },
+    {
+      "title": "Digtool: A Virtualization-Based Framework for Detecting Kernel Vulnerabilities",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "5903977e9b2f54f5c709e3148bd684cbd87c303f",
+      "venue": "USENIX Security Symposium",
+      "authors": [
+        "Jianfeng Pan",
+        "Guanglu Yan",
+        "Xiaocao Fan"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Dynamic buffer overflow detection for GPGPUs",
+      "year": 2017,
+      "doi": "10.1109/cgo.2017.7863729",
+      "openalex": "W4234208415",
+      "s2": "26362bc38c0c3ffe27e3424ea82704678fe09eb0",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Christopher D. Erb",
+        "Mike Collins",
+        "Joseph L. Greathouse"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Similar open source and commercial tools have roughly the same limitations [14, 42]."
+      ]
+    },
+    {
+      "title": "Enforcing Memory Safety in Cyber-Physical Systems",
+      "year": 2017,
+      "doi": "10.1007/978-3-319-72817-9_9",
+      "openalex": "W2778924243",
+      "s2": "0914ab5dc4d9a8c86ec18c6efb6e2ea7f0d51bd4",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Eyasu Getahun Chekole",
+        "John Henry Castellanos",
+        "Martín Ochoa",
+        "David K. Y. Yau"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Finding the needle in the heap : combining binary analysis techniques to trigger use-after-free. (Analyses de code binaire pour la détection et le déclenchement de use-after-free)",
+      "year": 2017,
+      "doi": "10.70675/925cbaa4zcf94z42a9z8e19z54d8c586211e",
+      "openalex": null,
+      "s2": "60260e90696015ff56c5af260a2ad56c68d31956",
+      "venue": null,
+      "authors": [
+        "Josselin Feist"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Interactive Runtime Verification",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "aa88c187a639ff9e97cf21bffb3ab95c2e4bdaac",
+      "venue": "arXiv.org",
+      "authors": [
+        "R. Jakse",
+        "Yliès Falcone",
+        "Jean-François Méhaut",
+        "K. Pouget"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Memory [4] is another similar tool based on DynamoRIO [5]."
+      ]
+    },
+    {
+      "title": "Introspection for C and its Applications to Library Robustness",
+      "year": 2017,
+      "doi": "10.22152/programming-journal.org/2018/2/4",
+      "openalex": null,
+      "s2": "5d6acc8caa48499c9765bd1f3f9bf6fadd0e47fb",
+      "venue": "The Art, Science, and Engineering of Programming",
+      "authors": [
+        "Manuel Rigger",
+        "R. Mayrhofer",
+        "Roland Schatz",
+        "Matthias Grimmer",
+        "H. Mössenböck"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Introspective Intrusion Detection",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "dfde0863ceecafeef2dc432b5d13cd44ebf1ed20",
+      "venue": null,
+      "authors": [
+        "Byron Hawkins"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Security tools such as BLACKBOX and several of its predecessors [94, 165, 27] as well as bug detection tools [17] are especially important for DGC-intensive programs."
+      ]
+    },
+    {
+      "title": "Leak detection for cloud-based IoT devices",
+      "year": 2017,
+      "doi": "10.1109/icce-berlin.2017.8210599",
+      "openalex": "W2774059627",
+      "s2": "29a99306dac9c30ab69f41565fa7974376b07c46",
+      "venue": "2017 IEEE 7th International Conference on Consumer Electronics - Berlin (ICCE-Berlin)",
+      "authors": [
+        "Myeongjin Cho",
+        "Seong-Won Lee",
+        "Hyungwook Lee"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Lenient Execution of C on a Java Virtual Machine: or: How I Learned to Stop Worrying and Run the Code",
+      "year": 2017,
+      "doi": "10.1145/3132190.3132204",
+      "openalex": null,
+      "s2": "ca9c4ef54efbb1602febc3944ef352faca138c98",
+      "venue": "Managed Languages & Runtimes",
+      "authors": [
+        "Manuel Rigger",
+        "Roland Schatz",
+        "Matthias Grimmer",
+        "H. Mössenböck"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "To this end, a host of static and dynamic tools enable programmers to detect memory problems [4, 31, 44, 46], integer overflows [5, 50], type problems [20], and other portability issues in programs [14, 17]."
+      ]
+    },
+    {
+      "title": "MALT: a Malloc tracker",
+      "year": 2017,
+      "doi": "10.1145/3141865.3141867",
+      "openalex": null,
+      "s2": "078021517c3c7d7b28f6f3ad930bfe5eb70e8a88",
+      "venue": "SEPS@SPLASH",
+      "authors": [
+        "S. Valat",
+        "Andres S. Charif-Rubial",
+        "W. Jalby"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "In this first category, we mainly cite the memcheck tool [14] based on valgrind [13], drmemory [3], electricfence [17] and AdressSanitizer [21] from LLVM."
+      ]
+    },
+    {
+      "title": "MIRAGE: Randomizing large chunk allocation via dynamic binary instrumentation",
+      "year": 2017,
+      "doi": "10.1109/desec.2017.8073800",
+      "openalex": "W2766468145",
+      "s2": "eb0fdb4ec60883dacb69dab0038a463cf5603691",
+      "venue": "International Conference on Data Science in Cyberspace",
+      "authors": [
+        "Zhenghao Hu",
+        "Yuanyuan Zhang",
+        "Hui Wang",
+        "Juanru Li",
+        "Wenbo Yang",
+        "Dawu Gu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "1) DBI Assisted: DrMemory [29], Memcheck [30] are built based on DBI (Dynamic Binary Instrumentation) tools in purpose of memory error detection.",
+        "Other works can be categorized as follows: 1) DBI Assisted: DrMemory [29], Memcheck [30] are built based on DBI (Dynamic Binary Instrumentation) tools in purpose of memory error detection."
+      ]
+    },
+    {
+      "title": "Mitigating Use-After-Free Attack with Application Program Loader",
+      "year": 2017,
+      "doi": "10.1109/aina.2017.62",
+      "openalex": "W2612863441",
+      "s2": "8352003b14f0b71d2060243ab56b3eb8da450b36",
+      "venue": "International Conference on Advanced Information Networking and Applications",
+      "authors": [
+        "Takamichi Saito",
+        "Shuta Kondo",
+        "Hiroyuki Miyazaki",
+        "Bing Wang",
+        "Ryohei Watanabe",
+        "Ryota Sugawara",
+        "Masateru Yokoyama"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "The specific techniques in this category are tainting tracking, dynamic binary translation, and static binary analysis [8-15]."
+      ]
+    },
+    {
+      "title": "Mitigating Use-After-Free Attacks Using Memory-Reuse-Prohibited Library",
+      "year": 2017,
+      "doi": "10.1587/transinf.2016inp0020",
+      "openalex": "W2758245286",
+      "s2": "cb91f7883b212ce811fbddee407e9795a8f3cfe1",
+      "venue": "IEICE Transactions on Information and Systems",
+      "authors": [
+        "Toshihiro Yamauchi",
+        "Yuta Ikegami",
+        "Yuya Ban"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Runtime Detection of Temporal Memory Errors",
+      "year": 2017,
+      "doi": "10.1007/978-3-319-67531-2_18",
+      "openalex": "W2752596063",
+      "s2": "e86ddd8d8e1544769ab05013cd03766d102df26f",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Kostyantyn Vorobyov",
+        "Nikolaï Kosmatov",
+        "Julien Signoles",
+        "Arvid Jakobsson"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Motivation State-of-the-art memory debuggers [3,7,22,20] have become efficient in detecting spatial memory errors (accesses to unallocated memory)."
+      ]
+    },
+    {
+      "title": "SafeInit: Comprehensive and Practical Mitigation of Uninitialized Read Vulnerabilities",
+      "year": 2017,
+      "doi": "10.14722/ndss.2017.23183",
+      "openalex": "W2612883158",
+      "s2": "ca65c8f4cf7e8c5dd958b72d51bb89d525023001",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Alyssa Milburn",
+        "Herbert Bos",
+        "Cristiano Giuffrida"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Memory [7], which significantly reduces overhead by applying optimizations, and MemorySanitizer [58] (MSan), which reduces overhead even further by instrumenting binaries during compilation (using LLVM)."
+      ]
+    },
+    {
+      "title": "Scheduling algorithm for parallel real-time tasks on multiprocessor systems",
+      "year": 2017,
+      "doi": "10.1145/3040575.3040577",
+      "openalex": null,
+      "s2": "7339ac92e47f4420f75e23c51e008ae22d57c866",
+      "venue": "SIAP",
+      "authors": [
+        "Chin-Fu Kuo",
+        "Yung-Feng Lu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Securing software systems by preventing information leaks",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "a38e357c324d6e47e09ee9dae536474d0112153f",
+      "venue": null,
+      "authors": [
+        "Kangjie Lu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [25], and Valgrind [162] leverage dynamic instrumentation and analysis to track memory accesses while compiler-based approaches like MemorySanitizer [172] and Usher [191] insert tracking code to find uninitialized uses at runtime.",
+        ", Valgrind [134] and DynamoRIO [25]) to instrument the binary and analyze memory access patterns dynamically.",
+        "Some dynamic tracking techniques [25, 138, 162] have been proposed to detect uninitialized data reads."
+      ]
+    },
+    {
+      "title": "Security Investigation in Encrypted Environment",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "cf89354f2f52402c462c2d794dcdd4bc9d381f98",
+      "venue": null,
+      "authors": [
+        "Fatih Kiliç"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Shadow state encoding for efficient monitoring of block-level properties",
+      "year": 2017,
+      "doi": "10.1145/3092255.3092269",
+      "openalex": null,
+      "s2": "e33e0a7178a3c051c7c72fa109123b41cb135715",
+      "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
+      "authors": [
+        "Kostyantyn Vorobyov",
+        "Julien Signoles",
+        "N. Kosmatov"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Memory [6], MemCheck [33] and patricia trie implementation of E-ACSL [22].",
+        "Memory [6] memory debuggers and a previous implementation of E-ACSL using patricia trie.",
+        "Memory [6] and Purify [16] memory debuggers shadow one byte by two bits which track that byte’s allocation and initialization status.",
+        "Memory [6], MemCheck [33] are increasingly popular.",
+        "Memory [6] based on Dynamo RIO DBI platform [7].",
+        "Memory [6], whereas memory overheads of the proposed encodings are lower.",
+        "This feature makes shadow memory particularly attractive for dynamic memory safety analysis [6, 16, 31, 33, 36]."
+      ]
+    },
+    {
+      "title": "Unleashing Use-Before-Initialization Vulnerabilities in the Linux Kernel Using Targeted Stack Spraying",
+      "year": 2017,
+      "doi": "10.14722/ndss.2017.23387",
+      "openalex": null,
+      "s2": "249eced8fc2d8d1c4855165813d03dacad40f2b1",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Kangjie Lu",
+        "Marie-Therese Walter",
+        "David Pfaff",
+        "Stefan Nümberger",
+        "Wenke Lee",
+        "M. Backes"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Using run-time randomization against memory corruption attacks on legacy binaries",
+      "year": 2017,
+      "doi": null,
+      "openalex": null,
+      "s2": "e33c504e60bd40e2126a94ae0ed9801a803d2a68",
+      "venue": null,
+      "authors": [
+        "X. Chen"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Dynamic memory checking tools [127; 30; 154; 32], in turn, can generally operate on the stack, offer pseudodeterministic detection guarantees, and also often detect uninitialized reads [127; 30; 176].",
+        "Systems in the former category are generally targeted towards heap-based vulnerabilities, with techniques ranging from garbage collection [140; 28] to secure allocation [68; 20; 9; 129; 119] and dynamic memory checking [127; 30; 154; 32].",
+        "Memory [30] typically incur performance overheads of an order of magnitude or more."
+      ]
+    },
+    {
+      "title": "WinHeap Explorer: Efficient and Transparent Heap-Based Bug Detection in Machine Code",
+      "year": 2017,
+      "doi": "10.1109/qrs.2017.20",
+      "openalex": "W2744474467",
+      "s2": "2952eeed1a0299da642fe8fa0ac3336fa898640a",
+      "venue": "International Conference on Software Quality, Reliability and Security",
+      "authors": [
+        "Maksim Olegovich Shudrak"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "31, which is comparable with results demonstrated by DrMemory.",
+        "However, we encountered higher overhead for the cfrac, nbench and bh benchmarks in comparison with DrMemory.",
+        "Despite the fact that WinHeap Explorer demonstrates higher overhead than DrMemory for several benchmarks, in the real-world applications we have fixed lower overheads for all selected applications ranging between 24.2%-71.1%.",
+        "There are systems that use compile-time instrumentation such as AddressSanitizier [16], LBC [14], Purify [15], BoundLess [12], MudFlap [13] and runtime instrumentation such as Valgrind Memcheck [17] and DrMemory [11].",
+        "DrMemory performs instrumentation at runtime and wraps heap functions to install redzones before and after each allocated heap memory block which introduce significant runtime overhead for SUT as mentioned above.",
+        "It is also important to note that all previously described tools except DrMemory are developed for Linux while we focused on Windows.",
+        "Experimental results have shown that the slowdown of DBI for each instruction may exceed x15-x20 on synthetic benchmarks [17], [11].",
+        "DrMemory [11] is a memory checking tool implemented on top of the DynamoRIO [30] DBI framework.",
+        "In parallel with runtime overhead, we evaluated the memory overhead of our approach for widely-used complex applications and benchmarks where WinHeap Explorer demonstrates the same level of memory overhead in comparison with DrMemory both for benchmarks and for widely-used complex applications (except Word and Python where we showed better results).",
+        "Since, to the best of our knowledge, DrMemory is the closest work to ours (see Section II), in this section, we use DrMemory to compare experimental results.",
+        "There are a range of various solutions to detect such bugs in machine code based on static analysis [8], [9], [10], dynamic binary instrumentation (DBI) [11], [12], [13], [14], [15], [16], [17] and special debug allocators [9], [18], [19], [20], [21].",
+        "dynamic binary instrumentation (DBI) [11], [12], [13], [14], [15], [16], [17] and special debug allocators [9], [18], [19], [20], [21].",
+        "WinHeap Explorer has been implemented on the top of the Intel Pin DBI framework [23].",
+        "• DBI introduces serious performance overhead for the SUT, which significantly reduces the ability of its application for software testing.",
+        "3DrMemory failed to instrument Internet Explorer launcher.",
+        "WinHeap Explorer uses the Intel Pin DBI framework [23] to perform analysis of each instrumented state in the SUT.",
+        "Furthermore, to acquire the same functionality, we run DrMemory with the following parameters: -no_check_handle_leaks, -no_check_leaks, -no_check_stack_access, -no_check_gdi.",
+        "This can be explained by the higher overhead of the Intel Pin DBI framework itself in comparison with DynamoRIO."
+      ]
+    },
+    {
+      "title": "eAOP: an aspect oriented programming framework for Erlang",
+      "year": 2017,
+      "doi": "10.1145/3123569.3123570",
+      "openalex": "W2752932970",
+      "s2": "a647c80405b0446d22b8de0114bb585b84f14eaa",
+      "venue": "Erlang Workshop",
+      "authors": [
+        "Ian Cassar",
+        "Adrian Francalanza",
+        "Luca Aceto",
+        "Anna Ingólfsdóttir"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "A recompilation and instrumentation-free monitoring architecture for detecting heap memory errors and exploits",
+      "year": 2016,
+      "doi": "10.31274/etd-180810-5548",
+      "openalex": null,
+      "s2": "e8241f1772bf63553ed36c5c8792e38dad978d30",
+      "venue": null,
+      "authors": [
+        "Alex Grieve"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "1 #define SRC_STR \"0123456789 abcde0123\" 2 3 typedef struct _charVoid 4 { 5 char charFirst [16]; 6 void* voidSecond; 7 void* voidThird; 8 } charVoid; 9 10 void CWE122_char_type_overrun_memcpy_01_bad () 11 { 12 charVoid* cv = (charVoid *) malloc(sizeof(charVoid)); 13 cv->voidSecond = (void*) SRC_STR; 14 15 /* Undetected Flaw: Using sizeof (*cv) will overwrite the pointer cv->voidSecond */ 16 memcpy(cv->charFirst , SRC_STR , sizeof (*cv)); 17 18 free(cv); 19 }",
+        "Memory [17] has similar functionality to Memcheck but is based on the multithreaded binary instrumentation platform DynamoRIO [16]."
+      ]
+    },
+    {
+      "title": "A runtime fault survival method for deployed software during production runs",
+      "year": 2016,
+      "doi": "10.1002/smr.1767",
+      "openalex": "W2554786240",
+      "s2": "3f88806389f30a6258ac2b8897151ede3a263e21",
+      "venue": "Journal of Software Evolution and Process",
+      "authors": [
+        "JooYoung Seo",
+        "Jihyun Park",
+        "Byoungju Choi"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "An Evolutionary Study of Linux Memory Management for Fun and Profit",
+      "year": 2016,
+      "doi": null,
+      "openalex": null,
+      "s2": "fcc1c2b99f35c565c6b5c81e573272ac1e0b4607",
+      "venue": "USENIX Annual Technical Conference",
+      "authors": [
+        "Jian Huang",
+        "Moinuddin K. Qureshi",
+        "K. Schwan"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Many tools [2, 4, 7, 55] were built to address memory-related errors such as buffer overflows, dangling pointers, memory leaks in the programming and library space."
+      ]
+    },
+    {
+      "title": "Automated memory leak fixing on value-flow slices for C programs",
+      "year": 2016,
+      "doi": "10.1145/2851613.2851773",
+      "openalex": null,
+      "s2": "fbb98737f2018d6e707a25b5f52d340fb9c0c21d",
+      "venue": "ACM Symposium on Applied Computing",
+      "authors": [
+        "Hua Yan",
+        "Yulei Sui",
+        "Shiping Chen",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const",
+      "year": 2016,
+      "doi": "10.4230/lipics.ecoop.2016.8",
+      "openalex": null,
+      "s2": "2ef00f64200d1e86d21a8f6143d148c3084c7f44",
+      "venue": "European Conference on Object-Oriented Programming",
+      "authors": [
+        "Jon Eyolfson",
+        "Patrick Lam"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "DoubleTake: Fast and Precise Error Detection via Evidence-Based Dynamic Analysis",
+      "year": 2016,
+      "doi": "10.1145/2884781.2884784",
+      "openalex": null,
+      "s2": "683ae91af686095c19bbad9ff744740ebbddca2a",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Tongping Liu",
+        "Charlie Curtsinger",
+        "E. Berger"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "umerous error detection tools use dynamic instrumentation, including many commercial tools. Valgrind’s Memcheck tool, Dr. Memory, Purify, Intel Inspector, and Sun Discover all fall into this category [8,14,18,28,32]. These tools use dynamic instrumentation engines, such as Pin, Valgrind, and DynamiRIO [7,24,28]. These tools can detect memory leaks, use-after-free errors, uninitialized reads, and buffer overﬂows."
+      ]
+    },
+    {
+      "title": "HeapRevolver: Delaying and Randomizing Timing of Release of Freed Memory Area to Prevent Use-After-Free Attacks",
+      "year": 2016,
+      "doi": "10.1007/978-3-319-46298-1_15",
+      "openalex": "W2522979148",
+      "s2": "c65d44491860bb4fa930cbb2ca5e8bc9b21acb91",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Toshihiro Yamauchi",
+        "Yuta Ikegami"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Interactive Function Identification Decreasing the Effort of Reverse Engineering",
+      "year": 2016,
+      "doi": "10.1007/978-3-319-38898-4_27",
+      "openalex": "W2470648003",
+      "s2": "5c3bc3cf49830e87f54d4e75c70d422048b26ac8",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Fatih Kılıç",
+        "Hannes Laner",
+        "Claudia Eckert"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Leveraging Static Analysis Tools for Improving Usability of Memory Error Sanitization Compilers",
+      "year": 2016,
+      "doi": "10.1109/qrs.2016.44",
+      "openalex": "W2529008657",
+      "s2": "20c3700939444863fd2542c51b25a1a0706e0340",
+      "venue": "International Conference on Software Quality, Reliability and Security",
+      "authors": [
+        "Rigel Gjomemo",
+        "Phu H. Phung",
+        "Edmund W. Ballou",
+        "Kedar S. Namjoshi",
+        "V. N. Venkatakrishnan",
+        "Lenore D. Zuck"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Preventing exploits against memory corruption vulnerabilities",
+      "year": 2016,
+      "doi": null,
+      "openalex": null,
+      "s2": "41c050f5965d6cca4f670d724173e69978052581",
+      "venue": null,
+      "authors": [
+        "Chengyu Song"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [29], kmemcheck [146], and AddressSanitizer [171] are representative shadow-memory based error detectors.",
+        "Memory [29] use dynamic binary instrumentation to monitor all memory access of the target program.",
+        "Memory [29], kmemcheck [146], and AddressSanitizer [171] can also detect temporal memory errors, as long as that memory has not be reallocated."
+      ]
+    },
+    {
+      "title": "Tag-Protector: An Effective and Dynamic Detection of Illegal Memory Accesses through Compile Time Code Instrumentation",
+      "year": 2016,
+      "doi": "10.1155/2016/9842936",
+      "openalex": null,
+      "s2": "d7d5c3ac54e1f5408fa8830553bc182e8e613f85",
+      "venue": "Advances in Software Engineering",
+      "authors": [
+        "A. Saeed",
+        "A. Ahmadinia",
+        "Mike Just"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "For instance, solutions such as Purify [32], Valgrind [33], Dr. Memory [34], and Dynamic Tainting [30] operate at binary level while other techniques like Backwards-Compatible Bounds Checking [10], Dynamic Buﬀer Over-ﬂow Detector [11], Backwards-compatible Array Bounds Checking [12], SAFECode [13],…"
+      ]
+    },
+    {
+      "title": "UniSan: Proactive Kernel Memory Initialization to Eliminate Data Leakages",
+      "year": 2016,
+      "doi": "10.1145/2976749.2978366",
+      "openalex": null,
+      "s2": "bfb2bbd26cd98227338a9b9183391d7fcc436ad7",
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Kangjie Lu",
+        "Chengyu Song",
+        "Taesoo Kim",
+        "Wenke Lee"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background",
+        "methodology"
+      ],
+      "contexts": [
+        "Some dynamic tracking techniques [5, 31, 36] have been proposed to detect uninitialized data reads.",
+        "These techniques rely on dynamic instrumentation platforms (e.g., Valgrind [29] and DynamoRIO [5]) to instrument the binary and analyze memory access patterns dynamically."
+      ]
+    },
+    {
+      "title": "A secure isolation of software activities in tiny scale systems",
+      "year": 2015,
+      "doi": "10.1109/percomw.2015.7134037",
+      "openalex": null,
+      "s2": "862840e4cf5475ec8a38f8ba54c6b34c5c455ee8",
+      "venue": "2015 IEEE International Conference on Pervasive Computing and Communication Workshops (PerCom Workshops)",
+      "authors": [
+        "Oliver Stecklina"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Accelerating Dynamic Detection of Memory Errors for C Programs via Static Analysis",
+      "year": 2015,
+      "doi": "10.26190/unsworks/18208",
+      "openalex": null,
+      "s2": "df2213faf04faceb26dfbd95c8480a372295e27d",
+      "venue": null,
+      "authors": [
+        "Ding Ye"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background",
+        "methodology"
+      ],
+      "contexts": [
+        "Memory [7], and CETS [62] maintain the lifetime status of memory objects in metadata.",
+        "2 Shadow-Memory-based Instrumentation When a program is fully instrumented with shadow memory [7, 30, 36, 77], the definedness of every variable v in Var [VarAT is tracked by its shadow variable, v 2 {T , F}, of a Boolean type.",
+        "Memory [7] are an order of magnitude slower than the native code.",
+        "For memory leak detection, the instrumentation behaves similar as a mark-andsweep garbage collector in [7, 77].",
+        "Di↵erent types of memory errors usually have distinct characteristics, and they require di↵erent techniques for detection [7, 66].",
+        "Memory [7], which is implemented on top of DynamoRIO",
+        "The instrumentation code for a program can be inserted into either its binary [7, 77] or its source [30, 36]."
+      ]
+    },
+    {
+      "title": "Experiments with property driven monitoring of C programs",
+      "year": 2015,
+      "doi": null,
+      "openalex": null,
+      "s2": "e964ac17f81b8a51604928cf392456c32201eba4",
+      "venue": null,
+      "authors": [
+        "Kostyantyn Vorobyov"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Kernel-assisted Pattern Analysis of Memory Events",
+      "year": 2015,
+      "doi": "10.5072/prism/26698",
+      "openalex": null,
+      "s2": "814554f2589ac2cc7f1eefd5ffe00cedc33f67b1",
+      "venue": null,
+      "authors": [
+        "Sarah Laing"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "MemorySanitizer: Fast detector of uninitialized memory use in C++",
+      "year": 2015,
+      "doi": "10.1109/cgo.2015.7054186",
+      "openalex": "W4240590466",
+      "s2": "b4f1bab4e6022a9b36bc4a35416a047330ad4297",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Evgeniy Stepanov",
+        "Konstantin Serebryany"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Mitigating the performance impact of memory bloat",
+      "year": 2015,
+      "doi": null,
+      "openalex": null,
+      "s2": "0c74bf5a6f010c27933761fefe87be57b4a93a87",
+      "venue": null,
+      "authors": [
+        "Sangho Lee"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Moreover, the reachability-based definition allows tracking memory leaks at runtime [26, 16] to locate problematic"
+      ]
+    },
+    {
+      "title": "On Efficiency and Accuracy of Data Flow Tracking Systems",
+      "year": 2015,
+      "doi": "10.7916/d8mg7p9d",
+      "openalex": null,
+      "s2": "06d250e2aa6c017721b6f4b367991760d1091525",
+      "venue": null,
+      "authors": [
+        "K. Jee"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Instances of this technology includes DFT, memory integrity checking [Nethercote and Seward, 2007; Bruening and Zhao, 2011], control flow integrity [Abadi et al., 2005], method counting, call graph profiling etc.",
+        "Dr. Memory [Bruening and Zhao, 2011] discovers similar types of programming errors including memory leaks, heap overflows, etc Softwarebased fault isolation [Wahbe et al., 1993] mechanisms can also be easily supported through our framework by using the existing code analysis for the primary and…"
+      ]
+    },
+    {
+      "title": "Optimizing binary translation of dynamically generated code",
+      "year": 2015,
+      "doi": "10.1109/cgo.2015.7054188",
+      "openalex": "W4240696716",
+      "s2": "7a916eae585a217c214f1ee3c1710e4ec85e4213",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Byron Hawkins",
+        "Brian Demsky",
+        "Derek Bruening",
+        "Qin Zhao"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "StackArmor: Comprehensive Protection From Stack-based Memory Error Vulnerabilities for Binaries",
+      "year": 2015,
+      "doi": "10.14722/ndss.2015.23248",
+      "openalex": null,
+      "s2": "d4914de7dbb5080d5c83004cab22df9100fb37d0",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "X. Chen",
+        "Asia Slowinska",
+        "Dennis Andriesse",
+        "H. Bos",
+        "Cristiano Giuffrida"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [21] typically incur performance overheads of an order of magnitude or more.",
+        "Systems in the former category are generally targeted towards heap-based vulnerabilities, with techniques ranging from garbage collection [19], [63] to secure allocation [9], [15], [42], [54], [59] and dynamic memory checking [21], [22], [57], [68].",
+        "Dynamic memory checking tools [21], [22], [57], [68], in turn, can generally operate on the stack, offer pseudo-deterministic detection guarantees, and also often detect uninitialized reads [21], [57], [79]."
+      ]
+    },
+    {
+      "title": "Static Analysis To Improve Compiler Sanitization",
+      "year": 2015,
+      "doi": null,
+      "openalex": null,
+      "s2": "0152d7554b3bd8372266e5ceddd0e2bf0ead6c11",
+      "venue": null,
+      "authors": [
+        "Edmund Ballou"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Поиск некоторых типов ошибок работы с памятью в бинарном коде программ",
+      "year": 2015,
+      "doi": "10.15514/ispras-2015-27(2)-7",
+      "openalex": null,
+      "s2": "a36e45d06a3fc2854902e9ead1e677d422552271",
+      "venue": null,
+      "authors": [
+        "А.Н. Федотов",
+        "В. В. Каушан",
+        "Вартан Андроникович Падарян",
+        "А. Ю. Тихонов"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Accelerating Dynamic Detection of Uses of Undefined Values with Static Value-Flow Analysis",
+      "year": 2014,
+      "doi": "10.1145/2544137.2544154",
+      "openalex": null,
+      "s2": "c2a28182c1ccdf94349bea147949d62b46b6c984",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Ding Ye",
+        "Yulei Sui",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Automated memory leak detection for production use",
+      "year": 2014,
+      "doi": "10.1145/2568225.2568311",
+      "openalex": null,
+      "s2": "5a0a225bf9260e49123dd1e7847917953a9dced9",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Changhee Jung",
+        "Sangho Lee",
+        "Easwaran Raman",
+        "S. Pande"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background",
+        "methodology"
+      ],
+      "contexts": [
+        "Requirements for Production Use: Since memory leaks are very input-and environment-sensitive [9, 7], production use is essential to observe real execution characteristics that actually cause the leaks.",
+        "This difﬁculty leads to the advent of those memory leak detection tools based on dynamic analysis techniques [39, 8, 47, 6, 7, 13, 9, 46, 48, 27] including Sniper 1 .",
+        "This section introduces basic concepts and terminologies used in state-of-the-art leak detection tools [47, 6, 42, 26, 7, 29, 13, 9, 46, 48, 49, 49, 27], and shows their limitations as well as the requirements for production use.",
+        "Unfortunately, existing tools [19, 35, 30, 13, 12, 37, 9] cannot be used in production environment.",
+        "That is mainly because memory leaks are very input-and environment-sensitive [9, 7].",
+        "Despite undergoing extensive in-house testing, leaks often exist in deployed software and show up in customer usage [9, 7]."
+      ]
+    },
+    {
+      "title": "Control + Data Flow Model Directed Inputs Generation B . Approximate Taint Flow Inference",
+      "year": 2014,
+      "doi": null,
+      "openalex": null,
+      "s2": "3972aeee6c08de5f3e9595c47abe2ca38022cbad",
+      "venue": null,
+      "authors": [
+        "Fabien Duchene"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "For the test verdict, we use both a crash occurence and DrMemory [12].",
+        "Dynamic memory errors detectors permit a more precise test verdict by propagating the taint from the inputs to the data [12, 73]."
+      ]
+    },
+    {
+      "title": "DBILL: an efficient and retargetable dynamic binary instrumentation framework using llvm backend",
+      "year": 2014,
+      "doi": "10.1145/2576195.2576213",
+      "openalex": null,
+      "s2": "41ce5974fb117f00696c63de63cd27856dae08d2",
+      "venue": "International Conference on Virtual Execution Environments",
+      "authors": [
+        "Yi-Hong Lyu",
+        "Ding-Yong Hong",
+        "Tai-Yi Wu",
+        "Jan-Jan Wu",
+        "W. Hsu",
+        "Pangfeng Liu",
+        "P. Yew"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Detecting Memory Leaks Statically with Full-Sparse Value-Flow Analysis",
+      "year": 2014,
+      "doi": "10.1109/tse.2014.2302311",
+      "openalex": "W2072385532",
+      "s2": "87e7c1e51f2dea7302118214543e6d6593498f58",
+      "venue": "IEEE Transactions on Software Engineering",
+      "authors": [
+        "Yulei Sui",
+        "Ye Ding",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "There are a number of reported attempts on memory leak detection using static analysis [3], [9], [10], [11], [13], [22], [30], [33] or dynamic analysis [1], [5], [20], [35], [36].",
+        "Such tools [1], [5], [18]"
+      ]
+    },
+    {
+      "title": "Detecting memory leaks through introspective dynamic behavior modelling using machine learning",
+      "year": 2014,
+      "doi": "10.1145/2568225.2568307",
+      "openalex": null,
+      "s2": "89cbc439c3ba58bcb8a05ffa0ffd22791f02d860",
+      "venue": "International Conference on Software Engineering",
+      "authors": [
+        "Sangho Lee",
+        "Changhee Jung",
+        "S. Pande"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "This diﬃculty leads to the advent of those memory leak detection tools based on dynamic analysis techniques [28, 8, 30, 35, 6, 7, 15, 9, 34, 25, 22]."
+      ]
+    },
+    {
+      "title": "Hardware and Application Profiling Tools",
+      "year": 2014,
+      "doi": "10.1016/b978-0-12-420232-0.00003-9",
+      "openalex": "W185047530",
+      "s2": "bb904f3bae311a61e2bcc295a60d8f65861c6bdc",
+      "venue": "Advances in computers",
+      "authors": [
+        "Tomislav Janjusic",
+        "Krishna M. Kavi"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "The ghost in the machine: Don't let it haunt your software performance measurements",
+      "year": 2014,
+      "doi": "10.6028/nist.tn.1830",
+      "openalex": null,
+      "s2": "a9418e6e2e413107812649b7cb54cca6002fd37a",
+      "venue": null,
+      "authors": [
+        "Vreda Pieterse",
+        "D. Flater"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology",
+        "background"
+      ],
+      "contexts": [
+        "Bruening and Zhao [2011] measured the execution times while using two different profiling instruments relative to native times on a number of benchmarks and observed considerable slow down in some cases.",
+        "With more effort, hardware instrumentation can be attached to the power inputs of the components one wants to measure [Carroll and Heiser, 2010]. Alternative approaches for estimating power consumption based on a power model and activity counters that can be used in place of instrumented power measurements have been proposed [Flinn and Satyanarayanan, 1999; Goel et al., 2010; Lewis et al., 2008; Singh et al., 2009; Stockman et al., 2010]. Software instruments that may be used to estimate power consumption at varying levels of detail are mentioned in Section 4. Owing to complex architectural setup when using multiple cores, the power used by a given process may not be directly associated with the measured power consumption. Tudor and Teo [2013] observed large imbalances between cores, memory and I/O resources leading to under-utilized resources and energy waste."
+      ]
+    },
+    {
+      "title": "A Dynamic Approach to Locating Memory Leaks",
+      "year": 2013,
+      "doi": "10.1007/978-3-642-41707-8_17",
+      "openalex": "W1680603524",
+      "s2": "e700a939e47b20b4f353523eac0582966078507c",
+      "venue": "Lecture notes in computer science",
+      "authors": [
+        "Kostyantyn Vorobyov",
+        "Padmanabhan Krishnan",
+        "Phil Stocks"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "More recent approaches, such as Dr. Memory [9], use dynamic binary instrumentation (DBI)."
+      ]
+    },
+    {
+      "title": "A novel resource related faults detecting approach",
+      "year": 2013,
+      "doi": "10.1109/iccsnt.2013.6967109",
+      "openalex": "W2544731853",
+      "s2": "5506f9cc381870045fe31c5323143031e1f4249e",
+      "venue": "Proceedings of 2013 3rd International Conference on Computer Science and Network Technology",
+      "authors": [
+        "Ming Huang",
+        "Shujie Guo",
+        "Liang Xu",
+        "Xuan Jiao"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Debugging With Behavioral Watchpoints",
+      "year": 2013,
+      "doi": null,
+      "openalex": null,
+      "s2": "81075b88d76f0639b20913a34f7b2a60f3b5af94",
+      "venue": null,
+      "authors": [
+        "K. Akshay"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Dynamic memory access monitoring based on tagged memory",
+      "year": 2013,
+      "doi": "10.1109/pact.2013.6618840",
+      "openalex": "W4253867891",
+      "s2": "3e14cc82cc9d80d5b0bd727d22082290608be220",
+      "venue": "Proceedings of the 22nd International Conference on Parallel Architectures and Compilation Techniques",
+      "authors": [
+        "M. A. Gorelov",
+        "Lev Mukhanov"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "The \ngoal of this research is to develop and investigate a memory access monitoring tool that detects memory \nleaks and corruption using tagged memory without reduce of an original application performance."
+      ]
+    },
+    {
+      "title": "Efficient Parallel Runtime Bounds Checking with the TAU Performance System",
+      "year": 2013,
+      "doi": null,
+      "openalex": null,
+      "s2": "fe89e3a8e7f32066e2eedf790a1522644a766836",
+      "venue": null,
+      "authors": [
+        "J. C. Linford",
+        "S. Shende",
+        "A. Malony"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [13] use shadow memory methods to isolate memory bugs."
+      ]
+    },
+    {
+      "title": "Framework for Evaluating Dynamic Memory Allocators Including a New Equivalence Class Based Cache-conscious Allocator",
+      "year": 2013,
+      "doi": "10.12794/metadc500151",
+      "openalex": "W1214594612",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Tomislav Janjusic"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Lightweight Memory Tracing",
+      "year": 2013,
+      "doi": null,
+      "openalex": null,
+      "s2": "561d1f3afc4d41c41b44f7e22f337132fc388332",
+      "venue": "USENIX Annual Technical Conference",
+      "authors": [
+        "Mathias Payer",
+        "Enrico Kravina",
+        "T. Gross"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "MPI-semantic memory checking tools for parallel applications",
+      "year": 2013,
+      "doi": "10.18419/opus-6437",
+      "openalex": null,
+      "s2": "dd65b09a791d7e353f13c9b93f24cc516efa3d6c",
+      "venue": null,
+      "authors": [
+        "Shiqing Fan"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "{ volatile unsigned int _zzq_args[6]; \\ volatile unsigned int _zzq_result; \\ _zzq_args[0] = (unsigned int)(_zzq_request); \\ _zzq_args[1] = (unsigned int)(_zzq_arg1); \\ _zzq_args[2] = (unsigned int)(_zzq_arg2); \\ _zzq_args[3] = (unsigned int)(_zzq_arg3); \\ _zzq_args[4] = (unsigned int)(_zzq_arg4); \\ _zzq_args[5] = (unsigned int)(_zzq_arg5); \\ __asm__ volatile(__SPECIAL_INSTRUCTION_PREAMBLE \\ /* %EDX = client_request ( %EAX ) */ \\ \"xchgl %%ebx,%%ebx\" \\ : \"=d\" (_zzq_result) \\ : \"a\" (&_zzq_args[0]), \"0\" (_zzq_default) \\ : \"cc\", \"memory\" \\ ); \\ _zzq_rlval = _zzq_result; \\ }",
+        "Similar tools are Valgrind and DynamoRIO [4, 5]."
+      ]
+    },
+    {
+      "title": "ShadowReplica: efficient parallelization of dynamic data flow tracking",
+      "year": 2013,
+      "doi": "10.1145/2508859.2516704",
+      "openalex": null,
+      "s2": "becd91dbba8b2d2bcb702bbc4d961e74c5d41050",
+      "venue": "Conference on Computer and Communications Security",
+      "authors": [
+        "Kangkook Jee",
+        "V. Kemerlis",
+        "A. Keromytis",
+        "G. Portokalidis"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "Categories and Subject Descriptors\nD.4.5 [Operating Systems]: Reliability; D.4.6 [Information flow controls]: Security and Protection; D.4.7 [Parallelization]: Organization and Design; D.4.8 [Optimization]: Performance\nKeywords\nSecurity, Information flow tracking, Optimization,…"
+      ]
+    },
+    {
+      "title": "Skadu: Efficient vector shadow memories for poly-scopic program analysis",
+      "year": 2013,
+      "doi": "10.1109/cgo.2013.6494985",
+      "openalex": "W2135348627",
+      "s2": "2a079134a4c16f509fcf02d749e594b04e458108",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Dong‐Hwan Jeon",
+        "Santi Orriols García",
+        "Michael Taylor"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background",
+        "methodology"
+      ],
+      "contexts": [
+        "These areas include security [5, 17, 23], data race detection [18], copy profiling [22], cache contention detection [26], and memory debugging [4, 19] among many others.",
+        "Memory shadowing is a general technique that has been used in a wide range of applications: from memory analysis [4, 19] to computer security [5, 17, 23]."
+      ]
+    },
+    {
+      "title": "A General Approach for Efficiently Accelerating Software-based Dynamic Data Flow Tracking on Commodity Hardware",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "2140cf164116b9c6b21ed44028902fdc3f6578e1",
+      "venue": "Network and Distributed System Security Symposium",
+      "authors": [
+        "Kangkook Jee",
+        "G. Portokalidis",
+        "V. Kemerlis",
+        "Soumyadeep Ghosh",
+        "David I. August",
+        "A. Keromytis"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "A practical oracle for sequential code parallelization",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "6e6be137332e16df6f10cb9e2cca51ca0d451980",
+      "venue": null,
+      "authors": [
+        "Saturnino Garcia"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "AddressSanitizer: A Fast Address Sanity Checker",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "29146d2b80bc8c56f7e18efe8d2c92354254e947",
+      "venue": "USENIX Annual Technical Conference",
+      "authors": [
+        "Kostya Serebryany",
+        "Derek Bruening",
+        "Alexander Potapenko",
+        "D. Vyukov"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background",
+        "methodology"
+      ],
+      "contexts": [
+        "Dozens of memory error detection tools are available on the market [3] [8] [11] [13] [15] [21] [23] [24].",
+        "Among the most popular are Valgrind (Memcheck) [21], Dr. Memory [8], Purify[13], BoundsChecker [17], Intel Parallel Inspector [15] and Discover [23].",
+        "Valgrind [20] and Dr. Memory [8] split their shadow memory into pieces and use a table lookup to obtain the shadow address, requiring an extra memory load."
+      ]
+    },
+    {
+      "title": "Aikido: accelerating shared data dynamic analyses",
+      "year": 2012,
+      "doi": "10.1145/2150976.2150995",
+      "openalex": null,
+      "s2": "c36d7ec573582cd93ccdb15f132eb983be04ec71",
+      "venue": "ASPLOS XVII",
+      "authors": [
+        "Marek Olszewski",
+        "Qin Zhao",
+        "David Koh",
+        "Jason Ansel",
+        "Saman P. Amarasinghe"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Umbra [33, 34] is an extension to the DynamoRIO binary instrumentation system that allows building efficient shadow value tools [8]."
+      ]
+    },
+    {
+      "title": "Baggy Bounds with Accurate Checking",
+      "year": 2012,
+      "doi": "10.1109/issrew.2012.24",
+      "openalex": "W2076148486",
+      "s2": "6a9744ec5ea1659d90f3dab0d6ce40f628432d1c",
+      "venue": "2012 IEEE 23rd International Symposium on Software Reliability Engineering Workshops",
+      "authors": [
+        "Baozeng Ding",
+        "Yeping He",
+        "Yanjun Wu",
+        "Alex Miller",
+        "John Criswell"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Memory [20] use binary instrumentation to detect memory errors, which is backward compatible but has high overhead."
+      ]
+    },
+    {
+      "title": "Comprehensive kernel instrumentation via dynamic binary translation",
+      "year": 2012,
+      "doi": "10.1145/2150976.2150992",
+      "openalex": null,
+      "s2": "4b6746125fb0e00dc7772a894b44b0f473f7af03",
+      "venue": "ASPLOS XVII",
+      "authors": [
+        "Peter Feiner",
+        "Angela Demke Brown",
+        "Ashvin Goel"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Computer Science (Computer Engineering)",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "d536d9f8129a92f54aa5dcc130a7565d14872741",
+      "venue": null,
+      "authors": [
+        "Dong-Keun Jeon"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "295423fa4c09786b7bea7f19b53e6ef3d9741af8",
+      "venue": null,
+      "authors": [
+        "J. Greathouse"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Memory, a similar tool built using a different instrumentation tool, has overheads of about 10× [28]."
+      ]
+    },
+    {
+      "title": "Operating system support for redundant multithreading",
+      "year": 2012,
+      "doi": "10.1145/2380356.2380375",
+      "openalex": null,
+      "s2": "048151b1fd4faee3a54566e4af03e46b01b16ced",
+      "venue": "International Conference on Embedded Software",
+      "authors": [
+        "Björn Döbel"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Parallel speedup estimates for serial programs",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "543f759f3f51690439851a303e9bc86a794786bd",
+      "venue": null,
+      "authors": [
+        "Donghwan Jeon"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Parallel speedup estimates for serial programs",
+      "year": 2012,
+      "doi": null,
+      "openalex": null,
+      "s2": "5fda459b100d6a2e33dcf67e19d721f4a5bfca80",
+      "venue": null,
+      "authors": [
+        "Donghwan Jeon",
+        "Misook Chung"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Static memory leak detection using full-sparse value-flow analysis",
+      "year": 2012,
+      "doi": "10.1145/2338965.2336784",
+      "openalex": null,
+      "s2": "62c1c9220ffd398cdb29d18fa702f96b9a81939b",
+      "venue": "International Symposium on Software Testing and Analysis",
+      "authors": [
+        "Yulei Sui",
+        "Ding Ye",
+        "Jingling Xue"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Transparent dynamic instrumentation",
+      "year": 2012,
+      "doi": "10.1145/2151024.2151043",
+      "openalex": null,
+      "s2": "f0d19c7e123c0160f2535e561c2955df99d4f993",
+      "venue": "International Conference on Virtual Execution Environments",
+      "authors": [
+        "Derek Bruening",
+        "Qin Zhao",
+        "Saman P. Amarasinghe"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "It provides a virtual execution environment within which arbitrary unmodiﬁed applications, even legacy software with no available source code,"
+      ]
+    },
+    {
+      "title": "Optimization of naïve dynamic binary instrumentation Tools",
+      "year": 2011,
+      "doi": null,
+      "openalex": null,
+      "s2": "4ed4f40468206c647651182d870fcdfadef25972",
+      "venue": null,
+      "authors": [
+        "R. Kleckner"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "For example, DrMemory uses the flexibility of DynamoRIO to generate memory accesses that will fault if the application uses uninitialized data.",
+        "As a result, DrMemory is on average twice as fast as Valgrind’s Memcheck.",
+        "Memory debuggers such as DrMemory[1] and Valgrind[2] in particular have been instrumental in tracking down uninitialized memory and memory leaks.",
+        "As a result, DrMemory is on average twice as fast as Valgrind's Memcheck.[1] Pin does not provide the flexibility needed to generate and handle this kind of instrumentation."
+      ]
+    },
+    {
+      "title": "Precise detection of un-initialized variables in large, real-life COBOL programs in presence of unrealizable paths",
+      "year": 2011,
+      "doi": "10.1109/icsm.2011.6080812",
+      "openalex": "W2055016274",
+      "s2": "e032da2294870692c81017f415725d74ff1d85d9",
+      "venue": "International Conference on Smart Multimedia",
+      "authors": [
+        "Rahul Jiresal",
+        "Adnan Contractor",
+        "Ravindra Naik"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "This paper is included in the",
+      "year": null,
+      "doi": null,
+      "openalex": null,
+      "s2": "c67b876ad4df04451b74420e7fcf6e3470c5a6b2",
+      "venue": null,
+      "authors": [
+        "Jakob Koschel",
+        "Pietro Borrello",
+        "Daniele Cono",
+        "Delia",
+        "Herbert Bos",
+        "Cristiano Giuffrida"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Similarly to ASan [50], several sanitizers rely on redzones: Purify [25], Memcheck [51], Dr. Memory [6] and LPC [24] leverage them to detect memory corrup-tions in the form of spatial and temporal safety violations."
+      ]
+    },
+    {
+      "title": "This paper is included in the Proceedings of the 32nd USENIX Security Symposium.",
+      "year": null,
+      "doi": null,
+      "openalex": null,
+      "s2": "a7b95e1b9312efa9171baa8c131164c37ba5a07e",
+      "venue": null,
+      "authors": [
+        "Yiming Zhang",
+        "Fengwei Zhang",
+        "Yuxin Hu",
+        "Zhenyu Ning",
+        "Xiapu Luo",
+        "Hao-Jan Huang",
+        "Shoumeng Yan",
+        "Zheng-hao He"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}

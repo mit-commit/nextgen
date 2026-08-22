@@ -1,0 +1,896 @@
+{
+  "counts": {
+    "openalex": 31,
+    "s2": 43
+  },
+  "citing": [
+    {
+      "title": "Automated Tensor-Relational Decomposition for Large-Scale Sparse Tensor Computation",
+      "year": 2026,
+      "doi": "10.14778/3797919.3797921",
+      "openalex": "W7160595337",
+      "s2": "f0ecbfa4aacfea5c4a2369be03e87068423a30cf",
+      "venue": "Proceedings of the VLDB Endowment",
+      "authors": [
+        "Yuxin Tang",
+        "Zhiyuan Xin",
+        "Zhimin Ding",
+        "Xinyu Yao",
+        "Daniel Bourgeois",
+        "Tirthak Patel",
+        "Chris Jermaine"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Fast Autoscheduling for Sparse ML Frameworks",
+      "year": 2026,
+      "doi": "10.1109/cgo68049.2026.11394842",
+      "openalex": "W7131131434",
+      "s2": "4b42dbb2833d295579d3b1babd331d20c4884f07",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Bobby Yan",
+        "Alexander J Root",
+        "Trevor Gale",
+        "David Broman",
+        "Fredrik Kjølstad"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "Pigeon [3] uses exhaustive enumeration while SpTTN-Cyclops [22] tunes contraction paths and index orders for specific SpTTN kernels (contractions of a single large sparse tensor with several dense tensors).",
+        "Table I compares Scorch’s autoscheduling performance against Pigeon [3], the only other sparse autoscheduler of which we are aware, on the two benchmarks made available in their artifact.",
+        "Prior autoscheduling techniques for sparse tensors [3, 22] rely on cost modeling and search-based methods, which are too slow for dynamic ML workloads.",
+        "Search-based autoscheduling [3] exhaustively explores the schedule space, taking hours to days.",
+        "More subtly, compilation has to be fast enough to support interactive model development with immediate execution, which precludes exclusively relying on search-based autoscheduling strategies [3].",
+        "Pigeon [3] makes loop ordering but not tiling decisions.",
+        "We introduce a novel algorithm for automatically determining efficient loop orders that, unlike prior work, does not require an offline exhaustive search [3] or manual scheduling directives [46, 54]."
+      ]
+    },
+    {
+      "title": "GRANII: Selection and Ordering of Primitives in GRAph Neural Networks using Input Inspection",
+      "year": 2026,
+      "doi": "10.1109/cgo68049.2026.11395219",
+      "openalex": "W7131170673",
+      "s2": "0f8938e644337e6c9acec8c2092782ce976ecc6e",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Damitha Lenadora",
+        "Vimarsh Sathia",
+        "Gerasimos Gerogiannis",
+        "Şerif Yeşil",
+        "Josep Torrellas",
+        "Charith Mendis"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Going beyond the boundary of a single kernel, systems such as [21]–[23], [65] perform loop ordering optimizations across multiple adjacent kernels.",
+        "Furthermore, systems that select loop orderings such as [21]–[23], make input-unaware choices between adjacent kernels without considering the expanded region of the entire GNN model, nor the domain-specific optimization opportunities."
+      ]
+    },
+    {
+      "title": "Harmonia: A Unified Hierarchical Scheduling Framework for Sparse Matrix Multiplication",
+      "year": 2026,
+      "doi": "10.1109/isca66397.2026.00151",
+      "openalex": "W7172394656",
+      "s2": "ec72906ee06fe5f2198b39b32a3120361e455752",
+      "venue": "International Symposium on Computer Architecture",
+      "authors": [
+        "Jingkui Yang",
+        "Fangxin Liu",
+        "Xin Ju",
+        "Ning Yang",
+        "Chenyang Guan",
+        "Junjie Wang",
+        "Zongwu Wang",
+        "Mei Wen",
+        "Jian Liu",
+        "Li Jiang",
+        "Haibing Guan"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
+      "year": 2026,
+      "doi": "10.1145/3771775.3786267",
+      "openalex": "W7125963162",
+      "s2": "2c4ae0a89568ac9c181cd662a7852023cff11ec2",
+      "venue": "International Conference on Compiler Construction",
+      "authors": [
+        "Shideh Hashemian",
+        "Michael F. P. O’Boyle",
+        "Amir Shaikhha"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "1b, to read the value 18 in row 2 and column 1 , first pos[2] and pos[3] are used as the bounds, ( 1:2 , includes 1 but excludes 2 ), to locate the position of the nonzero column indices ( 1 ) and values ( 18 ) in the other two arrays.",
+        "An offline automatic scheduler based on an abstract cost model was proposed [3], which generates schedules for the TACO [16] compiler."
+      ]
+    },
+    {
+      "title": "PANA: A Fine-Grained Runtime-Adaptive Load Balancing for Parallel SpMV on Multicore CPUs",
+      "year": 2026,
+      "doi": "10.1145/3774934.3786459",
+      "openalex": "W7125962849",
+      "s2": "82b04ddbf07dc75edba580a60af8bd2a084f8d54",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "authors": [
+        "Haodong Bian",
+        "Youhui Zhang",
+        "Xiang Fei",
+        "Jianqiang Huang",
+        "Xiaoying Wang"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
+      "year": 2026,
+      "doi": "10.48550/arxiv.2604.17198",
+      "openalex": null,
+      "s2": "efe3f11deccf87f1cb49c814700d22638980370e",
+      "venue": "arXiv.org",
+      "authors": [
+        "Atharv Chougule",
+        "Alexander J. Root",
+        "Rubens Lacouture",
+        "Bobby Yan",
+        "Rohan Yadav",
+        "Fredrik Kjolstad"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "A Closeness Centrality-based Circuit Partitioner for Quantum Simulations",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2509.14098",
+      "openalex": null,
+      "s2": "45ce386ad3314acf33c883c39ffa31f4247095ad",
+      "venue": "arXiv.org",
+      "authors": [
+        "Doru-Thom Popovici",
+        "Harlin Lee",
+        "M. D. Ben",
+        "Naoki Yoshioka",
+        "Nobuyasu Ito",
+        "K. Klymko",
+        "Daan Camps",
+        "Anastasiia Butko"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "We base our work on the TACO compiler [2, 8, 28] and its internal representation for tensor operations, namely the concrete index notation."
+      ]
+    },
+    {
+      "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
+      "year": 2025,
+      "doi": "10.1145/3725843.3756095",
+      "openalex": "W4415285476",
+      "s2": "7fd21e22195059267fcd609dc52c2c2654b0836c",
+      "venue": "Micro",
+      "authors": [
+        "Ritvik Sharma",
+        "Zi Yu Xue",
+        "Nathan Zhang",
+        "Rubens Lacouture",
+        "Fredrik Kjølstad",
+        "Sara Achour",
+        "Mark Horowitz"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "ASaP: Automatic Software Prefetching for Sparse Tensor Computations in MLIR",
+      "year": 2025,
+      "doi": "10.1145/3731599.3767477",
+      "openalex": "W4416004530",
+      "s2": "97ee776523207c023ceefe9a3908f37e5d077de7",
+      "venue": "SC25-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+      "authors": [
+        "Konstantinos Sotiropoulos",
+        "Jonas Skeppstedt",
+        "Per Stenström"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Finch: Sparse and Structured Tensor Programming with Control Flow",
+      "year": 2025,
+      "doi": "10.1145/3720473",
+      "openalex": "W4409310702",
+      "s2": "91cc09651bbcc232da5a6549812c4ae833c98e18",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Willow Ahrens",
+        "Teodoro Fields Collin",
+        "Radha Patel",
+        "Kyle Deeds",
+        "Changwan Hong",
+        "Saman Amarasinghe"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Inner-products is known to be asymptotically less efficient than the others, as we must do a merge operation to compute each of the 𝑀𝑁 entries in the output [8].",
+        "For example, the asymptotic performance of sparse matrix multiplication can be impacted by the distribution of nonzeros, the sparse format, and the loop order [8, 102]."
+      ]
+    },
+    {
+      "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow",
+      "year": 2025,
+      "doi": "10.1145/3779212.3790165",
+      "openalex": null,
+      "s2": "16c47ca02c5915d52ec921fec43773054c24b85d",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Rubens Lacouture",
+        "Nathan Zhang",
+        "Ritvik Sharma",
+        "Marco Siracusa",
+        "Fredrik Kjolstad",
+        "K. Olukotun",
+        "Olivia Hsu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "GALA: A High Performance Graph Neural Network Acceleration LAnguage and Compiler",
+      "year": 2025,
+      "doi": "10.1145/3763113",
+      "openalex": "W4415005851",
+      "s2": "219c2d496fbfb7c9f15327900cb22d25613309d4",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Damitha Lenadora",
+        "Nikhil Jayakumar",
+        "Chamika Sudusinghe",
+        "Charith Mendis"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Galley: Modern Query Optimization for Sparse Tensor Programs",
+      "year": 2025,
+      "doi": "10.1145/3725301",
+      "openalex": "W4411403183",
+      "s2": "a12b6c79da5c251bd674dc3901e6c4f37d5559b4",
+      "venue": "Proceedings of the ACM on Management of Data",
+      "authors": [
+        "Kyle Deeds",
+        "Willow Ahrens",
+        "Magdalena Bałazińska",
+        "Dan Suciu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Mapple: A Domain-Specific Language for Mapping Distributed Heterogeneous Parallel Programs",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2507.17087",
+      "openalex": null,
+      "s2": "51ad0ec6eede7a725d695afd9fb644457ab4db9b",
+      "venue": "arXiv.org",
+      "authors": [
+        "Anjiang Wei",
+        "Rohan Yadav",
+        "Hang Song",
+        "Wonchan Lee",
+        "Ke Wang",
+        "Alex Aiken"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Morphing-Based Compression for Data-Centric ML Pipelines",
+      "year": 2025,
+      "doi": "10.14778/3778092.3778104",
+      "openalex": "W7138922574",
+      "s2": null,
+      "venue": "Proceedings of the VLDB Endowment",
+      "authors": [
+        "Sebastian Baunsgaard",
+        "Matthias Boehm"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "Morphing-based Compression for Data-centric ML Pipelines",
+      "year": 2025,
+      "doi": "10.48550/arxiv.2504.11067",
+      "openalex": null,
+      "s2": "332736452004f3e658cc2bf23f6f339704510a14",
+      "venue": "Proceedings of the VLDB Endowment",
+      "authors": [
+        "Sebastian Baunsgaard",
+        "Matthias Boehm"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "ProSpec: Profile-guided Specialization for GPU Kernels",
+      "year": 2025,
+      "doi": "10.1016/j.infsof.2025.107901",
+      "openalex": "W4414519059",
+      "s2": "0e2dba7c56df9fc3cbcb55d7b799536700868673",
+      "venue": "Information and Software Technology",
+      "authors": [
+        "Jiali Liang",
+        "Lin Chen",
+        "Xiangyu Zhang",
+        "Yanhui Li",
+        "Yuming Zhou"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Scheduling Language Chronology: Past, Present, and Future",
+      "year": 2025,
+      "doi": "10.1145/3743135",
+      "openalex": null,
+      "s2": "db1e6ab705191946f472301f134238e925bb0bc0",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "authors": [
+        "Mary Hall",
+        "C. Oancea",
+        "Anne Elster",
+        "Ari Rasch",
+        "Sameeran Joshi",
+        "A. Tavakkoli",
+        "Richard Schulze"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "The right-hand side of Figure 4 demonstrates how this rule eliminates the creation of the intermediate list [ 1 , 2 , 3 , 4 , 5 ] .",
+        "For sparse tensor computations, Ahrens et al. [4] co-optimize the computation and format of a sparse tensor."
+      ]
+    },
+    {
+      "title": "SySTeC: A Symmetric Sparse Tensor Compiler",
+      "year": 2025,
+      "doi": "10.1145/3696443.3708919",
+      "openalex": "W4407863037",
+      "s2": null,
+      "venue": null,
+      "authors": [
+        "Radha Patel",
+        "Willow Ahrens",
+        "Saman Amarasinghe"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "pyATF: Constraint-Based Auto-Tuning in Python",
+      "year": 2025,
+      "doi": "10.1145/3708493.3712682",
+      "openalex": "W4407944868",
+      "s2": "f55999b000e3baf47016c7a95f11976f72b8c844",
+      "venue": "International Conference on Compiler Construction",
+      "authors": [
+        "Richard Schulze",
+        "Sergei Gorlatch",
+        "Ari Rasch"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Compilation of Modular and General Sparse Workspaces",
+      "year": 2024,
+      "doi": "10.1145/3656426",
+      "openalex": "W4399852843",
+      "s2": "4210d360f09809b99c45f8a43ebfe48d04bd3708",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Genghan Zhang",
+        "Olivia Hsu",
+        "Fredrik Kjølstad"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "CoolerSpace: A Language for Physically Correct and Computationally Efficient Color Programming",
+      "year": 2024,
+      "doi": "10.1145/3689741",
+      "openalex": "W4403160430",
+      "s2": "a0e0405a362aa13b355cdec5c74a472772f899d7",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Ethan Chen",
+        "Jiwon Chang",
+        "Yuhao Zhu"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Our cost function is based on a first-order estimation of operation counts; while empirically effective, future work can consider integrating hardware-aware models [Ahrens et al. 2022; Anderson et al. 2021; Liu et al. 2022]."
+      ]
+    },
+    {
+      "title": "Explore as a Storm, Exploit as a Raindrop: On the Benefit of Fine-Tuning Kernel Schedulers with Coordinate Descent",
+      "year": 2024,
+      "doi": "10.48550/arxiv.2406.20037",
+      "openalex": null,
+      "s2": "beec5e96c8f7ee25e29f98f8dcd09e49b6fbae33",
+      "venue": "arXiv.org",
+      "authors": [
+        "Michael Canesche",
+        "G. Verma",
+        "Fernando Magno Quintão Pereira"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Minimum Cost Loop Nests for Contraction of a Sparse Tensor with a Tensor Network",
+      "year": 2024,
+      "doi": "10.1145/3626183.3659985",
+      "openalex": "W4399344346",
+      "s2": "1a356c1539677626ab667d1cee8ba1da2f4e6890",
+      "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+      "authors": [
+        "Raghavendra Kanakagiri",
+        "Edgar Solomonik"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "NLTSP: A cost model for tensor program tuning using nested loop trees",
+      "year": 2024,
+      "doi": "10.1016/j.sysarc.2024.103305",
+      "openalex": "W4404523834",
+      "s2": "ed8893ad7b959cb1e632b5c53ccd35f2d7911dae",
+      "venue": "Journal of Systems Architecture",
+      "authors": [
+        "Xinghe Qin",
+        "Yunchun Li",
+        "Yunchun Li",
+        "Wei Li",
+        "Wei Li"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "SABLE: Staging Blocked Evaluation of Sparse Matrix Computations",
+      "year": 2024,
+      "doi": "10.48550/arxiv.2407.00829",
+      "openalex": null,
+      "s2": "6e288e83a2e57ba412cb10adfc3358db5916ded0",
+      "venue": "arXiv.org",
+      "authors": [
+        "Pratyush Das",
+        "Adhitha Dias",
+        "Anxhelo Xhebraj",
+        "Artem Pelenitsyn",
+        "Kirshanthan Sundararajah",
+        "Milind Kulkarni"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Given the diversity of compressed storage formats for sparse matrices and the challenges in determining the optimal access patterns, plenty of research has focused on separating the schedule — how computations are executed — from computations [1, 17, 29, 47]."
+      ]
+    },
+    {
+      "title": "Scheduling Languages: A Past, Present, and Future Taxonomy",
+      "year": 2024,
+      "doi": "10.48550/arxiv.2410.19927",
+      "openalex": null,
+      "s2": "54ff94dda3b37829344af13ee9a9d66c75f25d52",
+      "venue": "arXiv.org",
+      "authors": [
+        "Mary W. Hall",
+        "C. Oancea",
+        "A. Elster",
+        "Ari Rasch",
+        "Sameeran Joshi",
+        "A. Tavakkoli",
+        "Richard Schulze"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Scorch: A Library for Sparse Deep Learning",
+      "year": 2024,
+      "doi": "10.48550/arxiv.2405.16883",
+      "openalex": null,
+      "s2": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+      "venue": "arXiv.org",
+      "authors": [
+        "Bobby Yan",
+        "Alexander J. Root",
+        "T. Gale",
+        "David Broman",
+        "Fredrik Kjolstad"
+      ],
+      "isInfluential": true,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Prior auto-scheduling techniques for dense [2, 66, 65] and sparse tensors [3, 27] rely on cost modeling, optimization heuristics, and black-box search.",
+        "CIN-P [3] enumerates schedules based on asymptotic costs to find optimal schedules for general sparse tensor algebra expressions.",
+        "Unlike in dense tensor computations, the loop order of a sparse tensor computation affects its asymptotic complexity [3].",
+        "In fact, the wrong loop order in a sparse loop nest can even change its asymptotic complexity [3].",
+        "Unlike dense computations, where different loop orders have the same asymptotic complexity, the choice of loop order can impact the worst-case asymptotic complexity and thus the observed performance of sparse computations [3]."
+      ]
+    },
+    {
+      "title": "SparseAuto: An Auto-scheduler for Sparse Tensor Computations using Recursive Loop Nest Restructuring",
+      "year": 2024,
+      "doi": "10.1145/3689730",
+      "openalex": "W4403223472",
+      "s2": "01dacad71d6085a79cf170bd5eac4f66ccf39801",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Adhitha Dias",
+        "Logan Anderson",
+        "Kirshanthan Sundararajah",
+        "Artem Pelenitsyn",
+        "Milind Kulkarni"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "SySTeC: A Symmetric Sparse Tensor Compiler",
+      "year": 2024,
+      "doi": "10.48550/arxiv.2406.09266",
+      "openalex": null,
+      "s2": "a0edba5681ba31d2e9bdd629dd50c57a9c242d52",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Radha Patel",
+        "Willow Ahrens",
+        "Saman Amarasinghe"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": [
+        "Iterators over sparse tensor formats are often a performance bottle-neck, and are especially sensitive to changes in loop ordering and loop bounds [6]."
+      ]
+    },
+    {
+      "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU",
+      "year": 2024,
+      "doi": "10.1145/3627535.3638471",
+      "openalex": "W4391958657",
+      "s2": "bd4156a1abd1cf9abb75d1142518a346b21b5bde",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "authors": [
+        "Xiaoyan Liu",
+        "Xuegui Zheng",
+        "Hailong Yang",
+        "Zhongzhi Luan",
+        "Depei Qian"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Vesper: A Versatile Sparse Linear Algebra Accelerator With Configurable Compute Patterns",
+      "year": 2024,
+      "doi": "10.1109/tcad.2024.3496882",
+      "openalex": "W4404317065",
+      "s2": "fd61856f7525d61a0b1ba6d4e5c8fee13c753299",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "authors": [
+        "Hanchen Jin",
+        "Zichao Yue",
+        "Zhongyuan Zhao",
+        "Yixiao Du",
+        "Chenhui Deng",
+        "Nitish Srivastava",
+        "Zhiru Zhang"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Accelerating Convolutional Neural Network by Exploiting Sparsity on GPUs",
+      "year": 2023,
+      "doi": "10.1145/3600092",
+      "openalex": "W4378573650",
+      "s2": "06c1a7b0f604c731b64cc5b7c279d724450ce836",
+      "venue": "ACM Transactions on Architecture and Code Optimization",
+      "authors": [
+        "Weizhi Xu",
+        "Yintai Sun",
+        "Shengyu Fan",
+        "Hui Yu",
+        "Xin Fu"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "[2] propose an automatic asymptotic scheduler for sparse tensor programs."
+      ]
+    },
+    {
+      "title": "C2TACO: Lifting Tensor Code to TACO",
+      "year": 2023,
+      "doi": "10.1145/3624007.3624053",
+      "openalex": "W4387796988",
+      "s2": "e2b29090b001c1d29069199619e3e7351589105a",
+      "venue": "International Conference on Generative Programming: Concepts and Experiences",
+      "authors": [
+        "José Wesley de Souza Magalhães",
+        "Jackson Woodruff",
+        "Elizabeth Polgreen",
+        "Michael O’Boyle"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Designing a Dataflow Hardware Accelerator with an Abstract Machine",
+      "year": 2023,
+      "doi": null,
+      "openalex": null,
+      "s2": "fe1eab77bbf7bcd6a455d8025560c530420e1405",
+      "venue": null,
+      "authors": [
+        "Olivia Hsu",
+        "Maxwell Strange",
+        "K. Olukotun",
+        "M. Horowitz",
+        "Fredrik Kjolstad"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Indexed Streams: A Formal Intermediate Representation for Fused Contraction Programs",
+      "year": 2023,
+      "doi": "10.1145/3591268",
+      "openalex": "W4379512454",
+      "s2": "342fd56481179cd355abf1427847d23b56c578b0",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Scott Kovach",
+        "Praneeth Kolichala",
+        "Tiancheng Gu",
+        "Fredrik Kjølstad"
+      ],
+      "isInfluential": true,
+      "intents": [],
+      "contexts": [
+        "Given this interpretation, indexed streams can express three key optimizations that yield code with optimal asymptotic complexity [Ahrens et al. 2022; Ngo et al. 2018]: (1) Fusion: Index stream operations are fused by default.",
+        "Fusion can also achieve asymptotic speedup if 𝑧 is sparse, as prematurely calculating 𝑥 · 𝑦 is wasteful [Ahrens et al. 2022].",
+        "Fusion can also achieve asymptotic speedup if I is sparse, as prematurely calculating G · ~ is wasteful [Ahrens et al. 2022].",
+        "Given this interpretation, indexed streams can express three key optimizations that yield code with optimal asymptotic complexity [Ahrens et al. 2022; Ngo et al. 2018]:",
+        "We describe in Section 5.4 how two diﬀerent matrix multiplication stream orders produce algorithms with distinct asymptotic complexities [Ahrens et al. 2022].",
+        "4 how two different matrix multiplication stream orders produce algorithms with distinct asymptotic complexities [Ahrens et al. 2022]."
+      ]
+    },
+    {
+      "title": "Looplets: A Language for Structured Coiteration",
+      "year": 2023,
+      "doi": "10.1145/3579990.3580020",
+      "openalex": "W4321500415",
+      "s2": "0136cb8abb987ed63948404e1ce682965823e2a3",
+      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+      "authors": [
+        "Willow Ahrens",
+        "Daniel Donenfeld",
+        "Fredrik Kjølstad",
+        "Saman Amarasinghe"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "It was later extended to include multi statements (to express multiple outputs) [30] and protocol declarations (to customize the access protocol independently from the array format) [3].",
+        "Speedups on all pairs image similarity.",
+        "These index modifiers change the behavior of their corresponding mode by wrapping or modifying the looplets that mode would unfurl into."
+      ]
+    },
+    {
+      "title": "Mosaic: An Interoperable Compiler for Tensor Algebra",
+      "year": 2023,
+      "doi": "10.1145/3591236",
+      "openalex": "W4379537250",
+      "s2": "17abaa5579ee2e5471b294889f21561d19cd7d90",
+      "venue": "Proceedings of the ACM on Programming Languages",
+      "authors": [
+        "Manya Bansal",
+        "Olivia Hsu",
+        "Kunle Olukotun",
+        "Fredrik Kjølstad"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "Fusing operations can lead to better performance, thus breaking library boundaries [Ahrens et al. 2022; Hsu et al. 2023; Kjolstad et al. 2017; Yadav et al. 2022]."
+      ]
+    },
+    {
+      "title": "Rosko: Row Skipping Outer Products for Sparse Matrix Multiplication Kernels",
+      "year": 2023,
+      "doi": "10.48550/arxiv.2307.03930",
+      "openalex": null,
+      "s2": "90a0991d7943d33f8bb83694014fafe9e6140324",
+      "venue": "arXiv.org",
+      "authors": [
+        "Vikas Natesh",
+        "Andrew Sabot",
+        "H. Kung",
+        "Mark Ting"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
+      "year": 2023,
+      "doi": "10.1145/3582016.3582047",
+      "openalex": "W4327911434",
+      "s2": "c142bfce3b6849ee9d6aa0d5637ab28b170fd507",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Zihao Ye",
+        "Ruihang Lai",
+        "Junru Shao",
+        "Tianqi Chen",
+        "Luís Ceze"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+      "year": 2023,
+      "doi": "10.1145/3613424.3623791",
+      "openalex": "W4389500477",
+      "s2": "f6c15f15b98afeb8a23e321e098b7fd9f3bce85a",
+      "venue": "Micro",
+      "authors": [
+        "Nandeeka Nayak",
+        "Toluwanimi O. Odemuyiwa",
+        "Shubham Ugare",
+        "Christopher W. Fletcher",
+        "Michael Pellauer",
+        "Joel Emer"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+      "year": 2023,
+      "doi": "10.48550/arxiv.2304.07931",
+      "openalex": "W4366388644",
+      "s2": null,
+      "venue": "arXiv (Cornell University)",
+      "authors": [
+        "Nandeeka Nayak",
+        "Toluwanimi O. Odemuyiwa",
+        "Shubham Ugare",
+        "Christopher W. Fletcher",
+        "Michael Pellauer",
+        "Joel Emer"
+      ],
+      "isInfluential": null,
+      "intents": null,
+      "contexts": null
+    },
+    {
+      "title": "The Sparse Abstract Machine",
+      "year": 2023,
+      "doi": "10.1145/3582016.3582051",
+      "openalex": "W4327911471",
+      "s2": "7906159afac47695c5d87bc38baf8c75d3512c24",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "authors": [
+        "Olivia Hsu",
+        "Maxwell Strange",
+        "Ritvik Sharma",
+        "Jaeyeon Won",
+        "Kunle Olukotun",
+        "Joel Emer",
+        "Mark Horowitz",
+        "Fredrik Kjølstad"
+      ],
+      "isInfluential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "title": "Correct Compilation of Semiring Contractions",
+      "year": 2022,
+      "doi": "10.48550/arxiv.2207.13291",
+      "openalex": null,
+      "s2": "65ce7c4a0a49558452c5b524d4970a9d019ffddd",
+      "venue": "arXiv.org",
+      "authors": [
+        "S. Kovach",
+        "Fredrik Kjolstad"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "methodology"
+      ],
+      "contexts": [
+        "Using the example of matrix multiplication, we illustrate that asymptotic runtime depends on the index ordering, which has previously been demonstrated for tensor contractions [Ahrens et al. 2022; Kjølstad 2020]."
+      ]
+    },
+    {
+      "title": "Edinburgh Research Explorer C2TACO: Lifting Tensor Code to TACO",
+      "year": null,
+      "doi": null,
+      "openalex": null,
+      "s2": "11296e9b85c887f7e9c5b37ff29d7379fe53e8ef",
+      "venue": null,
+      "authors": [
+        "José Wesley de",
+        "Souza Magalhães",
+        "Elizabeth Polgreen",
+        "Michael F. P. O'Boyle"
+      ],
+      "isInfluential": false,
+      "intents": [
+        "background"
+      ],
+      "contexts": [
+        "In addition to these target-specific optimizations, work has been done for sparse tensors [8, 71]."
+      ]
+    }
+  ]
+}

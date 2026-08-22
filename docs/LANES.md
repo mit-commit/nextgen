@@ -37,7 +37,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — ID map built for all 327 entries of `data/publications.json`; `data/idmap.json` and `data/idmap-review.json` landed. |
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for all 151 `data/idmap.json` entries with an id into `harvest/citations/<bibtexKey>.json`; 23,154 merged citing works. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) is blocked (403). See `harvest/artifacts/README.md`. |
-| **repos** | `harvest/repos/` | unclaimed |
+| **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
@@ -103,7 +103,19 @@ raise it to the setup lane.
 
 ### repos
 
-_(no entries)_
+- Step 1 only, no GitHub searching. `harvest/repos/` holds a four-stage pipeline
+  (`extract_candidates.py` → `verify.py` → `repair.py` → `build_outputs.py`);
+  see `harvest/repos/README.md`.
+- `mentions.json` keys all 327 `bibtexKey`s; 59 have a live in-paper repo URL,
+  1 has only a dead one, 267 have none. Every URL was checked with a GET and
+  carries its status, the line it was printed on, and `final_url` when the
+  request was redirected (that is how repo renames surface).
+- PDF layout artifacts (URLs wrapped across lines, footnote markers glued on,
+  `%7B%22` escapes) are repaired where they resolve and otherwise recorded in
+  `mentions-pruned-variants.json` rather than reported as dead links.
+- `search-plan.json` carries keyword candidates only — author surnames,
+  username guesses, lab orgs observed elsewhere in the corpus, project and
+  software names, plausible repo spellings. Nothing in it has been searched.
 
 ### authors
 

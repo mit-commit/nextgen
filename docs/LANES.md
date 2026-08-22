@@ -35,10 +35,10 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | Lane | Claimed paths | Status |
 |---|---|---|
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — ID map built for all 327 entries of `data/publications.json`; `data/idmap.json` and `data/idmap-review.json` landed. |
-| **citations** | `harvest/citations/` | unclaimed |
-| **artifacts** | `harvest/artifacts/` | unclaimed |
+| **citations** | `harvest/citations/` | **active** — `harvest_citations.py` harvests OpenAlex `cited_by` and Semantic Scholar `/citations` metadata for every `data/idmap.json` entry with an id, into `harvest/citations/<bibtexKey>.json`. |
+| **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) is blocked (403). See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | unclaimed |
-| **authors** | `harvest/authors/` | unclaimed |
+| **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
 to its own log section — nothing else. Two lanes editing their own separate rows
@@ -64,11 +64,30 @@ raise it to the setup lane.
 
 ### citations
 
-_(no entries)_
+- `harvest/citations/harvest_citations.py`: for every `data/idmap.json` entry
+  carrying an OpenAlex or Semantic Scholar id, pages through OpenAlex
+  `works?filter=cites:<id>` and S2 `/paper/<id>/citations` (fields include
+  `isInfluential`, `intents`, `contexts`) and writes
+  `harvest/citations/<bibtexKey>.json` with `{counts, citing}`. Citing works
+  found by both sources are merged on DOI. Keyless at 1 req/s with 429
+  backoff by default; reads `OPENALEX_API_KEY` / `S2_API_KEY` from env.
+  Resumable — skips any bibtexKey that already has an output file. HTTP
+  responses are cached under `harvest/citations/cache/` (gitignored).
 
 ### artifacts
 
-_(no entries)_
+- `harvest/artifacts/metadata_scan.py` queries Crossref/OpenAlex/DataCite per
+  DOI in `data/idmap.json`; `harvest/artifacts/scan_pdfs.py` scans local
+  `papers/**.pdf` text for artifact/Zenodo/FigShare mentions; `merge.py`
+  combines both into `found.json`/`review.json`. Raw unfiltered signal kept
+  in `harvest/artifacts/raw/` for provenance.
+- ACM DL landing-page scraping (route 3, badge markup for the 87 `10.1145`
+  DOIs) returned 403 on the first request and was not retried further, per
+  the "stop on any 403/challenge" instruction — badge names are unavailable
+  this pass. Details and the precision rules used to keep the PDF/DataCite
+  scan from drowning in citation-noise false positives are in
+  `harvest/artifacts/README.md`.
+- Result: 10 confirmed artifacts, 6 flagged for review, 0 badges recovered.
 
 ### repos
 
@@ -76,7 +95,28 @@ _(no entries)_
 
 ### authors
 
-_(no entries)_
+- `harvest/authors/authors_build.py`: parses `author0` on every publication
+  ("Last, First and Last, First" or a bare "First Last") into one appearance
+  per author, in paper order. Dedupes on the exact normalized name only —
+  nothing is merged automatically. Distinct names that share a folded surname
+  + first initial are compared and, when they look like the same person
+  written two ways (an initial vs. a full given name, or an accent/case
+  difference), flagged to `harvest/authors/review.json` — never auto-merged.
+  For every `data/idmap.json` entry with a DOI, fetches the Crossref work and
+  the OpenAlex work's `authorships`, matches their author lists back onto our
+  parsed names by folded surname + initial, and attaches ORCID and the most
+  recent affiliation. Matches names against `data/people.xml` to flag COMMIT
+  members: exact (folded) match, or a surname+initial match that is
+  unambiguous on both sides and given-name-compatible — deliberately *not* a
+  bare surname+initial match, since e.g. "Jang Kim" and "Jason Kim" (two
+  distinct RAW-project authors, 1997–2004) both coarse-match a current,
+  unrelated member ("Juni C. Kim"); when our own author list has more than
+  one distinct person at that coarse key, the COMMIT match is skipped for all
+  of them. Writes `harvest/authors/authors.json`:
+  `{person_id, name, variants[], papers[], orcid, latest_affiliation,
+  commit_member}`. Dry-run by default; `--write` to write, `--report` to
+  summarize what exists. HTTP responses are cached under
+  `harvest/authors/cache/` (gitignored).
 
 ## Cross-lane requests
 

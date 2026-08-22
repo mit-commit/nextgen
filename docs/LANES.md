@@ -62,6 +62,33 @@ raise it to the setup lane.
 - `harvest/idmap_build.py` resolves DOI → OpenAlex → Semantic Scholar for all 327
   publications and writes `data/idmap.json` plus `data/idmap-review.json`.
   Dry-run by default; `--write` to write, `--report` to summarize what exists.
+- **idmap-review pass** (task `idmap-review`): resolved the 41
+  `data/idmap-review.json` rows by hand. `harvest/idmap_review_fetch.py`
+  pulls each candidate DOI's real Crossref record (authors, container, year)
+  for side-by-side comparison against the `publications.json` entry;
+  `harvest/idmap_review_apply.py` bakes in the ACCEPT/NOTE verdicts and
+  applies them (`--write` to commit, dry run otherwise).
+  - 12 accepted into `data/idmap.json` with `match: fuzzy_reviewed`: the
+    programmatic title-prefix check missed them for mundane reasons (an
+    ACM "Perspectives:" prefix, a Crossref title typo, initials vs. full
+    names, or -- for `hall:computer:1996`, `lee:micro:2002`,
+    `thies:bmc:2007` -- a same-claimed-DOI collision with a reprint/poster
+    sibling that `idmap_build.py`'s `dedupe()` correctly refused to pick a
+    winner for). Venue+year+authors all independently verified against the
+    live Crossref record before accepting, not just against the review
+    file's cached summary.
+  - 29 left in `data/idmap-review.json`, each with a one-line `note`
+    explaining why: most have no real matching candidate (workshop/CIDR/
+    NeurIPS papers commonly have no DOI at all, or Crossref's bibliographic
+    search only turned up unrelated same-acronym noise). Three
+    (`hall:dtj:1998`, `puppin:ijpp:2005`, `thies:recombposter:2006`) are
+    reprints/posters/extended versions that share a claimed DOI with one of
+    the 12 now-accepted keys -- the DOI's real Crossref record matches the
+    *other* key, not these, so they're flagged as probable
+    `same_work_as` candidates for a human to fold rather than auto-decided
+    here.
+  - `data/idmap.json` now has 298 entries (151 exact / 12 fuzzy_reviewed /
+    135 no_doi); `data/idmap-review.json` has 29.
 
 ### citations
 

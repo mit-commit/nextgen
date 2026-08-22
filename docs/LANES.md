@@ -39,6 +39,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) is blocked (403). See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). |
+| **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
 to its own log section — nothing else. Two lanes editing their own separate rows
@@ -141,6 +142,34 @@ raise it to the setup lane.
   commit_member}`. Dry-run by default; `--write` to write, `--report` to
   summarize what exists. HTTP responses are cached under
   `harvest/authors/cache/` (gitignored).
+
+### fulltext
+
+- Pilot set (8 papers): the 3 highest-cited entries in `harvest/citations/`
+  by `counts.openalex` (`thies:cc:2002`, `taylor:micro:2002`,
+  `halide:pldi:2013`), plus 5 named low-cited papers resolved to
+  `bibtexKey`s in `data/publications.json` (`netblocks-pldi24`,
+  `levison:istas:2002`, `amarasinghe:ijpp:2005`, `thies:toplas:2007`,
+  `petkov:ipdps:2002`).
+- `harvest/fulltext/harvest_fulltext.py` reads each pilot's citing list from
+  `harvest/citations/<bibtexKey>.json` — every citing work for the 5
+  low-cited papers, a `random.Random(42)` sample of 300 for each high-cited
+  one. For each, tries free-text routes in order (OpenAlex work's
+  `best_oa_location.pdf_url`, then an arXiv location on that work — via
+  `pdf_url`, an `arxiv.org/abs/` landing page, or the `10.48550/arxiv.*` DOI
+  itself, since OpenAlex often lists the arXiv source without a `pdf_url` —
+  then `api.unpaywall.org`, then Europe PMC's render endpoint keyed off
+  `ids.pmcid`), stopping at the first route whose extracted text (via
+  pypdf) reaches 2,000 chars. A citing work with neither a DOI nor an
+  OpenAlex id can't be looked up at all (`no_id`).
+- Writes `harvest/fulltext/<bibtexKey>/<doi-slug>.txt` + a `.json` sidecar
+  (`{doi, route, chars, status}`) per citing work; skipped/resumed on rerun
+  by sidecar presence. `harvest/fulltext/` (except `manifest.json`) is
+  gitignored — cached publisher text must not be pushed.
+- Yield is low (paywalls/bot-walls dominate `fetch_fail`, e.g. ScienceDirect
+  and ACM DL 403 on scripted requests even for Unpaywall-flagged-OA links;
+  no evasion attempted). Full results in `harvest/fulltext/manifest.json`.
+- Did not touch `harvest/citations/` (owned by another lane).
 
 ## Cross-lane requests
 

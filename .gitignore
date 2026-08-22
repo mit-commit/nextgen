@@ -12,3 +12,8 @@ __pycache__/
 harvest/idmap_cache/
 harvest/citations/cache/
 harvest/authors/cache/
+
+# Fulltext lane: cached publisher-fetched PDFs' extracted text must not be
+# pushed. Only the aggregate manifest is committed.
+harvest/fulltext/*/
+!harvest/fulltext/manifest.json

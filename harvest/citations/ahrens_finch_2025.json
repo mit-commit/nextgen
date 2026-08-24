@@ -1,290 +1,304 @@
 {
-  "counts": {
-    "openalex": 6,
-    "s2": 14
+ "counts": {
+  "openalex": 6,
+  "s2": 14
+ },
+ "citing": [
+  {
+   "title": "A Unified Execution Semantics Layer for Structured and Sparse Kernels",
+   "year": 2026,
+   "doi": "10.1109/icsp69961.2026.11540891",
+   "openalex": "W7163578858",
+   "s2": "f90de4e8a16e7e7c34db706e91e9f4e53c5d11e8",
+   "venue": "International Conference on the Software Process",
+   "authors": [
+    "Chaochao Yang",
+    "Hu Ren",
+    "Chengpeng Zhao",
+    "Fei Gao",
+    "Zengran Ge",
+    "Xiuxi Zhai"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Sparse systems unify primitives, representations, or language layers [13]\u2013[16]."
+   ],
+   "cited_by": 0
   },
-  "citing": [
-    {
-      "title": "A Unified Execution Semantics Layer for Structured and Sparse Kernels",
-      "year": 2026,
-      "doi": "10.1109/icsp69961.2026.11540891",
-      "openalex": "W7163578858",
-      "s2": "f90de4e8a16e7e7c34db706e91e9f4e53c5d11e8",
-      "venue": "International Conference on the Software Process",
-      "authors": [
-        "Chaochao Yang",
-        "Hu Ren",
-        "Chengpeng Zhao",
-        "Fei Gao",
-        "Zengran Ge",
-        "Xiuxi Zhai"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Sparse systems unify primitives, representations, or language layers [13]–[16]."
-      ]
-    },
-    {
-      "title": "Accelerating Sparse Algebra with Program Synthesis",
-      "year": 2026,
-      "doi": "10.1145/3771775.3786281",
-      "openalex": "W7125916650",
-      "s2": "3c945032d056e74c6605b39d8e82e949bd7160e9",
-      "venue": "International Conference on Compiler Construction",
-      "authors": [
-        "José Wesley de Souza Magalhães",
-        "Shideh Hashemian",
-        "Alexander Brauckmann",
-        "Jackson Woodruff",
-        "Elizabeth Polgreen",
-        "Michael F. P. O’Boyle"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Furthermore, while tensor DSLs are able to express and support a wide range of higher-order algebraic operations [7], they are still under development and in some cases may be outperformed by sparse matrix libraries."
-      ]
-    },
-    {
-      "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures",
-      "year": 2026,
-      "doi": "10.1109/isca66397.2026.00180",
-      "openalex": "W7172378581",
-      "s2": "6ad032c06e4bc1bb93830bbf63f72e13dd79763b",
-      "venue": "International Symposium on Computer Architecture",
-      "authors": [
-        "Peiming Yang",
-        "Sankeerth Durvasula",
-        "Ivan Fernandez",
-        "Mohammad Sadrosadati",
-        "Onur Mutlu",
-        "Gennady Pekhimenko",
-        "Christina Giannoula"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
-      "year": 2026,
-      "doi": "10.1145/3779212.3790176",
-      "openalex": "W7134951474",
-      "s2": "fec1555081b283683b1ed59fb9a353515045fbf9",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Jaeyeon Won",
-        "Willow Ahrens",
-        "Saman Amarasinghe",
-        "Joel Emer"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Once we construct an FX graph, we pass it to TorchInductor—the code generation backend of the PyTorch compiler.",
-        "Figure 6: BlockGroupCOO SpMM : 𝐶 𝐴𝑀 𝑝 ,𝑏𝑚,𝑛 = 𝐴𝑉 𝑝,𝑞,𝑏𝑚,𝑏𝑘 ∗ 𝐴𝐾 𝑝,𝑞 ,𝑏𝑘,𝑛 , where p indexes groups, q entries within each group, and bm , bk index each block."
-      ]
-    },
-    {
-      "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
-      "year": 2026,
-      "doi": "10.1145/3771775.3786267",
-      "openalex": "W7125963162",
-      "s2": "2c4ae0a89568ac9c181cd662a7852023cff11ec2",
-      "venue": "International Conference on Compiler Construction",
-      "authors": [
-        "Shideh Hashemian",
-        "Michael F. P. O’Boyle",
-        "Amir Shaikhha"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "…to read the value 18 (a) Comparing the simplified generated computation code for the given Einsum expression and sparsity information for sparse frameworks. in row 2 and column 1 , pos[2] points to the map storing the nonzeros for row 2 , where column 1 and the associated value ( 18 ) are stored.",
-        "Galley [10] is a cost-based query optimizer that utilizes the Finch [2] sparse compiler for compilation and execution, with a focus on database queries and linear algebra.",
-        "Although our work uses a similar strategy for optimized co-iteration, this approach assumes the output is either dense or follows the same sparsity pattern as one of the inputs.",
-        "1b, to read the value 18 in row 2 and column 1 , first pos[2] and pos[3] are used as the bounds, ( 1:2 , includes 1 but excludes 2 ), to locate the position of the nonzero column indices ( 1 ) and values ( 18 ) in the other two arrays."
-      ]
-    },
-    {
-      "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
-      "year": 2026,
-      "doi": "10.48550/arxiv.2604.17198",
-      "openalex": null,
-      "s2": "efe3f11deccf87f1cb49c814700d22638980370e",
-      "venue": "arXiv.org",
-      "authors": [
-        "Atharv Chougule",
-        "Alexander J. Root",
-        "Rubens Lacouture",
-        "Bobby Yan",
-        "Rohan Yadav",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "TENSURE: Fuzzing Sparse Tensor Compilers (Registered Report)",
-      "year": 2026,
-      "doi": "10.14722/fuzzing.2026.23006",
-      "openalex": null,
-      "s2": "e5642243b445dab339eb8b068874aff565e0d1e3",
-      "venue": "Proceedings 2026 International Fuzzing Workshop",
-      "authors": [
-        "Kabilan Mahathevan",
-        "Yining Zhang",
-        "Muhammad Ali Gulzar",
-        "Kirshanthan Sundararajah"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "This foundational work has since been adopted by modern frameworks, including MLIR’s Sparse Tensor Dialect [9], Finch [7], and TVM’s SparseTIR [8], as well as industrial extensions to XLA [29] and PyTorch [11], [30].",
-        "Prominent frameworks like TACO [6], Finch [7], and the MLIR Sparse Dialect [9] each expose distinct declarative DSLs and support varying subsets of the einsum standard.",
-        "We evaluated T EN S URE on two state-of-the-art systems: the C++-based TACO [6] and the Julia-based Finch [7]."
-      ]
-    },
-    {
-      "title": "WingSpan: Concurrency and Dependence for Sparse and Structured Tensor Compilers",
-      "year": 2026,
-      "doi": "10.48550/arxiv.2606.20855",
-      "openalex": null,
-      "s2": "ad9b53c4b992460fefe3b6025af5bdd7eff03c11",
-      "venue": "arXiv.org",
-      "authors": [
-        "A. Gushin",
-        "Sang Yoon Kim",
-        "Willow Ahrens"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "For example, threads modifying 𝐴 [ 1 , 1 ] and 𝐴 [ 2 , 1 ] cannot race because ( 1 , 1 ) ≠ ( 2 , 1 ) .",
-        "Finch, a state-of-the-art tensor compiler, is unique for its great diversity of level formats [2].",
-        "A fiber tree representation of a sparse matrix in CSC format, with a dense outer level, a sparse inner level, and an element level of leaves that store values [2, 41].",
-        "Our theory accounts for all of the dense, sparse, and otherwise structured tensor descriptions in Finch’s language, which is to our knowledge the largest set of such formats [2].",
-        "Our semantics build on those of Finch [2], and apply only to concordant loops (where the subscripts on all accesses are bare loop indices in the same order as the loops are nested).",
-        "Frameworks such as TACO, Finch, and SparseTIR support a wide range of data structures, hardware architectures, and optimizations [2, 8, 10, 27, 46]."
-      ]
-    },
-    {
-      "title": "Equality Saturation for Optimizing High-Level Julia IR",
-      "year": 2025,
-      "doi": "10.1145/3795883",
-      "openalex": null,
-      "s2": "c7401a20e3d8369324c5f9a75a28aa94cb42b5f2",
-      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
-      "authors": [
-        "Jules Merckx",
-        "Tim Besard",
-        "B. De Sutter"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Through an e-class analysis, we keep track of the most speciic type of all equivalent terms and use this information to support type-constrained rewrite rules."
-      ]
-    },
-    {
-      "title": "Spira: Exploiting Voxel Data Structural Properties for Efficient Sparse Convolution in Point Cloud Networks",
-      "year": 2025,
-      "doi": null,
-      "openalex": null,
-      "s2": "8d858de9239330b049a5c158ce01faa23a5c72b2",
-      "venue": null,
-      "authors": [
-        "Dionysios Adamopoulos",
-        "Anastasia Poulopoulou",
-        "G. Goumas",
-        "Christina Giannoula"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "…(DL) compilers optimize dense tensor algebra (Feng et al., 2023; Chen et al., 2018; Ding et al., 2023; Xing et al., 2022) and sparse tensor algebra kernels (Gupta et al., 2025; Liu et al., 2025; Ahrens et al., 2025; Du et al., 2025; Won et al., 2023; Ye et al., 2023; Kjolstad et al., 2017)."
-      ]
-    },
-    {
-      "title": "The Continuous Tensor Abstraction: Where Indices Are Real",
-      "year": 2025,
-      "doi": "10.1145/3763146",
-      "openalex": "W4415007445",
-      "s2": "b46a80006a3198befb141832d75734eda9e08d3b",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Jaeyeon Won",
-        "Willow Ahrens",
-        "Teodoro Fields Collin",
-        "Joel Emer",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Bring Your Own Formats and Kernels: Composable Abstractions for Sparse Matrix Computation",
-      "year": 2024,
-      "doi": null,
-      "openalex": null,
-      "s2": "682b8117bed888d5a4d0506023b599b24c4c1640",
-      "venue": null,
-      "authors": [
-        "Pratyush Das",
-        "Amirhossein Basareh",
-        "Artem Pelenitsyn",
-        "Kirshanthan Sundararajah",
-        "Milind Kulkarni",
-        "Benjamin Delaware"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Compressing Structured Tensor Algebra",
-      "year": 2024,
-      "doi": "10.48550/arxiv.2407.13726",
-      "openalex": null,
-      "s2": "5afb5ff9b763f070ab9c43578a35e09aaaf316f7",
-      "venue": "arXiv.org",
-      "authors": [
-        "Mahdi Ghorbani",
-        "Emilien Bauer",
-        "Tobias Grosser",
-        "Amir Shaikhha"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Finch [Ahrens et al. 2024, 2023] supports unstructured and structured sparsity but shares similar limitations."
-      ]
-    },
-    {
-      "title": "Edinburgh Research Explorer A semi-ring dictionary query language for data science",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "ce557ca29d25d409140dcc9306c20039db853133",
-      "venue": null,
-      "authors": [
-        "Amir Shaikhha",
-        "Mathieu Huot",
-        "Shideh Hashemian",
-        "Amirali Kaboli",
-        "Alex Mascolo",
-        "Milos Nikolic",
-        "Jaclyn Smith",
-        "Dan Olteanu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    }
-  ]
+  {
+   "title": "Accelerating Sparse Algebra with Program Synthesis",
+   "year": 2026,
+   "doi": "10.1145/3771775.3786281",
+   "openalex": "W7125916650",
+   "s2": "3c945032d056e74c6605b39d8e82e949bd7160e9",
+   "venue": "International Conference on Compiler Construction",
+   "authors": [
+    "Jos\u00e9 Wesley de Souza Magalh\u00e3es",
+    "Shideh Hashemian",
+    "Alexander Brauckmann",
+    "Jackson Woodruff",
+    "Elizabeth Polgreen",
+    "Michael F. P. O\u2019Boyle"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Furthermore, while tensor DSLs are able to express and support a wide range of higher-order algebraic operations [7], they are still under development and in some cases may be outperformed by sparse matrix libraries."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures",
+   "year": 2026,
+   "doi": "10.1109/isca66397.2026.00180",
+   "openalex": "W7172378581",
+   "s2": "6ad032c06e4bc1bb93830bbf63f72e13dd79763b",
+   "venue": "International Symposium on Computer Architecture",
+   "authors": [
+    "Peiming Yang",
+    "Sankeerth Durvasula",
+    "Ivan Fernandez",
+    "Mohammad Sadrosadati",
+    "Onur Mutlu",
+    "Gennady Pekhimenko",
+    "Christina Giannoula"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
+   "year": 2026,
+   "doi": "10.1145/3779212.3790176",
+   "openalex": "W7134951474",
+   "s2": "fec1555081b283683b1ed59fb9a353515045fbf9",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Jaeyeon Won",
+    "Willow Ahrens",
+    "Saman Amarasinghe",
+    "Joel Emer"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Once we construct an FX graph, we pass it to TorchInductor\u2014the code generation backend of the PyTorch compiler.",
+    "Figure 6: BlockGroupCOO SpMM : \ud835\udc36 \ud835\udc34\ud835\udc40 \ud835\udc5d ,\ud835\udc4f\ud835\udc5a,\ud835\udc5b = \ud835\udc34\ud835\udc49 \ud835\udc5d,\ud835\udc5e,\ud835\udc4f\ud835\udc5a,\ud835\udc4f\ud835\udc58 \u2217 \ud835\udc34\ud835\udc3e \ud835\udc5d,\ud835\udc5e ,\ud835\udc4f\ud835\udc58,\ud835\udc5b , where p indexes groups, q entries within each group, and bm , bk index each block."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
+   "year": 2026,
+   "doi": "10.1145/3771775.3786267",
+   "openalex": "W7125963162",
+   "s2": "2c4ae0a89568ac9c181cd662a7852023cff11ec2",
+   "venue": "International Conference on Compiler Construction",
+   "authors": [
+    "Shideh Hashemian",
+    "Michael F. P. O\u2019Boyle",
+    "Amir Shaikhha"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "\u2026to read the value 18 (a) Comparing the simplified generated computation code for the given Einsum expression and sparsity information for sparse frameworks. in row 2 and column 1 , pos[2] points to the map storing the nonzeros for row 2 , where column 1 and the associated value ( 18 ) are stored.",
+    "Galley [10] is a cost-based query optimizer that utilizes the Finch [2] sparse compiler for compilation and execution, with a focus on database queries and linear algebra.",
+    "Although our work uses a similar strategy for optimized co-iteration, this approach assumes the output is either dense or follows the same sparsity pattern as one of the inputs.",
+    "1b, to read the value 18 in row 2 and column 1 , first pos[2] and pos[3] are used as the bounds, ( 1:2 , includes 1 but excludes 2 ), to locate the position of the nonzero column indices ( 1 ) and values ( 18 ) in the other two arrays."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
+   "year": 2026,
+   "doi": "10.48550/arxiv.2604.17198",
+   "openalex": null,
+   "s2": "efe3f11deccf87f1cb49c814700d22638980370e",
+   "venue": "arXiv.org",
+   "authors": [
+    "Atharv Chougule",
+    "Alexander J. Root",
+    "Rubens Lacouture",
+    "Bobby Yan",
+    "Rohan Yadav",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "TENSURE: Fuzzing Sparse Tensor Compilers (Registered Report)",
+   "year": 2026,
+   "doi": "10.14722/fuzzing.2026.23006",
+   "openalex": null,
+   "s2": "e5642243b445dab339eb8b068874aff565e0d1e3",
+   "venue": "Proceedings 2026 International Fuzzing Workshop",
+   "authors": [
+    "Kabilan Mahathevan",
+    "Yining Zhang",
+    "Muhammad Ali Gulzar",
+    "Kirshanthan Sundararajah"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "This foundational work has since been adopted by modern frameworks, including MLIR\u2019s Sparse Tensor Dialect [9], Finch [7], and TVM\u2019s SparseTIR [8], as well as industrial extensions to XLA [29] and PyTorch [11], [30].",
+    "Prominent frameworks like TACO [6], Finch [7], and the MLIR Sparse Dialect [9] each expose distinct declarative DSLs and support varying subsets of the einsum standard.",
+    "We evaluated T EN S URE on two state-of-the-art systems: the C++-based TACO [6] and the Julia-based Finch [7]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "WingSpan: Concurrency and Dependence for Sparse and Structured Tensor Compilers",
+   "year": 2026,
+   "doi": "10.48550/arxiv.2606.20855",
+   "openalex": null,
+   "s2": "ad9b53c4b992460fefe3b6025af5bdd7eff03c11",
+   "venue": "arXiv.org",
+   "authors": [
+    "A. Gushin",
+    "Sang Yoon Kim",
+    "Willow Ahrens"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "For example, threads modifying \ud835\udc34 [ 1 , 1 ] and \ud835\udc34 [ 2 , 1 ] cannot race because ( 1 , 1 ) \u2260 ( 2 , 1 ) .",
+    "Finch, a state-of-the-art tensor compiler, is unique for its great diversity of level formats [2].",
+    "A fiber tree representation of a sparse matrix in CSC format, with a dense outer level, a sparse inner level, and an element level of leaves that store values [2, 41].",
+    "Our theory accounts for all of the dense, sparse, and otherwise structured tensor descriptions in Finch\u2019s language, which is to our knowledge the largest set of such formats [2].",
+    "Our semantics build on those of Finch [2], and apply only to concordant loops (where the subscripts on all accesses are bare loop indices in the same order as the loops are nested).",
+    "Frameworks such as TACO, Finch, and SparseTIR support a wide range of data structures, hardware architectures, and optimizations [2, 8, 10, 27, 46]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Equality Saturation for Optimizing High-Level Julia IR",
+   "year": 2025,
+   "doi": "10.1145/3795883",
+   "openalex": null,
+   "s2": "c7401a20e3d8369324c5f9a75a28aa94cb42b5f2",
+   "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+   "authors": [
+    "Jules Merckx",
+    "Tim Besard",
+    "B. De Sutter"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Through an e-class analysis, we keep track of the most speciic type of all equivalent terms and use this information to support type-constrained rewrite rules."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Spira: Exploiting Voxel Data Structural Properties for Efficient Sparse Convolution in Point Cloud Networks",
+   "year": 2025,
+   "doi": null,
+   "openalex": null,
+   "s2": "8d858de9239330b049a5c158ce01faa23a5c72b2",
+   "venue": null,
+   "authors": [
+    "Dionysios Adamopoulos",
+    "Anastasia Poulopoulou",
+    "G. Goumas",
+    "Christina Giannoula"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "\u2026(DL) compilers optimize dense tensor algebra (Feng et al., 2023; Chen et al., 2018; Ding et al., 2023; Xing et al., 2022) and sparse tensor algebra kernels (Gupta et al., 2025; Liu et al., 2025; Ahrens et al., 2025; Du et al., 2025; Won et al., 2023; Ye et al., 2023; Kjolstad et al., 2017)."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "The Continuous Tensor Abstraction: Where Indices Are Real",
+   "year": 2025,
+   "doi": "10.1145/3763146",
+   "openalex": "W4415007445",
+   "s2": "b46a80006a3198befb141832d75734eda9e08d3b",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Jaeyeon Won",
+    "Willow Ahrens",
+    "Teodoro Fields Collin",
+    "Joel Emer",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Bring Your Own Formats and Kernels: Composable Abstractions for Sparse Matrix Computation",
+   "year": 2024,
+   "doi": null,
+   "openalex": null,
+   "s2": "682b8117bed888d5a4d0506023b599b24c4c1640",
+   "venue": null,
+   "authors": [
+    "Pratyush Das",
+    "Amirhossein Basareh",
+    "Artem Pelenitsyn",
+    "Kirshanthan Sundararajah",
+    "Milind Kulkarni",
+    "Benjamin Delaware"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Compressing Structured Tensor Algebra",
+   "year": 2024,
+   "doi": "10.48550/arxiv.2407.13726",
+   "openalex": null,
+   "s2": "5afb5ff9b763f070ab9c43578a35e09aaaf316f7",
+   "venue": "arXiv.org",
+   "authors": [
+    "Mahdi Ghorbani",
+    "Emilien Bauer",
+    "Tobias Grosser",
+    "Amir Shaikhha"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Finch [Ahrens et al. 2024, 2023] supports unstructured and structured sparsity but shares similar limitations."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Edinburgh Research Explorer A semi-ring dictionary query language for data science",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "ce557ca29d25d409140dcc9306c20039db853133",
+   "venue": null,
+   "authors": [
+    "Amir Shaikhha",
+    "Mathieu Huot",
+    "Shideh Hashemian",
+    "Amirali Kaboli",
+    "Alex Mascolo",
+    "Milos Nikolic",
+    "Jaclyn Smith",
+    "Dan Olteanu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  }
+ ]
 }

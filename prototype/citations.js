@@ -49,7 +49,7 @@ var CITATIONS = (function(){
   }
 
   /* ---------- one citing-work row ---------- */
-  function renderRow(c){
+  function renderRow(c, showCites){
     var li = el('li', 'cite-row');
     var t = el('span', 'cite-row-title');
     if (c.url){
@@ -68,6 +68,8 @@ var CITATIONS = (function(){
     if (c.centrality === 'core') li.appendChild(el('span', 'cite-chip cite-chip-core', 'core'));
     if (c.flags && c.flags.indexOf('lineage') !== -1)
       li.appendChild(el('span', 'cite-chip', 'via a successor system'));
+    if (showCites && c.cited_by != null)
+      li.appendChild(el('span', 'cite-chip', fmt(c.cited_by) + ' cites'));
     return li;
   }
 
@@ -170,7 +172,9 @@ var CITATIONS = (function(){
         ' more citations come from our own group and students; they are listed separately at the bottom.'));
     }
 
-    /* Centrality filter (applies to the judged groups below). */
+    /* Centrality filter and sort modes (apply to the judged list below). */
+    state.sort = 'impact';
+    state.headers = true;
     var judgedExt = extDetailed.concat(extPassing);
     var centCounts = { core: 0, engaged: 0, peripheral: 0 };
     judgedExt.forEach(function(c){ if (centCounts[c.centrality] !== undefined) centCounts[c.centrality]++; });
@@ -185,7 +189,7 @@ var CITATIONS = (function(){
         for (var j = 0; j < btns.length; j++){
           btns[j].el.className = 'type-toggle-btn' + (btns[j].value === value ? ' active' : '');
         }
-        drawGroups();
+        drawList();
         trackSafe('citations-centrality-filter', { key: key, value: value });
       });
       btns.push({ value: value, el: b });
@@ -199,19 +203,105 @@ var CITATIONS = (function(){
     filterRow.appendChild(tg);
     mount.appendChild(filterRow);
 
-    /* FUNCTION drill-down groups. */
+    /* Sort modes + headers toggle. */
+    var sortRow = el('div', 'cite-filter');
+    sortRow.appendChild(el('span', 'cite-filter-label', 'Sort by '));
+    var sortBtns = [];
+    function mkSortBtn(value, label){
+      var b = el('button', 'type-toggle-btn' + (value === state.sort ? ' active' : ''), label);
+      b.type = 'button';
+      b.addEventListener('click', function(){
+        state.sort = value;
+        for (var j = 0; j < sortBtns.length; j++){
+          sortBtns[j].el.className = 'type-toggle-btn' + (sortBtns[j].value === value ? ' active' : '');
+        }
+        drawList();
+        trackSafe('citations-sort', { key: key, value: value });
+      });
+      sortBtns.push({ value: value, el: b });
+      return b;
+    }
+    var stg = el('span', 'type-toggle');
+    stg.appendChild(mkSortBtn('impact', 'Impact'));
+    stg.appendChild(mkSortBtn('recency', 'Recency'));
+    stg.appendChild(mkSortBtn('popularity', 'Popularity'));
+    sortRow.appendChild(stg);
+    var hdrBtn = el('button', 'type-toggle-btn active cite-hdr-toggle', 'Headers on');
+    hdrBtn.type = 'button';
+    hdrBtn.setAttribute('aria-pressed', 'true');
+    hdrBtn.addEventListener('click', function(){
+      state.headers = !state.headers;
+      hdrBtn.className = 'type-toggle-btn cite-hdr-toggle' + (state.headers ? ' active' : '');
+      hdrBtn.setAttribute('aria-pressed', state.headers ? 'true' : 'false');
+      hdrBtn.textContent = state.headers ? 'Headers on' : 'Headers off';
+      drawList();
+      trackSafe('citations-headers', { key: key, on: state.headers });
+    });
+    sortRow.appendChild(el('span', null, ' '));
+    sortRow.appendChild(hdrBtn);
+    mount.appendChild(sortRow);
+
+    /* The judged list, in the chosen order. */
     var groupsMount = el('div', 'cite-groups');
     mount.appendChild(groupsMount);
-    function drawGroups(){
-      groupsMount.innerHTML = '';
-      for (var g = 0; g < FUNCTIONS.length; g++){
-        var f = FUNCTIONS[g];
-        var rows = judgedExt.filter(function(c){ return c.function === f.key; });
-        if (state.centrality !== 'all'){
-          rows = rows.filter(function(c){ return c.centrality === state.centrality; });
+    var FN_RANK = {};
+    FUNCTIONS.forEach(function(f, i){ FN_RANK[f.key] = i; });
+    function popBucket(n){
+      if (n == null) return 'count unknown';
+      if (n >= 1000) return '1,000+ citations';
+      if (n >= 100) return '100–999 citations';
+      if (n >= 10) return '10–99 citations';
+      if (n >= 1) return '1–9 citations';
+      return 'not yet cited';
+    }
+    function renderFlat(rows, headerOf, showCites){
+      var ul = el('ul', 'cite-rows cite-flat');
+      var last = null;
+      for (var i = 0; i < rows.length; i++){
+        if (state.headers && headerOf){
+          var h = headerOf(rows[i]);
+          if (h !== last){
+            ul.appendChild(el('li', 'cite-subhead', h));
+            last = h;
+          }
         }
-        if (!rows.length) continue;
-        groupsMount.appendChild(renderGroup(f.label, f.gloss, rows, false));
+        ul.appendChild(renderRow(rows[i], showCites));
+      }
+      return ul;
+    }
+    function drawList(){
+      groupsMount.innerHTML = '';
+      var rows = judgedExt;
+      if (state.centrality !== 'all'){
+        rows = rows.filter(function(c){ return c.centrality === state.centrality; });
+      }
+      if (state.sort === 'impact' && state.headers){
+        /* Category groups: collapsible, lazily rendered. */
+        for (var g = 0; g < FUNCTIONS.length; g++){
+          var f = FUNCTIONS[g];
+          var grows = rows.filter(function(c){ return c.function === f.key; });
+          if (grows.length) groupsMount.appendChild(renderGroup(f.label, f.gloss, grows, false));
+        }
+      } else {
+        var sorted = rows.slice(), headerOf = null, showCites = false;
+        if (state.sort === 'impact'){
+          sorted.sort(function(a, b){
+            return (FN_RANK[a.function] - FN_RANK[b.function]) ||
+                   ((b.year || 0) - (a.year || 0));
+          });
+        } else if (state.sort === 'recency'){
+          sorted.sort(function(a, b){ return (b.year || -1) - (a.year || -1); });
+          headerOf = function(c){ return c.year ? String(c.year) : 'no year'; };
+        } else {
+          sorted.sort(function(a, b){
+            return ((b.cited_by != null ? b.cited_by : -1) -
+                    (a.cited_by != null ? a.cited_by : -1)) ||
+                   ((b.year || 0) - (a.year || 0));
+          });
+          headerOf = function(c){ return popBucket(c.cited_by); };
+          showCites = true;
+        }
+        groupsMount.appendChild(renderFlat(sorted, headerOf, showCites));
       }
       if (state.centrality === 'all' && extUnjudged.length){
         groupsMount.appendChild(renderGroup('Not yet analyzed',
@@ -224,7 +314,7 @@ var CITATIONS = (function(){
           ownGroup, false));
       }
     }
-    drawGroups();
+    drawList();
 
     var foot = el('div', 'cite-foot',
       'Classified with codebook v' + data.codebook + ' (' + data.generated +

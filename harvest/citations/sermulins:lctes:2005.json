@@ -1,2321 +1,2446 @@
 {
-  "counts": {
-    "openalex": 77,
-    "s2": 95
+ "counts": {
+  "openalex": 77,
+  "s2": 95
+ },
+ "citing": [
+  {
+   "title": "PIMFuse: Kernel Fusion for Processing-in-Memory",
+   "year": 2025,
+   "doi": "10.1145/3778359",
+   "openalex": null,
+   "s2": "2e27565821eb87bfd92fafc03c5cf364b7b55c52",
+   "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+   "authors": [
+    "Fan Yang",
+    "Zhe Zhou",
+    "Yusen Li",
+    "Amelie Chi Zhou",
+    "Guangyu Sun",
+    "Gang Wang",
+    "Xiaoguang Liu",
+    "Ming-Chang Yang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "On multi-core CPUs, fusion techniques [5, 22, 44, 52], whether based on polyhedral models or integer programming, are designed to exploit a rich hardware environment."
+   ],
+   "cited_by": 0
   },
-  "citing": [
-    {
-      "title": "PIMFuse: Kernel Fusion for Processing-in-Memory",
-      "year": 2025,
-      "doi": "10.1145/3778359",
-      "openalex": null,
-      "s2": "2e27565821eb87bfd92fafc03c5cf364b7b55c52",
-      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
-      "authors": [
-        "Fan Yang",
-        "Zhe Zhou",
-        "Yusen Li",
-        "Amelie Chi Zhou",
-        "Guangyu Sun",
-        "Gang Wang",
-        "Xiaoguang Liu",
-        "Ming-Chang Yang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "On multi-core CPUs, fusion techniques [5, 22, 44, 52], whether based on polyhedral models or integer programming, are designed to exploit a rich hardware environment."
-      ]
-    },
-    {
-      "title": "CASPHAr: Cache-Managed Accelerator Staging and Pipelining in Heterogeneous System Architectures",
-      "year": 2022,
-      "doi": "10.1109/tcad.2022.3197535",
-      "openalex": null,
-      "s2": "8104535c3dc71d64f0938d938fb3393da953d2c8",
-      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-      "authors": [
-        "Mochamad Asri",
-        "A. Gerstlauer"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Software-Centric Optimizations: Manual, compiler or library-based support has been proposed to exploit parallelism and regular communication patterns in stream programs by formulating a set of cache-aware optimizations that improve instruction and data locality [3], [4], [5], [6], [7], [8].",
-        "Data partitioning and locality-aware data placement in the memory hierarchy are widely exploited to maximize performance gains, commonly referred to as tiling or blocking optimizations supported by a high-performance software library or a compiler [3], [4], [5], [6], [7]."
-      ]
-    },
-    {
-      "title": "PAVER",
-      "year": 2021,
-      "doi": "10.1145/3451164",
-      "openalex": null,
-      "s2": "da13eca10e924217650a2229e8201b21f3fa2dc4",
-      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
-      "authors": [
-        "Devashree Tripathy",
-        "AmirAli Abdolrashidi",
-        "L. Bhuyan",
-        "Liang Zhou",
-        "Daniel Wong"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "There have been numerous works on structured parallelism in CPUs [3, 12, 14, 51], and more recently in the realm of GPUs [2, 6, 16, 60].",
-        "In [64], Zhang et al. use a compiler-based strategy to create a computation block dependency graph, targeting data reuse on multicore CPUs.",
-        "There have been analyses of the tradeoff between cache reuse and vectorization on CPUs, but in the end, they should be used in the right place and it mainly depends on the application type and the architecture [52].",
-        "In our work, we aim to perform analysis on the PTX code before the kernel launch in order to extract locality information from the kernel PTX. Profiling has been extensively used in CPUs [4, 58, 65].",
-        "Locality in CPU-Related Works: The idea of using data locality to improve the performance and reduce the memory bottleneck started in the realm of CPUs and continued to multicores."
-      ]
-    },
-    {
-      "title": "Stream Query Optimization",
-      "year": 2019,
-      "doi": "10.1007/978-3-319-77525-8_261",
-      "openalex": "W2918288513",
-      "s2": null,
-      "venue": "Encyclopedia of Big Data Technologies",
-      "authors": [
-        "Martin Hirzel",
-        "Robert Soulé",
-        "Buğra Gedik",
-        "Scott Schneider"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A survey of state management in big data processing systems",
-      "year": 2018,
-      "doi": "10.1007/s00778-018-0514-9",
-      "openalex": "W2592286282",
-      "s2": "763fe590dee9d2fdb44040f7e90f0dbfe39ee7e5",
-      "venue": "The VLDB Journal",
-      "authors": [
-        "Quoc-Cuong To",
-        "Juan Soto",
-        "Volker Markl"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Gloss: Seamless Live Reconfiguration and Reoptimization of Stream Programs",
-      "year": 2018,
-      "doi": "10.1145/3173162.3173170",
-      "openalex": null,
-      "s2": "2327e2a6b70578d599654055b55192eb0ab648f3",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "S. Rajadurai",
-        "Jeffrey Bosboom",
-        "W. Wong",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "S Stream Query Optimization",
-      "year": 2018,
-      "doi": null,
-      "openalex": null,
-      "s2": "43cf07e127650631ba276b00445a8602ebd837ae",
-      "venue": null,
-      "authors": [
-        "Martin Hirzel",
-        "R. Soulé",
-        "B. Gedik",
-        "S. Schneider"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Stream Query Optimization",
-      "year": 2018,
-      "doi": "10.1007/978-3-319-63962-8_261-1",
-      "openalex": "W4301274712",
-      "s2": "ab28a0f2a8cb06e2343d3a7df3d3e0b8486269d0",
-      "venue": "Encyclopedia of Big Data Technologies",
-      "authors": [
-        "Martin Hirzel",
-        "Robert Soulé",
-        "Buğra Gedik",
-        "Scott Schneider"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "A Survey of State Management in Big Data Processing Systems",
-      "year": 2017,
-      "doi": "10.48550/arxiv.1702.01596",
-      "openalex": "W2952020281",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Quoc-Cuong To",
-        "Juan Soto",
-        "Volker Markl"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "DSL Stream Programming on Multicore Architectures",
-      "year": 2017,
-      "doi": "10.1002/9781119332015.ch7",
-      "openalex": "W2582983959",
-      "s2": "368340da4f62bab488583c9d9bb58f4905f50630",
-      "venue": null,
-      "authors": [
-        "Pablo de Oliveira Castro",
-        "Stéphane Louise",
-        "Denis Barthou"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "On cache architectures, fusion transformations proposed in [26] optimize ﬁlters to instruction and data cache sizes."
-      ]
-    },
-    {
-      "title": "Fusing effectful comprehensions",
-      "year": 2017,
-      "doi": "10.1145/3062341.3062362",
-      "openalex": "W2529401481",
-      "s2": "85ef581d482f66795d875d0712ba0084928a6f82",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Olli Saarikivi",
-        "Margus Veanes",
-        "Todd Mytkowicz",
-        "Madan Musuvathi"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Other related work on StreamIt discusses fusion followed by optimizations like constant propagation and scalar replacement [23], and loop unrolling [39]."
-      ]
-    },
-    {
-      "title": "Fusing effectful comprehensions",
-      "year": 2017,
-      "doi": "10.1145/3140587.3062362",
-      "openalex": "W3085860359",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Olli Saarikivi",
-        "Margus Veanes",
-        "Todd Mytkowicz",
-        "Madan Musuvathi"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Locality-Aware Concurrency Platforms",
-      "year": 2017,
-      "doi": "10.7936/k7mw2gjh",
-      "openalex": null,
-      "s2": "ee6f9ec8dd7816bfda90a0027b66e7d30dccf07e",
-      "venue": null,
-      "authors": [
-        "Jordyn C. Maglalang"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Heuristic cache-aware scheduling of streaming programs on both single processors and multiprocessors has been studied by several research groups [43, 56, 66]."
-      ]
-    },
-    {
-      "title": "Stream processing optimizations for mobile sensing applications",
-      "year": 2017,
-      "doi": "10.17077/etd.dwz8diz6",
-      "openalex": null,
-      "s2": "8479191f9f1a6fa1f5739c378f450f5dc22026d8",
-      "venue": null,
-      "authors": [
-        "Farley Lai"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "We compare our compiler against the standard StreamIt compiler with and without the cache optimization enabled [44].",
-        "The proposed techniques include modulation [44, 50] and copy-shift [44].",
-        "On the other hand, several cache performance improvements were proposed including the copy-shift buffering and execution scaling for StreamIt in [44], and cache-aware optimizations for synchronous data flows [56] as part of the Ptolemy project [57].",
-        "scaling, the copy-shift approach can significantly outperform modulation [44].",
-        "We have also run the StreamIt in conjunction with the cache optimization described in [44].",
-        "In contrast with [44] that trades space for performance, our approach improves cache locality by saving space while eliminating unnecessary memory operations to improve the performance."
-      ]
-    },
-    {
-      "title": "Generalized cache tiling for dataflow programs",
-      "year": 2016,
-      "doi": "10.1145/2980930.2907960",
-      "openalex": "W4244607047",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Łukasz Domagała",
-        "Duco van Amstel",
-        "Fabrice Rastello"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Generalized cache tiling for dataflow programs",
-      "year": 2016,
-      "doi": "10.1145/2907950.2907960",
-      "openalex": "W2464124721",
-      "s2": "f0d601eceb107f59049deb3b07804badf4791c7a",
-      "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-      "authors": [
-        "Łukasz Domagała",
-        "Duco van Amstel",
-        "Fabrice Rastello"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "For the evaluation of both the constraint programming solver as well as the heuristics we will compare ourselves to the re-sults obtained with the approach described by Sermulins et al. [25].",
-        "This is partly what is done by Sermulins et al. [25] when they perform scaling and allow a given percentage of the actors to have IO requirements that exceed the data cache size.",
-        "Execution scaling [7, 25, 28], a technique that is also known as train scheduling or batching, increases the number of data elements that are processed in a single iteration by a multiplicative factor that is the same for each actor.",
-        "Actor fusion [25] groups multiple actors together and performs inter-actor rescheduling."
-      ]
-    },
-    {
-      "title": "Massively parallel stream processing with latency guarantees",
-      "year": 2016,
-      "doi": "10.14279/depositonce-5132",
-      "openalex": "W2408728055",
-      "s2": "dfe9fcd5c9ef1d078691fcf24934020890479d99",
-      "venue": "DepositOnce",
-      "authors": [
-        "Björn Lohrmann"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Execution scaling described in [106] is a static compiler optimization that trades of instruction and data cache locality by batching the execution of computations nodes in the data ŕow graph."
-      ]
-    },
-    {
-      "title": "Optimisation de la localité des données sur architectures manycœurs",
-      "year": 2016,
-      "doi": "10.70675/9db146d9zadddz4b3czab5bz567d15710e97",
-      "openalex": null,
-      "s2": "26f303a9b525dec05c6c1725a4e9ee2ca7eecee1",
-      "venue": null,
-      "authors": [
-        "Duco van Amstel"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Semantic-Preserving Transformations for Stream Program Orchestration on Multicore Architectures",
-      "year": 2016,
-      "doi": null,
-      "openalex": "W2563147835",
-      "s2": null,
-      "venue": "The Sydney eScholarship Repository (The University of Sydney)",
-      "authors": [
-        "Yousun Ko"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Semantic-Preserving Transformations for Stream Program Orchestration on Multicore Architectures",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "17ddf3be7ed9f6598e17d1f36b11462f1da409a9",
-      "venue": null,
-      "authors": [
-        "Yousun Ko"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "[69] applied scalar replacement to convert arrays into scalar variables for buffers that reside between fused actors.",
-        "The latest StreamIt system [69, 77] supports program-wise scalar replacement by fusing actors, only if the buffer in between two actors does not contain delay tokens, as well as tokens to peek exceeding consumption rate, and pre-loaded tokens to execute stream graph cycles."
-      ]
-    },
-    {
-      "title": "A Monitoring System for Runtime Adaptations of Streaming Applications",
-      "year": 2015,
-      "doi": "10.1109/pdp.2015.53",
-      "openalex": "W2170702873",
-      "s2": "823380130ffcfe64af82f16227cd03fe10a6e477",
-      "venue": "2015 23rd Euromicro International Conference on Parallel, Distributed, and Network-Based Processing",
-      "authors": [
-        "Manuel Selva",
-        "Lionel Morel",
-        "Kévin Marquet",
-        "Stéphane Frénot"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "This will be a strong complement to existing compilation strategies that already take the underlying memory hierarchy into account, eg [25], [22], [11], [10], [1]."
-      ]
-    },
-    {
-      "title": "A logical memory model for scaling parallel multimedia workloads",
-      "year": 2015,
-      "doi": "10.1145/2736084.2736096",
-      "openalex": "W1980251509",
-      "s2": "6f5c1e5cd5db69b3b6b4841412392576563afa08",
-      "venue": "International Workshop on Network and Operating System Support for Digital Audio and Video",
-      "authors": [
-        "Preben N. Olsen",
-        "Martin Nyhus",
-        "Pål Halvorsen",
-        "Carsten Griwodz"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "We demonstrate how this can overcome parallelization challenges and reduce execution times considerably."
-      ]
-    },
-    {
-      "title": "Dinamica Virtual Machine Para Geociências the Dinamica Virtual Machine for Geosciences List of Figures",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "cb186741426275ed005c1354bbaf407a0c36ec62",
-      "venue": null,
-      "authors": [
-        "B. Ferreira"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "LaminarIR: compile-time queues for structured streams",
-      "year": 2015,
-      "doi": "10.1145/2737924.2737994",
-      "openalex": "W2050298645",
-      "s2": "c7a0961c8fb714123a8353013ac622bc88006a48",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Yousun Ko",
-        "Bernd Burgstaller",
-        "Bernhard Scholz"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Sermulins et al. [20] applied scalar replacement to convert arrays into scalar variables for buffers that reside between fused actors."
-      ]
-    },
-    {
-      "title": "LaminarIR: compile-time queues for structured streams",
-      "year": 2015,
-      "doi": "10.1145/2813885.2737994",
-      "openalex": "W2997081332",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Yousun Ko",
-        "Bernd Burgstaller",
-        "Bernhard Scholz"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Language Runtime and Optimizations in IBM Streams",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "34b800320b332f624827c1a4507f9d8144efbb1c",
-      "venue": "IEEE Data Engineering Bulletin",
-      "authors": [
-        "S. Schneider",
-        "B. Gedik",
-        "Martin Hirzel"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Languages that focus on streaming with statically known selectivity solve fusion proﬁtability even more comprehensively [21]."
-      ]
-    },
-    {
-      "title": "Language Runtime and Optimizations in IBM Streams.",
-      "year": 2015,
-      "doi": null,
-      "openalex": "W2576929268",
-      "s2": null,
-      "venue": "IEEE Data(base) Engineering Bulletin",
-      "authors": [
-        "Scott Schneider",
-        "Buğra Gedik",
-        "Martin Hirzel"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Static memory management for efficient mobile sensing applications",
-      "year": 2015,
-      "doi": "10.5555/2830865.2830886",
-      "openalex": "W1930937188",
-      "s2": null,
-      "venue": "Embedded Software",
-      "authors": [
-        "Farley Lai",
-        "Daniel J. Schmidt",
-        "Octav Chipara"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Static memory management for efficient mobile sensing applications",
-      "year": 2015,
-      "doi": "10.1109/emsoft.2015.7318274",
-      "openalex": null,
-      "s2": "b0a9dff609a028af3916d71b3891ffcceb951c6c",
-      "venue": "International Conference on Embedded Software",
-      "authors": [
-        "Farley Lai",
-        "Daniel Schmidt",
-        "O. Chipara"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The key is to develop a \nstatic analysis technique that may pre­cisely identify location and temporal sharing opportunities."
-      ]
-    },
-    {
-      "title": "A catalog of stream processing optimizations",
-      "year": 2014,
-      "doi": "10.1145/2528412",
-      "openalex": "W2148222209",
-      "s2": "42490a37f9e284ba4d368cf5a41f2ea6c26b0ee1",
-      "venue": "ACM Computing Surveys",
-      "authors": [
-        "Martin Hirzel",
-        "Robert Soulé",
-        "Scott Schneider",
-        "Buğra Gedik",
-        "Robert Grimm"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Sermulins et al. show how to further optimize a shared queue, by making it local and computing all offsets at compile-time, so that it can be implemented by scalar variables instead of an array [Sermulins et al. 2005].",
-        "show how to further optimize a shared queue, by making it local and computing all offsets at compile-time, so that it can be implemented by scalar variables instead of an array [Sermulins et al. 2005].",
-        "—State sharing enables scalar replacement [Sermulins et al. 2005].",
-        "On the static side, execution scaling [Sermulins et al. 2005] is a batching algorithm for StreamIt that trades the i-cache beneﬁts of batching against the d-cache cost of requiring larger buffers.",
-        "— State sharing enables scalar replacement [Sermulins et al. 2005].",
-        "StreamIt uses a fully-static approach, where a static schedule prescribes exactly what data can be accessed by which operator at a particular time [Sermulins et al. 2005].",
-        "The compiler for a streaming language may even combine the techniques directly [Sermulins et al. 2005].",
-        "On the static side, execution scaling [Sermulins et al. 2005] is a batching algorithm for StreamIt that trades the i-cache benefits of batching against the d-cache cost of requiring larger buffers."
-      ]
-    },
-    {
-      "title": "Achieving self-aware parallelism in stream programs",
-      "year": 2014,
-      "doi": "10.1007/s10586-014-0412-x",
-      "openalex": "W2037353970",
-      "s2": "e44dfdac65beb40fd4036b0b967c92c1e4190902",
-      "venue": "Cluster Computing",
-      "authors": [
-        "Yan Su",
-        "Feng Shi",
-        "Shahnawaz Talpur",
-        "Yizhuo Wang",
-        "Sensen Hu",
-        "Jin Wei"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Brief Announcement: Cache-Oblivious Scheduling of Streaming Applications",
-      "year": 2014,
-      "doi": null,
-      "openalex": null,
-      "s2": "a0841a6ee33f4f3fe23b52ca17b7ec8c4d802d6a",
-      "venue": null,
-      "authors": [
-        "Kunal Agrawal"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Categories and Subject Descriptors F.2 [Analysis of Algorithms and Problem Complexity]: General\nKeywords Cache-Oblivious Algorithms; Caching; Partitioning; Pipelines; Scheduling; Streaming; Synchronous Data Flow."
-      ]
-    },
-    {
-      "title": "Cache-conscious scheduling of streaming pipelines on parallel machines with private caches",
-      "year": 2014,
-      "doi": "10.1109/hipc.2014.7116893",
-      "openalex": "W1554665814",
-      "s2": "e7d83ab743685595b22881fc770c3a01e9e16a2c",
-      "venue": "International Conference on High Performance Computing",
-      "authors": [
-        "Kunal Agrawal",
-        "Jordyn C. Maglalang",
-        "Jeremy T. Fineman"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "studied by several research groups [31]–[33]."
-      ]
-    },
-    {
-      "title": "Cache-oblivious scheduling of streaming pipelines",
-      "year": 2014,
-      "doi": "10.1145/2612669.2612707",
-      "openalex": "W2157403639",
-      "s2": "79dc1bfd4df9b185b76c69af5a4c51f39f0a5e6c",
-      "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-      "authors": [
-        "Kunal Agrawal",
-        "Jeremy T. Fineman"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Categories and Subject Descriptors F.2 [Analysis of Algorithms and Problem Complexity]: General\nKeywords Cache-Oblivious Algorithms; Caching; Partitioning; Pipelines; Scheduling; Streaming; Synchronous Data Flow."
-      ]
-    },
-    {
-      "title": "Optimizations in Stream Programming for Multimedia Applications",
-      "year": 2014,
-      "doi": null,
-      "openalex": null,
-      "s2": "d72594cbe1191d02446d6e76be287e6b34192029",
-      "venue": null,
-      "authors": [
-        "Eric Wong"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Thus there could be more accesses to longer latency memory hierarchies [46]."
-      ]
-    },
-    {
-      "title": "UNIVERSITÉ DE VERSAILLES SAINT-QUENTIN EN YVELINES",
-      "year": 2014,
-      "doi": null,
-      "openalex": null,
-      "s2": "85758d654165b08310d99cbdfe0cf0c3c25f6811",
-      "venue": null,
-      "authors": [
-        "École Doctorale",
-        "Dimitri Watel"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "11 PFLOP/s simulations of cloud cavitation collapse",
-      "year": 2013,
-      "doi": "10.1145/2503210.2504565",
-      "openalex": "W1966827540",
-      "s2": "3db50ba6e67fe4df04352c4203dfeb86690158a5",
-      "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
-      "authors": [
-        "Diego Rossinelli",
-        "Babak Hejazialhosseini",
-        "Panagiotis Hadjidoukas",
-        "Costas Bekas",
-        "Alessandro Curioni",
-        "Adam Bertsch",
-        "Scott Futral",
-        "Steffen J. Schmidt",
-        "Nikolaus A. Adams",
-        "Petros Koumoutsakos"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "data reordering [38, 54, 28] and cache-aware techniques [71] as described in the next paragraph."
-      ]
-    },
-    {
-      "title": "A Study of Cache Design in Stream Processor",
-      "year": 2013,
-      "doi": "10.1007/978-3-642-35898-2_5",
-      "openalex": "W1420463194",
-      "s2": "a5d000b24245f9a93aaa873929388fe55e8ee0c0",
-      "venue": "Communications in computer and information science",
-      "authors": [
-        "Chiyuan Ma",
-        "Zhenyu Zhao"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Sermulins proposes a cache aware optimization method of stream programs [12]."
-      ]
-    },
-    {
-      "title": "Automatic Mapping of Stream Programs on Multicore Architectures",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "5500fa422fab22feb1e5c478934cf96df60ce76c",
-      "venue": null,
-      "authors": [
-        "Pablo de Oliveira Castro",
-        "Stéphane Louise",
-        "Denis Barthou"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Sermulins et al. show in[13] how to optimize StreamIt programs for cache eﬀects in the context of a single core; in their paper the importance of coarsening the program to tune for performance is studied and a cache aware fusing technique is proposed."
-      ]
-    },
-    {
-      "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs",
-      "year": 2013,
-      "doi": "10.1109/icdcs.2013.13",
-      "openalex": "W2100315216",
-      "s2": "ab655f3afe15d3b6457327d1af73b6c71c494a8a",
-      "venue": "IEEE International Conference on Distributed Computing Systems",
-      "authors": [
-        "Fang Zheng",
-        "Chitra Venkatramani",
-        "Rohit Wagle",
-        "Karsten Schwan"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "[23] proposed three techniques to optimize StreamIt programs on a uniprocessor: execution scaling, buffer manager, and register replacement."
-      ]
-    },
-    {
-      "title": "Constraint based methods for allocation and scheduling of periodic applications",
-      "year": 2013,
-      "doi": null,
-      "openalex": "W2186216465",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Alessandro Vanelli‐Coralli",
-        "Paola Mello"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Constraint based methods for allocation and scheduling of periodic applications",
-      "year": 2013,
-      "doi": "10.6092/unibo/amsdottorato/5503",
-      "openalex": "W582601536",
-      "s2": "e5cbcaa0b94b61ed8ea1f71188335834cbb20c4c",
-      "venue": "AMS Dottorato Institutional Doctoral Theses Repository (University of Bologna)",
-      "authors": [
-        "Alessio Bonfietti"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "StreamIt is an architectureindependent language with a synchronous data-flow semantic, supplied with an efficient compiler, described in [57] and in [93]."
-      ]
-    },
-    {
-      "title": "Constraint based methods for allocation and scheduling of periodic applications",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "2f03916894445987094fda3d8506c0cf5f5a112b",
-      "venue": null,
-      "authors": [
-        "A. V. Coralli",
-        "P. Mello"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Dynamic expressivity with static optimization for streaming languages",
-      "year": 2013,
-      "doi": "10.1145/2488222.2488255",
-      "openalex": "W2144921311",
-      "s2": "346195af6c818e2ef0009c6724655518bc13d120",
-      "venue": "Distributed Event-Based Systems",
-      "authors": [
-        "Robert Soulé",
-        "Michael I. Gordon",
-        "Saman Amarasinghe",
-        "Robert Grimm",
-        "Martin Hirzel"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The StreamIt infrastructure includes a compilation path that mainly exploits this approach [7] for several different target platforms, including clusters of workstations [14], the MIT Raw microprocessor [16], and Tilera’s line of microprocessors [18]."
-      ]
-    },
-    {
-      "title": "Locality-aware task management for unstructured parallelism",
-      "year": 2013,
-      "doi": "10.1145/2486159.2486175",
-      "openalex": "W2146585781",
-      "s2": "6d16047553edf8b01a16c572e5ee13bd6e07ffc5",
-      "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-      "authors": [
-        "Richard M. Yoo",
-        "Christopher J. Hughes",
-        "Changkyu Kim",
-        "Yen-Kuang Chen",
-        "Christos Kozyrakis"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Maximum-throughput mapping of SDFGs on multi-core SoC platforms",
-      "year": 2013,
-      "doi": "10.1016/j.jpdc.2013.05.004",
-      "openalex": "W2052182306",
-      "s2": "1f5980219a0463af18eb722717d11287af583c9b",
-      "venue": "Journal of Parallel and Distributed Computing",
-      "authors": [
-        "Alessio Bonfietti",
-        "Michele Lombardi",
-        "Michela Milano",
-        "Luca Benini"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "StreamIt is an architecture-independent language with a synchronous data-flow semantic, supplied with an efficient compiler, described in [25] and in [41]."
-      ]
-    },
-    {
-      "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions",
-      "year": 2013,
-      "doi": null,
-      "openalex": "W2202992943",
-      "s2": null,
-      "venue": "eScholarship (California Digital Library)",
-      "authors": [
-        "Dai Bui"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "a12bee93834a00ceca8fa49f36005a98c8e6ea01",
-      "venue": null,
-      "authors": [
-        "D. Bui"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Although SDF is less general than KPN, it turns out that SDF is still general enough to model many stream applications [113], and it is suitable for compiler optimization techniques for optimizing buffer sizes and static scheduling [14, 105, 13, 15, 16, 87, 86, 100, 47, 68, 37, 98, 50, 51, 116, 24].",
-        "This abstraction enables several compiler optimization techniques [14, 105, 13, 15, 16, 87, 86, 100, 47, 68, 98, 50, 51, 37, 116, 24] for buffer space, scheduling and mapping to underlying architecture as well as worst-case performance analysis [40].",
-        "[100] use a similar technique that fuses (groups) adjacent actors in such a way that the code and data space, required by fusing actors, can fit into caches of processors."
-      ]
-    },
-    {
-      "title": "Tutorial",
-      "year": 2013,
-      "doi": "10.1145/2488222.2488268",
-      "openalex": "W2141003391",
-      "s2": "0407b4faec55431fea6ecaf8c29ab9697e9db7e6",
-      "venue": "Distributed Event-Based Systems",
-      "authors": [
-        "Scott Schneider",
-        "Martin Hirzel",
-        "Buğra Gedik"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "StreamIt performs batching statically, calling it execution scaling [31].",
-        "Finally, an even more restrictive, but common and profitable, case shares the state of a queue between two pipelined operators [31]."
-      ]
-    },
-    {
-      "title": "Cache-conscious scheduling of streaming applications",
-      "year": 2012,
-      "doi": "10.1145/2312005.2312049",
-      "openalex": null,
-      "s2": "be14c7c02fa52d1a724cdc00f2f26afe9e49c950",
-      "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-      "authors": [
-        "Kunal Agrawal",
-        "Jeremy T. Fineman",
-        "J. Krage",
-        "C. Leiserson",
-        "Sivan Toledo"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Heuristic cache-aware scheduling of streaming programs on both single processors and multiprocessors has been studied by several research groups [15, 21, 25], but the proposed heuristics are all evaluated empirically.",
-        "been considered, such as power consumption [29], memory usage [4,23], and cache efficiency [15,21,25].",
-        "[25] also try to heuristically optimize for both the data cache and the instruction cache."
-      ]
-    },
-    {
-      "title": "High-Level Support for Pipeline Parallelism on",
-      "year": 2012,
-      "doi": null,
-      "openalex": "W2742057174",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Many-Core Architectures",
-        "Siegfried Benkner",
-        "Enes Bajrović",
-        "Erich Marth",
-        "Martin Sandrieser",
-        "Samuel Thibault"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "High-Level Support for Pipeline Parallelism on",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "7b25b1c3ffa37076ef6ca63e976d364ffc76341d",
-      "venue": null,
-      "authors": [
-        "Many-Core Architectures",
-        "Siegfried Benkner",
-        "Enes Bajrovic",
-        "Erich Marth",
-        "Martin Sandrieser",
-        "Samuel Thibault"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "High-Level Support for Pipeline Parallelism on Many-Core Architectures",
-      "year": 2012,
-      "doi": "10.1007/978-3-642-32820-6_61",
-      "openalex": "W2326090267",
-      "s2": "5c94dacf279cd0b9e80aca3ed136a842fdfd9497",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Siegfried Benkner",
-        "Enes Bajrović",
-        "Erich Marth",
-        "Martin Sandrieser",
-        "Raymond Namyst",
-        "Samuel Thibault"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "[23] propose StreamIt, a domain speciﬁc language (DSL) for designing stream-based applications where in combination with the underlying compiler pipeline speciﬁc optimizations [24] are applied."
-      ]
-    },
-    {
-      "title": "Hitting the Sweet Spot for Streaming Languages : Dynamic Expressivity with Static Optimization",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "38aaa3f02f5f00c31cd98fd5dcb340408a5cd699",
-      "venue": null,
-      "authors": [
-        "R. Soulé",
-        "Michael I. Gordon",
-        "Saman P. Amarasinghe",
-        "R. Grimm",
-        "Martin Hirzel"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "this approach [7] for several different target platforms, including clusters of workstations [12], the MIT Raw microprocessor [14], and Tilera’s line of microprocessors [16]."
-      ]
-    },
-    {
-      "title": "Kernel Partitioning of Streaming Applications: A Statistical Approach to an NP-complete Problem",
-      "year": 2012,
-      "doi": "10.1109/micro.2012.44",
-      "openalex": "W2164767739",
-      "s2": "25de638f6dcf35cd41fcad745e17d37027d2995b",
-      "venue": "Micro",
-      "authors": [
-        "Petar Radojković",
-        "Paul Carpenter",
-        "Miquel Moretó",
-        "Alex Ramírez",
-        "Francisco J. Cazorla"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "routing, and a set of cache optimizations [22, 23, 37]."
-      ]
-    },
-    {
-      "title": "Optimizations in Stream Programming for Multimedia Applications by",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "dca6c235138b8f17bfc130219a29d4f8f5235091",
-      "venue": null,
-      "authors": [
-        "E. Wong"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Thus there could be more accesses to longer latency memory hierarchies [46]."
-      ]
-    },
-    {
-      "title": "Reusable Software Infrastructure for Stream Processing",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "be831d2fb31a5bcc0e2a4f239eb2249a6ca70b54",
-      "venue": null,
-      "authors": [
-        "R. Soulé"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "On the static side, execution scaling [101] is a batching algorithm for StreamIt that trades the instruction-cache benefits of batching against the data-cache cost of requiring larger buffers.",
-        "• State sharing enables scalar replacement, where an array is implemented by one local variable per array element [101].",
-        "The compiler for a streaming language may even combine the techniques directly [101].",
-        "StreamIt uses a fully-static approach, where a static schedule prescribes exactly what data can be accessed by which operator at a what time [101].",
-        "and clusters of workstations, often by rewriting an application’s dataflow graph [7, 10, 12, 14, 18, 20, 23, 25, 32, 42, 45, 46, 57, 63, 73, 92, 95, 99, 101, 103, 102, 108, 116, 117, 119, 122].",
-        "show how to further optimize a shared queue, by making it local and computing all offsets at compile-time, so that it can be implemented by scalar variables instead of an array [101]."
-      ]
-    },
-    {
-      "title": "Reusable software infrastructure for stream processing",
-      "year": 2012,
-      "doi": null,
-      "openalex": "W2514978310",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Robert Grimm",
-        "Robert Soulé"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "StreamTMC: Stream compilation for tiled multi-core architectures",
-      "year": 2012,
-      "doi": "10.1016/j.jpdc.2012.12.001",
-      "openalex": "W2051448602",
-      "s2": "e797948de6882b8980d347ac863fc99bc0159ce2",
-      "venue": "Journal of Parallel and Distributed Computing",
-      "authors": [
-        "Haitao Wei",
-        "Mingkang Qin",
-        "Weiwei Zhang",
-        "Junqing Yu",
-        "Dongrui Fan",
-        "Guang R. Gao"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Sermulins presented a cache aware optimization for stream programs on a uniprocessor [16]."
-      ]
-    },
-    {
-      "title": "Application-Tailored I/O with Streamline",
-      "year": 2011,
-      "doi": "10.1145/1963559.1963562",
-      "openalex": "W2041755486",
-      "s2": "ac871fbb5635ab1aa4ddb0f369b69f1c1b5f5aa5",
-      "venue": "ACM Transactions on Computer Systems",
-      "authors": [
-        "Willem de Bruijn",
-        "Herbert Bos",
-        "Henri E. Bal"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "StreamIt [Sermulins \net al. 2005] implements a more re.ned scheduling policy."
-      ]
-    },
-    {
-      "title": "Automated Architecture-Aware Mapping of Streaming Applications Onto GPUs",
-      "year": 2011,
-      "doi": "10.1109/ipdps.2011.52",
-      "openalex": "W2119304316",
-      "s2": "2024526c54d0e0324ed1ee9e4f5f662ae48087f8",
-      "venue": "IEEE International Parallel and Distributed Processing Symposium",
-      "authors": [
-        "Andrei Hagiescu",
-        "Huynh Phung Huynh",
-        "Weng‐Fai Wong",
-        "Rick Siow Mong Goh"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "One relies on caching transformations for StreamIt that have included narrowing the memory requirement through modulation or copy-shift [16]."
-      ]
-    },
-    {
-      "title": "Efficient, Deterministic and Deadlock-free Concurrency",
-      "year": 2011,
-      "doi": "10.7916/d8n87jpx",
-      "openalex": "W2121421584",
-      "s2": "5ca7ad4ec4d7329ebff5ad4684ffb6d14f970a31",
-      "venue": "Columbia Academic Commons (Columbia University)",
-      "authors": [
-        "Vasudevan, Nalini"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "[108] present cache aware optimizations that exploit communication patterns in StreamIt programs."
-      ]
-    },
-    {
-      "title": "Storage allocation for streaming-based register file",
-      "year": 2011,
-      "doi": "10.1201/b11418-6",
-      "openalex": null,
-      "s2": "1067ad71e759b0d18ec93f9edfe0f3dfa09300b1",
-      "venue": null,
-      "authors": [
-        "P. Raghavan",
-        "F. Catthoor"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "StreamPI: a stream-parallel programming extension for object-oriented programming languages",
-      "year": 2011,
-      "doi": "10.1007/s11227-011-0656-7",
-      "openalex": "W1967384908",
-      "s2": "0259ea2eef14ad0fffde3469bc0d4d6c957e9296",
-      "venue": "The Journal of Supercomputing",
-      "authors": [
-        "Jingun Hong",
-        "Kirak Hong",
-        "Bernd Burgstaller",
-        "Johann Blieberger"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The StreamIt benchmark collection [44] is commonly used for the evaluation of approaches to stream program orchestration [11, 13, 27, 29,  40 , 48, 49]."
-      ]
-    },
-    {
-      "title": "A Multidimensional Array Slicing DSL for Stream Programming",
-      "year": 2010,
-      "doi": "10.1109/cisis.2010.135",
-      "openalex": "W2165852314",
-      "s2": "027e078d2721baafc4d16124959b1590b261370c",
-      "venue": "Computational Intelligence in Security for Information Systems",
-      "authors": [
-        "Pablo de Oliveira Castro",
-        "Stéphane Louise",
-        "Denis Barthou"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "StreamIt[1] is both a stream language and an optimizing compiler for the RAW[4] and SMP[8] architectures."
-      ]
-    },
-    {
-      "title": "Adaptive Operating System Design for High Throughput I/O",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "c84b6f6524807076ca3f0881905d2b2121976ec4",
-      "venue": null,
-      "authors": [
-        "W. D. Bruijn"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Automatic Mapping of Stream Programs on Multicore Architectures",
-      "year": 2010,
-      "doi": null,
-      "openalex": "W2619204735",
-      "s2": null,
-      "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
-      "authors": [
-        "Pablo de Oliveira Castro",
-        "Stéphane Louise",
-        "Denis Barthou"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Buffer Sharing in Rendezvous Programs",
-      "year": 2010,
-      "doi": "10.1109/tcad.2010.2052840",
-      "openalex": "W2141558510",
-      "s2": null,
-      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-      "authors": [
-        "Nalini Vasudevan",
-        "Stephen A. Edwards"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Compiler techniques for scalable performance of stream programs on multicore architectures",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "e454ac36ab555f1b618e4936e36dcc572f9b151e",
-      "venue": null,
-      "authors": [
-        "Michael I. Gordon"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "This startup cost can be amortized by increasing the scheduling multiplicity of each filter but that would also the increase buffering requirement of each filter [STRA05].",
-        "Also, arrays of constants can be converted into multiple scalar variable constants by unrolling loops and performing constant propagation [STRA05].",
-        "This process is called scalar replacement [STRA05].",
-        "Also, fusion enables powerful inter-node optimizations such as scalar replacement [STRA05] and algebraic simplification [ATA05, LTA03]."
-      ]
-    },
-    {
-      "title": "Ensuring deterministic concurrency through compilation",
-      "year": 2010,
-      "doi": "10.1109/ipdpsw.2010.5470803",
-      "openalex": "W2064731352",
-      "s2": "6e4c787b522840bd73e61a41a6a5720564780779",
-      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
-      "authors": [
-        "Nalini Vasudevan",
-        "Stephen A. Edwards"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Expression et optimisation des réorganisations de données dans du parallélisme de flots",
-      "year": 2010,
-      "doi": null,
-      "openalex": "W90283474",
-      "s2": null,
-      "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
-      "authors": [
-        "Pablo de Oliveira Castro"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Expression et optimisation des réorganisations de données dans du parallélisme de flots. (Expression and optimization of data reorganizations in dataflow parallelism)",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "11040a2c0e14b25762f581ea6bc4358543ec7f84",
-      "venue": null,
-      "authors": [
-        "P. Herrero"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Formal Modeling of Embedded Systems with Explicit Schedules and Routes",
-      "year": 2010,
-      "doi": "10.1007/978-1-4419-6400-7_2",
-      "openalex": "W2113784798",
-      "s2": "0c9516f3bdf1444ada46252cfbdaef27a4b38fcd",
-      "venue": "Synthesis of Embedded Software",
-      "authors": [
-        "Julien Boucaron",
-        "Anthony Coadou",
-        "Robert de Simone"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "StreamIt [1, 48, 52, 71, 76] is a language and compiler for stream computing where SDF is the underlying MoCC."
-      ]
-    },
-    {
-      "title": "A hybrid static/dynamic approach to scheduling stream programs",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "0d4bc3a471a3eeca32ea97368d449aae31dbe0d9",
-      "venue": null,
-      "authors": [
-        "C. Tan"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Fusion enables powerful inter-filter optimizations such as scalar replacement [25] and algebraic simplification [1, 18."
-      ]
-    },
-    {
-      "title": "Buffer sharing in CSP-like programs",
-      "year": 2009,
-      "doi": "10.5555/1715759.1715779",
-      "openalex": "W2127645760",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Nalini Vasudevan",
-        "Stephen A. Edwards"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Buffer sharing in CSP-like programs",
-      "year": 2009,
-      "doi": "10.1109/memcod.2009.5185391",
-      "openalex": "W3145257065",
-      "s2": "5bf8c7e2de82cc9c95c6ad43906c3f90f19ef99e",
-      "venue": "2009 7th IEEE/ACM International Conference on Formal Methods and Models for Co-Design",
-      "authors": [
-        "Nalini Vasudevan",
-        "Stephen A. Edwards"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Cache aware mapping of streaming apllications on a multiprocessor system-on-chip",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "7f1ebc8815594adc32a3ed2bcefa786307576c1c",
-      "venue": null,
-      "authors": [
-        "A. Moonen",
-        "M. Bekooij",
-        "René van den Berg",
-        "J. V. Meerbergen"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "For this class of streaming applications we apply the cache aware optimisation technique execution scaling [13], which is a transformation that improves instruction and data locality by executing each actor multiple times before moving to the next actor.",
-        "Prefetching of data is latency tolerant instead of latency critical, as in the case when input and output data are stored in a cached memory region such as in [7, 13].",
-        "The number of cache misses are minimised in [7, 13] in the context of a single processor.",
-        "The input and output FIFO buffers are stored in an uncached memory region and not in a cached memory region as in [7, 13]."
-      ]
-    },
-    {
-      "title": "Instruction Hints for Super Efficient Data Caches",
-      "year": 2009,
-      "doi": "10.1007/978-3-642-01973-9_76",
-      "openalex": "W1528655227",
-      "s2": "f99a6279029480cf6285f4429efcf7cc88ea4207",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Jie Tao",
-        "Dominic Hillenbrand",
-        "H. Marten"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "This locality is typically achieved by restructuring the program code based on aﬃnity analysis [8,10,12,13,14]."
-      ]
-    },
-    {
-      "title": "Language and compiler support for stream programs",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W2321248633",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Saman Amarasinghe",
-        "William Thies"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Language and compiler support for stream programs",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "6257c9d0c725320fd7b05f84793971080d95084f",
-      "venue": null,
-      "authors": [
-        "W. Thies"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Also, using a transformation called scalar replacement [STRA05], the weights array can be eliminated completely by unrolling loops and propagating constants from the init function to the work function.",
-        "[STRA05] J."
-      ]
-    },
-    {
-      "title": "Predictable embedded multiprocessor architecture for streaming applications",
-      "year": 2009,
-      "doi": "10.6100/ir642808",
-      "openalex": "W1537221894",
-      "s2": null,
-      "venue": "Data Archiving and Networked Services (DANS)",
-      "authors": [
-        "Ajm Arno Moonen"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Predictable embedded multiprocessor architecture for streaming applications",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "dfffbc4f77cd9437c07958384dfbb23bf36863a2",
-      "venue": null,
-      "authors": [
-        "A. Moonen"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "This cache-aware optimisation technique is based on [73], but we target a multiprocessor architecture instead of a single processor and use uncached local memories to store the input and output data of a task.",
-        "The number of cache misses are minimised in [48, 73] in the context of a single processor.",
-        "This technique is based on a technique [73] that executes tasks multiple times in a loop before executing another task.",
-        "4, the number of cache misses are trade-off against end-to-end latency and memory usage, by making use of a cacheaware mapping technique that is based on execution scaling [73].",
-        "In this thesis, we apply a cache-optimisation technique execution scaling [73], which is a transformation that improves the use of the memory hierarchy by executing each task multiple times before moving to the next task in a schedule.",
-        "The input and output buffers are stored in a memory region that is not cached, in contrast with [48, 73]."
-      ]
-    },
-    {
-      "title": "SARA",
-      "year": 2009,
-      "doi": "10.1145/1629435.1629442",
-      "openalex": "W2011407435",
-      "s2": "b19b9a27586ed798fee79c3cec4f0d6b7cd8b43c",
-      "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
-      "authors": [
-        "Praveen Raghavan",
-        "Francky Catthoor"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Software Pipelined Execution of Stream Programs on GPUs",
-      "year": 2009,
-      "doi": "10.1109/cgo.2009.20",
-      "openalex": "W2122080725",
-      "s2": "6ef5453d68325ba700e103cfba400b01387c438e",
-      "venue": "2009 International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Abhishek Udupa",
-        "R. Govindarajan",
-        "Matthew J. Thazhuthaveetil"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Synergistic execution of stream programs on multicores with accelerators",
-      "year": 2009,
-      "doi": "10.1145/1542452.1542466",
-      "openalex": "W2139270694",
-      "s2": "624017a5b8a3bf767d18d0ad533e709e1fc495fa",
-      "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-      "authors": [
-        "Abhishek Udupa",
-        "R. Govindarajan",
-        "Matthew J. Thazhuthaveetil"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "It has been demonstrated in [24] that cache aware optimizations on StreamIt programs can yield large performance gains."
-      ]
-    },
-    {
-      "title": "Synergistic execution of stream programs on multicores with accelerators",
-      "year": 2009,
-      "doi": "10.1145/1543136.1542466",
-      "openalex": "W4248575100",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Abhishek Udupa",
-        "R. Govindarajan",
-        "Matthew J. Thazhuthaveetil"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Task centric memory management for an on-chip multiprocessor",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W2103428141",
-      "s2": null,
-      "venue": "Research Repository (Delft University of Technology)",
-      "authors": [
-        "Anca Molnos"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Task centric memory management for an on-chip multiprocessor",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "09822ced8c301854b55012d5899b6f54c6d8974c",
-      "venue": null,
-      "authors": [
-        "A. Molnos"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "This problem type is mostly solved for applications represented by different variants of Synchronous Data Flow (SDF) graphs (finding the buffers’ sizes problem) [117], [9], [61], [96]."
-      ]
-    },
-    {
-      "title": "The canals language and its compiler",
-      "year": 2009,
-      "doi": "10.1145/1543820.1543829",
-      "openalex": "W1989388608",
-      "s2": "645cc4eced0d123586dc43e6ec743750bdb26e02",
-      "venue": "Software and Compilers for Embedded Systems",
-      "authors": [
-        "Andreas Dahlin",
-        "Johan Ersfolk",
-        "Guyfu Yang",
-        "Haitham Habli",
-        "Johan Lilius"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Thus many of the compile-time optimizations that are possible to do on StreamIT programs [ 13 ], [14] are not possible on Canals programs."
-      ]
-    },
-    {
-      "title": "A Unified Approach to Adaptive Code Selection for Modern Systems",
-      "year": 2008,
-      "doi": null,
-      "openalex": "W2125548905",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Joseph Blomstedt"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Unified Approach to Adaptive Code Selection for Modern Systems",
-      "year": 2008,
-      "doi": null,
-      "openalex": null,
-      "s2": "f1b5c431de3f932690c9aedf82ae95f7f78f60f2",
-      "venue": null,
-      "authors": [
-        "Joseph Blomstedt"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "There is research on tuning scientific kernels specifically for a given set of architectures [19, 9, 37], developing cache oblivious algorithms that perform well without tuning [6, 17, 3], as well as studies comparing the performance of cache oblivious and cache aware techniques [5, 46]."
-      ]
-    },
-    {
-      "title": "Cache Aware Mapping of Streaming Applications on a Multiprocessor System-on-Chip",
-      "year": 2008,
-      "doi": "10.1109/date.2008.4484696",
-      "openalex": "W4256572130",
-      "s2": null,
-      "venue": "2008 Design, Automation and Test in Europe",
-      "authors": [
-        "Arno Moonen",
-        "Marco J.G. Bekooij",
-        "René van den Berg",
-        "J. van Meerbergen"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Cache aware mapping of streaming applications on a multiprocessor system-on-chip",
-      "year": 2008,
-      "doi": "10.1145/1403375.1403448",
-      "openalex": "W2118485837",
-      "s2": "8e1d25fd48190390306c87e72c4f802b837cd244",
-      "venue": "Design, Automation and Test in Europe",
-      "authors": [
-        "Arno Moonen",
-        "Marco J.G. Bekooij",
-        "René van den Berg",
-        "J. van Meerbergen"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "The number of processor stall cycles is determined by the number of \ncache misses and the cache miss penalty [6]."
-      ]
-    },
-    {
-      "title": "Constructive and Destructive Use of Compilers in Elliptic Curve Cryptography",
-      "year": 2008,
-      "doi": "10.1007/s00145-008-9023-0",
-      "openalex": "W2024490197",
-      "s2": "8688a7eb7c257b6b9436efdf5d1c7c051efe507a",
-      "venue": "Journal of Cryptology",
-      "authors": [
-        "Manuel Barbosa",
-        "Andrew Moss",
-        "Daniel Page"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "[41] where high-level cache-aware optimisations are applied in the compilation of a domain specific language for streaming applications."
-      ]
-    },
-    {
-      "title": "MPSoC Design Using Application-Specific Architecturally Visible Communication",
-      "year": 2008,
-      "doi": "10.1007/978-3-540-92990-1_15",
-      "openalex": "W2155361855",
-      "s2": "9ef27563266f33ed7b538afc862603689ba0fdcf",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Theo Kluter",
-        "Philip Brisk",
-        "Edoardo Charbon",
-        "Paolo Ienne"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "[15], in the context of a compiler for a single processor system, argued in favor of heterogeneous pipelining that has many similarities to ours."
-      ]
-    },
-    {
-      "title": "Matrix-based streamization approach for improving locality and parallelism on FT64 stream processor",
-      "year": 2008,
-      "doi": "10.1007/s11227-008-0186-0",
-      "openalex": "W2071784336",
-      "s2": "e19ff356c0debf5aa756a3b5ec7b675a688e1e77",
-      "venue": "The Journal of Supercomputing",
-      "authors": [
-        "Xuejun Yang",
-        "Jing Du",
-        "Xiaobo Yan",
-        "Yu Deng"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Furthermore, some existing researches on memory optimization for stream architectures mostly concerned partial hardware melioration [28] and common cache hierarchy optimization [29]."
-      ]
-    },
-    {
-      "title": "Model-T: Rethinking the OS for terabit speeds",
-      "year": 2008,
-      "doi": "10.1109/infocom.2008.4544642",
-      "openalex": "W2121483575",
-      "s2": "c8c203b5305d442e6f38a68ec215de38969e0f1f",
-      "venue": "IEEE INFOCOM Workshops 2008",
-      "authors": [
-        "Willem de Bruijn",
-        "Herbert Bos"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Most directly related to Model-T are Click [15], which statically schedules a layer-2 processing network for high throughput , Dryad [16] which schedules streams across distributed resources, StreamIt [17] which compiles stream-based tasks t o",
-        "For these two reasons, both compile time (as performed by StreamIt) and load time (Streamline) optimizations can only give rough estimates on cache fill-rate and will give less than optimal throughput.",
-        "Most directly related to Model-T are Click [15], which statically schedules a layer-2 processing network for high throughput, Dryad [16] which schedules streams across distributed resources, StreamIt [17] which compiles stream-based tasks to run on multiprocessors and optimizes cache utilization and SEDA [18], which schedules application-level operations i a highly concurrent fashion to optimize global end-to-end performance."
-      ]
-    },
-    {
-      "title": "A Streaming Computation Framework for the Cell Processor",
-      "year": 2007,
-      "doi": null,
-      "openalex": "W2146172931",
-      "s2": null,
-      "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-      "authors": [
-        "Xin David Zhang"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Streaming Computation Framework for the Cell Processor",
-      "year": 2007,
-      "doi": null,
-      "openalex": null,
-      "s2": "ba77617912535abc2ff7a2ff70466ea9793fd778",
-      "venue": null,
-      "authors": [
-        "Xin Zhang"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The StreamIt compiler is also able to perform cache-aware [21] and domainspecific [16, 1] optimizations."
-      ]
-    },
-    {
-      "title": "Compiler Assisted Elliptic Curve Cryptography",
-      "year": 2007,
-      "doi": "10.1007/978-3-540-76843-2_46",
-      "openalex": "W2136781432",
-      "s2": "5dd4de3af4568f15de144dff3b92a511aaed830a",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Manuel Barbosa",
-        "Andrew Moss",
-        "Daniel Page"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "[31] where high-level cache-aware optimisations are applied in the compilation of a domain specific language for streaming applications."
-      ]
-    },
-    {
-      "title": "Optimizing Stream Organization to Improve the Performance of Scientific Computing Applications on the Stream Processor",
-      "year": 2007,
-      "doi": "10.1007/978-3-540-72905-1_18",
-      "openalex": "W1556382755",
-      "s2": "3ec0292562e1965896bc69a1bac79a38a5a20b07",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Ying Zhang",
-        "Gen Li",
-        "Xuejun Yang",
-        "Kun Zeng"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Dynamic load-balancing of StreamIt cluster computations",
-      "year": 2006,
-      "doi": null,
-      "openalex": "W2240209338",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Eric Todd Fellheimer"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Dynamic load-balancing of StreamIt cluster computations",
-      "year": 2006,
-      "doi": null,
-      "openalex": null,
-      "s2": "fe19e2681be0e6fbe2e2c0855c718fcc130aede4",
-      "venue": null,
-      "authors": [
-        "Eric Fellheimer"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Another interesting class of optimizations are those which rely on the inherent memory model of the system[18]."
-      ]
-    },
-    {
-      "title": "Event Count Automata: A State-Based Model for Stream Processing Systems",
-      "year": 2006,
-      "doi": "10.1109/rtss.2005.21",
-      "openalex": "W2141513652",
-      "s2": "21427501199c0cea40271fb397347f719a6d7f6c",
-      "venue": "IEEE Real-Time Systems Symposium",
-      "authors": [
-        "Samarjit Chakraborty",
-        "Linh Thi Xuan Phan",
-        "P. S. Thiagarajan"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
-      "year": 2006,
-      "doi": "10.1145/1168857.1168877",
-      "openalex": "W2165100134",
-      "s2": "9b23d37b72ee7fe4f8bb3230e1640cbeb9c6c599",
-      "venue": "ASPLOS XII",
-      "authors": [
-        "Michael I. Gordon",
-        "William Thies",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "We do not enable StreamIt’s aggressive cache optimizations [35] or linear",
-        ", FIR, FFT, and DCT) [24], state-space analysis [3], and cache optimizations [35].",
-        "We apply fusion first because we assume that each data-parallel product will execute on a single core; fusion enables powerful inter-node optimizations such as scalar replacement [35] and algebraic simplification [3, 24]."
-      ]
-    },
-    {
-      "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
-      "year": 2006,
-      "doi": "10.1145/1168917.1168877",
-      "openalex": "W4235344346",
-      "s2": null,
-      "venue": "ACM SIGOPS Operating Systems Review",
-      "authors": [
-        "Michael I. Gordon",
-        "William Thies",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
-      "year": 2006,
-      "doi": "10.1145/1168919.1168877",
-      "openalex": "W4254265573",
-      "s2": null,
-      "venue": "ACM SIGARCH Computer Architecture News",
-      "authors": [
-        "Michael I. Gordon",
-        "William Thies",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
-      "year": 2006,
-      "doi": "10.1145/1168918.1168877",
-      "openalex": "W4237758066",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Michael I. Gordon",
-        "William Thies",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Logs and Lifeguards : Accelerating Dynamic Program Monitoring",
-      "year": 2006,
-      "doi": null,
-      "openalex": null,
-      "s2": "dbf8aebcd5106b2da97796416a0a9492af836098",
-      "venue": null,
-      "authors": [
-        "S. Chen",
-        "B. Falsafi",
-        "P. Gibbons",
-        "M. Kozuch",
-        "T. Mowry",
-        "R. Teodorescu",
-        "A. Ailamaki",
-        "L. Fix",
-        "G. Ganger",
-        "W. S",
-        "Schlosser"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Because the log is a continuous stream of information flowing from one processor (or hardware thread) to another, many of the techniques for optimizing stream-style computation are relevant for logging [1, 9, 14, 26]."
-      ]
-    },
-    {
-      "title": "MPEG-2 Decoding in a Stream Programming Language",
-      "year": 2006,
-      "doi": null,
-      "openalex": "W2124343693",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Matthew Drake",
-        "Hank Hoffmann",
-        "Rodric Rabbah",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "MPEG-2 decoding in a stream programming language",
-      "year": 2006,
-      "doi": "10.1109/ipdps.2006.1639343",
-      "openalex": "W4251551397",
-      "s2": "1c15296d391cef2aac22a3796d63b3ed9218704e",
-      "venue": "Proceedings 20th IEEE International Parallel & Distributed Processing Symposium",
-      "authors": [
-        "Matthew Drake",
-        "Hank Hoffmann",
-        "Rodric Rabbah",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "StreamIt also exposes the inherent parallelism and communication topology of the application, thereby empowering the compiler to perform many streamaware optimizations [1, 17, 25, 37] that elude other languages."
-      ]
-    },
-    {
-      "title": "Stream Programming for Image and Video Compression",
-      "year": 2006,
-      "doi": null,
-      "openalex": "W2145791143",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Matthew Drake"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Stream Programming for Image and Video Compression",
-      "year": 2006,
-      "doi": null,
-      "openalex": null,
-      "s2": "bfc46687c9adef4c6bd7d449867fef82ffd1c6ad",
-      "venue": null,
-      "authors": [
-        "M. Drake"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Cache Optimizations for Stream Programs",
-      "year": 2005,
-      "doi": null,
-      "openalex": null,
-      "s2": "3652871a3a3223f33649dc7c43ddb6052d156440",
-      "venue": null,
-      "authors": [
-        "Janis SermulirS"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Cache Optimizations for Stream Programs by Janis Sermulips",
-      "year": 2005,
-      "doi": null,
-      "openalex": null,
-      "s2": "ee8bd7e9ec4efbd34a427f1b7b344eb5313b11be",
-      "venue": null,
-      "authors": [
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "…for Stream Programs\nby\nJānis Sermuliņš\nSubmitted to the Department of Electrical Engineering and Computer Science\nin partial fulfillment of the requirements for the degree of\nMaster of Engineering in Computer Science and Engineering\nat the\nMASSACHUSETTS INSTITUTE OF TECHNOLOGY\nMay 2005\nc©…"
-      ]
-    },
-    {
-      "title": "High-Productivity Stream Programming For High-Performance Systems",
-      "year": 2005,
-      "doi": null,
-      "openalex": null,
-      "s2": "a283df29ce2a1066a3a72e5e1889944efa7fff78",
-      "venue": null,
-      "authors": [
-        "Rodric M. Rabbah",
-        "Bill Thies",
-        "Michael I. Gordon",
-        "Janis Sermulins",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Third, we will present several cache aware optimizations to improve instruction and data locality, and improve register allocation and scheduling freedom [7]."
-      ]
-    },
-    {
-      "title": "MPEG-2 in a Stream Programming Language",
-      "year": 2005,
-      "doi": null,
-      "openalex": "W2110552905",
-      "s2": null,
-      "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-      "authors": [
-        "Matthew Drake",
-        "Hank Hoffmann",
-        "Rodric Rabbah",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "MPEG-2 in a Stream Programming Language",
-      "year": 2005,
-      "doi": null,
-      "openalex": null,
-      "s2": "d1ac0c7f25b2391d65cacac57ec94b92bd2297aa",
-      "venue": null,
-      "authors": [
-        "M. Drake",
-        "H. Hoffmann",
-        "Rodric M. Rabbah",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "As a result, the parallelism and communication topology of the application are exposed, empowering the compiler to perform many stream-aware optimizations [1, 11, 19, 30] that elude other languages."
-      ]
-    },
-    {
-      "title": "Publications in Theoretical Computer Science : 1975 – 1979",
-      "year": 2003,
-      "doi": null,
-      "openalex": null,
-      "s2": "a26aac6dd7ccb4b978ed592c19a04f5f800ea0ba",
-      "venue": null,
-      "authors": [
-        "Nelson H. F. Beebe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Exploiting Coarse-Grained Task , Data , and Pipeline Parallelism in Stream Programs",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "c3d253c08ea741bde78e783e914f2357d8ad5ff5",
-      "venue": null,
-      "authors": [
-        "Michael I. Gordon",
-        "W. Thies",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "We do not enable StreamIt’s aggressive cache optimizations [35] or linear",
-        ", FIR, FFT, and DCT) [24], state-space analysis [3], and cache optimizations [35].",
-        "We apply fusion first because we assume that each data-parallel product will execute on a single core; fusion enables powerful inter-node optimizations such as scalar replacement [35] and algebraic simplification [3, 24]."
-      ]
-    },
-    {
-      "title": "Ieee Transactions on Computer-aided Design of Integrated Circuits and Systems 1 Buffer Sharing in Rendezvous Programs",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "5d8fba593e030638caff48e48957a8de89e46171",
-      "venue": null,
-      "authors": [
-        "N. Vasudevan",
-        "Stephen Anthony Edwards"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "MIT Open Access Articles Cache-conscious scheduling of streaming applications",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "916ef06a9bc5e0b559da8cec124d1dbc734d4bf3",
-      "venue": null,
-      "authors": [
-        "Kunal Agrawal",
-        "Jeremy T. Fineman",
-        "J. Krage",
-        "C. Leiserson",
-        "Sivan Toledo"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Sermulins et al. [25] also try to heuristically optimize for both the data cache and the instruction cache.",
-        "More recently, additional metrics have been considered, such as power consumption [29], memory usage [4,23], and cache eﬃciency [15,21,25].",
-        "Heuristic cache-aware scheduling of streaming programs on both single processors and multiprocessors has been studied by several research groups [15,21,25], but the proposed heuristics are all evaluated empirically."
-      ]
-    },
-    {
-      "title": "MIT Open Access Articles Dynamic expressivity with static optimization for streaming languages",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "8f110f388c37c192a05dd328f00d805760b0436f",
-      "venue": null,
-      "authors": [
-        "Robert G. Soule",
-        "Michael I. Gordon",
-        "Saman Amarasinghe",
-        "R. Grimm",
-        "Martin Hirzel"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "The StreamIt infrastructure includes a compilation path that mainly exploits this approach [7] for several diﬀerent target platforms, including clusters of workstations [14], the MIT Raw microprocessor [16], and Tilera’s line of microprocessors [18]."
-      ]
-    },
-    {
-      "title": "Research Statement Languages, Compilers, and Tools for Multicore Architectures",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "cc24eab217f6df1b815a97435ae0e5d867121578",
-      "venue": null,
-      "authors": [
-        "W. Thies"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Ubiquitous Stream Programming to Facilitate the Migration to Multicore Architectures",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "12a5965959a4f1f8f421e546478467a2f52c5ec2",
-      "venue": null,
-      "authors": [
-        "M. Drake",
-        "David Zhang",
-        "Michael I. Gordon",
-        "Janis Sermulins",
-        "W. Thies",
-        "Allyn Dimock",
-        "Rodric M. Rabbah",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "A difficult aspect of stream programming, from both a performance and programmability standpoint, is reconciling regular streaming dataflow with irregular control messages.",
-        "We have used StreamIt to implement DSP codes (e.g., software radio, beamforming), image and video codecs (e.g., MPEG-2 encoding and decoding), encryption algorithms (e.g., DES and Serpent), and many other applications.",
-        "A key component of the research is to also provide seamless integration with other programming practices, because large applications have various properties that may require different language abstractions."
-      ]
-    }
-  ]
+  {
+   "title": "CASPHAr: Cache-Managed Accelerator Staging and Pipelining in Heterogeneous System Architectures",
+   "year": 2022,
+   "doi": "10.1109/tcad.2022.3197535",
+   "openalex": null,
+   "s2": "8104535c3dc71d64f0938d938fb3393da953d2c8",
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": [
+    "Mochamad Asri",
+    "A. Gerstlauer"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Software-Centric Optimizations: Manual, compiler or library-based support has been proposed to exploit parallelism and regular communication patterns in stream programs by formulating a set of cache-aware optimizations that improve instruction and data locality [3], [4], [5], [6], [7], [8].",
+    "Data partitioning and locality-aware data placement in the memory hierarchy are widely exploited to maximize performance gains, commonly referred to as tiling or blocking optimizations supported by a high-performance software library or a compiler [3], [4], [5], [6], [7]."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "PAVER",
+   "year": 2021,
+   "doi": "10.1145/3451164",
+   "openalex": null,
+   "s2": "da13eca10e924217650a2229e8201b21f3fa2dc4",
+   "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+   "authors": [
+    "Devashree Tripathy",
+    "AmirAli Abdolrashidi",
+    "L. Bhuyan",
+    "Liang Zhou",
+    "Daniel Wong"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "There have been numerous works on structured parallelism in CPUs [3, 12, 14, 51], and more recently in the realm of GPUs [2, 6, 16, 60].",
+    "In [64], Zhang et al. use a compiler-based strategy to create a computation block dependency graph, targeting data reuse on multicore CPUs.",
+    "There have been analyses of the tradeoff between cache reuse and vectorization on CPUs, but in the end, they should be used in the right place and it mainly depends on the application type and the architecture [52].",
+    "In our work, we aim to perform analysis on the PTX code before the kernel launch in order to extract locality information from the kernel PTX. Profiling has been extensively used in CPUs [4, 58, 65].",
+    "Locality in CPU-Related Works: The idea of using data locality to improve the performance and reduce the memory bottleneck started in the realm of CPUs and continued to multicores."
+   ],
+   "cited_by": 32
+  },
+  {
+   "title": "Stream Query Optimization",
+   "year": 2019,
+   "doi": "10.1007/978-3-319-77525-8_261",
+   "openalex": "W2918288513",
+   "s2": null,
+   "venue": "Encyclopedia of Big Data Technologies",
+   "authors": [
+    "Martin Hirzel",
+    "Robert Soul\u00e9",
+    "Bu\u011fra Gedik",
+    "Scott Schneider"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "A survey of state management in big data processing systems",
+   "year": 2018,
+   "doi": "10.1007/s00778-018-0514-9",
+   "openalex": "W2592286282",
+   "s2": "763fe590dee9d2fdb44040f7e90f0dbfe39ee7e5",
+   "venue": "The VLDB Journal",
+   "authors": [
+    "Quoc-Cuong To",
+    "Juan Soto",
+    "Volker Markl"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 80
+  },
+  {
+   "title": "Gloss: Seamless Live Reconfiguration and Reoptimization of Stream Programs",
+   "year": 2018,
+   "doi": "10.1145/3173162.3173170",
+   "openalex": null,
+   "s2": "2327e2a6b70578d599654055b55192eb0ab648f3",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "S. Rajadurai",
+    "Jeffrey Bosboom",
+    "W. Wong",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 10
+  },
+  {
+   "title": "S Stream Query Optimization",
+   "year": 2018,
+   "doi": null,
+   "openalex": null,
+   "s2": "43cf07e127650631ba276b00445a8602ebd837ae",
+   "venue": null,
+   "authors": [
+    "Martin Hirzel",
+    "R. Soul\u00e9",
+    "B. Gedik",
+    "S. Schneider"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Stream Query Optimization",
+   "year": 2018,
+   "doi": "10.1007/978-3-319-63962-8_261-1",
+   "openalex": "W4301274712",
+   "s2": "ab28a0f2a8cb06e2343d3a7df3d3e0b8486269d0",
+   "venue": "Encyclopedia of Big Data Technologies",
+   "authors": [
+    "Martin Hirzel",
+    "Robert Soul\u00e9",
+    "Bu\u011fra Gedik",
+    "Scott Schneider"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "A Survey of State Management in Big Data Processing Systems",
+   "year": 2017,
+   "doi": "10.48550/arxiv.1702.01596",
+   "openalex": "W2952020281",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Quoc-Cuong To",
+    "Juan Soto",
+    "Volker Markl"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 5
+  },
+  {
+   "title": "DSL Stream Programming on Multicore Architectures",
+   "year": 2017,
+   "doi": "10.1002/9781119332015.ch7",
+   "openalex": "W2582983959",
+   "s2": "368340da4f62bab488583c9d9bb58f4905f50630",
+   "venue": null,
+   "authors": [
+    "Pablo de Oliveira Castro",
+    "St\u00e9phane Louise",
+    "Denis Barthou"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "On cache architectures, fusion transformations proposed in [26] optimize \ufb01lters to instruction and data cache sizes."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Fusing effectful comprehensions",
+   "year": 2017,
+   "doi": "10.1145/3062341.3062362",
+   "openalex": "W2529401481",
+   "s2": "85ef581d482f66795d875d0712ba0084928a6f82",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Olli Saarikivi",
+    "Margus Veanes",
+    "Todd Mytkowicz",
+    "Madan Musuvathi"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Other related work on StreamIt discusses fusion followed by optimizations like constant propagation and scalar replacement [23], and loop unrolling [39]."
+   ],
+   "cited_by": 11
+  },
+  {
+   "title": "Fusing effectful comprehensions",
+   "year": 2017,
+   "doi": "10.1145/3140587.3062362",
+   "openalex": "W3085860359",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Olli Saarikivi",
+    "Margus Veanes",
+    "Todd Mytkowicz",
+    "Madan Musuvathi"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Locality-Aware Concurrency Platforms",
+   "year": 2017,
+   "doi": "10.7936/k7mw2gjh",
+   "openalex": null,
+   "s2": "ee6f9ec8dd7816bfda90a0027b66e7d30dccf07e",
+   "venue": null,
+   "authors": [
+    "Jordyn C. Maglalang"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Heuristic cache-aware scheduling of streaming programs on both single processors and multiprocessors has been studied by several research groups [43, 56, 66]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Stream processing optimizations for mobile sensing applications",
+   "year": 2017,
+   "doi": "10.17077/etd.dwz8diz6",
+   "openalex": null,
+   "s2": "8479191f9f1a6fa1f5739c378f450f5dc22026d8",
+   "venue": null,
+   "authors": [
+    "Farley Lai"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "We compare our compiler against the standard StreamIt compiler with and without the cache optimization enabled [44].",
+    "The proposed techniques include modulation [44, 50] and copy-shift [44].",
+    "On the other hand, several cache performance improvements were proposed including the copy-shift buffering and execution scaling for StreamIt in [44], and cache-aware optimizations for synchronous data flows [56] as part of the Ptolemy project [57].",
+    "scaling, the copy-shift approach can significantly outperform modulation [44].",
+    "We have also run the StreamIt in conjunction with the cache optimization described in [44].",
+    "In contrast with [44] that trades space for performance, our approach improves cache locality by saving space while eliminating unnecessary memory operations to improve the performance."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Generalized cache tiling for dataflow programs",
+   "year": 2016,
+   "doi": "10.1145/2980930.2907960",
+   "openalex": "W4244607047",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "\u0141ukasz Domaga\u0142a",
+    "Duco van Amstel",
+    "Fabrice Rastello"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "Generalized cache tiling for dataflow programs",
+   "year": 2016,
+   "doi": "10.1145/2907950.2907960",
+   "openalex": "W2464124721",
+   "s2": "f0d601eceb107f59049deb3b07804badf4791c7a",
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": [
+    "\u0141ukasz Domaga\u0142a",
+    "Duco van Amstel",
+    "Fabrice Rastello"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "For the evaluation of both the constraint programming solver as well as the heuristics we will compare ourselves to the re-sults obtained with the approach described by Sermulins et al. [25].",
+    "This is partly what is done by Sermulins et al. [25] when they perform scaling and allow a given percentage of the actors to have IO requirements that exceed the data cache size.",
+    "Execution scaling [7, 25, 28], a technique that is also known as train scheduling or batching, increases the number of data elements that are processed in a single iteration by a multiplicative factor that is the same for each actor.",
+    "Actor fusion [25] groups multiple actors together and performs inter-actor rescheduling."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Massively parallel stream processing with latency guarantees",
+   "year": 2016,
+   "doi": "10.14279/depositonce-5132",
+   "openalex": "W2408728055",
+   "s2": "dfe9fcd5c9ef1d078691fcf24934020890479d99",
+   "venue": "DepositOnce",
+   "authors": [
+    "Bj\u00f6rn Lohrmann"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Execution scaling described in [106] is a static compiler optimization that trades of instruction and data cache locality by batching the execution of computations nodes in the data \u0155ow graph."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Optimisation de la localit\u00e9 des donn\u00e9es sur architectures manyc\u0153urs",
+   "year": 2016,
+   "doi": "10.70675/9db146d9zadddz4b3czab5bz567d15710e97",
+   "openalex": null,
+   "s2": "26f303a9b525dec05c6c1725a4e9ee2ca7eecee1",
+   "venue": null,
+   "authors": [
+    "Duco van Amstel"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Semantic-Preserving Transformations for Stream Program Orchestration on Multicore Architectures",
+   "year": 2016,
+   "doi": null,
+   "openalex": "W2563147835",
+   "s2": null,
+   "venue": "The Sydney eScholarship Repository (The University of Sydney)",
+   "authors": [
+    "Yousun Ko"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Semantic-Preserving Transformations for Stream Program Orchestration on Multicore Architectures",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "17ddf3be7ed9f6598e17d1f36b11462f1da409a9",
+   "venue": null,
+   "authors": [
+    "Yousun Ko"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "[69] applied scalar replacement to convert arrays into scalar variables for buffers that reside between fused actors.",
+    "The latest StreamIt system [69, 77] supports program-wise scalar replacement by fusing actors, only if the buffer in between two actors does not contain delay tokens, as well as tokens to peek exceeding consumption rate, and pre-loaded tokens to execute stream graph cycles."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "A Monitoring System for Runtime Adaptations of Streaming Applications",
+   "year": 2015,
+   "doi": "10.1109/pdp.2015.53",
+   "openalex": "W2170702873",
+   "s2": "823380130ffcfe64af82f16227cd03fe10a6e477",
+   "venue": "2015 23rd Euromicro International Conference on Parallel, Distributed, and Network-Based Processing",
+   "authors": [
+    "Manuel Selva",
+    "Lionel Morel",
+    "K\u00e9vin Marquet",
+    "St\u00e9phane Fr\u00e9not"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "This will be a strong complement to existing compilation strategies that already take the underlying memory hierarchy into account, eg [25], [22], [11], [10], [1]."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "A logical memory model for scaling parallel multimedia workloads",
+   "year": 2015,
+   "doi": "10.1145/2736084.2736096",
+   "openalex": "W1980251509",
+   "s2": "6f5c1e5cd5db69b3b6b4841412392576563afa08",
+   "venue": "International Workshop on Network and Operating System Support for Digital Audio and Video",
+   "authors": [
+    "Preben N. Olsen",
+    "Martin Nyhus",
+    "P\u00e5l Halvorsen",
+    "Carsten Griwodz"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "We demonstrate how this can overcome parallelization challenges and reduce execution times considerably."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Dinamica Virtual Machine Para Geoci\u00eancias the Dinamica Virtual Machine for Geosciences List of Figures",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "cb186741426275ed005c1354bbaf407a0c36ec62",
+   "venue": null,
+   "authors": [
+    "B. Ferreira"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "LaminarIR: compile-time queues for structured streams",
+   "year": 2015,
+   "doi": "10.1145/2737924.2737994",
+   "openalex": "W2050298645",
+   "s2": "c7a0961c8fb714123a8353013ac622bc88006a48",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Yousun Ko",
+    "Bernd Burgstaller",
+    "Bernhard Scholz"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Sermulins et al. [20] applied scalar replacement to convert arrays into scalar variables for buffers that reside between fused actors."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "LaminarIR: compile-time queues for structured streams",
+   "year": 2015,
+   "doi": "10.1145/2813885.2737994",
+   "openalex": "W2997081332",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Yousun Ko",
+    "Bernd Burgstaller",
+    "Bernhard Scholz"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Language Runtime and Optimizations in IBM Streams",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "34b800320b332f624827c1a4507f9d8144efbb1c",
+   "venue": "IEEE Data Engineering Bulletin",
+   "authors": [
+    "S. Schneider",
+    "B. Gedik",
+    "Martin Hirzel"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Languages that focus on streaming with statically known selectivity solve fusion pro\ufb01tability even more comprehensively [21]."
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "Language Runtime and Optimizations in IBM Streams.",
+   "year": 2015,
+   "doi": null,
+   "openalex": "W2576929268",
+   "s2": null,
+   "venue": "IEEE Data(base) Engineering Bulletin",
+   "authors": [
+    "Scott Schneider",
+    "Bu\u011fra Gedik",
+    "Martin Hirzel"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 6
+  },
+  {
+   "title": "Static memory management for efficient mobile sensing applications",
+   "year": 2015,
+   "doi": "10.5555/2830865.2830886",
+   "openalex": "W1930937188",
+   "s2": null,
+   "venue": "Embedded Software",
+   "authors": [
+    "Farley Lai",
+    "Daniel J. Schmidt",
+    "Octav Chipara"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Static memory management for efficient mobile sensing applications",
+   "year": 2015,
+   "doi": "10.1109/emsoft.2015.7318274",
+   "openalex": null,
+   "s2": "b0a9dff609a028af3916d71b3891ffcceb951c6c",
+   "venue": "International Conference on Embedded Software",
+   "authors": [
+    "Farley Lai",
+    "Daniel Schmidt",
+    "O. Chipara"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The key is to develop a \nstatic analysis technique that may pre\u00adcisely identify location and temporal sharing opportunities."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "A catalog of stream processing optimizations",
+   "year": 2014,
+   "doi": "10.1145/2528412",
+   "openalex": "W2148222209",
+   "s2": "42490a37f9e284ba4d368cf5a41f2ea6c26b0ee1",
+   "venue": "ACM Computing Surveys",
+   "authors": [
+    "Martin Hirzel",
+    "Robert Soul\u00e9",
+    "Scott Schneider",
+    "Bu\u011fra Gedik",
+    "Robert Grimm"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Sermulins et al. show how to further optimize a shared queue, by making it local and computing all offsets at compile-time, so that it can be implemented by scalar variables instead of an array [Sermulins et al. 2005].",
+    "show how to further optimize a shared queue, by making it local and computing all offsets at compile-time, so that it can be implemented by scalar variables instead of an array [Sermulins et al. 2005].",
+    "\u2014State sharing enables scalar replacement [Sermulins et al. 2005].",
+    "On the static side, execution scaling [Sermulins et al. 2005] is a batching algorithm for StreamIt that trades the i-cache bene\ufb01ts of batching against the d-cache cost of requiring larger buffers.",
+    "\u2014 State sharing enables scalar replacement [Sermulins et al. 2005].",
+    "StreamIt uses a fully-static approach, where a static schedule prescribes exactly what data can be accessed by which operator at a particular time [Sermulins et al. 2005].",
+    "The compiler for a streaming language may even combine the techniques directly [Sermulins et al. 2005].",
+    "On the static side, execution scaling [Sermulins et al. 2005] is a batching algorithm for StreamIt that trades the i-cache benefits of batching against the d-cache cost of requiring larger buffers."
+   ],
+   "cited_by": 295
+  },
+  {
+   "title": "Achieving self-aware parallelism in stream programs",
+   "year": 2014,
+   "doi": "10.1007/s10586-014-0412-x",
+   "openalex": "W2037353970",
+   "s2": "e44dfdac65beb40fd4036b0b967c92c1e4190902",
+   "venue": "Cluster Computing",
+   "authors": [
+    "Yan Su",
+    "Feng Shi",
+    "Shahnawaz Talpur",
+    "Yizhuo Wang",
+    "Sensen Hu",
+    "Jin Wei"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 5
+  },
+  {
+   "title": "Brief Announcement: Cache-Oblivious Scheduling of Streaming Applications",
+   "year": 2014,
+   "doi": null,
+   "openalex": null,
+   "s2": "a0841a6ee33f4f3fe23b52ca17b7ec8c4d802d6a",
+   "venue": null,
+   "authors": [
+    "Kunal Agrawal"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Categories and Subject Descriptors F.2 [Analysis of Algorithms and Problem Complexity]: General\nKeywords Cache-Oblivious Algorithms; Caching; Partitioning; Pipelines; Scheduling; Streaming; Synchronous Data Flow."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Cache-conscious scheduling of streaming pipelines on parallel machines with private caches",
+   "year": 2014,
+   "doi": "10.1109/hipc.2014.7116893",
+   "openalex": "W1554665814",
+   "s2": "e7d83ab743685595b22881fc770c3a01e9e16a2c",
+   "venue": "International Conference on High Performance Computing",
+   "authors": [
+    "Kunal Agrawal",
+    "Jordyn C. Maglalang",
+    "Jeremy T. Fineman"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "studied by several research groups [31]\u2013[33]."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Cache-oblivious scheduling of streaming pipelines",
+   "year": 2014,
+   "doi": "10.1145/2612669.2612707",
+   "openalex": "W2157403639",
+   "s2": "79dc1bfd4df9b185b76c69af5a4c51f39f0a5e6c",
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": [
+    "Kunal Agrawal",
+    "Jeremy T. Fineman"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Categories and Subject Descriptors F.2 [Analysis of Algorithms and Problem Complexity]: General\nKeywords Cache-Oblivious Algorithms; Caching; Partitioning; Pipelines; Scheduling; Streaming; Synchronous Data Flow."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Optimizations in Stream Programming for Multimedia Applications",
+   "year": 2014,
+   "doi": null,
+   "openalex": null,
+   "s2": "d72594cbe1191d02446d6e76be287e6b34192029",
+   "venue": null,
+   "authors": [
+    "Eric Wong"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Thus there could be more accesses to longer latency memory hierarchies [46]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "UNIVERSIT\u00c9 DE VERSAILLES SAINT-QUENTIN EN YVELINES",
+   "year": 2014,
+   "doi": null,
+   "openalex": null,
+   "s2": "85758d654165b08310d99cbdfe0cf0c3c25f6811",
+   "venue": null,
+   "authors": [
+    "\u00c9cole Doctorale",
+    "Dimitri Watel"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 57
+  },
+  {
+   "title": "11 PFLOP/s simulations of cloud cavitation collapse",
+   "year": 2013,
+   "doi": "10.1145/2503210.2504565",
+   "openalex": "W1966827540",
+   "s2": "3db50ba6e67fe4df04352c4203dfeb86690158a5",
+   "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
+   "authors": [
+    "Diego Rossinelli",
+    "Babak Hejazialhosseini",
+    "Panagiotis Hadjidoukas",
+    "Costas Bekas",
+    "Alessandro Curioni",
+    "Adam Bertsch",
+    "Scott Futral",
+    "Steffen J. Schmidt",
+    "Nikolaus A. Adams",
+    "Petros Koumoutsakos"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "data reordering [38, 54, 28] and cache-aware techniques [71] as described in the next paragraph."
+   ],
+   "cited_by": 72
+  },
+  {
+   "title": "A Study of Cache Design in Stream Processor",
+   "year": 2013,
+   "doi": "10.1007/978-3-642-35898-2_5",
+   "openalex": "W1420463194",
+   "s2": "a5d000b24245f9a93aaa873929388fe55e8ee0c0",
+   "venue": "Communications in computer and information science",
+   "authors": [
+    "Chiyuan Ma",
+    "Zhenyu Zhao"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Sermulins proposes a cache aware optimization method of stream programs [12]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Automatic Mapping of Stream Programs on Multicore Architectures",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "5500fa422fab22feb1e5c478934cf96df60ce76c",
+   "venue": null,
+   "authors": [
+    "Pablo de Oliveira Castro",
+    "St\u00e9phane Louise",
+    "Denis Barthou"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Sermulins et al. show in[13] how to optimize StreamIt programs for cache e\ufb00ects in the context of a single core; in their paper the importance of coarsening the program to tune for performance is studied and a cache aware fusing technique is proposed."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs",
+   "year": 2013,
+   "doi": "10.1109/icdcs.2013.13",
+   "openalex": "W2100315216",
+   "s2": "ab655f3afe15d3b6457327d1af73b6c71c494a8a",
+   "venue": "IEEE International Conference on Distributed Computing Systems",
+   "authors": [
+    "Fang Zheng",
+    "Chitra Venkatramani",
+    "Rohit Wagle",
+    "Karsten Schwan"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "[23] proposed three techniques to optimize StreamIt programs on a uniprocessor: execution scaling, buffer manager, and register replacement."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "Constraint based methods for allocation and scheduling of periodic applications",
+   "year": 2013,
+   "doi": null,
+   "openalex": "W2186216465",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Alessandro Vanelli\u2010Coralli",
+    "Paola Mello"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Constraint based methods for allocation and scheduling of periodic applications",
+   "year": 2013,
+   "doi": "10.6092/unibo/amsdottorato/5503",
+   "openalex": "W582601536",
+   "s2": "e5cbcaa0b94b61ed8ea1f71188335834cbb20c4c",
+   "venue": "AMS Dottorato Institutional Doctoral Theses Repository (University of Bologna)",
+   "authors": [
+    "Alessio Bonfietti"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "StreamIt is an architectureindependent language with a synchronous data-flow semantic, supplied with an efficient compiler, described in [57] and in [93]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Constraint based methods for allocation and scheduling of periodic applications",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "2f03916894445987094fda3d8506c0cf5f5a112b",
+   "venue": null,
+   "authors": [
+    "A. V. Coralli",
+    "P. Mello"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Dynamic expressivity with static optimization for streaming languages",
+   "year": 2013,
+   "doi": "10.1145/2488222.2488255",
+   "openalex": "W2144921311",
+   "s2": "346195af6c818e2ef0009c6724655518bc13d120",
+   "venue": "Distributed Event-Based Systems",
+   "authors": [
+    "Robert Soul\u00e9",
+    "Michael I. Gordon",
+    "Saman Amarasinghe",
+    "Robert Grimm",
+    "Martin Hirzel"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The StreamIt infrastructure includes a compilation path that mainly exploits this approach [7] for several different target platforms, including clusters of workstations [14], the MIT Raw microprocessor [16], and Tilera\u2019s line of microprocessors [18]."
+   ],
+   "cited_by": 33
+  },
+  {
+   "title": "Locality-aware task management for unstructured parallelism",
+   "year": 2013,
+   "doi": "10.1145/2486159.2486175",
+   "openalex": "W2146585781",
+   "s2": "6d16047553edf8b01a16c572e5ee13bd6e07ffc5",
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": [
+    "Richard M. Yoo",
+    "Christopher J. Hughes",
+    "Changkyu Kim",
+    "Yen-Kuang Chen",
+    "Christos Kozyrakis"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 34
+  },
+  {
+   "title": "Maximum-throughput mapping of SDFGs on multi-core SoC platforms",
+   "year": 2013,
+   "doi": "10.1016/j.jpdc.2013.05.004",
+   "openalex": "W2052182306",
+   "s2": "1f5980219a0463af18eb722717d11287af583c9b",
+   "venue": "Journal of Parallel and Distributed Computing",
+   "authors": [
+    "Alessio Bonfietti",
+    "Michele Lombardi",
+    "Michela Milano",
+    "Luca Benini"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "StreamIt is an architecture-independent language with a synchronous data-flow semantic, supplied with an efficient compiler, described in [25] and in [41]."
+   ],
+   "cited_by": 9
+  },
+  {
+   "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions",
+   "year": 2013,
+   "doi": null,
+   "openalex": "W2202992943",
+   "s2": null,
+   "venue": "eScholarship (California Digital Library)",
+   "authors": [
+    "Dai Bui"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "a12bee93834a00ceca8fa49f36005a98c8e6ea01",
+   "venue": null,
+   "authors": [
+    "D. Bui"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Although SDF is less general than KPN, it turns out that SDF is still general enough to model many stream applications [113], and it is suitable for compiler optimization techniques for optimizing buffer sizes and static scheduling [14, 105, 13, 15, 16, 87, 86, 100, 47, 68, 37, 98, 50, 51, 116, 24].",
+    "This abstraction enables several compiler optimization techniques [14, 105, 13, 15, 16, 87, 86, 100, 47, 68, 98, 50, 51, 37, 116, 24] for buffer space, scheduling and mapping to underlying architecture as well as worst-case performance analysis [40].",
+    "[100] use a similar technique that fuses (groups) adjacent actors in such a way that the code and data space, required by fusing actors, can fit into caches of processors."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Tutorial",
+   "year": 2013,
+   "doi": "10.1145/2488222.2488268",
+   "openalex": "W2141003391",
+   "s2": "0407b4faec55431fea6ecaf8c29ab9697e9db7e6",
+   "venue": "Distributed Event-Based Systems",
+   "authors": [
+    "Scott Schneider",
+    "Martin Hirzel",
+    "Bu\u011fra Gedik"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "StreamIt performs batching statically, calling it execution scaling [31].",
+    "Finally, an even more restrictive, but common and profitable, case shares the state of a queue between two pipelined operators [31]."
+   ],
+   "cited_by": 23
+  },
+  {
+   "title": "Cache-conscious scheduling of streaming applications",
+   "year": 2012,
+   "doi": "10.1145/2312005.2312049",
+   "openalex": null,
+   "s2": "be14c7c02fa52d1a724cdc00f2f26afe9e49c950",
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": [
+    "Kunal Agrawal",
+    "Jeremy T. Fineman",
+    "J. Krage",
+    "C. Leiserson",
+    "Sivan Toledo"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Heuristic cache-aware scheduling of streaming programs on both single processors and multiprocessors has been studied by several research groups [15, 21, 25], but the proposed heuristics are all evaluated empirically.",
+    "been considered, such as power consumption [29], memory usage [4,23], and cache efficiency [15,21,25].",
+    "[25] also try to heuristically optimize for both the data cache and the instruction cache."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "High-Level Support for Pipeline Parallelism on",
+   "year": 2012,
+   "doi": null,
+   "openalex": "W2742057174",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Many-Core Architectures",
+    "Siegfried Benkner",
+    "Enes Bajrovi\u0107",
+    "Erich Marth",
+    "Martin Sandrieser",
+    "Samuel Thibault"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "High-Level Support for Pipeline Parallelism on",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "7b25b1c3ffa37076ef6ca63e976d364ffc76341d",
+   "venue": null,
+   "authors": [
+    "Many-Core Architectures",
+    "Siegfried Benkner",
+    "Enes Bajrovic",
+    "Erich Marth",
+    "Martin Sandrieser",
+    "Samuel Thibault"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "High-Level Support for Pipeline Parallelism on Many-Core Architectures",
+   "year": 2012,
+   "doi": "10.1007/978-3-642-32820-6_61",
+   "openalex": "W2326090267",
+   "s2": "5c94dacf279cd0b9e80aca3ed136a842fdfd9497",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Siegfried Benkner",
+    "Enes Bajrovi\u0107",
+    "Erich Marth",
+    "Martin Sandrieser",
+    "Raymond Namyst",
+    "Samuel Thibault"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "[23] propose StreamIt, a domain speci\ufb01c language (DSL) for designing stream-based applications where in combination with the underlying compiler pipeline speci\ufb01c optimizations [24] are applied."
+   ],
+   "cited_by": 12
+  },
+  {
+   "title": "Hitting the Sweet Spot for Streaming Languages : Dynamic Expressivity with Static Optimization",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "38aaa3f02f5f00c31cd98fd5dcb340408a5cd699",
+   "venue": null,
+   "authors": [
+    "R. Soul\u00e9",
+    "Michael I. Gordon",
+    "Saman P. Amarasinghe",
+    "R. Grimm",
+    "Martin Hirzel"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "this approach [7] for several different target platforms, including clusters of workstations [12], the MIT Raw microprocessor [14], and Tilera\u2019s line of microprocessors [16]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Kernel Partitioning of Streaming Applications: A Statistical Approach to an NP-complete Problem",
+   "year": 2012,
+   "doi": "10.1109/micro.2012.44",
+   "openalex": "W2164767739",
+   "s2": "25de638f6dcf35cd41fcad745e17d37027d2995b",
+   "venue": "Micro",
+   "authors": [
+    "Petar Radojkovi\u0107",
+    "Paul Carpenter",
+    "Miquel Moret\u00f3",
+    "Alex Ram\u00edrez",
+    "Francisco J. Cazorla"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "routing, and a set of cache optimizations [22, 23, 37]."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Optimizations in Stream Programming for Multimedia Applications by",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "dca6c235138b8f17bfc130219a29d4f8f5235091",
+   "venue": null,
+   "authors": [
+    "E. Wong"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Thus there could be more accesses to longer latency memory hierarchies [46]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Reusable Software Infrastructure for Stream Processing",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "be831d2fb31a5bcc0e2a4f239eb2249a6ca70b54",
+   "venue": null,
+   "authors": [
+    "R. Soul\u00e9"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "On the static side, execution scaling [101] is a batching algorithm for StreamIt that trades the instruction-cache benefits of batching against the data-cache cost of requiring larger buffers.",
+    "\u2022 State sharing enables scalar replacement, where an array is implemented by one local variable per array element [101].",
+    "The compiler for a streaming language may even combine the techniques directly [101].",
+    "StreamIt uses a fully-static approach, where a static schedule prescribes exactly what data can be accessed by which operator at a what time [101].",
+    "and clusters of workstations, often by rewriting an application\u2019s dataflow graph [7, 10, 12, 14, 18, 20, 23, 25, 32, 42, 45, 46, 57, 63, 73, 92, 95, 99, 101, 103, 102, 108, 116, 117, 119, 122].",
+    "show how to further optimize a shared queue, by making it local and computing all offsets at compile-time, so that it can be implemented by scalar variables instead of an array [101]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Reusable software infrastructure for stream processing",
+   "year": 2012,
+   "doi": null,
+   "openalex": "W2514978310",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Robert Grimm",
+    "Robert Soul\u00e9"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "StreamTMC: Stream compilation for tiled multi-core architectures",
+   "year": 2012,
+   "doi": "10.1016/j.jpdc.2012.12.001",
+   "openalex": "W2051448602",
+   "s2": "e797948de6882b8980d347ac863fc99bc0159ce2",
+   "venue": "Journal of Parallel and Distributed Computing",
+   "authors": [
+    "Haitao Wei",
+    "Mingkang Qin",
+    "Weiwei Zhang",
+    "Junqing Yu",
+    "Dongrui Fan",
+    "Guang R. Gao"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Sermulins presented a cache aware optimization for stream programs on a uniprocessor [16]."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "Application-Tailored I/O with Streamline",
+   "year": 2011,
+   "doi": "10.1145/1963559.1963562",
+   "openalex": "W2041755486",
+   "s2": "ac871fbb5635ab1aa4ddb0f369b69f1c1b5f5aa5",
+   "venue": "ACM Transactions on Computer Systems",
+   "authors": [
+    "Willem de Bruijn",
+    "Herbert Bos",
+    "Henri E. Bal"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "StreamIt [Sermulins \net al. 2005] implements a more re.ned scheduling policy."
+   ],
+   "cited_by": 18
+  },
+  {
+   "title": "Automated Architecture-Aware Mapping of Streaming Applications Onto GPUs",
+   "year": 2011,
+   "doi": "10.1109/ipdps.2011.52",
+   "openalex": "W2119304316",
+   "s2": "2024526c54d0e0324ed1ee9e4f5f662ae48087f8",
+   "venue": "IEEE International Parallel and Distributed Processing Symposium",
+   "authors": [
+    "Andrei Hagiescu",
+    "Huynh Phung Huynh",
+    "Weng\u2010Fai Wong",
+    "Rick Siow Mong Goh"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "One relies on caching transformations for StreamIt that have included narrowing the memory requirement through modulation or copy-shift [16]."
+   ],
+   "cited_by": 30
+  },
+  {
+   "title": "Efficient, Deterministic and Deadlock-free Concurrency",
+   "year": 2011,
+   "doi": "10.7916/d8n87jpx",
+   "openalex": "W2121421584",
+   "s2": "5ca7ad4ec4d7329ebff5ad4684ffb6d14f970a31",
+   "venue": "Columbia Academic Commons (Columbia University)",
+   "authors": [
+    "Vasudevan, Nalini"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "[108] present cache aware optimizations that exploit communication patterns in StreamIt programs."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Storage allocation for streaming-based register file",
+   "year": 2011,
+   "doi": "10.1201/b11418-6",
+   "openalex": null,
+   "s2": "1067ad71e759b0d18ec93f9edfe0f3dfa09300b1",
+   "venue": null,
+   "authors": [
+    "P. Raghavan",
+    "F. Catthoor"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "StreamPI: a stream-parallel programming extension for object-oriented programming languages",
+   "year": 2011,
+   "doi": "10.1007/s11227-011-0656-7",
+   "openalex": "W1967384908",
+   "s2": "0259ea2eef14ad0fffde3469bc0d4d6c957e9296",
+   "venue": "The Journal of Supercomputing",
+   "authors": [
+    "Jingun Hong",
+    "Kirak Hong",
+    "Bernd Burgstaller",
+    "Johann Blieberger"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The StreamIt benchmark collection [44] is commonly used for the evaluation of approaches to stream program orchestration [11, 13, 27, 29,  40 , 48, 49]."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "A Multidimensional Array Slicing DSL for Stream Programming",
+   "year": 2010,
+   "doi": "10.1109/cisis.2010.135",
+   "openalex": "W2165852314",
+   "s2": "027e078d2721baafc4d16124959b1590b261370c",
+   "venue": "Computational Intelligence in Security for Information Systems",
+   "authors": [
+    "Pablo de Oliveira Castro",
+    "St\u00e9phane Louise",
+    "Denis Barthou"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "StreamIt[1] is both a stream language and an optimizing compiler for the RAW[4] and SMP[8] architectures."
+   ],
+   "cited_by": 9
+  },
+  {
+   "title": "Adaptive Operating System Design for High Throughput I/O",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "c84b6f6524807076ca3f0881905d2b2121976ec4",
+   "venue": null,
+   "authors": [
+    "W. D. Bruijn"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 2
+  },
+  {
+   "title": "Automatic Mapping of Stream Programs on Multicore Architectures",
+   "year": 2010,
+   "doi": null,
+   "openalex": "W2619204735",
+   "s2": null,
+   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+   "authors": [
+    "Pablo de Oliveira Castro",
+    "St\u00e9phane Louise",
+    "Denis Barthou"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Buffer Sharing in Rendezvous Programs",
+   "year": 2010,
+   "doi": "10.1109/tcad.2010.2052840",
+   "openalex": "W2141558510",
+   "s2": null,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": [
+    "Nalini Vasudevan",
+    "Stephen A. Edwards"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Compiler techniques for scalable performance of stream programs on multicore architectures",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "e454ac36ab555f1b618e4936e36dcc572f9b151e",
+   "venue": null,
+   "authors": [
+    "Michael I. Gordon"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "This startup cost can be amortized by increasing the scheduling multiplicity of each filter but that would also the increase buffering requirement of each filter [STRA05].",
+    "Also, arrays of constants can be converted into multiple scalar variable constants by unrolling loops and performing constant propagation [STRA05].",
+    "This process is called scalar replacement [STRA05].",
+    "Also, fusion enables powerful inter-node optimizations such as scalar replacement [STRA05] and algebraic simplification [ATA05, LTA03]."
+   ],
+   "cited_by": 53
+  },
+  {
+   "title": "Ensuring deterministic concurrency through compilation",
+   "year": 2010,
+   "doi": "10.1109/ipdpsw.2010.5470803",
+   "openalex": "W2064731352",
+   "s2": "6e4c787b522840bd73e61a41a6a5720564780779",
+   "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+   "authors": [
+    "Nalini Vasudevan",
+    "Stephen A. Edwards"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Expression et optimisation des r\u00e9organisations de donn\u00e9es dans du parall\u00e9lisme de flots",
+   "year": 2010,
+   "doi": null,
+   "openalex": "W90283474",
+   "s2": null,
+   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+   "authors": [
+    "Pablo de Oliveira Castro"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Expression et optimisation des r\u00e9organisations de donn\u00e9es dans du parall\u00e9lisme de flots. (Expression and optimization of data reorganizations in dataflow parallelism)",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "11040a2c0e14b25762f581ea6bc4358543ec7f84",
+   "venue": null,
+   "authors": [
+    "P. Herrero"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Formal Modeling of Embedded Systems with Explicit Schedules and Routes",
+   "year": 2010,
+   "doi": "10.1007/978-1-4419-6400-7_2",
+   "openalex": "W2113784798",
+   "s2": "0c9516f3bdf1444ada46252cfbdaef27a4b38fcd",
+   "venue": "Synthesis of Embedded Software",
+   "authors": [
+    "Julien Boucaron",
+    "Anthony Coadou",
+    "Robert de Simone"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "StreamIt [1, 48, 52, 71, 76] is a language and compiler for stream computing where SDF is the underlying MoCC."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "A hybrid static/dynamic approach to scheduling stream programs",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "0d4bc3a471a3eeca32ea97368d449aae31dbe0d9",
+   "venue": null,
+   "authors": [
+    "C. Tan"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Fusion enables powerful inter-filter optimizations such as scalar replacement [25] and algebraic simplification [1, 18."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Buffer sharing in CSP-like programs",
+   "year": 2009,
+   "doi": "10.5555/1715759.1715779",
+   "openalex": "W2127645760",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Nalini Vasudevan",
+    "Stephen A. Edwards"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 6
+  },
+  {
+   "title": "Buffer sharing in CSP-like programs",
+   "year": 2009,
+   "doi": "10.1109/memcod.2009.5185391",
+   "openalex": "W3145257065",
+   "s2": "5bf8c7e2de82cc9c95c6ad43906c3f90f19ef99e",
+   "venue": "2009 7th IEEE/ACM International Conference on Formal Methods and Models for Co-Design",
+   "authors": [
+    "Nalini Vasudevan",
+    "Stephen A. Edwards"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 5
+  },
+  {
+   "title": "Cache aware mapping of streaming apllications on a multiprocessor system-on-chip",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "7f1ebc8815594adc32a3ed2bcefa786307576c1c",
+   "venue": null,
+   "authors": [
+    "A. Moonen",
+    "M. Bekooij",
+    "Ren\u00e9 van den Berg",
+    "J. V. Meerbergen"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "For this class of streaming applications we apply the cache aware optimisation technique execution scaling [13], which is a transformation that improves instruction and data locality by executing each actor multiple times before moving to the next actor.",
+    "Prefetching of data is latency tolerant instead of latency critical, as in the case when input and output data are stored in a cached memory region such as in [7, 13].",
+    "The number of cache misses are minimised in [7, 13] in the context of a single processor.",
+    "The input and output FIFO buffers are stored in an uncached memory region and not in a cached memory region as in [7, 13]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Instruction Hints for Super Efficient Data Caches",
+   "year": 2009,
+   "doi": "10.1007/978-3-642-01973-9_76",
+   "openalex": "W1528655227",
+   "s2": "f99a6279029480cf6285f4429efcf7cc88ea4207",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Jie Tao",
+    "Dominic Hillenbrand",
+    "H. Marten"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "This locality is typically achieved by restructuring the program code based on a\ufb03nity analysis [8,10,12,13,14]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Language and compiler support for stream programs",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W2321248633",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Saman Amarasinghe",
+    "William Thies"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 100
+  },
+  {
+   "title": "Language and compiler support for stream programs",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "6257c9d0c725320fd7b05f84793971080d95084f",
+   "venue": null,
+   "authors": [
+    "W. Thies"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Also, using a transformation called scalar replacement [STRA05], the weights array can be eliminated completely by unrolling loops and propagating constants from the init function to the work function.",
+    "[STRA05] J."
+   ],
+   "cited_by": 140
+  },
+  {
+   "title": "Predictable embedded multiprocessor architecture for streaming applications",
+   "year": 2009,
+   "doi": "10.6100/ir642808",
+   "openalex": "W1537221894",
+   "s2": null,
+   "venue": "Data Archiving and Networked Services (DANS)",
+   "authors": [
+    "Ajm Arno Moonen"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 6
+  },
+  {
+   "title": "Predictable embedded multiprocessor architecture for streaming applications",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "dfffbc4f77cd9437c07958384dfbb23bf36863a2",
+   "venue": null,
+   "authors": [
+    "A. Moonen"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "This cache-aware optimisation technique is based on [73], but we target a multiprocessor architecture instead of a single processor and use uncached local memories to store the input and output data of a task.",
+    "The number of cache misses are minimised in [48, 73] in the context of a single processor.",
+    "This technique is based on a technique [73] that executes tasks multiple times in a loop before executing another task.",
+    "4, the number of cache misses are trade-off against end-to-end latency and memory usage, by making use of a cacheaware mapping technique that is based on execution scaling [73].",
+    "In this thesis, we apply a cache-optimisation technique execution scaling [73], which is a transformation that improves the use of the memory hierarchy by executing each task multiple times before moving to the next task in a schedule.",
+    "The input and output buffers are stored in a memory region that is not cached, in contrast with [48, 73]."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "SARA",
+   "year": 2009,
+   "doi": "10.1145/1629435.1629442",
+   "openalex": "W2011407435",
+   "s2": "b19b9a27586ed798fee79c3cec4f0d6b7cd8b43c",
+   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
+   "authors": [
+    "Praveen Raghavan",
+    "Francky Catthoor"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Software Pipelined Execution of Stream Programs on GPUs",
+   "year": 2009,
+   "doi": "10.1109/cgo.2009.20",
+   "openalex": "W2122080725",
+   "s2": "6ef5453d68325ba700e103cfba400b01387c438e",
+   "venue": "2009 International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Abhishek Udupa",
+    "R. Govindarajan",
+    "Matthew J. Thazhuthaveetil"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 114
+  },
+  {
+   "title": "Synergistic execution of stream programs on multicores with accelerators",
+   "year": 2009,
+   "doi": "10.1145/1542452.1542466",
+   "openalex": "W2139270694",
+   "s2": "624017a5b8a3bf767d18d0ad533e709e1fc495fa",
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": [
+    "Abhishek Udupa",
+    "R. Govindarajan",
+    "Matthew J. Thazhuthaveetil"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "It has been demonstrated in [24] that cache aware optimizations on StreamIt programs can yield large performance gains."
+   ],
+   "cited_by": 27
+  },
+  {
+   "title": "Synergistic execution of stream programs on multicores with accelerators",
+   "year": 2009,
+   "doi": "10.1145/1543136.1542466",
+   "openalex": "W4248575100",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Abhishek Udupa",
+    "R. Govindarajan",
+    "Matthew J. Thazhuthaveetil"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Task centric memory management for an on-chip multiprocessor",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W2103428141",
+   "s2": null,
+   "venue": "Research Repository (Delft University of Technology)",
+   "authors": [
+    "Anca Molnos"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Task centric memory management for an on-chip multiprocessor",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "09822ced8c301854b55012d5899b6f54c6d8974c",
+   "venue": null,
+   "authors": [
+    "A. Molnos"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "This problem type is mostly solved for applications represented by different variants of Synchronous Data Flow (SDF) graphs (finding the buffers\u2019 sizes problem) [117], [9], [61], [96]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "The canals language and its compiler",
+   "year": 2009,
+   "doi": "10.1145/1543820.1543829",
+   "openalex": "W1989388608",
+   "s2": "645cc4eced0d123586dc43e6ec743750bdb26e02",
+   "venue": "Software and Compilers for Embedded Systems",
+   "authors": [
+    "Andreas Dahlin",
+    "Johan Ersfolk",
+    "Guyfu Yang",
+    "Haitham Habli",
+    "Johan Lilius"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Thus many of the compile-time optimizations that are possible to do on StreamIT programs [ 13 ], [14] are not possible on Canals programs."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "A Unified Approach to Adaptive Code Selection for Modern Systems",
+   "year": 2008,
+   "doi": null,
+   "openalex": "W2125548905",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Joseph Blomstedt"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "A Unified Approach to Adaptive Code Selection for Modern Systems",
+   "year": 2008,
+   "doi": null,
+   "openalex": null,
+   "s2": "f1b5c431de3f932690c9aedf82ae95f7f78f60f2",
+   "venue": null,
+   "authors": [
+    "Joseph Blomstedt"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "There is research on tuning scientific kernels specifically for a given set of architectures [19, 9, 37], developing cache oblivious algorithms that perform well without tuning [6, 17, 3], as well as studies comparing the performance of cache oblivious and cache aware techniques [5, 46]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Cache Aware Mapping of Streaming Applications on a Multiprocessor System-on-Chip",
+   "year": 2008,
+   "doi": "10.1109/date.2008.4484696",
+   "openalex": "W4256572130",
+   "s2": null,
+   "venue": "2008 Design, Automation and Test in Europe",
+   "authors": [
+    "Arno Moonen",
+    "Marco J.G. Bekooij",
+    "Ren\u00e9 van den Berg",
+    "J. van Meerbergen"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Cache aware mapping of streaming applications on a multiprocessor system-on-chip",
+   "year": 2008,
+   "doi": "10.1145/1403375.1403448",
+   "openalex": "W2118485837",
+   "s2": "8e1d25fd48190390306c87e72c4f802b837cd244",
+   "venue": "Design, Automation and Test in Europe",
+   "authors": [
+    "Arno Moonen",
+    "Marco J.G. Bekooij",
+    "Ren\u00e9 van den Berg",
+    "J. van Meerbergen"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "The number of processor stall cycles is determined by the number of \ncache misses and the cache miss penalty [6]."
+   ],
+   "cited_by": 11
+  },
+  {
+   "title": "Constructive and Destructive Use of Compilers in Elliptic Curve Cryptography",
+   "year": 2008,
+   "doi": "10.1007/s00145-008-9023-0",
+   "openalex": "W2024490197",
+   "s2": "8688a7eb7c257b6b9436efdf5d1c7c051efe507a",
+   "venue": "Journal of Cryptology",
+   "authors": [
+    "Manuel Barbosa",
+    "Andrew Moss",
+    "Daniel Page"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "[41] where high-level cache-aware optimisations are applied in the compilation of a domain specific language for streaming applications."
+   ],
+   "cited_by": 12
+  },
+  {
+   "title": "MPSoC Design Using Application-Specific Architecturally Visible Communication",
+   "year": 2008,
+   "doi": "10.1007/978-3-540-92990-1_15",
+   "openalex": "W2155361855",
+   "s2": "9ef27563266f33ed7b538afc862603689ba0fdcf",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Theo Kluter",
+    "Philip Brisk",
+    "Edoardo Charbon",
+    "Paolo Ienne"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "[15], in the context of a compiler for a single processor system, argued in favor of heterogeneous pipelining that has many similarities to ours."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Matrix-based streamization approach for improving locality and parallelism on FT64 stream processor",
+   "year": 2008,
+   "doi": "10.1007/s11227-008-0186-0",
+   "openalex": "W2071784336",
+   "s2": "e19ff356c0debf5aa756a3b5ec7b675a688e1e77",
+   "venue": "The Journal of Supercomputing",
+   "authors": [
+    "Xuejun Yang",
+    "Jing Du",
+    "Xiaobo Yan",
+    "Yu Deng"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Furthermore, some existing researches on memory optimization for stream architectures mostly concerned partial hardware melioration [28] and common cache hierarchy optimization [29]."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "Model-T: Rethinking the OS for terabit speeds",
+   "year": 2008,
+   "doi": "10.1109/infocom.2008.4544642",
+   "openalex": "W2121483575",
+   "s2": "c8c203b5305d442e6f38a68ec215de38969e0f1f",
+   "venue": "IEEE INFOCOM Workshops 2008",
+   "authors": [
+    "Willem de Bruijn",
+    "Herbert Bos"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Most directly related to Model-T are Click [15], which statically schedules a layer-2 processing network for high throughput , Dryad [16] which schedules streams across distributed resources, StreamIt [17] which compiles stream-based tasks t o",
+    "For these two reasons, both compile time (as performed by StreamIt) and load time (Streamline) optimizations can only give rough estimates on cache fill-rate and will give less than optimal throughput.",
+    "Most directly related to Model-T are Click [15], which statically schedules a layer-2 processing network for high throughput, Dryad [16] which schedules streams across distributed resources, StreamIt [17] which compiles stream-based tasks to run on multiprocessors and optimizes cache utilization and SEDA [18], which schedules application-level operations i a highly concurrent fashion to optimize global end-to-end performance."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "A Streaming Computation Framework for the Cell Processor",
+   "year": 2007,
+   "doi": null,
+   "openalex": "W2146172931",
+   "s2": null,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": [
+    "Xin David Zhang"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 13
+  },
+  {
+   "title": "A Streaming Computation Framework for the Cell Processor",
+   "year": 2007,
+   "doi": null,
+   "openalex": null,
+   "s2": "ba77617912535abc2ff7a2ff70466ea9793fd778",
+   "venue": null,
+   "authors": [
+    "Xin Zhang"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The StreamIt compiler is also able to perform cache-aware [21] and domainspecific [16, 1] optimizations."
+   ],
+   "cited_by": 18
+  },
+  {
+   "title": "Compiler Assisted Elliptic Curve Cryptography",
+   "year": 2007,
+   "doi": "10.1007/978-3-540-76843-2_46",
+   "openalex": "W2136781432",
+   "s2": "5dd4de3af4568f15de144dff3b92a511aaed830a",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Manuel Barbosa",
+    "Andrew Moss",
+    "Daniel Page"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "[31] where high-level cache-aware optimisations are applied in the compilation of a domain specific language for streaming applications."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "Optimizing Stream Organization to Improve the Performance of Scientific Computing Applications on the Stream Processor",
+   "year": 2007,
+   "doi": "10.1007/978-3-540-72905-1_18",
+   "openalex": "W1556382755",
+   "s2": "3ec0292562e1965896bc69a1bac79a38a5a20b07",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Ying Zhang",
+    "Gen Li",
+    "Xuejun Yang",
+    "Kun Zeng"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Dynamic load-balancing of StreamIt cluster computations",
+   "year": 2006,
+   "doi": null,
+   "openalex": "W2240209338",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Eric Todd Fellheimer"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 4
+  },
+  {
+   "title": "Dynamic load-balancing of StreamIt cluster computations",
+   "year": 2006,
+   "doi": null,
+   "openalex": null,
+   "s2": "fe19e2681be0e6fbe2e2c0855c718fcc130aede4",
+   "venue": null,
+   "authors": [
+    "Eric Fellheimer"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Another interesting class of optimizations are those which rely on the inherent memory model of the system[18]."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Event Count Automata: A State-Based Model for Stream Processing Systems",
+   "year": 2006,
+   "doi": "10.1109/rtss.2005.21",
+   "openalex": "W2141513652",
+   "s2": "21427501199c0cea40271fb397347f719a6d7f6c",
+   "venue": "IEEE Real-Time Systems Symposium",
+   "authors": [
+    "Samarjit Chakraborty",
+    "Linh Thi Xuan Phan",
+    "P. S. Thiagarajan"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 55
+  },
+  {
+   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
+   "year": 2006,
+   "doi": "10.1145/1168857.1168877",
+   "openalex": "W2165100134",
+   "s2": "9b23d37b72ee7fe4f8bb3230e1640cbeb9c6c599",
+   "venue": "ASPLOS XII",
+   "authors": [
+    "Michael I. Gordon",
+    "William Thies",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "We do not enable StreamIt\u2019s aggressive cache optimizations [35] or linear",
+    ", FIR, FFT, and DCT) [24], state-space analysis [3], and cache optimizations [35].",
+    "We apply fusion first because we assume that each data-parallel product will execute on a single core; fusion enables powerful inter-node optimizations such as scalar replacement [35] and algebraic simplification [3, 24]."
+   ],
+   "cited_by": 523
+  },
+  {
+   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
+   "year": 2006,
+   "doi": "10.1145/1168917.1168877",
+   "openalex": "W4235344346",
+   "s2": null,
+   "venue": "ACM SIGOPS Operating Systems Review",
+   "authors": [
+    "Michael I. Gordon",
+    "William Thies",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 65
+  },
+  {
+   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
+   "year": 2006,
+   "doi": "10.1145/1168919.1168877",
+   "openalex": "W4254265573",
+   "s2": null,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": [
+    "Michael I. Gordon",
+    "William Thies",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 41
+  },
+  {
+   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
+   "year": 2006,
+   "doi": "10.1145/1168918.1168877",
+   "openalex": "W4237758066",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Michael I. Gordon",
+    "William Thies",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 26
+  },
+  {
+   "title": "Logs and Lifeguards : Accelerating Dynamic Program Monitoring",
+   "year": 2006,
+   "doi": null,
+   "openalex": null,
+   "s2": "dbf8aebcd5106b2da97796416a0a9492af836098",
+   "venue": null,
+   "authors": [
+    "S. Chen",
+    "B. Falsafi",
+    "P. Gibbons",
+    "M. Kozuch",
+    "T. Mowry",
+    "R. Teodorescu",
+    "A. Ailamaki",
+    "L. Fix",
+    "G. Ganger",
+    "W. S",
+    "Schlosser"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Because the log is a continuous stream of information flowing from one processor (or hardware thread) to another, many of the techniques for optimizing stream-style computation are relevant for logging [1, 9, 14, 26]."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "MPEG-2 Decoding in a Stream Programming Language",
+   "year": 2006,
+   "doi": null,
+   "openalex": "W2124343693",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Matthew Drake",
+    "Hank Hoffmann",
+    "Rodric Rabbah",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 36
+  },
+  {
+   "title": "MPEG-2 decoding in a stream programming language",
+   "year": 2006,
+   "doi": "10.1109/ipdps.2006.1639343",
+   "openalex": "W4251551397",
+   "s2": "1c15296d391cef2aac22a3796d63b3ed9218704e",
+   "venue": "Proceedings 20th IEEE International Parallel & Distributed Processing Symposium",
+   "authors": [
+    "Matthew Drake",
+    "Hank Hoffmann",
+    "Rodric Rabbah",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "StreamIt also exposes the inherent parallelism and communication topology of the application, thereby empowering the compiler to perform many streamaware optimizations [1, 17, 25, 37] that elude other languages."
+   ],
+   "cited_by": 14
+  },
+  {
+   "title": "Stream Programming for Image and Video Compression",
+   "year": 2006,
+   "doi": null,
+   "openalex": "W2145791143",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Matthew Drake"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 6
+  },
+  {
+   "title": "Stream Programming for Image and Video Compression",
+   "year": 2006,
+   "doi": null,
+   "openalex": null,
+   "s2": "bfc46687c9adef4c6bd7d449867fef82ffd1c6ad",
+   "venue": null,
+   "authors": [
+    "M. Drake"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 8
+  },
+  {
+   "title": "Cache Optimizations for Stream Programs",
+   "year": 2005,
+   "doi": null,
+   "openalex": null,
+   "s2": "3652871a3a3223f33649dc7c43ddb6052d156440",
+   "venue": null,
+   "authors": [
+    "Janis SermulirS"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 2
+  },
+  {
+   "title": "Cache Optimizations for Stream Programs by Janis Sermulips",
+   "year": 2005,
+   "doi": null,
+   "openalex": null,
+   "s2": "ee8bd7e9ec4efbd34a427f1b7b344eb5313b11be",
+   "venue": null,
+   "authors": [
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "\u2026for Stream Programs\nby\nJa\u0304nis Sermulin\u0327s\u030c\nSubmitted to the Department of Electrical Engineering and Computer Science\nin partial fulfillment of the requirements for the degree of\nMaster of Engineering in Computer Science and Engineering\nat the\nMASSACHUSETTS INSTITUTE OF TECHNOLOGY\nMay 2005\nc\u00a9\u2026"
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "High-Productivity Stream Programming For High-Performance Systems",
+   "year": 2005,
+   "doi": null,
+   "openalex": null,
+   "s2": "a283df29ce2a1066a3a72e5e1889944efa7fff78",
+   "venue": null,
+   "authors": [
+    "Rodric M. Rabbah",
+    "Bill Thies",
+    "Michael I. Gordon",
+    "Janis Sermulins",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Third, we will present several cache aware optimizations to improve instruction and data locality, and improve register allocation and scheduling freedom [7]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "MPEG-2 in a Stream Programming Language",
+   "year": 2005,
+   "doi": null,
+   "openalex": "W2110552905",
+   "s2": null,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": [
+    "Matthew Drake",
+    "Hank Hoffmann",
+    "Rodric Rabbah",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "MPEG-2 in a Stream Programming Language",
+   "year": 2005,
+   "doi": null,
+   "openalex": null,
+   "s2": "d1ac0c7f25b2391d65cacac57ec94b92bd2297aa",
+   "venue": null,
+   "authors": [
+    "M. Drake",
+    "H. Hoffmann",
+    "Rodric M. Rabbah",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "As a result, the parallelism and communication topology of the application are exposed, empowering the compiler to perform many stream-aware optimizations [1, 11, 19, 30] that elude other languages."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Publications in Theoretical Computer Science : 1975 \u2013 1979",
+   "year": 2003,
+   "doi": null,
+   "openalex": null,
+   "s2": "a26aac6dd7ccb4b978ed592c19a04f5f800ea0ba",
+   "venue": null,
+   "authors": [
+    "Nelson H. F. Beebe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 221
+  },
+  {
+   "title": "Exploiting Coarse-Grained Task , Data , and Pipeline Parallelism in Stream Programs",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "c3d253c08ea741bde78e783e914f2357d8ad5ff5",
+   "venue": null,
+   "authors": [
+    "Michael I. Gordon",
+    "W. Thies",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "We do not enable StreamIt\u2019s aggressive cache optimizations [35] or linear",
+    ", FIR, FFT, and DCT) [24], state-space analysis [3], and cache optimizations [35].",
+    "We apply fusion first because we assume that each data-parallel product will execute on a single core; fusion enables powerful inter-node optimizations such as scalar replacement [35] and algebraic simplification [3, 24]."
+   ],
+   "cited_by": 31
+  },
+  {
+   "title": "Ieee Transactions on Computer-aided Design of Integrated Circuits and Systems 1 Buffer Sharing in Rendezvous Programs",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "5d8fba593e030638caff48e48957a8de89e46171",
+   "venue": null,
+   "authors": [
+    "N. Vasudevan",
+    "Stephen Anthony Edwards"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "MIT Open Access Articles Cache-conscious scheduling of streaming applications",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "916ef06a9bc5e0b559da8cec124d1dbc734d4bf3",
+   "venue": null,
+   "authors": [
+    "Kunal Agrawal",
+    "Jeremy T. Fineman",
+    "J. Krage",
+    "C. Leiserson",
+    "Sivan Toledo"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Sermulins et al. [25] also try to heuristically optimize for both the data cache and the instruction cache.",
+    "More recently, additional metrics have been considered, such as power consumption [29], memory usage [4,23], and cache e\ufb03ciency [15,21,25].",
+    "Heuristic cache-aware scheduling of streaming programs on both single processors and multiprocessors has been studied by several research groups [15,21,25], but the proposed heuristics are all evaluated empirically."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "MIT Open Access Articles Dynamic expressivity with static optimization for streaming languages",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "8f110f388c37c192a05dd328f00d805760b0436f",
+   "venue": null,
+   "authors": [
+    "Robert G. Soule",
+    "Michael I. Gordon",
+    "Saman Amarasinghe",
+    "R. Grimm",
+    "Martin Hirzel"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "The StreamIt infrastructure includes a compilation path that mainly exploits this approach [7] for several di\ufb00erent target platforms, including clusters of workstations [14], the MIT Raw microprocessor [16], and Tilera\u2019s line of microprocessors [18]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Research Statement Languages, Compilers, and Tools for Multicore Architectures",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "cc24eab217f6df1b815a97435ae0e5d867121578",
+   "venue": null,
+   "authors": [
+    "W. Thies"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Ubiquitous Stream Programming to Facilitate the Migration to Multicore Architectures",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "12a5965959a4f1f8f421e546478467a2f52c5ec2",
+   "venue": null,
+   "authors": [
+    "M. Drake",
+    "David Zhang",
+    "Michael I. Gordon",
+    "Janis Sermulins",
+    "W. Thies",
+    "Allyn Dimock",
+    "Rodric M. Rabbah",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "A difficult aspect of stream programming, from both a performance and programmability standpoint, is reconciling regular streaming dataflow with irregular control messages.",
+    "We have used StreamIt to implement DSP codes (e.g., software radio, beamforming), image and video codecs (e.g., MPEG-2 encoding and decoding), encryption algorithms (e.g., DES and Serpent), and many other applications.",
+    "A key component of the research is to also provide seamless integration with other programming practices, because large applications have various properties that may require different language abstractions."
+   ],
+   "cited_by": 1
+  }
+ ]
 }

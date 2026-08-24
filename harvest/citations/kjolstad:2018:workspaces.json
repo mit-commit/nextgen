@@ -1,1805 +1,1886 @@
 {
-  "counts": {
-    "openalex": 52,
-    "s2": 73
+ "counts": {
+  "openalex": 52,
+  "s2": 73
+ },
+ "citing": [
+  {
+   "title": "A Compiler for Fused Relational Operations on Multisets",
+   "year": 2026,
+   "doi": "10.1145/3808283",
+   "openalex": "W7163957870",
+   "s2": "6d516904070927591444ad281edfc53475a794e4",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "James Dong",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
   },
-  "citing": [
-    {
-      "title": "A Compiler for Fused Relational Operations on Multisets",
-      "year": 2026,
-      "doi": "10.1145/3808283",
-      "openalex": "W7163957870",
-      "s2": "6d516904070927591444ad281edfc53475a794e4",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "James Dong",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs",
-      "year": 2026,
-      "doi": "10.1145/3808261",
-      "openalex": "W7163927618",
-      "s2": "bc4782647c6d22a4b79104cd6afd16e6b5fcd16e",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Amanda Liu",
-        "Gilbert Bernstein",
-        "S.A. Kamil",
-        "Adam Chlipala",
-        "Jonathan Ragan-Kelley"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Automated Tensor-Relational Decomposition for Large-Scale Sparse Tensor Computation",
-      "year": 2026,
-      "doi": "10.14778/3797919.3797921",
-      "openalex": null,
-      "s2": "f0ecbfa4aacfea5c4a2369be03e87068423a30cf",
-      "venue": "Proceedings of the VLDB Endowment",
-      "authors": [
-        "Yu-Shuen Tang",
-        "Zhiyuan Xin",
-        "Zhimin Ding",
-        "Xinyu Yao",
-        "Daniel Bourgeois",
-        "Tirthak Patel",
-        "Christopher Jermaine"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Ember: A Compiler for Embedding Operations on Decoupled Access-Execute Architectures",
-      "year": 2026,
-      "doi": "10.1109/cgo68049.2026.11395192",
-      "openalex": "W7131065374",
-      "s2": "745737ba38a758663a11863bcbb8663dc0c287de",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Marco Siracusa",
-        "Olivia Hsu",
-        "Victor Soria-Pardos",
-        "Joshua Randall",
-        "Arnaud Grasset",
-        "Eric Biscondi",
-        "Doug Joseph",
-        "Randy Allen",
-        "Fredrik Kjølstad",
-        "Miquel Moretó Planas",
-        "Adrià Armejach"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Ember emits enqueue instructions for control tokens based on the location of the callback in the SLC IR and queueing instructions for operands according to the SLC stream-to-value operations."
-      ]
-    },
-    {
-      "title": "Fast Autoscheduling for Sparse ML Frameworks",
-      "year": 2026,
-      "doi": "10.1109/cgo68049.2026.11394842",
-      "openalex": "W7131131434",
-      "s2": "4b42dbb2833d295579d3b1babd331d20c4884f07",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Bobby Yan",
-        "Alexander J Root",
-        "Trevor Gale",
-        "David Broman",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Loop ordering can fundamentally change the worst-case asymptotic complexity and thus the observed performance of sparse computations [25].",
-        "Researchers have also proposed sparse scheduling languages [25, 46, 53, 6, 56] that let users manually control how to optimize the generated code, through, e.g., loop ordering, tiling, and the introduction of temporary data structures."
-      ]
-    },
-    {
-      "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
-      "year": 2026,
-      "doi": "10.1145/3771775.3786267",
-      "openalex": "W7125963162",
-      "s2": "2c4ae0a89568ac9c181cd662a7852023cff11ec2",
-      "venue": "International Conference on Compiler Construction",
-      "authors": [
-        "Shideh Hashemian",
-        "Michael F. P. O’Boyle",
-        "Amir Shaikhha"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "We evaluate STAR against state-of-the-art compilers [16, 37] and a library [25] supporting sparse tensor algebra work-loads with sparse output.",
-        "TACO [16] is an open-source sparse tensor compiler.",
-        "We selected tensor kernels that have been extensively used in prior work [16, 17, 37] for evaluation.",
-        "06 × over TACO [16] and TACO with sparse workspaces (TACO-SW) [37] for kernels that TACO does not support.",
-        "An offline automatic scheduler based on an abstract cost model was proposed [3], which generates schedules for the TACO [16] compiler.",
-        "Existing compilers [5, 16] utilize an intermediate dense tensor (workspace) to overcome this limitation.",
-        "Their associated compilers [16, 17, 36, 37] can exploit high-level information to automatically generate optimized code for a wide range of tensor expressions and data formats.",
-        "While efficient dense tensor implementations are relatively mature, sparse solutions are still evolving, with research focusing on data formats and algorithms[8, 9, 16–18, 35, 36] to efficiently store and compute sparse tensor workloads.",
-        "CoNST formulates factors such as tensor layout and loop ordering as constraints, then uses the Z3 SMT solver to produce optimized loop structures and lay-outs, which are lowered to TACO [16] for code generation."
-      ]
-    },
-    {
-      "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
-      "year": 2026,
-      "doi": "10.48550/arxiv.2604.17198",
-      "openalex": null,
-      "s2": "efe3f11deccf87f1cb49c814700d22638980370e",
-      "venue": "arXiv.org",
-      "authors": [
-        "Atharv Chougule",
-        "Alexander J. Root",
-        "Rubens Lacouture",
-        "Bobby Yan",
-        "Rohan Yadav",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "RTeAAL Sim: Using Tensor Algebra to Represent and Accelerate RTL Simulation",
-      "year": 2026,
-      "doi": "10.1145/3779212.3790214",
-      "openalex": null,
-      "s2": "6fd0edcb1c4a236f035cc42f84fb6d56965c84f0",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Yan Zhu",
-        "Boru Chen",
-        "Christopher W. Fletcher",
-        "Nandeeka Nayak"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "We modify the 𝑂𝐼𝑀 so that all identity operations use matching source ( 𝑅 ) and destination ( 𝑆 ) coordinates, allowing us to elide explicit references to these now-redundant operations."
-      ]
-    },
-    {
-      "title": "TensorBench: Benchmarking Coding Agents on a Compiler-Based Tensor Framework",
-      "year": 2026,
-      "doi": "10.48550/arxiv.2606.05570",
-      "openalex": null,
-      "s2": "f18b7a6d6bda3f57e7a01e77cef15052dc06a286",
-      "venue": "arXiv.org",
-      "authors": [
-        "Bobby Yan",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Scorch’s design follows the TACO [10] lineage of sparse compilers, with CIN echoing the concrete index notation of Kjolstad et al. [11]; it is reimplemented in Python with an emphasis on extensibility for research and broadened to treat dense codegen as a first-class concern (rather than a special…"
-      ]
-    },
-    {
-      "title": "ASaP: Automatic Software Prefetching for Sparse Tensor Computations in MLIR",
-      "year": 2025,
-      "doi": "10.1145/3731599.3767477",
-      "openalex": "W4416004530",
-      "s2": "97ee776523207c023ceefe9a3908f37e5d077de7",
-      "venue": "SC25-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis",
-      "authors": [
-        "Konstantinos Sotiropoulos",
-        "Jonas Skeppstedt",
-        "Per Stenström"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "CROSS: Compiler-Driven Optimization of Sparse DNNs Using Sparse/Dense Computation Kernels",
-      "year": 2025,
-      "doi": "10.1109/hpca61900.2025.00076",
-      "openalex": "W4409248508",
-      "s2": "2340275b187fc500ffd6d521ccc7195881de4a15",
-      "venue": "International Symposium on High-Performance Computer Architecture",
-      "authors": [
-        "Fangxin Liu",
-        "Shiyuan Huang",
-        "Ning Yang",
-        "Zongwu Wang",
-        "Haoming Li",
-        "Li Jiang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "TACO [5], [19], [20], which presents sparse format abstractions and code generation routines based on merged grids."
-      ]
-    },
-    {
-      "title": "Finch: Sparse and Structured Tensor Programming with Control Flow",
-      "year": 2025,
-      "doi": "10.1145/3720473",
-      "openalex": "W4409310702",
-      "s2": "91cc09651bbcc232da5a6549812c4ae833c98e18",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Willow Ahrens",
-        "Teodoro Fields Collin",
-        "Radha Patel",
-        "Kyle Deeds",
-        "Changwan Hong",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "…originally supported just plain Einsum computations [58], but has been extended several times to support (single dimensional) local tensors [57], imperfectly nested loops [33], breaks via semi-rings [49], windowing and tiling [80], and convolution [97], and compilation in MLIR [20], all as…",
-        "Special-purpose compilers like TACO [57], Taichi [51], StructTensor [42], or CoRa [37] which support a select subset of structured data structures (only sparse, or only ragged tensors) must compromise by greatly constraining the classes of programs which they support, such as tensor contractions."
-      ]
-    },
-    {
-      "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow",
-      "year": 2025,
-      "doi": "10.1145/3779212.3790165",
-      "openalex": null,
-      "s2": "16c47ca02c5915d52ec921fec43773054c24b85d",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Rubens Lacouture",
-        "Nathan Zhang",
-        "Ritvik Sharma",
-        "Marco Siracusa",
-        "Fredrik Kjolstad",
-        "K. Olukotun",
-        "Olivia Hsu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Lightweight and Locality-Aware Composition of Black-Box Subroutines",
-      "year": 2025,
-      "doi": "10.1145/3729292",
-      "openalex": "W4411269466",
-      "s2": "5f354a214c70d1faec3b51466aaa2c407b04a536",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Manya Bansal",
-        "Dillon Sharlet",
-        "Jonathan Ragan‐Kelley",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "In contrast, some high-level, domain-specific languages (e.g., Halide [38], TACO [27], TVM [10] and Mosaic [4]) expose a computation language .",
-        "For inputs that are intermediate results of another computation, Fern emits an allocate node instead of a query node (Lines 15, 21, 24, 27).",
-        "In contrast, domain-specific languages (e.g., Halide [38], TACO [27], TVM [10], Mosaic [4], Hector [49], and Orchard [43]) often expose only the computation language."
-      ]
-    },
-    {
-      "title": "REPTILE: Performant Tiling of Recurrences",
-      "year": 2025,
-      "doi": "10.1145/3763074",
-      "openalex": "W4414988650",
-      "s2": "a018703927453f21102c01de2825b81fcc027dc7",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Muhammad Usman Tariq",
-        "Shiv Sundram",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "TACO [Kjolstad et al. 2017; Kjølstad 2020] showed how tensor algebra expressions could be compiled to efficient code for different sparse tensor formats [Chou et al. 2018], with a scheduling language to control optimization [Kjolstad et al. 2019; Senanayake et al. 2020]."
-      ]
-    },
-    {
-      "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture",
-      "year": 2025,
-      "doi": "10.1145/3696443.3708918",
-      "openalex": "W4407857172",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Olivia Hsu",
-        "Alexander Rucker",
-        "Tian Zhao",
-        "Varun Bhavin Desai",
-        "Kunle Olukotun",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "CoNST: Code Generator for Sparse Tensor Networks",
-      "year": 2024,
-      "doi": "10.1145/3689342",
-      "openalex": "W4401657015",
-      "s2": "179c725832285f2e757035b4408892faa3750990",
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Saurabh Raje",
-        "Yufan Xu",
-        "Atanas Rountev",
-        "Edward F. Valeev",
-        "P. Sadayappan"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "The Tucker decomposition of a sparse tensor is generally performed using the HOOI (High Order Orthogonal Iteration) iterative algorithm that requires 𝑛 TTMc (Tensor Times Matrix chain) operations [13].",
-        "Note that the numbering of modes from 0 to 𝑛 − 1 is purely for notational purposes and does not imply any particular concrete data layout representation; deciding on such a layout is one of the goals of our work, as described later.",
-        "For example, the binary tensor contraction 𝑌 𝑖𝑗𝑙𝑚 = 𝑈 𝑖𝑗𝑘 × 𝑊 𝑘𝑙𝑚 represents the computation ∀ 𝑖, 𝑗,𝑙,𝑚 : 𝑌 𝑖𝑗𝑙𝑚 = ∑︁ 𝑖𝑗𝑘 × 𝑊 𝑘𝑙𝑚",
-        "Tucker decomposition factorizes a sparse tensor 𝑇 with 𝑛 modes into a product of 𝑛 2D matrices and a dense core 𝑛 -mode tensor.",
-        "Section 5.3 presents performance on the TTMc (Tensor Times Matrix chain) expression that is the performance bottleneck for the Tucker decomposition algorithm [13].",
-        "An important next step is the parallelization of the generated code for multicore processors and GPUs and use of the developed framework to generate high-performance implementations for sparse tensor networks needed by computational scientists (e.g., in quantum chemistry).",
-        "We compare CoNST against state-of-the-art sparse tensor compilers and libraries: TACO 1 : As discussed in detail earlier, CoNST uses TACO for generation of C code after co-optimization for tensor layout choice, schedule for the contractions, loop fusion, and mode reduction of intermediate tensors."
-      ]
-    },
-    {
-      "title": "Compilation of Modular and General Sparse Workspaces",
-      "year": 2024,
-      "doi": "10.1145/3656426",
-      "openalex": null,
-      "s2": "4210d360f09809b99c45f8a43ebfe48d04bd3708",
-      "venue": "Proc. ACM Program. Lang.",
-      "authors": [
-        "Genghan Zhang",
-        "Olivia Hsu",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "However, they either only operate on linear algebra [10] or consume too much memory when densifying a sparse higher-order tensor into the temporary [38].",
-        "As shown in Table 1, prior sparse compilers [38, 39, 83, 86] cannot generate code for expressions with sparse scattering behavior.",
-        "If these two orders are the same, then the expression is concordant [1].",
-        "Users can apply schedules like split , pos , and reorder to a CIN expression as if no sparse scattering behavior exists in the expression.",
-        "Sparse tensor algebra expressions, given in concrete index notation (CIN) [38], are composed of tensors, index variables, and forall nodes.",
-        "We confirm this trend in Figure 18, which demonstrates that the dense workspace runs out of memory when the input matrices get too large (after the black line), while the sparse workspace scales.",
-        "Our work extends the generality of prior compilers for sparse tensor algebra by treating sparse tensors as a first-class concept for any tensor variable, including temporaries.",
-        "Compilers that generate code with dense workspaces [9, 10, 38, 44, 62] can assign a temporary dense array to hold values generated from the input co-iteration."
-      ]
-    },
-    {
-      "title": "Compilation of Shape Operators on Sparse Arrays",
-      "year": 2024,
-      "doi": "10.1145/3689752",
-      "openalex": "W4403223519",
-      "s2": "722555a424c3a50c2eafc1b5b58e958720d766ee",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Alexander J Root",
-        "Bobby Yan",
-        "Peiming Liu",
-        "Christophe Gyurgyik",
-        "Aart J. C. Bik",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "This data structure is used to implement an important component of sparse tensor algebra compilation, namely the coiteration optimization , which produces loops and control flow that handle the cases where some sparse tensors do not contain values for certain coordinates.",
-        "We define these sequence expressions in Section 5, provide a construction algorithm for generalized iteration lattices, and show how to use them to compile a loop in CIN to loops that efficiently coiterate sparse data structures in Section 6.1.",
-        "The forall statement iterates over a sequence expression that may contain sparse as well as dense sequences.",
-        "With these ideas, sparse array programming moves one step closer to the completeness that dense array programming systems have long since achieved.",
-        "1 func Seq(expr, i): Consider compiling the rightmost kernel in Figure 10, which generates a single loop over the output index, k ."
-      ]
-    },
-    {
-      "title": "Compiler Support for Sparse Tensor Convolutions",
-      "year": 2024,
-      "doi": "10.1145/3689721",
-      "openalex": "W4403223049",
-      "s2": "c41d33afb267182a1a20728022bae83ec40d4c10",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Peiming Liu",
-        "Alexander J Root",
-        "Anlun Xu",
-        "Yinying Li",
-        "Fredrik Kjølstad",
-        "Aart J. C. Bik"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures",
-      "year": 2024,
-      "doi": "10.1145/3620666.3651322",
-      "openalex": "W4395116186",
-      "s2": "5a1db85197ca5a608fea362c7d572fafb7193a7e",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Kun Wu",
-        "Mert Hidayetoğlu",
-        "Xiang Song",
-        "Sitao Huang",
-        "Da Zheng",
-        "Israt Nisa",
-        "Wen‐mei Hwu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "…traversal kernels, we think it viable to incorporate TACO for the code generation in the future because TACO provides a mature compiler infrastructure that enables the expression and application of optimizations [17] for sparse tensor operations in a principled manner, e.g., loop transformations."
-      ]
-    },
-    {
-      "title": "Mechanised Hypersafety Proofs about Structured Data",
-      "year": 2024,
-      "doi": "10.1145/3656403",
-      "openalex": "W4394710775",
-      "s2": null,
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Vladimir Gladshtein",
-        "Qiyuan Zhao",
-        "Willow Ahrens",
-        "Saman Amarasinghe",
-        "Ilya Sergey"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Representing Data Collections in an SSA Form",
-      "year": 2024,
-      "doi": "10.1109/cgo57630.2024.10444817",
-      "openalex": "W4392265899",
-      "s2": "514f33939194afd2d7f2e6830dee0543051fc0af",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Tommy McMichen",
-        "Nathan Greiner",
-        "Peter Zhong",
-        "Federico Sossai",
-        "Atmn Patel",
-        "Simone Campanoni"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "To remedy this, the TACO compiler [28–30] provides a general representation for tensor operations, abstracting away the storage structure as either sparse or dense."
-      ]
-    },
-    {
-      "title": "STCO: Enhancing Training Efficiency via Structured Sparse Tensor Compilation Optimization",
-      "year": 2024,
-      "doi": "10.1145/3701033",
-      "openalex": "W4403584939",
-      "s2": "3ca5a0b31ced75914d2f391c1613aa43cf7c0180",
-      "venue": "ACM Transactions on Design Automation of Electronic Systems",
-      "authors": [
-        "Shiyuan Huang",
-        "Fangxin Liu",
-        "Tian Li",
-        "Zongwu Wang",
-        "Ning Yang",
-        "Haoming Li",
-        "Li Jiang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "CSF, shown conceptually in (f), generalizes CSR to higher-order tensors [18], compressing each dimension in pos and recording indices in crd .",
-        "Despite the effectiveness of sparsification in reducing the size of DNNs, many existing deep learning frameworks and compilers [4, 5, 10, 16, 18, 34, 41] lack support for sparsity or only provide limited support using traditional sparse storage formats.",
-        "Existing Existing compilation frameworks, such as TVM, TACO [18], and others [1, 7, 45, 47], encounter significant challenges when dealing with traditional sparse formats like CSR."
-      ]
-    },
-    {
-      "title": "Scorch: A Library for Sparse Deep Learning",
-      "year": 2024,
-      "doi": "10.48550/arxiv.2405.16883",
-      "openalex": null,
-      "s2": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
-      "venue": "arXiv.org",
-      "authors": [
-        "Bobby Yan",
-        "Alexander J. Root",
-        "T. Gale",
-        "David Broman",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The code generator builds on prior work on sparse tensor algebra code generation from the TACO line of work [31, 32].",
-        "Then, Scorch generates a fused loop-level intermediate representation (IR) along the lines of TACO’s Concrete Index Notation IR [32]."
-      ]
-    },
-    {
-      "title": "SpMMPlu-Pro: An Enhanced Compiler Plug-In for Efficient SpMM and Sparsity Propagation Algorithm",
-      "year": 2024,
-      "doi": "10.1109/tcad.2024.3446718",
-      "openalex": "W4403407616",
-      "s2": "6014a733a6f74a2f7202609b01b85339c48ca701",
-      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-      "authors": [
-        "Shiyuan Huang",
-        "Fangxin Liu",
-        "Tao Yang",
-        "Zongwu Wang",
-        "Ning Yang",
-        "Li Jiang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "According to SparseTIR [4], Sputnik [24] demonstrates superior performance in SpMM compared to TACO [37], [38], [39] and other libraries [23], [40] on the V100 GPU.",
-        "Many compilation frameworks have introduced their own optimizations for sparse computations, including SparseRT [52], ASpT [16], SparseTIR [4], Sputnik [24], and TACO [37], [38], [39], among others.",
-        "3) Sparse Kernel Optimization: Sparse compilation optimization is a key area of research, with many frameworks [16], [24], [34], [35], [36], [37], [38], [39] exploring different scheduling techniques to enhance the efﬁciency of sparse kernels."
-      ]
-    },
-    {
-      "title": "SparseAuto: An Auto-scheduler for Sparse Tensor Computations using Recursive Loop Nest Restructuring",
-      "year": 2024,
-      "doi": "10.1145/3689730",
-      "openalex": "W4403223472",
-      "s2": "01dacad71d6085a79cf170bd5eac4f66ccf39801",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Adhitha Dias",
-        "Logan Anderson",
-        "Kirshanthan Sundararajah",
-        "Artem Pelenitsyn",
-        "Milind Kulkarni"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Kjolstad et al. [19] introduces precompute to add dense workspaces to remove sparse accesses."
-      ]
-    },
-    {
-      "title": "TSTC: Enabling Efficient Training via Structured Sparse Tensor Compilation",
-      "year": 2024,
-      "doi": "10.1109/asp-dac58780.2024.10473981",
-      "openalex": "W4393145428",
-      "s2": "a3c6e1871dc2db8337c13b463b91af45adeacb32",
-      "venue": "Asia and South Pacific Design Automation Conference",
-      "authors": [
-        "Shiyuan Huang",
-        "Fangxin Liu",
-        "Tian Li",
-        "Zongwu Wang",
-        "Haoming Li",
-        "Li Jiang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "The Dataflow Abstract Machine Simulator Framework",
-      "year": 2024,
-      "doi": "10.1109/isca59077.2024.00046",
-      "openalex": "W4401211843",
-      "s2": "14cc10c466d72887609c3932b7ed3be0f60db93b",
-      "venue": "International Symposium on Computer Architecture",
-      "authors": [
-        "Nathan Zhang",
-        "Rubens Lacouture",
-        "Gina Sohn",
-        "Paul Mure",
-        "Qizheng Zhang",
-        "Fredrik Kjølstad",
-        "Kunle Olukotun"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The SAM compiler is an adapted version of the TACO compiler [35], lowering from Concrete Index Notation [34] into a graph of “primitive” blocks connected by streams."
-      ]
-    },
-    {
-      "title": "Automatic Code Generation for High-Performance Graph Algorithms",
-      "year": 2023,
-      "doi": "10.1109/pact58117.2023.00010",
-      "openalex": "W4390280292",
-      "s2": "bd4e2df4c013100ff45fe672c7f1e1557a212054",
-      "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-      "authors": [
-        "Zhen Peng",
-        "Rizwan A. Ashraf",
-        "Luanzheng Guo",
-        "Ruiqin Tian",
-        "Gökçen Kestor"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Unlike previous work that [20] requires users to determine the index to apply workspace transformation, in this work, the compiler automatically identiﬁes the index involved based on the storage format."
-      ]
-    },
-    {
-      "title": "Challenges in Metaverse Research: An Internet of Things Perspective",
-      "year": 2023,
-      "doi": "10.1109/metacom57706.2023.00042",
-      "openalex": "W4387395078",
-      "s2": "20d2df4e9f301d4229f949fc2a70ea154f0cd24e",
-      "venue": "2023 IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom)",
-      "authors": [
-        "Tarek Abdelzaher",
-        "Matthew Caesar",
-        "Charith Mendis",
-        "Klara Nahrstedt",
-        "Mani Srivastava",
-        "Minlan Yu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Different compiler techniques focusing on eliminating redundancies [111] and workspaces [44] have been suggested to further improve upon these compiler infrastructures."
-      ]
-    },
-    {
-      "title": "Compiling Recurrences over Dense and Sparse Arrays",
-      "year": 2023,
-      "doi": "10.1145/3649820",
-      "openalex": null,
-      "s2": "e77af9f8aa34516f189daf7c0b2e2d719984afa7",
-      "venue": "Proc. ACM Program. Lang.",
-      "authors": [
-        "S. Sundram",
-        "Muhammad Usman Tariq",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "It then uses ideas from prior work on sparse tensor algebra compilation [Kjolstad et al. 2019, 2017] to lower loop nests over abstract arrays to imperative C code over dense and sparse data structures, although we have extended these ideas to support triangular loops."
-      ]
-    },
-    {
-      "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures",
-      "year": 2023,
-      "doi": "10.48550/arxiv.2301.06284",
-      "openalex": "W4317439177",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Kun Wu",
-        "Mert Hidayetoğlu",
-        "Xiang Song",
-        "Sitao Huang",
-        "Da Zheng",
-        "Israt Nisa",
-        "Wen‐mei Hwu"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Indexed Streams: A Formal Intermediate Representation for Fused Contraction Programs",
-      "year": 2023,
-      "doi": "10.1145/3591268",
-      "openalex": "W4379512454",
-      "s2": "342fd56481179cd355abf1427847d23b56c578b0",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Scott Kovach",
-        "Praneeth Kolichala",
-        "Tiancheng Gu",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Finally, Kjolstad et al. [2019] introduce compiler optimizations to reorder iteration and introduce temporaries, while Senanayake et al. [2020] introduce tiling and parallelizing optimizations.",
-        "It supports everything that the original TACO system [Kjolstad et al. 2017] supported, and it additionally supports format abstractions, iteration reordering [Kjolstad et al. 2019], and user-deﬁned functions [Henry et al. 2021]."
-      ]
-    },
-    {
-      "title": "JaxPruner: A concise library for sparsity research",
-      "year": 2023,
-      "doi": "10.48550/arxiv.2304.14082",
-      "openalex": null,
-      "s2": "f230e01cc34ff8738baa2dbbf5adcc715047ac44",
-      "venue": "CPAL",
-      "authors": [
-        "Jooyoung Lee",
-        "Wonpyo Park",
-        "Nicole Mitchell",
-        "Jonathan Pilault",
-        "Johan Obando-Ceron",
-        "Han-Byul Kim",
-        "Namhoon Lee",
-        "Elias Frantar",
-        "Yun Long",
-        "A. Yazdanbakhsh",
-        "Shivani Agrawal",
-        "Suvinay Subramanian",
-        "Xin Wang",
-        "Sheng-Chun Kao",
-        "Xingyao Zhang",
-        "Trevor Gale",
-        "Aart J. C. Bik",
-        "Woohyun Han",
-        "Milen Ferev",
-        "Zhonglin Han",
-        "Hong-Seok Kim",
-        "Yann Dauphin",
-        "Karolina Dziugaite",
-        "P. S. Castro",
-        "Utku Evci"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Software A promising direction for developing sparse software was pioneered for sparse linear algebra in the MT1 compiler [60] and generalized to sparse tensor algebra in the Tensor Algebra Compiler [61– 63]."
-      ]
-    },
-    {
-      "title": "Looplets: A Language for Structured Coiteration",
-      "year": 2023,
-      "doi": "10.1145/3579990.3580020",
-      "openalex": "W4321500415",
-      "s2": "0136cb8abb987ed63948404e1ce682965823e2a3",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Willow Ahrens",
-        "Daniel Donenfeld",
-        "Fredrik Kjølstad",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "CIN was first introduced as part of the TACO compiler [28].",
-        "Array compilers that support irregular sparsity include TACO [28, 29],MT1 [7, 9, 10],MLIR [8], COMET [54], Etch [34], SIPR [44], Tiramisu [5] and CHiLL-I/E [51]."
-      ]
-    },
-    {
-      "title": "Mosaic: An Interoperable Compiler for Tensor Algebra",
-      "year": 2023,
-      "doi": "10.1145/3591236",
-      "openalex": "W4379537250",
-      "s2": "17abaa5579ee2e5471b294889f21561d19cd7d90",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Manya Bansal",
-        "Olivia Hsu",
-        "Kunle Olukotun",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "2018a], TACO [Kjølstad et al. 2019; Senanayake et al. 2020], Lift/Elevate [Hagedorn et al.",
-        "Mosaic extends TACO’s scheduling language [Kjølstad et al. 2019; Senanayake et al. 2020; Yadav et al. 2022] with new commands that can be used to bind a tensor algebra expression to an external function.",
-        "These languages combine to form concrete index notation (CIN), an abstract loop based IR [Kjølstad et al. 2019]."
-      ]
-    },
-    {
-      "title": "RECom: A Compiler Approach to Accelerating Recommendation Model Inference with Massive Embedding Columns",
-      "year": 2023,
-      "doi": "10.1145/3623278.3624761",
-      "openalex": null,
-      "s2": "09aa3b34765d30e7b71939dc2030d1411e43c9fa",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Zaifeng Pan",
-        "Zhen Zheng",
-        "Feng Zhang",
-        "Ruofan Wu",
-        "Hao Liang",
-        "Dalin Wang",
-        "Xiafei Qiu",
-        "Junjie Bai",
-        "Wei Lin",
-        "Xiaoyong Du"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Many works [6, 10, 11, 19, 20, 30, 49, 51, 65, 72–74 , 81] are provided to"
-      ]
-    },
-    {
-      "title": "Sgap: towards efficient sparse tensor algebra compilation for GPU",
-      "year": 2023,
-      "doi": "10.1007/s42514-023-00140-4",
-      "openalex": "W4375865627",
-      "s2": "55a8676bb77f3d170bbedffe549636d99feb781b",
-      "venue": "CCF Transactions on High Performance Computing",
-      "authors": [
-        "Genghan Zhang",
-        "Yuetong Zhao",
-        "Yanting Tao",
-        "Zhongming Yu",
-        "Guohao Dai",
-        "Sitao Huang",
-        "Yuan Wen",
-        "Pavlos Petoumenos",
-        "Yu Wang"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "TACO assumes that the statement and the assignment of scalar workspace (Kjolstad et al. 2019) are in the same basic block.",
-        "To tackle these challenges and build a more efficient sparse compiler, we propose atomic parallelism and segment group in this paper and implement our techniques in a real sparse compiler TACO (Kjolstad et al. 2019; Chou et al. 2018; Kjolstad et al. 2017; Senanayake et al. 2020).",
-        "At the front-end, the tensor algebra expression is concretized to concrete index notation (Kjolstad et al. 2019)."
-      ]
-    },
-    {
-      "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
-      "year": 2023,
-      "doi": "10.1145/3613424.3623791",
-      "openalex": "W4389500477",
-      "s2": "f6c15f15b98afeb8a23e321e098b7fd9f3bce85a",
-      "venue": "Micro",
-      "authors": [
-        "Nandeeka Nayak",
-        "Toluwanimi O. Odemuyiwa",
-        "Shubham Ugare",
-        "Christopher W. Fletcher",
-        "Michael Pellauer",
-        "Joel Emer"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "We view TeAAL, as it is described in this work, as a middle level in this hierarchy.",
-        "Specifically, allowing accelerators to be described as a cascade of Einsums (instead of a single Einsum [35, 52]) means that we would like to explore multiple cascades for the same problem, which requires a way to efficiently list the various promising cascades for that problem."
-      ]
-    },
-    {
-      "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
-      "year": 2023,
-      "doi": "10.48550/arxiv.2304.07931",
-      "openalex": "W4366388644",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Nandeeka Nayak",
-        "Toluwanimi O. Odemuyiwa",
-        "Shubham Ugare",
-        "Christopher W. Fletcher",
-        "Michael Pellauer",
-        "Joel Emer"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "The Sparse Abstract Machine",
-      "year": 2023,
-      "doi": "10.1145/3582016.3582051",
-      "openalex": "W4327911471",
-      "s2": "7906159afac47695c5d87bc38baf8c75d3512c24",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Olivia Hsu",
-        "Maxwell Strange",
-        "Ritvik Sharma",
-        "Jaeyeon Won",
-        "Kunle Olukotun",
-        "Joel Emer",
-        "Mark Horowitz",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Instead, we describe an alternative compiler lowering algorithm that lowers from TACO’s high-level concrete index notation [27] to the SAM dataflow abstraction.",
-        "Custard compiles tensor algebra expressions with associated data structure specifications [11] and schedules [27, 49] to SAM dataflow graphs (see Figure 10).",
-        "TACO supports all five features of tensor index notation, as well as compressed data structures [11, 28], iteration reordering [27], and fusion [28]."
-      ]
-    },
-    {
-      "title": "AHA: An Agile Approach to the Design of Coarse-Grained Reconfigurable Accelerators and Compilers",
-      "year": 2022,
-      "doi": "10.1145/3534933",
-      "openalex": "W4284689293",
-      "s2": "cdcc955c050bfa569f580a7bb87d76384524c165",
-      "venue": "ACM Transactions on Embedded Computing Systems",
-      "authors": [
-        "Kalhan Koul",
-        "Jackson Melchert",
-        "Kavya Sreedhar",
-        "Leonard Truong",
-        "Gedeon Nyengele",
-        "Keyi Zhang",
-        "Qiaoyi Liu",
-        "Jeff Setter",
-        "Po‐Han Chen",
-        "Yuchen Mei",
-        "Maxwell Strange",
-        "Ross Daly",
-        "Caleb Donovick",
-        "Alex Carsello",
-        "Taeyoung Kong",
-        "Kathleen Feng",
-        "Dillon Huff",
-        "Ankita Nayak",
-        "Rajsekhar Setaluri",
-        "James J. Thomas",
-        "Nikhil Bhagdikar",
-        "David Durst",
-        "Zachary Myers",
-        "Nestan Tsiskaridze",
-        "Stephen Richardson",
-        "Rick Bahr",
-        "Kayvon Fatahalian",
-        "Pat Hanrahan",
-        "Clark Barrett",
-        "Mark Horowitz",
-        "Christopher Torng",
-        "Fredrik Kjølstad",
-        "Priyanka Raina"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "To be more specific, by developing new hardware primitives in conjunction with a new spatial dataflow IR targeted by a TACO [26] frontend, we can easily swap in sparse components for their dense counterparts (Halide to TACO, Clockwork to Concrete Index Notation [25], dense MEM to sparse MEM) and leverage the rest of the existing infrastructure to quickly iterate, test, and build new highly reconfigurable chips.",
-        "To be more speciic, by developing new hardware primitives in conjunction with a new spatial datalow IR targeted by a TACO [26] front-end, we can easily swap in sparse components for their dense counterparts (Halide to TACO), (Clockwork to Concrete Index Notation [25]), (dense MEM to sparse MEM) and leverage the rest of the existing infrastructure to quickly iterate, test, and build new, highly reconigurable chips."
-      ]
-    },
-    {
-      "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model",
-      "year": 2022,
-      "doi": "10.1145/3519939.3523442",
-      "openalex": "W4281658036",
-      "s2": "29581a7c366620585b577f03b9680325cae410c5",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Willow Ahrens",
-        "Fredrik Kjølstad",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "The following paragraph formalizes concrete index notation, described in earlier work [33].",
-        "In order to make our descriptions of sparse tensor algebra implementations more precise, we introduce the protocolized concrete index notation, an extension to concrete index notation [33].",
-        "Tensor compilers provide a mechanism to automatically generate efficient code for simple loop programs that operate on tensors, or multidimensional arrays [5, 12, 14, 21, 22, 31, 33, 34, 37ś39, 48, 53, 54, 56].",
-        "We build on our previous work on the TACO sparse tensor compiler [21, 22, 31, 33, 34], though our work certainly applies to similar compilers such as COMET [54] or the MLIR sparse tensor dialect [11].",
-        "Research into sparse tensor compilers has led to simplified languages to express these tradeoffs and generate efficient implementations [5, 12, 14, 21, 22, 31, 33, 34, 37ś39, 48, 51, 53, 54, 56]."
-      ]
-    },
-    {
-      "title": "Compilation of dynamic sparse tensor algebra",
-      "year": 2022,
-      "doi": "10.1145/3563338",
-      "openalex": null,
-      "s2": "1683f4502414992a6f3fc5b1bab1385a88d94fb6",
-      "venue": "Proc. ACM Program. Lang.",
-      "authors": [
-        "Stephen Chou",
-        "S. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Compiler Support for Sparse Tensor Computations in MLIR",
-      "year": 2022,
-      "doi": "10.1145/3544559",
-      "openalex": "W4290648346",
-      "s2": "f6be7f80dd776347c0eb3f9b052adb6a23a9c7e1",
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Aart J. C. Bik",
-        "Penporn Koanantakool",
-        "Tatiana Shpeisman",
-        "Nicolas Vasilache",
-        "Bixia Zheng",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Sparse compilation was formalized and generalized to sparse tensor algebra in TACO (Tensor Algebra Compiler) [42, 40, 41, 43].",
-        "The growing popularity of deep learning and big data has sparked a similar interest in studying how machine learning kernels can take advantage of sparse tensors [15, 40, 41, 43, 67, 70, 75].",
-        "Otherwise, the sparse compiler uses a technique called access pattern expansion or workspace [6, 24, 31, 41, 59, 60], which is a well-known way of eﬃciently dealing with sparse insertions as well as an alternative way to implement co-iteration over a conjunction or disjunction.",
-        "Kjolstad et al. [41] and Senanayake et al. [67] also extended the TACO compiler with a scheduling language that lets users (or automatic systems) organize the iteration over tensor expressions, which lets them tile, control fusion/ﬁssion, statically load-balance, and generate GPU code for sparse…",
-        "This idea of keeping sparsity completely transparent to the programmer was pioneered in the MT1 sparse compiler for linear algebra [6, 7, 8, 9] and later formalized and generalized to tensor algebra in TACO (Tensor Algebra Compiler) [42, 40, 41, 43]."
-      ]
-    },
-    {
-      "title": "Correct Compilation of Semiring Contractions",
-      "year": 2022,
-      "doi": "10.48550/arxiv.2207.13291",
-      "openalex": null,
-      "s2": "65ce7c4a0a49558452c5b524d4970a9d019ffddd",
-      "venue": "arXiv.org",
-      "authors": [
-        "S. Kovach",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "2021] and optimize [Kjolstad et al. 2019; Senanayake et al. 2020] arbitrary sparse tensor algebra expressions to fused code on several types of sparse and dense data structures [Chou et al."
-      ]
-    },
-    {
-      "title": "DISTAL: the distributed tensor algebra compiler",
-      "year": 2022,
-      "doi": "10.1145/3519939.3523437",
-      "openalex": "W4220690649",
-      "s2": "07165e4c919d095ae04a82d543146b2e423a5b9c",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Rohan Yadav",
-        "Alex Aiken",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "We provide the following transformations introduced by prior systems [21, 29, 32]:"
-      ]
-    },
-    {
-      "title": "Optimizing Tensor Programs on Flexible Storage",
-      "year": 2022,
-      "doi": "10.1145/3588717",
-      "openalex": null,
-      "s2": "eee0dad41eea0ad86932764981717da3220c32c3",
-      "venue": "Proc. ACM Manag. Data",
-      "authors": [
-        "Maximilian Schleich",
-        "Amir Shaikhha",
-        "Dan Suciu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The closest related work from the tensor systems literature is the Taco system [14, 26, 27], as highlighted in Sec."
-      ]
-    },
-    {
-      "title": "ReACT: Redundancy-Aware Code Generation for Tensor Expressions",
-      "year": 2022,
-      "doi": "10.1145/3559009.3569685",
-      "openalex": null,
-      "s2": "eec21bd85c82f0c274ea3ef446a163128eb22ec8",
-      "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-      "authors": [
-        "Tong Zhou",
-        "Ruiqin Tian",
-        "Rizwan A. Ashraf",
-        "R. Gioiosa",
-        "Gokcen Kestor",
-        "Vivek Sarkar"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "In a follow-on work [17], a concrete index notation was proposed as an IR to split an expression into multiple subexpressions and store temporary results."
-      ]
-    },
-    {
-      "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
-      "year": 2022,
-      "doi": "10.1109/sc41404.2022.00064",
-      "openalex": "W4321636673",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Rohan Yadav",
-        "Alex Aiken",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "SparseLNR",
-      "year": 2022,
-      "doi": "10.1145/3524059.3532386",
-      "openalex": "W4281550828",
-      "s2": "fb8f2157fa03ae73c67ce48f24825a2769409ff7",
-      "venue": "International Conference on Supercomputing",
-      "authors": [
-        "Adhitha Dias",
-        "Kirshanthan Sundararajah",
-        "Charitha Saumya",
-        "Milind Kulkarni"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "SparseLNR uses a branched iteration graph to represent sparse tensor algebra kernels, which is an extension to the concrete index notation described in [16].",
-        "Prior work has evaluated against single-threaded code in such situations [16, 34].",
-        "[16] added precompute scheduling directive to use intermediate dense workspaces to remove sparse accesses when storing data values to output tensors.",
-        "We change the iteration graph [17] and use the concrete index notation [16] to introduce intermediate temporaries that are shared between the producer and the consumer."
-      ]
-    },
-    {
-      "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
-      "year": 2022,
-      "doi": "10.1145/3582016.3582047",
-      "openalex": null,
-      "s2": "c142bfce3b6849ee9d6aa0d5637ab28b170fd507",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Zihao Ye",
-        "Ruihang Lai",
-        "Junru Shao",
-        "Tianqi Chen",
-        "L. Ceze"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Sparse tensor compilers, such as MT1 [8] and TACO [40], greatly simplify the development of sparse operators by decoupling format specification and format-agnostic computation descriptions.",
-        "We also achieve consistently better performance than state-of-the-art open source sparse library dgSPARSE [20], which implements DASpMM [17], and TACO with auto-scheduling enabled [55].",
-        "TACO [14, 39, 40] proposes abstractions for sparse formats and a merge lattice-based code generation routine.",
-        "SparseTIR significantly outperforms the DGL baseline and the TACO scheduled kernel because these implementations do not support two-stage reduction and vectorized load/store.",
-        "Though TACO also explores compile-time load balancing, it does not support caching the partially aggregated result in registers, which is critical to kernel performance on GPUs, and the irregularity of the CSR format limits the application of loop unrolling.",
-        "For SpMM, we select TACO-generated operator, cuSPARSE 11.6, and dgSPARSE 0.1 as baselines.",
-        "TACO [40] is an open-source sparse tensor compiler.",
-        "For SDDMM, we select TACOgenerated operator, cuSPARSE 11.6, dgSPARSE 0.1 and DGL 0.8.2’s implementation as baselines.",
-        "TACO [21, 53, 54] proposes sparse format abstractions and a merge lattices-based code generation routine."
-      ]
-    },
-    {
-      "title": "Sparsity-Specific Code Optimization using Expression Trees",
-      "year": 2022,
-      "doi": "10.1145/3520484",
-      "openalex": "W3209648960",
-      "s2": "f51470a9ea72c0872db2c904bb4865777c7af6d6",
-      "venue": "ACM Transactions on Graphics",
-      "authors": [
-        "Philipp Herholz",
-        "Xuan Tang",
-        "Teseo Schneider",
-        "Shoaib Kamil",
-        "Daniele Panozzo",
-        "Olga Sorkine‐Hornung"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture",
-      "year": 2022,
-      "doi": "10.48550/arxiv.2211.03251",
-      "openalex": null,
-      "s2": "9f7a965d794e39a507b6b39b89b47747536ae083",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Olivia Hsu",
-        "Alexander Rucker",
-        "Tian Zhao",
-        "K. Olukotun",
-        "Fredrik Kjolstad"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "When combined with prior work on TACO formats [8, 18] and scheduling constructs [17, 31], they let end users reshape computation to expose sub-expressions that can be mapped to domain-specific accelerator patterns.",
-        ", 2019 [17] Tensor Algebra Expression Formatting Language Chou et al.",
-        "Sparse algorithms are expressed in CIN (see Figure 2), which encodes iteration, computation, transformations, and temporary tensors [17].",
-        "Scheduling commands from TACO along with their CIN transformation [17, 18, 31]."
-      ]
-    },
-    {
-      "title": "TileSpGEMM",
-      "year": 2022,
-      "doi": "10.1145/3503221.3508431",
-      "openalex": "W4220912491",
-      "s2": "ca7617712701e1927e0d698bb88e54df75bcb1f2",
-      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-      "authors": [
-        "Yuyao Niu",
-        "Zhengyang Lu",
-        "Haonan Ji",
-        "Shuhui Song",
-        "Zhou Jin",
-        "Weifeng Liu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Moreover, compilation techniques have been proven effective for a few important sparse computations [30, 69, 70, 73, 91, 98]."
-      ]
-    },
-    {
-      "title": "A High Performance Sparse Tensor Algebra Compiler in MLIR",
-      "year": 2021,
-      "doi": "10.1109/llvmhpc54804.2021.00009",
-      "openalex": "W4200390336",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Ruiqin Tian",
-        "Luanzheng Guo",
-        "Jiajia Li",
-        "Bin Ren",
-        "Gökçen Kestor"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR",
-      "year": 2021,
-      "doi": null,
-      "openalex": null,
-      "s2": "5dcc03e71270042560e004d8a12380e325503589",
-      "venue": "arXiv.org",
-      "authors": [
-        "Ruiqin Tian",
-        "Luanzheng Guo",
-        "Jiajia Li",
-        "Bin Ren",
-        "Gokcen Kestor"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "…for asynchronous task execution based on LLVM co-routines Compared to hand-tuned libraries [12, 40, 41, 50, 62, 73] and source-to-source compilers [31–33], our approach is more portable, flexible, and adaptable, as emerging architectures and storage formats can be added without re-engineering the…",
-        "Kjolstad et al. [31, 33] reorder loops of tensor algebra computations to improve the data locality."
-      ]
-    },
-    {
-      "title": "An Asymptotic Cost Model for Autoscheduling Sparse Tensor Programs",
-      "year": 2021,
-      "doi": null,
-      "openalex": null,
-      "s2": "9280465db68b2f2f0c71f1a0faa3a1bebd88300f",
-      "venue": "arXiv.org",
-      "authors": [
-        "Peter Ahrens",
-        "Fredrik Kjolstad",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "As an example, consider TACO, a recently popular sparse tensor compiler that has inspired several lines of inquiry due to it’s simplified abstractions for sparse compilation [17, 18].",
-        "In order to make our descriptions of sparse tensor algebra implementations more precise, we introduce the protocolized concrete index notation, an extension to the concrete index notation of [17].",
-        "The following paragraph summarizes concrete index notation, described more formally in [17]."
-      ]
-    },
-    {
-      "title": "Compilation of sparse array programming models",
-      "year": 2021,
-      "doi": "10.1145/3485505",
-      "openalex": "W3207857196",
-      "s2": "655d93c3567ecdd121c139655d8b39a3a2974706",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Rawn Henry",
-        "Olivia Hsu",
-        "Rohan Yadav",
-        "Stephen Y. Chou",
-        "Kunle Olukotun",
-        "Saman Amarasinghe",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Most directly related to our work is the body of work on the Sparse Tensor Algebra Compiler (TACO) [Chou et al. 2018, 2020; Kjolstad et al. 2019; Kjolstad et al. 2017; Senanayake et al. 2020]."
-      ]
-    },
-    {
-      "title": "DNNFusion: accelerating deep neural networks execution with advanced operator fusion",
-      "year": 2021,
-      "doi": "10.1145/3453483.3454083",
-      "openalex": "W3174529902",
-      "s2": "2b2056bf5763e32811a69769fa8c223160125f9e",
-      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
-      "authors": [
-        "Wei Niu",
-        "Jiexiong Guan",
-        "Yanzhi Wang",
-        "Gagan Agrawal",
-        "Bin Ren"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Similarly, another promising direction will be to integrate DNNFusion into other compilation-based DNN frameworks [25, 45] or other popular general tensor/matrix/linear algebra computation frameworks, such as MLIR [40], Tiramisu [4], TACO [33, 34], Halide [56], and LGen [38, 64]."
-      ]
-    },
-    {
-      "title": "Dynamic Sparse Tensor Algebra Compilation",
-      "year": 2021,
-      "doi": null,
-      "openalex": null,
-      "s2": "b7f96e73ca78b8c0b542f0f3119c37b7aeb2eb50",
-      "venue": "arXiv.org",
-      "authors": [
-        "Stephen Chou",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "We implement our technique as a prototype extension to the TACO sparse tensor algebra compiler and find it generates efficient sparse tensor algebra kernels that compute on blist_head* aret; bool afirst = true; uint8_t bstate = iter_bst(0, ..., ib, bval); int32_t pc = c_pos[0]; while (bstate != 0 && pc < c_pos[1] operands stored in dynamic tensor formats.",
-        "However, existing sparse linear and tensor algebra compilers like TACO [11, 12, 21, 22] cannot readily, if at all, generate code to efficiently compute on tensors stored in disparate dynamic tensor formats.",
-        "We further compare code that our technique emits for computing on dynamic sparse tensors against code that TACO (without our extension) emits for computing on static sparse tensors.",
-        "This lets TACO’s code generator emit code to compute with tensors in specific formats by inlining the aforementioned code snippets into the generated loops.",
-        "However, TACO cannot generate code to compute with dynamic sparse tensors that are stored in pointer-based formats, since the sparse tensor format abstraction of Chou et al. [11] cannot represent those data structures.",
-        "TACO [11, 12, 21, 22] emits efficient sparse tensor algebra kernels that compute with static sparse tensors stored in a wide range of array-based formats like CSR and DIA [42].",
-        "Our technique builds on the techniques of Kjolstad et al. [21, 22] and Chou et al. [11], which are implemented in the TACO sparse tensor algebra compiler.",
-        "TACO’s code generator takes as input a tensor algebra computation expressed in concrete index notation , which specifies how each entry in the output tensor should be computed in terms of entries in the input tensors.",
-        "To generate code that compute with sparse tensors stored in specific formats though, TACO additionally requires the user to specify the format of each input and output tensor.",
-        "We have implemented our technique as a prototype extension to the TACO sparse tensor algebra compiler."
-      ]
-    },
-    {
-      "title": "FCNNLib: A Flexible Convolution Algorithm Library for Deep Learning on FPGAs",
-      "year": 2021,
-      "doi": "10.1109/tcad.2021.3108065",
-      "openalex": "W3217077065",
-      "s2": null,
-      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-      "authors": [
-        "Yun Liang",
-        "Qingcheng Xiao",
-        "Liqiang Lu",
-        "Jiaming Xie"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Gamma: leveraging Gustavson’s algorithm to accelerate sparse matrix multiplication",
-      "year": 2021,
-      "doi": "10.1145/3445814.3446702",
-      "openalex": "W3155922894",
-      "s2": "ea76c776b3cd3ad448572999ad3b4323abe47453",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Guowei Zhang",
-        "Nithya Attaluri",
-        "Joel Emer",
-        "Daniel Sánchez"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        ", using sparse accumulators [15, 28], bitmaps [24], unordered associative containers [33, 34, 36], trees [47], or heaps [1] to hold outputs.",
-        "Forinstance,TACO[28,29]introducesworksp-aces and proposes compiler machinery to handle complex tensor operations.",
-        "For instance, TACO [28, 29] introducesworkspaces and proposes compiler machinery to handle complex tensor operations."
-      ]
-    },
-    {
-      "title": "NDS: N-Dimensional Storage",
-      "year": 2021,
-      "doi": "10.1145/3466752.3480122",
-      "openalex": null,
-      "s2": "322aba4a17a7947b1511d87ac30d31793908beeb",
-      "venue": "Micro",
-      "authors": [
-        "Yu-Chia Liu",
-        "Hung-Wei Tseng"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "erators [24, 44, 52, 79], and accelerators [2, 28, 30, 34, 49, 66, 69, 80, 81, 98, 100, 101]."
-      ]
-    },
-    {
-      "title": "Reconfigurable Low-latency Memory System for Sparse Matricized Tensor Times Khatri-Rao Product on FPGA",
-      "year": 2021,
-      "doi": "10.1109/hpec49654.2021.9622851",
-      "openalex": "W3200075413",
-      "s2": "e3dea8151f6f07fc99b7a84d9296704e29b12538",
-      "venue": "IEEE Conference on High Performance Extreme Computing",
-      "authors": [
-        "Sasindu Wijeratne",
-        "Rajgopal Kannan",
-        "Viktor K. Prasanna"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "This paper follows the definitions and symbols used in Tensor Algebra Compiler (TACO) [18]."
-      ]
-    },
-    {
-      "title": "A sparse iteration space transformation framework for sparse tensor algebra",
-      "year": 2020,
-      "doi": "10.1145/3428226",
-      "openalex": "W3108012228",
-      "s2": "9734b213e134675187ba569c77276004d8cb3f7c",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Ryan Senanayake",
-        "Changwan Hong",
-        "Ziheng Wang",
-        "Amalee Wilson",
-        "Stephen Y. Chou",
-        "Shoaib Kamil",
-        "Saman Amarasinghe",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Collapse and split are affine functions and therefore bijective, reorder and parallelize only change the order of iteration without modifying the iteration space, and the correctness of the precompute transformation is given in [Kjolstad et al. 2019].",
-        "The second strategy separates the loop into worker and reduction loops that communicate through a workspace [Kjolstad et al. 2019] (e.g., a dense vector stored as a dense array).",
-        "2020], potentially facilitated by the precompute transformations [Kjolstad et al. 2019]",
-        "The second strategy separates the loop into worker and reduction loops that communicate through a workspace [Kjolstad et al. 2019] (e."
-      ]
-    },
-    {
-      "title": "Automatic Optimization of Sparse Tensor Algebra Programs",
-      "year": 2020,
-      "doi": null,
-      "openalex": null,
-      "s2": "c8e78fb55d8142a0f0ccb5a41f2a24baed495e5a",
-      "venue": null,
-      "authors": [
-        "Ziheng Wang",
-        "S. Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "I refer the unfamiliar reader to the multiple TACO publications for more information [10, 9, 7]."
-      ]
-    },
-    {
-      "title": "Automatic generation of efficient sparse tensor format conversion routines",
-      "year": 2020,
-      "doi": "10.1145/3385412.3385963",
-      "openalex": "W2999521721",
-      "s2": "eab59d00a0d7dbf4ca13351e14eb14dae269af82",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Stephen Y. Chou",
-        "Fredrik Kjølstad",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        " is equivalent to converting matrices from CSR to CSC. Existing sparse tensor and linear algebra compilers cannot generate efficient code to convert tensors between arbitrary, disparate formats. taco [14, 24, 25] can emit code to convert tensors between formats that store nonzeros in lexicographic coordinate order, but cannot generate complete conversion routines for structured formats like DIA and ELL. taco ",
-        "omputes an attribute query, our technique reformulates the query as sparse tensor algebra computation. The query is first lowered to a canonical form expressed in a variant of concrete index notation [24], which is a language for specifying tensor operations. The canonical form of the query then subsequently optimized by applying a set of transformations we define that simplify the computation. Finall",
-        "s. 1.2 Contributions We propose a technique to generate efficient sparse tensor conversion routines for a wide range of disparate formats, building on recent work on sparse tensor algebra compilation [14, 24, 25]. We decompose a large class of tensor conversion algorithms into three logical phases (Section 3). Then,tofacilitategeneratingcodeforeachphase,wedevelop coordinate remapping notation that precisely d"
-      ]
-    },
-    {
-      "title": "Cortex: A Compiler for Recursive Deep Learning Models",
-      "year": 2020,
-      "doi": null,
-      "openalex": null,
-      "s2": "acf31788fa545f5f0467289b16188f2c6cfa8c44",
-      "venue": "Conference on Machine Learning and Systems",
-      "authors": [
-        "Pratik Fegade",
-        "Tianqi Chen",
-        "Phillip B. Gibbons",
-        "T. Mowry"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "result",
-        "methodology"
-      ],
-      "contexts": [
-        "1) is similar to the concept of workspaces for Taco introduced in (Kjolstad et al., 2019).",
-        "For example, the idea of dense layouts for intermediate tensors (§5.1) is similar to the concept of workspaces for Taco introduced in (Kjolstad et al., 2019)."
-      ]
-    },
-    {
-      "title": "Distributed-Memory DMRG via Sparse and Dense Parallel Tensor Contractions",
-      "year": 2020,
-      "doi": "10.1109/sc41405.2020.00028",
-      "openalex": "W3132553051",
-      "s2": "46699a7f82877228212d3990e655448d05500c61",
-      "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
-      "authors": [
-        "Ryan Levy",
-        "Edgar Solomonik",
-        "Bryan K. Clark"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "EGGS: Sparsity‐Specific Code Generation",
-      "year": 2020,
-      "doi": "10.1111/cgf.14080",
-      "openalex": null,
-      "s2": "b978d4bc4cd0da22ff365c5291493e9f679f34e6",
-      "venue": "Computer graphics forum (Print)",
-      "authors": [
-        "Xuan Tang",
-        "T. Schneider",
-        "Shoaib Kamil",
-        "Aurojit Panda",
-        "Jinyang Li",
-        "Daniele Panozzo"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The Tensor Algebra Compiler project (taco), aims to build a compiler for dense and sparse linear and tensor algebra that supports a large variety of sparse and dense data structures [KKC ∗ 17, KAKA19,CKA18]."
-      ]
-    },
-    {
-      "title": "Effective Loop Fusion in Polyhedral Compilation Using Fusion Conflict Graphs",
-      "year": 2020,
-      "doi": "10.1145/3416510",
-      "openalex": "W3091055609",
-      "s2": null,
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Aravind Acharya",
-        "Uday Bondhugula",
-        "Albert Cohen"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Multi-layer optimizations for end-to-end data analytics",
-      "year": 2020,
-      "doi": "10.1145/3368826.3377923",
-      "openalex": "W3008198205",
-      "s2": "b063474ee3b54116f142910850da193854a0a397",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Amir Shaikhha",
-        "Maximilian Schleich",
-        "Alexandru Ghiţă",
-        "Dan Olteanu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "putisaCfunction that includes intrinsics to enable SIMD vector extensions. TACO [30] generates efficient low-level code for compound linear algebra operations on dense and sparse matrices. Workspaces [29] further improve the performance of the generated kernels by increasing sharing, and enabling optimizations such as loop-invariant code motion. It has similarities to our static memoization optimizati"
-      ]
-    },
-    {
-      "title": "Polyhedral+Dataflow Graphs",
-      "year": 2020,
-      "doi": "10.18122/td/1654/boisestate",
-      "openalex": "W2948835667",
-      "s2": "355bbe9f22203e944265008ae77a1b4920e41d66",
-      "venue": null,
-      "authors": [
-        "Eddie C. Davis"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The temporary workspaces used in the CPD benchmark in Chapter 6 are similar in purpose to TACO workspaces [164]."
-      ]
-    },
-    {
-      "title": "A Unified Iteration Space Transformation Framework for Sparse and Dense Tensor Algebra",
-      "year": 2019,
-      "doi": null,
-      "openalex": null,
-      "s2": "d3b08034d1c17776c698d680f9547d3c5f0bdf84",
-      "venue": "arXiv.org",
-      "authors": [
-        "Ryan Senanayake",
-        "Fredrik Kjolstad",
-        "Changwan Hong",
-        "Shoaib Kamil",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Most recently, the TACO compiler generalizes sparse and dense tensor operations in a variety of formats, automatically generating code for any computation [10, 17, 18].",
-        "The precompute transformation is described in prior work [17], but composes with our set of transformations to allow us to leverage scratchpad memories and reorder computations to increase locality.",
-        "A second strategy is to separate the loop into worker and a reduction loops that communicate through a workspace [17] (e.",
-        "There has been a lot of interest in compilers for dense [3, 24, 29, 36, 40] and sparse [10, 17, 18] linear and tensor algebra."
-      ]
-    },
-    {
-      "title": "Distributed-memory tensor completion for generalized loss functions in python using new sparse tensor kernels",
-      "year": 2019,
-      "doi": "10.1016/j.jpdc.2022.07.005",
-      "openalex": null,
-      "s2": "33b427c88a71382e1521bfda860a794b84b63d93",
-      "venue": "J. Parallel Distributed Comput.",
-      "authors": [
-        "Navjot Singh",
-        "Zecheng Zhang",
-        "Xiaoxia Wu",
-        "Naijing Zhang",
-        "Siyuan Zhang",
-        "Edgar Solomonik"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "In recent work, TACO has been improved to factorize longer tensor algebra expressions and their subcomponents into subsequences [38], the former being a user-guided version of the automated factorization in Cyclops."
-      ]
-    },
-    {
-      "title": "Enabling Distributed-Memory Tensor Completion in Python using New Sparse Tensor Kernels",
-      "year": 2019,
-      "doi": null,
-      "openalex": null,
-      "s2": "33fa89d13bba9accac55a474feec0943f6bdfba9",
-      "venue": "arXiv.org",
-      "authors": [
-        "Zecheng Zhang",
-        "Sissi Xiaoxiao Wu",
-        "Naijing Zhang",
-        "Siyuan Zhang",
-        "Edgar Solomonik"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "In recent work, TACO has been improved to factorize longer tensor algebra expressions and their subcomponents into subsequences [29], the former being a user-guided version of the automated factorization in Cyclops."
-      ]
-    },
-    {
-      "title": "Toward generalized tensor algebra for ab initio quantum chemistry methods",
-      "year": 2019,
-      "doi": "10.1145/3315454.3329958",
-      "openalex": null,
-      "s2": "bcac45a4bafcf175356d95a8e51ccfe73a02bcb9",
-      "venue": "ARRAY@PLDI",
-      "authors": [
-        "Erdal Mutlu",
-        "K. Kowalski",
-        "S. Krishnamoorthy"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "In a later work [8], they also introduced workspaces as temporary tensors to avoid inefficient data accesses to sparse tensor data."
-      ]
-    },
-    {
-      "title": "Interactive Compiler Scheduling with Strong Guarantees",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "ec0a35e90672141b418ec50ea1b7a9c60ad3e253",
-      "venue": null,
-      "authors": [
-        "Evan Williams",
-        "Justin P. Lubin",
-        "Rubens Lacouture",
-        "Olivia Hsu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Scheduling languages are a way to design and program domain-specific accelerators and their compilers [7, 14, 24, 25] by letting users explicitly optimize performance around key hardware constructs through, e.g. , tiling, memory hierarchy management, and data pinning [5, 10, 12, 16, 20]."
-      ]
-    },
-    {
-      "title": "Portable Dynamic Tiling for Sparse Tensor Accelerators",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "5abe2f8575fd927572049f45764a3a51d59eb641",
-      "venue": null,
-      "authors": [
-        "Sai Gautham Ravipati",
-        "Fredrik Kjolstad",
-        "Olivia Hsu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Prior work [2, 3, 10, 13] on sparse tensor orchestration partly addresses the first challenge, but relies on static tiling, which produces unevenly populated tiles for sparse data."
-      ]
-    }
-  ]
+  {
+   "title": "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs",
+   "year": 2026,
+   "doi": "10.1145/3808261",
+   "openalex": "W7163927618",
+   "s2": "bc4782647c6d22a4b79104cd6afd16e6b5fcd16e",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Amanda Liu",
+    "Gilbert Bernstein",
+    "S.A. Kamil",
+    "Adam Chlipala",
+    "Jonathan Ragan-Kelley"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Automated Tensor-Relational Decomposition for Large-Scale Sparse Tensor Computation",
+   "year": 2026,
+   "doi": "10.14778/3797919.3797921",
+   "openalex": null,
+   "s2": "f0ecbfa4aacfea5c4a2369be03e87068423a30cf",
+   "venue": "Proceedings of the VLDB Endowment",
+   "authors": [
+    "Yu-Shuen Tang",
+    "Zhiyuan Xin",
+    "Zhimin Ding",
+    "Xinyu Yao",
+    "Daniel Bourgeois",
+    "Tirthak Patel",
+    "Christopher Jermaine"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Ember: A Compiler for Embedding Operations on Decoupled Access-Execute Architectures",
+   "year": 2026,
+   "doi": "10.1109/cgo68049.2026.11395192",
+   "openalex": "W7131065374",
+   "s2": "745737ba38a758663a11863bcbb8663dc0c287de",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Marco Siracusa",
+    "Olivia Hsu",
+    "Victor Soria-Pardos",
+    "Joshua Randall",
+    "Arnaud Grasset",
+    "Eric Biscondi",
+    "Doug Joseph",
+    "Randy Allen",
+    "Fredrik Kj\u00f8lstad",
+    "Miquel Moret\u00f3 Planas",
+    "Adri\u00e0 Armejach"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Ember emits enqueue instructions for control tokens based on the location of the callback in the SLC IR and queueing instructions for operands according to the SLC stream-to-value operations."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Fast Autoscheduling for Sparse ML Frameworks",
+   "year": 2026,
+   "doi": "10.1109/cgo68049.2026.11394842",
+   "openalex": "W7131131434",
+   "s2": "4b42dbb2833d295579d3b1babd331d20c4884f07",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Bobby Yan",
+    "Alexander J Root",
+    "Trevor Gale",
+    "David Broman",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Loop ordering can fundamentally change the worst-case asymptotic complexity and thus the observed performance of sparse computations [25].",
+    "Researchers have also proposed sparse scheduling languages [25, 46, 53, 6, 56] that let users manually control how to optimize the generated code, through, e.g., loop ordering, tiling, and the introduction of temporary data structures."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
+   "year": 2026,
+   "doi": "10.1145/3771775.3786267",
+   "openalex": "W7125963162",
+   "s2": "2c4ae0a89568ac9c181cd662a7852023cff11ec2",
+   "venue": "International Conference on Compiler Construction",
+   "authors": [
+    "Shideh Hashemian",
+    "Michael F. P. O\u2019Boyle",
+    "Amir Shaikhha"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "We evaluate STAR against state-of-the-art compilers [16, 37] and a library [25] supporting sparse tensor algebra work-loads with sparse output.",
+    "TACO [16] is an open-source sparse tensor compiler.",
+    "We selected tensor kernels that have been extensively used in prior work [16, 17, 37] for evaluation.",
+    "06 \u00d7 over TACO [16] and TACO with sparse workspaces (TACO-SW) [37] for kernels that TACO does not support.",
+    "An offline automatic scheduler based on an abstract cost model was proposed [3], which generates schedules for the TACO [16] compiler.",
+    "Existing compilers [5, 16] utilize an intermediate dense tensor (workspace) to overcome this limitation.",
+    "Their associated compilers [16, 17, 36, 37] can exploit high-level information to automatically generate optimized code for a wide range of tensor expressions and data formats.",
+    "While efficient dense tensor implementations are relatively mature, sparse solutions are still evolving, with research focusing on data formats and algorithms[8, 9, 16\u201318, 35, 36] to efficiently store and compute sparse tensor workloads.",
+    "CoNST formulates factors such as tensor layout and loop ordering as constraints, then uses the Z3 SMT solver to produce optimized loop structures and lay-outs, which are lowered to TACO [16] for code generation."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
+   "year": 2026,
+   "doi": "10.48550/arxiv.2604.17198",
+   "openalex": null,
+   "s2": "efe3f11deccf87f1cb49c814700d22638980370e",
+   "venue": "arXiv.org",
+   "authors": [
+    "Atharv Chougule",
+    "Alexander J. Root",
+    "Rubens Lacouture",
+    "Bobby Yan",
+    "Rohan Yadav",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "RTeAAL Sim: Using Tensor Algebra to Represent and Accelerate RTL Simulation",
+   "year": 2026,
+   "doi": "10.1145/3779212.3790214",
+   "openalex": null,
+   "s2": "6fd0edcb1c4a236f035cc42f84fb6d56965c84f0",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Yan Zhu",
+    "Boru Chen",
+    "Christopher W. Fletcher",
+    "Nandeeka Nayak"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "We modify the \ud835\udc42\ud835\udc3c\ud835\udc40 so that all identity operations use matching source ( \ud835\udc45 ) and destination ( \ud835\udc46 ) coordinates, allowing us to elide explicit references to these now-redundant operations."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "TensorBench: Benchmarking Coding Agents on a Compiler-Based Tensor Framework",
+   "year": 2026,
+   "doi": "10.48550/arxiv.2606.05570",
+   "openalex": null,
+   "s2": "f18b7a6d6bda3f57e7a01e77cef15052dc06a286",
+   "venue": "arXiv.org",
+   "authors": [
+    "Bobby Yan",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Scorch\u2019s design follows the TACO [10] lineage of sparse compilers, with CIN echoing the concrete index notation of Kjolstad et al. [11]; it is reimplemented in Python with an emphasis on extensibility for research and broadened to treat dense codegen as a first-class concern (rather than a special\u2026"
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "ASaP: Automatic Software Prefetching for Sparse Tensor Computations in MLIR",
+   "year": 2025,
+   "doi": "10.1145/3731599.3767477",
+   "openalex": "W4416004530",
+   "s2": "97ee776523207c023ceefe9a3908f37e5d077de7",
+   "venue": "SC25-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": [
+    "Konstantinos Sotiropoulos",
+    "Jonas Skeppstedt",
+    "Per Stenstr\u00f6m"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "CROSS: Compiler-Driven Optimization of Sparse DNNs Using Sparse/Dense Computation Kernels",
+   "year": 2025,
+   "doi": "10.1109/hpca61900.2025.00076",
+   "openalex": "W4409248508",
+   "s2": "2340275b187fc500ffd6d521ccc7195881de4a15",
+   "venue": "International Symposium on High-Performance Computer Architecture",
+   "authors": [
+    "Fangxin Liu",
+    "Shiyuan Huang",
+    "Ning Yang",
+    "Zongwu Wang",
+    "Haoming Li",
+    "Li Jiang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "TACO [5], [19], [20], which presents sparse format abstractions and code generation routines based on merged grids."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Finch: Sparse and Structured Tensor Programming with Control Flow",
+   "year": 2025,
+   "doi": "10.1145/3720473",
+   "openalex": "W4409310702",
+   "s2": "91cc09651bbcc232da5a6549812c4ae833c98e18",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Willow Ahrens",
+    "Teodoro Fields Collin",
+    "Radha Patel",
+    "Kyle Deeds",
+    "Changwan Hong",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "\u2026originally supported just plain Einsum computations [58], but has been extended several times to support (single dimensional) local tensors [57], imperfectly nested loops [33], breaks via semi-rings [49], windowing and tiling [80], and convolution [97], and compilation in MLIR [20], all as\u2026",
+    "Special-purpose compilers like TACO [57], Taichi [51], StructTensor [42], or CoRa [37] which support a select subset of structured data structures (only sparse, or only ragged tensors) must compromise by greatly constraining the classes of programs which they support, such as tensor contractions."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow",
+   "year": 2025,
+   "doi": "10.1145/3779212.3790165",
+   "openalex": null,
+   "s2": "16c47ca02c5915d52ec921fec43773054c24b85d",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Rubens Lacouture",
+    "Nathan Zhang",
+    "Ritvik Sharma",
+    "Marco Siracusa",
+    "Fredrik Kjolstad",
+    "K. Olukotun",
+    "Olivia Hsu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Lightweight and Locality-Aware Composition of Black-Box Subroutines",
+   "year": 2025,
+   "doi": "10.1145/3729292",
+   "openalex": "W4411269466",
+   "s2": "5f354a214c70d1faec3b51466aaa2c407b04a536",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Manya Bansal",
+    "Dillon Sharlet",
+    "Jonathan Ragan\u2010Kelley",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "In contrast, some high-level, domain-specific languages (e.g., Halide [38], TACO [27], TVM [10] and Mosaic [4]) expose a computation language .",
+    "For inputs that are intermediate results of another computation, Fern emits an allocate node instead of a query node (Lines 15, 21, 24, 27).",
+    "In contrast, domain-specific languages (e.g., Halide [38], TACO [27], TVM [10], Mosaic [4], Hector [49], and Orchard [43]) often expose only the computation language."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "REPTILE: Performant Tiling of Recurrences",
+   "year": 2025,
+   "doi": "10.1145/3763074",
+   "openalex": "W4414988650",
+   "s2": "a018703927453f21102c01de2825b81fcc027dc7",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Muhammad Usman Tariq",
+    "Shiv Sundram",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "TACO [Kjolstad et al. 2017; Kj\u00f8lstad 2020] showed how tensor algebra expressions could be compiled to efficient code for different sparse tensor formats [Chou et al. 2018], with a scheduling language to control optimization [Kjolstad et al. 2019; Senanayake et al. 2020]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture",
+   "year": 2025,
+   "doi": "10.1145/3696443.3708918",
+   "openalex": "W4407857172",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Olivia Hsu",
+    "Alexander Rucker",
+    "Tian Zhao",
+    "Varun Bhavin Desai",
+    "Kunle Olukotun",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 5
+  },
+  {
+   "title": "CoNST: Code Generator for Sparse Tensor Networks",
+   "year": 2024,
+   "doi": "10.1145/3689342",
+   "openalex": "W4401657015",
+   "s2": "179c725832285f2e757035b4408892faa3750990",
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Saurabh Raje",
+    "Yufan Xu",
+    "Atanas Rountev",
+    "Edward F. Valeev",
+    "P. Sadayappan"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "The Tucker decomposition of a sparse tensor is generally performed using the HOOI (High Order Orthogonal Iteration) iterative algorithm that requires \ud835\udc5b TTMc (Tensor Times Matrix chain) operations [13].",
+    "Note that the numbering of modes from 0 to \ud835\udc5b \u2212 1 is purely for notational purposes and does not imply any particular concrete data layout representation; deciding on such a layout is one of the goals of our work, as described later.",
+    "For example, the binary tensor contraction \ud835\udc4c \ud835\udc56\ud835\udc57\ud835\udc59\ud835\udc5a = \ud835\udc48 \ud835\udc56\ud835\udc57\ud835\udc58 \u00d7 \ud835\udc4a \ud835\udc58\ud835\udc59\ud835\udc5a represents the computation \u2200 \ud835\udc56, \ud835\udc57,\ud835\udc59,\ud835\udc5a : \ud835\udc4c \ud835\udc56\ud835\udc57\ud835\udc59\ud835\udc5a = \u2211\ufe01 \ud835\udc56\ud835\udc57\ud835\udc58 \u00d7 \ud835\udc4a \ud835\udc58\ud835\udc59\ud835\udc5a",
+    "Tucker decomposition factorizes a sparse tensor \ud835\udc47 with \ud835\udc5b modes into a product of \ud835\udc5b 2D matrices and a dense core \ud835\udc5b -mode tensor.",
+    "Section 5.3 presents performance on the TTMc (Tensor Times Matrix chain) expression that is the performance bottleneck for the Tucker decomposition algorithm [13].",
+    "An important next step is the parallelization of the generated code for multicore processors and GPUs and use of the developed framework to generate high-performance implementations for sparse tensor networks needed by computational scientists (e.g., in quantum chemistry).",
+    "We compare CoNST against state-of-the-art sparse tensor compilers and libraries: TACO 1 : As discussed in detail earlier, CoNST uses TACO for generation of C code after co-optimization for tensor layout choice, schedule for the contractions, loop fusion, and mode reduction of intermediate tensors."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "Compilation of Modular and General Sparse Workspaces",
+   "year": 2024,
+   "doi": "10.1145/3656426",
+   "openalex": null,
+   "s2": "4210d360f09809b99c45f8a43ebfe48d04bd3708",
+   "venue": "Proc. ACM Program. Lang.",
+   "authors": [
+    "Genghan Zhang",
+    "Olivia Hsu",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "However, they either only operate on linear algebra [10] or consume too much memory when densifying a sparse higher-order tensor into the temporary [38].",
+    "As shown in Table 1, prior sparse compilers [38, 39, 83, 86] cannot generate code for expressions with sparse scattering behavior.",
+    "If these two orders are the same, then the expression is concordant [1].",
+    "Users can apply schedules like split , pos , and reorder to a CIN expression as if no sparse scattering behavior exists in the expression.",
+    "Sparse tensor algebra expressions, given in concrete index notation (CIN) [38], are composed of tensors, index variables, and forall nodes.",
+    "We confirm this trend in Figure 18, which demonstrates that the dense workspace runs out of memory when the input matrices get too large (after the black line), while the sparse workspace scales.",
+    "Our work extends the generality of prior compilers for sparse tensor algebra by treating sparse tensors as a first-class concept for any tensor variable, including temporaries.",
+    "Compilers that generate code with dense workspaces [9, 10, 38, 44, 62] can assign a temporary dense array to hold values generated from the input co-iteration."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Compilation of Shape Operators on Sparse Arrays",
+   "year": 2024,
+   "doi": "10.1145/3689752",
+   "openalex": "W4403223519",
+   "s2": "722555a424c3a50c2eafc1b5b58e958720d766ee",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Alexander J Root",
+    "Bobby Yan",
+    "Peiming Liu",
+    "Christophe Gyurgyik",
+    "Aart J. C. Bik",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "This data structure is used to implement an important component of sparse tensor algebra compilation, namely the coiteration optimization , which produces loops and control flow that handle the cases where some sparse tensors do not contain values for certain coordinates.",
+    "We define these sequence expressions in Section 5, provide a construction algorithm for generalized iteration lattices, and show how to use them to compile a loop in CIN to loops that efficiently coiterate sparse data structures in Section 6.1.",
+    "The forall statement iterates over a sequence expression that may contain sparse as well as dense sequences.",
+    "With these ideas, sparse array programming moves one step closer to the completeness that dense array programming systems have long since achieved.",
+    "1 func Seq(expr, i): Consider compiling the rightmost kernel in Figure 10, which generates a single loop over the output index, k ."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Compiler Support for Sparse Tensor Convolutions",
+   "year": 2024,
+   "doi": "10.1145/3689721",
+   "openalex": "W4403223049",
+   "s2": "c41d33afb267182a1a20728022bae83ec40d4c10",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Peiming Liu",
+    "Alexander J Root",
+    "Anlun Xu",
+    "Yinying Li",
+    "Fredrik Kj\u00f8lstad",
+    "Aart J. C. Bik"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 5
+  },
+  {
+   "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures",
+   "year": 2024,
+   "doi": "10.1145/3620666.3651322",
+   "openalex": "W4395116186",
+   "s2": "5a1db85197ca5a608fea362c7d572fafb7193a7e",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Kun Wu",
+    "Mert Hidayeto\u011flu",
+    "Xiang Song",
+    "Sitao Huang",
+    "Da Zheng",
+    "Israt Nisa",
+    "Wen\u2010mei Hwu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "\u2026traversal kernels, we think it viable to incorporate TACO for the code generation in the future because TACO provides a mature compiler infrastructure that enables the expression and application of optimizations [17] for sparse tensor operations in a principled manner, e.g., loop transformations."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Mechanised Hypersafety Proofs about Structured Data",
+   "year": 2024,
+   "doi": "10.1145/3656403",
+   "openalex": "W4394710775",
+   "s2": null,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Vladimir Gladshtein",
+    "Qiyuan Zhao",
+    "Willow Ahrens",
+    "Saman Amarasinghe",
+    "Ilya Sergey"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 8
+  },
+  {
+   "title": "Representing Data Collections in an SSA Form",
+   "year": 2024,
+   "doi": "10.1109/cgo57630.2024.10444817",
+   "openalex": "W4392265899",
+   "s2": "514f33939194afd2d7f2e6830dee0543051fc0af",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Tommy McMichen",
+    "Nathan Greiner",
+    "Peter Zhong",
+    "Federico Sossai",
+    "Atmn Patel",
+    "Simone Campanoni"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "To remedy this, the TACO compiler [28\u201330] provides a general representation for tensor operations, abstracting away the storage structure as either sparse or dense."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "STCO: Enhancing Training Efficiency via Structured Sparse Tensor Compilation Optimization",
+   "year": 2024,
+   "doi": "10.1145/3701033",
+   "openalex": "W4403584939",
+   "s2": "3ca5a0b31ced75914d2f391c1613aa43cf7c0180",
+   "venue": "ACM Transactions on Design Automation of Electronic Systems",
+   "authors": [
+    "Shiyuan Huang",
+    "Fangxin Liu",
+    "Tian Li",
+    "Zongwu Wang",
+    "Ning Yang",
+    "Haoming Li",
+    "Li Jiang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "CSF, shown conceptually in (f), generalizes CSR to higher-order tensors [18], compressing each dimension in pos and recording indices in crd .",
+    "Despite the effectiveness of sparsification in reducing the size of DNNs, many existing deep learning frameworks and compilers [4, 5, 10, 16, 18, 34, 41] lack support for sparsity or only provide limited support using traditional sparse storage formats.",
+    "Existing Existing compilation frameworks, such as TVM, TACO [18], and others [1, 7, 45, 47], encounter significant challenges when dealing with traditional sparse formats like CSR."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Scorch: A Library for Sparse Deep Learning",
+   "year": 2024,
+   "doi": "10.48550/arxiv.2405.16883",
+   "openalex": null,
+   "s2": "0c8dfb6e969a953b01356a0a9c1902fa12b3b95d",
+   "venue": "arXiv.org",
+   "authors": [
+    "Bobby Yan",
+    "Alexander J. Root",
+    "T. Gale",
+    "David Broman",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The code generator builds on prior work on sparse tensor algebra code generation from the TACO line of work [31, 32].",
+    "Then, Scorch generates a fused loop-level intermediate representation (IR) along the lines of TACO\u2019s Concrete Index Notation IR [32]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "SpMMPlu-Pro: An Enhanced Compiler Plug-In for Efficient SpMM and Sparsity Propagation Algorithm",
+   "year": 2024,
+   "doi": "10.1109/tcad.2024.3446718",
+   "openalex": "W4403407616",
+   "s2": "6014a733a6f74a2f7202609b01b85339c48ca701",
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": [
+    "Shiyuan Huang",
+    "Fangxin Liu",
+    "Tao Yang",
+    "Zongwu Wang",
+    "Ning Yang",
+    "Li Jiang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "According to SparseTIR [4], Sputnik [24] demonstrates superior performance in SpMM compared to TACO [37], [38], [39] and other libraries [23], [40] on the V100 GPU.",
+    "Many compilation frameworks have introduced their own optimizations for sparse computations, including SparseRT [52], ASpT [16], SparseTIR [4], Sputnik [24], and TACO [37], [38], [39], among others.",
+    "3) Sparse Kernel Optimization: Sparse compilation optimization is a key area of research, with many frameworks [16], [24], [34], [35], [36], [37], [38], [39] exploring different scheduling techniques to enhance the ef\ufb01ciency of sparse kernels."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "SparseAuto: An Auto-scheduler for Sparse Tensor Computations using Recursive Loop Nest Restructuring",
+   "year": 2024,
+   "doi": "10.1145/3689730",
+   "openalex": "W4403223472",
+   "s2": "01dacad71d6085a79cf170bd5eac4f66ccf39801",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Adhitha Dias",
+    "Logan Anderson",
+    "Kirshanthan Sundararajah",
+    "Artem Pelenitsyn",
+    "Milind Kulkarni"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Kjolstad et al. [19] introduces precompute to add dense workspaces to remove sparse accesses."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "TSTC: Enabling Efficient Training via Structured Sparse Tensor Compilation",
+   "year": 2024,
+   "doi": "10.1109/asp-dac58780.2024.10473981",
+   "openalex": "W4393145428",
+   "s2": "a3c6e1871dc2db8337c13b463b91af45adeacb32",
+   "venue": "Asia and South Pacific Design Automation Conference",
+   "authors": [
+    "Shiyuan Huang",
+    "Fangxin Liu",
+    "Tian Li",
+    "Zongwu Wang",
+    "Haoming Li",
+    "Li Jiang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 4
+  },
+  {
+   "title": "The Dataflow Abstract Machine Simulator Framework",
+   "year": 2024,
+   "doi": "10.1109/isca59077.2024.00046",
+   "openalex": "W4401211843",
+   "s2": "14cc10c466d72887609c3932b7ed3be0f60db93b",
+   "venue": "International Symposium on Computer Architecture",
+   "authors": [
+    "Nathan Zhang",
+    "Rubens Lacouture",
+    "Gina Sohn",
+    "Paul Mure",
+    "Qizheng Zhang",
+    "Fredrik Kj\u00f8lstad",
+    "Kunle Olukotun"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The SAM compiler is an adapted version of the TACO compiler [35], lowering from Concrete Index Notation [34] into a graph of \u201cprimitive\u201d blocks connected by streams."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Automatic Code Generation for High-Performance Graph Algorithms",
+   "year": 2023,
+   "doi": "10.1109/pact58117.2023.00010",
+   "openalex": "W4390280292",
+   "s2": "bd4e2df4c013100ff45fe672c7f1e1557a212054",
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": [
+    "Zhen Peng",
+    "Rizwan A. Ashraf",
+    "Luanzheng Guo",
+    "Ruiqin Tian",
+    "G\u00f6k\u00e7en Kestor"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Unlike previous work that [20] requires users to determine the index to apply workspace transformation, in this work, the compiler automatically identi\ufb01es the index involved based on the storage format."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Challenges in Metaverse Research: An Internet of Things Perspective",
+   "year": 2023,
+   "doi": "10.1109/metacom57706.2023.00042",
+   "openalex": "W4387395078",
+   "s2": "20d2df4e9f301d4229f949fc2a70ea154f0cd24e",
+   "venue": "2023 IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom)",
+   "authors": [
+    "Tarek Abdelzaher",
+    "Matthew Caesar",
+    "Charith Mendis",
+    "Klara Nahrstedt",
+    "Mani Srivastava",
+    "Minlan Yu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Different compiler techniques focusing on eliminating redundancies [111] and workspaces [44] have been suggested to further improve upon these compiler infrastructures."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Compiling Recurrences over Dense and Sparse Arrays",
+   "year": 2023,
+   "doi": "10.1145/3649820",
+   "openalex": null,
+   "s2": "e77af9f8aa34516f189daf7c0b2e2d719984afa7",
+   "venue": "Proc. ACM Program. Lang.",
+   "authors": [
+    "S. Sundram",
+    "Muhammad Usman Tariq",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "It then uses ideas from prior work on sparse tensor algebra compilation [Kjolstad et al. 2019, 2017] to lower loop nests over abstract arrays to imperative C code over dense and sparse data structures, although we have extended these ideas to support triangular loops."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures",
+   "year": 2023,
+   "doi": "10.48550/arxiv.2301.06284",
+   "openalex": "W4317439177",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Kun Wu",
+    "Mert Hidayeto\u011flu",
+    "Xiang Song",
+    "Sitao Huang",
+    "Da Zheng",
+    "Israt Nisa",
+    "Wen\u2010mei Hwu"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Indexed Streams: A Formal Intermediate Representation for Fused Contraction Programs",
+   "year": 2023,
+   "doi": "10.1145/3591268",
+   "openalex": "W4379512454",
+   "s2": "342fd56481179cd355abf1427847d23b56c578b0",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Scott Kovach",
+    "Praneeth Kolichala",
+    "Tiancheng Gu",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Finally, Kjolstad et al. [2019] introduce compiler optimizations to reorder iteration and introduce temporaries, while Senanayake et al. [2020] introduce tiling and parallelizing optimizations.",
+    "It supports everything that the original TACO system [Kjolstad et al. 2017] supported, and it additionally supports format abstractions, iteration reordering [Kjolstad et al. 2019], and user-de\ufb01ned functions [Henry et al. 2021]."
+   ],
+   "cited_by": 11
+  },
+  {
+   "title": "JaxPruner: A concise library for sparsity research",
+   "year": 2023,
+   "doi": "10.48550/arxiv.2304.14082",
+   "openalex": null,
+   "s2": "f230e01cc34ff8738baa2dbbf5adcc715047ac44",
+   "venue": "CPAL",
+   "authors": [
+    "Jooyoung Lee",
+    "Wonpyo Park",
+    "Nicole Mitchell",
+    "Jonathan Pilault",
+    "Johan Obando-Ceron",
+    "Han-Byul Kim",
+    "Namhoon Lee",
+    "Elias Frantar",
+    "Yun Long",
+    "A. Yazdanbakhsh",
+    "Shivani Agrawal",
+    "Suvinay Subramanian",
+    "Xin Wang",
+    "Sheng-Chun Kao",
+    "Xingyao Zhang",
+    "Trevor Gale",
+    "Aart J. C. Bik",
+    "Woohyun Han",
+    "Milen Ferev",
+    "Zhonglin Han",
+    "Hong-Seok Kim",
+    "Yann Dauphin",
+    "Karolina Dziugaite",
+    "P. S. Castro",
+    "Utku Evci"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Software A promising direction for developing sparse software was pioneered for sparse linear algebra in the MT1 compiler [60] and generalized to sparse tensor algebra in the Tensor Algebra Compiler [61\u2013 63]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Looplets: A Language for Structured Coiteration",
+   "year": 2023,
+   "doi": "10.1145/3579990.3580020",
+   "openalex": "W4321500415",
+   "s2": "0136cb8abb987ed63948404e1ce682965823e2a3",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Willow Ahrens",
+    "Daniel Donenfeld",
+    "Fredrik Kj\u00f8lstad",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "CIN was first introduced as part of the TACO compiler [28].",
+    "Array compilers that support irregular sparsity include TACO [28, 29],MT1 [7, 9, 10],MLIR [8], COMET [54], Etch [34], SIPR [44], Tiramisu [5] and CHiLL-I/E [51]."
+   ],
+   "cited_by": 19
+  },
+  {
+   "title": "Mosaic: An Interoperable Compiler for Tensor Algebra",
+   "year": 2023,
+   "doi": "10.1145/3591236",
+   "openalex": "W4379537250",
+   "s2": "17abaa5579ee2e5471b294889f21561d19cd7d90",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Manya Bansal",
+    "Olivia Hsu",
+    "Kunle Olukotun",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "2018a], TACO [Kj\u00f8lstad et al. 2019; Senanayake et al. 2020], Lift/Elevate [Hagedorn et al.",
+    "Mosaic extends TACO\u2019s scheduling language [Kj\u00f8lstad et al. 2019; Senanayake et al. 2020; Yadav et al. 2022] with new commands that can be used to bind a tensor algebra expression to an external function.",
+    "These languages combine to form concrete index notation (CIN), an abstract loop based IR [Kj\u00f8lstad et al. 2019]."
+   ],
+   "cited_by": 17
+  },
+  {
+   "title": "RECom: A Compiler Approach to Accelerating Recommendation Model Inference with Massive Embedding Columns",
+   "year": 2023,
+   "doi": "10.1145/3623278.3624761",
+   "openalex": null,
+   "s2": "09aa3b34765d30e7b71939dc2030d1411e43c9fa",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Zaifeng Pan",
+    "Zhen Zheng",
+    "Feng Zhang",
+    "Ruofan Wu",
+    "Hao Liang",
+    "Dalin Wang",
+    "Xiafei Qiu",
+    "Junjie Bai",
+    "Wei Lin",
+    "Xiaoyong Du"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Many works [6, 10, 11, 19, 20, 30, 49, 51, 65, 72\u201374 , 81] are provided to"
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Sgap: towards efficient sparse tensor algebra compilation for GPU",
+   "year": 2023,
+   "doi": "10.1007/s42514-023-00140-4",
+   "openalex": "W4375865627",
+   "s2": "55a8676bb77f3d170bbedffe549636d99feb781b",
+   "venue": "CCF Transactions on High Performance Computing",
+   "authors": [
+    "Genghan Zhang",
+    "Yuetong Zhao",
+    "Yanting Tao",
+    "Zhongming Yu",
+    "Guohao Dai",
+    "Sitao Huang",
+    "Yuan Wen",
+    "Pavlos Petoumenos",
+    "Yu Wang"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "TACO assumes that the statement and the assignment of scalar workspace (Kjolstad et al. 2019) are in the same basic block.",
+    "To tackle these challenges and build a more efficient sparse compiler, we propose atomic parallelism and segment group in this paper and implement our techniques in a real sparse compiler TACO (Kjolstad et al. 2019; Chou et al. 2018; Kjolstad et al. 2017; Senanayake et al. 2020).",
+    "At the front-end, the tensor algebra expression is concretized to concrete index notation (Kjolstad et al. 2019)."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+   "year": 2023,
+   "doi": "10.1145/3613424.3623791",
+   "openalex": "W4389500477",
+   "s2": "f6c15f15b98afeb8a23e321e098b7fd9f3bce85a",
+   "venue": "Micro",
+   "authors": [
+    "Nandeeka Nayak",
+    "Toluwanimi O. Odemuyiwa",
+    "Shubham Ugare",
+    "Christopher W. Fletcher",
+    "Michael Pellauer",
+    "Joel Emer"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "We view TeAAL, as it is described in this work, as a middle level in this hierarchy.",
+    "Specifically, allowing accelerators to be described as a cascade of Einsums (instead of a single Einsum [35, 52]) means that we would like to explore multiple cascades for the same problem, which requires a way to efficiently list the various promising cascades for that problem."
+   ],
+   "cited_by": 19
+  },
+  {
+   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+   "year": 2023,
+   "doi": "10.48550/arxiv.2304.07931",
+   "openalex": "W4366388644",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Nandeeka Nayak",
+    "Toluwanimi O. Odemuyiwa",
+    "Shubham Ugare",
+    "Christopher W. Fletcher",
+    "Michael Pellauer",
+    "Joel Emer"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "The Sparse Abstract Machine",
+   "year": 2023,
+   "doi": "10.1145/3582016.3582051",
+   "openalex": "W4327911471",
+   "s2": "7906159afac47695c5d87bc38baf8c75d3512c24",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Olivia Hsu",
+    "Maxwell Strange",
+    "Ritvik Sharma",
+    "Jaeyeon Won",
+    "Kunle Olukotun",
+    "Joel Emer",
+    "Mark Horowitz",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Instead, we describe an alternative compiler lowering algorithm that lowers from TACO\u2019s high-level concrete index notation [27] to the SAM dataflow abstraction.",
+    "Custard compiles tensor algebra expressions with associated data structure specifications [11] and schedules [27, 49] to SAM dataflow graphs (see Figure 10).",
+    "TACO supports all five features of tensor index notation, as well as compressed data structures [11, 28], iteration reordering [27], and fusion [28]."
+   ],
+   "cited_by": 38
+  },
+  {
+   "title": "AHA: An Agile Approach to the Design of Coarse-Grained Reconfigurable Accelerators and Compilers",
+   "year": 2022,
+   "doi": "10.1145/3534933",
+   "openalex": "W4284689293",
+   "s2": "cdcc955c050bfa569f580a7bb87d76384524c165",
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": [
+    "Kalhan Koul",
+    "Jackson Melchert",
+    "Kavya Sreedhar",
+    "Leonard Truong",
+    "Gedeon Nyengele",
+    "Keyi Zhang",
+    "Qiaoyi Liu",
+    "Jeff Setter",
+    "Po\u2010Han Chen",
+    "Yuchen Mei",
+    "Maxwell Strange",
+    "Ross Daly",
+    "Caleb Donovick",
+    "Alex Carsello",
+    "Taeyoung Kong",
+    "Kathleen Feng",
+    "Dillon Huff",
+    "Ankita Nayak",
+    "Rajsekhar Setaluri",
+    "James J. Thomas",
+    "Nikhil Bhagdikar",
+    "David Durst",
+    "Zachary Myers",
+    "Nestan Tsiskaridze",
+    "Stephen Richardson",
+    "Rick Bahr",
+    "Kayvon Fatahalian",
+    "Pat Hanrahan",
+    "Clark Barrett",
+    "Mark Horowitz",
+    "Christopher Torng",
+    "Fredrik Kj\u00f8lstad",
+    "Priyanka Raina"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "To be more specific, by developing new hardware primitives in conjunction with a new spatial dataflow IR targeted by a TACO [26] frontend, we can easily swap in sparse components for their dense counterparts (Halide to TACO, Clockwork to Concrete Index Notation [25], dense MEM to sparse MEM) and leverage the rest of the existing infrastructure to quickly iterate, test, and build new highly reconfigurable chips.",
+    "To be more speciic, by developing new hardware primitives in conjunction with a new spatial datalow IR targeted by a TACO [26] front-end, we can easily swap in sparse components for their dense counterparts (Halide to TACO), (Clockwork to Concrete Index Notation [25]), (dense MEM to sparse MEM) and leverage the rest of the existing infrastructure to quickly iterate, test, and build new, highly reconigurable chips."
+   ],
+   "cited_by": 38
+  },
+  {
+   "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model",
+   "year": 2022,
+   "doi": "10.1145/3519939.3523442",
+   "openalex": "W4281658036",
+   "s2": "29581a7c366620585b577f03b9680325cae410c5",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Willow Ahrens",
+    "Fredrik Kj\u00f8lstad",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "The following paragraph formalizes concrete index notation, described in earlier work [33].",
+    "In order to make our descriptions of sparse tensor algebra implementations more precise, we introduce the protocolized concrete index notation, an extension to concrete index notation [33].",
+    "Tensor compilers provide a mechanism to automatically generate efficient code for simple loop programs that operate on tensors, or multidimensional arrays [5, 12, 14, 21, 22, 31, 33, 34, 37\u015b39, 48, 53, 54, 56].",
+    "We build on our previous work on the TACO sparse tensor compiler [21, 22, 31, 33, 34], though our work certainly applies to similar compilers such as COMET [54] or the MLIR sparse tensor dialect [11].",
+    "Research into sparse tensor compilers has led to simplified languages to express these tradeoffs and generate efficient implementations [5, 12, 14, 21, 22, 31, 33, 34, 37\u015b39, 48, 51, 53, 54, 56]."
+   ],
+   "cited_by": 31
+  },
+  {
+   "title": "Compilation of dynamic sparse tensor algebra",
+   "year": 2022,
+   "doi": "10.1145/3563338",
+   "openalex": null,
+   "s2": "1683f4502414992a6f3fc5b1bab1385a88d94fb6",
+   "venue": "Proc. ACM Program. Lang.",
+   "authors": [
+    "Stephen Chou",
+    "S. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 8
+  },
+  {
+   "title": "Compiler Support for Sparse Tensor Computations in MLIR",
+   "year": 2022,
+   "doi": "10.1145/3544559",
+   "openalex": "W4290648346",
+   "s2": "f6be7f80dd776347c0eb3f9b052adb6a23a9c7e1",
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Aart J. C. Bik",
+    "Penporn Koanantakool",
+    "Tatiana Shpeisman",
+    "Nicolas Vasilache",
+    "Bixia Zheng",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Sparse compilation was formalized and generalized to sparse tensor algebra in TACO (Tensor Algebra Compiler) [42, 40, 41, 43].",
+    "The growing popularity of deep learning and big data has sparked a similar interest in studying how machine learning kernels can take advantage of sparse tensors [15, 40, 41, 43, 67, 70, 75].",
+    "Otherwise, the sparse compiler uses a technique called access pattern expansion or workspace [6, 24, 31, 41, 59, 60], which is a well-known way of e\ufb03ciently dealing with sparse insertions as well as an alternative way to implement co-iteration over a conjunction or disjunction.",
+    "Kjolstad et al. [41] and Senanayake et al. [67] also extended the TACO compiler with a scheduling language that lets users (or automatic systems) organize the iteration over tensor expressions, which lets them tile, control fusion/\ufb01ssion, statically load-balance, and generate GPU code for sparse\u2026",
+    "This idea of keeping sparsity completely transparent to the programmer was pioneered in the MT1 sparse compiler for linear algebra [6, 7, 8, 9] and later formalized and generalized to tensor algebra in TACO (Tensor Algebra Compiler) [42, 40, 41, 43]."
+   ],
+   "cited_by": 53
+  },
+  {
+   "title": "Correct Compilation of Semiring Contractions",
+   "year": 2022,
+   "doi": "10.48550/arxiv.2207.13291",
+   "openalex": null,
+   "s2": "65ce7c4a0a49558452c5b524d4970a9d019ffddd",
+   "venue": "arXiv.org",
+   "authors": [
+    "S. Kovach",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "2021] and optimize [Kjolstad et al. 2019; Senanayake et al. 2020] arbitrary sparse tensor algebra expressions to fused code on several types of sparse and dense data structures [Chou et al."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "DISTAL: the distributed tensor algebra compiler",
+   "year": 2022,
+   "doi": "10.1145/3519939.3523437",
+   "openalex": "W4220690649",
+   "s2": "07165e4c919d095ae04a82d543146b2e423a5b9c",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Rohan Yadav",
+    "Alex Aiken",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "We provide the following transformations introduced by prior systems [21, 29, 32]:"
+   ],
+   "cited_by": 29
+  },
+  {
+   "title": "Optimizing Tensor Programs on Flexible Storage",
+   "year": 2022,
+   "doi": "10.1145/3588717",
+   "openalex": null,
+   "s2": "eee0dad41eea0ad86932764981717da3220c32c3",
+   "venue": "Proc. ACM Manag. Data",
+   "authors": [
+    "Maximilian Schleich",
+    "Amir Shaikhha",
+    "Dan Suciu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The closest related work from the tensor systems literature is the Taco system [14, 26, 27], as highlighted in Sec."
+   ],
+   "cited_by": 21
+  },
+  {
+   "title": "ReACT: Redundancy-Aware Code Generation for Tensor Expressions",
+   "year": 2022,
+   "doi": "10.1145/3559009.3569685",
+   "openalex": null,
+   "s2": "eec21bd85c82f0c274ea3ef446a163128eb22ec8",
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": [
+    "Tong Zhou",
+    "Ruiqin Tian",
+    "Rizwan A. Ashraf",
+    "R. Gioiosa",
+    "Gokcen Kestor",
+    "Vivek Sarkar"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "In a follow-on work [17], a concrete index notation was proposed as an IR to split an expression into multiple subexpressions and store temporary results."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
+   "year": 2022,
+   "doi": "10.1109/sc41404.2022.00064",
+   "openalex": "W4321636673",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Rohan Yadav",
+    "Alex Aiken",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 8
+  },
+  {
+   "title": "SparseLNR",
+   "year": 2022,
+   "doi": "10.1145/3524059.3532386",
+   "openalex": "W4281550828",
+   "s2": "fb8f2157fa03ae73c67ce48f24825a2769409ff7",
+   "venue": "International Conference on Supercomputing",
+   "authors": [
+    "Adhitha Dias",
+    "Kirshanthan Sundararajah",
+    "Charitha Saumya",
+    "Milind Kulkarni"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "SparseLNR uses a branched iteration graph to represent sparse tensor algebra kernels, which is an extension to the concrete index notation described in [16].",
+    "Prior work has evaluated against single-threaded code in such situations [16, 34].",
+    "[16] added precompute scheduling directive to use intermediate dense workspaces to remove sparse accesses when storing data values to output tensors.",
+    "We change the iteration graph [17] and use the concrete index notation [16] to introduce intermediate temporaries that are shared between the producer and the consumer."
+   ],
+   "cited_by": 13
+  },
+  {
+   "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
+   "year": 2022,
+   "doi": "10.1145/3582016.3582047",
+   "openalex": null,
+   "s2": "c142bfce3b6849ee9d6aa0d5637ab28b170fd507",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Zihao Ye",
+    "Ruihang Lai",
+    "Junru Shao",
+    "Tianqi Chen",
+    "L. Ceze"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Sparse tensor compilers, such as MT1 [8] and TACO [40], greatly simplify the development of sparse operators by decoupling format specification and format-agnostic computation descriptions.",
+    "We also achieve consistently better performance than state-of-the-art open source sparse library dgSPARSE [20], which implements DASpMM [17], and TACO with auto-scheduling enabled [55].",
+    "TACO [14, 39, 40] proposes abstractions for sparse formats and a merge lattice-based code generation routine.",
+    "SparseTIR significantly outperforms the DGL baseline and the TACO scheduled kernel because these implementations do not support two-stage reduction and vectorized load/store.",
+    "Though TACO also explores compile-time load balancing, it does not support caching the partially aggregated result in registers, which is critical to kernel performance on GPUs, and the irregularity of the CSR format limits the application of loop unrolling.",
+    "For SpMM, we select TACO-generated operator, cuSPARSE 11.6, and dgSPARSE 0.1 as baselines.",
+    "TACO [40] is an open-source sparse tensor compiler.",
+    "For SDDMM, we select TACOgenerated operator, cuSPARSE 11.6, dgSPARSE 0.1 and DGL 0.8.2\u2019s implementation as baselines.",
+    "TACO [21, 53, 54] proposes sparse format abstractions and a merge lattices-based code generation routine."
+   ],
+   "cited_by": 85
+  },
+  {
+   "title": "Sparsity-Specific Code Optimization using Expression Trees",
+   "year": 2022,
+   "doi": "10.1145/3520484",
+   "openalex": "W3209648960",
+   "s2": "f51470a9ea72c0872db2c904bb4865777c7af6d6",
+   "venue": "ACM Transactions on Graphics",
+   "authors": [
+    "Philipp Herholz",
+    "Xuan Tang",
+    "Teseo Schneider",
+    "Shoaib Kamil",
+    "Daniele Panozzo",
+    "Olga Sorkine\u2010Hornung"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 12
+  },
+  {
+   "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture",
+   "year": 2022,
+   "doi": "10.48550/arxiv.2211.03251",
+   "openalex": null,
+   "s2": "9f7a965d794e39a507b6b39b89b47747536ae083",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Olivia Hsu",
+    "Alexander Rucker",
+    "Tian Zhao",
+    "K. Olukotun",
+    "Fredrik Kjolstad"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "When combined with prior work on TACO formats [8, 18] and scheduling constructs [17, 31], they let end users reshape computation to expose sub-expressions that can be mapped to domain-specific accelerator patterns.",
+    ", 2019 [17] Tensor Algebra Expression Formatting Language Chou et al.",
+    "Sparse algorithms are expressed in CIN (see Figure 2), which encodes iteration, computation, transformations, and temporary tensors [17].",
+    "Scheduling commands from TACO along with their CIN transformation [17, 18, 31]."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "TileSpGEMM",
+   "year": 2022,
+   "doi": "10.1145/3503221.3508431",
+   "openalex": "W4220912491",
+   "s2": "ca7617712701e1927e0d698bb88e54df75bcb1f2",
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": [
+    "Yuyao Niu",
+    "Zhengyang Lu",
+    "Haonan Ji",
+    "Shuhui Song",
+    "Zhou Jin",
+    "Weifeng Liu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Moreover, compilation techniques have been proven effective for a few important sparse computations [30, 69, 70, 73, 91, 98]."
+   ],
+   "cited_by": 63
+  },
+  {
+   "title": "A High Performance Sparse Tensor Algebra Compiler in MLIR",
+   "year": 2021,
+   "doi": "10.1109/llvmhpc54804.2021.00009",
+   "openalex": "W4200390336",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Ruiqin Tian",
+    "Luanzheng Guo",
+    "Jiajia Li",
+    "Bin Ren",
+    "G\u00f6k\u00e7en Kestor"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 33
+  },
+  {
+   "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR",
+   "year": 2021,
+   "doi": null,
+   "openalex": null,
+   "s2": "5dcc03e71270042560e004d8a12380e325503589",
+   "venue": "arXiv.org",
+   "authors": [
+    "Ruiqin Tian",
+    "Luanzheng Guo",
+    "Jiajia Li",
+    "Bin Ren",
+    "Gokcen Kestor"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "\u2026for asynchronous task execution based on LLVM co-routines Compared to hand-tuned libraries [12, 40, 41, 50, 62, 73] and source-to-source compilers [31\u201333], our approach is more portable, flexible, and adaptable, as emerging architectures and storage formats can be added without re-engineering the\u2026",
+    "Kjolstad et al. [31, 33] reorder loops of tensor algebra computations to improve the data locality."
+   ],
+   "cited_by": 20
+  },
+  {
+   "title": "An Asymptotic Cost Model for Autoscheduling Sparse Tensor Programs",
+   "year": 2021,
+   "doi": null,
+   "openalex": null,
+   "s2": "9280465db68b2f2f0c71f1a0faa3a1bebd88300f",
+   "venue": "arXiv.org",
+   "authors": [
+    "Peter Ahrens",
+    "Fredrik Kjolstad",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "As an example, consider TACO, a recently popular sparse tensor compiler that has inspired several lines of inquiry due to it\u2019s simplified abstractions for sparse compilation [17, 18].",
+    "In order to make our descriptions of sparse tensor algebra implementations more precise, we introduce the protocolized concrete index notation, an extension to the concrete index notation of [17].",
+    "The following paragraph summarizes concrete index notation, described more formally in [17]."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Compilation of sparse array programming models",
+   "year": 2021,
+   "doi": "10.1145/3485505",
+   "openalex": "W3207857196",
+   "s2": "655d93c3567ecdd121c139655d8b39a3a2974706",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Rawn Henry",
+    "Olivia Hsu",
+    "Rohan Yadav",
+    "Stephen Y. Chou",
+    "Kunle Olukotun",
+    "Saman Amarasinghe",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Most directly related to our work is the body of work on the Sparse Tensor Algebra Compiler (TACO) [Chou et al. 2018, 2020; Kjolstad et al. 2019; Kjolstad et al. 2017; Senanayake et al. 2020]."
+   ],
+   "cited_by": 26
+  },
+  {
+   "title": "DNNFusion: accelerating deep neural networks execution with advanced operator fusion",
+   "year": 2021,
+   "doi": "10.1145/3453483.3454083",
+   "openalex": "W3174529902",
+   "s2": "2b2056bf5763e32811a69769fa8c223160125f9e",
+   "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+   "authors": [
+    "Wei Niu",
+    "Jiexiong Guan",
+    "Yanzhi Wang",
+    "Gagan Agrawal",
+    "Bin Ren"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Similarly, another promising direction will be to integrate DNNFusion into other compilation-based DNN frameworks [25, 45] or other popular general tensor/matrix/linear algebra computation frameworks, such as MLIR [40], Tiramisu [4], TACO [33, 34], Halide [56], and LGen [38, 64]."
+   ],
+   "cited_by": 160
+  },
+  {
+   "title": "Dynamic Sparse Tensor Algebra Compilation",
+   "year": 2021,
+   "doi": null,
+   "openalex": null,
+   "s2": "b7f96e73ca78b8c0b542f0f3119c37b7aeb2eb50",
+   "venue": "arXiv.org",
+   "authors": [
+    "Stephen Chou",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "We implement our technique as a prototype extension to the TACO sparse tensor algebra compiler and find it generates efficient sparse tensor algebra kernels that compute on blist_head* aret; bool afirst = true; uint8_t bstate = iter_bst(0, ..., ib, bval); int32_t pc = c_pos[0]; while (bstate != 0 && pc < c_pos[1] operands stored in dynamic tensor formats.",
+    "However, existing sparse linear and tensor algebra compilers like TACO [11, 12, 21, 22] cannot readily, if at all, generate code to efficiently compute on tensors stored in disparate dynamic tensor formats.",
+    "We further compare code that our technique emits for computing on dynamic sparse tensors against code that TACO (without our extension) emits for computing on static sparse tensors.",
+    "This lets TACO\u2019s code generator emit code to compute with tensors in specific formats by inlining the aforementioned code snippets into the generated loops.",
+    "However, TACO cannot generate code to compute with dynamic sparse tensors that are stored in pointer-based formats, since the sparse tensor format abstraction of Chou et al. [11] cannot represent those data structures.",
+    "TACO [11, 12, 21, 22] emits efficient sparse tensor algebra kernels that compute with static sparse tensors stored in a wide range of array-based formats like CSR and DIA [42].",
+    "Our technique builds on the techniques of Kjolstad et al. [21, 22] and Chou et al. [11], which are implemented in the TACO sparse tensor algebra compiler.",
+    "TACO\u2019s code generator takes as input a tensor algebra computation expressed in concrete index notation , which specifies how each entry in the output tensor should be computed in terms of entries in the input tensors.",
+    "To generate code that compute with sparse tensors stored in specific formats though, TACO additionally requires the user to specify the format of each input and output tensor.",
+    "We have implemented our technique as a prototype extension to the TACO sparse tensor algebra compiler."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "FCNNLib: A Flexible Convolution Algorithm Library for Deep Learning on FPGAs",
+   "year": 2021,
+   "doi": "10.1109/tcad.2021.3108065",
+   "openalex": "W3217077065",
+   "s2": null,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": [
+    "Yun Liang",
+    "Qingcheng Xiao",
+    "Liqiang Lu",
+    "Jiaming Xie"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 18
+  },
+  {
+   "title": "Gamma: leveraging Gustavson\u2019s algorithm to accelerate sparse matrix multiplication",
+   "year": 2021,
+   "doi": "10.1145/3445814.3446702",
+   "openalex": "W3155922894",
+   "s2": "ea76c776b3cd3ad448572999ad3b4323abe47453",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Guowei Zhang",
+    "Nithya Attaluri",
+    "Joel Emer",
+    "Daniel S\u00e1nchez"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    ", using sparse accumulators [15, 28], bitmaps [24], unordered associative containers [33, 34, 36], trees [47], or heaps [1] to hold outputs.",
+    "Forinstance,TACO[28,29]introducesworksp-aces and proposes compiler machinery to handle complex tensor operations.",
+    "For instance, TACO [28, 29] introducesworkspaces and proposes compiler machinery to handle complex tensor operations."
+   ],
+   "cited_by": 154
+  },
+  {
+   "title": "NDS: N-Dimensional Storage",
+   "year": 2021,
+   "doi": "10.1145/3466752.3480122",
+   "openalex": null,
+   "s2": "322aba4a17a7947b1511d87ac30d31793908beeb",
+   "venue": "Micro",
+   "authors": [
+    "Yu-Chia Liu",
+    "Hung-Wei Tseng"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "erators [24, 44, 52, 79], and accelerators [2, 28, 30, 34, 49, 66, 69, 80, 81, 98, 100, 101]."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Reconfigurable Low-latency Memory System for Sparse Matricized Tensor Times Khatri-Rao Product on FPGA",
+   "year": 2021,
+   "doi": "10.1109/hpec49654.2021.9622851",
+   "openalex": "W3200075413",
+   "s2": "e3dea8151f6f07fc99b7a84d9296704e29b12538",
+   "venue": "IEEE Conference on High Performance Extreme Computing",
+   "authors": [
+    "Sasindu Wijeratne",
+    "Rajgopal Kannan",
+    "Viktor K. Prasanna"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "This paper follows the definitions and symbols used in Tensor Algebra Compiler (TACO) [18]."
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "A sparse iteration space transformation framework for sparse tensor algebra",
+   "year": 2020,
+   "doi": "10.1145/3428226",
+   "openalex": "W3108012228",
+   "s2": "9734b213e134675187ba569c77276004d8cb3f7c",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Ryan Senanayake",
+    "Changwan Hong",
+    "Ziheng Wang",
+    "Amalee Wilson",
+    "Stephen Y. Chou",
+    "Shoaib Kamil",
+    "Saman Amarasinghe",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Collapse and split are affine functions and therefore bijective, reorder and parallelize only change the order of iteration without modifying the iteration space, and the correctness of the precompute transformation is given in [Kjolstad et al. 2019].",
+    "The second strategy separates the loop into worker and reduction loops that communicate through a workspace [Kjolstad et al. 2019] (e.g., a dense vector stored as a dense array).",
+    "2020], potentially facilitated by the precompute transformations [Kjolstad et al. 2019]",
+    "The second strategy separates the loop into worker and reduction loops that communicate through a workspace [Kjolstad et al. 2019] (e."
+   ],
+   "cited_by": 53
+  },
+  {
+   "title": "Automatic Optimization of Sparse Tensor Algebra Programs",
+   "year": 2020,
+   "doi": null,
+   "openalex": null,
+   "s2": "c8e78fb55d8142a0f0ccb5a41f2a24baed495e5a",
+   "venue": null,
+   "authors": [
+    "Ziheng Wang",
+    "S. Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "I refer the unfamiliar reader to the multiple TACO publications for more information [10, 9, 7]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Automatic generation of efficient sparse tensor format conversion routines",
+   "year": 2020,
+   "doi": "10.1145/3385412.3385963",
+   "openalex": "W2999521721",
+   "s2": "eab59d00a0d7dbf4ca13351e14eb14dae269af82",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Stephen Y. Chou",
+    "Fredrik Kj\u00f8lstad",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    " is equivalent to converting matrices from CSR to CSC. Existing sparse tensor and linear algebra compilers cannot generate efficient code to convert tensors between arbitrary, disparate formats. taco [14, 24, 25] can emit code to convert tensors between formats that store nonzeros in lexicographic coordinate order, but cannot generate complete conversion routines for structured formats like DIA and ELL. taco ",
+    "omputes an attribute query, our technique reformulates the query as sparse tensor algebra computation. The query is first lowered to a canonical form expressed in a variant of concrete index notation [24], which is a language for specifying tensor operations. The canonical form of the query then subsequently optimized by applying a set of transformations we define that simplify the computation. Finall",
+    "s. 1.2 Contributions We propose a technique to generate efficient sparse tensor conversion routines for a wide range of disparate formats, building on recent work on sparse tensor algebra compilation [14, 24, 25]. We decompose a large class of tensor conversion algorithms into three logical phases (Section 3). Then,tofacilitategeneratingcodeforeachphase,wedevelop coordinate remapping notation that precisely d"
+   ],
+   "cited_by": 26
+  },
+  {
+   "title": "Cortex: A Compiler for Recursive Deep Learning Models",
+   "year": 2020,
+   "doi": null,
+   "openalex": null,
+   "s2": "acf31788fa545f5f0467289b16188f2c6cfa8c44",
+   "venue": "Conference on Machine Learning and Systems",
+   "authors": [
+    "Pratik Fegade",
+    "Tianqi Chen",
+    "Phillip B. Gibbons",
+    "T. Mowry"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "result",
+    "methodology"
+   ],
+   "contexts": [
+    "1) is similar to the concept of workspaces for Taco introduced in (Kjolstad et al., 2019).",
+    "For example, the idea of dense layouts for intermediate tensors (\u00a75.1) is similar to the concept of workspaces for Taco introduced in (Kjolstad et al., 2019)."
+   ],
+   "cited_by": 32
+  },
+  {
+   "title": "Distributed-Memory DMRG via Sparse and Dense Parallel Tensor Contractions",
+   "year": 2020,
+   "doi": "10.1109/sc41405.2020.00028",
+   "openalex": "W3132553051",
+   "s2": "46699a7f82877228212d3990e655448d05500c61",
+   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": [
+    "Ryan Levy",
+    "Edgar Solomonik",
+    "Bryan K. Clark"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 11
+  },
+  {
+   "title": "EGGS: Sparsity\u2010Specific Code Generation",
+   "year": 2020,
+   "doi": "10.1111/cgf.14080",
+   "openalex": null,
+   "s2": "b978d4bc4cd0da22ff365c5291493e9f679f34e6",
+   "venue": "Computer graphics forum (Print)",
+   "authors": [
+    "Xuan Tang",
+    "T. Schneider",
+    "Shoaib Kamil",
+    "Aurojit Panda",
+    "Jinyang Li",
+    "Daniele Panozzo"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The Tensor Algebra Compiler project (taco), aims to build a compiler for dense and sparse linear and tensor algebra that supports a large variety of sparse and dense data structures [KKC \u2217 17, KAKA19,CKA18]."
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "Effective Loop Fusion in Polyhedral Compilation Using Fusion Conflict Graphs",
+   "year": 2020,
+   "doi": "10.1145/3416510",
+   "openalex": "W3091055609",
+   "s2": null,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Aravind Acharya",
+    "Uday Bondhugula",
+    "Albert Cohen"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 14
+  },
+  {
+   "title": "Multi-layer optimizations for end-to-end data analytics",
+   "year": 2020,
+   "doi": "10.1145/3368826.3377923",
+   "openalex": "W3008198205",
+   "s2": "b063474ee3b54116f142910850da193854a0a397",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Amir Shaikhha",
+    "Maximilian Schleich",
+    "Alexandru Ghi\u0163\u0103",
+    "Dan Olteanu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "putisaCfunction that includes intrinsics to enable SIMD vector extensions. TACO [30] generates efficient low-level code for compound linear algebra operations on dense and sparse matrices. Workspaces [29] further improve the performance of the generated kernels by increasing sharing, and enabling optimizations such as loop-invariant code motion. It has similarities to our static memoization optimizati"
+   ],
+   "cited_by": 13
+  },
+  {
+   "title": "Polyhedral+Dataflow Graphs",
+   "year": 2020,
+   "doi": "10.18122/td/1654/boisestate",
+   "openalex": "W2948835667",
+   "s2": "355bbe9f22203e944265008ae77a1b4920e41d66",
+   "venue": null,
+   "authors": [
+    "Eddie C. Davis"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The temporary workspaces used in the CPD benchmark in Chapter 6 are similar in purpose to TACO workspaces [164]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "A Unified Iteration Space Transformation Framework for Sparse and Dense Tensor Algebra",
+   "year": 2019,
+   "doi": null,
+   "openalex": null,
+   "s2": "d3b08034d1c17776c698d680f9547d3c5f0bdf84",
+   "venue": "arXiv.org",
+   "authors": [
+    "Ryan Senanayake",
+    "Fredrik Kjolstad",
+    "Changwan Hong",
+    "Shoaib Kamil",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Most recently, the TACO compiler generalizes sparse and dense tensor operations in a variety of formats, automatically generating code for any computation [10, 17, 18].",
+    "The precompute transformation is described in prior work [17], but composes with our set of transformations to allow us to leverage scratchpad memories and reorder computations to increase locality.",
+    "A second strategy is to separate the loop into worker and a reduction loops that communicate through a workspace [17] (e.",
+    "There has been a lot of interest in compilers for dense [3, 24, 29, 36, 40] and sparse [10, 17, 18] linear and tensor algebra."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Distributed-memory tensor completion for generalized loss functions in python using new sparse tensor kernels",
+   "year": 2019,
+   "doi": "10.1016/j.jpdc.2022.07.005",
+   "openalex": null,
+   "s2": "33b427c88a71382e1521bfda860a794b84b63d93",
+   "venue": "J. Parallel Distributed Comput.",
+   "authors": [
+    "Navjot Singh",
+    "Zecheng Zhang",
+    "Xiaoxia Wu",
+    "Naijing Zhang",
+    "Siyuan Zhang",
+    "Edgar Solomonik"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "In recent work, TACO has been improved to factorize longer tensor algebra expressions and their subcomponents into subsequences [38], the former being a user-guided version of the automated factorization in Cyclops."
+   ],
+   "cited_by": 11
+  },
+  {
+   "title": "Enabling Distributed-Memory Tensor Completion in Python using New Sparse Tensor Kernels",
+   "year": 2019,
+   "doi": null,
+   "openalex": null,
+   "s2": "33fa89d13bba9accac55a474feec0943f6bdfba9",
+   "venue": "arXiv.org",
+   "authors": [
+    "Zecheng Zhang",
+    "Sissi Xiaoxiao Wu",
+    "Naijing Zhang",
+    "Siyuan Zhang",
+    "Edgar Solomonik"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "In recent work, TACO has been improved to factorize longer tensor algebra expressions and their subcomponents into subsequences [29], the former being a user-guided version of the automated factorization in Cyclops."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Toward generalized tensor algebra for ab initio quantum chemistry methods",
+   "year": 2019,
+   "doi": "10.1145/3315454.3329958",
+   "openalex": null,
+   "s2": "bcac45a4bafcf175356d95a8e51ccfe73a02bcb9",
+   "venue": "ARRAY@PLDI",
+   "authors": [
+    "Erdal Mutlu",
+    "K. Kowalski",
+    "S. Krishnamoorthy"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "In a later work [8], they also introduced workspaces as temporary tensors to avoid inefficient data accesses to sparse tensor data."
+   ],
+   "cited_by": 18
+  },
+  {
+   "title": "Interactive Compiler Scheduling with Strong Guarantees",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "ec0a35e90672141b418ec50ea1b7a9c60ad3e253",
+   "venue": null,
+   "authors": [
+    "Evan Williams",
+    "Justin P. Lubin",
+    "Rubens Lacouture",
+    "Olivia Hsu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Scheduling languages are a way to design and program domain-specific accelerators and their compilers [7, 14, 24, 25] by letting users explicitly optimize performance around key hardware constructs through, e.g. , tiling, memory hierarchy management, and data pinning [5, 10, 12, 16, 20]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Portable Dynamic Tiling for Sparse Tensor Accelerators",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "5abe2f8575fd927572049f45764a3a51d59eb641",
+   "venue": null,
+   "authors": [
+    "Sai Gautham Ravipati",
+    "Fredrik Kjolstad",
+    "Olivia Hsu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Prior work [2, 3, 10, 13] on sparse tensor orchestration partly addresses the first challenge, but relies on static tiling, which produces unevenly populated tiles for sparse data."
+   ],
+   "cited_by": 0
+  }
+ ]
 }

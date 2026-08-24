@@ -170,8 +170,9 @@ class Fetcher:
 
 # -------------------------------------------------------------------- sources
 
-OPENALEX_SELECT = "id,doi,title,publication_year,primary_location,authorships"
-S2_FIELDS = "title,year,externalIds,venue,authors,isInfluential,intents,contexts"
+OPENALEX_SELECT = "id,doi,title,publication_year,primary_location,authorships,cited_by_count"
+S2_FIELDS = ("title,year,externalIds,venue,authors,isInfluential,intents,"
+             "contexts,citationCount")
 
 
 def openalex_citing(fetch, work_id, verbose=False):
@@ -223,6 +224,7 @@ def openalex_record(item):
         "isInfluential": None,
         "intents": None,
         "contexts": None,
+        "cited_by": item.get("cited_by_count"),
     }
 
 
@@ -269,6 +271,7 @@ def s2_record(edge):
         "isInfluential": edge.get("isInfluential"),
         "intents": edge.get("intents") or [],
         "contexts": edge.get("contexts") or [],
+        "cited_by": cp.get("citationCount"),
     }
 
 
@@ -292,6 +295,8 @@ def merge(oa_list, s2_list):
                 target["venue"] = rec.get("venue")
             if not target.get("authors"):
                 target["authors"] = rec.get("authors")
+            if target.get("cited_by") is None:  # OpenAlex figure preferred
+                target["cited_by"] = rec.get("cited_by")
         else:
             merged.append(rec)
             if doi:

@@ -120,6 +120,8 @@ def build_paper(key, tax_rows, citing_list):
         e = {"title": r.get("title") or c.get("title") or "Untitled",
              "function": r["function"],
              "split": split_of(r["function"])}
+        cb = [c2.get("cited_by") for _, c2 in sibs if c2.get("cited_by") is not None]
+        e["cited_by"] = max(cb) if cb else None
         if r.get("year") or c.get("year"):
             e["year"] = r.get("year") or c.get("year")
         for src, dst in ((c.get("venue"), "venue"),

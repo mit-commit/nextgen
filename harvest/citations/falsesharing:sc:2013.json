@@ -1,877 +1,922 @@
 {
-  "counts": {
-    "openalex": 31,
-    "s2": 37
+ "counts": {
+  "openalex": 31,
+  "s2": 37
+ },
+ "citing": [
+  {
+   "title": "A Multi-Tiered Autotuner for Portable Heterogeneous-Compute Interfaces",
+   "year": 2025,
+   "doi": "10.1109/compsac65507.2025.00018",
+   "openalex": "W4413679266",
+   "s2": "8c8cdef8cbcc5041b8a096600d064f13829bb3c6",
+   "venue": "Annual International Computer Software and Applications Conference",
+   "authors": [
+    "Shahriar Ahmed Zisan",
+    "Mohammad Nooruddin",
+    "Apan Qasem"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "\u2026including predicting compiler optimization sequences and parameters [22], accurate program characterization [23], [24], predicting optimal runtime configurations [25], [26], selecting suitable data structures [27], identifying performance bottlenecks [28], and system energy management [29]."
+   ],
+   "cited_by": 0
   },
-  "citing": [
-    {
-      "title": "A Multi-Tiered Autotuner for Portable Heterogeneous-Compute Interfaces",
-      "year": 2025,
-      "doi": "10.1109/compsac65507.2025.00018",
-      "openalex": "W4413679266",
-      "s2": "8c8cdef8cbcc5041b8a096600d064f13829bb3c6",
-      "venue": "Annual International Computer Software and Applications Conference",
-      "authors": [
-        "Shahriar Ahmed Zisan",
-        "Mohammad Nooruddin",
-        "Apan Qasem"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "…including predicting compiler optimization sequences and parameters [22], accurate program characterization [23], [24], predicting optimal runtime configurations [25], [26], selecting suitable data structures [27], identifying performance bottlenecks [28], and system energy management [29]."
-      ]
-    },
-    {
-      "title": "Leveraging Cache Coherence to Detect and Repair False Sharing On-the-fly",
-      "year": 2024,
-      "doi": "10.1109/micro61859.2024.00066",
-      "openalex": "W4404954568",
-      "s2": "aa6bc1a32e5b13b4547e435d599f52168ff06d96",
-      "venue": "Micro",
-      "authors": [
-        "V. J. Patel",
-        "Swarnendu Biswas",
-        "Mainak Chaudhuri"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "However, such memory allocators cannot prevent false sharing within a heap object or those caused by thread contentions due to poor programming or thread scheduling [37].",
-        "Detecting False Sharing: Much prior work has focused on only detecting instances of false sharing by using static analysis [38], dynamic instrumentation [8], [33], [39], runtime monitoring [4], [40], machine learning techniques [37], and simulation with architectural extensions [5].",
-        "…to the application source and the software development process [8], [10], rely on fundamental changes to the core cache organization [6], [34], introduce complex speculation in coherence protocols [35], or can only detect false sharing but cannot repair on-the-ﬂy [5], [7], [8], [32], [36], [37].",
-        "Many recent techniques rely on accurate tracking of hardware performance counters (e.g., Intel HITM) to identify remote cache hits and use that to detect false sharing [7]–[9], [12], [30]–[32], [37]."
-      ]
-    },
-    {
-      "title": "CachePerf",
-      "year": 2022,
-      "doi": "10.1145/3489048.3526954",
-      "openalex": "W4220898986",
-      "s2": "68422c14d321030937ce5186eb1bd4d08eb6a145",
-      "venue": "Measurement and Modeling of Computer Systems",
-      "authors": [
-        "Jin Zhou",
-        "Steven Tang",
-        "Hanmei Yang",
-        "Tongping Liu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "propose a machine learning approach based on the sampled events [20], Laser utilizes a special type of events (hit-Modified) that may not be available on all hardware [39], while Feather utilizes the combination of the PMU-sampling and watchpoints to identify false sharing [6]; however, all existing tools typically report an absolute number to evaluate the seriousness of false sharing, which may report insignificant issues.",
-        "Some tools are relying on binary instrumentation [58], compiler-based instrumentation [34], process-based page protection [32], and the PMUbased sampling [6, 8, 20, 25, 33, 39]."
-      ]
-    },
-    {
-      "title": "Optimal Launch Bound Selection in CPU-GPU Hybrid Graph Applications with Deep Learning",
-      "year": 2022,
-      "doi": "10.1109/igsc55832.2022.9969364",
-      "openalex": "W4311224176",
-      "s2": "ad7c8f814e480047335b1fb17e27d3226d424411",
-      "venue": "International Green and Sustainable Computing Conference",
-      "authors": [
-        "Md Erfanul Haque Rafi",
-        "Apan Qasem"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Constructing sample instances by-hand [21] did not scale and generating instances from a speciﬁc benchmark suite [14] created training sets that were too small."
-      ]
-    },
-    {
-      "title": "Raptor: Mitigating CPU-GPU False Sharing Under Unified Memory Systems",
-      "year": 2022,
-      "doi": "10.1109/igsc55832.2022.9969376",
-      "openalex": "W4311306056",
-      "s2": "076cb06447c577415628fcd9455d939cb0ae901c",
-      "venue": "International Green and Sustainable Computing Conference",
-      "authors": [
-        "Md Erfanul Haque Rafi",
-        "Kaylee Williams",
-        "Apan Qasem"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Jayasena et al. train a supervised classifier that maps performance events to FS instances [26].",
-        "To reduce the high overhead incurred by these approaches, researchers proposed methods that take advantage of OS features and event-based sampling of PMUs to track memory accesses [25], [26], [12], [13], [14], [15]."
-      ]
-    },
-    {
-      "title": "HPC Ontology: Towards a Unified Ontology for Managing Training Datasets and AI Models for High-Performance Computing",
-      "year": 2021,
-      "doi": "10.1109/mlhpc54614.2021.00012",
-      "openalex": "W4200570984",
-      "s2": "4bf09e53bbfec974c9a1fc33f3279db296b8a07a",
-      "venue": "Workshop on Machine Learning in High Performance Computing Environments",
-      "authors": [
-        "Chunhua Liao",
-        "Pei‐Hung Lin",
-        "Gaurav Verma",
-        "Tristan Vanderbruggen",
-        "Murali Emani",
-        "Zifan Nan",
-        "Xipeng Shen"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Performance profilers and debugging tools for openMP applications",
-      "year": 2021,
-      "doi": "10.7282/t3-0edj-bf23",
-      "openalex": "W3197625063",
-      "s2": "dd763c6e5748f3d4e7d65714b7c0d7672f6080ce",
-      "venue": "Rutgers University Community Repository (Rutgers University)",
-      "authors": [
-        "Nader Boushehrinejad Moradi"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "How Are Performance Issues Caused and Resolved?-An Empirical Study from a Design Perspective",
-      "year": 2020,
-      "doi": "10.1145/3358960.3379130",
-      "openalex": null,
-      "s2": "f01c31740faaa931f5e53b0ef0fdf6223541ca20",
-      "venue": "International Conference on Performance Engineering",
-      "authors": [
-        "Yutong Zhao",
-        "Lu Xiao",
-        "Xiao Wang",
-        "Lei Sun",
-        "Bihuan Chen",
-        "Yang Liu",
-        "A. Bondi"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Reliable and Efficient Multithreading",
-      "year": 2020,
-      "doi": "10.7275/a5kn-p527",
-      "openalex": "W105318627",
-      "s2": null,
-      "venue": "Scholarworks (University of Massachusetts Amherst)",
-      "authors": [
-        "Tongping Liu"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Huron: hybrid false sharing detection and repair",
-      "year": 2019,
-      "doi": "10.1145/3314221.3314644",
-      "openalex": "W2955400013",
-      "s2": "c98bcc228b1a68c26cd5fa635530a81b4eee890d",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Tanvir Ahmed Khan",
-        "Yifan Zhao",
-        "Gilles Pokam",
-        "Barzan Mozafari",
-        "Baris Kasikci"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "In order to reduce the runtime overhead, many techniques [9, 21, 25, 28, 31, 32, 48, 52, 54, 56, 59, 62] rely on performance counter values that are correlated with false sharing (i.e, Intel HITM [18]).",
-        "Another technique uses machine learning on hardware event counts [32] to detect false sharing."
-      ]
-    },
-    {
-      "title": "Parallelism-centric what-if and differential analyses",
-      "year": 2019,
-      "doi": "10.1145/3314221.3314621",
-      "openalex": null,
-      "s2": "2b8075683596060aa6fa36d4029f5d74a6b1bc07",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Adarsh Yoga",
-        "Santosh Nagarakatte"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "They include tools to detect cache contention [8, 10, 21, 31, 36, 37, 44, 49, 65, 74], identify data locality issues [38ś40, 42], and find bottlenecks due to NUMA [41, 46]."
-      ]
-    },
-    {
-      "title": "PerfMemPlus: A Tool for Automatic Discovery of Memory Performance Problems",
-      "year": 2019,
-      "doi": "10.1007/978-3-030-20656-7_11",
-      "openalex": "W2949045089",
-      "s2": "25c6be12455348b0fcae9df02b72210ae492c9c5",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Christian Helm",
-        "Kenjiro Taura"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Using Differential Execution Analysis to Identify Thread Interference",
-      "year": 2019,
-      "doi": "10.1109/tpds.2019.2927481",
-      "openalex": "W2961994263",
-      "s2": "aca8e323135ac49689ebe14d1de74db56e0a47b8",
-      "venue": "IEEE Transactions on Parallel and Distributed Systems",
-      "authors": [
-        "Mohamed Saïd Mosli Bouksiaa",
-        "François Trahay",
-        "Alexis Lescouet",
-        "Gauthier Voron",
-        "Rémi Dulong",
-        "Amina Guermouche",
-        "Élisabeth Brunet",
-        "Gaël Thomas"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Collecting hardware counters has been extensively used for detecting cache contention [2], [4], [43], [44], [45], [46], NUMA effects [47], or false sharing [48]."
-      ]
-    },
-    {
-      "title": "Featherlight on-the-fly false-sharing detection",
-      "year": 2018,
-      "doi": "10.1145/3178487.3178499",
-      "openalex": "W2787541352",
-      "s2": "0d2d7f103a7c3a97e6e481d30b74c9dd6124fa85",
-      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-      "authors": [
-        "Milind Chabbi",
-        "Shasha Wen",
-        "Xu Liu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Parallel computing community [15, 25, 26, 31, 32, 34, 35, 44, 48, 59, 60] has made concerted efforts to build tools to detect false sharing.",
-        "Jayasena et al. [26] use machine learning to derive the potential patterns of false sharing by monitoring cache misses, TLB events, interactions among cores, and resources stalls."
-      ]
-    },
-    {
-      "title": "Featherlight on-the-fly false-sharing detection",
-      "year": 2018,
-      "doi": "10.1145/3200691.3178499",
-      "openalex": "W2999810048",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Milind Chabbi",
-        "Shasha Wen",
-        "Xu Liu"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Performance variation considered helpful. (Les variations de performance considérées utiles)",
-      "year": 2018,
-      "doi": "10.70675/e517200bz33abz439eza194za64d05e9405b",
-      "openalex": null,
-      "s2": "15af242fcc9ad3cfbc1946d42702079c580a03a6",
-      "venue": null,
-      "authors": [
-        "Mohamed Said Mosli Bouksiaa"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Sheriff [44] false sharing memory object # invalidations Plastic [45] false sharing Memory word Jayasena [48] et al false sharing -",
-        "A Machine Learning approach: Jayasena et al [48] take a peculiar approach to false sharing detection."
-      ]
-    },
-    {
-      "title": "A Machine Learning Approach to Automatic Creation of Architecture-Sensitive Performance Heuristics",
-      "year": 2017,
-      "doi": "10.1109/hpcc-smartcity-dss.2017.3",
-      "openalex": "W2786726542",
-      "s2": "3f494abb49c43a6a392e72ccbed2ac6ac216ba42",
-      "venue": "2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)",
-      "authors": [
-        "Biplab Kumar Saha",
-        "Tiffany A. Connors",
-        "Saami Rahman",
-        "Apan Qasem"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Many have resorted to hand-picking them [18], while some have employed statistical methods to select events that vary most across different program executions [11], [17].",
-        "Many variants of popular ML techniques have been successfully applied to different branches of HPC in performance optimization through code changes [3], [18], predicting optimal build configurations [12], runtime configurations [6], [14], identifying performance bottlenecks [10], [11] and recently, also in efficient energy management [2], [8]."
-      ]
-    },
-    {
-      "title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions",
-      "year": 2017,
-      "doi": "10.48550/arxiv.1709.07536",
-      "openalex": "W2947703459",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Mejbah Alam",
-        "Justin Gottschlich",
-        "Nesime Tatbul",
-        "Javier S. Turek",
-        "Timothy G. Mattson",
-        "A. A. M. Muzahid"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions",
-      "year": 2017,
-      "doi": null,
-      "openalex": null,
-      "s2": "683e0cf68992fdf7d5c95c1e84178f63a82f7fdb",
-      "venue": "Neural Information Processing Systems",
-      "authors": [
-        "Mejbah Alam",
-        "Justin Emile Gottschlich",
-        "Nesime Tatbul",
-        "Javier Turek",
-        "T. Mattson",
-        "Abdullah Muzahid"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology",
-        "result"
-      ],
-      "contexts": [
-        ", rule-based or supervised learning approaches [46, 16, 23, 27]).",
-        "[27] and UBL [17], (ii) analyze our clustering approach, and (iii) quantify profiling and training overheads.",
-        "Moreover, [27] uses a fixed ratio of various counters and therefore, cannot detect all anomalous runs in 6 programs and reports false positive runs for all 8 programs.",
-        ", false and/or true sharing cache contention [32, 34, 49, 27, 40, 18, 33], NUMA defects [35, 43, 48]).",
-        ", Bayesian networks [46, 16], Markov models [23], decision trees [27]).",
-        "With only 4% average profiling overhead, our tool can successfully detect three types of performance regressions common in parallel software (true sharing, false sharing, and NUMA latency), at consistently higher accuracy than two state-of-the-art approaches [17, 27].",
-        "Section 5 presents an experimental comparison of our approach against two of the above approaches [17, 27]."
-      ]
-    },
-    {
-      "title": "AutoCon: Regression Testing for Detecting Cache Contention Anomalies Using Autoencoder",
-      "year": 2017,
-      "doi": null,
-      "openalex": null,
-      "s2": "64ed3a3af683ddf2619173dda156e741c1fb277f",
-      "venue": "arXiv.org",
-      "authors": [
-        "Mohammad Mejbah Ul Alam",
-        "Justin Emile Gottschlich",
-        "Md. Mostofa Ali Patwary",
-        "S. Ahmad",
-        "Abdullah Muzahid"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "result",
-        "methodology",
-        "background"
-      ],
-      "contexts": [
-        "(6) We compared our work against a prior state-of-the-art cache contention detector [28] and showed that AutoCon can detect more anomalies.",
-        "Note that unlike the prior work [28], AutoCon does not need to know the anomalous contention level beforehand in order to detect cache contention anomalies.",
-        "We compared AutoCon with the state-of-the-art decision tree based false sharing detection approach [28]."
-      ]
-    },
-    {
-      "title": "AutoPerf: A Generalized Zero-Positive Learning System to Detect Software Performance Anomalies",
-      "year": 2017,
-      "doi": null,
-      "openalex": "W2775193917",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Mohammad Mejbah ul Alam",
-        "Justin Gottschlich",
-        "A. A. M. Muzahid"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "AutoPerf: A Generalized Zero-Positive Learning System to Detect Software Performance Anomalies",
-      "year": 2017,
-      "doi": null,
-      "openalex": null,
-      "s2": "fb6409e86fbd27f65b6fbbf7a448a1be958bd206",
-      "venue": null,
-      "authors": [
-        "Mohammad Mejbah Ul Alam",
-        "Justin Emile Gottschlich",
-        "Abdullah Muzahid"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "(7) We compare AutoPerf against a state-of-the-art approach [35] and show that it detects more anomalies.",
-        "It is important to note that unlike prior work [35], AutoPerf does not need examples of anomalous behaviors to detect them."
-      ]
-    },
-    {
-      "title": "Automatic Scaling of Cloud Applications via Transparently Elasticizing Virtual Memory",
-      "year": 2017,
-      "doi": null,
-      "openalex": null,
-      "s2": "59baad0f2935404e71f6555d592c957ba3422874",
-      "venue": null,
-      "authors": [
-        "Ehab Ababneh"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Automatically Selecting Profitable Thread Block Sizes for Accelerated Kernels",
-      "year": 2017,
-      "doi": "10.1109/hpcc-smartcity-dss.2017.58",
-      "openalex": "W2786865931",
-      "s2": "386cfe7eddabfb13c481dd5ebfdada1ad77c26cf",
-      "venue": "2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)",
-      "authors": [
-        "Tiffany A. Connors",
-        "Apan Qasem"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Many have resorted to hand-picking them [16] while some have employed statistical methods to select events that vary most across different program executions [11], [19].",
-        "Many variants of popular ML techniques have been successfully applied to different branches of HPC - in performance optimization through code changes [5] predicting optimal build configurations [12], runtime configurations [7], [13], identifying performance bottlenecks [10], [11] and recently, also in efficient energy management [4]"
-      ]
-    },
-    {
-      "title": "DR-BW: Identifying Bandwidth Contention in NUMA Architectures with Supervised Learning",
-      "year": 2017,
-      "doi": "10.1109/ipdps.2017.97",
-      "openalex": "W2731636953",
-      "s2": "dee62c826374fb94902ca15407872a29198ef102",
-      "venue": "IEEE International Parallel and Distributed Processing Symposium",
-      "authors": [
-        "Hao Xu",
-        "Shasha Wen",
-        "Alfredo Giménez",
-        "Todd Gamblin",
-        "Xu Liu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Sanath et al [13] use machine learning to detect false sharing and inefficient memory access."
-      ]
-    },
-    {
-      "title": "Identifying thread interference with performance variation",
-      "year": 2017,
-      "doi": null,
-      "openalex": null,
-      "s2": "d35d9d4fde7e3164147b27a013f1e2889ad35d5a",
-      "venue": null,
-      "authors": [
-        "Mohamed Said Mosli Bouksiaa",
-        "François Trahay",
-        "Alexis Lescouet",
-        "Gauthier Voron",
-        "Amina Guermouche",
-        "E. Brunet",
-        "Gaël Thomas"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "result"
-      ],
-      "contexts": [
-        "Apart from these studies, most of the other research projects focus on detecting one type of contention: memory contention (cache [10, 36, 48, 32, 45, 14, 15], NUMA effects [12, 25, 26], false-sharing [44, 22, 19, 50, 20, 29, 28, 34, 23, 27]), contention on the network [5, 9], or contention on locks [43, 49, 13, 4]."
-      ]
-    },
-    {
-      "title": "TMI",
-      "year": 2017,
-      "doi": "10.1145/3123939.3123947",
-      "openalex": "W2766440306",
-      "s2": "3f015b26d8b9a28c0a8bcee216830e7b568245db",
-      "venue": "Micro",
-      "authors": [
-        "Christian DeLozier",
-        "Ariel Eizenberg",
-        "Shiliang Hu",
-        "Gilles Pokam",
-        "Joseph Devietti"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "[16] uses machine learning to correlate performance counter results with false sharing, but uses non-PEBS counters and provides no repair mechanism."
-      ]
-    },
-    {
-      "title": "X 1 X 2 X 6 X 5 X 4 X 3 X ' 1 X ' 2 X ' 6 X ' 5 X ' 4 X ' 3 L 1 L 2 L 3 Encoder Decoder",
-      "year": 2017,
-      "doi": null,
-      "openalex": null,
-      "s2": null,
-      "venue": null,
-      "authors": [],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Cheetah: detecting false sharing efficiently and effectively",
-      "year": 2016,
-      "doi": "10.1145/2854038.2854039",
-      "openalex": "W2292155014",
-      "s2": "07f14998bd81048b73471934ca62295953361e65",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Tongping Liu",
-        "Xu Liu"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "First, most tools cannot distinguish true and false sharing, or require substantial manual effort to identify optimization opportunities [9, 12, 13, 16, 18, 24, 26, 30, 31].",
-        "cache invalidations) [16, 26, 30] (otherwise they experience a large quantity of false positives [12]); (2) they rely on manual annotation [26], experts’ expertise [12, 30], or multiple executions to locate the problem [30]; (3) they cannot provide sufficient information for optimization [12, 16, 26, 30].",
-        "use the machine learning approach to derive the potential pattern of false sharing bymonitoring cache misses, TLB events, interactions among cores, and resources stalls [16].",
-        "As prior work [16, 19, 20, 32], we perform experiments on two well-known benchmark suites: Phoenix [27] and PARSEC [3]."
-      ]
-    },
-    {
-      "title": "Dynamic error mitigation in NoCs using intelligent prediction techniques",
-      "year": 2016,
-      "doi": "10.1109/micro.2016.7783734",
-      "openalex": "W4230728285",
-      "s2": "5753fbcecfb32b068c803db122015620d1ca7398",
-      "venue": "Micro",
-      "authors": [
-        "Dominic DiTomaso",
-        "Travis Boraten",
-        "Avinash Kodi",
-        "Ahmed Louri"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Machine learning (ML) algorithms have been used in network/multi-core applications other than fault prediction for various applications such as network reconfiguration [32], [33], [34], detection of false memory sharing [35], management of voltage/frequncy/power network [36], [37], and prediction of congestion [38], [39]."
-      ]
-    },
-    {
-      "title": "Dynamic error mitigation in NoCs using intelligent prediction techniques",
-      "year": 2016,
-      "doi": "10.5555/3195638.3195675",
-      "openalex": "W2563863648",
-      "s2": null,
-      "venue": "International Symposium on Microarchitecture",
-      "authors": [
-        "Dominic DiTomaso",
-        "Travis Boraten",
-        "Avinash Kodi",
-        "Ahmed Louri"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "LASER: Light, Accurate Sharing dEtection and Repair",
-      "year": 2016,
-      "doi": "10.1109/hpca.2016.7446070",
-      "openalex": "W2333728936",
-      "s2": "fcb223fdb155adea67d8b8dbb80c14287bf5788e",
-      "venue": "International Symposium on High-Performance Computer Architecture",
-      "authors": [
-        "Liang Luo",
-        "Akshitha Sriraman",
-        "Brooke Fugate",
-        "Shiliang Hu",
-        "Gilles Pokam",
-        "Chris J. Newburn",
-        "Joseph Devietti"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "[16] collects performance event counts to identify programs that suffer from false sharing."
-      ]
-    },
-    {
-      "title": "Towards a Framework for Automating the Workflow for Building Machine Learning Based Performance Tuning",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "3e20d0963528598d89423e9d82a126826bd5014c",
-      "venue": null,
-      "authors": [
-        "B. Saha"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "AN EXPLORATION INTO THE EFFECTIVENESS OF PREFETCHING ON PROGRAM PERFORMANCE WITH THE HELP OF AN AUTOTUNING MODEL by",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "a4f0a101fec7923d5212835cad0d3e9c12d23d57",
-      "venue": null,
-      "authors": [
-        "S. Rahman",
-        "Martin Burtscher",
-        "Ziliang Zong",
-        "Nafisa Noor",
-        "Nahidul Akter"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "[33] have demonstrated effective use of a decision tree to prune performance events used as features in order to detect false sharing."
-      ]
-    },
-    {
-      "title": "An Exploration into the Effectiveness of Prefetching on Program Performance with the Help of an Autotuning Model",
-      "year": 2015,
-      "doi": null,
-      "openalex": "W2514270516",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Saami Rahman"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "An Exploration into the Effectiveness of Prefetching on Program Performance with the Help of an Autotuning Model",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "d787d1a6672261e96bc3e0aed8f676d35e02f493",
-      "venue": null,
-      "authors": [
-        "S. Rahman"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "False Sharing Detection in OpenMP Applications Using OMPT API",
-      "year": 2015,
-      "doi": "10.1007/978-3-319-24595-9_8",
-      "openalex": "W2295219273",
-      "s2": "f783627093eab4085afbd601a28ee36ef07a6440",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Millad Ghane",
-        "Abid M. Malik",
-        "Barbara Chapman",
-        "Ahmad Qawasmeh"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Maximizing Hardware Prefetch Effectiveness with Machine Learning",
-      "year": 2015,
-      "doi": "10.1109/hpcc-css-icess.2015.175",
-      "openalex": "W2180890913",
-      "s2": "59b0afb917493c4070f335bd87f55a172429195d",
-      "venue": "2015 IEEE 17th International Conference on High Performance Computing and Communications, 2015 IEEE 7th International Symposium on Cyberspace Safety and Security, and 2015 IEEE 12th International Conference on Embedded Software and Systems",
-      "authors": [
-        "Saami Rahman",
-        "Martin Burtscher",
-        "Ziliang Zong",
-        "Apan Qasem"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Counting events such as L2 cache misses and stalled CPU cycles provides quantiﬁed insight into a program’s behavior and has previously been employed to characterize programs [8], [9], [12], [13].",
-        "Jayasena et al. [8] demonstrated the effectiveness of a decision tree to prune performance events used as features for detecting false sharing."
-      ]
-    },
-    {
-      "title": "Reactive and Proactive Fault-Tolerant Network-on-Chip Architectures using Machine Learning",
-      "year": 2015,
-      "doi": null,
-      "openalex": "W2545007675",
-      "s2": null,
-      "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
-      "authors": [
-        "Dominic DiTomaso"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Reactive and Proactive Fault-Tolerant Network-on-Chip Architectures using Machine Learning",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "fe61daf58cb16a3c407c672e2be43b49d49e67af",
-      "venue": null,
-      "authors": [
-        "D. DiTomaso"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Resilient and Power-Efficient Multi-Function Channel Buffers in Network-on-Chip Architectures",
-      "year": 2015,
-      "doi": "10.1109/tc.2015.2401013",
-      "openalex": "W2044048499",
-      "s2": "7ef92915aed61978a11557393b68ad7bf1e061e3",
-      "venue": "IEEE Transactions on Computers",
-      "authors": [
-        "Dominic DiTomaso",
-        "Avinash Karanth",
-        "Ahmed Louri",
-        "Răzvan Bunescu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Machine learning algorithms have been used in network/CMP applications for various reasons such as optimizing wireless sensor topology [34], detection of false memory sharing [35], and management of network power"
-      ]
-    },
-    {
-      "title": "ScaAnalyzer",
-      "year": 2015,
-      "doi": "10.1145/2807591.2807648",
-      "openalex": "W2063364927",
-      "s2": "9c3857a69a7eec7777418627cfc87ad5e79572ca",
-      "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
-      "authors": [
-        "Xu Liu",
-        "Bo Wu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "To detect false sharing, existing tools [20, 12, 13] leverage sampling methods, via either software instrumentation or hardware PMU."
-      ]
-    },
-    {
-      "title": "PREDATOR",
-      "year": 2014,
-      "doi": "10.1145/2555243.2555244",
-      "openalex": "W2165734765",
-      "s2": "41baa7d9a6e1040b2eef8728d38706d8fdcbb06a",
-      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-      "authors": [
-        "Tongping Liu",
-        "Chen Tian",
-        "Ziang Hu",
-        "Emery D. Berger"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "They train their classifier on mini-programs and apply this classifier to general programs [13]."
-      ]
-    },
-    {
-      "title": "PREDATOR",
-      "year": 2014,
-      "doi": "10.1145/2692916.2555244",
-      "openalex": "W4238359122",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Tongping Liu",
-        "Chen Tian",
-        "Ziang Hu",
-        "Emery D. Berger"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Reliable and Efficient Multithreading",
-      "year": 2014,
-      "doi": null,
-      "openalex": null,
-      "s2": "78ba4e77c2f4a6b29b4feab71412bad4a0871eb2",
-      "venue": null,
-      "authors": [
-        "Tongping Liu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "They train their classifier on mini-programs and apply this classifier to general programs [32]."
-      ]
-    }
-  ]
+  {
+   "title": "Leveraging Cache Coherence to Detect and Repair False Sharing On-the-fly",
+   "year": 2024,
+   "doi": "10.1109/micro61859.2024.00066",
+   "openalex": "W4404954568",
+   "s2": "aa6bc1a32e5b13b4547e435d599f52168ff06d96",
+   "venue": "Micro",
+   "authors": [
+    "V. J. Patel",
+    "Swarnendu Biswas",
+    "Mainak Chaudhuri"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "However, such memory allocators cannot prevent false sharing within a heap object or those caused by thread contentions due to poor programming or thread scheduling [37].",
+    "Detecting False Sharing: Much prior work has focused on only detecting instances of false sharing by using static analysis [38], dynamic instrumentation [8], [33], [39], runtime monitoring [4], [40], machine learning techniques [37], and simulation with architectural extensions [5].",
+    "\u2026to the application source and the software development process [8], [10], rely on fundamental changes to the core cache organization [6], [34], introduce complex speculation in coherence protocols [35], or can only detect false sharing but cannot repair on-the-\ufb02y [5], [7], [8], [32], [36], [37].",
+    "Many recent techniques rely on accurate tracking of hardware performance counters (e.g., Intel HITM) to identify remote cache hits and use that to detect false sharing [7]\u2013[9], [12], [30]\u2013[32], [37]."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "CachePerf",
+   "year": 2022,
+   "doi": "10.1145/3489048.3526954",
+   "openalex": "W4220898986",
+   "s2": "68422c14d321030937ce5186eb1bd4d08eb6a145",
+   "venue": "Measurement and Modeling of Computer Systems",
+   "authors": [
+    "Jin Zhou",
+    "Steven Tang",
+    "Hanmei Yang",
+    "Tongping Liu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "propose a machine learning approach based on the sampled events [20], Laser utilizes a special type of events (hit-Modified) that may not be available on all hardware [39], while Feather utilizes the combination of the PMU-sampling and watchpoints to identify false sharing [6]; however, all existing tools typically report an absolute number to evaluate the seriousness of false sharing, which may report insignificant issues.",
+    "Some tools are relying on binary instrumentation [58], compiler-based instrumentation [34], process-based page protection [32], and the PMUbased sampling [6, 8, 20, 25, 33, 39]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Optimal Launch Bound Selection in CPU-GPU Hybrid Graph Applications with Deep Learning",
+   "year": 2022,
+   "doi": "10.1109/igsc55832.2022.9969364",
+   "openalex": "W4311224176",
+   "s2": "ad7c8f814e480047335b1fb17e27d3226d424411",
+   "venue": "International Green and Sustainable Computing Conference",
+   "authors": [
+    "Md Erfanul Haque Rafi",
+    "Apan Qasem"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Constructing sample instances by-hand [21] did not scale and generating instances from a speci\ufb01c benchmark suite [14] created training sets that were too small."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Raptor: Mitigating CPU-GPU False Sharing Under Unified Memory Systems",
+   "year": 2022,
+   "doi": "10.1109/igsc55832.2022.9969376",
+   "openalex": "W4311306056",
+   "s2": "076cb06447c577415628fcd9455d939cb0ae901c",
+   "venue": "International Green and Sustainable Computing Conference",
+   "authors": [
+    "Md Erfanul Haque Rafi",
+    "Kaylee Williams",
+    "Apan Qasem"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Jayasena et al. train a supervised classifier that maps performance events to FS instances [26].",
+    "To reduce the high overhead incurred by these approaches, researchers proposed methods that take advantage of OS features and event-based sampling of PMUs to track memory accesses [25], [26], [12], [13], [14], [15]."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "HPC Ontology: Towards a Unified Ontology for Managing Training Datasets and AI Models for High-Performance Computing",
+   "year": 2021,
+   "doi": "10.1109/mlhpc54614.2021.00012",
+   "openalex": "W4200570984",
+   "s2": "4bf09e53bbfec974c9a1fc33f3279db296b8a07a",
+   "venue": "Workshop on Machine Learning in High Performance Computing Environments",
+   "authors": [
+    "Chunhua Liao",
+    "Pei\u2010Hung Lin",
+    "Gaurav Verma",
+    "Tristan Vanderbruggen",
+    "Murali Emani",
+    "Zifan Nan",
+    "Xipeng Shen"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 18
+  },
+  {
+   "title": "Performance profilers and debugging tools for openMP applications",
+   "year": 2021,
+   "doi": "10.7282/t3-0edj-bf23",
+   "openalex": "W3197625063",
+   "s2": "dd763c6e5748f3d4e7d65714b7c0d7672f6080ce",
+   "venue": "Rutgers University Community Repository (Rutgers University)",
+   "authors": [
+    "Nader Boushehrinejad Moradi"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "How Are Performance Issues Caused and Resolved?-An Empirical Study from a Design Perspective",
+   "year": 2020,
+   "doi": "10.1145/3358960.3379130",
+   "openalex": null,
+   "s2": "f01c31740faaa931f5e53b0ef0fdf6223541ca20",
+   "venue": "International Conference on Performance Engineering",
+   "authors": [
+    "Yutong Zhao",
+    "Lu Xiao",
+    "Xiao Wang",
+    "Lei Sun",
+    "Bihuan Chen",
+    "Yang Liu",
+    "A. Bondi"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 16
+  },
+  {
+   "title": "Reliable and Efficient Multithreading",
+   "year": 2020,
+   "doi": "10.7275/a5kn-p527",
+   "openalex": "W105318627",
+   "s2": null,
+   "venue": "Scholarworks (University of Massachusetts Amherst)",
+   "authors": [
+    "Tongping Liu"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Huron: hybrid false sharing detection and repair",
+   "year": 2019,
+   "doi": "10.1145/3314221.3314644",
+   "openalex": "W2955400013",
+   "s2": "c98bcc228b1a68c26cd5fa635530a81b4eee890d",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Tanvir Ahmed Khan",
+    "Yifan Zhao",
+    "Gilles Pokam",
+    "Barzan Mozafari",
+    "Baris Kasikci"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "In order to reduce the runtime overhead, many techniques [9, 21, 25, 28, 31, 32, 48, 52, 54, 56, 59, 62] rely on performance counter values that are correlated with false sharing (i.e, Intel HITM [18]).",
+    "Another technique uses machine learning on hardware event counts [32] to detect false sharing."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "Parallelism-centric what-if and differential analyses",
+   "year": 2019,
+   "doi": "10.1145/3314221.3314621",
+   "openalex": null,
+   "s2": "2b8075683596060aa6fa36d4029f5d74a6b1bc07",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Adarsh Yoga",
+    "Santosh Nagarakatte"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "They include tools to detect cache contention [8, 10, 21, 31, 36, 37, 44, 49, 65, 74], identify data locality issues [38\u015b40, 42], and find bottlenecks due to NUMA [41, 46]."
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "PerfMemPlus: A Tool for Automatic Discovery of Memory Performance Problems",
+   "year": 2019,
+   "doi": "10.1007/978-3-030-20656-7_11",
+   "openalex": "W2949045089",
+   "s2": "25c6be12455348b0fcae9df02b72210ae492c9c5",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Christian Helm",
+    "Kenjiro Taura"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 8
+  },
+  {
+   "title": "Using Differential Execution Analysis to Identify Thread Interference",
+   "year": 2019,
+   "doi": "10.1109/tpds.2019.2927481",
+   "openalex": "W2961994263",
+   "s2": "aca8e323135ac49689ebe14d1de74db56e0a47b8",
+   "venue": "IEEE Transactions on Parallel and Distributed Systems",
+   "authors": [
+    "Mohamed Sa\u00efd Mosli Bouksiaa",
+    "Fran\u00e7ois Trahay",
+    "Alexis Lescouet",
+    "Gauthier Voron",
+    "R\u00e9mi Dulong",
+    "Amina Guermouche",
+    "\u00c9lisabeth Brunet",
+    "Ga\u00ebl Thomas"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Collecting hardware counters has been extensively used for detecting cache contention [2], [4], [43], [44], [45], [46], NUMA effects [47], or false sharing [48]."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Featherlight on-the-fly false-sharing detection",
+   "year": 2018,
+   "doi": "10.1145/3178487.3178499",
+   "openalex": "W2787541352",
+   "s2": "0d2d7f103a7c3a97e6e481d30b74c9dd6124fa85",
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": [
+    "Milind Chabbi",
+    "Shasha Wen",
+    "Xu Liu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Parallel computing community [15, 25, 26, 31, 32, 34, 35, 44, 48, 59, 60] has made concerted efforts to build tools to detect false sharing.",
+    "Jayasena et al. [26] use machine learning to derive the potential patterns of false sharing by monitoring cache misses, TLB events, interactions among cores, and resources stalls."
+   ],
+   "cited_by": 20
+  },
+  {
+   "title": "Featherlight on-the-fly false-sharing detection",
+   "year": 2018,
+   "doi": "10.1145/3200691.3178499",
+   "openalex": "W2999810048",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Milind Chabbi",
+    "Shasha Wen",
+    "Xu Liu"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 5
+  },
+  {
+   "title": "Performance variation considered helpful. (Les variations de performance consid\u00e9r\u00e9es utiles)",
+   "year": 2018,
+   "doi": "10.70675/e517200bz33abz439eza194za64d05e9405b",
+   "openalex": null,
+   "s2": "15af242fcc9ad3cfbc1946d42702079c580a03a6",
+   "venue": null,
+   "authors": [
+    "Mohamed Said Mosli Bouksiaa"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Sheriff [44] false sharing memory object # invalidations Plastic [45] false sharing Memory word Jayasena [48] et al false sharing -",
+    "A Machine Learning approach: Jayasena et al [48] take a peculiar approach to false sharing detection."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "A Machine Learning Approach to Automatic Creation of Architecture-Sensitive Performance Heuristics",
+   "year": 2017,
+   "doi": "10.1109/hpcc-smartcity-dss.2017.3",
+   "openalex": "W2786726542",
+   "s2": "3f494abb49c43a6a392e72ccbed2ac6ac216ba42",
+   "venue": "2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)",
+   "authors": [
+    "Biplab Kumar Saha",
+    "Tiffany A. Connors",
+    "Saami Rahman",
+    "Apan Qasem"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Many have resorted to hand-picking them [18], while some have employed statistical methods to select events that vary most across different program executions [11], [17].",
+    "Many variants of popular ML techniques have been successfully applied to different branches of HPC in performance optimization through code changes [3], [18], predicting optimal build configurations [12], runtime configurations [6], [14], identifying performance bottlenecks [10], [11] and recently, also in efficient energy management [2], [8]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions",
+   "year": 2017,
+   "doi": "10.48550/arxiv.1709.07536",
+   "openalex": "W2947703459",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Mejbah Alam",
+    "Justin Gottschlich",
+    "Nesime Tatbul",
+    "Javier S. Turek",
+    "Timothy G. Mattson",
+    "A. A. M. Muzahid"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 8
+  },
+  {
+   "title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions",
+   "year": 2017,
+   "doi": null,
+   "openalex": null,
+   "s2": "683e0cf68992fdf7d5c95c1e84178f63a82f7fdb",
+   "venue": "Neural Information Processing Systems",
+   "authors": [
+    "Mejbah Alam",
+    "Justin Emile Gottschlich",
+    "Nesime Tatbul",
+    "Javier Turek",
+    "T. Mattson",
+    "Abdullah Muzahid"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology",
+    "result"
+   ],
+   "contexts": [
+    ", rule-based or supervised learning approaches [46, 16, 23, 27]).",
+    "[27] and UBL [17], (ii) analyze our clustering approach, and (iii) quantify profiling and training overheads.",
+    "Moreover, [27] uses a fixed ratio of various counters and therefore, cannot detect all anomalous runs in 6 programs and reports false positive runs for all 8 programs.",
+    ", false and/or true sharing cache contention [32, 34, 49, 27, 40, 18, 33], NUMA defects [35, 43, 48]).",
+    ", Bayesian networks [46, 16], Markov models [23], decision trees [27]).",
+    "With only 4% average profiling overhead, our tool can successfully detect three types of performance regressions common in parallel software (true sharing, false sharing, and NUMA latency), at consistently higher accuracy than two state-of-the-art approaches [17, 27].",
+    "Section 5 presents an experimental comparison of our approach against two of the above approaches [17, 27]."
+   ],
+   "cited_by": 31
+  },
+  {
+   "title": "AutoCon: Regression Testing for Detecting Cache Contention Anomalies Using Autoencoder",
+   "year": 2017,
+   "doi": null,
+   "openalex": null,
+   "s2": "64ed3a3af683ddf2619173dda156e741c1fb277f",
+   "venue": "arXiv.org",
+   "authors": [
+    "Mohammad Mejbah Ul Alam",
+    "Justin Emile Gottschlich",
+    "Md. Mostofa Ali Patwary",
+    "S. Ahmad",
+    "Abdullah Muzahid"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "result",
+    "methodology",
+    "background"
+   ],
+   "contexts": [
+    "(6) We compared our work against a prior state-of-the-art cache contention detector [28] and showed that AutoCon can detect more anomalies.",
+    "Note that unlike the prior work [28], AutoCon does not need to know the anomalous contention level beforehand in order to detect cache contention anomalies.",
+    "We compared AutoCon with the state-of-the-art decision tree based false sharing detection approach [28]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "AutoPerf: A Generalized Zero-Positive Learning System to Detect Software Performance Anomalies",
+   "year": 2017,
+   "doi": null,
+   "openalex": "W2775193917",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Mohammad Mejbah ul Alam",
+    "Justin Gottschlich",
+    "A. A. M. Muzahid"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 7
+  },
+  {
+   "title": "AutoPerf: A Generalized Zero-Positive Learning System to Detect Software Performance Anomalies",
+   "year": 2017,
+   "doi": null,
+   "openalex": null,
+   "s2": "fb6409e86fbd27f65b6fbbf7a448a1be958bd206",
+   "venue": null,
+   "authors": [
+    "Mohammad Mejbah Ul Alam",
+    "Justin Emile Gottschlich",
+    "Abdullah Muzahid"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "(7) We compare AutoPerf against a state-of-the-art approach [35] and show that it detects more anomalies.",
+    "It is important to note that unlike prior work [35], AutoPerf does not need examples of anomalous behaviors to detect them."
+   ],
+   "cited_by": 8
+  },
+  {
+   "title": "Automatic Scaling of Cloud Applications via Transparently Elasticizing Virtual Memory",
+   "year": 2017,
+   "doi": null,
+   "openalex": null,
+   "s2": "59baad0f2935404e71f6555d592c957ba3422874",
+   "venue": null,
+   "authors": [
+    "Ehab Ababneh"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Automatically Selecting Profitable Thread Block Sizes for Accelerated Kernels",
+   "year": 2017,
+   "doi": "10.1109/hpcc-smartcity-dss.2017.58",
+   "openalex": "W2786865931",
+   "s2": "386cfe7eddabfb13c481dd5ebfdada1ad77c26cf",
+   "venue": "2017 IEEE 19th International Conference on High Performance Computing and Communications; IEEE 15th International Conference on Smart City; IEEE 3rd International Conference on Data Science and Systems (HPCC/SmartCity/DSS)",
+   "authors": [
+    "Tiffany A. Connors",
+    "Apan Qasem"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Many have resorted to hand-picking them [16] while some have employed statistical methods to select events that vary most across different program executions [11], [19].",
+    "Many variants of popular ML techniques have been successfully applied to different branches of HPC - in performance optimization through code changes [5] predicting optimal build configurations [12], runtime configurations [7], [13], identifying performance bottlenecks [10], [11] and recently, also in efficient energy management [4]"
+   ],
+   "cited_by": 13
+  },
+  {
+   "title": "DR-BW: Identifying Bandwidth Contention in NUMA Architectures with Supervised Learning",
+   "year": 2017,
+   "doi": "10.1109/ipdps.2017.97",
+   "openalex": "W2731636953",
+   "s2": "dee62c826374fb94902ca15407872a29198ef102",
+   "venue": "IEEE International Parallel and Distributed Processing Symposium",
+   "authors": [
+    "Hao Xu",
+    "Shasha Wen",
+    "Alfredo Gim\u00e9nez",
+    "Todd Gamblin",
+    "Xu Liu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Sanath et al [13] use machine learning to detect false sharing and inefficient memory access."
+   ],
+   "cited_by": 33
+  },
+  {
+   "title": "Identifying thread interference with performance variation",
+   "year": 2017,
+   "doi": null,
+   "openalex": null,
+   "s2": "d35d9d4fde7e3164147b27a013f1e2889ad35d5a",
+   "venue": null,
+   "authors": [
+    "Mohamed Said Mosli Bouksiaa",
+    "Fran\u00e7ois Trahay",
+    "Alexis Lescouet",
+    "Gauthier Voron",
+    "Amina Guermouche",
+    "E. Brunet",
+    "Ga\u00ebl Thomas"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "result"
+   ],
+   "contexts": [
+    "Apart from these studies, most of the other research projects focus on detecting one type of contention: memory contention (cache [10, 36, 48, 32, 45, 14, 15], NUMA effects [12, 25, 26], false-sharing [44, 22, 19, 50, 20, 29, 28, 34, 23, 27]), contention on the network [5, 9], or contention on locks [43, 49, 13, 4]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "TMI",
+   "year": 2017,
+   "doi": "10.1145/3123939.3123947",
+   "openalex": "W2766440306",
+   "s2": "3f015b26d8b9a28c0a8bcee216830e7b568245db",
+   "venue": "Micro",
+   "authors": [
+    "Christian DeLozier",
+    "Ariel Eizenberg",
+    "Shiliang Hu",
+    "Gilles Pokam",
+    "Joseph Devietti"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "[16] uses machine learning to correlate performance counter results with false sharing, but uses non-PEBS counters and provides no repair mechanism."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "X 1 X 2 X 6 X 5 X 4 X 3 X ' 1 X ' 2 X ' 6 X ' 5 X ' 4 X ' 3 L 1 L 2 L 3 Encoder Decoder",
+   "year": 2017,
+   "doi": null,
+   "openalex": null,
+   "s2": null,
+   "venue": null,
+   "authors": [],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": null
+  },
+  {
+   "title": "Cheetah: detecting false sharing efficiently and effectively",
+   "year": 2016,
+   "doi": "10.1145/2854038.2854039",
+   "openalex": "W2292155014",
+   "s2": "07f14998bd81048b73471934ca62295953361e65",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Tongping Liu",
+    "Xu Liu"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "First, most tools cannot distinguish true and false sharing, or require substantial manual effort to identify optimization opportunities [9, 12, 13, 16, 18, 24, 26, 30, 31].",
+    "cache invalidations) [16, 26, 30] (otherwise they experience a large quantity of false positives [12]); (2) they rely on manual annotation [26], experts\u2019 expertise [12, 30], or multiple executions to locate the problem [30]; (3) they cannot provide sufficient information for optimization [12, 16, 26, 30].",
+    "use the machine learning approach to derive the potential pattern of false sharing bymonitoring cache misses, TLB events, interactions among cores, and resources stalls [16].",
+    "As prior work [16, 19, 20, 32], we perform experiments on two well-known benchmark suites: Phoenix [27] and PARSEC [3]."
+   ],
+   "cited_by": 31
+  },
+  {
+   "title": "Dynamic error mitigation in NoCs using intelligent prediction techniques",
+   "year": 2016,
+   "doi": "10.1109/micro.2016.7783734",
+   "openalex": "W4230728285",
+   "s2": "5753fbcecfb32b068c803db122015620d1ca7398",
+   "venue": "Micro",
+   "authors": [
+    "Dominic DiTomaso",
+    "Travis Boraten",
+    "Avinash Kodi",
+    "Ahmed Louri"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Machine learning (ML) algorithms have been used in network/multi-core applications other than fault prediction for various applications such as network reconfiguration [32], [33], [34], detection of false memory sharing [35], management of voltage/frequncy/power network [36], [37], and prediction of congestion [38], [39]."
+   ],
+   "cited_by": 19
+  },
+  {
+   "title": "Dynamic error mitigation in NoCs using intelligent prediction techniques",
+   "year": 2016,
+   "doi": "10.5555/3195638.3195675",
+   "openalex": "W2563863648",
+   "s2": null,
+   "venue": "International Symposium on Microarchitecture",
+   "authors": [
+    "Dominic DiTomaso",
+    "Travis Boraten",
+    "Avinash Kodi",
+    "Ahmed Louri"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 14
+  },
+  {
+   "title": "LASER: Light, Accurate Sharing dEtection and Repair",
+   "year": 2016,
+   "doi": "10.1109/hpca.2016.7446070",
+   "openalex": "W2333728936",
+   "s2": "fcb223fdb155adea67d8b8dbb80c14287bf5788e",
+   "venue": "International Symposium on High-Performance Computer Architecture",
+   "authors": [
+    "Liang Luo",
+    "Akshitha Sriraman",
+    "Brooke Fugate",
+    "Shiliang Hu",
+    "Gilles Pokam",
+    "Chris J. Newburn",
+    "Joseph Devietti"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "[16] collects performance event counts to identify programs that suffer from false sharing."
+   ],
+   "cited_by": 28
+  },
+  {
+   "title": "Towards a Framework for Automating the Workflow for Building Machine Learning Based Performance Tuning",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "3e20d0963528598d89423e9d82a126826bd5014c",
+   "venue": null,
+   "authors": [
+    "B. Saha"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "AN EXPLORATION INTO THE EFFECTIVENESS OF PREFETCHING ON PROGRAM PERFORMANCE WITH THE HELP OF AN AUTOTUNING MODEL by",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "a4f0a101fec7923d5212835cad0d3e9c12d23d57",
+   "venue": null,
+   "authors": [
+    "S. Rahman",
+    "Martin Burtscher",
+    "Ziliang Zong",
+    "Nafisa Noor",
+    "Nahidul Akter"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "[33] have demonstrated effective use of a decision tree to prune performance events used as features in order to detect false sharing."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "An Exploration into the Effectiveness of Prefetching on Program Performance with the Help of an Autotuning Model",
+   "year": 2015,
+   "doi": null,
+   "openalex": "W2514270516",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Saami Rahman"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "An Exploration into the Effectiveness of Prefetching on Program Performance with the Help of an Autotuning Model",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "d787d1a6672261e96bc3e0aed8f676d35e02f493",
+   "venue": null,
+   "authors": [
+    "S. Rahman"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "False Sharing Detection in OpenMP Applications Using OMPT API",
+   "year": 2015,
+   "doi": "10.1007/978-3-319-24595-9_8",
+   "openalex": "W2295219273",
+   "s2": "f783627093eab4085afbd601a28ee36ef07a6440",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Millad Ghane",
+    "Abid M. Malik",
+    "Barbara Chapman",
+    "Ahmad Qawasmeh"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 7
+  },
+  {
+   "title": "Maximizing Hardware Prefetch Effectiveness with Machine Learning",
+   "year": 2015,
+   "doi": "10.1109/hpcc-css-icess.2015.175",
+   "openalex": "W2180890913",
+   "s2": "59b0afb917493c4070f335bd87f55a172429195d",
+   "venue": "2015 IEEE 17th International Conference on High Performance Computing and Communications, 2015 IEEE 7th International Symposium on Cyberspace Safety and Security, and 2015 IEEE 12th International Conference on Embedded Software and Systems",
+   "authors": [
+    "Saami Rahman",
+    "Martin Burtscher",
+    "Ziliang Zong",
+    "Apan Qasem"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Counting events such as L2 cache misses and stalled CPU cycles provides quanti\ufb01ed insight into a program\u2019s behavior and has previously been employed to characterize programs [8], [9], [12], [13].",
+    "Jayasena et al. [8] demonstrated the effectiveness of a decision tree to prune performance events used as features for detecting false sharing."
+   ],
+   "cited_by": 34
+  },
+  {
+   "title": "Reactive and Proactive Fault-Tolerant Network-on-Chip Architectures using Machine Learning",
+   "year": 2015,
+   "doi": null,
+   "openalex": "W2545007675",
+   "s2": null,
+   "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
+   "authors": [
+    "Dominic DiTomaso"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Reactive and Proactive Fault-Tolerant Network-on-Chip Architectures using Machine Learning",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "fe61daf58cb16a3c407c672e2be43b49d49e67af",
+   "venue": null,
+   "authors": [
+    "D. DiTomaso"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 2
+  },
+  {
+   "title": "Resilient and Power-Efficient Multi-Function Channel Buffers in Network-on-Chip Architectures",
+   "year": 2015,
+   "doi": "10.1109/tc.2015.2401013",
+   "openalex": "W2044048499",
+   "s2": "7ef92915aed61978a11557393b68ad7bf1e061e3",
+   "venue": "IEEE Transactions on Computers",
+   "authors": [
+    "Dominic DiTomaso",
+    "Avinash Karanth",
+    "Ahmed Louri",
+    "R\u0103zvan Bunescu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Machine learning algorithms have been used in network/CMP applications for various reasons such as optimizing wireless sensor topology [34], detection of false memory sharing [35], and management of network power"
+   ],
+   "cited_by": 18
+  },
+  {
+   "title": "ScaAnalyzer",
+   "year": 2015,
+   "doi": "10.1145/2807591.2807648",
+   "openalex": "W2063364927",
+   "s2": "9c3857a69a7eec7777418627cfc87ad5e79572ca",
+   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": [
+    "Xu Liu",
+    "Bo Wu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "To detect false sharing, existing tools [20, 12, 13] leverage sampling methods, via either software instrumentation or hardware PMU."
+   ],
+   "cited_by": 50
+  },
+  {
+   "title": "PREDATOR",
+   "year": 2014,
+   "doi": "10.1145/2555243.2555244",
+   "openalex": "W2165734765",
+   "s2": "41baa7d9a6e1040b2eef8728d38706d8fdcbb06a",
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": [
+    "Tongping Liu",
+    "Chen Tian",
+    "Ziang Hu",
+    "Emery D. Berger"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "They train their classifier on mini-programs and apply this classifier to general programs [13]."
+   ],
+   "cited_by": 33
+  },
+  {
+   "title": "PREDATOR",
+   "year": 2014,
+   "doi": "10.1145/2692916.2555244",
+   "openalex": "W4238359122",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Tongping Liu",
+    "Chen Tian",
+    "Ziang Hu",
+    "Emery D. Berger"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 5
+  },
+  {
+   "title": "Reliable and Efficient Multithreading",
+   "year": 2014,
+   "doi": null,
+   "openalex": null,
+   "s2": "78ba4e77c2f4a6b29b4feab71412bad4a0871eb2",
+   "venue": null,
+   "authors": [
+    "Tongping Liu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "They train their classifier on mini-programs and apply this classifier to general programs [32]."
+   ],
+   "cited_by": 0
+  }
+ ]
 }

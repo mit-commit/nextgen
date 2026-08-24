@@ -1,1612 +1,1699 @@
 {
-  "counts": {
-    "openalex": 60,
-    "s2": 64
+ "counts": {
+  "openalex": 60,
+  "s2": 64
+ },
+ "citing": [
+  {
+   "title": "Creating concise and efficient dynamic analyses with ALDA",
+   "year": 2022,
+   "doi": "10.1145/3503222.3507760",
+   "openalex": "W4214634252",
+   "s2": "9e4ad9d911d70fcd22eb1ac20cb50999f5e46e0b",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Xiang Cheng",
+    "David Devecsery"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Umbra[57] and Shadow[37] provide a detailed study on the efficiency and performance of shadowmemory on both 32-bit and 64-bit machines.",
+    "Many other works have focused on dynamic analysis optimization [2, 21, 23, 25, 37, 57].",
+    "Offset based shadow memory has better performance but higher memory usage than a page-table like data structure [37, 57]."
+   ],
+   "cited_by": 2
   },
-  "citing": [
-    {
-      "title": "Creating concise and efficient dynamic analyses with ALDA",
-      "year": 2022,
-      "doi": "10.1145/3503222.3507760",
-      "openalex": "W4214634252",
-      "s2": "9e4ad9d911d70fcd22eb1ac20cb50999f5e46e0b",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Xiang Cheng",
-        "David Devecsery"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Umbra[57] and Shadow[37] provide a detailed study on the efficiency and performance of shadowmemory on both 32-bit and 64-bit machines.",
-        "Many other works have focused on dynamic analysis optimization [2, 21, 23, 25, 37, 57].",
-        "Offset based shadow memory has better performance but higher memory usage than a page-table like data structure [37, 57]."
-      ]
-    },
-    {
-      "title": "PINT: Parallel INTerval-Based Race Detector",
-      "year": 2022,
-      "doi": "10.1109/ipdps53621.2022.00087",
-      "openalex": "W4285503917",
-      "s2": "52c082d8cdb448215155316dbd52130a3be554c3",
-      "venue": "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
-      "authors": [
-        "Yifan Xu",
-        "Anchengcheng Zhou",
-        "Kunal Agrawal",
-        "I-Ting Angelina Lee"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Many schemes have been explored to optimize access history [34], [29], [30], [28], [35], [36], [37], [38] which make various trade-offs in terms of access time and space.",
-        "A core worker inserts each executed strand into its current trace data structure according to their execution order (lines 11, 18, 25, 32, and 38)."
-      ]
-    },
-    {
-      "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning",
-      "year": 2021,
-      "doi": "10.1007/978-3-030-80129-8_66",
-      "openalex": "W3184285164",
-      "s2": null,
-      "venue": "Lecture notes in networks and systems",
-      "authors": [
-        "Federico Palmaro",
-        "Luisa Franchina"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Efficient Access History for Race Detection",
-      "year": 2021,
-      "doi": "10.1145/3409964.3461825",
-      "openalex": null,
-      "s2": "7187513ca87d588d336342b8329021798615d618",
-      "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-      "authors": [
-        "Yifan Xu",
-        "Anchengcheng Zhou",
-        "Grace Q. Yin",
-        "Kunal Agrawal",
-        "I. Lee",
-        "T. Schardl"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "The Taint Rabbit: Optimizing Generic Taint Analysis with Dynamic Fast Path Generation",
-      "year": 2020,
-      "doi": "10.1145/3320269.3384764",
-      "openalex": "W3041990968",
-      "s2": "765bc3dc79f1eeb142332847e1f9aa39007cc1af",
-      "venue": "ACM Asia Conference on Computer and Communications Security",
-      "authors": [
-        "John Galea",
-        "Daniel Kroening"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "hey consist of over 70,000 lines of C code (including tests) and their source is available at https://github.com/Dynamic-Rabbits/Dynamic-Rabbits. Furthermore, Dr. Memory’s shadow memory library Umbra [55] was enhanced to handle 32-bit tags. We also implemented a new DynamoRIO library called drbbdup, which duplicates the code of basic blocks. In turn, drbbdup is used to implement fast path generation. ",
-        "sents “no taint”. Byte Granularity. Meta-data is mapped to every byte in memory and registers; e.g, a mov eax, ebx propagates four labels, one for each byte in ebx. Labels are stored in shadow memory [55]. We do not label the x86 flag register to avoidtaint explosion [56]. Generic Taint Propagation. As illustrated in Figure 2, taint labels are propagated via user-defined code calledtaint primitives. A"
-      ]
-    },
-    {
-      "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
-      "year": 2019,
-      "doi": "10.23940/ijpe.19.11.p5.28712881",
-      "openalex": null,
-      "s2": "7b905434506591bb00ad23408727532775a657e8",
-      "venue": "International Journal of Performability Engineering",
-      "authors": [
-        "Liu Hui",
-        "Jinlong Xu",
-        "Ding Lili"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The dependence test methods of the coupling array subscript mainly include the delta test method and the omega test method [6-7]."
-      ]
-    },
-    {
-      "title": "Data-driven Spatial Locality",
-      "year": 2019,
-      "doi": null,
-      "openalex": null,
-      "s2": "0ef7b2fc24a0dbaf9dc1dba4871869c78f51b713",
-      "venue": null,
-      "authors": [],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Data-flow/dependence profiling for structured transformations",
-      "year": 2019,
-      "doi": "10.1145/3293883.3295737",
-      "openalex": "W2914687823",
-      "s2": "517f4619040eacfd89817855e4bae0eb61e2e947",
-      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-      "authors": [
-        "Fabian M. Gruber",
-        "Manuel Selva",
-        "Diogo Sampaio",
-        "Christophe Guillon",
-        "Antoine Moynault",
-        "Louis-Noël Pouchet",
-        "Fabrice Rastello"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Dynamic dependence graph Shadow memory [76] records a piece of information for each storage location used in a program."
-      ]
-    },
-    {
-      "title": "Efficient High Frequency Checkpointing for Recovery and Debugging",
-      "year": 2019,
-      "doi": null,
-      "openalex": null,
-      "s2": "fbc5e170b8fc18c47c2eec74014cbe357fed3c62",
-      "venue": null,
-      "authors": [
-        "Dirk Vogt"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "LMCrelies on a compiler-assisted shadow state organization—similar, in spirit, to shadow memory approaches used in state-of-the-art memory tracing techniques [124; 160; 162; 102; 111; 147; 161; 103]—to incrementally checkpoint the active memory image at the byte granularity."
-      ]
-    },
-    {
-      "title": "Wasabi",
-      "year": 2019,
-      "doi": "10.1145/3297858.3304068",
-      "openalex": "W2888822874",
-      "s2": "4c2d6e7037ba8c4118eb1d2fe25de910871314c9",
-      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-      "authors": [
-        "Daniel Lehmann",
-        "Michael Pradel"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "In particular, it is straightforward to implement memory shadowing [34, 53], a feature useful, e.g,. for tracking the origin of undesired values or for taint analysis.",
-        "Umbra [53] is a dynamic binary instrumentation tool that focuses on efficient memory shadowing."
-      ]
-    },
-    {
-      "title": "Enforcing Abstract Immutability",
-      "year": 2018,
-      "doi": null,
-      "openalex": "W2886049054",
-      "s2": null,
-      "venue": "UWSpace (University of Waterloo)",
-      "authors": [
-        "Jonathan Eyolfson"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Enforcing Abstract Immutability",
-      "year": 2018,
-      "doi": null,
-      "openalex": null,
-      "s2": "f39880610a1d7f3185494a67e4c732fb7f02e4ab",
-      "venue": null,
-      "authors": [
-        "Jon Eyolfson"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Our dynamic analysis approach is similar to approaches used in Umbra [94] and Dr."
-      ]
-    },
-    {
-      "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly",
-      "year": 2018,
-      "doi": "10.48550/arxiv.1808.10652",
-      "openalex": "W2951338155",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Daniel Lehmann",
-        "Michael Pradel"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const",
-      "year": 2016,
-      "doi": "10.4230/lipics.ecoop.2016.8",
-      "openalex": null,
-      "s2": "2ef00f64200d1e86d21a8f6143d148c3084c7f44",
-      "venue": "European Conference on Object-Oriented Programming",
-      "authors": [
-        "Jon Eyolfson",
-        "Patrick Lam"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Control-Flow Security",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "6febfe65483d6f833ce0fc9b3da0d64f8eafea30",
-      "venue": null,
-      "authors": [
-        "W. Arthur"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "demonstrate a low-overhead tool for shadow memory translation with Umbra [151], while Bosman et al."
-      ]
-    },
-    {
-      "title": "DINAMITE: A modern approach to memory performance profiling",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "ec2f24485e4f3dc0541f1d8f9086704fe6cc9f3e",
-      "venue": "arXiv.org",
-      "authors": [
-        "Svetozar Miucin",
-        "C. Brady",
-        "Alexandra Fedorova"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Dynamically diagnosing type errors in unsafe code",
-      "year": 2016,
-      "doi": "10.1145/2983990.2983998",
-      "openalex": "W2534285557",
-      "s2": "ab13d65fa30edde821423c3bc52626b3c1f99980",
-      "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
-      "authors": [
-        "Stephen Kell"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Dynamically diagnosing type errors in unsafe code",
-      "year": 2016,
-      "doi": "10.1145/3022671.2983998",
-      "openalex": "W4241086586",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Stephen Kell"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Low-overhead Online Code Transformations",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "aed85452d453f00789ad51c8e770398da8df8c45",
-      "venue": null,
-      "authors": [
-        "M. Laurenzano"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "as a baseline because it is a mature software project that is actively maintained and is well known for its low overhead relative to other dynamic compilers [65, 188]."
-      ]
-    },
-    {
-      "title": "Simple DRAM and Virtual Memory Abstractions to Enable Highly Efficient Memory Systems",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "c71074a913504bbf25c5d6231440b11c0413acf1",
-      "venue": "arXiv.org",
-      "authors": [
-        "Vivek Seshadri"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "HERMES: a fast cross-ISA binary translator with post-optimization",
-      "year": 2015,
-      "doi": "10.5555/2738600.2738631",
-      "openalex": "W2014012690",
-      "s2": null,
-      "venue": "Symposium on Code Generation and Optimization",
-      "authors": [
-        "Xiaochun Zhang",
-        "Qi Guo",
-        "Yunji Chen",
-        "Tianshi Chen",
-        "Weiwu Hu"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Hermes: A fast cross-ISA binary translator with post-optimization",
-      "year": 2015,
-      "doi": "10.1109/cgo.2015.7054204",
-      "openalex": "W4229566048",
-      "s2": "badda8b7df6f75ab77d7644d76805a6a5ba7b575",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Xiaochun Zhang",
-        "Qi Guo",
-        "Yunji Chen",
-        "Tianshi Chen",
-        "Weiwu Hu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The same-ISA translators are mainly used for program instrumentation, debugging, and security [14, 15, 19, 25]."
-      ]
-    },
-    {
-      "title": "Information Flow Auditing in the Cloud",
-      "year": 2015,
-      "doi": "10.7916/d82b8wq9",
-      "openalex": "W2137413731",
-      "s2": "b7539a04f9aea375c9f51acbad681373f3740ad0",
-      "venue": "Columbia Academic Commons (Columbia University)",
-      "authors": [
-        "Angeliki Zavou"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "In between, systems like Umbra [85] and TEMU [75] allow for various byte-to-byte and byte-to-bit configurations, as well as for lossy encodings (e.",
-        "But there are also situations [36; 85; 84; 75]) where we need to discriminate between data read from different sources or to distinguish between trust levels.",
-        "This requirement is highly challenging, as most DFT frameworks provide either a single tag [59; 16; 19] or just a few—usually eight [36; 85; 84]."
-      ]
-    },
-    {
-      "title": "Lightweight Memory Checkpointing",
-      "year": 2015,
-      "doi": "10.1109/dsn.2015.45",
-      "openalex": "W1571050301",
-      "s2": "029d5850adddb3c4bc7c7001959b50d29e82ebfc",
-      "venue": "2015 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
-      "authors": [
-        "Dirk Vogt",
-        "Cristiano Giuffrida",
-        "Herbert Bos",
-        "Andrew S. Tanenbaum"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Optimizing Control Transfer and Memory Virtualization in Full System Emulators",
-      "year": 2015,
-      "doi": "10.1145/2837027",
-      "openalex": "W2264988905",
-      "s2": "ce19eb01ba639b0c8f313b6c8e25858290283e18",
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Ding‐Yong Hong",
-        "Chun-Chen Hsu",
-        "Cheng-Yi Chou",
-        "Wei‐Chung Hsu",
-        "Pangfeng Liu",
-        "Jan‐Jan Wu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "DBTs have been widely used for runtime proﬁling [Witchel and Rosenblum 1996; Luk et al. 2005; Nethercote and Seward 2007; Zhao et al. 2010], transparent performance optimization [Bala et al. 2000; Bruening et al. 2003] and migration of legacy code [Baraz et al. 2003; Chernoff et al. 1998; Zheng and…"
-      ]
-    },
-    {
-      "title": "Using Machine Learning Techniques to Detect Parallel Patterns of Multi-threaded Applications",
-      "year": 2015,
-      "doi": "10.1007/s10766-015-0396-z",
-      "openalex": "W2190564708",
-      "s2": "0c19b7b11cf84afb904a67af05f87e9001f8d162",
-      "venue": "International Journal of Parallel Programming",
-      "authors": [
-        "Etem Deniz",
-        "Alper Şen"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "To collect characteristics ofmulti-threaded applications, we useDynamoRIO andUmbra as described in Sect.",
-        "In [54], the experimental results show that the slowdown due to instrumentation varies from about 10% to 6×.",
-        "We also use Umbra [54], for efficient and scalable memory shadowing.",
-        "We developed our data collection tool as a client of DynamoRIO and Umbra.",
-        "Furthermore, DynamoRIO and Umbra tools are meant to be efficient and scalable [20,54]."
-      ]
-    },
-    {
-      "title": "An Event-Based Language for Dynamic Binary Translation Frame Works",
-      "year": 2014,
-      "doi": "10.1145/2628071.2671420",
-      "openalex": "W2119361011",
-      "s2": "de634df718cca9a80d9e31b16146ad85c4299135",
-      "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-      "authors": [
-        "Serguei Makarov",
-        "Angela Demke Brown",
-        "Ashvin Goel"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Global data is used to store information collected by the probes, either in the script’s local memory or as shadow memory values associated to specific address locations in the target program’s memory, managed by a framework such as Umbra [10]."
-      ]
-    },
-    {
-      "title": "MINIME: Pattern-Aware Multicore Benchmark Synthesizer",
-      "year": 2014,
-      "doi": "10.1109/tc.2014.2349522",
-      "openalex": "W2035252178",
-      "s2": "d698cef243500d4d781eaeeb3f4ada89b045e575",
-      "venue": "IEEE Transactions on Computers",
-      "authors": [
-        "Etem Deniz",
-        "Alper Şen",
-        "Brian Kahne",
-        "Jim Holt"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "We also use Umbra [12], which is an efficient and scalable memory shadowing tool built on top of DynamoRIO.",
-        "Furthermore, our high level characterization tools DynamoRIO and Umbra currently support x86 ISA, hence we devised another technique to generate the synthetic on Power ISA.",
-        "We developed our characterizer as a client of DynamoRIO and Umbra."
-      ]
-    },
-    {
-      "title": "Methods for binary symbolic execution",
-      "year": 2014,
-      "doi": null,
-      "openalex": null,
-      "s2": "d22e0d814d8ee216e842dcecd7a91184004a7db3",
-      "venue": null,
-      "authors": [
-        "Anthony Romano"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Metadata for these algorithms is often stored in shadow memory [99, 137]."
-      ]
-    },
-    {
-      "title": "Protean Code: Achieving Near-Free Online Code Transformations for Warehouse Scale Computers",
-      "year": 2014,
-      "doi": "10.1109/micro.2014.21",
-      "openalex": "W1994790794",
-      "s2": "ed964ab4ca9516f1c6e2d6fc7ba2c79d4cd91262",
-      "venue": "Micro",
-      "authors": [
-        "Michael A. Laurenzano",
-        "Yunqi Zhang",
-        "Lingjia Tang",
-        "Jason Mars"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "DynamoRIO is a state of the art binary translation-based dynamic compiler, chosen as a baseline because it is a mature software project that is actively maintained and is well known for its low overhead relative to other dynamic compilers [49, 50]."
-      ]
-    },
-    {
-      "title": "symMMU",
-      "year": 2014,
-      "doi": "10.1145/2642937.2642974",
-      "openalex": "W1996922896",
-      "s2": "c84289a5f83a683ffe6a5f4e0fc38868ec1fd105",
-      "venue": "International Conference on Automated Software Engineering",
-      "authors": [
-        "Anthony G. Romano",
-        "Dawson Engler"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Metadata for these algorithms is often stored in shadow memory [21, 32]."
-      ]
-    },
-    {
-      "title": "Architecture-Independent Dynamic Information Flow Tracking",
-      "year": 2013,
-      "doi": "10.1007/978-3-642-37051-9_8",
-      "openalex": "W2104355531",
-      "s2": "8b4f3639397c7d9cf1daa5139daa26320cd301ed",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Ryan Whelan",
-        "Tim Leek",
-        "David Kaeli"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The key component in the architecture of dynamic information flow tracking systems that allows data to be tracked at a fine-grained level is a shadow memory [28, 43]."
-      ]
-    },
-    {
-      "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs",
-      "year": 2013,
-      "doi": "10.1109/icdcs.2013.13",
-      "openalex": "W2100315216",
-      "s2": "ab655f3afe15d3b6457327d1af73b6c71c494a8a",
-      "venue": "IEEE International Conference on Distributed Computing Systems",
-      "authors": [
-        "Fang Zheng",
-        "Chitra Venkatramani",
-        "Rohit Wagle",
-        "Karsten Schwan"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Umbra [31] adds a set of plug-ins to DynamoRIO for tracking program’s memory references."
-      ]
-    },
-    {
-      "title": "CloudFence: Data Flow Tracking as a Cloud Service",
-      "year": 2013,
-      "doi": "10.1007/978-3-642-41284-4_21",
-      "openalex": "W205715760",
-      "s2": "1eba1d345bf57793cca91c8fbdf0473756a68835",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Vasilis Pappas",
-        "Vasileios P. Kemerlis",
-        "Angeliki Zavou",
-        "Michalis Polychronakis",
-        "Angelos D. Keromytis"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "In between, systems like Umbra [36] and TEMU [40] allow for various byte-to-byte and byte-to-bit configurations, as well as for lossy encodings (e.",
-        "In between, systems like Umbra [36] and TEMU [40] allow for various byte-to-byte and byte-to-bit configurations, as well as for lossy encodings (e.g., four bytes of addressable memory can be tagged using one byte).",
-        "Despite the significant increase in tag space, the runtime overhead of CloudFence is comparable to existing byte-level data flow tracking systems that support just a single [9,13,34] or up to eight [23,35,36] tags, and an order of magnitude lower compared to systems that support arbitrarily many tags [14, 40].",
-        "This requirement is highly challenging, as most DFT frameworks provide either a single tag [9, 13, 34] or just a few—usually eight [23, 35, 36]."
-      ]
-    },
-    {
-      "title": "Detection of false sharing using machine learning",
-      "year": 2013,
-      "doi": "10.1145/2503210.2503269",
-      "openalex": "W1994256395",
-      "s2": "326d1495d5288ce7fbe548809df56a8ac11da544",
-      "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
-      "authors": [
-        "Sanath Jayasena",
-        "Saman Amarasinghe",
-        "A.W.L.D. Abeyweera",
-        "Gayashan Amarasinghe",
-        "Himeshi De Silva",
-        "Sunimal Rathnayake",
-        "Xiaoqiao Meng",
-        "Yanbin Liu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "HighlyScalableDistributedDataflowAnalysis",
-      "year": 2013,
-      "doi": null,
-      "openalex": "W2096801581",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Joseph L. Greathouse",
-        "Chelsea LeBlanc",
-        "Todd Austin",
-        "Valeria Bertacco"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Jalangi: a selective record-replay and dynamic analysis framework for JavaScript",
-      "year": 2013,
-      "doi": "10.1145/2491411.2491447",
-      "openalex": "W1987647365",
-      "s2": "72df5ef4cb7403a1ab5ab817f1ecbe16d83cd23b",
-      "venue": "ESEC/FSE 2013",
-      "authors": [
-        "Koushik Sen",
-        "Swaroop Kalasapur",
-        "Tasneem Brutch",
-        "Simon Gibbs"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The idea of shadow values in the context of x86 binaries has been previously proposed in [20, 36] and has been used in several analysis tools [36, 21, 6, 8]."
-      ]
-    },
-    {
-      "title": "Lightweight Memory Tracing",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "561d1f3afc4d41c41b44f7e22f337132fc388332",
-      "venue": "USENIX Annual Technical Conference",
-      "authors": [
-        "Mathias Payer",
-        "Enrico Kravina",
-        "T. Gross"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Umbra [31], EDDI [32], and Dr."
-      ]
-    },
-    {
-      "title": "Lightweight memory tracing",
-      "year": 2013,
-      "doi": null,
-      "openalex": "W2152389483",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Mathias Payer",
-        "Enrico Kravina",
-        "Thomas Groß"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Schnauzer: scalable profiling for likely security bug sites",
-      "year": 2013,
-      "doi": "10.1109/cgo.2013.6494998",
-      "openalex": "W1968161191",
-      "s2": "71ca85498d181c75a83891858c96560542060d03",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "W. Brian Arthur",
-        "Biruk Mammo",
-        "R. Rodríguez",
-        "T. Austin",
-        "Valeria Bertacco"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Skadu: Efficient vector shadow memories for poly-scopic program analysis",
-      "year": 2013,
-      "doi": "10.1109/cgo.2013.6494985",
-      "openalex": "W2135348627",
-      "s2": "2a079134a4c16f509fcf02d749e594b04e458108",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Dong‐Hwan Jeon",
-        "Santi Orriols García",
-        "Michael Taylor"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Recent work has expanded this basic structure to three-levels to better support 64-bit address spaces [24, 25].",
-        "Umbra: Ef.cient and scalable memory shadowing.",
-        "1 Although not shown, this structure is easily modified to handle 64-bit addressing via an additional table before the segment table, similar to what was proposed in [25].",
-        "While Skadu’s VStorage uses a three-level address translation organization similar to that of Umbra [25], Skadu’s overall architecture is optimized to meet the needs of regionbased analysis and vector shadow memory operations.",
-        "While Skadu s VStorage uses a three-level address trans­lation \norganization similar to that of Umbra [25], Skadu s overall architecture is optimized to meet the needs \nof region­based analysis and vector shadow memory operations."
-      ]
-    },
-    {
-      "title": "A case for unlimited watchpoints",
-      "year": 2012,
-      "doi": "10.1145/2150976.2150994",
-      "openalex": "W1981092677",
-      "s2": "04df5c287da72d13eb9aa7e17e84c6ab5531391d",
-      "venue": "ASPLOS XVII",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Hongyi Xin",
-        "Yixin Luo",
-        "Todd Austin"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The second baseline system is Umbra, a more general shadow memory system built on top of DynamoRio [49].",
-        "The second baseline \nsystem is Umbra, a more general shadow memory system built on top of DynamoRio [49]."
-      ]
-    },
-    {
-      "title": "A case for unlimited watchpoints",
-      "year": 2012,
-      "doi": "10.1145/2189750.2150994",
-      "openalex": "W4242112599",
-      "s2": null,
-      "venue": "ACM SIGARCH Computer Architecture News",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Hongyi Xin",
-        "Yixin Luo",
-        "Todd Austin"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A case for unlimited watchpoints",
-      "year": 2012,
-      "doi": "10.1145/2248487.2150994",
-      "openalex": "W4245241961",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Hongyi Xin",
-        "Yixin Luo",
-        "Todd Austin"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A practical oracle for sequential code parallelization",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "6e6be137332e16df6f10cb9e2cca51ca0d451980",
-      "venue": null,
-      "authors": [
-        "Saturnino Garcia"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "A specification language for debugging",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "470ab02a955b0dd0258b10c7d89b024af35784d8",
-      "venue": null,
-      "authors": [
-        "Ngo Tuan Vu"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "AddressSanitizer: A Fast Address Sanity Checker",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "29146d2b80bc8c56f7e18efe8d2c92354254e947",
-      "venue": "USENIX Annual Technical Conference",
-      "authors": [
-        "Kostya Serebryany",
-        "Derek Bruening",
-        "Alexander Potapenko",
-        "D. Vyukov"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "For 64-bit platforms, Valgrind uses an additional table layer for application addresses not in the lower 32GB. Umbra [30] [31] combines layout flexibility with efficiency , avoiding a table lookup via a non-uniform and dynamically-tuned scale and offset scheme.",
-        "Unlike in Umbra [31], the Offset must be chosen statically for every platform, but we do not see this as a serious limitation ."
-      ]
-    },
-    {
-      "title": "AddressSanitizer: a fast address sanity checker",
-      "year": 2012,
-      "doi": null,
-      "openalex": "W1878544538",
-      "s2": null,
-      "venue": "USENIX Annual Technical Conference",
-      "authors": [
-        "Konstantin Serebryany",
-        "Derek Bruening",
-        "Alexander Potapenko",
-        "Dmitry Vyukov"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Aikido",
-      "year": 2012,
-      "doi": "10.1145/2150976.2150995",
-      "openalex": "W2143644287",
-      "s2": "c36d7ec573582cd93ccdb15f132eb983be04ec71",
-      "venue": "ASPLOS XVII",
-      "authors": [
-        "Marek Olszewski",
-        "Qin Zhao",
-        "David Koh",
-        "Jason Ansel",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology",
-        "background"
-      ],
-      "contexts": [
-        "We have implemented Aikido as an extension to the Umbra project [34], an efficient framework for writing shadow value tools (tools that require per-address metadata) in the DynamoRIO [9] binary instrumentation system.",
-        "Umbra [33, 34] is an extension to the DynamoRIO binary instrumentation system that allows building efficient shadow value tools [8]."
-      ]
-    },
-    {
-      "title": "Aikido",
-      "year": 2012,
-      "doi": "10.1145/2189750.2150995",
-      "openalex": "W4238070624",
-      "s2": null,
-      "venue": "ACM SIGARCH Computer Architecture News",
-      "authors": [
-        "Marek Olszewski",
-        "Qin Zhao",
-        "David Koh",
-        "Jason Ansel",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Aikido",
-      "year": 2012,
-      "doi": "10.1145/2248487.2150995",
-      "openalex": "W4249700078",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Marek Olszewski",
-        "Qin Zhao",
-        "David Koh",
-        "Jason Ansel",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Comprehensive kernel instrumentation via dynamic binary translation",
-      "year": 2012,
-      "doi": "10.1145/2150976.2150992",
-      "openalex": "W2174935658",
-      "s2": "4b6746125fb0e00dc7772a894b44b0f473f7af03",
-      "venue": "ASPLOS XVII",
-      "authors": [
-        "Peter Feiner",
-        "Angela Demke Brown",
-        "Ashvin Goel"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "We decided to port the userspace Umbra shadow memory framework [25] for 64-bit x86 to the Linux kernel."
-      ]
-    },
-    {
-      "title": "Computer Science (Computer Engineering)",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "d536d9f8129a92f54aa5dcc130a7565d14872741",
-      "venue": null,
-      "authors": [
-        "Dong-Keun Jeon"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Fast loop-level data dependence profiling",
-      "year": 2012,
-      "doi": "10.1145/2304576.2304584",
-      "openalex": "W2018931757",
-      "s2": "f823279dcd52c0635cdce41bbbf37b94fa13b064",
-      "venue": "International Conference on Supercomputing",
-      "authors": [
-        "Hongtao Yu",
-        "Zhiyuan Li"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "result"
-      ],
-      "contexts": [
-        "[35] Zhao, Q., Bruening, D., \nand Amarasinghe, S. Umbra: e.cient and scalable memory shadowing.",
-        "The experimental results in [35] show that even the relatively \ne.­cient mapping mechanisms in Umbra [35] and Valgrind [21] incur three and nine times slowdown, respectively, \nto the program execution.",
-        "The experimental results in [35] show that even the relatively efficient mapping mechanisms in Umbra [35] and Valgrind [21] incur three and nine times slowdown, respectively, to the program execution."
-      ]
-    },
-    {
-      "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "295423fa4c09786b7bea7f19b53e6ef3d9741af8",
-      "venue": null,
-      "authors": [
-        "J. Greathouse"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Umbra reduced the overhead of shadow data accesses from 8–12× to 2–4× [234], but this is still more than most users would tolerate.",
-        "The second baseline system is Umbra, a more general shadow memory system built on top of DynamoRio [234].",
-        ", for instance, showed mechanisms to accelerate shadow variable accesses [234].",
-        "Simply accessing shadow values, as demonstrated by Umbra, can cause a program to run up to 3× slower [234].",
-        "In a different vein, previously discussed techniques for accelerating dynamic analyses, such as Umbra [234], would also work to accelerate data race detection."
-      ]
-    },
-    {
-      "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis.",
-      "year": 2012,
-      "doi": null,
-      "openalex": "W98207858",
-      "s2": null,
-      "venue": "Deep Blue (University of Michigan)",
-      "authors": [
-        "Todd Austin",
-        "Joseph L. Greathouse"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Parallel speedup estimates for serial programs",
-      "year": 2012,
-      "doi": null,
-      "openalex": "W338206765",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Michael Taylor",
-        "Dong‐Hwan Jeon"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Parallel speedup estimates for serial programs",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "543f759f3f51690439851a303e9bc86a794786bd",
-      "venue": null,
-      "authors": [
-        "Donghwan Jeon"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Parallel speedup estimates for serial programs",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "5fda459b100d6a2e33dcf67e19d721f4a5bfca80",
-      "venue": null,
-      "authors": [
-        "Donghwan Jeon",
-        "Misook Chung"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Practical low-overhead enforcement of memory safety for c programs",
-      "year": 2012,
-      "doi": null,
-      "openalex": "W51951760",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Milo M. K. Martin",
-        "Santosh Nagarakatte"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Practical low-overhead enforcement of memory safety for c programs",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "b2fb996bb0daaf8609e72c751140da95d080fb62",
-      "venue": null,
-      "authors": [
-        "Milo M. K. Martin",
-        "Santosh Nagarakatte"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "A shadowspace may be implemented as a large, directly accessed memory region, a hashtable [92], or a trie-based data structure [96, 138].",
-        "A few other researchers [96, 138] have observed mapping shadow memory as one of the performance problems in designing binary translation-based checkers and have proposed efficient software mechanisms to shadow memory on 64-bit machines with reasonable translation overhead [138]."
-      ]
-    },
-    {
-      "title": "Quantitative Application Data Flow Characterization for Heterogeneous Multicore Architectures",
-      "year": 2012,
-      "doi": "10.4233/uuid:5acbd4cd-ab5f-486a-8268-61cd7416550d",
-      "openalex": null,
-      "s2": "bdde4392bb6be04c04f37ff2ce84e387910156d6",
-      "venue": null,
-      "authors": [
-        "S. A. Ostadzadeh"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Transparent dynamic instrumentation",
-      "year": 2012,
-      "doi": "10.1145/2151024.2151043",
-      "openalex": "W2133692747",
-      "s2": "f0d19c7e123c0160f2535e561c2955df99d4f993",
-      "venue": "International Conference on Virtual Execution Environments",
-      "authors": [
-        "Derek Bruening",
-        "Qin Zhao",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Transparent dynamic instrumentation",
-      "year": 2012,
-      "doi": "10.1145/2365864.2151043",
-      "openalex": "W2996990589",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Derek Bruening",
-        "Qin Zhao",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Using software architectural patterns for synthetic embedded multicore benchmark development",
-      "year": 2012,
-      "doi": "10.1109/iiswc.2012.6402908",
-      "openalex": "W2088285489",
-      "s2": "8f644574017f127b73b0ae7ebbf74566313121d8",
-      "venue": "IEEE International Symposium on Workload Characterization",
-      "authors": [
-        "Etem Deniz",
-        "Alper Şen",
-        "Jim Holt",
-        "Brian Kahne"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "In order to achieve this, we measure the similarity between the original workload and the synthetic benchmark with respect to several similarity metrics."
-      ]
-    },
-    {
-      "title": "Demand-driven software race detection using hardware performance counters",
-      "year": 2011,
-      "doi": "10.1145/2000064.2000084",
-      "openalex": "W2128717053",
-      "s2": "275686a7ff912287fa73d51c85bdd3960f4f581d",
-      "venue": "International Symposium on Computer Architecture",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Zhiqiang Ma",
-        "Matthew I. Frank",
-        "Ramesh Peri",
-        "Todd Austin"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "In a different vein, Umbra shows methods for making the shadow memory accesses needed for dynamic analysis tools much more efficient [46]."
-      ]
-    },
-    {
-      "title": "Demand-driven software race detection using hardware performance counters",
-      "year": 2011,
-      "doi": "10.1145/2024723.2000084",
-      "openalex": "W4248238279",
-      "s2": null,
-      "venue": "ACM SIGARCH Computer Architecture News",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Zhiqiang Ma",
-        "Matthew I. Frank",
-        "Ramesh Peri",
-        "Todd Austin"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Dynamic cache contention detection in multi-threaded applications",
-      "year": 2011,
-      "doi": "10.1145/1952682.1952688",
-      "openalex": "W2123065508",
-      "s2": "0e92be856ff82fc9ddd9aad114129d263d3fb58b",
-      "venue": "International Conference on Virtual Execution Environments",
-      "authors": [
-        "Qin Zhao",
-        "David Koh",
-        "Syed Raza",
-        "Derek Bruening",
-        "Weng‐Fai Wong",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Dynamic cache contention detection in multi-threaded applications",
-      "year": 2011,
-      "doi": "10.1145/2007477.1952688",
-      "openalex": "W3000376980",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Qin Zhao",
-        "David Koh",
-        "Syed Raza",
-        "Derek Bruening",
-        "Weng‐Fai Wong",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Highly scalable distributed dataflow analysis",
-      "year": 2011,
-      "doi": "10.1109/cgo.2011.5764695",
-      "openalex": "W3147094945",
-      "s2": "588646ff9228b5ddf2224097041d1a3eaae55639",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Chelsea LeBlanc",
-        "Todd Austin",
-        "Valeria Bertacco"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Umbra attempts to reduce the overhead of accessing shadow variables, which should accelerate any dataflow analysis system [32]."
-      ]
-    },
-    {
-      "title": "Improving Hierarchical Critical Path Analysis Performance",
-      "year": 2011,
-      "doi": null,
-      "openalex": null,
-      "s2": "6befbe876dc9761fd4372205637835a4c160fa23",
-      "venue": null,
-      "authors": [
-        "Christopher M. Louie"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "First, We can partially evaluate some of the timestamp calculation statically so we perform them once during compilation instead of many times during the dynamic execution of the program."
-      ]
-    },
-    {
-      "title": "Kismet",
-      "year": 2011,
-      "doi": "10.1145/2048066.2048108",
-      "openalex": "W2124333827",
-      "s2": "021d7ca29cea1a55e5095e17ddb658e54e054793",
-      "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
-      "authors": [
-        "Dong‐Hwan Jeon",
-        "Saturnino Garcia",
-        "Chris Louie",
-        "Michael Taylor"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Umbra [58] and EMS64 [57] proposed efﬁcient shadow memory implementation for 64-bit address space, exploiting the sparse usage of memory space in 64-bit systems and cached shadow memory."
-      ]
-    },
-    {
-      "title": "Kismet",
-      "year": 2011,
-      "doi": "10.1145/2076021.2048108",
-      "openalex": "W4237203163",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Dong‐Hwan Jeon",
-        "Saturnino Garcia",
-        "Chris Louie",
-        "Michael Taylor"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Kremlin",
-      "year": 2011,
-      "doi": "10.1145/1993316.1993553",
-      "openalex": "W2115920894",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Saturnino Garcia",
-        "Dong‐Hwan Jeon",
-        "Christopher Louie",
-        "Michael Taylor"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Kremlin",
-      "year": 2011,
-      "doi": "10.1145/1993498.1993553",
-      "openalex": "W4230415451",
-      "s2": "8447777614f17875a93ad2c64d6289b6fd11bd13",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Saturnino Garcia",
-        "Dong‐Hwan Jeon",
-        "Christopher Louie",
-        "Michael Taylor"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Kremlin efficiently determines both of these values through the use of shadow memory [30, 45]."
-      ]
-    },
-    {
-      "title": "LnQ: Building High Performance Dynamic Binary Translators with Existing Compiler Backends",
-      "year": 2011,
-      "doi": "10.1109/icpp.2011.57",
-      "openalex": "W2166847391",
-      "s2": "e4050e462768a104dec7ed12fbd46bab6f94ef9b",
-      "venue": "International Conference on Parallel Processing",
-      "authors": [
-        "Chun-Chen Hsu",
-        "Pangfeng Liu",
-        "Chien‐Min Wang",
-        "Jan‐Jan Wu",
-        "Ding‐Yong Hong",
-        "Pen-Chung Yew",
-        "Wei‐Chung Hsu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "For example, Dynamo [1] uses dynamic binary translation techniques to improve execution performance, and DynamoRIO [2] PIN [3], Valgrind [4], Strata [5], [6], and Umbra [7] uses dynamic binary translation techniques for program instrumentation."
-      ]
-    },
-    {
-      "title": "Optimization of naïve dynamic binary instrumentation Tools",
-      "year": 2011,
-      "doi": null,
-      "openalex": "W1566677388",
-      "s2": null,
-      "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-      "authors": [
-        "Reid Kleckner"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Optimization of naïve dynamic binary instrumentation Tools",
-      "year": 2011,
-      "doi": null,
-      "openalex": null,
-      "s2": "4ed4f40468206c647651182d870fcdfadef25972",
-      "venue": null,
-      "authors": [
-        "R. Kleckner"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Using shadow memory provided by Umbra[14], the initial version of this tool checked if the memory in question had been accessed during the last epoch."
-      ]
-    },
-    {
-      "title": "Position Paper : The Potential of Sampling for Dynamic Analysis",
-      "year": 2011,
-      "doi": null,
-      "openalex": null,
-      "s2": "17951fe808a7d83f086919e58d5169536cac53cf",
-      "venue": null,
-      "authors": [
-        "J. Greathouse",
-        "T. Austin"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "…Subject Descriptors D.2.4 [Software Engineering]: Software/Program Verification—statistical methods; D.2.5 [Software Engineering]: Testing and Debugging— debugging aids, distributed debugging, testing tools\nGeneral Terms Performance, Security, Verification\nKeywords Distributed Analysis, Sampling"
-      ]
-    },
-    {
-      "title": "The potential of sampling for dynamic analysis",
-      "year": 2011,
-      "doi": "10.1145/2166956.2166959",
-      "openalex": "W2063005163",
-      "s2": "918be6879ff99df5bb5d46ae51ca53686309b41f",
-      "venue": "ACM Workshop on Programming Languages and Analysis for Security",
-      "authors": [
-        "Joseph L. Greathouse",
-        "Todd Austin"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "PLAS 11 June 5, 2011, San Jose, California, USA.",
-        "…dynamic analyses bene.t from seeing large num­bers \nof executions with a variety of inputs, allowing them Permission to make digital or hard copies of all \nor part of this work for personal or classroom use is granted without fee provided that copies are not \nmade or distributed for…"
-      ]
-    },
-    {
-      "title": "Efficient Memory Shadowing for 64-bit Architectures Citation",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "98e370993c9116be8cd3c9af272465cece11ebc7",
-      "venue": null,
-      "authors": [
-        "Qin Zhao",
-        "Derek Bruening",
-        "Saman P. Amarasinghe"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "• We implement EMS64 on top of Umbra [29] and show that its average overhead is 81%, which nearly halves the overhead of the fastest 64-bit shadow memory system we are aware of and is much lower than MemCheck’s 389% overhead.",
-        "To demonstrate the feasibility of EMS64, we have built a prototype using Umbra [29].",
-        "Although it uses a segmented mapping scheme, unlike other tools that map the entire address space uniformly Umbra [29] maps regions based on application memory allocation."
-      ]
-    },
-    {
-      "title": "Efficient memory shadowing for 64-bit architectures",
-      "year": 2010,
-      "doi": "10.1145/1806651.1806667",
-      "openalex": "W2117322468",
-      "s2": "ef383c3e9f68a33c0b5570df5801d0facaf49c72",
-      "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
-      "authors": [
-        "Qin Zhao",
-        "Derek Bruening",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Efficient memory shadowing for 64-bit architectures",
-      "year": 2010,
-      "doi": "10.1145/1837855.1806667",
-      "openalex": "W3113191890",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Qin Zhao",
-        "Derek Bruening",
-        "Saman Amarasinghe"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "PiPA",
-      "year": 2010,
-      "doi": "10.1145/1880037.1880038",
-      "openalex": "W1964104501",
-      "s2": "d7cd36e94170b920d5091b0429d01808f42b4bb4",
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Qin Zhao",
-        "Ioana Cutcutache",
-        "Weng‐Fai Wong"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "University of Warwick institutional repository: http://go",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "6b2a1a59b2111f8fba82d253aa4e54bd17747b2e",
-      "venue": null,
-      "authors": [
-        "S. Prosser"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The Umbra [131] scalable shadow memory implementation based on the DynamoRIO platform [17], presents a number of performance optimisations over Valgrind, but the toolset remains limited."
-      ]
-    },
-    {
-      "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications",
-      "year": null,
-      "doi": null,
-      "openalex": null,
-      "s2": "848b2450052b0fa64af0e4d7cba291ef19675fd5",
-      "venue": null,
-      "authors": [
-        "Qin Zhao",
-        "David Koh",
-        "S. Raza",
-        "Saman P. Amarasinghe",
-        "Derek Bruening",
-        "W. Wong"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "General frameworks like Umbra [38] have been developed to help users build customized memory shadowing tools.",
-        "We implemented our detector on top of the shadow memory framework Umbra [38], which is an efﬁcient memory shadowing framework that uses a novel mapping scheme [37] to translate application memory addresses to shadow memory addresses."
-      ]
-    },
-    {
-      "title": "The taint rabbit: optimizing generic taint analysis with dynamic fast path generation",
-      "year": null,
-      "doi": null,
-      "openalex": "W3092498976",
-      "s2": null,
-      "venue": "Oxford University Research Archive (ORA) (University of Oxford)",
-      "authors": [
-        "Kroening, D",
-        "Galea, J"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    }
-  ]
+  {
+   "title": "PINT: Parallel INTerval-Based Race Detector",
+   "year": 2022,
+   "doi": "10.1109/ipdps53621.2022.00087",
+   "openalex": "W4285503917",
+   "s2": "52c082d8cdb448215155316dbd52130a3be554c3",
+   "venue": "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
+   "authors": [
+    "Yifan Xu",
+    "Anchengcheng Zhou",
+    "Kunal Agrawal",
+    "I-Ting Angelina Lee"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Many schemes have been explored to optimize access history [34], [29], [30], [28], [35], [36], [37], [38] which make various trade-offs in terms of access time and space.",
+    "A core worker inserts each executed strand into its current trace data structure according to their execution order (lines 11, 18, 25, 32, and 38)."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning",
+   "year": 2021,
+   "doi": "10.1007/978-3-030-80129-8_66",
+   "openalex": "W3184285164",
+   "s2": null,
+   "venue": "Lecture notes in networks and systems",
+   "authors": [
+    "Federico Palmaro",
+    "Luisa Franchina"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Efficient Access History for Race Detection",
+   "year": 2021,
+   "doi": "10.1145/3409964.3461825",
+   "openalex": null,
+   "s2": "7187513ca87d588d336342b8329021798615d618",
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": [
+    "Yifan Xu",
+    "Anchengcheng Zhou",
+    "Grace Q. Yin",
+    "Kunal Agrawal",
+    "I. Lee",
+    "T. Schardl"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "The Taint Rabbit: Optimizing Generic Taint Analysis with Dynamic Fast Path Generation",
+   "year": 2020,
+   "doi": "10.1145/3320269.3384764",
+   "openalex": "W3041990968",
+   "s2": "765bc3dc79f1eeb142332847e1f9aa39007cc1af",
+   "venue": "ACM Asia Conference on Computer and Communications Security",
+   "authors": [
+    "John Galea",
+    "Daniel Kroening"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "hey consist of over 70,000 lines of C code (including tests) and their source is available at https://github.com/Dynamic-Rabbits/Dynamic-Rabbits. Furthermore, Dr. Memory\u2019s shadow memory library Umbra [55] was enhanced to handle 32-bit tags. We also implemented a new DynamoRIO library called drbbdup, which duplicates the code of basic blocks. In turn, drbbdup is used to implement fast path generation. ",
+    "sents \u201cno taint\u201d. Byte Granularity. Meta-data is mapped to every byte in memory and registers; e.g, a mov eax, ebx propagates four labels, one for each byte in ebx. Labels are stored in shadow memory [55]. We do not label the x86 flag register to avoidtaint explosion [56]. Generic Taint Propagation. As illustrated in Figure 2, taint labels are propagated via user-defined code calledtaint primitives. A"
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
+   "year": 2019,
+   "doi": "10.23940/ijpe.19.11.p5.28712881",
+   "openalex": null,
+   "s2": "7b905434506591bb00ad23408727532775a657e8",
+   "venue": "International Journal of Performability Engineering",
+   "authors": [
+    "Liu Hui",
+    "Jinlong Xu",
+    "Ding Lili"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The dependence test methods of the coupling array subscript mainly include the delta test method and the omega test method [6-7]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Data-driven Spatial Locality",
+   "year": 2019,
+   "doi": null,
+   "openalex": null,
+   "s2": "0ef7b2fc24a0dbaf9dc1dba4871869c78f51b713",
+   "venue": null,
+   "authors": [],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Data-flow/dependence profiling for structured transformations",
+   "year": 2019,
+   "doi": "10.1145/3293883.3295737",
+   "openalex": "W2914687823",
+   "s2": "517f4619040eacfd89817855e4bae0eb61e2e947",
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": [
+    "Fabian M. Gruber",
+    "Manuel Selva",
+    "Diogo Sampaio",
+    "Christophe Guillon",
+    "Antoine Moynault",
+    "Louis-No\u00ebl Pouchet",
+    "Fabrice Rastello"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Dynamic dependence graph Shadow memory [76] records a piece of information for each storage location used in a program."
+   ],
+   "cited_by": 8
+  },
+  {
+   "title": "Efficient High Frequency Checkpointing for Recovery and Debugging",
+   "year": 2019,
+   "doi": null,
+   "openalex": null,
+   "s2": "fbc5e170b8fc18c47c2eec74014cbe357fed3c62",
+   "venue": null,
+   "authors": [
+    "Dirk Vogt"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "LMCrelies on a compiler-assisted shadow state organization\u2014similar, in spirit, to shadow memory approaches used in state-of-the-art memory tracing techniques [124; 160; 162; 102; 111; 147; 161; 103]\u2014to incrementally checkpoint the active memory image at the byte granularity."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Wasabi",
+   "year": 2019,
+   "doi": "10.1145/3297858.3304068",
+   "openalex": "W2888822874",
+   "s2": "4c2d6e7037ba8c4118eb1d2fe25de910871314c9",
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": [
+    "Daniel Lehmann",
+    "Michael Pradel"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "In particular, it is straightforward to implement memory shadowing [34, 53], a feature useful, e.g,. for tracking the origin of undesired values or for taint analysis.",
+    "Umbra [53] is a dynamic binary instrumentation tool that focuses on efficient memory shadowing."
+   ],
+   "cited_by": 80
+  },
+  {
+   "title": "Enforcing Abstract Immutability",
+   "year": 2018,
+   "doi": null,
+   "openalex": "W2886049054",
+   "s2": null,
+   "venue": "UWSpace (University of Waterloo)",
+   "authors": [
+    "Jonathan Eyolfson"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Enforcing Abstract Immutability",
+   "year": 2018,
+   "doi": null,
+   "openalex": null,
+   "s2": "f39880610a1d7f3185494a67e4c732fb7f02e4ab",
+   "venue": null,
+   "authors": [
+    "Jon Eyolfson"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Our dynamic analysis approach is similar to approaches used in Umbra [94] and Dr."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly",
+   "year": 2018,
+   "doi": "10.48550/arxiv.1808.10652",
+   "openalex": "W2951338155",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Daniel Lehmann",
+    "Michael Pradel"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const",
+   "year": 2016,
+   "doi": "10.4230/lipics.ecoop.2016.8",
+   "openalex": null,
+   "s2": "2ef00f64200d1e86d21a8f6143d148c3084c7f44",
+   "venue": "European Conference on Object-Oriented Programming",
+   "authors": [
+    "Jon Eyolfson",
+    "Patrick Lam"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 2
+  },
+  {
+   "title": "Control-Flow Security",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "6febfe65483d6f833ce0fc9b3da0d64f8eafea30",
+   "venue": null,
+   "authors": [
+    "W. Arthur"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "demonstrate a low-overhead tool for shadow memory translation with Umbra [151], while Bosman et al."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "DINAMITE: A modern approach to memory performance profiling",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "ec2f24485e4f3dc0541f1d8f9086704fe6cc9f3e",
+   "venue": "arXiv.org",
+   "authors": [
+    "Svetozar Miucin",
+    "C. Brady",
+    "Alexandra Fedorova"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 5
+  },
+  {
+   "title": "Dynamically diagnosing type errors in unsafe code",
+   "year": 2016,
+   "doi": "10.1145/2983990.2983998",
+   "openalex": "W2534285557",
+   "s2": "ab13d65fa30edde821423c3bc52626b3c1f99980",
+   "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+   "authors": [
+    "Stephen Kell"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 16
+  },
+  {
+   "title": "Dynamically diagnosing type errors in unsafe code",
+   "year": 2016,
+   "doi": "10.1145/3022671.2983998",
+   "openalex": "W4241086586",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Stephen Kell"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Low-overhead Online Code Transformations",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "aed85452d453f00789ad51c8e770398da8df8c45",
+   "venue": null,
+   "authors": [
+    "M. Laurenzano"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "as a baseline because it is a mature software project that is actively maintained and is well known for its low overhead relative to other dynamic compilers [65, 188]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Simple DRAM and Virtual Memory Abstractions to Enable Highly Efficient Memory Systems",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "c71074a913504bbf25c5d6231440b11c0413acf1",
+   "venue": "arXiv.org",
+   "authors": [
+    "Vivek Seshadri"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 37
+  },
+  {
+   "title": "HERMES: a fast cross-ISA binary translator with post-optimization",
+   "year": 2015,
+   "doi": "10.5555/2738600.2738631",
+   "openalex": "W2014012690",
+   "s2": null,
+   "venue": "Symposium on Code Generation and Optimization",
+   "authors": [
+    "Xiaochun Zhang",
+    "Qi Guo",
+    "Yunji Chen",
+    "Tianshi Chen",
+    "Weiwu Hu"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 13
+  },
+  {
+   "title": "Hermes: A fast cross-ISA binary translator with post-optimization",
+   "year": 2015,
+   "doi": "10.1109/cgo.2015.7054204",
+   "openalex": "W4229566048",
+   "s2": "badda8b7df6f75ab77d7644d76805a6a5ba7b575",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Xiaochun Zhang",
+    "Qi Guo",
+    "Yunji Chen",
+    "Tianshi Chen",
+    "Weiwu Hu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The same-ISA translators are mainly used for program instrumentation, debugging, and security [14, 15, 19, 25]."
+   ],
+   "cited_by": 13
+  },
+  {
+   "title": "Information Flow Auditing in the Cloud",
+   "year": 2015,
+   "doi": "10.7916/d82b8wq9",
+   "openalex": "W2137413731",
+   "s2": "b7539a04f9aea375c9f51acbad681373f3740ad0",
+   "venue": "Columbia Academic Commons (Columbia University)",
+   "authors": [
+    "Angeliki Zavou"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "In between, systems like Umbra [85] and TEMU [75] allow for various byte-to-byte and byte-to-bit configurations, as well as for lossy encodings (e.",
+    "But there are also situations [36; 85; 84; 75]) where we need to discriminate between data read from different sources or to distinguish between trust levels.",
+    "This requirement is highly challenging, as most DFT frameworks provide either a single tag [59; 16; 19] or just a few\u2014usually eight [36; 85; 84]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Lightweight Memory Checkpointing",
+   "year": 2015,
+   "doi": "10.1109/dsn.2015.45",
+   "openalex": "W1571050301",
+   "s2": "029d5850adddb3c4bc7c7001959b50d29e82ebfc",
+   "venue": "2015 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
+   "authors": [
+    "Dirk Vogt",
+    "Cristiano Giuffrida",
+    "Herbert Bos",
+    "Andrew S. Tanenbaum"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 19
+  },
+  {
+   "title": "Optimizing Control Transfer and Memory Virtualization in Full System Emulators",
+   "year": 2015,
+   "doi": "10.1145/2837027",
+   "openalex": "W2264988905",
+   "s2": "ce19eb01ba639b0c8f313b6c8e25858290283e18",
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Ding\u2010Yong Hong",
+    "Chun-Chen Hsu",
+    "Cheng-Yi Chou",
+    "Wei\u2010Chung Hsu",
+    "Pangfeng Liu",
+    "Jan\u2010Jan Wu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "DBTs have been widely used for runtime pro\ufb01ling [Witchel and Rosenblum 1996; Luk et al. 2005; Nethercote and Seward 2007; Zhao et al. 2010], transparent performance optimization [Bala et al. 2000; Bruening et al. 2003] and migration of legacy code [Baraz et al. 2003; Chernoff et al. 1998; Zheng and\u2026"
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "Using Machine Learning Techniques to Detect Parallel Patterns of Multi-threaded Applications",
+   "year": 2015,
+   "doi": "10.1007/s10766-015-0396-z",
+   "openalex": "W2190564708",
+   "s2": "0c19b7b11cf84afb904a67af05f87e9001f8d162",
+   "venue": "International Journal of Parallel Programming",
+   "authors": [
+    "Etem Deniz",
+    "Alper \u015een"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "To collect characteristics ofmulti-threaded applications, we useDynamoRIO andUmbra as described in Sect.",
+    "In [54], the experimental results show that the slowdown due to instrumentation varies from about 10% to 6\u00d7.",
+    "We also use Umbra [54], for efficient and scalable memory shadowing.",
+    "We developed our data collection tool as a client of DynamoRIO and Umbra.",
+    "Furthermore, DynamoRIO and Umbra tools are meant to be efficient and scalable [20,54]."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "An Event-Based Language for Dynamic Binary Translation Frame Works",
+   "year": 2014,
+   "doi": "10.1145/2628071.2671420",
+   "openalex": "W2119361011",
+   "s2": "de634df718cca9a80d9e31b16146ad85c4299135",
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": [
+    "Serguei Makarov",
+    "Angela Demke Brown",
+    "Ashvin Goel"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Global data is used to store information collected by the probes, either in the script\u2019s local memory or as shadow memory values associated to specific address locations in the target program\u2019s memory, managed by a framework such as Umbra [10]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "MINIME: Pattern-Aware Multicore Benchmark Synthesizer",
+   "year": 2014,
+   "doi": "10.1109/tc.2014.2349522",
+   "openalex": "W2035252178",
+   "s2": "d698cef243500d4d781eaeeb3f4ada89b045e575",
+   "venue": "IEEE Transactions on Computers",
+   "authors": [
+    "Etem Deniz",
+    "Alper \u015een",
+    "Brian Kahne",
+    "Jim Holt"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "We also use Umbra [12], which is an efficient and scalable memory shadowing tool built on top of DynamoRIO.",
+    "Furthermore, our high level characterization tools DynamoRIO and Umbra currently support x86 ISA, hence we devised another technique to generate the synthetic on Power ISA.",
+    "We developed our characterizer as a client of DynamoRIO and Umbra."
+   ],
+   "cited_by": 19
+  },
+  {
+   "title": "Methods for binary symbolic execution",
+   "year": 2014,
+   "doi": null,
+   "openalex": null,
+   "s2": "d22e0d814d8ee216e842dcecd7a91184004a7db3",
+   "venue": null,
+   "authors": [
+    "Anthony Romano"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Metadata for these algorithms is often stored in shadow memory [99, 137]."
+   ],
+   "cited_by": 4
+  },
+  {
+   "title": "Protean Code: Achieving Near-Free Online Code Transformations for Warehouse Scale Computers",
+   "year": 2014,
+   "doi": "10.1109/micro.2014.21",
+   "openalex": "W1994790794",
+   "s2": "ed964ab4ca9516f1c6e2d6fc7ba2c79d4cd91262",
+   "venue": "Micro",
+   "authors": [
+    "Michael A. Laurenzano",
+    "Yunqi Zhang",
+    "Lingjia Tang",
+    "Jason Mars"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "DynamoRIO is a state of the art binary translation-based dynamic compiler, chosen as a baseline because it is a mature software project that is actively maintained and is well known for its low overhead relative to other dynamic compilers [49, 50]."
+   ],
+   "cited_by": 60
+  },
+  {
+   "title": "symMMU",
+   "year": 2014,
+   "doi": "10.1145/2642937.2642974",
+   "openalex": "W1996922896",
+   "s2": "c84289a5f83a683ffe6a5f4e0fc38868ec1fd105",
+   "venue": "International Conference on Automated Software Engineering",
+   "authors": [
+    "Anthony G. Romano",
+    "Dawson Engler"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Metadata for these algorithms is often stored in shadow memory [21, 32]."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "Architecture-Independent Dynamic Information Flow Tracking",
+   "year": 2013,
+   "doi": "10.1007/978-3-642-37051-9_8",
+   "openalex": "W2104355531",
+   "s2": "8b4f3639397c7d9cf1daa5139daa26320cd301ed",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Ryan Whelan",
+    "Tim Leek",
+    "David Kaeli"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The key component in the architecture of dynamic information flow tracking systems that allows data to be tracked at a fine-grained level is a shadow memory [28, 43]."
+   ],
+   "cited_by": 26
+  },
+  {
+   "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs",
+   "year": 2013,
+   "doi": "10.1109/icdcs.2013.13",
+   "openalex": "W2100315216",
+   "s2": "ab655f3afe15d3b6457327d1af73b6c71c494a8a",
+   "venue": "IEEE International Conference on Distributed Computing Systems",
+   "authors": [
+    "Fang Zheng",
+    "Chitra Venkatramani",
+    "Rohit Wagle",
+    "Karsten Schwan"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Umbra [31] adds a set of plug-ins to DynamoRIO for tracking program\u2019s memory references."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "CloudFence: Data Flow Tracking as a Cloud Service",
+   "year": 2013,
+   "doi": "10.1007/978-3-642-41284-4_21",
+   "openalex": "W205715760",
+   "s2": "1eba1d345bf57793cca91c8fbdf0473756a68835",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Vasilis Pappas",
+    "Vasileios P. Kemerlis",
+    "Angeliki Zavou",
+    "Michalis Polychronakis",
+    "Angelos D. Keromytis"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "In between, systems like Umbra [36] and TEMU [40] allow for various byte-to-byte and byte-to-bit configurations, as well as for lossy encodings (e.",
+    "In between, systems like Umbra [36] and TEMU [40] allow for various byte-to-byte and byte-to-bit configurations, as well as for lossy encodings (e.g., four bytes of addressable memory can be tagged using one byte).",
+    "Despite the significant increase in tag space, the runtime overhead of CloudFence is comparable to existing byte-level data flow tracking systems that support just a single [9,13,34] or up to eight [23,35,36] tags, and an order of magnitude lower compared to systems that support arbitrarily many tags [14, 40].",
+    "This requirement is highly challenging, as most DFT frameworks provide either a single tag [9, 13, 34] or just a few\u2014usually eight [23, 35, 36]."
+   ],
+   "cited_by": 45
+  },
+  {
+   "title": "Detection of false sharing using machine learning",
+   "year": 2013,
+   "doi": "10.1145/2503210.2503269",
+   "openalex": "W1994256395",
+   "s2": "326d1495d5288ce7fbe548809df56a8ac11da544",
+   "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
+   "authors": [
+    "Sanath Jayasena",
+    "Saman Amarasinghe",
+    "A.W.L.D. Abeyweera",
+    "Gayashan Amarasinghe",
+    "Himeshi De Silva",
+    "Sunimal Rathnayake",
+    "Xiaoqiao Meng",
+    "Yanbin Liu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 31
+  },
+  {
+   "title": "HighlyScalableDistributedDataflowAnalysis",
+   "year": 2013,
+   "doi": null,
+   "openalex": "W2096801581",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Joseph L. Greathouse",
+    "Chelsea LeBlanc",
+    "Todd Austin",
+    "Valeria Bertacco"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 9
+  },
+  {
+   "title": "Jalangi: a selective record-replay and dynamic analysis framework for JavaScript",
+   "year": 2013,
+   "doi": "10.1145/2491411.2491447",
+   "openalex": "W1987647365",
+   "s2": "72df5ef4cb7403a1ab5ab817f1ecbe16d83cd23b",
+   "venue": "ESEC/FSE 2013",
+   "authors": [
+    "Koushik Sen",
+    "Swaroop Kalasapur",
+    "Tasneem Brutch",
+    "Simon Gibbs"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The idea of shadow values in the context of x86 binaries has been previously proposed in [20, 36] and has been used in several analysis tools [36, 21, 6, 8]."
+   ],
+   "cited_by": 273
+  },
+  {
+   "title": "Lightweight Memory Tracing",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "561d1f3afc4d41c41b44f7e22f337132fc388332",
+   "venue": "USENIX Annual Technical Conference",
+   "authors": [
+    "Mathias Payer",
+    "Enrico Kravina",
+    "T. Gross"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Umbra [31], EDDI [32], and Dr."
+   ],
+   "cited_by": 30
+  },
+  {
+   "title": "Lightweight memory tracing",
+   "year": 2013,
+   "doi": null,
+   "openalex": "W2152389483",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Mathias Payer",
+    "Enrico Kravina",
+    "Thomas Gro\u00df"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 20
+  },
+  {
+   "title": "Schnauzer: scalable profiling for likely security bug sites",
+   "year": 2013,
+   "doi": "10.1109/cgo.2013.6494998",
+   "openalex": "W1968161191",
+   "s2": "71ca85498d181c75a83891858c96560542060d03",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "W. Brian Arthur",
+    "Biruk Mammo",
+    "R. Rodr\u00edguez",
+    "T. Austin",
+    "Valeria Bertacco"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 2
+  },
+  {
+   "title": "Skadu: Efficient vector shadow memories for poly-scopic program analysis",
+   "year": 2013,
+   "doi": "10.1109/cgo.2013.6494985",
+   "openalex": "W2135348627",
+   "s2": "2a079134a4c16f509fcf02d749e594b04e458108",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Dong\u2010Hwan Jeon",
+    "Santi Orriols Garc\u00eda",
+    "Michael Taylor"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Recent work has expanded this basic structure to three-levels to better support 64-bit address spaces [24, 25].",
+    "Umbra: Ef.cient and scalable memory shadowing.",
+    "1 Although not shown, this structure is easily modified to handle 64-bit addressing via an additional table before the segment table, similar to what was proposed in [25].",
+    "While Skadu\u2019s VStorage uses a three-level address translation organization similar to that of Umbra [25], Skadu\u2019s overall architecture is optimized to meet the needs of regionbased analysis and vector shadow memory operations.",
+    "While Skadu s VStorage uses a three-level address trans\u00adlation \norganization similar to that of Umbra [25], Skadu s overall architecture is optimized to meet the needs \nof region\u00adbased analysis and vector shadow memory operations."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "A case for unlimited watchpoints",
+   "year": 2012,
+   "doi": "10.1145/2150976.2150994",
+   "openalex": "W1981092677",
+   "s2": "04df5c287da72d13eb9aa7e17e84c6ab5531391d",
+   "venue": "ASPLOS XVII",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Hongyi Xin",
+    "Yixin Luo",
+    "Todd Austin"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The second baseline system is Umbra, a more general shadow memory system built on top of DynamoRio [49].",
+    "The second baseline \nsystem is Umbra, a more general shadow memory system built on top of DynamoRio [49]."
+   ],
+   "cited_by": 36
+  },
+  {
+   "title": "A case for unlimited watchpoints",
+   "year": 2012,
+   "doi": "10.1145/2189750.2150994",
+   "openalex": "W4242112599",
+   "s2": null,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Hongyi Xin",
+    "Yixin Luo",
+    "Todd Austin"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "A case for unlimited watchpoints",
+   "year": 2012,
+   "doi": "10.1145/2248487.2150994",
+   "openalex": "W4245241961",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Hongyi Xin",
+    "Yixin Luo",
+    "Todd Austin"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "A practical oracle for sequential code parallelization",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "6e6be137332e16df6f10cb9e2cca51ca0d451980",
+   "venue": null,
+   "authors": [
+    "Saturnino Garcia"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "A specification language for debugging",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "470ab02a955b0dd0258b10c7d89b024af35784d8",
+   "venue": null,
+   "authors": [
+    "Ngo Tuan Vu"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "AddressSanitizer: A Fast Address Sanity Checker",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "29146d2b80bc8c56f7e18efe8d2c92354254e947",
+   "venue": "USENIX Annual Technical Conference",
+   "authors": [
+    "Kostya Serebryany",
+    "Derek Bruening",
+    "Alexander Potapenko",
+    "D. Vyukov"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "For 64-bit platforms, Valgrind uses an additional table layer for application addresses not in the lower 32GB. Umbra [30] [31] combines layout flexibility with efficiency , avoiding a table lookup via a non-uniform and dynamically-tuned scale and offset scheme.",
+    "Unlike in Umbra [31], the Offset must be chosen statically for every platform, but we do not see this as a serious limitation ."
+   ],
+   "cited_by": 1317
+  },
+  {
+   "title": "AddressSanitizer: a fast address sanity checker",
+   "year": 2012,
+   "doi": null,
+   "openalex": "W1878544538",
+   "s2": null,
+   "venue": "USENIX Annual Technical Conference",
+   "authors": [
+    "Konstantin Serebryany",
+    "Derek Bruening",
+    "Alexander Potapenko",
+    "Dmitry Vyukov"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 642
+  },
+  {
+   "title": "Aikido",
+   "year": 2012,
+   "doi": "10.1145/2150976.2150995",
+   "openalex": "W2143644287",
+   "s2": "c36d7ec573582cd93ccdb15f132eb983be04ec71",
+   "venue": "ASPLOS XVII",
+   "authors": [
+    "Marek Olszewski",
+    "Qin Zhao",
+    "David Koh",
+    "Jason Ansel",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "contexts": [
+    "We have implemented Aikido as an extension to the Umbra project [34], an efficient framework for writing shadow value tools (tools that require per-address metadata) in the DynamoRIO [9] binary instrumentation system.",
+    "Umbra [33, 34] is an extension to the DynamoRIO binary instrumentation system that allows building efficient shadow value tools [8]."
+   ],
+   "cited_by": 24
+  },
+  {
+   "title": "Aikido",
+   "year": 2012,
+   "doi": "10.1145/2189750.2150995",
+   "openalex": "W4238070624",
+   "s2": null,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": [
+    "Marek Olszewski",
+    "Qin Zhao",
+    "David Koh",
+    "Jason Ansel",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Aikido",
+   "year": 2012,
+   "doi": "10.1145/2248487.2150995",
+   "openalex": "W4249700078",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Marek Olszewski",
+    "Qin Zhao",
+    "David Koh",
+    "Jason Ansel",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Comprehensive kernel instrumentation via dynamic binary translation",
+   "year": 2012,
+   "doi": "10.1145/2150976.2150992",
+   "openalex": "W2174935658",
+   "s2": "4b6746125fb0e00dc7772a894b44b0f473f7af03",
+   "venue": "ASPLOS XVII",
+   "authors": [
+    "Peter Feiner",
+    "Angela Demke Brown",
+    "Ashvin Goel"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "We decided to port the userspace Umbra shadow memory framework [25] for 64-bit x86 to the Linux kernel."
+   ],
+   "cited_by": 48
+  },
+  {
+   "title": "Computer Science (Computer Engineering)",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "d536d9f8129a92f54aa5dcc130a7565d14872741",
+   "venue": null,
+   "authors": [
+    "Dong-Keun Jeon"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Fast loop-level data dependence profiling",
+   "year": 2012,
+   "doi": "10.1145/2304576.2304584",
+   "openalex": "W2018931757",
+   "s2": "f823279dcd52c0635cdce41bbbf37b94fa13b064",
+   "venue": "International Conference on Supercomputing",
+   "authors": [
+    "Hongtao Yu",
+    "Zhiyuan Li"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "result"
+   ],
+   "contexts": [
+    "[35] Zhao, Q., Bruening, D., \nand Amarasinghe, S. Umbra: e.cient and scalable memory shadowing.",
+    "The experimental results in [35] show that even the relatively \ne.\u00adcient mapping mechanisms in Umbra [35] and Valgrind [21] incur three and nine times slowdown, respectively, \nto the program execution.",
+    "The experimental results in [35] show that even the relatively efficient mapping mechanisms in Umbra [35] and Valgrind [21] incur three and nine times slowdown, respectively, to the program execution."
+   ],
+   "cited_by": 20
+  },
+  {
+   "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "295423fa4c09786b7bea7f19b53e6ef3d9741af8",
+   "venue": null,
+   "authors": [
+    "J. Greathouse"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Umbra reduced the overhead of shadow data accesses from 8\u201312\u00d7 to 2\u20134\u00d7 [234], but this is still more than most users would tolerate.",
+    "The second baseline system is Umbra, a more general shadow memory system built on top of DynamoRio [234].",
+    ", for instance, showed mechanisms to accelerate shadow variable accesses [234].",
+    "Simply accessing shadow values, as demonstrated by Umbra, can cause a program to run up to 3\u00d7 slower [234].",
+    "In a different vein, previously discussed techniques for accelerating dynamic analyses, such as Umbra [234], would also work to accelerate data race detection."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis.",
+   "year": 2012,
+   "doi": null,
+   "openalex": "W98207858",
+   "s2": null,
+   "venue": "Deep Blue (University of Michigan)",
+   "authors": [
+    "Todd Austin",
+    "Joseph L. Greathouse"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Parallel speedup estimates for serial programs",
+   "year": 2012,
+   "doi": null,
+   "openalex": "W338206765",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Michael Taylor",
+    "Dong\u2010Hwan Jeon"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Parallel speedup estimates for serial programs",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "543f759f3f51690439851a303e9bc86a794786bd",
+   "venue": null,
+   "authors": [
+    "Donghwan Jeon"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Parallel speedup estimates for serial programs",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "5fda459b100d6a2e33dcf67e19d721f4a5bfca80",
+   "venue": null,
+   "authors": [
+    "Donghwan Jeon",
+    "Misook Chung"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Practical low-overhead enforcement of memory safety for c programs",
+   "year": 2012,
+   "doi": null,
+   "openalex": "W51951760",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Milo M. K. Martin",
+    "Santosh Nagarakatte"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 15
+  },
+  {
+   "title": "Practical low-overhead enforcement of memory safety for c programs",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "b2fb996bb0daaf8609e72c751140da95d080fb62",
+   "venue": null,
+   "authors": [
+    "Milo M. K. Martin",
+    "Santosh Nagarakatte"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "A shadowspace may be implemented as a large, directly accessed memory region, a hashtable [92], or a trie-based data structure [96, 138].",
+    "A few other researchers [96, 138] have observed mapping shadow memory as one of the performance problems in designing binary translation-based checkers and have proposed efficient software mechanisms to shadow memory on 64-bit machines with reasonable translation overhead [138]."
+   ],
+   "cited_by": 22
+  },
+  {
+   "title": "Quantitative Application Data Flow Characterization for Heterogeneous Multicore Architectures",
+   "year": 2012,
+   "doi": "10.4233/uuid:5acbd4cd-ab5f-486a-8268-61cd7416550d",
+   "openalex": null,
+   "s2": "bdde4392bb6be04c04f37ff2ce84e387910156d6",
+   "venue": null,
+   "authors": [
+    "S. A. Ostadzadeh"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 5
+  },
+  {
+   "title": "Transparent dynamic instrumentation",
+   "year": 2012,
+   "doi": "10.1145/2151024.2151043",
+   "openalex": "W2133692747",
+   "s2": "f0d19c7e123c0160f2535e561c2955df99d4f993",
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": [
+    "Derek Bruening",
+    "Qin Zhao",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 124
+  },
+  {
+   "title": "Transparent dynamic instrumentation",
+   "year": 2012,
+   "doi": "10.1145/2365864.2151043",
+   "openalex": "W2996990589",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Derek Bruening",
+    "Qin Zhao",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 19
+  },
+  {
+   "title": "Using software architectural patterns for synthetic embedded multicore benchmark development",
+   "year": 2012,
+   "doi": "10.1109/iiswc.2012.6402908",
+   "openalex": "W2088285489",
+   "s2": "8f644574017f127b73b0ae7ebbf74566313121d8",
+   "venue": "IEEE International Symposium on Workload Characterization",
+   "authors": [
+    "Etem Deniz",
+    "Alper \u015een",
+    "Jim Holt",
+    "Brian Kahne"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "In order to achieve this, we measure the similarity between the original workload and the synthetic benchmark with respect to several similarity metrics."
+   ],
+   "cited_by": 8
+  },
+  {
+   "title": "Demand-driven software race detection using hardware performance counters",
+   "year": 2011,
+   "doi": "10.1145/2000064.2000084",
+   "openalex": "W2128717053",
+   "s2": "275686a7ff912287fa73d51c85bdd3960f4f581d",
+   "venue": "International Symposium on Computer Architecture",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Zhiqiang Ma",
+    "Matthew I. Frank",
+    "Ramesh Peri",
+    "Todd Austin"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "In a different vein, Umbra shows methods for making the shadow memory accesses needed for dynamic analysis tools much more efficient [46]."
+   ],
+   "cited_by": 53
+  },
+  {
+   "title": "Demand-driven software race detection using hardware performance counters",
+   "year": 2011,
+   "doi": "10.1145/2024723.2000084",
+   "openalex": "W4248238279",
+   "s2": null,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Zhiqiang Ma",
+    "Matthew I. Frank",
+    "Ramesh Peri",
+    "Todd Austin"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 9
+  },
+  {
+   "title": "Dynamic cache contention detection in multi-threaded applications",
+   "year": 2011,
+   "doi": "10.1145/1952682.1952688",
+   "openalex": "W2123065508",
+   "s2": "0e92be856ff82fc9ddd9aad114129d263d3fb58b",
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": [
+    "Qin Zhao",
+    "David Koh",
+    "Syed Raza",
+    "Derek Bruening",
+    "Weng\u2010Fai Wong",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 70
+  },
+  {
+   "title": "Dynamic cache contention detection in multi-threaded applications",
+   "year": 2011,
+   "doi": "10.1145/2007477.1952688",
+   "openalex": "W3000376980",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Qin Zhao",
+    "David Koh",
+    "Syed Raza",
+    "Derek Bruening",
+    "Weng\u2010Fai Wong",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 10
+  },
+  {
+   "title": "Highly scalable distributed dataflow analysis",
+   "year": 2011,
+   "doi": "10.1109/cgo.2011.5764695",
+   "openalex": "W3147094945",
+   "s2": "588646ff9228b5ddf2224097041d1a3eaae55639",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Chelsea LeBlanc",
+    "Todd Austin",
+    "Valeria Bertacco"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Umbra attempts to reduce the overhead of accessing shadow variables, which should accelerate any dataflow analysis system [32]."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "Improving Hierarchical Critical Path Analysis Performance",
+   "year": 2011,
+   "doi": null,
+   "openalex": null,
+   "s2": "6befbe876dc9761fd4372205637835a4c160fa23",
+   "venue": null,
+   "authors": [
+    "Christopher M. Louie"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "First, We can partially evaluate some of the timestamp calculation statically so we perform them once during compilation instead of many times during the dynamic execution of the program."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Kismet",
+   "year": 2011,
+   "doi": "10.1145/2048066.2048108",
+   "openalex": "W2124333827",
+   "s2": "021d7ca29cea1a55e5095e17ddb658e54e054793",
+   "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+   "authors": [
+    "Dong\u2010Hwan Jeon",
+    "Saturnino Garcia",
+    "Chris Louie",
+    "Michael Taylor"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Umbra [58] and EMS64 [57] proposed ef\ufb01cient shadow memory implementation for 64-bit address space, exploiting the sparse usage of memory space in 64-bit systems and cached shadow memory."
+   ],
+   "cited_by": 49
+  },
+  {
+   "title": "Kismet",
+   "year": 2011,
+   "doi": "10.1145/2076021.2048108",
+   "openalex": "W4237203163",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Dong\u2010Hwan Jeon",
+    "Saturnino Garcia",
+    "Chris Louie",
+    "Michael Taylor"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 8
+  },
+  {
+   "title": "Kremlin",
+   "year": 2011,
+   "doi": "10.1145/1993316.1993553",
+   "openalex": "W2115920894",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Saturnino Garcia",
+    "Dong\u2010Hwan Jeon",
+    "Christopher Louie",
+    "Michael Taylor"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 85
+  },
+  {
+   "title": "Kremlin",
+   "year": 2011,
+   "doi": "10.1145/1993498.1993553",
+   "openalex": "W4230415451",
+   "s2": "8447777614f17875a93ad2c64d6289b6fd11bd13",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Saturnino Garcia",
+    "Dong\u2010Hwan Jeon",
+    "Christopher Louie",
+    "Michael Taylor"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Kremlin efficiently determines both of these values through the use of shadow memory [30, 45]."
+   ],
+   "cited_by": 62
+  },
+  {
+   "title": "LnQ: Building High Performance Dynamic Binary Translators with Existing Compiler Backends",
+   "year": 2011,
+   "doi": "10.1109/icpp.2011.57",
+   "openalex": "W2166847391",
+   "s2": "e4050e462768a104dec7ed12fbd46bab6f94ef9b",
+   "venue": "International Conference on Parallel Processing",
+   "authors": [
+    "Chun-Chen Hsu",
+    "Pangfeng Liu",
+    "Chien\u2010Min Wang",
+    "Jan\u2010Jan Wu",
+    "Ding\u2010Yong Hong",
+    "Pen-Chung Yew",
+    "Wei\u2010Chung Hsu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "For example, Dynamo [1] uses dynamic binary translation techniques to improve execution performance, and DynamoRIO [2] PIN [3], Valgrind [4], Strata [5], [6], and Umbra [7] uses dynamic binary translation techniques for program instrumentation."
+   ],
+   "cited_by": 16
+  },
+  {
+   "title": "Optimization of na\u00efve dynamic binary instrumentation Tools",
+   "year": 2011,
+   "doi": null,
+   "openalex": "W1566677388",
+   "s2": null,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": [
+    "Reid Kleckner"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "Optimization of na\u00efve dynamic binary instrumentation Tools",
+   "year": 2011,
+   "doi": null,
+   "openalex": null,
+   "s2": "4ed4f40468206c647651182d870fcdfadef25972",
+   "venue": null,
+   "authors": [
+    "R. Kleckner"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Using shadow memory provided by Umbra[14], the initial version of this tool checked if the memory in question had been accessed during the last epoch."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Position Paper : The Potential of Sampling for Dynamic Analysis",
+   "year": 2011,
+   "doi": null,
+   "openalex": null,
+   "s2": "17951fe808a7d83f086919e58d5169536cac53cf",
+   "venue": null,
+   "authors": [
+    "J. Greathouse",
+    "T. Austin"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "\u2026Subject Descriptors D.2.4 [Software Engineering]: Software/Program Verification\u2014statistical methods; D.2.5 [Software Engineering]: Testing and Debugging\u2014 debugging aids, distributed debugging, testing tools\nGeneral Terms Performance, Security, Verification\nKeywords Distributed Analysis, Sampling"
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "The potential of sampling for dynamic analysis",
+   "year": 2011,
+   "doi": "10.1145/2166956.2166959",
+   "openalex": "W2063005163",
+   "s2": "918be6879ff99df5bb5d46ae51ca53686309b41f",
+   "venue": "ACM Workshop on Programming Languages and Analysis for Security",
+   "authors": [
+    "Joseph L. Greathouse",
+    "Todd Austin"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "PLAS 11 June 5, 2011, San Jose, California, USA.",
+    "\u2026dynamic analyses bene.t from seeing large num\u00adbers \nof executions with a variety of inputs, allowing them Permission to make digital or hard copies of all \nor part of this work for personal or classroom use is granted without fee provided that copies are not \nmade or distributed for\u2026"
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Efficient Memory Shadowing for 64-bit Architectures Citation",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "98e370993c9116be8cd3c9af272465cece11ebc7",
+   "venue": null,
+   "authors": [
+    "Qin Zhao",
+    "Derek Bruening",
+    "Saman P. Amarasinghe"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "\u2022 We implement EMS64 on top of Umbra [29] and show that its average overhead is 81%, which nearly halves the overhead of the fastest 64-bit shadow memory system we are aware of and is much lower than MemCheck\u2019s 389% overhead.",
+    "To demonstrate the feasibility of EMS64, we have built a prototype using Umbra [29].",
+    "Although it uses a segmented mapping scheme, unlike other tools that map the entire address space uniformly Umbra [29] maps regions based on application memory allocation."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Efficient memory shadowing for 64-bit architectures",
+   "year": 2010,
+   "doi": "10.1145/1806651.1806667",
+   "openalex": "W2117322468",
+   "s2": "ef383c3e9f68a33c0b5570df5801d0facaf49c72",
+   "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
+   "authors": [
+    "Qin Zhao",
+    "Derek Bruening",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 19
+  },
+  {
+   "title": "Efficient memory shadowing for 64-bit architectures",
+   "year": 2010,
+   "doi": "10.1145/1837855.1806667",
+   "openalex": "W3113191890",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Qin Zhao",
+    "Derek Bruening",
+    "Saman Amarasinghe"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "PiPA",
+   "year": 2010,
+   "doi": "10.1145/1880037.1880038",
+   "openalex": "W1964104501",
+   "s2": "d7cd36e94170b920d5091b0429d01808f42b4bb4",
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Qin Zhao",
+    "Ioana Cutcutache",
+    "Weng\u2010Fai Wong"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 18
+  },
+  {
+   "title": "University of Warwick institutional repository: http://go",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "6b2a1a59b2111f8fba82d253aa4e54bd17747b2e",
+   "venue": null,
+   "authors": [
+    "S. Prosser"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The Umbra [131] scalable shadow memory implementation based on the DynamoRIO platform [17], presents a number of performance optimisations over Valgrind, but the toolset remains limited."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications",
+   "year": null,
+   "doi": null,
+   "openalex": null,
+   "s2": "848b2450052b0fa64af0e4d7cba291ef19675fd5",
+   "venue": null,
+   "authors": [
+    "Qin Zhao",
+    "David Koh",
+    "S. Raza",
+    "Saman P. Amarasinghe",
+    "Derek Bruening",
+    "W. Wong"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "General frameworks like Umbra [38] have been developed to help users build customized memory shadowing tools.",
+    "We implemented our detector on top of the shadow memory framework Umbra [38], which is an ef\ufb01cient memory shadowing framework that uses a novel mapping scheme [37] to translate application memory addresses to shadow memory addresses."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "The taint rabbit: optimizing generic taint analysis with dynamic fast path generation",
+   "year": null,
+   "doi": null,
+   "openalex": "W3092498976",
+   "s2": null,
+   "venue": "Oxford University Research Archive (ORA) (University of Oxford)",
+   "authors": [
+    "Kroening, D",
+    "Galea, J"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 15
+  }
+ ]
 }

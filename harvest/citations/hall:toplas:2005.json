@@ -1,1896 +1,2000 @@
 {
-  "counts": {
-    "openalex": 66,
-    "s2": 74
+ "counts": {
+  "openalex": 66,
+  "s2": 74
+ },
+ "citing": [
+  {
+   "title": "LEGO: A Layout Expression Language for Code Generation of Hierarchical Mapping",
+   "year": 2026,
+   "doi": "10.1109/cgo68049.2026.11394846",
+   "openalex": "W7131067420",
+   "s2": "52b764ea8074267c17ca6aa6be02ff49211a689a",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Amir Mohammad Tavakkoli",
+    "Cosmin E. Oancea",
+    "Mary Jane Hall"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "These can be represented as predicated extensions of polyhedral systems [6, 56] or as languages [57, 58] that build on linear-memory access descriptors (LMADs)."
+   ],
+   "cited_by": 1
   },
-  "citing": [
-    {
-      "title": "LEGO: A Layout Expression Language for Code Generation of Hierarchical Mapping",
-      "year": 2026,
-      "doi": "10.1109/cgo68049.2026.11394846",
-      "openalex": "W7131067420",
-      "s2": "52b764ea8074267c17ca6aa6be02ff49211a689a",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Amir Mohammad Tavakkoli",
-        "Cosmin E. Oancea",
-        "Mary Jane Hall"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "These can be represented as predicated extensions of polyhedral systems [6, 56] or as languages [57, 58] that build on linear-memory access descriptors (LMADs)."
-      ]
-    },
-    {
-      "title": "Verifying Array Properties in Pure Data-Parallel Programs",
-      "year": 2026,
-      "doi": "10.1145/3808304",
-      "openalex": null,
-      "s2": "8959d045b3a2ae6d71e6da81c5e51b518691ce3c",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "N. Hinnerskov",
-        "Robert Schenck",
-        "C. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "P 2 is inspired by loop optimizations where suitable access-pattern representations [43, 55] are key to scaling interprocedural analysis, statically [28, 50, 73] or via static-dynamic combinations [43, 48] for non-affine code."
-      ]
-    },
-    {
-      "title": "Link-Time Optimization of Dynamic Casts in C++ Programs",
-      "year": 2025,
-      "doi": "10.1145/3729266",
-      "openalex": "W4411260251",
-      "s2": "4b98d68ae6bc7f1b57ee84d7b2c1305a8e37ec1a",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Xufan Lu",
-        "Nuno P. Lopes"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Several optimizations leverage LTO to obtain a closed world [6, 13, 32, 68, 73, 76]."
-      ]
-    },
-    {
-      "title": "Verifying Properties of Index Arrays in a Purely-Functional Data-Parallel Language",
-      "year": 2025,
-      "doi": "10.48550/arxiv.2506.23058",
-      "openalex": null,
-      "s2": "4fe8321cbb05d165b525e2d9537b29bac1308132",
-      "venue": "arXiv.org",
-      "authors": [
-        "N. Hinnerskov",
-        "Robert Schenck",
-        "C. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Related analyses have shown that choosing a suitable representation for access patterns [35, 41, 50] is key to scaling analysis interprocedurally, either statically [24, 43, 65] or by combining static and dynamic [16, 42, 50] to cover challenging non-affine code instances."
-      ]
-    },
-    {
-      "title": "AD for an Array Language with Nested Parallelism",
-      "year": 2022,
-      "doi": "10.1109/sc41404.2022.00063",
-      "openalex": "W4321636553",
-      "s2": "5d5b39966ebf81d222cecfe173a3e2b3433ffbcb",
-      "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
-      "authors": [
-        "Robert Schenck",
-        "Ola Rφnning",
-        "Troels Henriksen",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Work in the automatic parallelization area can be used to automatically check the safety of such annotations, statically [16], dynamically [11], and anywhere in between [31]."
-      ]
-    },
-    {
-      "title": "Memory Optimizations in an Array Language",
-      "year": 2022,
-      "doi": "10.1109/sc41404.2022.00036",
-      "openalex": "W4321636600",
-      "s2": "d0acd6475d2460fb8247909d6dd11fb97045d096",
-      "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
-      "authors": [
-        "Philip Munksgaard",
-        "Troels Henriksen",
-        "P. Sadayappan",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "For example, many of the challenges pertaining to automatic parallelization are the result of the compiler having to reverse-engineer the users’ memory optimizations, as seen in the rich amount of work in the context of SUIF [1], [2], Polaris [3]– [5], and polyhedral compilation [6]–[8].",
-        "For example, many of the challenges pertaining to automatic parallelization are the result of the compiler having to reverseengineer the users’ memory optimizations, as seen in the rich amount of work in the context of SUIF [1], [2], Polaris [3]– [5], and polyhedral compilation [6]–[8].",
-        "Short-circuiting is related at a high-level with analyses developed in the context of automatic parallelization of loopbased (Fortran) code [1]–[3], [9], [16], [33], [34]."
-      ]
-    },
-    {
-      "title": "Discovering and exploiting parallelism in DOACROSS loops",
-      "year": 2021,
-      "doi": "10.48456/tr-882",
-      "openalex": "W2507252446",
-      "s2": null,
-      "venue": "CL Technical Reports",
-      "authors": [
-        "Niall Murphy"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Autotuning for Automatic Parallelization on Heterogeneous Systems",
-      "year": 2020,
-      "doi": "10.5445/ir/1000119646",
-      "openalex": null,
-      "s2": "6aa48de86078a391e6382af94d131c85787c1734",
-      "venue": null,
-      "authors": [
-        "Philip Pfaffe"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
-      "year": 2019,
-      "doi": "10.23940/ijpe.19.11.p5.28712881",
-      "openalex": "W2997098728",
-      "s2": "7b905434506591bb00ad23408727532775a657e8",
-      "venue": "International Journal of Performability Engineering",
-      "authors": [
-        "Liu Hui",
-        "Jinlong Xu",
-        "Lili Ding"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The automatic parallelizing compiler SUIF developed by Stanford University can recognize perfect nested loops in serial programs, but its parallel recognition of imperfect nested loops is also limited [3]."
-      ]
-    },
-    {
-      "title": "Incremental flattening for nested data parallelism",
-      "year": 2019,
-      "doi": "10.1145/3293883.3295707",
-      "openalex": "W2913154098",
-      "s2": "4b538a245f643110ab9983c183106f131442b421",
-      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-      "authors": [
-        "Troels Henriksen",
-        "Frederik Thorøe",
-        "Martin Elsman",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Multi-versioned code generation has been used in other contexts, for example automatic parallelization of non-affine loops (Fortran77 or C) onmulti-cores, where inter-procedural analysis is used to summarize statically memory references under a set-abstraction representation and to model loop independence as an equation on such sets [26, 49]."
-      ]
-    },
-    {
-      "title": "An integrated compiler and runtime framework for sparse matrix codes",
-      "year": 2018,
-      "doi": "10.26053/0h-n2q9-he00",
-      "openalex": "W2599487174",
-      "s2": null,
-      "venue": "J. Willard Marriott Library",
-      "authors": [
-        "Anand Venkat"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates",
-      "year": 2017,
-      "doi": "10.1145/3062341.3062354",
-      "openalex": "W2644985445",
-      "s2": "f463b6d692704baf9463e7d8b39e6032c23c4ec9",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Troels Henriksen",
-        "Niels G. W. Serup",
-        "Martin Elsman",
-        "Fritz Henglein",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "On one side, we find sophisticated analyses [16, 27, 41, 42, 55, 56], centered on dependency analysis of affine loop nests in low-level imperative languages such as C and Fortran."
-      ]
-    },
-    {
-      "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates",
-      "year": 2017,
-      "doi": "10.1145/3140587.3062354",
-      "openalex": "W4235593108",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Troels Henriksen",
-        "Niels G. W. Serup",
-        "Martin Elsman",
-        "Fritz Henglein",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Stack Memory Abstraction and Symbolic Analysis Framework for Executables",
-      "year": 2016,
-      "doi": "10.1145/2897511",
-      "openalex": "W2342473256",
-      "s2": "990cbf3497da2b2cbd5dfcb199af2e8fb79d5ab7",
-      "venue": "ACM Transactions on Software Engineering and Methodology",
-      "authors": [
-        "Kapil Anand",
-        "Khaled ElWazeer",
-        "Aparna Kotha",
-        "Matthew Smithson",
-        "Rajeev Barua",
-        "Angelos D. Keromytis"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "The SUIF compiler [Hall et al. 2005] employs symbolic analysis to represent array indices in a symbolic form of loop index variables to apply array dependence tests.",
-        "As discussed in various parallelizing compilers such as Parafrase [Haghighat and Polychronopoulos 1996] and SUIF [Hall et al. 2005], a large percentage of parallelization benchmarks have array references with symbolic terms other than loop induction variables and have symbolic loop bounds.",
-        "Standard dependence tests can then be employed to resolve data dependence queries [Hall et al. 2005; Blume and Eigenmann 1995]."
-      ]
-    },
-    {
-      "title": "An Integrated Compiler and Runtime Framework for Sparse Matrix Codes",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "7ce6007074046048b1d25670f4df0e85b3f404ce",
-      "venue": null,
-      "authors": [
-        "Anand Venkat"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Discovering and exploiting parallelism in DOACROSS loops",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "e43affbb2fe8fdbf95b2a11b6d26060c8488d1b0",
-      "venue": null,
-      "authors": [
-        "Niall Murphy"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Independent multithreading • SUIF [12] • Polaris [14] • LRPD Test [46] • Privateer [55] • HELIX Pure Speculation (Section 6.",
-        "Furthermore, HELIX applies a more general set of optimisations and transformations than SUIF which enables it to achieve substantial speedups on irregular codes.",
-        "Polaris [14] is another influential parallelising compiler contemporary to SUIF.",
-        "SUIF has considerable success at parallelising loops in SPECFP and NAS, specifically as a result of applying interprocedural analysis.",
-        "Stanford’s SUIF compiler [12] is an influential example of a system which made significant advances in analysis for parallelisation of such codes."
-      ]
-    },
-    {
-      "title": "FinPar",
-      "year": 2016,
-      "doi": "10.1145/2898354",
-      "openalex": "W2472217442",
-      "s2": "a564c755165250c8a0c3055adf81d9d824ae9598",
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Christian Andreetta",
-        "Vivien Bégot",
-        "Jost Berthold",
-        "Martin Elsman",
-        "Fritz Henglein",
-        "Troels Henriksen",
-        "Maj-Britt Nordfang",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "2011] (C), or interprocedural summarization of array subscripts [Hall et al. 2005] (Fortran).",
-        "…end are compilation techniques to automatically extract and optimize parallelism—usually within a language context, such as ﬂattening [Blelloch et al. 1994] ( NESL ), polyhedral frameworks [Pouchet et al. 2011] (C), or interprocedural summarization of array subscripts [Hall et al. 2005] (Fortran)."
-      ]
-    },
-    {
-      "title": "Runtime Information Integration into System Dependency Graphs",
-      "year": 2016,
-      "doi": null,
-      "openalex": null,
-      "s2": "583d79f0e9def487f307d75962fb44b9ede2cf54",
-      "venue": null,
-      "authors": [
-        "Alexander Barbie"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "g, parallel compilers [2] or recommendation systems [7]."
-      ]
-    },
-    {
-      "title": "Towards automatic parallelization of sequential programs and efficient use of resources in HPC centers",
-      "year": 2016,
-      "doi": "10.1109/hpcsim.2016.7568436",
-      "openalex": "W2519880423",
-      "s2": "f16652cfd2fe1c91714c22b87e53b5b2321c35ca",
-      "venue": "International Symposium on High Performance Computing Systems and Applications",
-      "authors": [
-        "Javier Corral-García",
-        "José-Luis González-Sánchez",
-        "Miguel A. Pérez"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "There are more tools available for automatic parallelization but they are compiler specific, such as SUIF [11] (that requires SUIF compiler) or Polaris [12] (which requires KAP compiler), as well as LLVM Polly [13] (under the LLVM Compiler Infrastructure)."
-      ]
-    },
-    {
-      "title": "A Financial Benchmark for GPGPU Compilation",
-      "year": 2015,
-      "doi": null,
-      "openalex": "W2258596252",
-      "s2": null,
-      "venue": "Research at the University of Copenhagen (University of Copenhagen)",
-      "authors": [
-        "Christian Andreetta",
-        "Vivien Bégot",
-        "Jost Berthold",
-        "Martin Elsman",
-        "Troels Henriksen",
-        "Maj-Britt Nordfang",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Financial Benchmark for GPGPU Compilation",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "ec836d5acd8fcbe67faeda7b5dae34846c50b8c1",
-      "venue": null,
-      "authors": [
-        "Christian Andreetta",
-        "V. Bégot",
-        "J. Berthold",
-        "M. Elsman",
-        "Troels Henriksen",
-        "Maj-Britt Nordfang",
-        "C. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "On the opposite end are compilation techniques to automatically extract and optimize parallelism— usually within a language context, such as flattening [2] (NESL), polyhedral frameworks [3] (C), or inter-procedural summarization of array subscripts [4], [5] (Fortran)."
-      ]
-    },
-    {
-      "title": "A Financial Benchmark for GPGPU Compilation Christian Andretta Vivien Begot Jost Berthold Martin Elsman",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "bf9ce41b4b9a68e22b54b710876d8102eed780d7",
-      "venue": null,
-      "authors": [
-        "Christian Andreetta",
-        "V. Bégot",
-        "J. Berthold",
-        "M. Elsman",
-        "Troels Henriksen",
-        "Maj-Britt Nordfang",
-        "C. Oancea",
-        "N. Markets"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "On the opposite end are compilation techniques to automatically extract and optimize parallelism— usually within a language context, such as flattening [2] (NESL), polyhedral frameworks [3] (C), or inter-procedural summarization of array subscripts [4], [5] (Fortran)."
-      ]
-    },
-    {
-      "title": "A Pattern-based Transformation Approach to Parallelise Software Systems using a System Dependency Graph",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "3f29974a9cdae1e6a62a5e593635b04e37a6d8e1",
-      "venue": null,
-      "authors": [
-        "J. Krause"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Assessing Safe Task Parallelism in SPEC 2006 INT",
-      "year": 2015,
-      "doi": "10.1109/ccgrid.2015.159",
-      "openalex": "W1667270618",
-      "s2": "350b1c92ac336343bee66be58a5738e2ae9af8e0",
-      "venue": "2015 15th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing",
-      "authors": [
-        "Tongxin Bai",
-        "Chen Ding",
-        "Pengcheng Li"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "It can perform interprocedural analysis to extract parallelism regardless of the number of functions being called in the loop [6]."
-      ]
-    },
-    {
-      "title": "Compiler and runtime techniques for bulk-synchronous programming models on CPU architectures",
-      "year": 2015,
-      "doi": null,
-      "openalex": "W2301530079",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Hee-Seok Kim"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Compiler and runtime techniques for bulk-synchronous programming models on CPU architectures",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "72dda3ec17afce23235432f1ce431d9cd0219b29",
-      "venue": null,
-      "authors": [
-        "Hee-Seok Kim"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Locality-centric thread scheduling for bulk-synchronous programming models on CPU architectures",
-      "year": 2015,
-      "doi": "10.5555/2738600.2738632",
-      "openalex": "W2138767187",
-      "s2": null,
-      "venue": "Symposium on Code Generation and Optimization",
-      "authors": [
-        "Hee-Seok Kim",
-        "Izzat El Hajj",
-        "John A. Stratton",
-        "Steven S. Lumetta",
-        "Wen‐mei Hwu"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Locality-centric thread scheduling for bulk-synchronous programming models on CPU architectures",
-      "year": 2015,
-      "doi": "10.1109/cgo.2015.7054205",
-      "openalex": "W4256213682",
-      "s2": "0659d614b3a18b4c1549d2984866a77670fd39c3",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Hee-Seok Kim",
-        "Izzat El Hajj",
-        "John A. Stratton",
-        "Steven S. Lumetta",
-        "Wen‐mei Hwu"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "These analyses are individually solved problems in the literature [8, 14]."
-      ]
-    },
-    {
-      "title": "Patty",
-      "year": 2015,
-      "doi": "10.1145/2712386.2712392",
-      "openalex": "W1967885990",
-      "s2": "f6a3f90f3bbc2e4c1b0f3117aa0bd04547143102",
-      "venue": "PMAM@PPoPP",
-      "authors": [
-        "Korbinian Molitorisz",
-        "Tobias Müller",
-        "Walter F. Tichy"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Related works consider either implicit parallel programming as in OpenMP, CILK, TBB, or XJava [27]), or automatic parallelizing compilers like SUIF [37] or the Intel C++ compiler."
-      ]
-    },
-    {
-      "title": "Probabilistic Dangling References of Imperative and Object-Oriented Multi-Core Programs",
-      "year": 2015,
-      "doi": null,
-      "openalex": "W2557948553",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Mohamed A. El-Zawawy",
-        "Mohammad Ibn"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Probabilistic Dangling References of Imperative and Object-Oriented Multi-Core Programs",
-      "year": 2015,
-      "doi": null,
-      "openalex": null,
-      "s2": "3169eb95234327abba701ea3debbfc1a422b2b26",
-      "venue": null,
-      "authors": [
-        "Mohamed A. El-Zawawy",
-        "Mohammad Ibn"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The work in the other category above includes synchronization analysis [31], race detection [32], reference analysis [ 3], and deadlock analysis [10]."
-      ]
-    },
-    {
-      "title": "Scalable conditional induction variables (CIV) analysis",
-      "year": 2015,
-      "doi": "10.5555/2738600.2738627",
-      "openalex": "W2039571393",
-      "s2": null,
-      "venue": "Symposium on Code Generation and Optimization",
-      "authors": [
-        "Cosmin E. Oancea",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Scalable conditional induction variables (CIV) analysis",
-      "year": 2015,
-      "doi": "10.1109/cgo.2015.7054201",
-      "openalex": "W4237770736",
-      "s2": "905643448927cce1b60daad3cc68307137426386",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Cosmin E. Oancea",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology",
-        "background"
-      ],
-      "contexts": [
-        "In practice, they were found to scale better than previously developed analysis based on pairwise accesses [9], but they do not support CIVs.",
-        "Other summarization techniques [9, 14, 16] aggregate array references across control-flow constructs, e.",
-        "The abstract set models the memory references of the corresponding array and is computed via interprocedural summarization of accesses [9, 11, 15, 16]."
-      ]
-    },
-    {
-      "title": "Bounds Checking",
-      "year": 2014,
-      "doi": "10.1145/2627373.2627388",
-      "openalex": "W1989792478",
-      "s2": "b4d77a72ea8c482f30b3d36cba5915c1f8d1e936",
-      "venue": "ARRAY@PLDI",
-      "authors": [
-        "Troels Henriksen",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Other work summarizes at program level array accesses, either via systems of afﬁne inequations or as a program in a language of abstract sets, and summaries are paired with predicates that are evaluated at runtime to minimize overheads [10, 16].",
-        "Such analyses, reviewed in Section 4, include optimization of the common-execution path in JIT compilation [1], inspector-executor and dependence analysis of array subscripts in automatic parallelization [10, 16–19]."
-      ]
-    },
-    {
-      "title": "Enhancing the performance of decoupled software pipeline through backward slicing",
-      "year": 2014,
-      "doi": "10.3923/rjasci.2016.900.909",
-      "openalex": null,
-      "s2": "c31388ae97cae9a6d28868833bd47b33d572689f",
-      "venue": null,
-      "authors": [
-        "E. Alwan"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "…that have the ability to discover the parallelism and convert a single threaded application to a multi threaded one have been integrated in some research compilers such as the Fortran-D compiler (Hiranandani et al., 1993), SUIF (Hall et al., 2005), Polaris (Blume et al., 1994), etc (Raman, 2009).",
-        ", 1993), SUIF (Hall et al., 2005), Polaris (Blume et al.",
-        "Both DOALL and DOACROSS along with several other techniques that have the ability to discover the parallelism and convert a single threaded application to a multi threaded one have been integrated in some research compilers such as the Fortran-D compiler (Hiranandani et al., 1993), SUIF (Hall et al., 2005), Polaris (Blume et al., 1994), etc (Raman, 2009)."
-      ]
-    },
-    {
-      "title": "Non-affine Extensions to Polyhedral Code Generation",
-      "year": 2014,
-      "doi": "10.1145/2581122.2544141",
-      "openalex": "W4295539146",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Anand Venkat",
-        "Manu Shantharam",
-        "Mary Hall",
-        "Michelle Mills Strout"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Non-affine Extensions to Polyhedral Code Generation",
-      "year": 2014,
-      "doi": "10.1145/2544137.2544141",
-      "openalex": "W2025278624",
-      "s2": "4c725527b426b28f9024a0092a6a09f180b25628",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Anand Venkat",
-        "Manu Shantharam",
-        "Mary Hall",
-        "Michelle Mills Strout"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "However, the only update to vector y is a commutative and associative operation, which can be recognized as a reduction, as is common among parallelizing compilers [12, 20]."
-      ]
-    },
-    {
-      "title": "Size slicing",
-      "year": 2014,
-      "doi": "10.1145/2636228.2636238",
-      "openalex": "W2024712769",
-      "s2": "604c30b7ae5afa90236f28fbd5b657c10fe62a8a",
-      "venue": "Functional High-Performance Computing",
-      "authors": [
-        "Troels Henriksen",
-        "Martin Elsman",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "2636238 of a range of analyses from entirely dynamic [11, 29, 34] to entirely static for automatic parallelization [20, 30, 33]."
-      ]
-    },
-    {
-      "title": "A Hybrid Approach to Proving Memory Reference Monotonicity",
-      "year": 2013,
-      "doi": "10.1007/978-3-642-36036-7_5",
-      "openalex": "W58073954",
-      "s2": "542c042aeb2b16c35936b536121e31bab9c979ad",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Cosmin E. Oancea",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "use interprocedural summarization [12, 16] to give a comprehensive study of parallelism for the perfect Club and spec2000 benchmarks."
-      ]
-    },
-    {
-      "title": "A T2 graph-reduction approach to fusion",
-      "year": 2013,
-      "doi": "10.1145/2502323.2502328",
-      "openalex": "W1997744477",
-      "s2": "74baf0ef53be9374dc1e3b4854310f7a0e3a4f6a",
-      "venue": "Functional High-Performance Computing",
-      "authors": [
-        "Troels Henriksen",
-        "Cosmin E. Oancea"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Furthermore, such analyses [12, 19, 27, 28] have not yet been integrated in the repertoire of commercial compilers, likely due to “heroic effort” concerns, albeit (i) their effectiveness was demonstrated on comprehensive suites, and (ii) some of them were developed more than a decade ago."
-      ]
-    },
-    {
-      "title": "A compiler level intermediate representation based binary analysis system and its applications",
-      "year": 2013,
-      "doi": null,
-      "openalex": "W141381105",
-      "s2": null,
-      "venue": "University Libraries (University of Maryland)",
-      "authors": [
-        "Kapil Anand"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A compiler level intermediate representation based binary analysis system and its applications",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "17424db6a78148ae31ddc824ad14f41c75154527",
-      "venue": null,
-      "authors": [
-        "K. Anand"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Standard dependence tests can then be employed to resolve data dependence queries [77, 31].",
-        "Existing parallelizing compilers based on symbolic analysis frameworks [76, 31, 77] collect the required information (recurrence relations and affine expressions) by symbolic analysis and perform dependence testing using a variety of techniques.",
-        "Various common dependence techniques, as presented in [69, 77], employ recurrence relations and affine expressions between array indices to characterize the dependence structure in two aspects.",
-        "As discussed in various parallelizing compilers like Parafrase [76], SUIF [77], Polaris [31], a large percentage of parallelization benchmarks have array references with symbolic terms other than loop induction variables and have symbolic loop bounds.",
-        "Symbolic analysis [76, 31, 77, 32] is an important source-code level static analysis technique which represents the values of program variables through symbolic expressions.",
-        "Various parallelizing compilers [76, 31, 77] have employed powerful symbolic analysis frameworks to resolve data-dependency queries and to enable critical optimizations like array privatization for effective parallelization of programs.",
-        "The SUIF compiler [77] employs symbolic analysis to represent array indices in a symbolic form of loop index variables to apply array dependence tests.",
-        "Symbolic analysis also enables various transformations like induction variable substitution and array privatization which further aid in exposing the dependence structure of a program [76, 77, 31]."
-      ]
-    },
-    {
-      "title": "Automated Optimization of a Computation for Different Architectures",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "f7b209d55c2c80aad3b8a1c21f0c68918773a831",
-      "venue": null,
-      "authors": [
-        "T. Biggerstaff"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "This includes compiling technology, generator technology [4] [5] [7] [22] [29] [30], computer aided software engineering (CASE) [13], model driven engineering [22], Aspect Oriented Programming (AOP) [17], Anticipatory Optimization Generation (AOG) [6] [7], general optimization based methods [1] [20] [16], parallel or specialty programming languages [8] [12], programming languages superficially similar to DSLGen TM ‘s partitioning model [14], programming language augmentation systems [15] [27], maintenance support systems [1] [2], refactoring [18] and other related technology and methods for creating implementation code from a specification of a computation."
-      ]
-    },
-    {
-      "title": "Detection of Probabilistic Dangling References in Multi-core Programs Using Proof-Supported Tools",
-      "year": 2013,
-      "doi": "10.1007/978-3-642-39640-3_38",
-      "openalex": "W9387966",
-      "s2": "4974b25135624d75079d54e4f766363c4f4c0fd3",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Mohamed A. El-Zawawy"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Never Reprogram Again",
-      "year": 2013,
-      "doi": null,
-      "openalex": null,
-      "s2": "34d3809309a0723340ac22ed3f722874308868c5",
-      "venue": null,
-      "authors": [
-        "T. Biggerstaff"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Parallel Techniques of the Sequential Codes Based on Multi-core",
-      "year": 2013,
-      "doi": "10.3923/itj.2013.1673.1684",
-      "openalex": "W2330095989",
-      "s2": "63e8eb9f5c3fd063b4e8d396d9a7019d24009554",
-      "venue": "Information Technology Journal",
-      "authors": [
-        "Xiang Li",
-        "Jing Zhang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Software thread integration for instruction-level parallelism",
-      "year": 2013,
-      "doi": "10.1145/2512466",
-      "openalex": "W2006020173",
-      "s2": "0e312a15f21d6b01e14ca7906870841c79cbc6bb",
-      "venue": "ACM Transactions on Embedded Computing Systems",
-      "authors": [
-        "Won So",
-        "Alexander G. Dean"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Financial software on GPUs",
-      "year": 2012,
-      "doi": "10.1145/2364474.2364484",
-      "openalex": "W2100232637",
-      "s2": "65d58682646901c66cbcbd6e7b4e42d6e377d4af",
-      "venue": "Functional High-Performance Computing",
-      "authors": [
-        "Cosmin E. Oancea",
-        "Christian Andreetta",
-        "Jost Berthold",
-        "Alain Frisch",
-        "Fritz Henglein"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "methodology",
-        "background"
-      ],
-      "contexts": [
-        "The latter was observed not only on our case study, but also on benchmarks in PERFECT-CLUB and SPEC suites [21, 39].",
-        "Issues become more complicated with larger loops, where symbolic constants, complex control flow, array-reshaping at call sites, quadratic array indexing, induction variables with no closed-form solutions hinder parallelism extraction [21, 39].",
-        "The set representation has taken the form of either (i) an array abstraction [21, 39], e.",
-        "However, most compiler solutions [21, 42] cannot establish this property, as their dependency analysis is restricted to cases where the array subscript can be expressed as a closed-form, typically affine, formula in the loop indexes."
-      ]
-    },
-    {
-      "title": "Logical inference techniques for loop parallelization",
-      "year": 2012,
-      "doi": "10.1145/2254064.2254124",
-      "openalex": "W2096862145",
-      "s2": "70b7b89b118107e7a8b294eab32de4a7f5e31b71",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Cosmin E. Oancea",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "To deal with this problem in a scalable manner, i.e., for outer, program level loops, we define an equally-rich language of predicates (PDAG) and an effective rule-based translation between the two languages, such that the result predicate p is a sufficient condition for loop independence: p ⇒ {S =…",
-        "Categories and Subject Descriptors D.1.3 [Concurrent Programming]: Parallel Programming; D.3.4 [Processors]: Compiler\nGeneral Terms Performance, Design, Algorithms\nKeywords auto-parallelization, USR, independence predicates."
-      ]
-    },
-    {
-      "title": "Logical inference techniques for loop parallelization",
-      "year": 2012,
-      "doi": "10.1145/2345156.2254124",
-      "openalex": "W4235730175",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Cosmin E. Oancea",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Optimization of Imperative Functional Parallel Programs with Non-local Program Transformations",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "52b67ed99851a8b2e30bcd725506b12f41098279",
-      "venue": null,
-      "authors": [
-        "A. Adamovich"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "A similar structure of compiling systems is used in a number of program transformation systems, such as SUIF [5], LLVM [6], OPS [7], etc."
-      ]
-    },
-    {
-      "title": "Parallelism Recognition Technology Based on Nested Loops Classifying",
-      "year": 2012,
-      "doi": "10.3724/sp.j.1001.2012.04178",
-      "openalex": null,
-      "s2": "210c12b95ce621ede07c5c3e69cbd8e2cdc857c6",
-      "venue": null,
-      "authors": [
-        "Zhao Jie",
-        "Pla Information"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Pattern-Based Detection and Utilization of Potential Parallelism in Software Systems",
-      "year": 2012,
-      "doi": null,
-      "openalex": null,
-      "s2": "541945cdb24ba7a595f39869292fe203b4043097",
-      "venue": "Software Engineering",
-      "authors": [
-        "C. Wulf"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "A framework for reasoning about inherent parallelism in modern object-oriented languages",
-      "year": 2011,
-      "doi": null,
-      "openalex": "W186462353",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Andrew Craik"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A framework for reasoning about inherent parallelism in modern object-oriented languages",
-      "year": 2011,
-      "doi": null,
-      "openalex": null,
-      "s2": "b14a1fd4e7e88b2680c3bd90ce4ca70f955c2cee",
-      "venue": null,
-      "authors": [
-        "Andrew Craik"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Automatic Recognition of Performance Idioms in Scientific Applications",
-      "year": 2011,
-      "doi": "10.1109/ipdps.2011.21",
-      "openalex": "W2107896023",
-      "s2": "30029528b5a843bea658be7c07eab8dc8a1fd8ee",
-      "venue": "IEEE International Parallel and Distributed Processing Symposium",
-      "authors": [
-        "Jiahua He",
-        "Allan Snavely",
-        "Rob F. Van der Wijngaart",
-        "Michael Frumkin"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "For example, reduction is one of the program constructs well studied by the compiler communities."
-      ]
-    },
-    {
-      "title": "Dynamic trace analysis with zero-suppressed bdds",
-      "year": 2011,
-      "doi": null,
-      "openalex": "W2148718702",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Manish Vachharajani",
-        "Graham Price"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Dynamic trace analysis with zero-suppressed bdds",
-      "year": 2011,
-      "doi": null,
-      "openalex": null,
-      "s2": "bd727f7b8409fb375e8672ce2f727013a4719eff",
-      "venue": null,
-      "authors": [
-        "Manish Vachharajani",
-        "Graham D. Price"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Automatic parallelization is a heavily research field [38, 41, 95]."
-      ]
-    },
-    {
-      "title": "Improved Affine Partition Algorithm for Compile-Time and Runtime Performance",
-      "year": 2011,
-      "doi": "10.1080/10798587.2011.10643220",
-      "openalex": "W2023703253",
-      "s2": "1795cb1aa78b160fa578cd52901e14959f0ef25b",
-      "venue": "Intelligent Automation & Soft Computing",
-      "authors": [
-        "Yuan Xinyu",
-        "Ying Li",
-        "Shuiguang Deng",
-        "Jie Cheng"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Increasing parallelizing compiler efficiency using commutative functions",
-      "year": 2011,
-      "doi": null,
-      "openalex": "W147450094",
-      "s2": null,
-      "venue": "Chalmers Publication Library (Chalmers University of Technology)",
-      "authors": [
-        "Jacob Lidman"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Increasing parallelizing compiler efficiency using commutative functions",
-      "year": 2011,
-      "doi": null,
-      "openalex": null,
-      "s2": "d863a24735b059755b95f5659c6cf60e31a3c405",
-      "venue": null,
-      "authors": [
-        "Jacob Lidman"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Symbolic analysis has long been used by parallelizing compilers [20, 24], such as the Parafrase-2 compiler [25] and SUIF [26], for various tasks including constant propagation, induction variable substituion, and loop invariant code detection, to name a few."
-      ]
-    },
-    {
-      "title": "Loop Acceleration Exploration for ASIP Architecture",
-      "year": 2011,
-      "doi": "10.1109/tvlsi.2011.2107923",
-      "openalex": "W2108917009",
-      "s2": "0835f920ccbabf0e86163f2028b5704e56285be4",
-      "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
-      "authors": [
-        "M. Mbaye",
-        "Normand Bélanger",
-        "Yvon Savaria",
-        "Samuel Pierre"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "to accelerate loops (loop unrolling [30], loop shifting [31], loop interchange [32], loop parallelization [33], loop fusion [34], etc."
-      ]
-    },
-    {
-      "title": "Scalable Manycore Computing with CUDA",
-      "year": 2011,
-      "doi": "10.1201/b11417-14",
-      "openalex": null,
-      "s2": "ae93f9fd758c0071affcfa727f09723393ea306f",
-      "venue": "Fundamentals of Multicore Software Development",
-      "authors": [
-        "Michael Garland",
-        "Vinod Grover",
-        "K. Skadron"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Test and Evaluation of Architecture-Aware Compiler Environment",
-      "year": 2011,
-      "doi": "10.21236/ada563246",
-      "openalex": "W291681784",
-      "s2": "b624f4482c8bd4f34733576ffa99501bd2abf41f",
-      "venue": null,
-      "authors": [
-        "Allan Snavely"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "A Generalized Streaming Model for Concurrent Computing",
-      "year": 2010,
-      "doi": "10.48550/arxiv.1012.1641",
-      "openalex": "W1563217556",
-      "s2": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Yibing Wang"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Generalized Streaming Model for Concurrent Computing",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "066edaf9b374a9cbe47d3068d9e1cd5d78e5b272",
-      "venue": "arXiv.org",
-      "authors": [
-        "Yibing Wang"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Stream entity deﬁnes a scope that can be bigger than loop nests, and the scope is ﬁ-nite so is superior than intractable number of procedures that hinder previous practices in interpro-cedural analyses [1, 21]."
-      ]
-    },
-    {
-      "title": "A generalized GCD test based affine partitioning algorithm",
-      "year": 2010,
-      "doi": "10.1109/icise.2010.5690981",
-      "openalex": "W2534845553",
-      "s2": "b731a67979eb7e01ccfd16a368bcbcc7d2cab1cb",
-      "venue": "International Conference on Information Science and Engineering",
-      "authors": [
-        "Yuan Xinyu",
-        "Ying Li",
-        "Shuiguang Deng",
-        "Jie Cheng"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "SUIF has successfully parallelized loops that have thousands of lines of code including the call between procedures[6]."
-      ]
-    },
-    {
-      "title": "Extending GCC with a multigrain parallelism adaptation framework for MPSoCs",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "bc35b1c1f11d0142a8b211a322b2782cc2f99bc7",
-      "venue": null,
-      "authors": [
-        "Nicolas Benoit",
-        "Stéphane Louise"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Synchronization via scheduling: managing shared state in video games",
-      "year": 2010,
-      "doi": null,
-      "openalex": "W2152517291",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Micah J. Best",
-        "Shane Mottishaw",
-        "Craig Mustard",
-        "Mark A. Roth",
-        "Alexandra Fedorova",
-        "Andrew Brownsword"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Synchronization via scheduling: managing shared state in video games",
-      "year": 2010,
-      "doi": null,
-      "openalex": null,
-      "s2": "268888432b316c25d0880f13b5cd4aa232efbb2e",
-      "venue": null,
-      "authors": [
-        "Micah J. Best",
-        "Shane Mottishaw",
-        "Craig Mustard",
-        "Mark Roth",
-        "Alexandra Fedorova",
-        "Andrew Brownsword"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Traditional static techniques for extracting parallelism rely on loop and subscript analysis[4, 8], but are only valid when there are no dependencies between iterations."
-      ]
-    },
-    {
-      "title": "Transparent runtime parallelization of the R scripting language",
-      "year": 2010,
-      "doi": "10.1016/j.jpdc.2010.08.013",
-      "openalex": "W1978163937",
-      "s2": "2823a359ec554a20e3f5d61f7dff6531c26a9b7e",
-      "venue": "Journal of Parallel and Distributed Computing",
-      "authors": [
-        "Jiangtian Li",
-        "Xiaosong Ma",
-        "Srikanth B. Yoginath",
-        "Guruprasad Kora",
-        "Nagiza F. Samatova"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Representative work on parallelizing compilers, such as SUIF [19] and Polaris [20] transform sequential C or Fortran code into parallel code (e.g., using OpenMP)."
-      ]
-    },
-    {
-      "title": "A Composable Model for Analyzing Locality of Multi-threaded Programs",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W21782772",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Chen Ding",
-        "Trishul Chilimbi"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Composable Model for Analyzing Locality of Multi-threaded Programs",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "4f1cf2a9244816dc9ea7be304b85a45b7e0941a4",
-      "venue": null,
-      "authors": [
-        "C. Ding",
-        "Trishul M. Chilimbi"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology",
-        "background"
-      ],
-      "contexts": [
-        "More general forms of dependence analysis are used by parallelizing compilers [7, 20 ,22,26].",
-        "researchers, see [2, 14]) has beenused to estimateand reorganize the concurrentdata access for examples for reducingfalse sharing by Eggers and Jeremiassen [18] on multiprocessors and for data prefetchingand message aggregation on DSM by Lu et al. [ 20 ] More generalforms of depen denceanalysis has beenusedto automatically parallelize sequentialcodefor examples in [5, 13, 16, 19]."
-      ]
-    },
-    {
-      "title": "A Language of Suggestions for Program Parallelization",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W2239185640",
-      "s2": null,
-      "venue": "UR Research (University of Rochester)",
-      "authors": [
-        "Chao Zhang",
-        "Xiaobing Feng",
-        "Chen Ding",
-        "Xiaoming Gu",
-        "Tongxin Bai",
-        "Kirk Kelsey"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "A Language of Suggestions for Program Parallelization",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "5ef1ae20aa715c57d9cacdde96bb5650cc556683",
-      "venue": null,
-      "authors": [
-        "Chao Zhang",
-        "Xiaobing Feng",
-        "C. Ding",
-        "X. Gu",
-        "Tongxin Bai",
-        "Kirk Kelsey"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Coarse-grained task parallelism exists in sequential code and can be leveraged to boost the use of chip multi-processors.",
-        "It is generally recognized that although automatic techniques are effective in exploiting loop parallelism (Hall et al., 2005; Blume et al., 1996; Allen and Kennedy, 2001; Wolfe, 1996), they are not sufficient to uncover parallelism among complex tasks in general-purpose code."
-      ]
-    },
-    {
-      "title": "Distributive Program Parallelization Using a Suggestion Language",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W227418731",
-      "s2": null,
-      "venue": "UR Research (University of Rochester)",
-      "authors": [
-        "Bryan Jacobs",
-        "Tongxin Bai",
-        "Chen Ding"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Distributive Program Parallelization Using a Suggestion Language",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "5404c458a257bcda9d26150b8ef980394e2934ea",
-      "venue": null,
-      "authors": [
-        "Bryan Jacobs",
-        "Tongxin Bai",
-        "C. Ding"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "A recent approach to distributed parallelization is to automatically translate a Fortran program from using OpenMP to using MPI [4–6].",
-        "Powerful compiler techniques such as dependence, array-section, alias and inter-procedural analysis can extract coarse-grained parallelism in scientific code [1, 2, 8, 18, 19, 21, 47].",
-        "Software speculative parallelization Loop-level software speculation was pioneered by the LRPD test for Fortran loops [36].",
-        "Although compiler techniques are effective in exploiting loop parallelism in scientific code written in Fortran [2, 8, 21, 47], they are not a sufficient solution for C/C++ programs or programs with input-dependent behavior where both the degree and the granularity of parallelism are not guaranteed or even predictable.",
-        "The SPMD model is used in distributedmemory programming as by MPI, PVM, software shared distributed memory (S-DSM) systems such as TreadMarks [3] and InterWeave [41], and PGAS languages such as UPC [44] and co-array Fortran [32].",
-        "There are ready-to-use parallel constructs in mainstream languages such as Fortran, C, C++ and Java, in threading libraries such as Microsoft .",
-        "High performance Fortran (HPF) lets a user suggest data distribution in Fortran code [1,2]."
-      ]
-    },
-    {
-      "title": "IMPROVED DEPENDENCE HANDLING",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "9adf9496f9d2dd991f50094c7e24a638d05a2244",
-      "venue": null,
-      "authors": [
-        "Easwaran Raman"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Parallelization techniques with improved dependence handling",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W1880444039",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "David I. August",
-        "Easwaran Raman"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Parallelization techniques with improved dependence handling",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "6fcedb679018fdd65f0175cbffaadc26dc33192c",
-      "venue": null,
-      "authors": [
-        "David I. August",
-        "Easwaran Raman"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "These and various other techniques for detecting dependences in loops and transforming them into parallel code were incorporated into research compilers such as Fortran-D Compiler [24], Suif [21, 61], Polaris [4], etc."
-      ]
-    },
-    {
-      "title": "Towards Transparent Parallel Processing on Multi-core Computers",
-      "year": 2009,
-      "doi": null,
-      "openalex": "W2274989117",
-      "s2": null,
-      "venue": "NCSU Libraries Repository (North Carolina State University Libraries)",
-      "authors": [
-        "Jiangtian Li"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Towards Transparent Parallel Processing on Multi-core Computers",
-      "year": 2009,
-      "doi": null,
-      "openalex": null,
-      "s2": "d01556a8bae70b1b1de0acf4e391bd831b00fd4c",
-      "venue": null,
-      "authors": [
-        "Jiangtian Li"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "methodology",
-        "background"
-      ],
-      "contexts": [
-        "Although exact loop data dependence analysis has been shown to be NPcomplete [79], many advanced dependence modeling and loop transformation techniques have been proposed and used in compilers [1, 6, 18, 54, 94, 100, 117].",
-        "One alternative to explicitly parallel programming is to let the compiler perform parallelization work and produce binaries that can be executed in parallel [1, 5, 7, 18, 54].",
-        "Our transparent parallelization framework has borrowed mature techniques from these projects, such as loop dependence analysis and loop transformation [1, 6, 18, 54, 94, 100, 117].",
-        "Representative work on parallelizing compilers, such as SUIF [54], Polaris [18], and Paradigm [7] transform sequential C or Fortran code into parallel code (e."
-      ]
-    },
-    {
-      "title": "Effect inference for deterministic parallelism",
-      "year": 2008,
-      "doi": null,
-      "openalex": "W1607754794",
-      "s2": null,
-      "venue": "KTH Publication Database DiVA (KTH Royal Institute of Technology)",
-      "authors": [
-        "Karl‐Filip Faxén"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Effect inference for deterministic parallelism",
-      "year": 2008,
-      "doi": null,
-      "openalex": null,
-      "s2": "b1236bf5da10badf28c239349f42bbee96cd854f",
-      "venue": null,
-      "authors": [
-        "Karl-Filip Faxén"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Our approach is somewhat similar in spirit to automatic parallelization since the confluent semantics of well typed programs in fact coincides with a purely sequential semantics [3, 1]."
-      ]
-    },
-    {
-      "title": "Global instruction scheduling for multi-threaded architectures",
-      "year": 2008,
-      "doi": null,
-      "openalex": "W2123298469",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "David I. August",
-        "Guilherme Ottoni"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Global instruction scheduling for multi-threaded architectures",
-      "year": 2008,
-      "doi": null,
-      "openalex": null,
-      "s2": "a0b2bd7f21ada8d4f01a44890df93f9b589e1eae",
-      "venue": null,
-      "authors": [
-        "David I. August",
-        "G. Ottoni"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "The velocity compiler: extracting efficient multicore execution from legacy sequential codes",
-      "year": 2008,
-      "doi": null,
-      "openalex": "W2161222618",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "David I. August",
-        "Matthew J. Bridges"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "The velocity compiler: extracting efficient multicore execution from legacy sequential codes",
-      "year": 2008,
-      "doi": null,
-      "openalex": null,
-      "s2": "9567e4d6024508b81d770e337dec20d938661a05",
-      "venue": null,
-      "authors": [
-        "David I. August",
-        "Matthew J. Bridges"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "conceptually creating separate variables or arrays via memory renaming [32, 41, 42, 81].",
-        "the integration of DOALL into several compilers that target array-based, numerical programs [8, 32].",
-        "technique interprocedural scope [9, 32].",
-        "Previous work in parallelizing scientific programs has shown interprocedural analysis to be useful [11, 32, 42] when parallelizing array-based programs."
-      ]
-    },
-    {
-      "title": "Area Optimisation in SystemC Hardware Compilation �",
-      "year": 2007,
-      "doi": null,
-      "openalex": null,
-      "s2": "6d80bec2ab72e133930f562c6f1843baac6f7448",
-      "venue": null,
-      "authors": [
-        "J. Ditmar"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "Inlining may therefore initially result in an explosive growth of a specification’s size [26]."
-      ]
-    },
-    {
-      "title": "Automatic Discovery of Coarse-Grained Parallelism in Media Applications",
-      "year": 2007,
-      "doi": "10.1007/978-3-540-71528-3_13",
-      "openalex": "W1506705824",
-      "s2": "d71f2756b845fdf11c7a3c955f18ff4df00d0b7a",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Shane Ryoo",
-        "Sain-Zee Ueng",
-        "Christopher Rodrigues",
-        "Robert E. Kidd",
-        "Matthew I. Frank",
-        "Wen‐mei Hwu"
-      ],
-      "isInfluential": true,
-      "intents": [],
-      "contexts": [
-        "SUIF [10] have emphasized the interprocedural nature of parallelizing analysis and code transformation.",
-        "Their reported parallelization results are only for Fortran benchmarks [10,11].",
-        "Of these projects, only SUIF has published research on compilation of C programs.",
-        "Several compiler projects, including Polaris [3], ParaScope [23], and SUIF [10] have emphasized the interprocedural nature of parallelizing analysis and code transformation."
-      ]
-    },
-    {
-      "title": "Sensitivity analysis for automatic parallelization on multi-cores",
-      "year": 2007,
-      "doi": "10.1145/1274971.1275008",
-      "openalex": "W1988777345",
-      "s2": "eb2931a29aeec1c59f2d7ad2af50757bf51c2b29",
-      "venue": "International Conference on Supercomputing",
-      "authors": [
-        "Silvius Rus",
-        "Marinus Pennings",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Software behavior oriented parallelization",
-      "year": 2007,
-      "doi": "10.1145/1250734.1250760",
-      "openalex": "W2158308706",
-      "s2": "e9b67d5c91f09cbfd74f432cb64a4e8a46b85059",
-      "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-      "authors": [
-        "Chen Ding",
-        "Xipeng Shen",
-        "Kirk Kelsey",
-        "Chris Tice",
-        "Ruke Huang",
-        "Chengliang Zhang"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "Dataflow analysis can identify privatizable variables [4, 16]."
-      ]
-    },
-    {
-      "title": "Software behavior oriented parallelization",
-      "year": 2007,
-      "doi": "10.1145/1273442.1250760",
-      "openalex": "W3015929788",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Chen Ding",
-        "Xipeng Shen",
-        "Kirk Kelsey",
-        "Chris Tice",
-        "Ruke Huang",
-        "Chengliang Zhang"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Verifiable early-reply with C++",
-      "year": 2007,
-      "doi": null,
-      "openalex": "W2593891803",
-      "s2": null,
-      "venue": "OakTrust (Texas A&M University Libraries)",
-      "authors": [
-        "Stephen Wendell Cook"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Verifiable early-reply with C++",
-      "year": 2007,
-      "doi": null,
-      "openalex": null,
-      "s2": "7ba265a3cf22f0942988d319e4d13afae870e6a5",
-      "venue": null,
-      "authors": [
-        "Stephen Cook"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "However, there has been some recent success parallelizing (fewer) large grain loops that span many procedures using compile time static analysis [6]."
-      ]
-    },
-    {
-      "title": "Compiler Technology for Migrating Sequential Code to Multi-threaded Architectures",
-      "year": 2006,
-      "doi": null,
-      "openalex": null,
-      "s2": "17a60d28d0bdb190753c66da49f55cf67af65dd7",
-      "venue": null,
-      "authors": [
-        "S. Rus",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "[11] presents the most recent (2005) comprehensive results in automatic parallelization, although based only on static analysis.",
-        "Figure 13: Comparison of automatic parallelization using HDA against SUIF Interprocedural Automatic Parallelizer [11]: (a) Speedup on four processors, (b) Granularity as average duration of a parallelized section expressed as percentage of the execution time, and (c) Coverage as percentage of the execution time."
-      ]
-    },
-    {
-      "title": "Compiler technology for migrating sequential code to multi-threaded Architectures",
-      "year": 2006,
-      "doi": null,
-      "openalex": "W34197133",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Silvius Rus",
-        "Lawrence Rauchwerger"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Program Demultiplexing",
-      "year": 2006,
-      "doi": "10.1145/1150019.1136512",
-      "openalex": "W2142501881",
-      "s2": "fd0b379c1a6fcca4b4d72817d09adada5ca6bbd5",
-      "venue": "ACM SIGARCH Computer Architecture News",
-      "authors": [
-        "Saisanthosh Balakrishnan",
-        "Gurindar S. Sohi"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": [
-        "There has been a significant body of work in expressing parallel execution as a collection of multiple sequential programs [4,5,13,15–18,28,29, 39, 53, 71–73, 79, 80, 85, 99, 109, 113–115, 127, 130, 141, 149, 156, 160, 195, 197, 206]."
-      ]
-    },
-    {
-      "title": "Sensitivity Analysis for Migrating Programs to Multi-Cores",
-      "year": 2006,
-      "doi": null,
-      "openalex": null,
-      "s2": "c7dbc25a136f309ec80892227c74f905753f0bf7",
-      "venue": null,
-      "authors": [
-        "S. Rus",
-        "Marinus Pennings"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "A Code Isolator: Isolating Code Fragments from Large Programs",
-      "year": 2005,
-      "doi": "10.1007/11532378_13",
-      "openalex": "W1881686332",
-      "s2": "8e7ad8c633c757304181010c39d037d0ec14fe57",
-      "venue": "Lecture notes in computer science",
-      "authors": [
-        "Yoon-Ju Lee",
-        "Mary Hall"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "Read is a list of read references within the loop, and Write is a list of write references within it with array data-flow analysis [8].",
-        "Using an adaptation of the region-based interprocedural array data-flow analysis described in [8], we determine the minimum data footprint of each code region."
-      ]
-    },
-    {
-      "title": "Empirical Optimization for a Sparse Linear Solver: A Case Study",
-      "year": 2005,
-      "doi": "10.1007/s10766-005-3581-7",
-      "openalex": "W2067202220",
-      "s2": "e769fa81d7c34c110a48f64ca5c930a14cddd0de",
-      "venue": "International Journal of Parallel Programming",
-      "authors": [
-        "Yoon-Ju Lee",
-        "Pedro C. Diniz",
-        "Mary Hall",
-        "Robert F. Lucas"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "Using an adaptation of the region-based interprocedural array data-flow analysis described in,(9) we determine the minimum data footprint of each code region."
-      ]
-    },
-    {
-      "title": "Combining Compile‐Time and Run‐Time Parallelization",
-      "year": 1999,
-      "doi": "10.1155/1999/490628",
-      "openalex": "W2065789159",
-      "s2": null,
-      "venue": "Scientific Programming",
-      "authors": [
-        "Sungdo Moon",
-        "Byoungro So",
-        "Mary Hall"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
-      "year": 1999,
-      "doi": "10.1145/301104.301112",
-      "openalex": "W1966848517",
-      "s2": null,
-      "venue": null,
-      "authors": [
-        "Sungdo Moon",
-        "Mary Hall"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    },
-    {
-      "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
-      "year": 1999,
-      "doi": "10.1145/329366.301112",
-      "openalex": "W4240983189",
-      "s2": null,
-      "venue": "ACM SIGPLAN Notices",
-      "authors": [
-        "Sungdo Moon",
-        "Mary Hall"
-      ],
-      "isInfluential": null,
-      "intents": null,
-      "contexts": null
-    }
-  ]
+  {
+   "title": "Verifying Array Properties in Pure Data-Parallel Programs",
+   "year": 2026,
+   "doi": "10.1145/3808304",
+   "openalex": null,
+   "s2": "8959d045b3a2ae6d71e6da81c5e51b518691ce3c",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "N. Hinnerskov",
+    "Robert Schenck",
+    "C. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "P 2 is inspired by loop optimizations where suitable access-pattern representations [43, 55] are key to scaling interprocedural analysis, statically [28, 50, 73] or via static-dynamic combinations [43, 48] for non-affine code."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Link-Time Optimization of Dynamic Casts in C++ Programs",
+   "year": 2025,
+   "doi": "10.1145/3729266",
+   "openalex": "W4411260251",
+   "s2": "4b98d68ae6bc7f1b57ee84d7b2c1305a8e37ec1a",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Xufan Lu",
+    "Nuno P. Lopes"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Several optimizations leverage LTO to obtain a closed world [6, 13, 32, 68, 73, 76]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Verifying Properties of Index Arrays in a Purely-Functional Data-Parallel Language",
+   "year": 2025,
+   "doi": "10.48550/arxiv.2506.23058",
+   "openalex": null,
+   "s2": "4fe8321cbb05d165b525e2d9537b29bac1308132",
+   "venue": "arXiv.org",
+   "authors": [
+    "N. Hinnerskov",
+    "Robert Schenck",
+    "C. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Related analyses have shown that choosing a suitable representation for access patterns [35, 41, 50] is key to scaling analysis interprocedurally, either statically [24, 43, 65] or by combining static and dynamic [16, 42, 50] to cover challenging non-affine code instances."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "AD for an Array Language with Nested Parallelism",
+   "year": 2022,
+   "doi": "10.1109/sc41404.2022.00063",
+   "openalex": "W4321636553",
+   "s2": "5d5b39966ebf81d222cecfe173a3e2b3433ffbcb",
+   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": [
+    "Robert Schenck",
+    "Ola R\u03c6nning",
+    "Troels Henriksen",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Work in the automatic parallelization area can be used to automatically check the safety of such annotations, statically [16], dynamically [11], and anywhere in between [31]."
+   ],
+   "cited_by": 11
+  },
+  {
+   "title": "Memory Optimizations in an Array Language",
+   "year": 2022,
+   "doi": "10.1109/sc41404.2022.00036",
+   "openalex": "W4321636600",
+   "s2": "d0acd6475d2460fb8247909d6dd11fb97045d096",
+   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": [
+    "Philip Munksgaard",
+    "Troels Henriksen",
+    "P. Sadayappan",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "For example, many of the challenges pertaining to automatic parallelization are the result of the compiler having to reverse-engineer the users\u2019 memory optimizations, as seen in the rich amount of work in the context of SUIF [1], [2], Polaris [3]\u2013 [5], and polyhedral compilation [6]\u2013[8].",
+    "For example, many of the challenges pertaining to automatic parallelization are the result of the compiler having to reverseengineer the users\u2019 memory optimizations, as seen in the rich amount of work in the context of SUIF [1], [2], Polaris [3]\u2013 [5], and polyhedral compilation [6]\u2013[8].",
+    "Short-circuiting is related at a high-level with analyses developed in the context of automatic parallelization of loopbased (Fortran) code [1]\u2013[3], [9], [16], [33], [34]."
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "Discovering and exploiting parallelism in DOACROSS loops",
+   "year": 2021,
+   "doi": "10.48456/tr-882",
+   "openalex": "W2507252446",
+   "s2": null,
+   "venue": "CL Technical Reports",
+   "authors": [
+    "Niall Murphy"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "Autotuning for Automatic Parallelization on Heterogeneous Systems",
+   "year": 2020,
+   "doi": "10.5445/ir/1000119646",
+   "openalex": null,
+   "s2": "6aa48de86078a391e6382af94d131c85787c1734",
+   "venue": null,
+   "authors": [
+    "Philip Pfaffe"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
+   "year": 2019,
+   "doi": "10.23940/ijpe.19.11.p5.28712881",
+   "openalex": "W2997098728",
+   "s2": "7b905434506591bb00ad23408727532775a657e8",
+   "venue": "International Journal of Performability Engineering",
+   "authors": [
+    "Liu Hui",
+    "Jinlong Xu",
+    "Lili Ding"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The automatic parallelizing compiler SUIF developed by Stanford University can recognize perfect nested loops in serial programs, but its parallel recognition of imperfect nested loops is also limited [3]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Incremental flattening for nested data parallelism",
+   "year": 2019,
+   "doi": "10.1145/3293883.3295707",
+   "openalex": "W2913154098",
+   "s2": "4b538a245f643110ab9983c183106f131442b421",
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": [
+    "Troels Henriksen",
+    "Frederik Thor\u00f8e",
+    "Martin Elsman",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Multi-versioned code generation has been used in other contexts, for example automatic parallelization of non-affine loops (Fortran77 or C) onmulti-cores, where inter-procedural analysis is used to summarize statically memory references under a set-abstraction representation and to model loop independence as an equation on such sets [26, 49]."
+   ],
+   "cited_by": 25
+  },
+  {
+   "title": "An integrated compiler and runtime framework for sparse matrix codes",
+   "year": 2018,
+   "doi": "10.26053/0h-n2q9-he00",
+   "openalex": "W2599487174",
+   "s2": null,
+   "venue": "J. Willard Marriott Library",
+   "authors": [
+    "Anand Venkat"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates",
+   "year": 2017,
+   "doi": "10.1145/3062341.3062354",
+   "openalex": "W2644985445",
+   "s2": "f463b6d692704baf9463e7d8b39e6032c23c4ec9",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Troels Henriksen",
+    "Niels G. W. Serup",
+    "Martin Elsman",
+    "Fritz Henglein",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "On one side, we find sophisticated analyses [16, 27, 41, 42, 55, 56], centered on dependency analysis of affine loop nests in low-level imperative languages such as C and Fortran."
+   ],
+   "cited_by": 116
+  },
+  {
+   "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates",
+   "year": 2017,
+   "doi": "10.1145/3140587.3062354",
+   "openalex": "W4235593108",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Troels Henriksen",
+    "Niels G. W. Serup",
+    "Martin Elsman",
+    "Fritz Henglein",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 27
+  },
+  {
+   "title": "A Stack Memory Abstraction and Symbolic Analysis Framework for Executables",
+   "year": 2016,
+   "doi": "10.1145/2897511",
+   "openalex": "W2342473256",
+   "s2": "990cbf3497da2b2cbd5dfcb199af2e8fb79d5ab7",
+   "venue": "ACM Transactions on Software Engineering and Methodology",
+   "authors": [
+    "Kapil Anand",
+    "Khaled ElWazeer",
+    "Aparna Kotha",
+    "Matthew Smithson",
+    "Rajeev Barua",
+    "Angelos D. Keromytis"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "The SUIF compiler [Hall et al. 2005] employs symbolic analysis to represent array indices in a symbolic form of loop index variables to apply array dependence tests.",
+    "As discussed in various parallelizing compilers such as Parafrase [Haghighat and Polychronopoulos 1996] and SUIF [Hall et al. 2005], a large percentage of parallelization benchmarks have array references with symbolic terms other than loop induction variables and have symbolic loop bounds.",
+    "Standard dependence tests can then be employed to resolve data dependence queries [Hall et al. 2005; Blume and Eigenmann 1995]."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "An Integrated Compiler and Runtime Framework for Sparse Matrix Codes",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "7ce6007074046048b1d25670f4df0e85b3f404ce",
+   "venue": null,
+   "authors": [
+    "Anand Venkat"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Discovering and exploiting parallelism in DOACROSS loops",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "e43affbb2fe8fdbf95b2a11b6d26060c8488d1b0",
+   "venue": null,
+   "authors": [
+    "Niall Murphy"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Independent multithreading \u2022 SUIF [12] \u2022 Polaris [14] \u2022 LRPD Test [46] \u2022 Privateer [55] \u2022 HELIX Pure Speculation (Section 6.",
+    "Furthermore, HELIX applies a more general set of optimisations and transformations than SUIF which enables it to achieve substantial speedups on irregular codes.",
+    "Polaris [14] is another influential parallelising compiler contemporary to SUIF.",
+    "SUIF has considerable success at parallelising loops in SPECFP and NAS, specifically as a result of applying interprocedural analysis.",
+    "Stanford\u2019s SUIF compiler [12] is an influential example of a system which made significant advances in analysis for parallelisation of such codes."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "FinPar",
+   "year": 2016,
+   "doi": "10.1145/2898354",
+   "openalex": "W2472217442",
+   "s2": "a564c755165250c8a0c3055adf81d9d824ae9598",
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Christian Andreetta",
+    "Vivien B\u00e9got",
+    "Jost Berthold",
+    "Martin Elsman",
+    "Fritz Henglein",
+    "Troels Henriksen",
+    "Maj-Britt Nordfang",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "2011] (C), or interprocedural summarization of array subscripts [Hall et al. 2005] (Fortran).",
+    "\u2026end are compilation techniques to automatically extract and optimize parallelism\u2014usually within a language context, such as \ufb02attening [Blelloch et al. 1994] ( NESL ), polyhedral frameworks [Pouchet et al. 2011] (C), or interprocedural summarization of array subscripts [Hall et al. 2005] (Fortran)."
+   ],
+   "cited_by": 18
+  },
+  {
+   "title": "Runtime Information Integration into System Dependency Graphs",
+   "year": 2016,
+   "doi": null,
+   "openalex": null,
+   "s2": "583d79f0e9def487f307d75962fb44b9ede2cf54",
+   "venue": null,
+   "authors": [
+    "Alexander Barbie"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "g, parallel compilers [2] or recommendation systems [7]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Towards automatic parallelization of sequential programs and efficient use of resources in HPC centers",
+   "year": 2016,
+   "doi": "10.1109/hpcsim.2016.7568436",
+   "openalex": "W2519880423",
+   "s2": "f16652cfd2fe1c91714c22b87e53b5b2321c35ca",
+   "venue": "International Symposium on High Performance Computing Systems and Applications",
+   "authors": [
+    "Javier Corral-Garc\u00eda",
+    "Jos\u00e9-Luis Gonz\u00e1lez-S\u00e1nchez",
+    "Miguel A. P\u00e9rez"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "There are more tools available for automatic parallelization but they are compiler specific, such as SUIF [11] (that requires SUIF compiler) or Polaris [12] (which requires KAP compiler), as well as LLVM Polly [13] (under the LLVM Compiler Infrastructure)."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "A Financial Benchmark for GPGPU Compilation",
+   "year": 2015,
+   "doi": null,
+   "openalex": "W2258596252",
+   "s2": null,
+   "venue": "Research at the University of Copenhagen (University of Copenhagen)",
+   "authors": [
+    "Christian Andreetta",
+    "Vivien B\u00e9got",
+    "Jost Berthold",
+    "Martin Elsman",
+    "Troels Henriksen",
+    "Maj-Britt Nordfang",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "A Financial Benchmark for GPGPU Compilation",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "ec836d5acd8fcbe67faeda7b5dae34846c50b8c1",
+   "venue": null,
+   "authors": [
+    "Christian Andreetta",
+    "V. B\u00e9got",
+    "J. Berthold",
+    "M. Elsman",
+    "Troels Henriksen",
+    "Maj-Britt Nordfang",
+    "C. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "On the opposite end are compilation techniques to automatically extract and optimize parallelism\u2014 usually within a language context, such as flattening [2] (NESL), polyhedral frameworks [3] (C), or inter-procedural summarization of array subscripts [4], [5] (Fortran)."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "A Financial Benchmark for GPGPU Compilation Christian Andretta Vivien Begot Jost Berthold Martin Elsman",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "bf9ce41b4b9a68e22b54b710876d8102eed780d7",
+   "venue": null,
+   "authors": [
+    "Christian Andreetta",
+    "V. B\u00e9got",
+    "J. Berthold",
+    "M. Elsman",
+    "Troels Henriksen",
+    "Maj-Britt Nordfang",
+    "C. Oancea",
+    "N. Markets"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "On the opposite end are compilation techniques to automatically extract and optimize parallelism\u2014 usually within a language context, such as flattening [2] (NESL), polyhedral frameworks [3] (C), or inter-procedural summarization of array subscripts [4], [5] (Fortran)."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "A Pattern-based Transformation Approach to Parallelise Software Systems using a System Dependency Graph",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "3f29974a9cdae1e6a62a5e593635b04e37a6d8e1",
+   "venue": null,
+   "authors": [
+    "J. Krause"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Assessing Safe Task Parallelism in SPEC 2006 INT",
+   "year": 2015,
+   "doi": "10.1109/ccgrid.2015.159",
+   "openalex": "W1667270618",
+   "s2": "350b1c92ac336343bee66be58a5738e2ae9af8e0",
+   "venue": "2015 15th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing",
+   "authors": [
+    "Tongxin Bai",
+    "Chen Ding",
+    "Pengcheng Li"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "It can perform interprocedural analysis to extract parallelism regardless of the number of functions being called in the loop [6]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Compiler and runtime techniques for bulk-synchronous programming models on CPU architectures",
+   "year": 2015,
+   "doi": null,
+   "openalex": "W2301530079",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Hee-Seok Kim"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Compiler and runtime techniques for bulk-synchronous programming models on CPU architectures",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "72dda3ec17afce23235432f1ce431d9cd0219b29",
+   "venue": null,
+   "authors": [
+    "Hee-Seok Kim"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Locality-centric thread scheduling for bulk-synchronous programming models on CPU architectures",
+   "year": 2015,
+   "doi": "10.5555/2738600.2738632",
+   "openalex": "W2138767187",
+   "s2": null,
+   "venue": "Symposium on Code Generation and Optimization",
+   "authors": [
+    "Hee-Seok Kim",
+    "Izzat El Hajj",
+    "John A. Stratton",
+    "Steven S. Lumetta",
+    "Wen\u2010mei Hwu"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 19
+  },
+  {
+   "title": "Locality-centric thread scheduling for bulk-synchronous programming models on CPU architectures",
+   "year": 2015,
+   "doi": "10.1109/cgo.2015.7054205",
+   "openalex": "W4256213682",
+   "s2": "0659d614b3a18b4c1549d2984866a77670fd39c3",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Hee-Seok Kim",
+    "Izzat El Hajj",
+    "John A. Stratton",
+    "Steven S. Lumetta",
+    "Wen\u2010mei Hwu"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "These analyses are individually solved problems in the literature [8, 14]."
+   ],
+   "cited_by": 12
+  },
+  {
+   "title": "Patty",
+   "year": 2015,
+   "doi": "10.1145/2712386.2712392",
+   "openalex": "W1967885990",
+   "s2": "f6a3f90f3bbc2e4c1b0f3117aa0bd04547143102",
+   "venue": "PMAM@PPoPP",
+   "authors": [
+    "Korbinian Molitorisz",
+    "Tobias M\u00fcller",
+    "Walter F. Tichy"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Related works consider either implicit parallel programming as in OpenMP, CILK, TBB, or XJava [27]), or automatic parallelizing compilers like SUIF [37] or the Intel C++ compiler."
+   ],
+   "cited_by": 7
+  },
+  {
+   "title": "Probabilistic Dangling References of Imperative and Object-Oriented Multi-Core Programs",
+   "year": 2015,
+   "doi": null,
+   "openalex": "W2557948553",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Mohamed A. El-Zawawy",
+    "Mohammad Ibn"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Probabilistic Dangling References of Imperative and Object-Oriented Multi-Core Programs",
+   "year": 2015,
+   "doi": null,
+   "openalex": null,
+   "s2": "3169eb95234327abba701ea3debbfc1a422b2b26",
+   "venue": null,
+   "authors": [
+    "Mohamed A. El-Zawawy",
+    "Mohammad Ibn"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The work in the other category above includes synchronization analysis [31], race detection [32], reference analysis [ 3], and deadlock analysis [10]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Scalable conditional induction variables (CIV) analysis",
+   "year": 2015,
+   "doi": "10.5555/2738600.2738627",
+   "openalex": "W2039571393",
+   "s2": null,
+   "venue": "Symposium on Code Generation and Optimization",
+   "authors": [
+    "Cosmin E. Oancea",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 8
+  },
+  {
+   "title": "Scalable conditional induction variables (CIV) analysis",
+   "year": 2015,
+   "doi": "10.1109/cgo.2015.7054201",
+   "openalex": "W4237770736",
+   "s2": "905643448927cce1b60daad3cc68307137426386",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Cosmin E. Oancea",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "contexts": [
+    "In practice, they were found to scale better than previously developed analysis based on pairwise accesses [9], but they do not support CIVs.",
+    "Other summarization techniques [9, 14, 16] aggregate array references across control-flow constructs, e.",
+    "The abstract set models the memory references of the corresponding array and is computed via interprocedural summarization of accesses [9, 11, 15, 16]."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Bounds Checking",
+   "year": 2014,
+   "doi": "10.1145/2627373.2627388",
+   "openalex": "W1989792478",
+   "s2": "b4d77a72ea8c482f30b3d36cba5915c1f8d1e936",
+   "venue": "ARRAY@PLDI",
+   "authors": [
+    "Troels Henriksen",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Other work summarizes at program level array accesses, either via systems of af\ufb01ne inequations or as a program in a language of abstract sets, and summaries are paired with predicates that are evaluated at runtime to minimize overheads [10, 16].",
+    "Such analyses, reviewed in Section 4, include optimization of the common-execution path in JIT compilation [1], inspector-executor and dependence analysis of array subscripts in automatic parallelization [10, 16\u201319]."
+   ],
+   "cited_by": 16
+  },
+  {
+   "title": "Enhancing the performance of decoupled software pipeline through backward slicing",
+   "year": 2014,
+   "doi": "10.3923/rjasci.2016.900.909",
+   "openalex": null,
+   "s2": "c31388ae97cae9a6d28868833bd47b33d572689f",
+   "venue": null,
+   "authors": [
+    "E. Alwan"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "\u2026that have the ability to discover the parallelism and convert a single threaded application to a multi threaded one have been integrated in some research compilers such as the Fortran-D compiler (Hiranandani et al., 1993), SUIF (Hall et al., 2005), Polaris (Blume et al., 1994), etc (Raman, 2009).",
+    ", 1993), SUIF (Hall et al., 2005), Polaris (Blume et al.",
+    "Both DOALL and DOACROSS along with several other techniques that have the ability to discover the parallelism and convert a single threaded application to a multi threaded one have been integrated in some research compilers such as the Fortran-D compiler (Hiranandani et al., 1993), SUIF (Hall et al., 2005), Polaris (Blume et al., 1994), etc (Raman, 2009)."
+   ],
+   "cited_by": null
+  },
+  {
+   "title": "Non-affine Extensions to Polyhedral Code Generation",
+   "year": 2014,
+   "doi": "10.1145/2581122.2544141",
+   "openalex": "W4295539146",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Anand Venkat",
+    "Manu Shantharam",
+    "Mary Hall",
+    "Michelle Mills Strout"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 40
+  },
+  {
+   "title": "Non-affine Extensions to Polyhedral Code Generation",
+   "year": 2014,
+   "doi": "10.1145/2544137.2544141",
+   "openalex": "W2025278624",
+   "s2": "4c725527b426b28f9024a0092a6a09f180b25628",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Anand Venkat",
+    "Manu Shantharam",
+    "Mary Hall",
+    "Michelle Mills Strout"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "However, the only update to vector y is a commutative and associative operation, which can be recognized as a reduction, as is common among parallelizing compilers [12, 20]."
+   ],
+   "cited_by": 38
+  },
+  {
+   "title": "Size slicing",
+   "year": 2014,
+   "doi": "10.1145/2636228.2636238",
+   "openalex": "W2024712769",
+   "s2": "604c30b7ae5afa90236f28fbd5b657c10fe62a8a",
+   "venue": "Functional High-Performance Computing",
+   "authors": [
+    "Troels Henriksen",
+    "Martin Elsman",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "2636238 of a range of analyses from entirely dynamic [11, 29, 34] to entirely static for automatic parallelization [20, 30, 33]."
+   ],
+   "cited_by": 17
+  },
+  {
+   "title": "A Hybrid Approach to Proving Memory Reference Monotonicity",
+   "year": 2013,
+   "doi": "10.1007/978-3-642-36036-7_5",
+   "openalex": "W58073954",
+   "s2": "542c042aeb2b16c35936b536121e31bab9c979ad",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Cosmin E. Oancea",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "use interprocedural summarization [12, 16] to give a comprehensive study of parallelism for the perfect Club and spec2000 benchmarks."
+   ],
+   "cited_by": 19
+  },
+  {
+   "title": "A T2 graph-reduction approach to fusion",
+   "year": 2013,
+   "doi": "10.1145/2502323.2502328",
+   "openalex": "W1997744477",
+   "s2": "74baf0ef53be9374dc1e3b4854310f7a0e3a4f6a",
+   "venue": "Functional High-Performance Computing",
+   "authors": [
+    "Troels Henriksen",
+    "Cosmin E. Oancea"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Furthermore, such analyses [12, 19, 27, 28] have not yet been integrated in the repertoire of commercial compilers, likely due to \u201cheroic effort\u201d concerns, albeit (i) their effectiveness was demonstrated on comprehensive suites, and (ii) some of them were developed more than a decade ago."
+   ],
+   "cited_by": 25
+  },
+  {
+   "title": "A compiler level intermediate representation based binary analysis system and its applications",
+   "year": 2013,
+   "doi": null,
+   "openalex": "W141381105",
+   "s2": null,
+   "venue": "University Libraries (University of Maryland)",
+   "authors": [
+    "Kapil Anand"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "A compiler level intermediate representation based binary analysis system and its applications",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "17424db6a78148ae31ddc824ad14f41c75154527",
+   "venue": null,
+   "authors": [
+    "K. Anand"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Standard dependence tests can then be employed to resolve data dependence queries [77, 31].",
+    "Existing parallelizing compilers based on symbolic analysis frameworks [76, 31, 77] collect the required information (recurrence relations and affine expressions) by symbolic analysis and perform dependence testing using a variety of techniques.",
+    "Various common dependence techniques, as presented in [69, 77], employ recurrence relations and affine expressions between array indices to characterize the dependence structure in two aspects.",
+    "As discussed in various parallelizing compilers like Parafrase [76], SUIF [77], Polaris [31], a large percentage of parallelization benchmarks have array references with symbolic terms other than loop induction variables and have symbolic loop bounds.",
+    "Symbolic analysis [76, 31, 77, 32] is an important source-code level static analysis technique which represents the values of program variables through symbolic expressions.",
+    "Various parallelizing compilers [76, 31, 77] have employed powerful symbolic analysis frameworks to resolve data-dependency queries and to enable critical optimizations like array privatization for effective parallelization of programs.",
+    "The SUIF compiler [77] employs symbolic analysis to represent array indices in a symbolic form of loop index variables to apply array dependence tests.",
+    "Symbolic analysis also enables various transformations like induction variable substitution and array privatization which further aid in exposing the dependence structure of a program [76, 77, 31]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Automated Optimization of a Computation for Different Architectures",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "f7b209d55c2c80aad3b8a1c21f0c68918773a831",
+   "venue": null,
+   "authors": [
+    "T. Biggerstaff"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "This includes compiling technology, generator technology [4] [5] [7] [22] [29] [30], computer aided software engineering (CASE) [13], model driven engineering [22], Aspect Oriented Programming (AOP) [17], Anticipatory Optimization Generation (AOG) [6] [7], general optimization based methods [1] [20] [16], parallel or specialty programming languages [8] [12], programming languages superficially similar to DSLGen TM \u2018s partitioning model [14], programming language augmentation systems [15] [27], maintenance support systems [1] [2], refactoring [18] and other related technology and methods for creating implementation code from a specification of a computation."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Detection of Probabilistic Dangling References in Multi-core Programs Using Proof-Supported Tools",
+   "year": 2013,
+   "doi": "10.1007/978-3-642-39640-3_38",
+   "openalex": "W9387966",
+   "s2": "4974b25135624d75079d54e4f766363c4f4c0fd3",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Mohamed A. El-Zawawy"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 8
+  },
+  {
+   "title": "Never Reprogram Again",
+   "year": 2013,
+   "doi": null,
+   "openalex": null,
+   "s2": "34d3809309a0723340ac22ed3f722874308868c5",
+   "venue": null,
+   "authors": [
+    "T. Biggerstaff"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Parallel Techniques of the Sequential Codes Based on Multi-core",
+   "year": 2013,
+   "doi": "10.3923/itj.2013.1673.1684",
+   "openalex": "W2330095989",
+   "s2": "63e8eb9f5c3fd063b4e8d396d9a7019d24009554",
+   "venue": "Information Technology Journal",
+   "authors": [
+    "Xiang Li",
+    "Jing Zhang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Software thread integration for instruction-level parallelism",
+   "year": 2013,
+   "doi": "10.1145/2512466",
+   "openalex": "W2006020173",
+   "s2": "0e312a15f21d6b01e14ca7906870841c79cbc6bb",
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": [
+    "Won So",
+    "Alexander G. Dean"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 4
+  },
+  {
+   "title": "Financial software on GPUs",
+   "year": 2012,
+   "doi": "10.1145/2364474.2364484",
+   "openalex": "W2100232637",
+   "s2": "65d58682646901c66cbcbd6e7b4e42d6e377d4af",
+   "venue": "Functional High-Performance Computing",
+   "authors": [
+    "Cosmin E. Oancea",
+    "Christian Andreetta",
+    "Jost Berthold",
+    "Alain Frisch",
+    "Fritz Henglein"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "contexts": [
+    "The latter was observed not only on our case study, but also on benchmarks in PERFECT-CLUB and SPEC suites [21, 39].",
+    "Issues become more complicated with larger loops, where symbolic constants, complex control flow, array-reshaping at call sites, quadratic array indexing, induction variables with no closed-form solutions hinder parallelism extraction [21, 39].",
+    "The set representation has taken the form of either (i) an array abstraction [21, 39], e.",
+    "However, most compiler solutions [21, 42] cannot establish this property, as their dependency analysis is restricted to cases where the array subscript can be expressed as a closed-form, typically affine, formula in the loop indexes."
+   ],
+   "cited_by": 19
+  },
+  {
+   "title": "Logical inference techniques for loop parallelization",
+   "year": 2012,
+   "doi": "10.1145/2254064.2254124",
+   "openalex": "W2096862145",
+   "s2": "70b7b89b118107e7a8b294eab32de4a7f5e31b71",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Cosmin E. Oancea",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "To deal with this problem in a scalable manner, i.e., for outer, program level loops, we define an equally-rich language of predicates (PDAG) and an effective rule-based translation between the two languages, such that the result predicate p is a sufficient condition for loop independence: p \u21d2 {S =\u2026",
+    "Categories and Subject Descriptors D.1.3 [Concurrent Programming]: Parallel Programming; D.3.4 [Processors]: Compiler\nGeneral Terms Performance, Design, Algorithms\nKeywords auto-parallelization, USR, independence predicates."
+   ],
+   "cited_by": 38
+  },
+  {
+   "title": "Logical inference techniques for loop parallelization",
+   "year": 2012,
+   "doi": "10.1145/2345156.2254124",
+   "openalex": "W4235730175",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Cosmin E. Oancea",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 8
+  },
+  {
+   "title": "Optimization of Imperative Functional Parallel Programs with Non-local Program Transformations",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "52b67ed99851a8b2e30bcd725506b12f41098279",
+   "venue": null,
+   "authors": [
+    "A. Adamovich"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "A similar structure of compiling systems is used in a number of program transformation systems, such as SUIF [5], LLVM [6], OPS [7], etc."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Parallelism Recognition Technology Based on Nested Loops Classifying",
+   "year": 2012,
+   "doi": "10.3724/sp.j.1001.2012.04178",
+   "openalex": null,
+   "s2": "210c12b95ce621ede07c5c3e69cbd8e2cdc857c6",
+   "venue": null,
+   "authors": [
+    "Zhao Jie",
+    "Pla Information"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 2
+  },
+  {
+   "title": "Pattern-Based Detection and Utilization of Potential Parallelism in Software Systems",
+   "year": 2012,
+   "doi": null,
+   "openalex": null,
+   "s2": "541945cdb24ba7a595f39869292fe203b4043097",
+   "venue": "Software Engineering",
+   "authors": [
+    "C. Wulf"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 4
+  },
+  {
+   "title": "A framework for reasoning about inherent parallelism in modern object-oriented languages",
+   "year": 2011,
+   "doi": null,
+   "openalex": "W186462353",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Andrew Craik"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "A framework for reasoning about inherent parallelism in modern object-oriented languages",
+   "year": 2011,
+   "doi": null,
+   "openalex": null,
+   "s2": "b14a1fd4e7e88b2680c3bd90ce4ca70f955c2cee",
+   "venue": null,
+   "authors": [
+    "Andrew Craik"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Automatic Recognition of Performance Idioms in Scientific Applications",
+   "year": 2011,
+   "doi": "10.1109/ipdps.2011.21",
+   "openalex": "W2107896023",
+   "s2": "30029528b5a843bea658be7c07eab8dc8a1fd8ee",
+   "venue": "IEEE International Parallel and Distributed Processing Symposium",
+   "authors": [
+    "Jiahua He",
+    "Allan Snavely",
+    "Rob F. Van der Wijngaart",
+    "Michael Frumkin"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "For example, reduction is one of the program constructs well studied by the compiler communities."
+   ],
+   "cited_by": 14
+  },
+  {
+   "title": "Dynamic trace analysis with zero-suppressed bdds",
+   "year": 2011,
+   "doi": null,
+   "openalex": "W2148718702",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Manish Vachharajani",
+    "Graham Price"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Dynamic trace analysis with zero-suppressed bdds",
+   "year": 2011,
+   "doi": null,
+   "openalex": null,
+   "s2": "bd727f7b8409fb375e8672ce2f727013a4719eff",
+   "venue": null,
+   "authors": [
+    "Manish Vachharajani",
+    "Graham D. Price"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Automatic parallelization is a heavily research field [38, 41, 95]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Improved Affine Partition Algorithm for Compile-Time and Runtime Performance",
+   "year": 2011,
+   "doi": "10.1080/10798587.2011.10643220",
+   "openalex": "W2023703253",
+   "s2": "1795cb1aa78b160fa578cd52901e14959f0ef25b",
+   "venue": "Intelligent Automation & Soft Computing",
+   "authors": [
+    "Yuan Xinyu",
+    "Ying Li",
+    "Shuiguang Deng",
+    "Jie Cheng"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Increasing parallelizing compiler efficiency using commutative functions",
+   "year": 2011,
+   "doi": null,
+   "openalex": "W147450094",
+   "s2": null,
+   "venue": "Chalmers Publication Library (Chalmers University of Technology)",
+   "authors": [
+    "Jacob Lidman"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Increasing parallelizing compiler efficiency using commutative functions",
+   "year": 2011,
+   "doi": null,
+   "openalex": null,
+   "s2": "d863a24735b059755b95f5659c6cf60e31a3c405",
+   "venue": null,
+   "authors": [
+    "Jacob Lidman"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Symbolic analysis has long been used by parallelizing compilers [20, 24], such as the Parafrase-2 compiler [25] and SUIF [26], for various tasks including constant propagation, induction variable substituion, and loop invariant code detection, to name a few."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Loop Acceleration Exploration for ASIP Architecture",
+   "year": 2011,
+   "doi": "10.1109/tvlsi.2011.2107923",
+   "openalex": "W2108917009",
+   "s2": "0835f920ccbabf0e86163f2028b5704e56285be4",
+   "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
+   "authors": [
+    "M. Mbaye",
+    "Normand B\u00e9langer",
+    "Yvon Savaria",
+    "Samuel Pierre"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "to accelerate loops (loop unrolling [30], loop shifting [31], loop interchange [32], loop parallelization [33], loop fusion [34], etc."
+   ],
+   "cited_by": 5
+  },
+  {
+   "title": "Scalable Manycore Computing with CUDA",
+   "year": 2011,
+   "doi": "10.1201/b11417-14",
+   "openalex": null,
+   "s2": "ae93f9fd758c0071affcfa727f09723393ea306f",
+   "venue": "Fundamentals of Multicore Software Development",
+   "authors": [
+    "Michael Garland",
+    "Vinod Grover",
+    "K. Skadron"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "Test and Evaluation of Architecture-Aware Compiler Environment",
+   "year": 2011,
+   "doi": "10.21236/ada563246",
+   "openalex": "W291681784",
+   "s2": "b624f4482c8bd4f34733576ffa99501bd2abf41f",
+   "venue": null,
+   "authors": [
+    "Allan Snavely"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "A Generalized Streaming Model for Concurrent Computing",
+   "year": 2010,
+   "doi": "10.48550/arxiv.1012.1641",
+   "openalex": "W1563217556",
+   "s2": null,
+   "venue": "arXiv (Cornell University)",
+   "authors": [
+    "Yibing Wang"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "A Generalized Streaming Model for Concurrent Computing",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "066edaf9b374a9cbe47d3068d9e1cd5d78e5b272",
+   "venue": "arXiv.org",
+   "authors": [
+    "Yibing Wang"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Stream entity de\ufb01nes a scope that can be bigger than loop nests, and the scope is \ufb01-nite so is superior than intractable number of procedures that hinder previous practices in interpro-cedural analyses [1, 21]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "A generalized GCD test based affine partitioning algorithm",
+   "year": 2010,
+   "doi": "10.1109/icise.2010.5690981",
+   "openalex": "W2534845553",
+   "s2": "b731a67979eb7e01ccfd16a368bcbcc7d2cab1cb",
+   "venue": "International Conference on Information Science and Engineering",
+   "authors": [
+    "Yuan Xinyu",
+    "Ying Li",
+    "Shuiguang Deng",
+    "Jie Cheng"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "SUIF has successfully parallelized loops that have thousands of lines of code including the call between procedures[6]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Extending GCC with a multigrain parallelism adaptation framework for MPSoCs",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "bc35b1c1f11d0142a8b211a322b2782cc2f99bc7",
+   "venue": null,
+   "authors": [
+    "Nicolas Benoit",
+    "St\u00e9phane Louise"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 8
+  },
+  {
+   "title": "Synchronization via scheduling: managing shared state in video games",
+   "year": 2010,
+   "doi": null,
+   "openalex": "W2152517291",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Micah J. Best",
+    "Shane Mottishaw",
+    "Craig Mustard",
+    "Mark A. Roth",
+    "Alexandra Fedorova",
+    "Andrew Brownsword"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Synchronization via scheduling: managing shared state in video games",
+   "year": 2010,
+   "doi": null,
+   "openalex": null,
+   "s2": "268888432b316c25d0880f13b5cd4aa232efbb2e",
+   "venue": null,
+   "authors": [
+    "Micah J. Best",
+    "Shane Mottishaw",
+    "Craig Mustard",
+    "Mark Roth",
+    "Alexandra Fedorova",
+    "Andrew Brownsword"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Traditional static techniques for extracting parallelism rely on loop and subscript analysis[4, 8], but are only valid when there are no dependencies between iterations."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Transparent runtime parallelization of the R scripting language",
+   "year": 2010,
+   "doi": "10.1016/j.jpdc.2010.08.013",
+   "openalex": "W1978163937",
+   "s2": "2823a359ec554a20e3f5d61f7dff6531c26a9b7e",
+   "venue": "Journal of Parallel and Distributed Computing",
+   "authors": [
+    "Jiangtian Li",
+    "Xiaosong Ma",
+    "Srikanth B. Yoginath",
+    "Guruprasad Kora",
+    "Nagiza F. Samatova"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Representative work on parallelizing compilers, such as SUIF [19] and Polaris [20] transform sequential C or Fortran code into parallel code (e.g., using OpenMP)."
+   ],
+   "cited_by": 14
+  },
+  {
+   "title": "A Composable Model for Analyzing Locality of Multi-threaded Programs",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W21782772",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Chen Ding",
+    "Trishul Chilimbi"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 41
+  },
+  {
+   "title": "A Composable Model for Analyzing Locality of Multi-threaded Programs",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "4f1cf2a9244816dc9ea7be304b85a45b7e0941a4",
+   "venue": null,
+   "authors": [
+    "C. Ding",
+    "Trishul M. Chilimbi"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "contexts": [
+    "More general forms of dependence analysis are used by parallelizing compilers [7, 20 ,22,26].",
+    "researchers, see [2, 14]) has beenused to estimateand reorganize the concurrentdata access for examples for reducingfalse sharing by Eggers and Jeremiassen [18] on multiprocessors and for data prefetchingand message aggregation on DSM by Lu et al. [ 20 ] More generalforms of depen denceanalysis has beenusedto automatically parallelize sequentialcodefor examples in [5, 13, 16, 19]."
+   ],
+   "cited_by": 50
+  },
+  {
+   "title": "A Language of Suggestions for Program Parallelization",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W2239185640",
+   "s2": null,
+   "venue": "UR Research (University of Rochester)",
+   "authors": [
+    "Chao Zhang",
+    "Xiaobing Feng",
+    "Chen Ding",
+    "Xiaoming Gu",
+    "Tongxin Bai",
+    "Kirk Kelsey"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "A Language of Suggestions for Program Parallelization",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "5ef1ae20aa715c57d9cacdde96bb5650cc556683",
+   "venue": null,
+   "authors": [
+    "Chao Zhang",
+    "Xiaobing Feng",
+    "C. Ding",
+    "X. Gu",
+    "Tongxin Bai",
+    "Kirk Kelsey"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Coarse-grained task parallelism exists in sequential code and can be leveraged to boost the use of chip multi-processors.",
+    "It is generally recognized that although automatic techniques are effective in exploiting loop parallelism (Hall et al., 2005; Blume et al., 1996; Allen and Kennedy, 2001; Wolfe, 1996), they are not sufficient to uncover parallelism among complex tasks in general-purpose code."
+   ],
+   "cited_by": 2
+  },
+  {
+   "title": "Distributive Program Parallelization Using a Suggestion Language",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W227418731",
+   "s2": null,
+   "venue": "UR Research (University of Rochester)",
+   "authors": [
+    "Bryan Jacobs",
+    "Tongxin Bai",
+    "Chen Ding"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "Distributive Program Parallelization Using a Suggestion Language",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "5404c458a257bcda9d26150b8ef980394e2934ea",
+   "venue": null,
+   "authors": [
+    "Bryan Jacobs",
+    "Tongxin Bai",
+    "C. Ding"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "A recent approach to distributed parallelization is to automatically translate a Fortran program from using OpenMP to using MPI [4\u20136].",
+    "Powerful compiler techniques such as dependence, array-section, alias and inter-procedural analysis can extract coarse-grained parallelism in scientific code [1, 2, 8, 18, 19, 21, 47].",
+    "Software speculative parallelization Loop-level software speculation was pioneered by the LRPD test for Fortran loops [36].",
+    "Although compiler techniques are effective in exploiting loop parallelism in scientific code written in Fortran [2, 8, 21, 47], they are not a sufficient solution for C/C++ programs or programs with input-dependent behavior where both the degree and the granularity of parallelism are not guaranteed or even predictable.",
+    "The SPMD model is used in distributedmemory programming as by MPI, PVM, software shared distributed memory (S-DSM) systems such as TreadMarks [3] and InterWeave [41], and PGAS languages such as UPC [44] and co-array Fortran [32].",
+    "There are ready-to-use parallel constructs in mainstream languages such as Fortran, C, C++ and Java, in threading libraries such as Microsoft .",
+    "High performance Fortran (HPF) lets a user suggest data distribution in Fortran code [1,2]."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "IMPROVED DEPENDENCE HANDLING",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "9adf9496f9d2dd991f50094c7e24a638d05a2244",
+   "venue": null,
+   "authors": [
+    "Easwaran Raman"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
+  },
+  {
+   "title": "Parallelization techniques with improved dependence handling",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W1880444039",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "David I. August",
+    "Easwaran Raman"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 4
+  },
+  {
+   "title": "Parallelization techniques with improved dependence handling",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "6fcedb679018fdd65f0175cbffaadc26dc33192c",
+   "venue": null,
+   "authors": [
+    "David I. August",
+    "Easwaran Raman"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "These and various other techniques for detecting dependences in loops and transforming them into parallel code were incorporated into research compilers such as Fortran-D Compiler [24], Suif [21, 61], Polaris [4], etc."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Towards Transparent Parallel Processing on Multi-core Computers",
+   "year": 2009,
+   "doi": null,
+   "openalex": "W2274989117",
+   "s2": null,
+   "venue": "NCSU Libraries Repository (North Carolina State University Libraries)",
+   "authors": [
+    "Jiangtian Li"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Towards Transparent Parallel Processing on Multi-core Computers",
+   "year": 2009,
+   "doi": null,
+   "openalex": null,
+   "s2": "d01556a8bae70b1b1de0acf4e391bd831b00fd4c",
+   "venue": null,
+   "authors": [
+    "Jiangtian Li"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "methodology",
+    "background"
+   ],
+   "contexts": [
+    "Although exact loop data dependence analysis has been shown to be NPcomplete [79], many advanced dependence modeling and loop transformation techniques have been proposed and used in compilers [1, 6, 18, 54, 94, 100, 117].",
+    "One alternative to explicitly parallel programming is to let the compiler perform parallelization work and produce binaries that can be executed in parallel [1, 5, 7, 18, 54].",
+    "Our transparent parallelization framework has borrowed mature techniques from these projects, such as loop dependence analysis and loop transformation [1, 6, 18, 54, 94, 100, 117].",
+    "Representative work on parallelizing compilers, such as SUIF [54], Polaris [18], and Paradigm [7] transform sequential C or Fortran code into parallel code (e."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Effect inference for deterministic parallelism",
+   "year": 2008,
+   "doi": null,
+   "openalex": "W1607754794",
+   "s2": null,
+   "venue": "KTH Publication Database DiVA (KTH Royal Institute of Technology)",
+   "authors": [
+    "Karl\u2010Filip Fax\u00e9n"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 0
+  },
+  {
+   "title": "Effect inference for deterministic parallelism",
+   "year": 2008,
+   "doi": null,
+   "openalex": null,
+   "s2": "b1236bf5da10badf28c239349f42bbee96cd854f",
+   "venue": null,
+   "authors": [
+    "Karl-Filip Fax\u00e9n"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Our approach is somewhat similar in spirit to automatic parallelization since the confluent semantics of well typed programs in fact coincides with a purely sequential semantics [3, 1]."
+   ],
+   "cited_by": 0
+  },
+  {
+   "title": "Global instruction scheduling for multi-threaded architectures",
+   "year": 2008,
+   "doi": null,
+   "openalex": "W2123298469",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "David I. August",
+    "Guilherme Ottoni"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 5
+  },
+  {
+   "title": "Global instruction scheduling for multi-threaded architectures",
+   "year": 2008,
+   "doi": null,
+   "openalex": null,
+   "s2": "a0b2bd7f21ada8d4f01a44890df93f9b589e1eae",
+   "venue": null,
+   "authors": [
+    "David I. August",
+    "G. Ottoni"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 9
+  },
+  {
+   "title": "The velocity compiler: extracting efficient multicore execution from legacy sequential codes",
+   "year": 2008,
+   "doi": null,
+   "openalex": "W2161222618",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "David I. August",
+    "Matthew J. Bridges"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 16
+  },
+  {
+   "title": "The velocity compiler: extracting efficient multicore execution from legacy sequential codes",
+   "year": 2008,
+   "doi": null,
+   "openalex": null,
+   "s2": "9567e4d6024508b81d770e337dec20d938661a05",
+   "venue": null,
+   "authors": [
+    "David I. August",
+    "Matthew J. Bridges"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "conceptually creating separate variables or arrays via memory renaming [32, 41, 42, 81].",
+    "the integration of DOALL into several compilers that target array-based, numerical programs [8, 32].",
+    "technique interprocedural scope [9, 32].",
+    "Previous work in parallelizing scientific programs has shown interprocedural analysis to be useful [11, 32, 42] when parallelizing array-based programs."
+   ],
+   "cited_by": 22
+  },
+  {
+   "title": "Area Optimisation in SystemC Hardware Compilation \ufffd",
+   "year": 2007,
+   "doi": null,
+   "openalex": null,
+   "s2": "6d80bec2ab72e133930f562c6f1843baac6f7448",
+   "venue": null,
+   "authors": [
+    "J. Ditmar"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "Inlining may therefore initially result in an explosive growth of a specification\u2019s size [26]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Automatic Discovery of Coarse-Grained Parallelism in Media Applications",
+   "year": 2007,
+   "doi": "10.1007/978-3-540-71528-3_13",
+   "openalex": "W1506705824",
+   "s2": "d71f2756b845fdf11c7a3c955f18ff4df00d0b7a",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Shane Ryoo",
+    "Sain-Zee Ueng",
+    "Christopher Rodrigues",
+    "Robert E. Kidd",
+    "Matthew I. Frank",
+    "Wen\u2010mei Hwu"
+   ],
+   "isInfluential": true,
+   "intents": [],
+   "contexts": [
+    "SUIF [10] have emphasized the interprocedural nature of parallelizing analysis and code transformation.",
+    "Their reported parallelization results are only for Fortran benchmarks [10,11].",
+    "Of these projects, only SUIF has published research on compilation of C programs.",
+    "Several compiler projects, including Polaris [3], ParaScope [23], and SUIF [10] have emphasized the interprocedural nature of parallelizing analysis and code transformation."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "Sensitivity analysis for automatic parallelization on multi-cores",
+   "year": 2007,
+   "doi": "10.1145/1274971.1275008",
+   "openalex": "W1988777345",
+   "s2": "eb2931a29aeec1c59f2d7ad2af50757bf51c2b29",
+   "venue": "International Conference on Supercomputing",
+   "authors": [
+    "Silvius Rus",
+    "Marinus Pennings",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 51
+  },
+  {
+   "title": "Software behavior oriented parallelization",
+   "year": 2007,
+   "doi": "10.1145/1250734.1250760",
+   "openalex": "W2158308706",
+   "s2": "e9b67d5c91f09cbfd74f432cb64a4e8a46b85059",
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": [
+    "Chen Ding",
+    "Xipeng Shen",
+    "Kirk Kelsey",
+    "Chris Tice",
+    "Ruke Huang",
+    "Chengliang Zhang"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "Dataflow analysis can identify privatizable variables [4, 16]."
+   ],
+   "cited_by": 179
+  },
+  {
+   "title": "Software behavior oriented parallelization",
+   "year": 2007,
+   "doi": "10.1145/1273442.1250760",
+   "openalex": "W3015929788",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Chen Ding",
+    "Xipeng Shen",
+    "Kirk Kelsey",
+    "Chris Tice",
+    "Ruke Huang",
+    "Chengliang Zhang"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 34
+  },
+  {
+   "title": "Verifiable early-reply with C++",
+   "year": 2007,
+   "doi": null,
+   "openalex": "W2593891803",
+   "s2": null,
+   "venue": "OakTrust (Texas A&M University Libraries)",
+   "authors": [
+    "Stephen Wendell Cook"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 2
+  },
+  {
+   "title": "Verifiable early-reply with C++",
+   "year": 2007,
+   "doi": null,
+   "openalex": null,
+   "s2": "7ba265a3cf22f0942988d319e4d13afae870e6a5",
+   "venue": null,
+   "authors": [
+    "Stephen Cook"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "However, there has been some recent success parallelizing (fewer) large grain loops that span many procedures using compile time static analysis [6]."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Compiler Technology for Migrating Sequential Code to Multi-threaded Architectures",
+   "year": 2006,
+   "doi": null,
+   "openalex": null,
+   "s2": "17a60d28d0bdb190753c66da49f55cf67af65dd7",
+   "venue": null,
+   "authors": [
+    "S. Rus",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "[11] presents the most recent (2005) comprehensive results in automatic parallelization, although based only on static analysis.",
+    "Figure 13: Comparison of automatic parallelization using HDA against SUIF Interprocedural Automatic Parallelizer [11]: (a) Speedup on four processors, (b) Granularity as average duration of a parallelized section expressed as percentage of the execution time, and (c) Coverage as percentage of the execution time."
+   ],
+   "cited_by": 3
+  },
+  {
+   "title": "Compiler technology for migrating sequential code to multi-threaded Architectures",
+   "year": 2006,
+   "doi": null,
+   "openalex": "W34197133",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Silvius Rus",
+    "Lawrence Rauchwerger"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 3
+  },
+  {
+   "title": "Program Demultiplexing",
+   "year": 2006,
+   "doi": "10.1145/1150019.1136512",
+   "openalex": "W2142501881",
+   "s2": "fd0b379c1a6fcca4b4d72817d09adada5ca6bbd5",
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": [
+    "Saisanthosh Balakrishnan",
+    "Gurindar S. Sohi"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [
+    "There has been a significant body of work in expressing parallel execution as a collection of multiple sequential programs [4,5,13,15\u201318,28,29, 39, 53, 71\u201373, 79, 80, 85, 99, 109, 113\u2013115, 127, 130, 141, 149, 156, 160, 195, 197, 206]."
+   ],
+   "cited_by": 57
+  },
+  {
+   "title": "Sensitivity Analysis for Migrating Programs to Multi-Cores",
+   "year": 2006,
+   "doi": null,
+   "openalex": null,
+   "s2": "c7dbc25a136f309ec80892227c74f905753f0bf7",
+   "venue": null,
+   "authors": [
+    "S. Rus",
+    "Marinus Pennings"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 1
+  },
+  {
+   "title": "A Code Isolator: Isolating Code Fragments from Large Programs",
+   "year": 2005,
+   "doi": "10.1007/11532378_13",
+   "openalex": "W1881686332",
+   "s2": "8e7ad8c633c757304181010c39d037d0ec14fe57",
+   "venue": "Lecture notes in computer science",
+   "authors": [
+    "Yoon-Ju Lee",
+    "Mary Hall"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "Read is a list of read references within the loop, and Write is a list of write references within it with array data-flow analysis [8].",
+    "Using an adaptation of the region-based interprocedural array data-flow analysis described in [8], we determine the minimum data footprint of each code region."
+   ],
+   "cited_by": 23
+  },
+  {
+   "title": "Empirical Optimization for a Sparse Linear Solver: A Case Study",
+   "year": 2005,
+   "doi": "10.1007/s10766-005-3581-7",
+   "openalex": "W2067202220",
+   "s2": "e769fa81d7c34c110a48f64ca5c930a14cddd0de",
+   "venue": "International Journal of Parallel Programming",
+   "authors": [
+    "Yoon-Ju Lee",
+    "Pedro C. Diniz",
+    "Mary Hall",
+    "Robert F. Lucas"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "Using an adaptation of the region-based interprocedural array data-flow analysis described in,(9) we determine the minimum data footprint of each code region."
+   ],
+   "cited_by": 10
+  },
+  {
+   "title": "Combining Compile\u2010Time and Run\u2010Time Parallelization",
+   "year": 1999,
+   "doi": "10.1155/1999/490628",
+   "openalex": "W2065789159",
+   "s2": null,
+   "venue": "Scientific Programming",
+   "authors": [
+    "Sungdo Moon",
+    "Byoungro So",
+    "Mary Hall"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 1
+  },
+  {
+   "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
+   "year": 1999,
+   "doi": "10.1145/301104.301112",
+   "openalex": "W1966848517",
+   "s2": null,
+   "venue": null,
+   "authors": [
+    "Sungdo Moon",
+    "Mary Hall"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 33
+  },
+  {
+   "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
+   "year": 1999,
+   "doi": "10.1145/329366.301112",
+   "openalex": "W4240983189",
+   "s2": null,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": [
+    "Sungdo Moon",
+    "Mary Hall"
+   ],
+   "isInfluential": null,
+   "intents": null,
+   "contexts": null,
+   "cited_by": 6
+  }
+ ]
 }

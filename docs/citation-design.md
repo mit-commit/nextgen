@@ -53,7 +53,17 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    — All / Core / Engaged / Peripheral buttons, with counts. *Core* means
    the citing work would be fundamentally different without this paper.
    Halide external: 67 core, 195 engaged, 740 peripheral.
-4. **Function groups.** Collapsible groups in codebook priority order, each
+4. **Sort modes** (approved ruling, 2026-08-24): **Impact** (default;
+   codebook priority order), **Recency** (year, newest first), and
+   **Popularity** (the citing work's own citation count — `cited_by` in the
+   schema — highest first, with a "N cites" chip per row). A **headers
+   on/off** toggle controls the section headers: category groups under
+   Impact, years under Recency, count buckets (1,000+ / 100–999 / 10–99 /
+   1–9 / not yet cited / count unknown) under Popularity. Impact-with-headers
+   keeps the lazily-rendered collapsible groups; every other combination is
+   one flat sorted list.
+5. **Function groups.** Under Impact with headers: collapsible groups in
+   codebook priority order, each
    with a plain-language label, a count, and a one-clause gloss:
    - Builds on it (`extends`) — 36
    - Uses the system (`uses-tool`) — 82
@@ -66,7 +76,7 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    year, a `core` chip where earned, and a "via a successor system" chip on
    lineage citations (papers that cite Halide as TVM's ancestor). Rows are
    built lazily, so opening the panel never renders 1,400 rows at once.
-5. **Provenance footer.** "Classified with codebook v0.2 (2026-08-24);
+6. **Provenance footer.** "Classified with codebook v0.2 (2026-08-24);
    duplicates folded, self-citations by the paper itself excluded."
 
 No chart library, no dependencies: the bar is three divs, the groups are
@@ -187,8 +197,9 @@ detailed / passing / not-yet-analyzed.
 
 1. Is `exemplifies` on the passing side right (§5)? Moving it to detailed
    is a merge-script rerun.
-2. Row order inside a function group is year-descending. Alternative:
-   core-first, then year. The data supports either.
+2. ~~Row order inside a function group~~ — superseded by the approved
+   three-sort-mode ruling (§2 item 4); rows inside Impact groups stay
+   year-descending.
 3. The unjudged group is visible by default. It could sit behind the
    footer instead; visible is the honest default and my recommendation.
 4. Label wording for the two residuals ("Mentions it specifically" /

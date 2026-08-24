@@ -79,6 +79,7 @@ year descending, then title. Omit a field rather than writing `null`/empty.
 | `secondary` | no | lower-priority FUNCTION values that also apply |
 | `flags` | no | union over folded siblings: `own-group`, `lineage`, `polluted-contexts`, `critical` |
 | `evidence` | yes | evidence tier of the kept sibling: `fulltext` / `abstract+contexts` / `contexts` / `abstract` / `title_only` |
+| `cited_by` | yes (nullable) | the citing work's own citation count — OpenAlex `cited_by_count`, falling back to S2 `citationCount` for S2-only records; `null` where neither service resolves it. Maximum over folded siblings. Drives the view's popularity sort; backfilled by `harvest/citations/backfill_cited_by.py` and carried natively by new harvests. |
 
 Judgment notes (the audit trail) deliberately do **not** ship to the site;
 they stay in `harvest/taxonomy/`.

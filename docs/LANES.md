@@ -146,6 +146,19 @@ raise it to the setup lane.
   with contexts/intents/isInfluential. Corpus now 177 files / 26,192
   merged citing works. These records postdate classify-corpus's submitted
   request list — per the queue they belong to the later straggler sweep.
+- **cited_by backfill** (task `cited-by-backfill`, 2026-08-24): the original
+  harvest's `select=` never requested citation counts, so the queue's
+  "mostly already stored" assumption did not hold — this was a real fetch.
+  `harvest/citations/backfill_cited_by.py` resolves every citing record's
+  own citation count: OpenAlex `cited_by_count` batched 50 ids/request via
+  `filter=openalex_id:` (12,791 ids) and `filter=doi:` (2,987 DOI-only
+  rows), then S2 `citationCount` via POST /paper/batch (4,007 S2-only
+  rows). 316 requests, 0 failures; `cited_by` set on 26,015/26,192 records
+  (99%), null on 177 (no resolvable id). Idempotent; --refresh re-fetches.
+  `harvest_citations.py` now requests `cited_by_count`/`citationCount`
+  natively (merge prefers the OpenAlex figure), so future harvests carry
+  `cited_by` without the backfill. Feeds the citation view's popularity
+  sort per the 2026-08-24 sort-mode ruling.
 
 ### artifacts
 
@@ -438,8 +451,23 @@ raise it to the setup lane.
 - Prototype verified rendering in Chrome against a local static server:
   toggle counts, on-demand load, split bar, centrality filter (core counts
   reconcile), lazy group expansion, lineage/core chips, zero-count legend
-  suppression. Stopped there per task instruction — human review before
+  suppression. Stopped there per task instruction, then resumed on the
+  approved sort-mode ruling (below) — human review before
   anything reaches the live pages.
+- **Sort modes + `cited_by`** (2026-08-24, on the human's sort-mode
+  ruling): SCHEMA.md gained a required nullable `cited_by` per citation
+  entry (the citing work's own citation count; max over dedup siblings,
+  OpenAlex figure preferred). The view gained the three approved sort
+  modes — Impact (default; codebook priority, collapsible category groups),
+  Recency (year descending, year headers), Popularity (`cited_by`
+  descending, count-bucket headers 1,000+/100–999/10–99/1–9/not yet
+  cited/count unknown, "N cites" chip per row) — plus a headers on/off
+  toggle; every non-default combination renders one flat sorted list.
+  Pilot data rebuilt with `cited_by` (1,470/1,483 resolved for Halide;
+  top: TensorFlow 19,935, TVM 2,131); all modes and the toggle verified
+  in Chrome, including a popBucket header bug caught and fixed. Merge-side
+  propagation for the 142 non-pilot files is with the taxonomy lane per
+  the agreed split.
 
 ## Cross-lane requests
 

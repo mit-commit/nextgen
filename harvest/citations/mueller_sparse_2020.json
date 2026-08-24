@@ -1,138 +1,144 @@
 {
-  "counts": {
-    "openalex": 6,
-    "s2": 6
+ "counts": {
+  "openalex": 6,
+  "s2": 6
+ },
+ "citing": [
+  {
+   "title": "Fast Autoscheduling for Sparse ML Frameworks",
+   "year": 2026,
+   "doi": "10.1109/cgo68049.2026.11394842",
+   "openalex": "W7131131434",
+   "s2": "4b42dbb2833d295579d3b1babd331d20c4884f07",
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": [
+    "Bobby Yan",
+    "Alexander J Root",
+    "Trevor Gale",
+    "David Broman",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 0
   },
-  "citing": [
-    {
-      "title": "Fast Autoscheduling for Sparse ML Frameworks",
-      "year": 2026,
-      "doi": "10.1109/cgo68049.2026.11394842",
-      "openalex": "W7131131434",
-      "s2": "4b42dbb2833d295579d3b1babd331d20c4884f07",
-      "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-      "authors": [
-        "Bobby Yan",
-        "Alexander J Root",
-        "Trevor Gale",
-        "David Broman",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "Compilation of Modular and General Sparse Workspaces",
-      "year": 2024,
-      "doi": "10.1145/3656426",
-      "openalex": "W4399852843",
-      "s2": "4210d360f09809b99c45f8a43ebfe48d04bd3708",
-      "venue": "Proceedings of the ACM on Programming Languages",
-      "authors": [
-        "Genghan Zhang",
-        "Olivia Hsu",
-        "Fredrik Kjølstad"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background",
-        "methodology"
-      ],
-      "contexts": [
-        "We chose this data structure because COO is convenient for transforming the physical organization of sparse tensor components [27, 51, 72], and we leverage work on code generation for format conversions between COO and other formats from the literature [15].",
-        "Our work extends the generality of prior compilers for sparse tensor algebra by treating sparse tensors as a first-class concept for any tensor variable, including temporaries."
-      ]
-    },
-    {
-      "title": "Exploring Data Layout for Sparse Tensor Times Dense Matrix on GPUs",
-      "year": 2023,
-      "doi": "10.1145/3633462",
-      "openalex": "W4390317766",
-      "s2": "4ca656226bc1f30cdf44aa740c1645e1b9b8b8f0",
-      "venue": "ACM Transactions on Architecture and Code Optimization",
-      "authors": [
-        "Khalid Ahmad",
-        "Cris Cecka",
-        "Michael Garland",
-        "Mary Hall"
-      ],
-      "isInfluential": false,
-      "intents": [],
-      "contexts": []
-    },
-    {
-      "title": "On Higher-performance Sparse Tensor Transposition",
-      "year": 2023,
-      "doi": "10.1109/ipdpsw59300.2023.00118",
-      "openalex": "W4385585536",
-      "s2": "3deb763382764ceb9fe3399a1f1d9897740dbc54",
-      "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
-      "authors": [
-        "Luanzheng Guo",
-        "Gökçen Kestor"
-      ],
-      "isInfluential": true,
-      "intents": [
-        "background",
-        "methodology",
-        "result"
-      ],
-      "contexts": [
-        "We use for evaluation a set of representative 3D tensors collected from the FROSTT Tensor Collection [18], which have been used extensively in similar studies [1], [19], [12].",
-        "TACO [12] uses the same implementation as SPLATT, but proposes an algorithm called Top-K-Sadilla, which enables skipping sorting passes on certain dimensions of coordinates based on their priority.",
-        "We describe the properties of the seven tensors in Table I. Note that we sort all dimensions of the coordinates just for performance comparison between different approaches, although some dimensions can be skipped, depending on the target permutation [12].",
-        "This also provides a uniform way of performing sparse tensor transpose, in which we convert any sparse tensor format to the COO format, perform the transpose, and then convert it back to the input sparse tensor format, which is the common approach adopted by related works [11], [12].",
-        "There have been a couple of research works targeting tensor transposition on sparse tensors for performance improvement [11], [12], [9], [20].",
-        "We can observe that count sort is the most performant one, which is also aligned with the time complexity of sorting and the previous studies [12].",
-        "Mueller et al. [12] designed a strategic approach that allows skipping a couple of dimensions of coordinates while sorting according to the ordering priority."
-      ]
-    },
-    {
-      "title": "Sparsity-Aware Tensor Decomposition",
-      "year": 2022,
-      "doi": "10.1109/ipdps53621.2022.00097",
-      "openalex": "W4285609561",
-      "s2": "a07d423d12c5307d3cf1383e38aeb169c5d99a02",
-      "venue": "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
-      "authors": [
-        "Süreyya Emre Kurt",
-        "Saurabh Raje",
-        "Aravind Sukumaran-Rajam",
-        "P. Sadayappan"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "methodology"
-      ],
-      "contexts": [
-        "The TACO compiler has integrated several optimizations for tensor decomposition and hence simplified the search across the entire optimization space, including the choice of mode orderings [15] [20] [21]."
-      ]
-    },
-    {
-      "title": "ALTO",
-      "year": 2021,
-      "doi": "10.1145/3447818.3461703",
-      "openalex": "W3131137184",
-      "s2": "01178c1dc4555d388fb773f5966c98783b567095",
-      "venue": "International Conference on Supercomputing",
-      "authors": [
-        "Ahmed E. Helal",
-        "Jan Laukemann",
-        "Fabio Checconi",
-        "Jesmin Jahan Tithi",
-        "Teresa Ranadive",
-        "Fabrizio Petrini",
-        "Jeewhan Choi"
-      ],
-      "isInfluential": false,
-      "intents": [
-        "background"
-      ],
-      "contexts": [
-        "The state-of-the-art approaches [39, 58] reduce these important operations to sorting the nonzero elements based on their multi-dimensional coordinates.",
-        "Sparse tensor transpositions are prevalent in high-dimensional data processing and analysis algorithms [39]."
-      ]
-    }
-  ]
+  {
+   "title": "Compilation of Modular and General Sparse Workspaces",
+   "year": 2024,
+   "doi": "10.1145/3656426",
+   "openalex": "W4399852843",
+   "s2": "4210d360f09809b99c45f8a43ebfe48d04bd3708",
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": [
+    "Genghan Zhang",
+    "Olivia Hsu",
+    "Fredrik Kj\u00f8lstad"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background",
+    "methodology"
+   ],
+   "contexts": [
+    "We chose this data structure because COO is convenient for transforming the physical organization of sparse tensor components [27, 51, 72], and we leverage work on code generation for format conversions between COO and other formats from the literature [15].",
+    "Our work extends the generality of prior compilers for sparse tensor algebra by treating sparse tensors as a first-class concept for any tensor variable, including temporaries."
+   ],
+   "cited_by": 6
+  },
+  {
+   "title": "Exploring Data Layout for Sparse Tensor Times Dense Matrix on GPUs",
+   "year": 2023,
+   "doi": "10.1145/3633462",
+   "openalex": "W4390317766",
+   "s2": "4ca656226bc1f30cdf44aa740c1645e1b9b8b8f0",
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": [
+    "Khalid Ahmad",
+    "Cris Cecka",
+    "Michael Garland",
+    "Mary Hall"
+   ],
+   "isInfluential": false,
+   "intents": [],
+   "contexts": [],
+   "cited_by": 5
+  },
+  {
+   "title": "On Higher-performance Sparse Tensor Transposition",
+   "year": 2023,
+   "doi": "10.1109/ipdpsw59300.2023.00118",
+   "openalex": "W4385585536",
+   "s2": "3deb763382764ceb9fe3399a1f1d9897740dbc54",
+   "venue": "IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum",
+   "authors": [
+    "Luanzheng Guo",
+    "G\u00f6k\u00e7en Kestor"
+   ],
+   "isInfluential": true,
+   "intents": [
+    "background",
+    "methodology",
+    "result"
+   ],
+   "contexts": [
+    "We use for evaluation a set of representative 3D tensors collected from the FROSTT Tensor Collection [18], which have been used extensively in similar studies [1], [19], [12].",
+    "TACO [12] uses the same implementation as SPLATT, but proposes an algorithm called Top-K-Sadilla, which enables skipping sorting passes on certain dimensions of coordinates based on their priority.",
+    "We describe the properties of the seven tensors in Table I. Note that we sort all dimensions of the coordinates just for performance comparison between different approaches, although some dimensions can be skipped, depending on the target permutation [12].",
+    "This also provides a uniform way of performing sparse tensor transpose, in which we convert any sparse tensor format to the COO format, perform the transpose, and then convert it back to the input sparse tensor format, which is the common approach adopted by related works [11], [12].",
+    "There have been a couple of research works targeting tensor transposition on sparse tensors for performance improvement [11], [12], [9], [20].",
+    "We can observe that count sort is the most performant one, which is also aligned with the time complexity of sorting and the previous studies [12].",
+    "Mueller et al. [12] designed a strategic approach that allows skipping a couple of dimensions of coordinates while sorting according to the ordering priority."
+   ],
+   "cited_by": 1
+  },
+  {
+   "title": "Sparsity-Aware Tensor Decomposition",
+   "year": 2022,
+   "doi": "10.1109/ipdps53621.2022.00097",
+   "openalex": "W4285609561",
+   "s2": "a07d423d12c5307d3cf1383e38aeb169c5d99a02",
+   "venue": "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
+   "authors": [
+    "S\u00fcreyya Emre Kurt",
+    "Saurabh Raje",
+    "Aravind Sukumaran-Rajam",
+    "P. Sadayappan"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "methodology"
+   ],
+   "contexts": [
+    "The TACO compiler has integrated several optimizations for tensor decomposition and hence simplified the search across the entire optimization space, including the choice of mode orderings [15] [20] [21]."
+   ],
+   "cited_by": 8
+  },
+  {
+   "title": "ALTO",
+   "year": 2021,
+   "doi": "10.1145/3447818.3461703",
+   "openalex": "W3131137184",
+   "s2": "01178c1dc4555d388fb773f5966c98783b567095",
+   "venue": "International Conference on Supercomputing",
+   "authors": [
+    "Ahmed E. Helal",
+    "Jan Laukemann",
+    "Fabio Checconi",
+    "Jesmin Jahan Tithi",
+    "Teresa Ranadive",
+    "Fabrizio Petrini",
+    "Jeewhan Choi"
+   ],
+   "isInfluential": false,
+   "intents": [
+    "background"
+   ],
+   "contexts": [
+    "The state-of-the-art approaches [39, 58] reduce these important operations to sorting the nonzero elements based on their multi-dimensional coordinates.",
+    "Sparse tensor transpositions are prevalent in high-dimensional data processing and analysis algorithms [39]."
+   ],
+   "cited_by": 30
+  }
+ ]
 }

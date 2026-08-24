@@ -37,7 +37,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — all 327 entries of `data/publications.json` resolved; `data/idmap-review.json` is now empty. |
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for every `data/idmap.json` entry with an id: 151 keys in the first sweep, plus 26 keys whose ids only landed with the later idmap-review resolutions (task `citations-s2-continue`, 2026-08-24) — 177 files, 26,192 merged citing works, all S2-enrichable keys enriched. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping via browser automation stayed blocked (see log), but a user-supplied `acm_badges.json` (badge markup for all 92 `10.1145` DOIs) was ingested — `found.json` now has 23 entries, 20 with a real ACM badge. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is empty. See `harvest/artifacts/README.md`. |
-| **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
+| **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. Step 2 (task `repos-search step 2`, 2026-08-24) complete: `search_github.py` scored candidates via the GitHub REST API for all 268 -- 217 strong, 27 weak-only, 24 none -- into `harvest/repos/candidates.json`. Auto-accepts nothing; see lane log. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (221 flagged rows: 4 name-variant near-misses + 217 from the enrich pass). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 287/369 resolved (task `authors-enrich verify`, 2026-08-24 — OpenAlex's search quota reset, rerun recovered 24 of the 79 previously-blocked people; 77 genuinely unresolved, 5 ambiguous, 0 still search-blocked; see lane log). |
 | **site-citations** | `docs/citation-design.md`, `data/citations/SCHEMA.md`, `data/citations/gscholar.json`, `data/citations/reception.json`, the 8 pilot `data/citations/<bibtexKey>.json` files, `data/citations/index.json` (bootstrap; merge script owns non-pilot rows), `prototype/`, and — for the citation view only — `publications.html`, `assets/js/citations.js`, the citation-view additions in `assets/js/publications.js` + `assets/css/style.css` | **active** — the per-paper citation section, designed, prototyped, human-APPROVED, and now **integrated into `publications.html`** (task `site-integration`, 2026-08-24): one small `index.json` fetch at page load turns on a "Citations (N)" toggle for the 150 papers with data files; per-paper data lazy-loads on first expand. Three sort modes (Impact / Recency / Popularity) with a headers on/off toggle — all three render uniform collapsible groups, collapsed by default with counts (categories / years / count buckets); expanded Summary and Citations panels sit in a lightly-outlined shaded box; Recency and Popularity incorporate own-group citations chip-marked, Impact keeps them in their separate section. `prototype/` kept as reference. `data/citations/SCHEMA.md` remains the contract; non-pilot `<bibtexKey>.json` files belong to the classify-corpus merge. |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. Task `abstracts-all` (2026-08-24, complete): `harvest_abstracts_all.py` extended the abstract harvest from the 8 pilots to every non-pilot citing work, batch-fetched via OpenAlex's OR filter (100 ids/request) rather than one-by-one -- 167 papers, 21,545 citing works, 14,014 gained a real abstract (65%). Deliberately left the 3 sampled high-cited pilots' abstract files untouched (they're inert for reclassification -- pilots are permanently excluded from `curate/classify_citations.py`'s population). Fed the taxonomy lane's rejudge sweep (see its log). |
@@ -214,6 +214,28 @@ raise it to the setup lane.
 - `search-plan.json` carries keyword candidates only — author surnames,
   username guesses, lab orgs observed elsewhere in the corpus, project and
   software names, plausible repo spellings. Nothing in it has been searched.
+- **Step 2** (task `repos-search step 2`, 2026-08-24): `search_github.py`
+  searches GitHub for each of the 268 `search-plan.json` papers. Two
+  sources per paper: direct `GET /repos/{owner}/{repo}` existence checks
+  (core API, 5000/hr) over `(owner, repo)` pairs built by crossing
+  `known_owners_same_authors` + `username_candidates` + `lab_org_candidates`
+  with `repo_name_candidates` (capped at 30 pairs/paper), plus one
+  `GET /search/repositories` call per paper (search API, 30/min) on the
+  project/software name to catch repos under an unguessed owner/name. Every
+  repo found either way is scored: repo name / description match,
+  owner match (including a fuzzy first-initial+surname check —
+  `bthies` for "Bill Thies" — since the pre-generated username list
+  doesn't enumerate every handle shape), created-date proximity to
+  publication year, and a README-contains-title/author-surname check
+  (one extra core-API call per candidate). Confidence: high (score≥5),
+  medium (≥3), low (else). **Auto-accepts nothing** — writes the top 3
+  scored candidates per paper with full evidence to
+  `harvest/repos/candidates.json`; a human decides what to promote.
+  Result: 217 papers with a high/medium top candidate, 27 with only a
+  low-confidence one, 24 with none found (spot-checked as plausible —
+  theses/position papers with no released code). API responses cached
+  under `harvest/repos/_ghcache/` (gitignored, ~29 MB, 5,230 core +
+  78 search requests for the full run).
 
 ### authors
 

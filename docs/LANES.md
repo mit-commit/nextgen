@@ -41,7 +41,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (221 flagged rows: 4 name-variant near-misses + 217 from the enrich pass). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 287/369 resolved (task `authors-enrich verify`, 2026-08-24 — OpenAlex's search quota reset, rerun recovered 24 of the 79 previously-blocked people; 77 genuinely unresolved, 5 ambiguous, 0 still search-blocked; see lane log). |
 | **site-citations** | `docs/citation-design.md`, `data/citations/SCHEMA.md`, `data/citations/gscholar.json`, `data/citations/halide:pldi:2013.json`, `data/citations/netblocks-pldi24.json`, `data/citations/index.json` (bootstrap — passes to the merge script when classify-corpus lands), `prototype/` | **active** — end-to-end design of the per-paper citation section, awaiting human review: `docs/citation-design.md` (page structure, loading strategy, reader walkthrough, 8 pilot worked examples), `data/citations/SCHEMA.md` (the per-paper JSON contract the classify-corpus merge script must emit), and a working prototype (`prototype/citations.html` + real data for the two claimed pilots, built by `prototype/build_pilot_data.py`). Non-pilot `data/citations/<bibtexKey>.json` is deliberately unclaimed here — it belongs to the classify-corpus merge, which must follow SCHEMA.md. Nothing touches the live pages until review. |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
-| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md`, `curate/`, `data/citations/<bibtexKey>.json` for non-pilot papers, `data/citations/index.json` (owns it after the first merge run, preserving the pilot rows) | **active** — pilot human-reviewed (approved with one amendment, applied 2026-08-24 as codebook v0.2): two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). v0.2 replaced residual `mentions` with `detailed-citation`/`passing-citation` and re-split all 701 affected rows (349/352). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Built `curate/classify_citations.py` (task `classify-corpus`, Anthropic Batch API) and `curate/merge_taxonomy.py` (emits data/citations/SCHEMA.md's shape for non-pilot papers only, never touching the pilot files or gscholar.json). Dry-run cost estimate reported (~$69 for 10,021 requests), approved by the human, and submitted for real: 28 batches (`--submit`) covering all 10,021 requests, now processing. Next: `--status`/`--collect` once batches finish, `--recover` for any rule-level rejections, then `merge_taxonomy.py --write`. |
+| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md`, `curate/`, `data/citations/<bibtexKey>.json` for non-pilot papers, `data/citations/index.json` (owns it after the first merge run, preserving the pilot rows) | **active** — pilot human-reviewed (approved with one amendment, applied 2026-08-24 as codebook v0.2): two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). v0.2 replaced residual `mentions` with `detailed-citation`/`passing-citation` and re-split all 701 affected rows (349/352). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Built `curate/classify_citations.py` (task `classify-corpus`, Anthropic Batch API) and `curate/merge_taxonomy.py` (emits data/citations/SCHEMA.md's shape for non-pilot papers only, never touching the pilot files or gscholar.json). Dry-run cost estimate reported (~$69/10,021 requests), approved by the human; actual submit came in at 11,082 requests / 28 batches (see lane log) — all collected, 22 rule-level rejections fixed by a parser/repair fix and recovered, 11,082/11,082 classified. `merge_taxonomy.py --write` folded all 142 non-pilot papers into `data/citations/<bibtexKey>.json` + `index.json` (144 papers total, pilot rows and files untouched). Task `classify-corpus` complete. |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
 to its own log section — nothing else. Two lanes editing their own separate rows
@@ -389,9 +389,27 @@ raise it to the setup lane.
   batches**, ~11% over the approved count (flagged to the human; harmless
   in substance, just a timing race with a concurrent lane, no duplicate
   work). Batch ids and per-item lookup in
-  `harvest/taxonomy/records/_batches.json`. Next: `--status` until every
-  batch shows `ended`, `--collect`, `--recover` for any rule-level
-  rejections, then `curate/merge_taxonomy.py --write`.
+  `harvest/taxonomy/records/_batches.json`. All 28 batches ended
+  `succeeded` on first check -- `--collect` wrote 11,060/11,082 records,
+  leaving 22 in `needs-review.jsonl`: 20 were the model writing a FLAG name
+  (`own-group`/`self-version`/`lineage`) into `function`/`secondary`
+  instead of `flags` (its own note always described the flag condition
+  correctly, just filed in the wrong field), and 2 were the model
+  self-correcting mid-response ("Wait, I need to reconsider...") and
+  writing a second JSON object that first-brace-to-last-brace parsing
+  turned into invalid JSON spanning both objects. Fixed both in
+  `classify_citations.py` (`parse_record()` now tries the JSON object
+  latest-opened-first; a new `repair()` moves a misplaced flag-as-function
+  value into `flags` and falls back `function` to `unknown`) and reran
+  `--recover`: 22/22 promoted, 0 left in review.
+  Final distribution (11,082 records, 142 non-pilot papers): FUNCTION
+  passing-citation 3117 / exemplifies 2705 / detailed-citation 1481 /
+  supports-claim 870 / uses-tool 763 / positions 739 / unknown 569 /
+  baseline 287 / adopts-idea 189 / uses-benchmark 161 / surveys 108 /
+  extends 93. CENTRALITY peripheral 8049 / engaged 1708 / core 763 /
+  unknown 562. Ran `curate/merge_taxonomy.py --write`: 142 non-pilot
+  `data/citations/<bibtexKey>.json` files written, `index.json` now has
+  144 papers (pilot rows/files verified untouched). Task complete.
 
 ### site-citations
 

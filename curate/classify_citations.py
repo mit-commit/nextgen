@@ -440,12 +440,52 @@ REQUIRED = ('function', 'secondary', 'centrality', 'flags', 'confidence', 'ancho
 
 
 def parse_record(text):
+    """Extract the JSON object. Occasionally the model second-guesses itself
+    mid-response ("Wait, I need to reconsider...") and writes a corrected
+    object after the first -- try the objects latest-opened-first so the
+    final (corrected) one wins over first-brace-to-last-brace, which would
+    otherwise span both objects and the prose between them."""
     text = (text or '').strip()
     text = re.sub(r'^```(?:json)?\s*|\s*```$', '', text)
-    start, end = text.find('{'), text.rfind('}')
-    if start < 0 or end <= start:
+    end = text.rfind('}')
+    if end < 0:
         raise ValueError('no JSON object in the response')
-    return json.loads(text[start:end + 1])
+    starts = [m.start() for m in re.finditer('{', text[:end + 1])]
+    last_error = ValueError('no JSON object in the response')
+    for start in reversed(starts):
+        try:
+            return json.loads(text[start:end + 1])
+        except json.JSONDecodeError as exc:
+            last_error = exc
+    raise last_error
+
+
+# Values the model occasionally writes into `function`/`secondary` when it
+# means the FLAG of the same name -- own-group/self-version/lineage describe
+# a real property of the citing record but are not FUNCTION values. Recover
+# rather than reject: move the value to `flags` and let `function` fall back
+# to `unknown` (the citation's actual function was, per the model's own
+# note in every observed case, genuinely unclear from the evidence).
+FUNCTION_FLAG_ALIASES = {'own-group', 'self-version', 'lineage'}
+
+
+def repair(record):
+    if not isinstance(record, dict):
+        return record
+    flags = list(record.get('flags') or [])
+    if record.get('function') in FUNCTION_FLAG_ALIASES:
+        alias = record['function']
+        if alias not in flags:
+            flags.append(alias)
+        record = {**record, 'function': 'unknown', 'flags': flags}
+    secondary = [v for v in (record.get('secondary') or []) if v not in FUNCTION_FLAG_ALIASES]
+    moved = [v for v in (record.get('secondary') or []) if v in FUNCTION_FLAG_ALIASES]
+    if moved:
+        flags = list(dict.fromkeys(record.get('flags', flags) + moved))
+        record = {**record, 'secondary': secondary, 'flags': flags}
+    if 'anchored' not in record:
+        record = {**record, 'anchored': 'none'}
+    return record
 
 
 def validate(record, codebook):
@@ -511,7 +551,7 @@ def write_result(key, slug, citing, tier, text, codebook, usage=None):
     out_dir = os.path.join(OUT, key)
     os.makedirs(out_dir, exist_ok=True)
     try:
-        parsed = parse_record(text)
+        parsed = repair(parse_record(text))
         problems = validate(parsed, codebook)
     except Exception as exc:
         parsed, problems = None, [f'{type(exc).__name__}: {exc}']
@@ -556,7 +596,7 @@ def do_recover(codebook):
         if os.path.exists(os.path.join(OUT, key, slug + '.json')):
             continue
         try:
-            parsed = parse_record(row.get('raw'))
+            parsed = repair(parse_record(row.get('raw')))
             problems = validate(parsed, codebook)
         except Exception as exc:
             problems = [f'{type(exc).__name__}: {exc}']

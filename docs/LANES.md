@@ -518,6 +518,13 @@ raise it to the setup lane.
   `cache: 'no-store'`; and publications.html versions the two script URLs
   (`?v=2`) so the HTML/JS pair can never be mixed vintages. Re-verified:
   Halide ranks first at 1,483, and a gscholar of 2,417 wins the max.
+- **Boxed panels, take two** (2026-08-24): the human re-requested the
+  boxed expanded panels — the earlier box was live but style.css carried
+  no cache-busting version, so browsers could hold the pre-box stylesheet.
+  publications.html now links style.css?v=2, and the panel shade is tuned
+  to the request: same 1px #ddd border and radius as .pub-item, background
+  rgba(226,226,226,0.35) — the page gray at low opacity, ~96% white.
+  Applies to Summary and Citations alike (both are .pub-summary.open).
 
 ## Cross-lane requests
 

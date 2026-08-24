@@ -234,13 +234,13 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
   color: #333;
 }
 /* Expanded panels (per-paper Summary and Citations both use .pub-summary):
-   a lightly outlined box echoing .pub-item, softly shaded to sit just
-   apart from the paper card itself. */
+   the same box as .pub-item, with a very light shade — the page gray at
+   low opacity, ~90% white — to sit just apart from the paper card. */
 .pub-summary.open {
   display: block;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #ddd;
   border-radius: 6px;
-  background: #fafafa;
+  background: rgba(226, 226, 226, 0.35);  /* body gray #e2e2e2 @ 35% ≈ 96% white */
   padding: 10px 12px;
   margin: 8px 0 4px;
 }

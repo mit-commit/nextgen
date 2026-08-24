@@ -34,7 +34,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 
 | Lane | Claimed paths | Status |
 |---|---|---|
-| **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — ID map built for all 327 entries of `data/publications.json`; `data/idmap.json` and `data/idmap-review.json` landed. |
+| **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — all 327 entries of `data/publications.json` resolved; `data/idmap-review.json` is now empty. |
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for all 151 `data/idmap.json` entries with an id into `harvest/citations/<bibtexKey>.json`; 23,154 merged citing works. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping via browser automation stayed blocked (see log), but a user-supplied `acm_badges.json` (badge markup for all 92 `10.1145` DOIs) was ingested — `found.json` now has 23 entries, 20 with a real ACM badge. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is empty. See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
@@ -90,6 +90,25 @@ raise it to the setup lane.
     here.
   - `data/idmap.json` now has 298 entries (151 exact / 12 fuzzy_reviewed /
     135 no_doi); `data/idmap-review.json` has 29.
+- **idmap-review-rest** (task `idmap-review-rest`, 2026-08-24): finalized the
+  29 remaining rows. For each, `harvest/idmap_review_finalize.py`
+  independently re-checked the top candidate's OpenAlex-by-DOI record
+  (venue+year+authors, corroborating the earlier Crossref-based note) and,
+  new this pass, searched OpenAlex directly for the publication's *own*
+  title -- workshop/CIDR/NeurIPS papers often have an OpenAlex work record
+  with no DOI at all, which the original build never checked since it only
+  resolved via DOI. 13 rows had a genuine own record (exact title, full
+  author-list match, hand-verified by fetching each work by id): 12 with no
+  DOI (`kind: "openalex_only"`) and one, `tiramisu-auto`, with a real arXiv
+  DOI (`kind: "doi"`) that OpenAlex's title search surfaced but the DOI-based
+  build had no way to find. The 3 rows that share a `claimed_doi` with an
+  already-accepted sibling key (`hall:dtj:1998`, `puppin:ijpp:2005`,
+  `thies:recombposter:2006`) were written as `kind: "same_work_as"` pointing
+  at that sibling. The remaining 13 got no corroborating record from either
+  check and were written `kind: "no_doi"` with the existing note preserved.
+  `data/idmap.json` now covers all 327 `data/publications.json` entries (164
+  doi / 147 no_doi / 13 openalex_only / 3 same_work_as); `data/idmap-review.json`
+  is empty.
 
 ### citations
 

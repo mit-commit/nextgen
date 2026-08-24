@@ -50,7 +50,11 @@ letters, digits, `:`, `-`, `.`, `_`).
 - `judged` — works with a real FUNCTION judgment (not `unknown`/`unclassified`).
 - `gscholar` — the human-supplied Google Scholar count for this paper, or
   `null` if none has been supplied. Copied verbatim from `gscholar.json` by
-  the merge script.
+  the merge script. **Convenience copy only, and it may lag**: the merge
+  script rewrites a paper's file only when that paper is reprocessed, while
+  `index.json` refreshes every paper's figure on every run — so `index.json`
+  is authoritative for display, and the view reads the Scholar figure from
+  its index row, falling back to this field only if the row lacks one.
 
 **Everything else is derived client-side.** Function/centrality/flag
 summaries are counted from `citations[]` in the browser; do not add summary

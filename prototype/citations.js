@@ -124,9 +124,13 @@ var CITATIONS = (function(){
   }
 
   /* ---------- the whole view for one paper ---------- */
-  function renderView(mount, key, data){
+  /* indexRow is authoritative for the Scholar figure: a gscholar.json
+     refresh reaches index.json on every merge run, while a paper's own
+     counts.gscholar is rewritten only when that paper is reprocessed. */
+  function renderView(mount, key, data, indexRow){
     mount.innerHTML = '';
     var counts = data.counts;
+    var gscholar = (indexRow && indexRow.gscholar != null) ? indexRow.gscholar : counts.gscholar;
     var all = data.citations;
     var external = [], ownGroup = [];
     for (var i = 0; i < all.length; i++){
@@ -134,11 +138,11 @@ var CITATIONS = (function(){
     }
 
     /* Headline: displayed count = max(verified, Google Scholar). */
-    var display = Math.max(counts.works, counts.gscholar || 0);
+    var display = Math.max(counts.works, gscholar || 0);
     var head = el('div', 'cite-head');
     head.appendChild(el('span', 'cite-head-count', fmt(display) + ' citations'));
     var src = [fmt(counts.works) + ' verified and analyzed below'];
-    if (counts.gscholar) src.push('Google Scholar reports ' + fmt(counts.gscholar));
+    if (gscholar) src.push('Google Scholar reports ' + fmt(gscholar));
     head.appendChild(el('span', 'cite-head-src', ' — ' + src.join('; ') + '.'));
     mount.appendChild(head);
 
@@ -249,7 +253,7 @@ var CITATIONS = (function(){
         div.appendChild(el('div', 'cite-loading', 'Loading…'));
         fetch(DATA_BASE + encodeURIComponent(key) + '.json')
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-          .then(function(data){ renderView(div, key, data); })
+          .then(function(data){ renderView(div, key, data, indexRow); })
           .catch(function(e){
             loaded = false;
             div.innerHTML = '';

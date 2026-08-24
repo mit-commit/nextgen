@@ -20,3 +20,8 @@ harvest/fulltext/*/
 !harvest/fulltext/manifest.json
 !harvest/fulltext/abstracts/
 !harvest/fulltext/abstracts/**
+
+# classify-corpus: the dry-run request dump is a large, regenerable scratch
+# artifact (re-run `curate/classify_citations.py --submit --dry-run` to
+# rebuild it) -- only the staging records and batch state are committed.
+harvest/taxonomy/records/_requests_dry_run.json

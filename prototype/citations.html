@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Commit @ CSAIL — Citation view prototype</title>
+  <!-- PROTOTYPE. Not linked from the live pages. Demonstrates the per-paper
+       citation section (docs/citation-design.md) on the two pilot papers
+       that have data/citations/<key>.json files. Serve the repo root over
+       HTTP (e.g. python3 -m http.server) and open /prototype/citations.html. -->
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link rel="stylesheet" href="citations.css"/>
+</head>
+<body>
+  <div class="pagewidth">
+    <div class="outer">
+      <div class="main">
+
+        <div class="menuitem nav">
+          <a class="menuitemlink" href="../index.html">Home</a>
+          <a class="menuitemlink" href="../projects.html">Projects</a>
+          <a class="menuitemlink" href="../people.html">People</a>
+          <a class="menuitemlink" href="../publications.html">Publications</a>
+        </div>
+        <div style="clear:both"></div>
+
+        <div class="secbody">
+          <h2 class="grouphead">Citation view — prototype</h2>
+          <div class="switchversion">
+            Two pilot papers rendered exactly as they appear on the
+            publications page, plus the proposed
+            <b>Citations (N)</b> toggle. The count and the view load from
+            <code>data/citations/</code>; nothing loads until a toggle is
+            opened. Design: <code>docs/citation-design.md</code>.
+          </div>
+          <div id="proto-errors" class="switchversion" style="color:#b00;"></div>
+          <div id="proto-results"></div>
+        </div>
+
+        <div class="credits">© Commit Group — Massachusetts Institute of Technology — CSAIL</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="citations.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    var KEYS = ['halide:pldi:2013', 'netblocks-pldi24'];
+
+    /* Minimal copies of the publications-page helpers, enough to render a
+       pub-item the same way renderItem() does. */
+    function text(s){ return document.createTextNode(s); }
+    function firstDefined(){ for (var i=0;i<arguments.length;i++){ var v=arguments[i]; if (v!==undefined && v!==null && v!=='') return v; } return ''; }
+    function venueOf(it){ return firstDefined(it.journal, it.booktitle, it.series, it.type, it.publisher); }
+    function normName(n){
+      var t = String(n||'').trim(), c = t.indexOf(',');
+      if (c >= 0){ var last = t.slice(0,c).trim(), first = t.slice(c+1).trim(); if (first) return first + ' ' + last; }
+      return t;
+    }
+    function authorsOf(it){
+      return String(it.author0||'').split(/\s+and\s+/).map(normName).filter(Boolean).join(', ');
+    }
+
+    function renderPub(it, indexRow){
+      var li = document.createElement('li'); li.className = 'pub-item';
+      var t = document.createElement('div'); t.className = 'pub-title';
+      t.appendChild(text((it.title||'Untitled') + '.')); li.appendChild(t);
+      var auth = authorsOf(it);
+      if (auth){ var al=document.createElement('div'); al.className='pub-authors'; al.appendChild(text(auth+'.')); li.appendChild(al); }
+      var ven = venueOf(it);
+      if (ven){ var vl=document.createElement('div'); vl.className='pub-venue'; vl.appendChild(text(ven+'.')); li.appendChild(vl); }
+      var meta = document.createElement('div'); meta.className='pub-meta';
+      var bits=[]; if (it.month) bits.push(String(it.month)+','); if (it.year) bits.push(String(it.year)+'.');
+      if (bits.length) meta.appendChild(text(bits.join(' ')+' '));
+      li.appendChild(meta);
+      if (indexRow) CITATIONS.attachToggle(meta, li, it.bibtexKey, indexRow);
+      return li;
+    }
+
+    Promise.all([getJSON('../data/publications.json'), CITATIONS.loadIndex()])
+      .then(function(res){
+        var pubs = res[0], index = res[1];
+        var byKey = {};
+        pubs.forEach(function(p){ if (p.bibtexKey) byKey[p.bibtexKey] = p; });
+        var ul = document.createElement('ul'); ul.className = 'pub-list';
+        KEYS.forEach(function(k){
+          if (!byKey[k]) throw new Error('publication not found: ' + k);
+          ul.appendChild(renderPub(byKey[k], index.papers[k]));
+        });
+        var mount = document.getElementById('proto-results');
+        mount.innerHTML = ''; mount.appendChild(ul);
+      })
+      .catch(function(e){
+        document.getElementById('proto-errors').textContent = String(e);
+      });
+  })();
+  </script>
+</body>
+</html>

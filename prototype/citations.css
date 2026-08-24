@@ -1,0 +1,52 @@
+/* Citation view — proposed additions to assets/css/style.css.
+   Everything is namespaced cite- and scoped inside .cite-view, which itself
+   reuses the existing .pub-summary open/closed mechanics. */
+
+.cite-view { max-width: none; }
+
+.cite-head { margin: 2px 0 8px; }
+.cite-head-count { font-weight: 700; font-size: 105%; }
+.cite-head-src { color: #555; }
+
+.cite-splitbar {
+  display: flex; height: 14px; border-radius: 4px; overflow: hidden;
+  border: 1px solid #ccc; max-width: 46em;
+}
+.cite-seg { height: 100%; }
+.cite-seg-detailed { background: #2c5f8a; }
+.cite-seg-passing  { background: #9db8cc; }
+.cite-seg-unjudged { background: #e3e3e3; }
+
+.cite-legend { margin: 6px 0 2px; color: #333; }
+.cite-legend-item { margin-right: 16px; white-space: nowrap; }
+.cite-key {
+  display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+  margin-right: 5px; border: 1px solid #bbb; vertical-align: baseline;
+}
+
+.cite-owngroup-note { color: #555; margin: 4px 0 2px; font-size: 95%; }
+
+.cite-filter { margin: 10px 0 6px; }
+.cite-filter-label { font-weight: bold; margin-right: 6px; }
+.cite-filter .type-toggle-btn { margin-right: 4px; }
+
+.cite-group { border-top: 1px solid #eee; padding: 5px 0; }
+.cite-group-head { display: block; color: inherit; }
+.cite-group-head:hover { text-decoration: none; background: #f7f7f7; }
+.cite-group-label { font-weight: 700; }
+.cite-group-count { font-weight: 700; color: #2c5f8a; }
+.cite-group-gloss { color: #666; font-size: 92%; }
+
+.cite-rows { list-style: none; margin: 4px 0 4px 14px; padding: 0; }
+.cite-row { margin: 3px 0; line-height: 1.4; }
+.cite-row-meta { color: #555; font-size: 95%; }
+
+.cite-chip {
+  display: inline-block; margin-left: 6px; padding: 0 6px;
+  border-radius: 8px; background: #eee; color: #444;
+  font-size: 82%; vertical-align: 8%;
+}
+.cite-chip-core { background: #2c5f8a; color: #fff; }
+
+.cite-loading { color: #777; font-style: italic; }
+.cite-foot { color: #888; font-size: 85%; margin-top: 10px; }

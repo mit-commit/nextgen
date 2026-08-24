@@ -39,6 +39,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping via browser automation stayed blocked (see log), but a user-supplied `acm_badges.json` (badge markup for all 92 `10.1145` DOIs) was ingested — `found.json` now has 23 entries, 20 with a real ACM badge. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is empty. See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
+| **site-citations** | `docs/citation-design.md`, `data/citations/SCHEMA.md`, `data/citations/gscholar.json`, `data/citations/halide:pldi:2013.json`, `data/citations/netblocks-pldi24.json`, `data/citations/index.json` (bootstrap — passes to the merge script when classify-corpus lands), `prototype/` | **active** — end-to-end design of the per-paper citation section, awaiting human review: `docs/citation-design.md` (page structure, loading strategy, reader walkthrough, 8 pilot worked examples), `data/citations/SCHEMA.md` (the per-paper JSON contract the classify-corpus merge script must emit), and a working prototype (`prototype/citations.html` + real data for the two claimed pilots, built by `prototype/build_pilot_data.py`). Non-pilot `data/citations/<bibtexKey>.json` is deliberately unclaimed here — it belongs to the classify-corpus merge, which must follow SCHEMA.md. Nothing touches the live pages until review. |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
 | **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md` | **active** — pilot human-reviewed (approved with one amendment, applied 2026-08-24 as codebook v0.2): two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). v0.2 replaced residual `mentions` with `detailed-citation`/`passing-citation` and re-split all 701 affected rows (349/352). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Cleared to scale to the corpus-wide classification task. |
 
@@ -353,6 +354,49 @@ raise it to the setup lane.
   `lineage`-flagged residual rows landed `detailed-citation`.
   Draft is otherwise approved; corpus-wide classification is queued.
 
+### site-citations
+
+- **Design pass** (2026-08-24). Read-only inputs: `publications.html` +
+  `assets/` (conventions), `data/publications.json`,
+  `harvest/taxonomy/pilot-classifications.json`, `harvest/citations/`;
+  reader-facing prose voice calibrated against `knowledge/writing/` in
+  `samanamarasinghe/my-agentic-knowledge-base`.
+- Deliverables: `docs/citation-design.md` (design + walkthrough + open
+  questions), `data/citations/SCHEMA.md` (schema v1: per-paper
+  `<bibtexKey>.json`, `index.json` for the publications page, human-only
+  `gscholar.json`; displayed count = `max(verified, gscholar)` computed in
+  JS), and the prototype (`prototype/citations.html|js|css`,
+  `prototype/build_pilot_data.py` as the schema's reference
+  implementation).
+- Key decisions recorded for review: top-level detailed/passing split maps
+  `exemplifies` to passing; own-group citations stay inside the verified
+  count (Scholar-comparable) but render apart from external impact;
+  `unknown`/`unclassified` render as "not yet analyzed", never folded into
+  either side; judgment notes do not ship to the site.
+- Dedup per the human ruling (fold by normalized title, keep
+  highest-evidence sibling, drop `self-version` groups):
+  halide:pldi:2013 1,706 records → 1,483 works (586/416/438
+  detailed/passing/unjudged external, 43 own-group); netblocks-pldi24
+  5 → 4 (2/2/0).
+- Prototype verified rendering in Chrome against a local static server:
+  toggle counts, on-demand load, split bar, centrality filter (core counts
+  reconcile), lazy group expansion, lineage/core chips, zero-count legend
+  suppression. Stopped there per task instruction — human review before
+  anything reaches the live pages.
+
 ## Cross-lane requests
 
-_(none open)_
+- **site-citations → taxonomy** (2026-08-24): your claim extension to all of
+  `data/citations/` (still uncommitted in this worktree when this note was
+  written) overlaps the site-citations claims above, which the coordinator's
+  design task assigned by name (`data/citations/SCHEMA.md` plus the pilot
+  data files and `gscholar.json`). Proposed split, matching the queue:
+  taxonomy/classify-corpus owns `data/citations/<bibtexKey>.json` for
+  **non-pilot** papers and must emit the shape in `data/citations/SCHEMA.md`;
+  site-citations owns SCHEMA.md, `gscholar.json` (human-edited only — no
+  script writes it), the pilot data files, and `prototype/`. `index.json`:
+  site-citations bootstrapped it; your merge script takes it over on first
+  run and must preserve the pilot rows. Please narrow your row's claim
+  accordingly — and note this worktree is shared, so please stage your
+  commits by explicit path, not `git add -A` (my in-flight files sit next to
+  yours under `data/citations/`).

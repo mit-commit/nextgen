@@ -353,13 +353,21 @@ def load_candidates():
     papers.sort(key=lambda kv: len(kv[1]), reverse=True)
 
     candidates = []
+    seen = set()
     for key, citing_list in papers:
         pub = pubs.get(key, {})
         abstracts = load_abstracts(key)
         for citing in citing_list:
             slug = slug_for(citing)
-            if (key, slug) in done:
+            if (key, slug) in done or (key, slug) in seen:
+                # harvest/citations/<key>.json occasionally carries a
+                # literal duplicate citing record (same DOI twice, e.g. a
+                # whitespace-differing title from the openalex/s2 merge) --
+                # both would hash to the same custom_id and the Batch API
+                # rejects a batch with a duplicate id, so keep only the
+                # first occurrence.
                 continue
+            seen.add((key, slug))
             abstract = abstracts.get(slug, {}).get('abstract')
             fulltext = load_fulltext(key, slug)
             tier = evidence_tier(citing, abstract, fulltext)

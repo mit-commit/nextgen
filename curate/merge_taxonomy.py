@@ -225,7 +225,8 @@ def main():
         raise SystemExit(f'{sorted(overlap)} are pilot papers -- owned by '
                          'prototype/build_pilot_data.py, not this script')
     if not keys:
-        return print('nothing to merge (no harvest/taxonomy/records/<key>/ yet)')
+        print('no paper has new staging records; still refreshing gscholar '
+             'figures in index.json')
 
     gscholar = json.load(open(GSCHOLAR_PATH)) if os.path.exists(GSCHOLAR_PATH) else {}
     index = (json.load(open(INDEX_PATH)) if os.path.exists(INDEX_PATH)
@@ -247,6 +248,22 @@ def main():
             with open(os.path.join(OUT_DIR, key + '.json'), 'w') as fh:
                 json.dump(paper, fh, indent=1, ensure_ascii=False)
                 fh.write('\n')
+
+    # index.json is the publications page's hot path (max(verified, gscholar)
+    # for every paper, computed client-side) -- refresh every OTHER paper's
+    # gscholar figure from the current gscholar.json too, even papers with no
+    # new staging records this run, so a Scholar-scrape update alone (no
+    # reclassification) still reaches the page on the next merge run.
+    refreshed = 0
+    for key, row in index['papers'].items():
+        if key in keys:
+            continue
+        gs = (gscholar.get(key) or {}).get('count')
+        if row.get('gscholar') != gs:
+            row['gscholar'] = gs
+            refreshed += 1
+    if refreshed:
+        print(f'refreshed gscholar for {refreshed} other paper(s) already in index.json')
 
     index['generated'] = args.generated
     if args.write:

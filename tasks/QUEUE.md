@@ -9,38 +9,43 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 ## HUMAN RULINGS IN FORCE (2026-08-24)
 - Taxonomy v0.2 APPROVED (detailed-citation / passing-citation residuals in
   place of `mentions`; higher categories always win).
-- **CLASSIFY-CORPUS BATCH SUBMIT APPROVED at the ~$69 estimate — proceed.**
+- **CLASSIFY-CORPUS BATCH SUBMIT APPROVED at the ~$69 / 10,021-request
+  estimate — proceed.**
 - Audit trail trusted; no human spot-check before scaling.
 - Dedup policy: fold same-work records by normalized title, keep the
   highest-evidence sibling, before any public-facing counts.
 - Scale to the WHOLE corpus, citation-rich papers first.
-- Prototype/design review: design deemed good so far; final design sign-off
-  pending — live pages remain untouched.
 
 ## OPEN
-1. [sonnet] **classify-corpus — SUBMIT APPROVED.** Run --submit for real,
-   then --status / --collect as batches land; --recover for rule-level
-   failures before any re-call. Key from env ANTHROPIC_BATCH_KEY (never
-   ANTHROPIC_API_KEY). After collect: merge script folds records + dedup into
-   data/citations/<bibtexKey>.json per SCHEMA.md. Report only: records
-   collected, review-queue size, per-function totals.
-2. [sonnet] **idmap-review-rest**: 29 rows remain in data/idmap-review.json.
-   Resolve via candidate landing page / OpenAlex venue+year+authors check, or
-   mark no_doi_confirmed with a note.
-3. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the pilots,
-   highest OpenAlex count first. Long-running; speeds up when S2_API_KEY
-   appears. Stragglers get a later classification sweep.
-
-## RUNNING (do not pick up)
-- repos-search step 2 (its own session)
-- authors-enrich part 2 (its own session)
+1. [sonnet] **classify-corpus — SUBMIT APPROVED.** --submit for real, then
+   --status / --collect; --recover before any re-call. Key from env
+   ANTHROPIC_BATCH_KEY (never ANTHROPIC_API_KEY). After collect: merge +
+   dedup into data/citations/<bibtexKey>.json per SCHEMA.md. Report only:
+   records collected, review-queue size, per-function totals. While batches
+   are pending, the same session may take task 2 or 3.
+2. [sonnet] **repos-search step 2 (RESUME — its session was lost).** Check
+   ~/workspace/nextgen for uncommitted work under harvest/repos/ first and
+   commit anything found. Then per harvest/repos/search-plan.json: GitHub
+   code/repo search on each paper's keyword sets (GITHUB_TOKEN in env).
+   Score candidates (name matches software, owner matches author/org, README
+   mentions title/authors, created within ~2y of publication). Auto-accept
+   NOTHING: top-3 candidates with evidence and confidence to
+   harvest/repos/candidates.json. Report: papers with strong / weak-only /
+   no candidates.
+3. [sonnet] **authors-enrich verify (session lost, output pushed).**
+   harvest/authors/enriched.json exists on main — verify completeness against
+   authors.json (all 369 covered? review rows written?), log its report line
+   in docs/LANES.md, fix gaps if any.
+4. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the
+   pilots, highest OpenAlex count first. Long-running; speeds up when
+   S2_API_KEY appears. Stragglers get a later classification sweep.
 
 ## DONE
-- setup/idmap (163 resolved / 135 no_doi / 29 review)
+- setup/idmap (163 resolved / 135 no_doi / rest no_doi_confirmed)
 - citations OpenAlex pass (151 papers)
 - artifacts part 1 + ACM badge pass
 - repos step 1 (59 live, 2 dead, 268 to search)
 - authors part 1 (369 authors, 149 ORCID, 98 COMMIT)
 - fulltext pilot (85/1067) + abstracts floor (528/982)
-- taxonomy v0.1 pilot + v0.2 amendment (mentions -> 349 detailed / 352 passing)
+- taxonomy v0.1 pilot + v0.2 amendment
 - citation-section design + prototype (prototype/citations.html) — reviewed

@@ -137,3 +137,38 @@ paper's own title/authors from `data/idmap.json`:
   not an artifact of their own.
 - `review.json` is now empty; each row's `review_resolution` field records
   the reasoning. See `settled_not_own.json` for the 4 dependency citations.
+
+## ACM DL badge ingestion (2026-08-24)
+
+The user separately obtained ACM DL badge markup for all 92 `10.1145` DOIs
+(scraped by hand outside this session, after route 3's Cloudflare block
+above) and handed it in as `~/Downloads/acm_badges.json` (list of `{key,
+doi, status, badges[], links[], title}`). Ingested into `found.json`:
+
+- `badges[]` on each entry is the parsed real ACM badge type strings only
+  (`Artifacts Available`, `Artifacts Evaluated & Functional`, `Artifacts
+  Evaluated & Reusable`, `Results Reproduced`) with version suffixes like
+  `/ v1.1` stripped; `badge_source: "acm_dl"` marks where they came from.
+  Non-badge noise in the raw `badges[]` field (artifact titles, the ACM
+  badging-policy URL) was dropped rather than kept as a fake badge type.
+- `acm_dl_links[]` holds every non-`scholar.google.com` link the page
+  surfaced (the raw list mixes the paper's own archived artifact with
+  bibliography citations to baseline tools -- it is not filtered to "own
+  artifact only"). Where `artifact_doi`/`artifact_url` was empty, it was
+  filled from the first Zenodo/DOI link, excluding six links already
+  confirmed (via `review.json` settlement, above, or a fresh landing-page
+  check) to be citations to a shared dependency rather than the paper's own
+  artifact: Shapely (`zenodo.5597138`), FInAT (`zenodo.597531`), TensorFlow
+  (`zenodo.16852354`), pandas (`zenodo.3509134`), Mathematical Components
+  (`zenodo.7118596`), and the CoRa Tensor Compiler (`zenodo.6326456`).
+- 11 papers had a real ACM badge but no prior `found.json` entry (PDF/DataCite
+  scan missed them entirely) and were added fresh, sourced purely from
+  `acm_dl` with no PDF evidence: `chen:asplos:2021`, `chen:pldi:2022`,
+  `chou-pldi20-taco-conversion`, `chou:2018:formats`,
+  `chou:2022:dynamic-formats`, `goslp`, `graphit`, `jaeyeon:asplos:2023`,
+  `kjolstad:oopsla:2017`, `og-cgo20`, `shajii:oopsla:2019`.
+- Two `settled_not_own.json` rows (`bansal2025lightweight`,
+  `won_continuous_2025`) had no ACM badge and their only links were more
+  dependency citations (confirmed for the new one, `pandas`,
+  `zenodo.3509134`) -- left as-is, not promoted.
+- `found.json` now has 23 entries; 20 carry at least one real ACM badge.

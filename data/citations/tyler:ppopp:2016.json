@@ -7,10 +7,25 @@
   "records_raw": 52,
   "works": 45,
   "commit": 4,
-  "judged": 36,
+  "judged": 40,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Distributed and Heterogeneous SAR Backprojection with Halide",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2021,
+   "authors": "Connor Imes, Tzu‐Mao Li, Mark Glines et al.",
+   "url": "https://doi.org/10.1109/hpec49654.2021.9622855",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "abstract"
+  },
   {
    "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers",
    "function": "uses-benchmark",
@@ -23,6 +38,7 @@
    "centrality": "engaged",
    "confidence": "high",
    "flags": [
+    "lineage",
     "own-group"
    ],
    "evidence": "contexts",
@@ -92,6 +108,22 @@
     "positions"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Roofline Guided Design and Analysis of a Multi-stencil CFD Solver for Multicore Performance",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2018,
+   "venue": "IEEE International Parallel and Distributed Processing Symposium",
+   "authors": "Bahareh Mostafazadeh, Ferran Marti, Feng Liu et al.",
+   "url": "https://doi.org/10.1109/ipdps.2018.00085",
+   "cited_by": 9,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Tiramisu : A Polyhedral Compiler with A Scheduling Language for Targeting High Performance Systems Riyadh",
@@ -296,6 +328,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2021,
+   "venue": "International Conference on Parallel Processing",
+   "authors": "Mingzhen Li, Yi Liu, Hailong Yang et al.",
+   "url": "https://doi.org/10.1145/3472456.3473517",
+   "cited_by": 17,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Improving communication by optimizing on-node data movement with data layout",
    "function": "exemplifies",
    "split": "passing",
@@ -488,6 +533,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2022,
+   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1109/sc41404.2022.00064",
+   "cited_by": 8,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Large-scale performance of a DSL-based multi-block structured-mesh application for Direct Numerical Simulation",
    "function": "passing-citation",
    "split": "passing",
@@ -525,6 +582,48 @@
    "evidence": "contexts"
   },
   {
+   "title": "Delivering Performance-Portable Stencil Computations on CPUs and GPUs Using Bricks",
+   "function": "unknown",
+   "split": null,
+   "year": 2018,
+   "venue": "International Workshop on Performance, Portability and Productivity in HPC",
+   "authors": "Tuowen Zhao, Samuel Williams, Mary W. Hall et al.",
+   "url": "https://doi.org/10.1109/p3hpc.2018.00009",
+   "cited_by": 37,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Efficient parallelization of MATLAB stencil applications for multi-core clusters",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "IEEE International Conference on High Performance Computing, Data, and Analytics",
+   "authors": "Johannes Spazier, Steffen Christgau, Bettina Schnor",
+   "url": "https://doi.org/10.5555/3019129.3019132",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "HPAT: High Performance Analytics with Scripting Ease-of-Use",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Ehsan Totoni, Todd A. Anderson, Tatiana Shpeisman",
+   "url": "https://doi.org/10.48550/arxiv.1611.04934",
+   "cited_by": 2,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "TD-Orch: Efficient Task-Data Orchestration for Distributed Systems with Application to Graph Processing",
    "function": "unclassified",
    "split": null,
@@ -543,81 +642,6 @@
    "authors": "Willian Barreiros, A. C. Melo, Jun Kong et al.",
    "url": "https://doi.org/10.1016/j.jpdc.2022.02.004",
    "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
-   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2022,
-   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1109/sc41404.2022.00064",
-   "cited_by": 8,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "International Conference on Parallel Processing",
-   "authors": "Mingzhen Li, Yi Liu, Hailong Yang et al.",
-   "url": "https://doi.org/10.1145/3472456.3473517",
-   "cited_by": 17,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Distributed and Heterogeneous SAR Backprojection with Halide",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "authors": "Connor Imes, Tzu‐Mao Li, Mark Glines et al.",
-   "url": "https://doi.org/10.1109/hpec49654.2021.9622855",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Delivering Performance-Portable Stencil Computations on CPUs and GPUs Using Bricks",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "International Workshop on Performance, Portability and Productivity in HPC",
-   "authors": "Tuowen Zhao, Samuel Williams, Mary W. Hall et al.",
-   "url": "https://doi.org/10.1109/p3hpc.2018.00009",
-   "cited_by": 37,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Roofline Guided Design and Analysis of a Multi-stencil CFD Solver for Multicore Performance",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "IEEE International Parallel and Distributed Processing Symposium",
-   "authors": "Bahareh Mostafazadeh, Ferran Marti, Feng Liu et al.",
-   "url": "https://doi.org/10.1109/ipdps.2018.00085",
-   "cited_by": 9,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient parallelization of MATLAB stencil applications for multi-core clusters",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "IEEE International Conference on High Performance Computing, Data, and Analytics",
-   "authors": "Johannes Spazier, Steffen Christgau, Bettina Schnor",
-   "url": "https://doi.org/10.5555/3019129.3019132",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "HPAT: High Performance Analytics with Scripting Ease-of-Use",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Ehsan Totoni, Todd A. Anderson, Tatiana Shpeisman",
-   "url": "https://doi.org/10.48550/arxiv.1611.04934",
-   "cited_by": 2,
    "evidence": "title_only"
   }
  ]

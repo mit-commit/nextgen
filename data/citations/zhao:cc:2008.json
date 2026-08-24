@@ -7,10 +7,26 @@
   "records_raw": 74,
   "works": 59,
   "commit": 6,
-  "judged": 35,
+  "judged": 42,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Lightweight memory tracing",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "USENIX Annual Technical Conference",
+   "authors": "Mathias Payer, Enrico Kravina, Thomas Groß",
+   "url": "https://openalex.org/W2152389483",
+   "cited_by": 30,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract"
+  },
   {
    "title": "Network analysis of large scale object oriented software systems",
    "function": "positions",
@@ -216,6 +232,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Accelerating Dynamic Detection of Uses of Undefined Values with Static Value-Flow Analysis",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2014,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Ye Ding, Yulei Sui, Jingling Xue",
+   "url": "https://doi.org/10.1145/2544137.2544154",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Fast dynamic binary translation for the kernel",
    "function": "exemplifies",
    "split": "passing",
@@ -253,6 +282,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Debugging With Behavioral Watchpoints",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "TSpace (University of Toronto)",
+   "authors": "Kumar Akshay",
+   "url": "https://openalex.org/W2188360797",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "PinADX",
@@ -338,6 +383,31 @@
    "evidence": "contexts"
   },
   {
+   "title": "NVBit",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2019,
+   "venue": "Micro",
+   "authors": "Oreste Villa, Mark W. Stephenson, David Nellans et al.",
+   "url": "https://doi.org/10.1145/3352460.3358307",
+   "cited_by": 166,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "An Empirical Evaluation of Feedback-Driven Software Development",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "authors": "M. Beller",
+   "url": "https://doi.org/10.4233/uuid:b2946104-2092-42bb-a1ee-3b085d110466",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "LDMBL: An architecture for reducing code duplication in heavyweight binary instrumentations",
    "function": "passing-citation",
    "split": "passing",
@@ -412,6 +482,9 @@
    "cited_by": 28,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -425,7 +498,26 @@
    "cited_by": 10,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Expositor: scriptable time-travel debugging with first-class traces",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "International Conference on Software Engineering",
+   "authors": "Khoo Yit Phang, Jeffrey S. Foster, Michael Hicks",
+   "url": "https://doi.org/10.5555/2486788.2486835",
+   "cited_by": 28,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Improving software diagnosability via log enhancement",
@@ -451,7 +543,27 @@
    "cited_by": 12,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Umbra",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Qin Zhao, Derek Bruening, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/1772954.1772960",
+   "cited_by": 59,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract+contexts",
+   "commit": true
   },
   {
    "title": "Di-NONAME-LIB: Logging only Dirty Chunks for Efﬁcient Management of Dynamic Memory Based Optimistic Simulation Objects",
@@ -481,131 +593,182 @@
   },
   {
    "title": "Proceedings of the 16th ACM SIGPLAN International Conference on Software Language Engineering",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2023,
    "url": "https://doi.org/10.1145/3623476",
    "cited_by": 2,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Reverse Engineering of an Obfuscated Binary",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2020,
    "authors": "Kaishuo Yang",
    "url": "https://doi.org/10.26686/wgtn.17149193.v1",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "NVBit",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "Micro",
-   "authors": "Oreste Villa, Mark W. Stephenson, David Nellans et al.",
-   "url": "https://doi.org/10.1145/3352460.3358307",
-   "cited_by": 166,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An Empirical Evaluation of Feedback-Driven Software Development",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "authors": "M. Beller",
-   "url": "https://doi.org/10.4233/uuid:b2946104-2092-42bb-a1ee-3b085d110466",
-   "cited_by": 2,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Enforcing Abstract Immutability",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2018,
    "venue": "UWSpace (University of Waterloo)",
    "authors": "Jonathan Eyolfson",
    "url": "https://openalex.org/W2886049054",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "On the dichotomy of debugging behavior among programmers",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2018,
    "venue": "International Conference on Software Engineering",
    "authors": "Moritz Beller, Niels Spruit, Diomidis Spinellis et al.",
    "url": "https://doi.org/10.1145/3180155.3180175",
    "cited_by": 75,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Lightweight Memory Checkpointing",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2015,
    "venue": "2015 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
    "authors": "Dirk Vogt, Cristiano Giuffrida, Herbert Bos et al.",
    "url": "https://doi.org/10.1109/dsn.2015.45",
    "cited_by": 19,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Accelerating Dynamic Detection of Uses of Undefined Values with Static Value-Flow Analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Ye Ding, Yulei Sui, Jingling Xue",
-   "url": "https://doi.org/10.1145/2544137.2544154",
-   "cited_by": 24,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Debugging With Behavioral Watchpoints",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "TSpace (University of Toronto)",
-   "authors": "K. Akshay",
-   "url": "https://openalex.org/W2188360797",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Expositor: scriptable time-travel debugging with first-class traces",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "International Conference on Software Engineering",
-   "authors": "Khoo Yit Phang, Jeffrey S. Foster, Michael Hicks",
-   "url": "https://doi.org/10.5555/2486788.2486835",
-   "cited_by": 28,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Higher SLA satisfaction in datacenters with continuous VM placement constraints",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2013,
    "venue": "Hot Topics in System Dependability",
    "authors": "Huynh Tu Dang, Fabien Hermenier",
    "url": "https://doi.org/10.1145/2524224.2524226",
    "cited_by": 18,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "Lightweight Memory Tracing",
-   "function": "unclassified",
+   "title": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles",
+   "function": "unknown",
    "split": null,
    "year": 2013,
-   "venue": "USENIX Annual Technical Conference",
-   "authors": "Mathias Payer, Enrico Kravina, T. Gross",
-   "url": "https://openalex.org/W2152389483",
-   "cited_by": 30,
-   "evidence": "title_only"
+   "venue": "Symposium on Operating Systems Principles",
+   "authors": "M. Kaminsky, M. Dahlin",
+   "url": "https://doi.org/10.1145/2517349",
+   "cited_by": 82,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Improving failure diagnosis via better design and analysis of log messages",
+   "function": "unknown",
+   "split": null,
+   "year": 2012,
+   "authors": "Ding Yuan",
+   "url": "https://openalex.org/W1684317732",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Transparent dynamic instrumentation",
+   "function": "unknown",
+   "split": null,
+   "year": 2012,
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2151024.2151043",
+   "cited_by": 124,
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
+   "title": "Dynamic cache contention detection in multi-threaded applications",
+   "function": "unknown",
+   "split": null,
+   "year": 2011,
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": "Qin Zhao, David Koh, Syed Raza et al.",
+   "url": "https://doi.org/10.1145/1952682.1952688",
+   "cited_by": 70,
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
+   "title": "Deliverable D2.1 Closed loop fuzzing algorithms",
+   "function": "unknown",
+   "split": null,
+   "year": 2010,
+   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+   "authors": "Laurent Andrey, Humberto Abdelnur, Jorge Lucángeli Obes et al.",
+   "url": "https://openalex.org/W2539362639",
+   "cited_by": 1,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Efficient memory shadowing for 64-bit architectures",
+   "function": "unknown",
+   "split": null,
+   "year": 2010,
+   "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
+   "authors": "Qin Zhao, Derek Bruening, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/1806651.1806667",
+   "cited_by": 19,
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts",
+   "commit": true
+  },
+  {
+   "title": "Di-DyMeLoR: Logging only Dirty Chunks for Efficient Management of Dynamic Memory Based Optimistic Simulation Objects",
+   "function": "unknown",
+   "split": null,
+   "year": 2009,
+   "venue": "2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation",
+   "authors": "Alessandro Pellegrini, Roberto Vitali, Francesco Quaglia",
+   "url": "https://doi.org/10.1109/pads.2009.24",
+   "cited_by": 34,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Path Projection : visualizing program paths",
@@ -615,17 +778,6 @@
    "authors": "Khoo Yit Phang",
    "url": "https://www.semanticscholar.org/paper/ba32378787e2c6d1423e501eb1b31a63d99660f6",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Symposium on Operating Systems Principles",
-   "authors": "M. Kaminsky, M. Dahlin",
-   "url": "https://doi.org/10.1145/2517349",
-   "cited_by": 82,
    "evidence": "title_only"
   },
   {
@@ -639,75 +791,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Improving failure diagnosis via better design and analysis of log messages",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "authors": "Ding Yuan",
-   "url": "https://openalex.org/W1684317732",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Transparent dynamic instrumentation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "International Conference on Virtual Execution Environments",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2151024.2151043",
-   "cited_by": 124,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Dynamic cache contention detection in multi-threaded applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "International Conference on Virtual Execution Environments",
-   "authors": "Qin Zhao, David Koh, Syed Raza et al.",
-   "url": "https://doi.org/10.1145/1952682.1952688",
-   "cited_by": 70,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Deliverable D2.1 Closed loop fuzzing algorithms",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
-   "authors": "Laurent Andrey, Humberto J. Abdelnur, Jorge Lucángeli Obes et al.",
-   "url": "https://openalex.org/W2539362639",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient memory shadowing for 64-bit architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
-   "authors": "Qin Zhao, Derek Bruening, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/1806651.1806667",
-   "cited_by": 19,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Umbra",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Qin Zhao, Derek Bruening, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/1772954.1772960",
-   "cited_by": 59,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
    "title": "Bibliography",
    "function": "unclassified",
    "split": null,
@@ -715,17 +798,6 @@
    "venue": "Elsevier eBooks",
    "url": "https://doi.org/10.1016/b978-0-12-374514-9.00002-1",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Di-DyMeLoR: Logging only Dirty Chunks for Efficient Management of Dynamic Memory Based Optimistic Simulation Objects",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation",
-   "authors": "Alessandro Pellegrini, Roberto Vitali, Francesco Quaglia",
-   "url": "https://doi.org/10.1109/pads.2009.24",
-   "cited_by": 34,
    "evidence": "title_only"
   },
   {

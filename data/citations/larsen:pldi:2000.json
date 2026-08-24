@@ -7,10 +7,46 @@
   "records_raw": 559,
   "works": 454,
   "commit": 18,
-  "judged": 287,
+  "judged": 365,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Enhancing Superword-Level Parallelism on RISC-V through Custom Instruction Extensions",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "ICPP Workshops",
+   "authors": "Min-Hsiu Hsu, Shih-Wei Liao, Chi-Hung Wei et al.",
+   "url": "https://doi.org/10.1145/3750720.3757287",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "uses-tool"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "goSLP: globally optimized superword level parallelism framework",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2018,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Charith Mendis, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/3276480",
+   "cited_by": 31,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
   {
    "title": "SuperGraph-SLP Auto-Vectorization",
    "function": "extends",
@@ -27,6 +63,48 @@
     "positions"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "PSLP: padded SLP automatic vectorization",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2015,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Vasileios Porpodas, Alberto Magni, Timothy M. Jones",
+   "url": "https://doi.org/10.5555/2738600.2738625",
+   "cited_by": 30,
+   "centrality": "core",
+   "confidence": "high",
+   "evidence": "abstract"
+  },
+  {
+   "title": "A New Algorithm to Exploit Superword Level Parallelism",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "Symposium on Dependable Autonomic and Secure Computing",
+   "authors": "Peng Liu, Rongcai Zhao, Wei Gao et al.",
+   "url": "https://doi.org/10.1109/dasc.2013.118",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Recovery Methodology to Avoid Loss for SLP",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "Procedia Engineering",
+   "authors": "Shuai Wei, Zhao Rong-cai, Yao Yuan",
+   "url": "https://doi.org/10.1016/j.proeng.2011.08.041",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "high",
+   "evidence": "abstract"
   },
   {
    "title": "Evaluating compiler technology for control-flow optimizations for multimedia extension architectures",
@@ -65,6 +143,19 @@
    "commit": true
   },
   {
+   "title": "Improving superword level parallelism support in modern compilers",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2005,
+   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
+   "authors": "Christian Tenllado, Luís Piñuel, Manuel Prieto et al.",
+   "url": "https://doi.org/10.1145/1084834.1084909",
+   "cited_by": 16,
+   "centrality": "core",
+   "confidence": "high",
+   "evidence": "abstract"
+  },
+  {
    "title": "Pack Transposition: Enhancing Superword Level Parallelism Exploitation",
    "function": "extends",
    "split": "detailed",
@@ -76,6 +167,25 @@
    "centrality": "core",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Design and implementation of a PowerPC backend with optimizations for the AltiVec SIMD processor",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2001,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": "Matthew W. Deeds",
+   "url": "https://openalex.org/W2227773402",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "uses-tool"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Superword Processors",
@@ -118,6 +228,9 @@
    "cited_by": 1,
    "centrality": "core",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -231,6 +344,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Qiwu: Exploiting Ciphertext-Level SIMD Parallelism in Homomorphic Encryption Programs",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Zhongcheng Zhang, Ying Liu, Yuyang Zhang et al.",
+   "url": "https://doi.org/10.1145/3696443.3708917",
+   "cited_by": 6,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Co-Utilizing SIMD and Scalar to Accelerate the Data Analytics Workloads",
    "function": "adopts-idea",
    "split": "detailed",
@@ -328,6 +454,9 @@
    "cited_by": 32,
    "centrality": "engaged",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -422,6 +551,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "Single instruction multiple data code auto generation for a very long instruction words digital signal processor in sensor‐based systems",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "IET Wireless Sensor Systems",
+   "authors": "Xu Yang, Yanjun Zhang, Dake Liu et al.",
+   "url": "https://doi.org/10.1049/iet-wss.2012.0114",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "An Address-Based Compiling Optimization for FFT on Multi-cluster DSP",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "2012 Fifth International Symposium on Parallel Architectures, Algorithms and Programming",
+   "authors": "Dongpeng Xu, Qilong Zheng",
+   "url": "https://doi.org/10.1109/paap.2012.17",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Automatic Vectorization by Runtime Binary Translation",
    "function": "adopts-idea",
    "split": "detailed",
@@ -467,6 +625,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "An open64-based cost analytical model in auto-vectorization",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "International Conference on Educational and Information Technology",
+   "authors": "Zhang Yuanyuan, Rongcai Zhao",
+   "url": "https://doi.org/10.1109/iceit.2010.5608348",
+   "cited_by": 3,
+   "centrality": "core",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Implicit Data Permutation for SIMD Devices",
    "function": "adopts-idea",
    "split": "detailed",
@@ -496,7 +667,58 @@
    "secondary": [
     "detailed-citation"
    ],
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Generation of Pack Instruction Sequence for Media Processors Using Multi-Valued Decision Diagram",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "IEICE Transactions on Fundamentals of Electronics Communications and Computer Sciences",
+   "authors": "Hidekazu Tanaka, Yutaka Takeuchi, Keishi Sakanushi et al.",
+   "url": "https://doi.org/10.1093/ietfec/e90-a.12.2800",
+   "cited_by": 3,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Interactive presentation: SoftSIMD - exploiting subword parallelism using source code transformations",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "Design, Automation, and Test in Europe",
+   "authors": "Stefan Kraemer, Rainer Leupers, Gerd Ascheid et al.",
+   "url": "https://doi.org/10.5555/1266366.1266660",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Model-Guided Empirical Optimization for Multimedia Extension Architectures: A Case Study",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "IEEE International Parallel and Distributed Processing Symposium",
+   "authors": "Chun Chen, Jaewook Shin, Shiva Kintali et al.",
+   "url": "https://doi.org/10.1109/ipdps.2007.370641",
+   "cited_by": 10,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Nested loop vectorisation",
@@ -511,6 +733,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "SoftSIMD - Exploiting Subword Parallelism Using Source Code Transformations",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "2007 Design, Automation & Test in Europe Conference & Exhibition",
+   "authors": "Stefan Kraemer, Rainer Leupers, Gerd Ascheid et al.",
+   "url": "https://doi.org/10.1109/date.2007.364485",
+   "cited_by": 6,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Design and exploitation of a high-performance SIMD floating-point unit for Blue Gene/L",
    "function": "adopts-idea",
    "split": "detailed",
@@ -522,6 +760,19 @@
    "centrality": "engaged",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Generation of permutations for SIMD processors",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2005,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Alexei Kudriavtsev, Peter M. Kogge",
+   "url": "https://doi.org/10.1145/1070891.1065931",
+   "cited_by": 45,
+   "centrality": "core",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Optimizing Compiler for the CELL Processor",
@@ -548,6 +799,25 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Exploring the limits of sub-word level parallelism",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2002,
+   "venue": "Proceedings 2000 International Conference on Parallel Architectures and Compilation Techniques (Cat. No.PR00622)",
+   "authors": "K. Scott, J. Davidson",
+   "url": "https://doi.org/10.1109/pact.2000.888333",
+   "cited_by": 4,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Overview of research efforts on media ISA extensions and their usage in video coding",
@@ -627,6 +897,22 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Efficient Selection of Vector Instructions Using Dynamic Programming",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "Micro",
+   "authors": "Rajkishore Barik, Jisheng Zhao, Vivek Sarkar",
+   "url": "https://doi.org/10.1109/micro.2010.38",
+   "cited_by": 51,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Coyote: A Compiler for Vectorizing Encrypted Arithmetic Circuits",
@@ -709,6 +995,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Exploiting mixed SIMD parallelism by reducing data reorganization overhead",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Hao Zhou, Jingling Xue",
+   "url": "https://doi.org/10.1145/2854038.2854054",
+   "cited_by": 43,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Vectorization for accelerated gather/scatter and multibyte data formats",
    "function": "positions",
    "split": "detailed",
@@ -788,6 +1090,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "Breaking SIMD shackles with an exposed flexible microarchitecture and the access execute PDG",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Venkatraman Govindaraju, Tony Nowatzki, Karthikeyan Sankaralingam",
+   "url": "https://doi.org/10.5555/2523721.2523767",
+   "cited_by": 20,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Efficient SIMD code generation for irregular kernels",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Seonggun Kim, Hwansoo Han",
+   "url": "https://doi.org/10.1145/2370036.2145824",
+   "cited_by": 39,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Building Retargetable and Efficient Compilers for Multimedia Instruction Sets",
    "function": "positions",
    "split": "detailed",
@@ -799,6 +1130,102 @@
    "centrality": "engaged",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Whole-function vectorization",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "R. Karrenberg, Sebastian Hack",
+   "url": "https://doi.org/10.1109/cgo.2011.5764682",
+   "cited_by": 98,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A metadata-enhanced framework for high performance visual effects",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "Spiral (Imperial College London)",
+   "authors": "Jay L. T. Cornwall",
+   "url": "https://doi.org/10.25560/5854",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A new compilation technique for SIMD code generation across basic block boundaries",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "Asia and South Pacific Design Automation Conference",
+   "authors": "Hiroki Tanaka, Yutaka Ota, Nobu Matsumoto et al.",
+   "url": "https://doi.org/10.1109/aspdac.2010.5419911",
+   "cited_by": 5,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "extends"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Automatic vector instruction selection for dynamic compilation",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Rajkishore Barik, Jisheng Zhao, Vivek Sarkar",
+   "url": "https://doi.org/10.1145/1854273.1854358",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "MacroSS",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Amir Hormati, Yoonseo Choi, Mark Woh et al.",
+   "url": "https://doi.org/10.1145/1735971.1736053",
+   "cited_by": 26,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A SIMD optimization framework for retargetable compilers",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Manuel Hohenauer, Felix Engel, Rainer Leupers et al.",
+   "url": "https://doi.org/10.1145/1509864.1509866",
+   "cited_by": 23,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Efficient SIMD optimization for media processors",
@@ -864,6 +1291,37 @@
    "evidence": "contexts"
   },
   {
+   "title": "Pack Instruction Generation for Media Processors Using Multi-valued Decision Diagram",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2006,
+   "authors": "Hiroki Tanaka, Yoshinori Takeuchi, Keishi Sakanushi et al.",
+   "url": "https://openalex.org/W2108806741",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Retargetable code optimization with SIMD instructions",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
+   "authors": "Manuel Hohenauer, Christoph Schumacher, Rainer Leupers et al.",
+   "url": "https://doi.org/10.1145/1176254.1176291",
+   "cited_by": 14,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "SIMD Optimization in COINS Compiler Infrastructure",
    "function": "positions",
    "split": "detailed",
@@ -880,6 +1338,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Untitled",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "Software Practice and Experience",
+   "authors": "I. Pryanishnikov, A. Krall, N. Horspool",
+   "url": "https://doi.org/10.1002/spe.v37:1",
+   "cited_by": 62,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Vectorization Techniques for BlueGene / L ’ s Double FPU",
    "function": "positions",
    "split": "detailed",
@@ -890,6 +1364,22 @@
    "centrality": "engaged",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "An integrated simdization framework using virtual vectors",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2005,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Peng Wu, Alexandre E. Eichenberger, Amy Wang et al.",
+   "url": "https://doi.org/10.1145/1088149.1088172",
+   "cited_by": 49,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Automatically Tuned FFTs for BlueGene/L’s Double FPU",
@@ -951,6 +1441,41 @@
    "evidence": "contexts"
   },
   {
+   "title": "Instruction combining for coalescing memory accesses using global code motion",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "Memory System Performance",
+   "authors": "Motohiro Kawahito, Hideaki Komatsu, Toshio Nakatani",
+   "url": "https://doi.org/10.1145/1065895.1065897",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "supports-claim"
+   ],
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "SWARP : a retargetable preprocessor for multimedia instructions",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "Concurrency and Computation Practice and Experience",
+   "authors": "Gilles Pokam, Stéphane Bihan, Julien Simonnet et al.",
+   "url": "https://doi.org/10.1002/cpe.776",
+   "cited_by": 16,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Vectorization for SIMD architectures with alignment constraints",
    "function": "positions",
    "split": "detailed",
@@ -980,6 +1505,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Data layout oriented compilation techniques in vectorization for multi-/many-cores",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2017,
+   "venue": "Arrow@dit (Dublin Institute of Technology)",
+   "authors": "Shixiong Xu",
+   "url": "https://openalex.org/W2753037357",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "A Report on Compilation Techniques for Short-Vector Instructions",
    "function": "surveys",
    "split": "detailed",
@@ -993,6 +1534,48 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Simdization transformation strategies",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "Research Repository (Delft University of Technology)",
+   "authors": "H.P. Westen",
+   "url": "https://openalex.org/W2143833058",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A Review of SIMD Multimedia Extensions and their Usage in Scientific and Engineering Applications",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2008,
+   "venue": "The Computer Journal",
+   "authors": "M. Hassaballah, Saleh Omran, Yousef B. Mahdy",
+   "url": "https://doi.org/10.1093/comjnl/bxm099",
+   "cited_by": 48,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Statistical and Machine Learning Techniques in Compiler Design",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "The Compiler Design Handbook, 2nd ed.",
+   "authors": "P Joseph, Y. N. Srikant, Kapil Vaswani et al.",
+   "url": "https://doi.org/10.1201/9781420043839.ch8",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Compiler Analysis and Optimizations: What is New?",
@@ -1024,6 +1607,22 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "A Graph-Based Learning Framework for Compiler Loop Auto-Vectorization",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "Intelligent Computing",
+   "authors": "Yao Xiao, Nesreen K. Ahmed, Mihai Capotă et al.",
+   "url": "https://doi.org/10.34133/icomputing.0113",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "JVProf: Locating Vectorization Candidates in JVM Applications",
@@ -1130,6 +1729,9 @@
    "cited_by": 1,
    "centrality": "engaged",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -1170,7 +1772,23 @@
    "cited_by": 8,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "SIMDization of Small Tensor Multiplication Kernels for Wide SIMD Vector Processors",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2018,
+   "venue": "WPMVP@PPoPP",
+   "authors": "Christopher Rodrigues, Amarin Phaosawasdi, Peng Wu",
+   "url": "https://doi.org/10.1145/3178433.3178436",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Complete and Practical Universal Instruction Selection",
@@ -1196,7 +1814,40 @@
    "cited_by": 3,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Language Support for Programming High-Performance Code",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2017,
+   "authors": "Roland Leißa",
+   "url": "https://doi.org/10.22028/d291-27128",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Runtime Optimization of Binary Through Vectorization Transformations. (Optimisation de binaire à l'exécution par la vectorisation)",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2017,
+   "authors": "Nabil Hallou",
+   "url": "https://doi.org/10.70675/95d71994z104dz4d0dz9835zf4a7adab2954",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "surveys"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Loop-oriented array- and field-sensitive pointer analysis for automatic SIMD vectorization",
@@ -1256,6 +1907,38 @@
    "evidence": "contexts"
   },
   {
+   "title": "DM-SIMD: A new SIMD predication mechanism for exploiting superword level parallelism",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "2009 IEEE 8th International Conference on ASIC",
+   "authors": "Libo Huang, Li Shen, Sheng Ma et al.",
+   "url": "https://doi.org/10.1109/asicon.2009.5351559",
+   "cited_by": 5,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "SIMD code generation in data-parallel programming",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "Publications of the UdS (Saarland University)",
+   "authors": "Nicolas Fritz",
+   "url": "https://doi.org/10.22028/d291-25954",
+   "cited_by": 3,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Automating the construction of compiler heuristics using machine learning",
    "function": "supports-claim",
    "split": "detailed",
@@ -1283,6 +1966,19 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Efficient Realization of the Edge Detection Algorithm on a Processor Array with Parallelism on Two Levels",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "International Conference on Parallel Computing in Electrical Engineering",
+   "authors": "Sebastian Siegel, Rainer Schaffer, Renate Merker",
+   "url": "https://doi.org/10.1109/parelec.2006.33",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Limitations of special-purpose instructions for similarity measurements in media SIMD extensions",
@@ -1354,6 +2050,9 @@
    "cited_by": 14,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -1413,7 +2112,26 @@
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Causality constraints for processor architectures with sub-word parallelism",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2003,
+   "venue": "Euromicro Symposium on Digital System Design, 2003. Proceedings.",
+   "authors": "Rainer Schaffer, Renate Merker, Francky Catthoor",
+   "url": "https://doi.org/10.1109/dsd.2003.1231904",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Embedded software: how to make it efficient?",
@@ -1427,6 +2145,21 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Evaluation of architectural paradigms for addressing theprocessor-memory gap",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2003,
+   "authors": "Leonid Oliker, Grime Gorden, Parry Husbands et al.",
+   "url": "https://doi.org/10.2172/860302",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Energy aware compilation for DSPs with SIMD instructions",
@@ -1516,6 +2249,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Jigsaw: Toward Conflict-free Vectorized Stencil Computation by Tessellating Swizzled Registers",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2025,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Yiwei Zhang, Kun Li, Liang Yuan et al.",
+   "url": "https://doi.org/10.1145/3710848.3710886",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "VecTrans: Enhancing Compiler Auto-Vectorization through LLM-Assisted Code Transformations",
    "function": "exemplifies",
    "split": "passing",
@@ -1597,6 +2343,19 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Occamy: Elastically Sharing a SIMD Co-processor across Multiple CPU Cores",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2023,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Zhongcheng Zhang, Yan Ou, Ying Liu et al.",
+   "url": "https://doi.org/10.1145/3582016.3582046",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Parsimony: Enabling SIMD/Vector Programming in Standard Compiler Flows",
@@ -1924,6 +2683,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Data layout transformation for structure vectorization on SIMD architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing",
+   "authors": "Pengyuan Li, Qinghua Zhang, Rongcai Zhao et al.",
+   "url": "https://doi.org/10.1109/snpd.2015.7176233",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Distributed and multiscale computing for scientific applications",
    "function": "exemplifies",
    "split": "passing",
@@ -1998,6 +2770,9 @@
    "cited_by": 2,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -2014,6 +2789,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Sub-word handling in data-parallel mapping",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "ARCS",
+   "authors": "Georgia Psychou, Robert Fasthuber, Francky Catthoor et al.",
+   "url": "https://openalex.org/W1564770073",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Compiling Stream Applications for Heterogeneous Architectures",
    "function": "exemplifies",
    "split": "passing",
@@ -2025,6 +2813,9 @@
    "confidence": "high",
    "secondary": [
     "supports-claim"
+   ],
+   "flags": [
+    "polluted-contexts"
    ],
    "evidence": "contexts"
   },
@@ -2089,6 +2880,9 @@
    "cited_by": 9,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -2105,6 +2899,35 @@
     "supports-claim"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiler based exploration of DSP energy savings by SIMD operations",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2005,
+   "venue": "ASP-DAC 2004: Asia and South Pacific Design Automation Conference 2004 (IEEE Cat. No.04EX753)",
+   "authors": "M. Lorenz, P. Marwedel, T. Drager et al.",
+   "url": "https://doi.org/10.1109/aspdac.2004.1337711",
+   "cited_by": 13,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Dependence Testing and Vectorization of Multimedia Agents.",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2005,
+   "venue": "UTS ePRESS (University of Technology Sydney)",
+   "authors": "John G. Allen, Richard Yi Da Xu, Jesse S. Jin",
+   "url": "https://openalex.org/W2167652639",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "surveys"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Efficient Utilization of SIMD Extensions",
@@ -2130,6 +2953,9 @@
    "cited_by": 2,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -2207,6 +3033,9 @@
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
    "evidence": "contexts"
   },
   {
@@ -2232,6 +3061,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Enhancing SLP Vectorization through Hybrid Slice Selection",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "ICPP Workshops",
+   "authors": "Chi-Hung Wei, Shih-Wei Liao, Chih‐Cheng Chen et al.",
+   "url": "https://doi.org/10.1145/3750720.3757288",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Parallel optimization techniques for ultra-large scale refined numerical simulations on Chinese supercomputers",
@@ -2409,6 +3254,9 @@
    "cited_by": 12,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -2423,6 +3271,23 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiler 2.0: Using Machine Learning to Modernize Compiler Technology",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2020,
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": "Saman P. Amarasinghe",
+   "url": "https://doi.org/10.1145/3372799.3397167",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
   },
   {
    "title": "NeuroVectorizer: end-to-end vectorization with deep reinforcement learning",
@@ -2641,6 +3506,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Identifying superword level parallelism with directed graph reachability}{Identifying superword level parallelism with directed graph reachability",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2017,
+   "venue": "Scientia Sinica Informationis",
+   "authors": "Jie Zhao, Rongcai Zhao",
+   "url": "https://doi.org/10.1360/n112016-00146",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Superword level parallelism aware word length optimization",
    "function": "detailed-citation",
    "split": "detailed",
@@ -2666,6 +3544,9 @@
    "confidence": "high",
    "secondary": [
     "positions"
+   ],
+   "flags": [
+    "polluted-contexts"
    ],
    "evidence": "contexts"
   },
@@ -3169,6 +4050,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Bilel Sefsaf, Abderraouf Dandani, Abdessamed Seddiki et al.",
+   "url": "https://doi.org/10.48550/arxiv.2601.19367",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Orkan: Cache-friendly simulation of quantum operations on hermitian operators",
    "function": "passing-citation",
    "split": "passing",
@@ -3179,6 +4076,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "S2VEC: Compiler-Driven Stream Specialization for Linearized Vectorization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Luís Crespo, Ana Fernandes, Gabriel Falcão et al.",
+   "url": "https://doi.org/10.1145/3797905.3807866",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
   },
   {
    "title": "HybridSIMD: A Super C++ SIMD Library with Integrated Auto-tuning Capabilities",
@@ -3205,6 +4115,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Research on SIMD Instruction Sequence Generation Method for Vector DSP Processor",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "Concurrency and Computation",
+   "authors": "Yonghua Hu, Fangjun Liu, Huifu Zhang et al.",
+   "url": "https://doi.org/10.1002/cpe.70377",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "LoRAStencil: Low-Rank Adaptation of Stencil Computation on Tensor Cores",
@@ -3324,6 +4247,9 @@
    "cited_by": 11,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -3403,6 +4329,49 @@
    "evidence": "contexts"
   },
   {
+   "title": "A Data Layout Transformation for Vectorizing Compilers",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "WPMVP@PPoPP",
+   "authors": "Arsène Pérard‐Gayot, Richard Membarth, Philipp Slusallek et al.",
+   "url": "https://doi.org/10.1145/3178433.3178440",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Cimple: instruction and memory level parallelism: a DSL for uncovering ILP and MLP",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": "Vladimir Kiriansky, Haoran Xu, Martin Rinard et al.",
+   "url": "https://openalex.org/W2897764559",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
+   "title": "Control Flow Vectorization for ARM NEON",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "Software and Compilers for Embedded Systems",
+   "authors": "Angela Pohl, Biagio Cosenza, Ben Juurlink",
+   "url": "https://doi.org/10.1145/3207719.3207721",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "SCP",
    "function": "passing-citation",
    "split": "passing",
@@ -3432,6 +4401,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Assisting Static Compiler Vectorization with a Speculative Dynamic Vectorizer in an HW/SW Codesigned Environment",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2016,
+   "venue": "ACM Transactions on Computer Systems",
+   "authors": "Rakesh Kumar, A. Martínez, Antonio González",
+   "url": "https://doi.org/10.1145/2807694",
+   "cited_by": 7,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Enabling Task Parallelism on Hardware/Software Layers using the Polyhedral Model",
    "function": "passing-citation",
    "split": "passing",
@@ -3455,6 +4437,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Automatic Vectorization of Interleaved Data Revisited",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Andrew Anderson, Avinash Malik, David Gregg",
+   "url": "https://doi.org/10.1145/2838735",
+   "cited_by": 23,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
   },
   {
    "title": "Effective SIMD Vectorization for Intel Xeon Phi Coprocessors",
@@ -3483,6 +4478,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Tracing Flow Information for Tighter WCET Estimation: Application to Vectorization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "IEEE International Conference on Embedded and Real-Time Computing Systems and Applications",
+   "authors": "Hanbing Li, Isabelle Puaut, Erven Rohou",
+   "url": "https://doi.org/10.1109/rtcsa.2015.18",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Performance comparison between Java and JNI for optimal implementation of computational micro-kernels",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2014,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Nassim Halli, Henri‐Pierre Charles, Jean‐François Méhaut",
+   "url": "https://doi.org/10.48550/arxiv.1412.6765",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Sierra",
    "function": "passing-citation",
    "split": "passing",
@@ -3506,6 +4527,32 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Can lock-free and combining techniques co-exist?: a novel approach on concurrent queue",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Proceedings of the 22nd International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Venkatraman Govindaraju, Tony Nowatzki, Karthikeyan Sankaralingam",
+   "url": "https://doi.org/10.1109/pact.2013.6618830",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "Dynamic Streamization Model Execution for SIMD Engines on Multicore Architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Libo Huang, Zhiying Wang, Nong Xiao et al.",
+   "url": "https://doi.org/10.1109/tcad.2013.2272537",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "From relational verification to SIMD loop synthesis",
@@ -3546,6 +4593,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Speculative dynamic vectorization to assist static vectorization in a HW/SW co-designed environment",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "20th Annual International Conference on High Performance Computing",
+   "authors": "Rakesh Kumar, A. Martínez, Antonio González",
+   "url": "https://doi.org/10.1109/hipc.2013.6799102",
+   "cited_by": 8,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
    "title": "Task sampling: computer architecture simulation in the many-core era",
    "function": "passing-citation",
    "split": "passing",
@@ -3559,7 +4622,22 @@
    "secondary": [
     "supports-claim"
    ],
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Vectorization past dependent branches through speculation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "authors": "Majedul Haque Sujon, R. Clint Whaley, Qing Yi",
+   "url": "https://doi.org/10.5555/2523721.2523769",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "When polyhedral transformations meet SIMD code generation",
@@ -3626,6 +4704,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "A Vectorization Method of Export Branch for SIMD Extension",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "International Conference on Interaction Sciences",
+   "authors": "Jiafeng Zhu, Rongcai Zhao, Lin Han et al.",
+   "url": "https://doi.org/10.1109/icis.2011.49",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "Automatic SIMD vectorization of fast fourier transforms for the larrabee and AVX instruction sets",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Daniel S. McFarlin, Volodymyr Arbatov, Franz Franchetti et al.",
+   "url": "https://doi.org/10.1145/1995896.1995938",
+   "cited_by": 41,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Boosting quantum evolutions using Trotter-Suzuki algorithms on GPUs",
    "function": "passing-citation",
    "split": "passing",
@@ -3663,6 +4770,42 @@
    "evidence": "contexts"
   },
   {
+   "title": "Running stream-like programs on heterogeneous multi-core systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "authors": "Paul Carpenter",
+   "url": "https://doi.org/10.5821/dissertation-2117-94642",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Single-Core Performance is Still Relevant in the Multi-Core Era",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "authors": "Todd Mytkowicz, Mark Marron",
+   "url": "https://openalex.org/W35937080",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Vapor SIMD: Auto-vectorize once, run everywhere",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "authors": "Dorit Nuzman, Sergei Dyshel, Erven Rohou et al.",
+   "url": "https://doi.org/10.1109/cgo.2011.5764683",
+   "cited_by": 51,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Automatic parallelization for graphics processing units",
    "function": "passing-citation",
    "split": "passing",
@@ -3686,7 +4829,23 @@
    "cited_by": 4,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Outer-loop vectorization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2008,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Dorit Nuzman, Ayal Zaks",
+   "url": "https://doi.org/10.1145/1454115.1454119",
+   "cited_by": 151,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Utilization of all Levels of Parallelism in a Processor Array with Subword Parallelism",
@@ -3763,6 +4922,18 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiling vector programs for simd devices",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2006,
+   "authors": "David Padua, Gang Ren",
+   "url": "https://openalex.org/W247625555",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Compressing heap data for improved memory performance",
@@ -3846,6 +5017,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "An empirical study on the vectorization of multimedia applications for multimedia extensions",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2005,
+   "venue": "IEEE International Parallel and Distributed Processing Symposium",
+   "authors": "Gang Ren, P. Wu, David Padua",
+   "url": "https://doi.org/10.1109/ipdps.2005.94",
+   "cited_by": 50,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
    "title": "Automatic Detection of Saturation and Clipping Idioms",
    "function": "passing-citation",
    "split": "passing",
@@ -3869,6 +5056,9 @@
    "cited_by": 3,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -3990,6 +5180,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "C Compiler Design for an Industrial Network Processor",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Jens Wagner, Rainer Leupers",
+   "url": "https://doi.org/10.1145/384196.384218",
+   "cited_by": 35,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "High level compilation for gate reconfigurable architectures",
    "function": "passing-citation",
    "split": "passing",
@@ -4026,6 +5232,322 @@
    "evidence": "contexts"
   },
   {
+   "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption",
+   "function": "unknown",
+   "split": null,
+   "year": 2026,
+   "venue": "International Conference on Compiler Construction",
+   "authors": "Abdessamed Seddiki, Arab Mohammed, Zakaria Hebbal et al.",
+   "url": "https://doi.org/10.1145/3771775.3786269",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Efficient and retargetable SIMD translation in a dynamic binary translator",
+   "function": "unknown",
+   "split": null,
+   "year": 2018,
+   "venue": "Software Practice and Experience",
+   "authors": "Sheng‐Yu Fu, Ding‐Yong Hong, Yuping Liu et al.",
+   "url": "https://doi.org/10.1002/spe.2573",
+   "cited_by": 8,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Refinement-based reasoning of optimized reactive systems",
+   "function": "unknown",
+   "split": null,
+   "year": 2018,
+   "authors": "Mitesh Jain",
+   "url": "https://doi.org/10.17760/d20319823",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Automatic generation of fast BLAS3-GEMM: a portable compiler approach",
+   "function": "unknown",
+   "split": null,
+   "year": 2017,
+   "venue": "Symposium on Code Generation and Optimization",
+   "authors": "Xing Su, Xiangke Liao, Jingling Xue",
+   "url": "https://doi.org/10.5555/3049832.3049846",
+   "cited_by": 13,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Improving Loop Dependence Analysis",
+   "function": "unknown",
+   "split": null,
+   "year": 2017,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Nicklas Bo Jensen, Sven Karlsson",
+   "url": "https://doi.org/10.1145/3095754",
+   "cited_by": 4,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Automated optimization of numerical methods for partial differential equations",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "Spiral (Imperial College London)",
+   "authors": "Fabio Luporini",
+   "url": "https://doi.org/10.25560/44726",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
+   "title": "AUXÍLIO A PORTABILIDADE DE CÓDIGO EM APLICAÇÕES DE ALTO DESEMPENHO",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "authors": "PAULO ROBERTO PEREIRA DE SOUZA FILHO",
+   "url": "https://doi.org/10.17771/pucrio.acad.28707",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Extraction and traceability of annotations for WCET estimation. (Extraction et traçabilité d'annotations pour l'estimation de WCET)",
+   "function": "unknown",
+   "split": null,
+   "year": 2015,
+   "authors": "Hanbing Li",
+   "url": "https://doi.org/10.70675/93ac1b8dzd215z40b2zafb4z5d67102b516a",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Proving Skipping Refinement with ACL2s",
+   "function": "unknown",
+   "split": null,
+   "year": 2015,
+   "venue": "Electronic Proceedings in Theoretical Computer Science",
+   "authors": "Mitesh Jain, Panagiotis Manolios",
+   "url": "https://doi.org/10.4204/eptcs.192.9",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "SIMD@OpenMP : a programming model approach to leverage SIMD features",
+   "function": "unknown",
+   "split": null,
+   "year": 2015,
+   "authors": "Diego Luis Caballero de Gea",
+   "url": "https://doi.org/10.5821/dissertation-2117-96011",
+   "cited_by": 2,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Methods and Metrics for Fair Server Assessment under Real-Time Financial Workloads",
+   "function": "unknown",
+   "split": null,
+   "year": 2014,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Giorgis Georgakoudis, Charles J. Gillan, Ahmed Rabee Sayed et al.",
+   "url": "https://doi.org/10.48550/arxiv.1501.00048",
+   "cited_by": 8,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Symbolic Crosschecking of Data-Parallel Floating-Point Code",
+   "function": "unknown",
+   "split": null,
+   "year": 2014,
+   "venue": "IEEE Transactions on Software Engineering",
+   "authors": "Peter Collingbourne, Cristian Cadar, Paul H. J. Kelly",
+   "url": "https://doi.org/10.1109/tse.2013.2297120",
+   "cited_by": 24,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Performance Study of SIMD Programming Models on Intel Multicore Processors",
+   "function": "unknown",
+   "split": null,
+   "year": 2012,
+   "venue": "2012 IEEE 26th International Parallel and Distributed Processing Symposium Workshops & PhD Forum",
+   "authors": "Peter Kristof, Hongtao Yu, Zhiyuan Li et al.",
+   "url": "https://doi.org/10.1109/ipdpsw.2012.299",
+   "cited_by": 17,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Automatic Translation of CUDA to OpenCL and Comparison of Performance Optimizations on GPUs",
+   "function": "unknown",
+   "split": null,
+   "year": 2011,
+   "venue": "Illinois Digital Environment for Access to Learning and Scholarship (University of Illinois at Urbana-Champaign)",
+   "authors": "Deepthi Nandakumar",
+   "url": "https://openalex.org/W657474705",
+   "cited_by": 6,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Parallel video decoding",
+   "function": "unknown",
+   "split": null,
+   "year": 2011,
+   "authors": "Mauricio Álvarez-Mesa",
+   "url": "https://doi.org/10.5821/dissertation-2117-94561",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Runtime Reconfiguration of Multiprocessors Based on Compile-Time Analysis",
+   "function": "unknown",
+   "split": null,
+   "year": 2010,
+   "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+   "authors": "Madhura Purnaprajna, Mario Porrmann, Ulrich Rueckert et al.",
+   "url": "https://doi.org/10.1145/1839480.1839487",
+   "cited_by": 3,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Retargetable code generation based on an architecture description language",
+   "function": "unknown",
+   "split": null,
+   "year": 2009,
+   "venue": "RWTH Publications (RWTH Aachen)",
+   "authors": "Manuel Hohenauer",
+   "url": "https://openalex.org/W2238901837",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Library generation for linear transforms",
+   "function": "unknown",
+   "split": null,
+   "year": 2008,
+   "authors": "Yevgen Voronenko",
+   "url": "https://openalex.org/W399786837",
+   "cited_by": 24,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Reducing exception management overhead with software restart markers",
+   "function": "unknown",
+   "split": null,
+   "year": 2008,
+   "authors": "Krste Asanović, Mark Hampton",
+   "url": "https://openalex.org/W2198189844",
+   "cited_by": 7,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Versatility of extended subwords and the matrix register file",
+   "function": "unknown",
+   "split": null,
+   "year": 2008,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Asadollah Shahbahrami, Ben Juurlink, Stamatis Vassiliadis",
+   "url": "https://doi.org/10.1145/1369396.1369401",
+   "cited_by": 13,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Separating implementation concerns in stencil computations for semiregular grids",
+   "function": "unknown",
+   "split": null,
+   "year": 2007,
+   "venue": "Digital Collections of Colorado (Colorado State University)",
+   "authors": "Andrew Stone, Strout, Michelle Mills, Massey, Daniel et al.",
+   "url": "https://doi.org/10.25675/3.021774",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Synergistic Processing in Cell's Multicore Architecture",
+   "function": "unknown",
+   "split": null,
+   "year": 2006,
+   "venue": "IEEE Micro",
+   "authors": "Michael Gschwind, H. Peter Hofstee, B. Flachs et al.",
+   "url": "https://doi.org/10.1109/mm.2006.41",
+   "cited_by": 406,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "The Challenges for High Performance Embedded Systems",
+   "function": "unknown",
+   "split": null,
+   "year": 2006,
+   "venue": "Euromicro Symposium on Digital Systems Design",
+   "authors": "Marc Duranton",
+   "url": "https://doi.org/10.1109/dsd.2006.87",
+   "cited_by": 20,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Using advanced compiler technology to exploit the performance of the Cell Broadband Engine™ architecture",
+   "function": "unknown",
+   "split": null,
+   "year": 2006,
+   "venue": "IBM Systems Journal",
+   "authors": "Alexandre E. Eichenberger, John O’Brien, Kathryn O’Brien et al.",
+   "url": "https://doi.org/10.1147/sj.451.0059",
+   "cited_by": 151,
+   "evidence": "abstract"
+  },
+  {
+   "title": "An efficient way to filter out data dependences with a sufficiently large distance between memory references",
+   "function": "unknown",
+   "split": null,
+   "year": 2005,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Patricio Bulić, Veselko Guštin",
+   "url": "https://doi.org/10.1145/1064165.1064174",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
    "title": "Automatically Optimized FFT Codes for the BlueGene/L Supercomputer",
    "function": "unknown",
    "split": null,
@@ -4039,6 +5561,33 @@
    "evidence": "contexts"
   },
   {
+   "title": "Register file optimizations for superscalar microprocessors",
+   "function": "unknown",
+   "split": null,
+   "year": 2005,
+   "authors": "Oğuz Ergin",
+   "url": "https://openalex.org/W2532245659",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Scalarization on Short Vector Machines",
+   "function": "unknown",
+   "split": null,
+   "year": 2005,
+   "venue": "IEEE International Symposium on Performance Analysis of Systems and Software, 2005. ISPASS 2005.",
+   "authors": "Yuan Zhao, Ken Kennedy",
+   "url": "https://doi.org/10.1109/ispass.2005.1430573",
+   "cited_by": 7,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
    "title": "the Blue Gene/L double FPU",
    "function": "unknown",
    "split": null,
@@ -4047,6 +5596,20 @@
    "url": "https://www.semanticscholar.org/paper/090b96e4538648c1742a9a30b4b76e26595d5fa9",
    "cited_by": 0,
    "evidence": "contexts"
+  },
+  {
+   "title": "Unlocking the Performance of the BlueGene/L Supercomputer",
+   "function": "unknown",
+   "split": null,
+   "year": 2005,
+   "venue": "Proceedings of the ACM/IEEE SC2004 Conference",
+   "authors": "George Almási, Siddhartha Chatterjee, Alan Gara et al.",
+   "url": "https://doi.org/10.1109/sc.2004.63",
+   "cited_by": 40,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "A high-performance SIMD floating point unit for BlueGene/L: architecture, compilation, and algorithm design",
@@ -4063,6 +5626,20 @@
    "evidence": "contexts"
   },
   {
+   "title": "Speculative software management of datapath-width for energy optimization",
+   "function": "unknown",
+   "split": null,
+   "year": 2004,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Gilles Pokam, Olivier Rochecouste, André Seznec et al.",
+   "url": "https://doi.org/10.1145/998300.997175",
+   "cited_by": 12,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Background data format optimization for efficient sub-word parallel program generation",
    "function": "unknown",
    "split": null,
@@ -4076,103 +5653,18 @@
    "evidence": "contexts"
   },
   {
-   "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
-   "function": "unclassified",
+   "title": "Cg",
+   "function": "unknown",
    "split": null,
-   "year": 2026,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Bilel Sefsaf, Abderraouf Dandani, Abdessamed Seddiki et al.",
-   "url": "https://doi.org/10.48550/arxiv.2601.19367",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption",
-   "function": "unclassified",
-   "split": null,
-   "year": 2026,
-   "venue": "International Conference on Compiler Construction",
-   "authors": "Abdessamed Seddiki, Arab Mohammed, Zakaria Hebbal et al.",
-   "url": "https://doi.org/10.1145/3771775.3786269",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "S2VEC: Compiler-Driven Stream Specialization for Linearized Vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2026,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Luís Crespo, Ana Fernandes, Gabriel Falcão et al.",
-   "url": "https://doi.org/10.1145/3797905.3807866",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Graph-Based Learning Framework for Compiler Loop Auto-Vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "Intelligent Computing",
-   "authors": "Yao Xiao, Nesreen K. Ahmed, Mihai Capotă et al.",
-   "url": "https://doi.org/10.34133/icomputing.0113",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Enhancing SLP Vectorization through Hybrid Slice Selection",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "ICPP Workshops",
-   "authors": "Chi-Hung Wei, Shih-Wei Liao, Chih‐Cheng Chen et al.",
-   "url": "https://doi.org/10.1145/3750720.3757288",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Enhancing Superword-Level Parallelism on RISC-V through Custom Instruction Extensions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "ICPP Workshops",
-   "authors": "Min-Hsiu Hsu, Shih-Wei Liao, Chi-Hung Wei et al.",
-   "url": "https://doi.org/10.1145/3750720.3757287",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Jigsaw: Toward Conflict-free Vectorized Stencil Computation by Tessellating Swizzled Registers",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Yiwei Zhang, Kun Li, Liang Yuan et al.",
-   "url": "https://doi.org/10.1145/3710848.3710886",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Qiwu: Exploiting Ciphertext-Level SIMD Parallelism in Homomorphic Encryption Programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Zhongcheng Zhang, Ying Liu, Yuyang Zhang et al.",
-   "url": "https://doi.org/10.1145/3696443.3708917",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Research on SIMD Instruction Sequence Generation Method for Vector DSP Processor",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "Concurrency and Computation",
-   "authors": "Yonghua Hu, Fangjun Liu, Huifu Zhang et al.",
-   "url": "https://doi.org/10.1002/cpe.70377",
-   "cited_by": 0,
-   "evidence": "title_only"
+   "year": 2003,
+   "venue": "ACM Transactions on Graphics",
+   "authors": "William R. Mark, R. Steven Glanville, Kurt Akeley et al.",
+   "url": "https://doi.org/10.1145/882262.882362",
+   "cited_by": 547,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles",
@@ -4196,17 +5688,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Occamy: Elastically Sharing a SIMD Co-processor across Multiple CPU Cores",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Zhongcheng Zhang, Yan Ou, Ying Liu et al.",
-   "url": "https://doi.org/10.1145/3582016.3582046",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
    "title": "PostSLP: Cross-Region Vectorization of Fully or Partially Vectorized Code",
    "function": "unclassified",
    "split": null,
@@ -4216,18 +5697,6 @@
    "url": "https://doi.org/10.1007/978-3-030-72789-5_2",
    "cited_by": 2,
    "evidence": "title_only"
-  },
-  {
-   "title": "Compiler 2.0: Using Machine Learning to Modernize Compiler Technology",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-   "authors": "Saman P. Amarasinghe",
-   "url": "https://doi.org/10.1145/3372799.3397167",
-   "cited_by": 2,
-   "evidence": "title_only",
-   "commit": true
   },
   {
    "title": "SIMD programming using Intel vector extensions",
@@ -4273,17 +5742,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "A Data Layout Transformation for Vectorizing Compilers",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "WPMVP@PPoPP",
-   "authors": "Arsène Pérard‐Gayot, Richard Membarth, Philipp Slusallek et al.",
-   "url": "https://doi.org/10.1145/3178433.3178440",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "An efficient tile size selection model based on machine learning",
    "function": "unclassified",
    "split": null,
@@ -4293,52 +5751,6 @@
    "url": "https://doi.org/10.1016/j.jpdc.2018.06.005",
    "cited_by": 11,
    "evidence": "title_only"
-  },
-  {
-   "title": "Cimple: instruction and memory level parallelism: a DSL for uncovering ILP and MLP",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-   "authors": "Vladimir Kiriansky, Haoran Xu, Martin Rinard et al.",
-   "url": "https://openalex.org/W2897764559",
-   "cited_by": 10,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Control Flow Vectorization for ARM NEON",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "Software and Compilers for Embedded Systems",
-   "authors": "Angela Pohl, Biagio Cosenza, Ben Juurlink",
-   "url": "https://doi.org/10.1145/3207719.3207721",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient and retargetable SIMD translation in a dynamic binary translator",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "Software Practice and Experience",
-   "authors": "Sheng‐Yu Fu, Ding‐Yong Hong, Yuping Liu et al.",
-   "url": "https://doi.org/10.1002/spe.2573",
-   "cited_by": 8,
-   "evidence": "title_only"
-  },
-  {
-   "title": "goSLP: globally optimized superword level parallelism framework",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Charith Mendis, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/3276480",
-   "cited_by": 31,
-   "evidence": "title_only",
-   "commit": true
   },
   {
    "title": "Performance evaluation of implicit and explicit SIMDization",
@@ -4363,16 +5775,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Refinement-based reasoning of optimized reactive systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "authors": "Mitesh Jain",
-   "url": "https://doi.org/10.17760/d20319823",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "SIMD stealing: Architectural support for efficient data parallel execution on multicores",
    "function": "unclassified",
    "split": null,
@@ -4381,28 +5783,6 @@
    "authors": "Libo Huang, Yashuai Lü, Sheng Ma et al.",
    "url": "https://doi.org/10.1016/j.micpro.2018.12.001",
    "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "SIMDization of Small Tensor Multiplication Kernels for Wide SIMD Vector Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "WPMVP@PPoPP",
-   "authors": "Christopher Rodrigues, Amarin Phaosawasdi, Peng Wu",
-   "url": "https://doi.org/10.1145/3178433.3178436",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic generation of fast BLAS3-GEMM: a portable compiler approach",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "Symposium on Code Generation and Optimization",
-   "authors": "Xing Su, Xiangke Liao, Jingling Xue",
-   "url": "https://doi.org/10.5555/3049832.3049846",
-   "cited_by": 13,
    "evidence": "title_only"
   },
   {
@@ -4417,17 +5797,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Data layout oriented compilation techniques in vectorization for multi-/many-cores",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "Arrow@dit (Dublin Institute of Technology)",
-   "authors": "Shixiong Xu",
-   "url": "https://openalex.org/W2753037357",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "High Performance with Prescriptive Optimization and Debugging",
    "function": "unclassified",
    "split": null,
@@ -4438,44 +5807,12 @@
    "evidence": "title_only"
   },
   {
-   "title": "Identifying superword level parallelism with directed graph reachability}{Identifying superword level parallelism with directed graph reachability",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "Scientia Sinica Informationis",
-   "authors": "Jie Zhao, Rongcai Zhao",
-   "url": "https://doi.org/10.1360/n112016-00146",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "Implementing compression on distributed time series database",
    "function": "unclassified",
    "split": null,
    "year": 2017,
    "authors": "M. Burman",
    "url": "https://www.semanticscholar.org/paper/950c452638be15ec9fd00dc52bf22077d82dadf5",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Improving Loop Dependence Analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Nicklas Bo Jensen, Sven Karlsson",
-   "url": "https://doi.org/10.1145/3095754",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Language Support for Programming High-Performance Code",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "authors": "Roland Leißa",
-   "url": "https://doi.org/10.22028/d291-27128",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -4491,48 +5828,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Runtime Optimization of Binary Through Vectorization Transformations. (Optimisation de binaire à l'exécution par la vectorisation)",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "authors": "Nabil Hallou",
-   "url": "https://doi.org/10.70675/95d71994z104dz4d0dz9835zf4a7adab2954",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Assisting Static Compiler Vectorization with a Speculative Dynamic Vectorizer in an HW/SW Codesigned Environment",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "ACM Transactions on Computer Systems",
-   "authors": "Rakesh Kumar, A. Martínez, Antonio González",
-   "url": "https://doi.org/10.1145/2807694",
-   "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automated optimization of numerical methods for partial differential equations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "Spiral (Imperial College London)",
-   "authors": "Fabio Luporini",
-   "url": "https://doi.org/10.25560/44726",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "AUXÍLIO A PORTABILIDADE DE CÓDIGO EM APLICAÇÕES DE ALTO DESEMPENHO",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "authors": "PAULO ROBERTO PEREIRA DE SOUZA FILHO",
-   "url": "https://doi.org/10.17771/pucrio.acad.28707",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Code Generation for Custom Architectures using Constraint Programming",
    "function": "unclassified",
    "split": null,
@@ -4540,17 +5835,6 @@
    "authors": "M. A. Arslan",
    "url": "https://www.semanticscholar.org/paper/b0efc11b31de967a9ee866440efacb0b8ac5ad06",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Exploiting mixed SIMD parallelism by reducing data reorganization overhead",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Hao Zhou, Jingling Xue",
-   "url": "https://doi.org/10.1145/2854038.2854054",
-   "cited_by": 43,
    "evidence": "title_only"
   },
   {
@@ -4596,38 +5880,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Automatic Vectorization of Interleaved Data Revisited",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Andrew Anderson, Avinash Malik, David Gregg",
-   "url": "https://doi.org/10.1145/2838735",
-   "cited_by": 23,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Data layout transformation for structure vectorization on SIMD architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Software Engineering, Artificial Intelligence, Networking and Parallel/Distributed Computing",
-   "authors": "Pengyuan Li, Qinghua Zhang, Rongcai Zhao et al.",
-   "url": "https://doi.org/10.1109/snpd.2015.7176233",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Extraction and traceability of annotations for WCET estimation. (Extraction et traçabilité d'annotations pour l'estimation de WCET)",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "authors": "Hanbing Li",
-   "url": "https://doi.org/10.70675/93ac1b8dzd215z40b2zafb4z5d67102b516a",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Performance Evaluation of NPB and SPEC CPU2006 on Various SIMD Extensions",
    "function": "unclassified",
    "split": null,
@@ -4636,28 +5888,6 @@
    "authors": "Bo Zhao, Wei Gao, Rongcai Zhao et al.",
    "url": "https://doi.org/10.1007/978-3-319-22047-5_21",
    "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Proving Skipping Refinement with ACL2s",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Electronic Proceedings in Theoretical Computer Science",
-   "authors": "Mitesh Jain, Panagiotis Manolios",
-   "url": "https://doi.org/10.4204/eptcs.192.9",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "PSLP: padded SLP automatic vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Vasileios Porpodas, Alberto Magni, Timothy M. Jones",
-   "url": "https://doi.org/10.5555/2738600.2738625",
-   "cited_by": 30,
    "evidence": "title_only"
   },
   {
@@ -4671,16 +5901,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "SIMD@OpenMP : a programming model approach to leverage SIMD features",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "authors": "Diego Luis Caballero de Gea",
-   "url": "https://doi.org/10.5821/dissertation-2117-96011",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "THÈSE / UNIVERSITÉ DE RENNES 1 sous le sceau de l'Université Européenne de Bretagne pour le grade de DOCTEUR DE L'UNIVERSITÉ DE RENNES 1 Mention : Informatique",
    "function": "unclassified",
    "split": null,
@@ -4691,17 +5911,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Tracing Flow Information for Tighter WCET Estimation: Application to Vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "IEEE International Conference on Embedded and Real-Time Computing Systems and Applications",
-   "authors": "Hanbing Li, Isabelle Puaut, Erven Rohou",
-   "url": "https://doi.org/10.1109/rtcsa.2015.18",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
    "title": "Explicit Vector Programming with OpenMP 4 . 0 SIMD Extensions",
    "function": "unclassified",
    "split": null,
@@ -4709,83 +5918,6 @@
    "authors": "Xinmin Tian, B. Supinski",
    "url": "https://www.semanticscholar.org/paper/549dbb402cc7b59cae393e1c85c5e66f9a0e1169",
    "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Methods and Metrics for Fair Server Assessment under Real-Time Financial Workloads",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Giorgis Georgakoudis, Charles J. Gillan, Ahmed Rabee Sayed et al.",
-   "url": "https://doi.org/10.48550/arxiv.1501.00048",
-   "cited_by": 8,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Performance comparison between Java and JNI for optimal implementation of computational micro-kernels",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Nassim Halli, Henri‐Pierre Charles, Jean‐François Méhaut",
-   "url": "https://doi.org/10.48550/arxiv.1412.6765",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Symbolic Crosschecking of Data-Parallel Floating-Point Code",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "IEEE Transactions on Software Engineering",
-   "authors": "Peter Collingbourne, Cristian Cadar, Paul H. J. Kelly",
-   "url": "https://doi.org/10.1109/tse.2013.2297120",
-   "cited_by": 24,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A New Algorithm to Exploit Superword Level Parallelism",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Symposium on Dependable Autonomic and Secure Computing",
-   "authors": "Peng Liu, Rongcai Zhao, Wei Gao et al.",
-   "url": "https://doi.org/10.1109/dasc.2013.118",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Breaking SIMD shackles with an exposed flexible microarchitecture and the access execute PDG",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Venkatraman Govindaraju, Tony Nowatzki, Karthikeyan Sankaralingam",
-   "url": "https://doi.org/10.5555/2523721.2523767",
-   "cited_by": 20,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Can lock-free and combining techniques co-exist?: a novel approach on concurrent queue",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Proceedings of the 22nd International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Venkatraman Govindaraju, Tony Nowatzki, Karthikeyan Sankaralingam",
-   "url": "https://doi.org/10.1109/pact.2013.6618830",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Dynamic Streamization Model Execution for SIMD Engines on Multicore Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Libo Huang, Zhiying Wang, Nong Xiao et al.",
-   "url": "https://doi.org/10.1109/tcad.2013.2272537",
-   "cited_by": 1,
    "evidence": "title_only"
   },
   {
@@ -4800,49 +5932,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Single instruction multiple data code auto generation for a very long instruction words digital signal processor in sensor‐based systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "IET Wireless Sensor Systems",
-   "authors": "Xu Yang, Yanjun Zhang, Dake Liu et al.",
-   "url": "https://doi.org/10.1049/iet-wss.2012.0114",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Speculative dynamic vectorization to assist static vectorization in a HW/SW co-designed environment",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "20th Annual International Conference on High Performance Computing",
-   "authors": "Rakesh Kumar, A. Martínez, Antonio González",
-   "url": "https://doi.org/10.1109/hipc.2013.6799102",
-   "cited_by": 8,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Vectorization past dependent branches through speculation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "authors": "Majedul Haque Sujon, R. Clint Whaley, Qing Yi",
-   "url": "https://doi.org/10.5555/2523721.2523769",
-   "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An Address-Based Compiling Optimization for FFT on Multi-cluster DSP",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "2012 Fifth International Symposium on Parallel Architectures, Algorithms and Programming",
-   "authors": "Dongpeng Xu, Qilong Zheng",
-   "url": "https://doi.org/10.1109/paap.2012.17",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Building Source-to-Source Compilers for Heterogeneous Targets",
    "function": "unclassified",
    "split": null,
@@ -4850,17 +5939,6 @@
    "authors": "Thèse de Doctorat",
    "url": "https://www.semanticscholar.org/paper/c2a1c053d69f8fe8d5db9cfca8ad858b26550be1",
    "cited_by": 12,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient SIMD code generation for irregular kernels",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Seonggun Kim, Hwansoo Han",
-   "url": "https://doi.org/10.1145/2370036.2145824",
-   "cited_by": 39,
    "evidence": "title_only"
   },
   {
@@ -4875,17 +5953,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Performance Study of SIMD Programming Models on Intel Multicore Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "2012 IEEE 26th International Parallel and Distributed Processing Symposium Workshops & PhD Forum",
-   "authors": "Peter Kristof, Hongtao Yu, Zhiyuan Li et al.",
-   "url": "https://doi.org/10.1109/ipdpsw.2012.299",
-   "cited_by": 17,
-   "evidence": "title_only"
-  },
-  {
    "title": "Scout: A Source-to-Source Transformator for SIMD-Optimizations",
    "function": "unclassified",
    "split": null,
@@ -4894,61 +5961,6 @@
    "authors": "Olaf Krzikalla, Kim Feldhoff, R. Müller-Pfefferkorn et al.",
    "url": "https://doi.org/10.1007/978-3-642-29740-3_17",
    "cited_by": 19,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Simdization transformation strategies",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "Research Repository (Delft University of Technology)",
-   "authors": "H. P. Westen",
-   "url": "https://openalex.org/W2143833058",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Sub-word handling in data-parallel mapping",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "ARCS",
-   "authors": "Georgia Psychou, Robert Fasthuber, Jos Hulzink et al.",
-   "url": "https://openalex.org/W1564770073",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Vectorization Method of Export Branch for SIMD Extension",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "International Conference on Interaction Sciences",
-   "authors": "Jiafeng Zhu, Rongcai Zhao, Lin Han et al.",
-   "url": "https://doi.org/10.1109/icis.2011.49",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic SIMD vectorization of fast fourier transforms for the larrabee and AVX instruction sets",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Daniel S. McFarlin, Volodymyr Arbatov, Franz Franchetti et al.",
-   "url": "https://doi.org/10.1145/1995896.1995938",
-   "cited_by": 41,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic Translation of CUDA to OpenCL and Comparison of Performance Optimizations on GPUs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "Illinois Digital Environment for Access to Learning and Scholarship (University of Illinois at Urbana-Champaign)",
-   "authors": "Deepthi Nandakumar",
-   "url": "https://openalex.org/W657474705",
-   "cited_by": 6,
    "evidence": "title_only"
   },
   {
@@ -4963,145 +5975,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Parallel video decoding",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "Mauricio Álvarez-Mesa",
-   "url": "https://doi.org/10.5821/dissertation-2117-94561",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Recovery Methodology to Avoid Loss for SLP",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "Procedia Engineering",
-   "authors": "Shuai Wei, Zhao Rong-cai, Yao Yuan",
-   "url": "https://doi.org/10.1016/j.proeng.2011.08.041",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Running stream-like programs on heterogeneous multi-core systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "Paul Carpenter",
-   "url": "https://doi.org/10.5821/dissertation-2117-94642",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Single-Core Performance is Still Relevant in the Multi-Core Era",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "Todd Mytkowicz, Mark Marron",
-   "url": "https://openalex.org/W35937080",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Vapor SIMD: Auto-vectorize once, run everywhere",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "Dorit Nuzman, Sergei Dyshel, Erven Rohou et al.",
-   "url": "https://doi.org/10.1109/cgo.2011.5764683",
-   "cited_by": 51,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Whole-function vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "R. Karrenberg, Sebastian Hack",
-   "url": "https://doi.org/10.1109/cgo.2011.5764682",
-   "cited_by": 98,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A metadata-enhanced framework for high performance visual effects",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "Spiral (Imperial College London)",
-   "authors": "Jay L. T. Cornwall",
-   "url": "https://doi.org/10.25560/5854",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A new compilation technique for SIMD code generation across basic block boundaries",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "Asia and South Pacific Design Automation Conference",
-   "authors": "Hiroki Tanaka, Yutaka Ota, Nobu Matsumoto et al.",
-   "url": "https://doi.org/10.1109/aspdac.2010.5419911",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An open64-based cost analytical model in auto-vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "International Conference on Educational and Information Technology",
-   "authors": "Zhang Yuanyuan, Rongcai Zhao",
-   "url": "https://doi.org/10.1109/iceit.2010.5608348",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic vector instruction selection for dynamic compilation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Rajkishore Barik, Jisheng Zhao, Vivek Sarkar",
-   "url": "https://doi.org/10.1145/1854273.1854358",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient Selection of Vector Instructions Using Dynamic Programming",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "Micro",
-   "authors": "Rajkishore Barik, Jisheng Zhao, Vivek Sarkar",
-   "url": "https://doi.org/10.1109/micro.2010.38",
-   "cited_by": 51,
-   "evidence": "title_only"
-  },
-  {
-   "title": "MacroSS",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "ASPLOS XV",
-   "authors": "Amir Hormati, Yoonseo Choi, Mark Woh et al.",
-   "url": "https://doi.org/10.1145/1736020.1736053",
-   "cited_by": 26,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Runtime Reconfiguration of Multiprocessors Based on Compile-Time Analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "ACM Transactions on Reconfigurable Technology and Systems",
-   "authors": "Madhura Purnaprajna, Mario Porrmann, Ulrich Rueckert et al.",
-   "url": "https://doi.org/10.1145/1839480.1839487",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
    "title": "Vectorization for Java",
    "function": "unclassified",
    "split": null,
@@ -5113,17 +5986,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "A SIMD optimization framework for retargetable compilers",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Manuel Hohenauer, Felix Engel, Rainer Leupers et al.",
-   "url": "https://doi.org/10.1145/1509864.1509866",
-   "cited_by": 23,
-   "evidence": "title_only"
-  },
-  {
    "title": "C Compilers for ASIPs",
    "function": "unclassified",
    "split": null,
@@ -5131,39 +5993,6 @@
    "authors": "Manuel Hohenauer, Rainer Leupers",
    "url": "https://doi.org/10.1007/978-1-4419-1176-6",
    "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "DM-SIMD: A new SIMD predication mechanism for exploiting superword level parallelism",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "2009 IEEE 8th International Conference on ASIC",
-   "authors": "Libo Huang, Li Shen, Sheng Ma et al.",
-   "url": "https://doi.org/10.1109/asicon.2009.5351559",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Retargetable code generation based on an architecture description language",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "RWTH Publications (RWTH Aachen)",
-   "authors": "M. Hohenauer",
-   "url": "https://openalex.org/W2238901837",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "SIMD code generation in data-parallel programming",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "Publications of the UdS (Saarland University)",
-   "authors": "Nicolas Fritz",
-   "url": "https://doi.org/10.22028/d291-25954",
-   "cited_by": 3,
    "evidence": "title_only"
   },
   {
@@ -5178,17 +6007,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "A Review of SIMD Multimedia Extensions and their Usage in Scientific and Engineering Applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "The Computer Journal",
-   "authors": "M. Hassaballah, Saleh Omran, Yousef B. Mahdy",
-   "url": "https://doi.org/10.1093/comjnl/bxm099",
-   "cited_by": 48,
-   "evidence": "title_only"
-  },
-  {
    "title": "Exploiting SIMD Parallelism with the CGiS Compiler Framework",
    "function": "unclassified",
    "split": null,
@@ -5200,27 +6018,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Library generation for linear transforms",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "authors": "Y. Voronenko",
-   "url": "https://openalex.org/W399786837",
-   "cited_by": 24,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Outer-loop vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Dorit Nuzman, Ayal Zaks",
-   "url": "https://doi.org/10.1145/1454115.1454119",
-   "cited_by": 151,
-   "evidence": "title_only"
-  },
-  {
    "title": "Proceedings of the GCC Developers' Summit",
    "function": "unclassified",
    "split": null,
@@ -5228,27 +6025,6 @@
    "authors": "G. Fursin, Cupertino Miranda, O. Temam et al.",
    "url": "https://openalex.org/W2600258283",
    "cited_by": 123,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reducing exception management overhead with software restart markers",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "authors": "M. Hampton",
-   "url": "https://openalex.org/W2198189844",
-   "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Versatility of extended subwords and the matrix register file",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Asadollah Shahbahrami, Ben Juurlink, Stamatis Vassiliadis",
-   "url": "https://doi.org/10.1145/1369396.1369401",
-   "cited_by": 13,
    "evidence": "title_only"
   },
   {
@@ -5269,93 +6045,6 @@
    "year": 2007,
    "authors": "R. Wilhelm",
    "url": "https://www.semanticscholar.org/paper/384519d746687136e1993286631f7e77a77614d2",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Generation of Pack Instruction Sequence for Media Processors Using Multi-Valued Decision Diagram",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "IEICE Transactions on Fundamentals of Electronics Communications and Computer Sciences",
-   "authors": "Hidekazu Tanaka, Yutaka Takeuchi, Keishi Sakanushi et al.",
-   "url": "https://doi.org/10.1093/ietfec/e90-a.12.2800",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Interactive presentation: SoftSIMD - exploiting subword parallelism using source code transformations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Design, Automation, and Test in Europe",
-   "authors": "Stefan Kraemer, Rainer Leupers, Gerd Ascheid et al.",
-   "url": "https://doi.org/10.5555/1266366.1266660",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Model-Guided Empirical Optimization for Multimedia Extension Architectures: A Case Study",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "IEEE International Parallel and Distributed Processing Symposium",
-   "authors": "Chun Chen, Jaewook Shin, Shiva Kintali et al.",
-   "url": "https://doi.org/10.1109/ipdps.2007.370641",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Separating implementation concerns in stencil computations for semiregular grids",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Digital Collections of Colorado (Colorado State University)",
-   "authors": "Andrew Stone, Strout, Michelle Mills, Massey, Daniel et al.",
-   "url": "https://doi.org/10.25675/3.021774",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "SoftSIMD - Exploiting Subword Parallelism Using Source Code Transformations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "2007 Design, Automation & Test in Europe Conference & Exhibition",
-   "authors": "S. Kraemer, R. Leupers, G. Ascheid et al.",
-   "url": "https://doi.org/10.1145/1266366.1266660",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Statistical and Machine Learning Techniques in Compiler Design",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "The Compiler Design Handbook, 2nd ed.",
-   "authors": "P Joseph, Y. N. Srikant, Kapil Vaswani et al.",
-   "url": "https://doi.org/10.1201/9781420043839.ch8",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiling Vector Programs for SIMD Devices",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "authors": "Gang Ren",
-   "url": "https://openalex.org/W247625555",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient Realization of the Edge Detection Algorithm on a Processor Array with Parallelism on Two Levels",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "International Conference on Parallel Computing in Electrical Engineering",
-   "authors": "Sebastian Siegel, Rainer Schaffer, Renate Merker",
-   "url": "https://doi.org/10.1109/parelec.2006.33",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -5382,60 +6071,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Pack Instruction Generation for Media Processors Using Multi-valued Decision Diagram",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "authors": "Tanaka Hiroaki, Y. Takeuchi, K. Sakanushi et al.",
-   "url": "https://openalex.org/W2108806741",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Retargetable code optimization with SIMD instructions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
-   "authors": "Manuel Hohenauer, Christoph Schumacher, Rainer Leupers et al.",
-   "url": "https://doi.org/10.1145/1176254.1176291",
-   "cited_by": 14,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Synergistic Processing in Cell's Multicore Architecture",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "IEEE Micro",
-   "authors": "Michael Gschwind, H. Peter Hofstee, B. Flachs et al.",
-   "url": "https://doi.org/10.1109/mm.2006.41",
-   "cited_by": 406,
-   "evidence": "title_only"
-  },
-  {
-   "title": "The Challenges for High Performance Embedded Systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "Euromicro Symposium on Digital Systems Design",
-   "authors": "Marc Duranton",
-   "url": "https://doi.org/10.1109/dsd.2006.87",
-   "cited_by": 20,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Untitled",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "Software Practice and Experience",
-   "authors": "I. Pryanishnikov, A. Krall, N. Horspool",
-   "url": "https://doi.org/10.1002/spe.v37:1",
-   "cited_by": 62,
-   "evidence": "title_only"
-  },
-  {
    "title": "Using advanced compiler technology to exploit the performance of the Cell Broadband Enginee",
    "function": "unclassified",
    "split": null,
@@ -5443,50 +6078,6 @@
    "authors": "A. Eichenberger, Kathryn M. O'Brien, Peng Wu et al.",
    "url": "https://www.semanticscholar.org/paper/d3c1df999b8e8062ce6821b1458aeb6240b5b2eb",
    "cited_by": 13,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Using advanced compiler technology to exploit the performance of the Cell Broadband Engine™ architecture",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "IBM Systems Journal",
-   "authors": "Alexandre E. Eichenberger, John O’Brien, Kathryn O’Brien et al.",
-   "url": "https://doi.org/10.1147/sj.451.0059",
-   "cited_by": 151,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An efficient way to filter out data dependences with a sufficiently large distance between memory references",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Patricio Bulić, Veselko Guštin",
-   "url": "https://doi.org/10.1145/1064165.1064174",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An empirical study on the vectorization of multimedia applications for multimedia extensions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "IEEE International Parallel and Distributed Processing Symposium",
-   "authors": "Gang Ren, P. Wu, David Padua",
-   "url": "https://doi.org/10.1109/ipdps.2005.94",
-   "cited_by": 50,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An integrated simdization framework using virtual vectors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Peng Wu, Alexandre E. Eichenberger, Amy Wang et al.",
-   "url": "https://doi.org/10.1145/1088149.1088172",
-   "cited_by": 49,
    "evidence": "title_only"
   },
   {
@@ -5501,17 +6092,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Compiler based exploration of DSP energy savings by SIMD operations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "ASP-DAC 2004: Asia and South Pacific Design Automation Conference 2004 (IEEE Cat. No.04EX753)",
-   "authors": "M. Lorenz, P. Marwedel, T. Drager et al.",
-   "url": "https://doi.org/10.1109/aspdac.2004.1337711",
-   "cited_by": 13,
-   "evidence": "title_only"
-  },
-  {
    "title": "Compiler optimizations for architectures supporting superword-level parallelism",
    "function": "unclassified",
    "split": null,
@@ -5519,60 +6099,6 @@
    "authors": "Mary W. Hall, Jaewook Shin",
    "url": "https://www.semanticscholar.org/paper/74694cb0402790213cf970df421f77de9f77143b",
    "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Dependence Testing and Vectorization of Multimedia Agents",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "Vision",
-   "authors": "J. G. Allen, R. Xu, Jesse S. Jin",
-   "url": "https://openalex.org/W2167652639",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Generation of permutations for SIMD processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Alexei Kudriavtsev, Peter M. Kogge",
-   "url": "https://doi.org/10.1145/1070891.1065931",
-   "cited_by": 45,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Improving superword level parallelism support in modern compilers",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
-   "authors": "Christian Tenllado, Luís Piñuel, Manuel Prieto et al.",
-   "url": "https://doi.org/10.1145/1084834.1084909",
-   "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Register file optimizations for superscalar microprocessors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "authors": "Oğuz Ergin",
-   "url": "https://openalex.org/W2532245659",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Scalarization on Short Vector Machines",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "IEEE International Symposium on Performance Analysis of Systems and Software, 2005. ISPASS 2005.",
-   "authors": "Yuan Zhao, Ken Kennedy",
-   "url": "https://doi.org/10.1109/ispass.2005.1430573",
-   "cited_by": 7,
    "evidence": "title_only"
   },
   {
@@ -5587,17 +6113,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Unlocking the Performance of the BlueGene/L Supercomputer",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "Proceedings of the ACM/IEEE SC2004 Conference",
-   "authors": "George Almási, Siddhartha Chatterjee, Alan Gara et al.",
-   "url": "https://doi.org/10.1109/sc.2004.63",
-   "cited_by": 40,
-   "evidence": "title_only"
-  },
-  {
    "title": "A Preliminary Study on the Vectorization of Multimedia Applications for Multimedia Extensions",
    "function": "unclassified",
    "split": null,
@@ -5606,17 +6121,6 @@
    "authors": "Gang Ren, Peng Wu, David Padua",
    "url": "https://doi.org/10.1007/978-3-540-24644-2_27",
    "cited_by": 29,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Instruction combining for coalescing memory accesses using global code motion",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "Memory System Performance",
-   "authors": "Motohiro Kawahito, Hideaki Komatsu, Toshio Nakatani",
-   "url": "https://doi.org/10.1145/1065895.1065897",
-   "cited_by": 1,
    "evidence": "title_only"
   },
   {
@@ -5631,28 +6135,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Speculative software management of datapath-width for energy optimization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Gilles Pokam, Olivier Rochecouste, André Seznec et al.",
-   "url": "https://doi.org/10.1145/998300.997175",
-   "cited_by": 12,
-   "evidence": "title_only"
-  },
-  {
-   "title": "SWARP : a retargetable preprocessor for multimedia instructions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "Concurrency and Computation Practice and Experience",
-   "authors": "Gilles Pokam, Stéphane Bihan, Julien Simonnet et al.",
-   "url": "https://doi.org/10.1002/cpe.776",
-   "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
    "title": "An Extended ANSI C for Processors with a Multimedia Extension",
    "function": "unclassified",
    "split": null,
@@ -5661,28 +6143,6 @@
    "authors": "Patricio Bulić, Veselko Guštin",
    "url": "https://doi.org/10.1023/a:1022617308483",
    "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Causality constraints for processor architectures with sub-word parallelism",
-   "function": "unclassified",
-   "split": null,
-   "year": 2003,
-   "venue": "Euromicro Symposium on Digital System Design, 2003. Proceedings.",
-   "authors": "Rainer Schaffer, Renate Merker, Francky Catthoor",
-   "url": "https://doi.org/10.1109/dsd.2003.1231904",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Cg",
-   "function": "unclassified",
-   "split": null,
-   "year": 2003,
-   "venue": "ACM Transactions on Graphics",
-   "authors": "William R. Mark, R. Steven Glanville, Kurt Akeley et al.",
-   "url": "https://doi.org/10.1145/882262.882362",
-   "cited_by": 547,
    "evidence": "title_only"
   },
   {
@@ -5703,16 +6163,6 @@
    "year": 2003,
    "authors": "B. Dang, N. Engin, Georgi Gaydadjiev",
    "url": "https://www.semanticscholar.org/paper/94d855e76e0957e33e6e825e6490fa93d977e68f",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Evaluation of architectural paradigms for addressing theprocessor-memory gap",
-   "function": "unclassified",
-   "split": null,
-   "year": 2003,
-   "authors": "Leonid Oliker, Grime Gorden, Parry Husbands et al.",
-   "url": "https://doi.org/10.2172/860302",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -5749,17 +6199,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Exploring the limits of sub-word level parallelism",
-   "function": "unclassified",
-   "split": null,
-   "year": 2002,
-   "venue": "Proceedings 2000 International Conference on Parallel Architectures and Compilation Techniques (Cat. No.PR00622)",
-   "authors": "K. Scott, J. Davidson",
-   "url": "https://doi.org/10.1109/pact.2000.888333",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
    "title": "A retargetable preprocessor for multimedia instructions",
    "function": "unclassified",
    "split": null,
@@ -5770,17 +6209,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "C Compiler Design for an Industrial Network Processor",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "LCTES/OM",
-   "authors": "Jens Wagner, Rainer Leupers",
-   "url": "https://doi.org/10.1145/384198.384218",
-   "cited_by": 35,
-   "evidence": "title_only"
-  },
-  {
    "title": "Categories and Subject Descriptors",
    "function": "unclassified",
    "split": null,
@@ -5788,17 +6216,6 @@
    "authors": "A. Schein, Alexandrin Popescul, L. Ungar et al.",
    "url": "https://www.semanticscholar.org/paper/551593a2c73b46210d3fa693df5b304582a142be",
    "cited_by": 1344,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Design and implementation of a PowerPC backend with optimizations for the AltiVec SIMD processor",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-   "authors": "Matt Deeds",
-   "url": "https://openalex.org/W2227773402",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {

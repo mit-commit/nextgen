@@ -7,10 +7,23 @@
   "records_raw": 48,
   "works": 43,
   "commit": 0,
-  "judged": 25,
+  "judged": 35,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Efficient Stencil Computation with Temporal Blocking by Halide DSL",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "2022 IEEE Intl Conf on Parallel & Distributed Processing with Applications, Big Data & Cloud Computing, Sustainable Computing & Communications, Social Computing & Networking (ISPA/BDCloud/SocialCom/SustainCom)",
+   "authors": "Hiroki Aikawa, Toshio Endo, Tomoya Yuki et al.",
+   "url": "https://doi.org/10.1109/ispa-bdcloud-socialcom-sustaincom57177.2022.00116",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
   {
    "title": "Program Lifting using Gray-Box Behavior",
    "function": "baseline",
@@ -27,6 +40,38 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Stencil-Lifting: Hierarchical Recursive Lifting System for Extracting Summary of Stencil Kernel in Legacy Codes",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Mingyi Li, Junmin Xiao, Siyan Chen et al.",
+   "url": "https://doi.org/10.1145/3763159",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "baseline"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Tensorize: Fast Synthesis of Tensor Programs from Legacy Code using Symbolic Tracing, Sketching and Solving",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Alexander Brauckmann, Luc Jaulmes, José W. de Souza Magalhães et al.",
+   "url": "https://doi.org/10.1145/3696443.3708956",
+   "cited_by": 5,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Automatically translating image processing libraries to halide",
@@ -59,6 +104,54 @@
     "exemplifies"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Trace-based affine reconstruction of codes",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Gabriel Rodríguez, José M. Andión, Mahmut Kandemir et al.",
+   "url": "https://doi.org/10.1145/2854038.2854056",
+   "cited_by": 13,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Verified lifting of stencil computations",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Shoaib Kamil, Alvin Cheung, Shachar Itzhaky et al.",
+   "url": "https://doi.org/10.1145/2980983.2908117",
+   "cited_by": 53,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Guess, Measure & Edit: Using Lowering to Lift Tensor Code",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2025,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "J. W. D. S. Magalhães, Jackson Woodruff, Jordi Armengol-Estapé et al.",
+   "url": "https://doi.org/10.1109/pact65351.2025.00029",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
   },
   {
    "title": "Inferring Drop-in Binary Parsers from Program Executions",
@@ -138,6 +231,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Automatic Matching of Legacy Code to Heterogeneous APIs",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2018,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Philip Ginsbach, Toomas Remmelg, Michel Steuwer et al.",
+   "url": "https://doi.org/10.1145/3296957.3173182",
+   "cited_by": 28,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "uses-tool"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Inference and Regeneration of Programs that Store and Retrieve Data",
    "function": "exemplifies",
    "split": "passing",
@@ -161,6 +270,17 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Untitled",
+   "function": "exemplifies",
+   "split": "passing",
+   "authors": "Philip Ginsbach, Bruce Collie, Michael O’Boyle",
+   "url": "https://openalex.org/W3099929288",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "QRANE: lifting QASM programs to an affine IR",
@@ -202,19 +322,6 @@
    "secondary": [
     "exemplifies"
    ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Extending halide to improve software development for imaging DSPs",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2016,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Vocke",
-   "url": "https://doi.org/10.1145/3106343",
-   "cited_by": 15,
-   "centrality": "peripheral",
-   "confidence": "high",
    "evidence": "contexts"
   },
   {
@@ -333,6 +440,45 @@
    "evidence": "contexts"
   },
   {
+   "title": "IMPROVING PERFORMANCE OF DATA-CENTRIC SYSTEMS THROUGH FINE-GRAINED CODE GENERATION",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2019,
+   "venue": "Purdue e-Pubs (Purdue University System)",
+   "authors": "Grégory M. Essertel",
+   "url": "https://doi.org/10.25394/pgs.11413206.v1",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Precise reasoning with structured time, structured heaps, and collective operations",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2019,
+   "venue": "Proc. ACM Program. Lang.",
+   "authors": "Grégory M. Essertel, Guannan Wei, Tiark Rompf",
+   "url": "https://doi.org/10.1145/3360583",
+   "cited_by": 7,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Halide Vectorization for Android Photography Applications — A Case Study",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2017,
+   "venue": "IEEE International Conference on Cluster Computing",
+   "authors": "Martin Johnson, D.P. Playne",
+   "url": "https://doi.org/10.1109/cluster.2017.40",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": ": Automatic, Retargetable Program Raising in Multi-Level IR using Program Synthesis",
    "function": "passing-citation",
    "split": "passing",
@@ -344,37 +490,83 @@
    "evidence": "contexts"
   },
   {
-   "title": "Guess, Measure & Edit: Using Lowering to Lift Tensor Code",
-   "function": "unclassified",
+   "title": "Performance profilers and debugging tools for openMP applications",
+   "function": "unknown",
    "split": null,
-   "year": 2025,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "J. W. D. S. Magalhães, Jackson Woodruff, Jordi Armengol-Estapé et al.",
-   "url": "https://doi.org/10.1109/pact65351.2025.00029",
+   "year": 2021,
+   "venue": "Rutgers University Community Repository (Rutgers University)",
+   "authors": "Nader Boushehrinejad Moradi",
+   "url": "https://doi.org/10.7282/t3-0edj-bf23",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "Stencil-Lifting: Hierarchical Recursive Lifting System for Extracting Summary of Stencil Kernel in Legacy Codes",
-   "function": "unclassified",
+   "title": "A survey of neural network accelerator with software development environments",
+   "function": "unknown",
    "split": null,
-   "year": 2025,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Mingyi Li, Junmin Xiao, Siyan Chen et al.",
-   "url": "https://doi.org/10.1145/3763159",
-   "cited_by": 0,
-   "evidence": "title_only"
+   "year": 2020,
+   "venue": "Journal of Semiconductors",
+   "authors": "Jin Song, Xuemeng Wang, Zhi-Dong Zhao et al.",
+   "url": "https://doi.org/10.1088/1674-4926/41/2/021403",
+   "cited_by": 6,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "Tensorize: Fast Synthesis of Tensor Programs from Legacy Code using Symbolic Tracing, Sketching and Solving",
-   "function": "unclassified",
+   "title": "Type-Directed Program Synthesis and Constraint Generation for Accelerator Library Portability",
+   "function": "unknown",
    "split": null,
-   "year": 2025,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Alexander Brauckmann, Luc Jaulmes, José W. de Souza Magalhães et al.",
-   "url": "https://doi.org/10.1145/3696443.3708956",
+   "year": 2019,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Bruce Collie, Philip Ginsbach, Michael O’Boyle",
+   "url": "https://openalex.org/W2967554924",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Extending Halide to Improve Software Development for Imaging DSPs",
+   "function": "unknown",
+   "split": null,
+   "year": 2017,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Sander Vocke, Henk Corporaal, Roel Jordans et al.",
+   "url": "https://doi.org/10.1145/3106343",
+   "cited_by": 15,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "A jump-target identification method for multi-architecture static binary translation",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Alessandro Federico, Giovanni Agosta",
+   "url": "https://doi.org/10.1145/2968455.2968514",
+   "cited_by": 20,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "Untitled",
+   "function": "unknown",
+   "split": null,
+   "authors": "Bruce Collie, Philip Ginsbach, Michael O’Boyle",
+   "url": "https://openalex.org/W2987290330",
    "cited_by": 5,
-   "evidence": "title_only"
+   "evidence": "abstract"
   },
   {
    "title": "A fast and concise parallel implementation of the 8x8 2D forward and inverse DCTs using halide",
@@ -388,39 +580,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Efficient Stencil Computation with Temporal Blocking by Halide DSL",
-   "function": "unclassified",
-   "split": null,
-   "year": 2022,
-   "venue": "2022 IEEE Intl Conf on Parallel & Distributed Processing with Applications, Big Data & Cloud Computing, Sustainable Computing & Communications, Social Computing & Networking (ISPA/BDCloud/SocialCom/SustainCom)",
-   "authors": "Hiroki Aikawa, Toshio Endo, Tomoya Yuki et al.",
-   "url": "https://doi.org/10.1109/ispa-bdcloud-socialcom-sustaincom57177.2022.00116",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Performance profilers and debugging tools for openMP applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "Rutgers University Community Repository (Rutgers University)",
-   "authors": "Nader Boushehrinejad Moradi",
-   "url": "https://doi.org/10.7282/t3-0edj-bf23",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A survey of neural network accelerator with software development environments",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "Journal of Semiconductors",
-   "authors": "Jin Song, Xuemeng Wang, Zhi-Dong Zhao et al.",
-   "url": "https://doi.org/10.1088/1674-4926/41/2/021403",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
    "title": "Binary Analysis Overview",
    "function": "unclassified",
    "split": null,
@@ -429,112 +588,6 @@
    "authors": "Saed Alrabaee, Mourad Debbabi, Paria Shirani et al.",
    "url": "https://doi.org/10.1007/978-3-030-34238-8_2",
    "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
-   "title": "IMPROVING PERFORMANCE OF DATA-CENTRIC SYSTEMS THROUGH FINE-GRAINED CODE GENERATION",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "Purdue e-Pubs (Purdue University System)",
-   "authors": "Grégory M. Essertel",
-   "url": "https://doi.org/10.25394/pgs.11413206.v1",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Precise reasoning with structured time, structured heaps, and collective operations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "Proc. ACM Program. Lang.",
-   "authors": "Grégory M. Essertel, Guannan Wei, Tiark Rompf",
-   "url": "https://doi.org/10.1145/3360583",
-   "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Type-Directed Program Synthesis and Constraint Generation for Accelerator Library Portability",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Bruce Collie, Philip Ginsbach, Michael O’Boyle",
-   "url": "https://openalex.org/W2967554924",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic Matching of Legacy Code to Heterogeneous APIs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Philip Ginsbach, Toomas Remmelg, Michel Steuwer et al.",
-   "url": "https://doi.org/10.1145/3296957.3173182",
-   "cited_by": 28,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Halide Vectorization for Android Photography Applications — A Case Study",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "IEEE International Conference on Cluster Computing",
-   "authors": "Martin Johnson, D.P. Playne",
-   "url": "https://doi.org/10.1109/cluster.2017.40",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A jump-target identification method for multi-architecture static binary translation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Alessandro Federico, Giovanni Agosta",
-   "url": "https://doi.org/10.1145/2968455.2968514",
-   "cited_by": 20,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Trace-based affine reconstruction of codes",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Gabriel Rodríguez, José M. Andión, Mahmut Kandemir et al.",
-   "url": "https://doi.org/10.1145/2854038.2854056",
-   "cited_by": 13,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Verified lifting of stencil computations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Shoaib Kamil, Alvin Cheung, Shachar Itzhaky et al.",
-   "url": "https://doi.org/10.1145/2980983.2908117",
-   "cited_by": 53,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Untitled",
-   "function": "unclassified",
-   "split": null,
-   "authors": "Philip Ginsbach, Bruce Collie, Michael O’Boyle",
-   "url": "https://openalex.org/W3099929288",
-   "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Untitled",
-   "function": "unclassified",
-   "split": null,
-   "authors": "Bruce Collie, Philip Ginsbach, Michael O’Boyle",
-   "url": "https://openalex.org/W2987290330",
-   "cited_by": 5,
    "evidence": "title_only"
   }
  ]

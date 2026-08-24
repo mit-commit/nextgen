@@ -7,7 +7,7 @@
   "records_raw": 34,
   "works": 33,
   "commit": 1,
-  "judged": 26,
+  "judged": 31,
   "gscholar": null
  },
  "citations": [
@@ -84,6 +84,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "Vectron: A Dynamic Programming Auto-vectorization Framework",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Sourena Naser Moghaddasi, Haris Smajlović, Ariya Shajii et al.",
+   "url": "https://doi.org/10.1145/3696443.3708963",
+   "cited_by": 1,
+   "centrality": "core",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Enumerating Valid Non-Alpha-Equivalent Programs for Interpreter Testing",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2024,
+   "venue": "ACM Transactions on Software Engineering and Methodology",
+   "authors": "Xinmeng Xia, Yang Feng, Qingkai Shi et al.",
+   "url": "https://doi.org/10.1145/3647994",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "abstract"
+  },
+  {
    "title": "HiPy: Extracting High-Level Semantics from Python Code for Data Processing",
    "function": "uses-benchmark",
    "split": "detailed",
@@ -99,6 +128,19 @@
     "exemplifies"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "An Empirical Study on the Performance and Energy Usage of Compiled Python Code",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "International Conference on Evaluation & Assessment in Software Engineering",
+   "authors": "Vincenzo Stoico, Andrei Dragomir, Patricia Lago",
+   "url": "https://doi.org/10.1145/3756681.3756972",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "abstract"
   },
   {
    "title": "Automatic Python code generation for Embedded/Cyber-Physical Systems",
@@ -125,6 +167,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "A shared compilation stack for distributed-memory parallelism in stencil DSLs",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2024,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "George Bisbas, Anton Lydike, Emilien Bauer et al.",
+   "url": "https://doi.org/10.1145/3620666.3651344",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "JACC: Leveraging HPC Meta-Programming and Performance Portability with the Just-in-Time and LLVM-based Julia Language",
@@ -213,6 +268,9 @@
    "cited_by": 5,
    "centrality": "engaged",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -310,6 +368,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Towards a type-based abstract semantics for Python",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "J. Log. Algebraic Methods Program.",
+   "authors": "Andrei Nacu",
+   "url": "https://doi.org/10.1016/j.jlamp.2024.101032",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Transcribing Natural Language to Python Code: A Compiler Based Approach",
    "function": "passing-citation",
    "split": "passing",
@@ -373,81 +444,32 @@
    "evidence": "contexts"
   },
   {
-   "title": "An Empirical Study on the Performance and Energy Usage of Compiled Python Code",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "International Conference on Evaluation & Assessment in Software Engineering",
-   "authors": "Vincenzo Stoico, Andrei Dragomir, Patricia Lago",
-   "url": "https://doi.org/10.1145/3756681.3756972",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "JetCert: A Self-Adaptive Compilation Framework for Fast and Safe Code Execution",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
    "authors": "Arman Cham Heidari, Mehran Alidoost Nia",
    "url": "https://doi.org/10.1145/3735452.3735528",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Vectron: A Dynamic Programming Auto-vectorization Framework",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Sourena Naser Moghaddasi, Haris Smajlović, Ariya Shajii et al.",
-   "url": "https://doi.org/10.1145/3696443.3708963",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A shared compilation stack for distributed-memory parallelism in stencil DSLs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "George Bisbas, Anton Lydike, Emilien Bauer et al.",
-   "url": "https://doi.org/10.1145/3620666.3651344",
-   "cited_by": 9,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Enumerating Valid Non-Alpha-Equivalent Programs for Interpreter Testing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "ACM Transactions on Software Engineering and Methodology",
-   "authors": "Xinmeng Xia, Yang Feng, Qingkai Shi et al.",
-   "url": "https://doi.org/10.1145/3647994",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Towards a type-based abstract semantics for Python",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "J. Log. Algebraic Methods Program.",
-   "authors": "Andrei Nacu",
-   "url": "https://doi.org/10.1016/j.jlamp.2024.101032",
-   "cited_by": 5,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Comparing Python Code Parallelization Techniques for Spatial Transcriptomics Data",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2023,
    "venue": "Telecommunications Forum",
    "authors": "Lazar Smiljković, Miloš Radonjić, Marko Mišić et al.",
    "url": "https://doi.org/10.1109/telfor59449.2023.10372599",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   }
  ]
 }

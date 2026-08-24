@@ -7,7 +7,7 @@
   "records_raw": 31,
   "works": 24,
   "commit": 8,
-  "judged": 16,
+  "judged": 17,
   "gscholar": null
  },
  "citations": [
@@ -104,7 +104,8 @@
    "centrality": "peripheral",
    "confidence": "high",
    "flags": [
-    "own-group"
+    "own-group",
+    "polluted-contexts"
    ],
    "evidence": "contexts",
    "commit": true
@@ -140,6 +141,9 @@
    "cited_by": 72,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -204,6 +208,23 @@
    "commit": true
   },
   {
+   "title": "Space-time scheduling of instruction-level parallelism on a raw machine",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 1998,
+   "venue": "ASPLOS VIII",
+   "authors": "Walter Lee, R. Barua, M. Frank et al.",
+   "url": "https://doi.org/10.1145/291069.291018",
+   "cited_by": 179,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
    "title": "Optimizations to prevent cache penalties for the Intel/spl reg/ Itanium/spl reg/ 2 processor",
    "function": "passing-citation",
    "split": "passing",
@@ -259,14 +280,42 @@
   },
   {
    "title": "Memory partitioning and scheduling co-optimization in behavioral synthesis",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2012,
    "venue": "2012 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)",
    "authors": "Peng Li, Yuxin Wang, Peng Zhang et al.",
    "url": "https://doi.org/10.1145/2429384.2429484",
    "cited_by": 28,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "OpenRCL: Low-Power High-Performance Computing with Reconfigurable Devices",
+   "function": "unknown",
+   "split": null,
+   "year": 2010,
+   "venue": "International Conference on Field-Programmable Logic and Applications",
+   "authors": "Mingjie Lin, Ilia A. Lebedev, John Wawrzynek",
+   "url": "https://doi.org/10.1109/fpl.2010.93",
+   "cited_by": 38,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "Spatial software pipelining on distributed architectures for sparse matrix codes",
+   "function": "unknown",
+   "split": null,
+   "year": 2004,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": "Michelle Duvall",
+   "url": "https://openalex.org/W2234067922",
+   "cited_by": 0,
+   "evidence": "abstract"
   },
   {
    "title": "Deployment of Reconfigurable Systems",
@@ -289,28 +338,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "OpenRCL: Low-Power High-Performance Computing with Reconfigurable Devices",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "International Conference on Field-Programmable Logic and Applications",
-   "authors": "Mingjie Lin, Ilia A. Lebedev, John Wawrzynek",
-   "url": "https://doi.org/10.1109/fpl.2010.93",
-   "cited_by": 38,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Spatial software pipelining on distributed architectures for sparse matrix codes",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-   "authors": "M. Duvall",
-   "url": "https://openalex.org/W2234067922",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Embedding tree computations into the RAW chip",
    "function": "unclassified",
    "split": null,
@@ -327,18 +354,6 @@
    "year": 1999,
    "cited_by": null,
    "evidence": "title_only"
-  },
-  {
-   "title": "Space-time scheduling of instruction-level parallelism on a raw machine",
-   "function": "unclassified",
-   "split": null,
-   "year": 1998,
-   "venue": "ASPLOS VIII",
-   "authors": "Walter Lee, R. Barua, M. Frank et al.",
-   "url": "https://doi.org/10.1145/291069.291018",
-   "cited_by": 179,
-   "evidence": "title_only",
-   "commit": true
   }
  ]
 }

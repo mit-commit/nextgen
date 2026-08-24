@@ -5,9 +5,9 @@
  "codebook": "0.2",
  "counts": {
   "records_raw": 87,
-  "works": 64,
-  "commit": 6,
-  "judged": 39,
+  "works": 63,
+  "commit": 5,
+  "judged": 44,
   "gscholar": null
  },
  "citations": [
@@ -90,6 +90,23 @@
    "evidence": "contexts"
   },
   {
+   "title": "Dynamic cache contention detection in multi-threaded applications",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Qin Zhao, David Koh, Syed Raza et al.",
+   "url": "https://doi.org/10.1145/2007477.1952688",
+   "cited_by": 70,
+   "centrality": "core",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
    "title": "Optimization of naïve dynamic binary instrumentation Tools",
    "function": "uses-tool",
    "split": "detailed",
@@ -100,6 +117,9 @@
    "cited_by": 3,
    "centrality": "core",
    "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
    "evidence": "contexts"
   },
   {
@@ -147,6 +167,9 @@
    "secondary": [
     "supports-claim",
     "detailed-citation"
+   ],
+   "flags": [
+    "polluted-contexts"
    ],
    "evidence": "contexts"
   },
@@ -247,6 +270,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2018,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Daniel Lehmann, Michael Pradel",
+   "url": "https://doi.org/10.48550/arxiv.1808.10652",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Information Flow Auditing in the Cloud",
    "function": "exemplifies",
    "split": "passing",
@@ -258,6 +294,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Lightweight Memory Checkpointing",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2015,
+   "venue": "2015 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
+   "authors": "Dirk Vogt, Cristiano Giuffrida, Herbert Bos et al.",
+   "url": "https://doi.org/10.1109/dsn.2015.45",
+   "cited_by": 19,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "An Event-Based Language for Dynamic Binary Translation Frame Works",
@@ -366,6 +418,23 @@
    "evidence": "contexts"
   },
   {
+   "title": "Transparent dynamic instrumentation",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2365864.2151043",
+   "cited_by": 124,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
    "title": "Demand-driven software race detection using hardware performance counters",
    "function": "detailed-citation",
    "split": "detailed",
@@ -376,6 +445,9 @@
    "cited_by": 53,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -415,6 +487,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2019,
+   "venue": "International Journal of Performability Engineering",
+   "authors": "Liu Hui, Jinlong Xu, Ding Lili",
+   "url": "https://doi.org/10.23940/ijpe.19.11.p5.28712881",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Data-flow/dependence profiling for structured transformations",
@@ -480,6 +568,9 @@
    "cited_by": 13,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -544,6 +635,9 @@
    "cited_by": 49,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -557,7 +651,119 @@
    "cited_by": 85,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Efficient Access History for Race Detection",
+   "function": "unknown",
+   "split": null,
+   "year": 2021,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Yifan Xu, Anchengcheng Zhou, Grace Q. Yin et al.",
+   "url": "https://doi.org/10.1145/3409964.3461825",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "European Conference on Object-Oriented Programming",
+   "authors": "Jon Eyolfson, Patrick Lam",
+   "url": "https://doi.org/10.4230/lipics.ecoop.2016.8",
+   "cited_by": 2,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Dynamically diagnosing type errors in unsafe code",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Stephen Kell",
+   "url": "https://doi.org/10.1145/3022671.2983998",
+   "cited_by": 16,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Detection of false sharing using machine learning",
+   "function": "unknown",
+   "split": null,
+   "year": 2013,
+   "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
+   "authors": "Sanath Jayasena, Saman Amarasinghe, A.W.L.D. Abeyweera et al.",
+   "url": "https://doi.org/10.1145/2503210.2503269",
+   "cited_by": 31,
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
+   "title": "Schnauzer: scalable profiling for likely security bug sites",
+   "function": "unknown",
+   "split": null,
+   "year": 2013,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "W. Brian Arthur, Biruk Mammo, R. Rodríguez et al.",
+   "url": "https://doi.org/10.1109/cgo.2013.6494998",
+   "cited_by": 2,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Parallel speedup estimates for serial programs",
+   "function": "unknown",
+   "split": null,
+   "year": 2012,
+   "authors": "Michael Taylor, Dong‐Hwan Jeon",
+   "url": "https://openalex.org/W338206765",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Quantitative Application Data Flow Characterization for Heterogeneous Multicore Architectures",
+   "function": "unknown",
+   "split": null,
+   "year": 2012,
+   "authors": "S. A. Ostadzadeh",
+   "url": "https://doi.org/10.4233/uuid:5acbd4cd-ab5f-486a-8268-61cd7416550d",
+   "cited_by": 5,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Using software architectural patterns for synthetic embedded multicore benchmark development",
+   "function": "unknown",
+   "split": null,
+   "year": 2012,
+   "venue": "IEEE International Symposium on Workload Characterization",
+   "authors": "Etem Deniz, Alper Şen, Jim Holt et al.",
+   "url": "https://doi.org/10.1109/iiswc.2012.6402908",
+   "cited_by": 8,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Improving Hierarchical Critical Path Analysis Performance",
@@ -586,6 +792,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "The potential of sampling for dynamic analysis",
+   "function": "unknown",
+   "split": null,
+   "year": 2011,
+   "venue": "ACM Workshop on Programming Languages and Analysis for Security",
+   "authors": "Joseph L. Greathouse, Todd Austin",
+   "url": "https://doi.org/10.1145/2166956.2166959",
+   "cited_by": 2,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "PiPA",
+   "function": "unknown",
+   "split": null,
+   "year": 2010,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Qin Zhao, Ioana Cutcutache, Weng‐Fai Wong",
+   "url": "https://doi.org/10.1145/1880037.1880038",
+   "cited_by": 18,
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning",
    "function": "unclassified",
    "split": null,
@@ -597,56 +832,12 @@
    "evidence": "title_only"
   },
   {
-   "title": "Efficient Access History for Race Detection",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Yifan Xu, Anchengcheng Zhou, Grace Q. Yin et al.",
-   "url": "https://doi.org/10.1145/3409964.3461825",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "International Journal of Performability Engineering",
-   "authors": "Liu Hui, Jinlong Xu, Ding Lili",
-   "url": "https://doi.org/10.23940/ijpe.19.11.p5.28712881",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "Data-driven Spatial Locality",
    "function": "unclassified",
    "split": null,
    "year": 2019,
    "url": "https://www.semanticscholar.org/paper/0ef7b2fc24a0dbaf9dc1dba4871869c78f51b713",
    "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Daniel Lehmann, Michael Pradel",
-   "url": "https://doi.org/10.48550/arxiv.1808.10652",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "European Conference on Object-Oriented Programming",
-   "authors": "Jon Eyolfson, Patrick Lam",
-   "url": "https://doi.org/10.4230/lipics.ecoop.2016.8",
-   "cited_by": 2,
    "evidence": "title_only"
   },
   {
@@ -661,17 +852,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Dynamically diagnosing type errors in unsafe code",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Stephen Kell",
-   "url": "https://doi.org/10.1145/3022671.2983998",
-   "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
    "title": "Simple DRAM and Virtual Memory Abstractions to Enable Highly Efficient Memory Systems",
    "function": "unclassified",
    "split": null,
@@ -680,40 +860,6 @@
    "authors": "Vivek Seshadri",
    "url": "https://www.semanticscholar.org/paper/c71074a913504bbf25c5d6231440b11c0413acf1",
    "cited_by": 37,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Lightweight Memory Checkpointing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "2015 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks",
-   "authors": "Dirk Vogt, Cristiano Giuffrida, Herbert Bos et al.",
-   "url": "https://doi.org/10.1109/dsn.2015.45",
-   "cited_by": 19,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Detection of false sharing using machine learning",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
-   "authors": "Sanath Jayasena, Saman Amarasinghe, A.W.L.D. Abeyweera et al.",
-   "url": "https://doi.org/10.1145/2503210.2503269",
-   "cited_by": 31,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Schnauzer: scalable profiling for likely security bug sites",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "W. Brian Arthur, Biruk Mammo, R. Rodríguez et al.",
-   "url": "https://doi.org/10.1109/cgo.2013.6494998",
-   "cited_by": 2,
    "evidence": "title_only"
   },
   {
@@ -744,95 +890,6 @@
    "authors": "Dong-Keun Jeon",
    "url": "https://www.semanticscholar.org/paper/d536d9f8129a92f54aa5dcc130a7565d14872741",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Parallel speedup estimates for serial programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "authors": "Donghwan Jeon, Misook Chung",
-   "url": "https://openalex.org/W338206765",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Quantitative Application Data Flow Characterization for Heterogeneous Multicore Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "authors": "S. A. Ostadzadeh",
-   "url": "https://doi.org/10.4233/uuid:5acbd4cd-ab5f-486a-8268-61cd7416550d",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Transparent dynamic instrumentation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2365864.2151043",
-   "cited_by": 124,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Using software architectural patterns for synthetic embedded multicore benchmark development",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "IEEE International Symposium on Workload Characterization",
-   "authors": "Etem Deniz, Alper Şen, Jim Holt et al.",
-   "url": "https://doi.org/10.1109/iiswc.2012.6402908",
-   "cited_by": 8,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Dynamic cache contention detection in multi-threaded applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Qin Zhao, David Koh, Syed Raza et al.",
-   "url": "https://doi.org/10.1145/2007477.1952688",
-   "cited_by": 70,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "The potential of sampling for dynamic analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "ACM Workshop on Programming Languages and Analysis for Security",
-   "authors": "Joseph L. Greathouse, Todd Austin",
-   "url": "https://doi.org/10.1145/2166956.2166959",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient memory shadowing for 64-bit architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Qin Zhao, Derek Bruening, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/1837855.1806667",
-   "cited_by": 19,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "PiPA",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Qin Zhao, Ioana Cutcutache, Weng‐Fai Wong",
-   "url": "https://doi.org/10.1145/1880037.1880038",
-   "cited_by": 18,
    "evidence": "title_only"
   }
  ]

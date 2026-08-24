@@ -7,10 +7,27 @@
   "records_raw": 60,
   "works": 56,
   "commit": 8,
-  "judged": 32,
+  "judged": 38,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Compiling Graph Applications for GPU s with GraphIt",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2021,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Ajay Brahmakshatriya, Yunming Zhang, Changwan Hong et al.",
+   "url": "https://doi.org/10.1109/cgo51591.2021.9370321",
+   "cited_by": 24,
+   "centrality": "core",
+   "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
   {
    "title": "Taming the Zoo: The Unified GraphIt Compiler Framework for Novel Architectures",
    "function": "extends",
@@ -73,6 +90,26 @@
    "commit": true
   },
   {
+   "title": "D2X: An eXtensible conteXtual Debugger for Modern DSLs",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Ajay Brahmakshatriya, Saman P. Amarasinghe",
+   "url": "https://doi.org/10.1145/3579990.3580014",
+   "cited_by": 5,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
    "title": "Mapping Computations in Heterogeneous Multicore Systems with Statistical Regression on Program Inputs",
    "function": "uses-benchmark",
    "split": "detailed",
@@ -101,6 +138,27 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "GraphIt to CUDA Compiler in 2021 LOC: A Case for High-Performance DSL Implementation via Staging with BuilDSL",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Ajay Brahmakshatriya, Saman Amarasinghe",
+   "url": "https://doi.org/10.1109/cgo53902.2022.9741280",
+   "cited_by": 5,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation",
+    "uses-tool"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
   },
   {
    "title": "Efficient Stepping Algorithms and Implementations for Parallel Shortest Paths",
@@ -360,6 +418,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "An efficient high throughput system of hypergraph neural network under CPU-GPU heterogeneous environments",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "Scientia Sinica Informationis",
+   "authors": "Hui Yu, Yu Zhang, Xintao Li et al.",
+   "url": "https://doi.org/10.1360/ssi-2024-0282",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Fast Adaptive Approximate Nearest Neighbor Search with Cluster-Shaped Indices",
    "function": "passing-citation",
    "split": "passing",
@@ -384,6 +455,38 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "One-Hop Sub-Query Result Caches for Graph Database Systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "arXiv.org",
+   "authors": "Hieu Nguyen, Jun Li, Shahram Ghandeharizadeh",
+   "url": "https://doi.org/10.48550/arxiv.2412.04698",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "Neural Information Processing Systems",
+   "authors": "Ruslan Svirschevski, Avner May, Zhuoming Chen et al.",
+   "url": "https://doi.org/10.48550/arxiv.2406.02532",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Communication-Efficient ∆-Stepping for Distributed Computing Systems",
@@ -449,7 +552,8 @@
    "centrality": "peripheral",
    "confidence": "high",
    "flags": [
-    "own-group"
+    "own-group",
+    "polluted-contexts"
    ],
    "evidence": "contexts",
    "commit": true
@@ -482,144 +586,190 @@
   },
   {
    "title": "Parallel Bidirectional A* Search for GPU-Accelerated Pathfinding",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2026,
    "venue": "International Conference on Supercomputing",
    "authors": "Hadi Al Khansa, Juan Gómez-Luna, Amer E. Mouawad et al.",
    "url": "https://doi.org/10.1145/3797905.3805620",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "WSGraph: A Framework for Tackling Redundant and Irregular Data Access in Streaming Graph Processing",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2026,
    "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
    "authors": "Xuanyi Li, Chen Li, Zhengyi Dai et al.",
    "url": "https://doi.org/10.1145/3803023",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An efficient high throughput system of hypergraph neural network under CPU-GPU heterogeneous environments",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "Scientia Sinica Informationis",
-   "authors": "Hui Yu, Yu Zhang, Xintao Li et al.",
-   "url": "https://doi.org/10.1360/ssi-2024-0282",
-   "cited_by": 1,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Boosting Task Scheduling Data Locality with Low-latency, HW-accelerated Label Propagation",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "Micro",
    "authors": "Lucas Morais, Juan Miguel de Haro Ruiz, Alfredo Goldman et al.",
    "url": "https://doi.org/10.1145/3725843.3756080",
    "cited_by": 1,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "FrontOrder: Frontier-Guided Graph Reordering",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "IEEE International Conference on Data Engineering",
    "authors": "X. L. Zhang, Cheng Liu, Shengwen Liang et al.",
    "url": "https://doi.org/10.1109/icde65448.2025.00258",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "OPMOS: Ordered Parallel Algorithm for Multi-Objective Shortest-Paths",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "International Conference on Supercomputing",
    "authors": "Leo Gold, Adam Bienkowski, David Sidoti et al.",
    "url": "https://doi.org/10.1145/3721145.3725781",
    "cited_by": 1,
-   "evidence": "title_only"
+   "evidence": "abstract"
   },
   {
    "title": "Parallel Point-to-Point Shortest Paths and Batch Queries",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
    "authors": "Xiaojun Dong, Andy Li, Yan Gu et al.",
    "url": "https://doi.org/10.1145/3694906.3743311",
    "cited_by": 1,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Proceedings of the 1st FastCode Programming Challenge",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "url": "https://doi.org/10.1145/3711708",
    "cited_by": 1,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Relax and don't Stop: Graph-aware Asynchronous SSSP",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "FCPC@PPOPP",
    "authors": "Marco D’Antonio, Kåre von Geijer, Son T. et al.",
    "url": "https://doi.org/10.1145/3711708.3723446",
    "cited_by": 3,
-   "evidence": "title_only"
+   "evidence": "abstract"
   },
   {
    "title": "Survey of Disaggregated Memory: Cross-Layer Technique Insights for Next-Generation Datacenters",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "ACM Computing Surveys",
    "authors": "Jing Wang, Chao Li, Taolei Wang et al.",
    "url": "https://doi.org/10.1145/3807443",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Wasp: Efficient Asynchronous Single-Source Shortest Path on Multicore Systems via Work Stealing",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2025,
    "venue": "International Conference on Software Composition",
    "authors": "Marco D’Antonio, Son T., Philippas Tsigas et al.",
    "url": "https://doi.org/10.1145/3712285.3759872",
    "cited_by": 3,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Multi Bucket Queues: Efficient Concurrent Priority Scheduling",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2024,
    "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
    "authors": "Guozheng Zhang, Gilead Posluns, Mark C. Jeffrey",
    "url": "https://doi.org/10.1145/3626183.3659962",
    "cited_by": 14,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "One-Hop Sub-Query Result Caches for Graph Database Systems",
-   "function": "unclassified",
+   "title": "iQAN",
+   "function": "unknown",
    "split": null,
-   "year": 2024,
-   "venue": "arXiv.org",
-   "authors": "Hieu Nguyen, Jun Li, Shahram Ghandeharizadeh",
-   "url": "https://doi.org/10.48550/arxiv.2412.04698",
+   "year": 2023,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Zhen Peng, Minjia Zhang, Kai Li et al.",
+   "url": "https://doi.org/10.1145/3572848.3577527",
+   "cited_by": 20,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "DMM-GAPBS: Adapting the GAP Benchmark Suite to a Distributed Memory Model",
+   "function": "unknown",
+   "split": null,
+   "year": 2021,
+   "authors": "Zachary Hansen, Brody Williams, John D. Leidel et al.",
+   "url": "https://doi.org/10.1109/hpec49654.2021.9622817",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Surveying Consumer Understanding & Sentiment Of VR",
+   "function": "unknown",
+   "split": null,
+   "year": 2021,
+   "venue": "MMVE@MMSys",
+   "authors": "Joseph O'Hagan, M. Khamis, J. Williamson",
+   "url": "https://doi.org/10.1145/3458307.3460965",
+   "cited_by": 17,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Skyway: Accelerate Graph Applications with a Dual-Path Architecture and Fine-Grained Data Management",
@@ -631,29 +781,6 @@
    "url": "https://doi.org/10.1007/s11390-023-2939-x",
    "cited_by": 0,
    "evidence": "title_only"
-  },
-  {
-   "title": "SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "Neural Information Processing Systems",
-   "authors": "Ruslan Svirschevski, Avner May, Zhuoming Chen et al.",
-   "url": "https://doi.org/10.48550/arxiv.2406.02532",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "D2X: An eXtensible conteXtual Debugger for Modern DSLs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Ajay Brahmakshatriya, Saman P. Amarasinghe",
-   "url": "https://doi.org/10.1145/3579990.3580014",
-   "cited_by": 5,
-   "evidence": "title_only",
-   "commit": true
   },
   {
    "title": "Fargraph+: Excavating the parallelism of graph processing workload on RDMA-based far memory system",
@@ -675,62 +802,6 @@
    "authors": "Mo Zou, Mingyu Yan, Wenming Li et al.",
    "url": "https://doi.org/10.1007/978-3-031-22677-9_15",
    "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "iQAN",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Zhen Peng, Minjia Zhang, Kai Li et al.",
-   "url": "https://doi.org/10.1145/3572848.3577527",
-   "cited_by": 20,
-   "evidence": "title_only"
-  },
-  {
-   "title": "GraphIt to CUDA Compiler in 2021 LOC: A Case for High-Performance DSL Implementation via Staging with BuilDSL",
-   "function": "unclassified",
-   "split": null,
-   "year": 2022,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Ajay Brahmakshatriya, Saman Amarasinghe",
-   "url": "https://doi.org/10.1109/cgo53902.2022.9741280",
-   "cited_by": 5,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Compiling Graph Applications for GPU s with GraphIt",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Ajay Brahmakshatriya, Yunming Zhang, Changwan Hong et al.",
-   "url": "https://doi.org/10.1109/cgo51591.2021.9370321",
-   "cited_by": 24,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "DMM-GAPBS: Adapting the GAP Benchmark Suite to a Distributed Memory Model",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "authors": "Zachary Hansen, Brody Williams, John D. Leidel et al.",
-   "url": "https://doi.org/10.1109/hpec49654.2021.9622817",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Surveying Consumer Understanding & Sentiment Of VR",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "MMVE@MMSys",
-   "authors": "Joseph O'Hagan, M. Khamis, J. Williamson",
-   "url": "https://doi.org/10.1145/3458307.3460965",
-   "cited_by": 17,
    "evidence": "title_only"
   },
   {

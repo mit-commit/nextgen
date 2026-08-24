@@ -7,10 +7,28 @@
   "records_raw": 57,
   "works": 51,
   "commit": 1,
-  "judged": 26,
+  "judged": 34,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Cool-Mem",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2002,
+   "authors": "Raksit Ashok, Saurabh Chheda, Csaba Andras Moritz",
+   "url": "https://doi.org/10.1145/605397.605412",
+   "cited_by": 16,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
+  },
   {
    "title": "Dynamic allocation for scratch-pad memory using compile-time decisions",
    "function": "baseline",
@@ -98,6 +116,31 @@
    "evidence": "contexts"
   },
   {
+   "title": "An optimal memory allocation scheme for scratch-pad-based embedded systems",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2002,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Oren Avissar, Rajeev Barua, Dave Stewart",
+   "url": "https://doi.org/10.1145/581888.581891",
+   "cited_by": 327,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Memory Systems: Cache, DRAM, Disk",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2007,
+   "authors": "Bruce Jacob, Spencer W. Ng, David Wang",
+   "url": "https://openalex.org/W1515422725",
+   "cited_by": 722,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "SUDS: automatic parallelization for raw processors",
    "function": "supports-claim",
    "split": "detailed",
@@ -112,6 +155,19 @@
    ],
    "evidence": "contexts",
    "commit": true
+  },
+  {
+   "title": "Integrating software caches with scratch pad memory",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Prasenjit Chakraborty, Preeti Ranjan Panda",
+   "url": "https://doi.org/10.1145/2380403.2380440",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
   },
   {
    "title": "Adaptive Scratch Pad Memory Management for Dynamic Behavior of Multimedia Applications",
@@ -241,6 +297,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Coupling compiler-enabled and conventional memory accessing for energy efficiency",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "ACM Transactions on Computer Systems",
+   "authors": "Raksit Ashok, Saurabh Chheda, Csaba Andras Moritz",
+   "url": "https://doi.org/10.1145/986533.986535",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Cool-Cache: A compiler-enabled energy efficient data caching framework for embedded/multimedia processors",
    "function": "detailed-citation",
    "split": "detailed",
@@ -286,6 +358,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "An energy-efficient adaptive hybrid cache",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "IEEE/ACM International Symposium on Low Power Electronics and Design",
+   "authors": "Jason Cong, Karthik Gururaj, Hui Huang et al.",
+   "url": "https://doi.org/10.1109/islped.2011.5993609",
+   "cited_by": 30,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
    "title": "DYNAMIC BINARY TRANSLATION FOR EMBEDDED SYSTEMS WITH SCRATCHPAD MEMORY",
    "function": "passing-citation",
    "split": "passing",
@@ -313,6 +401,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Minimizing inter-task interferences in scratch-pad memory usage for reducing the energy consumption of multi-task systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "L. Gauthier, T. Ishihara, Hideki Takase et al.",
+   "url": "https://doi.org/10.1145/1878921.1878945",
+   "cited_by": 17,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "DBDB: optimizing DMATransfer for the cell be architecture",
    "function": "passing-citation",
    "split": "passing",
@@ -337,6 +438,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Scratch-pad memory allocation without compiler support for java applications",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2007,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Nghi Nguyen, Ángel Manuel Gamaza Domínguez, Rajeev Barua",
+   "url": "https://doi.org/10.1145/1289881.1289899",
+   "cited_by": 19,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Memory allocation for embedded systems with a compile-time-unknown scratch-pad size",
@@ -369,14 +483,116 @@
   },
   {
    "title": "Efficient Heap Data Management on Software Managed Manycore Architectures",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2019,
    "venue": "International Conference on VLSI Design",
    "authors": "Jinn-Pean Lin, Jing Lü, Jian Cai et al.",
    "url": "https://doi.org/10.1109/vlsid.2019.00065",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "基于置换图的便笺存储器分配",
+   "function": "unknown",
+   "split": null,
+   "year": 2013,
+   "venue": "Scientia Sinica Informationis",
+   "authors": "XueJun YANG, Li WANG, HuaDong DAI",
+   "url": "https://doi.org/10.1360/zf2013-43-7-932",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Decoupled approaches to register and software controlled memory allocations. (Approches découplées aux problèmes d'allocations de registres et de mémoires locales)",
+   "function": "unknown",
+   "split": null,
+   "year": 2011,
+   "authors": "Boubacar Diouf",
+   "url": "https://doi.org/10.70675/99a3f74az999fz4999z87e4z324cadb9046e",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Hardware/software techniques for memory power optimizations in embedded processors.",
+   "function": "unknown",
+   "split": null,
+   "year": 2007,
+   "venue": "Deep Blue (University of Michigan)",
+   "authors": "Scott Mahlke, Rajiv Ravindran",
+   "url": "https://openalex.org/W2490560965",
+   "cited_by": 4,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Recursive function data allocation to scratch-pad memory",
+   "function": "unknown",
+   "split": null,
+   "year": 2007,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Ángel Manuel Gamaza Domínguez, Nghi Nguyen, Rajeev Barua",
+   "url": "https://doi.org/10.1145/1289881.1289897",
+   "cited_by": 24,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Cool-cache for hot multimedia",
+   "function": "unknown",
+   "split": null,
+   "year": 2005,
+   "venue": "Proceedings. 34th ACM/IEEE International Symposium on Microarchitecture. MICRO-34",
+   "authors": "Osman Ünsal, Roshini Ashok, Israel Koren et al.",
+   "url": "https://doi.org/10.1109/micro.2001.991125",
+   "cited_by": 14,
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Improving workload balance and code optimization in processor-in-memory systems",
+   "function": "unknown",
+   "split": null,
+   "year": 2002,
+   "venue": "Proceedings. Eighth International Conference on Parallel and Distributed Systems. ICPADS 2001",
+   "authors": "Slo‐Li Chu, Tsung-Chuan Huang, Lan-Chi Lee",
+   "url": "https://doi.org/10.1109/icpads.2001.934830",
+   "cited_by": 3,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A Software Framework for Supporting General Purpose Applications on Raw Computation Fabrics",
+   "function": "unknown",
+   "split": null,
+   "year": 2001,
+   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
+   "authors": "Matthew I. Frank, Walter Lee",
+   "url": "https://openalex.org/W2305929729",
+   "cited_by": 10,
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Heterogeneous memory management for embedded systems",
+   "function": "unknown",
+   "split": null,
+   "year": 2001,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Oren Avissar, Rajeev Barua, Dave Stewart",
+   "url": "https://doi.org/10.1145/502217.502223",
+   "cited_by": 79,
+   "evidence": "abstract"
   },
   {
    "title": "Scratchpad Management in Software Managed Manycore Architectures",
@@ -400,49 +616,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "基于置换图的便笺存储器分配",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Scientia Sinica Informationis",
-   "authors": "XueJun YANG, Li WANG, HuaDong DAI",
-   "url": "https://doi.org/10.1360/zf2013-43-7-932",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Integrating software caches with scratch pad memory",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Prasenjit Chakraborty, Preeti Ranjan Panda",
-   "url": "https://doi.org/10.1145/2380403.2380440",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An energy-efficient adaptive hybrid cache",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "IEEE/ACM International Symposium on Low Power Electronics and Design",
-   "authors": "Jason Cong, Karthik Gururaj, Hui Huang et al.",
-   "url": "https://doi.org/10.1109/islped.2011.5993609",
-   "cited_by": 30,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Decoupled approaches to register and software controlled memory allocations. (Approches découplées aux problèmes d'allocations de registres et de mémoires locales)",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "Boubacar Diouf",
-   "url": "https://doi.org/10.70675/99a3f74az999fz4999z87e4z324cadb9046e",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Scratchpad memory allocation for arrays in permutation graphs",
    "function": "unclassified",
    "split": null,
@@ -451,17 +624,6 @@
    "authors": "Li Wang, Xuejun Yang, Huadong Dai",
    "url": "https://doi.org/10.1007/s11432-011-4439-9",
    "cited_by": 9,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Minimizing inter-task interferences in scratch-pad memory usage for reducing the energy consumption of multi-task systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "L. Gauthier, T. Ishihara, Hideki Takase et al.",
-   "url": "https://doi.org/10.1145/1878921.1878945",
-   "cited_by": 17,
    "evidence": "title_only"
   },
   {
@@ -475,60 +637,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Hardware/software techniques for memory power optimizations in embedded processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Deep Blue (University of Michigan)",
-   "authors": "Rajiv A. Ravindran",
-   "url": "https://openalex.org/W2490560965",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Memory Systems: Cache, DRAM, Disk",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "authors": "B. Jacob, S. Ng, David T. Wang",
-   "url": "https://openalex.org/W1515422725",
-   "cited_by": 722,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Recursive function data allocation to scratch-pad memory",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Ángel Manuel Gamaza Domínguez, Nghi Nguyen, Rajeev Barua",
-   "url": "https://doi.org/10.1145/1289881.1289897",
-   "cited_by": 24,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Scratch-pad memory allocation without compiler support for java applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Nghi Nguyen, Ángel Manuel Gamaza Domínguez, Rajeev Barua",
-   "url": "https://doi.org/10.1145/1289881.1289899",
-   "cited_by": 19,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Cool-cache for hot multimedia",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "Proceedings. 34th ACM/IEEE International Symposium on Microarchitecture. MICRO-34",
-   "authors": "Osman Ünsal, Roshini Ashok, Israel Koren et al.",
-   "url": "https://doi.org/10.1109/micro.2001.991125",
-   "cited_by": 14,
-   "evidence": "title_only"
-  },
-  {
    "title": "An Analysis of Scalar Memory Accesses in Embedded and Multimedia Systems",
    "function": "unclassified",
    "split": null,
@@ -536,17 +644,6 @@
    "authors": "Osman Ünsal, Zhenlin Wang, Israel Koren et al.",
    "url": "https://doi.org/10.1007/978-1-4419-8987-1_13",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Coupling compiler-enabled and conventional memory accessing for energy efficiency",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "ACM Transactions on Computer Systems",
-   "authors": "Raksit Ashok, Saurabh Chheda, Csaba Andras Moritz",
-   "url": "https://doi.org/10.1145/986533.986535",
-   "cited_by": 2,
    "evidence": "title_only"
   },
   {
@@ -561,38 +658,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "An optimal memory allocation scheme for scratch-pad-based embedded systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2002,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Oren Avissar, Rajeev Barua, Dave Stewart",
-   "url": "https://doi.org/10.1145/581888.581891",
-   "cited_by": 327,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Cool-Mem",
-   "function": "unclassified",
-   "split": null,
-   "year": 2002,
-   "authors": "Raksit Ashok, Saurabh Chheda, Csaba Andras Moritz",
-   "url": "https://doi.org/10.1145/605397.605412",
-   "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Improving workload balance and code optimization in processor-in-memory systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2002,
-   "venue": "Proceedings. Eighth International Conference on Parallel and Distributed Systems. ICPADS 2001",
-   "authors": "Slo‐Li Chu, Tsung-Chuan Huang, Lan-Chi Lee",
-   "url": "https://doi.org/10.1109/icpads.2001.934830",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
    "title": "Memory Systems : Overview and Trends",
    "function": "unclassified",
    "split": null,
@@ -600,28 +665,6 @@
    "authors": "SaurabhChheda JeevanKumarChittamuru CsabaAndrasMoritz",
    "url": "https://www.semanticscholar.org/paper/a7e0e4845bd20f786421e14eaa2436c54ae4543e",
    "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Software Framework for Supporting General Purpose Applications on Raw Computation Fabrics",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "DSpace@MIT (Massachusetts Institute of Technology)",
-   "authors": "M. Frank, Walter Lee",
-   "url": "https://openalex.org/W2305929729",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Heterogeneous memory management for embedded systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Oren Avissar, Rajeev Barua, Dave Stewart",
-   "url": "https://doi.org/10.1145/502217.502223",
-   "cited_by": 79,
    "evidence": "title_only"
   },
   {

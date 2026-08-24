@@ -7,7 +7,7 @@
   "records_raw": 46,
   "works": 43,
   "commit": 6,
-  "judged": 32,
+  "judged": 36,
   "gscholar": null
  },
  "citations": [
@@ -266,6 +266,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Reinforcement Learning assisted Loop Distribution for Locality and Vectorization",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2022,
+   "venue": "Workshop on the LLVM Compiler Infrastructure in HPC",
+   "authors": "Shalini Jain, S. VenkataKeerthy, Rohit Aggarwal et al.",
+   "url": "https://doi.org/10.1109/llvm-hpc56686.2022.00006",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "A Synthesis-Aided Compiler for DSP Architectures (WiP Paper)",
    "function": "exemplifies",
    "split": "passing",
@@ -277,6 +290,23 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiler 2.0",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2020,
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": "Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/3372799.3397167",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "abstract",
+   "commit": true
   },
   {
    "title": "Vectorization for Digital Signal Processors via Equality Saturation Extended",
@@ -330,6 +360,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Qiwu: Exploiting Ciphertext-Level SIMD Parallelism in Homomorphic Encryption Programs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Zhongcheng Zhang, Ying Liu, Yuyang Zhang et al.",
+   "url": "https://doi.org/10.1145/3696443.3708917",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Retrofitting Control Flow Graphs in LLVM IR for Auto Vectorization",
    "function": "passing-citation",
    "split": "passing",
@@ -341,6 +384,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Scalar Interpolation: A Better Balance between Vector and Scalar Execution for SuperScalar Architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Reza Ghanbari, Henry Kao, João P. L. de Carvalho et al.",
+   "url": "https://doi.org/10.1145/3696443.3708950",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "A Tensor Compiler with Automatic Data Packing for Simple and Efficient Fully Homomorphic Encryption",
@@ -451,47 +507,31 @@
   },
   {
    "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2026,
    "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
    "authors": "Bilel Sefsaf, Abderraouf Dandani, Abdessamed Seddiki et al.",
    "url": "https://doi.org/10.48550/arxiv.2601.19367",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2026,
    "venue": "International Conference on Compiler Construction",
    "authors": "Abdessamed Seddiki, Arab Mohammed, Zakaria Hebbal et al.",
    "url": "https://doi.org/10.1145/3771775.3786269",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Qiwu: Exploiting Ciphertext-Level SIMD Parallelism in Homomorphic Encryption Programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Zhongcheng Zhang, Ying Liu, Yuyang Zhang et al.",
-   "url": "https://doi.org/10.1145/3696443.3708917",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Scalar Interpolation: A Better Balance between Vector and Scalar Execution for SuperScalar Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Reza Ghanbari, Henry Kao, João P. L. de Carvalho et al.",
-   "url": "https://doi.org/10.1145/3696443.3708950",
-   "cited_by": 2,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "The Strategic Random Search (SRS) – A new global optimizer for calibrating hydrological models",
@@ -516,17 +556,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Reinforcement Learning assisted Loop Distribution for Locality and Vectorization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2022,
-   "venue": "Workshop on the LLVM Compiler Infrastructure in HPC",
-   "authors": "Shalini Jain, S. VenkataKeerthy, Rohit Aggarwal et al.",
-   "url": "https://doi.org/10.1109/llvm-hpc56686.2022.00006",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
    "title": "PostSLP: Cross-Region Vectorization of Fully or Partially Vectorized Code",
    "function": "unclassified",
    "split": null,
@@ -536,18 +565,6 @@
    "url": "https://doi.org/10.1007/978-3-030-72789-5_2",
    "cited_by": 2,
    "evidence": "title_only"
-  },
-  {
-   "title": "Compiler 2.0",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-   "authors": "Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/3372799.3397167",
-   "cited_by": 2,
-   "evidence": "title_only",
-   "commit": true
   },
   {
    "title": "Vectorization cost modeling for NEON, AVX and SVE",

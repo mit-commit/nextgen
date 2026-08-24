@@ -7,7 +7,7 @@
   "records_raw": 174,
   "works": 146,
   "commit": 3,
-  "judged": 90,
+  "judged": 108,
   "gscholar": null
  },
  "citations": [
@@ -154,7 +154,8 @@
    "centrality": "peripheral",
    "confidence": "high",
    "flags": [
-    "own-group"
+    "own-group",
+    "polluted-contexts"
    ],
    "evidence": "contexts",
    "commit": true
@@ -171,6 +172,32 @@
    "centrality": "core",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "MIRAGE: Randomizing large chunk allocation via dynamic binary instrumentation",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2017,
+   "venue": "International Conference on Data Science in Cyberspace",
+   "authors": "Zhenghao Hu, Yuanyuan Zhang, Hui Wang et al.",
+   "url": "https://doi.org/10.1109/desec.2017.8073800",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "low",
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "RePEconstruct: reconstructing binaries with self-modifying code and import address table destruction",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "International Conference on Malicious and Unwanted Software",
+   "authors": "David Korczynski",
+   "url": "https://doi.org/10.1109/malware.2016.7888727",
+   "cited_by": 12,
+   "centrality": "core",
+   "confidence": "high",
+   "evidence": "abstract"
   },
   {
    "title": "Helium: lifting high-performance stencil kernels from stripped x86 binaries to halide DSL code",
@@ -227,6 +254,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "PROMPT: A Fast and Extensible Memory Profiling Framework",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "Proc. ACM Program. Lang.",
+   "authors": "Ziyang Xu, Yebin Chon, Yian Su et al.",
+   "url": "https://doi.org/10.1145/3649827",
+   "cited_by": 3,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "Optimising Dynamic Binary Modification Across ARM Microarchitectures",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2018,
+   "venue": "International Conference on Performance Engineering",
+   "authors": "Cosmin Gorgovan, Amanieu D'Antras, M. Luján",
+   "url": "https://doi.org/10.1145/3184407.3184425",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "Engineering Record and Replay for Deployability",
    "function": "baseline",
    "split": "detailed",
@@ -253,7 +309,38 @@
    "secondary": [
     "positions"
    ],
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
+  },
+  {
+   "title": "HALF: Process Hollowing Analysis Framework for Binary Programs with the Assistance of Kernel Modules",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "arXiv.org",
+   "authors": "Zhangbo Long, Letian Sha, Jiaye Pan et al.",
+   "url": "https://doi.org/10.48550/arxiv.2512.22043",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "baseline"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Techniques For Efficient Binary-Level Coverage Analysis",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2021,
+   "authors": "Ben Khadra, Mohamed Ben Ammar",
+   "url": "https://openalex.org/W3214078532",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
   },
   {
    "title": "Comprehensive Multiplatform Dynamic Program Analysis for Java and Android",
@@ -282,6 +369,38 @@
    "evidence": "contexts"
   },
   {
+   "title": "Application instrumentation for performance analysis and tuning with focus on energy efficiency",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2020,
+   "venue": "Concurrency and Computation Practice and Experience",
+   "authors": "Ondřej Vysocký, Lubomı́r Řı́ha, Andrea Bartolini",
+   "url": "https://doi.org/10.1002/cpe.5966",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "SoK",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2019,
+   "venue": "ACM Asia Conference on Computer and Communications Security",
+   "authors": "Daniele Cono D’Elia, Emilio Coppa, Simone Nicchi et al.",
+   "url": "https://doi.org/10.1145/3321705.3329819",
+   "cited_by": 50,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Automatically Detecting Variability Bugs Through Hybrid Control and Data Flow Analysis",
    "function": "supports-claim",
    "split": "detailed",
@@ -305,6 +424,9 @@
    "cited_by": 9,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -330,6 +452,9 @@
    "cited_by": 2,
    "centrality": "peripheral",
    "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -396,6 +521,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "Efficient Deterministic Replay through Dynamic Binary Translation",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2015,
+   "authors": "Piyus Kedia",
+   "url": "https://openalex.org/W2187165762",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
+  {
    "title": "WeXpose: Towards on-Line Dynamic Analysis of Web Attack Payloads using Just-In-Time Binary Modification",
    "function": "supports-claim",
    "split": "detailed",
@@ -432,6 +569,19 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Fast dynamic binary translation for the kernel",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "Symposium on Operating Systems Principles",
+   "authors": "Piyus Kedia, Sorav Bansal",
+   "url": "https://doi.org/10.1145/2517349.2522718",
+   "cited_by": 17,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract"
   },
   {
    "title": "QMSan: Efficiently Detecting Uninitialized Memory Errors During Fuzzing",
@@ -509,6 +659,9 @@
    "cited_by": 2,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -548,6 +701,9 @@
    "cited_by": 0,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -561,6 +717,9 @@
    "cited_by": 34,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -734,6 +893,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Engineering Record And Replay For Deployability: Extended Technical Report",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2017,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Robert O'Callahan, Chris Jones, Nathan Froyd et al.",
+   "url": "https://doi.org/10.48550/arxiv.1705.05937",
+   "cited_by": 19,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
   },
   {
    "title": "Malware Analysis and Privacy Policy Enforcement Techniques for Android Applications",
@@ -954,6 +1126,9 @@
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -996,6 +1171,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "AirTaint: Making Dynamic Taint Analysis Faster and Easier",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "IEEE Symposium on Security and Privacy",
+   "authors": "Qian Sang, Yanhao Wang, Yuwei Liu et al.",
+   "url": "https://doi.org/10.1109/sp54263.2024.00045",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Sidecar: Leveraging Debugging Extensions in Commodity Processors to Secure Software",
    "function": "passing-citation",
    "split": "passing",
@@ -1007,6 +1195,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Evaluating the Impact of Optimizations for Dynamic Binary Modification on 64-bit RISC-V",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2023,
+   "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
+   "authors": "John Alistair Kressel, Guillermo Callaghan, Cosmin Gorgovan et al.",
+   "url": "https://doi.org/10.1109/ispass57527.2023.00017",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Icicle: A Re-designed Emulator for Grey-Box Firmware Fuzzing",
@@ -1163,6 +1364,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Instrumentation and preservation of extra-functional properties of simulink models",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Spring Simulation Multiconference",
+   "authors": "Joachim Denil, Hany Kashif, Pansy Arafa et al.",
+   "url": "https://doi.org/10.5555/2872965.2872972",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Optimizing binary translation of dynamically generated code",
    "function": "passing-citation",
    "split": "passing",
@@ -1179,6 +1393,57 @@
    "evidence": "contexts"
   },
   {
+   "title": "PEMU",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Junyuan Zeng, Yangchun Fu, Zhiqiang Lin",
+   "url": "https://doi.org/10.1145/2817817.2731201",
+   "cited_by": 31,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "DIME: time-aware dynamic binary instrumentation using rate-based resource allocation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Embedded Software",
+   "authors": "Pansy Arafa, Hany Kashif, Sebastian Fischmeister",
+   "url": "https://doi.org/10.5555/2555754.2555779",
+   "cited_by": 16,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Program monitoring based on automaton simulation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Wuhan University Journal of Natural Sciences",
+   "authors": "Xiang Ling, Bo Huang, Guoqing Wu",
+   "url": "https://doi.org/10.1007/s11859-013-0901-4",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "abstract+contexts"
+  },
+  {
+   "title": "Versatile Binary-level Concolic Testing",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2000,
+   "authors": "Bo Chen",
+   "url": "https://doi.org/10.15760/etd.6994",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "XPROF: A N O PEN , S CALABLE , AND E XTENSIBLE P ROFILING S YSTEM FOR THE M ODERN ML S TACK",
    "function": "passing-citation",
    "split": "passing",
@@ -1188,6 +1453,252 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Fast Durably Linearizable Data Structures for Free",
+   "function": "unknown",
+   "split": null,
+   "year": 2025,
+   "venue": "ApPLIED",
+   "authors": "S. F. Egorov, Gregory Chockler, Brijesh Dongol et al.",
+   "url": "https://doi.org/10.1145/3743642.3743651",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Machine learning-based cache miss prediction",
+   "function": "unknown",
+   "split": null,
+   "year": 2025,
+   "venue": "International Journal on Software Tools for Technology Transfer",
+   "authors": "Edin Jelačić, Cristina Seceleanu, Ning Xiong et al.",
+   "url": "https://doi.org/10.1007/s10009-025-00800-6",
+   "cited_by": 2,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Overhead Comparison of Instrumentation Frameworks",
+   "function": "unknown",
+   "split": null,
+   "year": 2024,
+   "venue": "International Conference on Performance Engineering",
+   "authors": "David Georg Reichelt, Lubomír Bulej, Reiner Jung et al.",
+   "url": "https://doi.org/10.1145/3629527.3652269",
+   "cited_by": 8,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "TAO: Re-Thinking DL-based Microarchitecture Simulation",
+   "function": "unknown",
+   "split": null,
+   "year": 2024,
+   "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems",
+   "authors": "Santosh Pandey, Amir Yazdanbakhsh, Hang Liu",
+   "url": "https://doi.org/10.1145/3656012",
+   "cited_by": 6,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Vamos: Middleware for best-effort third-party monitoring",
+   "function": "unknown",
+   "split": null,
+   "year": 2024,
+   "venue": "Science of Computer Programming",
+   "authors": "Marek Chalupa, Fabian Muehlboeck, Stefanie Muroya Lei et al.",
+   "url": "https://doi.org/10.1016/j.scico.2024.103212",
+   "cited_by": 5,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Fundamental Approaches to Software Engineering",
+   "function": "unknown",
+   "split": null,
+   "year": 2023,
+   "venue": "Lecture notes in computer science",
+   "authors": "Leen Lambers, Sebastián Uchitel",
+   "url": "https://doi.org/10.1007/978-3-031-30826-0",
+   "cited_by": 3,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "3PO: Programmed Far-Memory Prefetching for Oblivious Applications",
+   "function": "unknown",
+   "split": null,
+   "year": 2022,
+   "venue": "arXiv.org",
+   "authors": "Christopher Branner-Augmon, Narek S. Galstyan, Sam Kumar et al.",
+   "url": "https://doi.org/10.48550/arxiv.2207.07688",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Features of fuzzing network interfaces without source codes",
+   "function": "unknown",
+   "split": null,
+   "year": 2021,
+   "venue": "Proceedings of the Institute for System Programming of RAS",
+   "authors": "Ivan Vladimirovich Sharkov, V. A. Padaryan, П.В. Хенкин",
+   "url": "https://doi.org/10.15514/ispras-2021-33(4)-15",
+   "cited_by": 3,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Identifying Bugs in Make and JVM-Oriented Builds",
+   "function": "unknown",
+   "split": null,
+   "year": 2020,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Thodoris Sotiropoulos, Stefanos Chaliasos, Dimitris Mitropoulos et al.",
+   "url": "https://doi.org/10.48550/arxiv.2005.06881",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "On the Dissection of Evasive Malware",
+   "function": "unknown",
+   "split": null,
+   "year": 2020,
+   "venue": "IEEE Transactions on Information Forensics and Security",
+   "authors": "Daniele Cono D’Elia, Emilio Coppa, Federico Palmaro et al.",
+   "url": "https://doi.org/10.1109/tifs.2020.2976559",
+   "cited_by": 59,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Parallel Processing and Applied Mathematics: 13th International Conference, PPAM 2019, Bialystok, Poland, September 8–11, 2019, Revised Selected Papers, Part II",
+   "function": "unknown",
+   "split": null,
+   "year": 2020,
+   "venue": "Parallel Processing and Applied Mathematics",
+   "authors": "Roman Wyrzykowski, E. Deelman, Jack Dongarra et al.",
+   "url": "https://doi.org/10.1007/978-3-030-43222-5",
+   "cited_by": 3,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Reverse Engineering of an Obfuscated Binary",
+   "function": "unknown",
+   "split": null,
+   "year": 2020,
+   "authors": "Kaishuo Yang",
+   "url": "https://doi.org/10.26686/wgtn.17149193.v1",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation using Deep Neural Networks",
+   "function": "unknown",
+   "split": null,
+   "year": 2018,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Charith Mendis, Alex Renda, Saman Amarasinghe et al.",
+   "url": "https://doi.org/10.48550/arxiv.1808.07412",
+   "cited_by": 188,
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "abstract",
+   "commit": true
+  },
+  {
+   "title": "Transparent System Introspection in Support of Analyzing Stealthy Malware",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "authors": "Kevin Leach",
+   "url": "https://doi.org/10.18130/v37027",
+   "cited_by": 0,
+   "evidence": "abstract"
+  },
+  {
+   "title": "VoiDbg: Projeto e Implementação de um Debugger Transparente para Inspeção de Aplicações Protegidas",
+   "function": "unknown",
+   "split": null,
+   "year": 2016,
+   "venue": "Anais do XVI Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSeg 2016)",
+   "authors": "Marcus Botacin, Paulo Lício de Geus, André Grégio",
+   "url": "https://doi.org/10.5753/sbseg.2016.19314",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Using Hardware Isolated Execution Environments for Securing Systems",
+   "function": "unknown",
+   "split": null,
+   "year": 2015,
+   "venue": "Open MIND",
+   "authors": "Fengwei Zhang",
+   "url": "https://doi.org/10.13021/mars/4469",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Efficient Hypervisor Based Malware Detection",
+   "function": "unknown",
+   "split": null,
+   "year": 2014,
+   "venue": "KiltHub Repository",
+   "authors": "Peter Klemperer",
+   "url": "https://doi.org/10.1184/r1/6716180",
+   "cited_by": 3,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "SPIRE",
+   "function": "unknown",
+   "split": null,
+   "year": 2013,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Ning Jia, Chun Yang, Jing Wang et al.",
+   "url": "https://doi.org/10.1145/2517326.2451516",
+   "cited_by": 19,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Leveraging Copy-and-Patch JIT for Low-Overhead Dynamic Program Analysis",
@@ -1212,17 +1723,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Fast Durably Linearizable Data Structures for Free",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "ApPLIED",
-   "authors": "S. F. Egorov, Gregory Chockler, Brijesh Dongol et al.",
-   "url": "https://doi.org/10.1145/3743642.3743651",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "HALF: Hollowing Analysis Framework for Binary Programs with Kernel Module Assistance",
    "function": "unclassified",
    "split": null,
@@ -1230,94 +1730,6 @@
    "authors": "Zhangbo Long, Letian Sha, Jiaye Pan et al.",
    "url": "https://www.semanticscholar.org/paper/97d8f25639df4c367206a6c166700d41f59d3415",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "HALF: Process Hollowing Analysis Framework for Binary Programs with the Assistance of Kernel Modules",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "arXiv.org",
-   "authors": "Zhangbo Long, Letian Sha, Jiaye Pan et al.",
-   "url": "https://doi.org/10.48550/arxiv.2512.22043",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Machine learning-based cache miss prediction",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "International Journal on Software Tools for Technology Transfer",
-   "authors": "Edin Jelačić, Cristina Seceleanu, Ning Xiong et al.",
-   "url": "https://doi.org/10.1007/s10009-025-00800-6",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "AirTaint: Making Dynamic Taint Analysis Faster and Easier",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "IEEE Symposium on Security and Privacy",
-   "authors": "Qian Sang, Yanhao Wang, Yuwei Liu et al.",
-   "url": "https://doi.org/10.1109/sp54263.2024.00045",
-   "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Overhead Comparison of Instrumentation Frameworks",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "International Conference on Performance Engineering",
-   "authors": "David Georg Reichelt, Lubomír Bulej, Reiner Jung et al.",
-   "url": "https://doi.org/10.1145/3629527.3652269",
-   "cited_by": 8,
-   "evidence": "title_only"
-  },
-  {
-   "title": "TAO: Re-Thinking DL-based Microarchitecture Simulation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems",
-   "authors": "Santosh Pandey, Amir Yazdanbakhsh, Hang Liu",
-   "url": "https://doi.org/10.1145/3656012",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Vamos: Middleware for best-effort third-party monitoring",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "Science of Computer Programming",
-   "authors": "Marek Chalupa, Fabian Muehlboeck, Stefanie Muroya Lei et al.",
-   "url": "https://doi.org/10.1016/j.scico.2024.103212",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Evaluating the Impact of Optimizations for Dynamic Binary Modification on 64-bit RISC-V",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "IEEE International Symposium on Performance Analysis of Systems and Software",
-   "authors": "John Alistair Kressel, Guillermo Callaghan, Cosmin Gorgovan et al.",
-   "url": "https://doi.org/10.1109/ispass57527.2023.00017",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Fundamental Approaches to Software Engineering",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "Lecture notes in computer science",
-   "authors": "Leen Lambers, Sebastián Uchitel",
-   "url": "https://doi.org/10.1007/978-3-031-30826-0",
-   "cited_by": 3,
    "evidence": "title_only"
   },
   {
@@ -1331,17 +1743,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "PROMPT: A Fast and Extensible Memory Profiling Framework",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "Proc. ACM Program. Lang.",
-   "authors": "Ziyang Xu, Yebin Chon, Yian Su et al.",
-   "url": "https://doi.org/10.1145/3649827",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
    "title": "Towards Diagnosing Accurately the Performance Bottleneck of Software-Based Network Function Implementation",
    "function": "unclassified",
    "split": null,
@@ -1349,17 +1750,6 @@
    "venue": "Lecture notes in computer science",
    "authors": "Ru Jia, Heng Pan, Haiyang Jiang et al.",
    "url": "https://doi.org/10.1007/978-3-031-28486-1_11",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "3PO: Programmed Far-Memory Prefetching for Oblivious Applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2022,
-   "venue": "arXiv.org",
-   "authors": "Christopher Branner-Augmon, Narek S. Galstyan, Sam Kumar et al.",
-   "url": "https://doi.org/10.48550/arxiv.2207.07688",
    "cited_by": 1,
    "evidence": "title_only"
   },
@@ -1386,38 +1776,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Features of fuzzing network interfaces without source codes",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "Proceedings of the Institute for System Programming of RAS",
-   "authors": "Ivan Vladimirovich Sharkov, V. A. Padaryan, П.В. Хенкин",
-   "url": "https://doi.org/10.15514/ispras-2021-33(4)-15",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Techniques For Efficient Binary-Level Coverage Analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "authors": "Ben Khadra, Mohamed Ben Ammar",
-   "url": "https://openalex.org/W3214078532",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Application instrumentation for performance analysis and tuning with focus on energy efficiency",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "Concurrency and Computation Practice and Experience",
-   "authors": "Ondřej Vysocký, Lubomı́r Řı́ha, Andrea Bartolini",
-   "url": "https://doi.org/10.1002/cpe.5966",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
    "title": "Application-driven Cache-Aware Roofline Model",
    "function": "unclassified",
    "split": null,
@@ -1426,49 +1784,6 @@
    "authors": "Diogo Marques, Aleksandar Ilić, Zakhar A. Matveev et al.",
    "url": "https://doi.org/10.1016/j.future.2020.01.044",
    "cited_by": 18,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Identifying Bugs in Make and JVM-Oriented Builds",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Thodoris Sotiropoulos, Stefanos Chaliasos, Dimitris Mitropoulos et al.",
-   "url": "https://doi.org/10.48550/arxiv.2005.06881",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "On the Dissection of Evasive Malware",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "IEEE Transactions on Information Forensics and Security",
-   "authors": "Daniele Cono D’Elia, Emilio Coppa, Federico Palmaro et al.",
-   "url": "https://doi.org/10.1109/tifs.2020.2976559",
-   "cited_by": 59,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Parallel Processing and Applied Mathematics: 13th International Conference, PPAM 2019, Bialystok, Poland, September 8–11, 2019, Revised Selected Papers, Part II",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "Parallel Processing and Applied Mathematics",
-   "authors": "Roman Wyrzykowski, E. Deelman, Jack Dongarra et al.",
-   "url": "https://doi.org/10.1007/978-3-030-43222-5",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reverse Engineering of an Obfuscated Binary",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "authors": "Kaishuo Yang",
-   "url": "https://doi.org/10.26686/wgtn.17149193.v1",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {
@@ -1494,17 +1809,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "SoK",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "ACM Asia Conference on Computer and Communications Security",
-   "authors": "Daniele Cono D’Elia, Emilio Coppa, Simone Nicchi et al.",
-   "url": "https://doi.org/10.1145/3321705.3329819",
-   "cited_by": 50,
-   "evidence": "title_only"
-  },
-  {
    "title": "A Vision for Enhancing Security of Cryptography in Executables",
    "function": "unclassified",
    "split": null,
@@ -1527,29 +1831,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation using Deep Neural Networks",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Charith Mendis, Alex Renda, Saman Amarasinghe et al.",
-   "url": "https://doi.org/10.48550/arxiv.1808.07412",
-   "cited_by": 188,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "Optimising Dynamic Binary Modification Across ARM Microarchitectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "International Conference on Performance Engineering",
-   "authors": "Cosmin Gorgovan, Amanieu D'Antras, M. Luján",
-   "url": "https://doi.org/10.1145/3184407.3184425",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "Unix, Plan 9 and the Lurking Smalltalk",
    "function": "unclassified",
    "split": null,
@@ -1561,34 +1842,12 @@
    "evidence": "title_only"
   },
   {
-   "title": "Engineering Record And Replay For Deployability: Extended Technical Report",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Robert O'Callahan, Chris Jones, Nathan Froyd et al.",
-   "url": "https://doi.org/10.48550/arxiv.1705.05937",
-   "cited_by": 19,
-   "evidence": "title_only"
-  },
-  {
    "title": "Low overhead dynamic binary translation for ARM",
    "function": "unclassified",
    "split": null,
    "year": 2017,
    "authors": "Bernard D'Antras",
    "url": "https://www.semanticscholar.org/paper/12ec12d40fe821797d4e36440b62410dc62e4155",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "MIRAGE: Randomizing large chunk allocation via dynamic binary instrumentation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "International Conference on Data Science in Cyberspace",
-   "authors": "Zhenghao Hu, Yuanyuan Zhang, Hui Wang et al.",
-   "url": "https://doi.org/10.1109/desec.2017.8073800",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -1612,38 +1871,6 @@
    "authors": "Fatih Kılıç, Hannes Laner, Claudia Eckert",
    "url": "https://doi.org/10.1007/978-3-319-38898-4_27",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "RePEconstruct: reconstructing binaries with self-modifying code and import address table destruction",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "International Conference on Malicious and Unwanted Software",
-   "authors": "David Korczynski",
-   "url": "https://doi.org/10.1109/malware.2016.7888727",
-   "cited_by": 12,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Transparent System Introspection in Support of Analyzing Stealthy Malware",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "authors": "Kevin Leach",
-   "url": "https://doi.org/10.18130/v37027",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "VoiDbg: Projeto e Implementação de um Debugger Transparente para Inspeção de Aplicações Protegidas",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "Anais do XVI Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSeg 2016)",
-   "authors": "Marcus Botacin, Paulo Lício de Geus, André Grégio",
-   "url": "https://doi.org/10.5753/sbseg.2016.19314",
-   "cited_by": 1,
    "evidence": "title_only"
   },
   {
@@ -1678,38 +1905,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Efficient Deterministic Replay through Dynamic Binary Translation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "authors": "Shashi Khosla",
-   "url": "https://openalex.org/W2187165762",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Instrumentation and preservation of extra-functional properties of simulink models",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Spring Simulation Multiconference",
-   "authors": "Joachim Denil, Hany Kashif, Pansy Arafa et al.",
-   "url": "https://doi.org/10.5555/2872965.2872972",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
-   "title": "PEMU",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Junyuan Zeng, Yangchun Fu, Zhiqiang Lin",
-   "url": "https://doi.org/10.1145/2817817.2731201",
-   "cited_by": 31,
-   "evidence": "title_only"
-  },
-  {
    "title": "SUDUTA: Script UAF Detection Using Taint Analysis",
    "function": "unclassified",
    "split": null,
@@ -1717,82 +1912,6 @@
    "venue": "Lecture notes in computer science",
    "authors": "John Galea, Mark Vella",
    "url": "https://doi.org/10.1007/978-3-319-24858-5_9",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Using Hardware Isolated Execution Environments for Securing Systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Open MIND",
-   "authors": "Fengwei Zhang",
-   "url": "https://doi.org/10.13021/mars/4469",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Efficient Hypervisor Based Malware Detection",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "KiltHub Repository",
-   "authors": "Peter F. Klemperer",
-   "url": "https://doi.org/10.1184/r1/6716180.v1",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "DIME: time-aware dynamic binary instrumentation using rate-based resource allocation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Embedded Software",
-   "authors": "Pansy Arafa, Hany Kashif, Sebastian Fischmeister",
-   "url": "https://doi.org/10.5555/2555754.2555779",
-   "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Fast dynamic binary translation for the kernel",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Symposium on Operating Systems Principles",
-   "authors": "Piyus Kedia, Sorav Bansal",
-   "url": "https://doi.org/10.1145/2517349.2522718",
-   "cited_by": 17,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Program monitoring based on automaton simulation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Wuhan University Journal of Natural Sciences",
-   "authors": "Xiang Ling, Bo Huang, Guoqing Wu",
-   "url": "https://doi.org/10.1007/s11859-013-0901-4",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "SPIRE",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Ning Jia, Chun Yang, Jing Wang et al.",
-   "url": "https://doi.org/10.1145/2517326.2451516",
-   "cited_by": 19,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Versatile Binary-level Concolic Testing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2000,
-   "authors": "Bo Chen",
-   "url": "https://doi.org/10.15760/etd.6994",
    "cited_by": 1,
    "evidence": "title_only"
   }

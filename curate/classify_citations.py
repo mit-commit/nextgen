@@ -455,6 +455,9 @@ def parse_record(text):
     otherwise span both objects and the prose between them."""
     text = (text or '').strip()
     text = re.sub(r'^```(?:json)?\s*|\s*```$', '', text)
+    # the model occasionally writes a bareword confidence value
+    # (`"confidence": low`) instead of a quoted string -- not valid JSON.
+    text = re.sub(r'("confidence"\s*:\s*)(low|medium|high)\b', r'\1"\2"', text)
     end = text.rfind('}')
     if end < 0:
         raise ValueError('no JSON object in the response')
@@ -493,6 +496,8 @@ def repair(record):
         record = {**record, 'secondary': secondary, 'flags': flags}
     if 'anchored' not in record:
         record = {**record, 'anchored': 'none'}
+    if 'flags' not in record:
+        record = {**record, 'flags': []}
     return record
 
 

@@ -7,10 +7,23 @@
   "records_raw": 113,
   "works": 82,
   "commit": 5,
-  "judged": 47,
+  "judged": 53,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Early Periodic Register Allocation on ILP Processors",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "Parallel Processing Letters",
+   "authors": "Sid‐Ahmed‐Ali Touati, Christine Eisenbeis",
+   "url": "https://doi.org/10.1142/s012962640400188x",
+   "cited_by": 25,
+   "centrality": "core",
+   "confidence": "medium",
+   "evidence": "abstract"
+  },
   {
    "title": "Efficient Method for Periodic Task Scheduling with Storage Requirement Minimization",
    "function": "adopts-idea",
@@ -23,6 +36,35 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Agentic Auto-Scheduling: An Experimental Study of LLM-Guided Loop Optimization",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Massinissa Merouani, Islem Kara Bernou, Riyadh Baghdadi",
+   "url": "https://doi.org/10.1109/pact65351.2025.00027",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
+   "title": "Automatic Storage Optimization for Arrays",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "ACM Transactions on Programming Languages and Systems",
+   "authors": "Somashekaracharya G. Bhaskaracharya, Uday Bondhugula, Albert Cohen",
+   "url": "https://doi.org/10.1145/2845078",
+   "cited_by": 8,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Memory Allocations for Tiled Uniform Dependence Programs",
@@ -336,6 +378,19 @@
    "commit": true
   },
   {
+   "title": "PCOT: Cache Oblivious Tiling of Polyhedral Programs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "arXiv (Cornell University)",
+   "authors": "Waruna Ranasinghe, Nirmal Prajapati, Tomofumi Yuki et al.",
+   "url": "https://doi.org/10.48550/arxiv.1802.00166",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Tiramisu : A Polyhedral Compiler with A Scheduling Language for Targeting High Performance Systems Riyadh",
    "function": "passing-citation",
    "split": "passing",
@@ -480,6 +535,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Elimination of Memory-Based Dependences for Loop-Nest Optimization and Parallelization: Evaluation of a Revised Violated Dependence Analysis Method on a Three-Address Code Polyhedral Compiler",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+   "authors": "Konrad Trifunović, Albert Cohen, Razya Ladelski et al.",
+   "url": "https://openalex.org/W2338742645",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Data locality and parallelism optimization using a constraint-based approach",
    "function": "passing-citation",
    "split": "passing",
@@ -543,6 +611,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "Effective automatic parallelization and locality optimization using the polyhedral model",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2008,
+   "authors": "P. Sadayappan, Uday Bondhugula",
+   "url": "https://openalex.org/W2332864379",
+   "cited_by": 69,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "abstract"
+  },
+  {
    "title": "Periodic register saturation in innermost loops",
    "function": "passing-citation",
    "split": "passing",
@@ -566,6 +646,9 @@
    "cited_by": 22,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -579,6 +662,9 @@
    "cited_by": 3,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -592,20 +678,26 @@
    "cited_by": 8,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
-   "title": "Improving data locality by array contraction",
+   "title": "Compiling for memory emergency",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2004,
-   "venue": "IEEE transactions on computers",
-   "authors": "Yonghong Song, Rong-Chang Xu, Cheng Wang et al.",
-   "url": "https://doi.org/10.1109/tc.2004.62",
-   "cited_by": 22,
+   "year": 2005,
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": "Mahmut Kandemir, Guangyu Chen, I. Kadayif",
+   "url": "https://doi.org/10.1145/1065910.1065941",
+   "cited_by": 0,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "An access regularity criterion and regularity improvement heuristics for data transfer optimization by global loop transformations",
@@ -618,6 +710,9 @@
    "cited_by": 8,
    "centrality": "peripheral",
    "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
    "evidence": "contexts"
   },
   {
@@ -651,6 +746,101 @@
    "commit": true
   },
   {
+   "title": "A Reinforcement Learning Environment for Automatic Code Optimization in the MLIR Compiler",
+   "function": "unknown",
+   "split": null,
+   "year": 2026,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Mohammed Tirichine, Nassim Ameur, Nazim Bendib et al.",
+   "url": "https://doi.org/10.1109/cgo68049.2026.11394838",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
+   "function": "unknown",
+   "split": null,
+   "year": 2026,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Bilel Sefsaf, Abderraouf Dandani, Abdessamed Seddiki et al.",
+   "url": "https://doi.org/10.48550/arxiv.2601.19367",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption",
+   "function": "unknown",
+   "split": null,
+   "year": 2026,
+   "venue": "International Conference on Compiler Construction",
+   "authors": "Abdessamed Seddiki, Arab Mohammed, Zakaria Hebbal et al.",
+   "url": "https://doi.org/10.1145/3771775.3786269",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A Data-driven Analysis of Code Optimizations",
+   "function": "unknown",
+   "split": null,
+   "year": 2025,
+   "venue": "ACS/IEEE International Conference on Computer Systems and Applications",
+   "authors": "Yacine Hakimi, Riyadh Baghdadi",
+   "url": "https://doi.org/10.1109/aiccsa66935.2025.11315210",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Dependence-Driven, Scalable Quantum Circuit Mapping with Affine Abstractions",
+   "function": "unknown",
+   "split": null,
+   "year": 2025,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Marouane Benbetka, Merwan Bekkar, Riyadh Baghdadi et al.",
+   "url": "https://doi.org/10.1109/cgo68049.2026.11394841",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A Strategy for High Performance in Computational Fluid Dynamics",
+   "function": "unknown",
+   "split": null,
+   "year": 2013,
+   "venue": "University of Minnesota Digital Conservancy (University of Minnesota)",
+   "authors": "Jagan Jayaraj",
+   "url": "https://openalex.org/W1553808293",
+   "cited_by": 12,
+   "evidence": "abstract"
+  },
+  {
+   "title": "Improved loop tiling based on the removal of spurious false dependences",
+   "function": "unknown",
+   "split": null,
+   "year": 2013,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Riyadh Baghdadi, Albert Cohen, Sven Verdoolaege et al.",
+   "url": "https://doi.org/10.1145/2400682.2400711",
+   "cited_by": 13,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
    "title": "Proximity Analysis of Social network using skip graph",
    "function": "unknown",
    "split": null,
@@ -662,6 +852,20 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "EFFICIENT SEARCH-BASED STRATEGIES FOR POLYHEDRAL COMPILATION: ALGORITHMS AND EXPERIENCE IN A PRODUCTION COMPILER",
+   "function": "unknown",
+   "split": null,
+   "year": 2011,
+   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+   "authors": "Konrad Trifunović",
+   "url": "https://openalex.org/W17913278",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
    "title": "Trading Off Memory For Parallelism Quality",
@@ -677,114 +881,112 @@
    "evidence": "contexts"
   },
   {
-   "title": "A Reinforcement Learning Environment for Automatic Code Optimization in the MLIR Compiler",
-   "function": "unclassified",
+   "title": "Reducing memory requirements of resource-constrained applications",
+   "function": "unknown",
    "split": null,
-   "year": 2026,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Mohammed Tirichine, Nassim Ameur, Nazim Bendib et al.",
-   "url": "https://doi.org/10.1109/cgo68049.2026.11394838",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2026,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Bilel Sefsaf, Abderraouf Dandani, Abdessamed Seddiki et al.",
-   "url": "https://doi.org/10.48550/arxiv.2601.19367",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption",
-   "function": "unclassified",
-   "split": null,
-   "year": 2026,
-   "venue": "International Conference on Compiler Construction",
-   "authors": "Abdessamed Seddiki, Arab Mohammed, Zakaria Hebbal et al.",
-   "url": "https://doi.org/10.1145/3771775.3786269",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Data-driven Analysis of Code Optimizations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "ACS/IEEE International Conference on Computer Systems and Applications",
-   "authors": "Yacine Hakimi, Riyadh Baghdadi",
-   "url": "https://doi.org/10.1109/aiccsa66935.2025.11315210",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Agentic Auto-Scheduling: An Experimental Study of LLM-Guided Loop Optimization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Massinissa Merouani, Islem Kara Bernou, Riyadh Baghdadi",
-   "url": "https://doi.org/10.1109/pact65351.2025.00027",
+   "year": 2009,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Priya Unnikrishnan, G. Chen, Mahmut Kandemir et al.",
+   "url": "https://doi.org/10.1145/1509288.1509289",
    "cited_by": 1,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "Dependence-Driven, Scalable Quantum Circuit Mapping with Affine Abstractions",
-   "function": "unclassified",
+   "title": "Trade-offs in loop transformations",
+   "function": "unknown",
    "split": null,
-   "year": 2025,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Marouane Benbetka, Merwan Bekkar, Riyadh Baghdadi et al.",
-   "url": "https://doi.org/10.1109/cgo68049.2026.11394841",
+   "year": 2009,
+   "venue": "ACM Transactions on Design Automation of Electronic Systems",
+   "authors": "Martin Palkovič, Francky Catthoor, Henk Corporaal",
+   "url": "https://doi.org/10.1145/1497561.1497565",
+   "cited_by": 17,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "A domain specific interconnect for reconfigurable computing",
+   "function": "unknown",
+   "split": null,
+   "year": 2008,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Sanjay Rajopadhye, Gautam Gupta, Lakshminarayanan Renganarayana",
+   "url": "https://doi.org/10.1145/1379023.1375669",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
+  },
+  {
+   "title": "Beyond shared memory loop parallelism in the polyhedral model",
+   "function": "unknown",
+   "split": null,
+   "year": 2007,
+   "venue": "Digital Collections of Colorado (Colorado State University)",
+   "authors": "Tomofumi Yuki, Rajopadhye, Sanjay, Böhm, Wim et al.",
+   "url": "https://doi.org/10.25675/3.023296",
    "cited_by": 0,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "PCOT: Cache Oblivious Tiling of Polyhedral Programs",
-   "function": "unclassified",
+   "title": "Loop Optimization using Hierarchical Compilation and Kernel Decomposition",
+   "function": "unknown",
    "split": null,
-   "year": 2018,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Waruna Ranasinghe, Nirmal Prajapati, Tomofumi Yuki et al.",
-   "url": "https://doi.org/10.48550/arxiv.1802.00166",
-   "cited_by": 2,
-   "evidence": "title_only"
+   "year": 2007,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Denis Barthou, Sébastien Donadio, Patrick Carribault et al.",
+   "url": "https://doi.org/10.1109/cgo.2007.22",
+   "cited_by": 9,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "Automatic Storage Optimization for Arrays",
-   "function": "unclassified",
+   "title": "Compiler-directed selective data protection against soft errors",
+   "function": "unknown",
    "split": null,
-   "year": 2016,
-   "venue": "ACM Transactions on Programming Languages and Systems",
-   "authors": "Somashekaracharya G. Bhaskaracharya, Uday Bondhugula, Albert Cohen",
-   "url": "https://doi.org/10.1145/2845078",
-   "cited_by": 8,
-   "evidence": "title_only"
+   "year": 2005,
+   "venue": "Proceedings of the ASP-DAC 2005. Asia and South Pacific Design Automation Conference, 2005.",
+   "authors": "Gong Chen, Mahmut Kandemir, M.J. Irwin et al.",
+   "url": "https://doi.org/10.1145/1120725.1121000",
+   "cited_by": 18,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract"
   },
   {
-   "title": "A Strategy for High Performance in Computational Fluid Dynamics",
-   "function": "unclassified",
+   "title": "Automatic Parallelization of Loop Programs for Distributed Memory Architectures",
+   "function": "unknown",
    "split": null,
-   "year": 2013,
-   "venue": "University of Minnesota Digital Conservancy (University of Minnesota)",
-   "authors": "J. Jayaraj",
-   "url": "https://openalex.org/W1553808293",
-   "cited_by": 12,
-   "evidence": "title_only"
+   "year": 2004,
+   "authors": "Martin Griebl",
+   "url": "https://openalex.org/W2142655718",
+   "cited_by": 142,
+   "evidence": "abstract"
   },
   {
-   "title": "Improved loop tiling based on the removal of spurious false dependences",
-   "function": "unclassified",
+   "title": "Improving data locality by array contraction",
+   "function": "unknown",
    "split": null,
-   "year": 2013,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Riyadh Baghdadi, Albert Cohen, Sven Verdoolaege et al.",
-   "url": "https://doi.org/10.1145/2400682.2400711",
-   "cited_by": 13,
-   "evidence": "title_only"
+   "year": 2004,
+   "venue": "IEEE Transactions on Computers",
+   "authors": "Yonghong Song, Rong Xu, Cheng Wang et al.",
+   "url": "https://doi.org/10.1109/tc.2004.62",
+   "cited_by": 22,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "abstract+contexts"
   },
   {
    "title": "Compilation optimisante pour processeurs extensibles",
@@ -807,28 +1009,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "EFFICIENT SEARCH-BASED STRATEGIES FOR POLYHEDRAL COMPILATION: ALGORITHMS AND EXPERIENCE IN A PRODUCTION COMPILER",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
-   "authors": "Konrad Trifunović",
-   "url": "https://openalex.org/W17913278",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Elimination of Memory-Based Dependences for Loop-Nest Optimization and Parallelization: Evaluation of a Revised Violated Dependence Analysis Method on a Three-Address Code Polyhedral Compiler",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
-   "authors": "Konrad Trifunović, Albert Cohen, Razya Ladelski et al.",
-   "url": "https://openalex.org/W2338742645",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "Design of Image Processing Embedded Systems Using Multidimensional Data Flow",
    "function": "unclassified",
    "split": null,
@@ -846,60 +1026,6 @@
    "year": 2010,
    "authors": "Joachim Keinert, Jürgen Teich",
    "url": "https://doi.org/10.1007/978-1-4419-7182-1_3",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reducing memory requirements of resource-constrained applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Priya Unnikrishnan, G. Chen, Mahmut Kandemir et al.",
-   "url": "https://doi.org/10.1145/1509288.1509289",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Trade-offs in loop transformations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "ACM Transactions on Design Automation of Electronic Systems",
-   "authors": "Martin Palkovič, Francky Catthoor, Henk Corporaal",
-   "url": "https://doi.org/10.1145/1497561.1497565",
-   "cited_by": 17,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A domain specific interconnect for reconfigurable computing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Sanjay Rajopadhye, Gautam Gupta, Lakshminarayanan Renganarayana",
-   "url": "https://doi.org/10.1145/1379023.1375669",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Effective automatic parallelization and locality optimization using the polyhedral model",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "authors": "P. Sadayappan, Uday Bondhugula",
-   "url": "https://openalex.org/W2332864379",
-   "cited_by": 69,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Beyond shared memory loop parallelism in the polyhedral model",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Digital Collections of Colorado (Colorado State University)",
-   "authors": "Tomofumi Yuki, Rajopadhye, Sanjay, Böhm, Wim et al.",
-   "url": "https://doi.org/10.25675/3.023296",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -925,17 +1051,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Loop Optimization using Hierarchical Compilation and Kernel Decomposition",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Denis Barthou, Sébastien Donadio, Patrick Carribault et al.",
-   "url": "https://doi.org/10.1109/cgo.2007.22",
-   "cited_by": 9,
-   "evidence": "title_only"
-  },
-  {
    "title": "Scalable and Structured Scheduling",
    "function": "unclassified",
    "split": null,
@@ -944,28 +1059,6 @@
    "authors": "Paul Feautrier",
    "url": "https://doi.org/10.1007/s10766-006-0011-4",
    "cited_by": 32,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiler-directed selective data protection against soft errors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "Proceedings of the ASP-DAC 2005. Asia and South Pacific Design Automation Conference, 2005.",
-   "authors": "Gong Chen, Mahmut Kandemir, M.J. Irwin et al.",
-   "url": "https://doi.org/10.1145/1120725.1121000",
-   "cited_by": 18,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiling for memory emergency",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Mahmut Kandemir, Guangyu Chen, I. Kadayif",
-   "url": "https://doi.org/10.1145/1070891.1065941",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {
@@ -987,27 +1080,6 @@
    "authors": "M. Samyn",
    "url": "https://www.semanticscholar.org/paper/0e340e68c4f6f1c03f81cfdb16cd838e00bffe6c",
    "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Automatic Parallelization of Loop Programs for Distributed Memory Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "authors": "M. Griebl",
-   "url": "https://openalex.org/W2142655718",
-   "cited_by": 142,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Early Periodic Register Allocation on ILP Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "Parallel Processing Letters",
-   "authors": "Sid‐Ahmed‐Ali Touati, Christine Eisenbeis",
-   "url": "https://doi.org/10.1142/s012962640400188x",
-   "cited_by": 25,
    "evidence": "title_only"
   },
   {

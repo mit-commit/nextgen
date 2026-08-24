@@ -537,6 +537,15 @@ raise it to the setup lane.
   element of the expanded Citations panel (style.css?v=3 /
   citations.js?v=3). Stopped after the 8 per task instruction — human
   critique before any scaling to the corpus.
+- **Show citations expand-all** (2026-08-24): a button beside Show
+  summaries opens/closes every paper's Citations panel; later-rendered
+  items follow the state (CITATIONS.setDefaultOpen), per-paper files
+  still lazy-load through a 4-wide progressive fetch queue, and the
+  summaries expand-all was scoped with :not(.cite-view)/:not(.cite-toggle)
+  — it had been silently rewriting the citation panels' classes and
+  toggle labels. Verified: 173 panels open and render, summaries toggle
+  leaves them untouched, filter re-render keeps them open, hide collapses
+  all. citations.js?v=4, publications.js?v=3.
 
 ## Cross-lane requests
 

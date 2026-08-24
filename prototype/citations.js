@@ -362,25 +362,43 @@ var CITATIONS = (function(){
   }
 
   /* ---------- toggle wiring, pub-summary pattern ---------- */
+
+  /* Expand-all support: every toggle registers here so "Show citations"
+     can open or close the whole page; defaultOpen makes items rendered
+     later (filter changes) follow the global state, like summaries do. */
+  var instances = [];
+  var defaultOpen = false;
+
+  /* Per-paper files load lazily even under expand-all; this small queue
+     keeps that progressive (a few fetches in flight, page never blocked). */
+  var fetchQueue = [], fetchActive = 0, FETCH_CONCURRENCY = 4;
+  function pumpQueue(){
+    while (fetchActive < FETCH_CONCURRENCY && fetchQueue.length){
+      var job = fetchQueue.shift();
+      fetchActive++;
+      job().then(
+        function(){ fetchActive--; pumpQueue(); },
+        function(){ fetchActive--; pumpQueue(); }
+      );
+    }
+  }
+
   function attachToggle(metaEl, bodyParent, key, indexRow){
     var display = displayCount(indexRow);
     var div = el('div', 'pub-summary cite-view');   // reuses .open show/hide
-    var toggle = el('a', 'pub-action pub-summary-toggle');
+    var toggle = el('a', 'pub-action pub-summary-toggle cite-toggle');
     toggle.href = '#';
     var setArrow = function(open){
       toggle.textContent = 'Citations (' + fmt(display) + ') ' + (open ? '▾' : '▸');
     };
     setArrow(false);
     var loaded = false;
-    toggle.addEventListener('click', function(ev){
-      ev.preventDefault();
-      var willOpen = div.className.indexOf('open') === -1;
-      div.className = 'pub-summary cite-view' + (willOpen ? ' open' : '');
-      setArrow(willOpen);
-      if (willOpen && !loaded){
-        loaded = true;
-        div.appendChild(el('div', 'cite-loading', 'Loading…'));
-        fetch(DATA_BASE + encodeURIComponent(key) + '.json')
+    function load(){
+      if (loaded) return;
+      loaded = true;
+      div.appendChild(el('div', 'cite-loading', 'Loading…'));
+      fetchQueue.push(function(){
+        return fetch(DATA_BASE + encodeURIComponent(key) + '.json')
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then(function(data){ renderView(div, key, data, indexRow); })
           .catch(function(e){
@@ -388,18 +406,42 @@ var CITATIONS = (function(){
             div.innerHTML = '';
             div.appendChild(el('div', 'cite-loading', 'Could not load citation data (' + e.message + ').'));
           });
-      }
+      });
+      pumpQueue();
+    }
+    function setOpen(open){
+      var isOpen = div.className.indexOf('open') !== -1;
+      if (open === isOpen) return;
+      div.className = 'pub-summary cite-view' + (open ? ' open' : '');
+      setArrow(open);
+      if (open) load();
+    }
+    toggle.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var willOpen = div.className.indexOf('open') === -1;
+      setOpen(willOpen);
       if (willOpen) trackSafe('citations-view', { key: key });
     });
     metaEl.appendChild(document.createTextNode(' '));
     metaEl.appendChild(toggle);
     bodyParent.appendChild(div);
+    instances.push({ el: div, setOpen: setOpen });
+    if (defaultOpen) setOpen(true);
+  }
+
+  function setAllOpen(open){
+    instances = instances.filter(function(inst){
+      return document.contains(inst.el);
+    });
+    for (var i = 0; i < instances.length; i++) instances[i].setOpen(open);
   }
 
   return {
     attachToggle: attachToggle,
     countBucket: countBucket,
     displayCount: displayCount,
+    setAllOpen: setAllOpen,
+    setDefaultOpen: function(v){ defaultOpen = !!v; },
     setDataBase: function(p){ DATA_BASE = p; },
     loadIndex: function(){
       // no-store: a stale cached index must never outlive a data refresh

@@ -120,6 +120,14 @@ ES5, `createElement`, `track()`):
   selectors namespaced `cite-`; the panel reuses `.pub-summary`'s
   open/closed mechanics).
 
+A **Show citations** button beside the existing Show summaries button
+expands the Citations panel on every paper at once (and collapses them all
+when toggled off), with papers rendered after the toggle following suit.
+Expanding all keeps lazy loading per paper: files fetch through a small
+progressive queue (four in flight), so the page never blocks. The two
+expand-alls are independent — the citation panels and toggles carry a
+`cite-` class the summaries toggle deliberately excludes.
+
 Analytics: the view fires `citations-view` on expand and
 `citations-centrality-filter` on filter use, via the same `track()` no-op
 wrapper the rest of the site uses.

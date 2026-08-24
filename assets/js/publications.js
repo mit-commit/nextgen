@@ -386,7 +386,8 @@ function createBibLink(it){
       authorQuery: '',            // free-text filter for the authors list
       typeMode: 'type',           // 'type' | 'venue' — how the third facet categorizes
       venueSort: 'name',          // 'name' | 'count' — venue ordering in venue mode
-      summaryExpanded: false      // global default for per-paper summaries
+      summaryExpanded: false,     // global default for per-paper summaries
+      citationsExpanded: false    // global default for per-paper citation panels
 
   };
   var els = {
@@ -396,6 +397,7 @@ function createBibLink(it){
     filtersInteractive: document.getElementById('filters-interactive'),
     btnClear: document.getElementById('btn-clear'),
     btnToggleSummaries: document.getElementById('btn-toggle-summaries'),
+    btnToggleCitations: document.getElementById('btn-toggle-citations'),
     years: document.getElementById('facet-years'),
     title: document.getElementById('facet-title'),
     kwBox: document.getElementById('facet-keywords'),
@@ -1131,11 +1133,27 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         var open = state.summaryExpanded;
         els.btnToggleSummaries.textContent = open ? 'Hide summaries' : 'Show summaries';
         els.btnToggleSummaries.setAttribute('aria-pressed', open ? 'true' : 'false');
-        var divs = document.querySelectorAll('.pub-summary'), i;
+        // :not(.cite-view) / :not(.cite-toggle): the citation panels share
+        // the .pub-summary box styling but have their own expand-all below.
+        var divs = document.querySelectorAll('.pub-summary:not(.cite-view)'), i;
         for (i = 0; i < divs.length; i++){ divs[i].className = 'pub-summary' + (open ? ' open' : ''); }
-        var toggles = document.querySelectorAll('.pub-summary-toggle'), j;
+        var toggles = document.querySelectorAll('.pub-summary-toggle:not(.cite-toggle)'), j;
         for (j = 0; j < toggles.length; j++){ toggles[j].textContent = open ? 'Summary \u25be' : 'Summary \u25b8'; }
         track('summaries-toggle-all', { expanded: open });
+      };
+    }
+
+    if (els.btnToggleCitations) {
+      els.btnToggleCitations.onclick = function(){
+        state.citationsExpanded = !state.citationsExpanded;
+        var on = state.citationsExpanded;
+        els.btnToggleCitations.textContent = on ? 'Hide citations' : 'Show citations';
+        els.btnToggleCitations.setAttribute('aria-pressed', on ? 'true' : 'false');
+        if (window.CITATIONS){
+          CITATIONS.setDefaultOpen(on);  // items rendered later follow suit
+          CITATIONS.setAllOpen(on);      // per-paper files still load lazily
+        }
+        track('citations-toggle-all', { expanded: on });
       };
     }
 

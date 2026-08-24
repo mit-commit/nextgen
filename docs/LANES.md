@@ -38,10 +38,10 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for every `data/idmap.json` entry with an id: 151 keys in the first sweep, plus 26 keys whose ids only landed with the later idmap-review resolutions (task `citations-s2-continue`, 2026-08-24) — 177 files, 26,192 merged citing works, all S2-enrichable keys enriched. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping via browser automation stayed blocked (see log), but a user-supplied `acm_badges.json` (badge markup for all 92 `10.1145` DOIs) was ingested — `found.json` now has 23 entries, 20 with a real ACM badge. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is empty. See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
-| **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
+| **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (221 flagged rows: 4 name-variant near-misses + 217 from the enrich pass). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 287/369 resolved (task `authors-enrich verify`, 2026-08-24 — OpenAlex's search quota reset, rerun recovered 24 of the 79 previously-blocked people; 77 genuinely unresolved, 5 ambiguous, 0 still search-blocked; see lane log). |
 | **site-citations** | `docs/citation-design.md`, `data/citations/SCHEMA.md`, `data/citations/gscholar.json`, `data/citations/halide:pldi:2013.json`, `data/citations/netblocks-pldi24.json`, `data/citations/index.json` (bootstrap — passes to the merge script when classify-corpus lands), `prototype/` | **active** — end-to-end design of the per-paper citation section, awaiting human review: `docs/citation-design.md` (page structure, loading strategy, reader walkthrough, 8 pilot worked examples), `data/citations/SCHEMA.md` (the per-paper JSON contract the classify-corpus merge script must emit), and a working prototype (`prototype/citations.html` + real data for the two claimed pilots, built by `prototype/build_pilot_data.py`). Non-pilot `data/citations/<bibtexKey>.json` is deliberately unclaimed here — it belongs to the classify-corpus merge, which must follow SCHEMA.md. Nothing touches the live pages until review. |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
-| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md`, `curate/`, `data/citations/<bibtexKey>.json` for non-pilot papers, `data/citations/index.json` (owns it after the first merge run, preserving the pilot rows) | **active** — pilot human-reviewed (approved with one amendment, applied 2026-08-24 as codebook v0.2): two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). v0.2 replaced residual `mentions` with `detailed-citation`/`passing-citation` and re-split all 701 affected rows (349/352). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Built `curate/classify_citations.py` (task `classify-corpus`, Anthropic Batch API) and `curate/merge_taxonomy.py` (emits data/citations/SCHEMA.md's shape for non-pilot papers only, never touching the pilot files or gscholar.json). Dry-run cost estimate reported (~$69 for 10,021 requests); stopped for human approval before the first real `--submit`, per task instruction. |
+| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md`, `curate/`, `data/citations/<bibtexKey>.json` for non-pilot papers, `data/citations/index.json` (owns it after the first merge run, preserving the pilot rows) | **active** — pilot human-reviewed (approved with one amendment, applied 2026-08-24 as codebook v0.2): two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). v0.2 replaced residual `mentions` with `detailed-citation`/`passing-citation` and re-split all 701 affected rows (349/352). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Built `curate/classify_citations.py` (task `classify-corpus`, Anthropic Batch API) and `curate/merge_taxonomy.py` (emits data/citations/SCHEMA.md's shape for non-pilot papers only, never touching the pilot files or gscholar.json). Dry-run cost estimate reported (~$69 for 10,021 requests), approved by the human, and submitted for real: 28 batches (`--submit`) covering all 10,021 requests, now processing. Next: `--status`/`--collect` once batches finish, `--recover` for any rule-level rejections, then `merge_taxonomy.py --write`. |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
 to its own log section — nothing else. Two lanes editing their own separate rows
@@ -271,6 +271,21 @@ raise it to the setup lane.
     `enriched.json` but unverified — mostly a real known-affiliation-at-
     publication-time vs. current-affiliation divergence, not a resolution
     error).
+- **authors-enrich verify** (task `authors-enrich verify`, 2026-08-24):
+  confirmed completeness first — all 369 `authors.json` people have an
+  `enriched.json` row (0 missing, 0 extra) and `review.json`'s 221 rows
+  (4 original name-variant flags + 217 from the enrich pass) exactly match
+  the counts documented above. The one real gap was the 79
+  `openalex_search_unavailable` stragglers; OpenAlex's search quota had
+  since reset (confirmed working during the same day's `idmap-review-rest`
+  task), so reran `enrich_openalex.py --write` in full. 287/369 resolved now
+  (143 orcid / 144 shared-work, +24 recovered from the stragglers); 77
+  genuinely unresolved, 5 ambiguous, 0 still search-blocked; 270 with
+  affiliation, 42 with homepage. `affiliation_conflict` unchanged at 111
+  (unrelated to the quota issue, still unverified). Full rerun rather than
+  a targeted subset since the script has no partial-rerun mode and the
+  other 290 people were fast cache hits (792 cached / 196 net requests
+  total).
 
 ### fulltext
 
@@ -365,6 +380,18 @@ raise it to the setup lane.
   contexts, 112 have only non-anchoring/polluted contexts). All 38
   `lineage`-flagged residual rows landed `detailed-citation`.
   Draft is otherwise approved; corpus-wide classification is queued.
+- **classify-corpus submit** (2026-08-24): human approved the ~$69 /
+  10,021-request dry-run estimate; ran `--submit` for real. Between the
+  dry-run and the submit call, `citations-s2-continue` landed 26 new
+  non-pilot `harvest/citations/<key>.json` files (its OpenAlex pass), and
+  `load_candidates()` re-scans that directory fresh rather than pinning a
+  snapshot -- so the real submission came in at **11,082 requests / 28
+  batches**, ~11% over the approved count (flagged to the human; harmless
+  in substance, just a timing race with a concurrent lane, no duplicate
+  work). Batch ids and per-item lookup in
+  `harvest/taxonomy/records/_batches.json`. Next: `--status` until every
+  batch shows `ended`, `--collect`, `--recover` for any rule-level
+  rejections, then `curate/merge_taxonomy.py --write`.
 
 ### site-citations
 

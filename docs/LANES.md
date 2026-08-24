@@ -40,7 +40,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
-| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md` | **active** — pilot done, awaiting human review: two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Nothing scales past the pilot until the draft is reviewed. |
+| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md` | **active** — pilot human-reviewed (approved with one amendment, applied 2026-08-24 as codebook v0.2): two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). v0.2 replaced residual `mentions` with `detailed-citation`/`passing-citation` and re-split all 701 affected rows (349/352). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Cleared to scale to the corpus-wide classification task. |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
 to its own log section — nothing else. Two lanes editing their own separate rows
@@ -302,12 +302,12 @@ raise it to the setup lane.
   tier, context anchoring (named/numref/none), confidence, flags, and a
   short justification note. Title-only records (1,878) were left
   `unclassified`, never guessed.
-- Taxonomy: FUNCTION (extends > uses-tool > adopts-idea > uses-benchmark
-  > baseline > positions > surveys > supports-claim > exemplifies >
-  mentions; priority order resolves multi-function rows, lower values
-  recorded in `secondary[]`) × CENTRALITY (core/engaged/peripheral) +
-  flags (`own-group`, `self-version`, `lineage`, `polluted-contexts`,
-  `critical`).
+- Taxonomy (codebook v0.2): FUNCTION (extends > uses-tool > adopts-idea
+  > uses-benchmark > baseline > positions > surveys > supports-claim >
+  exemplifies > detailed-citation > passing-citation; priority order
+  resolves multi-function rows, lower values recorded in `secondary[]`)
+  × CENTRALITY (core/engaged/peripheral) + flags (`own-group`,
+  `self-version`, `lineage`, `polluted-contexts`, `critical`).
 - Notable data hazards found and handled: 10% of judged rows have S2
   contexts that never anchor to the cited work (`polluted-contexts`,
   confidence downgraded); many same-work duplicate records
@@ -320,8 +320,19 @@ raise it to the setup lane.
   incl. papers with the pilot system in their title); S2 `intents`
   `methodology` is ~3× diluted by list mentions. Details and named cases
   in `docs/taxonomy-draft.md` §6.
-- **Stopped after the draft per task instruction — the draft gets human
-  review before anything scales.**
+- **v0.2 amendment** (human review, applied 2026-08-24): the residual
+  `mentions` value was replaced by two bottom-of-priority residuals —
+  `detailed-citation` (≥2 in-text cite sites to our paper, OR ≥1
+  sentence targeting our paper specifically; negative/comparative
+  counts) and `passing-citation` (our cite appears only in multi-paper
+  list sentences). All 701 `mentions` rows re-split (349 detailed /
+  352 passing: 109 mechanical via the multiple-cites rule, 573 by
+  sentence-level judgment in 10 rendered batches, 19 context-free rows
+  by manual ruling or duplicate-sibling inheritance); all 292 `unknown`
+  rows re-checked for the cheaper call — none resolvable (180 have no
+  contexts, 112 have only non-anchoring/polluted contexts). All 38
+  `lineage`-flagged residual rows landed `detailed-citation`.
+  Draft is otherwise approved; corpus-wide classification is queued.
 
 ## Cross-lane requests
 

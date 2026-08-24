@@ -1,9 +1,14 @@
-# Citation-function taxonomy — pilot draft (v0.1, for human review)
+# Citation-function taxonomy — pilot draft (v0.2, human-reviewed)
 
-**Status: DRAFT.** Built and applied on the 8-paper pilot corpus only
-(task `taxonomy-pilot`). Nothing here scales past the pilot until a human
-has reviewed this document. Machine-readable classifications for every
-citing work are in `harvest/taxonomy/pilot-classifications.json`.
+**Status: REVIEWED, amendment applied.** Built and applied on the
+8-paper pilot corpus (task `taxonomy-pilot`); approved by human review
+on 2026-08-24 with one amendment, applied in v0.2: the residual
+`mentions` value was replaced by two values, `detailed-citation` and
+`passing-citation` (§2.10–2.11), and the 701 `mentions` rows were
+re-split (the 292 `unknown` rows were re-checked at the same time; none
+had contexts sufficient even for this cheaper call). Machine-readable
+classifications for every citing work are in
+`harvest/taxonomy/pilot-classifications.json` (codebook 0.2).
 
 ---
 
@@ -57,7 +62,8 @@ One primary value per citation. When a citing work does several things
 value wins** and the rest go in `secondary`:
 
 > `extends > uses-tool > adopts-idea > uses-benchmark > baseline >
-> positions > surveys > supports-claim > exemplifies > mentions`
+> positions > surveys > supports-claim > exemplifies >
+> detailed-citation > passing-citation`
 
 The order encodes "depth of dependence": building on the artifact
 outranks running it, running it outranks borrowing its idea, any use
@@ -161,7 +167,7 @@ requires measured comparison, not prose differentiation.
 The citing work **describes the cited work's specifics and contrasts
 its own contribution** against them. Requires an actual competing
 contribution being differentiated — otherwise it's `surveys`,
-`exemplifies`, or `mentions`. Includes "we don't compare against X
+`exemplifies`, or a residual. Includes "we don't compare against X
 because…" statements and detailed limitation claims.
 
 - **AutoSA** (`10.1145_3431920.3439292`, FPGA'21, → halide:pldi:2013):
@@ -229,30 +235,63 @@ corpus (677 rows).
   delegating the low-level scheduling details" — a success-story example
   in an essay, no engagement with specifics.
 
-### 2.10 `mentions` — residual passing reference
+### 2.10 `detailed-citation` — residual, but individually addressed
 
-Anything thinner than the above: pointer citations, definitional cites,
-origin-credit one-liners, **secondhand citations** (citing Halide only
-to say "TVM is based on Halide"), terminology mappings. The second
-largest class (701 rows). The "secondhand" pattern is extremely common
-for halide:pldi:2013 — 62 rows carry the `lineage` flag, most of them
-citing Halide purely as TVM's ancestor.
+The residual class (nothing above applies) where the citing work still
+gives our paper individual attention: **either** it cites our paper at
+**≥2 distinct in-text sites**, **or** at least one sentence **targets
+our paper specifically** — describes, credits, defines, compares, or
+criticizes it in particular (negative and comparative statements
+count). Includes pointer citations and origin-credit one-liners whose
+sentence is about our work alone, and **secondhand citations** (citing
+Halide only to say "TVM is based on Halide" — the sentence is still
+specifically about our work). The secondhand pattern is extremely
+common for halide:pldi:2013: every one of the 38 `lineage`-flagged
+residual rows landed here.
 
 - **ConCo** (`10.1145_3721145.3735113`, → halide:pldi:2013):
   "TVM extends Halide's scheduling primitives" — Halide cited only to
-  describe TVM.
-- **Stream Types** (`10.1145_3656434`, POPL, → thies:cc:2002): a
-  history-of-streams pointer citation.
+  describe TVM, but the sentence targets Halide specifically.
 - **Scheduling of Iterative Algorithms** (`10.1007_s11265-006-0004-y`,
   → petkov:ipdps:2002): "Improvement by unroll-and-squash has been
-  shown in [23]" — names the technique, engages no further.
+  shown in [23]" — one sentence, but it is *about* the technique.
+- **Stream Types** (`10.1145_3656434`, POPL, → thies:cc:2002): a
+  history-of-streams citation, but at two distinct cite sites —
+  the multiple-cites clause.
 
-### 2.11 `unknown` / `unclassified`
+### 2.11 `passing-citation` — residual, list membership only
+
+The bottom of the order: our cite appears **only inside multi-paper
+list sentences** — one item among several works cited together, with no
+clause specifically about ours beyond membership. A one-clause gloss
+shared by the whole list does not count as specific.
+
+- **Fast Convolution on GPUs** (`10.1109_tc.2020.2973144`, →
+  halide:pldi:2013): "Halide, TVM, Tensor Comprehension and other
+  tools are able to generate CUDA source code of DNN kernels [18],
+  [33], [34], [35]."
+- **Introduction to algorithmic differentiation** (`10.1002_widm.1334`,
+  → halide:pldi:2013): one item in a list of AD tools ("autodiff for
+  Halide …, JuliaDiff for Julia …, Clad …").
+- **Compiling Affine Loop Nests** (`10.1145_2948975`, →
+  halide:pldi:2013): "Several systems [Kulkarni et al. 2007; Bosilca
+  et al. 2010, 2012; Ragan-Kelley et al. 2013; …] have been designed in
+  an integrated manner to various degrees."
+
+The difference from `exemplifies` (which sits above both residuals and
+wins when applicable) is that `exemplifies` list entries present the
+work as a *canonical example of a category*, typically with a gloss;
+`passing-citation` is bare list membership in any sentence shape.
+
+### 2.12 `unknown` / `unclassified`
 
 - `unknown` (292 rows): evidence exists but is insufficient — e.g. S2
   contexts that never anchor to the cited work (see `polluted-contexts`
   below), or an abstract that doesn't reach the citation's topic.
-  Judged as "cannot tell", not silently guessed.
+  Judged as "cannot tell", not silently guessed. All 292 were
+  re-checked for the cheaper detailed/passing call during the v0.2
+  re-split: 180 have no contexts at all, and in the other 112 every
+  context fails to anchor to our work — none could be resolved.
 - `unclassified` (1,878 rows): title-only records; not judged at all.
 
 ---
@@ -273,7 +312,10 @@ Guidance used (defaults, overridable by evidence): `extends`/`uses-tool`
 → core; `adopts-idea` → core when the idea pervades the citing work,
 else engaged; `uses-benchmark`/`baseline`/`positions` → engaged;
 `surveys` → engaged (peripheral for a single table row);
-`supports-claim`/`exemplifies`/`mentions` → peripheral.
+`supports-claim`/`exemplifies`/`detailed-citation`/`passing-citation`
+→ peripheral (both residuals are swap-out-able thin references; a
+detailed-citation sentence is *about* our work but does not engage its
+content the way `engaged` requires).
 
 Worked examples:
 - **core**: TVM → Halide (the compiler is built on it); Taylor's own
@@ -305,7 +347,8 @@ Worked examples:
 `contexts` 2,137 / `abstract` 318 / `title_only` 1,878) and **context
 anchoring** (`named` — contexts name the work or system: 1,737;
 `numref` — only bracket references: 510; `none`: 145). Anchoring drives
-**confidence** (`high` 1,655 / `medium` 485 / `low` 319): named
+**confidence** (over judged non-`unknown` rows, after the v0.2
+re-split: `high` 1,624 / `medium` 631 / `low` 204): named
 contexts → high is possible; numref-only → medium at best unless the
 sentence content pins the reference; abstract-only rows get a function
 only when lineage is unambiguous (e.g. a CoreVA-MPSoC paper for
@@ -336,7 +379,8 @@ percentages of judged non-unknown rows):
 | surveys | 36 | 19 | 25 | 2 | 82 |
 | supports-claim | 6 | 13 | 63 | 8 | 90 |
 | exemplifies | 271 | 249 | 132 | 25 | 677 |
-| mentions | 248 | 372 | 59 | 22 | 701 |
+| detailed-citation | 120 | 189 | 31 | 9 | 349 |
+| passing-citation | 128 | 183 | 28 | 13 | 352 |
 | **judged** | **911** | **1,065** | **367** | **116** | **2,459** |
 | unknown (within judged) | 101 | 80 | 96 | 15 | 292 |
 | unclassified (title-only) | 640 | 561 | 641 | 36 | 1,878 |
@@ -352,9 +396,12 @@ Reading of the numbers, per pilot:
   `lineage`), a hardware ecosystem (AHA/CGRA flows compiling Halide),
   and an auto-scheduling research industry that treats Halide as its
   experimental substrate. Its noise profile is distinctive too: a large
-  `mentions` mass exists *because* the idea won — hundreds of papers
+  residual mass exists *because* the idea won — hundreds of papers
   cite it only as "the origin of compute/schedule separation" or
-  through TVM.
+  through TVM. The v0.2 re-split shows that mass dividing almost evenly
+  (189 `detailed-citation` vs 183 `passing-citation`): about half of
+  even the thin cites still address Halide individually, usually as
+  TVM's ancestor.
 - **thies:cc:2002** (StreamIt) shows the *benchmark-suite* pattern:
   `uses-benchmark` (85) is far larger than for any other pilot — the
   StreamIt benchmark suite outlived the compiler as the community's
@@ -438,12 +485,14 @@ Comparable rows: 2,316 judged rows carry an S2 `isInfluential` verdict;
 
 Mapping used: use-class functions → expect `methodology`;
 `adopts-idea` → `methodology|background`; `positions`/`surveys`/
-`exemplifies`/`mentions` → `background`; `supports-claim` →
-`result|background`. Overall overlap agreement: **71%** (1,319/1,858).
+`exemplifies`/`detailed-citation`/`passing-citation` → `background`;
+`supports-claim` → `result|background`. Overall overlap agreement:
+**71%** (1,319/1,858).
 
 - Where S2 tags `methodology` (n=911), only **34%** of those rows fall
-  in our use-class. The bulk are `exemplifies` (213) and `mentions`
-  (194): S2 assigns `methodology` to any citation appearing in a
+  in our use-class. The bulk are `exemplifies` (213) and the residuals
+  (125 `detailed-citation` + 69 `passing-citation`): S2 assigns
+  `methodology` to any citation appearing in a
   methods-ish section, including pure list mentions. Conversely, of our
   use-class rows, 72% do get a `methodology` tag — so as a *recall*
   signal for "uses/extends" it is decent, as *precision* it is ~3×
@@ -465,10 +514,17 @@ Mapping used: use-class functions → expect `methodology`;
    The 111-row deep-read sample and the per-row notes are the audit
    trail. A human spot-check of, say, 50 rows stratified over
    function × confidence would calibrate error rates before scaling.
-2. **`exemplifies` vs. `mentions` boundary** is the fuzziest in
-   practice (list-with-gloss vs. bare pointer). If the site only needs
-   a coarser "substantive vs. peripheral" cut, these two can be merged
-   without loss.
+2. **Residual boundaries.** The old `exemplifies` vs. `mentions`
+   boundary (the fuzziest in v0.1) is partly superseded by the v0.2
+   re-split: `passing-citation` now has a mechanical definition (list
+   membership only), and the fuzz concentrates on (a) `exemplifies` vs.
+   `passing-citation` — canonical-example list vs. bare list — and
+   (b) whether a shared list gloss counts as "targeting our paper
+   specifically" (it does not, per the amendment). Note the re-split
+   applied the multiple-cites clause from S2-extracted contexts, which
+   undercount cite sites for non-OA works — some `passing-citation`
+   rows may be `detailed-citation` by the multiple-cites clause if
+   full text were available.
 3. **`adopts-idea` centrality** required the most judgment (core when
    pervasive, engaged otherwise); reviewers should check whether the
    TVM-style cases (labeled `extends`) vs. CoCoNet-style cases
@@ -497,3 +553,10 @@ Mapping used: use-class functions → expect `methodology`;
   scripts) live in the session scratchpad; the reconciliation confirmed
   every non-title record carries exactly one label and every label
   matches a manifest row.
+- v0.2 re-split provenance: every re-judged row's `note` carries a
+  `resplit:` (or, for unresolved unknowns, `recheck:`) suffix with the
+  justification. Of the 701 re-split rows, 109 were resolved
+  mechanically by the multiple-cites rule (≥2 distinct anchored
+  context snippets, non-polluted), 573 by sentence-level judgment over
+  rendered contexts in 10 batches, and 19 context-free rows by manual
+  ruling or by inheriting their duplicate sibling's label.

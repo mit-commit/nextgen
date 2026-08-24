@@ -40,6 +40,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
+| **taxonomy** | `harvest/taxonomy/`, `docs/taxonomy-draft.md` | **active** — pilot done, awaiting human review: two-dimension citation taxonomy (FUNCTION × CENTRALITY, plus flags/evidence-tier/confidence per row) drafted from a stratified deep read and applied to all 4,629 citing-work records of the 8 pilot papers (2,751 judged; 1,878 title-only left `unclassified`). Deliverables: `docs/taxonomy-draft.md` (codebook, worked examples, per-pilot distributions, S2 `isInfluential`/`intents` comparison) + `harvest/taxonomy/pilot-classifications.json`. Nothing scales past the pilot until the draft is reviewed. |
 
 `docs/LANES.md` is itself a shared file. Every lane appends to its own row and
 to its own log section — nothing else. Two lanes editing their own separate rows
@@ -283,6 +284,44 @@ raise it to the setup lane.
     a DOI nor an OpenAlex id to look up at all).
   - Idempotent/resumable like the full-text pass: an already-written slug
     in the output file is skipped on rerun.
+
+### taxonomy
+
+- **Pilot pass** (task `taxonomy-pilot`, 2026-08-24). Read-only inputs:
+  `harvest/citations/<key>.json` (S2 contexts/intents/isInfluential),
+  `harvest/fulltext/abstracts/<key>.json`, and the gitignored local
+  full-text cache under `harvest/fulltext/<key>/`. No other lane's files
+  written.
+- Method: built a per-pilot evidence index (each citing record tagged
+  with its best evidence tier: fulltext > abstract+contexts > contexts >
+  abstract > title_only); deep-read a stratified 111-row sample (seeded
+  `random.Random(42)`, quotas per pilot over influential/non-influential/
+  abstract-only strata) plus keyword-windowed reads of 15 cached full
+  texts; drafted the codebook; then classified all 2,751 judgeable
+  records in 67 rendered evidence batches, each row carrying evidence
+  tier, context anchoring (named/numref/none), confidence, flags, and a
+  short justification note. Title-only records (1,878) were left
+  `unclassified`, never guessed.
+- Taxonomy: FUNCTION (extends > uses-tool > adopts-idea > uses-benchmark
+  > baseline > positions > surveys > supports-claim > exemplifies >
+  mentions; priority order resolves multi-function rows, lower values
+  recorded in `secondary[]`) × CENTRALITY (core/engaged/peripheral) +
+  flags (`own-group`, `self-version`, `lineage`, `polluted-contexts`,
+  `critical`).
+- Notable data hazards found and handled: 10% of judged rows have S2
+  contexts that never anchor to the cited work (`polluted-contexts`,
+  confidence downgraded); many same-work duplicate records
+  (arXiv/DOI/venue clones) labeled consistently but not collapsed —
+  dedup policy is an open review question; 3 records are the pilot
+  papers citing themselves (`self-version`).
+- Step (d) headline: S2 `isInfluential` is strongly anti-correlated with
+  peripherality (4% base rate) but misses ~60% of substrate-level
+  dependence (P(infl|core)=39%; 124 core rows flagged not-influential,
+  incl. papers with the pilot system in their title); S2 `intents`
+  `methodology` is ~3× diluted by list mentions. Details and named cases
+  in `docs/taxonomy-draft.md` §6.
+- **Stopped after the draft per task instruction — the draft gets human
+  review before anything scales.**
 
 ## Cross-lane requests
 

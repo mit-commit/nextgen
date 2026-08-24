@@ -36,9 +36,21 @@ letters, digits, `:`, `-`, `.`, `_`).
     "judged": 1045,
     "gscholar": null
   },
+  "reception": "The citing literature engages this paper along two ...",
   "citations": [ ... ]
 }
 ```
+
+- `reception` (optional) — a short, hand-written reception summary: what
+  kinds of work cite the paper, its notable descendants and users, and any
+  distinctive citation pattern. Plain text; paragraphs separated by a
+  blank line (`\n\n`). The view renders it at the top of the expanded
+  Citations panel. Curated in `data/citations/reception.json` (keyed by
+  `bibtexKey`, human-reviewed prose — **never machine-generated into the
+  site without review**); every emitter folds that file in, so rebuilding
+  a paper's JSON preserves its summary. A paper absent from
+  `reception.json` simply has no `reception` field. Pilot-only until the
+  human approves the pilot texts.
 
 - `records_raw` — harvested citing records before dedup (provenance only).
 - `works` — the **verified citation count**: deduped citing works, with

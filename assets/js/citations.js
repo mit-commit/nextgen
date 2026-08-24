@@ -160,6 +160,16 @@ var CITATIONS = (function(){
       (all[i].commit ? commitPapers : external).push(all[i]);
     }
 
+    /* Reception summary: hand-written prose, rendered first when present. */
+    if (data.reception){
+      var rec = el('div', 'cite-reception');
+      var paras = String(data.reception).split(/\n\n+/);
+      for (var rp = 0; rp < paras.length; rp++){
+        rec.appendChild(el('p', null, paras[rp]));
+      }
+      mount.appendChild(rec);
+    }
+
     /* Headline: displayed count = max(verified, Google Scholar). */
     var display = displayCount({ verified: counts.works, gscholar: gscholar });
     var head = el('div', 'cite-head');

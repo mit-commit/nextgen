@@ -184,6 +184,8 @@ def main():
     tax = json.load(open(os.path.join(ROOT, "harvest/taxonomy/pilot-classifications.json")))
     gs_path = os.path.join(ROOT, "data/citations/gscholar.json")
     gscholar = json.load(open(gs_path)) if os.path.exists(gs_path) else {}
+    rec_path = os.path.join(ROOT, "data/citations/reception.json")
+    reception = json.load(open(rec_path)) if os.path.exists(rec_path) else {}
     out_dir = os.path.join(ROOT, "data/citations")
     index_path = os.path.join(out_dir, "index.json")
     index = (json.load(open(index_path)) if os.path.exists(index_path)
@@ -198,6 +200,8 @@ def main():
         paper["generated"] = args.generated
         gs = (gscholar.get(key) or {}).get("count")
         paper["counts"]["gscholar"] = gs
+        if reception.get(key):
+            paper["reception"] = reception[key]
         index["papers"][key] = {
             "verified": paper["counts"]["works"],
             "gscholar": gs,

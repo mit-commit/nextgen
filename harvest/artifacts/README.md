@@ -87,3 +87,53 @@ an institutional proxy) could revisit route 3 to fill in `badges[]` for the
 Re-run: `python3 metadata_scan.py && python3 scan_pdfs.py && python3 merge.py`
 (the two scan scripts hit the network / read every local PDF respectively and
 take a few minutes each; `merge.py` alone is near-instant).
+
+## Route 3 revisit (2026-08-24): still blocked
+
+Route 3 (ACM DL badge markup for the 87 `10.1145` DOIs in `data/idmap.json`)
+was retried with real browser access -- Playwright, headful Chromium, a
+persistent profile (`pip install playwright --break-system-packages &&
+playwright install chromium`). Every attempt hit a Cloudflare "Just a
+moment..." interstitial on `dl.acm.org`, including:
+
+- A specific paper DOI (`doi.org/10.1145/3519939.3523442` -> dl.acm.org).
+- The plain `dl.acm.org` homepage (no DOI, in case the challenge was
+  redirect-specific).
+- A logged-in-user manual solve attempt: the browser window was left open
+  (up to 30 min at a time) for a human to click through the challenge
+  directly, twice, including after the user separately confirmed their own
+  normal Chrome could load IEEE Xplore fine (ruling out a general
+  network/fingerprint problem) -- the ACM DL challenge never cleared.
+
+Conclusion: this isn't a rate-limit or headless-detection issue, dl.acm.org
+is blocking this network path/profile outright regardless of browser
+automation vs. manual human interaction. **Badge names remain unavailable.**
+`found.json` entries now carry a `badges: []` field (schema-ready for a
+future successful scrape) but nothing is populated in it, and no
+`badge_source` field was added since no data was actually sourced from
+`acm_dl`. Anyone revisiting this with a different network path (e.g. an
+institutional VPN/proxy, or a residential IP) could try again.
+
+## review.json settlement (2026-08-24)
+
+All 6 `review.json` rows were settled by opening each row's `artifact_url`
+(the Zenodo landing page) and comparing its title/authors against the
+paper's own title/authors from `data/idmap.json`:
+
+- **2 promoted to `found.json`** as the paper's own artifact (title and
+  authors match exactly, and in one case the Zenodo record explicitly
+  states it's the artifact for this paper):
+  - `ahrens_autoscheduling_2022` -> zenodo.org/record/6366296, "Autoscheduling
+    for Sparse Tensor Algebra with an Asymptotic Cost Model (The Artifact)".
+  - `gladshtein_mechanised_2024` -> 10.5281/zenodo.10951930, "LGTM: the Logic
+    for Graceful Tensor Manipulation", which states outright it's the
+    artifact for "Mechanised Hypersafety Proofs about Structured Data".
+- **4 settled as citations to a dependency, not the paper's own artifact**
+  (moved to `harvest/artifacts/settled_not_own.json` for the audit trail,
+  removed from `review.json`): `bansal2025lightweight`,
+  `thea:sm-thesis:2025`, `won:phd-thesis:2026`, and `won_continuous_2025` all
+  turned out to cite the same two general-purpose libraries in their
+  bibliography -- Shapely (geospatial Python) or FInAT (finite elements) --
+  not an artifact of their own.
+- `review.json` is now empty; each row's `review_resolution` field records
+  the reasoning. See `settled_not_own.json` for the 4 dependency citations.

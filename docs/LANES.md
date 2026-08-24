@@ -36,7 +36,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 |---|---|---|
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — ID map built for all 327 entries of `data/publications.json`; `data/idmap.json` and `data/idmap-review.json` landed. |
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for all 151 `data/idmap.json` entries with an id into `harvest/citations/<bibtexKey>.json`; 23,154 merged citing works. |
-| **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) is blocked (403). See `harvest/artifacts/README.md`. |
+| **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping (route 3) retried with a real headful browser and manual human solving, still fully blocked by Cloudflare — badges remain empty. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is now empty. See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. |
@@ -128,6 +128,19 @@ raise it to the setup lane.
   scan from drowning in citation-noise false positives are in
   `harvest/artifacts/README.md`.
 - Result: 10 confirmed artifacts, 6 flagged for review, 0 badges recovered.
+- 2026-08-24: retried route 3 with real browser access (Playwright, headful
+  Chromium, persistent profile). Every attempt — a specific paper DOI, the
+  plain dl.acm.org homepage, and two rounds of a human manually trying to
+  solve the challenge in the visible window — hit an unclearing Cloudflare
+  "Just a moment..." interstitial. Confirmed not a rate/headless-detection
+  issue (the user's own normal Chrome loaded IEEE Xplore fine at the same
+  time). Stopped per instructions; badges remain unavailable. Separately,
+  settled all 6 `review.json` rows by opening each `artifact_url` (Zenodo
+  landing page) and comparing title/authors to the paper's own: 2 were the
+  paper's own artifact (promoted into `found.json`), 4 were bibliography
+  citations to a shared dependency (Shapely or FInAT) and moved to
+  `harvest/artifacts/settled_not_own.json`. `review.json` is now empty.
+  Details in `harvest/artifacts/README.md`.
 
 ### repos
 

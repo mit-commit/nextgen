@@ -11,6 +11,10 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
   place of `mentions`; higher categories always win).
 - **CLASSIFY-CORPUS BATCH SUBMIT APPROVED at the ~$69 / 10,021-request
   estimate — proceed.**
+- Citation view APPROVED with three sort modes (impact/influence, recency,
+  popularity by the citing work's own citation count) and a headers on/off
+  toggle; headers = category groups / year / count buckets respectively.
+  SCHEMA.md carries `cited_by` per citing work.
 - Audit trail trusted; no human spot-check before scaling.
 - Dedup policy: fold same-work records by normalized title, keep the
   highest-evidence sibling, before any public-facing counts.
@@ -20,10 +24,16 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 1. [sonnet] **classify-corpus — SUBMIT APPROVED.** --submit for real, then
    --status / --collect; --recover before any re-call. Key from env
    ANTHROPIC_BATCH_KEY (never ANTHROPIC_API_KEY). After collect: merge +
-   dedup into data/citations/<bibtexKey>.json per SCHEMA.md. Report only:
-   records collected, review-queue size, per-function totals. While batches
-   are pending, the same session may take task 2 or 3.
-2. [sonnet] **repos-search step 2 (RESUME — its session was lost).** Check
+   dedup into data/citations/<bibtexKey>.json per SCHEMA.md (including
+   `cited_by`). Report only: records collected, review-queue size,
+   per-function totals. While batches are pending, the same session may take
+   the next task.
+2. [sonnet] **cited-by-backfill**: ensure every citing work in
+   harvest/citations/*.json carries `cited_by` (OpenAlex cited_by_count).
+   Most of it is already in the stored OpenAlex records — re-read before
+   re-fetching; fetch only the gaps (S2-only rows may use S2 citationCount).
+   Null where unknown. This feeds the popularity sort.
+3. [sonnet] **repos-search step 2 (RESUME — its session was lost).** Check
    ~/workspace/nextgen for uncommitted work under harvest/repos/ first and
    commit anything found. Then per harvest/repos/search-plan.json: GitHub
    code/repo search on each paper's keyword sets (GITHUB_TOKEN in env).
@@ -32,13 +42,15 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
    NOTHING: top-3 candidates with evidence and confidence to
    harvest/repos/candidates.json. Report: papers with strong / weak-only /
    no candidates.
-3. [sonnet] **authors-enrich verify (session lost, output pushed).**
+4. [sonnet] **authors-enrich verify (session lost, output pushed).**
    harvest/authors/enriched.json exists on main — verify completeness against
-   authors.json (all 369 covered? review rows written?), log its report line
-   in docs/LANES.md, fix gaps if any.
-4. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the
+   authors.json, log its report line in docs/LANES.md, fix gaps if any.
+5. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the
    pilots, highest OpenAlex count first. Long-running; speeds up when
    S2_API_KEY appears. Stragglers get a later classification sweep.
+
+## RUNNING (do not pick up)
+- three-sort-mode prototype update (fable tab)
 
 ## DONE
 - setup/idmap (163 resolved / 135 no_doi / rest no_doi_confirmed)
@@ -48,4 +60,4 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 - authors part 1 (369 authors, 149 ORCID, 98 COMMIT)
 - fulltext pilot (85/1067) + abstracts floor (528/982)
 - taxonomy v0.1 pilot + v0.2 amendment
-- citation-section design + prototype (prototype/citations.html) — reviewed
+- citation-section design + prototype — reviewed and approved

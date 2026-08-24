@@ -35,7 +35,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | Lane | Claimed paths | Status |
 |---|---|---|
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — all 327 entries of `data/publications.json` resolved; `data/idmap-review.json` is now empty. |
-| **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for all 151 `data/idmap.json` entries with an id into `harvest/citations/<bibtexKey>.json`; 23,154 merged citing works. |
+| **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for every `data/idmap.json` entry with an id: 151 keys in the first sweep, plus 26 keys whose ids only landed with the later idmap-review resolutions (task `citations-s2-continue`, 2026-08-24) — 177 files, 26,192 merged citing works, all S2-enrichable keys enriched. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping via browser automation stayed blocked (see log), but a user-supplied `acm_badges.json` (badge markup for all 92 `10.1145` DOIs) was ingested — `found.json` now has 23 entries, 20 with a real ACM badge. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is empty. See `harvest/artifacts/README.md`. |
 | **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. No GitHub searching run yet. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (4 flagged near-misses). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 263/369 resolved so far — 79 pending a rerun once OpenAlex's search endpoint is unblocked (see lane log). |
@@ -134,6 +134,18 @@ raise it to the setup lane.
   - All 151 entries with an id are harvested: 14,851 OpenAlex citing works,
     18,156 S2 citing works, 23,154 after merging on DOI. 2 papers (both
     2025/2026) have zero citations so far.
+- **Continuation sweep** (task `citations-s2-continue`, 2026-08-24): the
+  idmap-review passes had resolved ids for 26 more keys *after* the first
+  harvest (12 `fuzzy_reviewed`/`doi`, 13 `openalex_only`, `tiramisu-auto`),
+  so those keys had no citations file at all — the queue task's original
+  "partial S2 coverage" framing was already stale, since every existing
+  file was fully enriched. Ran both passes; both completed with zero
+  failures (S2 429s retried through). 26 new files, 3,038 merged citing
+  records (largest: `wilson:sigplan:1994` 803, `hall:computer:1996` 644,
+  `stephenson:pldi:2000` 309); 12 of the 26 had S2 ids and are enriched
+  with contexts/intents/isInfluential. Corpus now 177 files / 26,192
+  merged citing works. These records postdate classify-corpus's submitted
+  request list — per the queue they belong to the later straggler sweep.
 
 ### artifacts
 

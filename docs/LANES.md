@@ -487,6 +487,18 @@ raise it to the setup lane.
   `publications.html`: toggle placement next to Summary, boxed panels,
   drill-downs, and Recency year-group counts matching the data histogram
   exactly (1,002 external + 43 own-group judged for Halide).
+- **COMMIT papers** (human refinement, 2026-08-24): the separated bucket
+  is now defined by Saman Amarasinghe's authorship of the citing work, not
+  the classifier's broader any-author-overlap `own-group` flag (kept as
+  metadata only), and is labeled "COMMIT papers" ("COMMIT" chip in
+  Recency/Popularity). New per-entry `commit` field + `counts.commit`
+  emitted at build time; the name rule (Saman/S./Saman P. Amarasinghe,
+  excluding other Amarasinghes) is in SCHEMA.md and must be identical in
+  every emitter. All 8 pilot files rebuilt (Halide 40, StreamIt 39, Raw 15
+  COMMIT papers — e.g. Raw's 16 Taylor/Miller/Agarwal-only works moved to
+  external, and 3 Saman-authored works the flag had missed moved in).
+  Verified in Chrome on the live page. Non-pilot files await the
+  merge-script rerun (taxonomy lane).
 
 ## Cross-lane requests
 

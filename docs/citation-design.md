@@ -25,7 +25,8 @@ Requirements it honors, from the task:
   count from a human-supplied scrape).
 - The section expands exactly like the existing per-paper summary.
 - Top level: detailed vs passing. Drill-down: FUNCTION and CENTRALITY, with
-  flags; our own group's citations reported apart from external impact.
+  flags; COMMIT papers (citing works Saman Amarasinghe co-authored)
+  reported apart from external impact.
 - A routine "add new papers + citations" refresh every few months stays easy
   (§7).
 
@@ -47,14 +48,14 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    segments: **detailed engagement** (the citing work engages this paper
    specifically), **passing mention** (this paper appears inside a
    multi-paper citation list), and **not yet analyzed** (no usable
-   evidence). For Halide: 586 detailed, 416 passing, 438 not yet analyzed.
-   A one-line note follows: "Counts above are external. 43 more citations
-   come from our own group and students; they are listed separately at the
-   bottom."
+   evidence). For Halide: 598 detailed, 416 passing, 429 not yet analyzed.
+   A one-line note follows: "Counts above are external. 40 more citations
+   are COMMIT papers (Saman Amarasinghe among the authors); they are
+   listed separately at the bottom."
 3. **A centrality filter.** "How central is this paper to the citing work?"
    — All / Core / Engaged / Peripheral buttons, with counts. *Core* means
    the citing work would be fundamentally different without this paper.
-   Halide external: 67 core, 195 engaged, 740 peripheral.
+   Halide external: 78 core, 198 engaged, 738 peripheral.
 4. **Sort modes** (approved ruling, 2026-08-24): **Impact** (default;
    codebook priority order), **Recency** (year, newest first), and
    **Popularity** (the citing work's own citation count — `cited_by` in the
@@ -64,20 +65,20 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    groups under Impact, years under Recency, count buckets (1,000+ /
    100–999 / 10–99 / 1–9 / not yet cited / count unknown) under
    Popularity, all lazily rendered in one shared style. **Headers off**
-   gives one flat sorted list. Impact keeps our own group's citations in
+   gives one flat sorted list. Impact keeps COMMIT papers in
    their separate section (the external-impact story); Recency and
-   Popularity incorporate them into the main list, each row marked with an
-   "our group" chip.
+   Popularity incorporate them into the main list, each row marked with a
+   "COMMIT" chip.
 5. **Function groups.** Under Impact with headers: collapsible groups in
    codebook priority order, each
    with a plain-language label, a count, and a one-clause gloss:
-   - Builds on it (`extends`) — 36
-   - Uses the system (`uses-tool`) — 82
-   - Adopts the idea (`adopts-idea`) — 96
+   - Builds on it (`extends`) — 35
+   - Uses the system (`uses-tool`) — 77
+   - Adopts the idea (`adopts-idea`) — 89
    - Uses its benchmarks, Measures against it, Positions against it,
      Surveys it, Cites a result as evidence, Names it as an example,
      Mentions it specifically, Cites it in a list — and, under All,
-     "Not yet analyzed" and "Our own group".
+     "Not yet analyzed" and "COMMIT papers".
    Opening a group lists its citing works: linked title, authors, venue,
    year, a `core` chip where earned, and a "via a successor system" chip on
    lineage citations (papers that cite Halide as TVM's ancestor). Rows are
@@ -148,17 +149,21 @@ all eleven values:
 The mapping ships precomputed in each entry's `split` field, so changing
 this decision is a merge-script rerun, not a JS change.
 
-## 6. Counts, dedup, own-group
+## 6. Counts, dedup, COMMIT papers
 
 - **Verified count** = deduped citing works, excluding records of the paper
-  citing itself (`self-version`), *including* our own group's citations —
+  citing itself (`self-version`), *including* COMMIT papers —
   so it is comparable to Google Scholar's number. Dedup follows the human
   ruling: fold by normalized title, keep the highest-evidence sibling
   (rule details in `data/citations/SCHEMA.md`).
-- **Own-group separation**: the split bar, centrality counts, and function
-  groups cover external citations only; own-group works appear in their own
-  labeled group at the bottom, with the note under the bar saying exactly
-  that. Impact claims never lean on self-ecosystem citations.
+- **COMMIT-papers separation**: a citing work is a COMMIT paper iff Saman
+  Amarasinghe is among its authors (the `commit` field; exact name rule in
+  SCHEMA.md — deliberately narrower than the classifier's `own-group`
+  any-author-overlap flag, which remains as metadata only). The split bar,
+  centrality counts, and Impact's function groups cover external citations
+  only; COMMIT papers appear in their own labeled group at the bottom of
+  Impact, and chip-marked inside Recency/Popularity. Impact claims never
+  lean on the group's own citations.
 
 ## 7. Routine refresh
 
@@ -185,7 +190,8 @@ verified count; the max logic is in place and takes over the moment
 
 ## 9. Worked examples — the 8 pilot papers
 
-Numbers are external citations after dedup (own-group shown separately);
+Numbers below predate the COMMIT-papers redefinition (they used the
+broader own-group flag); the shape of each story is unchanged.
 detailed / passing / not-yet-analyzed.
 
 | paper | works (own) | split D/P/U | what the view shows |

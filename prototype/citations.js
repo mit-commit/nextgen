@@ -66,8 +66,7 @@ var CITATIONS = (function(){
     if (c.year) bits.push(String(c.year));
     if (bits.length) li.appendChild(el('span', 'cite-row-meta', ' — ' + bits.join('. ') + '.'));
     if (c.centrality === 'core') li.appendChild(el('span', 'cite-chip cite-chip-core', 'core'));
-    if (c.flags && c.flags.indexOf('own-group') !== -1)
-      li.appendChild(el('span', 'cite-chip', 'our group'));
+    if (c.commit) li.appendChild(el('span', 'cite-chip', 'COMMIT'));
     if (c.flags && c.flags.indexOf('lineage') !== -1)
       li.appendChild(el('span', 'cite-chip', 'via a successor system'));
     if (showCites && c.cited_by != null)
@@ -136,9 +135,12 @@ var CITATIONS = (function(){
     var counts = data.counts;
     var gscholar = (indexRow && indexRow.gscholar != null) ? indexRow.gscholar : counts.gscholar;
     var all = data.citations;
-    var external = [], ownGroup = [];
+    /* COMMIT papers = citing works with Saman Amarasinghe among the
+       authors (entry.commit, set at build time); everything else is
+       external impact. */
+    var external = [], commitPapers = [];
     for (var i = 0; i < all.length; i++){
-      ((all[i].flags && all[i].flags.indexOf('own-group') !== -1) ? ownGroup : external).push(all[i]);
+      (all[i].commit ? commitPapers : external).push(all[i]);
     }
 
     /* Headline: displayed count = max(verified, Google Scholar). */
@@ -168,10 +170,10 @@ var CITATIONS = (function(){
     if (extPassing.length) legend.appendChild(leg('cite-seg-passing', 'Passing mention', extPassing.length));
     if (extUnjudged.length) legend.appendChild(leg('cite-seg-unjudged', 'Not yet analyzed', extUnjudged.length));
     mount.appendChild(legend);
-    if (ownGroup.length){
+    if (commitPapers.length){
       mount.appendChild(el('div', 'cite-owngroup-note',
-        'Counts above are external. ' + fmt(ownGroup.length) +
-        ' more citations come from our own group and students; they are listed separately at the bottom.'));
+        'Counts above are external. ' + fmt(commitPapers.length) +
+        ' more citations are COMMIT papers (Saman Amarasinghe among the authors); they are listed separately at the bottom.'));
     }
 
     /* Centrality filter and sort modes (apply to the judged list below). */
@@ -281,13 +283,13 @@ var CITATIONS = (function(){
       }
       return sorted;
     }
-    var ownJudged = ownGroup.filter(function(c){ return c.split; });
-    var ownUnjudged = ownGroup.filter(function(c){ return !c.split; });
+    var commitJudged = commitPapers.filter(function(c){ return c.split; });
+    var commitUnjudged = commitPapers.filter(function(c){ return !c.split; });
     function drawList(){
       groupsMount.innerHTML = '';
-      /* Impact keeps our own group's citations apart (external-impact
-         story); Recency and Popularity incorporate them, chip-marked. */
-      var rows = (state.sort === 'impact') ? judgedExt : judgedExt.concat(ownJudged);
+      /* Impact keeps COMMIT papers apart (external-impact story);
+         Recency and Popularity incorporate them, chip-marked. */
+      var rows = (state.sort === 'impact') ? judgedExt : judgedExt.concat(commitJudged);
       if (state.centrality !== 'all'){
         rows = rows.filter(function(c){ return c.centrality === state.centrality; });
       }
@@ -320,16 +322,16 @@ var CITATIONS = (function(){
         groupsMount.appendChild(renderFlat(sortRows(rows), showCites));
       }
       var unjudged = (state.sort === 'impact')
-        ? extUnjudged : extUnjudged.concat(ownUnjudged);
+        ? extUnjudged : extUnjudged.concat(commitUnjudged);
       if (state.centrality === 'all' && unjudged.length){
         groupsMount.appendChild(renderGroup('Not yet analyzed',
           'no usable evidence yet: title-only records, or citation snippets that never reach this paper',
           unjudged, false));
       }
-      if (state.sort === 'impact' && state.centrality === 'all' && ownGroup.length){
-        groupsMount.appendChild(renderGroup('Our own group',
-          'author overlap with this paper; reported apart from external impact',
-          ownGroup, false));
+      if (state.sort === 'impact' && state.centrality === 'all' && commitPapers.length){
+        groupsMount.appendChild(renderGroup('COMMIT papers',
+          'the group\'s own citing papers — Saman Amarasinghe is an author; reported apart from external impact',
+          commitPapers, false));
       }
     }
     drawList();

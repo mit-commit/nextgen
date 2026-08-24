@@ -32,7 +32,7 @@ letters, digits, `:`, `-`, `.`, `_`).
   "counts": {
     "records_raw": 1706,
     "works": 1483,
-    "own_group": 43,
+    "commit": 40,
     "judged": 1045,
     "gscholar": null
   },
@@ -44,9 +44,12 @@ letters, digits, `:`, `-`, `.`, `_`).
 - `works` — the **verified citation count**: deduped citing works, with
   `self-version` records (the paper indexed as citing itself) excluded.
   This is the number compared against Google Scholar.
-- `own_group` — how many of `works` carry the `own-group` flag (author
-  overlap with the paper). The view reports them separately from external
-  impact; they stay inside `works` so the total is comparable to Scholar's.
+- `commit` — how many of `works` are **COMMIT papers**: citing works with
+  Saman Amarasinghe among the authors (the per-entry `commit` field). The
+  view reports them separately from external impact; they stay inside
+  `works` so the total is comparable to Scholar's. (This replaced the
+  earlier `own_group` count, which used the classifier's broader
+  any-author-overlap flag.)
 - `judged` — works with a real FUNCTION judgment (not `unknown`/`unclassified`).
 - `gscholar` — the human-supplied Google Scholar count for this paper, or
   `null` if none has been supplied. Copied verbatim from `gscholar.json` by
@@ -77,7 +80,8 @@ year descending, then title. Omit a field rather than writing `null`/empty.
 | `centrality` | judged only | `core` / `engaged` / `peripheral` / `unknown` |
 | `confidence` | judged only | `high` / `medium` / `low` |
 | `secondary` | no | lower-priority FUNCTION values that also apply |
-| `flags` | no | union over folded siblings: `own-group`, `lineage`, `polluted-contexts`, `critical` |
+| `commit` | only when `true` | this citing work is a **COMMIT paper**: Saman Amarasinghe is among its authors, checked over all folded siblings' full author lists. Name rule (identical in every emitter): fold the name to lowercase letters; it is Saman iff it contains `amarasinghe` and either contains `saman` or matches `(^| )s (p )?amarasinghe` — so "Saman", "Saman P.", and "S. Amarasinghe" count while other Amarasinghes (Gayashan, Yasith, …) do not. Drives the COMMIT-papers vs external-impact separation in the view. |
+| `flags` | no | union over folded siblings: `own-group` (classifier's broader any-author-overlap flag — kept as classification metadata, no longer drives display), `lineage`, `polluted-contexts`, `critical` |
 | `evidence` | yes | evidence tier of the kept sibling: `fulltext` / `abstract+contexts` / `contexts` / `abstract` / `title_only` |
 | `cited_by` | yes (nullable) | the citing work's own citation count — OpenAlex `cited_by_count`, falling back to S2 `citationCount` for S2-only records; `null` where neither service resolves it. Maximum over folded siblings. Drives the view's popularity sort; backfilled by `harvest/citations/backfill_cited_by.py` and carried natively by new harvests. |
 

@@ -54,6 +54,17 @@ def norm_title(t):
     return re.sub(r"[^a-z0-9]+", "", (t or "").lower())
 
 
+def is_saman(name):
+    """True iff this author name is Saman Amarasinghe (drives the COMMIT-papers
+    separation; see SCHEMA.md). Handles 'Saman', 'Saman P.', and 'S.' forms,
+    including glued PDF-extraction artifacts, while excluding other
+    Amarasinghes (Gayashan, Yasith, ...)."""
+    n = re.sub(r"[^a-z]+", " ", (name or "").lower()).strip()
+    if "amarasinghe" not in n:
+        return False
+    return "saman" in n or bool(re.search(r"(^| )s (p )?amarasinghe", n))
+
+
 def authors_short(names):
     names = [n for n in (names or []) if n]
     if not names:
@@ -97,7 +108,7 @@ def build_paper(key, tax_rows, citing_list):
         groups.setdefault(gk, []).append((r, c))
 
     entries = []
-    n_own = 0
+    n_commit = 0
     n_self_groups = 0
     for _, sibs in groups.items():
         flags = sorted(set(f for r, _ in sibs for f in r["flags"]))
@@ -122,6 +133,9 @@ def build_paper(key, tax_rows, citing_list):
              "split": split_of(r["function"])}
         cb = [c2.get("cited_by") for _, c2 in sibs if c2.get("cited_by") is not None]
         e["cited_by"] = max(cb) if cb else None
+        if any(is_saman(a) for _, c2 in sibs for a in (c2.get("authors") or [])):
+            e["commit"] = True
+            n_commit += 1
         if r.get("year") or c.get("year"):
             e["year"] = r.get("year") or c.get("year")
         for src, dst in ((c.get("venue"), "venue"),
@@ -137,8 +151,6 @@ def build_paper(key, tax_rows, citing_list):
         if flags:
             e["flags"] = flags
         e["evidence"] = r["evidence"]
-        if "own-group" in flags:
-            n_own += 1
         entries.append(e)
 
     forder = {f: i for i, f in enumerate(FUNCTION_ORDER)}
@@ -153,7 +165,7 @@ def build_paper(key, tax_rows, citing_list):
         "counts": {
             "records_raw": len(tax_rows),
             "works": len(entries),          # deduped, self-version excluded
-            "own_group": n_own,
+            "commit": n_commit,             # Saman-authored citing works
             "judged": judged,
             "gscholar": None,               # filled from gscholar.json
         },
@@ -192,7 +204,7 @@ def main():
         }
         c = paper["counts"]
         print(f"{key}: raw={c['records_raw']} works={c['works']} "
-              f"own_group={c['own_group']} judged={c['judged']} gscholar={gs}")
+              f"commit={c['commit']} judged={c['judged']} gscholar={gs}")
         if args.write:
             with open(os.path.join(out_dir, key + ".json"), "w") as f:
                 json.dump(paper, f, indent=1)

@@ -61,6 +61,34 @@ var CITATIONS = (function(){
     if (!row) return 0;
     return Math.max(row.verified || 0, row.gscholar || 0);
   }
+
+  /* Impact score: each external judged citation weighted by what it does.
+     Weights mirrored in data/citations/SCHEMA.md — change both together. */
+  var WEIGHTS = {
+    'extends': 10, 'uses-tool': 8, 'adopts-idea': 8,
+    'uses-benchmark': 5, 'baseline': 5, 'positions': 3,
+    'surveys': 2, 'supports-claim': 2, 'exemplifies': 1,
+    'detailed-citation': 1, 'passing-citation': 0.5
+  };
+  function impactScore(row){
+    if (!row || !row.functions) return null;
+    var s = 0;
+    for (var f in row.functions){ s += (WEIGHTS[f] || 0) * row.functions[f]; }
+    return Math.round(s);
+  }
+
+  /* Page-level panel state: every open panel follows these; per-panel
+     controls can still diverge afterwards. */
+  var gPanel = { sort: 'impact', centrality: 'all', categories: null, search: '' };
+  function rowMatchesGlobal(c){
+    if (gPanel.categories && gPanel.categories.length &&
+        gPanel.categories.indexOf(c.function) === -1) return false;
+    if (gPanel.search){
+      var hay = ((c.title || '') + ' ' + (c.authors || '') + ' ' + (c.venue || '')).toLowerCase();
+      if (hay.indexOf(gPanel.search) === -1) return false;
+    }
+    return true;
+  }
   function trackSafe(name, data){
     try { if (typeof track === 'function') track(name, data); } catch (e) {}
   }
@@ -180,7 +208,7 @@ var CITATIONS = (function(){
     mount.appendChild(head);
 
     /* Top-level split over external works. */
-    var state = { centrality: 'all' };
+    var state = { centrality: gPanel.centrality };
     var extDetailed = external.filter(function(c){ return c.split === 'detailed'; });
     var extPassing  = external.filter(function(c){ return c.split === 'passing'; });
     var extUnjudged = external.filter(function(c){ return !c.split; });
@@ -204,7 +232,7 @@ var CITATIONS = (function(){
     }
 
     /* Centrality filter and sort modes (apply to the judged list below). */
-    state.sort = 'impact';
+    state.sort = gPanel.sort;
     state.headers = true;
     var judgedExt = extDetailed.concat(extPassing);
     var centCounts = { core: 0, engaged: 0, peripheral: 0 };
@@ -213,7 +241,7 @@ var CITATIONS = (function(){
     filterRow.appendChild(el('span', 'cite-filter-label', 'How central is this paper to the citing work? '));
     var btns = [];
     function mkBtn(value, label){
-      var b = el('button', 'type-toggle-btn' + (value === 'all' ? ' active' : ''), label);
+      var b = el('button', 'type-toggle-btn' + (value === state.centrality ? ' active' : ''), label);
       b.type = 'button';
       b.addEventListener('click', function(){
         state.centrality = value;
@@ -312,6 +340,7 @@ var CITATIONS = (function(){
       if (state.centrality !== 'all'){
         rows = rows.filter(function(c){ return c.centrality === state.centrality; });
       }
+      rows = rows.filter(rowMatchesGlobal);
       var showCites = state.sort === 'popularity';
       if (state.headers){
         /* All three modes: collapsible groups, collapsed by default, the
@@ -340,20 +369,31 @@ var CITATIONS = (function(){
       } else {
         groupsMount.appendChild(renderFlat(sortRows(rows), showCites));
       }
-      var unjudged = (state.sort === 'impact')
-        ? extUnjudged : extUnjudged.concat(commitUnjudged);
+      var unjudged = ((state.sort === 'impact')
+        ? extUnjudged : extUnjudged.concat(commitUnjudged)).filter(rowMatchesGlobal);
       if (state.centrality === 'all' && unjudged.length){
         groupsMount.appendChild(renderGroup('Not yet analyzed',
           'no usable evidence yet: title-only records, or citation snippets that never reach this paper',
           unjudged, false));
       }
-      if (state.sort === 'impact' && state.centrality === 'all' && commitPapers.length){
+      var commitShown = commitPapers.filter(rowMatchesGlobal);
+      if (state.sort === 'impact' && state.centrality === 'all' && commitShown.length){
         groupsMount.appendChild(renderGroup('COMMIT papers',
           'the group\'s own citing papers — Saman Amarasinghe is an author; reported apart from external impact',
-          commitPapers, false));
+          commitShown, false));
       }
     }
     drawList();
+
+    panels.push({ el: mount, sync: function(){
+      state.sort = gPanel.sort;
+      state.centrality = gPanel.centrality;
+      for (var pj = 0; pj < btns.length; pj++)
+        btns[pj].el.className = 'type-toggle-btn' + (btns[pj].value === state.centrality ? ' active' : '');
+      for (var pk = 0; pk < sortBtns.length; pk++)
+        sortBtns[pk].el.className = 'type-toggle-btn' + (sortBtns[pk].value === state.sort ? ' active' : '');
+      drawList();
+    } });
 
     var foot = el('div', 'cite-foot',
       'Classified with codebook v' + data.codebook + ' (' + data.generated +
@@ -367,7 +407,9 @@ var CITATIONS = (function(){
      can open or close the whole page; defaultOpen makes items rendered
      later (filter changes) follow the global state, like summaries do. */
   var instances = [];
+  var panels = [];      // loaded panel controllers, for the page-level tools
   var defaultOpen = false;
+  var dataCache = {};   // key -> per-paper JSON, kept for cross-paper analysis
 
   /* Per-paper files load lazily even under expand-all; this small queue
      keeps that progressive (a few fetches in flight, page never blocked). */
@@ -400,7 +442,7 @@ var CITATIONS = (function(){
       fetchQueue.push(function(){
         return fetch(DATA_BASE + encodeURIComponent(key) + '.json')
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-          .then(function(data){ renderView(div, key, data, indexRow); })
+          .then(function(data){ dataCache[key] = data; renderView(div, key, data, indexRow); })
           .catch(function(e){
             loaded = false;
             div.innerHTML = '';
@@ -436,10 +478,75 @@ var CITATIONS = (function(){
     for (var i = 0; i < instances.length; i++) instances[i].setOpen(open);
   }
 
+  /* Page-level tools: patch the global panel state and resync every
+     loaded panel (open or not — they redraw in place). */
+  function setGlobalPanels(patch){
+    if (patch.sort !== undefined) gPanel.sort = patch.sort;
+    if (patch.centrality !== undefined) gPanel.centrality = patch.centrality;
+    if (patch.categories !== undefined) gPanel.categories = patch.categories;
+    if (patch.search !== undefined) gPanel.search = String(patch.search || '').toLowerCase().trim();
+    panels = panels.filter(function(pn){ return document.contains(pn.el); });
+    for (var i = 0; i < panels.length; i++) panels[i].sync();
+  }
+
+  /* Fetch (through the progressive queue) the data files for a set of
+     papers without opening their panels; resolves when all settle. */
+  function ensureData(list){
+    var jobs = [];
+    for (var i = 0; i < list.length; i++){
+      (function(key){
+        if (dataCache[key]) return;
+        jobs.push(new Promise(function(resolve){
+          fetchQueue.push(function(){
+            return fetch(DATA_BASE + encodeURIComponent(key) + '.json')
+              .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+              .then(function(data){ dataCache[key] = data; })
+              .catch(function(){})
+              .then(resolve);
+          });
+        }));
+      })(list[i].key !== undefined ? list[i].key : list[i]);
+    }
+    pumpQueue();
+    return Promise.all(jobs);
+  }
+
+  /* Works citing more than one of the given papers, matched by DOI or
+     normalized title over whatever files are cached. */
+  function crossCiters(keys){
+    var byId = {};
+    for (var i = 0; i < keys.length; i++){
+      var d = dataCache[keys[i]];
+      if (!d) continue;
+      for (var j = 0; j < d.citations.length; j++){
+        var c = d.citations[j];
+        if (!c.title || c.title === 'Untitled') continue; // unauditable records
+        var id = c.doi || c.title.toLowerCase().replace(/[^a-z0-9]+/g, '');
+        if (!id) continue;
+        if (!byId[id]) byId[id] = { work: c, papers: [] };
+        if (byId[id].papers.indexOf(keys[i]) === -1) byId[id].papers.push(keys[i]);
+        if ((c.cited_by || 0) > (byId[id].work.cited_by || 0)) byId[id].work = c;
+      }
+    }
+    var out = [];
+    for (var id2 in byId){ if (byId[id2].papers.length >= 2) out.push(byId[id2]); }
+    out.sort(function(a, b){
+      return (b.papers.length - a.papers.length) ||
+             ((b.work.cited_by || 0) - (a.work.cited_by || 0));
+    });
+    return out;
+  }
+
   return {
     attachToggle: attachToggle,
     countBucket: countBucket,
     displayCount: displayCount,
+    impactScore: impactScore,
+    WEIGHTS: WEIGHTS,
+    FUNCTIONS: FUNCTIONS,
+    setGlobalPanels: setGlobalPanels,
+    ensureData: ensureData,
+    crossCiters: crossCiters,
     setAllOpen: setAllOpen,
     setDefaultOpen: function(v){ defaultOpen = !!v; },
     setDataBase: function(p){ DATA_BASE = p; },

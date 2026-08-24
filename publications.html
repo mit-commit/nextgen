@@ -8,7 +8,7 @@
        To add a publication, append an entry to that file.
        To feature a paper, set "featured": true on its entry (award papers
        with a "price" are featured automatically). -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=4"/>
   <!-- Umami analytics (privacy-friendly, cookieless) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="0501f709-b527-45af-8727-062721122bb4"></script>
 </head>
@@ -108,16 +108,15 @@
 
             <div id="filters-interactive" class="filters-interactive hidden">
               <div class="filter-block">
-                <div class="filter-label">Years</div>
-                <div id="facet-years" class="year-grid"></div>
-              </div>
-
-              <div class="filter-block">
                 <div class="filter-label">Title search</div>
                 <input id="facet-title" type="text" class="text-input" placeholder="Search title…">
               </div>
 
               <div class="filter-grid">
+                <div class="filter-block">
+                  <div class="filter-label">Years</div>
+                  <div id="facet-years" class="facet-list"></div>
+                </div>
                 <div class="filter-block">
                   <div class="filter-label">Topics &amp; Projects</div>
                   <div class="type-toggle" id="kw-toggle" role="group" aria-label="Filter by topic or project">
@@ -150,8 +149,55 @@
                   <div id="facet-types" class="facet-list"></div>
                 </div>
               </div>
+
+              <!-- Page-level citation tools: drive every open Citations panel
+                   (sort, centrality, categories, search) and filter the paper
+                   list itself (citation-count and impact sliders). -->
+              <div class="filter-grid cite-tools">
+                <div class="filter-block">
+                  <div class="filter-label">Citation categories</div>
+                  <div id="facet-cite-cats" class="facet-list"></div>
+                </div>
+                <div class="filter-block">
+                  <div class="filter-label">Citation panels</div>
+                  <div class="cite-tools-row">Sort
+                    <span class="type-toggle" id="cite-global-sort">
+                      <button type="button" class="type-toggle-btn active" data-v="impact">Impact</button>
+                      <button type="button" class="type-toggle-btn" data-v="recency">Recency</button>
+                      <button type="button" class="type-toggle-btn" data-v="popularity">Popularity</button>
+                    </span>
+                  </div>
+                  <div class="cite-tools-row">Centrality
+                    <span class="type-toggle" id="cite-global-centrality">
+                      <button type="button" class="type-toggle-btn active" data-v="all">All</button>
+                      <button type="button" class="type-toggle-btn" data-v="core">Core</button>
+                      <button type="button" class="type-toggle-btn" data-v="engaged">Engaged</button>
+                      <button type="button" class="type-toggle-btn" data-v="peripheral">Peripheral</button>
+                    </span>
+                  </div>
+                  <div class="cite-tools-row">
+                    <input id="cite-search" type="text" class="text-input" placeholder="Search citing works (title, author, venue)…">
+                  </div>
+                </div>
+                <div class="filter-block">
+                  <div class="filter-label">Paper thresholds</div>
+                  <div class="cite-tools-row">Citations ≥ <b id="cite-min-cites-label">0</b>
+                    <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0">
+                  </div>
+                  <div class="cite-tools-row">Impact ≥ <b id="cite-min-impact-label">0</b>
+                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="100" value="0">
+                  </div>
+                  <div class="cite-tools-note">Impact weighs each citation by its
+                    category (building on a paper counts more than citing it in a
+                    list). Papers without citation data are hidden once a
+                    threshold is above zero.</div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Aggregate citation overview + cross-paper citers (filled by JS) -->
+          <div id="cite-overview" class="cite-overview hidden"></div>
 
           <!-- PUBLICATIONS -->
           <h2 class="grouphead">Publications <span id="pubs-count"></span></h2>
@@ -169,7 +215,7 @@
   <script src="assets/js/common.js"></script>
   <script src="assets/js/pubs.js"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
-  <script src="assets/js/citations.js?v=4"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=3"></script> <!-- the filters controller -->
+  <script src="assets/js/citations.js?v=5"></script>    <!-- per-paper citation view (data/citations/) -->
+  <script src="assets/js/publications.js?v=4"></script> <!-- the filters controller -->
 </body>
 </html>

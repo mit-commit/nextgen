@@ -387,7 +387,9 @@ function createBibLink(it){
       typeMode: 'type',           // 'type' | 'venue' — how the third facet categorizes
       venueSort: 'name',          // 'name' | 'count' — venue ordering in venue mode
       summaryExpanded: false,     // global default for per-paper summaries
-      citationsExpanded: false    // global default for per-paper citation panels
+      citationsExpanded: false,   // global default for per-paper citation panels
+      minCites: 0,                // paper threshold: displayed citation count
+      minImpact: 0                // paper threshold: weighted impact score
 
   };
   var els = {
@@ -413,6 +415,15 @@ function createBibLink(it){
       sort3: document.getElementById('sort-3'),
       sort4: document.getElementById('sort-4'),
       sortReset: document.getElementById('sort-reset'),
+      citeOverview: document.getElementById('cite-overview'),
+      citeSort: document.getElementById('cite-global-sort'),
+      citeCentrality: document.getElementById('cite-global-centrality'),
+      citeSearch: document.getElementById('cite-search'),
+      citeCats: document.getElementById('facet-cite-cats'),
+      minCites: document.getElementById('cite-min-cites'),
+      minCitesLabel: document.getElementById('cite-min-cites-label'),
+      minImpact: document.getElementById('cite-min-impact'),
+      minImpactLabel: document.getElementById('cite-min-impact-label'),
 
   };
 
@@ -983,6 +994,19 @@ if (auKeys.length){
       }
     }
 
+    // Citation thresholds (page-level sliders); papers without data are
+    // hidden once a threshold is above zero.
+    if (state.minCites > 0){
+      items = items.filter(function(it){ return citeCountOf(it) >= state.minCites; });
+    }
+    if (state.minImpact > 0 && window.CITATIONS){
+      items = items.filter(function(it){
+        var row = CITE_INDEX && CITE_INDEX[bibtexKeyOf(it)];
+        var imp = row ? CITATIONS.impactScore(row) : null;
+        return imp != null && imp >= state.minImpact;
+      });
+    }
+
     return items;
   }
 
@@ -999,13 +1023,7 @@ if (auKeys.length){
       var y = itemsY[i].year ? String(itemsY[i].year) : '';
       if (y) yCounts[y] = (yCounts[y]||0) + 1;
     }
-    // update year badges + active class
-    for (var yKey in yearBtnMap){
-      var badgeNode = yearBtnMap[yKey].badge;
-	badgeNode.nodeValue = ' (' + String(yCounts[yKey] || 0) + ')';
-
-      yearBtnMap[yKey].btn.className = state.years[yKey] ? 'year-btn active' : 'year-btn';
-    }
+    updateFacetCounts(els.years, 'years', yCounts, state.years);
 
     // Keywords
     var itemsK = filteredItems('keywords'), kCounts = {}, j;
@@ -1060,6 +1078,79 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
 
   updatePublicationCount(0);
 
+  // Aggregate citation overview over the papers currently shown, plus the
+  // cross-paper-citers finder. Hidden when the citations index is absent.
+  function renderCiteOverview(items){
+    var box = els.citeOverview;
+    if (!box) return;
+    if (!CITE_INDEX || !window.CITATIONS){ box.className = 'cite-overview hidden'; return; }
+    var withData = [], totalC = 0, totalI = 0, det = 0, pas = 0, i, f;
+    var DET = {'extends':1,'uses-tool':1,'adopts-idea':1,'uses-benchmark':1,'baseline':1,
+               'positions':1,'surveys':1,'supports-claim':1,'detailed-citation':1};
+    for (i = 0; i < items.length; i++){
+      var row = CITE_INDEX[bibtexKeyOf(items[i])];
+      if (!row) continue;
+      withData.push({ key: bibtexKeyOf(items[i]), title: items[i].title || '' });
+      totalC += CITATIONS.displayCount(row);
+      var imp = CITATIONS.impactScore(row);
+      if (imp != null) totalI += imp;
+      for (f in (row.functions || {})){
+        if (DET[f]) det += row.functions[f]; else pas += row.functions[f];
+      }
+    }
+    box.innerHTML = '';
+    if (!withData.length){ box.className = 'cite-overview hidden'; return; }
+    box.className = 'cite-overview';
+    var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
+    l1.innerHTML = '<b>' + withData.length.toLocaleString('en-US') + '</b> of ' +
+      items.length.toLocaleString('en-US') + ' shown papers have citation data — <b>' +
+      totalC.toLocaleString('en-US') + '</b> citations, combined impact <b>' +
+      totalI.toLocaleString('en-US') + '</b>. External judged citations: ' +
+      det.toLocaleString('en-US') + ' detailed / ' + pas.toLocaleString('en-US') + ' passing.';
+    box.appendChild(l1);
+    var cc = document.createElement('div'); cc.className = 'cite-crossciters';
+    var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'btn';
+    btn.textContent = 'Works citing several of these papers';
+    var out = document.createElement('div');
+    btn.onclick = function(){
+      btn.disabled = true; btn.textContent = 'Loading citation data…';
+      CITATIONS.ensureData(withData.map(function(w){ return w.key; })).then(function(){
+        var titleByKey = {};
+        withData.forEach(function(w){ titleByKey[w.key] = w.title; });
+        var hits = CITATIONS.crossCiters(withData.map(function(w){ return w.key; }));
+        btn.textContent = 'Works citing several of these papers (' + hits.length.toLocaleString('en-US') + ')';
+        btn.disabled = false;
+        out.innerHTML = '';
+        var ul = document.createElement('ul');
+        var cap = Math.min(hits.length, 40);
+        for (var h = 0; h < cap; h++){
+          var li = document.createElement('li');
+          var w = hits[h].work;
+          if (w.url){
+            var a = document.createElement('a'); a.href = w.url; a.target = '_blank';
+            a.rel = 'noopener'; a.textContent = w.title; li.appendChild(a);
+          } else { li.appendChild(document.createTextNode(w.title)); }
+          var which = hits[h].papers.map(function(k){
+            var t = titleByKey[k] || k;
+            return t.length > 34 ? t.slice(0, 34) + '…' : t;
+          }).join('; ');
+          li.appendChild(document.createTextNode(' — cites ' + hits[h].papers.length +
+            ' of these papers (' + which + ')' +
+            (w.cited_by != null ? '; ' + w.cited_by.toLocaleString('en-US') + ' cites of its own' : '')));
+          ul.appendChild(li);
+        }
+        if (hits.length > cap){
+          var more = document.createElement('li');
+          more.textContent = '… and ' + (hits.length - cap).toLocaleString('en-US') + ' more.';
+          ul.appendChild(more);
+        }
+        out.appendChild(ul);
+        track('citations-cross-citers', { papers: withData.length, hits: hits.length });
+      });
+    };
+    cc.appendChild(btn); cc.appendChild(out); box.appendChild(cc);
+  }
+
   function applyFilters(){
     // recompute dynamic counts first (so user sees availability)
     updateDynamicCounts();
@@ -1082,11 +1173,23 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
 
     renderList(els.results, items);
 
+    renderCiteOverview(items);
+
     // interactive panel visibility
     els.filtersInteractive.className = (state.mode === 'interactive') ? 'filters-interactive' : 'filters-interactive hidden';
   }
 
   function clearAll(){
+    // citation tools
+    state.minCites = 0; state.minImpact = 0;
+    if (els.minCites){ els.minCites.value = '0'; els.minCitesLabel.textContent = '0'; }
+    if (els.minImpact){ els.minImpact.value = '0'; els.minImpactLabel.textContent = '0'; }
+    if (els.citeSearch) els.citeSearch.value = '';
+    if (els.citeCats){
+      var ccbs = els.citeCats.querySelectorAll('input'), ci;
+      for (ci = 0; ci < ccbs.length; ci++) ccbs[ci].checked = false;
+    }
+    if (window.CITATIONS) CITATIONS.setGlobalPanels({ categories: null, search: '' });
     state.years = {};
     state.titleQuery = '';
     state.keywords = {};
@@ -1156,6 +1259,88 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         track('citations-toggle-all', { expanded: on });
       };
     }
+
+    // Page-level citation tools: sort / centrality button groups driving
+    // every open panel, the category listbox, the citing-work search, and
+    // the two paper-threshold sliders.
+    function wireToggleGroup(container, patchKey){
+      if (!container) return;
+      var bs = container.querySelectorAll('.type-toggle-btn');
+      for (var i = 0; i < bs.length; i++){
+        bs[i].onclick = function(){
+          for (var j = 0; j < bs.length; j++){
+            bs[j].className = 'type-toggle-btn' + (bs[j] === this ? ' active' : '');
+          }
+          if (window.CITATIONS){
+            var patch = {}; patch[patchKey] = this.getAttribute('data-v');
+            CITATIONS.setGlobalPanels(patch);
+          }
+          track('citations-global-' + patchKey, { value: this.getAttribute('data-v') });
+        };
+      }
+    }
+    wireToggleGroup(els.citeSort, 'sort');
+    wireToggleGroup(els.citeCentrality, 'centrality');
+
+    if (els.citeCats && window.CITATIONS){
+      (function(){
+        var selected = {};
+        for (var i = 0; i < CITATIONS.FUNCTIONS.length; i++){
+          (function(f){
+            var label = document.createElement('label'); label.className = 'facet-item';
+            var cb = document.createElement('input'); cb.type = 'checkbox'; cb.value = f.key;
+            var txt = document.createElement('span'); txt.className = 'facet-text';
+            txt.appendChild(document.createTextNode(f.label)); txt.title = f.gloss;
+            cb.onchange = function(){
+              selected[f.key] = this.checked;
+              var keys = keysSelected(selected);
+              CITATIONS.setGlobalPanels({ categories: keys.length ? keys : null });
+              if (this.checked) track('citations-category-filter', { value: f.key });
+            };
+            label.appendChild(cb); label.appendChild(txt);
+            els.citeCats.appendChild(label);
+          })(CITATIONS.FUNCTIONS[i]);
+        }
+      })();
+    }
+
+    if (els.citeSearch){
+      var citeSearchTimer = null;
+      els.citeSearch.oninput = function(){
+        var q = this.value;
+        clearTimeout(citeSearchTimer);
+        citeSearchTimer = setTimeout(function(){
+          if (window.CITATIONS) CITATIONS.setGlobalPanels({ search: q });
+        }, 200);
+      };
+    }
+
+    // Sliders map quadratically onto [0, max] for fine control at the low end.
+    function wireSlider(input, labelEl, maxFn, apply){
+      if (!input) return;
+      input.oninput = function(){
+        var frac = (parseInt(this.value, 10) || 0) / 100;
+        var v = Math.round(frac * frac * maxFn());
+        labelEl.textContent = v.toLocaleString('en-US');
+        apply(v);
+        applyFilters();
+      };
+    }
+    function maxCites(){
+      var m = 0, k;
+      for (k in (CITE_INDEX || {})) m = Math.max(m, CITATIONS.displayCount(CITE_INDEX[k]));
+      return m || 1;
+    }
+    function maxImpact(){
+      var m = 0, k, v;
+      for (k in (CITE_INDEX || {})){
+        v = window.CITATIONS ? CITATIONS.impactScore(CITE_INDEX[k]) : null;
+        if (v != null) m = Math.max(m, v);
+      }
+      return m || 1;
+    }
+    wireSlider(els.minCites, els.minCitesLabel, maxCites, function(v){ state.minCites = v; });
+    wireSlider(els.minImpact, els.minImpactLabel, maxImpact, function(v){ state.minImpact = v; });
 
     if (els.authorSort) {
       els.authorSort.value = state.authorSort;
@@ -1412,7 +1597,7 @@ if (els.sortReset) els.sortReset.onclick = function(){
           for (i=0;i<DATA.length;i++){ if (DATA[i].year) ySet[String(DATA[i].year)] = 1; }
           var years = []; for (var k in ySet) years.push(parseInt(k,10));
           years.sort(function(a,b){ return b-a; });
-          buildYearGrid(years);
+          buildFacetBox(years.map(String), els.years, 'years', state.years);
 
             // Facets static lists (values only; counts dynamic)
             var auSet = {};

@@ -202,9 +202,16 @@ def main():
         paper["counts"]["gscholar"] = gs
         if reception.get(key):
             paper["reception"] = reception[key]
+        # External judged function counts: feed the page-level impact score
+        # and aggregate overview without loading the per-paper file.
+        fn_counts = {}
+        for e in paper["citations"]:
+            if e["split"] and not e.get("commit"):
+                fn_counts[e["function"]] = fn_counts.get(e["function"], 0) + 1
         index["papers"][key] = {
             "verified": paper["counts"]["works"],
             "gscholar": gs,
+            "functions": fn_counts,
         }
         c = paper["counts"]
         print(f"{key}: raw={c['records_raw']} works={c['works']} "

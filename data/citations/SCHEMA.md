@@ -128,11 +128,32 @@ sibling. If any sibling is `self-version`, drop the whole group.
   "schema": 1,
   "generated": "2026-08-24",
   "papers": {
-    "halide:pldi:2013":  { "verified": 1483, "gscholar": null },
-    "netblocks-pldi24":  { "verified": 4,    "gscholar": null }
+    "halide:pldi:2013":  { "verified": 1483, "gscholar": null,
+                           "functions": { "extends": 35, "uses-tool": 77, "...": 0 } },
+    "netblocks-pldi24":  { "verified": 4,    "gscholar": null,
+                           "functions": { "extends": 1, "exemplifies": 2 } }
   }
 }
 ```
+
+- `functions` — the paper's **external judged** citation counts per FUNCTION
+  value (COMMIT papers and unjudged rows excluded; zero-count values
+  omitted). Lets the publications page compute the paper's **impact score**
+  and the aggregate overview without fetching per-paper files. The impact
+  score is `Σ weight(function) × count`, with the weights defined once in
+  `citations.js` (`CITATIONS.WEIGHTS`) and mirrored here:
+
+  | function | weight | | function | weight |
+  |---|---|---|---|---|
+  | extends | 10 | | surveys | 2 |
+  | uses-tool | 8 | | supports-claim | 2 |
+  | adopts-idea | 8 | | exemplifies | 1 |
+  | uses-benchmark | 5 | | detailed-citation | 1 |
+  | baseline | 5 | | passing-citation | 0.5 |
+  | positions | 3 | | | |
+
+  A row without `functions` has no impact score (`null`); the page's impact
+  threshold then hides that paper whenever the threshold is above zero.
 
 One small file, fetched once by the publications page. A paper appears here
 iff `<bibtexKey>.json` exists; presence is what turns on the paper's

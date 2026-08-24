@@ -128,6 +128,37 @@ progressive queue (four in flight), so the page never blocks. The two
 expand-alls are independent — the citation panels and toggles carry a
 `cite-` class the summaries toggle deliberately excludes.
 
+### Page-level citation tools
+
+When citations are shown across many papers, the filters area carries a
+citation-tools row (2026-08-24 request):
+
+- **Citation panels**: Impact/Recency/Popularity and All/Core/Engaged/
+  Peripheral button groups that drive every open panel at once (each
+  panel's own controls stay usable afterwards), plus a **citing-work
+  search** filtering rows in all panels by title, author, or venue.
+- **Citation categories**: a facet listbox of the eleven FUNCTION values
+  (Builds on it, Uses the system, …); selecting values restricts every
+  panel to those categories.
+- **Paper thresholds**: two sliders filtering the paper list itself —
+  minimum citation count (the displayed figure) and minimum **impact
+  score** (`Σ weight(function) × count` over external judged citations;
+  weights in SCHEMA.md, computed from `index.json`'s per-paper
+  `functions` counts). Quadratic slider mapping for fine control at the
+  low end; papers without data are hidden once a threshold is above zero.
+- **Aggregate overview**: a box above the list totalling the shown
+  papers' citations, combined impact, and detailed/passing judged counts,
+  with a **works citing several of these papers** finder that loads the
+  shown papers' files through the progressive queue and lists works
+  citing two or more of them (matched by DOI or normalized title;
+  untitled records skipped).
+- **Years** moved from the button grid into a facet listbox styled like
+  Topics & Projects and Authors.
+
+Clear filters resets the tools; the sliders and overview live entirely on
+`index.json`, so none of this adds per-paper fetches until a panel opens
+or the cross-citers finder is invoked.
+
 Analytics: the view fires `citations-view` on expand and
 `citations-centrality-filter` on filter use, via the same `track()` no-op
 wrapper the rest of the site uses.

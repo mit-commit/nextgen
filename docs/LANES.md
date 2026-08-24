@@ -568,6 +568,20 @@ raise it to the setup lane.
   toggle labels. Verified: 173 panels open and render, summaries toggle
   leaves them untouched, filter re-render keeps them open, hide collapses
   all. citations.js?v=4, publications.js?v=3.
+- **Page-level citation tools** (2026-08-24 request): global
+  Impact/Recency/Popularity + All/Core/Engaged/Peripheral controls
+  driving every open panel; a FUNCTION-category facet listbox and a
+  citing-work search filtering panel rows; two paper-threshold sliders
+  (citation count, and impact = Σ weight×count from the new per-paper
+  `functions` counts in index.json — weights in SCHEMA.md); an aggregate
+  overview box with a cross-paper-citers finder (DOI/title matched,
+  untitled records skipped); Years converted from the button grid to a
+  facet listbox. Clear filters resets the tools. Verified in Chrome end
+  to end (global sync into panels, category/search row filtering,
+  slider thresholds 723-impact→2 papers, cross-citers over 43 papers →
+  2,491 works). Non-pilot index rows lack `functions` until the
+  taxonomy lane's merge rerun — impact shows pilots-only meanwhile.
+  style.css?v=4, citations.js?v=5, publications.js?v=4.
 
 ## Cross-lane requests
 

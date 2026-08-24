@@ -262,14 +262,19 @@ def main():
         paper = build_paper(key, tax_rows, citing_list, args.generated)
         gs = (gscholar.get(key) or {}).get('count')
         paper['counts']['gscholar'] = gs
-        # External judged function counts: feed the page-level impact score
-        # and aggregate overview without loading the per-paper file.
+        # External judged function/centrality counts: feed the page-level
+        # impact score, aggregate overview, and centrality buttons without
+        # loading the per-paper file.
         fn_counts = {}
+        cent_counts = {}
         for e in paper['citations']:
             if e['split'] and not e.get('commit'):
                 fn_counts[e['function']] = fn_counts.get(e['function'], 0) + 1
+                cent = e.get('centrality')
+                if cent in ('core', 'engaged', 'peripheral'):
+                    cent_counts[cent] = cent_counts.get(cent, 0) + 1
         index['papers'][key] = {'verified': paper['counts']['works'], 'gscholar': gs,
-                                'functions': fn_counts}
+                                'functions': fn_counts, 'centrality': cent_counts}
         c = paper['counts']
         print(f"{key}: raw={c['records_raw']} works={c['works']} "
               f"commit={c['commit']} judged={c['judged']} gscholar={gs}")

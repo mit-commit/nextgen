@@ -1,0 +1,184 @@
+{
+ "10.1016_j.jss.2024.112250": {
+  "abstract": null,
+  "doi": "10.1016/j.jss.2024.112250",
+  "openalex": "W4403331667",
+  "status": "no_abstract",
+  "title": "Measuring code efficiency optimization capabilities with ACEOB"
+ },
+ "10.1016_j.sysarc.2023.102838": {
+  "abstract": null,
+  "doi": "10.1016/j.sysarc.2023.102838",
+  "openalex": "W4320480670",
+  "status": "no_abstract",
+  "title": "Facilitating hardware-aware neural architecture search with learning-based predictive models"
+ },
+ "10.1016_j.sysarc.2024.103305": {
+  "abstract": null,
+  "doi": "10.1016/j.sysarc.2024.103305",
+  "openalex": "W4404523834",
+  "status": "no_abstract",
+  "title": "NLTSP: A cost model for tensor program tuning using nested loop trees"
+ },
+ "10.1051_bioconf_20249700021": {
+  "abstract": "This work presents an innovative machine-learning approach to improve loop tiling in computational programming. Loop tiling is a crucial strategy for boosting speed by promoting data locality and reducing cache misses. Conventional methods frequently have difficulties in accurately calculating the most suitable tile size, which is a crucial component impacting the performance of the program. The combination of Multi-Output Generalized Regression Neural Networks (MOGRNN) and Linear Regression in researchers’ techniques allows for precise prediction of optimal tile sizes for various computing workloads. The study entails an extensive gathering of data from 22 benchmark programs, which encompass a diverse set of computational patterns and issue sizes. This data collection is further enhanced by incorporating both static and dynamic program aspects. By employing meticulous preprocessing and doing dual-model analysis, the researchers’ approach effectively captures both linear and intricate non-linear correlations present in the data. The method’s usefulness in boosting prediction accuracy for ideal tile sizes and enhancing overall program performance has been demonstrated through extensive testing on an Intel Core i7 CPU. This novel approach provides a viable avenue for advanced study in code optimization approaches.",
+  "doi": "10.1051/bioconf/20249700021",
+  "openalex": "W4394001280",
+  "status": "ok",
+  "title": "Enhancing Programs Efficiency through a Machine Learning-Based Model for Tile Size Selection"
+ },
+ "10.1109_cgo53902.2022.9741263": {
+  "abstract": "Despite ceaseless efforts, extremely large and complex optimization space makes even the state-of-the-art compilers fail in delivering the most performant setting that can fully utilize the underlying hardware. Although this inefficiency suggests opportunity for tuning, it has been challenging for prior tuning methods to consider the complex interactions between optimizations and maximize the tuning quality while handling local optima efficiently. To tackle this problem, we suggest an intelligent auto-tuning strategy, called SRTuner, which searches for the best optimization setting by exposing important optimization interactions and directly using them to focus on promising subspaces. To reveal high-impact inter-optimization relations, SRTuner proposes a multistage structure and a distribution-based estimation method that approximates the impact of an optimization effectively. Besides, to efficiently handle local optima, our technique defines optimization decisions as a series of multi-armed bandit problems to formulate the exploration-exploitation dilemma. SRTuner is evaluated with three representative compilers from various domains on different target hardware: GCC (traditional C/ C++ compiler) on CPU, TVM (domain-specific machine learning compiler) on GPU, and OpenCL compilers (kernel compiler for heterogeneous computing) on both CPU/GPU. Results show that SRTuner accelerates target executions by $1. 24 \\times$, $2. 03 \\times$ and $34. 4 \\times$ compared to the highest level of optimization provided by each compiler and outperforms state-of-the-art works by $1. 04 \\times - 1. 14 \\times$. As a byproduct of our unique tuning strategy, SRTuner can offer synergistic optimizations for each workload, which allows it to in part identify why it outperformed current compilers. With this information, we are able to find important optimizations that each compiler misused and demonstrate how this information can benefit future tuning strategies.",
+  "doi": "10.1109/cgo53902.2022.9741263",
+  "openalex": "W4220833602",
+  "status": "ok",
+  "title": "SRTuner: Effective Compiler Optimization Customization by Exposing Synergistic Relations"
+ },
+ "10.1109_cgo57630.2024.10444791": {
+  "abstract": "Polyhedral techniques have been widely used for automatic code optimization in low-level compilers and higher-level processes. Loop optimization is central to this technique, and several polyhedral schedulers like Feautrier, Pluto, isl and Tensor Scheduler have been proposed, each of them targeting a different architecture, parallelism model, or application scenario. The need for scenario-specific optimization is growing due to the heterogeneity of architectures. One of the most critical cases is represented by NPUs (Neural Processing Units) used for AI, which may require loop optimization with different objectives. Another factor to be considered is the framework or compiler in which polyhedral optimization takes place. Different scenarios, depending on the target architecture, compilation environment, and application domain, may require different kinds of optimization to best exploit the architecture feature set. We introduce a new configurable polyhedral scheduler, PolyTOPS, that can be adjusted to various scenarios with straightforward, high-level configurations. This scheduler allows the creation of diverse scheduling strategies that can be both scenario-specific (like state-of-the-art schedulers) and kernel-specific, breaking the concept of a one-size-fits-all scheduler approach. PolyTOPS has been used with isl and CLooG as code generators and has been integrated in MindSpore AKG deep learning compiler. Experimental results in different scenarios show good performance: a geomean speedup of 7.66x on MindSpore (for the NPU Ascend architecture) hybrid custom operators over isl scheduling, a geomean speedup up to 1.80× on PolyBench on different multicore architectures over Pluto scheduling. Finally, some comparisons with different state-of-the-art tools are presented in the PolyMage scenario.",
+  "doi": "10.1109/cgo57630.2024.10444791",
+  "openalex": "W4392266023",
+  "status": "ok",
+  "title": "PolyTOPS: Reconfigurable and Flexible Polyhedral Scheduler"
+ },
+ "10.1109_infocom53939.2023.10228858": {
+  "abstract": "Traditional deep learning compilers rely on heuristics for subgraph generation, which impose extra constraints on graph optimization, e.g., each subgraph can only contain at most one complex operator. In this paper, we propose AGO, a framework for graph optimization with arbitrary structures to boost the inference performance of deep models by removing such constraints. To create new optimization opportunities for complicated subgraphs, we propose intensive operator fusion, which effectively stitches multiple complex operators together for better performance. Further, we design a graph partitioning scheme that allows an arbitrary structure for each subgraph while guaranteeing the acyclic property among all generated subgraphs. Additionally, to enable efficient performance tuning for complicated subgraphs, we devise a divide-and-conquer tuning mechanism to orchestrate different system components. Through extensive experiments on various neural networks and mobile devices, we show that our system can improve the inference performance by up to 3.3× when compared with state-of-the-art vendor libraries and deep compilers.",
+  "doi": "10.1109/infocom53939.2023.10228858",
+  "openalex": "W4386243294",
+  "status": "ok",
+  "title": "AGO: Boosting Mobile AI Inference Performance by Removing Constraints on Graph Optimization"
+ },
+ "10.1109_pact52795.2021.00008": {
+  "abstract": "Search-based techniques have been demonstrated effective in solving complex optimization problems that arise in domain-specific compilers for machine learning (ML). Unfortunately, deploying such techniques in production compilers is impeded by two limitations. First, prior works require factorization of a computation graph into smaller subgraphs over which search is applied. This decomposition is not only non-trivial but also significantly limits the scope of optimization. Second, prior works require search to be applied in a single stage in the compilation flow, which does not fit with the multi-stage layered architecture of most production ML compilers. This paper presents Xtat, an autotuner for production ML compilers that can tune both graph-level and subgraph-level optimizations across multiple compilation stages. Xtat applies Xtat-M, a flexible search methodology that defines a search formulation for joint optimizations by accurately modeling the interactions between different compiler passes. Xtat tunes tensor layouts, operator fusion decisions, tile sizes, and code generation parameters in XLA, a production ML compiler, using various search strategies. In an evaluation across 150 ML training and inference models on Tensor Processing Units (TPUs) at Google, Xtat offers up to 2.4x and an average 5% execution time speedup over the heavily-optimized XLA compiler.",
+  "doi": "10.1109/pact52795.2021.00008",
+  "openalex": "W3205943341",
+  "status": "ok",
+  "title": "A Flexible Approach to Autotuning Multi-Pass Machine Learning Compilers"
+ },
+ "10.1109_pact52795.2021.00009": {
+  "abstract": "The polyhedral model allows a structured way of defining semantics-preserving transformations to improve the performance of a large class of loops. Finding profitable points in this space is a hard problem which is usually approached by heuristics that generalize from domain-expert knowledge. Existing search space formulations in state-of-the-art heuristics depend on the shape of particular loops, making it hard to leverage generic and more powerful optimization techniques from the machine learning domain. In this paper, we propose a shape-agnostic formulation for the space of legal transformations in the polyhedral model as a Markov Decision Process (MDP). Instead of using transformations, the formulation is based on an abstract space of possible schedules. In this formulation, states model partial schedules, which are constructed by actions that are reusable across different loops. With a simple heuristic to traverse the space, we demonstrate that our formulation is powerful enough to match and outperform state-of-the-art heuristics. On the Polybench benchmark suite, we found the search space to contain transformations that lead to a speedup of 3.39x over LLVM O3, which is 1.34x better than the best transformations found in the search space of isl, and 1.83x better than the speedup achieved by the default heuristics of isl. Our generic MDP formulation enables future work to use reinforcement learning to learn optimization heuristics over a wide range of loops. This also contributes to the emerging field of machine learning in compilers, as it exposes a novel problem formulation that can push the limits of existing methods.",
+  "doi": "10.1109/pact52795.2021.00009",
+  "openalex": "W3207198460",
+  "status": "ok",
+  "title": "PolyGym: Polyhedral Optimizations as an Environment for Reinforcement Learning"
+ },
+ "10.1109_pact52795.2021.00020": {
+  "abstract": "With the deepening of research and increasing size of data sets, deep neural networks have become larger and larger. To reduce the training time of large neural networks, researchers propose to optimize neural networks from different levels. When performing optimizations, prior knowledge about execution time of each part of the network can help avoid repeatedly time-consuming testing and profiling process. However it is quite challenging to build an accurate iteration time prediction model, due to opaque underlying implementation of network operators and complex architecture of accelerators. In this paper, we propose SEER, an iteration time prediction model for CNNs, targeting on GPU platforms. We propose to categorize convolution kernels into three different types: Compute-bound, DRAM-bound and Under-utilized, then we build performance model for each type respectively. We combined analytical models and learning-based models to make the performance model accurate and in line with GPU execution model. Experimental results show that, our model achieves 14.71% prediction error on convolution kernels and up to 1.79% prediction error for the overall computation time in one iteration of common CNNs. Besides, when used for selecting the best convolution algorithm, our model shows 7.14% lower error rate than cuDNN's official algorithm picker.",
+  "doi": "10.1109/pact52795.2021.00020",
+  "openalex": "W3205805162",
+  "status": "ok",
+  "title": "SEER: A Time Prediction Model for CNNs from GPU Kernel's View"
+ },
+ "10.1109_tpds.2022.3201531": {
+  "abstract": "This article proposesDisCo, an automatic deep learning compilation module for data-parallel distributed training. Unlike most deep learning compilers that focus on training or inference on a single device,DisCooptimizes a DNN model for distributed training over multiple GPU machines. Existing single-device compilation strategies do not work well in distributed training, due mainly to communication inefficiency that they incur.DisCogenerates optimized, joint computation operator and communication tensor fusion strategies to enable highly efficient distributed training. A GNN-based simulator is built to effectively estimate per-iteration training time achieved by operator/tensor fusion candidates. A backtracking search algorithm is driven by the simulator, navigating efficiently in the large strategy space to identify good operator/tensor fusion strategies that minimize distributed training time. We compareDisCowith existing DL fusion schemes and show that it achieves good training speed-up close to the ideal, full computation-communication overlap case.",
+  "doi": "10.1109/tpds.2022.3201531",
+  "openalex": "W4293057171",
+  "status": "ok",
+  "title": "Optimizing DNN Compilation for Distributed Training With Joint OP and Tensor Fusion"
+ },
+ "10.1109_tpds.2023.3279233": {
+  "abstract": "The heterogeneity of Deep Learning models, libraries, and hardware poses an important challenge for improving model inference performance. Auto-tuners address this challenge via automatic tensor program optimization towards a target-device. However, auto-tuners incur a substantial time cost to complete given their design necessitates performing tensor program candidate measurements serially within an isolated target-device to minimize latency measurement inaccuracy. In this article we propose DOPpler, a parallel auto-tuning measurement infrastructure. DOPpler allows for considerable auto-tuning speedup over conventional approaches whilst maintaining high-quality tensor program optimization. DOPpler accelerates the auto-tuning process by proposing a parallel execution engine to efficiently execute candidate tensor programs in parallel across the CPU-host and GPU target-device, and overcomes measurement inaccuracy by introducing a high-precision on-device measurement technique when measuring tensor program kernel latency. DOPpler is designed to automatically calculate the optimal degree of parallelism to provision fast and accurate auto-tuning for different tensor programs, auto-tuners and target-devices. Experiment results show that DOPpler reduces total auto-tuning time by 50.5% on average whilst achieving optimization gains equivalent to conventional auto-tuning infrastructure.",
+  "doi": "10.1109/tpds.2023.3279233",
+  "openalex": "W4377710416",
+  "status": "ok",
+  "title": "DOPpler: Parallel Measurement Infrastructure for Auto-Tuning Deep Learning Tensor Programs"
+ },
+ "10.1145_3472883.3486973": {
+  "abstract": "Modern deep learning systems embrace the compilation idea to self generate code of a deep learning model to catch up the rapidly changed deep learning operators and newly emerged hardware platforms. The performance of the self-generated code is guaranteed via auto-tuning frameworks which normally take a long time to find proper execution schedules for the given operators, which hurts both user experiences and time-to-the-market in terms of model developments and deployments.",
+  "doi": "10.1145/3472883.3486973",
+  "openalex": "W3211053593",
+  "status": "ok",
+  "title": "Lorien"
+ },
+ "10.1145_3485486": {
+  "abstract": "We present a new algorithm to quickly generate high-performance GPU implementations of complex imaging and vision pipelines, directly from high-level Halide algorithm code. It is fully automatic, requiring no schedule templates or hand-optimized kernels. We address the scalability challenge of extending search-based automatic scheduling to map large real-world programs to the deep hierarchies of memory and parallelism on GPU architectures in reasonable compile time. We achieve this using (1) a two-phase search algorithm that first ‘freezes’ decisions for the lowest cost sections of a program, allowing relatively more time to be spent on the important stages, (2) a hierarchical sampling strategy that groups schedules based on their structural similarity, then samples representatives to be evaluated, allowing us to explore a large space with few samples, and (3) memoization of repeated partial schedules, amortizing their cost over all their occurrences. We guide the process with an efficient cost model combining machine learning, program analysis, and GPU architecture knowledge. We evaluate our method’s performance on a diverse suite of real-world imaging and vision pipelines. Our scalability optimizations lead to average compile time speedups of 49x (up to 530x). We find schedules that are on average 1.7x faster than existing automatic solutions (up to 5x), and competitive with what the best human experts were able to achieve in an active effort to beat our automatic results.",
+  "doi": "10.1145/3485486",
+  "openalex": "W3207208385",
+  "status": "ok",
+  "title": "Efficient automatic scheduling of imaging and vision pipelines for the GPU"
+ },
+ "10.1145_3526241.3530316": {
+  "abstract": "With the rapid development of deep learning, training big neural network models demands huge amount of computing power.Therefore, many accelerators are designed to meet the performance requirements. Recently, series of Kunlun chips have been released, which claim comparable performance over GPUs. However, there lacks an end-to-end compiler to support both training and inference on Kunlun chip,leaving large performance optimization space to be explored. This paper presents KunlunTVM, the first end-to-end compiler based on TVM, supporting both training and inference tasks on Kunlun Chip. Experimental results show that KunlunTVM achieves up to 5x training performance improvement over the existing framework PaddlePaddle supporting Kunlun chip. It is noteworthy that the proposed methods are general and extensible for the TVM framework targeting different backends.",
+  "doi": "10.1145/3526241.3530316",
+  "openalex": "W4281616485",
+  "status": "ok",
+  "title": "KunlunTVM: A Compilation Framework for Kunlun Chip Supporting Both Training and Inference"
+ },
+ "10.1145_3575693.3575737": {
+  "abstract": "Tensor program tuning is a non-convex objective optimization problem, to which search-based approaches have proven to be effective. At the core of the search-based approaches lies the design of the cost model. Though deep learning-based cost models perform significantly better than other methods, they still fall short and suffer from the following problems. First, their feature extraction heavily relies on expert-level domain knowledge in hardware architectures. Even so, the extracted features are often unsatisfactory and require separate considerations for CPUs and GPUs. Second, a cost model trained on one hardware platform usually performs poorly on another, a problem we call cross-hardware unavailability.",
+  "doi": "10.1145/3575693.3575737",
+  "openalex": "W4318541553",
+  "status": "ok",
+  "title": "TLP: A Deep Learning-Based Cost Model for Tensor Program Tuning"
+ },
+ "10.1145_3581784.3607069": {
+  "abstract": "Performance tuning, software/hardware co-design, and job scheduling are among the many tasks that rely on models to predict application performance. We propose and evaluate low-rank tensor decomposition for modeling application performance. We discretize the input and configuration domains of an application using regular grids. Application execution times mapped within grid-cells are averaged and represented by tensor elements. We show that low-rank canonical-polyadic (CP) tensor decomposition is effective in approximating these tensors. We further show that this decomposition enables accurate extrapolation of unobserved regions of an application's parameter space. We then employ tensor completion to optimize a CP decomposition given a sparse set of observed execution times. We consider alternative piecewise/grid-based models and supervised learning models for six applications and demonstrate that CP decomposition optimized using tensor completion offers higher prediction accuracy and memory-efficiency for high-dimensional performance modeling.",
+  "doi": "10.1145/3581784.3607069",
+  "openalex": "W4388031363",
+  "status": "ok",
+  "title": "Application Performance Modeling via Tensor Completion"
+ },
+ "10.1145_3650200.3656631": {
+  "abstract": "With the growing importance of deploying deep neural networks (DNNs), there are increasing demands to improve both the efficiency and quality of tensor program optimization (TPO). TPO involves searching for possible program transformations for a given tensor program on target hardware to optimize its execution. TPO is challenging and expensive due to the exponential combinations of transformations and time-consuming on-device measurement of transformations. While prior research has primarily focused on the quality of TPO, i.e., generating high-performance tensor programs, there has been less emphasis on the efficiency of TPO, i.e., optimizing tensor programs with low optimization time overhead.",
+  "doi": "10.1145/3650200.3656631",
+  "openalex": "W4399282189",
+  "status": "ok",
+  "title": "Fasor: A Fast Tensor Program Optimization Framework for Efficient DNN Deployment"
+ },
+ "10.1145_3656019.3676950": {
+  "abstract": "The intensive computational requirements of training deep neural networks (DNNs) have significantly driven the adoption of DNN accelerators like Graph Processing Units (GPU). However, selecting the most suitable GPU from all candidates with drastically different specifications and prices is still a challenging problem. While directly measuring the performance of DNN training tasks on every candidate is prohibitive, and not always available due to hardware shortage, an accurate performance predictor can assist in the decision-making. However, most existing performance predictors cannot predict the GPU memory footprint in an accurate, generalizable, and interpretable manner, which is crucial to the feasibility and performance of running the DNN model on real GPUs. Moreover, many optimizations for DNN training, such as mixed precision training and checkpointing, can significantly impact performance. However, such hardware-dependent optimizations are not considered by existing performance predictors.",
+  "doi": "10.1145/3656019.3676950",
+  "openalex": "W4403334577",
+  "status": "ok",
+  "title": "BOOM: Use your Desktop to Accurately Predict the Performance of Large Deep Neural Networks"
+ },
+ "10.1145_3676641.3716269": {
+  "abstract": "Tensor program tuning is essential for the efficient deployment of deep neural networks. Search-based approaches have demonstrated scalability and effectiveness in automatically finding high-performance programs for specific hardware. However, the search process is often inefficient, taking hours or even days to discover optimal programs due to the exploration mechanisms guided by an accurate but slow-learned cost model. Meanwhile, the learned cost model trained on one platform cannot seamlessly adapt online to another, which we call cross-platform online unawareness. In this work, we propose Pruner and MoA-Pruner. Pruner is a ''Draft-then-Verify'' exploration mechanism that accelerates the schedule search process. Instead of applying the complex learned cost model to all explored candidates, Pruner drafts small-scale potential candidates by introducing a naive Symbol-based Analyzer (draft model), then identifies the best candidates by the learned cost model. MoA-Pruner introduces a Momentum online Adaptation strategy to address the cross-platform online unawareness.",
+  "doi": "10.1145/3676641.3716269",
+  "openalex": "W4408894246",
+  "status": "ok",
+  "title": "Pruner: A Draft-then-Verify Exploration Mechanism to Accelerate Tensor Program Tuning"
+ },
+ "10.1145_3727638": {
+  "abstract": "Automatic code optimization enables developers to write high-level code relying on compilers to optimize it and generate efficient code for target hardware. State-of-the-art methods for automatic code optimization leverage deep learning to build cost models that predict the impact of code optimizations on execution time. However, these models are typically limited in terms of the size and complexity of the programs they support. This research presents a novel approach to developing deep learning-based cost models that address these limitations. Our approach introduces a new program representation that efficiently represents programs with complex structures and large sizes such as varying loop depths, buffer numbers, and dimensions. Furthermore, we propose a novel deep learning architecture, that can handle this dynamic program representation. This allows the model to work on larger and more complex programs than those it was trained on. We implemented this model in Tiramisu, a state-of-the-art compiler. Our evaluation shows that our proposed model can generalize to programs larger than those seen during training, while the original Tiramisu cost model cannot. We also show that such generality does not lead to a significant increase in our proposed model’s Mean Absolute Percentage Error or a decrease in the quality of code optimizations found when the model is used for automatic code optimization. In contrast, our proposed model on average achieves a 41.89% improvement in speed compared to the original cost model when both models are trained on the same dataset, showing better generalization over unseen programs. This is a significant advantage over previous approaches, which typically do not support program sizes beyond those seen during the training.",
+  "doi": "10.1145/3727638",
+  "openalex": "W4409061765",
+  "status": "ok",
+  "title": "Supporting Dynamic Program Sizes in Deep Learning-Based Cost Models for Code Optimization"
+ },
+ "10.1145_3762660": {
+  "abstract": "Optimizing deep learning inference, particularly reducing the execution latency of tensor computations at small batch sizes, is crucial for the successful and widespread adoption of deep neural network (DNN) models. However, current deep learning compilers and hand-tuned libraries often fail to achieve high hardware efficiency when executing small-batch workloads. The primary reason is the inherently sequential nature of reductions (e.g., along the hidden dimension in the flattened GEMM for LLM decoding), which is difficult to parallelize and therefore fails to fully utilize available hardware resources. In this article, we propose Swift, a novel search-based approach for efficiently generating high-performance programs for GPUs by maximizing hardware utilization. The key insight is that reduction parallelization can be incorporated into a unified representation alongside the existing tile structure, significantly expanding the search space for high-performance programs. Concretely, by enumerating all possible parallel mappings of loops, we first generate a large search space that contains high-performance programs. Then, to efficiently explore the extended search space, we employ subspace shifting exploration to identify promising regions, effectively prune large portions of the less-promising search space. We conduct experiments on three distinct GPU architectures using a diverse set of benchmarks representative of typical application scenarios. Experimental results demonstrate that Swift achieves an average speedup of 1.19× over the state-of-the-art compiler-based approaches. Moreover, compared with vendor-provided hand-tuned libraries, Swift achieves an average speedup of 2.40×.",
+  "doi": "10.1145/3762660",
+  "openalex": "W4413520990",
+  "status": "ok",
+  "title": "Swift: High Parallelism Program Generation of Tensor Operators for Accelerating Deep Learning Inference"
+ },
+ "10.20944_preprints202401.0208.v1": {
+  "abstract": "Tuning tensor program generation involves navigating a vast search space to find optimal program transformations and measurements for a program on target hardware. The complexity of this process is further amplified by the exponential combinations of transformations, especially in heterogeneous environments. This research addresses these challenges by introducing a novel approach that learns the joint neural network and hardware features space, facilitating knowledge transfer to new, unseen target hardware. A comprehensive analysis is conducted on the existing state-of-the-art dataset, TenSet, including a thorough examination of test split strategies and the proposal of methodologies for dataset pruning. Leveraging an attention-inspired technique, we tailor the tuning of tensor programs to embed both neural network and hardware-specific features. Notably, our approach substantially reduces the dataset size by up to 53% compared to the baseline without compromising Pairwise Comparison Accuracy (PCA). Furthermore, our proposed methodology demonstrates competitive or improved mean inference times with only 25%40% of the baseline tuning time across various networks and target hardware. The attention-based tuner can effectively utilize schedules learned from previous hardware program measurements to optimize tensor program tuning on previously unseen hardware, achieving a top-5 accuracy exceeding 90%. This research introduces a significant advancement in auto-tuning tensor program generation, addressing the complexities associated with heterogeneous environments and showcasing promising results regarding efficiency and accuracy.",
+  "doi": "10.20944/preprints202401.0208.v1",
+  "openalex": "W4390562550",
+  "status": "ok",
+  "title": "Cross-Feature Transfer Learning For Efficient Tensor Program Generation"
+ },
+ "10.32657_10356_172372": {
+  "abstract": "otal roles in shaping the initial project direction, offering invaluable insights, engaging in constructive discussions regarding the system design,",
+  "doi": "10.32657/10356/172372",
+  "openalex": "W4390585464",
+  "status": "ok",
+  "title": "Building efficient and practical machine learning systems"
+ },
+ "10.48550_arxiv.2104.13732": {
+  "abstract": "The polyhedral model allows a structured way of defining semantics-preserving transformations to improve the performance of a large class of loops. Finding profitable points in this space is a hard problem which is usually approached by heuristics that generalize from domain-expert knowledge. Existing problem formulations in state-of-the-art heuristics depend on the shape of particular loops, making it hard to leverage generic and more powerful optimization techniques from the machine learning domain. In this paper, we propose PolyGym, a shape-agnostic formulation for the space of legal transformations in the polyhedral model as a Markov Decision Process (MDP). Instead of using transformations, the formulation is based on an abstract space of possible schedules. In this formulation, states model partial schedules, which are constructed by actions that are reusable across different loops. With a simple heuristic to traverse the space, we demonstrate that our formulation is powerful enough to match and outperform state-of-the-art heuristics. On the Polybench benchmark suite, we found transformations that led to a speedup of 3.39x over LLVM O3, which is 1.83x better than the speedup achieved by ISL. Our generic MDP formulation enables using reinforcement learning to learn optimization policies over a wide range of loops. This also contributes to the emerging field of machine learning in compilers, as it exposes a novel problem formulation that can push the limits of existing methods.",
+  "doi": "10.48550/arxiv.2104.13732",
+  "openalex": "W3157676465",
+  "status": "ok",
+  "title": "A Reinforcement Learning Environment for Polyhedral Optimizations"
+ },
+ "10.48550_arxiv.2309.14846": {
+  "abstract": "Software optimization refines programs for resource efficiency while preserving functionality. Traditionally, it is a process done by developers and compilers. This paper introduces a third option, automated optimization at the source code level. We present Supersonic, a neural approach targeting minor source code modifications for optimization. Using a seq2seq model, Supersonic is trained on C/C++ program pairs ($x_{t}$, $x_{t+1}$), where $x_{t+1}$ is an optimized version of $x_{t}$, and outputs a diff. Supersonic's performance is benchmarked against OpenAI's GPT-3.5-Turbo and GPT-4 on competitive programming tasks. The experiments show that Supersonic not only outperforms both models on the code optimization task but also minimizes the extent of the change with a model more than 600x smaller than GPT-3.5-Turbo and 3700x smaller than GPT-4.",
+  "doi": "10.48550/arxiv.2309.14846",
+  "openalex": "W4387151373",
+  "status": "ok",
+  "title": "Supersonic: Learning to Generate Source Code Optimizations in C/C++"
+ }
+}

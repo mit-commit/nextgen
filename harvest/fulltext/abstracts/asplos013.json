@@ -1,0 +1,163 @@
+{
+ "10.1002_cpe.6759": {
+  "abstract": "Summary A recurrent challenge in real‐world applications is autonomous management of the executions at run‐time. In this vein, stream processing is a class of applications that compute data flowing in the form of streams (e.g., video feeds, images, and data analytics), where parallel computing can help accelerate the executions. On the one hand, stream processing applications are becoming more complex, dynamic, and long‐running. On the other hand, it is unfeasible for humans to monitor and manually change the executions continuously. Hence, self‐adaptation can reduce costs and human efforts by providing a higher‐level abstraction with an autonomic/seamless management of executions. In this work, we aim at providing a literature review regarding self‐adaptation applied to the parallel stream processing domain. We present a comprehensive revision using a systematic literature review method. Moreover, we propose a taxonomy to categorize and classify the existing self‐adaptive approaches. Finally, applying the taxonomy made it possible to characterize the state‐of‐the‐art, identify trends, and discuss open research challenges and future opportunities.",
+  "doi": "10.1002/cpe.6759",
+  "openalex": "W4200300311",
+  "status": "ok",
+  "title": "Self‐adaptation on parallel stream processing: A systematic review"
+ },
+ "10.1002_spe.2948": {
+  "abstract": "Abstract Stream processing applications are common computing workloads that demand parallelism to increase their performance. As in the past, parallel programming remains a difficult task for application programmers. The complexity increases when application programmers must set nonintuitive parallelism parameters, that is, the degree of parallelism. The main problem is that state‐of‐the‐art libraries use a static degree of parallelism and are not sufficiently abstracted for developing stream processing applications. In this article, we propose a self‐adaptive regulation of the degree of parallelism to provide higher‐level abstractions. Flexibility is provided to programmers with two new self‐adaptive strategies, one is for performance experts, and the other abstracts the need to set a performance goal. We evaluated our solution using compiler transformation rules to generate parallel code with the SPar domain‐specific language. The experimental results with real‐world applications highlighted higher abstraction levels without significant performance degradation in comparison to static executions. The strategy for performance experts achieved slightly higher performance than the one that works without user‐defined performance goals.",
+  "doi": "10.1002/spe.2948",
+  "openalex": "W3119073650",
+  "status": "ok",
+  "title": "Providing high‐level self‐adaptive abstractions for stream parallelism on multicores"
+ },
+ "10.1007_s00607-021-00998-8": {
+  "abstract": "Abstract Several real-world parallel applications are becoming more dynamic and long-running, demanding online (at run-time) adaptations. Stream processing is a representative scenario that computes data items arriving in real-time and where parallel executions are necessary. However, it is challenging for humans to monitor and manually self-optimize complex and long-running parallel executions continuously. Moreover, although high-level and structured parallel programming aims to facilitate parallelism, several issues still need to be addressed for improving the existing abstractions. In this paper, we extend self-adaptiveness for supporting autonomous and online changes of the parallel pattern compositions. Online self-adaptation is achieved with an online profiler that characterizes the applications, which is combined with a new self-adaptive strategy and a model for smooth transitions on reconfigurations. The solution provides a new abstraction layer that enables application programmers to define non-functional requirements instead of hand-tuning complex configurations. Hence, we contribute with additional abstractions and flexible self-adaptation for responsiveness at run-time. The proposed solution is evaluated with applications having different processing characteristics, workloads, and configurations. The results show that it is possible to provide additional abstractions, flexibility, and responsiveness while achieving performance comparable to the best static configuration executions.",
+  "doi": "10.1007/s00607-021-00998-8",
+  "openalex": "W3193414543",
+  "status": "ok",
+  "title": "Online and transparent self-adaptation of stream parallel patterns"
+ },
+ "10.1007_s11227-024-06191-w": {
+  "abstract": "Abstract Parallel computing is very important to accelerate the performance of computing applications. Moreover, parallel applications are expected to continue executing in more dynamic environments and react to changing conditions. In this context, applying self-adaptation is a potential solution to achieve a higher level of autonomic abstractions and runtime responsiveness. In our research, we aim to explore and assess the possible abstractions attainable through the transparent management of parallel executions by self-adaptation. Our primary objectives are to expand the adaptation space to better reflect real-world applications and assess the potential for self-adaptation to enhance efficiency. We provide the following scientific contributions: (I) A conceptual framework to improve the designing of self-adaptation; (II) A new decision-making strategy for applications with multiple parallel stages; (III) A comprehensive evaluation of the proposed decision-making strategy compared to the state-of-the-art. The results demonstrate that the proposed conceptual framework can help design and implement self-adaptive strategies that are more modular and reusable. The proposed decision-making strategy provides significant gains in accuracy compared to the state-of-the-art, increasing the parallel applications’ performance and efficiency.",
+  "doi": "10.1007/s11227-024-06191-w",
+  "openalex": "W4399884421",
+  "status": "ok",
+  "title": "Enhancing self-adaptation for efficient decision-making at run-time in streaming applications on multicores"
+ },
+ "10.1109_access.2025.3638805": {
+  "abstract": "Stream processing systems are typically long-running and likely experience varying workloads over time. The systems may need to process an excessive amount of data at any time. They must scale their capacity to meet low-latency requirements while still being resource-efficient. In distributed stream processing systems (DSPSs), scaling typically involves reconfiguring the physical topology of streaming jobs in the distributed computing environment. Current production-level DSPSs adopt a shared-nothing architecture to achieve scalability and reliability at a low cost, though this makes scaling stateful processing challenging. Most DSPSs employ a fixed partitioning scheme, which prevents altering the topology at runtime. As a result, scaling is performed by releasing the jobs and redeploying them with a modified topology. In fact, rescaling only some operators is sufficient to handle changes in workload. Several studies propose on-the-fly scaling by exchanging states between parallel instances of an operator. However, their custom state transfer mechanisms require substantial modifications to the existing DSPS architecture. We propose a dynamic scaling scheme that allows individual operators to scale at runtime with respect to the standard mechanisms provided by current DSPSs. We employ just-in-time snapshots for efficient state management of stateful processing. Compared to the job redeployment, the implemented approach in Apache Flink shows that scaling can be performed faster, with up to 80 percent for scale-out and two orders of magnitude for scale-in. The dynamic scaling scheme maintains stable performance during the rescaling phase.",
+  "doi": "10.1109/access.2025.3638805",
+  "openalex": "W4416798164",
+  "status": "ok",
+  "title": "Dynamic Scaling With Just-in-Time Snapshot in Distributed Stream Processing Systems"
+ },
+ "10.1109_icde65448.2025.00035": {
+  "abstract": "More and more data is produced outside the cloud by edge devices that provide basic processing capabilities. This trend enables a new class of data management systems that use both edge and cloud infrastructures for efficient data processing. Such systems push down operations by placing query operators close to the data-producing devices. A key challenge for these systems is handling the evolution of continuous queries and the dynamic changes in the infrastructure. In particular, frequent arrival or removal of queries and potential volatility of the infrastructure might invalidate or reduce the efficiency of previous operator placement decisions and thus might lead to constant, expensive re-optimizations of queries. These changes require new solutions for operator placement, which adjust existing placement decisions upon changes to the queries and infrastructure. In this paper, we propose ISQP, a framework that keeps the operator placements valid under query and infrastructure changes. ISQP performs a fine-grained identification of invalid operator placements and takes concurrent, incremental placement decisions to reduce the optimization time. ISQP works for arbitrary placement strategies, making it a general-purpose framework. Our evaluations show that ISQP reduces the optimization overhead by one order of magnitude compared to the baseline.",
+  "doi": "10.1109/icde65448.2025.00035",
+  "openalex": "W4413360700",
+  "status": "ok",
+  "title": "Incremental Stream Query Placement in Massively Distributed and Volatile Infrastructures"
+ },
+ "10.1109_icde65448.2025.00286": {
+  "abstract": "Dynamic scaling is critical to stream processing engines, as their long-running nature demands adaptive resource management. Existing scaling approaches easily cause performance degradation due to coarse-grained synchronization and inefficient state migration, resulting in system halt or high processing latency. In this paper, we propose DRRS, an on-the-fly scaling method that reduces performance overhead at the system level with three key innovations: (i) fine-grained scaling signals coupled with a re-routing mechanism that significantly mitigates propagation delay, (ii) a sophisticated record-scheduling mechanism that substantially reduces processing suspension, and (iii) subscale division, a mechanism that partitions migrating states into independent subsets, thereby reducing dependency-related overhead to enable finer-grained control and better runtime adaptability during scaling. DRRS is implemented on Apache Flink and, when compared to state-of-the-art approaches, reduces peak and average latencies by up to 81.1% and 95.5% respectively, while achieving a 72%-86% reduction in scaling duration, without disruption in non-scaling periods.",
+  "doi": "10.1109/icde65448.2025.00286",
+  "openalex": "W4413360266",
+  "status": "ok",
+  "title": "Towards Fine-Grained Scalability for Stateful Stream Processing Systems"
+ },
+ "10.1109_infocom41043.2020.9155511": {
+  "abstract": "Distributed streaming applications require the underlying network flows to transmit packets continuously to keep their output results fresh. These results will become stale if no updates come, and their staleness is determined by the slowest flow. At this point, coflows can be semantically comprised. Hence, efficient coflow transmission is critical for streaming applications. However, prior coflow-based solutions have significant limitations. They use a one-shot performance metric-CCT (coflow completion time), which cannot continuously reflect the staleness of the output results for a streaming application.To this end, we propose a new performance metric-coflow age (CA), for coflows generated by distributed streaming applications. The CA tracks the longest time-since-last-service among all flows in a coflow. In such a context, we consider a data center network with multiple coflows that continuously transmit packets between their source-destination pairs and address the problem of minimizing the average long-term CA while simultaneously satisfying the throughput constraints from the coflows. To solve this problem efficiently, we design a randomized algorithm and a drift-plus-age algorithm, and show that they can make the average long-term CA to achieve nearly two times and arbitrarily close to the optimal value, respectively. Through extensive simulations, we further demonstrate that both of the proposed algorithms can significantly reduce the CA of coflows, without violating the throughput requirement of any coflow, when compared to the state-of-the-art solution.",
+  "doi": "10.1109/infocom41043.2020.9155511",
+  "openalex": "W3047173245",
+  "status": "ok",
+  "title": "Efficient Coflow Transmission for Distributed Stream Processing"
+ },
+ "10.1109_pdp52278.2021.00022": {
+  "abstract": "Stream processing applications compute streams of data and provide insightful results in a timely manner, where parallel computing is necessary for accelerating the application executions. Considering that these applications are becoming increasingly dynamic and long-running, a potential solution is to apply dynamic runtime changes. However, it is challenging for humans to continuously monitor and manually self-optimize the executions. In this paper, we propose self-adaptiveness of the parallel patterns used, enabling flexible on-the-fly adaptations. The proposed solution is evaluated with an existing programming framework and running experiments with a synthetic and a real-world application. The results show that the proposed solution is able to dynamically self-adapt to the most suitable parallel pattern configuration and achieve performance competitive with the best static cases. The feasibility of the proposed solution encourages future optimizations and other applicabilities.",
+  "doi": "10.1109/pdp52278.2021.00022",
+  "openalex": "W3158757117",
+  "status": "ok",
+  "title": "Towards On-the-fly Self-Adaptation of Stream Parallel Patterns"
+ },
+ "10.1109_sec54971.2022.00011": {
+  "abstract": "Next generation applications such as augmented/vir-tual reality, autonomous driving, and Industry 4.0, have tight latency constraints and produce large amounts of data. To address the real-time nature and high bandwidth usage of new applications, edge computing provides an extension to the cloud infrastructure through a hierarchy of datacenters located between the edge devices and the cloud. Outside of the cloud and closer to the edge, the network becomes more dynamic requiring stream processing frameworks to adapt more frequently. Cloud based frameworks adapt very slowly because they employ a stop-the-world approach and it can take several minutes to reconfigure jobs resulting in downtime. In this paper, we propose Shepherd, a new stream processing framework for edge computing. Shepherd minimizes downtime during application reconfiguration, with almost no impact on data processing latency. Our experiments show that, compared to Apache Storm, Shepherd reduces application downtime from several minutes to a few tens of milliseconds.",
+  "doi": "10.1109/sec54971.2022.00011",
+  "openalex": "W4313525874",
+  "status": "ok",
+  "title": "Shepherd: Seamless Stream Processing on the Edge"
+ },
+ "10.1109_sec62691.2024.00026": {
+  "abstract": "Stream processing is an attractive paradigm for deploying applications in geo-distributed edge-cloud environments. However, the reverse economics of scale in edge networks and the movement of data sources between edges require the ability to dynamically reconfigure the deployment of stateful applications to adapt to workload variations and user mobility. Unfortunately, existing stream processing engines either do not support the reconfiguration of stateful operators or are ill-suited to edge-cloud environments since they stop application processing during reconfiguration or require costly duplication of application state. We propose Falcon, a new stream processing engine. At its core lies a live key migration approach to allow reconfiguration to occur with minimal disruption to processing, even across distant datacenters. Falcon supports the reconfiguration of stateful operators including different windowing approaches and source mobility across different edge regions. It scales gracefully with network latency, the number of datacenters, and the size and number of keys. Our evaluation in geo-distributed edge-cloud deployments shows that Falcon reduces the length of processing interruptions and their impact on latency by 2 to 4 orders of magnitude compared to the existing state-of-the-art frameworks such as Apache Flink, Trisk, and Meces.",
+  "doi": "10.1109/sec62691.2024.00026",
+  "openalex": "W4405975327",
+  "status": "ok",
+  "title": "Falcon: Live Reconfiguration for Stateful Stream Processing on the Edge"
+ },
+ "10.1109_tnet.2019.2918341": {
+  "abstract": "As more and more applications need to analyze unbounded data streams in a real-time manner, data stream processing platforms, such as Storm, have drawn the attention of many researchers, especially the scheduling problem. However, there are still many challenges unnoticed or unsolved. In this paper, we propose and implement an adaptive online scheme to solve three important challenges of scheduling. First, how to make a scaling decision in a real-time manner to handle the fluctuant load without congestion? Second, how to minimize the number of affected workers during rescheduling while satisfying the resource demand of each instance? We also point out that the stateful instances should not be placed on the same worker with stateless instances. Third, currently, the application performance cannot be guaranteed because of resource contention even if the computation platform implements an optimal scheduling algorithm. In this paper, we realize resource isolation using Cgroup, and then the performance interference caused by resource contention is mitigated. We implement our scheduling scheme and plug it into Storm, and our experiments demonstrate in some respects our scheme achieves better performance than the state-of-the-art solutions.",
+  "doi": "10.1109/tnet.2019.2918341",
+  "openalex": "W2949718648",
+  "status": "ok",
+  "title": "An Adaptive Online Scheme for Scheduling and Resource Enforcement in Storm"
+ },
+ "10.1109_ton.2024.3517718": {
+  "abstract": "Distributed stream processing has recently gained much interest due to the need of extracting meaningful results from continuous data stream. To keep the extracted results fresh, the underlying network flows are often required to transmit packets continuously. Otherwise, these results will become stale, and their staleness is determined by the slowest flow. At this point,coflowscan be semantically comprised. Hence, efficient coflow transmission is critical for streaming applications. However, prior coflow-based solutions have significant limitations. They use a one-shot performance metric—CCT (coflow completion time), which cannot continuously reflect the staleness of the output results for a streaming application. To this end, we propose a new performance metric—coflow age(CA), for coflows generated by distributed streaming applications. The CA tracks thelongest time-since-last-serviceamong all flows in a coflow. In such a context, we consider a data center network with multiple coflows that continuously transmit packets between their source-destination pairs and address the problem of minimizing the average long-term CA while simultaneously satisfying the throughput constraints from the coflows. To solve this problem efficiently, we design a randomized algorithm and a drift-plus-age algorithm, and show that they can make the average long-term CA to achieve nearly two times and arbitrarily close to the optimal value, respectively. Through extensive simulations, we further demonstrate that both of the proposed algorithms can significantly reduce the CA of coflows, without violating the throughput requirement of any coflow, when compared to the state-of-the-art solution in both scenario with the packet arrival probability being known and unknown a prior.",
+  "doi": "10.1109/ton.2024.3517718",
+  "openalex": "W7115697872",
+  "status": "ok",
+  "title": "Optimizing Timeliness for Distributed Stream Processing via Coflow Transmission"
+ },
+ "10.1145_3297858.3304031": {
+  "abstract": "Stream analytics has an insatiable demand for memory and performance. Emerging hybrid memories combine commodity DDR4 DRAM with 3D-stacked High Bandwidth Memory (HBM) DRAM to meet such demands. However, achieving this promise is challenging because (1) HBM is capacity-limited and (2) HBM boosts performance best for sequential access and high parallelism workloads. At first glance, stream analytics appears a particularly poor match for HBM because they have high capacity demands and data grouping operations, their most demanding computations, use random access. This paper presents the design and implementation of StreamBox-HBM, a stream analytics engine that exploits hybrid memories to achieve scalable high performance. StreamBox-HBM performs data grouping with sequential access sorting algorithms in HBM, in contrast to random access hashing algorithms commonly used in DRAM. StreamBox-HBM solely uses HBM to store Key Pointer Array (KPA) data structures that contain only partial records (keys and pointers to full records) for grouping operations. It dynamically creates and manages prodigious data and pipeline parallelism, choosing when to allocate KPAs in HBM. It dynamically optimizes for both the high bandwidth and limited capacity of HBM, and the limited bandwidth and high capacity of standard DRAM. StreamBox-HBM achieves 110 million records per second and 238 GB/s memory bandwidth while effectively utilizing all 64 cores of Intel's Knights Landing, a commercial server with hybrid memory. It outperforms stream engines with sequential access algorithms without KPAs by 7x and stream engines with random access algorithms by an order of magnitude in throughput. To the best of our knowledge, StreamBox-HBM is the first stream engine optimized for hybrid memories.",
+  "doi": "10.1145/3297858.3304031",
+  "openalex": "W4288375488",
+  "status": "ok",
+  "title": "StreamBox-HBM"
+ },
+ "10.14778_3329772.3329777": {
+  "abstract": "We design and implement Megaphone, a data migration mechanism for stateful distributed dataflow engines with latency objectives. When compared to existing migration mechanisms, Megaphone has the following differentiating characteristics: (i) migrations can be subdivided to a configurable granularity to avoid latency spikes, and (ii) migrations can be prepared ahead of time to avoid runtime coordination. Megaphone is implemented as a library on an unmodified timely dataflow implementation, and provides an operator interface compatible with its existing APIs. We evaluate Megaphone on established benchmarks with varying amounts of state and observe that compared to naïve approaches Megaphone reduces service latencies during reconfiguration by orders of magnitude without significantly increasing steady-state overhead.",
+  "doi": "10.14778/3329772.3329777",
+  "openalex": "W2946887925",
+  "status": "ok",
+  "title": "Megaphone"
+ },
+ "10.14778_3773749.3773759": {
+  "abstract": "Distributed data stream processing engines (DSPEs) operating over the cloud-edge continuum must deploy data processing operators across a distributed infrastructure. However, the volatile nature of these infrastructure nodes—where devices frequently join, leave, or move—can invalidate existing query operator-to-topology node mappings, leading to interruptions in query execution and potential data loss. To ensure continuous processing while maintaining correctness, DSPEs must dynamically adapt these mappings and redeploy (part of) affected queries. In this paper, we introduce incremental stream query deployment (ISQD), a framework that efficiently redeploys queries affected by topology changes. ISQD employs a greedy strategy to identify and redeploy only affected operators. It uses ad-hoc queries to migrate operator state seamlessly, and leverages reconfiguration markers to synchronize the redeployment process. Our evaluation shows that ISQD achieves up to 7.5X lower deployment latency and up to 39X lower event time latency compared to state-of-the-art approaches, even under high-frequency topology changes.",
+  "doi": "10.14778/3773749.3773759",
+  "openalex": "W7138466120",
+  "status": "ok",
+  "title": "Incremental Stream Query Deployment under Continuous Infrastructure Changes in the Cloud-Edge Continuum"
+ },
+ "10.3929_ethz-b-000378081": {
+  "abstract": null,
+  "doi": "10.3929/ethz-b-000378081",
+  "openalex": "W2988621517",
+  "status": "no_abstract",
+  "title": "Managing and understanding distributed stream processing"
+ },
+ "10.48550_arxiv.1901.01328": {
+  "abstract": "Stream analytics have an insatiable demand for memory and performance. Emerging hybrid memories combine commodity DDR4 DRAM with 3D-stacked High Bandwidth Memory (HBM) DRAM to meet such demands. However, achieving this promise is challenging because (1) HBM is capacity-limited and (2) HBM boosts performance best for sequential access and high parallelism workloads. At first glance, stream analytics appear a particularly poor match for HBM because they have high capacity demands and data grouping operations, their most demanding computations, use random access. This paper presents the design and implementation of StreamBox-HBM, a stream analytics engine that exploits hybrid memories to achieve scalable high performance. StreamBox-HBM performs data grouping with sequential access sorting algorithms in HBM, in contrast to random access hashing algorithms commonly used in DRAM. StreamBox-HBM solely uses HBM to store Key Pointer Array (KPA) data structures that contain only partial records (keys and pointers to full records) for grouping operations. It dynamically creates and manages prodigious data and pipeline parallelism, choosing when to allocate KPAs in HBM. It dynamically optimizes for both the high bandwidth and limited capacity of HBM, and the limited bandwidth and high capacity of standard DRAM. StreamBox-HBM achieves 110 million records per second and 238 GB/s memory bandwidth while effectively utilizing all 64 cores of Intel's Knights Landing, a commercial server with hybrid memory. It outperforms stream engines with sequential access algorithms without KPAs by 7x and stream engines with random access algorithms by an order of magnitude in throughput. To the best of our knowledge, StreamBox-HBM is the first stream engine optimized for hybrid memories.",
+  "doi": "10.48550/arxiv.1901.01328",
+  "openalex": "W2907186209",
+  "status": "ok",
+  "title": "StreamBox-HBM: Stream Analytics on High Bandwidth Hybrid Memory"
+ },
+ "oa-W2903524367": {
+  "abstract": "We design and implement Megaphone, a data migration mechanism for stateful distributed dataflow engines with latency objectives. When compared to existing migration mechanisms, Megaphone has the following differentiating characteristics: (i) migrations can be subdivided to a configurable granularity to avoid latency spikes, and (ii) migrations can be prepared ahead of time to avoid runtime coordination. Megaphone is implemented as a library on an unmodified timely dataflow implementation, and provides an operator interface compatible with its existing APIs. We evaluate Megaphone on established benchmarks with varying amounts of state and observe that compared to na\\ive approaches Megaphone reduces service latencies during reconfiguration by orders of magnitude without significantly increasing steady-state overhead.",
+  "doi": null,
+  "openalex": "W2903524367",
+  "status": "ok",
+  "title": "Megaphone: Live state migration for distributed streaming dataflows."
+ },
+ "s2-5e8aa2fdfdc6839c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Sponge: Fast Reactive Scaling for Stream Processing with Serverless Frameworks"
+ },
+ "s2-6044a9e50f301808": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Megaphone: Live state migration for distributed streaming dataflows"
+ },
+ "s2-b808b68555300e0f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "FARSI: Facebook AR System Investigator for Agile Domain-Specific System-on-Chip Exploration"
+ },
+ "s2-f1ddf757d3dd8c52": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Meces: Latency-efficient Rescaling via Prioritized State Migration for Stateful Distributed Stream Processing Systems"
+ }
+}

@@ -1,0 +1,569 @@
+{
+ "10.1007_s42514-023-00140-4": {
+  "abstract": null,
+  "doi": "10.1007/s42514-023-00140-4",
+  "openalex": "W4375865627",
+  "status": "no_abstract",
+  "title": "Sgap: towards efficient sparse tensor algebra compilation for GPU"
+ },
+ "10.1016_j.jpdc.2022.07.005": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2022.07.005",
+  "openalex": "W3165460533",
+  "status": "no_abstract",
+  "title": "Distributed-memory tensor completion for generalized loss functions in python using new sparse tensor kernels"
+ },
+ "10.1109_asp-dac58780.2024.10473981": {
+  "abstract": "Network sparsification is an effective technique for Deep Neural Network (DNN) inference acceleration. However, existing sparsification solutions often rely on structured sparsity, which has limited benefits. This is because many sparse storage formats introduce substantial memory and computation overhead for address generation and gradient update, or they are only applicable during the inference, neglecting the training phase.In this paper, we propose a novel compilation optimization design called TSTC that enables efficient training via structured sparse tensor compilation. TSTC introduces a novel sparse format, Tensorization-aware Index Entity (TIE), that efficiently represents structured sparse tensors by eliminating repeated indices and reducing storage overhead. The TIE format is applied in the Address-carry flow (AC flow) pass, optimizing the data layout at the computational graph layer. Additionally, a shape inference pass utilizes the address-carry flow to derive optimized tensor shapes. Furthermore, an operator-level AC flow optimization pass generates efficient addresses for structured sparse tensors. TSTC is a versatile design that can be efficiently integrated into existing frameworks or compilers. As a result, TSTC achieves 3.64×, 5.43×, 4.89×, and 3.91× speedup compared to state-of-the-art sparse formats on VGG16, ResNet-18, MobileNetV1 and MobileNetV2, respectively.",
+  "doi": "10.1109/asp-dac58780.2024.10473981",
+  "openalex": "W4393145428",
+  "status": "ok",
+  "title": "TSTC: Enabling Efficient Training via Structured Sparse Tensor Compilation"
+ },
+ "10.1109_cgo57630.2024.10444817": {
+  "abstract": "Compiler research and development has treated computation as the primary driver of performance improvements in C/C++ programs, leaving memory optimizations as a secondary consideration. Developers are currently handed the arduous task of describing both the semantics and layout of their data in memory, either manually or via libraries, prematurely lowering high-level data collections to a low-level view of memory for the compiler. Thus, the compiler can only glean conservative information about the memory in a program, e.g., alias analysis, and is further hampered by heavy memory optimizations. This paper proposes the Memory Object Intermediate Representation (MEMOIR), a language-agnostic SSA form for sequential and associative data collections, objects, and the fields contained therein. At the core of Memoir is a decoupling of the memory used to store data from that used to logically organize data. Through its SSA form, Memoir compilers can perform element-level analysis on data collections, enabling static analysis on the state of a collection or object at any given program point. To illustrate the power of this analysis, we perform dead element elimination, resulting in a 26.6% speedup on mcf from SPECINT 2017. With the degree of freedom to mutate memory layout, our Memoir compiler performs field elision and dead field elimination, reducing peak memory usage of mcf by 20.8%.",
+  "doi": "10.1109/cgo57630.2024.10444817",
+  "openalex": "W4392265899",
+  "status": "ok",
+  "title": "Representing Data Collections in an SSA Form"
+ },
+ "10.1109_cgo68049.2026.11394842": {
+  "abstract": "The rapid growth in the size of deep learning models strains the capabilities of dense computation paradigms. Leveraging sparse computation has become increasingly popular for training and deploying large-scale models, but existing deep learning frameworks lack extensive support for sparse operations. Current approaches either require manual scheduling expertise or rely on exhaustive search taking hours to days, which are both incompatible with the interactive development essential to machine learning research. We present three algorithmic contributions that enable fast, automatic optimization of sparse tensor computations. First, we develop a heuristic-based loop ordering algorithm that avoids asymptotic performance cliffs while compiling in milliseconds rather than hours. Second, we introduce a tiling algorithm specialized for mixed sparse-dense computations that achieves performance comparable to hand-optimized kernels. Third, we present a format inference algorithm that automatically selects appropriate sparse tensor formats for intermediate and output tensors based on operation semantics. These algorithms are grounded in the computational properties of sparse tensor algebra, making them predictable and robust across diverse workloads. We implement these techniques in Scorch, a prototype sparse tensor compiler for PyTorch that demonstrates their practical effectiveness. With only minimal code changes, our approach achieves 1.05–5.80× speedups over PyTorch Sparse on end-to-end tasks including graph neural networks, sparse autoencoders, and sparse transformers, with compilation times fast enough for interactive ML development.",
+  "doi": "10.1109/cgo68049.2026.11394842",
+  "openalex": "W7131131434",
+  "status": "ok",
+  "title": "Fast Autoscheduling for Sparse ML Frameworks"
+ },
+ "10.1109_cgo68049.2026.11395192": {
+  "abstract": "Decoupled Access-Execute (DAE) architectures separate memory accesses from computation in two specialized units. This design is becoming increasingly popular among hyperscalers to accelerate irregular embedding lookups in recommendation models. In this paper, we first broaden the scope by demonstrating the benefits of DAE architectures across a wider range of irregular embedding operations in several machine learning models. Then, we propose the Ember compiler to automatically compile all of these embedding operations to DAE architectures. Conversely from other DAE compilers, Ember features multiple intermediate representations specifically designed for different optimization levels. In this way, Ember can implement all optimizations to match the performance of hand-written code, unlocking the full potential of DAE architectures at scale.",
+  "doi": "10.1109/cgo68049.2026.11395192",
+  "openalex": "W7131065374",
+  "status": "ok",
+  "title": "Ember: A Compiler for Embedding Operations on Decoupled Access-Execute Architectures"
+ },
+ "10.1109_hpca61900.2025.00076": {
+  "abstract": "As deep learning models continue to grow larger and more complex, exploiting sparsity is becoming one of the most critical areas for enhancing efficiency and scalability. Several methods for leveraging sparsity have been proposed to more effectively balance the trade-off between compression ratio and accuracy. While these methods offer algorithmic advantages, they also introduce significant hardware overhead due to index-based encoding and decoding. In this paper, we propose CROSS, an end-to-end compilation optimization technique to achieve sparse DNN acceleration using GPU computation kernels. The key insight behind CROSS is to exploit parameter distribution locality and reconcile the “sparse” DNN computation with the high-performance “dense” computation kernels. Specifically, we perform an in-depth analysis of sparse operations in mainstream DNN computing frameworks. We then decompose the sparse workload into multiple components to create highly efficient, specialized operators with different sparsity levels. Additionally, we introduce a novel sparse graph translation technique to facilitate computation kernel processing of the sparse workload. The resulting CROSS framework can accommodate various sparsity patterns and optimization techniques, delivering an average $2.03 \\times$ speedup on inference latency compared to seven state-of-the-art solutions with smaller memory footprints across various models and datasets.",
+  "doi": "10.1109/hpca61900.2025.00076",
+  "openalex": "W4409248508",
+  "status": "ok",
+  "title": "CROSS: Compiler-Driven Optimization of Sparse DNNs Using Sparse/Dense Computation Kernels"
+ },
+ "10.1109_hpec49654.2021.9622851": {
+  "abstract": "Tensor decomposition has become an essential tool in many applications in various domains, including machine learning. Sparse Matricized Tensor Times Khatri-Rao Product (MTTKRP) is one of the most computationally expensive kernels in tensor computations. Despite having significant computational parallelism, MTTKRP is a challenging kernel to optimize due to its irregular memory access characteristics. This paper focuses on a multi-faceted memory system, which explores the spatial and temporal locality of the data structures of MTTKRP. Further, users can reconfigure our design depending on the behavior of the compute units used in the FPGA accelerator. Our system efficiently accesses all the MTTKRP data structures while reducing the total memory access time, using a distributed cache and Direct Memory Access (DMA) subsystem. Moreover, our work improves the memory access time by 3.5× compared with commercial memory controller IPs. Also, our system shows 2× and 1.26× speedups compared with cache-only and DMA-only memory systems, respectively.",
+  "doi": "10.1109/hpec49654.2021.9622851",
+  "openalex": "W3200075413",
+  "status": "ok",
+  "title": "Reconfigurable Low-latency Memory System for Sparse Matricized Tensor Times Khatri-Rao Product on FPGA"
+ },
+ "10.1109_isca59077.2024.00046": {
+  "abstract": "The growing interest in novel dataflow architectures and streaming execution paradigms has created the need for a simulator optimized for modeling dataflow systems. To fill this need, we present three new techniques that make it feasible to simulate complex systems consisting of thousands of components. First, we introduce an interface based on Communicating Sequential Processes which allows users to simultaneously describe functional and timing characteristics. Second, we introduce a scalable point-to-point synchronization scheme that avoids global synchronization. Finally, we demonstrate a technique to exploit slack in the simulated system, such as FIFOs, to increase simulation parallelism. We implement these techniques in the Dataflow Machine (DAM), a parallel simulator framework for dataflow systems. We demonstrate the benefits of using DAM by highlighting three case studies using the framework. First, we use DAM directly as an exploration tool for streaming algorithms on dataflow hardware. We simulate two different implementations of the attention algorithm used in large language models, and use DAM to show that the second implementation only requires a constant amount of local memory. Second, we re-implement a simulator for a sparse tensor algebra accelerator, resulting in $57 \\%$ less code and a simulation speedup of up to four orders of magnitude. Finally, we demonstrate a general technique for time-multiplexing real hardware to simulate multiple virtual copies of the hardware using DAM.",
+  "doi": "10.1109/isca59077.2024.00046",
+  "openalex": "W4401211843",
+  "status": "ok",
+  "title": "The Dataflow Abstract Machine Simulator Framework"
+ },
+ "10.1109_llvmhpc54804.2021.00009": {
+  "abstract": "Sparse tensor algebra is widely used in many applications, including scientific computing, machine learning, and data analytics. The performance of sparse tensor algebra kernels strongly depends on the intrinsic characteristics of the input tensors, hence many storage formats are designed for tensors to achieve optimal performance for particular applications/architectures, which makes it challenging to implement and optimize every tensor operation of interest on a given architecture. We propose a tensor algebra domain-specific language (DSL) and compiler framework to automatically generate kernels for mixed sparse-dense tensor algebra operations. The proposed DSL provides high-level programming abstractions that resemble the familiar Einstein notation to represent tensor algebra operations. The compiler introduces a new Sparse Tensor Algebra dialect built on top of LLVM’s extensible MLIR compiler infrastructure for efficient code generation while covering a wide range of tensor storage formats. Our compiler also leverages input-dependent code optimization to enhance data locality for better performance. Our results show that the performance of automatically generated kernels outperforms the state-of-the-art sparse tensor algebra compiler, with up to 20.92x, 6.39x, and 13.9x performance improvement over state-of-the-art tensor algebra compilers, for parallel SpMV, SpMM, and TTM, respectively.",
+  "doi": "10.1109/llvmhpc54804.2021.00009",
+  "openalex": "W4200390336",
+  "status": "ok",
+  "title": "A High Performance Sparse Tensor Algebra Compiler in MLIR"
+ },
+ "10.1109_metacom57706.2023.00042": {
+  "abstract": "The paper describes research challenges arising from the increasing interest in supporting more immersive and more intelligent environments that enable the next generation of seamless human and physical interactions. These environments span the gamut from augmented-physical to virtual, and are referred to hereafter as the Metaverse. We focus on challenges that constitute a natural extension of Internet of Things (IoT) research. Among the key applications of IoT has always been the integration of physical and cyber environments to endow \"things\" with a better contextual understanding of their surroundings, and endow human users with more seamless means of perception and control, ranging from smart home automation to industrial applications. This IoT vision was based on the premise that the number of physical \"things\" on the Internet will soon significantly outpace humans. Intelligent IoT further envisions a proliferation of edge intelligence with which humans will interact. The paper elaborates the research challenges that extrapolate the above trajectory.",
+  "doi": "10.1109/metacom57706.2023.00042",
+  "openalex": "W4387395078",
+  "status": "ok",
+  "title": "Challenges in Metaverse Research: An Internet of Things Perspective"
+ },
+ "10.1109_pact58117.2023.00010": {
+  "abstract": "Graph problems are common across many fields, from scientific computing to social sciences. Despite their importance and the attention received, implementing graph algorithms effectively on modern computing systems remains a challenging task that requires significant programming effort and generally results in customized implementations. Current computing and memory hierarchies are not architected for irregular computations, resulting performance that is far from the theoretical architectural peak. In this paper, we propose a compiler framework to simplify the development of graph algorihtm implementations that can achieve high performance on modern computing systems. We provide a high-level domain specific language (DSL) to represent graph algorithms through sparse linear algebra expressions and graph primitives including semiring and masking. The compiler leverages the semantics information expressed through the DSL during the optimization and code transformation passes, resulting in more efficient IR passed to the compiler backend. In particular, we introduce an Index Tree Dialect that preserves the semantic information of the graph algorithm to perform high-level, domain-specific optimizations, including workspace transformation, two-phase computation, and automatic parallelization. We demonstrate that this work outperforms state-of-the-art graph libraries LAGraph by up to 3.7 × speedup in semiring operations, 2.19 ×speedup in an important sparse computational kernel, and 9.05 × speedup in graph processing algorithms.",
+  "doi": "10.1109/pact58117.2023.00010",
+  "openalex": "W4390280292",
+  "status": "ok",
+  "title": "Automatic Code Generation for High-Performance Graph Algorithms"
+ },
+ "10.1109_sc41404.2022.00064": {
+  "abstract": "We introduce SpDISTAL, a compiler for sparse tensor algebra that targets distributed systems. SpDISTAL combines separate descriptions of tensor algebra expressions, sparse data structures, data distribution, and computation distribution. Thus, it enables distributed execution of sparse tensor algebra expressions with a wide variety of sparse data structures and data distributions. SpDISTAL is implemented as a C++ library that targets a distributed task-based runtime system and can generate code for nodes with both multi-core CPUs and multiple GPUs. SpDISTAL generates distributed code that achieves performance competitive with hand-written distributed functions for specific sparse tensor algebra expressions and that outperforms general interpretation-based systems by one to two orders of magnitude.",
+  "doi": "10.1109/sc41404.2022.00064",
+  "openalex": "W4321636673",
+  "status": "ok",
+  "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations"
+ },
+ "10.1109_sc41405.2020.00028": {
+  "abstract": "The density matrix renormalization group (DMRG) algorithm is a powerful tool for solving eigenvalue problems to model quantum systems. DMRG relies on tensor contractions and dense linear algebra to compute properties of condensed matter physics systems. However, its efficient parallel implementation is challenging due to limited concurrency, large memory footprint, and tensor sparsity. We mitigate these problems by implementing two new parallel approaches that handle block sparsity arising in DMRG, via Cyclops, a distributed memory tensor contraction library. We benchmark their performance on two physical systems using the Blue Waters and Stampede2 supercomputers. Our DMRG performance is improved by up to 5.9X in runtime and 99X in processing rate over ITensor, at roughly comparable computational resource use. This enables higher accuracy calculations via larger tensors for quantum state approximation. We demonstrate that despite having limited concurrency, DMRG is weakly scalable with the use of efficient parallel tensor contraction mechanisms.",
+  "doi": "10.1109/sc41405.2020.00028",
+  "openalex": "W3132553051",
+  "status": "ok",
+  "title": "Distributed-Memory DMRG via Sparse and Dense Parallel Tensor Contractions"
+ },
+ "10.1109_tcad.2021.3108065": {
+  "abstract": "Convolution features huge complexity and demands high computation capability. Among hardware platforms, field programmable gate array (FPGA) emerges as a promising solution for its substantial available parallelism and energy efficiency. Besides, convolution can be implemented with different algorithms, including conventional, general matrix–matrix multiplication (GEMM), Winograd, and fast Fourier transformation (FFT) algorithms, which are diverse in arithmetic complexity, resource requirement, etc. Different convolutional neural network (CNN) models have different topologies and structures, favoring different convolution algorithms. In response, software libraries such as cuDNN provide a variety of computational primitives to support these algorithms. However, supporting such libraries on FPGAs is challenging. First, multiple algorithms can share the FPGA resources spatially as well as temporally, introducing either reconfiguration overhead or resource underutilization. Second, FPGA implementation remains a significant challenge for library developers. It typically requires significant specialized hardware knowledge. In this article, we proposeFCNNLib, an efficient and scalable convolution algorithm library on FPGAs. To coordinate multiple convolution algorithms on FPGAs, we develop three schedulings: 1) spatial; 2) temporal; and 3) hybrid, which exhibit different tradeoffs in latency and throughput. We explore these schedulings by balancing the reconfiguration overhead, resource utilization, and optimization objectives of the CNNs. Then, we provide efficient and tunable algorithm templates that allow performance tuning through performance and resource models. To arm the users,FCNNLibexposes a set of interfaces to support high-level application designs. We demonstrate the usability ofFCNNLibwith state-of-the-art CNNs.FCNNLibachieves up to$44.6\\times $and$1.76\\times $energy efficiency in various scenarios compared with software libraries for CPUs and GPUs, respectively.",
+  "doi": "10.1109/tcad.2021.3108065",
+  "openalex": "W3217077065",
+  "status": "ok",
+  "title": "FCNNLib: A Flexible Convolution Algorithm Library for Deep Learning on FPGAs"
+ },
+ "10.1109_tcad.2024.3446718": {
+  "abstract": "Sparse matrix-matrix multiplication (SpMM) is a fundamental operation widely used in deep neural networks (DNNs) and high-performance computing. Many compilation studies have optimized the kernel code of SpMM to achieve better performance gains. However, on the one hand, these efforts often focus solely on optimizing individual SpMM operations, without fully considering the influence of preceding and subsequent operators on SpMM. On the other hand, when dense regions in SpMM require accumulation to the same output location, these dense matrix multiplications must be executed sequentially, leading to significant overhead from atomic additions or thread synchronization. In this article, we propose a novel compiler plug-in for efficient SpMM, named SpMMPlu-Pro. SpMMPlu-Pro inherits the sparse intermediate representation (Sparse IR) and sparse pattern representation [meta-operation (meta-op)] as well as five optimization passes from SpMMPlu. To fully utilize the sparse properties, SpMMPlu-Pro implements a forward and backward cross-layer sparsity propagation algorithm, which propagates the sparsity of one layer to the front and back layers, fully releasing the potential of utilizing sparsity to accelerate neural network inference. To alleviate the inefficient accumulation of meta-ops caused by atomic addition or thread synchronization, we propose two complementary scheduling schemes: 1) the segmentation and grouping algorithm based on automatic search and 2) the atomic optimization method through the meta-op data flow graph restructure. We integrated SpMMPlu-Pro into MindSpore and tested its effectiveness and scalability on the NVIDIA V100 GPU and Huawei Ascend 910. The results show that SpMMPlu-Pro supports various sparsity patterns, achieving an average speedup of$4.10\\times $on the V100 GPU and$4.35\\times $on the Ascend 910 compared to the dense counterpart.",
+  "doi": "10.1109/tcad.2024.3446718",
+  "openalex": "W4403407616",
+  "status": "ok",
+  "title": "SpMMPlu-Pro: An Enhanced Compiler Plug-In for Efficient SpMM and Sparsity Propagation Algorithm"
+ },
+ "10.1111_cgf.14080": {
+  "abstract": "Abstract Sparse matrix computations are among the most important computational patterns, commonly used in geometry processing, physical simulation, graph algorithms, and other situations where sparse data arises. In many cases, the structure of a sparse matrix is known a priori, but the values may change or depend on inputs to the algorithm. We propose a new methodology for compile‐time specialization of algorithms relying on mixing sparse and dense linear algebra operations, using an extension to the widely‐used open source Eigen package. In contrast to library approaches optimizing individual building blocks of a computation (such as sparse matrix product), we generate reusable sparsity‐specific implementations for a given algorithm, utilizing vector intrinsics and reducing unnecessary scanning through matrix structures. We demonstrate the effectiveness of our technique on a benchmark of artificial expressions to quantitatively evaluate the benefit of our approach over the state‐of‐the‐art library Intel MKL. To further demonstrate the practical applicability of our technique we show that our technique can improve performance, with minimal code changes, for mesh smoothing, mesh parametrization, volumetric deformation, optical flow, and computation of the Laplace operator.",
+  "doi": "10.1111/cgf.14080",
+  "openalex": "W3049715889",
+  "status": "ok",
+  "title": "EGGS: Sparsity‐Specific Code Generation"
+ },
+ "10.1145_3315454.3329958": {
+  "abstract": "The widespread use of tensor operations in describing electronic structure calculations has motivated the design of software frameworks for productive development of scalable optimized tensor-based electronic structure methods. Whereas prior work focused on Cartesian abstractions for dense tensors, we present an algebra to specify and perform tensor operations on a larger class of block-sparse tensors. We illustrate the use of this framework in expressing real-world computational chemistry calculations beyond the reach of existing frameworks.",
+  "doi": "10.1145/3315454.3329958",
+  "openalex": "W2954210556",
+  "status": "ok",
+  "title": "Toward generalized tensor algebra for ab initio quantum chemistry methods"
+ },
+ "10.1145_3368826.3377923": {
+  "abstract": "We consider the problem of training machine learning models over multi-relational data. The mainstream approach is to first construct the training dataset using a feature extraction query over input database and then use a statistical software package of choice to train the model. In this paper we introduce Iterative Functional Aggregate Queries (IFAQ), a framework that realizes an alternative approach. IFAQ treats the feature extraction query and the learning task as one program given in the IFAQ's domain-specific language, which captures a subset of Python commonly used in Jupyter notebooks for rapid prototyping of machine learning applications. The program is subject to several layers of IFAQ optimizations, such as algebraic transformations, loop transformations, schema specialization, data layout optimizations, and finally compilation into efficient low-level C++ code specialized for the given workload and data.",
+  "doi": "10.1145/3368826.3377923",
+  "openalex": "W3008198205",
+  "status": "ok",
+  "title": "Multi-layer optimizations for end-to-end data analytics"
+ },
+ "10.1145_3385412.3385963": {
+  "abstract": "This paper shows how to generate code that efficiently converts sparse tensors between disparate storage formats (data layouts) such as CSR, DIA, ELL, and many others. We decompose sparse tensor conversion into three logical phases: coordinate remapping, analysis, and assembly. We then develop a language that precisely describes how different formats group together and order a tensor’s nonzeros in memory. This lets a compiler emit code that performs complex remappings of nonzeros when converting between formats. We also develop a query language that can extract statistics about sparse tensors, and we show how to emit efficient analysis code that computes such queries. Finally, we define an abstract interface that captures how data structures for storing a tensor can be efficiently assembled given specific statistics about the tensor. Disparate formats can implement this common interface, thus letting a compiler emit optimized sparse tensor conversion code for arbitrary combinations of many formats without hard-coding for any specific combination.",
+  "doi": "10.1145/3385412.3385963",
+  "openalex": "W2999521721",
+  "status": "ok",
+  "title": "Automatic generation of efficient sparse tensor format conversion routines"
+ },
+ "10.1145_3416510": {
+  "abstract": "Polyhedral auto-transformation frameworks are known to find efficient loop transformations that maximize locality and parallelism and minimize synchronization. While complex loop transformations are routinely modeled in these frameworks, they tend to rely on ad hoc heuristics for loop fusion. Although there exist multiple loop fusion models with cost functions to maximize locality and parallelism, these models involve separate optimization steps rather than seamlessly integrating with other loop transformations like loop permutation, scaling, and shifting. Incorporating parallelism-preserving loop fusion heuristics into existing affine transformation frameworks like Pluto, LLVM-Polly, PPCG, and PoCC requires solving a large number of Integer Linear Programming formulations, which increase auto-transformation times significantly. In this work, we incorporate polynomial time loop fusion heuristics into the Pluto-lp-dfp framework. We present a data structure called the fusion conflict graph (FCG), which enables us to efficiently model loop fusion in the presence of other affine loop transformations. We propose a clustering heuristic to group the vertices of the FCG, which further enables us to provide three different polynomial time greedy fusion heuristics, namely, maximal fusion , typed fusion , and hybrid fusion , while maintaining the compile time improvements of Pluto-lp-dfp over Pluto. Our experiments reveal that the hybrid fusion model, in conjunction with Pluto’s cost function, finds efficient transformations that outperform PoCC and Pluto by mean factors of 1.8× and 1.07×, respectively, with a maximum performance improvement of 14× over PoCC and 2.6× over Pluto.",
+  "doi": "10.1145/3416510",
+  "openalex": "W3091055609",
+  "status": "ok",
+  "title": "Effective Loop Fusion in Polyhedral Compilation Using Fusion Conflict Graphs"
+ },
+ "10.1145_3428226": {
+  "abstract": "We address the problem of optimizing sparse tensor algebra in a compiler and show how to define standard loop transformations---split, collapse, and reorder---on sparse iteration spaces. The key idea is to track the transformation functions that map the original iteration space to derived iteration spaces. These functions are needed by the code generator to emit code that maps coordinates between iteration spaces at runtime, since the coordinates in the sparse data structures remain in the original iteration space. We further demonstrate that derived iteration spaces can tile both the universe of coordinates and the subset of nonzero coordinates: the former is analogous to tiling dense iteration spaces, while the latter tiles sparse iteration spaces into statically load-balanced blocks of nonzeros. Tiling the space of nonzeros lets the generated code efficiently exploit heterogeneous compute resources such as threads, vector units, and GPUs. We implement these concepts by extending the sparse iteration theory implementation in the TACO system. The associated scheduling API can be used by performance engineers or it can be the target of an automatic scheduling system. We outline one heuristic autoscheduling system, but other systems are possible. Using the scheduling API, we show how to optimize mixed sparse-dense tensor algebra expressions on CPUs and GPUs. Our results show that the sparse transformations are sufficient to generate code with competitive performance to hand-optimized implementations from the literature, while generalizing to all of the tensor algebra.",
+  "doi": "10.1145/3428226",
+  "openalex": "W3108012228",
+  "status": "ok",
+  "title": "A sparse iteration space transformation framework for sparse tensor algebra"
+ },
+ "10.1145_3445814.3446702": {
+  "abstract": "Sparse matrix-sparse matrix multiplication (spMspM) is at the heart of a wide range of scientific and machine learning applications. spMspM is inefficient on general-purpose architectures, making accelerators attractive. However, prior spMspM accelerators use inner- or outer-product dataflows that suffer poor input or output reuse, leading to high traffic and poor performance. These prior accelerators have not explored Gustavson's algorithm, an alternative spMspM dataflow that does not suffer from these problems but features irregular memory access patterns that prior accelerators do not support.",
+  "doi": "10.1145/3445814.3446702",
+  "openalex": "W3155922894",
+  "status": "ok",
+  "title": "Gamma: leveraging Gustavson’s algorithm to accelerate sparse matrix multiplication"
+ },
+ "10.1145_3453483.3454083": {
+  "abstract": "Deep Neural Networks (DNNs) have emerged as the core enabler of many major applications on mobile devices. To achieve high accuracy, DNN models have become increasingly deep with hundreds or even thousands of operator layers, leading to high memory and computational requirements for inference. Operator fusion (or kernel/layer fusion) is key optimization in many state-of-the-art DNN execution frameworks, such as TensorFlow, TVM, and MNN, that aim to improve the efficiency of the DNN inference. However, these frameworks usually adopt fusion approaches based on certain patterns that are too restrictive to cover the diversity of operators and layer connections, especially those seen in many extremely deep models. Polyhedral-based loop fusion techniques, on the other hand, work on a low-level view of the computation without operator-level information, and can also miss potential fusion opportunities. To address this challenge, this paper proposes a novel and extensive loop fusion framework called DNNFusion. The basic idea of this work is to work at an operator view of DNNs, but expand fusion opportunities by developing a classification of both individual operators and their combinations. In addition, DNNFusion includes 1) a novel mathematical-property-based graph rewriting framework to reduce evaluation costs and facilitate subsequent operator fusion, 2) an integrated fusion plan generation that leverages the high-level analysis and accurate light-weight profiling, and 3) additional optimizations during fusion code generation. DNNFusion is extensively evaluated on 15 DNN models with varied types of tasks, model sizes, and layer counts. The evaluation results demonstrate that DNNFusion finds up to 8.8 × higher fusion opportunities, outperforms four state-of-the-art DNN execution frameworks with 9.3× speedup. The memory requirement reduction and speedups can enable the execution of many of the target models on mobile devices and even make them part of a real-time application.",
+  "doi": "10.1145/3453483.3454083",
+  "openalex": "W3174529902",
+  "status": "ok",
+  "title": "DNNFusion: accelerating deep neural networks execution with advanced operator fusion"
+ },
+ "10.1145_3466752.3480122": {
+  "abstract": "Demands for efficient computing among applications that use high-dimensional datasets have led to multi-dimensional computers—computers that leverage heterogeneous processors/accelerators offering various processing models to support multi-dimensional compute kernels. Yet the front-end for these processors/accelerators is inefficient, as memory/storage systems often expose only entrenched linear-space abstractions to an application, and they often ignore the benefits of modern memory/storage systems, such as support for multi-dimensionality through different types of parallel access.",
+  "doi": "10.1145/3466752.3480122",
+  "openalex": "W3207014500",
+  "status": "ok",
+  "title": "NDS: N-Dimensional Storage"
+ },
+ "10.1145_3485505": {
+  "abstract": "This paper shows how to compile sparse array programming languages. A sparse array programming language is an array programming language that supports element-wise application, reduction, and broadcasting of arbitrary functions over dense and sparse arrays with any fill value. Such a language has great expressive power and can express sparse and dense linear and tensor algebra, functions over images, exclusion and inclusion filters, and even graph algorithms. Our compiler strategy generalizes prior work in the literature on sparse tensor algebra compilation to support any function applied to sparse arrays, instead of only addition and multiplication. To achieve this, we generalize the notion of sparse iteration spaces beyond intersections and unions. These iteration spaces are automatically derived by considering how algebraic properties annotated onto functions interact with the fill values of the arrays. We then show how to compile these iteration spaces to efficient code. When compared with two widely-used Python sparse array packages, our evaluation shows that we generate built-in sparse array library features with a performance of 1.4× to 53.7× when measured against PyData/Sparse for user-defined functions and between 0.98× and 5.53× when measured against SciPy/Sparse for sparse array slicing. Our technique outperforms PyData/Sparse by 6.58× to 70.3×, and (where applicable) performs between 0.96× and 28.9× that of a dense NumPy implementation, on end-to-end sparse array applications. We also implement graph linear algebra kernels in our system with a performance of between 0.56× and 3.50× compared to that of the hand-optimized SuiteSparse:GraphBLAS library.",
+  "doi": "10.1145/3485505",
+  "openalex": "W3207857196",
+  "status": "ok",
+  "title": "Compilation of sparse array programming models"
+ },
+ "10.1145_3503221.3508431": {
+  "abstract": "Sparse general matrix-matrix multiplication (SpGEMM) is one of the most fundamental building blocks in sparse linear solvers, graph processing frameworks and machine learning applications. The existing parallel approaches for shared memory SpGEMM mostly use the row-row style with possibly good parallelism. However, because of the irregularity in sparsity structures, the existing row-row methods often suffer from three problems: (1) load imbalance, (2) high global space complexity and unsatisfactory data locality, and (3) sparse accumulator selection.",
+  "doi": "10.1145/3503221.3508431",
+  "openalex": "W4220912491",
+  "status": "ok",
+  "title": "TileSpGEMM"
+ },
+ "10.1145_3519939.3523437": {
+  "abstract": "We introduce DISTAL, a compiler for dense tensor algebra that targets modern distributed and heterogeneous systems. DISTAL lets users independently describe how tensors and computation map onto target machines through separate format and scheduling languages. The combination of choices for data and computation distribution creates a large design space that includes many algorithms from both the past (e.g., Cannon’s algorithm) and the present (e.g., COSMA). DISTAL compiles a tensor algebra domain specific language to a distributed task-based runtime system and supports nodes with multi-core CPUs and multiple GPUs. Code generated by is competitive with optimized codes for matrix multiply on 256 nodes of the Lassen supercomputer and outperforms existing systems by between 1.8x to 3.7x (with a 45.7x outlier) on higher order tensor operations.",
+  "doi": "10.1145/3519939.3523437",
+  "openalex": "W4220690649",
+  "status": "ok",
+  "title": "DISTAL: the distributed tensor algebra compiler"
+ },
+ "10.1145_3519939.3523442": {
+  "abstract": "While loop reordering and fusion can make big impacts on the constant-factor performance of dense tensor programs, the effects on sparse tensor programs are asymptotic, often leading to orders of magnitude performance differences in practice. Sparse tensors also introduce a choice of compressed storage formats that can have asymptotic effects. Research into sparse tensor compilers has led to simplified languages that express these tradeoffs, but the user is expected to provide a schedule that makes the decisions. This is challenging because schedulers must anticipate the interaction between sparse formats, loop structure, potential sparsity patterns, and the compiler itself. Automating this decision making process stands to finally make sparse tensor compilers accessible to end users.",
+  "doi": "10.1145/3519939.3523442",
+  "openalex": "W4281658036",
+  "status": "ok",
+  "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model"
+ },
+ "10.1145_3520484": {
+  "abstract": "We introduce a code generator that converts unoptimized C++ code operating on sparse data into vectorized and parallel CPU or GPU kernels. Our approach unrolls the computation into a massive expression graph, performs redundant expression elimination, grouping, and then generates an architecture-specific kernel to solve the same problem, assuming that the sparsity pattern is fixed, which is a common scenario in many applications in computer graphics and scientific computing. We show that our approach scales to large problems and can achieve speedups of two orders of magnitude on CPUs and three orders of magnitude on GPUs, compared to a set of manually optimized CPU baselines. To demonstrate the practical applicability of our approach, we employ it to optimize popular algorithms with applications to physical simulation and interactive mesh deformation.",
+  "doi": "10.1145/3520484",
+  "openalex": "W3209648960",
+  "status": "ok",
+  "title": "Sparsity-Specific Code Optimization using Expression Trees"
+ },
+ "10.1145_3524059.3532386": {
+  "abstract": "Sparse tensor algebra computations have become important in many real-world applications like machine learning, scientific simulations, and data mining. Hence, automated code generation and performance optimizations for tensor algebra kernels are paramount. Recent advancements such as the Tensor Algebra Compiler (TACO) greatly generalize and automate the code generation for tensor algebra expressions. However, the code generated by TACO for many important tensor computations remains suboptimal due to the absence of a scheduling directive to support transformations such as distribution/fusion.",
+  "doi": "10.1145/3524059.3532386",
+  "openalex": "W4281550828",
+  "status": "ok",
+  "title": "SparseLNR"
+ },
+ "10.1145_3534933": {
+  "abstract": "With the slowing of Moore’s law, computer architects have turned to domain-specific hardware specialization to continue improving the performance and efficiency of computing systems. However, specialization typically entails significant modifications to the software stack to properly leverage the updated hardware. The lack of a structured approach for updating the compiler and the accelerator in tandem has impeded many attempts to systematize this procedure. We propose a new approach to enable flexible and evolvable domain-specific hardware specialization based on coarse-grained reconfigurable arrays (CGRAs). Our agile methodology employs a combination of new programming languages and formal methods to automatically generate the accelerator hardware and its compiler from a single source of truth. This enables the creation of design-space exploration frameworks that automatically generate accelerator architectures that approach the efficiencies of hand-designed accelerators, with a significantly lower design effort for both hardware and compiler generation. Our current system accelerates dense linear algebra applications but is modular and can be extended to support other domains. Our methodology has the potential to significantly improve the productivity of hardware-software engineering teams and enable quicker customization and deployment of complex accelerator-rich computing systems.",
+  "doi": "10.1145/3534933",
+  "openalex": "W4284689293",
+  "status": "ok",
+  "title": "AHA: An Agile Approach to the Design of Coarse-Grained Reconfigurable Accelerators and Compilers"
+ },
+ "10.1145_3544559": {
+  "abstract": "Sparse tensors arise in problems in science, engineering, machine learning, and data analytics. Programs that operate on such tensors can exploit sparsity to reduce storage requirements and computational time. Developing and maintaining sparse software by hand, however, is a complex and error-prone task. Therefore, we propose treating sparsity as a property of tensors, not a tedious implementation task, and letting a sparse compiler generate sparse code automatically from a sparsity-agnostic definition of the computation. This article discusses integrating this idea into MLIR.",
+  "doi": "10.1145/3544559",
+  "openalex": "W4290648346",
+  "status": "ok",
+  "title": "Compiler Support for Sparse Tensor Computations in MLIR"
+ },
+ "10.1145_3559009.3569685": {
+  "abstract": "High-level programming models for tensor computations are becoming increasingly popular in many domains such as machine learning and data science. The index notation is one such model that is widely adopted for expressing a wide range of tensor computations algorithmically and also as input to programming systems. In programming systems, sparse tensors can be specified as type annotations, and a compiler can be employed to perform code generation for the specified tensor expressions and sparse formats. Different code generation strategies and optimization decisions can have a significant impact on the performance of the generated code. However, the code generation strategies used by current state-of-the-art tensor compilers can result in redundant computations being present in the output code. In this work, we identify four common types of redundancies that can occur when generating code for compound expressions, and introduce new techniques that can avoid these redundancies. Empirical evaluation on real-world compound kernels, such as Sampled Dense Dense Matrix Multiplication (SDDMM), Graph Neural Network (GNN) and Matricized-Tensor Times Khatri-Rao Product (MTTKRP) shows that our generated code with redundancy elimination can result in performance improvements of 1.1× to 25× relative to a state-of-the-art Tensor Algebra COmpiler (TACO) and up to 101× relative to library approaches such as the SciPy.sparse.",
+  "doi": "10.1145/3559009.3569685",
+  "openalex": "W4318328284",
+  "status": "ok",
+  "title": "ReACT"
+ },
+ "10.1145_3563338": {
+  "abstract": "Many applications, from social network graph analytics to control flow analysis, compute on sparse data that evolves over the course of program execution. Such data can be represented as dynamic sparse tensors and efficiently stored in formats (data layouts) that utilize pointer-based data structures like block linked lists, binary search trees, B-trees, and C-trees among others. These specialized formats support fast in-place modification and are thus better suited than traditional, array-based data structures like CSR for storing dynamic sparse tensors. However, different dynamic sparse tensor formats have distinct benefits and drawbacks, and performing different computations on tensors that are stored in different formats can require vastly dissimilar code that are not straightforward to correctly implement and optimize. This paper shows how a compiler can generate efficient code to compute tensor algebra operations on dynamic sparse tensors that may be stored in a wide range of disparate formats. We propose a language for precisely specifying recursive, pointer-based data structures, and we show how this language can express many different dynamic data structures, including all the ones named above as well as many more. We then describe how, given high-level specifications of such dynamic data structures, a compiler can emit code to efficiently access and compute on dynamic sparse tensors that are stored in the aforementioned data structures. We evaluate our technique and find it generates efficient dynamic sparse tensor algebra kernels that have performance comparable to, if not better than, state-of-the-art libraries and frameworks such as PAM, Aspen, STINGER, and Terrace. At the same time, our technique supports a wider range of tensor algebra operations---such as those that simultaneously compute with static and dynamic sparse tensors---than Aspen, STINGER, and Terrace, while also achieving significantly better performance than PAM for those same operations.",
+  "doi": "10.1145/3563338",
+  "openalex": "W4307887693",
+  "status": "ok",
+  "title": "Compilation of dynamic sparse tensor algebra"
+ },
+ "10.1145_3579990.3580020": {
+  "abstract": "Real world arrays often contain underlying structure, such as sparsity, runs of repeated values, or symmetry. Specializing for structure yields significant speedups. But automatically generating efficient code for structured data is challenging, especially when arrays with different structure interact. We show how to abstract over array structures so that the compiler can generate code to coiterate over any combination of them. Our technique enables new array formats (such as 1DVBL for irregular clustered sparsity), new iteration strategies (such as galloping intersections), and new operations over structured data (such as concatenation or convolution).",
+  "doi": "10.1145/3579990.3580020",
+  "openalex": "W4321500415",
+  "status": "ok",
+  "title": "Looplets: A Language for Structured Coiteration"
+ },
+ "10.1145_3582016.3582047": {
+  "abstract": "Sparse tensors are rapidly becoming critical components of modern deep learning workloads. However, developing high-performance sparse operators can be difficult and tedious, and existing vendor libraries cannot satisfy the escalating demands from new operators. Sparse tensor compilers simplify the development of operators, but efficient sparse compilation for deep learning remains challenging because a single sparse format cannot maximize hardware efficiency, and single-shot compilers cannot keep up with latest hardware and system advances. In this paper, we observe that the key to addressing both these challenges is to leverage composable formats and composable transformations. We propose SparseTIR, a sparse tensor compilation abstraction that offers composable formats and composable transformations for deep learning workloads. SparseTIR constructs a search space over these composable components for performance tuning. With these improvements, SparseTIR obtains consistent performance speedups vs vendor libraries on GPUs for single operators: 1.20-2.34x for GNN operators, 1.05-2.98x for sparse attention operators, and 0.56-7.45x for sparse convolution operators. SparseTIR also accelerates end-to-end GNNs by 1.08-1.52x for GraphSAGE training, and 4.20-40.18x for RGCN inference.",
+  "doi": "10.1145/3582016.3582047",
+  "openalex": "W4327911434",
+  "status": "ok",
+  "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning"
+ },
+ "10.1145_3582016.3582051": {
+  "abstract": "We propose the Sparse Abstract Machine (SAM), an abstract machine model for targeting sparse tensor algebra to reconfigurable and fixed-function spatial dataflow accelerators. SAM defines a streaming dataflow abstraction with sparse primitives that encompass a large space of scheduled tensor algebra expressions. SAM dataflow graphs naturally separate tensor formats from algorithms and are expressive enough to incorporate arbitrary iteration orderings and many hardware-specific optimizations. We also present Custard, a compiler from a high-level language to SAM that demonstrates SAM's usefulness as an intermediate representation. We automatically bind from SAM to a streaming dataflow simulator. We evaluate the generality and extensibility of SAM, explore the performance space of sparse tensor algebra optimizations using SAM, and show SAM's ability to represent dataflow hardware.",
+  "doi": "10.1145/3582016.3582051",
+  "openalex": "W4327911471",
+  "status": "ok",
+  "title": "The Sparse Abstract Machine"
+ },
+ "10.1145_3588717": {
+  "abstract": "Tensor programs often need to process large tensors (vectors, matrices, or higher order tensors) that require a specialized storage format for their memory layout. Several such layouts have been proposed in the literature, such as the Coordinate Format, the Compressed Sparse Row format, and many others, that were especially designed to optimally store tensors with specific sparsity properties. However, existing tensor processing systems require specialized extensions in order to take advantage of every new storage format. In this paper we describe a system that allows users to define flexible storage formats in a declarative tensor query language, similar to the language used by the tensor program. The programmer only needs to write storage mappings, which describe, in a declarative way, how the tensors are laid out in main memory. Then, we describe a cost-based optimizer that optimizes the tensor program for the specific memory layout. We demonstrate empirically significant performance improvements compared to state-of-the-art tensor processing systems.",
+  "doi": "10.1145/3588717",
+  "openalex": "W4380433265",
+  "status": "ok",
+  "title": "Optimizing Tensor Programs on Flexible Storage"
+ },
+ "10.1145_3591236": {
+  "abstract": "We introduce Mosaic, a sparse tensor algebra compiler that can bind tensor expressions to external functions of other tensor algebra libraries and compilers. Users can extend Mosaic by adding new functions and bind a sub-expression to a function using a scheduling API. Mosaic substitutes the bound sub-expressions with calls to the external functions and automatically generates the remaining code using a default code generator. As the generated code is fused by default, users can productively leverage both fusion and calls to specialized functions within the same compiler. We demonstrate the benefits of our dual approach by showing that calling hand-written CPU and specialized hardware functions can provide speedups of up to 206× against fused code in some cases, while generating fused code can provide speedups of up to 3.57× against code that calls external functions in other cases. Mosaic also offers a search system that can automatically map an expression to a set of registered external functions. Both the explicit binding and automatic search are verified by Mosaic. Additionally, the interface for adding new external functions is simple and general. Currently, 38 external functions have been added to Mosaic, with each addition averaging 20 lines of code.",
+  "doi": "10.1145/3591236",
+  "openalex": "W4379537250",
+  "status": "ok",
+  "title": "Mosaic: An Interoperable Compiler for Tensor Algebra"
+ },
+ "10.1145_3591268": {
+  "abstract": "We introduce indexed streams, a formal operational model and intermediate representation that describes the fused execution of a contraction language that encompasses both sparse tensor algebra and relational algebra. We prove that the indexed stream model is correct with respect to a functional semantics. We also develop a compiler for contraction expressions that uses indexed streams as an intermediate representation. The compiler is only 540 lines of code, but we show that its performance can match both the TACO compiler for sparse tensor algebra and the SQLite and DuckDB query processing libraries for relational algebra.",
+  "doi": "10.1145/3591268",
+  "openalex": "W4379512454",
+  "status": "ok",
+  "title": "Indexed Streams: A Formal Intermediate Representation for Fused Contraction Programs"
+ },
+ "10.1145_3613424.3623791": {
+  "abstract": "Over the past few years, the explosion in sparse tensor algebra workloads has led to a corresponding rise in domain-specific accelerators to service them. Due to the irregularity present in sparse tensors, these accelerators employ a wide variety of novel solutions to achieve good performance. At the same time, prior work on design-flexible sparse accelerator modeling does not express this full range of design features, making it difficult to understand the impact of each design choice and compare or extend the state-of-the-art.",
+  "doi": "10.1145/3613424.3623791",
+  "openalex": "W4389500477",
+  "status": "ok",
+  "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators"
+ },
+ "10.1145_3620666.3651322": {
+  "abstract": "Relational graph neural networks (RGNNs) are graph neural networks with dedicated structures for modeling the different types of nodes and edges in heterogeneous graphs. While RGNNs have been increasingly adopted in many real-world applications due to their versatility and accuracy, they pose performance and system design challenges: inherent memory-intensive computation patterns, the gap between the programming interface and kernel APIs, and heavy programming effort required to optimize kernels caused by their coupling with data layout and heterogeneity. To systematically address these challenges, we propose Hector, a novel two-level intermediate representation and its code generator framework that (a) captures the key properties of RGNN models, and opportunities to reduce memory accesses in inter-operator scheduling and materialization, (b) generates code with flexible data access schemes to eliminate redundant data copies, and (c) decouples model semantics, data layout, and operators-specific optimizations from each other to reduce programming effort. By building on one general matrix multiply (GEMM) template and a node/edge traversal template, Hector achieves up to 9.9× speed-up in inference and 43.7× speed-up in training compared with the state-of-the-art public systems on select models, RGCN, RGAT and HGT, when running heterogeneous graphs provided by Deep Graph Library (DGL) and Open Graph Benchmark (OGB). In addition, Hector does not trigger any out-of-memory (OOM) exception in these tests. We also propose linear operator reordering and compact materialization to further accelerate the system by up to 3.8×. As an indicator of the reduction of programming effort, Hector takes in 51 lines of code expressing the three models and generates a total of 8K lines of CUDA and C++ code. Through profiling, we found that higher memory efficiency allows Hector to accommodate larger input and therefore attain higher throughput in forward propagation, while backward propagation is bound by latency introduced by atomic updates and outer products.",
+  "doi": "10.1145/3620666.3651322",
+  "openalex": "W4395116186",
+  "status": "ok",
+  "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures"
+ },
+ "10.1145_3623278.3624761": {
+  "abstract": "Embedding columns are important for deep recommendation models to achieve high accuracy, but they can be very time-consuming during inference. Machine learning (ML) compilers are used broadly in real businesses to optimize ML models automatically. Unfortunately, no existing work uses compilers to automatically accelerate the heavy embedding column computations during recommendation model inferences. To fill this gap, we propose RECom, the first ML compiler that aims at optimizing the massive embedding columns in recommendation models on the GPU. RECom addresses three major challenges. First, generating an efficient schedule on the GPU for the massive operators within embedding columns is difficult. Existing solutions usually lead to numerous small kernels and also lack inter-subgraph parallelism. We adopt a novel codegen strategy that fuses massive embedding columns into a single kernel and maps each column into a separate thread block on the GPU. Second, the complex shape computations under dynamic shape scenarios impede further graph optimizations. We develop a symbolic expression-based module to reconstruct all shape computations. Third, ML frameworks inevitably introduce redundant computations due to robustness considerations. We develop a subgraph optimization module that performs graph-level simplifications based on the entire embedding column context. Experiments on both in-house and open-source models show that RECom can achieve 6.61X and 1.91X over state-of-the-art baselines in terms of end-to-end inference latency and throughput, respectively. RECom's source code is publicly available at https://github.com/AlibabaResearch/recom.",
+  "doi": "10.1145/3623278.3624761",
+  "openalex": "W4391623937",
+  "status": "ok",
+  "title": "RECom: A Compiler Approach to Accelerating Recommendation Model Inference with Massive Embedding Columns"
+ },
+ "10.1145_3649820": {
+  "abstract": "We present a framework for compiling recurrence equations into native code. In our framework, users specify a system of recurrences, the types of data structures that store inputs and outputs, and scheduling commands for optimization. Our compiler then lowers these specifications into native code that respects the dependencies in the recurrence equations. Our compiler can generate code over both sparse and dense data structures, and determines if the recurrence system is solvable with the provided scheduling primitives. We evaluate the performance and correctness of the generated code on several recurrences, from domains as diverse as dense and sparse matrix solvers, dynamic programming, graph problems, and sparse tensor algebra. We demonstrate that the generated code has competitive performance to hand-optimized implementations in libraries. However, these handwritten libraries target specific recurrences, specific data structures, and specific optimizations. Our system, on the other hand, automatically generates implementations from recurrences, data formats, and schedules, giving our system more generality than library approaches.",
+  "doi": "10.1145/3649820",
+  "openalex": "W4396214500",
+  "status": "ok",
+  "title": "Compiling Recurrences over Dense and Sparse Arrays"
+ },
+ "10.1145_3656403": {
+  "abstract": "Arrays are a fundamental abstraction to represent collections of data. It is often possible to exploit structural properties of the data stored in an array ( e.g ., repetition or sparsity) to develop a specialised representation optimised for space efficiency. Formally reasoning about correctness of manipulations with such structured data is challenging, as they are often composed of multiple loops with non-trivial invariants. In this work, we observe that specifications for structured data manipulations can be phrased as hypersafety properties, i.e ., predicates that relate traces of k programs. To turn this observation into an effective verification methodology, we developed the Logic for Graceful Tensor Manipulation (LGTM), a new Hoare-style relational separation logic for specifying and verifying computations over structured data. The key enabling idea of LGTM is that of parametrised hypersafety specifications that allow the number k of the program components to depend on the program variables . We implemented LGTM as a foundational embedding into Coq, mechanising its rules, meta-theory, and the proof of soundness. Furthermore, we developed a library of domain-specific tactics that automate computer-aided hypersafety reasoning, resulting in pleasantly short proof scripts that enjoy a high degree of reuse. We argue for the effectiveness of relational reasoning about structured data in LGTM by specifying and mechanically proving correctness of 13 case studies including computations on compressed arrays and efficient operations over multiple kinds of sparse tensors.",
+  "doi": "10.1145/3656403",
+  "openalex": "W4394710775",
+  "status": "ok",
+  "title": "Mechanised Hypersafety Proofs about Structured Data"
+ },
+ "10.1145_3656426": {
+  "abstract": "Recent years have seen considerable work on compiling sparse tensor algebra expressions. This paper addresses a shortcoming in that work, namely how to generate efficient code (in time and space) that scatters values into a sparse result tensor. We address this shortcoming through a compiler design that generates code that uses sparse intermediate tensors (sparse workspaces) as efficient adapters between compute code that scatters and result tensors that do not support random insertion. Our compiler automatically detects sparse scattering behavior in tensor expressions and inserts necessary intermediate workspace tensors. We present an algorithm template for workspace insertion that is the backbone of our code generation algorithm. Our algorithm template is modular by design, supporting sparse workspaces that span multiple user-defined implementations. Our evaluation shows that sparse workspaces can be up to 27.12 × faster than the dense workspaces of prior work. On the other hand, dense workspaces can be up to 7.58 × faster than the sparse workspaces generated by our compiler in other situations, which motivates our compiler design that supports both. Our compiler produces sequential code that is competitive with hand-optimized linear and tensor algebra libraries on the expressions they support, but that generalizes to any other expression. Sparse workspaces are also more memory efficient than dense workspaces as they compress away zeros. This compression can asymptotically decrease memory usage, enabling tensor computations on data that would otherwise run out of memory.",
+  "doi": "10.1145/3656426",
+  "openalex": "W4399852843",
+  "status": "ok",
+  "title": "Compilation of Modular and General Sparse Workspaces"
+ },
+ "10.1145_3689342": {
+  "abstract": "Sparse tensor networks represent contractions over multiple sparse tensors. Tensor contractions are higher-order analogs of matrix multiplication. Tensor networks arise commonly in many domains of scientific computing and data science. Such networks are typically computed using a tree of binary contractions. Several critical inter-dependent aspects must be considered in the generation of efficient code for a contraction tree, including sparse tensor layout mode order, loop fusion to reduce intermediate tensors, and the mutual dependence of loop order, mode order, and contraction order. We propose CoNST, a novel approach that considers these factors in an integrated manner using a single formulation. Our approach creates a constraint system that encodes these decisions and their interdependence, while aiming to produce reduced-order intermediate tensors via fusion. The constraint system is solved by the Z3 SMT solver and the result is used to create the desired fused loop structure and tensor mode layouts for the entire contraction tree. This structure is lowered to the IR of the TACO compiler, which is then used to generate executable code. Our experimental evaluation demonstrates significant performance improvements over current state-of-the-art sparse tensor compiler/library alternatives.",
+  "doi": "10.1145/3689342",
+  "openalex": "W4401657015",
+  "status": "ok",
+  "title": "CoNST: Code Generator for Sparse Tensor Networks"
+ },
+ "10.1145_3689721": {
+  "abstract": "This paper extends prior work on sparse tensor algebra compilers to generate asymptotically efficient code for tensor expressions with affine subscript expressions. Our technique enables compiler support for a wide range of sparse computations, including sparse convolutions and pooling that are widely used in ML and graphics applications. We propose an approach that gradually rewrites compound subscript expressions to simple subscript expressions with loops that exploit the sparsity pattern of the input sparse tensors. As a result, the time complexity of the generated kernels is bounded by the number of stored elements and not by the shape of the tensors. Our approach seamlessly integrates into existing frameworks and is compatible with recent advances in compilers for sparse computations, including the flexibility to efficiently handle arbitrary combinations of different sparse tensor formats. The implementation of our algorithm is open source and upstreamed to the MLIR sparse compiler. Experimental results show that our method achieves 19.5x speedup when compared with the state-of-the-art compiler-based method at 99.9% sparsity. The generated sparse kernels start to outperform dense convolution implementations at about 80% sparsity",
+  "doi": "10.1145/3689721",
+  "openalex": "W4403223049",
+  "status": "ok",
+  "title": "Compiler Support for Sparse Tensor Convolutions"
+ },
+ "10.1145_3689730": {
+  "abstract": "Automated code generation and performance enhancements for sparse tensor algebra have become essential in many real-world applications, such as quantum computing, physical simulations, computational chemistry, and machine learning. General sparse tensor algebra compilers are not always versatile enough to generate asymptotically optimal code for sparse tensor contractions. This paper shows how to generate asymptotically better schedules for complex sparse tensor expressions using kernel fission and fusion. We present generalized loop restructuring transformations to reduce asymptotic time complexity and memory footprint. Furthermore, we present an auto-scheduler that uses a partially ordered set (poset)-based cost model that uses both time and auxiliary memory complexities to prune the search space of schedules. In addition, we highlight the use of Satisfiability Module Theory (SMT) solvers in sparse auto-schedulers to approximate the Pareto frontier of better schedules to the smallest number of possible schedules, with user-defined constraints available at compile-time. Finally, we show that our auto-scheduler can select better-performing schedules and generate code for them. Our results show that the auto-scheduler provided schedules achieve orders of-magnitude speedup compared to the code generated by the Tensor Algebra Compiler (TACO) for several computations on different real-world tensors.",
+  "doi": "10.1145/3689730",
+  "openalex": "W4403223472",
+  "status": "ok",
+  "title": "SparseAuto: An Auto-scheduler for Sparse Tensor Computations using Recursive Loop Nest Restructuring"
+ },
+ "10.1145_3689752": {
+  "abstract": "We show how to build a compiler for a sparse array language that supports shape operators such as reshaping or concatenating arrays, in addition to compute operators. Existing sparse array programming systems implement generic shape operators for only some sparse data structures, reduce shape operators on other data structures to those, and do not support fusion. Our system compiles sparse array expressions to code that efficiently iterates over reshaped views of irregular sparse data structures, without needing to materialize temporary storage for intermediates. Our evaluation shows that our approach generates sparse array code competitive with popular sparse array libraries: our generated shape operators achieve geometric mean speed-ups of 1.66×–15.3× when compared to hand-written kernels in scipy.sparse and 1.67×–651× when compared to generic implementations in pydata/sparse . For operators that require data structure conversions in these libraries, our generated code achieves geometric mean speed-ups of 7.29×–13.0× when compared to scipy.sparse and 21.3×–511× when compared to pydata/sparse . Finally, our evaluation demonstrates that fusing shape and compute operators improves the performance of several expressions by geometric mean speed-ups of 1.22×–2.23×.",
+  "doi": "10.1145/3689752",
+  "openalex": "W4403223519",
+  "status": "ok",
+  "title": "Compilation of Shape Operators on Sparse Arrays"
+ },
+ "10.1145_3696443.3708918": {
+  "abstract": "We introduce Stardust, a compiler from sparse tensor algebra languages to a sparse reconfigurable dataflow architecture via a parallel-patterns programming model. Stardust lets performance engineers specify the placement of data into memories separately from the placement of computation onto compute units. Users first schedule data placement onto an abstract memory model, and then Stardust binds that data to complex, on-chip physical memories. With guidance from user schedules, Stardust binds computation using these on-chip data structures to the appropriate parallel patterns. Through cycle-accurate simulation, we show that Stardust generates nine more tensor algebra kernels than the original Capstan sparse RDA work. The generated kernels perform, on average, 138× better than generated CPU kernels and 41× better than generated GPU kernels.",
+  "doi": "10.1145/3696443.3708918",
+  "openalex": "W4407857172",
+  "status": "ok",
+  "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture"
+ },
+ "10.1145_3701033": {
+  "abstract": "Network sparsification serves as an effective technique to accelerate Deep Neural Network (DNN) inference. However, existing sparsification techniques often rely on structured sparsity, which yields limited benefits. This is primarily due to the significant memory and computational overhead introduced by numerous sparse storage formats during address generation and gradient updates. Additionally, many of these solutions are tailored solely for the inference phase, neglecting the crucial training phase. In this article, we introduce STCO, a novel Sparse Tensor Compilation Optimization technique that significantly enhances training efficiency through structured sparse tensor compilation. Central to STCO is the Tensorization-aware Index Entity (TIE) format, which effectively represents structured sparse tensors by eliminating redundant indices and minimizing storage overhead. The TIE format plays a pivotal role in the Address-carry flow (AC flow) pass, which optimizes the data layout at the computational graph level. This pass leverages the TIE format to enhance the efficiency of tensor representations, enabling more compact and efficient sparse tensor storage. Meanwhile, a shape inference pass utilizes the AC flow to derive optimized tensor shapes, further refining the performance of sparse tensor operations. Moreover, the Address-Carry TIE Flow dynamically tracks nonzero addresses, extending the benefits of sparse optimization to both forward and backward propagation. This seamless integration into the training pipeline enables a smooth transition to sparse tensor compilation without significant modifications to existing codebases. To further boost training performance, we implement an operator-level AC flow optimization pass tailored for structured sparse tensors. This pass generates efficient addresses, ensuring minimal computational overhead during sparse tensor operations. The flexibility of STCO allows it to be efficiently integrated into various frameworks or compilers, providing a robust solution for enhancing training efficiency with structured sparse tensors. Experiments demonstrated that STCO achieved impressive speedups of 3.64×, 5.43×, 4.89×, and 3.91× when compared to state-of-the-art sparse formats on VGG16, ResNet-18, MobileNetV1, and MobileNetV2, respectively. These findings underscore the efficiency and superiority of our proposed approach in leveraging unstructured sparsity for DNN inference acceleration.",
+  "doi": "10.1145/3701033",
+  "openalex": "W4403584939",
+  "status": "ok",
+  "title": "STCO: Enhancing Training Efficiency via Structured Sparse Tensor Compilation Optimization"
+ },
+ "10.1145_3720473": {
+  "abstract": "From FORTRAN to NumPy, tensors have revolutionized how we express computation. However, tensors in these, and almost all prominent systems, can only handle dense rectilinear integer grids. Real world tensors often contain underlying structure, such as sparsity, runs of repeated values, or symmetry. Support for structured data is fragmented and incomplete. Existing frameworks limit the tensor structures and program control flow they support to better simplify the problem. In this work, we propose a new programming language, Finch, which supports both flexible control flow and diverse data structures. Finch facilitates a programming model which resolves the challenges of computing over structured tensors by combining control flow and data structures into a common representation where they can be co-optimized. Finch automatically specializes control flow to data so that performance engineers can focus on experimenting with many algorithms. Finch supports a familiar programming language of loops, statements, ifs, breaks, etc., over a wide variety of tensor structures, such as sparsity, run-length-encoding, symmetry, triangles, padding, or blocks. Finch reliably utilizes the key properties of structure, such as structural zeros, repeated values, or clustered non-zeros. We show that this leads to dramatic speedups in operations such as SpMV and SpGEMM, image processing, and graph analytics.",
+  "doi": "10.1145/3720473",
+  "openalex": "W4409310702",
+  "status": "ok",
+  "title": "Finch: Sparse and Structured Tensor Programming with Control Flow"
+ },
+ "10.1145_3729292": {
+  "abstract": "Subroutines are essential building blocks in software design: users encapsulate common functionality in libraries and write applications by composing calls to subroutines. Unfortunately, performance may be lost at subroutine boundaries due to reduced locality and increased memory consumption. Operator fusion helps recover the performance lost at composition boundaries. Previous solutions fuse operators by manually rewriting code into monolithic fused subroutines, or by relying on heavy-weight compilers to generate code that performs fusion. Both approaches require a semantic understanding of the entire computation, breaking the decoupling necessary for modularity and reusability of subroutines. In this work, we attempt to identify the minimal ingredients required to fuse computations, enabling composition of subroutines without sacrificing performance or modularity. We find that, unlike previous approaches that require a semantic understanding of the computation, most opportunities for fusion require understanding only data production and consumption patterns. Exploiting this insight, we add fusion on top of black-box subroutines by proposing a lightweight enrichment of subroutine declarations to expose data-dependence patterns. We implement our approach in a system called Fern, and demonstrate Fern’s benefits by showing that it is competitive with state-of-the-art, high-performance libraries with manually fused operators, can fuse across library and domain boundaries for unforeseen workloads, and can deliver speedups of up to 5× over unfused code.",
+  "doi": "10.1145/3729292",
+  "openalex": "W4411269466",
+  "status": "ok",
+  "title": "Lightweight and Locality-Aware Composition of Black-Box Subroutines"
+ },
+ "10.1145_3731599.3767477": {
+  "abstract": "Sparse tensor computations suffer from irregular memory access patterns that degrade cache performance. While software prefetching can mitigate this, existing compiler approaches lack the semantic insight needed for effective optimization.",
+  "doi": "10.1145/3731599.3767477",
+  "openalex": "W4416004530",
+  "status": "ok",
+  "title": "ASaP: Automatic Software Prefetching for Sparse Tensor Computations in MLIR"
+ },
+ "10.1145_3763074": {
+  "abstract": "We introduce REPTILE, a compiler that performs tiling optimizations for programs expressed as mathematical recurrence equations. REPTILE recursively decomposes a recurrence program into a set of unique tiles and then simplifies each into a different set of recurrences. Given declarative user specifications of recurrence equations, optimizations, and optional mappings of recurrence subexpressions to external libraries calls, REPTILE generates C code that composes compiler-generated loops with calls to external hand-optimized libraries. We show that for direct linear solvers expressible as recurrence equations, the generated C code matches and often exceeds the performance of standard hand-optimized libraries. We evaluate REPTILE’s generated C code against hand-optimized implementations of linear solvers in Intel MKL, as well as two nonsolver recurrences from bioinformatics: Needleman-Wunsch and Smith-Waterman. When the user provides good tiling specifications, REPTILE achieves parity with MKL, achieving between 0.79−1.27x speedup for the LU decomposition, 0.97−1.21x speedup for the Cholesky decomposition, 1.61x−2.72x for lower triangular matrix inversion, 1.01−1.14x speedup for triangular solve with multiple right-hand sides, and 1.14−1.73x speedup over handwritten implementations of the bioinformatics recurrences.",
+  "doi": "10.1145/3763074",
+  "openalex": "W4414988650",
+  "status": "ok",
+  "title": "REPTILE: Performant Tiling of Recurrences"
+ },
+ "10.1145_3771775.3786267": {
+  "abstract": "Sparse tensor algebra plays an important role in many scientific and engineering applications, yet existing sparse libraries and compilers face challenges when the output tensor is sparse. Array-based storage formats, such as CSR, require costly memory reallocations and rely on intermediate tensors (workspaces) to handle sparse scattering into the output, which limits performance and scalability. We introduce a new approach that employs our proposed flexible map-based storage format to directly support sparse scattering into the output without requiring extra workspaces. Our system then applies code and storage-specific optimizations to maximize efficiency. Experimental results across a range of kernels and datasets demonstrate an average speedup of 8.06× over a state-of-the-art compiler and 5.28× over a sparse tensor library.",
+  "doi": "10.1145/3771775.3786267",
+  "openalex": "W7125963162",
+  "status": "ok",
+  "title": "Optimizing Sparse Tensor Compilation for Sparse Output"
+ },
+ "10.1145_3779212.3790165": {
+  "abstract": "As deep learning models scale, sparse deep learning (DL) models that exploit sparsity in weights, activations, or inputs and specialized dataflow hardware have emerged as powerful solutions to address efficiency. We propose FuseFlow, a compiler that converts sparse machine learning models written in PyTorch to fused sparse dataflow graphs for reconfigurable dataflow architectures (RDAs). FuseFlow is the first compiler to support general cross-expression fusion of sparse operations. In addition to fusion across kernels (expressions), FuseFlow also supports optimizations like parallelization, dataflow ordering, and sparsity blocking. It targets a cycle-accurate dataflow simulator for microarchitectural analysis of fusion strategies. We use FuseFlow for design-space exploration across four real-world machine learning applications with sparsity, showing that full fusion (entire cross-expression fusion across all computation in an end-to-end model) is not always optimal for sparse models—fusion granularity depends on the model itself. FuseFlow also provides a heuristic to identify and prune suboptimal configurations. Using FuseFlow, we achieve performance improvements, including a ~2.7x speedup over an unfused baseline for GPT-3 with BigBird block-sparse attention.",
+  "doi": "10.1145/3779212.3790165",
+  "openalex": "W7125845704",
+  "status": "ok",
+  "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow"
+ },
+ "10.1145_3779212.3790214": {
+  "abstract": "RTL simulation on CPUs remains a persistent bottleneck in hardware design. State-of-the-art simulators embed the circuit directly into the simulation binary, resulting in long compilation times and execution that is fundamentally CPU frontend-bound, with severe instruction-cache pressure. This work proposes RTeAAL Sim, which reformulates RTL simulation as a sparse tensor algebra problem. By representing RTL circuits as tensors and simulation as a sparse tensor algebra kernel, RTeAAL Sim decouples simulation behavior from binary size and makes RTL simulation amenable to well-studied tensor algebra optimizations. We demonstrate that a prototype of our tensor-based simulator, even with a subset of these optimizations, already mitigates the compilation overhead and frontend pressure and achieves performance competitive with the highly optimized Verilator simulator across multiple CPUs and ISAs.",
+  "doi": "10.1145/3779212.3790214",
+  "openalex": "W7125831324",
+  "status": "ok",
+  "title": "RTeAAL Sim: Using Tensor Algebra to Represent and Accelerate RTL Simulation"
+ },
+ "10.1145_3808261": {
+  "abstract": "In this paper, we introduce a verified framework for defining and composing sparse tensor formats. We extend the ATL tensor language and scheduling framework, which formerly could only express dense tensor kernels. We define a levelized abstraction to describe per-dimension tensor formats via their encoding routines, access and iteration functions, and formal properties enforcing soundness of the sparse structures as representations of the original dense tensors. Using this abstraction, we compositionally define format-agnostic, multidimensional compression and decompression functions that are used to express the top-level soundness theorem for these abstract sparse tensor formats. We then use this soundness theorem as an adjoint-pair rewrite theorem to introduce sparse data structures and iteration into a dense tensor kernel via the existing scheduling-rewrite framework of ATL. Overall, we are able to start with a program computing over dense operands and derive a proven semantically equivalent, optimized program computing over sparse structures. We further prove a minimal set of instances of the level-format abstraction, which can be composed and passed as parameters to compression to capture a broad range of canonical, multidimensional tensor-compression formats.",
+  "doi": "10.1145/3808261",
+  "openalex": "W7163927618",
+  "status": "ok",
+  "title": "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs"
+ },
+ "10.1145_3808283": {
+  "abstract": "We describe a comprehensive compilation approach for relational algebra, centered on an abstract loop-based intermediate representation (IR) that can express fused implementations of relational algebra operators on both sets and multisets. The loops are abstracted away from physical data structures thus making it easier to optimize. We show how to lower relational algebra query plan trees to the IR, including the complex operators that are used in production database systems, such as outer joins, non-equi joins, and differences. We then show how to compile this IR to efficient C++ code that co-iterates over the physical data structures present in relational algebra expressions. Finally, we show that our approach is portable across data structures. Since our approach can fuse across disparate operators, it achieves a 3.8x speedup (0.8--12.1x) compared to Hyper on selected LSQB benchmarks and worst-case optimal triangle queries. Our compiler also generates code of high quality: it has similar sequential performance to Hyper on TPC-H with a 1.0x speedup (0.4--4.3x) and is approaching their parallel performance with a 0.6x speedup (0.2--1.8x).",
+  "doi": "10.1145/3808283",
+  "openalex": "W7163957870",
+  "status": "ok",
+  "title": "A Compiler for Fused Relational Operations on Multisets"
+ },
+ "10.14778_3797919.3797921": {
+  "abstract": "A tensor-relational computation is a relational computation where individual tuples carry vectors, matrices, or higher-dimensional arrays. An advantage of tensor-relational computation is that the overall computation can be executed on top of a relational system, inheriting the system's ability to automatically handle very large inputs with high levels of sparsity while high-performance kernels (such as optimized matrix-matrix multiplication codes) can be used to perform most of the underlying mathematical operations. In this paper, we introduce upper-case-lower-case EinSum, which is a tensor-relational version of the classical Einstein Summation Notation. We study how to automatically rewrite a computation in Einstein Notation into upper-case-lower-case EinSum so that computationally intensive components are executed using efficient numerical kernels, while sparsity is managed relationally.",
+  "doi": "10.14778/3797919.3797921",
+  "openalex": "W7160595337",
+  "status": "ok",
+  "title": "Automated Tensor-Relational Decomposition for Large-Scale Sparse Tensor Computation"
+ },
+ "10.18122_td_1654_boisestate": {
+  "abstract": "This research presents an intermediate compiler representation that is designed for optimization, and emphasizes the temporary storage requirements and execution schedule of a given computation to guide optimization decisions. The representation is expressed as a dataflow graph that describes computational statements and data mappings within the polyhedral compilation model. The targeted applications include both the regular and irregular scientific domains. The intermediate representation can be integrated into existing compiler infrastructures. A specification language implemented as a domain specific language in C++ describes the graph components and the transformations that can be applied. The visual representation allows users to reason about optimizations. Graph variants can be translated into source code or other representation. The language, intermediate representation, and associated transformations have been applied to improve the performance of differential equation solvers, or sparse matrix operations, tensor decomposition, and structured multigrid methods.",
+  "doi": "10.18122/td/1654/boisestate",
+  "openalex": "W2948835667",
+  "status": "ok",
+  "title": "Polyhedral+Dataflow Graphs"
+ },
+ "10.48550_arxiv.2207.13291": {
+  "abstract": "We introduce a formal operational semantics that describes the fused execution of variable contraction problems, which compute indexed arithmetic over a semiring and generalize sparse and dense tensor algebra, relational algebra, and graph algorithms. We prove that the model is correct with respect to a functional semantics. We also develop a compiler for variable contraction expressions and show that its performance is equivalent to a state-of-the art sparse tensor algebra compiler, while providing greater generality and correctness guarantees.",
+  "doi": "10.48550/arxiv.2207.13291",
+  "openalex": "W4288726088",
+  "status": "ok",
+  "title": "Correct Compilation of Semiring Contractions"
+ },
+ "10.48550_arxiv.2211.03251": {
+  "abstract": "We introduce Stardust, a compiler that compiles sparse tensor algebra to reconfigurable dataflow architectures (RDAs). Stardust introduces new user-provided data representation and scheduling language constructs for mapping to resource-constrained accelerated architectures. Stardust uses the information provided by these constructs to determine on-chip memory placement and to lower to the Capstan RDA through a parallel-patterns rewrite system that targets the Spatial programming model. The Stardust compiler is implemented as a new compilation path inside the TACO open-source system. Using cycle-accurate simulation, we demonstrate that Stardust can generate more Capstan tensor operations than its authors had implemented and that it results in 138$\\times$ better performance than generated CPU kernels and 41$\\times$ better performance than generated GPU kernels.",
+  "doi": "10.48550/arxiv.2211.03251",
+  "openalex": "W4308614321",
+  "status": "ok",
+  "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture"
+ },
+ "10.48550_arxiv.2301.06284": {
+  "abstract": "Relational graph neural networks (RGNNs) are graph neural networks with dedicated structures for modeling the different types of nodes and edges in heterogeneous graphs. While RGNNs have been increasingly adopted in many real-world applications due to their versatility and accuracy, they pose performance and system design challenges: inherent memory-intensive computation patterns, the gap between the programming interface and kernel APIs, and heavy programming effort in optimizing kernels caused by their coupling with data layout and heterogeneity. To systematically address these challenges, we propose Hector, a novel two-level intermediate representation and its code generator framework, that (a) captures the key properties of RGNN models, and opportunities to reduce memory accesses in inter-operator scheduling and materialization, (b) generates code with flexible data access scheme to eliminate redundant data copies, (c) decouples model semantics, data layout, and operators-specific optimization from each other to reduce programming effort. By building on one general matrix multiply (GEMM) template and a node/edge traversal template, Hector achieves up to 9.9x speed-up in inference and 43.7x speed-up in training compared with the state-of-the-art public systems on select models, i.e., RGCN, RGAT and HGT, when running heterogeneous graphs provided by Deep Graph Library (DGL) and Open Graph Benchmark (OGB). In addition, Hector does not trigger any out-of-memory (OOM) exception in these tests. We also propose the linear operator reorder and compact materialization to further accelerate the system by up to 3.8x. As an indicator of programming effort reduction, Hector takes in 51 lines of code expressing the three models and generates a total of 8K lines of CUDA and C++ code.",
+  "doi": "10.48550/arxiv.2301.06284",
+  "openalex": "W4317439177",
+  "status": "ok",
+  "title": "Hector: An Efficient Programming and Compilation Framework for Implementing Relational Graph Neural Networks in GPU Architectures"
+ },
+ "10.48550_arxiv.2304.07931": {
+  "abstract": "Over the past few years, the explosion in sparse tensor algebra workloads has led to a corresponding rise in domain-specific accelerators to service them. Due to the irregularity present in sparse tensors, these accelerators employ a wide variety of novel solutions to achieve good performance. At the same time, prior work on design-flexible sparse accelerator modeling does not express this full range of design features, making it difficult to understand the impact of each design choice and compare or extend the state-of-the-art. To address this, we propose TeAAL: a language and simulator generator for the concise and precise specification and evaluation of sparse tensor algebra accelerators. We use TeAAL to represent and evaluate four disparate state-of-the-art accelerators -- ExTensor, Gamma, OuterSPACE, and SIGMA -- and verify that it reproduces their performance with high accuracy. Finally, we demonstrate the potential of TeAAL as a tool for designing new accelerators by showing how it can be used to speed up vertex-centric programming accelerators -- achieving $1.9\\times$ on BFS and $1.2\\times$ on SSSP over GraphDynS.",
+  "doi": "10.48550/arxiv.2304.07931",
+  "openalex": "W4366388644",
+  "status": "ok",
+  "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators"
+ },
+ "10.48550_arxiv.2304.14082": {
+  "abstract": "This paper introduces JaxPruner, an open-source JAX-based pruning and sparse training library for machine learning research. JaxPruner aims to accelerate research on sparse neural networks by providing concise implementations of popular pruning and sparse training algorithms with minimal memory and latency overhead. Algorithms implemented in JaxPruner use a common API and work seamlessly with the popular optimization library Optax, which, in turn, enables easy integration with existing JAX based libraries. We demonstrate this ease of integration by providing examples in four different codebases: Scenic, t5x, Dopamine and FedJAX and provide baseline experiments on popular benchmarks.",
+  "doi": "10.48550/arxiv.2304.14082",
+  "openalex": "W4367365775",
+  "status": "ok",
+  "title": "JaxPruner: A concise library for sparsity research"
+ },
+ "10.48550_arxiv.2405.16883": {
+  "abstract": "The rapid growth in the size of deep learning models strains the capabilities of traditional dense computation paradigms. Leveraging sparse computation has become increasingly popular for training and deploying large-scale models, but existing deep learning frameworks lack extensive support for sparse operations. To bridge this gap, we introduce Scorch, a library that seamlessly integrates efficient sparse tensor computation into the PyTorch ecosystem, with an initial focus on inference workloads on CPUs. Scorch provides a flexible and intuitive interface for sparse tensors, supporting diverse sparse data structures. Scorch introduces a compiler stack that automates key optimizations, including automatic loop ordering, tiling, and format inference. Combined with a runtime that adapts its execution to both dense and sparse data, Scorch delivers substantial speedups over hand-written PyTorch Sparse (torch.sparse) operations without sacrificing usability. More importantly, Scorch enables efficient computation of complex sparse operations that lack hand-optimized PyTorch implementations. This flexibility is crucial for exploring novel sparse architectures. We demonstrate Scorch's ease of use and performance gains on diverse deep learning models across multiple domains. With only minimal code changes, Scorch achieves 1.05-5.78x speedups over PyTorch Sparse on end-to-end tasks. Scorch's seamless integration and performance gains make it a valuable addition to the PyTorch ecosystem. We believe Scorch will enable wider exploration of sparsity as a tool for scaling deep learning and inform the development of other sparse libraries.",
+  "doi": "10.48550/arxiv.2405.16883",
+  "openalex": "W4399116486",
+  "status": "ok",
+  "title": "Scorch: A Library for Sparse Deep Learning"
+ },
+ "10.48550_arxiv.2604.17198": {
+  "abstract": "Sparse tensor algebra is challenging to efficiently parallelize due to the irregular, data-dependent, and potentially skewed structure of sparse computation. We propose the first partitioning algorithm that provably load balances the computation of any sparse tensor algebra expression across parallel execution units. Our algorithm generalizes parallel merging algorithms to any number of operands, and to multi-dimensional, hierarchical sparse data structures. We implement our algorithm within an existing sparse tensor algebra compilation framework to automatically generate parallel sparse tensor algebra kernels that target multi-core CPUs and GPUs. We show that our generated code is competitive with hand-implemented parallelization strategies used by vendor libraries like Intel MKL and NVIDIA cuSPARSE (geo-means of $0.73$--$3.4\\times$) and \\textsc{Taco} (geo-means of $1.0$--$2.4\\times$), and significantly outperforms general-purpose strategies for sparse tensor expressions where specialized algorithms have not been developed (geo-means of $2.0$--$6.4\\times$).",
+  "doi": "10.48550/arxiv.2604.17198",
+  "openalex": "W7155046096",
+  "status": "ok",
+  "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution"
+ },
+ "10.48550_arxiv.2606.05570": {
+  "abstract": "Repository-level coding benchmarks face a trade-off between task difficulty and evaluation reliability: tasks that challenge frontier models often involve large codebases with incomplete test coverage, while human review does not scale. We introduce TensorBench, a benchmark of 199 feature-addition and refactoring tasks on an open-source compiler-based tensor framework that extends PyTorch with first-class support for dense and sparse tensors. Tasks cover new sparse formats, dense optimization passes, IR transformations, scheduler changes, runtime components, and high-level numerical operators. TensorBench grades each run by applying the agent's patch and running the framework's test suite, which includes the pre-existing randomized regression tests and any tests the agent adds. For feature-addition tasks, a pass means that the patched repository preserves the tested pre-existing behavior and satisfies the agent-added checks for the requested feature. We evaluate seven coding agents spanning three frontier model families and one open-weight model. Pass rates under this criterion range from $64.8\\%$ for the strongest agent to $22.1\\%$ for the weakest. Agents pass different subsets of tasks: pairwise Cohen's $κ$ ranges from $-0.07$ to $0.43$, with $κ= 0.05$ for the two strongest agents.",
+  "doi": "10.48550/arxiv.2606.05570",
+  "openalex": "W7163665316",
+  "status": "ok",
+  "title": "TensorBench: Benchmarking Coding Agents on a Compiler-Based Tensor Framework"
+ },
+ "s2-33fa89d13bba9acc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Enabling Distributed-Memory Tensor Completion in Python using New Sparse Tensor Kernels"
+ },
+ "s2-5abe2f8575fd9275": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Portable Dynamic Tiling for Sparse Tensor Accelerators"
+ },
+ "s2-5dcc03e712700425": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR"
+ },
+ "s2-9280465db68b2f2f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An Asymptotic Cost Model for Autoscheduling Sparse Tensor Programs"
+ },
+ "s2-acf31788fa545f5f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cortex: A Compiler for Recursive Deep Learning Models"
+ },
+ "s2-b7f96e73ca78b8c0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic Sparse Tensor Algebra Compilation"
+ },
+ "s2-c8e78fb55d8142a0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automatic Optimization of Sparse Tensor Algebra Programs"
+ },
+ "s2-d3b08034d1c17776": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Unified Iteration Space Transformation Framework for Sparse and Dense Tensor Algebra"
+ },
+ "s2-ec0a35e90672141b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Interactive Compiler Scheduling with Strong Guarantees"
+ }
+}

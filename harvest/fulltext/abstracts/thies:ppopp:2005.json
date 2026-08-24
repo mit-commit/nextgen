@@ -1,0 +1,590 @@
+{
+ "10.1007_978-1-4419-6345-1_34": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4419-6345-1_34",
+  "openalex": "W4241372864",
+  "status": "no_abstract",
+  "title": "Kahn Process Networks and a Reactive Extension"
+ },
+ "10.1007_978-1-4614-6859-2_32": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4614-6859-2_32",
+  "openalex": "W4211006745",
+  "status": "no_abstract",
+  "title": "Kahn Process Networks and a Reactive Extension"
+ },
+ "10.1007_978-3-319-91734-4_24": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-91734-4_24",
+  "openalex": "W2121043258",
+  "status": "no_abstract",
+  "title": "Kahn Process Networks and a Reactive Extension"
+ },
+ "10.1007_978-3-642-04167-9_12": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-04167-9_12",
+  "openalex": "W1544057780",
+  "status": "no_abstract",
+  "title": "Session-Based Compilation Framework for Multicore Programming"
+ },
+ "10.1007_s12243-012-0342-7": {
+  "abstract": null,
+  "doi": "10.1007/s12243-012-0342-7",
+  "openalex": "W2040430471",
+  "status": "no_abstract",
+  "title": "Optimized dynamic compilation of dataflow representations for multimedia applications"
+ },
+ "10.1017_cbo9780511770524.005": {
+  "abstract": "Dataflow models of computation have intrigued computer scientists since the 1970s. They were first introduced by Jack Dennis as a basis for parallel programming languages and architectures, and by Gilles Kahn as a model of concurrency. Interest in these models of computation has been recently rekindled by the resurrection of parallel computing, due to the emergence of multicore architectures. However, Dennis and Kahn approached dataflow very differently. Dennis' approach was based on an operational notion of atomic firings driven by certain firing rules. Kahn's approach was based on a denotational notion of processes as continuous functions on infinite streams. This paper bridges the gap between these two points of view, showing that sequences of firings define a continuous Kahn process as the least fixed point of an appropriately constructed functional. The Dennis firing rules are sets of finite prefixes satisfying certain conditions that ensure determinacy. These conditions result in firing rules that are strictly more general than the blocking reads of the Kahn–MacQueen implementation of Kahn process networks, and solve some compositionality problems in the dataflow model. This work was supported in part by the Center for Hybrid and Embedded Software Systems (CHESS) at UC Berkeley, which receives support from the National Science Foundation (NSF awards #0720882 (CSR-EHS: PRET), #0647591 (CSR-SGER), and #0720841 (CSR-CPS)), the US Army Research Office (ARO #W911NF-07-2-0019), the US Air Force Office of Scientific Research (MURI #FA9550-06-0312 and AF-TRUST #FA9550-06-1-0244), the Air Force Research Lab (AFRL), the State of California Micro Program, and the following companies: Agilent, Bosch, DGIST, National Instruments, and Toyota.",
+  "doi": "10.1017/cbo9780511770524.005",
+  "openalex": "W897054116",
+  "status": "ok",
+  "title": "The semantics of dataflow with firing"
+ },
+ "10.1080_00051144.2010.11828394": {
+  "abstract": "Streaming has emerged as an important model in present—day applications, ranging from multimedia to scientific computing. Moreover, the emergence of new multicore architectures has resulted with new challenges in efficient utilization of available computational resources. Streaming model offers the portability and scalability of performance with the increasing number of cores. In this paper we propose a tool which enables the implementation of the compute—intensive stream processing kernels as portable modules in general—purpose applications. Resulting modules can be efficiently reused with high degree of scalability in regard to increasing number of processing cores.",
+  "doi": "10.1080/00051144.2010.11828394",
+  "openalex": "W4240244037",
+  "status": "ok",
+  "title": "Integrating Streaming Computations for Efficient Execution on Novel Multicore Architectures"
+ },
+ "10.1109_dfm.2014.13": {
+  "abstract": "Embedded many-core systems offering thousands of cores should be available in the near future. Stream programming is a particular instance of data-flow programming where computations are expressed as the data-driven execution of repetitive \"filters\" on data streams. Stream programming fits these manycore systems' requirements in terms of parallelism, functional determinism, and local data reuse. Statically or semi-dynamically scheduled stream languages like e.g. StreamIt and ?C can generate very efficient parallel code, but have strict limitations with respect to the expression of dynamic computational tasks, context-dependent modes of operation, and dynamic memory management. This paper compares two state-of-the-art stream languages, StreamIt and ?C, with the aim of better understanding their strengths and weaknesses, and finding a way to improve them. We also propose an automatic conversion method and tool to transform between these two languages. This tool allows to port and evaluate the classical StreamIt benchmarks on Kalray's MPPA, a real-world many-core processor representative of tomorrow's embedded many-core chips. We conclude with propositions for the evolution of stream-programming models.",
+  "doi": "10.1109/dfm.2014.13",
+  "openalex": "W1976927745",
+  "status": "ok",
+  "title": "Comparing the StreamIt and SC Languages for Manycore Processors"
+ },
+ "10.1109_emsoft.2013.6658581": {
+  "abstract": "Dataflow programming models are well-suited to program many-core streaming applications. However, many streaming applications have a dynamic behavior. To capture this behavior, parametric dataflow models have been introduced over the years. Still, such models do not allow the topology of the dataflow graph to change at runtime, a feature that is also required to program modern streaming applications. To overcome these restrictions, we propose a new model of computation, the Boolean Parametric Data Flow (BPDF) model which combines integer parameters (to express dynamic rates) and boolean parameters (to express the activation and deactivation of communication channels). High dynamism is provided by integer parameters which can change at each basic iteration and boolean parameters which can even change within the iteration. The major challenge with such dynamic models is to guarantee liveness and boundedness. We present static analyses which ensure statically the liveness and the boundedness of BDPF graphs. We also introduce a scheduling methodology to implement our model on highly parallel platforms and demonstrate our approach using a video decoder case study.",
+  "doi": "10.1109/emsoft.2013.6658581",
+  "openalex": "W2051164005",
+  "status": "ok",
+  "title": "BPDF: A statically analyzable dataflow model with integer and boolean parameters"
+ },
+ "10.1109_icpp.2010.37": {
+  "abstract": "Embedded media applications have traditionally used custom ASICs to meet their real-time performance requirements. However, the combination of increasing chip design cost and availability of commodity many-core processors is making programmable devices increasingly attractive alternatives. Yet for these processors to be successful in this role, programming systems are needed that can automate the task of mapping the applications to the tens-to-hundreds of cores on current and future many-core processors, while simultaneously guaranteeing the real-time throughput constraints. This paper presents a block-parallel program description for embedded real-time media applications and automatic transformations including buffering and parallelization to ensure the program meets the throughput requirements. These transformations are enabled by starting with a high-level, yet intuitive, application description. The description builds on traditional stream programming structures by adding simple control and serialization constructs to enable a greater variety of applications. The result is an application description that provides a balance of flexibility and power to the programmer, while exposing the application structure to the compiler at a high enough level to enable useful transformations without heroic analysis.",
+  "doi": "10.1109/icpp.2010.37",
+  "openalex": "W2042790850",
+  "status": "ok",
+  "title": "Block-Parallel Programming for Real-Time Embedded Applications"
+ },
+ "10.1109_icsamos.2008.4664841": {
+  "abstract": "Many embedded DSP systems can be characterized as streaming applications. Imperative programming languages are ill suited for describing the concurrency within these DSP systems. SPEX is a language extension designed to let the programmers describe the inherent parallelism within DSP systems. In this paper, we highlight SPEX’s language features for describing the streaming computation and communication patterns of DSP systems, and allowing the compiler to generate efficient code for embedded DSP architectures. This language extension is based on the parameterized dataflow computation model, with modifications to better describe DSP systems’ complex streaming patterns. SPEX is applied as an extension onto the C++ programming language. It consists of a set of language constructs for describing the semantics of parameterized dataflow computations, and a set of language restrictions for helping the embedded compilation process. In this paper, the W-CDMA wireless protocol is used as our case study.",
+  "doi": "10.1109/icsamos.2008.4664841",
+  "openalex": "W2108117386",
+  "status": "ok",
+  "title": "A parameterized dataflow language extension for embedded streaming systems"
+ },
+ "10.1109_ipdps.2006.1639343": {
+  "abstract": "Image and video codecs are prevalent in multimedia devices, ranging from embedded systems, to desktop computers, to high-end servers such as HDTV editing consoles. It is not uncommon however that developers create and customize separate coder and decoder implementations for each of the architectures they target. This practice is time consuming and error prone, leading to code that is neither malleable nor portable. This paper describes an implementation of the MPEG-2 decoder using the StreamIt programming language. StreamIt is an architecture-independent stream language that aims to improve programmer productivity, while concomitantly exposing the inherent parallelism and communication topology of the application. The paper shows that MPEG is a good match for the streaming programming model and illustrates the malleability of the implementation using a simple modification to the decoder to support alternate color compression formats. StreamIt allows for modular application development, which increases code reuse, and reduces the complexity of the debugging process since stream components can be verified independently. This in turn leads to greater programmer productivity.",
+  "doi": "10.1109/ipdps.2006.1639343",
+  "openalex": "W4251551397",
+  "status": "ok",
+  "title": "MPEG-2 decoding in a stream programming language"
+ },
+ "10.1109_ipdps.2011.251": {
+  "abstract": "An integral part of many data-intensive applications is the need to collect and analyze enormous datasets efficiently. Concurrent with such application needs is the increasing adoption of MapReduce as a programming model for processing large datasets using a cluster of machines. Current MapReduce systems, however, require the data set to be loaded into the cluster before running analytical queries, and thereby incur high delays to start query processing. Furthermore, existing systems are geared towards batch processing. In this paper, we seek to answer a fundamental question: what architectural changes are necessary to bring the benefits of the MapReduce computation model to incremental, one-pass analytics, i.e., to support stream processing and online aggregation? To answer this question, we first conduct a detailed empirical performance study of current MapReduce implementations including Hadoop and MapReduce Online using a variety of workloads. By doing so, we identify several drawbacks of existing systems for one-pass analytics. Based on the insights from our study, we conclude by listing key design requirements and arguing for architectural changes of MapReduce systems to overcome their current limitations and fully embrace incremental one-pass analytics and showing promising preliminary results.",
+  "doi": "10.1109/ipdps.2011.251",
+  "openalex": "W2140928415",
+  "status": "ok",
+  "title": "Towards Scalable One-Pass Analytics Using MapReduce"
+ },
+ "10.1109_les.2017.2725826": {
+  "abstract": "With embedded systems being increasingly networked, appropriate models of computation and communication are needed for specification of such networks-of-systems. Traditional dataflow models have shown their usefulness in analyzing isolated systems. However, these models cannot express the inherent requirements of connected applications, such as dynamic behavior associated with network losses and reactivity to external events. This letter proposes a reactive and adaptive data flow (RADF) model that introduces a notion of empty tokens to expose network losses and provide adaptivity at the application level while maintaining overall determinism. Empty tokens, combined with expanded actor semantics, are also used to model reactivity to sporadic external events. We formally define RADF semantics and show efficient methods for analyzing RADF graphs in terms of their worst-case throughput and latency.",
+  "doi": "10.1109/les.2017.2725826",
+  "openalex": "W2736041835",
+  "status": "ok",
+  "title": "A Reactive and Adaptive Data Flow Model for Network-of-System Specification"
+ },
+ "10.1109_padsw.2014.7097925": {
+  "abstract": "Streaming computing is a paradigm of distributed computing that features networked nodes connected by first-in-first-out data channels. Communication between nodes may include not only high-volume data tokens but also infrequent and unpredictable control messages carrying control information, such as data set boundaries, exceptions, or reconfiguration requests. In many applications, it is necessary to order delivery of control messages precisely relative to data tokens, which can be especially challenging when nodes can filter data tokens. Existing approaches, mainly data serialization protocols, do not exploit the low-volume nature of control messages and may not guarantee that synchronization of these messages with data will be free of deadlock. In this paper, we propose an efficient messaging system for adding precisely ordered control messages to streaming applications. We use a credit-based protocol to avoid the need to tag data tokens and control messages. For potential deadlocks caused by filtering behavior and global synchronization, we propose deadlock avoidance solutions and prove their correctness.",
+  "doi": "10.1109/padsw.2014.7097925",
+  "openalex": "W2064203363",
+  "status": "ok",
+  "title": "Orchestrating safe streaming computations with precise control"
+ },
+ "10.1145_1086297.1086315": {
+  "abstract": "Digital Signal Processing (DSP) is becoming increasingly widespread in portable devices. Due to harsh constraints on power, latency, and throughput in embedded environments, developers often appeal to signal processing experts to hand-optimize algorithmic aspects of the application. However, such DSP optimizations are tedious, error-prone, and expensive, as they require sophisticated domain-specific knowledge.We present a general model for automatically representing and optimizing a large class of signal processing applications. The model is based on linear state space systems. A program is viewed as a set of filters, each of which has an input stream, an output stream, and a set of internal states. At each time step, the filter produces some outputs that are a linear combination of the inputs and the state values; the state values are also updated in a linear fashion. Examples of linear state space filters include IIR filters and linear difference equations.Using the state space representation, we describe a novel set of program transformations, including combination of adjacent filters, elimination of redundant states and reduction of the number of system parameters. We have implemented the optimizations in the StreamIt compiler and demonstrate improved generality over previous techniques.",
+  "doi": "10.1145/1086297.1086315",
+  "openalex": "W2171281059",
+  "status": "ok",
+  "title": "Optimizing stream programs using linear state space analysis"
+ },
+ "10.1145_1375527.1375543": {
+  "abstract": "Aspen is a programming language that relies on high-level messaging to support communication among different program tasks executing in parallel. Unlike MPI, the computational logic of Aspen tasks is specified and developed independently of the global communication structure of the program. A root module specifies the communication structure of the program. The semantics and generality of these specifications enable novel forms of collective communication, including asynchronous and concurrent collective operations and reduction type operations with subsets of the participants being receivers of the reduced data, and with receivers that do not provide data to the reduction. This paper describes efficient implementations of these and other collective communication operations in Aspen. We demonstrate the ease-of-use of these features using several code examples and quantify their performance impact through both microbenchmarks and a quantum chemistry code used in rubber chemistry. Aspen's performance is competitive with, or slightly better than, the performance of MPI implementations for both the chemistry application and the microbenchmarks.",
+  "doi": "10.1145/1375527.1375543",
+  "openalex": "W1982723930",
+  "status": "ok",
+  "title": "Advanced collective communication in aspen"
+ },
+ "10.1145_1450095.1450112": {
+  "abstract": "The architectures of system-on-chip (SoC) platforms found in high-end consumer devices are getting more and more complex as designers strive to deliver increasingly compute-intensive applications on near-constant energy budgets. Workloads running on these platforms require the exploitation of heterogeneous parallelism and increasingly irregular memory hierarchies. The conventional approach to programming such hardware is very lowlevel but this yields software which is intimately and inseparably tied to the details of the platform it was originally designed for, limiting the software's portability, and, ultimately, the architectural choices available to designers of future platform generations. The key insight of this paper is that many of the problems experienced in mapping applications onto SoC platforms come not from deciding how to map a program onto the hardware but from the need to restructure the program and the number of interdependencies introduced in the process of implementing those decisions. We tackle this complexity with a set of language extensions which allows the programmer to introduce pipeline parallelism into sequential programs, manage distributed memories, and express the desired mapping of tasks to resources. The compiler takes care of the complex, error-prone details required to implement that mapping. We demonstrate the effectiveness of SoC-C and its compiler with a \"software defined radio\" example (the PHY layer of a Digital Video Broadcast receiver) achieving a 3.4x speedup on 4 cores.",
+  "doi": "10.1145/1450095.1450112",
+  "openalex": "W2088288690",
+  "status": "ok",
+  "title": "SoC-C"
+ },
+ "10.1145_1854273.1854319": {
+  "abstract": "Stream programs represent an important class of high-performance computations. Defined by their regular processing of sequences of data, stream programs appear most commonly in the context of audio, video, and digital signal processing, though also in networking, encryption, and other areas. In order to develop effective compilation techniques for the streaming domain, it is important to understand the common characteristics of these programs. Prior characterizations of stream programs have examined legacy implementations in C, C++, or FORTRAN, making it difficult to extract the high-level properties of the algorithms.",
+  "doi": "10.1145/1854273.1854319",
+  "openalex": "W2130285523",
+  "status": "ok",
+  "title": "An empirical characterization of stream programs and its implications for language and compiler design"
+ },
+ "10.1145_1869459.1869469": {
+  "abstract": "The halt in clock frequency scaling has forced architects and language designers to look elsewhere for continued improvements in performance. We believe that extracting maximum performance will require compilation to highly heterogeneous architectures that include reconfigurable hardware.",
+  "doi": "10.1145/1869459.1869469",
+  "openalex": "W2054625910",
+  "status": "ok",
+  "title": "Lime"
+ },
+ "10.1145_1932682.1869469": {
+  "abstract": "The halt in clock frequency scaling has forced architects and language designers to look elsewhere for continued improvements in performance. We believe that extracting maximum performance will require compilation to highly heterogeneous architectures that include reconfigurable hardware. We present a new language, Lime, which is designed to be executable across a broad range of architectures, from FPGAs to conventional CPUs. We present the language as a whole, focusing on its novel features for limiting side-effects and integration of the streaming paradigm into an object- oriented language. We conclude with some initial results demonstrating applications running either on a CPU or co- executing on a CPU and an FPGA.",
+  "doi": "10.1145/1932682.1869469",
+  "openalex": "W4251609645",
+  "status": "ok",
+  "title": "Lime"
+ },
+ "10.1145_2451116.2451118": {
+  "abstract": "Nondeterminism is a key challenge in developing multithreaded applications. Even with the same input, each execution of a multithreaded program may produce a different output. This behavior complicates debugging and limits one's ability to test for correctness. This non-reproducibility situation is aggravated on massively parallel architectures like graphics processing units (GPUs) with thousands of concurrent threads. We believe providing a deterministic environment to ease debugging and testing of GPU applications is essential to enable a broader class of software to use GPUs.",
+  "doi": "10.1145/2451116.2451118",
+  "openalex": "W2023999916",
+  "status": "ok",
+  "title": "GPUDet"
+ },
+ "10.1145_2458523.2458529": {
+  "abstract": "Heterogeneous systems have grown in popularity within the commercial platform and application developer communities. We have seen a growing number of systems incorporating CPUs, Graphics Processors (GPUs) and Accelerated Processing Units (APUs combine a CPU and GPU on the same chip). These emerging class of platforms are now being targeted to accelerate applications where the host processor (typically a CPU) and compute device (typically a GPU) co-operate on a computation. In this scenario, the performance of the application is not only dependent on the processing power of the respective heterogeneous processors, but also on the efficient interaction and communication between them.",
+  "doi": "10.1145/2458523.2458529",
+  "openalex": "W2024052005",
+  "status": "ok",
+  "title": "Valar"
+ },
+ "10.1145_2490301.2451118": {
+  "abstract": "Nondeterminism is a key challenge in developing multithreaded applications. Even with the same input, each execution of a multithreaded program may produce a different output. This behavior complicates debugging and limits one's ability to test for correctness. This non-reproducibility situation is aggravated on massively parallel architectures like graphics processing units (GPUs) with thousands of concurrent threads. We believe providing a deterministic environment to ease debugging and testing of GPU applications is essential to enable a broader class of software to use GPUs. Many hardware and software techniques have been proposed for providing determinism on general-purpose multi-core processors. However, these techniques are designed for small numbers of threads. Scaling them to thousands of threads on a GPU is a major challenge. This paper proposes a scalable hardware mechanism, GPUDet, to provide determinism in GPU architectures. In this paper we characterize the existing deterministic and nondeterministic aspects of current GPU execution models, and we use these observations to inform GPUDet's design. For example, GPUDet leverages the inherent determinism of the SIMD hardware in GPUs to provide determinism within a wavefront at no cost. GPUDet also exploits the Z-Buffer Unit, an existing GPU hardware unit for graphics rendering, to allow parallel out-of-order memory writes to produce a deterministic output. Other optimizations in GPUDet include deterministic parallel execution of atomic operations and a workgroup-aware algorithm that eliminates unnecessary global synchronizations. Our simulation results indicate that GPUDet incurs only 2X slowdown on average over a baseline nondeterministic architecture, with runtime overheads as low as 4% for compute-bound applications, despite running GPU kernels with thousands of threads. We also characterize the sources of overhead for deterministic execution on GPUs to provide insights for further optimizations.",
+  "doi": "10.1145/2490301.2451118",
+  "openalex": "W4249623003",
+  "status": "ok",
+  "title": "GPUDet"
+ },
+ "10.1145_2499368.2451118": {
+  "abstract": "Nondeterminism is a key challenge in developing multithreaded applications. Even with the same input, each execution of a multithreaded program may produce a different output. This behavior complicates debugging and limits one's ability to test for correctness. This non-reproducibility situation is aggravated on massively parallel architectures like graphics processing units (GPUs) with thousands of concurrent threads. We believe providing a deterministic environment to ease debugging and testing of GPU applications is essential to enable a broader class of software to use GPUs. Many hardware and software techniques have been proposed for providing determinism on general-purpose multi-core processors. However, these techniques are designed for small numbers of threads. Scaling them to thousands of threads on a GPU is a major challenge. This paper proposes a scalable hardware mechanism, GPUDet, to provide determinism in GPU architectures. In this paper we characterize the existing deterministic and nondeterministic aspects of current GPU execution models, and we use these observations to inform GPUDet's design. For example, GPUDet leverages the inherent determinism of the SIMD hardware in GPUs to provide determinism within a wavefront at no cost. GPUDet also exploits the Z-Buffer Unit, an existing GPU hardware unit for graphics rendering, to allow parallel out-of-order memory writes to produce a deterministic output. Other optimizations in GPUDet include deterministic parallel execution of atomic operations and a workgroup-aware algorithm that eliminates unnecessary global synchronizations. Our simulation results indicate that GPUDet incurs only 2X slowdown on average over a baseline nondeterministic architecture, with runtime overheads as low as 4% for compute-bound applications, despite running GPU kernels with thousands of threads. We also characterize the sources of overhead for deterministic execution on GPUs to provide insights for further optimizations.",
+  "doi": "10.1145/2499368.2451118",
+  "openalex": "W4244697326",
+  "status": "ok",
+  "title": "GPUDet"
+ },
+ "10.1145_2636228.2661115": {
+  "abstract": "Software-defined radio (SDR) brings the flexibility of software to the domain of wireless protocol design, promising both an ideal platform for research and innovation and the rapid deployment of new protocols on existing hardware. Most existing SDR platforms require careful hand-tuning of low-level code to be useful in the real world. In this talk I will describe Ziria, an SDR platform that is both easily programmable and performant. Ziria introduces a programming model that builds on ideas from functional programming and that is tailored to wireless physical layer tasks. The model captures the inherent and important distinction between data and control paths in this domain. I will describe the programming model, give an overview of the execution model, compiler optimizations, and current work. We have used Ziria to produce an implementation of 802.11a/g and a partial implementation of LTE.",
+  "doi": "10.1145/2636228.2661115",
+  "openalex": "W2135259032",
+  "status": "ok",
+  "title": "Ziria"
+ },
+ "10.1145_2660193.2660236": {
+  "abstract": "There are many domain libraries, but despite the performance benefits of compilation, domain-specific languages are comparatively rare due to the high cost of implementing an optimizing compiler. We propose commensal compilation, a new strategy for compiling embedded domain-specific languages by reusing the massive investment in modern language virtual machine platforms. Commensal compilers use the host language's front-end, use host platform APIs that enable back-end optimizations by the host platform JIT, and use an autotuner for optimization selection. The cost of implementing a commensal compiler is only the cost of implementing the domain-specific optimizations. We demonstrate the concept by implementing a commensal compiler for the stream programming language StreamJIT atop the Java platform. Our compiler achieves performance 2.8 times better than the StreamIt native code (via GCC) compiler with considerably less implementation effort.",
+  "doi": "10.1145/2660193.2660236",
+  "openalex": "W2026725014",
+  "status": "ok",
+  "title": "StreamJIT"
+ },
+ "10.1145_2663165.2663320": {
+  "abstract": "Many distributed applications deployed on the Internet must operate continuously with no noticeable interruption of service. Such 24/7 availability requirements make the maintenance of these application difficult because fixing bugs or adding new functionality necessitates the online replacement of the software version by the new one, i.e., a \"live update\". Support for \"live update\" is therefore essential to allow software evolution of critical services. While the problem of live update has been widely studied and several techniques have been proposed (e.g., using group communication and replication), we propose in this paper an original approach for the dataflow-based programming model (FBP). An interesting property of FBP is its seamless support for multi-and many-core architectures, which have become the norm in recent generation of servers and Cloud infrastructures. We introduce a framework and new algorithms for implementing coordinated non-blocking updates, which do not only support the replacement of individual software components, but also modifications of structural aspects of the applications independently of the underlying execution infrastructure. These algorithms allow us to transparently orchestrate live updates without halting the executing program. We illustrate and evaluate our approach on a web server application. We present experimental evidence that our live update algorithms are scalable and have negligible impact on availability and performance.",
+  "doi": "10.1145/2663165.2663320",
+  "openalex": "W2055229437",
+  "status": "ok",
+  "title": "A framework for the dynamic evolution of highly-available dataflow programs"
+ },
+ "10.1145_2714064.2660236": {
+  "abstract": "There are many domain libraries, but despite the performance benefits of compilation, domain-specific languages are comparatively rare due to the high cost of implementing an optimizing compiler. We propose commensal compilation , a new strategy for compiling embedded domain-specific languages by reusing the massive investment in modern language virtual machine platforms. Commensal compilers use the host language's front-end, use host platform APIs that enable back-end optimizations by the host platform JIT, and use an autotuner for optimization selection. The cost of implementing a commensal compiler is only the cost of implementing the domain-specific optimizations. We demonstrate the concept by implementing a commensal compiler for the stream programming language StreamJIT atop the Java platform. Our compiler achieves performance 2.8 times better than the StreamIt native code (via GCC) compiler with considerably less implementation effort.",
+  "doi": "10.1145/2714064.2660236",
+  "openalex": "W4241156817",
+  "status": "ok",
+  "title": "StreamJIT"
+ },
+ "10.1145_3110263": {
+  "abstract": "Software-defined radio (SDR) promises to bring the flexibility and rapid iterative workflow of software to radio protocol design. Many factors make achieving this promise challenging, not least of which are the high data rates and timing requirements of real-world radio protocols. The Ziria language and accompanying compiler demonstrated that a high-level language can compete in this demanding space, but extracting reusable lessons from this success is difficult due to Ziria's lack of a formal semantics. Our first contribution is a core language, operational semantics, and type system for Ziria. The insight we gained through developing this operational semantics led to our second contribution, consisting of two program transformations. The first is fusion, which can eliminate intermediate queues in Ziria programs. Fusion subsumes many one-off optimizations performed by the original Ziria compiler. The second transformation is pipeline coalescing, which reduces execution overhead by batching IO. Pipeline coalescing relies critically on fusion and provides a much simpler story for the original Ziria compiler's \"vectorization\" transformation. These developments serve as the basis of our third contribution, a new compiler for Ziria that produces significantly faster code than the original compiler. The new compiler leverages our intermediate language to help eliminate unnecessary memory traffic. As well as providing a firm foundation for the Ziria language, our work on an operational semantics resulted in very real software engineering benefits. These benefits need not be limited to SDR---the core language and accompanying transformations we present are applicable to other domains that require processing streaming data at high speed.",
+  "doi": "10.1145/3110263",
+  "openalex": "W2753542429",
+  "status": "ok",
+  "title": "Better living through operational semantics: an optimizing compiler for radio protocols"
+ },
+ "10.1145_3362692": {
+  "abstract": "Many application areas for embedded systems, such as DSP, media coding, and image processing, are based on stream processing. Stream programs in these areas are often naturally described as graphs, where nodes are computational kernels that send data over the edges. This structure also exhibits large amounts of concurrency, because the kernels can execute independently as long as there are data to process on the edges. The explicit data dependencies also help making efficient sequential implementations of such programs, allowing programs to be more portable between platforms with various degrees of parallelism. The kernels can be expressed in many different ways; for example, as imperative programs with read and write statements for the communication or as a set of actions that can be performed and conditions for when these actions can be executed. Traditionally, there has been a tension between how the kernels are expressed and how efficiently they can be implemented. There are very efficient implementation techniques for stream programs with restricted expressiveness, such as synchronous dataflow. In this article, we present a framework for building stream program compilers that we call Tÿcho. At the core of this framework is a common kernel representation, based on a machine model for stream program kernels called actor machine , on which transformations and optimizations are performed. Both imperative and action-based kernels are translated to this common representation, making the same optimizations applicable to different kinds of kernels, and even across source language boundaries. An actor machine is described by the steps of execution that a kernel can take, and the conditions for taking them, together with a controller that decides how the conditions are tested and the steps are taken. We outline how kernels of an imperative process language and an action-based language are decomposed and translated to the common kernel representation, and we describe a simple backend that generates sequential C code from this representation. We present optimization heuristics of the decision process in the controller that we evaluate using a few dozen kernels from a video decoder with various degrees of complexity. We also present kernel fusion, by merging the controllers of actor machines, as a way of scheduling kernels on the same processor, which we compare to prior art.",
+  "doi": "10.1145/3362692",
+  "openalex": "W2995669284",
+  "status": "ok",
+  "title": "Tÿcho"
+ },
+ "10.1145_3729256": {
+  "abstract": "Spatial dataflow architectures (SDAs) are a promising and versatile accelerator platform. They are software-programmable and achieve near-ASIC performance and energy efficiency, beating CPUs by orders of magnitude. Unfortunately, many SDAs struggle to efficiently implement irregular computations because they suffer from an abstraction inversion: they fail to capture coarse-grain dataflow semantics in the application — namely asynchronous communication, pipelining, and queueing — that are naturally supported by the dataflow execution model and existing SDA hardware. Ripple is a language and architecture that corrects the abstraction inversion by preserving dataflow semantics down the stack. Ripple provides asynchronous iterators , shared-memory atomics , and a familiar task-parallel interface to concisely express the asynchronous pipeline parallelism enabled by an SDA. Ripple efficiently implements deadlock-free, asynchronous task communication by exposing hardware token queues in its ISA. Across nine important workloads, compared to a recent ordered-dataflow SDA, Ripple shrinks programs by 1.9×, improves performance by 3×, increases IPC by 58%, and reduces dynamic instructions by 44%.",
+  "doi": "10.1145/3729256",
+  "openalex": "W4411269357",
+  "status": "ok",
+  "title": "Ripple: Asynchronous Programming for Spatial Dataflow Architectures"
+ },
+ "10.14288_1.0074006": {
+  "abstract": "Nondeterminism is a key challenge in developing multithreaded applications. Even with the same input, each execution of a multithreaded program may produce a different output. This behavior complicates debugging and limits one’s ability to test for correctness. This non-reproducibility situation is aggravated on massively parallel architectures like graphics processing units (GPUs) with thousands of concurrent threads. We believe providing a deterministic environment to ease debugging and testing of GPU applications is essential to enable a broader class of software to use GPUs. Many hardware and software techniques have been proposed for providing determinism on general-purpose multi-core processors. However, these techniques are designed for small numbers of threads. Scaling them to thousands of threads on a GPU is a major challenge. Here we propose a scalable hardware mechanism, GPUDet, to provide determinism in GPU architectures. In this thesis we characterize the existing deterministic and nondeterministic aspects of current GPU execution models, and we use these observations to inform GPUDet’s design. For example, GPUDet leverages the inherent determinism of the SIMD hardware in GPUs to provide determinism within a wavefront at no cost. GPUDet also exploits the Z-Buffer Unit, an existing GPU hardware unit for graphics rendering, to allow parallel out-of-order memory writes to produce a deterministic output. Other optimizations in GPUDet include deterministic parallel execution of atomic operations and a workgroup-aware algorithm that eliminates unnecessary global synchronizations. Our simulation results indicate that GPUDet incurs only 2× slowdown on average over a baseline nondeterministic architecture, with runtime overheads as low as 4% for compute-bound applications, despite running GPU kernels with thousands of threads. We also characterize the sources of overhead for deterministic execution on GPUs to provide insights for further optimizations.",
+  "doi": "10.14288/1.0074006",
+  "openalex": "W2292250103",
+  "status": "ok",
+  "title": "Deterministic execution on GPU architectures"
+ },
+ "10.17760_d20005005": {
+  "abstract": "Since the advent of heterogeneous computing a large number of applications have been ported to utilize heterogeneous systems. Data parallel applications have mapped their computation to the large numbers of cores in heterogeneous systems and reported large performance improvements. However, the programming APIs targeting heterogeneous systems require explicit data movement and thread management by the application developer. Low level programming models such as OpenCL complicate the performance optimization of closely coupled applications executing on heterogeneous systems.",
+  "doi": "10.17760/d20005005",
+  "openalex": "W2255214627",
+  "status": "ok",
+  "title": "Architectural support for irregular programs and performance monitoring for heterogeneous systems"
+ },
+ "10.21236_ada548741": {
+  "abstract": "This work presents a cyclic dependency analysis for stream-based programs. Specifically, we focus on the cyclo-static dataflow (CSDF) programming model with control messages through teleport messaging as implemented in the StreamIt framework. Unlike existing cyclic dependency analyses, we allow overlapped teleport messages. An overlapped teleport message is one that traverses actors that themselves transmit teleport messages, which can complicate the stream graph topology with teleport messages. Therefore, the challenge in this work is to decide whether such stream graphs are feasible in the presence of such complex teleport messages. Our analysis addresses this challenge by first ensuring that the stream graph with teleport messages is feasible, and then computing an execution schedule for the CSDF graph in the presence of complex overlapped teleport messaging constraints. Consequently, our analysis accepts a larger class of CSDF stream graphs with complex teleport messaging topologies for execution.",
+  "doi": "10.21236/ada548741",
+  "openalex": "W303657053",
+  "status": "ok",
+  "title": "Checking for Circular Dependencies in Distributed Stream Programs"
+ },
+ "10.48550_arxiv.2006.07478": {
+  "abstract": "Streaming computations on massive data sets are an attractive candidate for parallelization, particularly when they exhibit independence (and hence data parallelism) between items in the stream. However, some streaming computations are stateful, which disrupts independence and can limit parallelism. In this work, we consider how to extract data parallelism from streaming computations with a common, limited form of statefulness. The stream is assumed to be divided into variably-sized regions, and items in the same region are processed in a common context of state. In general, the computation to be performed on a stream is also irregular, with each item potentially undergoing different, data-dependent processing. This work describes mechanisms to implement such computations efficiently on a SIMD-parallel architecture such as a GPU. We first develop a low-level protocol by which a data stream can be augmented with control signals that are delivered to each stage of a computation at precise points in the stream. We then describe an abstraction, enumeration and aggregation, by which an application developer can specify the behavior of a streaming application with region-based state. Finally, we study an implementation of our ideas as part of the MERCATOR system for irregular streaming computations on GPUs, investigating how the frequency of region boundaries in a stream impacts SIMD occupancy and hence application performance.",
+  "doi": "10.48550/arxiv.2006.07478",
+  "openalex": "W3034709593",
+  "status": "ok",
+  "title": "Streaming Computations with Region-Based State on SIMD Architectures"
+ },
+ "10.5821_dissertation-2117-94642": {
+  "abstract": "All major semiconductor companies are now shipping multi-cores. Phones, PCs, laptops, and mobile internet devices will all require software that can make effective use of these cores. Writing high-performance parallel software is difficult, time-consuming and error prone, increasing both time-to-market and cost. Software outlives hardware; it typically takes longer to develop new software than hardware, and legacy software tends to survive for a long time, during which the number of cores per system will increase. Development and maintenance productivity will be improved if parallelism and technical details are managed by the machine, while the programmer reasons about the application as a whole. Parallel software should be written using domain-specific high-level languages or extensions. These languages reveal implicit parallelism, which would be obscured by a sequential language such as C. When memory allocation and program control are managed by the compiler, the program's structure and data layout can be safely and reliably modified by high-level compiler transformations. One important application domain contains so-called stream programs, which are structured as independent kernels interacting only through one-way channels, called streams. Stream programming is not applicable to all programs, but it arises naturally in audio and video encode and decode, 3D graphics, and digital signal processing. This representation enables high-level transformations, including kernel unrolling and kernel fusion. This thesis develops new compiler and run-time techniques for stream programming. The first part of the thesis is concerned with a statically scheduled stream compiler. It introduces a new static partitioning algorithm, which determines which kernels should be fused, in order to balance the loads on the processors and interconnects. A good partitioning algorithm is crucial if the compiler is to produce efficient code. The algorithm also takes account of downstream compiler passes---specifically software pipelining and buffer allocation---and it models the compiler's ability to fuse kernels. The latter is important because the compiler may not be able to fuse arbitrary collections of kernels. This thesis also introduces a static queue sizing algorithm. This algorithm is important when memory is distributed, especially when local stores are small. The algorithm takes account of latencies and variations in computation time, and is constrained by the sizes of the local memories. The second part of this thesis is concerned with dynamic scheduling of stream programs. First, it investigates the performance of known online, non-preemptive, non-clairvoyant dynamic schedulers. Second, it proposes two dynamic schedulers for stream programs. The first is specifically for one-dimensional stream programs. The second is more general: it does not need to be told the stream graph, but it has slightly larger overhead. This thesis also introduces some support tools related to stream programming. StarssCheck is a debugging tool, based on Valgrind, for the StarSs task-parallel programming language. It generates a warning whenever the program's behaviour contradicts a pragma annotation. Such behaviour could otherwise lead to exceptions or race conditions. StreamIt to OmpSs is a tool to convert a streaming program in the StreamIt language into a dynamically scheduled task based program using StarSs. Totes les empreses de semiconductors produeixen actualment multi-cores. Mòbils,PCs, portàtils, i dispositius mòbils d’Internet necessitaran programari quefaci servir eficientment aquests cores. Escriure programari paral·lel d’altrendiment és difícil, laboriós i propens a errors, incrementant tant el tempsde llançament al mercat com el cost. El programari té una vida més llarga queel maquinari; típicament pren més temps desenvolupar nou programi que noumaquinari, i el programari ja existent pot perdurar molt temps, durant el qualel nombre de cores dels sistemes incrementarà. La productivitat dedesenvolupament i manteniment millorarà si el paral·lelisme i els detallstècnics són gestionats per la màquina, mentre el programador raona sobre elconjunt de l’aplicació.El programari paral·lel hauria de ser escrit en llenguatges específics deldomini. Aquests llenguatges extrauen paral·lelisme implícit, el qual és ocultatper un llenguatge seqüencial com C. Quan l’assignació de memòria i lesestructures de control són gestionades pel compilador, l’estructura iorganització de dades del programi poden ser modificades de manera segura ifiable per les transformacions d’alt nivell del compilador.Un dels dominis de l’aplicació importants és el que consta dels programes destream; aquest programes són estructurats com a nuclis independents queinteractuen només a través de canals d’un sol sentit, anomenats streams. Laprogramació de streams no és aplicable a tots els programes, però sorgeix deforma natural en la codificació i descodificació d’àudio i vídeo, gràfics 3D, iprocessament de senyals digitals. Aquesta representació permet transformacionsd’alt nivell, fins i tot descomposició i fusió de nucli.Aquesta tesi desenvolupa noves tècniques de compilació i sistemes en tempsd’execució per a programació de streams. La primera part d’aquesta tesi esfocalitza amb un compilador de streams de planificació estàtica. Presenta unnou algorisme de partició estàtica, que determina quins nuclis han de serfusionats, per tal d’equilibrar la càrrega en els processadors i en lesinterconnexions. Un bon algorisme de particionat és fonamental per tal de queel compilador produeixi codi eficient. L’algorisme també té en compte elspassos de compilació subseqüents---específicament software pipelining il’arranjament de buffers---i modela la capacitat del compilador per fusionarnuclis. Aquesta tesi també presenta un algorisme estàtic de redimensionament de cues.Aquest algorisme és important quan la memòria és distribuïda, especialment quanles memòries locals són petites. L’algorisme té en compte latències ivariacions en els temps de càlcul, i considera el límit imposat per la mida deles memòries locals.La segona part d’aquesta tesi es centralitza en la planificació dinàmica deprogrames de streams. En primer lloc, investiga el rendiment dels planificadorsdinàmics online, non-preemptive i non-clairvoyant. En segon lloc, proposa dosplanificadors dinàmics per programes de stream. El primer és específicament pera programes de streams unidimensionals. El segon és més general: no necessitael graf de streams, però els overheads són una mica més grans.Aquesta tesi també presenta un conjunt d’eines de suport relacionades amb laprogramació de streams. StarssCheck és una eina de depuració, que és basa enValgrind, per StarSs, un llenguatge de programació paral·lela basat en tasques.Aquesta eina genera un avís cada vegada que el comportament del programa estàen contradicció amb una anotació pragma. Aquest comportament d’una altra manerapodria causar excepcions o situacions de competició. StreamIt to OmpSs és unaeina per convertir un programa de streams codificat en el llenguatge StreamIt aun programa de tasques en StarSs planificat de forma dinàmica.",
+  "doi": "10.5821/dissertation-2117-94642",
+  "openalex": "W904513124",
+  "status": "ok",
+  "title": "Running stream-like programs on heterogeneous multi-core systems"
+ },
+ "10.7305_automatika.2014.12.617": {
+  "abstract": "In this paper, we describe a scalable and portable parallelized implementation of a MPEG decoder using a streaming computation paradigm, tailored to new generations of multi—core systems. A novel, hybrid approach towards parallelization of both new and legacy applications is described, where only data—intensive and performance—critical parts are implemented in the streaming domain. An architecture—independent StreamIt language is used for design, optimization and implementation of parallelized segments, while the developed StreamGate interface provides a communication mechanism between the implementation domains. The proposed hybrid approach was employed in re—factoring of a reference MPEG video decoder implementation; identifying the most performance—critical segments and re—implementing them in StreamIt language, with StreamGate interface as a communication mechanism between the host and streaming kernel. We evaluated the scalability of the decoder with respect to the number of cores, video frame formats, sizes and decomposition. Decoder performance was examined in the presence of different processor load configurations and with respect to the number of simultaneously processed frames.",
+  "doi": "10.7305/automatika.2014.12.617",
+  "openalex": "W2162429397",
+  "status": "ok",
+  "title": "Parallelizing MPEG Decoder with Scalable Streaming Computation Kernels"
+ },
+ "10.7305_automatika.51-4.25": {
+  "abstract": "Streaming has emerged as an important model in present--day applications ranging from multimedia to scientific computing. Moreover, the emergence of new multicore architectures has resulted in new challenges for efficient utilization of available computational resources. Streaming model offers the portability and scalability of performance with the increasing number of cores. In this paper we propose a tool which enables the implementation of the compute--intensive stream processing kernels as portable modules in general--purpose applications. Resulting modules can be efficiently reused with high degree of scalability in regard to increasing number of processing cores.",
+  "doi": "10.7305/automatika.51-4.25",
+  "openalex": "W2219318428",
+  "status": "ok",
+  "title": "Integrating Streaming Computations for Efficient Execution on Novel Multicore Architectures"
+ },
+ "10.7916_d8bp08sn": {
+  "abstract": "Multi-core platforms have spread to all corners of the computing industry, and trends in design and power indicate that the shift to multi-core will become even wider-spread in the future. As the number of cores on a chip rises, the complexity of memory systems and on-chip interconnects increases drastically. The programmer inherits this complexity in the form of new responsibilities for task decomposition, synchronization, and data movement within an application, which hitherto have been concealed by complex processing pipelines or deemed unimportant since tasks were largely executed sequentially. To some extent, the need for explicit parallel programming is inevitable, due to limits in the instruction-level parallelism that can be automatically extracted from a program. However, these challenges create a great opportunity for the development of new programming abstractions which hide the low-level architectural complexity while exposing intuitive high-level mechanisms for expressing parallelism. Many models of parallel programming fall into the category of data-centric models, where the structure of an application depends on the role of data and communication in the relationships between tasks. The utilization of the inter-core communication networks and effective scaling to large data sets are decidedly important in designing efficient implementations of parallel applications. The questions of how many low-level architectural details should be exposed to the programmer, and how much parallelism in an application a programmer should expose to the compiler remain open-ended, with different answers depending on the architecture and the application in question. I propose that the key to unlocking the capabilities of multi-core platforms is the development of abstractions and optimizations which match the patterns of data movement in applications with the inter-core communication capabilities of the platforms. After a comparative analysis that confirms and stresses the importance of finding a good match between the programming abstraction, the application, and the architecture, this dissertation proposes two techniques that showcase the power of leveraging data dependency patterns in parallel performance optimizations. Flexible Filters dynamically balance load in stream programs by creating flexibility in the runtime data flow through the addition of redundant stream filters. This technique combines a static mapping with dynamic flow control to achieve light-weight, distributed and scalable throughput optimization. The properties of stream communication, i.e., FIFO pipes, enable flexible filters by exposing the backpressure dependencies between tasks. Next, I present Huckleberry, a novel recursive programming abstraction developed in order to allow programmers to expose data locality in divide-and-conquer algorithms at a high level of abstraction. Huckleberry automatically converts sequential recursive functions with explicit data partitioning into parallel implementations that can be ported across changes in the underlying architecture including the number of cores and the amount of on-chip memory. I then present a performance model for multi-core applications which provides an efficient means to evaluate the trade-offs between the computational and communication requirements of applications together with the hardware resources of a target multi-core architecture. The model encompasses all data-driven abstractions that can be reduced to a task graph representation and is extensible to performance techniques such as Flexible Filters that alter an application's original task graph. Flexible Filters and Huckleberry address the challenges of parallel programming on multi-core architectures by taking advantage of properties specific to the stream and recursive paradigms, and the performance model creates a unifying framework based on the communication between tasks in parallel applications. Combined, these contributions demonstrate that specialization with respect to communication patterns enhances the ability of parallel programming abstractions and optimizations to harvest the power of multi-core platforms.",
+  "doi": "10.7916/d8bp08sn",
+  "openalex": "W2156024465",
+  "status": "ok",
+  "title": "Data-Driven Programming Abstractions and Optimization for Multi-Core Platforms"
+ },
+ "10.7936_k7gh9g56": {
+  "abstract": "Streaming computing is a paradigm of distributed computing that features networked nodes connected by first-in-first-out data channels.Communication between nodes may include not only high-volume data tokens but also infrequent and unpredictable control messages carrying control information, such as data set boundaries, exceptions, or reconfiguration requests.In many applications, it is necessary to order delivery of control messages precisely relative to data tokens, which can be especially challenging when nodes can filter data tokens.Existing approaches, mainly data serialization protocols, do not exploit the low-volume nature of control messages and may not guarantee that synchronization of these messages with data will be free of deadlock.In this paper, we propose an efficient messaging system for adding precisely ordered control messages to streaming applications.We use a credit-based protocol to avoid the need to tag data tokens and control messages.For potential deadlocks caused by filtering behavior and global synchronization, we propose deadlock avoidance solutions and prove their correctness.Experimental results show that with our messaging system, we can substantially improve the performance of a sparse-data streaming application by filtering unnecessary data tokens.",
+  "doi": "10.7936/k7gh9g56",
+  "openalex": "W639802226",
+  "status": "ok",
+  "title": "Streaming Computations with Precise Control"
+ },
+ "oa-W1813494901": {
+  "abstract": "The physical layer of most wireless protocols is traditionally implemented in custom hardware to satisfy the heavy computational requirements while keeping power consumption to a minimum. These implementations are time consuming to design and difficult to verify. A programmable hardware platform capable of supporting software implementations of the physical layer, or Software Defined Radio (SDR), has a number of advantages. These include support for multiple protocols, faster time-to-market, higher chip volumes, and support for late implementation changes. The challenge is to achieve this under the power budget of a mobile device. Wireless communications belong to an emerging class of applications with the processing requirements of a supercomputer but the power constraints of a mobile device — mobile supercomputing. \r\nThis thesis presents a set of design proposals for building a programmable wireless communication solution. In order to design a solution that can meet the lofty requirements of SDR, this thesis takes an application-centric design approach — evaluate and optimize all aspects of the design based on the characteristics of wireless communication protocols. This includes a DSP processor architecture optimized for wireless baseband processing, wireless algorithm optimizations, and language and compilation tool support for the algorithm software and the processor hardware. This thesis first analyzes the software characteristics of SDR. Based on the analysis, this thesis proposes the Signal-Processing On-Demand Architecture (SODA), a fully programmable multi-core architecture that can support the computation requirements of third generation wireless protocols, while operating within the power budget of a mobile device. This thesis then presents wireless algorithm implementations and optimizations for the SODA processor architecture. A signal processing language extension (SPEX) is proposed to help the software development efforts of wireless communication protocols on SODA-like multi-core architecture. And finally, the SPIR compiler is proposed to automatically map SPEX code onto the multi-core processor hardware.",
+  "doi": null,
+  "openalex": "W1813494901",
+  "status": "ok",
+  "title": "Realizing Software Defined Radio - A Study in Designing Mobile Supercomputers."
+ },
+ "oa-W2110552905": {
+  "abstract": "Image and video codecs are prevalent in multimedia applications, ranging from embedded systems, to desktop computers, to high-end servers such as HDTV editing consoles. It is not uncommon however that developers create (from scratch) and customize their codec implementations for each of the architecture targets they intend their coders and decoders to run on. This practice is time consuming anderror prone, leading to code that is not malleable or portable. In this paper we describe an implementation of the MPEG-2 codec using the StreamIt programming language. StreamIt is an architecture-independent stream language that aims to improve programmer productivity, while concomitantly exposing the inherent parallelism and communication topology of the application. We describe why MPEG is a good match forthe streaming programming model, and illustrate the malleability of the implementation using a simple modification to the decoder to support alternate color compression formats. StreamIt allows for modular application development, which also reduces the complexity of the debugging process since stream components can be verifiedindependently. This in turn leads to greater programmer productivity. We implement a fully functional MPEG-2 decoder in StreamIt. The decoder was developed in eight weeks by a single student programmer who did not have any prior experience with MPEG or other video codecs. Many of the MPEG-2 components were subsequently reused to assemble a JPEG codec.",
+  "doi": null,
+  "openalex": "W2110552905",
+  "status": "ok",
+  "title": "MPEG-2 in a Stream Programming Language"
+ },
+ "oa-W2124343693": {
+  "abstract": "Abstract Image and video codecs are prevalent in multime-dia devices, ranging from embedded systems, to desktop",
+  "doi": null,
+  "openalex": "W2124343693",
+  "status": "ok",
+  "title": "MPEG-2 Decoding in a Stream Programming Language"
+ },
+ "oa-W2130563583": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2130563583",
+  "status": "no_abstract",
+  "title": "A Framework for Parallel Streaming Applications"
+ },
+ "oa-W2134883993": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2007.",
+  "doi": null,
+  "openalex": "W2134883993",
+  "status": "ok",
+  "title": "Image-based motion estimation in a stream programming language"
+ },
+ "oa-W2145791143": {
+  "abstract": "Thesis (M. Eng. and S.B.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2006.",
+  "doi": null,
+  "openalex": "W2145791143",
+  "status": "ok",
+  "title": "Stream Programming for Image and Video Compression"
+ },
+ "oa-W2146172931": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2007.",
+  "doi": null,
+  "openalex": "W2146172931",
+  "status": "ok",
+  "title": "A Streaming Computation Framework for the Cell Processor"
+ },
+ "oa-W2186557946": {
+  "abstract": "The Message Passing Interface (MPI) is the library-based programming model employed by most scalable parallel applications today; however, it is not easy to use. To simplify program development, Partitioned Global Address Space (PGAS) languages have emerged as promising alternatives to MPI. Co-array Fortran (CAF), Titanium, and Unified Parallel C are explicitly parallel single-program multiple-data languages that provide the abstraction of a global shared memory and enable programmers to use one-sided communication to access remote data. This thesis focuses on evaluating PGAS languages and explores new language features to simplify the development of high performance programs in CAF.\r\nTo simplify program development, we explore extending CAF with abstractions for group, Cartesian, and graph communication topologies that we call co-spaces. The combination of co-spaces, textual barriers, and single values enables effective analysis and optimization of CAF programs. We present an algorithm for synchronization strength reduction (SSR), which replaces textual barriers with faster point-to-point synchronization. This optimization is both difficult and error-prone for developers to perform manually. SSR-optimized versions of Jacobi iteration and the NAS MG and CG benchmarks yield performance similar to that of our best hand-optimized variants and demonstrate significant improvement over their barrier-based counterparts.\r\nTo simplify the development of codes that rely on producer-consumer communication, we explore extending CAF with multi-version variables (MVVs). MVVs increase programmer productivity by insulating application developers from the details of buffer management, communication, and synchronization. Sweep3D, NAS BT, and NAS SP codes expressed using MVVs are much simpler than the fastest hand-coded variants, and experiments show that they yield similar performance.\r\nTo avoid exposing latency in distributed memory systems, we explore extending CAF with distributed multithreading (DMT) based on the concept of function shipping. Function shipping facilitates co-locating computation with data as well as executing several asynchronous activities in the remote and local memory. DMT uses co-subroutines/cofunctions to ship computation with either blocking or non-blocking semantics. A prototype implementation and experiments show that DMT simplifies development of parallel search algorithms and the performance of DMT-based RandomAccess exceeds that of the reference MPI implementation.",
+  "doi": null,
+  "openalex": "W2186557946",
+  "status": "ok",
+  "title": "Expressiveness, programmability and portable high performance of global address space languages"
+ },
+ "oa-W2202992943": {
+  "abstract": "Real-time streaming of HD movies and TV via YouTube, Netflix, Apple TV and Xbox Live is gaining popularity. Stream programs often consume considerable amounts of energy due to their compute-intensive nature. Making stream programs energy-efficient is important, especially for energy-constrained computing devices such as mobile phones and tablets. The first part of this thesis focuses on exploiting the popular Synchronous Dataflow (SDF) high-level abstraction of stream programs to design adaptive stream programs for energy reduction on multicore machines. Observing that IO rates of stream programs can vary at runtime, we seek to make stream programs adaptive by transforming their internal structures to adapt required occupied computing resources, e.g., cores and memory, to workload changes at runtime. Our experiments show that adapting stream programs to IO rate changes can lead to significant energy reduction. In addition, we also show that the modularity and static attributes of stream programs' abstraction not only help map stream programs on multicore machines more easily but also enable energy-efficient routing schemes of high-bandwidth stream traffic on the interconnection fabric, such as networks on-chip.While SDF abstractions can help optimize stream programs on multicore machines, SDF is more suitable for describing stream data-intensive computations such as FFT, DCT, and FIR and so on. Modern stream operations such as MPEG2 or MP3 encoders/decoders are often more sophisticated and composed of multiple such computations. Enabling operation synchronization between different such computations with different semantics leads to the need for control messaging. We extend previous work on control messaging and give a formal definition for control message latency via the semantics of information wavefronts. This control-operation-integrated SDF (COSDF) is able to model sophisticated stream programs more precisely. However, the conventional scheduling method developed for SDF is not sufficient to schedule COSDF applications. To schedule COSDF applications, we develop a scheduling method using dependency graphs and applying a periodic graph theory, based on reduced dependency graphs (RDG). This RDG scheduling method also helps extract parallelism of stream programs. The more precise abstraction of COSDF is expected to help synthesize and generate sophisticated stream programs more efficiently.Although the SDF modularity property also improves programmability, it can come at a price of efficiency when SDF models are not compiled and run using model-based design environments. However, compiling large SDF models to mitigate the inefficiency can be prohibitive in the situations where even a small change in a model may lead to large recompilation overhead. We tackle the problem by proposing a method for incrementally compiling large SDF models that faithfully captures the executions of original SDF models to avoid potential artificial deadlocks of a naive compilation method.",
+  "doi": null,
+  "openalex": "W2202992943",
+  "status": "ok",
+  "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions"
+ },
+ "oa-W2258632733": {
+  "abstract": "Stream applications are characterized by the requirement to process a virtually infinite sequence of data items. They appear in many areas including communication, networking, multimedia and cryptography. Embedded manycore systems, currently in the range of hundreds of cores, have shown a tremendous potential in achieving high throughput and low power consumption for such applications.\r\nThe focus of this dissertation is on automated synthesis of parallel software for stream applications on embedded manycore systems. Automated software synthesis significantly reduces the development and debug time. The vision is to enable seamless and efficient transformation from a higher-order specification of the stream application (e.g., dataflow graph) to parallel software code (e.g., multiple .C files) for a given target manycore system. This automated process involves many steps that are being actively researched, including workload estimation of tasks (actors) in the dataflow graph, allocation of tasks to processors, scheduling of tasks for execution on the processors, binding of processors to physical cores on the chip, binding of communications to physical channels on the chip, generation of the parallel software code, backend code optimization and estimation of throughput.\r\nThis dissertation improves on the state-of-the-art by making the following contributions. First, a versatile task allocation algorithm for pipelined execution is proposed that is provably-efficient and can be configured to target platforms with different underlying architectures. Second, a throughput estimation method is introduced that has acceptable accuracy, high scalability with respect to the number of cores, and a high degree of freedom in targeting platforms with different underlying onchip networks. Third, a task scheduling algorithm is proposed, based on iteration overlapping techniques, which explores the tradeoff between throughput and memory requirements for manycore platforms with and without FIFO-based onchip communication channels. Finally, to increase the scalability of application throughput with respect to the number of cores, a malleable dataflow specification model is proposed.",
+  "doi": null,
+  "openalex": "W2258632733",
+  "status": "ok",
+  "title": "Automated software synthesis for streaming applications on embedded manycore processors"
+ },
+ "oa-W2309639351": {
+  "abstract": "We believe that FPGA-like parallel coprocessor accelerators can be programmed efficiently at the “C level” of abstraction. In order to support this claim we define an abstract architectural model of accelerators that conveys the kind of high-level behavior and performance characteristics that the von Neumann model conveys to programmers of conventional processors. Using the model as a guide we define a programming language and compilation strategy that: 1. do not impose programming style restrictions that are not inherent in the model, 2. do not introduce serious inefficiencies, and 3. are performance portable across implementations of the model. \r\nIn this dissertation I describe C-level programming of accelerators broadly, and make three particular contributions to the programmability of accelerators. \r\nEnhanced loop flattening is a new method for translating loop nests with arbitrary static control flow into a form that can be efficiently pipelined with conventional algorithms designed for simple loops. This method advances the goal of supporting a wide set of programming styles with reasonable efficiency. \r\nParallel accelerators have statically managed resources—like local memories—that vary widely in capacity from one implementation to the next. In order to get close to peak performance, applications must be tuned to the specific resources available in a given implementation, and empirical auto-tuning is an attractive way to do that. I propose and evaluate a new probabilistic auto-tuning method that elegantly handles situation where many possible configurations of the application fail to work at all because they exceed some architectural resource limit. \r\nFor many applications, achieving good performance on parallel accelerators requires deep loop pipelining, which requires dramatically reordering the individual operations in the application. Local dependencies between operations can be respected by compilers relatively easily, but non-local dependencies force implementations to choose between conservatively not reordering operations (which might kill performance), proving that reordering preserves the meaning of the program (which is impossible in the general case), or making unsound transformations (which programmers generally dislike). I propose a mostly sequential operational semantics for C-level streaming languages targeted at parallel accelerators that offers enough flexibility to the implementation to achieve good performance, deviates from conventional program-order semantics in fairly modest and understandable ways, and provides tools with which the programmer can control the reordering performed by the implementation. \r\nThese innovations are evaluated in the context of Macah, a new C-like language developed in the Mosaic group at the University of Washington. For validation we use a number of compute-intensive benchmarks developed by members of the Mosaic group and other contributors.",
+  "doi": null,
+  "openalex": "W2309639351",
+  "status": "ok",
+  "title": "c-level programming of parallel coprocessor accelerators"
+ },
+ "oa-W2321248633": {
+  "abstract": "Stream programs represent an important class of high-performance computations. Defined by their regular processing of sequences of data, stream programs appear most commonly in the context of audio, video, and digital signal processing, though also in networking, encryption, and other areas. Stream programs can be naturally represented as a graph of independent actors that communicate explicitly over data channels. In this work we focus on programs where the input and output rates of actors are known at compile time, enabling aggressive transformations by the compiler; this model is known as synchronous dataflow.\r\nWe develop a new programming language, StreamIt, that empowers both programmers and compiler writers to leverage the unique properties of the streaming domain. StreamIt offers several new abstractions, including hierarchical single-input single-output streams, composable primitives for data reordering, and a mechanism called teleport messaging that enables precise event handling in a distributed environment. We demonstrate the feasibility of developing applications in StreamIt via a detailed characterization of our 34,000-line benchmark suite, which spans from MPEG-2 encoding/decoding to GMTI radar processing. We also present a novel dynamic analysis for migrating legacy C programs into a streaming representation.\r\nThe central premise of stream programming is that it enables the compiler to perform powerful optimizations. We support this premise by presenting a suite of new transformations. We describe the first translation of stream programs into the compressed domain, enabling programs written for uncompressed data formats to automatically operate directly on compressed data formats (based on LZ77). This technique offers a median speedup of 15x on common video editing operations. We also review other optimizations developed in the StreamIt group, including automatic parallelization (offering an 11x mean speedup on the 16-core Raw machine), optimization of linear computations (offering a 5.5x average speedup on a Pentium 4), and cache-aware scheduling (offering a 3.5x mean speedup on a StrongARM 1100). While these transformations are beyond the reach of compilers for traditional languages such as C, they become tractable given the abundant parallelism and regular communication patterns exposed by the stream programming model. (Copies available exclusively from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307. Ph. 617-253-5668; Fax 617-253-1690.)",
+  "doi": null,
+  "openalex": "W2321248633",
+  "status": "ok",
+  "title": "Language and compiler support for stream programs"
+ },
+ "oa-W2602914815": {
+  "abstract": "Abstract. Heterogeneous computing has become prevalent due to the comput-ing power and low cost of Graphics Processing Units(GPUs). OpenCL provides a programming model where the CPU is the master or host, and compute-intensive portions of an algorithm are offloaded to the GPU. However, the host-device model is very limiting. In this model, data-dependent, run-time optimizations that could benefit many applications cannot be easily realized as the cost of transfer-ring intermediate results between devices is high. Besides, implementing run time optimizations for OpenCL devices would require additional synchronization, pro-filing and value monitoring code on the part of the application developer. To overcome this challenge, we present the open-source Haptic (Heterogeneous Application Profiling Tools) framework. Haptic provides extensions to OpenCL that create a closer coupling between the host and device, which allows them to work cooperatively on challenging compute problems. This work discusses the architecture of the Haptic system. The effectiveness of Haptic is demonstrated using signal processing and computer vision applications where performance im-provements up-to 40 % were seen. The worst case overhead witnessed was 17.5%. 1",
+  "doi": null,
+  "openalex": "W2602914815",
+  "status": "ok",
+  "title": "A Framework for Profiling and Performance Monitoring of Heterogeneous Applications"
+ },
+ "oa-W3149185107": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W3149185107",
+  "status": "no_abstract",
+  "title": "StreamJIT: A Commensal Compiler for High-Performance Stream Programming"
+ },
+ "s2-05d185e8914d6492": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Block parallel programming for real-time applications on multi-core processors"
+ },
+ "s2-0d4bc3a471a3eeca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A hybrid static/dynamic approach to scheduling stream programs"
+ },
+ "s2-12a5965959a4f1f8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Ubiquitous Stream Programming to Facilitate the Migration to Multicore Architectures"
+ },
+ "s2-1fba74ab11799a1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Conception et Implantation d'un Environnement de Développement de Logiciels à Base de Composants, Applications aux Systèmes Multiprocesseurs sur Puce. (Design and Implementation of a Component-Based Software Development Environment, Applications for Multi-Processor System-on-Chips)"
+ },
+ "s2-2d8a7f4b95e91164": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "WashU Scholarly Repository WashU Scholarly Repository"
+ },
+ "s2-48c6745132c58a5d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Towards implicit parallel programming for systems"
+ },
+ "s2-5e1d36a665961036": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Framework for Profiling and Performance Monitoring of Heterogeneous Applications"
+ },
+ "s2-6257c9d0c725320f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Language and compiler support for stream programs"
+ },
+ "s2-65adb757672c2b4d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Effects, Asynchrony, and Choice in Arrowized Functional Reactive Programming"
+ },
+ "s2-873f74c30d84597c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Streaming Computations with Region-Based State on SIMD Architectures"
+ },
+ "s2-88510d30a087deb5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "c-level programming of parallel coprocessor accelerators"
+ },
+ "s2-8b2bdae79a43a7a7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Architectural support for irregular programs and performance monitoring for heterogeneous systems"
+ },
+ "s2-8d777484760c68e9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automated software synthesis for streaming applications on embedded manycore processors"
+ },
+ "s2-914070d891c0d1f4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "BPDF: Boolean Parametric Data Flow"
+ },
+ "s2-a044c3e94ec8c2ae": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Realizing Software Defined Radio - A Study in Designing Mobile Supercomputers"
+ },
+ "s2-a12bee93834a00ce": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions"
+ },
+ "s2-a283df29ce2a1066": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "High-Productivity Stream Programming For High-Performance Systems"
+ },
+ "s2-ac141c8282a41457": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Framework for Parallel Streaming Applications"
+ },
+ "s2-ae8b15bc8271a773": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiled microprocessors"
+ },
+ "s2-b6c344300b5ec3e2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Expressiveness, programmability and portable high performance of global address space languages"
+ },
+ "s2-ba77617912535abc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Streaming Computation Framework for the Cell Processor"
+ },
+ "s2-bec3f9877094e5b3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Generating, optimizing, and scheduling a compiler level representation of stream parallelism"
+ },
+ "s2-bfc46687c9adef4c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Stream Programming for Image and Video Compression"
+ },
+ "s2-cc24eab217f6df1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Research Statement Languages, Compilers, and Tools for Multicore Architectures"
+ },
+ "s2-cd893abb1228f442": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Integrating stream parallelism and task parallelism in a dataflow programming model"
+ },
+ "s2-d1ac0c7f25b2391d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MPEG-2 in a Stream Programming Language"
+ },
+ "s2-e454ac36ab555f1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler techniques for scalable performance of stream programs on multicore architectures"
+ },
+ "s2-f8dd5cc3d35ee2eb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "System Design, Modeling, and Simulation Using Ptolemy Ii Ontologies"
+ },
+ "s2-ff7e40b91dfb5d55": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Image-based motion estimation in a stream programming language"
+ }
+}

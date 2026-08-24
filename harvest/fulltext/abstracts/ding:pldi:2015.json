@@ -1,0 +1,1080 @@
+{
+ "10.1002_cpe.6267": {
+  "abstract": "Abstract Task‐based execution of graph workloads allows various ordered and unordered implementations, with tasks representing dependencies between graph vertices and edges. This work explores graph algorithms in the context of ordered and unordered task‐based implementations, that trade‐off work‐efficiency with parallelism. The monotonicity of convergent graph solutions is the reason behind the trade‐off between work‐efficiency and parallelism. This trade‐off results in variable performance‐based choices within and across different machines (CPUs and GPUs), graph algorithms, implementations (ordered, relaxed, and unordered). Input graphs also augment this choice space, with this work analyzing temporally changing graphs in addition to the static graphs explored by prior works. These algorithmic and architectural choices are first explored in this work, and it is seen that different graph workload‐input combinations perform optimally on diverse architectural configurations. The resulting choice space is analyzed and this work represents it in the form of characteristic variables that correlate with each choice space. Using these characteristic variables, this work proposes analytical and neural network models to correlate these choice spaces to find the best performing implementation. The variables and the prediction models proposed in this work are also integrated with a state‐of‐the‐art performance predictor on a multiaccelerator setup, and shows geometric performance gains of 54% on a CPU, 14% on a GPU, and 31.5% in a multiaccelerator setup over baseline implementations without performance prediction.",
+  "doi": "10.1002/cpe.6267",
+  "openalex": "W3159543207",
+  "status": "ok",
+  "title": "A performance predictor for implementation selection of parallelized static and temporal graph algorithms"
+ },
+ "10.1007_978-3-030-32094-2_7": {
+  "abstract": "Abstract The energy consumption limits the application performance in a wide range of scenarios, ranging from embedded to High-Performance Computing. To improve computation efficiency, this Chapter focuses on a software-level methodology to enhance a target application with an adaptive layer that provides self-optimization capabilities. We evaluated the benefits of dynamic autotuning in three case studies: a probabilistic time-dependent routing application from a navigation system, a molecular docking application to perform virtual-screening, and a stereo-matching application to compute the depth of a three-dimensional scene. Experimental results show how it is possible to improve computation efficiency by adapting reactively and proactively.",
+  "doi": "10.1007/978-3-030-32094-2_7",
+  "openalex": "W2930768331",
+  "status": "ok",
+  "title": "Dynamic Application Autotuning for Self-aware Approximate Computing"
+ },
+ "10.1007_978-3-030-94705-7_7": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-94705-7_7",
+  "openalex": "W4285195839",
+  "status": "no_abstract",
+  "title": "Accuracy-Aware Compilers"
+ },
+ "10.1007_978-3-319-91479-4_23": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-91479-4_23",
+  "openalex": "W2804826778",
+  "status": "no_abstract",
+  "title": "Analyzing the Influence of LLVM Code Optimization Passes on Software Performance"
+ },
+ "10.1007_s11227-020-03295-x": {
+  "abstract": "The drug discovery process involves several tasks to be performed in vivo, in vitro and in silico. Molecular docking is a task typically performed in silico. It aims at finding the three-dimensional pose of a given molecule when it interacts with the target protein binding site. This task is often done for virtual screening a huge set of molecules to find the most promising ones, which will be forwarded to the later stages of the drug discovery process. Given the huge complexity of the problem, molecular docking cannot be solved by exploring the entire space of the ligand poses. State-of-the-art approaches face the problem by sampling the space of the ligand poses to generate results in a reasonable time budget. In this work, we improve the geometric approach to molecular docking by introducing tunable approximations. In particular, we analysed and enriched the original implementation with tunable software knobs to explore and control the performance-accuracy trade-offs. We modelled time-to-solution of the virtual screening task as a function of software knobs, input data features, and available computational resources. Therefore, the application can autotune its configuration according to a user-defined time budget. We used a Mini-App derived by LiGenDock—a state-of-the-art molecular docking application—to validate the proposed approach. We run the enhanced Mini-App on a high-performance computing system by using a very large database of pockets and ligands. The proposed approach exposes a time-to-solution interval spanning more than one order of magnitude with accuracy degradation up to 30%, more in general providing different accuracy levels according to the needs of the virtual screening campaign.",
+  "doi": "10.1007/s11227-020-03295-x",
+  "openalex": "W3023570844",
+  "status": "ok",
+  "title": "Tunable approximations to control time-to-solution in an HPC molecular docking Mini-App"
+ },
+ "10.1016_b978-0-12-804189-5.00008-9": {
+  "abstract": null,
+  "doi": "10.1016/b978-0-12-804189-5.00008-9",
+  "openalex": "W3021376903",
+  "status": "no_abstract",
+  "title": "Additional topics"
+ },
+ "10.1016_bs.adcom.2016.04.002": {
+  "abstract": null,
+  "doi": "10.1016/bs.adcom.2016.04.002",
+  "openalex": "W2345523543",
+  "status": "no_abstract",
+  "title": "Input-Sensitive Profiling"
+ },
+ "10.1016_j.engappai.2020.104075": {
+  "abstract": null,
+  "doi": "10.1016/j.engappai.2020.104075",
+  "openalex": "W3108220046",
+  "status": "no_abstract",
+  "title": "Exploration of Convolutional Neural Network models for source code classification"
+ },
+ "10.1016_j.jss.2021.111044": {
+  "abstract": null,
+  "doi": "10.1016/j.jss.2021.111044",
+  "openalex": "W3193483200",
+  "status": "no_abstract",
+  "title": "Learning Software Configuration Spaces: A Systematic Literature Review"
+ },
+ "10.1016_j.jss.2023.111671": {
+  "abstract": null,
+  "doi": "10.1016/j.jss.2023.111671",
+  "openalex": "W4321854833",
+  "status": "no_abstract",
+  "title": "Input sensitivity on the performance of configurable systems an empirical study"
+ },
+ "10.1016_j.jss.2023.111883": {
+  "abstract": null,
+  "doi": "10.1016/j.jss.2023.111883",
+  "openalex": "W4388312433",
+  "status": "no_abstract",
+  "title": "Learning input-aware performance models of configurable systems: An empirical evaluation"
+ },
+ "10.1016_j.micpro.2025.105219": {
+  "abstract": "Nowadays, most computing systems experience highly dynamic workloads with performance-demanding applications entering and leaving the system with an unpredictable trend. Ensuring their performance guarantees led to the design of adaptive mechanisms, including (i) application autotuners, able to optimize algorithmic parameters (e.g., frame resolution in a video processing application), and (ii) runtime resource management to distribute computing resources among the running applications and tune architectural knobs (e.g., frequency scaling). Past work investigates the two directions separately, acting on a limited set of control knobs and objective functions; instead, this work proposes a combined framework to integrate these two complementary approaches in a single two-level governor acting on the overall hardware/software stack. The resource manager incorporates a policy for computing resource distribution and architectural knobs to guarantee the required performance of each application while limiting the side effect on results quality and minimizing system power consumption. Meanwhile, the autotuner manages the applications’ software knobs, ensuring results’ quality and performance constraint satisfaction while hiding application details from the controller. Experimental evaluation carried out on a homogeneous architecture for workstation machines demonstrates that the proposed framework is stable and can save more than 72% of the power consumed by one-layer solutions.",
+  "doi": "10.1016/j.micpro.2025.105219",
+  "openalex": "W4415355002",
+  "status": "ok",
+  "title": "Power/accuracy-aware dynamic workload optimization combining application autotuning and runtime resource management on homogeneous architectures"
+ },
+ "10.1051_itmconf_20213701021": {
+  "abstract": "Compiler optimization techniques allow developers to achieve peak performance with low-cost hardware and are of prime importance in the field of efficient computing strategies. The realm of compiler suites that possess and apply efficient optimization methods provide a wide array of beneficial attributes that help programs execute efficiently with low execution time and minimal memory utilization. Different compilers provide a certain degree of optimization possibilities and applying the appropriate optimization strategies to complex programs can have a significant impact on the overall performance of the system. This paper discusses methods of compiler optimization and covers significant advances in compiler optimization techniques that have been established over the years. This article aims to provide an overall survey of the cache optimization methods, multi memory allocation features and explore the scope of machine learning in compiler optimization to attain a sustainable computing experience for the developer and user.",
+  "doi": "10.1051/itmconf/20213701021",
+  "openalex": "W3137291726",
+  "status": "ok",
+  "title": "Memory Utilization and Machine Learning Techniques for Compiler Optimization"
+ },
+ "10.1109_access.2018.2867151": {
+  "abstract": "Automatic vectorization is crucial for improving the performance of computationally intensive programs. Existing compilers use conservative optimization strategies for automatic vectorization, which, in many cases, lead to the loss of vectorization opportunity. Studies have shown that the use of machine learning algorithms to build a performance prediction model is beneficial to improve the program performance. The model input is program features, and the output is the predicted optimization strategies or the program performance related to the optimization. In this paper, we focus on a computational intensive loop structure-tensor contraction, which is common in quantum chemical simulations. Most existing machine learning methods rely on control and data flow graphs as features to represent programs, but different tensor contraction kernels have the same control and data flow graphs. In addition, the existing methods often use the same kind of learning algorithm to construct a learning model, which is prone to overfitting and low-precision problems. In this paper, we propose an automatic vectorization performance enhancement method based on ensemble learning. We construct an ensemble learning model to predict the performance of tensor contraction kernels with different vectorization strategies and select the best vectorization strategy for the kernels. According to the storage access patterns of the tensor contraction kernels, we propose a static method for features representation. Based on the multi-algorithm ensemble learning strategy, we obtain better learning results than the single learning algorithm. The experimental results show that the prediction model achieves 88% and 87% prediction efficiency on two different platforms with different instruction sets, data types, and compilers. Compared with the existing methods, the prediction efficiency is greatly improved. In addition, the average peak performance is 2.96× of Intel ICC 12.0 and 2.98× of GCC 4.6 compiler, respectively.",
+  "doi": "10.1109/access.2018.2867151",
+  "openalex": "W2888295354",
+  "status": "ok",
+  "title": "Using Ensemble Learning to Improve Automatic Vectorization of Tensor Contraction Program"
+ },
+ "10.1109_cgo.2017.7863739": {
+  "abstract": "This paper shows that many applications exhibit execution-phase-specific sensitivity towards approximation of the internal subcomputations. Therefore, approximation in certain phases can be more beneficial than others. Further, this paper presents Opprox, a novel system for application's execution-phase-aware approximation. For a user provided error budget and target input parameters, Opprox identifies different program phases and searches for profitable approximation settings for each phase of the application execution. Our evaluation with five benchmarks and four existing transformations show that our phase-aware optimization on average does 14% less work for a 5% error tolerance bound and 42% less work for a 20% tolerance bound.",
+  "doi": "10.1109/cgo.2017.7863739",
+  "openalex": "W2749110104",
+  "status": "ok",
+  "title": "Phase-aware optimization in approximate computing"
+ },
+ "10.1109_cgo.2019.8661177": {
+  "abstract": "Many programs or algorithms are largely parameterized, especially those based on heuristics. The quality of the results depends on the parameter setting. Different inputs often have different optimal settings. Program tuning is hence of great importance. Existing tuning techniques treat the program as a black-box and hence cannot leverage the internal program states to achieve better tuning. We propose a white-box tuning technique that is implemented as a library. The user can compose complex program tuning tasks by adding a small number of library calls to the original program and providing a few callback functions. Our experiments on 13 widely-used real-world programs show that our technique substantially improves data processing results and outperforms OpenTuner, the state-of-the-art black-box tuning technique.",
+  "doi": "10.1109/cgo.2019.8661177",
+  "openalex": "W4244919398",
+  "status": "ok",
+  "title": "White-Box Program Tuning"
+ },
+ "10.1109_hipc53243.2021.00040": {
+  "abstract": "Autotuning has been widely studied in high performance computing as a very effective mechanism for improving application performance. Such an approach has become particularly crucial for architectures like the modern GPUs, where obtaining the best performance involves a complex interaction between the architecture and the applications. Autotuning methods rely upon a search strategy, which is designed to search through the (potentially very large) space. A large number of search methods have been proposed in the past, and include both local and global strategies. We observe that on GPU applications, high performing configurations are likely to be spatially clustered. Based on this observation, we propose to apply a strategy we refer to as shrinking sample. This method searches in all areas of the entire space, looking for combinations of different parameter values, and without relying on random (initial) choices that may miss a part of the space. The efficacy and efficiency of this method has been tested against state-of-the-art local and global search algorithms on seven benchmark GPU kernels. Our experiments show that the shrinking-sample method can achieve around 99% percent of the performance from exhaustive search (on average) with orders of magnitude much less tuning time.",
+  "doi": "10.1109/hipc53243.2021.00040",
+  "openalex": "W4206904842",
+  "status": "ok",
+  "title": "Shrinking Sample Search Algorithm for Automatic Tuning of GPU Kernels"
+ },
+ "10.1109_hpca57654.2024.00066": {
+  "abstract": "Dynamic neural network (DyNN) enables high computational efficiency and strong representation capability. However, training DyNN can face a memory capacity problem because of increasing model size or limited GPU memory capacity. Managing tensors to save GPU memory is challenging, because of the dynamic structure of DyNN. We present DyNN-Offload, a memory management system to train DyNN. DyNN-Offload uses a learned approach (using a neural network called the pilot model) to increase predictability of tensor accesses to facilitate memory management. The key of DyNN-Offload is to enable fast inference of the pilot model in order to reduce its performance overhead, while providing high inference (or prediction) accuracy. DyNNOffload reduces input feature space and model complexity of the pilot model based on a new representation of DyNN; DyNNOffload converts the hard problem of making prediction for individual operators into a simpler problem of making prediction for a group of operators in DyNN. DyNN-Offload enables 8 × larger DyNN training on a single GPU compared with using PyTorch alone (unprecedented with any existing solution). Evaluating with AlphaFold (a production-level, large-scale DyNN), we show that DyNN-Offload outperforms unified virtual memory (UVM) and dynamic tensor rematerialization (DTR), the most advanced solutions to save GPU memory for DyNN, by 3 × and 2.1 × respectively in terms of maximum batch size.",
+  "doi": "10.1109/hpca57654.2024.00066",
+  "openalex": "W4393407138",
+  "status": "ok",
+  "title": "Enabling Large Dynamic Neural Network Training with Learning-based Memory Management"
+ },
+ "10.1109_hpcc-smartcity-dss.2017.3": {
+  "abstract": "Recent interest in machine-learning based methods has produced many sophisticated models for performance modeling and optimization. These models tend to be sensitive to parameters of the underlying architecture and hence yield the highest prediction accuracy when trained on the target platform. Training a classifier, however, is a fairly involved process and requires knowledge of statistics and machine learning that the end users of such models may not possess. This paper presents a new framework for automatically generating machine-learning based performance models. A tool-chain is developed that provides automated mechanisms for sample generation, dynamic feature extraction, feature selection, data labeling, validation and hyper parameter tuning. We describe the design and implementation of this system and demonstrate its efficacy by developing a learning heuristic for register allocation in GPU kernels. Results show that auto-generated models can predict register thresholds that lead to integer factor performance improvements over kernels produced by state-of-the-art optimizing compilers.",
+  "doi": "10.1109/hpcc-smartcity-dss.2017.3",
+  "openalex": "W2786726542",
+  "status": "ok",
+  "title": "A Machine Learning Approach to Automatic Creation of Architecture-Sensitive Performance Heuristics"
+ },
+ "10.1109_iadcc.2015.7154712": {
+  "abstract": "In today's HPC world, numerous applications executed with high speed. The multi core architecture has provided a wide scope of exploration towards any kind of high-end applications. The paper gives an analogy on ability to handle the high-end input triggers by managing the core utilities at the lower end of the computer. The optimized way of memory block utilization, debugging proliferation and data management at configured input level discussed in the paper. The Data Proliferation framework model named as COMCO (Component for Compiler Optimization) model and it elaborates on how to handle configured inputs at the OS level. The paper gives an exploration of the configured inputs safely at the multi thread level using the COMCO (Component for Compiler Optimization) strategy.",
+  "doi": "10.1109/iadcc.2015.7154712",
+  "openalex": "W1553640507",
+  "status": "ok",
+  "title": "Proliferation framework on input data set to improve memory latency in multicores for optimization"
+ },
+ "10.1109_iceccme57830.2023.10252342": {
+  "abstract": "Traditionally, computational hardware (HW) has undergone a quick evolution that, in recent years, was complemented with the arise of a large variety of architectures. Modifying software (SW) so that it can perform efficiently in these new platforms is a costly process, but necessary in many cases. Therefore, the development of novel methods to automatically adapt SW to efficiently perform in any HW architecture is required. However, this is a very complex and time consuming problem, as the impact of code optimizations on the performance of SW is unknown, with a strong dependence on (i) the other applied optimizations, (ii) the code to optimize, and (iii) the HW where it executes. In this work, we propose the Faevol framework, which makes use of evolutionary computation to find the best sequence of LLVM optimizations that maximizes the performance of a given SW on the underlying HW. The performance is measured in terms of both the run time and the energy consumption of the computer when executing the SW. Additionally, we develop two predictive models based on artificial neural networks to accurately estimate the impact of any sequence of LLVM optimizations on a SW code. These models are used in a surrogate version of Faevol in order to accelerate the optimization process. We demonstrate how incorporating the proposed predictive models for energy consumption and run time in Faevol leads to similar results as when actually running the SW to take performance measurements, with a considerably lower time demand.",
+  "doi": "10.1109/iceccme57830.2023.10252342",
+  "openalex": "W4386952440",
+  "status": "ok",
+  "title": "A Surrogate Optimization Method for Automatically Generating Greener Software Using LLVM"
+ },
+ "10.1109_icse48619.2023.00176": {
+  "abstract": "Modern software systems often exhibit numerous configuration options to tailor them to user requirements, including the system's performance behavior. Performance models derived via machine learning are an established approach for estimating and optimizing configuration-dependent software performance. Most existing approaches in this area rely on software performance measurements conducted with a single workload (i.e., input fed to a system). This single workload, however, is often not representative of a software system's real-world application scenarios. Understanding to what extent configuration and workload-individually and combined-cause a software system's performance to vary is key to understand whether performance models are generalizable across different configurations and workloads. Yet, so far, this aspect has not been systematically studied. To fill this gap, we conducted a systematic empirical study across 25 258 configurations from nine real-world configurable software systems to investigate the effects of workload variation at system-level performance and for individual configuration options. We explore driving causes for workload-configuration interactions by enriching performance observations with option-specific code coverage information. Our results demonstrate that workloads can induce substantial performance variation and interact with configuration options, often in non-monotonous ways. This limits not only the generalizability of single-workload models, but also challenges assumptions for existing transfer-learning techniques. As a result, workloads should be considered when building performance prediction models to maintain and improve representativeness and reliability.",
+  "doi": "10.1109/icse48619.2023.00176",
+  "openalex": "W4384302801",
+  "status": "ok",
+  "title": "Analysing the Impact of Workloads on Modeling the Performance of Configurable Software Systems"
+ },
+ "10.1109_icst.2018.00036": {
+  "abstract": "Mutation testing is a well-established approach for evaluating test-suite quality by modifying code using syntax-changing (and potentially semantics-changing) transformations, called mutation operators. This paper proposes approximate transformations as new mutation operators that can give novel insights about the code and tests. Approximate transformations are semantics-changing transformations used in the emerging area of approximate computing, but so far they were not evaluated for mutation testing. We found that approximate transformations can be effective mutation operators. We compared three approximate transformations with a set of conventional mutation operators from the literature, on nine open-source Java subjects. The results showed that approximate transformations change program behavior differently from conventional mutation operators. Our analysis uncovered code patterns in which approximate mutants survivedand showed the practical value of approximate transformations for both understanding code amenable to approximations and discovering bad tests. We submitted 11 pull requests to fix bad tests. Seven have already been integrated by the developers.",
+  "doi": "10.1109/icst.2018.00036",
+  "openalex": "W2806676720",
+  "status": "ok",
+  "title": "Approximate Transformations as Mutation Operators"
+ },
+ "10.1109_iiswc.2016.7581278": {
+  "abstract": "Graph analytics is becoming ever more ubiquitous in today's world. However, situational dynamic changes in input graphs, such as changes in traffic and weather patterns, lead to variations in concurrency. Moreover, graph algorithms are known to have data dependent loops and fine-grain synchronization that makes them hard to scale on parallel machines. Recent trends in computing indicate the rise of massively-threaded machines, such as Graphic Processing Units (GPUs). It is of paramount importance to adopt these graph algorithms efficiently on these GPU machines. However, concurrency variations are expected to play a formidable role in achieving good GPU performance. This paper performs an in-depth characterization of GPU architectural choices for graph benchmarks executing on a diverse set of input graphs. The analysis shows that performance improves by a geometric mean of 40% when optimal threads are spawned on a GPU relative to a naive choice that maximizes total thread count. Moreover, an additional 41% performance is achieved when the number of threads per GPU work group is reduced to a setting that optimizes exploitable hardware concurrency. It is also shown that algorithmic auto-tuning coupled with the right architectural choices co-optimize GPU performance.",
+  "doi": "10.1109/iiswc.2016.7581278",
+  "openalex": "W2529597500",
+  "status": "ok",
+  "title": "GPU concurrency choices in graph analytics"
+ },
+ "10.1109_iiswc47752.2019.9042139": {
+  "abstract": "Hand-optimising graph algorithm code for different GPUs is particularly labour-intensive and error-prone, involving complex and ill-understood interactions between GPU chips, applications, and inputs. Although the generation of optimised variants has been automated through graph algorithm DSL compilers, these do not yet use an optimisation policy. Instead they defer to techniques like autotuning, which can produce good results, but at the expense of portability. In this work, we propose a methodology to automatically identify portable optimisation policies that can be tailored (“semi-specialised”) as needed over a combination of chips, applications and inputs. Using a graph algorithm DSL compiler that targets the OpenCL programming model, we demonstrate optimising graph algorithms to run in a portable fashion across a wide range of GPU devices for the first time. We use this compiler and its optimisation space as the basis for a large empirical study across 17 graph applications, 3 diverse graph inputs and 6 GPUs spanning multiple vendors. We show that existing automatic approaches for building a portable optimisation policy fall short on our dataset, providing trivial or biased results. Thus, we present a new statistical analysis which can characterise optimisations and quantify performance trade-offs at various degrees of specialisation. We use this analysis to quantify the performance tradeoffs as portability is sacrificed for specialisation across three natural dimensions: chip, application, and input. Compared to not optimising programs at all, a fully portable approach provides a 1.15× improvement in geometric mean performance, rising to 1.29 × when specialised to application and inputs (but not hardware). Furthermore, these semi-specialised optimisations provide insights into performance-critical features of specialisation. For example, optimisations specialised by chip reveal subtle, yet performance-critical, characteristics of various GPUs.",
+  "doi": "10.1109/iiswc47752.2019.9042139",
+  "openalex": "W3011163152",
+  "status": "ok",
+  "title": "One Size Doesn't Fit All: Quantifying Performance Portability of Graph Applications on GPUs"
+ },
+ "10.1109_inista52262.2021.9548573": {
+  "abstract": "Recently, program autotuning has become very popular especially in embedded systems, when we have limited resources such as computing power and memory where these systems run generally time-critical applications. Compiler optimization space gradually expands with the renewed compiler options and inclusion of new architectures. These advancements bring autotuning even more important position. In this paper, we introduced Flag Optimization with Genetic Algorithm (FOGA) as an autotuning solution for GCC flag optimization. FOGA has two main advantages over the other autotuning approaches: the first one is the hyperparameter tuning of the genetic algorithm (GA), the second one is the maximum iteration parameter to stop when no further improvement occurs. We demonstrated remarkable speedup in the execution time of C++ source codes with the help of optimization flags provided by FOGA when compared to the state of the art framework OpenTuner.",
+  "doi": "10.1109/inista52262.2021.9548573",
+  "openalex": "W3160962618",
+  "status": "ok",
+  "title": "FOGA: Flag Optimization with Genetic Algorithm"
+ },
+ "10.1109_ipdps.2017.38": {
+  "abstract": "Increasing architectural diversity makes performance portability extremely important for parallel simulation codes. Emerging on-node parallelization frameworks such as Kokkos and RAJA decouple the work done in kernels from the parallelization mechanism, allowing for a single source kernel to be tuned for different architectures at compile time. However, computational demands in production applications change at runtime, and performance depends both on the architecture and the input problem, and tuning a kernel for one set of inputs may not improve its performance on another. The statically optimized versions need to be chosen dynamically to obtain the best performance. Existing auto-tuning approaches can handle slowly evolving applications effectively, but are too slow to tune highly input-dependent kernels. We developed Apollo, an auto-tuning extension for RAJA that uses pre-trained, reusable models to tune input-dependent code at runtime. Apollo is designed for highly dynamic applications; it generates sufficiently low-overhead code to tune parameters each time a kernel runs, making fast decisions. We apply Apollo to two hydrodynamics benchmarks and to a production multi-physics code, and show that it can achieve speedups from 1.2x to 4.8x.",
+  "doi": "10.1109/ipdps.2017.38",
+  "openalex": "W2727949054",
+  "status": "ok",
+  "title": "Apollo: Reusable Models for Fast, Dynamic Tuning of Input-Dependent Code"
+ },
+ "10.1109_ipdps.2018.00104": {
+  "abstract": "Sparse matrix vector multiplication (SpMV) is an important kernel in many applications and is often the major performance bottleneck. The storage format of sparse matrices critically affects the performance of SpMV. Although there have been previous studies on selecting the appropriate format for a given matrix, they have ignored the influence of runtime prediction overhead and format conversion overhead. For many common uses of SpMV, such overhead is part of the execution times and may outweigh the benefits of new formats. Ignoring them makes the predictions from previous solutions frequently suboptimal and sometimes inferior. On the other hand, the overhead is difficult to consider, as it, along with the benefits of having a new format, varies from matrix to matrix, and from application to application. This work proposes a solution. It first explores the pros and cons of various possible treatments to the overhead in the format selection problem. It then presents an explicit approach which involves several regression models for capturing the influence of the overhead and benefits of format conversions on the overall program performance. It proposes a two-stage lazy-and-light scheme to help control the risks in the format predictions and at the same time maximize the overall format conversion benefits. Experiments show that the technique outperforms previous techniques significantly. It improves the overall performance of applications by 1.14X to 1.43X, significantly larger than the 0.82X to 1.24X upperbound speedups overhead-oblivious methods could give.",
+  "doi": "10.1109/ipdps.2018.00104",
+  "openalex": "W2887930195",
+  "status": "ok",
+  "title": "Overhead-Conscious Format Selection for SpMV-Based Applications"
+ },
+ "10.1109_ipdps47924.2020.00090": {
+  "abstract": "High performance computing applications, runtimes, and platforms are becoming more configurable to enable applications to obtain better performance. As a result, users are increasingly presented with a multitude of options to configure application-specific as well as platform-level parameters. The combined effect of different parameter choices on application performance is difficult to predict, and an exhaustive evaluation of this combinatorial parameter space is practically infeasible. One approach to parameter selection is a user-guided exploration of a part of the space. However, such an ad hoc exploration of the parameter space can result in suboptimal choices. Therefore, an automatic approach that can efficiently explore the parameter space is needed. In this paper, we propose HiPerBOt, a Bayesian optimization based configuration selection framework to identify application and platform-level parameters that result in high performing configurations. We demonstrate the effectiveness of HiPerBOt in tuning parameters that include compiler flags, runtime settings, and application-level options for several parallel codes, including, Kripke, Hypre, LULESH, and OpenAtom.",
+  "doi": "10.1109/ipdps47924.2020.00090",
+  "openalex": "W3042713993",
+  "status": "ok",
+  "title": "Auto-tuning Parameter Choices in HPC Applications using Bayesian Optimization"
+ },
+ "10.1109_ipdpsw.2017.28": {
+  "abstract": "In this paper we explore the problem of autotuning the choice of algorithm. For a given task, there may be multiple algorithms available, each of which may contain its own set of tunable parameters and may provide optimal performance under different sets of inputs. Algorithmic choice is a type of tuning parameter which has not been well studied in the history of autotuning. To close this gap, we examine established autotuning techniques with regard to their ability of handling these parameters. We discuss the inadequacy of the state-of-the-art autotuning toolbox in manipulating algorithmic choice parameters and introduce four strategies to tackle this task. We evaluate our strategies in two case studies of online-autotuning scenarios, both with and without additional, numeric tuning parameters. The strategies are able to determine the optimal algorithm, and can even interoperate with the autotuning of the additional parameters.",
+  "doi": "10.1109/ipdpsw.2017.28",
+  "openalex": "W2725201101",
+  "status": "ok",
+  "title": "Online-Autotuning in the Presence of Algorithmic Choice"
+ },
+ "10.1109_ispass.2018.00029": {
+  "abstract": "A proper evaluation of techniques that require multiple training and evaluation executions of a benchmark, such as Feedback-Directed Optimization (FDO), requires multiple workloads that can be used to characterize variations on the behaviour of a program based on the workload. This paper aims to improve the performance evaluation of computer systems - including compilers, computer architecture simulation, and operating-system prototypes - that rely on the industrystandard SPEC CPU benchmark suite. A main concern with the use of this suite in research is that it is distributed with a very small number of workloads. This paper describes the process to create additional workloads for this suite and offers useful insights in many of its benchmarks. The set of additional workloads created, named the Alberta Workloads for the SPEC CPU 2017 Benchmark Suite1 is made freely available with the goal of providing additional data points for the exploration of learning in computing systems. These workloads should also contribute to ameliorate the hidden learning problem where a researcher sets parameters to a system during development based on a set of benchmarks and then evaluates the system using the very same set of benchmarks with the very same workloads.",
+  "doi": "10.1109/ispass.2018.00029",
+  "openalex": "W2806944479",
+  "status": "ok",
+  "title": "The Alberta Workloads for the SPEC CPU 2017 Benchmark Suite"
+ },
+ "10.1109_ispass.2019.00039": {
+  "abstract": "With the ever-increasing amount of data and input variations, portable performance is becoming harder to exploit on today's architectures. Computational setups utilize single-chip processors, such as GPUs or large-scale multicores for graph analytics. Some algorithm-input combinations perform more efficiently when utilizing a GPU's higher concurrency and bandwidth, while others perform better with a multicore's stronger data caching capabilities. Architectural choices also occur within selected accelerators, where variables such as threading and thread placement need to be decided for optimal performance. This paper proposes a performance predictor paradigm for a heterogeneous parallel architecture where multiple disparate accelerators are integrated in an operational high performance computing setup. The predictor aims to improve graph processing efficiency by exploiting the underlying concurrency variations within and across the heterogeneous integrated accelerators using graph benchmark and input characteristics. The evaluation shows that intelligent and real-time selection of near-optimal concurrency choices provides performance benefits ranging from 5 % to 3.8 x, and an energy benefit averaging around 2.4 x over the traditional single-accelerator setup.",
+  "doi": "10.1109/ispass.2019.00039",
+  "openalex": "W2935614364",
+  "status": "ok",
+  "title": "HeteroMap: A Runtime Performance Predictor for Efficient Processing of Graph Analytics on Heterogeneous Multi-Accelerators"
+ },
+ "10.1109_jproc.2018.2817118": {
+  "abstract": "In the last decade, machine-learning-based compilation has moved from an obscure research niche to a mainstream activity. In this paper, we describe the relationship between machine learning and compiler optimization and introduce the main concepts of features, models, training, and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine-learning-based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.1109/jproc.2018.2817118",
+  "openalex": "W2962724414",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimization"
+ },
+ "10.1109_jproc.2018.2841200": {
+  "abstract": "Autotuning refers to the automatic generation of a search space of possible implementations of a computation that are evaluated through models and/or empirical measurement to identify the most desirable implementation. Autotuning has the potential to dramatically improve the performance portability of petascale and exascale applications. To date, autotuning has been used primarily in high-performance applications through tunable libraries or previously tuned application code that is integrated directly into the application. This paper draws on the authors' extensive experience applying autotuning to high-performance applications, describing both successes and future challenges. If autotuning is to be widely used in the HPC community, researchers must address the software engineering challenges, manage configuration overheads, and continue to demonstrate significant performance gains and portability across architectures. In particular, tools that configure the application must be integrated into the application build process so that tuning can be reapplied as the application and target architectures evolve.",
+  "doi": "10.1109/jproc.2018.2841200",
+  "openalex": "W2898099374",
+  "status": "ok",
+  "title": "Autotuning in High-Performance Computing Applications"
+ },
+ "10.1109_pact.2017.24": {
+  "abstract": "Accurate automatic optimization heuristics are necessary for dealing with thecomplexity and diversity of modern hardware and software. Machine learning is aproven technique for learning such heuristics, but its success is bound by thequality of the features used. These features must be hand crafted by developersthrough a combination of expert domain knowledge and trial and error. This makesthe quality of the final model directly dependent on the skill and availabletime of the system architect. Our work introduces a better way for building heuristics. We develop a deepneural network that learns heuristics over raw code, entirely without using codefeatures. The neural network simultaneously constructs appropriaterepresentations of the code and learns how best to optimize, removing the needfor manual feature creation. Further, we show that our neural nets can transferlearning from one optimization problem to another, improving the accuracy of newmodels, without the help of human experts. We compare the effectiveness of our automatically generated heuristics againstones with features hand-picked by experts. We examine two challenging tasks:predicting optimal mapping for heterogeneous parallelism and GPU threadcoarsening factors. In 89% of the cases, the quality of our fully automaticheuristics matches or surpasses that of state-of-the-art predictive models usinghand-crafted features, providing on average 14% and 12% more performance withno human effort expended on designing features.",
+  "doi": "10.1109/pact.2017.24",
+  "openalex": "W2618564128",
+  "status": "ok",
+  "title": "End-to-End Deep Learning of Optimization Heuristics"
+ },
+ "10.1109_saner48275.2020.9054849": {
+  "abstract": "Coding rules become more critical for security-oriented softwares, which prefer compilers as their base platforms due to simultaneous demands not only in a mature grammatical analysis, but also in compilation and optimization techniques. However, engineering such a compiler-based analyzer, exploring proper launch points before integrating hundreds of rules one by one in the frontend of compilers, is a completely manual decision-making process with heavy redundant efforts exhausted. To improve this, we introduce a novel pattern-guided approach, named Referee, to facilitate this process. Referee improves the manual approach significantly by making three advances: (1) our pattern-guided approach can significantly reduce the amount of redundant manual efforts required, (2) a twin-graph aided broadcasting process is developed to enable rule patterns to be characterized with partially developed rules, and (3) a reliable recommendation mechanism is used to pinpoint the launch point for a new rule based on the accumulated experience from handling earlier rules. We have implemented Referee in GCC 8.2 with 163 rules from SPACE-C and MISRA-C standards. Referee achieves an accuracy of 89.9% on recommendation of launch points for new rules to our GCC-based analyzer automatically when trained with 70% of all the rules. Decreasing the training data size to 60% and 50% still yields an accuracy of 87.7% and 81.5%, respectively. Therefore, Referee can significantly reduce the amount of manual efforts that would otherwise be required, with a careful selection of seeding rule patterns, providing an interesting and fruitful avenue for further research.",
+  "doi": "10.1109/saner48275.2020.9054849",
+  "openalex": "W3014462788",
+  "status": "ok",
+  "title": "Referee: A Pattern-Guided Approach for Auto Design in Compiler-Based Analyzers"
+ },
+ "10.1109_tc.2018.2883597": {
+  "abstract": "In the autonomic computing context, the system is perceived as a set of autonomous elements capable of self-management, where end-users define high-level goals and the system shall adapt to achieve the desired behaviour. Runtime adaptation creates several optimization opportunities, especially if we consider approximate computing applications, where it is possible to trade off the accuracy of the result and the performance. Given that modern systems are limited by the power dissipated, autonomic computing is an appealing approach to increase the computation efficiency. In this paper, we introduce mARGOt, a dynamic autotuning framework to enhance the target application with an adaptation layer to provide self-optimization capabilities. The framework is implemented as a C++ library that works at function-level and provides to the application a mechanism to adapt in a reactive and a proactive way. Moreover, the application is capable to change dynamically its requirements and to learn online the underlying application-knowledge. We evaluated the proposed framework in three real-life scenarios, ranging from embedded to HPC applications. In the three use cases, experimental results demonstrate how, thanks to mARGOt, it is possible to increase the computation efficiency by adapting the application at runtime with a limited overhead.",
+  "doi": "10.1109/tc.2018.2883597",
+  "openalex": "W2903046887",
+  "status": "ok",
+  "title": "mARGOt: A Dynamic Autotuning Framework for Self-Aware Approximate Computing"
+ },
+ "10.1109_tpds.2017.2755657": {
+  "abstract": "Tuning the kernel work-group size for GPUs is a challenging problem. In this paper, using the performance counters provided by GPUs, we characterize a large body of OpenCL kernels to identify the performance factors that affect the choice of a good work-group size. Based on the characterization, we realize that the most influential performance factors with regard to the work-group size include occupancy, coalesced global memory accesses, cache contention, and variation in the amount of workload in the kernel. By tackling the performance factors one by one, we propose auto-tuning techniques that selects the best work-group size and shape for GPU kernels. We show the effectiveness of our auto-tuner by evaluating it with a set of 54 OpenCL kernels on three different NVIDIA GPUs and one AMD GPU. On average, the auto-tuner needs to spend no more than 8 percent of the time required by an exhaustive search to find an optimal work-group size. The execution time of the selected sub-optimal work-group size is at most 1.14x slower than that of the optimal work-group size found by the exhaustive search, on average.",
+  "doi": "10.1109/tpds.2017.2755657",
+  "openalex": "W2758013740",
+  "status": "ok",
+  "title": "An Auto-Tuner for OpenCL Work-Group Size on GPUs"
+ },
+ "10.1109_tpds.2019.2932931": {
+  "abstract": "Sparse matrix-vector multiplication (SpMV) is an important kernel and its performance is critical for many applications. Storage format selection is to select the best format to store a sparse matrix; it is essential for SpMV performance. Prior studies have focused on predicting the format that helps SpMV run fastest, but have ignored the runtime prediction and format conversion overhead. This work shows that the runtime overhead makes the predictions from previous solutions frequently sub-optimal and sometimes inferior regarding the end-to-end time. It proposes a new paradigm for SpMV storage selection, an overhead-conscious method. Through carefully designed regression models and neural network-based time series prediction models, the method captures the influence imposed on the overall program performance by the overhead and the benefits of format prediction and conversions. The method employs a novel two-stage lazy-and-light scheme to help control the possible negative effects of format predictions, and at the same time, maximize the overall format conversion benefits. Experiments show that the technique outperforms previous techniques significantly. It improves the overall performance of applications by 1.21X to 1.53X, significantly larger than the 0.83X to 1.25X upper-bound speedups overhead-oblivious methods could give.",
+  "doi": "10.1109/tpds.2019.2932931",
+  "openalex": "W2965706220",
+  "status": "ok",
+  "title": "Enabling Runtime SpMV Format Selection through an Overhead Conscious Method"
+ },
+ "10.1109_tpds.2020.3040150": {
+  "abstract": "Despite numerous efforts for optimizing the performance of Sparse Matrix and Vector Multiplication (SpMV) on modern hardware architectures, few works are done to its sparse counterpart, Sparse Matrix and Sparse Vector Multiplication (SpMSpV), not to mention dealing with input vectors of varied sparsity. The key challenge is that depending on the sparsity levels, distribution of data, and compute platform, the optimal choice of SpMV/SpMSpV kernel can vary, and a static choice does not suffice. In this article, we propose an adaptive SpMV/SpMSpV framework, which can automatically select the appropriate SpMV/SpMSpV kernel on GPUs for any sparse matrix and vector at the runtime. Based on systematic analysis on key factors such as computing pattern, workload distribution and write-back strategy, eight candidate SpMV/SpMSpV kernels are encapsulated into the framework to achieve high performance in a seamless manner. A comprehensive study on machine learning-based kernel selector is performed to choose the kernel and adapt with the varieties of both the input and hardware from both accuracy and overhead perspectives. Experiments demonstrate that the adaptive framework can substantially outperform the previous state-of-the-art in real-world applications on NVIDIA Tesla K40m, P100, and V100 GPUs.",
+  "doi": "10.1109/tpds.2020.3040150",
+  "openalex": "W3110597019",
+  "status": "ok",
+  "title": "Adaptive SpMV/SpMSpV on GPUs for Input Vectors of Varied Sparsity"
+ },
+ "10.1145_2851500": {
+  "abstract": "Runtime specialization is used for optimizing programs based on partial information available only at runtime. In this paper we apply autotuning on runtime specialization of Sparse Matrix-Vector Multiplication to predict a best specialization method among several. In 91% to 96% of the predictions, either the best or the second-best method is chosen. Predictions achieve average speedups that are very close to the speedups achievable when only the best methods are used. By using an efficient code generator and a carefully designed set of matrix features, we show the runtime costs can be amortized to bring performance benefits for many real-world cases.",
+  "doi": "10.1145/2851500",
+  "openalex": "W2321358174",
+  "status": "ok",
+  "title": "Autotuning Runtime Specialization for Sparse Matrix-Vector Multiplication"
+ },
+ "10.1145_2872362.2872402": {
+  "abstract": "Approximate computing trades off accuracy of results for resources such as energy or computing time. There is a large and rapidly growing literature on approximate computing that has focused mostly on showing the benefits of approximate computing. However, we know relatively little about how to control approximation in a disciplined way. In this paper, we address the problem of controlling approximation for non-streaming programs that have a set of \"knobs\" that can be dialed up or down to control the level of approximation of different components in the program. We formulate this control problem as a constrained optimization problem, and describe a system called Capri that uses machine learning to learn cost and error models for the program, and uses these models to determine, for a desired level of approximation, knob settings that optimize metrics such as running time or energy usage. Experimental results with complex benchmarks from different problem domains demonstrate the effectiveness of this approach.",
+  "doi": "10.1145/2872362.2872402",
+  "openalex": "W2319130110",
+  "status": "ok",
+  "title": "Proactive Control of Approximate Programs"
+ },
+ "10.1145_2872362.2872411": {
+  "abstract": "Code variants represent alternative implementations of a computation, and are common in high-performance libraries and applications to facilitate selecting the most appropriate implementation for a specific execution context (target architecture and input dataset). Automating code variant selection typically relies on machine learning to construct a model during an offline learning phase that can be quickly queried at runtime once the execution context is known. In this paper, we define a new approach called architecture-adaptive code variant tuning, where the variant selection model is learned on a set of source architectures, and then used to predict variants on a new target architecture without having to repeat the training process. We pose this as a multi-task learning problem, where each source architecture corresponds to a task; we use device features in the construction of the variant selection model. This work explores the effectiveness of multi-task learning and the impact of different strategies for device feature selection. We evaluate our approach on a set of benchmarks and a collection of six NVIDIA GPU architectures from three distinct generations. We achieve performance results that are mostly comparable to the previous approach of tuning for a single GPU architecture without having to repeat the learning phase.",
+  "doi": "10.1145/2872362.2872411",
+  "openalex": "W2329047703",
+  "status": "ok",
+  "title": "Architecture-Adaptive Code Variant Tuning"
+ },
+ "10.1145_2908080.2908087": {
+  "abstract": "This paper introduces Input Responsive Approximation (IRA), an approach that uses a canary input — a small program input carefully constructed to capture the intrinsic properties of the original input — to automatically control how program approximation is applied on an input-by-input basis. Motivating this approach is the observation that many of the prior techniques focusing on choosing how to approximate arrive at conservative decisions by discounting substantial differences between inputs when applying approximation. The main challenges in overcoming this limitation lie in making the choice of how to approximate both effectively (e.g., the fastest approximation that meets a particular accuracy target) and rapidly for every input. With IRA, each time the approximate program is run, a canary input is constructed and used dynamically to quickly test a spectrum of approximation alternatives. Based on these runtime tests, the approximation that best fits the desired accuracy constraints is selected and applied to the full input to produce an approximate result. We use IRA to select and parameterize mixes of four approximation techniques from the literature for a range of 13 image processing, machine learning, and data mining applications. Our results demonstrate that IRA significantly outperforms prior approaches, delivering an average of 10.2× speedup over exact execution while minimizing accuracy losses in program outputs.",
+  "doi": "10.1145/2908080.2908087",
+  "openalex": "W2411972054",
+  "status": "ok",
+  "title": "Input responsiveness: using canary inputs to dynamically steer approximation"
+ },
+ "10.1145_2925426.2926288": {
+  "abstract": "Loop tiling or blocking improves temporal locality by dividing the problem domain into tiles and then repeatedly accessing the data within a tile. While this reduces reuse, it also leads to an often ignored side-effect: breaking the streaming data access pattern. As a result, tiled codes are unable to exploit the sophisticated hardware prefetchers in present-day processors to extract extra performance.",
+  "doi": "10.1145/2925426.2926288",
+  "openalex": "W2414782828",
+  "status": "ok",
+  "title": "TurboTiling"
+ },
+ "10.1145_2928270": {
+  "abstract": "The variety of today’s architectures forces programmers to spend a great deal of time porting and tuning application codes across different platforms. Compilers themselves need additional tuning, which has considerable complexity as the standard optimization levels, usually designed for the average case and the specific target architecture, often fail to bring the best results. This article proposes COBAYN : Compiler autotuning framework using BAYesian Networks, an approach for a compiler autotuning methodology using machine learning to speed up application performance and to reduce the cost of the compiler optimization phases. The proposed framework is based on the application characterization done dynamically by using independent microarchitecture features and Bayesian networks. The article also presents an evaluation based on using static analysis and hybrid feature collection approaches. In addition, the article compares Bayesian networks with respect to several state-of-the-art machine-learning models. Experiments were carried out on an ARM embedded platform and GCC compiler by considering two benchmark suites with 39 applications. The set of compiler configurations, selected by the model (less than 7% of the search space), demonstrated an application performance speedup of up to 4.6 × on Polybench (1.85 × on average) and 3.1 × on cBench (1.54 × on average) with respect to standard optimization levels. Moreover, the comparison of the proposed technique with (i) random iterative compilation, (ii) machine learning--based iterative compilation, and (iii) noniterative predictive modeling techniques shows, on average, 1.2 × , 1.37 × , and 1.48 × speedup, respectively. Finally, the proposed method demonstrates 4 × and 3 × speedup, respectively, on cBench and Polybench in terms of exploration efficiency given the same quality of the solutions generated by the random iterative compilation model.",
+  "doi": "10.1145/2928270",
+  "openalex": "W2441512324",
+  "status": "ok",
+  "title": "COBAYN"
+ },
+ "10.1145_2954679.2872402": {
+  "abstract": "Approximate computing trades off accuracy of results for resources such as energy or computing time. There is a large and rapidly growing literature on approximate computing that has focused mostly on showing the benefits of approximate computing. However, we know relatively little about how to control approximation in a disciplined way. In this paper, we address the problem of controlling approximation for non-streaming programs that have a set of \"knobs\" that can be dialed up or down to control the level of approximation of different components in the program. We formulate this control problem as a constrained optimization problem, and describe a system called Capri that uses machine learning to learn cost and error models for the program, and uses these models to determine, for a desired level of approximation, knob settings that optimize metrics such as running time or energy usage. Experimental results with complex benchmarks from different problem domains demonstrate the effectiveness of this approach.",
+  "doi": "10.1145/2954679.2872402",
+  "openalex": "W4255614840",
+  "status": "ok",
+  "title": "Proactive Control of Approximate Programs"
+ },
+ "10.1145_2954679.2872411": {
+  "abstract": "Code variants represent alternative implementations of a computation, and are common in high-performance libraries and applications to facilitate selecting the most appropriate implementation for a specific execution context (target architecture and input dataset). Automating code variant selection typically relies on machine learning to construct a model during an offline learning phase that can be quickly queried at runtime once the execution context is known. In this paper, we define a new approach called architecture-adaptive code variant tuning, where the variant selection model is learned on a set of source architectures, and then used to predict variants on a new target architecture without having to repeat the training process. We pose this as a multi-task learning problem, where each source architecture corresponds to a task; we use device features in the construction of the variant selection model. This work explores the effectiveness of multi-task learning and the impact of different strategies for device feature selection. We evaluate our approach on a set of benchmarks and a collection of six NVIDIA GPU architectures from three distinct generations. We achieve performance results that are mostly comparable to the previous approach of tuning for a single GPU architecture without having to repeat the learning phase.",
+  "doi": "10.1145/2954679.2872411",
+  "openalex": "W4249999659",
+  "status": "ok",
+  "title": "Architecture-Adaptive Code Variant Tuning"
+ },
+ "10.1145_2954680.2872411": {
+  "abstract": "Code variants represent alternative implementations of a computation, and are common in high-performance libraries and applications to facilitate selecting the most appropriate implementation for a specific execution context (target architecture and input dataset). Automating code variant selection typically relies on machine learning to construct a model during an offline learning phase that can be quickly queried at runtime once the execution context is known. In this paper, we define a new approach called architecture-adaptive code variant tuning, where the variant selection model is learned on a set of source architectures, and then used to predict variants on a new target architecture without having to repeat the training process. We pose this as a multi-task learning problem, where each source architecture corresponds to a task; we use device features in the construction of the variant selection model. This work explores the effectiveness of multi-task learning and the impact of different strategies for device feature selection. We evaluate our approach on a set of benchmarks and a collection of six NVIDIA GPU architectures from three distinct generations. We achieve performance results that are mostly comparable to the previous approach of tuning for a single GPU architecture without having to repeat the learning phase.",
+  "doi": "10.1145/2954680.2872411",
+  "openalex": "W4250054043",
+  "status": "ok",
+  "title": "Architecture-Adaptive Code Variant Tuning"
+ },
+ "10.1145_2980024.2872402": {
+  "abstract": "Approximate computing trades off accuracy of results for resources such as energy or computing time. There is a large and rapidly growing literature on approximate computing that has focused mostly on showing the benefits of approximate computing. However, we know relatively little about how to control approximation in a disciplined way. In this paper, we address the problem of controlling approximation for non-streaming programs that have a set of \"knobs\" that can be dialed up or down to control the level of approximation of different components in the program. We formulate this control problem as a constrained optimization problem, and describe a system called Capri that uses machine learning to learn cost and error models for the program, and uses these models to determine, for a desired level of approximation, knob settings that optimize metrics such as running time or energy usage. Experimental results with complex benchmarks from different problem domains demonstrate the effectiveness of this approach.",
+  "doi": "10.1145/2980024.2872402",
+  "openalex": "W4233153727",
+  "status": "ok",
+  "title": "Proactive Control of Approximate Programs"
+ },
+ "10.1145_2980024.2872411": {
+  "abstract": "Code variants represent alternative implementations of a computation, and are common in high-performance libraries and applications to facilitate selecting the most appropriate implementation for a specific execution context (target architecture and input dataset). Automating code variant selection typically relies on machine learning to construct a model during an offline learning phase that can be quickly queried at runtime once the execution context is known. In this paper, we define a new approach called architecture-adaptive code variant tuning, where the variant selection model is learned on a set of source architectures, and then used to predict variants on a new target architecture without having to repeat the training process. We pose this as a multi-task learning problem, where each source architecture corresponds to a task; we use device features in the construction of the variant selection model. This work explores the effectiveness of multi-task learning and the impact of different strategies for device feature selection. We evaluate our approach on a set of benchmarks and a collection of six NVIDIA GPU architectures from three distinct generations. We achieve performance results that are mostly comparable to the previous approach of tuning for a single GPU architecture without having to repeat the learning phase.",
+  "doi": "10.1145/2980024.2872411",
+  "openalex": "W4253172297",
+  "status": "ok",
+  "title": "Architecture-Adaptive Code Variant Tuning"
+ },
+ "10.1145_2980983.2908087": {
+  "abstract": "This paper introduces Input Responsive Approximation (IRA), an approach that uses a canary input — a small program input carefully constructed to capture the intrinsic properties of the original input — to automatically control how program approximation is applied on an input-by-input basis. Motivating this approach is the observation that many of the prior techniques focusing on choosing how to approximate arrive at conservative decisions by discounting substantial differences between inputs when applying approximation. The main challenges in overcoming this limitation lie in making the choice of how to approximate both effectively (e.g., the fastest approximation that meets a particular accuracy target) and rapidly for every input. With IRA, each time the approximate program is run, a canary input is constructed and used dynamically to quickly test a spectrum of approximation alternatives. Based on these runtime tests, the approximation that best fits the desired accuracy constraints is selected and applied to the full input to produce an approximate result. We use IRA to select and parameterize mixes of four approximation techniques from the literature for a range of 13 image processing, machine learning, and data mining applications. Our results demonstrate that IRA significantly outperforms prior approaches, delivering an average of 10.2× speedup over exact execution while minimizing accuracy losses in program outputs.",
+  "doi": "10.1145/2980983.2908087",
+  "openalex": "W4231963082",
+  "status": "ok",
+  "title": "Input responsiveness: using canary inputs to dynamically steer approximation"
+ },
+ "10.1145_3126908.3126939": {
+  "abstract": "Efficient implementations of HPC applications for parallel architectures generally rely on external software packages (e.g., BLAS, LAPACK, CUDNN). While these libraries provide highly optimized routines for certain characteristics of inputs (e.g., square matrices), they generally do not retain optimal performance across the wide range of problems encountered in practice. In this paper, we present an input-aware auto-tuning framework for matrix multiplications and convolutions, ISAAC, which uses predictive modeling techniques to drive highly parameterized PTX code templates towards not only hardware-, but also application-specific kernels. Numerical experiments on the NVIDIA Maxwell and Pascal architectures show up to 3x performance gains over both cuBLAS and cuDNN after only a few hours of auto-tuning.",
+  "doi": "10.1145/3126908.3126939",
+  "openalex": "W2768009889",
+  "status": "ok",
+  "title": "Input-aware auto-tuning of compute-bound HPC kernels"
+ },
+ "10.1145_3126908.3126969": {
+  "abstract": "Tuning application parameters for optimal performance is a challenging combinatorial problem. Hence, techniques for modeling the functional relationships between various input features in the parameter space and application performance are important. We show that simple statistical inference techniques are inadequate to capture these relationships. Even with more complex ensembles of models, the minimum coverage of the parameter space required via experimental observations is still quite large. We propose a deep learning based approach that can combine information from exhaustive observations collected at a smaller scale with limited observations collected at a larger target scale. The proposed approach is able to accurately predict performance in the regimes of interest to performance analysts while outperforming many traditional techniques. In particular, our approach can identify the best performing configurations even when trained using as few as 1% of observations at the target scale.",
+  "doi": "10.1145/3126908.3126969",
+  "openalex": "W2767224631",
+  "status": "ok",
+  "title": "Performance modeling under resource constraints using deep transfer learning"
+ },
+ "10.1145_3178487.3178495": {
+  "abstract": "This work presents a systematic exploration on the promise and special challenges of deep learning for sparse matrix format selection---a problem of determining the best storage format for a matrix to maximize the performance of Sparse Matrix Vector Multiplication (SpMV). It describes how to effectively bridge the gap between deep learning and the special needs of the pillar HPC problem through a set of techniques on matrix representations, deep learning structure, and cross-architecture model migrations. The new solution cuts format selection errors by two thirds, and improves SpMV performance by 1.73X on average over the state of the art.",
+  "doi": "10.1145/3178487.3178495",
+  "openalex": "W2788264912",
+  "status": "ok",
+  "title": "Bridging the gap between deep learning and sparse matrix format selection"
+ },
+ "10.1145_3197978": {
+  "abstract": "Since the mid-1990s, researchers have been trying to use machine-learning-based approaches to solve a number of different compiler optimization problems. These techniques primarily enhance the quality of the obtained results and, more importantly, make it feasible to tackle two main compiler optimization problems: optimization selection (choosing which optimizations to apply) and phase-ordering (choosing the order of applying optimizations). The compiler optimization space continues to grow due to the advancement of applications, increasing number of compiler optimizations, and new target architectures. Generic optimization passes in compilers cannot fully leverage newly introduced optimizations and, therefore, cannot keep up with the pace of increasing options. This survey summarizes and classifies the recent advances in using machine learning for the compiler optimization field, particularly on the two major problems of (1) selecting the best optimizations, and (2) the phase-ordering of optimizations. The survey highlights the approaches taken so far, the obtained results, the fine-grain classification among different approaches, and finally, the influential papers of the field.",
+  "doi": "10.1145/3197978",
+  "openalex": "W2783614532",
+  "status": "ok",
+  "title": "A Survey on Compiler Autotuning using Machine Learning"
+ },
+ "10.1145_3200691.3178495": {
+  "abstract": "This work presents a systematic exploration on the promise and special challenges of deep learning for sparse matrix format selection---a problem of determining the best storage format for a matrix to maximize the performance of Sparse Matrix Vector Multiplication (SpMV). It describes how to effectively bridge the gap between deep learning and the special needs of the pillar HPC problem through a set of techniques on matrix representations, deep learning structure, and cross-architecture model migrations. The new solution cuts format selection errors by two thirds, and improves SpMV performance by 1.73X on average over the state of the art.",
+  "doi": "10.1145/3200691.3178495",
+  "openalex": "W3015089394",
+  "status": "ok",
+  "title": "Bridging the gap between deep learning and sparse matrix format selection"
+ },
+ "10.1145_3236024.3275432": {
+  "abstract": "Reinforcement learning (RL) has seen tremendous success at solving a variety of problems ranging from industrial automation to games. This paper describes how existing programming languages can be augmented with new features so as to allow developers to exploit the power of modern RL algorithms and implementations.",
+  "doi": "10.1145/3236024.3275432",
+  "openalex": "W2899054334",
+  "status": "ok",
+  "title": "Towards learning-augmented languages"
+ },
+ "10.1145_3293883.3295716": {
+  "abstract": "This paper proposes Gswitch, a pattern-based algorithmic auto-tuning system that dynamically switches between optimization variants with negligible overhead. Its novelty lies in a small set of algorithmic patterns that allow for the configurable assembly of variants of the algorithm. The fast transition of Gswitch is based on a machine learning model trained using 644 real graphs. Moreover, Gswitch provides a simple programming interface that conceals low-level tuning details from the user. We evaluate Gswitch on typical graph algorithms (BFS, CC, PR, SSSP, and BC) using Nvidia Kepler and Pascal GPUs. The results show that Gswitch runs up to 10× faster than the best configuration of the state-of-the-art programmable GPU-based graph processing libraries on 10 representative graphs. Gswitch outperforms Gunrock on 92.4% cases of 644 graphs which is the largest dataset evaluation reported to date.",
+  "doi": "10.1145/3293883.3295716",
+  "openalex": "W2915012400",
+  "status": "ok",
+  "title": "A pattern based algorithmic autotuner for graph processing on GPUs"
+ },
+ "10.1145_3302516.3307348": {
+  "abstract": "Approximate computing is necessary to meet deadlines in some compute-intensive applications like simulation. Building them requires a high level of expertise from the application designers as well as a significant development effort. Some application programming interfaces greatly facilitate their conception but they still heavily rely on the developer's domain-specific knowledge and require many modifications to successfully generate an approximate version of the program. In this paper we present new techniques to semi-automatically discover relevant approximate computing parameters. We believe that superior compiler-user interaction is the key to improved productivity. After pinpointing the region of interest to optimize, the developer is guided by the compiler in making the best implementation choices. Static analysis and runtime monitoring are used to infer approximation parameter values for the application. We evaluated these techniques on multiple application kernels that support approximation and show that with the help of our method, we achieve similar performance as non-assisted, hand-tuned version while requiring minimal intervention from the user.",
+  "doi": "10.1145/3302516.3307348",
+  "openalex": "W2912098980",
+  "status": "ok",
+  "title": "Automatic adaptive approximation for stencil computations"
+ },
+ "10.1145_3314221.3314593": {
+  "abstract": "Most traditional software systems are not built with the artificial intelligence support (AI) in mind. Among them, some may require human interventions to operate, e.g., the manual specification of the parameters in the data processing programs, or otherwise, would behave poorly. We propose a novel framework called Autonomizer to autonomize these systems by installing the AI into the traditional programs. Autonomizeris general so it can be applied to many real-world applications. We provide the primitives and the run-time support, where the primitives abstract common tasks of autonomization and the runtime support realizes them transparently. With the support of Autonomizer, the users can gain the AI support with little engineering efforts. Like many other AI applications, the challenge lies in the feature selection, which we address by proposing multiple automated strategies based on the program analysis. Our experiment results on nine real-world applications show that the autonomization only requires adding a few lines to the source code.Besides, for the data-processing programs, Autonomizer improves the output quality by 161% on average over the default settings. For the interactive programs such as game/driving,Autonomizer achieves higher success rate with lower training time than existing autonomized programs.",
+  "doi": "10.1145/3314221.3314593",
+  "openalex": "W2953594004",
+  "status": "ok",
+  "title": "Programming support for autonomizing software"
+ },
+ "10.1145_3316781.3317789": {
+  "abstract": "Modern heterogeneous platforms require compilers capable of choosing the appropriate device for the execution of program portions. This paper presents a machine learning method designed for supporting mapping decisions through the analysis of the program source code represented in LLVM assembly language (IR) for exploiting the advantages offered by this generalised and optimised representation. To evaluate our solution, we trained an LSTM neural network on OpenCL kernels compiled in LLVM-IR and processed with our tokenizer capable of filtering less-informative tokens. We tested the network that reaches an accuracy of 85% in distinguishing the best computational unit.",
+  "doi": "10.1145/3316781.3317789",
+  "openalex": "W2946120105",
+  "status": "ok",
+  "title": "Code Mapping in Heterogeneous Platforms Using Deep Learning and LLVM-IR"
+ },
+ "10.1145_3360545": {
+  "abstract": "We present Parallely, a programming language and a system for verification of approximations in parallel message-passing programs. Parallely's language can express various software and hardware level approximations that reduce the computation and communication overheads at the cost of result accuracy. Parallely's safety analysis can prove the absence of deadlocks in approximate computations and its type system can ensure that approximate values do not interfere with precise values. Parallely's quantitative accuracy analysis can reason about the frequency and magnitude of error. To support such analyses, Parallely presents an approximation-aware version of canonical sequentialization, a recently proposed verification technique that generates sequential programs that capture the semantics of well-structured parallel programs (i.e., ones that satisfy a symmetric nondeterminism property). To the best of our knowledge, Parallely is the first system designed to analyze parallel approximate programs. We demonstrate the effectiveness of Parallely on eight benchmark applications from the domains of graph analytics, image processing, and numerical analysis. We also encode and study five approximation mechanisms from literature. Our implementation of Parallely automatically and efficiently proves type safety, reliability, and accuracy properties of the approximate benchmarks.",
+  "doi": "10.1145/3360545",
+  "openalex": "W2980166939",
+  "status": "ok",
+  "title": "Verifying safety and accuracy of approximate parallel programs via canonical sequentialization"
+ },
+ "10.1145_3360612": {
+  "abstract": "We propose ApproxHPVM, a compiler IR and system designed to enable accuracy-aware performance and energy tuning on heterogeneous systems with multiple compute units and approximation methods. ApproxHPVM automatically translates end-to-end application-level quality metrics into accuracy requirements for individual operations. ApproxHPVM uses a hardware-agnostic accuracy-tuning phase to do this translation that provides greater portability across heterogeneous hardware platforms and enables future capabilities like accuracy-aware dynamic scheduling and design space exploration. ApproxHPVM incorporates three main components: (a) a compiler IR with hardware-agnostic approximation metrics, (b) a hardware-agnostic accuracy-tuning phase to identify error-tolerant computations, and (c) an accuracy-aware hardware scheduler that maps error-tolerant computations to approximate hardware components. As ApproxHPVM does not incorporate any hardware-specific knowledge as part of the IR, it can serve as a portable virtual ISA that can be shipped to all kinds of hardware platforms. We evaluate our framework on nine benchmarks from the deep learning domain and five image processing benchmarks. Our results show that our framework can offload chunks of approximable computations to special-purpose accelerators that provide significant gains in performance and energy, while staying within user-specified application-level quality metrics with high probability. Across the 14 benchmarks, we observe from 1-9x performance speedups and 1.1-11.3x energy reduction for very small reductions in accuracy.",
+  "doi": "10.1145/3360612",
+  "openalex": "W2979645155",
+  "status": "ok",
+  "title": "ApproxHPVM: a portable compiler IR for accuracy-aware optimizations"
+ },
+ "10.1145_3380536.3380540": {
+  "abstract": "Many real-world systems utilize graphs that are time-varying in nature, where edges appear and disappear with respect to time. Moreover, the weights of different edges are also a function of time. Various conventional graph algorithms, such as single source shortest path (SSSP) have been developed for time-varying graphs. However, these algorithms are sequential in nature and their parallel counterparts are largely overlooked. On the other hand, parallel algorithms for static graphs are implemented as ordered and unordered variants. Unordered implementations do not enforce local or global order for processing tasks in parallel, but incur redundant task processing to converge their solutions. These implementations expose parallelism at the cost of high redundant work. Relax-ordered implementations maintain local order through per-core priority queues to reduce the amount of redundant work, while exposing parallelism. Finally, strict-ordered implementations achieve the work efficiency of sequential version by enforcing a global order at the expense of high thread synchronizations. These parallel implementations are adopted for temporal graphs to explore the choices that provide optimal performance on different parallel accelerators. This work shows that selecting the optimal parallel implementation extracts geometric performance gain of 46.38% on Intel Xeon-40 core and 20.30% on NVidia GTX-1080 GPU. It is also shown that optimal implementation choices for temporal graphs are not always the same as their respective static graphs.",
+  "doi": "10.1145/3380536.3380540",
+  "openalex": "W3008727334",
+  "status": "ok",
+  "title": "Exploring accelerator and parallel graph algorithmic choices for temporal graphs"
+ },
+ "10.1145_3384419.3431159": {
+  "abstract": "Advanced video analytic systems, including scene classification and object detection, have seen widespread success in various domains such as smart cities and autonomous systems. With an evolution of heterogeneous client devices, there is incentive to move these heavy video analytics workloads from the cloud to mobile devices for low latency and real-time processing and to preserve user privacy. However, most video analytic systems are heavyweight and are trained offline with some pre-defined latency or accuracy requirements. This makes them unable to adapt at runtime in the face of three types of dynamism --- the input video characteristics change, the amount of compute resources available on the node changes due to co-located applications, and the user's latency-accuracy requirements change. In this paper we introduce ApproxDet, an adaptive video object detection framework for mobile devices to meet accuracy-latency requirements in the face of changing content and resource contention scenarios. To achieve this, we introduce a multi-branch object detection kernel, which incorporates a data-driven modeling approach on the performance metrics, and a latency SLA-driven scheduler to pick the best execution branch at runtime. We evaluate ApproxDet on a large benchmark video dataset and compare quantitatively to AdaScale and YOLOv3. We find that ApproxDet is able to adapt to a wide variety of contention and content characteristics and outshines all baselines, e.g., it achieves 52% lower latency and 11.1% higher accuracy over YOLOv3. Our software is open-sourced at https://github.com/purdue-dcsl/ApproxDet.",
+  "doi": "10.1145/3384419.3431159",
+  "openalex": "W3107788976",
+  "status": "ok",
+  "title": "ApproxDet"
+ },
+ "10.1145_3392717.3392741": {
+  "abstract": "In high performance computing (HPC), scientific simulation codes are executed repeatedly with different inputs. The peak performance of these programs heavily depends on various compiler optimizations, which are often selected agnostically on program input or may be selected with sensitivity to just a single input. When subsequently executed, often with different inputs, performance may suffer for all or all but the one input tested, and for the latter potentially even compared to the O3 baseline.",
+  "doi": "10.1145/3392717.3392741",
+  "openalex": "W3040233907",
+  "status": "ok",
+  "title": "CodeSeer"
+ },
+ "10.1145_3392717.3392758": {
+  "abstract": "Work-efficient task-parallel algorithms enforce ordered execution of tasks using priority schedulers. These algorithms suffer from limited parallelism due to data movement and synchronization bottlenecks. State-of-the-art priority schedulers relax the ordering of tasks to avoid false dependencies generated by strict queuing constraints, thus unlocking task parallelism. However, relaxing task dependencies results in shared data races among cores that lead to redundant task computations in concurrently executing threads. Although static algorithm optimizations have been shown to reduce redundant work, they do not exploit the tradeoff between parallelism and work efficiency that is only exposed during runtime. This paper proposes a task dependency checking mechanism that dynamically tracks the monotonic property of parent-child relationships across multiple levels from any given task. Since shared memory writes are known to be slower than concurrent reads, the multi-level checks effectively detect task dependency races to prune redundant tasks. Evaluation of relax-ordered algorithms on a 40-core Intel Xeon multicore shows an average of 44% performance improvement over the Galois obim scheduler.",
+  "doi": "10.1145/3392717.3392758",
+  "openalex": "W3039743418",
+  "status": "ok",
+  "title": "Accelerating relax-ordered task-parallel workloads using multi-level dependency checking"
+ },
+ "10.1145_3392717.3392759": {
+  "abstract": "GPU accelerators have become common on today's leadership-class computing platforms. Effective exploitation of the additional parallelism offered by GPUs is fraught with challenges. A key performance challenge faced by developers is how to limit the time consumed by synchronizations between the CPU and GPU. We introduce the extended feed-forward measurement (FFM) performance tool that provides an automated detection of synchronization problems, identifies if the synchronization problem is a component of a larger construct that exhibits a problem beyond an individual synchronization operation, identifies remedies that can correct the issue, and in some cases automatically applies remedies to problems exhibited by larger constructs. The extended FFM performance tool identifies three causes of unnecessary synchronizations: a problem caused by a single operation, a problem caused by memory management issues, and a problem caused by a memory transfer. The extended FFM model prescribes remedies for each construct and can automatically apply remedies for memory management and memory transfer cause problems. We created an implementation of the extended FFM performance tool and employed it to identify and automatically correct problems in three real-world scientific applications, resulting in an automatically obtained reduction in execution time between 9% and 43%.",
+  "doi": "10.1145/3392717.3392759",
+  "openalex": "W3040223855",
+  "status": "ok",
+  "title": "Identifying and (automatically) remedying performance problems in CPU/GPU applications"
+ },
+ "10.1145_3394898": {
+  "abstract": "When a computational task tolerates a relaxation of its specification or when an algorithm tolerates the effects of noise in its execution, hardware, system software, and programming language compilers or their runtime systems can trade deviations from correct behavior for lower resource usage. We present, for the first time, a synthesis of research results on computing systems that only make as many errors as their end-to-end applications can tolerate. The results span the disciplines of computer-aided design of circuits, digital system design, computer architecture, programming languages, operating systems, and information theory. Rather than over-provisioning the resources controlled by each of these layers of abstraction to avoid errors, it can be more efficient to exploit the masking of errors occurring at one layer and thereby prevent those errors from propagating to a higher layer. We demonstrate the potential benefits of end-to-end approaches using two illustrative examples. We introduce a formalization of terminology that allows us to present a coherent view across the techniques traditionally used by different research communities in their individual layer of focus. Using this formalization, we survey tradeoffs for individual layers of computing systems at the circuit, architecture, operating system, and programming language levels as well as fundamental information-theoretic limits to tradeoffs between resource usage and correctness.",
+  "doi": "10.1145/3394898",
+  "openalex": "W3034464722",
+  "status": "ok",
+  "title": "Exploiting Errors for Efficiency"
+ },
+ "10.1145_3410463.3414635": {
+  "abstract": "To this day, polyhedral optimizing compilers use either extremely rigid (but accurate) cost models, one-size-fits-all general-purpose heuristics, or auto-tuning strategies to traverse and evaluate large optimization spaces. In this paper, we introduce an adaptive and automatic scheduler that permits to generate novel loop transformation sequences (or recipes) capable of delivering strong performance for a variety of different architectures without relying on auto-tuning, nor on pre-determined transformation strategies. We evaluate our approach using the Polybench/C benchmark suite against two modern state-of-the-art optimizers on three different architectures: An AMD ThreadRipper, an Intel Xeon Phi, and an Intel Xeon Platinum. Our results provide evidence that a set of high-level objectives backed up by an automatic adaptive scheduler (i.e., not hard-wired) is capable of achieving competitive performance, while only resorting to evaluating a handful of tuned variants.",
+  "doi": "10.1145/3410463.3414635",
+  "openalex": "W3090768939",
+  "status": "ok",
+  "title": "Automatic Generation of Multi-Objective Polyhedral Compiler Transformations"
+ },
+ "10.1145_3410463.3414670": {
+  "abstract": "Deep learning is emerging as a promising technique for building predictive models to support code-related tasks like performance optimization and code vulnerability detection. One of the critical aspects of building a successful predictive model is having the right representation to characterize the model input for the given task. Existing approaches in the area typically treat the program structure as a sequential sequence but fail to capitalize on the rich semantics of data and control flow information, for which graphs are a proven representation structure.",
+  "doi": "10.1145/3410463.3414670",
+  "openalex": "W3090891670",
+  "status": "ok",
+  "title": "Deep Program Structure Modeling Through Multi-Relational Graph-based Learning"
+ },
+ "10.1145_3434402": {
+  "abstract": "Efficient HPC libraries often expose multiple tunable parameters, algorithmic implementations, or a combination of them, to provide optimized routines. The optimal parameters and algorithmic choices may depend on input properties such as the shapes of the matrices involved in the operation. Traditionally, these parameters are manually tuned or set by auto-tuners. In emerging applications such as deep learning, this approach is not effective across the wide range of inputs and architectures used in practice. In this work, we analyze different machine learning techniques and predictive models to accelerate the convolution operator and GEMM. Moreover, we address the problem of dataset generation, and we study the performance, accuracy, and generalization ability of the models. Our insights allow us to improve the performance of computationally expensive deep learning primitives on high-end GPUs as well as low-power embedded GPU architectures on three different libraries. Experimental results show significant improvement in the target applications from 50% up to 300% compared to auto-tuned and high-optimized vendor-based heuristics by using simple decision tree- and MLP-based models.",
+  "doi": "10.1145/3434402",
+  "openalex": "W3120016685",
+  "status": "ok",
+  "title": "On the Anatomy of Predictive Models for Accelerating GPU Convolution Kernels and Beyond"
+ },
+ "10.1145_3437801.3446108": {
+  "abstract": "Manually optimizing the tradeoffs between accuracy, performance and energy for resource-intensive applications with flexible accuracy or precision requirements is extremely difficult. We present ApproxTuner, an automatic framework for accuracy-aware optimization of tensor-based applications while requiring only high-level end-to-end quality specifications. ApproxTuner implements and manages approximations in algorithms, system software, and hardware.",
+  "doi": "10.1145/3437801.3446108",
+  "openalex": "W3133016223",
+  "status": "ok",
+  "title": "ApproxTuner"
+ },
+ "10.1145_3442391.3442402": {
+  "abstract": "Configuring software is a powerful means to reach functional and performance goals of a system. However, many layers (hardware, operating system, input data, etc.), themselves subject to variability, can alter performances of software configurations. For instance, configurations’ options of the x264 video encoder may have very different effects on x264’s encoding time when used with different input videos, depending on the hardware on which it is executed. In this vision paper, we coin the term deep software variability to refer to the interaction of all external layers modifying the behavior or non-functional properties of a software. Deep software variability challenges practitioners and researchers: the combinatorial explosion of possible executing environments complicates the understanding, the configuration, the maintenance, the debug, and the test of configurable systems. There are also opportunities: harnessing all variability layers (and not only the software layer) can lead to more efficient systems and configuration knowledge that truly generalizes to any usage and context.",
+  "doi": "10.1145/3442391.3442402",
+  "openalex": "W3120787194",
+  "status": "ok",
+  "title": "Deep Software Variability: Towards Handling Cross-Layer Configuration"
+ },
+ "10.1145_3448016.3457317": {
+  "abstract": "Machine learning (ML) computations are often expressed using vectors, matrices, or higher-dimensional tensors. Such data structures can have many different implementations, especially in a distributed environment: a matrix could be stored as row or column vectors, tiles of different sizes, or relationally, as a set of (rowIndex, colIndex, value) triples. Many other storage formats are possible. The choice of format can have a profound impact on the performance of a ML computation. In this paper, we propose a framework for automatic optimization of the physical implementation of a complex ML or linear algebra (LA) computation in a distributed environment, develop algorithms for solving this problem, and show, through a prototype on top of a distributed relational database system, that our ideas can radically speed up common ML and LA computations.",
+  "doi": "10.1145/3448016.3457317",
+  "openalex": "W3174739838",
+  "status": "ok",
+  "title": "Automatic Optimization of Matrix Implementations for Distributed Machine Learning and Linear Algebra"
+ },
+ "10.1145_3453483.3454109": {
+  "abstract": "As parallel applications become more complex, auto-tuning becomes more desirable, challenging, and time-consuming. We propose, Bliss, a novel solution for auto-tuning parallel applications without requiring apriori information about applications, domain-specific knowledge, or instrumentation. Bliss demonstrates how to leverage a pool of Bayesian Optimization models to find the near-optimal parameter setting 1.64× faster than the state-of-the-art approaches.",
+  "doi": "10.1145/3453483.3454109",
+  "openalex": "W3176750915",
+  "status": "ok",
+  "title": "Bliss: auto-tuning complex applications using a pool of diverse lightweight learning models"
+ },
+ "10.1145_3458817.3476216": {
+  "abstract": "As we approach the limits of Moore's law, researchers are exploring new paradigms for future high-performance computing (HPC) systems. Approximate computing has gained traction by promising to deliver substantial computing power. However, due to the stringent accuracy requirements of HPC scientific applications, the broad adoption of approximate computing methods in HPC requires an in-depth understanding of the application's amenability to approximations.",
+  "doi": "10.1145/3458817.3476216",
+  "openalex": "W3210400148",
+  "status": "ok",
+  "title": "HPAC"
+ },
+ "10.1145_3497776.3517769": {
+  "abstract": "Reinforcement learning (RL) is emerging as a powerful technique for solving complex code optimization tasks with an ample search space. While promising, existing solutions require a painstaking manual process to tune the right task-specific RL architecture, for which compiler developers need to determine the composition of the RL exploration algorithm, its supporting components like state, reward, and transition functions, and the hyperparameters of these models. This paper introduces SuperSonic, a new open-source framework to allow compiler developers to integrate RL into compilers easily, regardless of their RL expertise. SuperSonic supports customizable RL architecture compositions to target a wide range of optimization tasks. A key feature of SuperSonic is the use of deep RL and multi-task learning techniques to develop a meta-optimizer to automatically find and tune the right RL architecture from training benchmarks. The tuned RL can then be deployed to optimize new programs. We demonstrate the efficacy and generality of SuperSonic by applying it to four code optimization problems and comparing it against eight auto-tuning frameworks. Experimental results show that SuperSonic consistently improves hand-tuned methods by delivering better overall performance, accelerating the deployment-stage search by 1.75x on average (up to 100x).",
+  "doi": "10.1145/3497776.3517769",
+  "openalex": "W4220727415",
+  "status": "ok",
+  "title": "Automating reinforcement learning architecture design for code optimization"
+ },
+ "10.1145_3497776.3517774": {
+  "abstract": "Auto-tuning DL compilers are gaining ground as an optimizing back-end for DL frameworks. While existing work can generate deep learning models that exceed the performance of hand-tuned libraries, they still suffer from prohibitively long auto-tuning time due to repeated hardware measurements in large search spaces. In this paper, we take a neural-predictor inspired approach to reduce the auto-tuning overhead and show that a performance predictor model trained prior to compilation can produce optimized tensor operation codes without repeated search and hardware measurements. To generate a sample-efficient training dataset, we extend input representation to include task-specific information and to guide data sampling methods to focus on learning high-performing codes. We evaluated the resulting predictor model, One-Shot Tuner, against AutoTVM and other prior work, and the results show that One-Shot Tuner speeds up compilation by 2.81x to 67.7x compared to prior work while providing comparable or improved inference time for CNN and Transformer models.",
+  "doi": "10.1145/3497776.3517774",
+  "openalex": "W4221062244",
+  "status": "ok",
+  "title": "One-shot tuner for deep learning compilers"
+ },
+ "10.1145_3614321.3614352": {
+  "abstract": "This essay investigates the complex relationship between digital technologies and social participation, focusing on the challenges and opportunities the technosphere presents. Utilizing Twitter as a case study, the essay critically examines the power dynamics, values, and interests that shape the design and implementation of digital technologies and their impact on social participation. The framework presented in this essay identifies two interconnected layers of social participation in the digital context: 1) employing technology as a tool for social participation and 2) actively engaging in the construction and political dynamics of technology itself. Through an interdisciplinary approach, the study argues that the current privatization of the technosphere and its governance by a few powerful corporations poses significant threats to democracy, equity, and the public interest. The essay claims strategies for fostering democratic engagement within the technosphere, such as developing public digital infrastructure, implementing transparency and accountability measures, and empowering civil society. By actively involving diverse stakeholders in developing, governance, and evaluating digital technologies, this essay advocates for a more inclusive and democratic technosphere that genuinely serves the public interest. This essay contributes to the academic discourse on the role of digital technologies in shaping our social, political, and economic lives and calls for further interdisciplinary research to explore the technosphere for democratic participation. By critically examining and addressing the power dynamics inherent in digital technologies, we can work towards a more inclusive, equitable, and democratic digital ecosystem.",
+  "doi": "10.1145/3614321.3614352",
+  "openalex": "W4388823743",
+  "status": "ok",
+  "title": "The politics of digital technologies: Reimagining social participation in the digital age"
+ },
+ "10.1145_3669940.3707259": {
+  "abstract": null,
+  "doi": "10.1145/3669940.3707259",
+  "openalex": "W4407218307",
+  "status": "no_abstract",
+  "title": "DarwinGame: Playing Tournaments for Tuning Applications in Noisy Cloud Environments"
+ },
+ "10.1145_nnnnnnn.nnnnnnn": {
+  "abstract": "International audience",
+  "doi": "10.1145/nnnnnnn.nnnnnnn",
+  "openalex": "W2791320241",
+  "status": "ok",
+  "title": "Simty: generalized SIMT execution on RISC-V"
+ },
+ "10.17635_lancaster_thesis_371": {
+  "abstract": "Contemporary software systems often have millions of lines of code that interact over complex infrastructures. The development of such systems is very challenging due to the increasing complexity of services and the high level of dynamism of current operating environments. In order to support the development and management of such systems, autonomic computing concepts have gained significant importance. The majority of autonomic computing approaches show significant levels of expert dependency in designing adaptive solutions. These approaches usually rely on human-made models and policies to support and guide software adaptation at runtime. These approaches mainly suffer from: i) a significant upfront effort demanded to create such solutions, which adds to the complexity of creating autonomous systems, and ii) unreliability given the high levels of uncertainty in current operating environments, leading the system to degraded performance and error states when subjected to unpredicted operating conditions and unexpected software interactions. Motivated by the problems and limitations of state-of-the-art autonomic computing solutions, this thesis introduces the concept of Emergent Software Systems. These systems are autonomously composed at runtime from discovered components, and are autonomously optimised based on the operating conditions, being able to build their own understanding of their environment and constituent parts. This thesis defines Emergent Software Systems, presenting the challenges of implementing such approach, and presents a fully functioning emergent systems framework that demonstrates this concept in real-world, fully functioning datacentre-based software.",
+  "doi": "10.17635/lancaster/thesis/371",
+  "openalex": "W2927094313",
+  "status": "ok",
+  "title": "Emergent software systems"
+ },
+ "10.17721_2415-881x.2026.100.1.140-152": {
+  "abstract": "The study explores the broad conceptual dimension of the prospects for digital political governance based on the democratic expression of will by Internet users. In this context, attention is paid to the virtualization of political demands and interests, which requires democratic political institutions to develop mechanisms for verifying “genuine” and “non-genuine” needs and claims of citizens and political communities. The mechanisms of digital political campaigns that utilize access to Internet technologies and social media platforms within political-technological strategies are identified. The study examines how Internet users are influenced by content that appears more organic and peer-endorsed than overt political advertising. The ability of digital political campaigns to bypass traditional “gatekeepers” and reach niche audiences through personalized political messaging is revealed. The specificity of the increasing political-technological impact of targeted political advertising on behavior and representation is demonstrated. It is established that targeted advertising can take various forms, including short videos, banners, or direct messages, aimed at maximizing engagement while often neglecting individual rights, thereby deepening digital inequality. It is argued that voters tend to perceive such messages as specifically tailored to them, which increases the likelihood of persuasion. The significance of digital political actors’ use of trust and outreach potential to influence followers is analyzed. The study highlights the enhanced persuasive effect of personalized (targeted) political-technological messages across various digital touchpoints. It is substantiated that digital political behavior increasingly becomes an act of virtual self-expression within the thematic space of the digital political world.",
+  "doi": "10.17721/2415-881x.2026.100.1.140-152",
+  "openalex": "W7163008288",
+  "status": "ok",
+  "title": "POLITICAL BEHAVIOR AND POLITICAL REPRESENTATION: CHALLENGES OF THE DEVELOPMENT OF DIGITAL POLITICAL TECHNOLOGIES"
+ },
+ "10.2172_1176882": {
+  "abstract": "This grant supported the ZettaBricks and OpenTuner projects. ZettaBricks is a new implicitly parallel language and compiler where defining multiple implementations of multiple algorithms to solve a problem is the natural way of programming. ZettaBricks makes algorithmic choice a first class construct of the language. Choices are provided in a way that also allows our compiler to tune at a finer granularity. The ZettaBricks compiler autotunes programs by making both fine-grained as well as algorithmic choices. Choices also include different automatic parallelization techniques, data distributions, algorithmic parameters, transformations, and blocking. Additionally, ZettaBricks introduces novel techniques to autotune algorithms for different convergence criteria. When choosing between various direct and iterative methods, the ZettaBricks compiler is able to tune a program in such a way that delivers near-optimal efficiency for any desired level of accuracy. The compiler has the flexibility of utilizing different convergence criteria for the various components within a single algorithm, providing the user with accuracy choice alongside algorithmic choice. OpenTuner is a generalization of the experience gained in building an autotuner for ZettaBricks. OpenTuner is a new open source framework for building domain-specific multi-objective program autotuners. OpenTuner supports fully-customizable configuration representations, an extensible technique representation to allow for domain-specific techniques, and an easy to use interface for communicating with the program to be autotuned. A key capability inside OpenTuner is the use of ensembles of disparate search techniques simultaneously; techniques that perform well will dynamically be allocated a larger proportion of tests.",
+  "doi": "10.2172/1176882",
+  "openalex": "W2465978700",
+  "status": "ok",
+  "title": "ZettaBricks: A Language Compiler and Runtime System for Anyscale Computing"
+ },
+ "10.25394_pgs.11482839.v1": {
+  "abstract": "Data-processing programs are becoming increasingly important in the Big-data era. However, two notable problems of these programs may cause sub-optimal data- processing results. On one hand, these programs contain large number of floating-point computations. Due to the limited precision of floating-point representations, errors are introduced, propagated and accumulated in series of computations, making the computation results unreliable. We call this problem as floating-point instability. On the other hand, these programs are heavily parameterized. As no universal optimal parameter configuration exists for all possible inputs, the setting of program parameters should be carefully chosen and tuned for each input. Otherwise, the result would be sub-optimal. Manual tuning is infeasible because the number of parameters and the range of each parameter value may be big. We try to address these two challenges in this dissertation. For floating-point instability problem, we develop a novel runtime technique to capture different output variations in the presence of instability. It features the idea of transforming every floating point value to a vector of multiple values $-$ the values added to create the vector are obtained by introducing artificial errors that are upper bounds of actual errors. The propagation of artificial errors models the propagation of actual errors. When values in vectors result in discrete execution differences (e.g., following different paths), the execution is forked to capture the resulting output variations. For parameterized data-processing programs, we develop a white-box program tuning framework to tune the program parameter configuration for optimal data-processing result of each program input. To further reduce the parameter configuration overhead, we propose the first general framework to inject artificial intelligence (AI) in the program, so the intelligent program is able to predict the parameter configuration for each incoming input directly. However, similar to many other ML/AI applications, the crucial challenge lies in feature selection, i.e., selection of the feature variables for predicting the target parameter specified by the users.Thus, we propose a novel approach by combining program analysis and statistical analysis for better program feature variables selection which further helps better target parameter prediction and improves the result.",
+  "doi": "10.25394/pgs.11482839.v1",
+  "openalex": "W2998966359",
+  "status": "ok",
+  "title": "Improving Stability and Parameter Selection of Data Processing Programs"
+ },
+ "10.25560_68006": {
+  "abstract": "GPUs are parallel devices that are able to run thousands of independent threads concurrently. Traditional GPU programs are data-parallel, requiring little to no communication, i.e. synchronisation, between threads. However, classical concurrency in the context of CPUs often exploits synchronisation idioms that are not supported on GPUs. By studying such idioms on GPUs, with an aim to facilitate them in a portable way, a wider and more generic space of GPU applications can be made possible. While the breadth of this thesis extends to many aspects of GPU systems, the common thread throughout is the global barrier: an execution barrier that synchronises all threads executing a GPU application. The idea of such a barrier might seem straightforward, however this investigation reveals many challenges and insights. In particular, this thesis includes the following studies: Execution models: while a general global barrier can deadlock due to starvation on GPUs, it is shown that the scheduling guarantees of current GPUs can be used to dynamically create an execution environment that allows for a safe and portable global barrier across a subset of the GPU threads. Application optimisations: a set GPU optimisations are examined that are tailored for graph applications, including one optimisation enabled by the global barrier. It is shown that these optimisations can provided substantial performance improvements, e.g. the barrier optimisation achieves over a 10X speedup on AMD and Intel GPUs. The performance portability of these optimisations is investigated, as their utility varies across input, application, and architecture. Multitasking: because many GPUs do not support preemption, long-running GPU compute tasks (e.g. applications that use the global barrier) may block other GPU functions, including graphics. A simple cooperative multitasking scheme is proposed that allows graphics tasks to meet their deadlines with reasonable overheads.",
+  "doi": "10.25560/68006",
+  "openalex": "W2953861678",
+  "status": "ok",
+  "title": "Inter-workgroup barrier synchronisation on graphics processing units"
+ },
+ "10.3390_electronics11152452": {
+  "abstract": "Iterative compilation based on machine learning can effectively predict a program’s compiler optimization parameters. Although having some limits, such as the low efficiency of optimization parameter search and prediction accuracy, machine learning-based solutions have been a frontier research field in the field of iterative compilation and have gained increasing attention. The research challenges are focused on learning algorithm selection, optimal parameter search, and program feature representation. For the existing problems, we propose an ensemble learning-based optimization parameter selection (ELOPS) method for the compiler. First, in order to further improve the optimization parameter search efficiency and accuracy, we proposed a multi-objective particle swarm optimization (PSO) algorithm to determine the optimal compiler parameters of the program. Second, we extracted the mixed features of the program through the feature-class relevance method, rather than using static or dynamic features alone. Finally, as the existing research usually uses a separate machine learning algorithm to build prediction models, an ensemble learning model using program features and optimization parameters was constructed to effectively predict compiler optimization parameters of the new program. Using standard performance evaluation corporation 2006 (SPEC2006) and NAS parallel benchmark (NPB) benchmarks as well as some typical scientific computing programs, we compared ELOPS with the existing methods. The experimental results showed that we can respectively achieve 1.29× and 1.26× speedup when using our method on two platforms, which are better results than those of existing methods.",
+  "doi": "10.3390/electronics11152452",
+  "openalex": "W4290466551",
+  "status": "ok",
+  "title": "Compiler Optimization Parameter Selection Method Based on Ensemble Learning"
+ },
+ "10.48550_arxiv.1706.00767": {
+  "abstract": "Approximate computing trades off accuracy of results for resources such as energy or computing time. There is a large and rapidly growing literature on approximate computing that has focused mostly on showing the benefits of approximation. However, we know relatively little about how to control approximation in a disciplined way. This document briefly describes our published work of controlling approximation for non-streaming programs that have a set of \"knobs\" that can be dialed up or down to control the level of approximation of different components in the program. The proposed system, Capri, solves this control problem as a constrained optimization problem. Capri uses machine learning to learn cost and error models for the program, and uses these models to determine, for a desired level of approximation, knob settings that optimize metrics such as running time or energy usage. Experimental results with complex benchmarks from different problem domains demonstrate the effectiveness of this approach. This report outlines improvements and extensions to the existing Capri system to address its limitations, including a complete rewrite of the software, and discusses directions for follow up work. The document also includes instructions and guidelines for using the new Capri infrastructure.",
+  "doi": "10.48550/arxiv.1706.00767",
+  "openalex": "W2620693587",
+  "status": "ok",
+  "title": "Capri: A Control System for Approximate Programs"
+ },
+ "10.48550_arxiv.1805.03441": {
+  "abstract": "In the last decade, machine learning based compilation has moved from an an obscure research niche to a mainstream activity. In this article, we describe the relationship between machine learning and compiler optimisation and introduce the main concepts of features, models, training and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine learning based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.48550/arxiv.1805.03441",
+  "openalex": "W2802910567",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "10.48550_arxiv.1806.07060": {
+  "abstract": "Efficient high-performance libraries often expose multiple tunable parameters to provide highly optimized routines. These can range from simple loop unroll factors or vector sizes all the way to algorithmic changes, given that some implementations can be more suitable for certain devices by exploiting hardware characteristics such as local memories and vector units. Traditionally, such parameters and algorithmic choices are tuned and then hard-coded for a specific architecture and for certain characteristics of the inputs. However, emerging applications are often data-driven, thus traditional approaches are not effective across the wide range of inputs and architectures used in practice. In this paper, we present a new adaptive framework for data-driven applications which uses a predictive model to select the optimal algorithmic parameters by training with synthetic and real datasets. We demonstrate the effectiveness of a BLAS library and specifically on its matrix multiplication routine. We present experimental results for two GPU architectures and show significant performance gains of up to 3x (on a high-end NVIDIA Pascal GPU) and 2.5x (on an embedded ARM Mali GPU) when compared to a traditionally optimized library.",
+  "doi": "10.48550/arxiv.1806.07060",
+  "openalex": "W2809472233",
+  "status": "ok",
+  "title": "A model-driven approach for a new generation of adaptive libraries"
+ },
+ "10.48550_arxiv.1901.06228": {
+  "abstract": "Application autotuning is a promising path investigated in literature to improve computation efficiency. In this context, the end-users define high-level requirements and an autonomic manager is able to identify and seize optimization opportunities by leveraging trade-offs between extra-functional properties of interest, such as execution time, power consumption or quality of results. The relationship between an application configuration and the extra-functional properties might depend on the underlying architecture, on the system workload and on features of the current input. For these reasons, autotuning frameworks rely on application knowledge to drive the adaptation strategies. The autotuning task is typically done offline because having it in production requires significant effort to reduce its overhead. In this paper, we enhance a dynamic autotuning framework with a module for learning the application knowledge during the production phase, in a distributed fashion. We leverage two strategies to limit the overhead introduced at the production phase. On one hand, we use a scalable infrastructure capable of leveraging the parallelism of the underlying platform. On the other hand, we use ensemble models to speed up the predictive capabilities, while iteratively gathering production data. Experimental results on synthetic applications and on a use case show how the proposed approach is able to learn the application knowledge, by exploring a small fraction of the design space.",
+  "doi": "10.48550/arxiv.1901.06228",
+  "openalex": "W2910710869",
+  "status": "ok",
+  "title": "On-line Application Autotuning Exploiting Ensemble Models"
+ },
+ "10.48550_arxiv.2006.16767": {
+  "abstract": "Despite numerous efforts for optimizing the performance of Sparse Matrix and Vector Multiplication (SpMV) on modern hardware architectures, few works are done to its sparse counterpart, Sparse Matrix and Sparse Vector Multiplication (SpMSpV), not to mention dealing with input vectors of varied sparsity. The key challenge is that depending on the sparsity levels, distribution of data, and compute platform, the optimal choice of SpMV/SpMSpV kernel can vary, and a static choice does not suffice. In this paper, we propose an adaptive SpMV/SpMSpV framework, which can automatically select the appropriate SpMV/SpMSpV kernel on GPUs for any sparse matrix and vector at the runtime. Based on systematic analysis on key factors such as computing pattern, workload distribution and write-back strategy, eight candidate SpMV/SpMSpV kernels are encapsulated into the framework to achieve high performance in a seamless manner. A comprehensive study on machine learning based kernel selector is performed to choose the kernel and adapt with the varieties of both the input and hardware from both accuracy and overhead perspectives. Experiments demonstrate that the adaptive framework can substantially outperform the previous state-of-the-art in real-world applications on NVIDIA Tesla K40m, P100 and V100 GPUs.",
+  "doi": "10.48550/arxiv.2006.16767",
+  "openalex": "W3038822515",
+  "status": "ok",
+  "title": "Adaptive SpMV/SpMSpV on GPUs for Input Vectors of Varied Sparsity"
+ },
+ "10.48550_arxiv.2008.06991": {
+  "abstract": "In-situ parallel workflows couple multiple component applications, such as simulation and analysis, via streaming data transfer. in order to avoid data exchange via shared file systems. Such workflows are challenging to configure for optimal performance due to the large space of possible configurations. Expert experience is rarely sufficient to identify optimal configurations, and existing empirical auto-tuning approaches are inefficient due to the high cost of obtaining training data for machine learning models. It is also infeasible to optimize individual components independently, due to component interactions. We propose here a new auto-tuning method, Component-based Ensemble Active Learning (CEAL), that combines machine learning techniques with knowledge of in-situ workflow structure to enable automated workflow configuration with a limited number of performance measurements.",
+  "doi": "10.48550/arxiv.2008.06991",
+  "openalex": "W3049146139",
+  "status": "ok",
+  "title": "In-situ Workflow Auto-tuning via Combining Performance Models of Component Applications"
+ },
+ "10.48550_arxiv.2010.10754": {
+  "abstract": "Advanced video analytic systems, including scene classification and object detection, have seen widespread success in various domains such as smart cities and autonomous transportation. With an ever-growing number of powerful client devices, there is incentive to move these heavy video analytics workloads from the cloud to mobile devices to achieve low latency and real-time processing and to preserve user privacy. However, most video analytic systems are heavyweight and are trained offline with some pre-defined latency or accuracy requirements. This makes them unable to adapt at runtime in the face of three types of dynamism -- the input video characteristics change, the amount of compute resources available on the node changes due to co-located applications, and the user's latency-accuracy requirements change. In this paper we introduce ApproxDet, an adaptive video object detection framework for mobile devices to meet accuracy-latency requirements in the face of changing content and resource contention scenarios. To achieve this, we introduce a multi-branch object detection kernel (layered on Faster R-CNN), which incorporates a data-driven modeling approach on the performance metrics, and a latency SLA-driven scheduler to pick the best execution branch at runtime. We couple this kernel with approximable video object tracking algorithms to create an end-to-end video object detection system. We evaluate ApproxDet on a large benchmark video dataset and compare quantitatively to AdaScale and YOLOv3. We find that ApproxDet is able to adapt to a wide variety of contention and content characteristics and outshines all baselines, e.g., it achieves 52% lower latency and 11.1% higher accuracy over YOLOv3.",
+  "doi": "10.48550/arxiv.2010.10754",
+  "openalex": "W3094577470",
+  "status": "ok",
+  "title": "ApproxDet: Content and Contention-Aware Approximate Object Detection for Mobiles"
+ },
+ "10.48550_arxiv.2102.04199": {
+  "abstract": "Deep learning compiler frameworks are gaining ground as a more portable back-end for deep learning applications on increasingly diverse hardware. However, they face the daunting challenge of matching performance offered by hand-tuned target-specific libraries. While auto-tuning frameworks with statistical cost models can provide dynamic and efficient code optimization, they suffer from large space exploration and cost model training overheads. This paper proposes MetaTune, a meta-learning based cost model that more quickly and accurately predicts the performance of optimized codes with pre-trained model parameters. MetaTune encodes convolution kernel codes as structurally similar graphs to facilitate meta-learning, meta-trains a GNN model with a very small input data set, and then predicts optimization parameters for unseen convolution operations with varying sizes and structures during compilation. The resulting framework with MetaTune provides 8 to 13% better inference time on average for four CNN models with comparable or lower optimization time while outperforming transfer learning by 10% in cross-platform cases.",
+  "doi": "10.48550/arxiv.2102.04199",
+  "openalex": "W3127883644",
+  "status": "ok",
+  "title": "MetaTune: Meta-Learning Based Cost Model for Fast and Efficient Auto-tuning Frameworks"
+ },
+ "10.48550_arxiv.2203.02530": {
+  "abstract": "We present a new strategy for automatically exploring the design space of key CUDA+MPI programs and providing design rules that discriminate slow from fast implementations. In such programs, the order of operations (e.g., GPU kernels, MPI communication) and assignment of operations to resources (e.g., GPU streams) makes the space of possible designs enormous. Systems experts have the task of redesigning and reoptimizing these programs to effectively utilize each new platform. This work provides a prototype tool to reduce that burden. In our approach, a directed acyclic graph of CUDA and MPI operations defines the design space for the program. Monte-Carlo tree search discovers regions of the design space that have large impact on the program's performance. A sequence-to-vector transformation defines features for each explored implementation, and each implementation is assigned a class label according to its relative performance. A decision tree is trained on the features and labels to produce design rules for each class; these rules can be used by systems experts to guide their implementations. We demonstrate our strategy using a key kernel from scientific computing -- sparse-matrix vector multiplication -- on a platform with multiple MPI ranks and GPU streams.",
+  "doi": "10.48550/arxiv.2203.02530",
+  "openalex": "W4225632006",
+  "status": "ok",
+  "title": "Machine Learning for CUDA+MPI Design Rules"
+ },
+ "10.48550_arxiv.2410.14842": {
+  "abstract": "Virtual screening applications are highly parameterized to optimize the balance between quality and execution performance. While output quality is critical, the entire screening process must be completed within a reasonable time. In fact, a slight reduction in output accuracy may be acceptable when dealing with large datasets. Finding the optimal quality-throughput trade-off depends on the specific HPC system used and should be re-evaluated with each new deployment or significant code update. This paper presents two parallel autotuning techniques for constrained optimization in distributed High-Performance Computing (HPC) environments. These techniques extend sequential Bayesian Optimization (BO) with two parallel asynchronous approaches, and they integrate predictions from Machine Learning (ML) models to help comply with constraints. Our target application is LiGen, a real-world virtual screening software for drug discovery. The proposed methods address two relevant challenges: efficient exploration of the parameter space and performance measurement using domain-specific metrics and procedures. We conduct an experimental campaign comparing the two methods with a popular state-of-the-art autotuner. Results show that our methods find configurations that are, on average, up to 35-42% better than the ones found by the autotuner and the default expert-picked LiGen configuration.",
+  "doi": "10.48550/arxiv.2410.14842",
+  "openalex": "W4404088115",
+  "status": "ok",
+  "title": "Efficient Parameter Tuning for a Structure-Based Virtual Screening HPC Application"
+ },
+ "10.48550_arxiv.2507.15277": {
+  "abstract": null,
+  "doi": "10.48550/arxiv.2507.15277",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "A Few Fit Most: Improving Performance Portability of SGEMM on GPUs using Multi-Versioning"
+ },
+ "10.5445_ir_1000119646": {
+  "abstract": null,
+  "doi": "10.5445/ir/1000119646",
+  "openalex": "W3028782475",
+  "status": "no_abstract",
+  "title": "Autotuning for Automatic Parallelization on Heterogeneous Systems"
+ },
+ "10.5555_2830689.2830696": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2015.",
+  "doi": "10.5555/2830689.2830696",
+  "openalex": "W2057995594",
+  "status": "ok",
+  "title": "Accuracy-aware optimization of approximate programs"
+ },
+ "10.5555_3049832.3049853": {
+  "abstract": "This paper shows that many applications exhibit execution-phase-specific sensitivity towards approximation of the internal subcomputations. Therefore, approximation in certain phases can be more beneficial than others. Further, this paper presents Opprox, a novel system for application's execution-phase-aware approximation. For a user provided error budget and target input parameters, Opprox identifies different program phases and searches for profitable approximation settings for each phase of the application execution. Our evaluation with five benchmarks and four existing transformations show that our phase-aware optimization on average does 14% less work for a 5% error tolerance bound and 42% less work for a 20% tolerance bound.",
+  "doi": "10.5555/3049832.3049853",
+  "openalex": "W2591726959",
+  "status": "ok",
+  "title": "Phase-aware optimization in approximate computing"
+ },
+ "oa-W1483258291": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2014.",
+  "doi": null,
+  "openalex": "W1483258291",
+  "status": "ok",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "oa-W2610861045": {
+  "abstract": "Detection, diagnosis and mitigation of performance problems in today's large-scale distributed and parallel systems is a difficult task. These large distributed and parallel systems are composed of various complex software and hardware components. When the system experiences some performance or correctness problem, developers struggle to understand the root cause of the problem and fix in a timely manner. In my thesis, I address these three components of the performance problems in computer systems. First, we focus on diagnosing performance problems in large-scale parallel applications running on supercomputers. We developed techniques to localize the performance problem for root-cause analysis. Parallel applications, most of which are complex scientific simulations running in supercomputers, can create up to millions of parallel tasks that run on different machines and communicate using the message passing paradigm. We developed a highly scalable and accurate automated debugging tool called PRODOMETER, which uses sophisticated algorithms to first, create a logical progress dependency graph of the tasks to highlight how the problem spread through the system manifesting as a system-wide performance issue. Second, uses this logical progress dependence graph to identify the task where the problem originated. Finally, PRODOMETER pinpoints the code region corresponding to the origin of the bug. Second, we developed a tool-chain that can detect performance anomaly using machine-learning techniques and can achieve very low false positive rate. Our input-aware performance anomaly detection system consists of a scalable data collection framework to collect performance related metrics from different granularity of code regions, an offline model creation and prediction-error characterization technique, and a threshold based anomaly-detection-engine for production runs. Our system requires few training runs and can handle unknown inputs and parameter combinations by dynamically calibrating the anomaly detection threshold according to the characteristics of the input data and the characteristics of the prediction-error of the models. Third, we developed performance problem mitigation scheme for erasure-coded distributed storage systems. Repair operations of the failed blocks in erasure-coded distributed storage system take really long time in networked constrained data-centers. The reason being, during the repair operation for erasure-coded distributed storage, a lot of data from multiple nodes are gathered into a single node and then a mathematical operation is performed to reconstruct the missing part. This process severely congests the links toward the destination where newly recreated data is to be hosted. We proposed a novel distributed repair technique, called Partial-Parallel-Repair (PPR) that performs this reconstruction in parallel on multiple nodes and eliminates network bottlenecks, and as a result, greatly speeds up the repair process. Fourth, we study how for a class of applications, performance can be improved (or performance problems can be mitigated) by selectively approximating some of the computations. For many applications, the main computation happens inside a loop that can be logically divided into a few temporal segments, we call phases. We found that while approximating the initial phases might severely degrade the quality of the results, approximating the computation for the later phases have very small impact on the final quality of the result. Based on this observation, we developed an optimization framework that for a given budget of quality-loss, would find the best approximation settings for each phase in the execution.",
+  "doi": null,
+  "openalex": "W2610861045",
+  "status": "ok",
+  "title": "What broke where for distributed and parallel applications---a whodunit story"
+ },
+ "oa-W2621868162": {
+  "abstract": "The ability to perform online code transformations - to dynamically change the implementation of running native programs - has been shown to be useful in domains as diverse as optimization, security, debugging, resilience and portability. However, conventional techniques for performing online code transformations carry significant runtime overhead, limiting their applicability for performance-sensitive applications. This dissertation proposes and investigates a novel low-overhead online code transformation technique that works by running the dynamic compiler asynchronously and in parallel to the running program. As a consequence, this technique allows programs to execute with the online code transformation capability at near-native speed, unlocking a host of additional opportunities that can take advantage of the ability to re-visit compilation choices as the program runs. This dissertation builds on the low-overhead online code transformation mechanism, describing three novel runtime systems that represent in best-in-class solutions to three challenging problems facing modern computer scientists. First, I leverage online code transformations to significantly increase the utilization of multicore datacenter servers by dynamically managing program cache contention. Compared to state-of-the-art prior work that mitigate contention by throttling application execution, the proposed technique achieves a 1.3-1.5x improvement in application performance. Second, I build a technique to automatically configure and parameterize approximate computing techniques for each program input. This technique results in the ability to configure approximate computing to achieve an average performance improvement of 10.2x while maintaining 90% result accuracy, which significantly improves over oracle versions of prior techniques. Third, I build an operating system designed to secure running applications from dynamic return oriented programming attacks by efficiently, transparently and continuously re-randomizing the code of running programs. The technique is able to re-randomize program code at a frequency of 300ms with an average overhead of 9%, a frequency fast enough to resist state-of-the-art return oriented programming attacks based on memory disclosures and side channels.",
+  "doi": null,
+  "openalex": "W2621868162",
+  "status": "ok",
+  "title": "Low-overhead Online Code Transformations."
+ },
+ "oa-W2885039032": {
+  "abstract": "North Carolina State University Theses Computer Science.",
+  "doi": null,
+  "openalex": "W2885039032",
+  "status": "ok",
+  "title": "Lowering Knowledge Barriers for HPC: From Representations to Infrastructures and Acquisitions."
+ },
+ "oa-W2886267997": {
+  "abstract": "Many video streaming applications require low-latency processing on resource-constrained devices. To meet the latency and resource constraints, developers must often approximate filter computations. A key challenge to successfully tuning approximations is finding the optimal configuration, which may change across and within the input videos because it is content-dependent. Searching through the entire search space for every frame in the video stream is infeasible, while tuning the pipeline offline, on a set of training videos, yields suboptimal results.\r\n\r\nWe present VIDEOCHEF, a system for approximate optimization of video pipelines. VIDEOCHEF finds the optimal configurations of approximate filters at runtime, by leveraging the previously proposed concept of canary inputs--using small inputs to tune the accuracy of the computations and transferring the approximate configurations to full inputs. VIDEOCHEF is the first system to show that canary inputs can be used for complex streaming applications. The two key innovations of VIDEOCHEF are (1) an accurate error mapping from the approximate processing with downsampled inputs to that with full inputs and (2) a directed search that balances the cost of each search step with the estimated reduction in the run time.\r\n\r\nWe evaluate our approach on 106 videos obtained from YouTube, on a set of 9 video processing pipelines with a total of 10 distinct filters. Our results show significant performance improvement over the baseline and the previous approach that uses canary inputs. We also perform a user study that shows that the videos produced by VIDEOCHEF are often acceptable to human subjects.",
+  "doi": null,
+  "openalex": "W2886267997",
+  "status": "ok",
+  "title": "Videochef: efficient approximation for streaming video processing pipelines"
+ },
+ "oa-W2990160550": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2990160550",
+  "status": "no_abstract",
+  "title": "Understanding the Performance of HPC Applications"
+ },
+ "oa-W3094413649": {
+  "abstract": "Software testing is by far the most popular technique used in industry for quality assurance. One key challenge of software testing is how to evaluate the quality of test suites in terms of their bug-finding capability. A test suite with a large number of tests, or that achieves a high statement or branch coverage, does not necessarily have a high bug-finding capability. Mutation testing is widely used in research to evaluate the quality of test suites, and it is often considered the most powerful approach for this purpose. Mutation testing proceeds in two steps. The first step is mutant generation. A mutant is a modified version of the original program obtained by applying a mutation operator. A mutation operator is a program transformation that introduces a small syntactic change to the original program. The second step of mutation testing is to run the test suite and determine which mutants are killed, i.e., which mutants lead to tests having a different output when run on them compared against running on the original program. Mutation testing produces a measure of quality of the test suite called mutation score. The mutation score of a given test suite is the percentage of mutants killed by that test suite out of the total number of generated mutants.\\n\\nIn this dissertation, we explore three design decisions related to mutation testing and provide recommendations to researchers in those regards. First, we look into mutation operators. To provide insights about how to improve the test suites, mutation testing requires both high quality and diverse mutation operators that lead to different program behaviors. We propose the use of approximate transformations as mutation operators. Approximate transformations were introduced in the emerging area of approximate computing for changing program semantics to trade the accuracy of results for improved energy efficiency or performance. We compared three approximate transformations with a set of conventional mutation operators from the literature, on nine open-source Java subjects. The results showed that approximate transformations change program behavior differently from conventional mutation operators. Our analysis uncovered code patterns in which approximate mutants survived (i.e., were not killed) and showed the practical value of approximate transformations both for understanding code amenable to approximations and for discovering bad tests. We submitted 11 pull requests to fix bad tests. Seven have already been integrated by the developers.\\n\\nSecond, we explore the effect of compiler optimizations on mutation testing. Multiple mutation testing tools were developed that perform mutation at different levels. More recently mutation testing has been performed at the level of compiler intermediate representation (IR), e.g., for the LLVM IR and Java bytecode/IR. Compiler optimizations are automatic program transformations applied at the IR level with the goal of improving a measure of program performance, while preserving program semantics. Applying mutations at the IR level means that mutation testing becomes more susceptible to the effects of compiler optimizations. We investigate a new perspective on mutation testing: evaluating how standard compiler optimizations affect the cost and results of mutation testing performed at the IR level. Our study targets LLVM, a popular compiler infrastructure that supports multiple source and target languages. Our evaluation on 16 Coreutils programs discovers several interesting relations between the numbers of mutants (including the numbers on equivalent and duplicated mutants) and mutation scores on unoptimized and optimized programs.\\n\\nThird, we perform an empirical study to compare mutation testing at the source (SRC) and IR levels. Applying mutation at different levels offers different advantages and disadvantages, and the relation between mutants at the different levels is not clear. In our study, we compare mutation testing at the SRC and IR levels, specifically in the C programming language and the LLVM compiler IR. To make the comparison fair, we develop two mutation tools that implement conceptually the same operators at both levels. We also employ automated techniques to account for equivalent and duplicated mutants, and to determine hard-tokill mutants. We carry out our study on 16 programs from the Coreutils library, using a total of 948 tests. Our results show interesting characteristics that can help researchers better understand the relationship between mutation testing at both levels. Overall, we find mutation testing to be better at the SRC level than at the IR level: the SRC level produces much fewer (non-equivalent) mutants and is thus less expensive, but the SRC level still generates a similar number of hard-to-kill mutants.",
+  "doi": null,
+  "openalex": "W3094413649",
+  "status": "ok",
+  "title": "Exploring design decisions for mutation testing"
+ },
+ "oa-W3123327479": {
+  "abstract": "Programming heterogeneous parallel systems, such as the SoCs (System-on-Chip) on mobile and edge devices is extremely difficult; the diverse parallel hardware they contain exposes vastly different hardware instruction sets, parallelism models and memory systems. Moreover, a wide range of diverse hardware and software approximation techniques are available for applications targeting heterogeneous SoCs, further exacerbating the programmability challenges. In this thesis, we alleviate the programmability challenges of such systems using flexible compiler intermediate representation solutions, in order to benefit from the performance and superior energy efficiency of heterogeneous systems.\\nFirst, we develop Heterogeneous Parallel Virtual Machine (HPVM), a parallel program representation for heterogeneous systems, designed to enable functional and performance portability across popular parallel hardware. HPVM is based on a hierarchical dataflow graph with side effects. HPVM successfully supports three important capabilities for programming heterogeneous systems: a compiler intermediate representation (IR), a virtual instruction set (ISA), and a basis for runtime scheduling. We use the HPVM representation to implement an HPVM prototype, defining the HPVM IR as an extension of the Low Level Virtual Machine (LLVM) IR. Our results show comparable performance with optimized OpenCL kernels for the target hardware from a single HPVM representation using translators from HPVM virtual ISA to native code, IR optimizations operating directly on the HPVM representation, and the capability for supporting flexible runtime scheduling schemes from a single HPVM representation.\\nWe extend HPVM to ApproxHPVM, introducing hardware-independent approximation metrics in the IR to enable maintaining accuracy information at the IR level and mapping of application-level end-to-end quality metrics to system level \"knobs\". The approximation metrics quantify the acceptable accuracy loss for individual computations. Application programmers only need to specify high-level, and end-to-end, quality metrics, instead of detailed parameters for individual approximation methods. The ApproxHPVM system then automatically tunes the accuracy requirements of individual computations and maps them to approximate hardware when possible. ApproxHPVM results show significant performance and energy improvements for popular deep learning benchmarks.\\nFinally, we extend to ApproxHPVM to ApproxTuner, a compiler and runtime system for approximation. ApproxTuner extends ApproxHPVM with a wide range of hardware and software approximation techniques. It uses a three step approximation tuning strategy, a combination of development-time, install-time, and dynamic tuning. Our strategy ensures software portability, even though approximations have highly hardware-dependent performance, and enables efficient dynamic approximation tuning despite the expensive offline steps. ApproxTuner results show significant performance and energy improvements across 7 Deep Neural Networks and 3 image processing benchmarks, and ensures that high-level end-to-end quality specifications are satisfied during adaptive approximation tuning.",
+  "doi": null,
+  "openalex": "W3123327479",
+  "status": "ok",
+  "title": "Heterogeneous parallel virtual machine: A portable program representation and compiler for performance and energy optimizations on heterogeneous parallel systems"
+ },
+ "oa-W3198963934": {
+  "abstract": "In general, mixed-use building with laboratories, office, and classrooms consume a significant amount of energy and very energy intensive. These buildings provide great opportunities for energy efficiency improvement from mechanical and energy system, including Heating, Ventilation and Air-Conditioning (HVAC) plugs, and lighting subsystems. Building Energy Modeling (BEM) recently has received more and more attention as a tool to reduce building energy consumption. However, the interconnected complexity of system and equipment in buildings with laboratories makes modeling of these buildings a unique and challenging task. This study presents a development and calibration of a university mixed-use building using the EnergyPlus simulation program. The building under study is the South Engineering Research Center (SERC) building. This building was built in 2012 and has a total area of 175,000 ft2 with three floors. SERC mainly consists of research and teaching laboratories, classrooms, conference rooms and offices. Air Hander Units (AHU) equipped with Energy Recovery Units (ERU) supply 100 percent outside air to the laboratory spaces through terminal Variable Air Volume (VAV) Boxes. Chilled and hot water are delivered from the campus central energy plant. Building geometry was created using DesignBuilder. Meter and sensors data from Building Automation System (BAS) are being collected and used for calibration. The modeling process, preliminary calibration and verification results, as well as implementation issues encountered throughout the modeling and calibration processed from a user’s perspective, are presented and discussed. (Published By University of Alabama Libraries)",
+  "doi": null,
+  "openalex": "W3198963934",
+  "status": "ok",
+  "title": "Energy modeling and calibration of a mixed-use building with laboratories, offices, and classrooms"
+ },
+ "s2-0194f17f97dd8c36": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-130ec7fe147182c7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Multi-objective Autotuning Framework For The Java Virtual Machine"
+ },
+ "s2-1c726736250d96c7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An Introduction to Autotuning Parallel Applications"
+ },
+ "s2-33c15da0de280e38": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-3565631680fa8eff": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-3e20d0963528598d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Towards a Framework for Automating the Workflow for Building Machine Learning Based Performance Tuning"
+ },
+ "s2-41b2828a66e9e5c7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Runtime specialization and autotuning of sparse matrix-vector multiplication (Seyrek matrıs-vektör çarpımının koşut zamanda özelleştirilmesı ve otomatık ayarlanması)"
+ },
+ "s2-43740ad6e1f1e3e8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploiting Heterogeneous Parallel Accelerators to Improve Performance in Graph Analytics"
+ },
+ "s2-5223d05a9dc9b185": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "On-line Application Autotuning Exploiting Ensemble Models"
+ },
+ "s2-620dd02799faf1bf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-640ff97695e38994": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "VideoChef: Efficient Approximation for Streaming Video Processing Pipelines"
+ },
+ "s2-679f68fdf07cf61c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "What broke where for distributed and parallel applications - a whodunit story"
+ },
+ "s2-71f874ac2d61424c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Situa & onal * * Scheduler * Parallel & Hardware & Concurrency & Primi 2 ves & Learn * and * Configure * So 4 ware * & * Hardware * Distributed & Hardware & Resources &"
+ },
+ "s2-768a63aede6e2b23": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploring Parallel Algorithmic Choices for Graph Analytics"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-7a7a1aba675a2b08": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A framework to build bespoke auto-tuners with structured Bayesian optimisation"
+ },
+ "s2-7d2ffb60509d55fc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Capri: A Control System for Approximate Programs"
+ },
+ "s2-86d1f4610c4e2e68": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-88e94ebf09d239ba": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Accelerating Graph Processing on Large-scale Multicores"
+ },
+ "s2-8c435e653c32b84a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "dEsign enVironmEnt foR Extreme-Scale big data analyTics on heterogeneous platforms"
+ },
+ "s2-8f914d9ed2234897": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "1 A Survey on Compiler Autotuning using Machine Learning"
+ },
+ "s2-94261a9e2217323c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-9efd2ec28552bf2f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Interaction between Inputs and Configurations fed to Software Systems: an Empirical Study"
+ },
+ "s2-a1f7d217d9e21a81": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-a9a71aadbceedbe1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Multi-Objective Autotuning Targeting a Domain Specific Language for Particle Simulations"
+ },
+ "s2-aed85452d453f007": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Low-overhead Online Code Transformations"
+ },
+ "s2-bc6d664f99fbef23": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-bdb02fc884736ee1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient Approximation for Streaming Video Processing Pipelines"
+ },
+ "s2-bf7a5a726fd03f6d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MLTUNE : A Toolchain for Automating the Workflow of Machine-Learning Based Performance Tuning"
+ },
+ "s2-c2e3b7e3e8e5de4c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-c6f1be936f04fed8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MetaTune: Meta-Learning Based Cost Model for Fast and Efficient Auto-tuning Frameworks"
+ },
+ "s2-c71256b3ca846bae": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-c79f75577e0ffb42": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "s2-cecfe9f49722cbd0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-dbb1e5987fbfdea2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "COBAYN: Compiler Autotuning Framework using Bayesian Networks ACM Transactions on Architecture and Code Optimization"
+ },
+ "s2-dc2fd9908e50a23a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Lowering Knowledge Barriers for HPC: From Representations to Infrastructures and Acquisitions."
+ },
+ "s2-e4638e00bbd66707": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Abstractions and Strategies for Adaptive Programming"
+ },
+ "s2-e4b8e00d7fc797cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-e89e0e943cb1f1e2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-f9a5ae104a899f5a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "End-to-end Deep Learning of Optimization Heuristics"
+ },
+ "s2-fcab775ee6490af7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning Techniques for Code Optimization"
+ },
+ "s2-fde4128f852f8e4f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compilers"
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "10.1016_b978-0-323-95502-7.00023-3": {
+  "abstract": null,
+  "doi": "10.1016/b978-0-323-95502-7.00023-3",
+  "openalex": "W4402297401",
+  "status": "no_abstract",
+  "title": "Computational Pipelines and Workflows in Bioinformatics"
+ },
+ "10.1038_s41467-020-18320-z": {
+  "abstract": "Haplotype reconstruction of distant genetic variants remains an unsolved problem due to the short-read length of common sequencing data. Here, we introduce HapTree-X, a probabilistic framework that utilizes latent long-range information to reconstruct unspecified haplotypes in diploid and polyploid organisms. It introduces the observation that differential allele-specific expression can link genetic variants from the same physical chromosome, thus even enabling using reads that cover only individual variants. We demonstrate HapTree-X's feasibility on in-house sequenced Genome in a Bottle RNA-seq and various whole exome, genome, and 10X Genomics datasets. HapTree-X produces more complete phases (up to 25%), even in clinically important genes, and phases more variants than other methods while maintaining similar or higher accuracy and being up to 10× faster than other tools. The advantage of HapTree-X's ability to use multiple lines of evidence, as well as to phase polyploid genomes in a single integrative framework, substantially grows as the amount of diverse data increases.",
+  "doi": "10.1038/s41467-020-18320-z",
+  "openalex": "W3087650361",
+  "status": "ok",
+  "title": "Improved haplotype inference by exploiting long-range linking and allelic imbalance in RNA-seq datasets"
+ },
+ "10.1038_s41587-021-00985-6": {
+  "abstract": null,
+  "doi": "10.1038/s41587-021-00985-6",
+  "openalex": "W3183451325",
+  "status": "no_abstract",
+  "title": "A Python-based programming language for high-performance computational genomics"
+ },
+ "10.1093_nsr_nwaa092": {
+  "abstract": "Natural phenomena of collective intelligence (CI) occurring in physical space show a potential approach to effective large-scale human collaboration in cyberspace. Based on existing explanatory understanding of CI, this perspective proposes a constructive model for building artificial CI systems, i.e., problem-oriented CI phenomena with AI-powered information integration and feedback.",
+  "doi": "10.1093/nsr/nwaa092",
+  "openalex": "W3022630278",
+  "status": "ok",
+  "title": "A constructive model for collective intelligence"
+ },
+ "10.1101_2020.10.29.361402": {
+  "abstract": "Abstract Exponentially-growing next-generation sequencing data requires high-performance tools and algorithms. Nevertheless, the implementation of high-performance computational genomics software is inaccessible to many scientists because it requires extensive knowledge of low-level software optimization techniques, forcing scientists to resort to high-level software alternatives that are less efficient. Here, we introduce Seq—a Python-based optimization framework that combines the power and usability of high-level languages like Python with the performance of low-level languages like C or C++. Seq allows for shorter, simpler code, is readily usable by a novice programmer, and obtains significant performance improvements over existing languages and frameworks. We showcase and evaluate Seq by implementing seven standard, widely-used applications from all stages of the genomics analysis pipeline, including genome index construction, finding maximal exact matches, long-read alignment and haplotype phasing, and demonstrate its implementations are up to an order of magnitude faster than existing hand-optimized implementations, with just a fraction of the code. By enabling researchers of all backgrounds to easily implement high-performance analysis tools, Seq further opens the door to the democratization and scalability of computational genomics.",
+  "doi": "10.1101/2020.10.29.361402",
+  "openalex": "W3096134169",
+  "status": "ok",
+  "title": "A Python-based optimization framework for high-performance genomics"
+ },
+ "10.1109_isca52012.2021.00041": {
+  "abstract": "We live in a new Cambrian Explosion of hardware devices. The end of conventional processor scaling has driven research and industry practice to explore a new generation of approaches. The old DNA of architecture design, including vectors, threads, shared or private memories, coherence or message passing, dataflow or von Neumann execution, are hybridized together in new and exciting ways. Each new architecture exposes a unique hardware-level API. Performance and energy efficiency are critically dependent on how well programs can use these APIs. One approach is to implement custom libraries for each new hardware architecture and application domain. A more scalable approach is to utilize a portable compiler infrastructure tailored to the application domain that makes it easy to generate efficient code for a diverse set of architectures with minimal porting effort.We propose the Unified GraphIt Compiler framework (UGC), which does exactly this for graph applications. UGC achieves portability with reasonable effort by decoupling the architecture-independent algorithm from the architecture-specific schedules and backends. We introduce a new domain-specific intermediate representation, GraphIR, that is key to this decoupling. GraphIR encodes high-level algorithm and optimization information needed for hardware-specific code generation, making it easy to develop different backends (GraphVMs) for diverse architectures, including CPUs, GPUs, and next-generation hardware such as Swarm and the HammerBlade manycore. We also build scheduling language extensions that make it easy to expose optimization decisions like load balancing strategies, blocking for locality, and other data structure choices. We evaluate UGC on five algorithms and 10 input graphs on these 4 distinct architectures and show that UGC enables implementing optimizations that can provide up to 53× speedup over programmer-generated straightforward implementations.",
+  "doi": "10.1109/isca52012.2021.00041",
+  "openalex": "W3189388815",
+  "status": "ok",
+  "title": "Taming the Zoo: The Unified GraphIt Compiler Framework for Novel Architectures"
+ },
+ "10.1109_tcbb.2022.3219114": {
+  "abstract": "The continuous growth of generated sequencing data leads to the development of a variety of associated bioinformatics tools. However, many of them are not able to fully exploit the resources of modern multi-core systems since they are bottlenecked by parsing files leading to slow execution times. This motivates the design of an efficient method for parsing sequencing data that can exploit the power of modern hardware, especially for modern CPUs with fast storage devices. We have developed RabbitFX, a fast, efficient, and easy-to-use framework for processing biological sequencing data on modern multi-core platforms. It can efficiently read FASTA and FASTQ files by combining a lightweight parsing method by means of an optimized formatting implementation. Furthermore, we provide user-friendly and modularized C++ APIs that can be easily integrated into applications in order to increase their file parsing speed. As proof-of-concept, we have integrated RabbitFX into three I/O-intensive applications: fastp, Ktrim, and Mash. Our evaluation shows that the inclusion of RabbitFX leads to speedups of at least 11.6 (6.6), 2.4 (2.4), and 3.7 (3.2) compared to the original versions on plain (gzip-compressed) files, respectively. These case studies demonstrate that RabbitFX can be easily integrated into a variety of NGS analysis tools to significantly reduce associated runtimes. It is open source software available at https://github.com/RabbitBio/RabbitFX.",
+  "doi": "10.1109/tcbb.2022.3219114",
+  "openalex": "W4308187598",
+  "status": "ok",
+  "title": "RabbitFX: Efficient Framework for FASTA/Q File Parsing on Modern Multi-Core Platforms"
+ },
+ "10.1145_3572848.3577509": {
+  "abstract": "This paper presents OpenCilk, an open-source software infrastructure for task-parallel programming that allows for substantial code reuse and easy exploration of design choices in language abstraction, compilation strategy, runtime mechanism, and productivity-tool development.",
+  "doi": "10.1145/3572848.3577509",
+  "openalex": "W4321446066",
+  "status": "ok",
+  "title": "OpenCilk"
+ },
+ "10.1145_3578360.3580275": {
+  "abstract": "Domain-specific languages (DSLs) are able to provide intuitive high-level abstractions that are easy to work with while attaining better performance than general-purpose languages. Yet, implementing new DSLs is a burdensome task. As a result, new DSLs are usually embedded in general-purpose languages. While low-level languages like C or C++ often provide better performance as a host than high-level languages like Python, high-level languages are becoming more prevalent in many domains due to their ease and flexibility. Here, we present Codon, a domain-extensible compiler and DSL framework for high-performance DSLs with Python's syntax and semantics. Codon builds on previous work on ahead-of-time type checking and compilation of Python programs and leverages a novel intermediate representation to easily incorporate domain-specific optimizations and analyses. We showcase and evaluate several compiler extensions and DSLs for Codon targeting various domains, including bioinformatics, secure multi-party computation, block-based data compression and parallel programming, showing that Codon DSLs can provide benefits of familiar high-level languages and achieve performance typically only seen with low-level languages, thus bridging the gap between performance and usability.",
+  "doi": "10.1145/3578360.3580275",
+  "openalex": "W4321184667",
+  "status": "ok",
+  "title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs"
+ },
+ "10.1145_3579990.3580014": {
+  "abstract": "Compiled Domain Specific Languages are taking over various high-performance domains because of their ability to exploit the domain knowledge and apply optimizations that produce the most specialized code. A lot of research has gone into making DSLs more performant and easy to prototype. But the Achilles heel for DSLs is still the lack of debugging support that provides an end-to-end picture to the user and improves the productivity of both the DSL designer and the end-user. Conventional techniques extend the compilers, the debugging information format, and the debuggers themselves to provide more information than what the debugger can provide when attached to the generated code. Such an approach quickly stops scaling as adding extensions to large and complex debuggers hampers DSL designer productivity. We present D2X, a DSL debugging infrastructure that works with most standard debuggers without any modifications and is easily extensible to capture all the domain specific information the end-user cares about. We show that we can add debugging support to the state-of-the-art graph DSL GraphIt with as little as 1.4% changes to the compiler code base. We also apply our techniques to a meta-programming DSL framework BuildIt so that any DSLs built on top of BuildIt get debugging support without any modifications further boosting the productivity of future DSL designers.",
+  "doi": "10.1145/3579990.3580014",
+  "openalex": "W4321496247",
+  "status": "ok",
+  "title": "D2X: An eXtensible conteXtual Debugger for Modern DSLs"
+ },
+ "10.1145_3696443.3708963": {
+  "abstract": "Dynamic programming (DP) is a fundamental algorithmic strategy that decomposes large problems into manageable subproblems. It is a cornerstone of many important computational methods in diverse fields, especially in the field of computational genomics, where it is used for sequence comparison. However, as the scale of the data keeps increasing, these algorithms are becoming a major computational bottleneck, and there is a need for strategies that can improve their performance. Here, we present Vectron, a novel auto-vectorization suite that targets array-based DP implementations written in Python and converts them to efficient vectorized counterparts that can efficiently process multiple problem instances in parallel. Leveraging Single Instruction Multiple Data (SIMD) capabilities in modern CPUs, along with Graphics Processing Units (GPUs), Vectron delivers significant speedups, ranging from 10% to more than 20x, over the conventional C++ implementations and manually vectorized and domain-specific state-of-the-art implementations, without necessitating large algorithm or code changes. Vectron's generality enables automatic vectorization of any array-based DP algorithm and, as a result, presents an attractive solution to optimization challenges inherent to DP algorithms.",
+  "doi": "10.1145/3696443.3708963",
+  "openalex": "W4407857640",
+  "status": "ok",
+  "title": "Vectron: A Dynamic Programming Auto-vectorization Framework"
+ },
+ "10.1145_3756681.3756972": {
+  "abstract": "Python is a popular programming language known for its ease of learning and extensive libraries. However, concerns about performance and energy consumption have led to the development of compilers to enhance Python code efficiency. Despite the proven benefits of existing compilers on the efficiency of Python code, there is limited analysis comparing their performance and energy efficiency, particularly considering code characteristics and factors like CPU frequency and core count. Our study investigates how compilation impacts the performance and energy consumption of Python code, using seven benchmarks compiled with eight different tools: PyPy, Numba, Nuitka, Mypyc, Codon, Cython, Pyston-lite, and the experimental Python 3.13 version, compared to CPython. The benchmarks are single-threaded and executed on an NUC and a server, measuring energy usage, execution time, memory usage, and Last-Level Cache (LLC) miss rates at a fixed frequency and on a single core. The results show that compilation can significantly enhance execution time, energy and memory usage, with Codon, PyPy, and Numba achieving over 90% speed and energy improvements. Nuitka optimizes memory usage consistently on both testbeds. The impact of compilation on LLC miss rate is not clear since it varies considerably across benchmarks for each compiler. Our study is important for researchers and practitioners focused on improving Python code performance and energy efficiency. We outline future research directions, such as exploring caching effects on energy usage. Our findings help practitioners choose the best compiler based on their efficiency benefits and accessibility.",
+  "doi": "10.1145/3756681.3756972",
+  "openalex": "W7117104135",
+  "status": "ok",
+  "title": "An Empirical Study on the Performance and Energy Usage of Compiled Python Code"
+ },
+ "10.1186_s13015-022-00210-2": {
+  "abstract": "MOTIVATION: The increasing availability of high-quality genome assemblies raised interest in the characterization of genomic architecture. Major architectural elements, such as common repeats and segmental duplications (SDs), increase genome plasticity that stimulates further evolution by changing the genomic structure and inventing new genes. Optimal computation of SDs within a genome requires quadratic-time local alignment algorithms that are impractical due to the size of most genomes. Additionally, to perform evolutionary analysis, one needs to characterize SDs in multiple genomes and find relations between those SDs and unique (non-duplicated) segments in other genomes. A naïve approach consisting of multiple sequence alignment would make the optimal solution to this problem even more impractical. Thus there is a need for fast and accurate algorithms to characterize SD structure in multiple genome assemblies to better understand the evolutionary forces that shaped the genomes of today. RESULTS: Here we introduce a new approach, BISER, to quickly detect SDs in multiple genomes and identify elementary SDs and core duplicons that drive the formation of such SDs. BISER improves earlier tools by (i) scaling the detection of SDs with low homology to multiple genomes while introducing further 7-33[Formula: see text] speed-ups over the existing tools, and by (ii) characterizing elementary SDs and detecting core duplicons to help trace the evolutionary history of duplications to as far as 300 million years. AVAILABILITY AND IMPLEMENTATION: BISER is implemented in Seq programming language and is publicly available at https://github.com/0xTCG/biser .",
+  "doi": "10.1186/s13015-022-00210-2",
+  "openalex": "W4221035067",
+  "status": "ok",
+  "title": "Fast characterization of segmental duplication structure in multiple genome assemblies"
+ },
+ "10.1186_s13059-022-02841-5": {
+  "abstract": "Secure multiparty computation (MPC) is a cryptographic tool that allows computation on top of sensitive biomedical data without revealing private information to the involved entities. Here, we introduce Sequre, an easy-to-use, high-performance framework for developing performant MPC applications. Sequre offers a set of automatic compile-time optimizations that significantly improve the performance of MPC applications and incorporates the syntax of Python programming language to facilitate rapid application development. We demonstrate its usability and performance on various bioinformatics tasks showing up to 3-4 times increased speed over the existing pipelines with 7-fold reductions in codebase sizes.",
+  "doi": "10.1186/s13059-022-02841-5",
+  "openalex": "W4315567939",
+  "status": "ok",
+  "title": "Sequre: a high-performance framework for secure multiparty computation enables biomedical data sharing"
+ },
+ "10.22214_ijraset.2022.40949": {
+  "abstract": "Abstract: In a scientific study, computing is a must-have tool. In general, scientists have various difficulties, requirements, and views when it comes to computation, which need to be addressed by the programming language that they use, this cannot be satisfied by general-purpose languages. Also, researchers need to concentrate on the issue they are working on rather than the optimizations for the calculations, so instead of using a general-purpose language, if there exists a language whose compiler would take care of those optimizations, it would make their work easier and faster. This is a survey of the work undertaken to design the programming language and its compiler. The primary goal of this research is to examine the function of work, implementation strategy, steps taken for improving the performance, the procedure of benchmarking, and finally, the outcome of the papers studied. The survey's main conclusions are that: the most common language mentioned among the papers was Python which appears to be more popular among developers due to its simple syntax and library support for computing. On the other hand, Python lacks performance, to compensate for this performance issue, the community has developed tools like Cython, Numba, Pythran, etc, which can be used to speed up Python. Domain-specific languages such as Wolfram, Seq, and ELI highlighted various methods for overcoming problems. Some languages like Wolfram and ELI moved from interpreter to compiler to get the performance boost. Most of the compilers use LLVM as the backend for optimizations and code generation. Keywords: scientific computation, compiler, programming language",
+  "doi": "10.22214/ijraset.2022.40949",
+  "openalex": "W4221054191",
+  "status": "ok",
+  "title": "Design of a New Language Seeks Literature Survey"
+ },
+ "10.3390_app11125426": {
+  "abstract": "Bioinformatics is a branch of science that uses computers, algorithms, and databases to solve biological problems. To achieve more accurate results, researchers need to use large and complex datasets. Sequence alignment is a well-known field of bioinformatics that allows the comparison of different genomic sequences. The comparative genomics field allows the comparison of different genomic sequences, leading to benefits in areas such as evolutionary biology, agriculture, and human health (e.g., mutation testing connects unknown genes to diseases). However, software engineering best practices, such as software performance engineering, are not taken into consideration in most bioinformatics tools and frameworks, which may lead to serious performance problems. Having an estimate of the software performance in the early phases of the Software Development Life Cycle (SDLC) is beneficial in making better decisions relating to the software design. Software performance engineering provides a reliable and observable method to build systems that can achieve their required performance goals. In this paper, we introduce the use of the Palladio Component Modeling (PCM) methodology to predict the performance of a sequence alignment system. Software performance engineering was not considered during the original system development. As a result of the performance analysis, an alternative design is proposed. Comparing the performance of the proposed design against the one already developed, a better response time is obtained. The response time of the usage scenario is reduced from 16 to 8.6 s. The study results show that using performance models at early stages in bioinformatics systems can help to achieve better software system performance.",
+  "doi": "10.3390/app11125426",
+  "openalex": "W3172655847",
+  "status": "ok",
+  "title": "Early Performance Prediction in Bioinformatics Systems Using Palladio Component Modeling"
+ },
+ "10.3390_computation9100106": {
+  "abstract": "Genetic expression analysis is a principal tool to explain the behavior of genes in an organism when exposed to different experimental conditions. In the state of art, many clustering algorithms have been proposed. It is overwhelming the amount of biological data whose high-dimensional structure exceeds mostly current computational architectures. The computational time and memory consumption optimization actually become decisive factors in choosing clustering algorithms. We propose a clustering algorithm based on Non-negative Matrix Factorization and K-means to reduce data dimensionality but whilst preserving the biological context and prioritizing gene selection, and it is implemented within parallel GPU-based environments through the CUDA library. A well-known dataset is used in our tests and the quality of the results is measured through the Rand and Accuracy Index. The results show an increase in the acceleration of 6.22× compared to the sequential version. The algorithm is competitive in the biological datasets analysis and it is invariant with respect to the classes number and the size of the gene expression matrix.",
+  "doi": "10.3390/computation9100106",
+  "openalex": "W3204009036",
+  "status": "ok",
+  "title": "Gene Expression Analysis through Parallel Non-Negative Matrix Factorization"
+ },
+ "10.4251_wjgo.v18.i6.117851": {
+  "abstract": "BACKGROUND Accurate assessment of lymph node metastasis (LNM) is important in patients with esophageal cancer (EC). AIM To construct machine learning (ML) models using routine clinical data to predict LNM in patients with EC, exploring predictive capacity after integrating circulating tumor DNA (ctDNA) features. METHODS In this retrospective study, we collected demographic information, risk factors, protein biomarkers, computed tomography (CT), endoscopic, and pathological data of 206 patients with EC. The ctDNA data were available for 57 patients. A total of 81 models were developed using different feature-selection techniques and ML algorithms. A total of 79 (38.3%) patients had pathologically confirmed LNM. RESULTS The different ML models demonstrated good predictive performance, with a median area under the curve (AUC) of 0.767 (interquartile range: 0.679, 0.828) and median F1 score of 0.715 (interquartile range: 0.672, 0.772). The variables were selected through univariate and multivariate logistic analyses and the best model was constructed using the random forest algorithm. It incorporated tumor length, location, CT results, depth of tumor invasion, and number of aberrant protein biomarkers. It demonstrated an AUC of 0.79 (95%CI: 0.65-0.93) and accuracy of 82.26% (95%CI: 70.47%-90.80%), which were superior to the CT results. Incorporating ctDNA features yielded modest improvements in AUC (9.0%) and F1 score (14.3%); however, these gains were not statistically significant. CONCLUSION Combining ctDNA features with preoperative clinical factors and CT results can enhance the predictive ability of LNM models in patients with EC.",
+  "doi": "10.4251/wjgo.v18.i6.117851",
+  "openalex": "W7163902784",
+  "status": "ok",
+  "title": "Machine-learning models integrating preoperative clinical factors and circulating tumor DNA features predict lymph node metastasis in esophageal carcinoma"
+ },
+ "10.64898_2026.07.28.741211": {
+  "abstract": "Motivation: Novel sequencing technologies (for example, different single-cell chemistries and protocols) produce complex data. Often, the sequenced reads themselves encode critical technical information, such as the cell or molecule of origin. For effective pre-processing of this data and subsequent downstream analysis, it is required to efficiently and accurately identify, extract, and potentially normalize this information. Results: We introduce seqproc, a general-purpose sequence pre-processing tool based on a concise descriptive grammar to specify sequence matching and transformations. seqproc compiles a user-provided sequence geometry and transformation description into an execution graph, executed by the antisequence library. We demonstrate that seqproc is faster on most chemistries, substantially more memory efficient, and at least as accurate as alternative tools that provide similar functionality, while having a more concise description syntax. Availability: seqproc is written in Rust and can be executed as a binary program or used as a Rust crate. It is licensed under the BSD 3-clause license and the source code is available at https://github.com/COMBINE-lab/seqprocy .",
+  "doi": "10.64898/2026.07.28.741211",
+  "openalex": "W7171641744",
+  "status": "ok",
+  "title": "seqproc: An efficient, flexible, and concise tool for sequence geometry description and transformation"
+ },
+ "s2-70afeb06c8c3ee13": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Shechi: A Secure Distributed Computation Compiler Based on Multiparty Homomorphic Encryption"
+ },
+ "s2-933027b12f069b7d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiling Bioinformatics Recurrences"
+ }
+}

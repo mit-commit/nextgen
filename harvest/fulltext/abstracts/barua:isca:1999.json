@@ -1,0 +1,961 @@
+{
+ "10.1002_cpe.1013": {
+  "abstract": "Abstract Clustering is a common technique to overcome the wire delay problem incurred by the evolution of technology. Fully distributed architectures, where the register file, the functional units and the data cache are partitioned, are particularly effective to deal with these constraints and moreover they are very scalable. In this paper, effective instruction scheduling techniques for a word‐interleaved cache clustered VLIW processor are presented. Such scheduling techniques rely on (i) loop unrolling and variable alignment to increase the fraction of local accesses, (ii) a latency assignment process to schedule memory instructions with an appropriate latency, and (iii) different heuristics to assign memory instructions to clusters. Memory consistency is guaranteed by constraining the assignment of memory instructions to clusters. In addition, the use of Attraction Buffers is also introduced. An Attraction Buffer is a hardware mechanism that allows some data replication in order to increase the number of local accesses and, in consequence, reduces stall time. Performance results for the Mediabench benchmark suite demonstrate the effectiveness of the presented techniques and mechanisms. The number of local accesses is increased by more than 25% by using the mentioned scheduling techniques, while stall time is reduced by more than 30% when Attraction Buffers are used. Finally, IPC results for such an architecture are 10% and 5% better compared to those of a clustered VLIW processor with a centralized/unified data cache depending on the scheduling heuristic, respectively. Copyright © 2006 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.1013",
+  "openalex": "W1984435539",
+  "status": "ok",
+  "title": "Instruction scheduling for a clustered VLIW processor with a word‐interleaved cache"
+ },
+ "10.1007_3-540-35767-x_17": {
+  "abstract": null,
+  "doi": "10.1007/3-540-35767-x_17",
+  "openalex": "W1557355787",
+  "status": "no_abstract",
+  "title": "Strength Reduction of Integer Division and Modulo Operations"
+ },
+ "10.1007_3-540-44570-6_9": {
+  "abstract": null,
+  "doi": "10.1007/3-540-44570-6_9",
+  "openalex": "W1504058227",
+  "status": "no_abstract",
+  "title": "FlexCache: A Framework for Flexible Compiler Generated Data Caching"
+ },
+ "10.1007_978-1-4419-0263-4_1": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4419-0263-4_1",
+  "openalex": "W1646056354",
+  "status": "no_abstract",
+  "title": "Tiled Multicore Processors"
+ },
+ "10.1007_978-90-481-3913-2_3": {
+  "abstract": null,
+  "doi": "10.1007/978-90-481-3913-2_3",
+  "openalex": "W2226607684",
+  "status": "no_abstract",
+  "title": "Deployment of Reconfigurable Systems"
+ },
+ "10.1016_j.micpro.2004.06.007": {
+  "abstract": null,
+  "doi": "10.1016/j.micpro.2004.06.007",
+  "openalex": "W2089641827",
+  "status": "no_abstract",
+  "title": "Automatic mapping of C to FPGAs with the DEFACTO compilation and synthesis system"
+ },
+ "10.1016_j.sysarc.2008.10.006": {
+  "abstract": null,
+  "doi": "10.1016/j.sysarc.2008.10.006",
+  "openalex": "W2084744582",
+  "status": "no_abstract",
+  "title": "A framework for low energy data management in reconfigurable multi-context architectures"
+ },
+ "10.1016_s0065-2458_00_80003-0": {
+  "abstract": null,
+  "doi": "10.1016/s0065-2458(00)80003-0",
+  "openalex": "W1517538177",
+  "status": "no_abstract",
+  "title": "Shared-memory multiprocessing: Current state and future directions"
+ },
+ "10.1016_s1383-7621_03_00090-0": {
+  "abstract": null,
+  "doi": "10.1016/s1383-7621(03)00090-0",
+  "openalex": "W2031931305",
+  "status": "no_abstract",
+  "title": "SAGE: an automatic analyzing system for a new high-performance SoC architecture––processor-in-memory"
+ },
+ "10.1109_12.966498": {
+  "abstract": "This paper presents an algorithm to automatically map code on a generic intelligent memory system that consists of a high-end host processor and a simpler memory processor. To achieve high performance with this type of architecture, the code needs to be partitioned and scheduled such that each section is assigned to the processor on which it runs most efficiently. In addition, the two processors should overlap their execution as much as possible. With our algorithm, applications are mapped fully automatically using both static and dynamic information. Using a set of standard applications and a simulated architecture, we obtain average speedups of 1.7 for numerical applications and 1.2 for nonnumerical applications over a single host with plain memory. The speedups are very close and often higher than ideal speedups on a more expensive multiprocessor system composed of two identical host processors. Our work shows that heterogeneity can be cost-effectively exploited and represents one step toward effectively mapping code on heterogeneous intelligent memory systems.",
+  "doi": "10.1109/12.966498",
+  "openalex": "W2105504416",
+  "status": "ok",
+  "title": "Automatic code mapping on an intelligent memory architecture"
+ },
+ "10.1109_aspdac.2001.913368": {
+  "abstract": "The paper gives a brief survey over a decade of R&D on coarse grain reconfigurable hardware and related compilation techniques and points out its significance to the emerging discipline of reconfigurable computing.",
+  "doi": "10.1109/aspdac.2001.913368",
+  "openalex": "W2167956099",
+  "status": "ok",
+  "title": "Coarse grain reconfigurable architectures"
+ },
+ "10.1109_cgo.2003.1191545": {
+  "abstract": "Clustering is a common technique to deal with wire delays. Fully-distributed architectures, where the register file, the functional units and the cache memory are partitioned, are particularly effective to deal with these constraints and besides they are very scalable. However the distribution of the data cache introduces a new problem: memory instructions may reach the cache in an order different to the sequential program order, thus possibly violating its contents. In this paper two local scheduling mechanisms that guarantee the serialization of aliased memory instructions are proposed and evaluated: the construction of memory dependent chains (MDC solution), and two transformations (store replication and load-store synchronization) applied to the original data dependence graph (DDGT solution). These solutions do not require any extra hardware. The proposed scheduling techniques are evaluated for a word-interleaved cache clustered VLIW processor (although these techniques can also be used for any other distributed cache configuration). Results for the Mediabench benchmark suite demonstrate the effectiveness of such techniques. In particular, the DDGT solution increases the proportion of local accesses by 16% compared to MDC, and stall time is reduced by 32% since load instructions can be freely scheduled in any cluster However the MDC solution reduces compute time and it often outperforms the former. Finally the impact of both techniques on an architecture with attraction buffers is studied and evaluated.",
+  "doi": "10.1109/cgo.2003.1191545",
+  "openalex": "W4249378766",
+  "status": "ok",
+  "title": "Local scheduling techniques for memory coherence in a clustered VLIW processor with a distributed data cache"
+ },
+ "10.1109_cgo.2004.1281682": {
+  "abstract": "We describe a generalized approach to deriving a custom data layout in multiple memory banks for array-based computations, to facilitate high-bandwidth parallel memory accesses in modern architectures, where multiple memory banks can simultaneously feed one or more functional units. We do not use a fixed data layout, but rather select application-specific layouts according to access patterns in the code. A unique feature of this approach is its flexibility in the presence of code reordering transformations, such as the loop nest transformations commonly applied to array-based computations. We have implemented this algorithm in the DEFACTO system, a design environment for automatically mapping C programs to hardware implementations for FPGA-based systems. We present experimental results for five multimedia kernels that demonstrate the benefits of this approach. Our results show that custom data layout yields results as good as, or better than, naive or fixed cyclic layouts, and is significantly better for certain access patterns and in the presence of code reordering transformations. When used in conjunction with unrolling loops in a nest to expose instruction-level parallelism, we observe greater than a 75% reduction in the number of memory access cycles and speedups ranging from 3.96 to 46.7 for 8 memories, as compared to using a single memory with no unrolling.",
+  "doi": "10.1109/cgo.2004.1281682",
+  "openalex": "W4241787720",
+  "status": "ok",
+  "title": "Custom data layout for memory parallelism"
+ },
+ "10.1109_date.2001.915091": {
+  "abstract": "The paper surveys a decade of R&D on coarse grain reconfigurable hardware and related CAD, points out why this emerging discipline is heading toward a dichotomy of computing science, and advocates the introduction of a new soft machine paradigm to replace CAD by compilation.",
+  "doi": "10.1109/date.2001.915091",
+  "openalex": "W4250486818",
+  "status": "ok",
+  "title": "A decade of reconfigurable computing: a visionary retrospective"
+ },
+ "10.1109_dsd.2001.952125": {
+  "abstract": "Making gate arrays obsolete, FPGAs are successfully proceeding from niche to mainstream. Like microprocessor usage, FPGA application is RAM-based, but by structural programming (also called \"(re)configuration\") instead of procedural programming. Now both, host and accelerator are RAM-based and as such also available on the same chip: a new approach to SoC design. Now also accelerator definition may be-at least partly-conveyed from vendor site to customer site. A new business model is needed. But this paradigm switch is still ignored: FPGAs do not repeat the RAM-based success story of the software industry. There is not yet a configware industry, since mapping applications onto FPGAs mainly uses hardware syntheses method. From a decade of world-wide research on Reconfigurable Computing another breed of reconfigurable platforms is an emerging future competitor to FPGAs. Supporting roughly single bit wide configurable logic blocks (CLBs) the mapping tools are mainly based on gate level methods-similar to CAD for hardware logic. In contrast to this fine-grained arrays of coarse-grained reconfigurable datapath units (rDPUs) with drastically reduced reconfigurability overhead: to directly configure high level parallelism. But the \"von Neumann\" paradigm does not support soft datapaths because \"instruction fetch\" is not done at run time, and, since most reconfigurable computing arrays do not run parallel processes, but multiple pipe networks instead.",
+  "doi": "10.1109/dsd.2001.952125",
+  "openalex": "W2137332180",
+  "status": "ok",
+  "title": "Reconfigurable computing: a new business model-and its impact on SoC design"
+ },
+ "10.1109_fpga.1999.803668": {
+  "abstract": "FPGA-based processors, like many conventional DSP systems, often associate small high performance memories with each processing chip. These memories may be on-board embedded SRAMs or discrete parts. In the process of mapping a computation onto an FPGA processor, it is necessary to map the applications' data to memories. In this work, we present an algorithm that has been implemented in our NAPA C compiler to assign data automatically to memories to produce minimum overall execution time of the loops in the program. With the addition of this algorithm to our compiler, the programmer need not explicitly annotate array declarations with location information. Rather, the compiler analyzes the usage patterns of variables and selects the optimal location for each variable. The algorithm uses a search technique known as implicit enumeration to reduce the otherwise exponential search space. In practice, the use of this memory allocation compiler phase in our SUIF-based NAPA C compiler has negligible effect on compiler run time.",
+  "doi": "10.1109/fpga.1999.803668",
+  "openalex": "W2123183104",
+  "status": "ok",
+  "title": "Automatic allocation of arrays to memories in FPGA processors with multiple memory banks"
+ },
+ "10.1109_fpga.1999.803669": {
+  "abstract": "The next decade of computing will be dominated by embedded systems, information appliances and application-specific computers. In order to build these systems, designers will need high-level compilation and CAD tools that generate architectures that effectively meet the needs of each application. In this paper we present a novel compilation system that allows sequential programs, written in C or FORTRAN, to be compiled directly into custom silicon or reconfigurable architectures. This capability is also interesting because trends in computer architecture are moving towards more reconfigurable hardware-like substrates, such as FPGA based systems. Our system works by successfully combining two resource-efficient computing disciplines: Small Memories and Virtual Wires. For a given application, the compiler first analyzes the memory access patterns of pointers and arrays in the program and constructs a partitioned memory system made up of many small memories. The computation is implemented by active computing elements that are spatially distributed within the memory array. A space-time scheduler assigns instructions to the computing elements in a way that maximizes locality and minimizes physical communication distance. It also generates an efficient static schedule for the interconnect. Finally, specialized hardware for the resulting schedule of memory accesses, wires, and computation is generated as a multi-process state machine in synthesizable Verilog. With this system, implemented as a set of SUIF compiler passes, we have successfully compiled programs into hardware and achieve specialization performance enhancements by up to an order of magnitude versus a single general purpose processor. We also achieve additional parallelization speedups similar to those obtainable using a tightly-interconnected multiprocessor.",
+  "doi": "10.1109/fpga.1999.803669",
+  "openalex": "W2137149639",
+  "status": "ok",
+  "title": "Parallelizing applications into silicon"
+ },
+ "10.1109_fpga.2002.1106663": {
+  "abstract": "Reconfigurable systems, and in particular, FPGA-based custom computing machines, offer a unique opportunity to define application-specific architectures. These architectures offer performance advantages for application domains such as image processing, where the use of customized pipelines exploits the inherent coarse-grain parallelism. In this paper we describe a set of program analyses and an implementation that map a sequential and un-annotated C program into a pipelined implementation running on a set of FPGAs, each with multiple external memories. Based on well-known parallel computing analysis techniques, our algorithms perform unrolling for operator parallelization, reuse and data layout for memory parallelization and precise communication analysis. We extend these techniques for FPGA-based systems to automatically partition the application data and computation into custom pipeline stages, taking into account the available FPGA and interconnect resources. We illustrate the analysis components by way of an example, a machine vision program. We present the algorithm results, derived with minimal manual intervention, which demonstrate the potential of this approach for automatically deriving pipelined designs from high-level sequential specifications.",
+  "doi": "10.1109/fpga.2002.1106663",
+  "openalex": "W2151264479",
+  "status": "ok",
+  "title": "Coarse-grain pipelining on multiple FPGA architectures"
+ },
+ "10.1109_fpl.2006.311241": {
+  "abstract": "Configurable architectures offer the unique opportunity of customizing the storage allocation to meet specific applications, needs. In this paper we describe a compiler approach to map the arrays of a loop-based computation to internal memories of a configurable architecture with the objective of minimizing the overall execution time. We present an algorithm that considers the data access patterns of the arrays along the critical path of the computation as well as the available storage and memory bandwidth. We demonstrate experimental results of the application of this approach for a set of kernel codes when targeting a Field-Programmable Gate-Array (FPGA). The results reveal that our algorithm outperforms naive and custom data layouts for these kernels by an average of 33% and 15% in terms of execution time, while taking into account the available hardware resources.",
+  "doi": "10.1109/fpl.2006.311241",
+  "openalex": "W2109805563",
+  "status": "ok",
+  "title": "Memory Parallelism Using Custom Array Mapping to Heterogeneous Storage Structures"
+ },
+ "10.1109_fpt.2005.1568519": {
+  "abstract": "Aggressive pipelining allows FPGAs to achieve high throughput on many digital signal processing applications. However, cyclic data dependencies in the computation can limit pipelining and reduce the efficiency and speed of an FPGA implementation. Saturated accumulation is an important example where such a cycle limits the throughput of signal processing applications. We show how to reformulate saturated addition as an associative operation so that we can use a parallel prefix calculation to perform saturated accumulation at any data rate supported by the device. This allows us, for example, to design a 16-bit saturated accumulator which can operate at 280MHz on a Xilinx Spartan-3 (XC3S-5000-4), the maximum frequency supported by the component's DCM",
+  "doi": "10.1109/fpt.2005.1568519",
+  "openalex": "W2095887037",
+  "status": "ok",
+  "title": "Pipelining saturated accumulation"
+ },
+ "10.1109_hipc.1998.737991": {
+  "abstract": "We present modulo unrolling, a code transformation technique for enabling array references to be accessed through the fast static network on a Raw machine. A Raw machine comprises of a mesh of simple, replicated tiles connected by an interconnect which supports fast, static near-neighbor communication. Like all other resources, memory is distributed across the tiles. Management of the memory can be performed by well known techniques which generate the requisite communication code on distributed address-space architectures. On the other hand, the fast, static network provides the compiler with a simple interface to optimize such communication. This paper addresses the problem of taking advantage of such static communication for memory accesses. The requirement for static memory communication is the compile-time knowledge of the exact communication required for each memory reference. This knowledge, in turn, can be obtained if a memory reference refers exclusively to memory residing on a single processing tile. We introduce modulo unrolling as a technique which allows the static communication of a large class of array accesses. We show how this technique achieves the goal of static communication by using a relatively small unroll factor. For a set of dense matrix scientific applications, we are able to access all the array references on the static network, enabling scalable speedups on the Raw machine.",
+  "doi": "10.1109/hipc.1998.737991",
+  "openalex": "W1816828244",
+  "status": "ok",
+  "title": "Memory bank disambiguation using modulo unrolling for Raw machines"
+ },
+ "10.1109_hpca.2000.824340": {
+  "abstract": "This paper presents flit-reservation flow control, in which control flits traverse the network in advance of data flits, reserving buffers and channel bandwidth. Flit-reservation flow control requires control flits to precede data flits, which can be realized through fast on-chip control wires or the pipelining of control flits one or more cycles ahead of data flits. Scheduling ahead of data at rival enables buffers to be held only during actual buffer usage, unlike existing flow control methods. It also eliminates data latency due to routing and arbitration decisions. Simulations with fast control wires show that flit-reservation flow control extends the 63% throughput attained by virtual-channel flow control with 8 flit buffers per input to 77%, an improvement of 20% with equal storage and bandwidth overheads. Its throughput with 6 buffers (77%) approaches that of virtual-channel flow control using 16 buffers (80%), reflecting the significant buffer savings as a result of efficient buffer utilization. Data latency is also reduced by 15.6% as compared to virtual-channel flow control. The improvement in throughput is similarly realized by the pipelining of each control flit a cycle ahead of their data flits, using control and data networks with the same propagation delay of 1 cycle.",
+  "doi": "10.1109/hpca.2000.824340",
+  "openalex": "W2143342758",
+  "status": "ok",
+  "title": "Flit-reservation flow control"
+ },
+ "10.1109_hpca.2001.903257": {
+  "abstract": "This paper presents an algorithm to automatically map code on a generic intelligent memory system that consists of a host processor and a simpler memory processor. To achieve high performance with this type of architecture, code needs to be partitioned and scheduled such that each section is assigned to the processor on which it runs most efficiently. In addition, the two processors should overlap their execution as much as possible. With our algorithm, applications are mapped fully automatically using both static and dynamic information. Using a set of standard applications and a simulated architecture, we show average speedups of 1.7 for numerical applications and 1.3 for nonnumerical applications over a single host with plain memory. The speedups are very close and often higher than ideal speedups on a more expensive multiprocessor system composed of two identical host processors. Our work shows that heterogeneity can be cost-effectively exploited and represents one step toward effectively mapping code on intelligent memory systems.",
+  "doi": "10.1109/hpca.2001.903257",
+  "openalex": "W2160062854",
+  "status": "ok",
+  "title": "Automatically mapping code on an intelligent memory architecture"
+ },
+ "10.1109_hpca.2003.1183551": {
+  "abstract": "The bypass paths and multiported register files in microprocessors serve as an implicit interconnect to communicate operand values among pipeline stages and multiple ALU. Previous superscalar designs implemented this interconnect using centralized structures that do not scale with increasing ILP demands. In search of scalability, recent microprocessor designs in industry and academia exhibit a trend towards distributed resources such as partitioned register files, banked caches, multiple independent compute pipelines, and even multiple program counters. Some of these partitioned microprocessor designs have begun to implement bypassing and operand transport using point-to-point interconnects rather than centralized networks. We call interconnects optimized for scalar data transport, whether centralized or distributed, scalar operand networks. Although these networks share many of the challenges of multiprocessor networks such as scalability and deadlock avoidance, they have many unique requirements, including ultra-low latencies (a few cycles versus tens of cycles) and ultra-fast operation-operand matching. This paper discusses the unique properties of scalar operand networks, examines alternative ways of implementing them, and describes in detail the implementation of one such network in the Raw microprocessor. The paper analyzes the performance of these networks for ILP workloads and the sensitivity of overall ILP performance to network properties.",
+  "doi": "10.1109/hpca.2003.1183551",
+  "openalex": "W1573851380",
+  "status": "ok",
+  "title": "Scalar operand networks: on-chip interconnect for ILP in partitioned architectures"
+ },
+ "10.1109_hpca.2005.21": {
+  "abstract": "Future high-performance billion-transistor processors are likely to employ partitioned architectures to achieve high clock speeds, high parallelism, low design complexity, and low power. In such architectures, inter-partition communication over global wires has a significant impact on overall processor performance and power consumption. VLSI techniques allow a variety of wire implementations, but these wire properties have previously never been exposed to the microarchitecture. This paper advocates global wire management at the microarchitecture level and proposes a heterogeneous interconnect that is comprised of wires with varying latency, bandwidth, and energy characteristics. We propose and evaluate microarchitectural techniques that can exploit such a heterogeneous interconnect to improve performance and reduce energy consumption. These techniques include a novel cache pipeline design, the identification of narrow bit-width operands, the classification of non-critical data, and the detection of interconnect load imbalance. For a dynamically scheduled partitioned architecture, our results demonstrate that the proposed innovations result in up to 11% reductions in overall processor ED/sup 2/, compared to a baseline processor that employs a homogeneous interconnect.",
+  "doi": "10.1109/hpca.2005.21",
+  "openalex": "W2113338652",
+  "status": "ok",
+  "title": "Microarchitectural Wire Management for Performance and Power in Partitioned Architectures"
+ },
+ "10.1109_iccad.2011.6105318": {
+  "abstract": "Data transformation is one of the key optimizations in maximizing cache locality. Traditional data transformation strategies employ linear data layouts, e.g., row-major or column-major, for multidimensional arrays. Although a linear layout matches the linear memory space well in most cases, it can only optimize for self-spatial locality for individual references. In this work, we propose a novel data layout transformation framework that is able to determine a tiled layout for each array in an application program. Tiled layout can exploit the group-spatial locality among different references and improve cache line utilization. In our strategy, the data elements accessed by different references in one loop iteration are placed into a tile and fetched into the same cache line at runtime. This helps minimizing conflict misses in caches. We evaluated our data layout transformation framework using 30 benchmarks on a commercial multicore machine. The experimental results show that our approach outperforms state-of-the-art data transformation strategies and works well with large core counts.",
+  "doi": "10.1109/iccad.2011.6105318",
+  "openalex": "W3147566371",
+  "status": "ok",
+  "title": "Optimizing data locality using array tiling"
+ },
+ "10.1109_icrtccm.2017.69": {
+  "abstract": "This paper shows a compiler machine for adaptable figuring. Our technique assembles the flexibility and comfort in a way that grants to port the structure to different centers with an irrelevant effort. In light of a present arrangement stream, we endeavor to accomplish another tier of handiness in the way of exploring and dividing programs written in C on most hoisted able to be done delineation tier. We show that the examination on this level is more successful than on lower ones as a result of usage of more communicative fabricate of programming. The better examination comes to fruition merged with Static single assignment based estimation for data way creation might provoke upper game plan nature of the last structure setup.",
+  "doi": "10.1109/icrtccm.2017.69",
+  "openalex": "W2763824094",
+  "status": "ok",
+  "title": "Propels in Compiler Construction for Versatile Figuring"
+ },
+ "10.1109_interact.2005.9": {
+  "abstract": "This paper describes multigrain parallel processing on a compiler cooperative chip multiprocessor. The multigrain parallel processing hierarchically exploits multiple grains of parallelism such as coarse grain task parallelism, loop iteration level parallelism and statement level near-fine grain parallelism. The chip multiprocessor has been designed to attain high effective performance, cost effectiveness and high software productivity by supporting the optimizations of the multigrain parallelizing compiler, which is developed by Japanese Millennium Project IT21 \"Advance Parallelizing Compiler\". To achieve full potential of multigrain parallel processing, the chip multiprocessor integrates simple single-issue processors having distributed shared data memory for both optimal use of data locality and scalar data transfer, local data memory for processor private data, in addition to centralized shared memory for shared data among processors. This paper focuses on the scalability of the chip multiprocessor having up to eight processors on a chip by exploiting of the multigrain parallelism from SPECfp95 programs. When microSPARC like the simple processor core is used under assumption of 90 nm technology and 2.8 GHz, the evaluation results show the speedups for eight processors and four processors reach 7.1 and 3.9, respectively. Similarly, when 400 MHz is assumed for embedded usage, the speedups reach 7.8 and 4.0, respectively.",
+  "doi": "10.1109/interact.2005.9",
+  "openalex": "W2157909040",
+  "status": "ok",
+  "title": "Multigrain Parallel Processing on Compiler Cooperative Chip Multiprocessor"
+ },
+ "10.1109_isca52012.2021.00085": {
+  "abstract": "The need for speed in modern data-intensive work-loads and the rise of \"dark silicon\" in the semiconductor industry are pushing for larger, faster, and more energy and area-efficient architectures, such as Reconfigurable Dataflow Accelerators (RDAs). Nevertheless, challenges remain in developing mechanisms to effectively utilize the compute power of these large-scale RDAs. To address these challenges, we present SARA, a compiler that employs a novel mapping strategy to efficiently utilize large-scale RDAs. Starting from a single-threaded imperative abstraction, SARA spatially maps a program onto RDA's distributed resources, exploiting dataflow parallelism within and across hyperblocks to saturate the compute throughput of an RDA. SARA introduces (a) compiler-managed memory consistency (CMMC), a control paradigm that hierarchically pipelines a nested and data-dependent control-flow graph onto a dataflow architecture, and (b) a compilation flow that decomposes the program graph across distributed heterogeneous resources to hide low-level RDA constraints from programmers. Our evaluation shows that SARA achieves close to perfect performance scaling on a recently proposed RDA—Plasticine. Over a mix of deep-learning, graph-processing, and streaming applications, SARA achieves a 1.9× geo-mean speedup over a Tesla V100 GPU using only 12% of the silicon area.",
+  "doi": "10.1109/isca52012.2021.00085",
+  "openalex": "W3190681843",
+  "status": "ok",
+  "title": "SARA: Scaling a Reconfigurable Dataflow Accelerator"
+ },
+ "10.1109_ispass.2006.1620794": {
+  "abstract": "The ever increasing demand for high clock speeds and the desire to exploit abundant transistor budgets have resulted in alarming increases in processor power dissipation. Partitioned (or clustered) architectures have been proposed in recent years to address scalability concerns in future billion-transistor microprocessors. Our analysis shows that increasing processor resources in a clustered architecture results in a linear increase in power consumption, while providing diminishing improvements in single-thread performance. To preserve high performance to power ratios, we claim that the power consumption of additional resources should be in proportion to the performance improvements they yield. Hence, in this paper, we propose the implementation of heterogeneous clusters that have varying delay and power characteristics. A cluster's performance and power characteristic is tuned by scaling its frequency and novel policies dynamically assign frequencies to clusters, while attempting to either meet a fixed power budget or minimize a metric such as Energy /spl times/ Delay/sup 2/ (ED/sup 2/). By increasing resources in a power-efficient manner, we observe an 11% improvement in ED/sup 2/ and a 22.4% average reduction in peak temperature, when compared to a processor with homogeneous units. Our proposed processor model also provides strategies to handle thermal emergencies that have a relatively low impact on performance.",
+  "doi": "10.1109/ispass.2006.1620794",
+  "openalex": "W2098310731",
+  "status": "ok",
+  "title": "Power efficient resource scaling in partitioned architectures through dynamic heterogeneity"
+ },
+ "10.1109_iwia.1999.898840": {
+  "abstract": "With the increase of the number of transistors integrated on a chip, efficient use of transistors and scalable improvement of effective performance of a processor are getting important problems However, it has been thought that popular superscalar and VLIW world have difficult to obtain scalable improvement of effective performance in future because of the limitation of instruction level parallelism. To cope with this problem, a single chip multiprocessor (SCM) approach with multi grain parallel processing inside a chip, which hierarchically exploits loop parallelism and coarse grain parallelism among subroutines, loops and basic blocks in addition to instruction level parallelism, is thought one of the most promising approaches. This paper evaluates effectiveness of the single chip multiprocessor architectures with a shared cache, global registers, distributed shared memory and/or local memory for near fine grain parallel processing as the first step of research on SCM architecture to support multi grain parallel processing. The evaluation shows OSCAR (Optimally Scheduled Advanced Multiprocessor) architecture having distributed shared memory and local memory in addition to centralized shared memory and attachment of global register gives us significant speed rip such as 13.8% to 143.8% for four processors compared with shared cache architecture for applications which have been difficult to extract parallelism effectively.",
+  "doi": "10.1109/iwia.1999.898840",
+  "openalex": "W1962929342",
+  "status": "ok",
+  "title": "Near fine grain parallel processing using static scheduling on single chip multiprocessors"
+ },
+ "10.1109_iwia.2003.1262783": {
+  "abstract": "It seems that instruction level parallelism (ILP) approach, which has been used by various superscalar processors and VLIW processors for a long time, reaches its limitation of performance improvement. To obtain scalable performance improvement, cost effectiveness and high productivity even in the era of one billion transistors, the cooperative work between software and hardware is getting increasingly important. For this reason, the authors have developed OSCAR (Optimally SCheduled Advanced multiprocessoR) Chip Multiprocessor (OSCAR CMP) and OSCAR multigrain compiler simultaneously. To preserve the scalability in the future, OSCAR CMP has mechanisms for efficient use of parallelism and data locality, and for hiding data transfer overhead. These mechanisms can be fully controlled by the OSCAR multigrain compiler. In this paper, the authors focus on multigrain parallel processing on OSCAR CMP, which enables us to exploit loop iteration level parallelism and coarse grain task parallelism in addition to ILP from the entire of a program. Performance of multigrain parallel processing on OSCAR CMP architecture is evaluated using SPEC fp 2000/95 benchmark suite. When microSPARC like single issue core is used, OSCAR CMP gives us from 1.77 to 3.96 times speedup for four processors against single processor. In addition, OSCAR CMP is compared with Sun UltraSPARC II like processor to evaluate cost effectiveness. As a result, OSCAR CMP gives us 1.66 times better performance on the average under the condition that OSCAR CMP and UltraSPARC II are built from almost same number of transistors.",
+  "doi": "10.1109/iwia.2003.1262783",
+  "openalex": "W2146727697",
+  "status": "ok",
+  "title": "Multigrain parallel processing on OSCAR CMP"
+ },
+ "10.1109_micro.2002.1176243": {
+  "abstract": "Convergent scheduling is a general framework for cluster assignment and instruction scheduling on spatial architectures. A convergent scheduler is composed of independent passes, each implementing a heuristic that addresses a particular problem or constraint. The passes share a simple, common interface that provides spatial and temporal preference for each instruction. Preferences are not absolute; instead, the interface allows a pass to express the confidence of its preferences, as well as preferences for multiple space and time slots. A pass operates by modifying these preferences. By applying a series of passes that address all the relevant constraints, the convergent scheduler can produce a schedule that satisfies all the important constraints. Because all passes are independent and need to understand only one interface to interact with each other, convergent scheduling simplifies the problem of handling multiple constraints and co-developing different heuristics. We have applied convergent scheduling to two spatial architectures: the Raw processor and a clustered VLIW machine. It is able to successfully handle traditional constraints such as parallelism, load balancing, and communication minimization, as well as constraints due to preplaced instructions, which are instructions with predetermined cluster assignment. Convergent scheduling is able to obtain an average performance improvement of 21% over the existing space-time scheduler of the Raw processor, and an improvement of 14% over state-of-the-art assignment and scheduling techniques on a clustered VLIW architecture.",
+  "doi": "10.1109/micro.2002.1176243",
+  "openalex": "W4239187837",
+  "status": "ok",
+  "title": "Convergent scheduling"
+ },
+ "10.1109_micro.2002.1176244": {
+  "abstract": "Clustering is a common technique to overcome the wire delay problem incurred by the evolution of technology. Fully-distributed architectures, where the register file, the functional units and the data cache are partitioned, are particularly effective to deal with these constraints and besides they are very scalable. In this paper effective instruction scheduling techniques for a clustered VLIW processor with a word-interleaved cache are proposed Such scheduling techniques rely on: (i) loop unrolling and variable alignment to increase the percentage of local accesses, (ii) a latency assignment process to schedule memory operations with an appropriate latency and (iii) different heuristics to assign instructions to clusters. In particular, the number of local accesses is increased by more than 25% if these techniques are used and the ratio of stall time over compute time is small. Next, the main source of remote accesses and stall time is investigated. Stall time is mainly due to remote hits, and Attraction Buffers are used to increase local accesses and reduce stall time. Stall time is reduced by 29% and 34% depending on the scheduling heuristic. IPC results for a word-interleaved cache clustered VLIW processor are similar to those of the multiVLIW (a cache-coherent clustered processor with a more complex hardware design), and are 10% and 5% better (depending on the scheduling heuristic) than the IPC for a clustered processor with a unified cache.",
+  "doi": "10.1109/micro.2002.1176244",
+  "openalex": "W4250012106",
+  "status": "ok",
+  "title": "Effective instruction scheduling techniques for an interleaved cache clustered VLIW processor"
+ },
+ "10.1109_pact.2009.36": {
+  "abstract": "With increasing numbers of cores, future CMPs (chip multi-processors) are likely to have a tiled architecture with a portion of shared L2 cache on each tile and a bank-interleaved distribution of the address space. Although such an organization is effective for avoiding access hot-spots, it can cause a significant number of non-local L2 accesses for many commonly occurring regular data access patterns. In this paper we develop a compile-time framework for data locality optimization via data layout transformation. Using a polyhedral model, the program's localizability is determined by analysis of its index set and array reference functions, followed by non-canonical data layout transformation to reduce non-local accesses for localizable computations. Simulation-based results on a 16-core 2D tiled CMP demonstrate the effectiveness of the approach. The developed program transformation technique is also useful in several other data layout transformation contexts.",
+  "doi": "10.1109/pact.2009.36",
+  "openalex": "W2102056800",
+  "status": "ok",
+  "title": "Data Layout Transformation for Enhancing Data Locality on NUCA Chip Multiprocessors"
+ },
+ "10.1109_pact.2011.20": {
+  "abstract": "The emergence of multicore platforms offers several opportunities for boosting application performance. These opportunities, which include parallelism and data locality benefits, require strong support from compilers as well as operating systems. Current compiler research targeting multicores mostly focuses on code restructuring and mapping. In this work, we explore automatic data layout transformation targeting multithreaded applications running on multicores. Our transformation considers both data access patterns exhibited by different threads of a multithreaded application and the on-chip cache topology of the target multicore architecture. It automatically determines a customized memory layout for each target array to minimize potential cache conflicts across threads. Our experiments show that, our optimization brings significant benefits over state-of-the-art data locality optimization strategies when tested using 30 benchmark programs on an Intel multicore machine. The results also indicate that this strategy is able to scale to larger core counts and it performs better with increased data set sizes.",
+  "doi": "10.1109/pact.2011.20",
+  "openalex": "W2017239768",
+  "status": "ok",
+  "title": "Optimizing Data Layouts for Parallel Computation on Multicores"
+ },
+ "10.1109_pact.2015.26": {
+  "abstract": "The increasing number of cores and the anticipated level of heterogeneity in upcoming multicore architectures cause important problems in traditional cache hierarchies. A good way to alleviate these problems is to add scratchpad memories alongside the cache hierarchy, forming a hybrid memory hierarchy. This memory organization has the potential to improve performance and to reduce the power consumption and the on-chip network traffic, but exposing such a complex memory model to the programmer has a very negative impact on the programmability of the architecture. Emerging task-based programming models are a promising alternative to program heterogeneous multicore architectures. In these models the runtime system manages the execution of the tasks on the architecture, allowing them to apply many optimizations in a generic way at the runtime system level. This paper proposes giving the runtime system the responsibility to manage the scratchpad memories of a hybrid memory hierarchy in multicore processors, transparently to the programmer. In the envisioned system, the runtime system takes advantage of the information found in the task dependences to map the inputs and outputs of a task to the scratchpad memory of the core that is going to execute it. In addition, the paper exploits two mechanisms to overlap the data transfers with computation and a locality-aware scheduler to reduce the data motion. In a 32-core multicore architecture, the hybrid memory hierarchy outperforms cache-only hierarchies by up to 16%, reduces on-chip network traffic by up to 31% and saves up to 22% of the consumed power.",
+  "doi": "10.1109/pact.2015.26",
+  "openalex": "W2296632105",
+  "status": "ok",
+  "title": "Runtime-Guided Management of Scratchpad Memories in Multicore Architectures"
+ },
+ "10.1109_tc.2008.110": {
+  "abstract": "Aggressive pipelining and spatial parallelism allow integrated circuits (e.g., custom VLSI, ASICs, and FPGAs) to achieve high throughput on many digital signal processing applications. However, cyclic data dependencies in the computation can limit parallelism and reduce the efficiency and speed of an implementation. Saturated accumulation is an important example where such a cycle limits the throughput of signal processing applications. We show how to reformulate saturated addition as an associative operation so that we can use a parallel-prefix calculation to perform saturated accumulation at any data rate supported by the device. This allows us, for example, to design a 16-bit saturated accumulator which can operate at 280 MHz on a Xilinx Spartan-3(XC3S-5000-4) FPGA, the maximum frequency supported by the component's DCM.",
+  "doi": "10.1109/tc.2008.110",
+  "openalex": "W2050039846",
+  "status": "ok",
+  "title": "Pipelining saturated accumulation"
+ },
+ "10.1109_tpds.2005.24": {
+  "abstract": "The bypass paths and multiported register files in microprocessors serve as an implicit interconnect to communicate operand values among pipeline stages and multiple ALUs. Previous superscalar designs implemented this interconnect using centralized structures that do not scale with increasing ILP demands. In search of scalability, recent microprocessor designs in industry and academia exhibit a trend toward distributed resources such as partitioned register files, banked caches, multiple independent compute pipelines, and even multiple program counters. Some of these partitioned microprocessor designs have begun to implement bypassing and operand transport using point-to-point interconnects. We call interconnects optimized for scalar data transport, whether centralized or distributed, scalar operand networks. Although these networks share many of the challenges of multiprocessor networks such as scalability and deadlock avoidance, they have many unique requirements, including ultra-low latency (a few cycles versus tens of cycles) and ultra-fast operation-operand matching. This work discusses the unique properties of scalar operand networks (SONs), examines alternative ways of implementing them, and introduces the AsTrO taxonomy to distinguish between them. It discusses the design of two alternative networks in the context of the Raw microprocessor, and presents timing, area, and energy statistics for a real implementation. The paper also presents a 5-tuple performance model for SONs and analyzes their performance sensitivity to network properties for ILP workloads.",
+  "doi": "10.1109/tpds.2005.24",
+  "openalex": "W2009687274",
+  "status": "ok",
+  "title": "Scalar operand networks"
+ },
+ "10.1109_tsg.2025.3608582": {
+  "abstract": "Increasing numbers of distributed photovoltaic (PV) systems are integrated into power grids. Accurate distributed PV power forecasting is pivotal in guiding individual users to manage their electricity usage. The forecasting model is often deployed on low-cost local devices of distributed systems to reduce communication costs and protect data privacy. However, the offline trained models may not perform satisfactorily on these systems due to the distribution shift caused by spatial and temporal context variations, which calls for online model updating to tackle such problems. Nevertheless, the memory consumption required for on-device model training is prohibitive for edge devices with limited memory capacity. To enable on-device forecasting model updates, we propose a tiny online learning framework to tackle the distribution shift problem in a lightweight manner. First, we introduce a tiny model adaptation strategy that freezes dense layers while updating memory-efficient components online. Second, we develop a tiny distribution shift detection mechanism that compares residual distribution discrepancies without catching historical data to identify shifting samples. Third, we present a tiny parameter importance evaluation approach that determines critical parameters to guide dynamic sparse training. Extensive experiments conducted on a hardware testbed show the effectiveness of our framework in improving forecasting accuracy (up to 14.5%) and training efficiency (13.1×) compared to vanilla online learning methods.",
+  "doi": "10.1109/tsg.2025.3608582",
+  "openalex": "W4414110801",
+  "status": "ok",
+  "title": "Toward On-Device Distributed Photovoltaic Power Forecasting: A Tiny Online Learning Framework"
+ },
+ "10.1145_1006209.1006255": {
+  "abstract": "The growing dominance of wire delays at future technology points renders a microprocessor communication-bound. Clustered microarchitectures allow most dependence chains to execute without being affected by long on-chip wire latencies. They also allow faster clock speeds and reduce design complexity, thereby emerging as a popular design choice for future microprocessors. However, a centralized data cache threatens to be the primary bottle-neck in highly clustered systems. The paper attempts to identify the most complexity-effective approach to alleviate this bottleneck. While decentralized cache organizations have been proposed, they introduce excessive logic and wiring complexity. The paper evaluates if the performance gains of a decentralized cache are worth the increase in complexity. We also introduce and evaluate the behavior of Cluster Prefetch - the forwarding of data values to a cluster through accurate address prediction. Our results show that the success of this technique depends on accurate speculation across unresolved stores. The technique applies for a wide class of processor models and most importantly, it allows high performance even while employing a simple centralized data cache. We conclude that address prediction holds more promise for future wire-delay-limited processors than decentralized cache organizations.",
+  "doi": "10.1145/1006209.1006255",
+  "openalex": "W1974798403",
+  "status": "ok",
+  "title": "Cluster prefetch"
+ },
+ "10.1145_1024393.1024396": {
+  "abstract": "This paper describes a computer architecture, Spatial Computation (SC), which is based on the translation of high-level language programs directly into hardware structures. SC program implementations are completely distributed, with no centralized control. SC circuits are optimized for wires at the expense of computation units.In this paper we investigate a particular implementation of SC: ASH (Application-Specific Hardware). Under the assumption that computation is cheaper than communication, ASH replicates computation units to simplify interconnect, building a system which uses very simple, completely dedicated communication channels. As a consequence, communication on the datapath never requires arbitration; the only arbitration required is for accessing memory. ASH relies on very simple hardware primitives, using no associative structures, no multiported register files, no scheduling logic, no broadcast, and no clocks. As a consequence, ASH hardware is fast and extremely power efficient.In this work we demonstrate three features of ASH: (1) that such architectures can be built by automatic compilation of C programs; (2) that distributed computation is in some respects fundamentally different from monolithic superscalar processors; and (3) that ASIC implementations of ASH use three orders of magnitude less energy compared to high-end superscalar processors, while being on average only 33% slower in performance (3.5x worst-case).",
+  "doi": "10.1145/1024393.1024396",
+  "openalex": "W2293374899",
+  "status": "ok",
+  "title": "Spatial computation"
+ },
+ "10.1145_1024393.1024397": {
+  "abstract": "We present a novel processor architecture designed specifically for use in low-power wireless sensor-network nodes. Our sensor network asynchronous processor (SNAP/LE) is based on an asynchronous data-driven 16-bit RISC core with an extremely low-power idle state, and a wakeup response latency on the order of tens of nanoseconds. The processor instruction set is optimized for sensor-network applications, with support for event scheduling, pseudo-random number generation, bitfield operations, and radio/sensor interfaces. SNAP/LE has a hardware event queue and event coprocessors, which allow the processor to avoid the overhead of operating system software (such as task schedulers and external interrupt servicing), while still providing a straightforward programming interface to the designer. The processor can meet performance levels required for data monitoring applications while executing instructions with tens of picojoules of energy.We evaluate the energy consumption of SNAP/LE with several applications representative of the workload found in data-gathering wireless sensor networks. We compare our architecture and software against existing platforms for sensor networks, quantifying both the software and hardware benefits of our approach.",
+  "doi": "10.1145/1024393.1024397",
+  "openalex": "W2162278060",
+  "status": "ok",
+  "title": "An ultra low-power processor for sensor networks"
+ },
+ "10.1145_1028176.1006733": {
+  "abstract": "This paper evaluates the Raw microprocessor. Raw addresses thechallenge of building a general-purpose architecture that performswell on a larger class of stream and embedded computing applicationsthan existing microprocessors, while still running existingILP-based sequential programs with reasonable performance in theface of increasing wire delays. Raw approaches this challenge byimplementing plenty of on-chip resources - including logic, wires,and pins - in a tiled arrangement, and exposing them through a newISA, so that the software can take advantage of these resources forparallel applications. Raw supports both ILP and streams by routingoperands between architecturally-exposed functional units overa point-to-point scalar operand network. This network offers lowlatency for scalar data transport. Raw manages the effect of wiredelays by exposing the interconnect and using software to orchestrateboth scalar and stream data transport.We have implemented a prototype Raw microprocessor in IBM's180 nm, 6-layer copper, CMOS 7SF standard-cell ASIC process. Wehave also implemented ILP and stream compilers. Our evaluationattempts to determine the extent to which Raw succeeds in meetingits goal of serving as a more versatile, general-purpose processor.Central to achieving this goal is Raw's ability to exploit all formsof parallelism, including ILP, DLP, TLP, and Stream parallelism.Specifically, we evaluate the performance of Raw on a diverse setof codes including traditional sequential programs, streaming applications,server workloads and bit-level embedded computation.Our experimental methodology makes use of a cycle-accurate simulatorvalidated against our real hardware. Compared to a 180 nmPentium-III, using commodity PC memory system components, Rawperforms within a factor of 2x for sequential applications with a verylow degree of ILP, about 2x to 9x better for higher levels of ILP, and10x-100x better when highly parallel applications are coded in astream language or optimized by hand. The paper also proposes anew versatility metric and uses it to discuss the generality of Raw.",
+  "doi": "10.1145/1028176.1006733",
+  "openalex": "W2150007533",
+  "status": "ok",
+  "title": "Evaluation of the Raw Microprocessor"
+ },
+ "10.1145_1111037.1111055": {
+  "abstract": "Increasing complexity in the communication patterns of embedded applications parallelized over multiple processing units makes it difficult to continue using the traditional bus-based on-chip communication techniques. The main contribution of this paper is to demonstrate the importance of compiler technology in reducing power consumption of applications designed for emerging multi processor, NoC (Network-on-Chip) based embedded systems. Specifically, we propose and evaluate a compiler-directed approach to NoC power management in the context of array-intensive applications, used frequently in embedded image/video processing. The unique characteristic of the compiler-based approach proposed in this paper is that it increases the idle periods of communication channels by reusing the same set of channels for as many communication messages as possible. The unused channels in this case take better advantage of the underlying power saving mechanism employed by the network architecture. However, this channel reuse optimization should be applied with care as it can hurt performance if two or more simultaneous communications are mapped onto the same set of channels. Therefore, the problem addressed in this paper is one of reducing the number of channels used to implement a set of communications without increasing the communication latency significantly. To test the effectiveness of our approach, we implemented it within an optimizing compiler and performed experiments using twelve application codes and a network simulation environment. Our experiments show that the proposed compiler-based approach is very successful in practice and works well under both hardware based and software based channel turn-off schemes.",
+  "doi": "10.1145/1111037.1111055",
+  "openalex": "W2026192802",
+  "status": "ok",
+  "title": "Compiler-directed channel allocation for saving power in on-chip networks"
+ },
+ "10.1145_1133255.1134004": {
+  "abstract": "While scalable NoC (Network-on-Chip) based communication architectures have clear advantages over long point-to-point communication channels, their power consumption can be very high. In contrast to most of the existing hardware-based efforts on NoC power optimization, this paper proposes a compiler-directed approach where the compiler decides the appropriate voltage/frequency levels to be used for each communication channel in the NoC. Our approach builds and operates on a novel graph based representation of a parallel program and has been implemented within an optimizing compiler and tested using 12 embedded benchmarks. Our experiments indicate that the proposed approach behaves better - from both performance and power perspectives - than a hardwarebased scheme and the energy savings it achieves are very close to the savings that could be obtained from an optimal, but hypothetical voltage/frequency scaling scheme.",
+  "doi": "10.1145/1133255.1134004",
+  "openalex": "W2151316670",
+  "status": "ok",
+  "title": "Reducing NoC energy consumption through compiler-directed channel voltage scaling"
+ },
+ "10.1145_1133981.1134004": {
+  "abstract": "While scalable NoC (Network-on-Chip) based communication architectures have clear advantages over long point-to-point communication channels, their power consumption can be very high. In contrast to most of the existing hardware-based efforts on NoC power optimization, this paper proposes a compiler-directed approach where the compiler decides the appropriate voltage/frequency levels to be used for each communication channel in the NoC. Our approach builds and operates on a novel graph based representation of a parallel program and has been implemented within an optimizing compiler and tested using 12 embedded benchmarks. Our experiments indicate that the proposed approach behaves better - from both performance and power perspectives - than a hardwarebased scheme and the energy savings it achieves are very close to the savings that could be obtained from an optimal, but hypothetical voltage/frequency scaling scheme.",
+  "doi": "10.1145/1133981.1134004",
+  "openalex": "W4239166840",
+  "status": "ok",
+  "title": "Reducing NoC energy consumption through compiler-directed channel voltage scaling"
+ },
+ "10.1145_1391962.1391969": {
+  "abstract": "Configurable architectures offer the unique opportunity of realizing hardware designs tailored to the specific data and computational patterns of an application code. Customizing the storage structures is becoming increasingly important in mitigating the continuing gap between memory latencies and internal computing speeds. In this article we describe and evaluate a compiler algorithm that maps the arrays of a loop-based computation to internal storage structures, either RAM blocks or discrete registers. Our objective is to minimize the overall execution time while considering the capacity and bandwidth constraints of the storage resources. The novelty of our approach lies in creating a single framework that combines high-level compiler techniques with lower-level scheduling information for mapping the data. We illustrate the benefits of our approach for a set of image/signal processing kernels using a Xilinx Virtex™ Field-Programmable Gate Array (FPGA). Our algorithm leads to faster designs compared to the state-of-the-art custom data layout mapping technique, in some instances using less storage. When compared to hand-coded designs, our results are comparable in terms of execution time and resources, but are derived in a minute fraction of the design time.",
+  "doi": "10.1145/1391962.1391969",
+  "openalex": "W2012687750",
+  "status": "ok",
+  "title": "A compiler approach to managing storage and memory bandwidth in configurable architectures"
+ },
+ "10.1145_2676870.2676877": {
+  "abstract": "This paper presents modulo unrolling without unrolling (modulo unrolling WU), a method for message aggregation for parallel loops in message passing programs that use affine array accesses in Chapel, a Partitioned Global Address Space (PGAS) parallel programming language. Messages incur a non-trivial run time overhead, a significant component of which is independent of the size of the message. Therefore, aggregating messages improves performance. Our optimization for message aggregation is based on a technique known as modulo unrolling, pioneered by Barua [3], whose purpose was to ensure a statically predictable single tile number for each memory reference for tiled architectures, such as the MIT Raw Machine [18]. Modulo unrolling WU applies to data that is distributed in a cyclic or block-cyclic manner. In this paper, we adapt the aforementioned modulo unrolling technique to the difficult problem of efficiently compiling PGAS languages to message passing architectures. When applied to loops and data distributed cyclically or block-cyclically, modulo unrolling WU can decide when to aggregate messages thereby reducing the overall message count and runtime for a particular loop. Compared to other methods, modulo unrolling WU greatly simplifies the complex problem of automatic code generation of message passing code. It also results in substantial performance improvement compared to the non-optimized Chapel compiler.",
+  "doi": "10.1145/2676870.2676877",
+  "openalex": "W2161248153",
+  "status": "ok",
+  "title": "Affine Loop Optimization Based on Modulo Unrolling in Chapel"
+ },
+ "10.1145_291069.291018": {
+  "abstract": "Increasing demand for both greater parallelism and faster clocks dictate that future generation architectures will need to decentralize their resources and eliminate primitives that require single cycle global communication. A Raw microprocessor distributes all of its resources, including instruction streams, register files, memory ports, and ALUs, over a pipelined two-dimensional mesh interconnect, and exposes them fully to the compiler. Because communication in Raw machines is distributed, compiling for instruction-level parallelism (ILP) requires both spatial instruction partitioning as well as traditional temporal instruction scheduling. In addition, the compiler must explicitly manage all communication through the interconnect, including the global synchronization required at branch points. This paper describes RAWCC, the compiler we have developed for compiling general-purpose sequential programs to the distributed Raw architecture. We present performance results that demonstrate that although Raw machines provide no mechanisms for global communication the Raw compiler can schedule to achieve speedups that scale with the number of available functional units.",
+  "doi": "10.1145/291069.291018",
+  "openalex": "W4242368470",
+  "status": "ok",
+  "title": "Space-time scheduling of instruction-level parallelism on a raw machine"
+ },
+ "10.1145_301618.301645": {
+  "abstract": "This paper presents a novel interprocedural, flow-sensitive, and context-sensitive pointer analysis algorithm for multithreaded programs that may concurrently update shared pointers. For each pointer and each program point, the algorithm computes a conservative approximation of the memory locations to which that pointer may point. The algorithm correctly handles a full range of constructs in multithreaded programs, including recursive functions, function pointers, structures, arrays, nested structures and arrays, pointer arithmetic, casts between pointer variables of different types, heap and stack allocated memory, shared global variables, and thread-private global variables. We have implemented the algorithm in the SUIF compiler system and used the implementation to analyze a sizable set of multithreaded programs written in the Cilk multithreaded programming language. Our experimental results show that the analysis has good precision and converges quickly for our set of Cilk programs. 1",
+  "doi": "10.1145/301618.301645",
+  "openalex": "W1997474908",
+  "status": "ok",
+  "title": "Pointer analysis for multithreaded programs"
+ },
+ "10.1145_301631.301645": {
+  "abstract": "This paper presents a novel interprocedural, flow-sensitive, and context-sensitive pointer analysis algorithm for multithreaded programs that may concurrently update shared pointers. For each pointer and each program point, the algorithm computes a conservative approximation of the memory locations to which that pointer may point. The algorithm correctly handles a full range of constructs in multithreaded programs, including recursive functions, function pointers, structures, arrays, nested structures and arrays, pointer arithmetic, casts between pointer variables of different types, heap and stack allocated memory, shared global variables, and thread-private global variables.We have implemented the algorithm in the SUIF compiler system and used the implementation to analyze a sizable set of multithreaded programs written in the Cilk multithreaded programming language. Our experimental results show that the analysis has good precision and converges quickly for our set of Cilk programs.",
+  "doi": "10.1145/301631.301645",
+  "openalex": "W3020486320",
+  "status": "ok",
+  "title": "Pointer analysis for multithreaded programs"
+ },
+ "10.1145_3453483.3454069": {
+  "abstract": "Cache behavior is one of the major factors that influence the performance of applications. Most of the existing compiler techniques that target cache memories focus exclusively on reducing data reuse distances in time (DIT). However, current manycore systems employ distributed on-chip caches that are connected using an on-chip network. As a result, a reused data element/block needs to travel over this on-chip network, and the distance to be traveled -- reuse distance in space (DIS) -- can be as influential in dictating application performance as reuse DIT. This paper represents the first attempt at defining a compiler framework that accommodates both DIT and DIS. Specifically, it first classifies data reuses into four groups: G1: (low DIT, low DIS), G2: (high DIT, low DIS), G3: (low DIT, high DIS), and G4: (high DIT, high DIS). Then, observing that reuses in G1 represent the ideal case and there is nothing much to be done in computations in G4, it proposes a \"reuse transfer\" strategy that transfers select reuses between G2 and G3, eventually, transforming each reuse to either G1 or G4. Finally, it evaluates the proposed strategy using a set of 10 multithreaded applications. The collected results reveal that the proposed strategy reduces parallel execution times of the tested applications between 19.3% and 33.3%.",
+  "doi": "10.1145/3453483.3454069",
+  "openalex": "W3174456297",
+  "status": "ok",
+  "title": "Distance-in-time versus distance-in-space"
+ },
+ "10.1145_349299.349317": {
+  "abstract": "This paper introduces Bitwise, a compiler that minimizes the bitwidth the number of bits used to represent each operand for both integers and pointers in a program. By propagating 70 static information both forward and backward in the program dataflow graph, Bitwise frees the programmer from declaring bitwidth invariants in cases where the compiler can determine bitwidths automatically. Because loop instructions comprise the bulk of dynamically executed instructions, Bitwise incorporates sophisticated loop analysis techniques for identifying bitwidths. We find a rich opportunity for bitwidth reduction in modern multimedia and streaming application workloads. For new architectures that support sub-word data-types, we expect that our bitwidth reductions will save power and increase processor performance.",
+  "doi": "10.1145/349299.349317",
+  "openalex": "W1965864973",
+  "status": "ok",
+  "title": "Bidwidth analysis with application to silicon compilation"
+ },
+ "10.1145_358438.349317": {
+  "abstract": "This paper introduces Bitwise , a compiler that minimizes the bitwidth the number of bits used to represent each operand for both integers and pointers in a program. By propagating 70 static information both forward and backward in the program dataflow graph, Bitwise frees the programmer from declaring bitwidth invariants in cases where the compiler can determine bitwidths automatically. Because loop instructions comprise the bulk of dynamically executed instructions, Bitwise incorporates sophisticated loop analysis techniques for identifying bitwidths. We find a rich opportunity for bitwidth reduction in modern multimedia and streaming application workloads. For new architectures that support sub-word data-types, we expect that our bitwidth reductions will save power and increase processor performance. This paper also applies our analysis to silicon compilation, the translation of programs into custom hardware, to realize the full benefits of bitwidth reduction. We describe our integration of Bitwise with the DeepC Silicon Compiler. By taking advantage of bitwidth information during architectural synthesis, we reduce silicon real estate by 15 - 86%, improve clock speed by 3 - 249%, and reduce power by 46 - 73%. The next era of general purpose and reconfigurable architectures should strive to capture a portion of these gains.",
+  "doi": "10.1145/358438.349317",
+  "openalex": "W4229550884",
+  "status": "ok",
+  "title": "Bidwidth analysis with application to silicon compilation"
+ },
+ "10.1145_360276.360322": {
+  "abstract": "It is difficult to exploit the massive, fine-grained parallelism of configurable hardware with a conventional application program?ming language such as C, Pascal or Java. The difficulty arises from the mismatch between the synchronous, concurrent processing capability of the hardware and the expressiveness of the lan?guage-the so-called semantic gap. We attack this problem by using a programming model matched to the hardware's capabilities that can be implemented in any (unmodified) object-oriented lan?guage, and building a corresponding compiler. The result is appli?cation code that can be developed, compiled, debugged and executed on a personal computer using conventional tools (such as Visual C++ or Visual Cafe), and then recompiled without modifi?cation to the configurable hardware target. A straightforward C++ implementation of the Serpent encryption algorithm compiled with our compiler onto a Virtex XCV1000 FPGA yielded an implemen?tation that was smaller (3200 vs. 4502 CLBs) and faster (77 MHz vs. 38 MHz) than an independent VHDL implementation with the same degree of pipelining. A tuned version of the source yielded an implementation that ran at 95 MHz.",
+  "doi": "10.1145/360276.360322",
+  "openalex": "W2161939679",
+  "status": "ok",
+  "title": "Attacking the semantic gap between application programming languages and configurable hardware"
+ },
+ "10.1145_370155.370535": {
+  "abstract": "The paper gives a brief survey over a decade of R&D on coarse grain reconfigurable hardware and related compilation techniques and points out its significance to the emerging discipline of reconfigurable computing.",
+  "doi": "10.1145/370155.370535",
+  "openalex": "W1974887540",
+  "status": "ok",
+  "title": "Coarse grain reconfigurable architecture (embedded tutorial)"
+ },
+ "10.1145_3770854.3785697": {
+  "abstract": null,
+  "doi": "10.1145/3770854.3785697",
+  "openalex": "W7171968725",
+  "status": "no_abstract",
+  "title": "QuaMap: A Multi-Backend Benchmark Dataset for Quantum Circuit Mapping and Learning-Based Compiler Evaluation"
+ },
+ "10.1145_512529.512550": {
+  "abstract": "The current practice of mapping computations to custom hardware implementations requires programmers to assume the role of hardware designers. In tuning the performance of their hardware implementation, designers manually apply loop transformations such as loop unrolling. designers manually apply loop transformations. For example, loop unrolling is used to expose instruction-level parallelism at the expense of more hardware resources for concurrent operator evaluation. Because unrolling also increases the amount of data a computation requires, too much unrolling can lead to a memory bound implementation where resources are idle. To negotiate inherent hardware space-time trade-offs, designers must engage in an iterative refinement cycle, at each step manually applying transformations and evaluating their impact. This process is not only error-prone and tedious but also prohibitively expensive given the large search spaces and with long synthesis times. This paper describes an automated approach to hardware design space exploration, through a collaboration between parallelizing compiler technology and high-level synthesis tools. We present a compiler algorithm that automatically explores the large design spaces resulting from the application of several program transformations commonly used in application-specific hardware designs. Our approach uses synthesis estimation techniques to quantitatively evaluate alternate designs for a loop nest computation. We have implemented this design space exploration algorithm in the context of a compilation and synthesis system called DEFACTO, and present results of this implementation on five multimedia kernels. Our algorithm derives an implementation that closely matches the performance of the fastest design in the design space, and among implementations with comparable performance, selects the smallest design. We search on average only 0.3% of the design space. This technology thus significantly raises the level of abstraction for hardware design and explores a design space much larger than is feasible for a human designer.",
+  "doi": "10.1145/512529.512550",
+  "openalex": "W2030934436",
+  "status": "ok",
+  "title": "A compiler approach to fast hardware design space exploration in FPGA-based systems"
+ },
+ "10.1145_514191.514222": {
+  "abstract": "Clustered microarchitectures are becoming a common organization due to their potential to reduce the penalties caused by wire delays and power consumption. Fully-distributed architectures are particularly effective to deal with these constraints, and besides they are very scalable. However, the distribution of the data cache memory poses a significant challenge and may be critical for performance. In this work, a distributed data cache VLIW architecture based on an interleaved cache organization along with cyclic scheduling techniques are proposed. Moreover, the use of Attraction Buffers for such an architecture is introduced. Attraction Buffers are a novel hardware mechanism to increase the percentage of local accesses. The idea is to allow the movement of some data towards the clusters that need it.Performance results for 9 Mediabench benchmarks show that our scheduling techniques are able to hide the increased memory latency when accessing data mapped in a remote cluster. In addition, the local hit ratio is increased by 15% and stall time is reduced by 30% when using the same scheduling techniques with an interleaved cache clustered processor with Attraction Buffers. Finally, the proposed architecture is compared with a state-of-the-art distributed architecture such as the multiVLIW. Results show that the performance of an interleaved cache clustered VLIW processor with Attraction Buffers is similar to that of the multiVLIW architecture, whereas the former has a lower hardware complexity.",
+  "doi": "10.1145/514191.514222",
+  "openalex": "W2139179617",
+  "status": "ok",
+  "title": "An interleaved cache clustered VLIW processor"
+ },
+ "10.1145_543552.512550": {
+  "abstract": "The current practice of mapping computations to custom hardware implementations requires programmers to assume the role of hardware designers. In tuning the performance of their hardware implementation, designers manually apply loop transformations such as loop unrolling. designers manually apply loop transformations. For example, loop unrolling is used to expose instruction-level parallelism at the expense of more hardware resources for concurrent operator evaluation. Because unrolling also increases the amount of data a computation requires, too much unrolling can lead to a memory bound implementation where resources are idle. To negotiate inherent hardware space-time trade-offs, designers must engage in an iterative refinement cycle, at each step manually applying transformations and evaluating their impact. This process is not only error-prone and tedious but also prohibitively expensive given the large search spaces and with long synthesis times. This paper describes an automated approach to hardware design space exploration, through a collaboration between parallelizing compiler technology and high-level synthesis tools. We present a compiler algorithm that automatically explores the large design spaces resulting from the application of several program transformations commonly used in application-specific hardware designs. Our approach uses synthesis estimation techniques to quantitatively evaluate alternate designs for a loop nest computation. We have implemented this design space exploration algorithm in the context of a compilation and synthesis system called DEFACTO, and present results of this implementation on five multimedia kernels. Our algorithm derives an implementation that closely matches the performance of the fastest design in the design space, and among implementations with comparable performance, selects the smallest design. We search on average only 0.3% of the design space. This technology thus significantly raises the level of abstraction for hardware design and explores a design space much larger than is feasible for a human designer.",
+  "doi": "10.1145/543552.512550",
+  "openalex": "W4253509622",
+  "status": "ok",
+  "title": "A compiler approach to fast hardware design space exploration in FPGA-based systems"
+ },
+ "10.1145_596980.596982": {
+  "abstract": "This paper presents a novel interprocedural, flow-sensitive, and context-sensitive pointer analysis algorithm for multithreaded programs that may concurrently update shared pointers. The algorithm is designed to handle programs with structured parallel constructs, including fork-join constructs, parallel loops, and conditionally spawned threads. For each pointer and each program point, the algorithm computes a conservative approximation of the memory locations to which that pointer may point. The algorithm correctly handles a wide range of programming language constructs, including recursive functions, recursively generated parallelism, function pointers, structures, arrays, nested structures and arrays, pointer arithmetic, casts between different pointer types, heap and stack allocated memory, shared global variables, and thread-private global variables. We have implemented the algorithm in the SUIF compiler system and used the implementation to analyze a set of multithreaded programs written in the Cilk programming language. Our experimental results show that the analysis has good precision and converges quickly for our set of Cilk programs.",
+  "doi": "10.1145/596980.596982",
+  "openalex": "W2013578854",
+  "status": "ok",
+  "title": "Pointer analysis for structured parallel programs"
+ },
+ "10.5555_2132325.2132359": {
+  "abstract": "Data transformation is one of the key optimizations in maximizing cache locality. Traditional data transformation strategies employ linear data layouts, e. g., row-major or column-major, for multidimensional arrays. Although a linear layout matches the linear memory space well in most cases, it can only optimize for self-spatial locality for individual references. In this work, we propose a novel data layout transformation framework that is able to determine a tiled layout for each array in an application program. Tiled layout can exploit the group-spatial locality among different references and improve cache line utilization. In our strategy, the data elements accessed by different references in one loop iteration are placed into a tile and fetched into the same cache line at runtime. This helps minimizing conflict misses in caches. We evaluated our data layout transformation framework using 30 benchmarks on a commercial multicore machine. The experimental results show that our approach outperforms state-of-the-art data transformation strategies and works well with large core counts.",
+  "doi": "10.5555/2132325.2132359",
+  "openalex": "W2167080040",
+  "status": "ok",
+  "title": "Optimizing data locality using array tiling"
+ },
+ "10.5555_367072.367839": {
+  "abstract": "The paper surveys a decade of R&D on coarse grain reconfigurable hardware and related CAD, points out why this emerging discipline is heading toward a dichotomy of computing science, and advocates the introduction of a new soft machine paradigm to replace CAD by compilation.",
+  "doi": "10.5555/367072.367839",
+  "openalex": "W2135050419",
+  "status": "ok",
+  "title": "A decade of reconfigurable computing: a visionary retrospective"
+ },
+ "10.5555_774861.774874": {
+  "abstract": "Convergent scheduling is a general framework for cluster assignment and instruction scheduling on spatial architectures. A convergent scheduler is composed of independent passes, each implementing a heuristic that addresses a particular problem or constraint. The passes share a simple, common interface that provides spatial and temporal preference for each instruction. Preferences are not absolute; instead, the interface allows a pass to express the confidence of its preferences, as well as preferences for multiple space and time slots. A pass operates by modifying these preferences. By applying a series of passes that address all the relevant constraints, the convergent scheduler can produce a schedule that satisfies all the important constraints. Because all passes are independent and need to understand only one interface to interact with each other, convergent scheduling simplifies the problem of handling multiple constraints and codeveloping different heuristics. We have applied convergent scheduling to two spatial architectures: the Raw processor and a clustered VLIW machine. It is able to successfully handle traditional constraints such as parallelism, load balancing, and communication minimization, as well as constraints due to preplaced instructions, which are instructions with predetermined cluster assignment. Convergent scheduling is able to obtain an average performance improvement of 21% over the existing space-time scheduler of the Raw processor, and an improvement of 14% over state-of-the-art assignment and scheduling techniques on a clustered VLIW architecture.",
+  "doi": "10.5555/774861.774874",
+  "openalex": "W2295087662",
+  "status": "ok",
+  "title": "Convergent scheduling"
+ },
+ "10.5555_774861.774875": {
+  "abstract": "Clustering is a common technique to overcome the wire delay problem incurred by the evolution of technology. Fully-distributed architectures, where the register file, the functional units and the data cache are partitioned, are particularly effective to deal with these constraints and besides they are very scalable. In this paper effective instruction scheduling techniques for a clustered VLIW processor with a word-interleaved cache are proposed Such scheduling techniques rely on: (i) loop unrolling and variable alignment to increase the percentage of local accesses, (ii) a latency assignment process to schedule memory operations with an appropriate latency and (iii) different heuristics to assign instructions to clusters. In particular, the number of local accesses is increased by more than 25% if these techniques are used and the ratio of stall time over compute time is small. Next, the main source of remote accesses and stall time is investigated. Stall time is mainly due to remote hits, and Attraction Buffers are used to increase local accesses and reduce stall time. Stall time is reduced by 29% and 34% depending on the scheduling heuristic. IPC results for a word-interleaved cache clustered VLIW processor are similar to those of the multiVLIW (a cache-coherent clustered processor with a more complex hardware design), and are 10% and 5% better (depending on the scheduling heuristic) than the IPC for a clustered processor with a unified cache.",
+  "doi": "10.5555/774861.774875",
+  "openalex": "W2139025109",
+  "status": "ok",
+  "title": "Effective instruction scheduling techniques for an interleaved cache clustered VLIW processor"
+ },
+ "10.5555_776261.776283": {
+  "abstract": "Clustering is a common technique to deal with wire delays. Fully-distributed architectures, where the register file, the functional units and the cache memory are partitioned, are particularly effective to deal with these constraints and besides they are very scalable. However, the distribution of the data cache introduces a new problem: memory instructions may reach the cache in an order different to the sequential program order, thus possibly violating its contents. In this paper two local scheduling mechanisms that guarantee the serialization of aliased memory instructions are proposed and evaluated: the construction of memory dependent chains (MDC solution), and two transformations (store replication and load-store synchronization) applied to the original Data Dependence Graph (DDGT solution). These solutions do not require any extra hardware.The proposed scheduling techniques are evaluated for a word-interleaved cache clustered VLIW processor (although these techniques can also be used for any other distributed cache configuration). Results for the Mediabench benchmark suite demonstrate the effectiveness of such techniques. In particular, the DDGT solution increases the proportion of local accesses by 16% compared to MDC, and stall time is reduced by 32% since load instructions can be freely scheduled in any cluster. However, the MDC solution reduces compute time and it often outperforms the former. Finally the impact of both techniques on an architecture with Attraction Buffers is studied and evaluated.",
+  "doi": "10.5555/776261.776283",
+  "openalex": "W2112461202",
+  "status": "ok",
+  "title": "Local scheduling techniques for memory coherence in a clustered VLIW processor with a distributed data cache"
+ },
+ "10.5555_977395.977674": {
+  "abstract": "In this paper, we describe a generalized approach to deriving a custom data layout in multiple memory banks for array-based computations, to facilitate high-bandwidth parallel memory accesses in modern architectures where multiple memory banks can simultaneously feed one or more functional units. We do not use a fixed data layout, but rather select application-specific layouts according to access patterns in the code. A unique feature of this approach is its flexibility in the presence of code reordering transformations, such as the loop nest transformations commonly applied to array-based computations. We have implemented this algorithm in the DEFACTO system, a design environment for automatically mapping C programs to hardware implementations for FPGA-based systems. We present experimental results for five multimedia benchmarks that demonstrate the benefits of this approach. Our results show that custom data layout yields results as good as, or better than, naive or fixed cyclic layouts, and is significantly better for certain access patterns and in the presence of code reordering transformations. When used in conjunction with unrolling loops in a nest to expose instruction-level parallelism, we observe greater than a 75 % reduction in the number of memory access cycles and speedups ranging from 3.96 to 46.7 for 8 memories, as compared to using a single memory with no unrolling. 1",
+  "doi": "10.5555/977395.977674",
+  "openalex": "W2116316191",
+  "status": "ok",
+  "title": "Custom data layout for memory parallelism"
+ },
+ "noid-fafa18d9e9cbdb2b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "C or Fortran Program Custom Logic Generation Traditional CAD Optimizations Traditional Compiler Optimzations Virtual Wires Scheduling Small Memory Partitioning"
+ },
+ "oa-W1575182384": {
+  "abstract": "A computer can never be too fast or too cheap. Computer systems pervade nearly every aspect of science, engineering, communications and commerce because they perform certain tasks at rates unachievable by any other kind of system built by humans. A computer system 's throughput, however, is constrained by that system 's ability to find concurrency. Given a particular target work load the computer architect's role is to design mechanisms to find and exploit the available concurrency in that work load.",
+  "doi": null,
+  "openalex": "W1575182384",
+  "status": "ok",
+  "title": "Suds: automatic parallelization for raw processors"
+ },
+ "oa-W1601257395": {
+  "abstract": "Institute for Computing Systems Architecture",
+  "doi": null,
+  "openalex": "W1601257395",
+  "status": "ok",
+  "title": "An OS-Based Alternative to Full Hardware Coherence on Tiled Chip-Multiprocessors"
+ },
+ "oa-W1603460974": {
+  "abstract": "Today the most commonly used system architectures in data processing can be divided into three categories: general purpose processors, application specific architectures and reconfigurable architectures. General purpose processors are flexible, but inefficient and for some applications do not other enough performance. Application specific architectures are efficient and give good performance, but are in flexible. Recently reconfigurable systems have drawn increasing attention due to their combination of flexibility and efficiency. Reconfigurable architectures limit their flexibility to a particular algorithm domain. Two types of reconfigurable architectures exist: fine-grained in which the functionality of the hardware is specified at the bit level and coarse-grained in which the functionality of the hardware is specified at the word level. High-level design entry tools are essential for reconfigurable systems, especially coarse-grained reconfigurable architectures. However, the tools for coarse-grained reconfigurable architectures are far from mature. This thesis proposes a method for mapping applications onto a coarse-grained reconfigurable architecture. This is a heuristic method which tackles this complex problem in four phases: translation, clustering, scheduling and allocation. In this thesis, the Montium tile processor, a coarse-grained reconfigurable architecture, is used to demonstrate the proposed mapping method. In the translation phase, an input program written in a high-level language is translated into a control data flow graph; and some transformations and simplifications are done on the control data flow graph. In the clustering phase, the data flow graph is partitioned into clusters and mapped onto an unbounded number of fully connected Arithmetic Logic Units (ALUs). The ALU structure is the main concern of this phase and we do not take the inter-ALU communication into consideration. In the scheduling phase the graph obtained from the clustering phase is scheduled taking the maximum number of ALUs into account. The scheduling algorithm tries to minimize the number of clock cycles used for the given application under the constraints of the number of distinct reconfigurations of ALUs. In the allocation phase, variables are allocated to memories or registers, and data moves are scheduled. The main concern in this phase is the details of the target architecture. There are many constraints and optimization objectives that need to be considered during the mapping and scheduling procedure. According to the above mentioned division only parts of constraints and optimization goals are considered in each phase, which simplifies the problem dramatically. Furthermore, after the division, part of our work relates to the existing research work, especially the work in the clustering and the scheduling phases. This connection is very important because on one hand, we can build our work on the results of others; on the other hand, the result of our work can also be used by others. Different levels of heuristics are used in the mapping procedure. In our opinion, using a greedy method is the only practical choice because the original mapping task is too complex to be handled in an optimal way. To decrease the negative consequences caused by the sequential order of the heuristics, when tackling each subproblem, we take the requirements of other subproblems also into consideration. In the Montium, a two-layer decoding technique is used. This technique limits the configuration space to simplify the structure of instruction fetching, which is good for reducing energy consumption and cost. However, the compiler has to face the challenge of decreasing the number of distinct configurations, i.e., generating a limited number of different instructions, which is the most difficult requirement to the Montium compiler. This is also the main difference between the Montium compiler and a compiler for other architectures. However, these constraints have a good reason: they are inherent to energy efficiency, so we believe that it will be used more and more in future energy-efficient computing architectures. Therefore, we have to find ways to cope with these constraints. To generate only a few different instructions, our approach tries to find the regularity in the algorithms. Therefore, regularity selection algorithms are used (e.g., template selection in the clustering phase, pattern selection in the scheduling phase). These algorithms find the most frequently used templates or patterns in an application. By using these templates or patterns, the number of different instructions is small.",
+  "doi": null,
+  "openalex": "W1603460974",
+  "status": "ok",
+  "title": "Mapping applications to a coarse-grained reconfigurable architecture"
+ },
+ "oa-W1608261789": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2006.",
+  "doi": null,
+  "openalex": "W1608261789",
+  "status": "ok",
+  "title": "Raw fabric hardware implementation and characterization"
+ },
+ "oa-W1812749193": {
+  "abstract": "This paper describes Hot Pages, a software solution for managing on-chip data on the Raw Machine, a scalable, parallel, microprocessor architecture. This software system transparently manages the mapping between the program address space and on-chip memory. Hot Pages combines compile time information to selectively virtualize memory references and to eliminate many cachetag lookups. For many of the memory accesses that cannot be fully predicted, Hot Pages replaces the cache-tag lookups with simple register comparisons by reusing translated virtual page descriptions from earlier nearby memory references. Hot Pages implements a multi-bank memory structure, allowing multiple references in parallel, to provide memory bandwidth matched to the computational resources on the Raw microprocessor. Because virtualization is handled in software rather than hardware, the system is easier to test, it is more predictable, and provides the flexibility of application specific customized caching solutio...",
+  "doi": null,
+  "openalex": "W1812749193",
+  "status": "ok",
+  "title": "Hot Pages: Software Caching for Raw Microprocessors"
+ },
+ "oa-W2109589569": {
+  "abstract": "In recent years, interconnection network fabrics, historically used in high-end multiprocessor systems, have been deployed in a wide spectrum of communication systems—I/O interconnects, high-speed network switches, terabit Internet routers and on-chip interconnects. This thesis proposes flow control and micro architectural mechanisms for extending interconnection network performance, and improving the performance of the overall system. \r\nThe thesis introduces flit-reservation flow control where control flits traverse the network in advance of data flits, reserving buffers and channel bandwidth on their behalf. Reserving resources ahead of time yields two performance improvements. First, it enables routing and arbitration to be carried out beforehand, reducing network latency. Second, this advance scheduling makes very efficient use of buffers, pushing throughput beyond that of existing flow control methods. Our simulations show flit-reservation flow control reducing latency by up to 33%, and matching or surpassing the throughput performance of virtual-channel flow control with just half the number of buffers. \r\nNext, this thesis proposes a delay model developed for pipelined routers. Motivated by the model, the effect of speculation on the critical path of routers is investigated. While previous models claim that the complexity of virtual-channel flow control leads to high router latency which overwhelms its throughput advantages over wormhole flow control, the proposed model concludes otherwise. Simulations based on the pipelines prescribed by the proposed model demonstrate that a speculative virtual-channel router can have the same router latency as a wormhole router, while extending its throughput by up to 50%.",
+  "doi": null,
+  "openalex": "W2109589569",
+  "status": "ok",
+  "title": "Flow control and micro-architectural mechanisms for extending the performance of interconnection networks"
+ },
+ "oa-W21131072": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W21131072",
+  "status": "no_abstract",
+  "title": "Reconflgurable Computing Systems Cost/Beneflt Analysis Model"
+ },
+ "oa-W2126041619": {
+  "abstract": "Thesis (S.M.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, June 2000.",
+  "doi": null,
+  "openalex": "W2126041619",
+  "status": "ok",
+  "title": "A Technique for Compilation to Exposed Memory Hierarchy"
+ },
+ "oa-W2197261917": {
+  "abstract": "The bypass paths and multiported register files in microprocessors serve as an implicit interconnect tocommunicate operand values among pipeline stages and multiple ALUs. Previous superscalar designs implementedthis interconnect using centralized structures that do not scale with increasing ILP demands. Insearch of scalability, recent microprocessor designs in industry and academia exhibit a trend toward distributedresources such as partitioned register files, banked caches, multiple independent compute pipelines,and even multiple program counters. Some of these partitioned microprocessor designs have begun to implementbypassing and operand transport using point-to-point interconnects. We call interconnects optimizedfor scalar data transport, whether centralized or distributed, scalar operand networks. Although thesenetworks share many of the challenges of multiprocessor networks such as scalability and deadlock avoidance,they have many unique requirements, including ultra-low latencies (a few cycles versus tens of cycles)and ultra-fast operation-operand matching. This paper discusses the unique properties of scalar operandnetworks (SONs), examines alternative ways of implementing them, and introduces the AsTrO taxonomy todistinguish between them. It discusses the design of two alternative networks in the context of the Raw microprocessor,and presents detailed timing, area and energy statistics for a real implementation. The paperalso presents a 5-tuple performance model for SONs and analyzes their performance sensitivity to networkproperties for ILP workloads.",
+  "doi": null,
+  "openalex": "W2197261917",
+  "status": "ok",
+  "title": "Scalar Operand Networks: Design, Implementation, and Analysis"
+ },
+ "oa-W2224113243": {
+  "abstract": "Thesis (S.M.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 1999.",
+  "doi": null,
+  "openalex": "W2224113243",
+  "status": "ok",
+  "title": "Design decision in the implementation of a raw architecture workstation"
+ },
+ "oa-W2234067922": {
+  "abstract": "Thesis (M. Eng. and S.B.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2234067922",
+  "status": "ok",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "oa-W2244785618": {
+  "abstract": "Thesis (S.M.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, February 2003.",
+  "doi": null,
+  "openalex": "W2244785618",
+  "status": "ok",
+  "title": "Convergent scheduling : a flexible and extensible scheduling framework for clustered VLIW architectures"
+ },
+ "oa-W2249794205": {
+  "abstract": "Instruction scheduling on software exposed architectures, such as Raw, must be performed in both time and space. The complexity and variance of application scheduling regions dictates that the space-time scheduling task be divided into phases. Unfortunately, the interaction of phases presents a phase ordering problem. In this",
+  "doi": null,
+  "openalex": "W2249794205",
+  "status": "ok",
+  "title": "Spatial instruction scheduling for raw machines"
+ },
+ "oa-W2258382939": {
+  "abstract": "Thesis (S.M.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2000.",
+  "doi": null,
+  "openalex": "W2258382939",
+  "status": "ok",
+  "title": "Bitwise: Optimizing Bitwidths Using Data-Range Propagation"
+ },
+ "oa-W2305929729": {
+  "abstract": "This paper presents SUDS (Software Un-Do Systems), a data speculation system for Raw processors. SUDS manages specultation in software. Thekey to managing speculation in software is to use the compiler to minimize the number of data items that need to be managed in runtime. Managing speculation in software enables Raw processors to achieve good performance on integer applications without sacrificing chip area for speculation hardware. This additional area can instead be devoted to additional computer resources, improving the performance of dense matrix and media applications.",
+  "doi": null,
+  "openalex": "W2305929729",
+  "status": "ok",
+  "title": "A Software Framework for Supporting General Purpose Applications on Raw Computation Fabrics"
+ },
+ "oa-W2340323764": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2340323764",
+  "status": "no_abstract",
+  "title": "Arquiteturas e Modelos para Avaliação de Área e Desempenho"
+ },
+ "oa-W2471250713": {
+  "abstract": "Technology advances will soon enable billion transistor chips, permitting large quantities of both logic and memory to be placed on a single die. Increasing on-chip wire delays, however, are shrinking the chip area reachable in a single clock cycle. In response, computer architects are redesigning on-chip structures to reduce the distance signals must travel in one clock period. Single-chip multiprocessors are one proposed architecture for dealing with the multi-cycle communication latencies affecting future chips. These chips are organized into a grid of nodes, where each node contains a processor and a portion of the total on-chip memory. Although these nodes function independently, they interact via shared memory through a network with the property that latency increases linearly based on Manhattan distance. \r\nThis dissertation examines how to efficiently map applications onto single-chip multiprocessors given these chips' constraints and opportunities. The small amount of per-node storage limits how much data can be placed on any given node, while the ample processing resources and high bandwidth, low-latency on-chip communication create a large number of quickly accessible locations where data and threads can reside. In order to achieve high performance on these chips, applications must balance the competing goals of improving locality and of distributing resource demands across the chips' many nodes. I present two symbiotic approaches for managing these chips' resources. The first technique, migration of data and threads, reacts to dynamic resource demands and communication patterns to avoid resource hot-spotting and improve locality. The second approach proactively eliminates communication by executing computation at the location of its most frequently accessed data, its anchor. Finally, I show how these techniques can be used in conjunction with well-established techniques, like caching, to further improve application performance.",
+  "doi": null,
+  "openalex": "W2471250713",
+  "status": "ok",
+  "title": "Resource management in single-chip multiprocessors"
+ },
+ "oa-W2593862411": {
+  "abstract": "g th e tim e lo r reviewna in s tru c tio n s , s e a rc h in g e x is tin g d a ta so u rc e s.",
+  "doi": null,
+  "openalex": "W2593862411",
+  "status": "ok",
+  "title": "Scalar Queue Conversion: Dynamic Single Assignment for Concurrent Scheduling"
+ },
+ "oa-W38722360": {
+  "abstract": "The Raw project is attempting to create a scalable proces-sor architecture that is suitable for both general purpose and embedded computations. Current general purpose pro-cessors differ from embedded devices in that they provide large amounts of hardware support to discover and manipu-late instruction-level parallelism and unstructured memory accesses. Because the parallelism in embedded computa-tions is much more predictable, embedded devices such as DSPs do not offer a rich set of mechanisms, rather they de-vote their area to computational resources such as pipelined floating point, thereby achieving significantly better area and energy efficiency. However, their best performance is achieved for regular data access patterns such as streams, and they often require assembly code manipulation. Em-bedded FPGAs and ASICs go one step further, and can of-",
+  "doi": null,
+  "openalex": "W38722360",
+  "status": "ok",
+  "title": "The Raw Processor: A Composeable 32-Bit Fabric for Embedded and General Purpose Computing"
+ },
+ "oa-W82701650": {
+  "abstract": "The MIT Raw machine provides a point-to-point interconnection network for transferring register values between tiles. The programmer schedules the network communication for each tile by himself/herself and guarantees the correctness. It is not easy to parallelize benchmarks by hand for all possible tile configurations on the Raw processor. To overcome this problem, we develop a communication library and a switch code generator to create the switch code for each tile automatically. We implement our techniques for the SSCA#3 (SAR Sensor Processing, Knowledge Formation) benchmark, and evaluate the parallelism on a physical Raw processor. The experimental results show the SSCA#3 benchmark has dense matrix operations with abundant parallelism. Using 16 tiles, the ’SAR image formation’ procedure achieves a speedup of 13.86, and the speedup of the ’object detection’ procedure is 9.98.",
+  "doi": null,
+  "openalex": "W82701650",
+  "status": "ok",
+  "title": "Parallelization of the SSCA#3 Benchmark on the RAW Processor"
+ },
+ "s2-04a5d1f237ea5c9c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Reconflgurable Computing Systems Cost/Beneflt Analysis Model"
+ },
+ "s2-081b49072ceead8d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Wire Aware Cache Architecture"
+ },
+ "s2-0c0b78c8e301b96b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scalable primary cache memory architectures"
+ },
+ "s2-0ca9ccb4c3a2f944": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Mi-croarchitectural Techniques to Reduce Interconnect Power in Clustered Processors"
+ },
+ "s2-11bf39c2eb595260": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "s2-182e22c54b02edad": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "FlexCa he : A Framework for FlexibleCompiler Generated Data Ca hingCsaba"
+ },
+ "s2-226df9ca61a78e9f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Redes-em-Chip : arquiteturas e modelos para avaliação de área e desempenho"
+ },
+ "s2-22d770ea3310f39c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Øøøóööøø Blockin Blockinð Òò Ôöö Blockinøø Blockin Blockinð Ôôöóó Øó Ò×øöù Blockinøøóò × Blockinùððòò Óò ×ôôøøøð Ö Blockinøø Blockinøùöö×"
+ },
+ "s2-2cf0d949a1580868": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hot Pages : Software Caching for Raw Microprocessors Csaba"
+ },
+ "s2-358543897d83e12a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Bitwise: Optimizing Bitwidths Using Data-Range Propagation"
+ },
+ "s2-3678866830af1494": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spatial instruction scheduling for raw machines"
+ },
+ "s2-42fd41634e3f56ff": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "ROOM : reconfigurable object-oriented machines for specific applications"
+ },
+ "s2-48aadc42bcad2744": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An OS-based alternative to full hardware coherence on tiled chip-multiprocessors"
+ },
+ "s2-515f23d6ecf606fb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Convergent scheduling : a flexible and extensible scheduling framework for clustered VLIW architectures"
+ },
+ "s2-56f86f9db7698861": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallelizing Applications into Smart Memories"
+ },
+ "s2-5a8cdf1b0c3e861a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "On-Chip Interconnection Network Topologies An Emerging Critical Design"
+ },
+ "s2-6400e5b3f0fec747": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler Parallelization Techniques for Tiled Multicore Processors"
+ },
+ "s2-65641ae65b40faaa": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Mapping Applications to a Coarse-Grained Reconfigurable Architecture"
+ },
+ "s2-6b3797d119677333": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "D:\\winnt\\profiles\\hoffmann\\desktop\\sbcci01.fm &rduvh*udlqhgg5hfrqiljxudeoh$ufklwhfwxuhv"
+ },
+ "s2-6fde2ee7fb9488da": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Mapping Applications to a Coarse-Grained Reconfigurable Architecture"
+ },
+ "s2-6fe006d20a8ba8a8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Data layout optimization techniques for modern and emerging architectures"
+ },
+ "s2-71b119d69dbdfbbd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Compile-Time Data Locality Optimization Framework for NUCA Chip Multiprocessors"
+ },
+ "s2-792d50892528dee8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallelization and Locality Analysis for Adaptive Computing Systems"
+ },
+ "s2-7ccbc9f9b05f16ca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SUDS: automatic parallelization for raw processors"
+ },
+ "s2-81f609253aa65402": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compositional Pointer and Escape Analysis for Multithreaded Java Programs"
+ },
+ "s2-841f542bf3d62535": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Coordinated concurrent memory accesses on a reconfigurable multimedia processor"
+ },
+ "s2-909469c00c6ffc0d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Evaluation of Single Chip Multiprocessor Core Architecture"
+ },
+ "s2-9100c6bbb1f56997": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Design Decisions for Tiled Architecture Memory Systems"
+ },
+ "s2-985c116e8637220d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Raw fabric hardware implementation and characterization"
+ },
+ "s2-9a42f0e7d78dd2e3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hot Pages: Software Caching for Raw Microprocessors"
+ },
+ "s2-9dcd845f36c4cf36": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Controlling speculative execution through a virtually ordered memory system"
+ },
+ "s2-9f03d27fda6b9a39": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scalar Queue Conversion: Dynamic Single Assignment for Concurrent Scheduling"
+ },
+ "s2-a8f4421527419530": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scalar Operand Networks: Design, Implementation, and Analysis"
+ },
+ "s2-ae8b15bc8271a773": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiled microprocessors"
+ },
+ "s2-ae9e8ba0a8f483a5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallelization of the SSCA#3 Benchmark on the RAW Processor"
+ },
+ "s2-c1145ce6a9dfa1a7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Flow control and micro-architectural mechanisms for extending the performance of interconnection networks"
+ },
+ "s2-c16639aa1bcfbfe2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Raw Processor: A Composeable 32-Bit Fabric for Embedded and General Purpose Computing"
+ },
+ "s2-c3334cbb903d860a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Design and analysis of spatially-partitioned shared caches"
+ },
+ "s2-c97c701bdce332d2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "My Memory Ain ’ t What it Used to Be : Directions in Memory Interfaces"
+ },
+ "s2-cdce762243dff9e2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Software Framework for Supporting General Purpose Applications on Raw Computation Fabrics"
+ },
+ "s2-d1eabf088f5092a8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "High level compilation for gate reconfigurable architectures"
+ },
+ "s2-d57254be9a88c239": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Resource management in single-chip multiprocessors"
+ },
+ "s2-dba40a3fe66dd7a6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "FIELD PROGRAMMABLE GATE ARRAYS: COLLABORATION BETWEEN DIFFERENT COMPILER DESIGN TOOLS"
+ },
+ "s2-e79ff75b068ffa06": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Case for Using Active Memory to Support Garbage Collection"
+ },
+ "s2-f3a2e1d459f62bbc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Design decision in the implementation of a raw architecture workstation"
+ },
+ "s2-f4479ba014db01a0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "How to build scalable on-chip ILP networks for a decentralized architecture"
+ },
+ "s2-f5572c6f39d770bf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Complexity-Effective Decoding Architecture Based on Instruction Streams"
+ },
+ "s2-f8cbd024f302f0ed": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Coarse Grained Reconfigurable Architectures"
+ }
+}

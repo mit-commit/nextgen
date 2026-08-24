@@ -1,0 +1,121 @@
+{
+ "10.1007_s00778-018-0533-6": {
+  "abstract": null,
+  "doi": "10.1007/s00778-018-0533-6",
+  "openalex": "W2903881938",
+  "status": "no_abstract",
+  "title": "Interleaving with coroutines: a systematic and practical approach to hide memory latency in index joins"
+ },
+ "10.1101_2020.10.29.361402": {
+  "abstract": "Abstract Exponentially-growing next-generation sequencing data requires high-performance tools and algorithms. Nevertheless, the implementation of high-performance computational genomics software is inaccessible to many scientists because it requires extensive knowledge of low-level software optimization techniques, forcing scientists to resort to high-level software alternatives that are less efficient. Here, we introduce Seq—a Python-based optimization framework that combines the power and usability of high-level languages like Python with the performance of low-level languages like C or C++. Seq allows for shorter, simpler code, is readily usable by a novice programmer, and obtains significant performance improvements over existing languages and frameworks. We showcase and evaluate Seq by implementing seven standard, widely-used applications from all stages of the genomics analysis pipeline, including genome index construction, finding maximal exact matches, long-read alignment and haplotype phasing, and demonstrate its implementations are up to an order of magnitude faster than existing hand-optimized implementations, with just a fraction of the code. By enabling researchers of all backgrounds to easily implement high-performance analysis tools, Seq further opens the door to the democratization and scalability of computational genomics.",
+  "doi": "10.1101/2020.10.29.361402",
+  "openalex": "W3096134169",
+  "status": "ok",
+  "title": "A Python-based optimization framework for high-performance genomics"
+ },
+ "10.1109_cgo51591.2021.9370333": {
+  "abstract": "The simplest implementation of a domain-specific language is to embed it in an existing language using operator overloading. This way, the DSL can inherit parsing, syntax and type checking, error handling, and the toolchain of debuggers and IDEs from the host language. A natural host language choice for most high-performance DSLs is the de-facto high-performance language, C++. However, DSL designers quickly run into the problem of not being able to extract control flows due to a lack of introspection in C++ and have to resort to special functions with lambdas to represent loops and conditionals. This approach introduces unnecessary syntax and does not capture the side effects of updates inside the lambdas in a safe way. We present BuildIt, a type-based multi-stage execution framework that solves this problem by extracting all control flow operators like if-then-else conditionals and for and while loops using a pure library approach. BuildIt achieves this by repeated execution of the program to explore all control flow paths and construct the AST piece by piece. We show that BuildIt can do this without exponential blow-up in terms of output size and execution time. We apply BuildIt's staging capabilities to the state-of-the-art tensor compiler TACO to generate low-level IR for custom-level formats. Thus, BuildIt offers a way to get both generalization and programmability for the user while generating specialized and efficient code. We also demonstrate that BuildIt can generate rich control-flow from relatively simple code by using it to stage an interpreter for an esoteric language. BuildIt changes the way we think about multi-staging as a problem by reducing the PL complexity of a supposedly harder problem requiring features like introspection or specialized compiler support to a set of common features found in most languages.",
+  "doi": "10.1109/cgo51591.2021.9370333",
+  "openalex": "W3139323122",
+  "status": "ok",
+  "title": "BuildIt: A Type-Based Multi-stage Programming Framework for Code Generation in C++"
+ },
+ "10.1109_cse57773.2022.00011": {
+  "abstract": "We demonstrate a novel method of speeding up large iterative tasks such as machine learning inference. Our approach is to improve the memory access pattern, taking advantage of coroutines as a programming language feature to minimise the developer effort and reduce code complexity. We evaluate our approach using a comprehensive set of bench-marks run on three hardware platforms (one ARM and two Intel CPUs). The best observed performance boosts were 65% for scanning the nodes in a B+ tree, 34% for support vector machine inference, 12% for image pixel normalisation, and 15.5% for two dimensional convolution. Performance varied with data size, numeric type, and other factors, but overall the method is practical and can lead to significant improvements for edge computing.",
+  "doi": "10.1109/cse57773.2022.00011",
+  "openalex": "W4327641252",
+  "status": "ok",
+  "title": "Speeding up Machine Learning Inference on Edge Devices by Improving Memory Access Patterns using Coroutines"
+ },
+ "10.1109_hpca56546.2023.10071026": {
+  "abstract": "Irregular applications are increasingly common in diverse domains, like graph analytics and sparse linear algebra. Accelerating these applications is challenging because of their unpredictable data reuse and control flow. Recent work has proposed hardware support for fine-grain pipeline parallelism, hiding long latencies by decoupling irregular applications into pipeline stages. However, this prior work requires programmers to manually decouple applications. This tedious and error-prone process limits the usefulness of such architectural support.We address this problem with Phloem, a compiler that automatically discovers and exploits pipeline parallelism in irregular applications. Prior compilers for pipeline parallelism target regular applications, which contain simple pipeline stages with known latencies and fixed buffering needs. Designing Phloem to target irregular applications, where these properties do not hold, requires treating their unique challenges as first-class considerations throughout its design. Phloem breaks down this complex transformation into a series of simple passes that together encode the insights that have been previously applied by hand, producing code that targets architectures with support for queue-based communication.We evaluate Phloem by generating efficient pipelines on a variety of irregular applications. Phloem’s contributions improve performance by 1.7× on average, approaching (and sometimes exceeding) the performance of manually optimized pipeline-parallel code. These results show that, for the first time, automatic parallelization for irregular applications is not only feasible, but also profitable.",
+  "doi": "10.1109/hpca56546.2023.10071026",
+  "openalex": "W4360831841",
+  "status": "ok",
+  "title": "Phloem: Automatic Acceleration of Irregular Applications with Fine-Grain Pipeline Parallelism"
+ },
+ "10.1109_pact65351.2025.00046": {
+  "abstract": "Modern data-intensive applications face memory latency challenges exacerbated by disaggregated memory systems. Recent work shows that coroutines are promising in effectively interleaving tasks and hiding memory latency, but they struggle to balance latency-hiding efficiency with runtime overhead. We present CoroAMU, a hardware-software co-designed system for memory-centric coroutines. It introduces compiler procedures that optimize coroutine code generation, minimize context, and coalesce requests, paired with a simple interface. With hardware support of decoupled memory operations, we enhance the Asynchronous Memory Unit to further exploit dynamic coroutine schedulers by coroutine-specific memory operations and a novel memory-guided branch prediction mechanism. It is implemented with LLVM and open-source XiangShan RISCV processor over the FPGA platform. Experiments demonstrate that the CoroAMU compiler achieves a $\\mathbf{1. 5 1} \\boldsymbol{\\times}$ speedup over state-of-the-art coroutine methods on Intel server processors. When combined with optimized hardware of decoupled memory access, it delivers $3.39 \\times$ and $4.87 \\times$ average performance improvements over the baseline processor on FPGA-emulated disaggregated systems under 200 ns and 800 ns latency respectively.",
+  "doi": "10.1109/pact65351.2025.00046",
+  "openalex": "W4417403177",
+  "status": "ok",
+  "title": "CoroAMU: Unleashing Memory-Driven Coroutines through Latency-Aware Decoupled Operations"
+ },
+ "10.1145_3329785.3329917": {
+  "abstract": "Non-Volatile Memory (NVM) technologies exhibit 4X the read access latency of conventional DRAM. When the working set does not fit in the processor cache, this latency gap between DRAM and NVM leads to more than 2X runtime increase for queries dominated by latency-bound operations such as index joins and tuple reconstruction. We explain how to easily hide NVM latency by interleaving the execution of parallel work in index joins and tuple reconstruction using coroutines. Our evaluation shows that interleaving applied to the non-trivial implementations of these two operations in a production-grade codebase accelerates end-to-end query runtimes on both NVM and DRAM by up to 1.7X and 2.6X respectively, thereby reducing the performance difference between DRAM and NVM by more than 60%.",
+  "doi": "10.1145/3329785.3329917",
+  "openalex": "W2949157610",
+  "status": "ok",
+  "title": "Bridging the Latency Gap between NVM and DRAM for Latency-bound Operations"
+ },
+ "10.1145_3360551": {
+  "abstract": "The scope and scale of biological data are increasing at an exponential rate, as technologies like next-generation sequencing are becoming radically cheaper and more prevalent. Over the last two decades, the cost of sequencing a genome has dropped from $100 million to nearly $100—a factor of over 10 6 —and the amount of data to be analyzed has increased proportionally. Yet, as Moore’s Law continues to slow, computational biologists can no longer rely on computing hardware to compensate for the ever-increasing size of biological datasets. In a field where many researchers are primarily focused on biological analysis over computational optimization, the unfortunate solution to this problem is often to simply buy larger and faster machines. Here, we introduce Seq , the first language tailored specifically to bioinformatics, which marries the ease and productivity of Python with C-like performance. Seq starts with a subset of Python—and is in many cases a drop-in replacement—yet also incorporates novel bioinformatics- and computational genomics-oriented data types, language constructs and optimizations. Seq enables users to write high-level, Pythonic code without having to worry about low-level or domain-specific optimizations, and allows for the seamless expression of the algorithms, idioms and patterns found in many genomics or bioinformatics applications. We evaluated Seq on several standard computational genomics tasks like reverse complementation, k -mer manipulation, sequence pattern matching and large genomic index queries. On equivalent CPython code, Seq attains a performance improvement of up to two orders of magnitude, and a 160× improvement once domain-specific language features and optimizations are used. With parallelism, we demonstrate up to a 650× improvement. Compared to optimized C++ code, which is already difficult for most biologists to produce, Seq frequently attains up to a 2× improvement, and with shorter, cleaner code. Thus, Seq opens the door to an age of democratization of highly-optimized bioinformatics software.",
+  "doi": "10.1145/3360551",
+  "openalex": "W2979985440",
+  "status": "ok",
+  "title": "Seq: a high-performance language for bioinformatics"
+ },
+ "10.1145_3477132.3483551": {
+  "abstract": "We present the Cuckoo Trie, a fast, memory-efficient ordered index structure. The Cuckoo Trie is designed to have memory-level parallelism---which a modern out-of-order processor can exploit to execute DRAM accesses in parallel--- without sacrificing memory efficiency. The Cuckoo Trie thus breaks a fundamental performance barrier faced by current indexes, whose bottleneck is a series of dependent pointer-chasing DRAM accesses---e.g., traversing a search tree path--- which the processor cannot parallelize. Our evaluation shows that the Cuckoo Trie outperforms state-of-the-art-indexes by up to 20%-360% on a variety of datasets and workloads, typically with a smaller or comparable memory footprint.",
+  "doi": "10.1145/3477132.3483551",
+  "openalex": "W3207781726",
+  "status": "ok",
+  "title": "Cuckoo Trie"
+ },
+ "10.1145_3725843.3756070": {
+  "abstract": null,
+  "doi": "10.1145/3725843.3756070",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "SHADOW: Simultaneous Multi-Threading Architecture with Asymmetric Threads"
+ },
+ "10.14778_3368289.3368290": {
+  "abstract": "SIMD is an instruction set in mainstream processors, which provides the data level parallelism to accelerate the performance of applications. However, its advantages diminish when applications suffer from heavy cache misses. To eliminate cache misses in SIMD vectorization, we present interleaved multi-vectorizing (IMV) in this paper. It interleaves multiple execution instances of vectorized code to hide memory access latency with more computation. We also propose residual vectorized states to solve the control flow divergence in vectorization. IMV can make full use of the data parallelism in SIMD and the memory level parallelism through prefetching. It reduces cache misses, branch misses and computation overhead to significantly speed up the performance of pointer-chasing applications, and it can be applied to executing entire query pipelines. As experimental results show, IMV achieves up to 4.23X and 3.17X better performance compared with the pure scalar implementation and the pure SIMD vectorization, respectively.",
+  "doi": "10.14778/3368289.3368290",
+  "openalex": "W2998373160",
+  "status": "ok",
+  "title": "Interleaved multi-vectorizing"
+ },
+ "10.5075_epfl-thesis-9712": {
+  "abstract": "Database systems access memory either sequentially or randomly. Contrary to sequential access and despite the extensive efforts of computer architects, compiler writers, and system builders, random access to data larger than the processor cache has been synonymous to inefficient execution. Especially in the big data era, data processing is memory bound, and accesses to DRAM and non-volatile memory each take several tens or hundreds of nanoseconds respectively, posing a great challenge to current processors. Due to the mismatch between the way humans write code and the way processors execute this code, workload execution stalls on main memory access, instead of executing the other parallel work that typically exists in big data workloads. This thesis establishes cooperative multitasking as the principal way to hide memory latency in operations that consist of parallel tasks. We first systematize cooperative multitasking presenting an analogue of Amdahl's law for latency hiding. More importantly, we then introduce interleaving with coroutines, a general-purpose and practical technique to interleave the execution of parallel tasks within one thread interleaved execution and thereby hide memory access. This form of cooperative multitasking enables significant performance improvements for analytical and transactional use cases that suffer from unavoidable memory accesses, such as index joins and tuple reconstruction, as well as concurrent GET and PUT operations in key-value stores. Given enough parallel work, sufficient hardware support for concurrent memory accesses, and a low-overhead mechanism to switch between tasks, interleaved execution renders important database operations oblivious to memory latency and makes their execution behave as if all accessed data resides in the processor cache.",
+  "doi": "10.5075/epfl-thesis-9712",
+  "openalex": "W2993612540",
+  "status": "ok",
+  "title": "Improving Main-memory Database System Performance through Cooperative Multitasking"
+ },
+ "10.6001_energetika.2025.71.1.2": {
+  "abstract": "Due to the progressing complexity of modern energy systems, the need to forecast energy consumption and generation, optimise processes and develop new technologies in the energy sector, analyse scenarios for the development of energy systems and elaborate a strategy for their development, modelling and simulation is of particular relevance in this industry. The growing need to improve the productivity of computer simulation in the energy industry is effectively addressed by utilising modern computer architectures and advanced software tools that provide acceleration for computationally intensive tasks. Research presented in this paper focuses on enhancing the performance of computationally intensive algorithms using the Thomas algorithm by employing modern asynchronous programming techniques. The work implements classical and develops and implements asynchronous computational algorithms of the sweep method with subsequent assessment of the time and efficiency of their execution for the order of systems of linear equations (SLAEs) up to 5 × 107. The program code was developed using Microsoft Visual Studio C++ and the standard template for asynchronous programming. The numerical experiments showed the possibility of increasing of the implementation speed of the asynchronous algorithm by 1.87–2.91 times. Research results correspond with the literature data and the results previously obtained by the authors in similar studies using alternative parallel programming software. In general, the results of this study determine the potential for further improvement and development of methods and technologies for parallel implementation of computational tasks using the Tridiagonal Matrix Algorithm. These approaches can be extended to developing various computer models of energy processes and systems based on the solution of SLAEs with tridiagonal matrices on computers with multiprocessor or multi-core architectures.",
+  "doi": "10.6001/energetika.2025.71.1.2",
+  "openalex": "W4406957811",
+  "status": "ok",
+  "title": "Using asynchronous programming to improve computer simulation performance in energy systems"
+ },
+ "oa-W2897764559": {
+  "abstract": "Modern out-of-order processors have increased capacity to exploit instruction level parallelism (ILP) and memory level parallelism (MLP), e.g., by using wide superscalar pipelines and vector execution units, as well as deep buffers for inflight memory requests. These resources, however, often exhibit poor utilization rates on workloads with large working sets, e.g., in-memory databases, key-value stores, and graph analytics, as compilers and hardware struggle to expose ILP and MLP from the instruction stream automatically. In this paper, we introduce the IMLP (Instruction and Memory Level Parallelism) task programming model. IMLP tasks execute as coroutines that yield execution at annotated long-latency operations, e.g., memory accesses, divisions, or unpredictable branches. IMLP tasks are interleaved on a single thread, and integrate well with thread parallelism and vectorization. Our DSL embedded in C++, Cimple, allows exploration of task scheduling and transformations, such as buffering, vectorization, pipelining, and prefetching. We demonstrate state-of-the-art performance on core algorithms used in in-memory databases that operate on arrays, hash tables, trees, and skip lists. Cimple applications reach 2.5× throughput gains over hardware multithreading on a multi-core, and 6.4× single thread speedup.",
+  "doi": null,
+  "openalex": "W2897764559",
+  "status": "ok",
+  "title": "Cimple: instruction and memory level parallelism: a DSL for uncovering ILP and MLP"
+ },
+ "s2-53b6021be2687afe": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Defense Against Cache Based Micro-architectural Side Channel Attacks"
+ },
+ "s2-88ae49153a6bcb17": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Harvesting Sub-Microsecond CXL Memory Stalls with LiteSwitch"
+ },
+ "s2-a5ab86415af3467f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving performance and security of indirect memory references on speculative execution machines"
+ }
+}

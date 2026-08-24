@@ -1,0 +1,219 @@
+{
+ "10.1007_978-3-642-41284-4_21": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-41284-4_21",
+  "openalex": "W205715760",
+  "status": "no_abstract",
+  "title": "CloudFence: Data Flow Tracking as a Cloud Service"
+ },
+ "10.1109_cgo.2013.6494985": {
+  "abstract": "Shadow memory is a critical component of many dynamic program analysis frameworks with applications ranging from memory debugging to computer security. Most recent work has focused on optimizing the execution time of analyses that associate a single tag with each memory address. However, an important new class of dynamic analyses (poly-scopic analyses) requires multiple tags for each memory address. These new analyses place additional burdens on memory shadowing infrastructures, especially with regards to memory overhead. Existing shadow memory infrastructures are either unequipped to handle these additional burdens or result in runtime and memory overheads that make them impractical for all but small inputs. In this paper we propose vector shadow memories (VSMs) as an infrastructure to support poly-scopic analyses. Furthermore we introduce Skadu, a VSM implementation that employs several novel techniques to greatly reduce the runtime and memory overhead associated with the two major challenges of VSMs: tag validation and garbage collection. Our results show that on two separate poly-scopic analyses, memory footprint profiling and hierarchical critical path analysis, Skadu significantly reduces the associated memory overhead: by 14.2× and 11.4× respectively. In both cases, Skadu makes poly-scopic analysis practical for ordinary desktop and laptop machines.",
+  "doi": "10.1109/cgo.2013.6494985",
+  "openalex": "W2135348627",
+  "status": "ok",
+  "title": "Skadu: Efficient vector shadow memories for poly-scopic program analysis"
+ },
+ "10.1109_dsn.2015.45": {
+  "abstract": "Memory check pointing is a pivotal technique in systems reliability, with applications ranging from crash recovery to replay debugging. Unfortunately, many traditional memory check pointing use-cases require high-frequency checkpoints, something for which existing application-level solutions are not well-suited. The problem is that they incur either substantial run-time performance overhead, or poor memory usage guarantees. As a result, their application in practice is hampered. This paper presents Lightweight Memory Check pointing (LMC), a new user-level memory check pointing technique that combines low performance overhead with strong memory usage guarantees for high check pointing frequencies. To this end, LMC relies on compiler-based instrumentation to shadow the entire memory address space of the running program and incrementally checkpoint modified memory bytes in a LMC-maintained shadow state. Our evaluation on popular server applications demonstrates the viability of our approach in practice, confirming that LMC imposes low performance overhead with strictly bounded memory usage at runtime.",
+  "doi": "10.1109/dsn.2015.45",
+  "openalex": "W1571050301",
+  "status": "ok",
+  "title": "Lightweight Memory Checkpointing"
+ },
+ "10.1109_dsn48063.2020.00024": {
+  "abstract": "We present ClearTrack, a system that tracks meta-data for each primitive value in Java programs to detect and nullify a range of vulnerabilities such as integer overflow/underflow and SQL/command injection vulnerabilities. Contributions include new techniques for eliminating false positives associated with benign integer overflows and underflows, new metadata-aware techniques for detecting and nullifying SQL/command command injection attacks, and results from an independent evaluation team. These results show that 1) ClearTrack operates successfully on Java programs comprising hundreds of thousands of lines of code (including instrumented jar files and Java system libraries, the majority of the applications comprise over 3 million lines of code), 2) because of computations such as cryptography and hash table calculations, these applications perform millions of benign integer overflows and underflows, and 3) ClearTrack successfully detects and nullifies all tested integer overflow and underflow and SQL/command injection vulnerabilities in the benchmark applications.",
+  "doi": "10.1109/dsn48063.2020.00024",
+  "openalex": "W2991316809",
+  "status": "ok",
+  "title": "Comprehensive Java Metadata Tracking for Attack Detection and Repair"
+ },
+ "10.1145_1952682.1952688": {
+  "abstract": "In today's multi-core systems, cache contention due to true and false sharing can cause unexpected and significant performance degradation. A detailed understanding of a given multi-threaded application's behavior is required to precisely identify such performance bottlenecks. Traditionally, however, such diagnostic information can only be obtained after lengthy simulation of the memory hierarchy.",
+  "doi": "10.1145/1952682.1952688",
+  "openalex": "W2123065508",
+  "status": "ok",
+  "title": "Dynamic cache contention detection in multi-threaded applications"
+ },
+ "10.1145_2007477.1952688": {
+  "abstract": "In today's multi-core systems, cache contention due to true and false sharing can cause unexpected and significant performance degradation. A detailed understanding of a given multi-threaded application's behavior is required to precisely identify such performance bottlenecks. Traditionally, however, such diagnostic information can only be obtained after lengthy simulation of the memory hierarchy. In this paper, we present a novel approach that efficiently analyzes interactions between threads to determine thread correlation and detect true and false sharing. It is based on the following key insight: although the slowdown caused by cache contention depends on factors including the thread-to-core binding and parameters of the memory hierarchy, the amount of data sharing is primarily a function of the cache line size and application behavior. Using memory shadowing and dynamic instrumentation, we implemented a tool that obtains detailed sharing information between threads without simulating the full complexity of the memory hierarchy. The runtime overhead of our approach --- a 5x slowdown on average relative to native execution --- is significantly less than that of detailed cache simulation. The information collected allows programmers to identify the degree of cache contention in an application, the correlation among its threads, and the sources of significant false sharing. Using our approach, we were able to improve the performance of some applications up to a factor of 12x. For other contention-intensive applications, we were able to shed light on the obstacles that prevent their performance from scaling to many cores.",
+  "doi": "10.1145/2007477.1952688",
+  "openalex": "W3000376980",
+  "status": "ok",
+  "title": "Dynamic cache contention detection in multi-threaded applications"
+ },
+ "10.1145_2048066.2048108": {
+  "abstract": "Software engineers now face the difficult task of refactoring serial programs for parallel execution on multicore processors. Currently, they are offered little guidance as to how much benefit may come from this task, or how close they are to the best possible parallelization. This paper presents Kismet, a tool that creates parallel speedup estimates for unparallelized serial programs. Kismet differs from previous approaches in that it does not require any manual analysis or modification of the program. This difference allows quick analysis of many programs, avoiding wasted engineering effort on those that are fundamentally limited. To accomplish this task, Kismet builds upon the hierarchical critical path analysis (HCPA) technique, a recently developed dynamic analysis that localizes parallelism to each of the potentially nested regions in the target program. It then uses a parallel execution time model to compute an approximate upper bound for performance, modeling constraints that stem from both hardware parameters and internal program structure.",
+  "doi": "10.1145/2048066.2048108",
+  "openalex": "W2124333827",
+  "status": "ok",
+  "title": "Kismet"
+ },
+ "10.1145_2076021.2048108": {
+  "abstract": "Software engineers now face the difficult task of refactoring serial programs for parallel execution on multicore processors. Currently, they are offered little guidance as to how much benefit may come from this task, or how close they are to the best possible parallelization. This paper presents Kismet, a tool that creates parallel speedup estimates for unparallelized serial programs. Kismet differs from previous approaches in that it does not require any manual analysis or modification of the program. This difference allows quick analysis of many programs, avoiding wasted engineering effort on those that are fundamentally limited. To accomplish this task, Kismet builds upon the hierarchical critical path analysis (HCPA) technique, a recently developed dynamic analysis that localizes parallelism to each of the potentially nested regions in the target program. It then uses a parallel execution time model to compute an approximate upper bound for performance, modeling constraints that stem from both hardware parameters and internal program structure. Our evaluation applies Kismet to eight high-parallelism NAS Parallel Benchmarks running on a 32-core AMD multicore system, five low-parallelism SpecInt benchmarks, and six medium-parallelism benchmarks running on the finegrained MIT Raw processor. The results are compelling. Kismet is able to significantly improve the accuracy of parallel speedup estimates relative to prior work based on critical path analysis.",
+  "doi": "10.1145/2076021.2048108",
+  "openalex": "W4237203163",
+  "status": "ok",
+  "title": "Kismet"
+ },
+ "10.1145_2150976.2150995": {
+  "abstract": "Despite a burgeoning demand for parallel programs, the tools available to developers working on shared-memory multicore processors have lagged behind. One reason for this is the lack of hardware support for inspecting the complex behavior of these parallel programs. Inter-thread communication, which must be instrumented for many types of analyses, may occur with any memory operation. To detect such thread communication in software, many existing tools require the instrumentation of all memory operations, which leads to significant performance overheads. To reduce this overhead, some existing tools resort to random sampling of memory operations, which introduces false negatives. Unfortunately, neither of these approaches provide the speed and accuracy programmers have traditionally expected from their tools. In this work, we present Aikido, a new system and framework that enables the development of efficient and transparent analyses that operate on shared data. Aikido uses a hybrid of existing hardware features and dynamic binary rewriting to detect thread communication with low overhead. Aikido runs a custom hypervisor below the operating system, which exposes per-thread hardware protection mechanisms not available in any widely used operating system. This hybrid approach allows us to benefit from the low cost of detecting memory accesses with hardware, while maintaining the word-level accuracy of a software-only approach. To evaluate our framework, we have implemented an Aikido-enabled vector clock race detector. Our results show that the Aikido enabled race-detector outperforms existing techniques that provide similar accuracy by up to 6.0x, and 76% on average, on the PARSEC benchmark suite.",
+  "doi": "10.1145/2150976.2150995",
+  "openalex": "W2143644287",
+  "status": "ok",
+  "title": "Aikido"
+ },
+ "10.1145_2189750.2150995": {
+  "abstract": "Despite a burgeoning demand for parallel programs, the tools available to developers working on shared-memory multicore processors have lagged behind. One reason for this is the lack of hardware support for inspecting the complex behavior of these parallel programs. Inter-thread communication, which must be instrumented for many types of analyses, may occur with any memory operation. To detect such thread communication in software, many existing tools require the instrumentation of all memory operations, which leads to significant performance overheads. To reduce this overhead, some existing tools resort to random sampling of memory operations, which introduces false negatives. Unfortunately, neither of these approaches provide the speed and accuracy programmers have traditionally expected from their tools. In this work, we present Aikido, a new system and framework that enables the development of efficient and transparent analyses that operate on shared data. Aikido uses a hybrid of existing hardware features and dynamic binary rewriting to detect thread communication with low overhead. Aikido runs a custom hypervisor below the operating system, which exposes per-thread hardware protection mechanisms not available in any widely used operating system. This hybrid approach allows us to benefit from the low cost of detecting memory accesses with hardware, while maintaining the word-level accuracy of a software-only approach. To evaluate our framework, we have implemented an Aikido-enabled vector clock race detector. Our results show that the Aikido enabled race-detector outperforms existing techniques that provide similar accuracy by up to 6.0x, and 76% on average, on the PARSEC benchmark suite.",
+  "doi": "10.1145/2189750.2150995",
+  "openalex": "W4238070624",
+  "status": "ok",
+  "title": "Aikido"
+ },
+ "10.1145_2248487.2150995": {
+  "abstract": "Despite a burgeoning demand for parallel programs, the tools available to developers working on shared-memory multicore processors have lagged behind. One reason for this is the lack of hardware support for inspecting the complex behavior of these parallel programs. Inter-thread communication, which must be instrumented for many types of analyses, may occur with any memory operation. To detect such thread communication in software, many existing tools require the instrumentation of all memory operations, which leads to significant performance overheads. To reduce this overhead, some existing tools resort to random sampling of memory operations, which introduces false negatives. Unfortunately, neither of these approaches provide the speed and accuracy programmers have traditionally expected from their tools. In this work, we present Aikido, a new system and framework that enables the development of efficient and transparent analyses that operate on shared data. Aikido uses a hybrid of existing hardware features and dynamic binary rewriting to detect thread communication with low overhead. Aikido runs a custom hypervisor below the operating system, which exposes per-thread hardware protection mechanisms not available in any widely used operating system. This hybrid approach allows us to benefit from the low cost of detecting memory accesses with hardware, while maintaining the word-level accuracy of a software-only approach. To evaluate our framework, we have implemented an Aikido-enabled vector clock race detector. Our results show that the Aikido enabled race-detector outperforms existing techniques that provide similar accuracy by up to 6.0x, and 76% on average, on the PARSEC benchmark suite.",
+  "doi": "10.1145/2248487.2150995",
+  "openalex": "W4249700078",
+  "status": "ok",
+  "title": "Aikido"
+ },
+ "10.1145_2749469.2750379": {
+  "abstract": "Many recent works propose mechanisms demonstrating the potential advantages of managing memory at a fine (e.g., cache line) granularity---e.g., fine-grained deduplication and fine-grained memory protection. Unfortunately, existing virtual memory systems track memory at a larger granularity (e.g., 4 KB pages), inhibiting efficient implementation of such techniques. Simply reducing the page size results in an unacceptable increase in page table overhead and TLB pressure.",
+  "doi": "10.1145/2749469.2750379",
+  "openalex": "W2154142155",
+  "status": "ok",
+  "title": "Page overlays"
+ },
+ "10.1145_2807426.2807433": {
+  "abstract": "Understanding and tracking down memory-related performance problems, such as long garbage collection times and memory leaks, is a tedious task in large and complex applications. Memory profilers can support developers in this task by recording detailed traces of the application's memory behavior which can then be analyzed offline. Unfortunately, these traces can become huge, and processing them is a real challenge. If the goal is to rebuild the heap from a trace in order to analyze it, most state-of-the-art tools perform badly, because they are either too slow or provide only a coarse-grained view of the monitored application.",
+  "doi": "10.1145/2807426.2807433",
+  "openalex": "W1966210512",
+  "status": "ok",
+  "title": "Efficient Rebuilding of Large Java Heaps from Event Traces"
+ },
+ "10.1145_2872887.2750379": {
+  "abstract": "Many recent works propose mechanisms demonstrating the potential advantages of managing memory at a fine (e.g., cache line) granularity---e.g., fine-grained deduplication and fine-grained memory protection. Unfortunately, existing virtual memory systems track memory at a larger granularity (e.g., 4 KB pages), inhibiting efficient implementation of such techniques. Simply reducing the page size results in an unacceptable increase in page table overhead and TLB pressure. We propose a new virtual memory framework that enables efficient implementation of a variety of fine-grained memory management techniques. In our framework, each virtual page can be mapped to a structure called a page overlay, in addition to a regular physical page. An overlay contains a subset of cache lines from the virtual page. Cache lines that are present in the overlay are accessed from there and all other cache lines are accessed from the regular physical page. Our page-overlay framework enables cache-line-granularity memory management without significantly altering the existing virtual memory framework or introducing high overheads. We show that our framework can enable simple and efficient implementations of seven memory management techniques, each of which has a wide variety of applications. We quantitatively evaluate the potential benefits of two of these techniques: overlay-on-write and sparse-data-structure computation. Our evaluations show that overlay-on-write, when applied to fork, can improve performance by 15% and reduce memory capacity requirements by 53% on average compared to traditional copy-on-write. For sparse data computation, our framework can outperform a state-of-the-art software-based sparse representation on a number of real-world sparse matrices. Our framework is general, powerful, and effective in enabling fine-grained memory management at low cost.",
+  "doi": "10.1145/2872887.2750379",
+  "openalex": "W4256267172",
+  "status": "ok",
+  "title": "Page overlays"
+ },
+ "10.1145_3317550.3321424": {
+  "abstract": "Recent research efforts propose remote memory systems that pool memory from multiple hosts. These systems rely on the virtual memory subsystem to track application memory accesses and transparently offer remote memory to applications. We outline several limitations of this approach, such as page fault overheads and dirty data amplification. Instead, we argue for a fundamentally different approach: leverage the local host's cache coherence traffic to track application memory accesses at cache line granularity. Our approach uses emerging cache-coherent FPGAs to expose cache coherence events to the operating system. This approach not only accelerates remote memory systems by reducing dirty data amplification and by eliminating page faults, but also enables other use cases, such as live virtual machine migration, unified virtual memory, security and code analysis. All of these use cases open up many promising research directions.",
+  "doi": "10.1145/3317550.3321424",
+  "openalex": "W2944787913",
+  "status": "ok",
+  "title": "Project PBerry"
+ },
+ "10.1145_3649827": {
+  "abstract": "Memory profiling captures programs’ dynamic memory behavior, assisting programmers in debugging, tuning, and enabling advanced compiler optimizations like speculation-based automatic parallelization. As each use case demands its unique program trace summary, various memory profiler types have been developed. Yet, designing practical memory profilers often requires extensive compiler expertise, adeptness in program optimization, and significant implementation effort. This often results in a void where aspirations for fast and robust profilers remain unfulfilled. To bridge this gap, this paper presents PROMPT, a framework for streamlined development of fast memory profilers. With PROMPT, developers need only specify profiling events and define the core profiling logic, bypassing the complexities of custom instrumentation and intricate memory profiling components and optimizations. Two state-of-the-art memory profilers were ported with PROMPT where all features preserved. By focusing on the core profiling logic, the code was reduced by more than 65% and the profiling overhead was improved by 5.3× and 7.1× respectively. To further underscore PROMPT’s impact, a tailored memory profiling workflow was constructed for a sophisticated compiler optimization client. In 570 lines of code, this redesigned workflow satisfies the client’s memory profiling needs while achieving more than 90% reduction in profiling overhead and improved robustness compared to the original profilers.",
+  "doi": "10.1145/3649827",
+  "openalex": "W4396238970",
+  "status": "ok",
+  "title": "PROMPT: A Fast and Extensible Memory Profiling Framework"
+ },
+ "10.4230_lipics.ecoop.2023.13": {
+  "abstract": null,
+  "doi": "10.4230/lipics.ecoop.2023.13",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Dynamic Determinacy Race Detection for Task-Parallel Programs with Promises"
+ },
+ "10.7916_d82b8wq9": {
+  "abstract": "As cloud technology matures and trendsetters like Google, Amazon, Microsoft, Apple, and VMware have become the top-tier cloud services players, public cloud services have turned mainstream for individual users. In this work, I propose a set of techniques that can be used as the basis for alleviating cloud customers' privacy concerns and elevating their condence in using the cloud for security-sensitive operations as well as trusting it with their sensitive data. The main goal is to provide cloud customers' with a reliable mechanism that will cover the entire path of tracking their sensitive data, while they are collected and used by cloud-hosted services, to the presentation of the tracking results to the respective data owners. In particular, my design accomplishes this goal by retrofitting legacy applications with data flow tracking techniques and providing the cloud customers with comprehensive information flow auditing capabilities. For this purpose, we created CloudFence, a cloud-wide fine-grained data flow tracking (DFT) framework, that sensitive data in well-defined domains, offering additional protection against inadvertent leaks and unauthorized access.",
+  "doi": "10.7916/d82b8wq9",
+  "openalex": "W2137413731",
+  "status": "ok",
+  "title": "Information Flow Auditing in the Cloud"
+ },
+ "oa-W1878544538": {
+  "abstract": "Memory access bugs, including buffer overflows and uses of freed heap memory, remain a serious problem for programming languages like C and C++. Many memory error detectors exist, but most of them are either slow or detect a limited set of bugs, or both.\r\n\r\nThis paper presents AddressSanitizer, a new memory error detector. Our tool finds out-of-bounds accesses to heap, stack, and global objects, as well as use-after-free bugs. It employs a specialized memory allocator and code instrumentation that is simple enough to be implemented in any compiler, binary translation system, or even in hardware.\r\n\r\nAddressSanitizer achieves efficiency without sacrificing comprehensiveness. Its average slowdown is just 73% yet it accurately detects bugs at the point of occurrence. It has found over 300 previously unknown bugs in the Chromium browser and many bugs in other software.",
+  "doi": null,
+  "openalex": "W1878544538",
+  "status": "ok",
+  "title": "AddressSanitizer: a fast address sanity checker"
+ },
+ "oa-W2990869997": {
+  "abstract": "Detailed information about the paths that data take through a system is invaluable for understanding sources and behaviors of complex exfiltration malware. We present a new system, ClearScope, that tracks, at the level of individual bytes, the complete paths that data follow through Android systems. These paths include the original source where data entered the device (such as sensors or network connections), files in which the data was temporarily stored, applications that the data traversed during its time in the device, and sinks through which the data left the device. The ClearScope system design enables this unprecedented level of provenance tracking detail by 1) structuring the provenance representation as references, via provenance tags, to provenance events that record the movement of data between system components and into or out of the device and 2) adopting a split design in which provenance events are streamed to a remote server for storage, with only the minimal information required to generate the tagged stream of events retained on the device. ClearScope also includes compiler optimizations that enable efficient provenance tracking within applications by eliminating unnecessary provenance tracking computations and adopting and efficient aggregate provenance representation for arrays when all array elements have the same provenance. Experience using ClearScope to analyze the notorious Adups FOTA malware highlights the significant benefits that this level of comprehensive detail can bring. Performance experiments with the Caffeine Mark benchmarks show that the overall ClearScope provenance tracking overhead on this benchmark suite is 14%.",
+  "doi": null,
+  "openalex": "W2990869997",
+  "status": "ok",
+  "title": "Precise and Comprehensive Provenance Tracking for Android Devices"
+ },
+ "oa-W338206765": {
+  "abstract": "Software engineers now face the difficult task of parallelizing serial programs for parallel execution on multicore processors. Parallelization is a complex task that typically requires considerable time and effort. However, even after extensive engineering efforts, the resulting speedup is often fundamentally limited due to the lack of parallelism in the target program or the inability of the target platform to exploit existing parallelism. Unfortunately, little guidance is available as to how much benefit may come from parallelization, making it hard for a programmer to answer this critical question:  Should I parallelize my code?. \r\nIn this dissertation, we examine the design and implementation of Kismet, a tool that creates parallel speedup estimates for unparallelized serial programs. Our approach differs from previous approaches in that it does not require any changes or manual analysis of the serial program. This difference allows quick profitability analysis of a program, helping programmers make informed decisions in the initial stages of parallelization. \r\nTo provide parallel speedup estimates from serial programs, we developed a dynamic program analysis named hierarchical critical path analysis (HCPA). HCPA extends a classic technique called critical path analysis to quantify localized parallelism of each region in a program. Based on the parallelism information from HCPA, Kismet incorporates key parallelization constraints that can significantly affect the parallel speedup, providing realistic speedup upperbounds. The results are compelling. Kismet can significantly improve the accuracy of parallel speedup estimates relative to prior work based on critical path analysis.",
+  "doi": null,
+  "openalex": "W338206765",
+  "status": "ok",
+  "title": "Parallel speedup estimates for serial programs"
+ },
+ "s2-29146d2b80bc8c56": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "AddressSanitizer: A Fast Address Sanity Checker"
+ },
+ "s2-470ab02a955b0dd0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A specification language for debugging"
+ },
+ "s2-4a781d4737f652ba": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Precise and Comprehensive Provenance Tracking for Android Devices"
+ },
+ "s2-543f759f3f516904": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallel speedup estimates for serial programs"
+ },
+ "s2-5fda459b100d6a2e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallel speedup estimates for serial programs"
+ },
+ "s2-6e6be137332e16df": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A practical oracle for sequential code parallelization"
+ },
+ "s2-848b2450052b0fa6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications"
+ },
+ "s2-c71074a913504bbf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Simple DRAM and Virtual Memory Abstractions to Enable Highly Efficient Memory Systems"
+ },
+ "s2-d536d9f8129a92f5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Computer Science (Computer Engineering)"
+ },
+ "s2-fbc5e170b8fc18c4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient High Frequency Checkpointing for Recovery and Debugging"
+ }
+}

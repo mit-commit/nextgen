@@ -1,0 +1,16 @@
+{
+ "10.1109_cgo68049.2026.11395229": {
+  "abstract": "A computational graph in a tensor compiler represents a program as a set of kernels connected by edges that describe how tensors flow between them. Tensors may be dense or sparse, the latter storing only nonzero values. Recognizing sparsity allows the compiler to avoid redundant computation and reduce memory usage. This paper introduces Sparsity Propagation Analysis (SPA), a static analysis that conservatively infers sparsity in tensor slices: sets of tensor elements that share a fixed subset of indices. SPA estimates which slices can be treated as zero, via forward, backward, and lateral propagation of sparsity information. SPA applies to tensors of arbitrary dimension and to operators defined over general semirings (e.g., addition and multiplication, MAX and MIN, logical AND and OR). Its runtime grows with the number of slices rather than the number of elements, making it asymptotically faster than executing even a single iteration of the graph. We implement SPA in the Tensor Algebra Compiler (TACO) and evaluate it on benchmarks from the Einsum Collection. Results indicate that multidirectional propagation increases the precision of the sparsity analysis, reduces memory consumption, and enables optimizations that improve runtime performance.",
+  "doi": "10.1109/cgo68049.2026.11395229",
+  "openalex": "W7131123835",
+  "status": "ok",
+  "title": "Multidirectional Propagation of Sparsity Information across Tensor Slices"
+ },
+ "10.1109_cgo68049.2026.11395231": {
+  "abstract": "Efficient inference on large language models (LLMs) has become a popular topic in both academia and industry. Roughly speaking, LLMs consist of a collection of weight matrices, and generative inference on these models essentially computes a sequence of matrix-vector products and thus can be heavily memory-bound. Consequently, much work has been devoted to reducing the size of the weights to lower bit-widths through various forms of quantization. In turn, these diverse precision formats complicate both the arithmetic and optimized kernel implementation. So far, the vast majority of implementation work for mixed-precision LLM computation has been done manually. Currently, one of the most powerful and complex scalar LLM compression techniques is nonuniform quantization, in which a matrix is divided unevenly into parts that are quantized with different bit-widths, minimizing the output compression error. In this paper, we present QIGen, the first kernel generator for LLM inference on CPUs to support nonuniform quantization in full generality. Given a nonuniformly quantized LLM and target CPU characteristics, QIGen first generates the diverse set of needed custom matrix-vector product kernels and combines them with a suitable storage format. We benchmark and analyze QIGen-generated code in various experiments. In particular, we show that our code achieves Pareto optimality in terms of performance and accuracy with respect to the most used open-source tool. We show a speedup of up to 1.3× for the matrix-vector and 3.4× for the matrix-matrix computations even when using uniform quantization.",
+  "doi": "10.1109/cgo68049.2026.11395231",
+  "openalex": "W7131077177",
+  "status": "ok",
+  "title": "QIGen: A Kernel Generator for Inference on Nonuniformly Quantized Large Language Models"
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "10.1007_978-3-030-31019-6_5": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-31019-6_5",
+  "openalex": "W2980186989",
+  "status": "no_abstract",
+  "title": "Evaluation of Stencil Based Algorithm Parallelization over System-on-Chip FPGA Using a High Level Synthesis Tool"
+ },
+ "10.1007_978-981-13-5907-1_36": {
+  "abstract": null,
+  "doi": "10.1007/978-981-13-5907-1_36",
+  "openalex": "W2914389485",
+  "status": "no_abstract",
+  "title": "Cost-Performance Comparison of Various Accelerator Implementation Platforms for Deep Convolutional Neural Network"
+ },
+ "10.1007_978-981-16-7487-7_14": {
+  "abstract": null,
+  "doi": "10.1007/978-981-16-7487-7_14",
+  "openalex": "W4285009800",
+  "status": "no_abstract",
+  "title": "Reconfigurable Architectures: The Shift from General Systems to Domain Specific Solutions"
+ },
+ "10.1109_access.2020.3024098": {
+  "abstract": "Heterogeneous computing systems with tightly coupled processors and reconfigurable logic blocks provide great scope to improve software performance by executing each section of code on the processor or custom hardware accelerator that best matches its requirements and the system optimisation goals. This article is motivated by the idea of a software tool that can automatically accomplish the task of deploying code, originally written for a conventional computer, to the processors and reconfigurable logic blocks in a heterogeneous system. We undertake an extensive survey of high-level synthesis tools to determine how close we are to this vision, and to identify any capability gaps. The survey is structured according to a new framework that clearly expresses the relationships between the many tools surveyed. We find that none of the existing tools can deploy general high-level code without manual intervention. Logic synthesis from arbitrary high-level code remains an open problem with dynamic data structures, function pointers and recursion all presenting challenges. Other challenges include automating the tasks of code partitioning, optimisation and design space exploration.",
+  "doi": "10.1109/access.2020.3024098",
+  "openalex": "W3085407124",
+  "status": "ok",
+  "title": "Towards Automatic High-Level Code Deployment on Reconfigurable Platforms: A Survey of High-Level Synthesis Tools and Toolchains"
+ },
+ "10.1109_asap.2018.8445108": {
+  "abstract": "The major flaw of Field Programmable Gate Arrays (FPGAs) is their hard programmability and steep learning curve. Even though High-Level Synthesis (HLS) tools may alleviate this task by providing directives to optimize the hardware design, as well as supporting languages like C/C++ and OpenCL, the development of efficient designs for FPGA is still a challenging and time-consuming task. In this context, Domain Specific Languages (DSLs) represent an emerging solution to generate efficient code to target FPGAs. However, the support for these languages towards FPGA is still limited, and only few DSLs provide FPGA backends. This paper describes FROST, a unified backend for targeting FPGAs from DSLs. FROST takes as input an algorithm described in one of the supported DSLs and generates an optimized design suitable for HLS tools. To this end, FROST exposes a high-level scheduling co-language to drive many aspects of the optimization process, like the resulting architecture, the level of parallelism, and so on. We evaluated FROST on a set of image processing kernels, developed in Halide and TIRAMISU, and compared the results against a hand-tuned FPGA library. The experimental results demonstrate that FROST designs are able to match the performance of such library (exploiting the same level of parallelism), and surpass it by a factor of 10X when combining FROST and the frontends scheduling commands.",
+  "doi": "10.1109/asap.2018.8445108",
+  "openalex": "W2889424113",
+  "status": "ok",
+  "title": "A Unified Backend for Targeting FPGAs from DSLs"
+ },
+ "10.1109_fccm.2018.00043": {
+  "abstract": "FPGA is reconfigurable architecture able to implement a good trade-off in terms of energy, performance, and flexibility. However, the main drawback in using FPGAs is their very long routing time. Multi-core processors are now ubiquitous, making parallelism an increasingly attractive direction to accelerate the routing time. In this paper, we propose a task-level distributed parallel router that exploits conflict-aware box expansion and equal-sized grid partitioning for parallel FPGA routing. In box expansion, we adopt net bounding box to limit the search space of routing and based on current congestion state among nets, we design conflict-aware box expansion to optimize the serial routing time and provide more non-conflicting nets to obtain significant parallelism. In grid partitioning, we employ equal-sized grid to partition the overall routing region, where the nets in same grid are routed in serial and the grids are processed in parallel. Specifically, the nets distributed in multiple grids can be used to balance the workloads among processor cores. Experiments show that the parallel implementation scales to an average speedup of about 21 × using 32 processor cores compared to state-of-the-art VPR router.",
+  "doi": "10.1109/fccm.2018.00043",
+  "openalex": "W2891110926",
+  "status": "ok",
+  "title": "Exploiting Box Expansion and Grid Partitioning for Parallel FPGA Routing"
+ },
+ "10.1109_icet58434.2023.10212025": {
+  "abstract": "In order to improve the detection efficiency of human photo plethysmo graphy (PPG) waveform, a hardware based PPG waveform and heart rate detection system is proposed. PPG waveform is detected by fingertip reflection photoelectric detection method. The transmitter and receiver are located at the same end of the fingertip. The receiver receives the light wave reflected by the fingertip and converts it into an electrical signal. For the waveform processing process, after receiving the waveform, the DC and power frequency noise in the waveform is filtered through the band-pass filter, and the filtered waveform is amplified through the amplifier circuit, and then the waveform data is collected into the FPGA. The median filter is used in FPGA to filter the PPG waveform to get the baseline drift noise, and the original waveform is subtracted from the baseline drift noise to get a stable waveform signal. In the median filtering process, the larger the selected filtering window is, the more details can be retained in the final waveform, but the worse the baseline drift removal effect is. The pulse process is determined by detecting the rising edge of the waveform and the human heart rate is calculated by timing. After processing the above waveform data, a stable PPG waveform and heart rate value output can be obtained. The system supports real-time monitoring and display of waveform and heart rate, which can be applied to intelligent wearable or home health detection field. Meanwhile, the detected PPG waveform can be used to calculate various human physiological parameters by extracting details.",
+  "doi": "10.1109/icet58434.2023.10212025",
+  "openalex": "W4385831931",
+  "status": "ok",
+  "title": "Hardware Acceleration of PPG Waveform and Heart Rate Detection System"
+ },
+ "10.1109_iecon51785.2023.10311683": {
+  "abstract": "Condition monitoring and predictive maintenance of induction motors have great relevance in industrial applications. Nowadays, there are different techniques to analyze electronic signals from different types of sensors. At the same time, the application of FPGA-based hardware acceleration has gained traction in recent years due to the increasing demand for time and energy optimization. However, the application of hardware-accelerated algorithms in condition monitoring applications has yet to be explored despite its potential to improve online fault detection systems. This paper presents the implementation of an FPGA-based hardware-accelerated thermal image processing pipeline on the PYNQ Z2 board based on two image statistical features (mean and standard deviation) to detect five different induction motor mechanical fault conditions: misalignment, unbalanced load, bearing defect on the outer race, two broken rotor bars, and a healthy case that was used as reference. The hardware implementation of the thermal image statistical feature computation made it possible to reduce the computational load and the computation time on the development board.",
+  "doi": "10.1109/iecon51785.2023.10311683",
+  "openalex": "W4388727505",
+  "status": "ok",
+  "title": "Hardware Accelerated Thermal Image Processing for the Detection of Induction Motor Faults Based on Statistical Features"
+ },
+ "10.1109_ipdpsw.2018.00023": {
+  "abstract": "Despite the remarkable improvements in the effectiveness of High Level Synthesis tools for FPGA development in recent years, they still require some domain specific knowledge and expertise to be used effectively. In this paper we present OXiGen, a tool which aims to further increase the accessibility of HLS technology by harnessing the flexibility of LLVM to offer a high level language front-end for the design of dataflow applications on FPGA. In contrast to many HLS tools, which intend to be general in the architectural templates they offer, OXiGen specifically targets the dataflow computational paradigm, which has proven to be very effective when implemented on FPGA. Starting from a high level language supported by LLVM, the tool generates a dataflow intermediate representation of the target function and translates it into a chosen target language suitable for hardware synthesis. The bitstream generation is handled by a back-end synthesis tool of choice which supports the dataflow computational paradigm. We present an example of this approach targeting MaxCompiler and translating high level computational kernels written in C into MaxJ. OXiGen also provides a resources and performance model for design space exploration purposes, which allows the user to find the optimal translation configuration to optimize the design according to its critical resources and performance goals.",
+  "doi": "10.1109/ipdpsw.2018.00023",
+  "openalex": "W2886241345",
+  "status": "ok",
+  "title": "OXiGen: A Tool for Automatic Acceleration of C Functions Into Dataflow FPGA-Based Kernels"
+ },
+ "10.1109_ipdpsw.2018.00037": {
+  "abstract": "Hardware accelerators are an effective solution to increase the performance of algorithms in a wide array of disciplines, from data science to computational finance. However, data scientists and mathematicians often do not have the required knowledge or time to fully exploit these accelerators, and they perceive them as difficult and frustrating to use. OpenCL was created to simplify the creation of computational pipelines with heterogeneous hardware, but as of today, its integration with high-level languages commonly used in data science is limited. In this paper, we propose a framework to integrate OpenCL kernels running on Field Programmable Gate Arrays (FPGAs) with Python, R, and MATLAB, the most common languages used in data science. Our framework can automatically generate all the interfaces needed to wrap an OpenCL kernel into these high-level languages and provide the user with a transparent access to the kernel itself.",
+  "doi": "10.1109/ipdpsw.2018.00037",
+  "openalex": "W2885023974",
+  "status": "ok",
+  "title": "FIDA: A Framework to Automatically Integrate FPGA Kernels Within Data-Science Applications"
+ },
+ "10.1109_isca45697.2020.00071": {
+  "abstract": "Image processing is becoming an increasingly important domain for many applications on workstations and the datacenter that require accelerators for high performance and energy efficiency. GPU, which is the state-of-the-art accelerator for image processing, suffers from the memory bandwidth bottleneck. To tackle this bottleneck, near-bank architecture provides a promising solution due to its enormous bank-internal bandwidth and low-energy memory access. However, previous work lacks hardware programmability, while image processing workloads contain numerous heterogeneous pipeline stages with diverse computation and memory access patterns. Enabling programmable near-bank architecture with low hardware overhead remains challenging.This work proposes iPIM, the first programmable in-memory image processing accelerator using near-bank architecture. We first design a decoupled control-execution architecture to provide lightweight programmability support. Second, we propose the SIMB (Single-Instruction-Multiple-Bank) ISA to enable flexible control flow and data access. Third, we present an end-to-end compilation flow based on Halide that supports a wide range of image processing applications and maps them to our SIMB ISA. We further develop iPIM-aware compiler optimizations, including register allocation, instruction reordering, and memory order enforcement to improve performance. We evaluate a set of representative image processing applications on iPIM and demonstrate that on average iPIM obtains 11.02× acceleration and 79.49% energy saving over an NVIDIA Tesla V100 GPU. Further analysis shows that our compiler optimizations contribute 3.19× speedup over the unoptimized baseline.",
+  "doi": "10.1109/isca45697.2020.00071",
+  "openalex": "W3042598257",
+  "status": "ok",
+  "title": "iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture"
+ },
+ "10.1109_norcas64408.2024.10752450": {
+  "abstract": "The increasing demand for real-time low-power hardware processing systems, endowed with the capacity to perform compute-intensive applications, accentuated the inadequacy of the conventional architecture of multicore general-purpose processors. In an effort to meet this demand, edge computing hardware accelerators have come to the forefront, notably with regard to deep learning and robotic systems. This paper explores preeminent hardware accelerators and examines the performance, accuracy, and power consumption of a GPU and an FPGA-based platform, specifically designed for edge computing applications. The experiments were conducted using three deep neural network models, namely AlexNet, GoogLeNet, and ResNet-18, trained to perform binary image classification in a known environment. Our results demonstrate that the FPGA-based platform, particularly a Kria KV260 Vision AI starter kit, exhibited an inference speed of up to nine and a half times faster than that of the GPU-based Jetson Nano developer kit. Additionally, the empirical findings of this work reported as much as a quintuple efficiency over the Jetson Nano in terms of inference speed per watt with a mere $5.4 \\%$ drop in accuracy caused by the quantization process required by the FPGA. However, the Jetson Nano showed a 1.6 times faster inference rate with the AlexNet model over the KV260 and its deployment process proved to be less challenging.",
+  "doi": "10.1109/norcas64408.2024.10752450",
+  "openalex": "W4404481977",
+  "status": "ok",
+  "title": "FPGA-Based Hardware Acceleration for Deep Learning in Mobile Robotics"
+ },
+ "10.1109_tcad.2020.2970597": {
+  "abstract": "A large semantic gap between a high-level synthesis (HLS) design and a low-level RTL simulation environment often creates a barrier for those who are not field-programmable gate array (FPGA) experts. Moreover, such a low-level simulation takes a long time to complete. Software HLS simulators can help bridge this gap and accelerate the simulation process; but their shortcoming is that they do not provide performance estimation. To make matters worse, we found that the current FPGA HLS commercial software simulators sometimes produce incorrect results. In order to solve these performance estimation and correctness problems while maintaining the high speed of software simulators, this article proposes a new HLS simulation flow named FLASH. The main idea behind the proposed flow is to extract scheduling information from the HLS tool and automatically construct an equivalent cycle-accurate simulation model while preserving C semantics. The experimental results show that FLASH runs three orders of magnitude faster than the RTL simulation.",
+  "doi": "10.1109/tcad.2020.2970597",
+  "openalex": "W3004310455",
+  "status": "ok",
+  "title": "FLASH: Fast, Parallel, and Accurate Simulator for HLS"
+ },
+ "10.1109_tpds.2020.3039409": {
+  "abstract": "Spatial computing architectures promise a major stride in performance and energy efficiency over the traditional load/store devices currently employed in large scale computing systems. The adoption of high-level synthesis (HLS) from languages such as C++ and OpenCL has greatly increased programmer productivity when designing for such platforms. While this has enabled a wider audience to target spatial computing architectures, the optimization principles known from traditional software design are no longer sufficient to implement high-performance codes, due to fundamentally distinct aspects of hardware design, such as programming for deep pipelines, distributed memory resources, and scalable routing. To alleviate this, we present a collection of optimizing transformations for HLS, targeting scalable and efficient architectures for high-performance computing (HPC) applications. We systematically identify classes of transformations (pipelining, scalability, and memory), the characteristics of their effect on the HLS code and the resulting hardware (e.g., increasing data reuse or resource consumption), and the objectives that each transformation can target (e.g., resolve interface contention, or increase parallelism). We show how these can be used to efficiently exploit pipelining, on-chip distributed fast memory, and on-chip dataflow, allowing for massively parallel architectures. To quantify the effect of various transformations, we cover the optimization process of a sample set of HPC kernels, provided as open source reference codes. We aim to establish a common toolbox to guide both performance engineers and compiler engineers in tapping into the performance potential offered by spatial computing architectures using HLS.",
+  "doi": "10.1109/tpds.2020.3039409",
+  "openalex": "W2803374624",
+  "status": "ok",
+  "title": "Transformations of High-Level Synthesis Codes for High-Performance Computing"
+ },
+ "10.1145_3289602.3293918": {
+  "abstract": "A large semantic gap between the high-level synthesis (HLS) design and the low-level (on-board or RTL) simulation environment often creates a barrier for those who are not FPGA experts. Moreover, such low-level simulation takes a long time to complete. Software-based HLS simulators can help bridge this gap and accelerate the simulation process; however, we found that the current FPGA HLS commercial software simulators sometimes produce incorrect results. In order to solve this correctness issue while maintaining the high speed of a software-based simulator, this paper proposes a new HLS simulation flow named FLASH. The main idea behind the proposed flow is to extract the scheduling information from the HLS tool and automatically construct an equivalent cycle-accurate simulation model while preserving C semantics. Experimental results show that FLASH runs three orders of magnitude faster than the RTL simulation.",
+  "doi": "10.1145/3289602.3293918",
+  "openalex": "W2905285402",
+  "status": "ok",
+  "title": "Rapid Cycle-Accurate Simulator for High-Level Synthesis"
+ },
+ "10.1145_3532989": {
+  "abstract": "Field Programmable Gate Arrays (FPGAs) are spatial architectures with a heterogeneous reconfigurable fabric. They are state-of-the-art for prototyping, telecommunications, embedded, and an emerging alternative for cloud-scale acceleration. However, FPGA adoption found limitations in their programmability and required knowledge. Therefore, researchers focused on FPGA abstractions and automation tools. Here, we survey three leading digital design abstractions: Hardware Description Languages (HDLs) , High-Level Synthesis (HLS) tools, and Domain-Specific Languages (DSLs) . We review these abstraction solutions, provide a timeline, and propose a taxonomy for each abstraction trend: programming models for HDLs; Intellectual Property (IP) -based or System-based toolchains for HLS; application, architecture, and infrastructure domains for DSLs.",
+  "doi": "10.1145/3532989",
+  "openalex": "W4224924610",
+  "status": "ok",
+  "title": "Pushing the Level of Abstraction of Digital System Design: A Survey on How to Program FPGAs"
+ },
+ "10.3389_fdata.2022.787421": {
+  "abstract": "machine learning (ML) in science-the concept of integrating powerful ML methods into the real-time experimental data processing loop to accelerate scientific discovery. The material for the report builds on two workshops held by the Fast ML for Science community and covers three main areas: applications for fast ML across a number of scientific domains; techniques for training and implementing performant and resource-efficient ML algorithms; and computing architectures, platforms, and technologies for deploying these algorithms. We also present overlapping challenges across the multiple scientific domains where common solutions can be found. This community report is intended to give plenty of examples and inspiration for scientific discovery through integrated and accelerated ML solutions. This is followed by a high-level overview and organization of technical advances, including an abundance of pointers to source material, which can enable these breakthroughs.",
+  "doi": "10.3389/fdata.2022.787421",
+  "openalex": "W3208839263",
+  "status": "ok",
+  "title": "Applications and Techniques for Fast Machine Learning in Science"
+ },
+ "10.48550_arxiv.1803.00419": {
+  "abstract": "High-performance DSL developers work hard to take advantage of modern hardware. The DSL compilers have to build their own complex middle-ends before they can target a common back-end such as LLVM, which only handles single instruction streams with SIMD instructions. We introduce Tiramisu, a common middle-end that can generate efficient code for modern processors and accelerators such as multicores, GPUs, FPGAs and distributed clusters. Tiramisu introduces a novel three-level IR that separates the algorithm, how that algorithm is executed, and where intermediate data are stored. This separation simplifies optimization and makes targeting multiple hardware architectures from the same algorithm easier. As a result, DSL compilers can be made considerably less complex with no loss of performance while immediately targeting multiple hardware or hardware combinations such as distributed nodes with both CPUs and GPUs. We evaluated Tiramisu by creating a new middle-end for the Halide and Julia compilers. We show that Tiramisu extends Halide and Julia with many new capabilities including the ability to: express new algorithms (such as recurrent filters and non-rectangular iteration spaces), perform new complex loop nest transformations (such as wavefront parallelization, loop shifting and loop fusion) and generate efficient code for more architectures (such as combinations of distributed clusters, multicores, GPUs and FPGAs). Finally, we demonstrate that Tiramisu can generate very efficient code that matches the highly optimized Intel MKL gemm (generalized matrix multiplication) implementation, we also show speedups reaching 4X in Halide and 16X in Julia due to optimizations enabled by Tiramisu.",
+  "doi": "10.48550/arxiv.1803.00419",
+  "openalex": "W2791892411",
+  "status": "ok",
+  "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers"
+ },
+ "10.48550_arxiv.1812.07012": {
+  "abstract": "A large semantic gap between the high-level synthesis (HLS) design and the low-level (on-board or RTL) simulation environment often creates a barrier for those who are not FPGA experts. Moreover, such low-level simulation takes a long time to complete. Software-based HLS simulators can help bridge this gap and accelerate the simulation process; however, we found that the current FPGA HLS commercial software simulators sometimes produce incorrect results. In order to solve this correctness issue while maintaining the high speed of a software-based simulator, this paper proposes a new HLS simulation flow named FLASH. The main idea behind the proposed flow is to extract the scheduling information from the HLS tool and automatically construct an equivalent cycle-accurate simulation model while preserving C semantics. Experimental results show that FLASH runs three orders of magnitude faster than the RTL simulation.",
+  "doi": "10.48550/arxiv.1812.07012",
+  "openalex": "W2949189234",
+  "status": "ok",
+  "title": "Rapid Cycle-Accurate Simulator for High-Level Synthesis"
+ },
+ "oa-W3202154603": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W3202154603",
+  "status": "no_abstract",
+  "title": "Optimización de algoritmos para computación científica sobre arquitecturas heterogéneas"
+ },
+ "s2-98b1d15fff08aab5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers"
+ },
+ "s2-cb9dca41a41ba803": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A unified compiler backend for distributed, cooperative heterogeneous execution"
+ },
+ "s2-f1713ad89e53f60a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiramisu: A Code Optimization Framework for High Performance Systems"
+ }
+}

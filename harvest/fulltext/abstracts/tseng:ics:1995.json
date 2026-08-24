@@ -1,0 +1,170 @@
+{
+ "10.1002_cpe.648": {
+  "abstract": "Abstract The NAS parallel benchmarks (NPB) are a well‐known benchmark set for high‐performance machines. Much effort has been made to implement them in High‐Performance Fortran (HPF). In previous attempts, however, the HPF versions did not include the complete set of benchmarks, and the performance was not always good. In this study, we implement all eight benchmarks of the NPB in HPF, and parallelize them using an HPF compiler that we have developed. This report describes the implementation techniques and compiler features necessary to achieve good performance. We evaluate the HPF version on the Hitachi SR2201, a distributed‐memory parallel machine. With 16 processors, the execution time of the HPF version is within a factor of 1.5 of the hand‐parallelized version of the NPB 2.3 beta. Copyright © 2002 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.648",
+  "openalex": "W2157260508",
+  "status": "ok",
+  "title": "Techniques for compiling and implementing all NAS parallel benchmarks in HPF"
+ },
+ "10.1006_jpdc.1999.1552": {
+  "abstract": null,
+  "doi": "10.1006/jpdc.1999.1552",
+  "openalex": "W2162959959",
+  "status": "no_abstract",
+  "title": "A Matrix-Based Approach to Global Locality Optimization"
+ },
+ "10.1006_jpdc.2000.1639": {
+  "abstract": null,
+  "doi": "10.1006/jpdc.2000.1639",
+  "openalex": "W2060252920",
+  "status": "no_abstract",
+  "title": "Compiler Algorithms for Optimizing Locality and Parallelism on Shared and Distributed-Memory Machines"
+ },
+ "10.1007_bf03356754": {
+  "abstract": null,
+  "doi": "10.1007/bf03356754",
+  "openalex": "W90902021",
+  "status": "no_abstract",
+  "title": "Memory Referencing Behavior in Compiler-Parallelized Applications"
+ },
+ "10.1109_hpc.1997.592166": {
+  "abstract": "On a distributed shared memory (DSM) system, the optimization of memory access is very important for achieving good performance. The authors propose an optimizing compiler which controls a software cache system implemented on a DSM. The software cache consists of a static part related to the compiler and a dynamic part related to cache-managing runtime routines. The compiler controls the static part of the software cache by using information from static analysis. For applications whose behavior can only be dynamically determined, the compiler uses the dynamic part of the software cache. They also propose the application of RISC-oriented optimization techniques to parallel applications on their software cache system. They evaluate the efficiency of the compiler and RISC-oriented optimization techniques on the CM-5 distributed parallel machine. The results show that the compiler and the optimizations considerably improve the performance of basic linear algebra routines: matrix multiplication, Cholesky decomposition and Gaussian elimination.",
+  "doi": "10.1109/hpc.1997.592166",
+  "openalex": "W2150461890",
+  "status": "ok",
+  "title": "Using cache optimizing compiler for managing software cache on distributed shared memory system"
+ },
+ "10.1109_pact.1997.644019": {
+  "abstract": "Distributed memory message passing machines can deliver scalable performance but are difficult to program. Shared memory machines, on the other hand, are easier to program but obtaining scalable performance with a large number of processors is difficult. Previously, some scalable architectures based on logically-shared physically-distributed memory have been designed and implemented. While some of the performance issues like parallelism and locality are common to the different parallel architectures, issues such as data decomposition are unique to specific types of architectures. One of the most important challenges compiler writers face is to design compilation techniques that can work on a variety of architectures. In this paper, we propose an algorithm that can be employed by optimizing compilers for different types of parallel architectures. Our optimization algorithm does the following: (1) transforms loop nests such that, where possible, the outermost loops can be run in parallel across processors; (2) decomposes each array across processors; (3) optimizes interprocessor communication by vectorizing it whenever possible; and (it) optimizes locality (cache performance) by assigning appropriate storage layout for each array. Depending on the underlying hardware system, some or all of these steps can be applied in a unified framework. We present simulation results for cache miss rates, and empirical results on SUN SPARCstation 5, IBM SP-2, SGI Challenge and Convex Exemplar to validate the effectiveness of our approach on different architectures.",
+  "doi": "10.1109/pact.1997.644019",
+  "openalex": "W4232512937",
+  "status": "ok",
+  "title": "Compiler algorithms for optimizing locality and parallelism on shared and distributed memory machines"
+ },
+ "10.1109_tpds.2003.1195407": {
+  "abstract": "The performance of applications on large shared-memory multiprocessors with coherent caches depends on the interaction between the granularity of data sharing, the size of the coherence unit, and the spatial locality exhibited by the applications, in addition to the amount of parallelism in the applications. Large coherence units are helpful in exploiting spatial locality, but worsen the effects of false sharing. A mathematical framework that allows a clean description of the relationship between spatial locality and false sharing is derived in this paper. First, a technique to identify a severe form of multiple-writer false sharing is presented. The importance of the interaction between optimization techniques aimed at enhancing locality and the techniques oriented toward reducing false sharing is then demonstrated. Given the conflicting requirements, a compiler-based approach to this problem holds promise. This paper investigates the use of data transformations in addressing spatial locality and false sharing, and derives an approach that balances the impact of the two. Experimental results demonstrate that such a balanced approach outperforms those approaches that consider only one of these two issues. On an eight-processor SGI/Cray Origin 2000 multiprocessor, our approach brings an additional 9 percent improvement over a powerful locality optimization technique that uses both loop and data transformations. The presented approach also obtains an additional 19 percent improvement over an optimization technique that is oriented specifically toward reducing false sharing. This study also reveals that, in addition to reducing synchronization costs and improving the memory subsystem performance, obtaining large granularity parallelism is helpful in balancing the effects of enhancing locality and reducing false sharing, rendering them compatible.",
+  "doi": "10.1109/tpds.2003.1195407",
+  "openalex": "W2115147458",
+  "status": "ok",
+  "title": "Reducing false sharing and improving spatial locality in a unified compilation framework"
+ },
+ "10.1145_263580.263650": {
+  "abstract": "This paper describes an algorithm to optimize cache locality in scientic codes on uniprocessor and multiprocessor ma-chines. A distinctive characteristic of our algorithm is that it considers loop and data layout transformations in a uni-ed framework. We illustrate through examples that our approach is very eective at reducing cache misses and tile-size sensitivity of blocked loop nests; and can optimize nests for which optimization techniques based on loop transfor-mations alone are not successful. An important special case is the one in which data layouts of some arrays are xed and cannot be changed. We show how our algorithm can handle this case, and demonstrate how it can be used to optimize multiple loop nests. 1",
+  "doi": "10.1145/263580.263650",
+  "openalex": "W2045773292",
+  "status": "ok",
+  "title": "A compiler algorithm for optimizing locality in loop nests"
+ },
+ "10.1145_944645.944702": {
+  "abstract": "This paper develops a new approach to compiling C programs for multiple address space, multi-processor DSPs. It integrates a novel data transformation technique that exposes the processor location of partitioned data into a parallelization strategy. When this is combined with a new address resolution mechanism, it generates efficient programs that run on multiple address spaces without using message passing. This approach is applied to the UTDSP benchmark suite and evaluated on a four processor TigerSHARC board, where it is shown to outperform existing approaches and gives an average speedup of 3.25 on the parallel benchmarks.",
+  "doi": "10.1145/944645.944702",
+  "openalex": "W2129526543",
+  "status": "ok",
+  "title": "Compiler parallelization of C programs for multi-core DSPs with multiple address spaces"
+ },
+ "10.5281_zenodo.1331198": {
+  "abstract": "Most scientific programs have large input and output data sets that require out-of-core programming or use virtual memory management (VMM). Out-of-core programming is very error-prone and tedious; as a result, it is generally avoided. However, in many instance, VMM is not an effective approach because it often results in substantial performance reduction. In contrast, compiler driven I/O management will allow a program-s data sets to be retrieved in parts, called blocks or tiles. Comanche (COmpiler MANaged caCHE) is a compiler combined with a user level runtime system that can be used to replace standard VMM for out-of-core programs. We describe Comanche and demonstrate on a number of representative problems that it substantially out-performs VMM. Significantly our system does not require any special services from the operating system and does not require modification of the operating system kernel.",
+  "doi": "10.5281/zenodo.1331198",
+  "openalex": "W2246371503",
+  "status": "ok",
+  "title": "Comanche – A Compiler-Driven I/O Management System"
+ },
+ "10.5555_522659.825639": {
+  "abstract": "Distributed memory message passing machines can deliver scalable performance but are difficult to program. Shared memory machines, on the other hand, are easier to program but obtaining scalable performance with a large number of processors is difficult. Previously, some scalable architectures based on logically-shared physically-distributed memory have been designed and implemented. While some of the performance issues like parallelism and locality are common to the different parallel architectures, issues such as data decomposition are unique to specific types of architectures. One of the most important challenges compiler writers face is to design compilation techniques that can work on a variety of architectures. In this paper, we propose an algorithm that can be employed by optimizing compilers for different types of parallel architectures. Our optimization algorithm does the following: (1) transforms loop nests such that, where possible, the outermost loops can be run in parallel across processors; (2) decomposes each array across processors; (3) optimizes interprocessor communication by vectorizing it whenever possible; and (it) optimizes locality (cache performance) by assigning appropriate storage layout for each array. Depending on the underlying hardware system, some or all of these steps can be applied in a unified framework. We present simulation results for cache miss rates, and empirical results on SUN SPARCstation 5, IBM SP-2, SGI Challenge and Convex Exemplar to validate the effectiveness of our approach on different architectures.",
+  "doi": "10.5555/522659.825639",
+  "openalex": "W2117734128",
+  "status": "ok",
+  "title": "Compiler algorithms for optimizing locality and parallelism on shared and distributed memory machines"
+ },
+ "oa-W1557715966": {
+  "abstract": "Parallel computing is regarded by most computer scientists as the most likely approach for significantly improving computing power for scientists and engineers. Advances in programming languages and parallelizing compilers are making parallel computers easier to use by providing a high-level portable programming model that protects software investment. However, experience has shown that simply finding parallelism is not always sufficient for obtaining good performance from today's multiprocessors. The goal of this project is to develop advanced compiler analysis of data and computation decompositions, thread placement, communication, synchronization, and memory system effects needed in order to take advantage of performance-critical elements in modern parallel architectures.",
+  "doi": null,
+  "openalex": "W1557715966",
+  "status": "ok",
+  "title": "Efficient Machine-Independent Programming of High-Performance Multiprocessors"
+ },
+ "oa-W2618045488": {
+  "abstract": "While parallel computing offers an attractive perspective for the future, developing efficient parallel applications today is a labor-intensive process that requires an intimate knowledge of the machines, the applications, and many subtle machine-application interactions. Optimizing applications so that they can achieve their full potential on parallel machines is often beyond the programmer's or the compiler's ability; furthermore its complexity will not be reduced with the increasingly complex computer architectures of the foreseeable future. In this dissertation, we discuss how application performance can be optimized systematically. We show how insights regarding machine-application pairs and the weaknesses in their delivered performance can be derived by characterizing the machine, the application, and the machine-application interactions. We describe a general performance tuning scheme that can be used for selecting and applying a broad range of performance tuning actions to solve major performance problems in a structured sequence of steps, and discuss the interrelationship among and between performance problems and performance tuning actions. To guide programmers in performance tuning, we developed a goal-directed performance tuning methodology that employs hierarchical performance bounds to characterize the delivered performance quantitatively and explain where potential performance is lost. To reduce the complexity of performance tuning, we developed an innovative performance modeling scheme to quickly derive machine-application interactions from abstract representations of the machine and application of interest. Collectively, this dissertation unifies a range of research work done within the Parallel Performance Project at the University of Michigan over the past seven years and significantly improves the state-of-the-art in parallel application development environments.",
+  "doi": null,
+  "openalex": "W2618045488",
+  "status": "ok",
+  "title": "Optimizing parallel applications."
+ },
+ "oa-W315527393": {
+  "abstract": "Despite the progress made in developing more advanced compilers for embedded systems, programming of embedded high-performance computing systems based on Digital Signal Processors (DSPs) is still a highly skilled manual task. This is true for single-processor systems, and even more for embedded systems based on multiple DSPs. Compilers often fail to optimise existing DSP codes written in C due to the employed programming style. Parallelisation is hampered by the complex multiple address space memory architecture, which can be found in most commercial multi-DSP configurations. This thesis develops...",
+  "doi": null,
+  "openalex": "W315527393",
+  "status": "ok",
+  "title": "Compilation Techniques for High-Performance Embedded Systems with Multiple Processors"
+ },
+ "s2-3b209ae648c1b29a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Comanche – A Compiler-Driven I/O Management System"
+ },
+ "s2-4889ec31de3773e0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient Machine-Independent Programming of High-Performance Multiprocessors"
+ },
+ "s2-511a91267727d4f5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Compiler Driven Out-of-Core Programming Approach for Optimizing Data Locality in Loop Nests"
+ },
+ "s2-551c6b8398357e73": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Analysis for Shared and Distributed Memory Machines"
+ },
+ "s2-8bed28afb75bd2ab": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compilation techniques for high-performance embedded systems with multiple processors"
+ },
+ "s2-a5e2b452810e1abe": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Comanche – A Compiler-Driven I / O Management System"
+ },
+ "s2-b199a0971f3e8afd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "2 Compiling for Parallelism"
+ },
+ "s2-df043d1284d43b4b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "I / O Performance Improvement through the Use of Compiler-Driven Memory Management"
+ },
+ "s2-e659db97b1484920": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software Support For Improving Locality in Advanced Scientific Codes"
+ },
+ "s2-f1df85fd600d77c9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing parallel applications"
+ }
+}

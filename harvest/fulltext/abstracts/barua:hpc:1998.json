@@ -1,0 +1,219 @@
+{
+ "10.1007_3-540-35767-x_4": {
+  "abstract": null,
+  "doi": "10.1007/3-540-35767-x_4",
+  "openalex": "W1533393723",
+  "status": "no_abstract",
+  "title": "Bridging the Gap between Compilation and Synthesis in the DEFACTO System"
+ },
+ "10.1007_978-90-481-3913-2_3": {
+  "abstract": null,
+  "doi": "10.1007/978-90-481-3913-2_3",
+  "openalex": "W2226607684",
+  "status": "no_abstract",
+  "title": "Deployment of Reconfigurable Systems"
+ },
+ "10.1109_cgo.2003.1191537": {
+  "abstract": "This paper describes scheduling optimizations in the Intel/spl reg/ Itanium/spl reg/ compiler to prevent cache penalties due to various micro-architectural effects on the Itanium 2 processor. This paper does not try to improve cache hit rates but to avoid penalties, which probably all processors have in one form or another, even in the case of cache hits. These optimizations make use of sophisticated methods for disambiguation of memory references, and this paper examines the performance improvement obtained by integrating these methods into the cache optimizations.",
+  "doi": "10.1109/cgo.2003.1191537",
+  "openalex": "W1500027417",
+  "status": "ok",
+  "title": "Optimizations to prevent cache penalties for the Intel/spl reg/ Itanium/spl reg/ 2 processor"
+ },
+ "10.1109_fpga.1999.803669": {
+  "abstract": "The next decade of computing will be dominated by embedded systems, information appliances and application-specific computers. In order to build these systems, designers will need high-level compilation and CAD tools that generate architectures that effectively meet the needs of each application. In this paper we present a novel compilation system that allows sequential programs, written in C or FORTRAN, to be compiled directly into custom silicon or reconfigurable architectures. This capability is also interesting because trends in computer architecture are moving towards more reconfigurable hardware-like substrates, such as FPGA based systems. Our system works by successfully combining two resource-efficient computing disciplines: Small Memories and Virtual Wires. For a given application, the compiler first analyzes the memory access patterns of pointers and arrays in the program and constructs a partitioned memory system made up of many small memories. The computation is implemented by active computing elements that are spatially distributed within the memory array. A space-time scheduler assigns instructions to the computing elements in a way that maximizes locality and minimizes physical communication distance. It also generates an efficient static schedule for the interconnect. Finally, specialized hardware for the resulting schedule of memory accesses, wires, and computation is generated as a multi-process state machine in synthesizable Verilog. With this system, implemented as a set of SUIF compiler passes, we have successfully compiled programs into hardware and achieve specialization performance enhancements by up to an order of magnitude versus a single general purpose processor. We also achieve additional parallelization speedups similar to those obtainable using a tightly-interconnected multiprocessor.",
+  "doi": "10.1109/fpga.1999.803669",
+  "openalex": "W2137149639",
+  "status": "ok",
+  "title": "Parallelizing applications into silicon"
+ },
+ "10.1109_fpl.2010.93": {
+  "abstract": "This work presents the Open Reconfigurable Computing Language (OpenRCL) system designed to enable low-power high-performance reconfigurable computing with imperative programming language such as C/C++. The key idea is to expose the FPGA platform as a compiler target for applications expressed in the OpenCL paradigm. To this end, we present a combination of low-level virtual machine instruction set, execution model, many-core architecture, and associated compiler to achieve high performance and power efficiency by exploiting the FPGA's distributed memories and abundant hardware structures (such as DSP blocks, long carry-chains, and registers). Our resulting OpenRCL system not only allows programmers to easily express parallelism through the API defined in the OpenCL standard but also supports coarse-grain multithreading and dataflow-style fine-grain threading while permitting bit-level resource control. An OpenRCL prototype machine with 30 processing nodes was implemented using a Virtex-5 (XCV5LX155T-2) FPGA. For the well-known Parallel Prefix Sum (Scan) problem, comparing the runtime of the same problem on a GeForce 9400m using the OpenCL SDK from Apple Inc., the OpenRCL machine demonstrates comparable performance with a 5x reduction in core power consumption.",
+  "doi": "10.1109/fpl.2010.93",
+  "openalex": "W2131355383",
+  "status": "ok",
+  "title": "OpenRCL: Low-Power High-Performance Computing with Reconfigurable Devices"
+ },
+ "10.1109_isca.1999.765935": {
+  "abstract": "This paper describes Maps, a compiler managed memory system for Raw architectures. Traditional processors for sequential programs maintain the abstraction of a unified memory by using a single centralized memory system. This implementation leads to the infamous \"Von Neumann bottleneck,\" with machine performance limited by the large memory latency and limited memory bandwidth. A Raw architecture addresses this problem by taking advantage of the rapidly increasing transistor budget to move much of its memory on chip. To remove the bottleneck and complexity associated with centralized memory, Raw distributes the memory with its processing elements. Unified memory semantics are implemented jointly by the hardware and the compiler. The hardware provides a clean compiler interface to its two inter-tile interconnects: a fast, statically schedulable network and a traditional dynamic network. Maps then uses these communication mechanisms to orchestrate the memory accesses for low latency and parallelism while enforcing proper dependence. It optimizes for speed in two ways: by finding accesses that can be scheduled on the static interconnect through static promotion, and by minimizing dependence sequentialization for the remaining accesses. Static promotion is performed using equivalence class unification and module unrolling: memory dependences are enforced through explicit synchronization and software serial ordering. We have implemented Maps based on the SUIF infrastructure. This paper demonstrates that the exclusive use of static promotion yields roughly 20-fold speedup on 32 tiles for our regular applications and about 5-fold speedup on 16 or more tiles for our irregular applications. The paper also shows that selective use of dynamic accesses can be a useful complement to the mostly static memory system.",
+  "doi": "10.1109/isca.1999.765935",
+  "openalex": "W4243834914",
+  "status": "ok",
+  "title": "Maps: a compiler-managed memory system for Raw machines"
+ },
+ "10.1109_micro.2001.991111": {
+  "abstract": "A direct addressed cache is a hardware-software design for an energy-efficient microprocessor data cache. Direct addressing allows software to access cache data without a hardware cache tag check. These tag-unchecked loads and stores save the energy of a tag check when the compiler can guarantee an access will be to the same line as an earlier access. We have added support for tag-unchecked loads and stores to C and Java compilers. For Mediabench C programs, the compiler eliminates 16-76% of data cache tag accesses, with half of the benchmarks avoiding over 40% of the data tag checks. For SPECjvm98 Java programs, the compiler eliminates 18-63% of data cache tag checks. These tag check reductions translate into data cache energy savings of 9-40%, and overall processor and cache energy savings of 2-8%.",
+  "doi": "10.1109/micro.2001.991111",
+  "openalex": "W4232546421",
+  "status": "ok",
+  "title": "Direct addressed caches for reduced power consumption"
+ },
+ "10.1109_pact.2002.1105970": {
+  "abstract": "A static memory reference exhibits a unique property when its dynamic memory addresses are congruent with respect to some non-trivial modulus. Extraction of this congruence information at compile-time enables new classes of program optimization. In this paper, we present methods for forcing congruence among the dynamic addresses of a memory reference. We also introduce a compiler algorithm for detecting this property. Our transformations do not require interprocedural analysis and introduce almost no overhead. As a result, they can be incorporated into real compilation systems. On average, our transformations are able to achieve a five-fold increase in the number of congruent memory operations. We are then able to detect 95% of these references. This success is invaluable in providing performance gains in a variety of areas. When congruence information is incorporated into a vectorizing compiler we can increase the performance of a G4 AltiVec processor up to a factor of two. Using the same methods, we are able to reduce energy consumption in a data cache by as much as 35%.",
+  "doi": "10.1109/pact.2002.1105970",
+  "openalex": "W4242539338",
+  "status": "ok",
+  "title": "Increasing and detecting memory address congruence"
+ },
+ "10.1145_2429384.2429484": {
+  "abstract": "Achieving optimal throughput by extracting parallelism in behavioral synthesis often exaggerates memory bottleneck issues. Data partitioning is an important technique for increasing memory bandwidth by scheduling multiple simultaneous memory accesses to different memory banks. In this paper we present a vertical memory partitioning and scheduling algorithm that can generate a valid partition scheme for arbitrary affine memory inputs. It does this by arranging non-conflicting memory accesses across the border of loop iterations. A mixed memory partitioning and scheduling algorithm is also proposed to combine the advantages of the vertical and other state-of-art algorithms. A set of theorems is provided as criteria for selecting a valid partitioning scheme. This is followed by an optimal and scalable memory scheduling algorithm. By utilizing the property of constant strides between memory addresses in successive loop iterations, an address translation optimization technique for an arbitrary partition factor is proposed to improve performance, area and energy efficiency. Experimental results show that on a set of real-world medical image processing kernels, the proposed mixed algorithm with address translation optimization can gain speed-up, area reduction and power savings of 15.8%, 36% and 32.4% respectively, compared to the state-of-art memory partitioning algorithm.",
+  "doi": "10.1145/2429384.2429484",
+  "openalex": "W2028342110",
+  "status": "ok",
+  "title": "Memory partitioning and scheduling co-optimization in behavioral synthesis"
+ },
+ "10.1145_291069.291018": {
+  "abstract": "Increasing demand for both greater parallelism and faster clocks dictate that future generation architectures will need to decentralize their resources and eliminate primitives that require single cycle global communication. A Raw microprocessor distributes all of its resources, including instruction streams, register files, memory ports, and ALUs, over a pipelined two-dimensional mesh interconnect, and exposes them fully to the compiler. Because communication in Raw machines is distributed, compiling for instruction-level parallelism (ILP) requires both spatial instruction partitioning as well as traditional temporal instruction scheduling. In addition, the compiler must explicitly manage all communication through the interconnect, including the global synchronization required at branch points. This paper describes RAWCC, the compiler we have developed for compiling general-purpose sequential programs to the distributed Raw architecture. We present performance results that demonstrate that although Raw machines provide no mechanisms for global communication the Raw compiler can schedule to achieve speedups that scale with the number of available functional units.",
+  "doi": "10.1145/291069.291018",
+  "openalex": "W4242368470",
+  "status": "ok",
+  "title": "Space-time scheduling of instruction-level parallelism on a raw machine"
+ },
+ "10.1145_300979.300980": {
+  "abstract": "Microprocessors of the next decade and beyond will be built using VLSI chips employing billions of transistors. In this generation of microprocessors, achieving a high level of parallelism at a reasonable clock speed will require full distribution of machine resources. Raw architectures explore this architectural space by distributing all their processor and memory resources as a 2-D mesh of simple tiles. To provide a simple sequential programming model, a Raw architecture exposes the hardware fully and relies on the compiler or the software run-time system to achieve efficient execution while maintaining the semantics of a single instruction stream and a unified memory system. Supporting a single view of memory on top of a distributed memory architecture presents a challenging compiler problem. This paper presents a compiler system called Maps that supports a unified view of memory on a Raw architecture. Maps relies on two inter-tile interconnects: a fast, statically schedulable network and a slower dynamic network. Maps attempts to schedule the memory accesses for maximum parallelism and speed while enforcing proper dependence. It optimizes for speed in two ways: by finding accesses that can be scheduled on the static interconnect through a process called static promotion, and by minimizing dependence sequentialization for the remaining accesses. Static accesses are discovered through applications of traditional pointer and array analysis, and a new technique called modulo unrolling. Maps enforces proper dependence through a combination of explicit synchronization and a technique called software serial ordering. We have implemented Maps based on the SUIF infrastructure. This paper presents preliminary results based on compiling several programs using Maps. 1",
+  "doi": "10.1145/300979.300980",
+  "openalex": "W2049961921",
+  "status": "ok",
+  "title": "Maps: a compiler-managed memory system for raw machines"
+ },
+ "10.25560_5577": {
+  "abstract": "With the large resource densities available on modern FPGAs it is often the available memory bandwidth that limits the parallelism (and therefore performance) that can be achieved. For this reason the focus of this thesis is the development of an integrated scheduling and memory optimisation methodology to allow high levels of parallelism to be exploited in FPGA based designs. A manual translation from C to hardware is first investigated as a case study, exposing a number of potential optimisation techniques that have not been exploited in existing work. An existing outer loop pipelining approach, originally developed for VLIW processors, is extended and adapted for application to FPGAs. The outer loop pipelining methodology is first developed to use a fixed memory subsystem design and then extended to automate the optimisation of the memory subsystem. This approach allocates arrays to physical memories and selects the set of data reuse structures to implement to match the available and required memory bandwidths as the pipelining search progresses. The final extension to this work is to include the partitioning of data from a single array across multiple physical memories, increasing the number of memory ports through which data my be accessed. The facility for loop unrolling is also added to increase the potential for parallelism and exploit the additional bandwidth that partitioning can provide. We describe our approach based on formal methodologies and present the results achieved when these methods are applied to a number of benchmarks. These results show the advantages of both extending pipelining to levels above the innermost loop and the co-optimisation of the datapath and memory subsystem.",
+  "doi": "10.25560/5577",
+  "openalex": "W2536302898",
+  "status": "ok",
+  "title": "Datapath and memory co-optimization for FPGA-based computation"
+ },
+ "10.5555_563998.564014": {
+  "abstract": "A direct addressed cache is a hardware-software design for an energy-efficient microprocessor data cache. Direct addressing allows software to access cache data without a hardware cache tag check. These tag-unchecked loads and stores save the energy of a tag check when the compiler can guarantee an access will be to the same line as an earlier access. We have added support for tag-unchecked loads and stores to C and Java compilers. For Mediabench C programs, the compiler eliminates 16--76% of data cache tag accesses, with half of the benchmarks avoiding over 40% of the data tag checks. For SPECjvm98 Java programs, the compiler eliminates 18--63% of data cache tag checks. These tag check reductions translate into data cache energy savings of 9--40%, and overall processor and cache energy savings of 2--8%. 1.",
+  "doi": "10.5555/563998.564014",
+  "openalex": "W2116701005",
+  "status": "ok",
+  "title": "Direct addressed caches for reduced power consumption"
+ },
+ "10.5555_645989.674329": {
+  "abstract": "A static memory reference exhibits a unique property when its dynamic memory addresses are congruent with respect to some non-trivial modulus. Extraction of this congruence information at compile-time enables new classes of program optimization. In this paper, we present methods for forcing congruence among the dynamic addresses of a memory reference. We also introduce a compiler algorithm for detecting this property. Our transformations do not require interprocedural analysis and introduce almost no overhead. As a result, they can be incorporated into real compilation systems. On average, our transformations are able to achieve a five-fold increase in the number of congruent memory operations. We are then able to detect 95% of these references. This success is invaluable in providing performance gains in a variety of areas. When congruence information is incorporated into a vectorizing compiler, we can increase the performance of a G4 AltiVec processor up to a factor of two. Using the same methods, we are able to reduce energy consumption in a data cache by as much as 35%.",
+  "doi": "10.5555/645989.674329",
+  "openalex": "W2137249790",
+  "status": "ok",
+  "title": "Increasing and detecting memory address congruence"
+ },
+ "noid-fafa18d9e9cbdb2b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "C or Fortran Program Custom Logic Generation Traditional CAD Optimizations Traditional Compiler Optimzations Virtual Wires Scheduling Small Memory Partitioning"
+ },
+ "oa-W1812749193": {
+  "abstract": "This paper describes Hot Pages, a software solution for managing on-chip data on the Raw Machine, a scalable, parallel, microprocessor architecture. This software system transparently manages the mapping between the program address space and on-chip memory. Hot Pages combines compile time information to selectively virtualize memory references and to eliminate many cachetag lookups. For many of the memory accesses that cannot be fully predicted, Hot Pages replaces the cache-tag lookups with simple register comparisons by reusing translated virtual page descriptions from earlier nearby memory references. Hot Pages implements a multi-bank memory structure, allowing multiple references in parallel, to provide memory bandwidth matched to the computational resources on the Raw microprocessor. Because virtualization is handled in software rather than hardware, the system is easier to test, it is more predictable, and provides the flexibility of application specific customized caching solutio...",
+  "doi": null,
+  "openalex": "W1812749193",
+  "status": "ok",
+  "title": "Hot Pages: Software Caching for Raw Microprocessors"
+ },
+ "oa-W2234067922": {
+  "abstract": "Thesis (M. Eng. and S.B.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2234067922",
+  "status": "ok",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "oa-W2271499747": {
+  "abstract": "Thesis (M.Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 1999.",
+  "doi": null,
+  "openalex": "W2271499747",
+  "status": "ok",
+  "title": "Software floating-point computation on parallel mahcines"
+ },
+ "oa-W38722360": {
+  "abstract": "The Raw project is attempting to create a scalable proces-sor architecture that is suitable for both general purpose and embedded computations. Current general purpose pro-cessors differ from embedded devices in that they provide large amounts of hardware support to discover and manipu-late instruction-level parallelism and unstructured memory accesses. Because the parallelism in embedded computa-tions is much more predictable, embedded devices such as DSPs do not offer a rich set of mechanisms, rather they de-vote their area to computational resources such as pipelined floating point, thereby achieving significantly better area and energy efficiency. However, their best performance is achieved for regular data access patterns such as streams, and they often require assembly code manipulation. Em-bedded FPGAs and ASICs go one step further, and can of-",
+  "doi": null,
+  "openalex": "W38722360",
+  "status": "ok",
+  "title": "The Raw Processor: A Composeable 32-Bit Fabric for Embedded and General Purpose Computing"
+ },
+ "s2-11bf39c2eb595260": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "s2-2cf0d949a1580868": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hot Pages : Software Caching for Raw Microprocessors Csaba"
+ },
+ "s2-56f86f9db7698861": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallelizing Applications into Smart Memories"
+ },
+ "s2-81ae0519c8299d0a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Embedding tree computations into the RAW chip"
+ },
+ "s2-9753dedb53512bbf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler Controlled Cache Placement"
+ },
+ "s2-9a42f0e7d78dd2e3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hot Pages: Software Caching for Raw Microprocessors"
+ },
+ "s2-b0ee08fe579fab3f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic coarse grained reconfigurable architectures"
+ },
+ "s2-b8cf509f78f43ab0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software floating-point computation on parallel mahcines"
+ },
+ "s2-bfd8915b0cf4cf88": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software orchestration of instruction level parallelism on tiled processor architectures"
+ },
+ "s2-c16639aa1bcfbfe2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Raw Processor: A Composeable 32-Bit Fabric for Embedded and General Purpose Computing"
+ },
+ "s2-c287a25eff7fe1fd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizations to prevent cache penalties for the Intel® Itanium® 2 Processor"
+ },
+ "s2-d1eabf088f5092a8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "High level compilation for gate reconfigurable architectures"
+ }
+}

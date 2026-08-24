@@ -1,0 +1,359 @@
+{
+ "10.1002_cpe.6089": {
+  "abstract": "Summary Dynamic compilers perform compilation and generation of target code during runtime, implying that the compilation time is added into the program runtime. Thus, to build a high‐performing dynamic compilation system, it is crucial to be able to generate high‐quality code and, at the same time, have a small compilation cost. In this article, we present an approach that uses machine learning to select sequences of optimization for dynamic compilation that considers both code quality and compilation overhead. Our approach starts by training a model, offline, with a knowledge bank of those sequences with low overhead and high‐quality code generation capability using a genetic heuristic. Then, this bank is used to guide the smart selection of optimizations sequences for the compilation of code fragments during the emulation of an application. We evaluate the proposed strategy in two LLVM‐based dynamic binary translators, namely OI‐DBT and HQEMU, and show that these two translators can achieve average speedups of 1.26x and 1.15x in MiBench and Spec Cpu benchmarks, respectively.",
+  "doi": "10.1002/cpe.6089",
+  "openalex": "W3107397589",
+  "status": "ok",
+  "title": "Smart selection of optimizations in dynamic compilers"
+ },
+ "10.1109_aspdac.2011.5722189": {
+  "abstract": "Recently, Dynamic Binary Translation (DBT) technology has gained much attentions on embedded systems due to its various capabilities. However, the memory resource in embedded systems is often limited. This leads to the overhead of code retranslation and causes significant performance degradation. To reduce this overhead, Heterogeneous Code Cache (HCC), is proposed to split the code cache among SPM and main memory to avoid code re-translation. Although HCC is effective in handling applications with large working sets, it ignores the execution frequencies of program segments. Frequently executed program segments can be stored in main memory and suffer from large access latency. This causes significant performance loss. To address this problem, an enhanced Heterogeneous Code Cache management scheme which considers program behaviors is proposed in this paper. Experimental results show that the proposed management scheme can effectively improve the access ratio of SPM from 49.48% to 95.06%. This leads to 42.68% improvement of performance as compared with the management scheme proposed in the previous work.",
+  "doi": "10.1109/aspdac.2011.5722189",
+  "openalex": "W3145850882",
+  "status": "ok",
+  "title": "Enhanced Heterogeneous Code Cache management scheme for Dynamic Binary Translation"
+ },
+ "10.1109_cgo.2006.3": {
+  "abstract": "Software code caches help amortize the overhead of dynamic binary transformation by enabling reuse of transformed code. Since code caches contain a potentially-altered copy of every instruction that executes, run-time access to a code cache can be a very powerful opportunity. Unfortunately, current research infrastructures lack the ability to model and direct code caching, and as a result, past code cache investigations have required access to the source code of the binary transformation system. This paper presents a code cache-aware interface to the pin dynamic instrumentation system. While a program executes, our interface allows a user to inspect the code cache, receive callbacks when key events occur, and manipulate the code cache contents at will. We demonstrate the utility of this interface on four architectures (IA32, EM64T, IPF, XScale) and present several tools written using our API. These tools include a self-modifying code handler, a two-phase instrumentation analyzer, a code cache visualizer, and custom code cache replacement policies. We also show that tools written using our interface have comparable performance to direct, source-level implementations. Both our interface and sample open-source tools that utilize the interface have been incorporated into the standard distribution of the pin dynamic instrumentation engine, which has been downloaded over 5,000 times in 18 months.",
+  "doi": "10.1109/cgo.2006.3",
+  "openalex": "W2139731921",
+  "status": "ok",
+  "title": "A Cross-Architectural Interface for Code Cache Manipulation"
+ },
+ "10.1109_cgo.2006.36": {
+  "abstract": "Software code caches are increasingly being used to amortize the runtime overhead of dynamic optimizers, simulators, emulators, dynamic translators, dynamic compilers, and other tools. Despite the now-wide spread use of code caches, techniques for efficiently sharing them across multiple threads have not been fully explored. Some systems simply do not support threads, while others resort to thread-private code caches. Although thread-private caches are much simpler to manage, synchronize, and provide scratch space for, they simply do not scale when applied to many-threaded programs. Thread-shared code caches are needed to target server applications, which employ hundreds of worker threads all performing similar tasks. Yet, those systems that do share their code caches often have brute-force, inefficient solutions to the challenges of concurrent code cache access: a single global lock on runtime system code and suspension of all threads for any cache management action. This limits the possibilities for cache design and has performance problems with applications that require frequent cache invalidations to maintain cache consistency. In this paper, we discuss the design choices when building thread-shared code caches and enumerate the difficulties of thread-local storage, synchronization, trace building, in-cache lookup tables, and cache eviction. We present efficient solutions to these problems that both scale well and do not require thread suspension. We evaluate our results in DynamoRIO, an industrial-strength dynamic binary translation system, on real-world server applications. On these applications our thread-shared caches use an order of magnitude less memory and improve throughput by up to four times compared to thread-private caches.",
+  "doi": "10.1109/cgo.2006.36",
+  "openalex": "W2118750966",
+  "status": "ok",
+  "title": "Thread-Shared Software Code Caches"
+ },
+ "10.1109_cgo.2007.10": {
+  "abstract": "Software dynamic translation (SDT) systems are used for program instrumentation, dynamic optimization, security, intrusion detection, and many other uses. As noted by many researchers, a major source of SDT overhead is the execution of code which is needed to translate an indirect branch's target address into the address of the translated destination block. This paper discusses the sources of indirect branch (IB) overhead in SDT systems and evaluates several techniques for overhead reduction. Measurements using SPEC CPU2000 show that the appropriate choice and configuration of IB translation mechanisms can significantly reduce the IB handling overhead. In addition, cross-architecture evaluation of IB handling mechanisms reveals that the most efficient implementation and configuration can be highly dependent on the implementation of the underlying architecture",
+  "doi": "10.1109/cgo.2007.10",
+  "openalex": "W2113181828",
+  "status": "ok",
+  "title": "Evaluating Indirect Branch Handling Mechanisms in Software Dynamic Translation Systems"
+ },
+ "10.1109_cgo.2015.7054188": {
+  "abstract": "Dynamic binary translation serves as a core technology that enables a wide range of important tools such as profiling, bug detection, program analysis, and security. Many of the target applications often include large amounts of dynamically generated code, which poses a special performance challenge in maintaining consistency between the source application and the translated application. This paper introduces two approaches for optimizing binary translation of JITs and other dynamic code generators. First we present a system of efficient source code annotations that allow developers to demarcate dynamic code regions and identify code changes within those regions. The second technique avoids the annotation and source code requirements by automatically inferring the presence of a JIT and instrumenting its write instructions with translation consistency operations. We implemented these techniques in DynamoRIO and demonstrate performance improvements over the state-of-the-art DBT systems on JIT applications as high as 7.3× over base DynamoRIO and Pin.",
+  "doi": "10.1109/cgo.2015.7054188",
+  "openalex": "W4240696716",
+  "status": "ok",
+  "title": "Optimizing binary translation of dynamically generated code"
+ },
+ "10.1109_dsn.2007.98": {
+  "abstract": "Transient faults are emerging as a critical concern in the reliability of general-purpose microprocessors. As architectural trends point towards multi-threaded multi-core designs, there is substantial interest in adapting such parallel hardware resources for transient fault tolerance. This paper proposes a software-based multi-core alternative for transient fault tolerance using process-level redundancy (PLR). PLR creates a set of redundant processes per application process and systematically compares the processes to guarantee correct execution. Redundancy at the process level allows the operating system to freely schedule the processes across all available hardware resources. PLR's software-centric approach to transient fault tolerance shifts the focus from ensuring correct hardware execution to ensuring correct software execution. As a result, PLR ignores many benign faults that do not propagate to affect program correctness. A real PLR prototype for running single-threaded applications is presented and evaluated for fault coverage and performance. On a 4-way SMP machine, PLR provides improved performance over existing software transient fault tolerance techniques with 16.9% overhead for fault detection on a set of optimized SPEC2000 binaries.",
+  "doi": "10.1109/dsn.2007.98",
+  "openalex": "W2144620757",
+  "status": "ok",
+  "title": "Using Process-Level Redundancy to Exploit Multiple Cores for Transient Fault Tolerance"
+ },
+ "10.1109_iccc56324.2022.10065707": {
+  "abstract": "Buffer overflow is an important security issue. Many countermeasures have been proposed, e.g., DEP, shadow stack. However, existing DEP is facing the problem of being bypassed by attackers through information leakage attacks. To address the shortcomings of current backward edge pointer integrity protection in preventing buffer overflow attacks, this paper proposes a shadow stack based backward edge pointer integrity protection scheme through dynamic instrumentation, and implements a prototype system based on the DynamoRIO framework. Shadow stack mechanism can achieve effective protection for return address integrity by maintaining a one-to-one mapping relationship between the shadow stack and the program stack. Meanwhile, test cases were designed to evaluate the effectiveness, runtime performance and compatibility of the plugin. Experiment results show that the security plugin is compatible with most programs and can run with an average overhead of about 10%to 15%. This is acceptable when comparing to stack shield with 22% overhead.",
+  "doi": "10.1109/iccc56324.2022.10065707",
+  "openalex": "W4328027520",
+  "status": "ok",
+  "title": "Backward Edge Pointer Protection Technology Based on Dynamic Instrumentation"
+ },
+ "10.1109_mascots.2010.18": {
+  "abstract": "We propose a prefetch cache sizing module for use with any sequential prefetching scheme and evaluate its impact on the hit rate. Disk array caches perform sequential prefetching by loading data contiguous to I/O request data into the array cache. If the I/O workload has sequential locality, then data prefetched in response to sequential accesses in the workload will receive hits. Different schemes prefetch different data, so the prefetch cache size requirement varies. Moreover, the proportion of sequential and random requests in the workload and their interleaving pattern affects the size requirement. If the cache is too small, then prefetched data would get evicted from the cache before a request for the data arrives, thus lowering the hit rate. If the cache is too large, then valuable cache space is wasted. We present a simple sizing module that can be added to any prefetching scheme to ensure that the prefetch cache size is adequately matched to the requirement of the prefetching scheme on a dynamic workload comprising multiple streams. We analytically compute the maximal hit rate achievable by popular prefetching schemes and through simulations, show that our sizing module maintains the prefetch cache at a size that nearly achieves this maximal hit rate.",
+  "doi": "10.1109/mascots.2010.18",
+  "openalex": "W2141676084",
+  "status": "ok",
+  "title": "Sequential Prefetch Cache Sizing for Maximal Hit Rate"
+ },
+ "10.1109_micro.2005.22": {
+  "abstract": "The performance of a dynamic optimization system depends heavily on the code it selects to optimize. Many current systems follow the design of HP Dynamo and select a single interprocedural path, or trace, as the unit of code optimization and code caching. Though this approach to region selection has worked well in practice, we show that it is possible to adapt this basic approach to produce regions with greater locality, less needless code duplication, and fewer profiling counters. In particular, we propose two new region-selection algorithms and evaluate them against Dynamo's selection mechanism, next-executing tail (NET). Our first algorithm, last-executed iteration (LEI), identifies cyclic paths of execution better than NET, improving locality of execution while reducing the size of the code cache. Our second algorithm allows overlapping traces of similar execution frequency to be combined into a single large region. This second technique can be applied to both NET and LEI, and we find that it significantly improves metrics of locality and memory overhead for each.",
+  "doi": "10.1109/micro.2005.22",
+  "openalex": "W2114978795",
+  "status": "ok",
+  "title": "Improving Region Selection in Dynamic Optimization Systems"
+ },
+ "10.1109_paap.2010.60": {
+  "abstract": "Dynamic Binary Translation (DBT) is widely used, but it suffers from substantial overhead. Several methods are taken to improve its performance, such as linking/chaining, building super block according to profiling and/or tracing. Reorganizing code layout of software cache can also improve performance on the ground that the execution stream will be more approximate to its control flow. Once the target code in software cache is reframed properly, hot code will be gathered together and well organized. Because of exact prediction and improved locality, the execution stream will concentrate on a small area with less control transfer. In this paper, we designed a new approach using dynamic-static combined framework to reorganize code layout of software cache. Then we compare it with another two conventional types of code layout in detail. Experimental result shows that our method can significantly cut down the overhead. The overall run time reduced by about 30% on average. Finally, we analyze the reason why reorganizing code layout can improve the performance of dynamic binary translator from several different perspectives.",
+  "doi": "10.1109/paap.2010.60",
+  "openalex": "W2135073797",
+  "status": "ok",
+  "title": "A New Approach to Reorganize Code Layout of Software Cache in Dynamic Binary Translator"
+ },
+ "10.1109_tdsc.2008.62": {
+  "abstract": "Transient faults are emerging as a critical concern in the reliability of general-purpose microprocessors. As architectural trends point toward multicore designs, there is substantial interest in adapting such parallel hardware resources for transient fault tolerance. This paper presents process-level redundancy (PLR), a software technique for transient fault tolerance, which leverages multiple cores for low overhead. PLR creates a set of redundant processes per application process and systematically compares the processes to guarantee correct execution. Redundancy at the process level allows the operating system to freely schedule the processes across all available hardware resources. PLR uses a software-centric approach to transient fault tolerance, which shifts the focus from ensuring correct hardware execution to ensuring correct software execution. As a result, many benign faults that do not propagate to affect program correctness can be safely ignored. A real prototype is presented that is designed to be transparent to the application and can run on general-purpose single-threaded programs without modifications to the program, operating system, or underlying hardware. The system is evaluated for fault coverage and performance on a four-way SMP machine and provides improved performance over existing software transient fault tolerance techniques with a 16.9 percent overhead for fault detection on a set of optimized SPEC2000 binaries.",
+  "doi": "10.1109/tdsc.2008.62",
+  "openalex": "W2140433506",
+  "status": "ok",
+  "title": "PLR: A Software Approach to Transient Fault Tolerance for Multicore Architectures"
+ },
+ "10.1145_1085130.1085147": {
+  "abstract": "Debugging techniques have evolved over the years in response to changes in programming languages, implementation techniques, and user needs. A new type of implementation vehicle for software has emerged that, once again, requires new debugging techniques. Software dynamic translation (SDT) has received much attention due to compelling applications of the technology, including software security checking, binary translation, and dynamic optimization. Using SDT, program code changes dynamically, and thus, debugging techniques developed for statically generated code cannot be used to debug these applications. In this paper, we describe a new debug architecture for applications executing with SDT systems. The architecture provides features that create the illusion that the source program is being debugged, while allowing the SDT system to modify the executing code. We incorporated this architecture in a new tool, called tdb, that integrates a SDT system, Strata, with a widely used debugger, gdb. We evaluated tdb in the context of a code security checker. The results show that a dynami-cally translated program can be debugged at the source level and that the approach does not overly increase the run-time perfor-mance or memory demands of the debugger.",
+  "doi": "10.1145/1085130.1085147",
+  "openalex": "W2084187449",
+  "status": "ok",
+  "title": "Tdb"
+ },
+ "10.1145_1134760.1220166": {
+  "abstract": "Dynamic translation is a general purpose tool used for instrumenting programs at run time. Performance of translated execution relies on balancing the cost of translation against the benefits of any optimizations achieved, and many current translators perform substantial rewriting during translation in an attempt to reduce execution time. Our results show that these optimizations offer no significant benefit even when the translated program has a small, hot working set. When used in a broader range of applications, such as ubiquitous policy enforcement or penetration detection, translator performance cannot rely on the presence of a hot working set to amortize the cost of translation. A simpler, more maintainable, adaptable, and smaller translator appears preferable to more complicated designs in most cases.HDTrans is a light-weight dynamic instrumentation system for the IA-32 architecture that uses some simple and effective translation techniques in combination with established trace linearization and code caching optimizations. We present an evaluation of translation overhead under both benchmark and less idealized conditions, showing that conventional benchmarks do not provide a good prediction of translation overhead when used pervasively.A further contribution of this paper is an analysis of the effectiveness of post-link static pre-translation techniques for overhead reduction. Our results indicate that static pre-translation is effective only when expensive instrumentation or optimization is performed.",
+  "doi": "10.1145/1134760.1220166",
+  "openalex": "W2153478046",
+  "status": "ok",
+  "title": "HDTrans"
+ },
+ "10.1145_1176760.1176793": {
+  "abstract": "Dynamic binary instrumentation (DBI) is a powerful technique for analyzing the runtime behavior of software. While numerous DBI frameworks have been developed for general-purpose architectures, work on DBI frameworks for embedded architectures has been fairly limited. In this paper, we describe the design, implementation, and applications of the ARM version of Pin, a dynamic instrumentation system from Intel. In particular, we highlight the design decisions that are geared toward the space and processing limitations of embedded systems. Pin for ARM is publicly available and is shipped with dozens of sample plug-in instrumentation tools. It has been downloaded over 500 times since its release.",
+  "doi": "10.1145/1176760.1176793",
+  "openalex": "W2019326155",
+  "status": "ok",
+  "title": "A dynamic binary instrumentation engine for the ARM architecture"
+ },
+ "10.1145_1289881.1289898": {
+  "abstract": "Dynamic binary translation (DBT) has been used to achieve numerous goals (e.g., better performance) for general-purpose computers. Recently, DBT has also attracted attention for embedded systems. However, a challenge to DBT in this domain is stringent constraints on memory and performance. The translated code buffer used by DBT may occupy too much memory space. This paper proposes novel schemes to manage this buffer with scratchpad memory. We use footprint reduction to minimize the space needed by the translated code, victim compression to reduce the cost of retranslating previously seen code, and fragment pinning to avoid evicting needed code. We comprehensively evaluate our techniques to demonstrate their effectiveness.",
+  "doi": "10.1145/1289881.1289898",
+  "openalex": "W2110252373",
+  "status": "ok",
+  "title": "Fragment cache management for dynamic binary translators in embedded systems with scratchpad"
+ },
+ "10.1145_1346256.1346265": {
+  "abstract": "Software code caches are increasingly being used to amortizethe runtime overhead of tools such as dynamic optimizers, simulators, and instrumentation engines. The additional memory consumed by these caches, along with the data structures used to manage them, limits the scalability of dynamic tool deployment. Inter-process sharing of code caches significantly improves the ability to efficiently apply code caching tools to many processes simultaneously.",
+  "doi": "10.1145/1346256.1346265",
+  "openalex": "W2061088273",
+  "status": "ok",
+  "title": "Process-shared and persistent code caches"
+ },
+ "10.1145_1450095.1450114": {
+  "abstract": "Dynamic binary translators (DBT) have recently attracted much attention for embedded systems. The effective implementation of DBT in these systems is challenging due to tight constraints on memory and performance. A DBT uses a software-managed code cache to hold blocks of translated code. To minimize overhead, the code cache is usually large so blocks are translated once and never discarded. However, an embedded system may lack the resources for a large code cache. This constraint leads to significant slowdowns due to the retranslation of blocks prematurely discarded from a small code cache. This paper addresses the problem and shows how to impose a tight size bound on the code cache without performance loss. We show that about 70 % of the code cache is consumed by instructions that the DBT introduces for its own purposes. Based on this observation, we propose novel techniques that reduce the amount of space required by DBT-injected code, leaving more room for actual application code and improving the miss ratio. We experimentally demonstrate that a bounded code cache can have performance on-par with an unbounded one. Categories and Subject Descriptors C.3 [Computer Systems Organization]: Special-purpose and a-pplication-based systems—Real-time and embedded systems; D.3.4 [Programming Languages]: Processors—Code generation, Compilers,",
+  "doi": "10.1145/1450095.1450114",
+  "openalex": "W2123540180",
+  "status": "ok",
+  "title": "Reducing pressure in bounded DBT code caches"
+ },
+ "10.1145_1629911.1630103": {
+  "abstract": "Dynamic binary translation (DBT) can be used to address important issues in embedded systems. DBT systems store translated code in a software-managed code cache. Unlike general-purpose systems, embedded systems often have specialized memory resources, such as a fast scratchpad memory, that can be used to mitigate DBT performance overhead. This paper presents the Heterogeneous Code Cache (HCC), a code cache split among scratchpad and main memory. We explore several HCC management policies and show that, on average, an HCC outperforms a code cache allocated only to scratchpad or only to main memory.",
+  "doi": "10.1145/1629911.1630103",
+  "openalex": "W2101925549",
+  "status": "ok",
+  "title": "Heterogeneous code cache"
+ },
+ "10.1145_1735997.1736018": {
+  "abstract": "Dynamic binary translators(DBTs) provide powerful platforms for building dynamic program monitoring and adaptation tools. DBTs, however, have high memory demands because they cache translated code and auxiliary code to a software code cache and must also maintain data structures to support the code cache. The high memory demands make it difficult for memory-constrained embedded systems to take advantage of DBT-based tools. Previous research on DBT memory management focused on the translated code and auxiliary code only. However, we found that data structures are comparable to the code cache in size. We show that the translated code size, auxiliary code size and the data structure size interact in a complex manner, depending on the path selection (trace selection and link formation) strategy. Therefore, holistic memory efficiency (comprising translated code, auxiliary code and data structures) cannot be improved by focusing on the code cache only. In this paper, we use path selection for improving holistic memory efficiency which in turn impacts performance in memory-constrained environments. Although there has been previous research on path selection, such research only considered performance in memory-unconstrained environments.",
+  "doi": "10.1145/1735997.1736018",
+  "openalex": "W2119785836",
+  "status": "ok",
+  "title": "DBT path selection for holistic memory efficiency and performance"
+ },
+ "10.1145_1772954.1772968": {
+  "abstract": "In virtual machines for embedded devices that use just-in-time compilation, the management of the code cache can significantly impact performance in terms of both memory usage and start-up time. Although improving memory usage has been a common focus for system designers, start-up time is often overlooked. In systems with constrained resources, however, these two performance metrics are often at odds and must be considered together. In this paper, we present an adaptive self-adjusting code cache manager to improve performance with respect to both start-up time and memory usage. It balances these concerns by detecting changes in method compilation rates, resizing the cache after each pitching event. We conduct experiments to validate our proposed system and quantify the impacts that different code cache management techniques have on memory usage and start-up time through two oracle systems. Our results show that the proposed algorithm yields nearly the same start-up times as a hand-tuned oracle and shorter execution times than those of the SSCLI in eight out of ten applications. It also has lower memory usage over time in all but one application.",
+  "doi": "10.1145/1772954.1772968",
+  "openalex": "W2074873811",
+  "status": "ok",
+  "title": "A self-adjusting code cache manager to balance start-up time and memory usage"
+ },
+ "10.1145_1815695.1815724": {
+  "abstract": "Dynamic (on the fly) binary translation is an important part of many software systems. In this paper we discuss how to combine efficient translation with the generation of efficient code, while providing a high-level table-driven user interface that simplifies the generation of the binary translator (BT).",
+  "doi": "10.1145/1815695.1815724",
+  "openalex": "W2138019494",
+  "status": "ok",
+  "title": "Generating low-overhead dynamic binary translators"
+ },
+ "10.1145_1837854.1736018": {
+  "abstract": "Dynamic binary translators(DBTs) provide powerful platforms for building dynamic program monitoring and adaptation tools. DBTs, however, have high memory demands because they cache translated code and auxiliary code to a software code cache and must also maintain data structures to support the code cache. The high memory demands make it difficult for memory-constrained embedded systems to take advantage of DBT-based tools. Previous research on DBT memory management focused on the translated code and auxiliary code only. However, we found that data structures are comparable to the code cache in size. We show that the translated code size, auxiliary code size and the data structure size interact in a complex manner, depending on the path selection (trace selection and link formation) strategy. Therefore, holistic memory efficiency (comprising translated code, auxiliary code and data structures) cannot be improved by focusing on the code cache only. In this paper, we use path selection for improving holistic memory efficiency which in turn impacts performance in memory-constrained environments. Although there has been previous research on path selection, such research only considered performance in memory-unconstrained environments. The challenge for holistic memory efficiency is that the path selection strategy results in complex interactions between the memory demand components. Also, individual aspects of path selection and the holistic memory efficiency may impact performance in complex ways. We explore these interactions to motivate path selection targeting holistic memory demand. We enumerate all the aspects involved in a path selection design and evaluate a comprehensive set of approaches for each aspect. Finally, we propose a path selection strategy that reduces memory demands by 20% and at the same time improves performance by 5-20% compared to an industrial-strength DBT.",
+  "doi": "10.1145/1837854.1736018",
+  "openalex": "W4230176092",
+  "status": "ok",
+  "title": "DBT path selection for holistic memory efficiency and performance"
+ },
+ "10.1145_1878921.1878923": {
+  "abstract": "Dynamic binary translators (DBTs) are becoming increasingly important because of their power and flexibility. However, the high memory demands of DBTs present an obstacle for all platforms, and especially embedded systems. The memory demand is typically controlled by placing a limit on cached translations and forcing the DBT to flush all translations upon reaching the limit. This solution manifests as a performance inefficiency because many flushed translations require retranslation. Ideally, translations should be selectively flushed to minimize retranslations for a given memory limit. However, three obstacles exist:(1) it is difficult to predict which selections will minimize retranslation,(2) selective flushing results in greater book-keeping overheads than full flushing, and(3) the emergence of multicore processors and multi-threaded programming complicates most flushing algorithms. These issues have led to the widespread adoption of full flushing as a standard protocol. In this paper, we present a partial flushing approach aimed at reducing retranslation overhead and improving overall performance, given a fixed memory budget. Our technique applies uniformly to single-threaded and multi-threaded guest applications",
+  "doi": "10.1145/1878921.1878923",
+  "openalex": "W2051531076",
+  "status": "ok",
+  "title": "Balancing memory and performance through selective flushing of software code caches"
+ },
+ "10.1145_1950365.1950412": {
+  "abstract": "Trace-based compilation is a promising technique for language compilers and binary translators. It offers the potential to expand the compilation scopes that have traditionally been limited by method boundaries.Detecting repeating cyclic execution paths and capturing the detected repetitions into traces is a key requirement for trace selection algorithms to achieve good optimization and performance with small amounts of code. One important class of repetition detection is cyclic-path-based repetition detection, where a cyclic execution path (a path that starts and ends at the same instruction address) is detected as a repeating cyclic execution path.However, we found many cyclic paths that are not repeating cyclic execution paths, which we call false loops. A common class of false loops occurs when a method is invoked from multiple call-sites. A cycle is formed between two invocations of the method from different call-sites, but which does not represent loops or recursion. False loops can result in shorter traces and smaller compilation scopes, and degrade the performance.We propose false loop filtering, an approach to reject false loops in the repetition detection step of trace selection, and a technique called false loop filtering by call-stack-comparison, which rejects a cyclic path as a false loop if the call stacks at the beginning and the end of the cycle are different.We applied false loop filtering to our trace-based Java™ JIT compiler that is based on IBM's J9 JVM. We found that false loop filtering achieved an average improvement of 16% and 10% for the DaCapo benchmark when applied to two baseline trace selection algorithms, respectively, with up to 37% improvement for individual benchmarks. In the end, with false loop filtering, our trace-based JIT achieves a performance comparable to that of the method-based J9 JVM/JIT using the corresponding optimization level.",
+  "doi": "10.1145/1950365.1950412",
+  "openalex": "W2133240977",
+  "status": "ok",
+  "title": "Improving the performance of trace-based systems by false loop filtering"
+ },
+ "10.1145_1961295.1950412": {
+  "abstract": "Trace-based compilation is a promising technique for language compilers and binary translators. It offers the potential to expand the compilation scopes that have traditionally been limited by method boundaries. Detecting repeating cyclic execution paths and capturing the detected repetitions into traces is a key requirement for trace selection algorithms to achieve good optimization and performance with small amounts of code. One important class of repetition detection is cyclic-path-based repetition detection, where a cyclic execution path (a path that starts and ends at the same instruction address) is detected as a repeating cyclic execution path. However, we found many cyclic paths that are not repeating cyclic execution paths, which we call false loops. A common class of false loops occurs when a method is invoked from multiple call-sites. A cycle is formed between two invocations of the method from different call-sites, but which does not represent loops or recursion. False loops can result in shorter traces and smaller compilation scopes, and degrade the performance. We propose false loop filtering, an approach to reject false loops in the repetition detection step of trace selection, and a technique called false loop filtering by call-stack-comparison, which rejects a cyclic path as a false loop if the call stacks at the beginning and the end of the cycle are different. We applied false loop filtering to our trace-based Java™ JIT compiler that is based on IBM's J9 JVM. We found that false loop filtering achieved an average improvement of 16% and 10% for the DaCapo benchmark when applied to two baseline trace selection algorithms, respectively, with up to 37% improvement for individual benchmarks. In the end, with false loop filtering, our trace-based JIT achieves a performance comparable to that of the method-based J9 JVM/JIT using the corresponding optimization level.",
+  "doi": "10.1145/1961295.1950412",
+  "openalex": "W4253537088",
+  "status": "ok",
+  "title": "Improving the performance of trace-based systems by false loop filtering"
+ },
+ "10.1145_1961296.1950412": {
+  "abstract": "Trace-based compilation is a promising technique for language compilers and binary translators. It offers the potential to expand the compilation scopes that have traditionally been limited by method boundaries. Detecting repeating cyclic execution paths and capturing the detected repetitions into traces is a key requirement for trace selection algorithms to achieve good optimization and performance with small amounts of code. One important class of repetition detection is cyclic-path-based repetition detection, where a cyclic execution path (a path that starts and ends at the same instruction address) is detected as a repeating cyclic execution path. However, we found many cyclic paths that are not repeating cyclic execution paths, which we call false loops. A common class of false loops occurs when a method is invoked from multiple call-sites. A cycle is formed between two invocations of the method from different call-sites, but which does not represent loops or recursion. False loops can result in shorter traces and smaller compilation scopes, and degrade the performance. We propose false loop filtering, an approach to reject false loops in the repetition detection step of trace selection, and a technique called false loop filtering by call-stack-comparison, which rejects a cyclic path as a false loop if the call stacks at the beginning and the end of the cycle are different. We applied false loop filtering to our trace-based Java™ JIT compiler that is based on IBM's J9 JVM. We found that false loop filtering achieved an average improvement of 16% and 10% for the DaCapo benchmark when applied to two baseline trace selection algorithms, respectively, with up to 37% improvement for individual benchmarks. In the end, with false loop filtering, our trace-based JIT achieves a performance comparable to that of the method-based J9 JVM/JIT using the corresponding optimization level.",
+  "doi": "10.1145/1961296.1950412",
+  "openalex": "W4243471668",
+  "status": "ok",
+  "title": "Improving the performance of trace-based systems by false loop filtering"
+ },
+ "10.1145_1970386.1970390": {
+  "abstract": "Software Dynamic Translation (SDT) is used for instrumentation, optimization, security, and many other uses. A major source of SDT overhead is the execution of code to translate an indirect branch's target address into the translated destination block's address. This article discusses sources of Indirect Branch (IB) overhead in SDT systems and evaluates techniques for overhead reduction. Measurements using SPEC CPU2000 show that the appropriate choice and configuration of IB translation mechanisms can significantly reduce the overhead. Further, cross-architecture evaluation of these mechanisms reveals that the most efficient implementation and configuration can be highly dependent on the architecture implementation.",
+  "doi": "10.1145/1970386.1970390",
+  "openalex": "W2029880463",
+  "status": "ok",
+  "title": "Evaluating indirect branch handling mechanisms in software dynamic translation systems"
+ },
+ "10.1145_2024724.2024924": {
+  "abstract": "Modern processor architectures call for software that is highly tuned to an unpredictable operating environment. Process-level virtualization systems allow existing software to adapt to the operating environment, including resource contention and other dynamic events, by modifying the application instructions at runtime. While these systems are becoming widespread in the general-purpose computing communities, various challenges have prevented widespread adoption on resource-constrained devices, with memory and performance overheads being at the forefront. In this paper, we discuss the advantages and opportunities of runtime adaptation of embedded software. We also describe some of the existing dynamic binary modification tools that can be used to perform runtime adaptation, and discuss the challenges of balancing memory overheads and performance when developing these tools for embedded platforms.",
+  "doi": "10.1145/2024724.2024924",
+  "openalex": "W2149198363",
+  "status": "ok",
+  "title": "Process-level virtualization for runtime adaptation of embedded software"
+ },
+ "10.1145_2048066.2048127": {
+  "abstract": "When optimizing large-scale applications, striking the balance between steady-state performance, start-up time, and code size has always been a grand challenge. While recent advances in trace compilation have significantly improved the steady-state performance of trace JITs for large-scale Java applications, the size control aspect of a trace compilation system remains largely overlooked. For instance, using the DaCapo 9.12 benchmarks, we observe that 40% of traces selected by a state-of-the-art trace selection algorithm are short-lived and, on average, each selected basic block is replicated 13 times in the trace cache.",
+  "doi": "10.1145/2048066.2048127",
+  "openalex": "W2111783950",
+  "status": "ok",
+  "title": "Reducing trace selection footprint for large-scale Java applications without performance loss"
+ },
+ "10.1145_2076021.2048127": {
+  "abstract": "When optimizing large-scale applications, striking the balance between steady-state performance, start-up time, and code size has always been a grand challenge. While recent advances in trace compilation have significantly improved the steady-state performance of trace JITs for large-scale Java applications, the size control aspect of a trace compilation system remains largely overlooked. For instance, using the DaCapo 9.12 benchmarks, we observe that 40% of traces selected by a state-of-the-art trace selection algorithm are short-lived and, on average, each selected basic block is replicated 13 times in the trace cache. This paper studies the size control problem for a class of commonly used trace selection algorithms and proposes six techniques to reduce the footprint of trace selection without incurring any performance loss. The crux of our approach is to target redundancies in trace selection in the form of either short-lived traces or unnecessary trace duplication. Using one of the best performing selection algorithms as the baseline, we demonstrate that, on the DaCapo 9.12 benchmarks and DayTrader 2.0 on WebSphere Application Server 7.0, our techniques reduce the code size and compilation time by 69% and the start-up time by 43% while retaining the steady-state performance. On DayTrader 2.0, an example of large-scale application, our techniques also improve the steady-state performance by 10%.",
+  "doi": "10.1145/2076021.2048127",
+  "openalex": "W3083107916",
+  "status": "ok",
+  "title": "Reducing trace selection footprint for large-scale Java applications without performance loss"
+ },
+ "10.1145_2151024.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application.",
+  "doi": "10.1145/2151024.2151043",
+  "openalex": "W2133692747",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2355585.2355595": {
+  "abstract": "Dynamic binary translators (DBTs) are becoming increasingly important because of their power and flexibility. DBT-based services are valuable for all types of platforms. However, the high memory demands of DBTs present an obstacle for embedded systems. Most research on DBT design has a performance focus, which often drives up the DBT memory demand. In this article, we present a memory-oriented approach to DBT design. We consider the class of translation-based DBTs and their sources of memory demand; cached translated code, cached auxiliary code and DBT data structures. We explore aspects of DBT design that impact these memory demand sources and present strategies to mitigate memory demand. We also explore performance optimizations for DBTs that handle memory demand by placing a limit on it, and repeatedly flush translations to stay within the limit, thereby replacing the memory demand problem with a performance degradation problem. Our optimizations that mitigate memory demand improve performance.",
+  "doi": "10.1145/2355585.2355595",
+  "openalex": "W2072554713",
+  "status": "ok",
+  "title": "Memory optimization of dynamic binary translators for embedded systems"
+ },
+ "10.1145_2362336.2399178": {
+  "abstract": "Important challenges for embedded systems can be addressed by dynamic binary translation. A dynamic binary translator stores translated instructions in a software-managed code cache, which is usually large to minimize overhead. This article shows how to use a small scratchpad memory for the code cache. A small code cache may require frequent code evictions and retranslation, which degrade performance. We propose techniques to reduce the number of instructions inserted by the translator and a way to form fragments that minimizes translated code size. With our techniques, a much smaller code cache can hold a program's translated code working set.",
+  "doi": "10.1145/2362336.2399178",
+  "openalex": "W2108470968",
+  "status": "ok",
+  "title": "Enabling dynamic binary translation in embedded systems with scratchpad memory"
+ },
+ "10.1145_2365864.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application. Transparency has historically been provided on an ad-hoc basis, as a reaction to observed problems in target applications. This paper identifies a necessary set of transparency requirements for running mainstream Windows and Linux applications. We discuss possible solutions to each transparency issue, evaluate tradeoffs between different choices, and identify cases where maintaining transparency is not practically solvable. We believe this will provide a guideline for better design and implementation of transparent dynamic instrumentation, as well as other similar process virtualization systems using software code caches.",
+  "doi": "10.1145/2365864.2151043",
+  "openalex": "W2996990589",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.2200_s00345ed1v01y201104cac015": {
+  "abstract": null,
+  "doi": "10.2200/s00345ed1v01y201104cac015",
+  "openalex": "W2086302980",
+  "status": "no_abstract",
+  "title": "Dynamic Binary Modification: Tools, Techniques, and Applications"
+ },
+ "10.22456_2175-2745.25803": {
+  "abstract": "Diversas implementações de linguagens de alto nível focam no desenvolvimento de sistemas baseados em mecanismos de compilação just-in-time. Esse mecanismo possui o atrativo de melhorar o desempenho de tais linguagens, mantendo a portabilidade. Contudo, ao preço da inclusão do tempo de compilação ao tempo total de execução. Diante disso, as pesquisas na área têm voltado balancear o custo de compilação com eficiência de execução. Os primeiros sistemas de compilação just-in-time empregavam estratégias estáticas para selecionar e otimizar as regiões de código propícias para gerar bom desempenho. Sistemas mais sofisticados aprimoraram tais estratégias com o objetivo de aplicar otimizações de forma mais criteriosa. Nesse sentido, este tutorial apresenta os princípios que fundamentam a compilação just-in-time e sua evolução ao longo dos anos, bem como a abordagem utilizada por diversos sistemas para garantir o balanceamento de custo e eficiência. Embora seja difícil definir a melhor abordagem, trabalhos recentes mostram que estratégias rígidas para detecção e otimização de código, juntamente com recursos de paralelismo oferecidos pelas arquiteturas multi-core formarão a base dos futuros sistemas de compilação just-in-time.",
+  "doi": "10.22456/2175-2745.25803",
+  "openalex": "W2210280",
+  "status": "ok",
+  "title": "Compilação Just-In-Time: Histórico, Arquitetura, Princípios e Sistemas"
+ },
+ "10.4304_jsw.6.12.2341-2349": {
+  "abstract": "Dynamic binary translation (DBT) has attracted much attention as a powerful technique for the runtime adaptation of software among different ISAs. It offers unprecedented flexibility in the control and modification of a program during the runtime. However, its inherent high overhead has perplexed researchers for many years. In order to reduce the overhead of DBT, this paper presents a dynamic-static combined approach to reorganize the layout of software cache. Under this approach, we first employ an emulating execution to collect the profile information and the translated target code. Especially, the path of execution flow will be tracked. In the static phase, based on the profile information collected in the previous stage, we first use the method of code replicating to build the traces, and then reorganize the layout of the target code by putting the hottest traces at the top of the software cache. Because of exact prediction and improved locality, the execution stream will concentrate on a small area with less control transfer. This approach can greatly reduce the overhead of DBT on the condition that the program runs repeatedly. Experimental results on executing the SPEC 2000 benchmarks show that our approach can reduce more than 30% run time on average.",
+  "doi": "10.4304/jsw.6.12.2341-2349",
+  "openalex": "W2065026312",
+  "status": "ok",
+  "title": "A Dynamic-Static Combined Code Layout Reorganization Approach for Dynamic Binary Translation"
+ },
+ "10.5555_2738600.2738610": {
+  "abstract": "Dynamic binary translation serves as a core technology that enables a wide range of important tools such as profiling, bug detection, program analysis, and security. Many of the target applications often include large amounts of dynamically generated code, which poses a special performance challenge in maintaining consistency between the source application and the translated application. This paper introduces two approaches for optimizing binary translation of JITs and other dynamic code generators. First we present a system of efficient source code annotations that allow developers to demarcate dynamic code regions and identify code changes within those regions. The second technique avoids the annotation and source code requirements by automatically inferring the presence of a JIT and instrumenting its write instructions with translation consistency operations. We implemented these techniques in DynamoRIO and demonstrate performance improvements over the state-of-the-art DBT systems on JIT applications as high as 7.3× over base DynamoRIO and Pin.",
+  "doi": "10.5555/2738600.2738610",
+  "openalex": "W2106965075",
+  "status": "ok",
+  "title": "Optimizing binary translation of dynamically generated code"
+ },
+ "oa-W2108075603": {
+  "abstract": "The capability to debug a program at the source level is useful and often indispensable. Debuggers usesophisticated techniques to provide a source view of a program, even though what is executing on the hard-ware is machine code. Debugging techniques evolve with significant changes in programming languagesand execution environments. Recently, software dynamic translation (SDT) has emerged as a new execu-tion mechanism. SDT inserts a run-time software layer between the program and the host machine, provid-ing flexibility in execution and program monitoring. Increasingly popular technologies that use thismechanism include dynamic optimization, dynamic instrumentation, security checking, binary translation,and host machine virtualization. However, the run-time program modifications in a SDT environment posesignificant challenges to a source level debugger. Currently debugging techniques do not exist for softwaredynamic translators. This thesis is the first to provide techniques for source level debugging of dynamically translatedprograms. The thesis proposes a novel debugging framework, called Tdb, that addresses the difficult chal-lenge of maintaining and providing source level information for programs whose binary code changes asthe program executes. The proposed framework has a number of important features. First, it does notrequire or induce changes in the program being debugged. In other words, programs are debugged is theirdeployment environment. Second, the framework is portable and can be applied to virtually any SDT sys-tem. The framework requires minimal changes to an SDT implementation, usually just a few lines of code.Third, the framework can be integrated with existing debuggers, such as Gdb, and does not require changesto these debuggers. This improves usability and adoption, eliminating the learning curve associated with anew debugging environment. Finally, the proposed techniques are efficient. The runtime overhead of thedebugged programs is low and comparable to that of existing debuggers. Tdb's techniques have been implemented for three different dynamic translators, on two differenthardware platforms. The experimental results demonstrate that source level debugging of dynamicallytranslated programs is feasible, and our implemented systems are portable, usable, and efficient.",
+  "doi": null,
+  "openalex": "W2108075603",
+  "status": "ok",
+  "title": "Source level debugging of dynamically translated programs"
+ },
+ "oa-W2170861439": {
+  "abstract": "Embedded software development has recently changed with advances in computing. Rather than fully co-designing software and hardware to perform a relatively simple task, nowadays embedded and mobile devices are designed as a platform where multiple applications can be run, new applications can be added, and existing applications can be updated. In this scenario, traditional constraints in embedded systems design (i.e., performance, memory and energy consumption and real-time guarantees) are more difficult to address. New concerns (e.g., security) have become important and increase software complexity as well.\r\n\r\nIn general-purpose systems, Dynamic Binary Translation (DBT) has been used to address these issues with services such as Just-In-Time (JIT) compilation, dynamic optimization, virtualization, power management and code security. In embedded systems, however, DBT is not usually employed due to performance, memory and power overhead.\r\n\r\nThis dissertation presents StrataX, a low-overhead DBT framework for embedded systems. StrataX addresses the challenges faced by DBT in embedded systems using novel techniques. To reduce DBT overhead, StrataX loads code from NAND-Flash storage and translates it into a Scratchpad Memory (SPM), a software-managed on-chip SRAM with limited capacity. SPM has similar access latency as a hardware cache, but consumes less power and chip area.\r\n\r\nStrataX manages SPM as a software instruction cache, and employs victim compression and pinning to reduce retranslation cost and capture frequently executed code in the SPM. To prevent performance loss due to excessive code expansion, StrataX minimizes the amount of code inserted by DBT to maintain control of program execution. When a hardware instruction cache is available, StrataX dynamically partitions translated code among the SPM and main memory. With these techniques, StrataX has low performance overhead relative to native execution for MiBench programs. Further, it simplifies embedded software and hardware design by operating transparently to applications without any special hardware support. StrataX achieves sufficiently low overhead to make it feasible to use DBT in embedded systems to address important design goals and requirements.",
+  "doi": null,
+  "openalex": "W2170861439",
+  "status": "ok",
+  "title": "DYNAMIC BINARY TRANSLATION FOR EMBEDDED SYSTEMS WITH SCRATCHPAD MEMORY"
+ },
+ "s2-012622167239db2c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "DYNAMIC BINARY TRANSLATION FOR EMBEDDED SYSTEMS WITH SCRATCHPAD MEMORY"
+ },
+ "s2-5d179da8c30773eb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "OS + Hardware Application Translation Engine Code Cache Application Code Request for Translation Translated Code Region Executable Code"
+ },
+ "s2-6f3659d5bf3761d6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cobra: a framework for continuous profiling and binary re-adaptation"
+ },
+ "s2-76704bb207c22b79": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "How to Detect Self-Modifying Code During Instruction-Set Simulation"
+ },
+ "s2-7718c0c799e18e6b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Safe loading and efficient runtime confinement: A foundation for secure execution"
+ },
+ "s2-7f8231d2e56d151c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Black box to Gray box Using sequential prefetching to move toward ﬁle-aware storage"
+ },
+ "s2-97a5f78bbc6db493": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Source level debugging of dynamically translated programs"
+ },
+ "s2-a960977a3fa0b953": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fast Binary Translation : Translation Efficiency and Runtime Efficiency"
+ },
+ "s2-c164cffdb7744f47": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Ieee Transactions on Dependable and Secure Computing Plr: a Software Approach to Transient Fault Tolerance for Multi-core Architectures"
+ },
+ "s2-dfde0863ceecafee": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Introspective Intrusion Detection"
+ }
+}

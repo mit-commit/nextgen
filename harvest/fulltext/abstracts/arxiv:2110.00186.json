@@ -1,0 +1,16 @@
+{
+ "10.1145_3579990.3580020": {
+  "abstract": "Real world arrays often contain underlying structure, such as sparsity, runs of repeated values, or symmetry. Specializing for structure yields significant speedups. But automatically generating efficient code for structured data is challenging, especially when arrays with different structure interact. We show how to abstract over array structures so that the compiler can generate code to coiterate over any combination of them. Our technique enables new array formats (such as 1DVBL for irregular clustered sparsity), new iteration strategies (such as galloping intersections), and new operations over structured data (such as concatenation or convolution).",
+  "doi": "10.1145/3579990.3580020",
+  "openalex": "W4321500415",
+  "status": "ok",
+  "title": "Looplets: A Language for Structured Coiteration"
+ },
+ "10.1145_3696443.3708919": {
+  "abstract": "Symmetric and sparse tensors arise naturally in many domains including linear algebra, statistics, physics, chemistry, and graph theory. Symmetric tensors are equal to their transposes, so in the n-dimensional case we can save up to a factor of n! by avoiding redundant operations. Sparse tensors, on the other hand, are mostly zero, and we can save asymptotically by processing only nonzeros. Unfortunately, specializing for both symmetry and sparsity at the same time is uniquely challenging. Optimizing for symmetry requires consideration of n! transpositions of a triangular kernel, which can be complex and error prone. Considering multiple transposed iteration orders and triangular loop bounds also complicates iteration through intricate sparse tensor formats. Additionally, since each combination of symmetry and sparse tensor formats requires a specialized implementation, this leads to a combinatorial number of cases. A compiler is needed, but existing compilers cannot take advantage of both symmetry and sparsity within the same kernel. In this paper, we describe the first compiler which can automatically generate symmetry-aware code for sparse or structured tensor kernels. We introduce a taxonomy for symmetry in tensor kernels, and show how to target each kind of symmetry. Our implementation demonstrates significant speedups ranging from 1.36x for SSYMV to 30.4x for a 5-dimensional MTTKRP over the non-symmetric state of the art.",
+  "doi": "10.1145/3696443.3708919",
+  "openalex": "W4407863037",
+  "status": "ok",
+  "title": "SySTeC: A Symmetric Sparse Tensor Compiler"
+ }
+}

@@ -1,0 +1,247 @@
+{
+ "10.1016_j.parco.2017.11.008": {
+  "abstract": null,
+  "doi": "10.1016/j.parco.2017.11.008",
+  "openalex": "W2769038278",
+  "status": "no_abstract",
+  "title": "Output nondeterminism detection for programming models combining dataflow with shared memory"
+ },
+ "10.1093_comjnl_bxt013": {
+  "abstract": "This article presents AccessedBefore (AccB), an algorithm and its associated minimal hardware support to detect data races, and compares it with two widely known and used commercial tools: Helgrind, the data race detection tool included in the general purpose memory checking suite Valgrind, and Intel Thread Checker, now shipped as part of Intel Thread Inspector. It provides a performance overhead evaluation using current workloads, along with an analysis of AccB's scalability with the number of threads and workload input set size. It demonstrates that AccB is in the range of 2× to 11× faster than these two tools. Finally, it shows the complete proof that AccB is complete in that, for every static data race present in a program, there exists an instruction interleaving that would expose this data race such that AccB can detect it.",
+  "doi": "10.1093/comjnl/bxt013",
+  "openalex": "W2002144472",
+  "status": "ok",
+  "title": "Data Race Detection with Minimal Hardware Support"
+ },
+ "10.1109_ipdps.2014.76": {
+  "abstract": "To detect races precisely without false alarms, vector clock based race detectors can be applied if the overhead in time and space can be contained. This is indeed the case for the applications developed in object-oriented programming language where objects can be used as detection units. On the other hand, embedded applications, often written in C/C++, necessitate the use of fine-grained detection approaches that lead to significant execution overhead. In this paper, we present a dynamic granularity algorithm for vector clock based data race detectors. The algorithm exploits the fact that neigh boring memory locations tend to be accessed together and can share the same vector clock archiving dynamic granularity of detection. The algorithm is implemented on top of Fast Track and uses Intel PIN tool for dynamic binary instrumentation. Experimental results on benchmarks show that, on average, the race detection tool using the dynamic granularity algorithm is 43% faster than the Fast Track with byte granularity and is with 60% less memory usage. Comparison with existing industrial tools, Val grind DRD and Intel Inspector XE, also suggests that the proposed dynamic granularity approach is very viable.",
+  "doi": "10.1109/ipdps.2014.76",
+  "openalex": "W2142768779",
+  "status": "ok",
+  "title": "Efficient Data Race Detection for C/C++ Programs Using Dynamic Granularity"
+ },
+ "10.1109_isca.2012.6237018": {
+  "abstract": "Data-race freedom is a valuable safety property for multithreaded programs that helps with catching bugs, simplifying memory consistency model semantics, and verifying and enforcing both atomicity and determinism. Unfortunately, existing software-only dynamic race detectors are precise but slow; proposals with hardware support offer higher performance but are imprecise. Both precision and performance are necessary to achieve the many advantages always-on dynamic race detection could provide.",
+  "doi": "10.1109/isca.2012.6237018",
+  "openalex": "W3142915758",
+  "status": "ok",
+  "title": "RADISH: Always-on sound and complete race detection in software and hardware"
+ },
+ "10.1145_2366231.2337182": {
+  "abstract": "Data-race freedom is a valuable safety property for multithreaded programs that helps with catching bugs, simplifying memory consistency model semantics, and verifying and enforcing both atomicity and determinism. Unfortunately, existing software-only dynamic race detectors are precise but slow; proposals with hardware support offer higher performance but are imprecise. Both precision and performance are necessary to achieve the many advantages always-on dynamic race detection could provide. To resolve this trade-off, we propose Radish, a hybrid hardware-software dynamic race detector that is always-on and fully precise. In Radish, hardware caches a principled subset of the metadata necessary for race detection; this subset allows the vast majority of race checks to occur completely in hardware. A flexible software layer handles persistence of race detection metadata on cache evictions and occasional queries to this expanded set of metadata. We show that Radish is correct by proving equivalence to a conventional happens-before race detector. Our design has modest hardware complexity: caches are completely unmodified and we piggy-back on existing coherence messages but do not otherwise modify the protocol. Furthermore, Radish can leverage type-safe languages to reduce overheads substantially. Our evaluation of a simulated 8-core Radish processor using PARSEC benchmarks shows runtime overheads from negligible to 2x, outperforming the leading software-only race detector by 2x-37x.",
+  "doi": "10.1145/2366231.2337182",
+  "openalex": "W2161038602",
+  "status": "ok",
+  "title": "RADISH"
+ },
+ "10.1145_2384616.2384650": {
+  "abstract": "We propose a new algorithm for dynamic data-race detection. Our algorithm reports no false positives and runs on arbitrary C and C++ code. Unlike previous algorithms, we do not have to instrument every memory access or track a full happens-before relation. Our data-race detector, which we call IFRit, is based on a run-time abstraction called an interference-free region (IFR). An IFR is an interval of one thread's execution during which any write to a specific variable by a different thread is a data race. We insert instrumentation at compile time to monitor active IFRs at run-time. If the runtime observes overlapping IFRs for conflicting accesses to the same variable in two different threads, it reports a race. The static analysis aggregates information for multiple accesses to the same variable, avoiding the expense of having to instrument every memory access in the program.",
+  "doi": "10.1145/2384616.2384650",
+  "openalex": "W2121816623",
+  "status": "ok",
+  "title": "IFRit"
+ },
+ "10.1145_2398857.2384650": {
+  "abstract": "We propose a new algorithm for dynamic data-race detection. Our algorithm reports no false positives and runs on arbitrary C and C++ code. Unlike previous algorithms, we do not have to instrument every memory access or track a full happens-before relation. Our data-race detector, which we call IFRit, is based on a run-time abstraction called an interference-free region (IFR). An IFR is an interval of one thread's execution during which any write to a specific variable by a different thread is a data race. We insert instrumentation at compile time to monitor active IFRs at run-time. If the runtime observes overlapping IFRs for conflicting accesses to the same variable in two different threads, it reports a race. The static analysis aggregates information for multiple accesses to the same variable, avoiding the expense of having to instrument every memory access in the program. We directly compare IFRit to FastTrack and ThreadSanitizer, two state-of-the-art fully-precise data-race detectors. We show that IFRit imposes a fraction of the overhead of these detectors. We show that for the PARSEC benchmarks, and several real-world applications, IFRit finds many of the races detected by a fully-precise detector. We also demonstrate that sampling can further reduce IFRit's performance overhead without completely forfeiting precision.",
+  "doi": "10.1145/2398857.2384650",
+  "openalex": "W4252602476",
+  "status": "ok",
+  "title": "IFRit"
+ },
+ "10.1145_2465351.2465366": {
+  "abstract": "As hardware parallelism continues to increase, CPU caches can no longer be considered as a transparent, hardware-level performance optimization. Cache impact on performance, in particular in the face of false sharing, is completely dependent on the software that is executing. To effectively support parallel workloads on cache coherent hardware, the operating system must begin to treat the CPU cache like other shared hardware resources, and manage it appropriately.",
+  "doi": "10.1145/2465351.2465366",
+  "openalex": "W2071761886",
+  "status": "ok",
+  "title": "Whose cache line is it anyway?"
+ },
+ "10.1145_2509136.2509519": {
+  "abstract": "Parallel programming is essential for reaping the benefits of parallel hardware, but it is notoriously difficult to develop and debug reliable, scalable software systems. One key challenge is that modern languages and systems provide poor support for ensuring concurrency correctness properties - atomicity, sequential consistency, and multithreaded determinism - because all existing approaches are impractical. Dynamic, software-based approaches slow programs by up to an order of magnitude because capturing and controlling cross-thread dependences (i.e., conflicting accesses to shared memory) requires synchronization at virtually every access to potentially shared memory.",
+  "doi": "10.1145/2509136.2509519",
+  "openalex": "W1963966612",
+  "status": "ok",
+  "title": "OCTET"
+ },
+ "10.1145_2541940.2541955": {
+  "abstract": "Researchers have proposed always-on data-race exceptions as a way to avoid the ill effects of data races, but slow performance of accurate dynamic data-race detection remains a barrier to the adoption of always-on data-race exceptions. Proposals for accurate low-level (e.g., hardware) data-race detection have the potential to reduce this performance barrier. This paper explains why low-level data-race detectors are wrong for programs written in high-level languages (e.g., Java): they miss true data races and report false data races in these programs. To bring the benefits of low-level data-race detection to high-level languages, we design low-level abstractable race detection (LARD), an extension of the interface between low-level data-race detectors and run-time systems that enables accurate language-level data-race detection using low-level detection mechanisms. We implement accurate LARD data-race exception support for Java, coupling a modified Jikes RVM Java virtual machine and a simulated hardware race detector. We evaluate our detector's accuracy against an accurate dynamic Java data-race detector and other low-level race detectors without LARD, showing that naive accurate nlow-level data-race detectors suffer from many missed and false language-level races in practice, and that LARD prevents this inaccuracy.",
+  "doi": "10.1145/2541940.2541955",
+  "openalex": "W2087969648",
+  "status": "ok",
+  "title": "Low-level detection of language-level data races with LARD"
+ },
+ "10.1145_2544173.2509519": {
+  "abstract": "Parallel programming is essential for reaping the benefits of parallel hardware, but it is notoriously difficult to develop and debug reliable, scalable software systems. One key challenge is that modern languages and systems provide poor support for ensuring concurrency correctness properties - atomicity, sequential consistency, and multithreaded determinism - because all existing approaches are impractical. Dynamic, software-based approaches slow programs by up to an order of magnitude because capturing and controlling cross-thread dependences (i.e., conflicting accesses to shared memory) requires synchronization at virtually every access to potentially shared memory. This paper introduces a new software-based concurrency control mechanism called OCTET that soundly captures cross-thread dependences and can be used to build dynamic analyses for concurrency correctness. OCTET achieves low overheads by tracking the locality state of each potentially shared object. Non-conflicting accesses conform to the locality state and require no synchronization; only conflicting accesses require a state change and heavyweight synchronization. This optimistic tradeoff leads to significant efficiency gains in capturing cross-thread dependences: a prototype implementation of OCTET in a high-performance Java virtual machine slows real-world concurrent programs by only 26% on average. A dependence recorder, suitable for record & replay, built on top of OCTET adds an additional 5% overhead on average. These results suggest that OCTET can provide a foundation for developing low-overhead analyses that check and enforce concurrency correctness.",
+  "doi": "10.1145/2544173.2509519",
+  "openalex": "W4251580636",
+  "status": "ok",
+  "title": "OCTET"
+ },
+ "10.1145_2644865.2541955": {
+  "abstract": "Researchers have proposed always-on data-race exceptions as a way to avoid the ill effects of data races, but slow performance of accurate dynamic data-race detection remains a barrier to the adoption of always-on data-race exceptions. Proposals for accurate low-level (e.g., hardware) data-race detection have the potential to reduce this performance barrier. This paper explains why low-level data-race detectors are wrong for programs written in high-level languages (e.g., Java): they miss true data races and report false data races in these programs. To bring the benefits of low-level data-race detection to high-level languages, we design low-level abstractable race detection (LARD), an extension of the interface between low-level data-race detectors and run-time systems that enables accurate language-level data-race detection using low-level detection mechanisms. We implement accurate LARD data-race exception support for Java, coupling a modified Jikes RVM Java virtual machine and a simulated hardware race detector. We evaluate our detector's accuracy against an accurate dynamic Java data-race detector and other low-level race detectors without LARD, showing that naive accurate nlow-level data-race detectors suffer from many missed and false language-level races in practice, and that LARD prevents this inaccuracy.",
+  "doi": "10.1145/2644865.2541955",
+  "openalex": "W4253522574",
+  "status": "ok",
+  "title": "Low-level detection of language-level data races with LARD"
+ },
+ "10.1145_2654822.2541955": {
+  "abstract": "Researchers have proposed always-on data-race exceptions as a way to avoid the ill effects of data races, but slow performance of accurate dynamic data-race detection remains a barrier to the adoption of always-on data-race exceptions. Proposals for accurate low-level (e.g., hardware) data-race detection have the potential to reduce this performance barrier. This paper explains why low-level data-race detectors are wrong for programs written in high-level languages (e.g., Java): they miss true data races and report false data races in these programs. To bring the benefits of low-level data-race detection to high-level languages, we design low-level abstractable race detection (LARD), an extension of the interface between low-level data-race detectors and run-time systems that enables accurate language-level data-race detection using low-level detection mechanisms. We implement accurate LARD data-race exception support for Java, coupling a modified Jikes RVM Java virtual machine and a simulated hardware race detector. We evaluate our detector's accuracy against an accurate dynamic Java data-race detector and other low-level race detectors without LARD, showing that naive accurate nlow-level data-race detectors suffer from many missed and false language-level races in practice, and that LARD prevents this inaccuracy.",
+  "doi": "10.1145/2654822.2541955",
+  "openalex": "W4242252151",
+  "status": "ok",
+  "title": "Low-level detection of language-level data races with LARD"
+ },
+ "10.1145_3352460.3358317": {
+  "abstract": "Some of the most difficult to find bugs in multi-threaded programs are caused by unintended sharing, leading to data races. The detection of data races can be facilitated by requiring programmers to explicitly specify any intended sharing and then verifying compliance with these intentions. We present a novel dynamic checker based on this approach, called PUSh.",
+  "doi": "10.1145/3352460.3358317",
+  "openalex": "W2979636926",
+  "status": "ok",
+  "title": "PUSh"
+ },
+ "10.1145_3445814.3446727": {
+  "abstract": "Finding data race bugs in multi-threaded programs has proven challenging. A promising direction is to use dynamic detectors that monitor the program’s execution for data races. However, despite extensive work on dynamic data race detection, most proposed systems for commodity hardware incur prohibitive overheads due to expensive compiler instrumentation of memory accesses; hence, they are not efficient enough to be used in all development and testing settings.",
+  "doi": "10.1145/3445814.3446727",
+  "openalex": "W3110764597",
+  "status": "ok",
+  "title": "Kard: lightweight data race detection with per-thread memory protection"
+ },
+ "10.1155_2015_205827": {
+  "abstract": "Data races represent the most notorious class of concurrency bugs in multithreaded programs. To detect data races precisely and efficiently during the execution of multithreaded programs, the epoch-based FastTracktechnique has been employed. However, FastTrackhas time and space complexities that depend on the maximum parallelism of the program to partially maintain expensive data structures, such as vector clocks. This paper presents an efficient algorithm, callediFT, that uses only the epochs of the access histories. Unlike FastTrack, our algorithm requires O(1) operations to maintain an access history and locate data races, without any switching between epochs and vector clocks. We implement this algorithm on top of the Pin binary instrumentation framework and compare it with other on-the-fly detection algorithms, including FastTrack, which uses a state-of-the-art happens-before analysis algorithm. Empirical results using the PARSEC benchmark show thatiFT reduces the average runtime and memory overhead to 84% and 37%, respectively, of those of FastTrack.",
+  "doi": "10.1155/2015/205827",
+  "openalex": "W1488480972",
+  "status": "ok",
+  "title": "An Efficient Algorithm for On-the-Fly Data Race Detection Using an Epoch-Based Technique"
+ },
+ "10.14288_1.0052202": {
+  "abstract": "As hardware parallelism continues to increase, CPU caches can no longer be considered a transparent, hardware-level performance optimization. Adverse cache impact on performance is entirely workload-dependent and may depend on runtime factors. The operating system must begin to treat CPU caches like any other shared hardware resource to effectively support workloads on parallel hardware. We present a binary translation system called Cachekata that provides a byte-granular memory remapping facility within the OS in an efficient manner. Cachekata is incorporated into a larger system, Plastic, which diagnoses and corrects instances of false sharing occurring within running applications. Our implementation is able to achieve a 3-6x performance improvement on known examples of false sharing in parallel benchmarks.",
+  "doi": "10.14288/1.0052202",
+  "openalex": "W2305731979",
+  "status": "ok",
+  "title": "Cachekata : memory hierarchy optimization via dynamic binary translation"
+ },
+ "10.14288_1.0376084": {
+  "abstract": "The performance density of modern hardware has forced the sharing of hardware resources across applications for better utilization and efficiency. Shared infrastructure, however, weakens isolation and risks interference, which can result in degraded performance and security breaches. This thesis explores the tension between isolation and sharing with three prototype systems: Xoar, Plastic, and Decibel. All three of these systems demonstrate the value of software mediation in providing isolation on shared hardware without sacrificing either hardware resource utilization or the performance of the underlying devices. Xoar, Plastic, and Decibel provide isolation for different hardware resources: Xoar strengthens isolation between virtual machines, thereby allowing underutilized processors to be shared; Plastic transparently mitigates poor cache utilization and the performance artifacts caused by insufficient cache line isolation across cores; and Decibel provides isolation in shared non-volatile storage and guarantees throughput, even in the face of competing workloads.",
+  "doi": "10.14288/1.0376084",
+  "openalex": "W2921040666",
+  "status": "ok",
+  "title": "Operator, number please : mediating access to shared resources for efficiency and isolation"
+ },
+ "oa-W1483258291": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2014.",
+  "doi": null,
+  "openalex": "W1483258291",
+  "status": "ok",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "oa-W2181545570": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2181545570",
+  "status": "no_abstract",
+  "title": "c Copyright 2014"
+ },
+ "oa-W2252644510": {
+  "abstract": "Thesis (Ph.D.)--University of Washington, 2014",
+  "doi": null,
+  "openalex": "W2252644510",
+  "status": "ok",
+  "title": "Software and Hardware Support for Data-Race Exceptions"
+ },
+ "oa-W2289234327": {
+  "abstract": "It is typical for state-of-the-art dynamic race detection algorithms for C programs to slow down an application by a large factor. Our measurements indicate that a significant portion of this slowdown is due to additional lock-based synchronization performed by instrumentation code. This synchronization is necessary to ensure atomic update of analysis state. We present the first precise race detection tool that improves race-detection slowdown by using commercial hardware transactional memory support to synchronize analysis and program data. By careful choice of transaction sizes, we obtain noteworthy speedups over lock-based protection of race analysis metadata.",
+  "doi": null,
+  "openalex": "W2289234327",
+  "status": "ok",
+  "title": "Accelerating Precise Race Detection Using Commercially- Available Hardware Transactional Memory Support"
+ },
+ "oa-W2310514039": {
+  "abstract": "Programming languages must be defined precisely so that programmers can reason carefully about the behavior of their code and language implementers can provide correct and efficient compilers and interpreters. However, until quite recently, mainstream languages such as Java and C++ did not specify exactly how programs that use shared-memory multithreading should behave (e.g., when do writes by one thread become visible to another thread?). The memory model of a programming language addresses such questions. The recently-approved memory model for C++ effectively requires programs to be data-race-free: all executions of the program must have the property that any conflicting memory accesses in different threads are ordered by synchronization. To meet this requirement, programmers must ensure that threads properly coordinate accesses to shared memory using synchronization mechanisms such as mutual-exclusion locks. \r\nWe introduce a new abstraction for reasoning about data-race-free programs: interference-free regions. An interference-free region, or IFR, is a region surrounding a memory access during which no other thread can modify the accessed memory location without causing a data race. Specifically, the interference-free region for a memory access extends from the last acquire call (e.g., mutex lock) before the access to the first release call (e.g., mutex unlock) after the access. Using IFRs, we can reason sequentially about code that contains synchronization operations. IFRs enable entirely thread-local reasoning, meaning we do not need to have the whole program available in order to make useful inferences. We develop IFRs as a abstract concept, and also present two practical applications of IFRs. \r\nFirst, IFR-based reasoning can be used to extend the scope of compiler optimizations. Compilers typically optimize within synchronization-free regions, since the data-race-freedom assumption permits sequential reasoning in the absence of synchronization. We make the observation that this rule of thumb is overly conservative: it is safe to optimize across synchronization calls as long as the calls are interference-free for the variable in question. (We say that a variable is interference-free at a call if the call falls in the interference-free region for an access to that variable.) We have developed two symmetric compiler analyses for determining which variables are interference-free at each synchronization call, thereby allowing later optimization passes to optimize in larger regions that may include synchronization. \r\nSecond, we have developed an algorithm for dynamic data-race detection based on the concept of IFRs. Data-race detection is an important problem to the programming languages community: programmers need to eliminate data races during software development in order to avoid costly bugs in production systems. Our algorithm monitors active IFRs for each thread at runtime, reporting a data race if conflicting IFRs in different threads overlap in real time. Conservative approximations of IFRs are inferred using a static instrumentation pass. We compare our algorithm to two precise data-race detectors, and determine that our algorithm catches many data races and provides better performance on most benchmarks. \r\nAs a final step, we extend the compiler analyses used in both projects to be interprocedural (i.e., analyzing more than one function at a time). Specifically, we classify functions according to their synchronization behavior, making it easier to infer when IFRs propagate through function calls. On the compiler optimization side, this change means that we can optimize across calls that contain internal synchronization. On the data-race detection side, we are able to statically infer longer IFRs, meaning that we are more likely to detect data races.",
+  "doi": null,
+  "openalex": "W2310514039",
+  "status": "ok",
+  "title": "Interference-free regions and their application to compiler optimization and data-race detection"
+ },
+ "oa-W2526413164": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2526413164",
+  "status": "no_abstract",
+  "title": "Dynamic Analysis of Embedded Software"
+ },
+ "oa-W98207858": {
+  "abstract": "The complexity of modern software makes it difficult to ship correct programs. Errors can cost money and lives, so developers often use automated software analysis tools to hunt for bugs. By automatically analyzing a program's runtime operation, dynamic analysis tools can find subtle errors that would normally escape the notice of even careful human testers. These dynamic analyses are more likely to find errors if they observe the program under numerous and varied runtime situations, so, ideally, users would analyze programs as they run them. Regrettably, these tests cause orders-of-magnitude slowdowns, which few users would tolerate. This dissertation presents methods of accelerating dynamic software analyses in order to distribute these trials to users. It begins by observing that the overhead that any individual observes can be lowered by allowing each user to analyze a small, random sample of the program's operations. It then describes a sampling mechanism for dynamic dataflow analyses that only requires access to the virtual memory system. Other dynamic software analyses cannot use this technique, so the remainder of this dissertation focuses on novel hardware-based acceleration mechanisms. The first, Testudo, allows faster and more accurate dataflow analysis sampling by storing meta-data in an on-chip cache and stochastically removing these values whenever it overflows. Next, a method for performing demand-driven data race detection using existing hardware performance counters is detailed. These counters make inter-cache sharing events visible to software, allowing the data race detector to be enabled only when needed. Finally, fine-grained memory monitoring is a crucial for every analysis studied in this work. This dissertation closes by examining a hardware mechanism for allowing unlimited fine-grained watchpoints, which can be used to reduce the overheads of many analyses. In total, this dissertation demonstrates that hardware designers can play a role in mitigating software bugs, as many of the acceleration mechanisms explored in this work require hardware support in one form or another. Taken together, these works represent a step forward for accelerating dynamic software analyses and distributing them to end-users.",
+  "doi": null,
+  "openalex": "W98207858",
+  "status": "ok",
+  "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis."
+ },
+ "s2-213354898f670b8c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "O CTET : Practical Concurrency Control for Dynamic Analyses and Systems"
+ },
+ "s2-295423fa4c09786b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis"
+ },
+ "s2-3eff6d19cddddaf2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software and Hardware Support for Data-Race Exceptions"
+ },
+ "s2-4495447c8b433ba2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "c Copyright 2014"
+ },
+ "s2-581e61dd252942cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Gestión de los accesos a memoria en sistemas de altas prestaciones. Memory accesss management in high performance computers"
+ },
+ "s2-5d2a0ecb7ac8fd71": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Interference-Free Regions and Their Application to Compiler Optimization and Data-Race Detection"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-81ca8165ffcdd984": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Runtime race detection for shared memory programming models (Paylaşımlı bellek programlama modelleri için çalışma zamanı yarışı algılama)"
+ },
+ "s2-b22122f79ec2812f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Accelerating Precise Race Detection Using Commercially- Available Hardware Transactional Memory Support"
+ },
+ "s2-b6e50902b2593b37": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic Analysis of Embedded Software"
+ }
+}

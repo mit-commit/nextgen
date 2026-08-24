@@ -1,0 +1,100 @@
+{
+ "10.1109_icsp69961.2026.11540891": {
+  "abstract": "Structured kernels and sparse kernels are often described differently at the frontend. However, on scratchpad- or LDM-based backends, they must ultimately address the same execution questions: how to tile, which objects should reside locally, when to move data, and when to write back. This paper proposes a unified execution semantics layer. It represents a kernel using its iteration domain, object roles, set-valued access mappings, target-position mapping, update mode, and pure computation body. Based on this interface, we divide the execution semantics into three layers: description, legality, and lowering. In the SpMV case, we clarify that the semantic iteration unit is an output row, not a nonzero element. Thus, accumulation within a row is part of the body, while the target-position update remains assignment. Experiments demonstrate that this interface allows reuse of the same frontend description across multiple executors. This showcases its feasibility on the Sunway platform. It achieves an order of magnitude end-to-end speedup on structured stencil workloads and delivers performance comparable to specialized parallel implementations on selected SpMV workloads. The current method mainly applies to single-step, gather-dominant computation patterns whose output locations can be determined statically.",
+  "doi": "10.1109/icsp69961.2026.11540891",
+  "openalex": "W7163578858",
+  "status": "ok",
+  "title": "A Unified Execution Semantics Layer for Structured and Sparse Kernels"
+ },
+ "10.1109_isca66397.2026.00180": {
+  "abstract": null,
+  "doi": "10.1109/isca66397.2026.00180",
+  "openalex": "W7172378581",
+  "status": "no_abstract",
+  "title": "DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures"
+ },
+ "10.1145_3763146": {
+  "abstract": "This paper introduces the continuous tensor abstraction, allowing indices to take real-number values (e.g., A[3.14]). It also presents continuous tensor algebra expressions, such as C x,y = A x,y * B x,y , where indices are defined over a continuous domain. This work expands the traditional tensor model to include continuous tensors. Our implementation supports piecewise-constant tensors, on which infinite domains can be processed in finite time. We also introduce a new tensor format for efficient storage and a code generation technique for automatic kernel generation. For the first time, our abstraction expresses domains like computational geometry and computer graphics in the language of tensor programming. Our approach demonstrates competitive or better performance to hand-optimized kernels in leading libraries across diverse applications. Compared to hand-implemented libraries on a CPU, our compiler-based implementation achieves an average speedup of 9.20× on 2D radius search with ∼60× fewer lines of code (LoC), 1.22× on genomic interval overlapping queries (with ∼18× LoC saving), and 1.69× on trilinear interpolation in Neural Radiance Field (with ∼6× LoC saving).",
+  "doi": "10.1145/3763146",
+  "openalex": "W4415007445",
+  "status": "ok",
+  "title": "The Continuous Tensor Abstraction: Where Indices Are Real"
+ },
+ "10.1145_3771775.3786267": {
+  "abstract": "Sparse tensor algebra plays an important role in many scientific and engineering applications, yet existing sparse libraries and compilers face challenges when the output tensor is sparse. Array-based storage formats, such as CSR, require costly memory reallocations and rely on intermediate tensors (workspaces) to handle sparse scattering into the output, which limits performance and scalability. We introduce a new approach that employs our proposed flexible map-based storage format to directly support sparse scattering into the output without requiring extra workspaces. Our system then applies code and storage-specific optimizations to maximize efficiency. Experimental results across a range of kernels and datasets demonstrate an average speedup of 8.06× over a state-of-the-art compiler and 5.28× over a sparse tensor library.",
+  "doi": "10.1145/3771775.3786267",
+  "openalex": "W7125963162",
+  "status": "ok",
+  "title": "Optimizing Sparse Tensor Compilation for Sparse Output"
+ },
+ "10.1145_3771775.3786281": {
+  "abstract": "Linear algebra libraries and tensor domain-specific languages are able to deliver high performance for modern scientific and machine learning workloads. While there has been recent work in automatically translating legacy software to use these libraries/DSLs using pattern matching and program lifting, this has been largely limited to dense linear algebra.",
+  "doi": "10.1145/3771775.3786281",
+  "openalex": "W7125916650",
+  "status": "ok",
+  "title": "Accelerating Sparse Algebra with Program Synthesis"
+ },
+ "10.1145_3779212.3790176": {
+  "abstract": "Programming high-performance sparse GPU kernels is notoriously difficult, requiring both substantial effort and deep expertise. Sparse compilers aim to simplify this process, but existing systems fall short in two key ways. First, they are primarily designed for CPUs and rarely produce high-performance GPU code. Second, when computations involve both sparse and dense regions, these compilers often fail to optimize the dense portions effectively. In this paper, we propose a new approach for expressing sparse computations. We start from format-agnostic Einsums over sparse tensors and rewrite them into format-conscious indirect Einsums, which explicitly encode format information by mapping sparse data and metadata onto dense tensor operations through indirect indexing. To execute indirect Einsums, we introduce the Insum compiler, which generates efficient GPU code for these Einsums by lowering to the PyTorch compiler, extended to better support Tensor Core–enabled indirect Einsums. We also present two fixed-length sparse formats, GroupCOO and BlockGroupCOO, designed to fit naturally with indirect Einsums. Our approach achieves 1.14×–3.81× speedups across a range of sparse GPU applications while reducing lines of code by 202×–4491× compared to hand-written implementations. The source code for Insum is publicly available at https://github.com/nullplay/IndirectEinsum.",
+  "doi": "10.1145/3779212.3790176",
+  "openalex": "W7134951474",
+  "status": "ok",
+  "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums"
+ },
+ "10.1145_3795883": {
+  "abstract": "Compilers are indispensable for transforming code written in high-level languages into performant machine code, but their general-purpose optimizations sometimes fall short. Domain experts might be aware of optimizations that the compiler is unable to apply or that are only valid in a particular domain. We have developed a system that allows domain experts to express rewrite rules to optimize code in the Julia programming language. Our system builds on e-graphs and equality saturation. It can apply optimizations in the presence of control flow and side effects. As Julia uses multiple dispatch, we allow users to constrain rewrite rules by argument types, and propagate type information through the e-graph representation. We propose an ILP formulation for optimal e-graph extraction that exploits opportunities for code reuse and introduce CFG skeleton relaxation to rewrite calls to pure functions as well as those with side effects. Use cases demonstrate that our system can perform rewrites on high-level, domain-specific code, as well as on lower-level code such as Julia’s broadcasting mechanism. We analyze the required compilation time and the performance impact of these rewrites.",
+  "doi": "10.1145/3795883",
+  "openalex": "W7131082296",
+  "status": "ok",
+  "title": "Equality Saturation for Optimizing High-Level Julia IR"
+ },
+ "10.14722_fuzzing.2026.23006": {
+  "abstract": "Sparse Tensor Compilers (STCs) have emerged as critical infrastructure for optimizing high-dimensional data analytics and machine learning workloads.The STCs must synthesize complex, irregular control flow for various compressed storage formats directly from high-level declarative specifications, thereby making them highly susceptible to subtle correctness defects.Existing testing frameworks, which rely on mutating computation graphs restricted to a standard vocabulary of operators, fail to exercise the arbitrary loop synthesis capabilities of these compilers.Furthermore, generic grammar-based fuzzers struggle to generate valid inputs due to the strict rules governing how indices are reused across multiple tensors.In this paper, we present TENSURE, the first extensible blackbox fuzzing framework specifically designed for the testing of STCs.TENSURE leverages Einstein Summation (Einsum) notation as a general input abstraction, enabling the generation of complex, unconventional tensor contractions that expose corner cases in the code-generation phases of STCs.We propose a novel constraint-based generation algorithm that guarantees 100% semantic validity of synthesized kernels, significantly outperforming the ∼3.3% validity rate of baseline grammar fuzzers.To enable metamorphic testing without a trusted reference, we introduce a set of semantic-preserving mutation operators that exploit algebraic commutativity and heterogeneity in storage formats.Our evaluation on two state-of-the-art systems, TACO and Finch, reveals widespread fragility, particularly in TACO, where TENSURE exposed crashes or silent miscompilations in a majority of generated test cases.These findings underscore the critical need for specialized testing tools in the sparse compilation ecosystem.",
+  "doi": "10.14722/fuzzing.2026.23006",
+  "openalex": "W7139989008",
+  "status": "ok",
+  "title": "TenSure: Fuzzing Sparse Tensor Compilers (Registered Report)"
+ },
+ "10.48550_arxiv.2407.13726": {
+  "abstract": "Tensor algebra is a crucial component for data-intensive workloads such as machine learning and scientific computing. As the complexity of data grows, scientists often encounter a dilemma between the highly specialized dense tensor algebra and efficient structure-aware algorithms provided by sparse tensor algebra. In this paper, we introduce DASTAC, a framework to propagate the tensors's captured high-level structure down to low-level code generation by incorporating techniques such as automatic data layout compression, polyhedral analysis, and affine code generation. Our methodology reduces memory footprint by automatically detecting the best data layout, heavily benefits from polyhedral optimizations, leverages further optimizations, and enables parallelization through MLIR. Through extensive experimentation, we show that DASTAC achieves 1 to 2 orders of magnitude speedup over TACO, a state-of-the-art sparse tensor compiler, and StructTensor, a state-of-the-art structured tensor algebra compiler, with a significantly lower memory footprint.",
+  "doi": "10.48550/arxiv.2407.13726",
+  "openalex": "W4402346403",
+  "status": "ok",
+  "title": "Compressing Structured Tensor Algebra"
+ },
+ "10.48550_arxiv.2604.17198": {
+  "abstract": "Sparse tensor algebra is challenging to efficiently parallelize due to the irregular, data-dependent, and potentially skewed structure of sparse computation. We propose the first partitioning algorithm that provably load balances the computation of any sparse tensor algebra expression across parallel execution units. Our algorithm generalizes parallel merging algorithms to any number of operands, and to multi-dimensional, hierarchical sparse data structures. We implement our algorithm within an existing sparse tensor algebra compilation framework to automatically generate parallel sparse tensor algebra kernels that target multi-core CPUs and GPUs. We show that our generated code is competitive with hand-implemented parallelization strategies used by vendor libraries like Intel MKL and NVIDIA cuSPARSE (geo-means of $0.73$--$3.4\\times$) and \\textsc{Taco} (geo-means of $1.0$--$2.4\\times$), and significantly outperforms general-purpose strategies for sparse tensor expressions where specialized algorithms have not been developed (geo-means of $2.0$--$6.4\\times$).",
+  "doi": "10.48550/arxiv.2604.17198",
+  "openalex": "W7155046096",
+  "status": "ok",
+  "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution"
+ },
+ "10.48550_arxiv.2606.20855": {
+  "abstract": "Sparse tensors represent data that is mostly zero or some other compressible fill pattern. Such datasets can be massive, so optimized tensor algebra libraries and compilers have been developed to exploit these patterns to improve performance. Existing systems, however, frequently lack support for parallelism, especially when outputs are sparse or multiple inputs are sparse. We propose WingSpan, a sparse tensor language enabling unrestricted parallel programming. WingSpan supports arbitrary composition of parallel loops and data structures, matching or exceeding the performance of hand-optimized parallel routines on critical kernels such as SpGEMM. We also introduce a dependence theory for the safety of parallel programs involving sparse tensors and structures beyond sparsity.",
+  "doi": "10.48550/arxiv.2606.20855",
+  "openalex": "W7165642973",
+  "status": "ok",
+  "title": "WingSpan: Concurrency and Dependence for Sparse and Structured Tensor Compilers"
+ },
+ "s2-682b8117bed888d5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Bring Your Own Formats and Kernels: Composable Abstractions for Sparse Matrix Computation"
+ },
+ "s2-8d858de9239330b0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spira: Exploiting Voxel Data Structural Properties for Efficient Sparse Convolution in Point Cloud Networks"
+ },
+ "s2-ce557ca29d25d409": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Edinburgh Research Explorer A semi-ring dictionary query language for data science"
+ }
+}

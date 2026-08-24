@@ -1,0 +1,93 @@
+{
+ "10.1109_dodugc.2005.53": {
+  "abstract": "Algorithm implementation efficiency is key to delivering high-performance computing capabilities to demanding, high throughput DoD signal and image processing applications and simulations. Significant progress has been made in compiler optimization of serial programs, but many applications require parallel processing, which brings with it the difficult task of determining efficient mappings of algorithms to multiprocessor computers. The pMapper infrastructure addresses the problem of performance optimization of multistage MATLAB applications on parallel architectures. pMapper is an automatic performance tuning library written as a layer on top of pMatlab. pMatlab is a parallel Matlab toolbox that provides MATLAB users with global array semantics. While pMatlab abstracts the message-passing interface, the responsibility of generating maps for numerical arrays still falls on the user. A processor map for a numerical array is defined as an assignment of blocks of data to processing elements. Choosing the best mapping for a set of numerical arrays in a program is a nontrivial task that requires significant knowledge of programming languages, parallel computing, and processor architecture. pMapper automates the task of map generation, increasing the ease of programming and productivity. In addition to automating the mapping of parallel Matlab programs, pMapper could be used as a mapping tool for embedded systems. This paper addresses the design details of the pMapper infrastructure and presents preliminary results.",
+  "doi": "10.1109/dodugc.2005.53",
+  "openalex": "W2153096900",
+  "status": "ok",
+  "title": "pMapper: Automatic Mapping of Parallel Matlab Programs"
+ },
+ "10.1109_icara.2000.4804024": {
+  "abstract": "This paper introduces a general purpose graphics processing unit (GPGPU) stream processing implementation of moment invariants using an integral image or summed area table approach. Summed area tables have been used to help attain real-time performance for some classifier systems, however due to the computational complexity of moment invariants, a high throughput computational platform is required to obtain real-time processing. The stream programming algorithm is presented and its performance is evaluated and compared with alternate CPU based approaches. The significant performance gains means that moment invariant classifiers can be implemented for real-time performance on a GPGPU that would not be possible on current CPU platforms.",
+  "doi": "10.1109/icara.2000.4804024",
+  "openalex": "W2112713251",
+  "status": "ok",
+  "title": "Stream processing of moment invariants for real-time classifiers"
+ },
+ "10.1109_imtc.2009.5168636": {
+  "abstract": "This paper introduces an IO bandwidth reduction technique for real-time moment invariant classifier systems running on both CPUs and GPUs. This system can run in real time on commodity general purpose graphics processor unit (GPGPU) systems. The output IO is reduced by calculating the locations of objects of interest using a projection of the 2D classified outputs onto the two axes of the image. The two projections are then used to calculate the positions of a large proportion of the hits in the original image. For a system with a low number of hits there is no loss during this compression, while a system with a large number of hits only suffer losses in a small number of degenerate cases that have a low probability of occurrence in real classifier systems. Lower compression rate approaches can reduce the probability of losses at the expense of higher bandwidth and potentially lower frame rates.",
+  "doi": "10.1109/imtc.2009.5168636",
+  "openalex": "W2164873497",
+  "status": "ok",
+  "title": "Reducing IO bandwidth for GPU based moment invariant classifier systems"
+ },
+ "10.1109_pdcat.2008.46": {
+  "abstract": "This paper presents the design and evaluation of the stream processing implementation of the integral image algorithm. The integral image is a key component of many image processing algorithms in particular the Haar-like feature based systems. Modern GPUs provide a large number of processors with a peak floating point performance that is significantly higher than current general CPUs. This results in significant performance improvement when the Integral Image calculation for large input images is offloaded onto the GPU of the system.",
+  "doi": "10.1109/pdcat.2008.46",
+  "openalex": "W2141591263",
+  "status": "ok",
+  "title": "Stream Processing of Integral Images for Real-Time Object Detection"
+ },
+ "10.1145_1142473.1142522": {
+  "abstract": "Stream processing applications have recently gained significant attention in the networking and database community. At the core of these applications is a stream processing engine that performs resource allocation and management to support continuous tracking of queries over collections of physically-distributed and rapidly-updating data streams. While numerous stream processing systems exist, there has been little work on understanding the performance characteristics of these applications in a distributed setup. In this paper, we examine the performance bottlenecks of streaming data applications, in particular the Linear Road stream data management benchmark, in achieving good performance in large-scale distributed environments, using the Stream Processing Core (SPC), a stream processing middleware we have developed. First, we present the design and implementation of the Linear Road benchmark on the SPC middleware. SPC has been designed to scale to tens of thousands of processing nodes, while supporting concurrent applications and multiple simultaneous queries. Second, we identify the main performance bottlenecks in the Linear Road application in achieving scalability and low query response latency. Our results show that data locality, buffer capacity, physical allocation of processing elements to infrastructure nodes, and packaging for transporting streamed data are important factors in achieving good application performance. Though we evaluate our system primarily for the Linear Road application, we believe it also provides useful insights into the overall system behavior for supporting other distributed and large-scale continuous streaming data applications. Finally, we examine how SPC can be used and tuned to enable a very efficient implementation of the Linear Road application in a distributed environment.",
+  "doi": "10.1145/1142473.1142522",
+  "openalex": "W2147544162",
+  "status": "ok",
+  "title": "Design, implementation, and evaluation of the linear road bnchmark on the stream processing core"
+ },
+ "10.1145_2884781.2884815": {
+  "abstract": "Reactive programming is a recent programming technique that provides dedicated language abstractions for reactive software. Reactive programming relieves developers from manually updating outputs when the inputs of a computation change, it overcomes a number of well-know issues of the Observer design pattern, and it makes programs more comprehensible. Unfortunately, complementing the new paradigm with proper tools is a vastly unexplored area. Hence, as of now, developers can embrace reactive programming only at the cost of a more challenging development process.",
+  "doi": "10.1145/2884781.2884815",
+  "openalex": "W2348402940",
+  "status": "ok",
+  "title": "Debugging for reactive programming"
+ },
+ "10.1201_9781315221908-19": {
+  "abstract": "This chapter presents that high performance embedded computing (HPEC) software architectures and evaluation metrics. A canonical HPEC application is used to illustrate basic concepts. The chapter discusses different types of parallelism are reviewed, and performance analysis techniques. It presents a typical programmable multicomputer and explores the performance trade-offs of different parallel mappings on this computer using key system performance metrics. HPEC systems are amongst the most challenging systems in the world to build. Synthetic Aperture Radar (SAR) is one of the most common modes in a radar system and one of the most computationally stressing to implement. Often the first step in the development of a system is to produce a rough estimate of how many processors will be needed. The parallel opportunities at each stage of the calculation discussed in the previous section show that there are many different ways to exploit parallelism in this application. The chapter concludes with a discussion of the impact of different software implementations approaches.",
+  "doi": "10.1201/9781315221908-19",
+  "openalex": "W2483095339",
+  "status": "ok",
+  "title": "Performance Metrics and Software Architecture"
+ },
+ "10.1504_ijista.2009.025105": {
+  "abstract": "An extended set of Haar-like features for image sensors beyond the standard vertically and horizontally aligned Haar-like features and the 45° twisted Haar-like features are introduced. The extended rotated Haar-like features are based on the standard Haar-like features that have been rotated based on whole integer pixel-based rotations. These rotated feature values can also be calculated using rotated integral images which mean that they can be fast and efficiently calculated with just eight operations irrespective of the feature size. The integral image calculations can be offloaded to the graphical processing unit (GPU) using the stream processing paradigm. The integral image calculation on the GPU is seen to be faster than the traditional central processing unit implementation of the algorithm, for large image sizes, allowing more complex classifiers to be implemented in real-time.",
+  "doi": "10.1504/ijista.2009.025105",
+  "openalex": "W1996008127",
+  "status": "ok",
+  "title": "Stream processing for fast and efficient rotated Haar-like features using rotated integral images"
+ },
+ "oa-W123297562": {
+  "abstract": "To bring out high performance in applications running on a CELL Broadband Engine processor (CELL processor), developers have to know its architecture and have special skills of the programming. As we know, the CELL processor is suitable for stream processing, but the CELL processor itself is not specialized for stream processing and the SDK of the CELL processor does not support stream processing. In this paper, we focus on stream processing on the CELL processor, and we design and implement a system to support stream processing for the CELL processor. We evaluate the performance of stream processing on the CELL processor with our approach. The result shows the effectiveness of stream processing for the CELL processor.",
+  "doi": null,
+  "openalex": "W123297562",
+  "status": "ok",
+  "title": "Design and implementation of stream processing system and library for CELL broadband engine processors"
+ },
+ "oa-W2121082877": {
+  "abstract": "The recent switch to parallel microprocessors is a milestone in the history of computing. Industry has laid out a roadmap for multicore designs that preserves the programming paradigm of the past via binary compatibility and cache coherence. Conventional wisdom is now to double the number of cores on a chip with each silicon generation. A multidisciplinary group of Berkeley researchers met nearly two years to discuss this change. Our view is that this evolutionary approach to parallel hardware and software may work from 2 or 8 processor systems, but is likely to face diminishing returns as 16 and 32 processor systems are realized, just as returns fell with greater instruction-level parallelism. We believe that much can be learned by examining the success of parallelism at the extremes of the computing spectrum, namely embedded computing and high performance computing. This led us to frame the parallel landscape with seven questions, and to recommend the following: • The overarching goal should be to make it easy to write programs that execute efficiently on highly parallel computing systems • The target should be 1000s of cores per chip, as these chips are built from processing elements that are the most efficient in MIPS (Million Instructions per Second) per watt, MIPS per area of silicon, and MIPS per development dollar. • Instead of traditional benchmarks, use 13 “Dwarfs” to design and evaluate parallel programming models and architectures. (A dwarf is an algorithmic method that captures a pattern of computation and communication.) • “Autotuners” should play a larger role than conventional compilers in translating parallel programs. • To maximize programmer productivity, future programming models must be more human-centric than the conventional focus on hardware or applications. • To be successful, programming models should be independent of the number of processors. • To maximize application efficiency, programming models should support a wide range of data types and successful models of parallelism: task-level parallelism, word-level parallelism, and bit-level parallelism. 1 The Landscape of Parallel Computing Research: A View From Berkeley • Architects should not include features that significantly affect performance or energy if programmers cannot accurately measure their impact via performance counters and energy counters. • Traditional operating systems will be deconstructed and operating system functionality will be orchestrated using libraries and virtual machines. • To explore the design space rapidly, use system emulators based on Field Programmable Gate Arrays (FPGAs) that are highly scalable and low cost. Since real world applications are naturally parallel and hardware is naturally parallel, what we need is a programming model, system software, and a supporting architecture that are naturally parallel. Researchers have the rare opportunity to re-invent these cornerstones of computing, provided they simplify the efficient programming of highly parallel systems.",
+  "doi": null,
+  "openalex": "W2121082877",
+  "status": "ok",
+  "title": "The Landscape of Parallel Computing Research: A View from Berkeley"
+ },
+ "oa-W2130563583": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2130563583",
+  "status": "no_abstract",
+  "title": "A Framework for Parallel Streaming Applications"
+ },
+ "oa-W2321248633": {
+  "abstract": "Stream programs represent an important class of high-performance computations. Defined by their regular processing of sequences of data, stream programs appear most commonly in the context of audio, video, and digital signal processing, though also in networking, encryption, and other areas. Stream programs can be naturally represented as a graph of independent actors that communicate explicitly over data channels. In this work we focus on programs where the input and output rates of actors are known at compile time, enabling aggressive transformations by the compiler; this model is known as synchronous dataflow.\r\nWe develop a new programming language, StreamIt, that empowers both programmers and compiler writers to leverage the unique properties of the streaming domain. StreamIt offers several new abstractions, including hierarchical single-input single-output streams, composable primitives for data reordering, and a mechanism called teleport messaging that enables precise event handling in a distributed environment. We demonstrate the feasibility of developing applications in StreamIt via a detailed characterization of our 34,000-line benchmark suite, which spans from MPEG-2 encoding/decoding to GMTI radar processing. We also present a novel dynamic analysis for migrating legacy C programs into a streaming representation.\r\nThe central premise of stream programming is that it enables the compiler to perform powerful optimizations. We support this premise by presenting a suite of new transformations. We describe the first translation of stream programs into the compressed domain, enabling programs written for uncompressed data formats to automatically operate directly on compressed data formats (based on LZ77). This technique offers a median speedup of 15x on common video editing operations. We also review other optimizations developed in the StreamIt group, including automatic parallelization (offering an 11x mean speedup on the 16-core Raw machine), optimization of linear computations (offering a 5.5x average speedup on a Pentium 4), and cache-aware scheduling (offering a 3.5x mean speedup on a StrongARM 1100). While these transformations are beyond the reach of compilers for traditional languages such as C, they become tractable given the abundant parallelism and regular communication patterns exposed by the stream programming model. (Copies available exclusively from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307. Ph. 617-253-5668; Fax 617-253-1690.)",
+  "doi": null,
+  "openalex": "W2321248633",
+  "status": "ok",
+  "title": "Language and compiler support for stream programs"
+ },
+ "oa-W3024282042": {
+  "abstract": "International audience",
+  "doi": null,
+  "openalex": "W3024282042",
+  "status": "ok",
+  "title": "Bounded Stream Scheduling in Polyhedral OpenStream"
+ }
+}

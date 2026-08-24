@@ -1,0 +1,611 @@
+{
+ "10.1007_978-3-030-80129-8_66": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-80129-8_66",
+  "openalex": "W3184285164",
+  "status": "no_abstract",
+  "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning"
+ },
+ "10.1007_978-3-642-37051-9_8": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-37051-9_8",
+  "openalex": "W2104355531",
+  "status": "no_abstract",
+  "title": "Architecture-Independent Dynamic Information Flow Tracking"
+ },
+ "10.1007_978-3-642-41284-4_21": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-41284-4_21",
+  "openalex": "W205715760",
+  "status": "no_abstract",
+  "title": "CloudFence: Data Flow Tracking as a Cloud Service"
+ },
+ "10.1007_s10766-015-0396-z": {
+  "abstract": null,
+  "doi": "10.1007/s10766-015-0396-z",
+  "openalex": "W2190564708",
+  "status": "no_abstract",
+  "title": "Using Machine Learning Techniques to Detect Parallel Patterns of Multi-threaded Applications"
+ },
+ "10.1109_cgo.2011.5764695": {
+  "abstract": "Dynamic dataflow analyses find software errors by tracking meta-values associated with a program's runtime data. Despite their benefits, the orders-of-magnitude slowdowns that accompany these systems limit their use to the development stage; few users would tolerate such overheads. This work extends dynamic dataflow analyses with a novel sampling system which ensures that runtime slowdowns do not exceed a user-defined threshold. While previous sampling methods are inadequate for dataflow analyses, our technique efficiently reduces the number and size of analyzed dataflows. In doing so, it allows individual users to test large, stochastically chosen sets of a process's dataflows. Large populations can therefore, in aggregate, analyze a larger portion of the program than is possible by any single user running a complete, but slow, analysis. In our experimental evaluation, we show that 1 out of every 10 users expose a number of security exploits while only experiencing a 10% performance slowdown, in contrast with the 100× overhead caused by a complete analysis that exposes the same problems.",
+  "doi": "10.1109/cgo.2011.5764695",
+  "openalex": "W3147094945",
+  "status": "ok",
+  "title": "Highly scalable distributed dataflow analysis"
+ },
+ "10.1109_cgo.2013.6494985": {
+  "abstract": "Shadow memory is a critical component of many dynamic program analysis frameworks with applications ranging from memory debugging to computer security. Most recent work has focused on optimizing the execution time of analyses that associate a single tag with each memory address. However, an important new class of dynamic analyses (poly-scopic analyses) requires multiple tags for each memory address. These new analyses place additional burdens on memory shadowing infrastructures, especially with regards to memory overhead. Existing shadow memory infrastructures are either unequipped to handle these additional burdens or result in runtime and memory overheads that make them impractical for all but small inputs. In this paper we propose vector shadow memories (VSMs) as an infrastructure to support poly-scopic analyses. Furthermore we introduce Skadu, a VSM implementation that employs several novel techniques to greatly reduce the runtime and memory overhead associated with the two major challenges of VSMs: tag validation and garbage collection. Our results show that on two separate poly-scopic analyses, memory footprint profiling and hierarchical critical path analysis, Skadu significantly reduces the associated memory overhead: by 14.2× and 11.4× respectively. In both cases, Skadu makes poly-scopic analysis practical for ordinary desktop and laptop machines.",
+  "doi": "10.1109/cgo.2013.6494985",
+  "openalex": "W2135348627",
+  "status": "ok",
+  "title": "Skadu: Efficient vector shadow memories for poly-scopic program analysis"
+ },
+ "10.1109_cgo.2013.6494998": {
+  "abstract": "Software bugs comprise the greatest threat to computer security today. Though enormous effort has been expended on eliminating security exploits, contemporary testing techniques are insufficient to deliver software free of security vulnerabilities. In this paper we propose a novel approach to security vulnerability analysis: dynamic control frontier profiling. Security exploits are often buried in rarely executed code paths hidden just beyond the path space explored by end-users. Therefore, we develop Schnauzer, a distributed sampling technology to discover the dynamic control frontier, which forms the line of demarcation between dynamically executed and unseen paths. This frontier may then be used to direct tools (such as white-box fuzz testers) to attain a level of testing coverage currently unachievable. We further demonstrate that the dynamic control frontier paths are a rich source of security bugs, sensitizing many known security exploits.",
+  "doi": "10.1109/cgo.2013.6494998",
+  "openalex": "W1968161191",
+  "status": "ok",
+  "title": "Schnauzer: scalable profiling for likely security bug sites"
+ },
+ "10.1109_cgo.2015.7054204": {
+  "abstract": "In the era of mobile and cloud computing, cross-ISA (Instruction Set Architecture) binary translation attracts increasing attentions due to the ISA diversity of computing platforms. To easily adapt to vast guest- and host-ISAs with minimal porting efforts, existing cross-ISA binary translators (e.g., QEMU) are typically built upon ISA-independent Intermediate Representation (IR). Although IR conceals the architectural details of different IS As, it also prevents enforcing several effective ISA-specific optimizations, which results in severe performance degradation. To improve the performance of cross-ISA binary translation without loss of portability, we present a fast cross-ISA binary translator, Hermes, by conducting post-optimization on the translated code, rather than on the IR as conventional binary translators do. The proposed post-optimization technique uses Host-specific Data Dependence Graph (HDDG) to significantly eliminate redundant instructions, including arithmetic, load/store and call/return-emulation instructions. To validate our approach, we implement Hermes on a commercial MIPS host system for both ×86 and ARM guest. Compared with QEMU dynamic binary translator, HERMES improves the performance by a factor of 3.14× and 5.18× for ×86 and ARM guest, respectively. Compared with state-of-the-art static binary translator, HERMES achieves comparable performance, while it reduces the translation overhead by 185×.",
+  "doi": "10.1109/cgo.2015.7054204",
+  "openalex": "W4229566048",
+  "status": "ok",
+  "title": "Hermes: A fast cross-ISA binary translator with post-optimization"
+ },
+ "10.1109_dsn.2015.45": {
+  "abstract": "Memory check pointing is a pivotal technique in systems reliability, with applications ranging from crash recovery to replay debugging. Unfortunately, many traditional memory check pointing use-cases require high-frequency checkpoints, something for which existing application-level solutions are not well-suited. The problem is that they incur either substantial run-time performance overhead, or poor memory usage guarantees. As a result, their application in practice is hampered. This paper presents Lightweight Memory Check pointing (LMC), a new user-level memory check pointing technique that combines low performance overhead with strong memory usage guarantees for high check pointing frequencies. To this end, LMC relies on compiler-based instrumentation to shadow the entire memory address space of the running program and incrementally checkpoint modified memory bytes in a LMC-maintained shadow state. Our evaluation on popular server applications demonstrates the viability of our approach in practice, confirming that LMC imposes low performance overhead with strictly bounded memory usage at runtime.",
+  "doi": "10.1109/dsn.2015.45",
+  "openalex": "W1571050301",
+  "status": "ok",
+  "title": "Lightweight Memory Checkpointing"
+ },
+ "10.1109_icdcs.2013.13": {
+  "abstract": "Data Stream Processing is an important class of data intensive applications in the \"Big Data\" era. Chip Multi-Processors (CMPs) are the standard hosting platforms in modern data centers. Gaining high performance for stream processing applications on CMPs is therefore of great interest. Since the performance of stream processing applications largely depends on their effective use of the complex cache structure present on CMPs, this paper proposes the StreamMap approach for tuning streaming applications' use of cache. Our major idea is to map application threads to CPU cores to facilitate data sharing AND mitigate memory resource contention among threads in a holistic manner. Applying StreamMap to the IBM's System S middleware leads to improvements of up to 1.8x in the performance of realistic applications over standard Linux OS scheduler on three different CMP platforms.",
+  "doi": "10.1109/icdcs.2013.13",
+  "openalex": "W2100315216",
+  "status": "ok",
+  "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs"
+ },
+ "10.1109_icpp.2011.57": {
+  "abstract": "This paper presents an LLVM+QEMU (LnQ)framework for building high performance and retargetable binary translators with existing compiler modules. Dynamic binary translation is a just-in-time (JIT) compilation from binary code of guest ISA to binary code of host ISA. The quality of translated code is critical to the performance of a dynamic binary translator, which translates code between different IS As, so the translated code is often carefully hand-optimized. As a result, it takes tremendous implementation efforts for software engineers to port an existing dynamic binary translator to anew host ISA. The goal of LnQ framework is to enable the process of building high performance and retarget able dynamic binary translators with existing optimizers and code generation back ends. LnQ framework consists of a translation module and an emulation engine. We design the translation module based on LLVM compiler infrastructure, and use QEMU as our emulation engine. We implement an x86-to-x86 64 dynamic binary translator with our LnQ framework to show that the framework is retarget able, and conduct experiments on SPECCPU2006 benchmarks to show that the resulting binary translator has good performance. The experiment results indicate that the x86-to-x86 64 LnQ translator achieves an average speedup of 1.62X in integer benchmarks, and 3.02X in floating point benchmarks than QEMU.",
+  "doi": "10.1109/icpp.2011.57",
+  "openalex": "W2166847391",
+  "status": "ok",
+  "title": "LnQ: Building High Performance Dynamic Binary Translators with Existing Compiler Backends"
+ },
+ "10.1109_iiswc.2012.6402908": {
+  "abstract": "Benchmarks capture the essence of many important real-world applications and allow performance, and power analysis while developing new systems. Synthetic benchmarks are a miniaturized form of benchmarks that allow high simulation speeds and act as proxies to proprietary applications. Software architecture principles guide the development of new applications and benchmarks. We leverage software architectural patterns in developing synthetic benchmarks for embedded multicore systems. We developed an automated framework complete with characterization and synthesis components and performed experiments on PARSEC and Rodinia benchmarks. Our benchmarks can be run on any given infrastructure, that is, SMP or message passing, unlike previously developed benchmarks. Hence, this allows us to target heterogeneous embedded multicore systems. Our results show that the synthetic benchmarks and the real applications are similar with respect to various micro-architecture dependent as well as independent metrics.",
+  "doi": "10.1109/iiswc.2012.6402908",
+  "openalex": "W2088285489",
+  "status": "ok",
+  "title": "Using software architectural patterns for synthetic embedded multicore benchmark development"
+ },
+ "10.1109_ipdps53621.2022.00087": {
+  "abstract": "A race detector for task-parallel code typically consists of two main components - a reachability analysis component that checks whether two instructions are logically in parallel and an access history component that keeps track of memory locations accessed by previous instructions. Race detectors from prior work typically utilize a hashmap to maintain the access history, which provides asymptotically optimal overhead per operation but can incur significant overhead in practice, since the detector needs to insert into and query the hashmap for every memory access. An exception is STINT by Xu et al., which race detects task-parallel code by coalescing memory accesses into intervals, or continuous memory locations accessed within a sequence of instructions without any parallel construct. STINT utilizes a treap to manage access history that allows for insertions and queries of non-overlapping intervals. While a treap incurs higher asymptotic overhead per operation, this strategy works well in practice as the race detector performs operation on the access history with much lower frequency compared to the strategy that utilizes a hashmap. STINT only executes task-parallel code sequentially, however, due to the unique design of their treap that ensures no overlapping intervals exist in the tree. Parallelizing STINT efficiently is non-trivial, as it would require a concurrent treap that ensures no overlapping interval, which is challenging to design and likely incurs high synchronization overhead. This work proposes PINT, a race detector that, like STINT, race detects task-parallel code at the interval granularity and utilizes the same treap design to maintain access history. PINT executes the computation in parallel, however, while keeping the parallelization / synchronization overhead low. A key insight is that, PINT separates out operations needed for race detection into the core part (e.g., reachability maintenance) and the access history part. Doing so allows PINT to parallelize the core part efficiently and perform the access history part asynchronously, thereby incurring low overhead.",
+  "doi": "10.1109/ipdps53621.2022.00087",
+  "openalex": "W4285503917",
+  "status": "ok",
+  "title": "PINT: Parallel INTerval-Based Race Detector"
+ },
+ "10.1109_micro.2014.21": {
+  "abstract": "Rampant dynamism due to load fluctuations, co runner changes, and varying levels of interference poses a threat to application quality of service (QoS) and has limited our ability to allow co-locations in modern warehouse scale computers (WSCs). Instruction set features such as the non-temporal memory access hints found in modern ISAs (both ARM and x86) may be useful in mitigating these effects. However, despite the challenge of this dynamism and the availability of an instruction set mechanism that might help address the problem, a key capability missing in the system software stack in modern WSCs is the ability to dynamically transform (and re-transform) the executing application code to apply these instruction set features when necessary. In this work we introduce protean code, a novel approach for enacting arbitrary compiler transformations at runtime for native programs running on commodity hardware with negligible (<;1%) overhead. The fundamental insight behind the underlying mechanism of protean code is that, instead of maintaining full control throughout the program's execution as with traditional dynamic optimizers, protean code allows the original binary to execute continuously and diverts control flow only at a set of virtualized points, allowing rapid and seamless rerouting to the new code variants. In addition, the protean code compiler embeds IR with high-level semantic information into the program, empowering the dynamic compiler to perform rich analysis and transformations online with little overhead. Using a fully functional protean code compiler and runtime built on LLVM, we design PC3D, Protean Code for Cache Contention in Datacenters. PC3D dynamically employs non-temporal access hints to achieve utilization improvements of up to 2.8x (1.5x on average) higher than state-of-the-art contention mitigation runtime techniques at a QoS target of 98%.",
+  "doi": "10.1109/micro.2014.21",
+  "openalex": "W1994790794",
+  "status": "ok",
+  "title": "Protean Code: Achieving Near-Free Online Code Transformations for Warehouse Scale Computers"
+ },
+ "10.1109_tc.2014.2349522": {
+  "abstract": "We present a novel automated multicore benchmark synthesis framework with characterization and generation components. Our framework uses parallel patterns in capturing important characteristics of multi-threaded applications and generates synthetic multicore benchmarks from those applications. The resulting synthetic benchmarks are small, fast, portable, human-readable, and they accurately reflect microarchitecture dependent and independent characteristics of the original multicore applications. Also, they can use either Pthreads or MCA libraries. We implement our techniques in the MINIME tool and generate synthetic benchmarks from PARSEC, Rodinia, and EEMBC MultibenchTM benchmarks on x86 and Power Architecture®platforms. We show that synthetic benchmarks are representative across a range of multicore machines with different architectures, while being on average 21× faster and 14× smaller than original benchmarks.",
+  "doi": "10.1109/tc.2014.2349522",
+  "openalex": "W2035252178",
+  "status": "ok",
+  "title": "MINIME: Pattern-Aware Multicore Benchmark Synthesizer"
+ },
+ "10.1145_1806651.1806667": {
+  "abstract": "Shadow memory is used by dynamic program analysis tools to store metadata for tracking properties of application memory. The efficiency of mapping between application memory and shadow memory has substantial impact on the overall performance of such analysis tools. However, traditional memory mapping schemes that work well on 32-bit architectures cannot easily port to 64-bit architectures due to the much larger 64-bit address space.",
+  "doi": "10.1145/1806651.1806667",
+  "openalex": "W2117322468",
+  "status": "ok",
+  "title": "Efficient memory shadowing for 64-bit architectures"
+ },
+ "10.1145_1837855.1806667": {
+  "abstract": "Shadow memory is used by dynamic program analysis tools to store metadata for tracking properties of application memory. The efficiency of mapping between application memory and shadow memory has substantial impact on the overall performance of such analysis tools. However, traditional memory mapping schemes that work well on 32-bit architectures cannot easily port to 64-bit architectures due to the much larger 64-bit address space. This paper presents EMS64, an efficient memory shadowing scheme for 64-bit architectures. By taking advantage of application reference locality and unused regions in the 64-bit address space, EMS64 provides a fast and flexible memory mapping scheme without relying on any underlying platform features or requiring any specific shadow memory size. Our experiments show that EMS64 is able to reduce the runtime shadow memory translation overhead to 81% on average, which almost halves the overhead of the fastest 64-bit shadow memory system we are aware of.",
+  "doi": "10.1145/1837855.1806667",
+  "openalex": "W3113191890",
+  "status": "ok",
+  "title": "Efficient memory shadowing for 64-bit architectures"
+ },
+ "10.1145_1880037.1880038": {
+  "abstract": "Profiling and online analysis are important tasks in program understanding and feedback-directed optimization. However, fine-grained profiling and online analysis tend to seriously slow down the application. To cope with the slowdown, one may have to terminate the process early or resort to sampling. The former tends to distort the result because of warm-up effects. The latter runs the risk of missing important effects because sampling was turned off during the time that these effects appeared. A promising approach is to make use of the parallel processing capabilities of the now ubiquitous multicore processors to speed up the profiling and analysis process. In this article, we present Pipelined Profiling and Analysis (PiPA), which is a novel technique for parallelizing dynamic program profiling and analysis by taking advantage of multicore systems. In essence, the application under examination is profiled using a dynamic instrumentation tool. Optimized instrumentation code outputs the profile information in a succinct format, that we call the REP format, to buffers. This lightweight trace compression minimizes the processing overhead impinged on the application whenever a buffer is full. Another thread recovers the required information from the REP buffer. The recovered full profile is then divided up and passed to multiple threads for further analysis. To achieve the best performance, the entire system has to be well-balanced. We have implemented prototypes of PiPA using two dynamic instrumentation systems, namely DynamoRIO and Pin, thereby demonstrating its portability. Our experiments show that PiPA is able to speed up the overall profiling and analysis tasks significantly. Compared to the more than 100× slowdown of Cachegrind and the 32× slowdown of Pin dcache, we achieved a mere 10.2× slowdown on an 8-core system. In this paper, we will also describe the insights we gained in obtaining the balance needed for PiPA to perform optimally.",
+  "doi": "10.1145/1880037.1880038",
+  "openalex": "W1964104501",
+  "status": "ok",
+  "title": "PiPA"
+ },
+ "10.1145_1952682.1952688": {
+  "abstract": "In today's multi-core systems, cache contention due to true and false sharing can cause unexpected and significant performance degradation. A detailed understanding of a given multi-threaded application's behavior is required to precisely identify such performance bottlenecks. Traditionally, however, such diagnostic information can only be obtained after lengthy simulation of the memory hierarchy.",
+  "doi": "10.1145/1952682.1952688",
+  "openalex": "W2123065508",
+  "status": "ok",
+  "title": "Dynamic cache contention detection in multi-threaded applications"
+ },
+ "10.1145_1993316.1993553": {
+  "abstract": "Many recent parallelization tools lower the barrier for parallelizing a program, but overlook one of the first questions that a programmer needs to answer: which parts of the program should I spend time parallelizing ? This paper examines Kremlin, an automatic tool that, given a serial version of a program, will make recommendations to the user as to what regions (e.g. loops or functions) of the program to attack first. Kremlin introduces a novel hierarchical critical path analysis and develops a new metric for estimating the potential of parallelizing a region: self-parallelism . We further introduce the concept of a parallelism planner , which provides a ranked order of specific regions to the programmer that are likely to have the largest performance impact when parallelized. Kremlin supports multiple planner personalities , which allow the planner to more effectively target a particular programming environment or class of machine. We demonstrate the effectiveness of one such personality, an OpenMP planner, by comparing versions of programs that are parallelized according to Kremlin's plan against third-party manually parallelized versions. The results show that Kremlin's OpenMP planner is highly effective, producing plans whose performance is typically comparable to, and sometimes much better than, manual parallelization. At the same time, these plans would require that the user parallelize significantly fewer regions of the program.",
+  "doi": "10.1145/1993316.1993553",
+  "openalex": "W2115920894",
+  "status": "ok",
+  "title": "Kremlin"
+ },
+ "10.1145_1993498.1993553": {
+  "abstract": "Many recent parallelization tools lower the barrier for parallelizing a program, but overlook one of the first questions that a programmer needs to answer: which parts of the program should I spend time parallelizing?",
+  "doi": "10.1145/1993498.1993553",
+  "openalex": "W4230415451",
+  "status": "ok",
+  "title": "Kremlin"
+ },
+ "10.1145_2000064.2000084": {
+  "abstract": "Dynamic data race detectors are an important mechanism for creating robust parallel programs. Software race detectors instrument the program under test, observe each memory access, and watch for inter-thread data sharing that could lead to concurrency errors. While this method of bug hunting can find races that are normally difficult to observe, it also suffers from high runtime overheads. It is not uncommon for commercial race detectors to experience 300x slowdowns, limiting their usage.",
+  "doi": "10.1145/2000064.2000084",
+  "openalex": "W2128717053",
+  "status": "ok",
+  "title": "Demand-driven software race detection using hardware performance counters"
+ },
+ "10.1145_2007477.1952688": {
+  "abstract": "In today's multi-core systems, cache contention due to true and false sharing can cause unexpected and significant performance degradation. A detailed understanding of a given multi-threaded application's behavior is required to precisely identify such performance bottlenecks. Traditionally, however, such diagnostic information can only be obtained after lengthy simulation of the memory hierarchy. In this paper, we present a novel approach that efficiently analyzes interactions between threads to determine thread correlation and detect true and false sharing. It is based on the following key insight: although the slowdown caused by cache contention depends on factors including the thread-to-core binding and parameters of the memory hierarchy, the amount of data sharing is primarily a function of the cache line size and application behavior. Using memory shadowing and dynamic instrumentation, we implemented a tool that obtains detailed sharing information between threads without simulating the full complexity of the memory hierarchy. The runtime overhead of our approach --- a 5x slowdown on average relative to native execution --- is significantly less than that of detailed cache simulation. The information collected allows programmers to identify the degree of cache contention in an application, the correlation among its threads, and the sources of significant false sharing. Using our approach, we were able to improve the performance of some applications up to a factor of 12x. For other contention-intensive applications, we were able to shed light on the obstacles that prevent their performance from scaling to many cores.",
+  "doi": "10.1145/2007477.1952688",
+  "openalex": "W3000376980",
+  "status": "ok",
+  "title": "Dynamic cache contention detection in multi-threaded applications"
+ },
+ "10.1145_2024723.2000084": {
+  "abstract": "Dynamic data race detectors are an important mechanism for creating robust parallel programs. Software race detectors instrument the program under test, observe each memory access, and watch for inter-thread data sharing that could lead to concurrency errors. While this method of bug hunting can find races that are normally difficult to observe, it also suffers from high runtime overheads. It is not uncommon for commercial race detectors to experience 300x slowdowns, limiting their usage. This paper presents a hardware-assisted demand-driven race detector. We are able to observe cache events that are indicative of data sharing between threads by taking advantage of hardware available on modern commercial microprocessors. We use these to build a race detector that is only enabled when it is likely that inter-thread data sharing is occurring. When little sharing takes place, this demand-driven analysis is much faster than contemporary continuous-analysis tools without a large loss of detection accuracy. We modified the race detector in Intel(R) Inspector XE to utilize our hardware-based sharing indicator and were able to achieve performance increases of 3x and 10x in two parallel benchmark suites and 51x for one particular program.",
+  "doi": "10.1145/2024723.2000084",
+  "openalex": "W4248238279",
+  "status": "ok",
+  "title": "Demand-driven software race detection using hardware performance counters"
+ },
+ "10.1145_2048066.2048108": {
+  "abstract": "Software engineers now face the difficult task of refactoring serial programs for parallel execution on multicore processors. Currently, they are offered little guidance as to how much benefit may come from this task, or how close they are to the best possible parallelization. This paper presents Kismet, a tool that creates parallel speedup estimates for unparallelized serial programs. Kismet differs from previous approaches in that it does not require any manual analysis or modification of the program. This difference allows quick analysis of many programs, avoiding wasted engineering effort on those that are fundamentally limited. To accomplish this task, Kismet builds upon the hierarchical critical path analysis (HCPA) technique, a recently developed dynamic analysis that localizes parallelism to each of the potentially nested regions in the target program. It then uses a parallel execution time model to compute an approximate upper bound for performance, modeling constraints that stem from both hardware parameters and internal program structure.",
+  "doi": "10.1145/2048066.2048108",
+  "openalex": "W2124333827",
+  "status": "ok",
+  "title": "Kismet"
+ },
+ "10.1145_2076021.2048108": {
+  "abstract": "Software engineers now face the difficult task of refactoring serial programs for parallel execution on multicore processors. Currently, they are offered little guidance as to how much benefit may come from this task, or how close they are to the best possible parallelization. This paper presents Kismet, a tool that creates parallel speedup estimates for unparallelized serial programs. Kismet differs from previous approaches in that it does not require any manual analysis or modification of the program. This difference allows quick analysis of many programs, avoiding wasted engineering effort on those that are fundamentally limited. To accomplish this task, Kismet builds upon the hierarchical critical path analysis (HCPA) technique, a recently developed dynamic analysis that localizes parallelism to each of the potentially nested regions in the target program. It then uses a parallel execution time model to compute an approximate upper bound for performance, modeling constraints that stem from both hardware parameters and internal program structure. Our evaluation applies Kismet to eight high-parallelism NAS Parallel Benchmarks running on a 32-core AMD multicore system, five low-parallelism SpecInt benchmarks, and six medium-parallelism benchmarks running on the finegrained MIT Raw processor. The results are compelling. Kismet is able to significantly improve the accuracy of parallel speedup estimates relative to prior work based on critical path analysis.",
+  "doi": "10.1145/2076021.2048108",
+  "openalex": "W4237203163",
+  "status": "ok",
+  "title": "Kismet"
+ },
+ "10.1145_2150976.2150992": {
+  "abstract": "Dynamic binary translation (DBT) is a powerful technique that enables fine-grained monitoring and manipulation of an existing program binary. At the user level, it has been employed extensively to develop various analysis, bug-finding, and security tools. Such tools are currently not available for operating system (OS) binaries since no comprehensive DBT framework exists for the OS kernel. To address this problem, we have developed a DBT framework that runs as a Linux kernel module, based on the user-level DynamoRIO framework. Our approach is unique in that it controls all kernel execution, including interrupt and exception handlers and device drivers, enabling comprehensive instrumentation of the OS without imposing any overhead on user-level code. In this paper, we discuss the key challenges in designing and building an in-kernel DBT framework and how the design differs from user-space. We use our framework to build several sample instrumentations, including simple instruction counting as well as an implementation of shadow memory for the kernel. Using the shadow memory, we build a kernel stack overflow protection tool and a memory addressability checking tool. Qualitatively, the system is fast enough and stable enough to run the normal desktop workload of one of the authors for several weeks.",
+  "doi": "10.1145/2150976.2150992",
+  "openalex": "W2174935658",
+  "status": "ok",
+  "title": "Comprehensive kernel instrumentation via dynamic binary translation"
+ },
+ "10.1145_2150976.2150994": {
+  "abstract": "Numerous tools have been proposed to help developers fix software errors and inefficiencies. Widely-used techniques such as memory checking suffer from overheads that limit their use to pre-deployment testing, while more advanced systems have such severe performance impacts that they may require special-purpose hardware. Previous works have described hardware that can accelerate individual analyses, but such specialization stymies adoption; generalized mechanisms are more likely to be added to commercial processors. This paper demonstrates that the ability to set an unlimited number of fine-grain data watchpoints can reduce the runtime overheads of numerous dynamic software analysis techniques. We detail the watchpoint capabilities required to accelerate these analyses while remaining general enough to be useful in the future. We describe a hardware design that stores watchpoints in main memory and utilizes two different on-chip caches to accelerate performance. The first is a bitmap lookaside buffer that stores fine-grained watchpoints, while the second is a range cache that can efficiently hold large contiguous regions of watchpoints. As an example of the power of such a system, it is possible to use watchpoints to accelerate read/write set checks in a software data race detector by nearly 9x.",
+  "doi": "10.1145/2150976.2150994",
+  "openalex": "W1981092677",
+  "status": "ok",
+  "title": "A case for unlimited watchpoints"
+ },
+ "10.1145_2150976.2150995": {
+  "abstract": "Despite a burgeoning demand for parallel programs, the tools available to developers working on shared-memory multicore processors have lagged behind. One reason for this is the lack of hardware support for inspecting the complex behavior of these parallel programs. Inter-thread communication, which must be instrumented for many types of analyses, may occur with any memory operation. To detect such thread communication in software, many existing tools require the instrumentation of all memory operations, which leads to significant performance overheads. To reduce this overhead, some existing tools resort to random sampling of memory operations, which introduces false negatives. Unfortunately, neither of these approaches provide the speed and accuracy programmers have traditionally expected from their tools. In this work, we present Aikido, a new system and framework that enables the development of efficient and transparent analyses that operate on shared data. Aikido uses a hybrid of existing hardware features and dynamic binary rewriting to detect thread communication with low overhead. Aikido runs a custom hypervisor below the operating system, which exposes per-thread hardware protection mechanisms not available in any widely used operating system. This hybrid approach allows us to benefit from the low cost of detecting memory accesses with hardware, while maintaining the word-level accuracy of a software-only approach. To evaluate our framework, we have implemented an Aikido-enabled vector clock race detector. Our results show that the Aikido enabled race-detector outperforms existing techniques that provide similar accuracy by up to 6.0x, and 76% on average, on the PARSEC benchmark suite.",
+  "doi": "10.1145/2150976.2150995",
+  "openalex": "W2143644287",
+  "status": "ok",
+  "title": "Aikido"
+ },
+ "10.1145_2151024.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application.",
+  "doi": "10.1145/2151024.2151043",
+  "openalex": "W2133692747",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2166956.2166959": {
+  "abstract": "This paper presents an argument for distributing dynamic software analyses to large populations of users in order to locate bugs that cause security flaws. We review a collection of dynamic analysis systems and show that, despite a great deal of effort from the research community, their performance is still too low to allow their use in the field. We then show that there are effective sampling mechanisms for accelerating a wide range of powerful dynamic analyses. These mechanisms reduce the rate at which errors are observed by individual analyses, but this loss can be offset by the subsequent increase in test population. Nevertheless, there are unsolved issues in this domain that deserve attention if this technique is to be widely utilized.",
+  "doi": "10.1145/2166956.2166959",
+  "openalex": "W2063005163",
+  "status": "ok",
+  "title": "The potential of sampling for dynamic analysis"
+ },
+ "10.1145_2189750.2150994": {
+  "abstract": "Numerous tools have been proposed to help developers fix software errors and inefficiencies. Widely-used techniques such as memory checking suffer from overheads that limit their use to pre-deployment testing, while more advanced systems have such severe performance impacts that they may require special-purpose hardware. Previous works have described hardware that can accelerate individual analyses, but such specialization stymies adoption; generalized mechanisms are more likely to be added to commercial processors. This paper demonstrates that the ability to set an unlimited number of fine-grain data watchpoints can reduce the runtime overheads of numerous dynamic software analysis techniques. We detail the watchpoint capabilities required to accelerate these analyses while remaining general enough to be useful in the future. We describe a hardware design that stores watchpoints in main memory and utilizes two different on-chip caches to accelerate performance. The first is a bitmap lookaside buffer that stores fine-grained watchpoints, while the second is a range cache that can efficiently hold large contiguous regions of watchpoints. As an example of the power of such a system, it is possible to use watchpoints to accelerate read/write set checks in a software data race detector by nearly 9x.",
+  "doi": "10.1145/2189750.2150994",
+  "openalex": "W4242112599",
+  "status": "ok",
+  "title": "A case for unlimited watchpoints"
+ },
+ "10.1145_2189750.2150995": {
+  "abstract": "Despite a burgeoning demand for parallel programs, the tools available to developers working on shared-memory multicore processors have lagged behind. One reason for this is the lack of hardware support for inspecting the complex behavior of these parallel programs. Inter-thread communication, which must be instrumented for many types of analyses, may occur with any memory operation. To detect such thread communication in software, many existing tools require the instrumentation of all memory operations, which leads to significant performance overheads. To reduce this overhead, some existing tools resort to random sampling of memory operations, which introduces false negatives. Unfortunately, neither of these approaches provide the speed and accuracy programmers have traditionally expected from their tools. In this work, we present Aikido, a new system and framework that enables the development of efficient and transparent analyses that operate on shared data. Aikido uses a hybrid of existing hardware features and dynamic binary rewriting to detect thread communication with low overhead. Aikido runs a custom hypervisor below the operating system, which exposes per-thread hardware protection mechanisms not available in any widely used operating system. This hybrid approach allows us to benefit from the low cost of detecting memory accesses with hardware, while maintaining the word-level accuracy of a software-only approach. To evaluate our framework, we have implemented an Aikido-enabled vector clock race detector. Our results show that the Aikido enabled race-detector outperforms existing techniques that provide similar accuracy by up to 6.0x, and 76% on average, on the PARSEC benchmark suite.",
+  "doi": "10.1145/2189750.2150995",
+  "openalex": "W4238070624",
+  "status": "ok",
+  "title": "Aikido"
+ },
+ "10.1145_2248487.2150994": {
+  "abstract": "Numerous tools have been proposed to help developers fix software errors and inefficiencies. Widely-used techniques such as memory checking suffer from overheads that limit their use to pre-deployment testing, while more advanced systems have such severe performance impacts that they may require special-purpose hardware. Previous works have described hardware that can accelerate individual analyses, but such specialization stymies adoption; generalized mechanisms are more likely to be added to commercial processors. This paper demonstrates that the ability to set an unlimited number of fine-grain data watchpoints can reduce the runtime overheads of numerous dynamic software analysis techniques. We detail the watchpoint capabilities required to accelerate these analyses while remaining general enough to be useful in the future. We describe a hardware design that stores watchpoints in main memory and utilizes two different on-chip caches to accelerate performance. The first is a bitmap lookaside buffer that stores fine-grained watchpoints, while the second is a range cache that can efficiently hold large contiguous regions of watchpoints. As an example of the power of such a system, it is possible to use watchpoints to accelerate read/write set checks in a software data race detector by nearly 9x.",
+  "doi": "10.1145/2248487.2150994",
+  "openalex": "W4245241961",
+  "status": "ok",
+  "title": "A case for unlimited watchpoints"
+ },
+ "10.1145_2248487.2150995": {
+  "abstract": "Despite a burgeoning demand for parallel programs, the tools available to developers working on shared-memory multicore processors have lagged behind. One reason for this is the lack of hardware support for inspecting the complex behavior of these parallel programs. Inter-thread communication, which must be instrumented for many types of analyses, may occur with any memory operation. To detect such thread communication in software, many existing tools require the instrumentation of all memory operations, which leads to significant performance overheads. To reduce this overhead, some existing tools resort to random sampling of memory operations, which introduces false negatives. Unfortunately, neither of these approaches provide the speed and accuracy programmers have traditionally expected from their tools. In this work, we present Aikido, a new system and framework that enables the development of efficient and transparent analyses that operate on shared data. Aikido uses a hybrid of existing hardware features and dynamic binary rewriting to detect thread communication with low overhead. Aikido runs a custom hypervisor below the operating system, which exposes per-thread hardware protection mechanisms not available in any widely used operating system. This hybrid approach allows us to benefit from the low cost of detecting memory accesses with hardware, while maintaining the word-level accuracy of a software-only approach. To evaluate our framework, we have implemented an Aikido-enabled vector clock race detector. Our results show that the Aikido enabled race-detector outperforms existing techniques that provide similar accuracy by up to 6.0x, and 76% on average, on the PARSEC benchmark suite.",
+  "doi": "10.1145/2248487.2150995",
+  "openalex": "W4249700078",
+  "status": "ok",
+  "title": "Aikido"
+ },
+ "10.1145_2304576.2304584": {
+  "abstract": "Execution-driven data dependence profiling has gained significant interest as a tool to compensate the weakness of static data dependence analysis. Although such dependence profiling is valid for specific inputs only, its result can be used in many ways for program parallelization. Unfortunately, traditional hash-based dependence profiling can take tremendous memory and machine time, which severely limits its practical use. In this paper, we propose new compiler-based techniques to perform fast loop-level data dependence profiling. Firstly, using type consistency and alias information, our compiler embeds memory tags into the data structures in the original program such that memory addresses can be efficiently compared for dependence testing. This approach avoids the bytewise hashing overhead in conventional profiling methods. Secondly, we prove that a partial dependence graph obtained from profiling is sufficient for loop-level reordering transformations and parallelization. Such partial dependence graph can be obtained very fast, without having to exhaustively enumerate all dependence edges. Thirdly, our compiler partitions the profiling task into independent slices. Such slices can be profiled in parallel, producing subgraphs which are eventually combined automatically into the complete data dependence graph by the compiler. Experiments show that these techniques significantly reduce the memory use and shorten the profiling time (by an order of magnitude for several SPEC2006 benchmarks). Benchmarks too big to profile at all loop levels by previous methods can now be profiled fully within several hours.",
+  "doi": "10.1145/2304576.2304584",
+  "openalex": "W2018931757",
+  "status": "ok",
+  "title": "Fast loop-level data dependence profiling"
+ },
+ "10.1145_2365864.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application. Transparency has historically been provided on an ad-hoc basis, as a reaction to observed problems in target applications. This paper identifies a necessary set of transparency requirements for running mainstream Windows and Linux applications. We discuss possible solutions to each transparency issue, evaluate tradeoffs between different choices, and identify cases where maintaining transparency is not practically solvable. We believe this will provide a guideline for better design and implementation of transparent dynamic instrumentation, as well as other similar process virtualization systems using software code caches.",
+  "doi": "10.1145/2365864.2151043",
+  "openalex": "W2996990589",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2491411.2491447": {
+  "abstract": "JavaScript is widely used for writing client-side web applications and is getting increasingly popular for writing mobile applications. However, unlike C, C++, and Java, there are not that many tools available for analysis and testing of JavaScript applications. In this paper, we present a simple yet powerful framework, called Jalangi, for writing heavy-weight dynamic analyses. Our framework incorporates two key techniques: 1) selective record-replay, a technique which enables to record and to faithfully replay a user-selected part of the program, and 2) shadow values and shadow execution, which enables easy implementation of heavy-weight dynamic analyses. Our implementation makes no special assumption about JavaScript, which makes it applicable to real-world JavaScript programs running on multiple platforms. We have implemented concolic testing, an analysis to track origins of nulls and undefined, a simple form of taint analysis, an analysis to detect likely type inconsistencies, and an object allocation profiler in Jalangi. Our evaluation of Jalangi on the SunSpider benchmark suite and on five web applications shows that Jalangi has an average slowdown of 26X during recording and 30X slowdown during replay and analysis. The slowdowns are comparable with slowdowns reported for similar tools, such as PIN and Valgrind for x86 binaries. We believe that the techniques proposed in this paper are applicable to other dynamic languages.",
+  "doi": "10.1145/2491411.2491447",
+  "openalex": "W1987647365",
+  "status": "ok",
+  "title": "Jalangi: a selective record-replay and dynamic analysis framework for JavaScript"
+ },
+ "10.1145_2503210.2503269": {
+  "abstract": "False sharing is a major class of performance bugs in parallel applications. Detecting false sharing is difficult as it does not change the program semantics. We introduce an efficient and effective approach for detecting false sharing based on machine learning.",
+  "doi": "10.1145/2503210.2503269",
+  "openalex": "W1994256395",
+  "status": "ok",
+  "title": "Detection of false sharing using machine learning"
+ },
+ "10.1145_2628071.2671420": {
+  "abstract": "No abstract available.",
+  "doi": "10.1145/2628071.2671420",
+  "openalex": "W2119361011",
+  "status": "ok",
+  "title": "An Event-Based Language for Dynamic Binary Translation Frame Works"
+ },
+ "10.1145_2642937.2642974": {
+  "abstract": "Symbolic execution calls for specialized address translation. Unlike a pointer on a traditional machine model, which corresponds to a single address, a symbolic pointer may represent multiple feasible addresses. A symbolic pointer dereference manipulates symbolic state, potentially submitting many theorem prover requests in the process. Hence, design and management of symbolic accesses critically affects symbolic executor performance, complexity, and completeness.",
+  "doi": "10.1145/2642937.2642974",
+  "openalex": "W1996922896",
+  "status": "ok",
+  "title": "symMMU"
+ },
+ "10.1145_2837027": {
+  "abstract": "Full system emulators provide virtual platforms for several important applications, such as kernel and system software development, co-verification with cycle accurate CPU simulators, or application development for hardware still in development. Full system emulators usually use dynamic binary translation to obtain reasonable performance. This paper focuses on optimizing the performance of full system emulators. First, we optimize performance by enabling classic control transfer optimizations of dynamic binary translation in full system emulation, such as indirect branch target caching and block chaining. Second, we improve the performance of memory virtualization of cross-ISA virtual machines by improving the efficiency of the software translation lookaside buffer (software TLB). We implement our optimizations on QEMU, an industrial-strength full system emulator, along with the Android emulator. Experimental results show that our optimizations achieve an average speedup of 1.98X for ARM-to-X86-64 QEMU running SPEC CINT2006 benchmarks with train inputs. Our optimizations also achieve an average speedup of 1.44X and 1.40X for IA32-to-X86-64 QEMU and AArch64-to-X86-64 QEMU on SPEC CINT2006. We use a set of real applications downloaded from Google Play as benchmarks for the Android emulator. Experimental results show that our optimizations achieve an average speedup of 1.43X for the Android emulator running these applications.",
+  "doi": "10.1145/2837027",
+  "openalex": "W2264988905",
+  "status": "ok",
+  "title": "Optimizing Control Transfer and Memory Virtualization in Full System Emulators"
+ },
+ "10.1145_2983990.2983998": {
+  "abstract": "Existing approaches for detecting type errors in unsafe languages are limited. Static analysis methods are imprecise, and often require source-level changes, while most dynamic methods check only memory properties (bounds, liveness, etc.), owing to a lack of run-time type information. This paper describes libcrunch, a system for binary-compatible run-time type checking of unmodified unsafe code, currently focusing on C. Practical experience shows that our prototype implementation is easily applicable to many real codebases without source-level modification, correctly flags programmer errors with a very low rate of false positives, offers a very low run-time overhead, and covers classes of error caught by no previously existing tool.",
+  "doi": "10.1145/2983990.2983998",
+  "openalex": "W2534285557",
+  "status": "ok",
+  "title": "Dynamically diagnosing type errors in unsafe code"
+ },
+ "10.1145_3022671.2983998": {
+  "abstract": "Existing approaches for detecting type errors in unsafe languages are limited. Static analysis methods are imprecise, and often require source-level changes, while most dynamic methods check only memory properties (bounds, liveness, etc.), owing to a lack of run-time type information. This paper describes libcrunch, a system for binary-compatible run-time type checking of unmodified unsafe code, currently focusing on C. Practical experience shows that our prototype implementation is easily applicable to many real codebases without source-level modification, correctly flags programmer errors with a very low rate of false positives, offers a very low run-time overhead, and covers classes of error caught by no previously existing tool.",
+  "doi": "10.1145/3022671.2983998",
+  "openalex": "W4241086586",
+  "status": "ok",
+  "title": "Dynamically diagnosing type errors in unsafe code"
+ },
+ "10.1145_3293883.3295737": {
+  "abstract": "Profiling feedback is an important technique used by developers for performance debugging, where it is usually used to pinpoint performance bottlenecks and also to find optimization opportunities. Assessing the validity and potential benefit of a program transformation requires accurate knowledge of the data flow and dependencies, which can be uncovered by profiling a particular execution of the program.",
+  "doi": "10.1145/3293883.3295737",
+  "openalex": "W2914687823",
+  "status": "ok",
+  "title": "Data-flow/dependence profiling for structured transformations"
+ },
+ "10.1145_3297858.3304068": {
+  "abstract": "WebAssembly is the new low-level language for the web and has now been implemented in all major browsers since over a year. To ensure the security, performance, and correctness of future web applications, there is a strong need for dynamic analysis tools for WebAssembly. However, building such tools from scratch requires knowledge of low-level details of the language and its runtime environment. This paper presents Wasabi, the first general-purpose framework for dynamically analyzing WebAssembly. Wasabi provides an easy-to-use, high-level API that supports heavyweight dynamic analyses. It is based on binary instrumentation, which inserts calls to analysis functions written in JavaScript into a WebAssembly binary. Dynamically analyzing WebAssembly comes with several unique challenges, such as the problem of tracing type-polymorphic instructions with analysis functions that have a fixed type, which we address through on-demand monomorphization. Our evaluation on compute-intensive benchmarks and real-world applications shows that Wasabi (i) faithfully preserves the original program behavior, (ii) imposes an overhead that is reasonable for heavyweight dynamic analysis, and (iii) makes it straightforward to implement various dynamic analyses, including instruction counting, call graph extraction, memory access tracing, and taint analysis.",
+  "doi": "10.1145/3297858.3304068",
+  "openalex": "W2888822874",
+  "status": "ok",
+  "title": "Wasabi"
+ },
+ "10.1145_3320269.3384764": {
+  "abstract": "Generic taint analysis is a pivotal technique in software security. However, it suffers from staggeringly high overhead. In this paper, we explore the hypothesis whether just-in-time (JIT) generation of fast paths for tracking taint can enhance the performance. To this end, we present the Taint Rabbit, which supports highly customizable user-defined taint policies and combines a JIT with fast context switching. Our experimental results suggest that this combination outperforms notable existing implementations of generic taint analysis and bridges the performance gap to specialized trackers. For instance, Dytan incurs an average overhead of 237x, while the Taint Rabbit achieves 1.7x on the same set of benchmarks. This compares favorably to the 1.5x overhead delivered by the bitwise, non-generic, taint engine LibDFT.",
+  "doi": "10.1145/3320269.3384764",
+  "openalex": "W3041990968",
+  "status": "ok",
+  "title": "The Taint Rabbit: Optimizing Generic Taint Analysis with Dynamic Fast Path Generation"
+ },
+ "10.1145_3409964.3461825": {
+  "abstract": "While there has been extensive research on race-detection algorithms for task-parallel programs, most of this research has focused on optimizing a particular component, namely, reachability analysis, which checks whether two instructions are logically in parallel. Little attention has been paid to the other important component, the access history, which stores all memory locations previous instructions have accessed. In theory, the access-history component adds no asymptotic overhead; however, in practice, it is often the most expensive component of race detection since it is queried and (possibly) updated at each memory access. We optimize this component based on the observation that, typically, strands within parallel programs access contiguous blocks of memory. Therefore, instead of maintaining the access history at the granularity of individual memory locations, we maintain it at the granularity of these (varying size) intervals. To enable this access history, we propose (1) compiler and runtime mechanisms that allow us to efficiently collect these intervals and (2) a tree-based access-history data structure that allows updates and queries at interval granularity. The resulting tool can race-detect fork-join code with amortized constant overhead, assuming the number of intervals is small compared to the total work of the computation.",
+  "doi": "10.1145/3409964.3461825",
+  "openalex": "W3174684347",
+  "status": "ok",
+  "title": "Efficient Access History for Race Detection"
+ },
+ "10.1145_3503222.3507760": {
+  "abstract": "Dynamic program analyses are essential to creating safe, reliable, and productive computing environments. However, these analyses are challenging and time-consuming to construct due to the low-level optimization required to achieve acceptable performance. Consequently, many analyses are often never realized, or have inefficient implementations. In this work we argue that many analyses can and should be constructed with a high-level description language, leaving the burden of low-level optimizations to the analysis instrumentation system itself. We propose a novel language for dynamic analysis called ALDA. ALDA leverages common structuring of dynamic analyses to provide a simple and high-level description for dynamic analyses. Through restricting the supported behaviors to only essential operations in dynamic analyses, an optimizing compiler for ALDA can create analysis implementations with performance on-par to hand-tuned analyses. To demonstrate ALDA’s universality and efficiency, we create an optimizing compiler for ALDA targeting the LLVM instrumentation framework named ALDAcc. We use ALDAcc to construct 8 different dynamic analysis algorithms, including the popular MemorySanitizer analysis, and show their construction is succinct and simple. By comparing two of them (Eraser and MemorySanitizer) with their hand-tuned implementations, we show that ALDAcc’s optimized analyses are comparable to hand-tuned implementations.",
+  "doi": "10.1145/3503222.3507760",
+  "openalex": "W4214634252",
+  "status": "ok",
+  "title": "Creating concise and efficient dynamic analyses with ALDA"
+ },
+ "10.23940_ijpe.19.11.p5.28712881": {
+  "abstract": "GCC compiler is a retargetable compiler program that was developed to increase the efficiency of programs in the GNU system. In recent years, compiler optimization based on data dependency analysis has become an important research area of modern compilers. Existing GCC compilers can only conduct dependency analysis on perfect nested loops. In order to better explore the coarse-grained parallelism of the nested loops, we propose a dependence test method that can deal with the branch nested loops. Firstly, we identify the branch nested loop in the programs. Then, we analyze the relationship between the array subscript and the outer index variable of the branch nested loop. Finally, we calculate the distance vector of the outer loop index variable and determine whether the loop has dependence through distance vector detection. Experimental results show that our method can correctly and effectively analyze the dependence relationship of branch nested loops.",
+  "doi": "10.23940/ijpe.19.11.p5.28712881",
+  "openalex": "W2997098728",
+  "status": "ok",
+  "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop"
+ },
+ "10.4230_lipics.ecoop.2016.8": {
+  "abstract": "The ability to specify immutability in a programming language is a powerful tool for developers, enabling them to better understand and more safely transform their code without fearing unintended changes to program state. The C++ programming language allows developers to specify a form of immutability using the const keyword. In this work, we characterize the meaning of the C++ const qualifier and present the ConstSanitizer tool, which dynamically verifies a stricter form of immutability than that defined in C++: it identifies const uses that are either not consistent with transitive immutability, that write to mutable fields, or that write to formerly-const objects whose const-ness has been cast away. We evaluate a set of 7 C++ benchmark programs to find writes-through-const, establish root causes for how they fail to respect our stricter definition of immutability, and assign attributes to each write (namely: synchronized, not visible, buffer/cache, delayed initialization, and incorrect). ConstSanitizer finds 17 archetypes for writes in these programs which do not respect our version of immutability. Over half of these seem unnecessary to us. Our classification and observations of behaviour in practice contribute to the understanding of a widely-used C++ language feature.",
+  "doi": "10.4230/lipics.ecoop.2016.8",
+  "openalex": "W2541904841",
+  "status": "ok",
+  "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const"
+ },
+ "10.4233_uuid_5acbd4cd-ab5f-486a-8268-61cd7416550d": {
+  "abstract": "Recent trends show a steady increase in the utilization of heterogeneous multicore architectures in order to address the ever-growing need for computing performance. These emerging architectures pose specific challenges with regard to their programmability. In addition, they require efficient application mapping schemes to fully harness their processing power and avoid bottlenecks. In this respect, it is of critical importance to analyse application behaviour, and the data communication between tasks, in particular. In this dissertation, we present a profiling framework that helps developers to gain an insight into the behaviour of an application. The presented profiling framework is generic and not restricted to a particular platform, application, or purpose. We utilize this framework with the primary goal of mapping applications onto a heterogeneous multicore architecture. The framework includes a memory access profiling toolset, called QUAD, that provides quantitative information regarding the memory accesses in an application. QUAD utilizes Dynamic Binary Instrumentation (DBI) to detect the actual data dependencies that occur between the tasks of an application at runtime. Additionally, it also provides accurate memory access measurements, such as the amount of data transferred between tasks and the memory size required for their communication. Such information can be utilized to identify critical parts of an application, to highlight coarse-grained parallelism opportunities, and to guide code optimizations. As a proof of concept to substantiate the usefulness of the extracted profiling information, we utilize the main output of QUAD, the Quantitative Data Usage (QDU) graph, as the input model to formulate a general application partitioning problem. The formulation of this intractable problem is flexible and accommodates different design objectives and constraints. Subsequently, we propose a heuristic algorithm to find high quality partitions of an application in a reasonable amount of time. In addition to the complexity analysis of the proposed algorithm, we present a thorough theoretical analysis of the application partitioning problem. In order to evaluate the quality of the solutions, we developed a test bench for generating synthetic QDU graphs and compared the results against the optimal partitions obtained using an exhaustive search. The comparison results show that the proposed heuristic algorithm is able to provide optimal or near-optimal solutions. To further prove the applicability of the profiling framework, we investigate in detail the utilization of the framework in practice, by mapping two real applications onto a heterogeneous reconfigurable architecture. To achieve this goal, we propose a hardware/software partitioning methodology that introduces the concept of merging tightly-coupled tasks based on the data communication analysis. Moreover, the profiling information is utilized to fine-tune the applications and optimize their data flow. The obtained results show a performance increase of 192% and 30%.",
+  "doi": "10.4233/uuid:5acbd4cd-ab5f-486a-8268-61cd7416550d",
+  "openalex": "W593168771",
+  "status": "ok",
+  "title": "Quantitative Application Data Flow Characterization for Heterogeneous Multicore Architectures"
+ },
+ "10.48550_arxiv.1808.10652": {
+  "abstract": "WebAssembly is the new low-level language for the web and has now been implemented in all major browsers since over a year. To ensure the security, performance, and correctness of future web applications, there is a strong need for dynamic analysis tools for WebAssembly. Unfortunately, building such tools from scratch requires knowledge of low-level details of the language, and perhaps even its runtime environment. This paper presents Wasabi, the first general-purpose framework for dynamically analyzing WebAssembly. Wasabi provides an easy-to-use, high-level API that allows implementing heavyweight dynamic analyses that can monitor all low-level behavior. The approach is based on binary instrumentation, which inserts calls to analysis functions written in JavaScript into a WebAssembly binary. Wasabi addresses several unique challenges not present for other binary instrumentation tools, such as the problem of tracing type-polymorphic instructions with analysis functions that have a fixed type, which we address through an on-demand monomorphization of analysis calls. To control the overhead imposed by an analysis, Wasabi selectively instruments only those instructions relevant for the analysis. Our evaluation on compute-intensive benchmarks and real-world applications shows that Wasabi (i) faithfully preserves the original program behavior, (ii) imposes an overhead that is reasonable for heavyweight dynamic analysis (depending on the program and the analyzed instructions, between 1.02x and 163x), and (iii) makes it straightforward to implement various dynamic analyses, including instruction counting, call graph extraction, memory access tracing, and taint analysis.",
+  "doi": "10.48550/arxiv.1808.10652",
+  "openalex": "W2951338155",
+  "status": "ok",
+  "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly"
+ },
+ "10.5555_2738600.2738631": {
+  "abstract": "In the era of mobile and cloud computing, cross-ISA (Instruction Set Architecture) binary translation attracts increasing attentions due to the ISA diversity of computing platforms. To easily adapt to vast guest- and host-ISAs with minimal porting efforts, existing cross-ISA binary translators (e.g., QEMU) are typically built upon ISA-independent Intermediate Representation (IR). Although IR conceals the architectural details of different IS As, it also prevents enforcing several effective ISA-specific optimizations, which results in severe performance degradation. To improve the performance of cross-ISA binary translation without loss of portability, we present a fast cross-ISA binary translator, Hermes, by conducting post-optimization on the translated code, rather than on the IR as conventional binary translators do. The proposed post-optimization technique uses Host-specific Data Dependence Graph (HDDG) to significantly eliminate redundant instructions, including arithmetic, load/store and call/return-emulation instructions. To validate our approach, we implement Hermes on a commercial MIPS host system for both ×86 and ARM guest. Compared with QEMU dynamic binary translator, HERMES improves the performance by a factor of 3.14× and 5.18× for ×86 and ARM guest, respectively. Compared with state-of-the-art static binary translator, HERMES achieves comparable performance, while it reduces the translation overhead by 185×.",
+  "doi": "10.5555/2738600.2738631",
+  "openalex": "W2014012690",
+  "status": "ok",
+  "title": "HERMES: a fast cross-ISA binary translator with post-optimization"
+ },
+ "10.7916_d82b8wq9": {
+  "abstract": "As cloud technology matures and trendsetters like Google, Amazon, Microsoft, Apple, and VMware have become the top-tier cloud services players, public cloud services have turned mainstream for individual users. In this work, I propose a set of techniques that can be used as the basis for alleviating cloud customers' privacy concerns and elevating their condence in using the cloud for security-sensitive operations as well as trusting it with their sensitive data. The main goal is to provide cloud customers' with a reliable mechanism that will cover the entire path of tracking their sensitive data, while they are collected and used by cloud-hosted services, to the presentation of the tracking results to the respective data owners. In particular, my design accomplishes this goal by retrofitting legacy applications with data flow tracking techniques and providing the cloud customers with comprehensive information flow auditing capabilities. For this purpose, we created CloudFence, a cloud-wide fine-grained data flow tracking (DFT) framework, that sensitive data in well-defined domains, offering additional protection against inadvertent leaks and unauthorized access.",
+  "doi": "10.7916/d82b8wq9",
+  "openalex": "W2137413731",
+  "status": "ok",
+  "title": "Information Flow Auditing in the Cloud"
+ },
+ "oa-W1566677388": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2011.",
+  "doi": null,
+  "openalex": "W1566677388",
+  "status": "ok",
+  "title": "Optimization of naïve dynamic binary instrumentation Tools"
+ },
+ "oa-W1878544538": {
+  "abstract": "Memory access bugs, including buffer overflows and uses of freed heap memory, remain a serious problem for programming languages like C and C++. Many memory error detectors exist, but most of them are either slow or detect a limited set of bugs, or both.\r\n\r\nThis paper presents AddressSanitizer, a new memory error detector. Our tool finds out-of-bounds accesses to heap, stack, and global objects, as well as use-after-free bugs. It employs a specialized memory allocator and code instrumentation that is simple enough to be implemented in any compiler, binary translation system, or even in hardware.\r\n\r\nAddressSanitizer achieves efficiency without sacrificing comprehensiveness. Its average slowdown is just 73% yet it accurately detects bugs at the point of occurrence. It has found over 300 previously unknown bugs in the Chromium browser and many bugs in other software.",
+  "doi": null,
+  "openalex": "W1878544538",
+  "status": "ok",
+  "title": "AddressSanitizer: a fast address sanity checker"
+ },
+ "oa-W2096801581": {
+  "abstract": "Dynamic dataflow analyses find software errors by tracking meta-values associated with a program’s runtime data. Despite their benefits, the orders-of-magnitude slowdowns that accompany these systems limit their use to the development stage; few users would tolerate such overheads. This work extends dynamic dataflow analyses with a novel sampling system which ensures that runtime slowdowns do not exceed a user-defined threshold. While previous sampling methods are inadequate for dataflow analyses, our technique efficiently reduces the number and size of analyzed dataflows. In doing so, it allows individual users to test large, stochastically chosen sets of a process’s dataflows. Large populations can therefore, in aggregate, analyze a larger portion of the program than is possible by any single user running a complete, but slow, analysis. In our experimental evaluation, we show that 1 out of every 10 users expose a number of security exploits while only experiencing a 10 % performance slowdown, in contrast with the 100 × overhead caused by a complete analysis that exposes the same problems. 1.",
+  "doi": null,
+  "openalex": "W2096801581",
+  "status": "ok",
+  "title": "HighlyScalableDistributedDataflowAnalysis"
+ },
+ "oa-W2152389483": {
+  "abstract": "Memory tracing (executing additional code for every memory access of a program) is a powerful technique with many applications, e.g., debugging, taint checking, or tracking dataflow. Current approaches are limited: software-only memory tracing incurs high performance overhead (e.g., for Libdft up to 10×) because every single memory access of the application is checked by additional code that is not part of the original application and hardware is limited to a small set of watched locations.\r\n\r\nThis paper introduces memTrace, a lightweight memory tracing technique that builds on dynamic on-the-fly cross-ISA binary translation of 32-bit code to 64-bit code. Our software-only approach enables memory tracing for unmodified, binary-only ×86 applications using the ×64 extension that is available in current CPUs; no OS extensions or special hardware is required. The additional registers in ×64 and the wider memory addressing enable a low-overhead tracing infrastructure that is protected from the application code (i.e., uses disjunct registers and memory regions). MemTrace handles multi-threaded applications. Two case studies discuss a framework for unlimited read and write watchpoints and an allocation-based memory checker similar in functionality to memgrind.\r\n\r\nThe performance evaluation of memTrace shows that the time overhead is between 1.3× and 3.1× for the SPEC CPU2006 benchmarks, with a geometric mean of 1.97×.",
+  "doi": null,
+  "openalex": "W2152389483",
+  "status": "ok",
+  "title": "Lightweight memory tracing"
+ },
+ "oa-W2886049054": {
+  "abstract": "Researchers have recently proposed a number of systems for expressing, \\nverifying, and inferring immutability declarations. These systems are \\noften rigid, and do not support \"abstract immutability\". An abstractly \\nimmutable object is an object o which is immutable from the point of \\nview of any external methods. The C++ programming language is not \\nrigid–it allows developers to express intent by adding immutability \\ndeclarations to methods. Abstract immutability allows for performance \\nimprovements such as caching, even in the presence of writes to object \\nfields. This dissertation presents a system to enforce abstract \\nimmutability. \\n \\nFirst, we explore abstract immutability in real-world systems. We \\nfound that developers often incorrectly use abstract immutability, \\nperhaps because no programming language helps developers correctly \\nimplement abstract immutability. We believe that this omission leads \\nto incorrect usages. Specifically, we wrote a dynamic analysis that \\nreports any writes through immutability declarations. To our knowledge, \\nthis work was the first to explore how objects implement abstract \\nimmutability (or fail to implement it). Our novel study found three \\nuses of abstract immutability: caching, delayed initialization, and \\nunit testing. Unit testing was a surprising application of abstract \\nimmutability, and we believe that the ability to modify state is \\nneeded for proper unit testing. \\n \\nNext, we explore developers' revealed needs for immutability in the \\nsource code. We found that the majority of classes contain a mix of \\nimmutable and mutable methods, with a majority of the overall methods \\nbeing immutable. Immutability systems with only immutable or \\nall-mutating classes are insufficient: developers need immutability \\ndeclarations at method granularity. Our study then combined developer \\nimmutability declarations with results from a static analysis to \\nestimate the true number of immutable methods. The static analysis \\nchecked that no transitive writes to a receiver object occurred. Our \\nresults indicated the need for a sophisticated analysis to check that \\nthese apparently abstractly immutable methods were indeed abstractly \\nimmutable. \\n \\nFinally, we created a novel static analysis which checks that \\ndevelopers follow abstract immutability. Specifically, we define \\nabstract immutability to mean that a class's set of immutable methods \\nis collectively free of writes to exposed fields. Our analysis found \\nincorrect usages of abstract immutability, such as incorrect caching. \\nThis analysis is particularly valuable in the context of code \\nevolution, whereby subsequent programmers may make changes that break \\npreviously-correct cache implementations, for instance. Our work \\nallows developers to trust that their code is abstractly immutable.",
+  "doi": null,
+  "openalex": "W2886049054",
+  "status": "ok",
+  "title": "Enforcing Abstract Immutability"
+ },
+ "oa-W3092498976": {
+  "abstract": "Generic taint analysis is a pivotal technique in software security. However, it suffers from staggeringly high overhead. In this paper, we explore the hypothesis whether just-in-time (JIT) generation of fast paths for tracking taint can enhance the performance. To this end, we present the Taint Rabbit, which supports highly customizable user-defined taint policies and combines a JIT with fast context switching. Our experimental results suggest that this combination outperforms notable existing implementations of generic taint analysis and bridges the performance gap to specialized trackers. For instance, Dytan incurs an average overhead of 237x, while the Taint Rabbit achieves 1.7x on the same set of benchmarks. This compares favorably to the 1.5x overhead delivered by the bitwise, non-generic, taint engine LibDFT.",
+  "doi": null,
+  "openalex": "W3092498976",
+  "status": "ok",
+  "title": "The taint rabbit: optimizing generic taint analysis with dynamic fast path generation"
+ },
+ "oa-W338206765": {
+  "abstract": "Software engineers now face the difficult task of parallelizing serial programs for parallel execution on multicore processors. Parallelization is a complex task that typically requires considerable time and effort. However, even after extensive engineering efforts, the resulting speedup is often fundamentally limited due to the lack of parallelism in the target program or the inability of the target platform to exploit existing parallelism. Unfortunately, little guidance is available as to how much benefit may come from parallelization, making it hard for a programmer to answer this critical question:  Should I parallelize my code?. \r\nIn this dissertation, we examine the design and implementation of Kismet, a tool that creates parallel speedup estimates for unparallelized serial programs. Our approach differs from previous approaches in that it does not require any changes or manual analysis of the serial program. This difference allows quick profitability analysis of a program, helping programmers make informed decisions in the initial stages of parallelization. \r\nTo provide parallel speedup estimates from serial programs, we developed a dynamic program analysis named hierarchical critical path analysis (HCPA). HCPA extends a classic technique called critical path analysis to quantify localized parallelism of each region in a program. Based on the parallelism information from HCPA, Kismet incorporates key parallelization constraints that can significantly affect the parallel speedup, providing realistic speedup upperbounds. The results are compelling. Kismet can significantly improve the accuracy of parallel speedup estimates relative to prior work based on critical path analysis.",
+  "doi": null,
+  "openalex": "W338206765",
+  "status": "ok",
+  "title": "Parallel speedup estimates for serial programs"
+ },
+ "oa-W51951760": {
+  "abstract": "The serious bugs and security vulnerabilities that result from C's lack of bounds checking and unsafe manual memory management are well known, yet C remains in widespread use. Unfortunately, C's arbitrary pointer arithmetic, conflation of pointers and arrays, and programmer-visible memory layout make retrofitting C with memory safety guarantees challenging. Existing approaches suffer from incompleteness, have high runtime overhead, or require non-trivial changes to the C source code. Thus far, these deficiencies have prevented widespread adoption of such techniques.\r\nThis dissertation proposes mechanisms to provide comprehensive memory safety that works with mostly unmodified C code with a low performance overhead. We use a pointer-based approach where we maintain metadata with pointers and check every pointer dereference. To enable compatibility with existing code, we maintain the metadata for the pointers in memory in a disjoint metadata space leaving the memory layout of the program intact. For detecting spatial violations, we maintain bounds metadata with every pointer. For detecting temporal violations, we also maintain a unique identifier metadata with each pointer. This pointer metadata is propagated with pointer operations and checked on pointer dereferences. Coupling disjoint metadata with a pointer-based approach enables comprehensive detection of all memory safety violations in unmodified C programs. This dissertation demonstrates the compatibility of this approach by hardening legacy C/C++ code with minimal source code changes. Further, this dissertation shows the effectiveness of the approach by detecting new memory safety errors and previously known memory safety errors in large code bases. To attain low performance overheads, this dissertation proposes efficient instantiations of this approach (1) within a compiler, (2) within hardware, and (3) with a hybrid hardware accelerated compiler instrumentation that reduces the overhead of enforcing memory safety, and thereby enabling their use in deployed systems.",
+  "doi": null,
+  "openalex": "W51951760",
+  "status": "ok",
+  "title": "Practical low-overhead enforcement of memory safety for c programs"
+ },
+ "oa-W98207858": {
+  "abstract": "The complexity of modern software makes it difficult to ship correct programs. Errors can cost money and lives, so developers often use automated software analysis tools to hunt for bugs. By automatically analyzing a program's runtime operation, dynamic analysis tools can find subtle errors that would normally escape the notice of even careful human testers. These dynamic analyses are more likely to find errors if they observe the program under numerous and varied runtime situations, so, ideally, users would analyze programs as they run them. Regrettably, these tests cause orders-of-magnitude slowdowns, which few users would tolerate. This dissertation presents methods of accelerating dynamic software analyses in order to distribute these trials to users. It begins by observing that the overhead that any individual observes can be lowered by allowing each user to analyze a small, random sample of the program's operations. It then describes a sampling mechanism for dynamic dataflow analyses that only requires access to the virtual memory system. Other dynamic software analyses cannot use this technique, so the remainder of this dissertation focuses on novel hardware-based acceleration mechanisms. The first, Testudo, allows faster and more accurate dataflow analysis sampling by storing meta-data in an on-chip cache and stochastically removing these values whenever it overflows. Next, a method for performing demand-driven data race detection using existing hardware performance counters is detailed. These counters make inter-cache sharing events visible to software, allowing the data race detector to be enabled only when needed. Finally, fine-grained memory monitoring is a crucial for every analysis studied in this work. This dissertation closes by examining a hardware mechanism for allowing unlimited fine-grained watchpoints, which can be used to reduce the overheads of many analyses. In total, this dissertation demonstrates that hardware designers can play a role in mitigating software bugs, as many of the acceleration mechanisms explored in this work require hardware support in one form or another. Taken together, these works represent a step forward for accelerating dynamic software analyses and distributing them to end-users.",
+  "doi": null,
+  "openalex": "W98207858",
+  "status": "ok",
+  "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis."
+ },
+ "s2-0ef7b2fc24a0dbaf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Data-driven Spatial Locality"
+ },
+ "s2-17951fe808a7d83f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Position Paper : The Potential of Sampling for Dynamic Analysis"
+ },
+ "s2-29146d2b80bc8c56": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "AddressSanitizer: A Fast Address Sanity Checker"
+ },
+ "s2-295423fa4c09786b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis"
+ },
+ "s2-470ab02a955b0dd0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A specification language for debugging"
+ },
+ "s2-4ed4f40468206c64": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimization of naïve dynamic binary instrumentation Tools"
+ },
+ "s2-543f759f3f516904": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallel speedup estimates for serial programs"
+ },
+ "s2-561d1f3afc4d41c4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Lightweight Memory Tracing"
+ },
+ "s2-5fda459b100d6a2e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallel speedup estimates for serial programs"
+ },
+ "s2-6b2a1a59b2111f8f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "University of Warwick institutional repository: http://go"
+ },
+ "s2-6befbe876dc9761f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving Hierarchical Critical Path Analysis Performance"
+ },
+ "s2-6e6be137332e16df": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A practical oracle for sequential code parallelization"
+ },
+ "s2-6febfe65483d6f83": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Control-Flow Security"
+ },
+ "s2-848b2450052b0fa6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications"
+ },
+ "s2-98e370993c9116be": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient Memory Shadowing for 64-bit Architectures Citation"
+ },
+ "s2-aed85452d453f007": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Low-overhead Online Code Transformations"
+ },
+ "s2-b2fb996bb0daaf86": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Practical low-overhead enforcement of memory safety for c programs"
+ },
+ "s2-c71074a913504bbf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Simple DRAM and Virtual Memory Abstractions to Enable Highly Efficient Memory Systems"
+ },
+ "s2-d22e0d814d8ee216": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Methods for binary symbolic execution"
+ },
+ "s2-d536d9f8129a92f5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Computer Science (Computer Engineering)"
+ },
+ "s2-ec2f24485e4f3dc0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "DINAMITE: A modern approach to memory performance profiling"
+ },
+ "s2-f39880610a1d7f31": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Enforcing Abstract Immutability"
+ },
+ "s2-fbc5e170b8fc18c4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient High Frequency Checkpointing for Recovery and Debugging"
+ }
+}

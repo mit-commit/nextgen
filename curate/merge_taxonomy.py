@@ -57,6 +57,18 @@ FUNCTION_ORDER = ['extends', 'uses-tool', 'adopts-idea', 'uses-benchmark',
                   'unknown', 'unclassified']
 
 
+def is_saman(name):
+    """True iff this author name is Saman Amarasinghe (drives the COMMIT-papers
+    separation; see SCHEMA.md). Handles 'Saman', 'Saman P.', and 'S.' forms,
+    including glued PDF-extraction artifacts, while excluding other
+    Amarasinghes (Gayashan, Yasith, ...). Kept byte-identical to
+    prototype/build_pilot_data.py's copy -- the two emitters must agree."""
+    n = re.sub(r'[^a-z]+', ' ', (name or '').lower()).strip()
+    if 'amarasinghe' not in n:
+        return False
+    return 'saman' in n or bool(re.search(r'(^| )s (p )?amarasinghe', n))
+
+
 def slug_for(citing):
     doi = citing.get('doi')
     if doi:
@@ -142,7 +154,7 @@ def build_paper(key, tax_rows, citing_list, generated):
         groups.setdefault(gk, []).append((r, c))
 
     entries = []
-    n_own = 0
+    n_commit = 0
     for _, sibs in groups.items():
         flags = sorted(set(f for r, _ in sibs for f in r['flags']))
         if 'self-version' in flags:
@@ -186,8 +198,9 @@ def build_paper(key, tax_rows, citing_list, generated):
         if flags:
             e['flags'] = flags
         e['evidence'] = r['evidence']
-        if 'own-group' in flags:
-            n_own += 1
+        if any(is_saman(a) for _, c2 in sibs for a in (c2.get('authors') or [])):
+            e['commit'] = True
+            n_commit += 1
         entries.append(e)
 
     forder = {f: i for i, f in enumerate(FUNCTION_ORDER)}
@@ -202,7 +215,7 @@ def build_paper(key, tax_rows, citing_list, generated):
         'counts': {
             'records_raw': len(tax_rows),
             'works': len(entries),
-            'own_group': n_own,
+            'commit': n_commit,
             'judged': judged,
             'gscholar': None,
         },
@@ -252,7 +265,7 @@ def main():
         index['papers'][key] = {'verified': paper['counts']['works'], 'gscholar': gs}
         c = paper['counts']
         print(f"{key}: raw={c['records_raw']} works={c['works']} "
-              f"own_group={c['own_group']} judged={c['judged']} gscholar={gs}")
+              f"commit={c['commit']} judged={c['judged']} gscholar={gs}")
         if args.write:
             with open(os.path.join(OUT_DIR, key + '.json'), 'w') as fh:
                 json.dump(paper, fh, indent=1, ensure_ascii=False)

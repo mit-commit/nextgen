@@ -1,0 +1,240 @@
+{
+ "10.1007_978-3-031-49252-5_4": {
+  "abstract": null,
+  "doi": "10.1007/978-3-031-49252-5_4",
+  "openalex": "W4389095818",
+  "status": "no_abstract",
+  "title": "A Federated Learning Algorithms Development Paradigm"
+ },
+ "10.1016_j.jlamp.2024.101032": {
+  "abstract": "Python is a high-level programming language that is strongly, but dynamically typed. In this paper, we propose a type inference framework to compute specifications for Python functions in isolation. To achieve this, we aim to use an abstract-interpretation-based data flow analysis to infer variable types on a subset of Python programs that use built-in types, operators and functions. To evaluate the expressions found in every program point, specifications for the encountered operations and functions are required. We propose a method for extracting these specifications from the Typeshed project, which contains a set of annotations for built-in and popular third-party libraries. These specifications will be used then to extend the proposed type inference to large Python programs. • Static analysis is used to infer types of variables for a subset of Python programs. • The type inference is achieved by combining dataflow analysis, abstract interpretation, and a constraint solver. • Annotations can be translated to a more formal model, that can be used for variable type inference for larger programs.",
+  "doi": "10.1016/j.jlamp.2024.101032",
+  "openalex": "W4405220163",
+  "status": "ok",
+  "title": "Towards a type-based abstract semantics for Python"
+ },
+ "10.1038_s41746-025-02271-0": {
+  "abstract": "Scattered between many healthcare providers across the US, Electronic Health Records (EHR) are extensively used for research purposes. Collaboration and sharing of EHRs between multiple institutions often provide access to more diverse datasets and a chance to conduct comprehensive studies. However, these collaboration efforts are usually hindered by privacy issues that render the pooling of such data at a centralized database impossible. Furthermore, EHRs are often incomplete and require statistical imputation prior to the study. To enable collaborative studies on top of incomplete, private EHRs, here we provide a provably secure solution built with secure multiparty computation (SMC) that provides practical runtimes and accuracy on par with the state-of-the-art, non-secure equivalents. Our solution enables the utilization of distributed datasets as a whole to impute the missing data and conduct collective studies between non-trusting private data proprietors. We demonstrate its effectiveness on various synthetic and real-world datasets, and show that our solution can significantly improve the classification of high-risk patient outcomes during ICU admission.",
+  "doi": "10.1038/s41746-025-02271-0",
+  "openalex": "W7119898966",
+  "status": "ok",
+  "title": "Secure distributed multiple imputation enables missing data inference for private data proprietors"
+ },
+ "10.1101_2024.02.27.582413": {
+  "abstract": "Accurate genotyping of Killer cell Immunoglobulin-like Receptor (KIR) genes plays a pivotal role in enhancing our understanding of innate immune responses, disease correlations, and the advancement of personalized medicine. However, due to the high variability of the KIR region and high level of sequence similarity among different KIR genes, the currently available genotyping methods are unable to accurately infer copy numbers, genotypes and haplotypes of individual KIR genes from next-generation sequencing data. Here we introduce Geny, a new computational tool for precise genotyping of KIR genes. Geny utilizes available KIR haplotype databases and proposes a novel combination of expectation-maximization filtering schemes and integer linear programming-based combinatorial optimization models to resolve ambiguous reads, provide accurate copy number estimation and estimate the haplotype of each copy for the genes within the KIR region. We evaluated Geny on a large set of simulated short-read datasets covering the known validated KIR region assemblies and a set of Illumina short-read samples sequenced from 25 validated samples from the Human Pangenome Reference Consortium collection and showed that it outperforms the existing genotyping tools in terms of accuracy, precision and recall. We envision Geny becoming a valuable resource for understanding immune system response and consequently advancing the field of patient-centric medicine.",
+  "doi": "10.1101/2024.02.27.582413",
+  "openalex": "W4392343332",
+  "status": "ok",
+  "title": "Geny: A Genotyping Tool for Allelic Decomposition of Killer Cell Immunoglobulin-Like Receptor Genes"
+ },
+ "10.1109_assic64892.2025.11158099": {
+  "abstract": "The Optimizing C Compiler is an advanced tool designed to enhance the performance and efficiency of C programs by implementing a comprehensive suite of optimization techniques during the compilation process. It incorporates methods such as constant propagation, constant folding, loop unrolling, strength reduction, common subexpression elimination, and basic block-level optimizations to improve execution speed and minimize memory usage while maintaining the program's original functionality. These optimizations are especially beneficial in resource-constrained environments like embedded systems, where computational and memory efficiency are critical. The compiler also adopts aggressive strategies like control flow restructuring, peephole optimization, and constant propagation across basic blocks, which streamline execution paths and refine code further by eliminating redundant or inefficient patterns. Implemented in Python, the compiler leverages libraries such as Ply for parsing C code and Re for pattern matching, enabling efficient handling of complex expressions. Additionally, it introduces modular components for tasks like loop unrolling and arithmetic evaluation, allowing flexibility and adaptability to evolving optimization needs. Experimental results validate the compiler's effectiveness, showcasing execution time reductions of up to 40 % in specific scenarios. By combining a robust set of optimization techniques with a modular and extensible design, the compiler serves as a vital tool for developers aiming to build high-performance, resource-efficient applications in both generalpurpose and resource-limited domains.",
+  "doi": "10.1109/assic64892.2025.11158099",
+  "openalex": "W4414271724",
+  "status": "ok",
+  "title": "Streamlining C Compilation: Harnessing Different Optimization Techniques"
+ },
+ "10.1109_cgo68049.2026.11394843": {
+  "abstract": "Python dominates AI development and is the most widely used dynamic programming language, but synthesizing its polymorphic functions into hardware remains challenging. Existing HLS solutions support only static subsets of Python, forcing CPU offload with costly communication overhead. We present Pyls, the first framework that synthesizes dynamically polymorphic Python into monolithic hardware via Left-Child Right-Sibling (LCRS) encoding. Key to our approach is representing all Python objects as LCRS trees, enabling uniform hardware handling of dynamic types. Pyls automatically converts objects to fixed-width formats, generates XLS IR designs, and implements a tree memory architecture for efficient runtime type resolution. On FPGA platforms, Pyls demonstrates speedups of 5.19× and 3.98× over two ASIC CPUs, 303.29× over a soft-core processor, and 282.66× over a heterogeneous SoC design.",
+  "doi": "10.1109/cgo68049.2026.11394843",
+  "openalex": "W7131131699",
+  "status": "ok",
+  "title": "Pyls: Enabling Python Hardware Synthesis with Dynamic Polymorphism via LCRS Encoding"
+ },
+ "10.1109_hpec67600.2025.11196478": {
+  "abstract": "High level programming languages and GPU accelerators are powerful enablers for a wide range of applications. Achieving scalable vertical (within a compute node), horizontal (across compute nodes), and temporal (over different generations of hardware) performance while retaining productivity requires effective abstractions. Distributed arrays are one such abstraction that enables high level programming to achieve highly scalable performance. Distributed arrays achieve this performance by deriving parallelism from data locality, which naturally leads to high memory bandwidth efficiency. This paper explores distributed array performance using the STREAM memory bandwidth benchmark on a variety of hardware. Scalable performance is demonstrated within and across CPU cores, CPU nodes, and GPU nodes. Horizontal scaling across multiple nodes was linear. The hardware used spans decades and allows a direct comparison of hardware improvements for memory bandwidth over this time range; showing a 10x increase in CPU core bandwidth over 20 years, 100x increase in CPU node bandwidth over 20 years, and 5x increase in GPU node bandwidth over 5 years. Running on hundreds of MIT SuperCloud nodes simultaneously achieved a sustained bandwidth >1 PB/s.",
+  "doi": "10.1109/hpec67600.2025.11196478",
+  "openalex": "W4415250847",
+  "status": "ok",
+  "title": "Easy Acceleration with Distributed Arrays"
+ },
+ "10.1109_hpec67600.2025.11196667": {
+  "abstract": null,
+  "doi": "10.1109/hpec67600.2025.11196667",
+  "openalex": "W4415250776",
+  "status": "no_abstract",
+  "title": "GraphBLAS Mathematical Opportunities: Parallel Hypersparse, Matrix Based Graph Streaming, and Complex-Index Matrices"
+ },
+ "10.1109_icccnt61001.2024.10725235": {
+  "abstract": "Coding in a programming language can indeed be a meticulous and a less interesting task, especially when compared to the fluidity of spoken or written communication. Each programming language has its own set of syntax and rules, demanding expertise to effectively write code in it. Through this study, a compiler based approach to translate Natural Language into Python code is proposed. This endeavor could revolutionize access to programming by making it more intuitive and inclusive. The research involves working with different phases of the compiler including the lexical analyser, syntax and the semantic analyser phase in combination with Natural Language Processing techniques. By automating this process, we aim to streamline programming for a wider audience, removing barriers to entry and making coding more accessible to all.",
+  "doi": "10.1109/icccnt61001.2024.10725235",
+  "openalex": "W4404032248",
+  "status": "ok",
+  "title": "Transcribing Natural Language to Python Code: A Compiler Based Approach"
+ },
+ "10.1109_issre59848.2023.00066": {
+  "abstract": "Skeletal Program Enumeration (SPE) is one of the state-of-the-art techniques for generating programs and validating the correctness of compilers/interpreters. However, existing SPE approaches neglect the enumeration of function calls, thereby overlooking a crucial feature of modern programming languages. To address this gap, this paper proposes an approach that integrates function calls into SPE techniques. Our approach first defines function skeletons and then employs the staged enumeration of variables and arguments. Consequently, our approach can eliminate equivalent programs on-the-fly. To address the test oracle problem in SPE, it takes a differential strategy to identify interpreter bugs, i.e., differentially comparing program execution results across various interpreters. Hence it can effectively detect crash bugs, behavior bugs, and miscompilation bugs. To evaluate the effectiveness, we have implemented the proposed approach into an open-source tool, i.e., FcFuzzer, for testing Python interpreters. The evaluation is conducted on seven Python interpreters: CPython, RustPython, IronPython, Pyston, PyPy, Codon, and GPython. Using the same seeds, FcFuzzer can detect, on average, 1.6 times more bugs than the state-of-the-art SPE technique. In a one-month fuzzing experiment, FcFuzzer successfully identified 35 Python interpreter bugs, of which 16 were confirmed to be unknown, and six have been fixed.",
+  "doi": "10.1109/issre59848.2023.00066",
+  "openalex": "W4388212253",
+  "status": "ok",
+  "title": "Detecting Interpreter Bugs via Filling Function Calls in Skeletal Program Enumeration"
+ },
+ "10.1109_saner-c67878.2026.00033": {
+  "abstract": "The United Nations' 2030 Agenda for Sustainable Development highlights the importance of energy-efficient software to reduce the global carbon footprint. Programming languages and execution models strongly influence software energy consumption, with interpreted languages generally being less efficient than compiled ones. Lua illustrates this trade-off: despite its popularity, it is less energy-efficient than greener and faster languages such as C. This paper presents an empirical study of Lua's runtime performance and energy efficiency across 25 official interpreter versions and just-in-time (JIT) compilers. Using a comprehensive benchmark suite, we measure execution time and energy consumption to analyze Lua's evolution, the impact of JIT compilation, and comparisons with other languages. Results show that all LuaJIT compilers significantly outperform standard Lua interpreters. The most efficient LuaJIT consumes about seven times less energy and runs seven times faster than the best Lua interpreter. Moreover, LuaJIT approaches C's efficiency, using roughly six times more energy and running about eight times slower, demonstrating the substantial benefits of JIT compilation for improving both performance and energy efficiency in interpreted languages.",
+  "doi": "10.1109/saner-c67878.2026.00033",
+  "openalex": "W7160450490",
+  "status": "ok",
+  "title": "The Green Side of the Lua"
+ },
+ "10.1109_scw63240.2024.00245": {
+  "abstract": "We present JACC (Julia for Accelerators), the first high-level, and performance-portable model for the just-in-time and LLVM-based Julia language. JACC provides a unified and lightweight front end across different back ends available in Julia, enabling the same Julia code to run efficiently on many HPC CPU and GPU targets. We evaluated the performance of JACC for common HPC kernels as well as for the most computationally demanding kernels used in applications, HPCCG, a supercomputing benchmark test for sparse domains, and HARVEY, a blood flow simulator to assist in the diagnosis and treatment of patients suffering from vascular diseases. We carried out the performance analysis on the most advanced US DOE supercomputers: Aurora, Frontier, and Perlmutter. Overall, we show that JACC has a negligible overhead versus vendor-specific solutions, reporting GPU speedups with no extra cost to programmability.",
+  "doi": "10.1109/scw63240.2024.00245",
+  "openalex": "W4406171566",
+  "status": "ok",
+  "title": "JACC: Leveraging HPC Meta-Programming and Performance Portability with the Just-in-Time and LLVM-based Julia Language"
+ },
+ "10.1109_sp63933.2026.00256": {
+  "abstract": null,
+  "doi": "10.1109/sp63933.2026.00256",
+  "openalex": "W7166835009",
+  "status": "no_abstract",
+  "title": "Decor: Delegated Computation on Randomness for Secure Evaluation of Nonlinear Functions"
+ },
+ "10.1109_telfor59449.2023.10372599": {
+  "abstract": "Processing of large quantitities of data from bioinformatics domain pose significant challenge for contemporary computing systems. For that reason, it is important to employ all hardware resources available by means of parallelization. In this paper, we compare several Python-based parallelization frameworks and libraries and evaluate them using a simple processing algorithm on spatial transcriptomics data. The results show speedups of up to 60x with significant variation in the execution time depending on the framework used. The results and experiences are discussed in the paper.",
+  "doi": "10.1109/telfor59449.2023.10372599",
+  "openalex": "W4390482043",
+  "status": "ok",
+  "title": "Comparing Python Code Parallelization Techniques for Spatial Transcriptomics Data"
+ },
+ "10.1109_telfor63250.2024.10819071": {
+  "abstract": "The original Python Testbed for Federated Learning Algorithms (PTB-FLA) is a light FL framework, which provides generic centralized and decentralized federated learning algorithms, but has the limitation that all the application instances can run only on a single PC. This paper presents the MicroPyton Testbed for Federated Learning Algorithms (MPT-FLA), the new framework that overcomes this limitation such that individual application instances may run on different network nodes like PCs and IoTs, primarily in edge systems. The new framework was validated and evaluated on a wireless LAN of PCs and RPi Pico W boards and wired LAN of PCs, respectively, by using application examples originally developed for the predecessor framework.",
+  "doi": "10.1109/telfor63250.2024.10819071",
+  "openalex": "W4406014591",
+  "status": "ok",
+  "title": "MicroPython Testbed for Federated Learning Algorithms"
+ },
+ "10.1109_yef-ece58420.2023.10209340": {
+  "abstract": "This article introduces the development of an automatic code generation tool for the high-level programming language Python. This tool was created with the objective of implementing embedded system controllers and cyber-physical systems. The controllers are designed using graphical models in the IOPT-Flow Web environment, which are automatically converted to Python code, permitting the reduction of errors caused by manual coding. The code generator tool is based on the XSL language, used to transform XML documents describing graphical models into Python code. To validate this approach, a prototype of a robotic arm was used to perform pick and place tasks, demonstrating the use of the new tool to implement an industrial application.",
+  "doi": "10.1109/yef-ece58420.2023.10209340",
+  "openalex": "W4385655726",
+  "status": "ok",
+  "title": "Automatic Python code generation for Embedded/Cyber-Physical Systems"
+ },
+ "10.1145_3620666.3651344": {
+  "abstract": "Domain Specific Languages (DSLs) increase programmer productivity and provide high performance. Their targeted abstractions allow scientists to express problems at a high level, providing rich details that optimizing compilers can exploit to target current- and next-generation supercomputers. The convenience and performance of DSLs come with significant development and maintenance costs. The siloed design of DSL compilers and the resulting inability to benefit from shared infrastructure cause uncertainties around longevity and the adoption of DSLs at scale. By tailoring the broadly-adopted MLIR compiler framework to HPC, we bring the same synergies that the machine learning community already exploits across their DSLs (e.g. Tensorflow, PyTorch) to the finite-difference stencil HPC community. We introduce new HPC-specific abstractions for message passing targeting distributed stencil computations. We demonstrate the sharing of common components across three distinct HPC stencil-DSL compilers: Devito, PSyclone, and the Open Earth Compiler, showing that our framework generates high-performance executables based upon a shared compiler ecosystem.",
+  "doi": "10.1145/3620666.3651344",
+  "openalex": "W4395106400",
+  "status": "ok",
+  "title": "A shared compilation stack for distributed-memory parallelism in stencil DSLs"
+ },
+ "10.1145_3622825": {
+  "abstract": "Despite the widespread popularity of dynamically typed languages such as Python, it is well known that they pose significant challenges to code optimization due to the lack of concrete type information. To overcome this limitation, many ahead-of-time optimizing compiler approaches for Python rely on programmers to provide optional type information as a prerequisite for extensive code optimization. Since few programmers provide this information, a large majority of Python applications are executed without the benefit of code optimization, thereby contributing collectively to a significant worldwide wastage of compute and energy resources. In this paper, we introduce a new approach to concrete type inference that is shown to be effective in enabling code optimization for dynamically typed languages, without requiring the programmer to provide any type information. We explore three kinds of type inference algorithms in our approach based on: 1) machine learning models including GPT-4, 2) constraint-based inference based on SMT solving, and 3) a combination of 1) and 2). Our approach then uses the output from type inference to generate multi-version code for a bounded number of concrete type options, while also including a catch-all untyped version for the case when no match is found. The typed versions are then amenable to code optimization. Experimental results show that the combined algorithm in 3) delivers far superior precision and performance than the separate algorithms for 1) and 2). The performance improvement due to type inference, in terms of geometric mean speedup across all benchmarks compared to standard Python, when using 3) is 26.4× with Numba as an AOT optimizing back-end and 62.2× with the Intrepydd optimizing compiler as a back-end. These vast performance improvements can have a significant impact on programmers’ productivity, while also reducing their applications’ use of compute and energy resources.",
+  "doi": "10.1145/3622825",
+  "openalex": "W4387674229",
+  "status": "ok",
+  "title": "Concrete Type Inference for Code Optimization using Machine Learning with SMT Solving"
+ },
+ "10.1145_3647994": {
+  "abstract": "Skeletal program enumeration (SPE) can generate a great number of test programs for validating the correctness of compilers or interpreters. The classic SPE generates programs by exhaustively enumerating all possible variable usage patterns into a given syntactic structure. Even though it is capable of producing many test programs, the exhaustive enumeration strategy generates a large number of invalid programs, which may waste plenty of testing time and resources. To address the problem, this article proposes a tree-based SPE technique. Compared to the state-of-the-art, the key merit of the tree-based approach is that it allows us to take the dependency information into consideration when producing test programs and, thus, make it possible to (1) directly generate non-equivalent programs and (2) apply dominance relations to eliminate invalid test programs that have undefined variables. Hence, our approach significantly saves the cost of the naïve SPE approach. We have implemented our approach into an automated testing tool, IFuzzer , and applied it to test eight different implementations of Python interpreters, including CPython, PyPy, IronPython, Jython, RustPython, GPython, Pyston, and Codon. In three months of fuzzing, IFuzzer detected 142 bugs, of which 87 have been confirmed to be previously unknown bugs, of which 34 have been fixed. Compared to the state-of-the-art SPE techniques, IFuzzer takes only 61.0% of the time cost given the same number of testing seeds and improves 5.3% source code function coverage in the same time budget of testing.",
+  "doi": "10.1145/3647994",
+  "openalex": "W4391753607",
+  "status": "ok",
+  "title": "Enumerating Valid Non-Alpha-Equivalent Programs for Interpreter Testing"
+ },
+ "10.1145_3689737": {
+  "abstract": "Data science workloads frequently include Python code, but Python’s dynamic nature makes efficient execution hard. Traditional approaches either treat Python as a black box, missing out on optimization potential, or are limited to a narrow domain. However, a deep and efficient integration of user-defined Python code into data processing systems requires extracting the semantics of the entire Python code. In this paper, we propose a novel approach for extracting the high-level semantics by transforming general Python functions into program generators that generate a statically-typed IR when executed. The extracted IR then allows for high-level, domain-specific optimizations and the generation of efficient C++ code. With our prototype implementation, HiPy, we achieve single-threaded speedups of 2–20x for many workloads. Furthermore, HiPy is also capable of accelerating Python code in other domains like numerical data, where it can sometimes even outperform specialized compilers.",
+  "doi": "10.1145/3689737",
+  "openalex": "W4403223243",
+  "status": "ok",
+  "title": "HiPy: Extracting High-Level Semantics from Python Code for Data Processing"
+ },
+ "10.1145_3696443.3708963": {
+  "abstract": "Dynamic programming (DP) is a fundamental algorithmic strategy that decomposes large problems into manageable subproblems. It is a cornerstone of many important computational methods in diverse fields, especially in the field of computational genomics, where it is used for sequence comparison. However, as the scale of the data keeps increasing, these algorithms are becoming a major computational bottleneck, and there is a need for strategies that can improve their performance. Here, we present Vectron, a novel auto-vectorization suite that targets array-based DP implementations written in Python and converts them to efficient vectorized counterparts that can efficiently process multiple problem instances in parallel. Leveraging Single Instruction Multiple Data (SIMD) capabilities in modern CPUs, along with Graphics Processing Units (GPUs), Vectron delivers significant speedups, ranging from 10% to more than 20x, over the conventional C++ implementations and manually vectorized and domain-specific state-of-the-art implementations, without necessitating large algorithm or code changes. Vectron's generality enables automatic vectorization of any array-based DP algorithm and, as a result, presents an attractive solution to optimization challenges inherent to DP algorithms.",
+  "doi": "10.1145/3696443.3708963",
+  "openalex": "W4407857640",
+  "status": "ok",
+  "title": "Vectron: A Dynamic Programming Auto-vectorization Framework"
+ },
+ "10.1145_3735452.3735528": {
+  "abstract": "Embedded and safety-critical applications must operate reliably under dynamic and resource-constrained environments, where maintaining a balance between safety guarantees and system performance is crucial. Traditional static compilation approaches lack the flexibility needed to adaptively respond to runtime variations in operational conditions, often leading either to compromised safety or suboptimal performance. To address these challenges, we introduce JetCert, a self-adaptive compilation framework designed for embedded and safety-critical systems. JetCert dynamically transitions between formally verified, safety-critical compilation and optimized, high-performance compilation strategies based on runtime monitoring and analysis. By integrating seamlessly with existing self-adaptive control loops, JetCert ensures adaptive runtime decision-making. Moreover, JetCert features a priority-based continuous integration and deployment (CI/CD) pipeline designed for embedded environments. It supports rapid and reliable software updates. Experimental results demonstrate JetCert’s capability to effectively maintain safety constraints while optimizing system performance in dynamic embedded scenarios.",
+  "doi": "10.1145/3735452.3735528",
+  "openalex": "W4411259674",
+  "status": "ok",
+  "title": "JetCert: A Self-Adaptive Compilation Framework for Fast and Safe Code Execution"
+ },
+ "10.1145_3756681.3756972": {
+  "abstract": "Python is a popular programming language known for its ease of learning and extensive libraries. However, concerns about performance and energy consumption have led to the development of compilers to enhance Python code efficiency. Despite the proven benefits of existing compilers on the efficiency of Python code, there is limited analysis comparing their performance and energy efficiency, particularly considering code characteristics and factors like CPU frequency and core count. Our study investigates how compilation impacts the performance and energy consumption of Python code, using seven benchmarks compiled with eight different tools: PyPy, Numba, Nuitka, Mypyc, Codon, Cython, Pyston-lite, and the experimental Python 3.13 version, compared to CPython. The benchmarks are single-threaded and executed on an NUC and a server, measuring energy usage, execution time, memory usage, and Last-Level Cache (LLC) miss rates at a fixed frequency and on a single core. The results show that compilation can significantly enhance execution time, energy and memory usage, with Codon, PyPy, and Numba achieving over 90% speed and energy improvements. Nuitka optimizes memory usage consistently on both testbeds. The impact of compilation on LLC miss rate is not clear since it varies considerably across benchmarks for each compiler. Our study is important for researchers and practitioners focused on improving Python code performance and energy efficiency. We outline future research directions, such as exploring caching effects on energy usage. Our findings help practitioners choose the best compiler based on their efficiency benefits and accessibility.",
+  "doi": "10.1145/3756681.3756972",
+  "openalex": "W7117104135",
+  "status": "ok",
+  "title": "An Empirical Study on the Performance and Energy Usage of Compiled Python Code"
+ },
+ "10.1145_3787218": {
+  "abstract": "Tensors are an integral part of numerous domains, and while significant effort has been put into the design of tensor data structures in isolation, little attention has been paid to the relationships that exist across tensors and how this affects their representation and use. In this article, we focus on spatial relationships across tensors in a program, where such tensors are defined relative to a common reference coordinate system. These relationships are complicated by the fact that the tensors may differ in their representations, such as having variations in their axes, spacings, origins, and overall shape. Due to the lack of existing abstractions and language support for these types of tensor semantics, users are currently forced to manually perform the bookkeeping necessary to account for these varying relationships and representations. Unfortunately, we cannot rely on a simple library to capture these relationships, as computations on these types of tensors often happen at the innermost levels of programs; we find that the overheads associated with an unoptimized implementation quickly accumulate, leading to performance up to nearly 65x slower than a reference C implementation on a series of image and video compression benchmarks. In this article, we introduce the novel UniTe abstraction, which captures spatial relationships across all such tensors in a program. We also introduce two domain-specific languages and optimizing compilers, CoLa for Python and SHiM for C/C++, built off of UniTe. Both CoLa and SHiM provide users with an intuitive set of tensor primitives based on spatial relationships, hiding the complexity that goes into maintaining the tensors and computing accesses across them. In addition, we discuss the optimizations necessary to remove the associated abstraction overhead and describe their implementations. On the benchmarks, we show that both CoLa and SHiM successfully remove the overheads, achieving performance parity with existing C implementations.",
+  "doi": "10.1145/3787218",
+  "openalex": "W7121049142",
+  "status": "ok",
+  "title": "UniTe: A Universal Tensor Abstraction for Capturing Spatial Relationships"
+ },
+ "10.1145_3795883": {
+  "abstract": "Compilers are indispensable for transforming code written in high-level languages into performant machine code, but their general-purpose optimizations sometimes fall short. Domain experts might be aware of optimizations that the compiler is unable to apply or that are only valid in a particular domain. We have developed a system that allows domain experts to express rewrite rules to optimize code in the Julia programming language. Our system builds on e-graphs and equality saturation. It can apply optimizations in the presence of control flow and side effects. As Julia uses multiple dispatch, we allow users to constrain rewrite rules by argument types, and propagate type information through the e-graph representation. We propose an ILP formulation for optimal e-graph extraction that exploits opportunities for code reuse and introduce CFG skeleton relaxation to rewrite calls to pure functions as well as those with side effects. Use cases demonstrate that our system can perform rewrites on high-level, domain-specific code, as well as on lower-level code such as Julia’s broadcasting mechanism. We analyze the required compilation time and the performance impact of these rewrites.",
+  "doi": "10.1145/3795883",
+  "openalex": "W7131082296",
+  "status": "ok",
+  "title": "Equality Saturation for Optimizing High-Level Julia IR"
+ },
+ "10.15388_ioi.2023.08": {
+  "abstract": "Recursion is considered a challenging programming technique by many students. There are two common approaches intended to help students understand recursion. One of them is based on the operational semantics of function execution involving a stack, where students trace the execution of a recursively defined function for some concrete arguments. The other approach is based on the axiomatic semantics involving inductive reasoning with the contract of the recursively defined function. The former approach is not so helpful when designing recursive functions, whereas the latter can be helpful (being a special case of divide and conquer) but contracts can be hard to discover. In this article, I will show a third approach. It is based neither on an operational nor an axiomatic semantics. Rather, it involves a rewriting semantics using program transformation by substitution, thereby inlining function calls. We show that this approach not only may help understanding, but can also be used to design recursive functions.",
+  "doi": "10.15388/ioi.2023.08",
+  "openalex": "W4383824342",
+  "status": "ok",
+  "title": "Understanding and Designing Recursive Functions via Syntactic Rewriting"
+ },
+ "10.48550_arxiv.2307.06983": {
+  "abstract": "In the realm of software applications in the transportation industry, Domain-Specific Languages (DSLs) have enjoyed widespread adoption due to their ease of use and various other benefits. With the ceaseless progress in computer performance and the rapid development of large-scale models, the possibility of programming using natural language in specified applications - referred to as Application-Specific Natural Language (ASNL) - has emerged. ASNL exhibits greater flexibility and freedom, which, in turn, leads to an increase in computational complexity for parsing and a decrease in processing performance. To tackle this issue, our paper advances a design for an intermediate representation (IR) that caters to ASNL and can uniformly process transportation data into graph data format, improving data processing performance. Experimental comparisons reveal that in standard data query operations, our proposed IR design can achieve a speed improvement of over forty times compared to direct usage of standard XML format data.",
+  "doi": "10.48550/arxiv.2307.06983",
+  "openalex": "W4384613837",
+  "status": "ok",
+  "title": "IR Design for Application-Specific Natural Language: A Case Study on Traffic Data"
+ },
+ "10.48550_arxiv.2307.16080": {
+  "abstract": "Multi-Level Intermediate Representation (MLIR) is a novel compiler infrastructure that aims to provide modular and extensible components to facilitate building domain specific compilers. However, since MLIR models programs at an intermediate level of abstraction, and most extant frontends are at a very high level of abstraction, the semantics and mechanics of the fundamental transformations available in MLIR are difficult to investigate and employ in and of themselves. To address these challenges, we have developed \\texttt{nelli}, a lightweight, Python-embedded, domain-specific, language for generating MLIR code. \\texttt{nelli} leverages existing MLIR infrastructure to develop Pythonic syntax and semantics for various MLIR features. We describe \\texttt{nelli}'s design goals, discuss key details of our implementation, and demonstrate how \\texttt{nelli} enables easily defining and lowering compute kernels to diverse hardware platforms.",
+  "doi": "10.48550/arxiv.2307.16080",
+  "openalex": "W4385473805",
+  "status": "ok",
+  "title": "nelli: a lightweight frontend for MLIR"
+ },
+ "10.48550_arxiv.2310.05102": {
+  "abstract": "At present many distributed and decentralized frameworks for federated learning algorithms are already available. However, development of such a framework targeting smart Internet of Things in edge systems is still an open challenge. A solution to that challenge named Python Testbed for Federated Learning Algorithms (PTB-FLA) appeared recently. This solution is written in pure Python, it supports both centralized and decentralized algorithms, and its usage was validated and illustrated by three simple algorithm examples. In this paper, we present the federated learning algorithms development paradigm based on PTB-FLA. The paradigm comprises the four phases named by the code they produce: (1) the sequential code, (2) the federated sequential code, (3) the federated sequential code with callbacks, and (4) the PTB-FLA code. The development paradigm is validated and illustrated in the case study on logistic regression, where both centralized and decentralized algorithms are developed.",
+  "doi": "10.48550/arxiv.2310.05102",
+  "openalex": "W4387559716",
+  "status": "ok",
+  "title": "A Federated Learning Algorithms Development Paradigm"
+ },
+ "10.48550_arxiv.2605.18697": {
+  "abstract": "Compound AI applications, which compose calls to ML models using a general-purpose programming language like Python, are widely used for a variety of user-facing tasks, from software engineering to enterprise automation, making their end-to-end latency a critical bottleneck. In contrast to traditional applications, execution time is dominated by the external components, which cannot be handled by traditional language optimization systems, like optimizing compilers. To address this problem, we develop PopPy, a system that can uncover parallelization opportunities in Python applications that invoke these heavy external components, including those used in compound AI applications. PopPy supports a very expressive fragment of Python and requires minimal developer input to uncover parallelism. It combines an ahead-of-time compiler with a runtime, addressing three key challenges in extracting parallelism from Python applications: language complexity, dynamic dispatch, and variable mutation. On a set of real-world compound AI applications, PopPy achieves up to $6.4\\times$ speedups in end-to-end execution time compared to standard Python execution while preserving the sequential program semantics.",
+  "doi": "10.48550/arxiv.2605.18697",
+  "openalex": "W7161676990",
+  "status": "ok",
+  "title": "PopPy: Opportunistically Exploiting Parallelism in Python Compound AI Applications"
+ },
+ "10.5220_0012704000003687": {
+  "abstract": "This paper presents pyZtrategic: a library that embeds strategic term rewriting and attribute grammars in the Python programming language. Strategic term rewriting and attribute grammars are two powerful programming techniques widely used in language engineering: The former relies on strategies to apply term rewrite rules in defining large-scale language transformations, while the latter is suitable to express context-dependent language processing algorithms. Thus, pyZtrategic offers Python programmers recursion schemes (strategies) which apply term rewrite rules in defining large scale language transformations. It also offers attribute grammars to express context-dependent language processing algorithms. PyZtrategic offers the best of those two worlds, thus providing powerful abstractions to express software maintenance and evolution tasks. Moreover, we developed several language engineering problems in pyZtrategic, and we compare it to well established strategic programming and attribute grammar systems. Our preliminary results show that our library offers similar expressiveness as such systems, but, unfortunately, it does suffer from the current poor runtime performance of the Python language.",
+  "doi": "10.5220/0012704000003687",
+  "openalex": "W4396554348",
+  "status": "ok",
+  "title": "pyZtrategic: A Zipper-Based Embedding of Strategies and Attribute Grammars in Python"
+ },
+ "s2-0b527ccbc4a23b10": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Towards Ahead-of-Time Meta-Compilation of Dynamic Languages With an Extensible Type Analysis"
+ },
+ "s2-70afeb06c8c3ee13": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Shechi: A Secure Distributed Computation Compiler Based on Multiparty Homomorphic Encryption"
+ },
+ "s2-f7e446ea09c6a1f0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Edinburgh Research Explorer A shared compilation stack for distributed-memory parallelism in stencil DSLs"
+ }
+}

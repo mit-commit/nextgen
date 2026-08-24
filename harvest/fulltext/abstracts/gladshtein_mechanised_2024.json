@@ -1,0 +1,93 @@
+{
+ "10.1007_978-3-032-30693-7_26": {
+  "abstract": null,
+  "doi": "10.1007/978-3-032-30693-7_26",
+  "openalex": "W7167498982",
+  "status": "no_abstract",
+  "title": "Intuitive Verification of Sequential Programs Using Hybrid Reasoning"
+ },
+ "10.1145_3689756": {
+  "abstract": "Hyperproperties relate multiple executions of a program and are useful to express common correctness properties (such as determinism) and security properties (such as non-interference). While there are a number of powerful program logics for the deductive verification of hyperproperties, their automation falls behind. Most existing deductive verification tools are limited to safety properties, but cannot reason about the existence of executions, for instance, to prove the violation of a safety property. Others support more flexible hyperproperties such as generalized non-interference, but have limitations in terms of the programs and proof structures they support. In this paper, we present the first deductive verification technique for arbitrary hyperproperties over multiple executions of the same program. Our technique automates the generation of verification conditions for Hyper Hoare Logic. Our key insight is that arbitrary hyperproperties and the corresponding proof rules can be encoded into a standard intermediate verification language by representing sets of states of the input program explicitly in the states of the intermediate program. Verification is then automated using an existing SMT-based verifier for the intermediate language. We implement our technique in a tool called Hypra and demonstrate that it can reliably verify complex hyperproperties.",
+  "doi": "10.1145/3689756",
+  "openalex": "W4403223419",
+  "status": "ok",
+  "title": "Hypra: A Deductive Program Verifier for Hyper Hoare Logic"
+ },
+ "10.1145_3720474": {
+  "abstract": "Many interesting program properties involve the execution of multiple programs, including observational equivalence, noninterference, co-termination, monotonicity, and idempotency. One strategy for verifying such relational properties is to construct and reason about an intermediate program whose correctness implies that the individual programs exhibit those properties. A key challenge in building an intermediate program is finding a good alignment of the original programs. An alignment puts subparts of the original programs into correspondence so that their similarities can be exploited in order to simplify verification. We propose an approach to intermediate program construction that uses e-graphs, equality saturation, and algebraic realignment rules to efficiently represent and build programs amenable to automated verification. A key ingredient of our solution is a novel data-driven extraction technique that uses execution traces of candidate intermediate programs to identify solutions that are semantically well-aligned. We have implemented a relational verification engine based on our proposed approach, called KestRel , and use it to evaluate our approach over a suite of benchmarks taken from the relational verification literature.",
+  "doi": "10.1145/3720474",
+  "openalex": "W4409310606",
+  "status": "ok",
+  "title": "KestRel: Relational Verification using E-Graphs for Program Alignment"
+ },
+ "10.1145_3763130": {
+  "abstract": "Hyperproperties are system properties that relate multiple execution traces and commonly occur when specifying information-flow and security policies. Logics like HyperLTL utilize explicit quantification over execution traces to express temporal hyperproperties in reactive systems, i.e., hyperproperties that reason about the temporal behavior along infinite executions. An often unwanted side-effect of such logics is that they compare the quantified traces synchronously . This prohibits the logics from expressing properties that compare multiple traces asynchronously, such as Zdancewic and Myers’s observational determinism , McLean’s non-inference , or stuttering refinement . We study the model-checking problem for a variant of asynchronous HyperLTL (A-HLTL), a temporal logic that can express hyperproperties where multiple traces are compared across timesteps. In addition to quantifying over system traces, A-HLTL features secondary quantification over stutterings of these traces. Consequently, A-HLTL allows for a succinct specification of many widely used asynchronous hyperproperties. Model-checking A-HLTL requires finding suitable stutterings, which, thus far, has been only possible for very restricted fragments or terminating systems. In this paper, we propose a novel game-based approach for the verification of arbitrary ∀ ∗ ∃ ∗ A-HLTL formulas in reactive systems. In our method, we consider the verification as a game played between a verifier and a refuter, who challenge each other by controlling parts of the underlying traces and stutterings. A winning strategy for the verifier then corresponds to concrete witnesses for existentially quantified traces and asynchronous alignments for existentially quantified stutterings. We identify fragments for which our game-based interpretation is complete and thus constitutes a finite-state decision procedure. We contribute a prototype implementation for finite-state systems and report on encouraging experimental results.",
+  "doi": "10.1145/3763130",
+  "openalex": "W4414988703",
+  "status": "ok",
+  "title": "Verifying Asynchronous Hyperproperties in Reactive Systems"
+ },
+ "10.1145_3776719": {
+  "abstract": "Multi-modal program verification is a process of validating code against its specification using both dynamic and symbolic techniques, and proving its correctness by a combination of automated and interactive machine-assisted tools. In order to be trustworthy, such verification tools must themselves come with formal soundness proofs, establishing that any program verified in them against a certain specification does not violate the specification’s statement when executed. Verification tools that are proven sound in a general-purpose proof assistant with a small trusted core are commonly referred to as foundational . We present a framework that facilitates and streamlines construction of program verifiers that are both foundational and multi-modal. Our approach adopts the well-known idea of monadic shallow embedding of an executable program semantics into the programming language of a theorem prover based on higher-order logic, in our case, the Lean proof assistant. We provide a library of monad transformers for such semantics, encoding a variety of computational effects, including state, divergence, exceptions, and non-determinism. The key theoretical innovation of our work are monad transformer algebras that enable automated derivation of the respective sound verification condition generators. We show that proofs of the resulting verification conditions enjoy automation using off-the-shelf SMT solvers and allow for an interactive proof mode when automation fails. To demonstrate versatility of our framework, we instantiated it to embed two foundational multi-modal verifiers into Lean for reasoning about (1) distributed protocol safety and (2) Dafny-style specifications of imperative programs, and used them to mechanically verify a number of non-trivial case studies.",
+  "doi": "10.1145/3776719",
+  "openalex": "W7119483861",
+  "status": "ok",
+  "title": "Foundational Multi-Modal Program Verifiers"
+ },
+ "10.1145_3808261": {
+  "abstract": "In this paper, we introduce a verified framework for defining and composing sparse tensor formats. We extend the ATL tensor language and scheduling framework, which formerly could only express dense tensor kernels. We define a levelized abstraction to describe per-dimension tensor formats via their encoding routines, access and iteration functions, and formal properties enforcing soundness of the sparse structures as representations of the original dense tensors. Using this abstraction, we compositionally define format-agnostic, multidimensional compression and decompression functions that are used to express the top-level soundness theorem for these abstract sparse tensor formats. We then use this soundness theorem as an adjoint-pair rewrite theorem to introduce sparse data structures and iteration into a dense tensor kernel via the existing scheduling-rewrite framework of ATL. Overall, we are able to start with a program computing over dense operands and derive a proven semantically equivalent, optimized program computing over sparse structures. We further prove a minimal set of instances of the level-format abstraction, which can be composed and passed as parameters to compression to capture a broad range of canonical, multidimensional tensor-compression formats.",
+  "doi": "10.1145/3808261",
+  "openalex": "W7163927618",
+  "status": "ok",
+  "title": "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs"
+ },
+ "10.1145_3808328": {
+  "abstract": "Many important functional and security properties—including non-interference, determinism, and generalized non-interference (GNI)—are hyperproperties, i.e., properties relating multiple executions of a program. Existing separation logics allow one to reason about specific classes of hyperproperties, e.g., ∀∀-hyperproperties such as non-interference and ∃∃-properties such as non-determinism. However, they do not support quantifier alternation, which is for instance needed to express GNI. The only existing logic that can reason about such properties is Hyper Hoare Logic, but it does not support heap-manipulating programs and, thus, is not applicable to common imperative programs. This paper introduces Hyper Separation Logic (HSL), the first program logic that supports modular reasoning about hyperproperties with arbitrary quantifier alternation over programs that manipulate the heap. HSL generalizes Hyper Hoare Logic with a novel hyper separating conjunction that lifts the standard separating conjunction to sets of states, enabling a generalized frame rule for hyperproperties. We prove HSL sound in Isabelle/HOL and demonstrate its expressiveness for hyperproperties that lie beyond the reach of existing separation logics.",
+  "doi": "10.1145/3808328",
+  "openalex": "W7163951230",
+  "status": "ok",
+  "title": "Hyper Separation Logic"
+ },
+ "10.1145_3828694": {
+  "abstract": "Verifying the functional correctness of real-world code with complex algorithms can be decomposed into two layers: verifying that the concrete code refines an abstract algorithmic description, and proving the correctness of the formal description. However, in practice the two layers do not stay cleanly separated. For example, in the verification of the Knuth-Morris-Pratt (KMP) algorithm, the implementation correctness proof often re-establishes algorithm properties that have already been proved, as the concrete implementation relies on invariants that the traditional two-layer method provides no mechanism to transfer. This makes it difficult to clearly separate the concerns of algorithm correctness and implementation correctness. In this pearl, we show how a clean separation can be achieved within the two-layer method by combining two simple ideas: expressing implementation correctness as a relational Hoare quadruple, and introducing assertion annotations into the abstract program to capture key invariants. Properties established in the algorithm proof are thereby transferred directly to the implementation proof, eliminating the need to re-prove them. We demonstrate the effectiveness of this approach through non-trivial case studies, including the Knuth-Morris-Pratt pattern-matching algorithm and the depth-first search algorithm, showing that it leads to simpler proofs and a more modular verification process.",
+  "doi": "10.1145/3828694",
+  "openalex": "W7203631356",
+  "status": "ok",
+  "title": "Assertions for Free: Transferring Invariants from Algorithm to Implementation Proofs (Functional Pearl)"
+ },
+ "10.4230_lipics.itp.2026.6": {
+  "abstract": "Separation Logic is an established formalism for deductive verification of heap-manipulating programs. Proofs of symbolic heap entailment, an analogue of the ordinary logical implication, are amongst the most common reasoning steps in Separation Logic, and many existing heap verifiers provide automation for discharging valid heap entailments. We observe that existing techniques for automating entailment proofs in foundational Separation Logic verifiers embedded into provers such as Rocq, suffer from three main drawbacks: (a) poor performance due to metaprogramming overhead, (b) limited expressivity, and (c) restricted extensibility. To address these shortcomings, we propose lazy proof automation - an approach to entailment proofs inspired by translation validation. Our key idea is to implement an entailment checker as a combination of (1) an efficient but unverified prover, suitable for fast-paced interactive proofs, and (2) a proof reconstruction procedure that takes the prover’s trace and produces a certificate of entailment validity that can be checked a posteriori. We implemented these ideas in Yolo - a generic and extensible heap entailment prover built in Lean. We instantiate Yolo for two Lean-embedded Separation Logics and show its practical benefits, both in terms of user experience and proof-checking speed, compared with the automation available in state-of-the-art foundational Separation Logics.",
+  "doi": "10.4230/lipics.itp.2026.6",
+  "openalex": "W7168573586",
+  "status": "ok",
+  "title": "Lazy Proof Automation for Separation Logic"
+ },
+ "10.48550_arxiv.2509.04777": {
+  "abstract": null,
+  "doi": "10.48550/arxiv.2509.04777",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Forall-Exists Relational Verification by Filtering to Forall-Forall"
+ },
+ "s2-0a5277acd007a41c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Formalization of security"
+ },
+ "s2-16560057e46c231b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "KestRel: Relational Verification using E-Graphs for Program Alignment"
+ },
+ "s2-1b00d19ea295d3eb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "KestRel: Relational Verification using E-Graphs for Program Alignment"
+ }
+}

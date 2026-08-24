@@ -1,0 +1,324 @@
+{
+ "10.1007_978-3-642-23397-5_19": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-23397-5_19",
+  "openalex": "W57332520",
+  "status": "no_abstract",
+  "title": "A Fully Empirical Autotuned Dense QR Factorization for Multicore Architectures"
+ },
+ "10.1016_j.jocs.2021.101489": {
+  "abstract": "We present an autotuning approach for compile-time optimization of numerical discretization methods in simulations of partial differential equations. Our approach is based on data-driven regression of performance models for numerical methods. We use these models at compile time to automatically determine the parameters (e.g., resolution, time step size, etc.) of numerical simulations of continuum spatio-temporal models in order to optimize the tradeoff between simulation accuracy and runtime. The resulting autotuner is developed for the compiler of a Domain-Specific Language (DSL) for numerical simulations. The abstractions in the DSL enable the compiler to automatically determine the performance models and know which discretization parameters to tune. We demonstrate that this high-level approach can explore a large space of possible simulations, with simulation runtimes spanning multiple orders of magnitude. We evaluate our approach in two test cases: the linear diffusion equation and the nonlinear Gray-Scott reaction–diffusion equation. The results show that our model-based autotuner consistently finds configurations that outperform those found by state-of-the-art general-purpose autotuners. Specifically, our autotuner yields simulations that are on average 4.2x faster than those found by the best generic exploration algorithms, while using 16x less tuning time. Compared to manual tuning by a group of researchers with varying levels of expertise, the autotuner was slower than the best users by not more than a factor of 2, whereas it was able to significantly outperform half of them.",
+  "doi": "10.1016/j.jocs.2021.101489",
+  "openalex": "W3215807083",
+  "status": "ok",
+  "title": "Model-based autotuning of discretization methods in numerical simulations of partial differential equations"
+ },
+ "10.1109_cgo.2011.5764677": {
+  "abstract": "Approximating ideal program outputs is a common technique for solving computationally difficult problems, for adhering to processing or timing constraints, and for performance optimization in situations where perfect precision is not necessary. To this end, programmers often use approximation algorithms, iterative methods, data resampling, and other heuristics. However, programming such variable accuracy algorithms presents difficult challenges since the optimal algorithms and parameters may change with different accuracy requirements and usage environments. This problem is further compounded when multiple variable accuracy algorithms are nested together due to the complex way that accuracy requirements can propagate across algorithms and because of the size of the set of allowable compositions. As a result, programmers often deal with this issue in an ad-hoc manner that can sometimes violate sound programming practices such as maintaining library abstractions. In this paper, we propose language extensions that expose trade-offs between time and accuracy to the compiler. The compiler performs fully automatic compile-time and installtime autotuning and analyses in order to construct optimized algorithms to achieve any given target accuracy. We present novel compiler techniques and a structured genetic tuning algorithm to search the space of candidate algorithms and accuracies in the presence of recursion and sub-calls to other variable accuracy code. These techniques benefit both the library writer, by providing an easy way to describe and search the parameter and algorithmic choice space, and the library user, by allowing high level specification of accuracy requirements which are then met automatically without the need for the user to understand any algorithm-specific parameters. Additionally, we present a new suite of benchmarks, written in our language, to examine the efficacy of our techniques. Our experimental results show that by relaxing accuracy requirements, we can easily obtain performance improvements ranging from 1.1× to orders of magnitude of speedup.",
+  "doi": "10.1109/cgo.2011.5764677",
+  "openalex": "W4251875201",
+  "status": "ok",
+  "title": "Language and compiler support for auto-tuning variable-accuracy algorithms"
+ },
+ "10.1109_hipc.2013.6799131": {
+  "abstract": "This paper describes a compiler approach to introducing communication-avoiding optimizations in geometric multigrid (GMG), one of the most popular methods for solving partial differential equations. Communication-avoiding optimizations reduce vertical communication through the memory hierarchy and horizontal communication across processes or threads, usually at the expense of introducing redundant computation. We focus on applying these optimizations to the smooth operator, which successively reduces the error and accounts for the largest fraction of the GMG execution time. Our compiler technology applies both novel and known transformations to derive an implementation comparable to manually-tuned code. To make the approach portable, an underlying autotuning system explores the tradeoff between reduced communication and increased computation, as well as tradeoffs in threading schemes, to automatically identify the best implementation for a particular architecture and at each computation phase. Results show that we are able to quadruple the performance of the smooth operation on the finest grids while attaining performance within 94% of manually-tuned code. Overall we improve the overall multigrid solve time by 2.5× without sacrificing programer productivity.",
+  "doi": "10.1109/hipc.2013.6799131",
+  "openalex": "W2026024102",
+  "status": "ok",
+  "title": "Compiler generation and autotuning of communication-avoiding operators for geometric multigrid"
+ },
+ "10.1109_ipdpsw.2017.152": {
+  "abstract": "We describe an integration of the CHiLL compiler with OpenTuner to reduce the programmer burden in using autotuning. We use as a case study optimizing the smooth operator and its associated stencil computations in the context of Geometric Multigrid (GMG), a hierarchical linear solver that operates in multiple grid resolutions (levels). Smooth is the most performance-critical operation that runs multiple times at each grid level and effectively performs a relaxation of the approximated solution at a given grid resolution. This computation poses a particular challenge for autotuning, as the desired optimization strategy varies at different grid resolutions within the same application execution. Even though the compiler provides a number of standard and domain-specific optimizations for stencil computations, it is challenging for a programmer to decide which optimizations to perform and implement all the steps of the autotuning search. In this paper, we make the following contributions to simplify this process and make it possible to configure the application for its different phases: (1) we provide an interface (called a superscript) to concisely describe a search space and automatically generate CHiLL transformation recipes; and, (2) we use OpenTuner tailored to CHiLL transformation recipes to employ sophisticated heuristic algorithms that manage the computational complexity of search. We demonstrate performance that far exceeds that of fixed optimization strategies, while only sampling a tiny subset of the autotuning search space.",
+  "doi": "10.1109/ipdpsw.2017.152",
+  "openalex": "W2732207342",
+  "status": "ok",
+  "title": "Automating Compiler-Directed Autotuning for Phased Performance Behavior"
+ },
+ "10.1109_jproc.2018.2817118": {
+  "abstract": "In the last decade, machine-learning-based compilation has moved from an obscure research niche to a mainstream activity. In this paper, we describe the relationship between machine learning and compiler optimization and introduce the main concepts of features, models, training, and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine-learning-based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.1109/jproc.2018.2817118",
+  "openalex": "W2962724414",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimization"
+ },
+ "10.1109_jproc.2018.2854229": {
+  "abstract": "The purpose of a domain-specific language (DSL) is to enable the application programmer to specify a problem, or an abstract algorithm description, in his/her domain of expertise without being burdened by implementation details. The ideal scenario is that the implementation detail is added in an automatic process of program translation and code generation. The approach of domain-specific program generation has lately received increasing attention in the area of computational science and engineering. In this paper, we introduce the new code generation framework Athariac. Its goal is to support the quick implementation of a language processing and program optimization platform for a given DSL based on stepwise term rewriting. We demonstrate the framework's use on our DSL ExaSlang for the specification and optimization of multigrid solvers. On this example, we provide evidence of Athariac's potential for making domain-specific software engineering more productive.",
+  "doi": "10.1109/jproc.2018.2854229",
+  "openalex": "W2898550083",
+  "status": "ok",
+  "title": "Automating the Development of High-Performance Multigrid Solvers"
+ },
+ "10.1109_sc.2012.85": {
+  "abstract": "Multigrid methods are widely used to accelerate the convergence of iterative solvers for linear systems used in a number of different application areas. In this paper, we explore optimization techniques for geometric multigrid on existing and emerging multicore systems including the Opteron-based Cray XE6, Intel® Xeon® E5-2670 and X5550 processor-based Infiniband clusters, as well as the new Intel® Xeon Phi coprocessor (Knights Corner). Our work examines a variety of novel techniques including communication-aggregation, threaded wavefront-based DRAM communication-avoiding, dynamic threading decisions, SIMDization, and fusion of operators. We quantify performance through each phase of the V-cycle for both single-node and distributed-memory experiments and provide detailed analysis for each class of optimization. Results show our optimizations yield significant speedups across a variety of subdomain sizes while simultaneously demonstrating the potential of multi- and manycore processors to dramatically accelerate single-node performance. However, our analysis also indicates that improvements in networks and communication will be essential to reap the potential of manycore processors in large-scale multigrid calculations.",
+  "doi": "10.1109/sc.2012.85",
+  "openalex": "W4241696959",
+  "status": "ok",
+  "title": "Optimization of geometric multigrid for emerging multi- and manycore processors"
+ },
+ "10.1145_1542476.1542481": {
+  "abstract": "It is often impossible to obtain a one-size-fits-all solution for high performance algorithms when considering different choices for data distributions, parallelism, transformations, and blocking. The best solution to these choices is often tightly coupled to different architectures, problem sizes, data, and available system resources. In some cases, completely different algorithms may provide the best performance. Current compiler and programming language techniques are able to change some of these parameters, but today there is no simple way for the programmer to express or the compiler to choose different algorithms to handle different parts of the data. Existing solutions normally can handle only coarse-grained, library level selections or hand coded cutoffs between base cases and recursive cases.",
+  "doi": "10.1145/1542476.1542481",
+  "openalex": "W2000873501",
+  "status": "ok",
+  "title": "PetaBricks"
+ },
+ "10.1145_1836543.1836554": {
+  "abstract": "Building adaptable and more efficient programs for the multi-core era is now within reach.",
+  "doi": "10.1145/1836543.1836554",
+  "openalex": "W4247598064",
+  "status": "ok",
+  "title": "PetaBricks"
+ },
+ "10.1145_1953611.1953623": {
+  "abstract": "The NAS parallel benchmarks, originally developed by NASA for evaluating performance of their high-performance computers, have been regarded as one of the most widely used benchmark suites for side-by-side comparisons of high-performance machines. However, even though the NAS parallel benchmarks have grown tremendously in the last two decades, documentation is lagging behind because of rapid changes and additions to the collection of benchmark codes primarily due to rapid innovation of parallel architectures. Consequently, the learning curve for beginning graduate students, researchers, or software systems engineers to pick up these benchmarks is typically huge. In this paper, we document and assess the NAS parallel benchmark suite by identifying parallel patterns within the NAS benchmark codes. We believe that such documentation of the benchmarks will allow researchers as well as those in industry to understand, use and modify these codes more effectively.",
+  "doi": "10.1145/1953611.1953623",
+  "openalex": "W2047290283",
+  "status": "ok",
+  "title": "Towards using and improving the NAS parallel benchmarks"
+ },
+ "10.1145_2160803.2160870": {
+  "abstract": "poster Share on BrickX: building hybrid systems for recursive computations Authors: Yuanrui Zhang The Pennsylvania State University, University Park, PA The Pennsylvania State University, University Park, PAView Profile , Jun Liu The Pennsylvania State University, University Park, PA The Pennsylvania State University, University Park, PAView Profile , Sai Prashanth Muralidhara The Pennsylvania State University, University Park, PA The Pennsylvania State University, University Park, PAView Profile , Mahmut Kandemir The Pennsylvania State University, University Park, PA The Pennsylvania State University, University Park, PAView Profile Authors Info & Claims ACM SIGMETRICS Performance Evaluation ReviewVolume 39Issue 3December 2011 pp 98–100https://doi.org/10.1145/2160803.2160870Published:21 December 2011Publication History 0citation55DownloadsMetricsTotal Citations0Total Downloads55Last 12 Months0Last 6 weeks0 Get Citation AlertsNew Citation Alert added!This alert has been successfully added and will be sent to:You will be notified whenever a record that you have chosen has been cited.To manage your alert preferences, click on the button below.Manage my AlertsNew Citation Alert!Please log in to your account Save to BinderSave to BinderCreate a New BinderNameCancelCreateExport CitationPublisher SiteGet Access",
+  "doi": "10.1145/2160803.2160870",
+  "openalex": "W2054837693",
+  "status": "ok",
+  "title": "BrickX"
+ },
+ "10.1145_2628071.2628092": {
+  "abstract": "Program autotuning has been shown to achieve better or more portable performance in a number of domains. However, autotuners themselves are rarely portable between projects, for a number of reasons: using a domain-informed search space representation is critical to achieving good results; search spaces can be intractably large and require advanced machine learning techniques; and the landscape of search spaces can vary greatly between different problems, sometimes requiring domain specific search techniques to explore efficiently.",
+  "doi": "10.1145/2628071.2628092",
+  "openalex": "W2100218206",
+  "status": "ok",
+  "title": "OpenTuner"
+ },
+ "10.1145_2904903": {
+  "abstract": "Image pipelines arise frequently in modern computational photography systems and consist of multiple processing stages where each stage produces an intermediate image that serves as input to a future stage. Inspired by recent work on loop perforation [Sidiroglou-Douskos et al. 2011], this article introduces image perforation , a new optimization technique that allows us to automatically explore the space of performance-accuracy tradeoffs within an image pipeline. Image perforation works by transforming loops over the image at each pipeline stage into coarser loops that effectively “skip” certain samples. These missing samples are reconstructed for later stages using a number of different interpolation strategies that are relatively inexpensive to perform compared to the original cost of computing the sample. We describe a genetic algorithm for automatically exploring the resulting combinatoric search space of which loops to perforate, in what manner, by how much, and using which reconstruction method. We also present a prototype language that implements image perforation along with several other domain-specific optimizations and show results for a number of different image pipelines and inputs. For these cases, image perforation achieves speedups of 2 × --10 × with acceptable loss in visual quality and significantly outperforms loop perforation.",
+  "doi": "10.1145/2904903",
+  "openalex": "W2509143135",
+  "status": "ok",
+  "title": "Image Perforation"
+ },
+ "10.1145_3009837.3009846": {
+  "abstract": "Virtually all real-valued computations are carried out using floating-point data types and operations. The precision of these data types must be set with the goals of reducing the overall round-off error, but also emphasizing performance improvements. Often, a mixed-precision allocation achieves this optimum; unfortunately, there are no techniques available to compute such allocations and conservatively meet a given error target across all program inputs. In this work, we present a rigorous approach to precision allocation based on formal analysis via Symbolic Taylor Expansions, and error analysis based on interval functions. This approach is implemented in an automated tool called FPTuner that generates and solves a quadratically constrained quadratic program to obtain a precision-annotated version of the given expression. FPTuner automatically introduces all the requisite precision up and down casting operations. It also allows users to flexibly control precision allocation using constraints to cap the number of high precision operators as well as group operators to allocate the same precision to facilitate vectorization. We evaluate FPTuner by tuning several benchmarks and measuring the proportion of lower precision operators allocated as we increase the error threshold. We also measure the reduction in energy consumption resulting from executing mixed-precision tuned code on a real hardware platform. We observe significant energy savings in response to mixed-precision tuning, but also observe situations where unexpected compiler behaviors thwart intended optimizations.",
+  "doi": "10.1145/3009837.3009846",
+  "openalex": "W2566629575",
+  "status": "ok",
+  "title": "Rigorous floating-point mixed-precision tuning"
+ },
+ "10.1145_3093333.3009846": {
+  "abstract": "Virtually all real-valued computations are carried out using floating-point data types and operations. The precision of these data types must be set with the goals of reducing the overall round-off error, but also emphasizing performance improvements. Often, a mixed-precision allocation achieves this optimum; unfortunately, there are no techniques available to compute such allocations and conservatively meet a given error target across all program inputs. In this work, we present a rigorous approach to precision allocation based on formal analysis via Symbolic Taylor Expansions, and error analysis based on interval functions. This approach is implemented in an automated tool called FPTuner that generates and solves a quadratically constrained quadratic program to obtain a precision-annotated version of the given expression. FPTuner automatically introduces all the requisite precision up and down casting operations. It also allows users to flexibly control precision allocation using constraints to cap the number of high precision operators as well as group operators to allocate the same precision to facilitate vectorization. We evaluate FPTuner by tuning several benchmarks and measuring the proportion of lower precision operators allocated as we increase the error threshold. We also measure the reduction in energy consumption resulting from executing mixed-precision tuned code on a real hardware platform. We observe significant energy savings in response to mixed-precision tuning, but also observe situations where unexpected compiler behaviors thwart intended optimizations.",
+  "doi": "10.1145/3093333.3009846",
+  "openalex": "W3011924825",
+  "status": "ok",
+  "title": "Rigorous floating-point mixed-precision tuning"
+ },
+ "10.1145_3291527": {
+  "abstract": "Automatic performance tuning (Autotuning) is an increasingly critical tuning technique for the high portable performance of Exascale applications. However, constructing an autotuner from scratch remains a challenge, even for domain experts. In this work, we propose a performance tuning and knowledge management suite (PAK) to help rapidly build autotuners. In order to accommodate existing autotuning techniques, we present an autotuning protocol that is composed of an extractor, producer, optimizer, evaluator, and learner. To achieve modularity and reusability, we also define programming interfaces for each protocol component as the fundamental infrastructure, which provides a customizable mechanism to deploy knowledge mining in the performance database. PAK’s usability is demonstrated by studying two important computational kernels: stencil computation and sparse matrix-vector multiplication (SpMV). Our proposed autotuner based on PAK shows comparable performance and higher productivity than traditional autotuners by writing just a few tens of code using our autotuning protocol.",
+  "doi": "10.1145/3291527",
+  "openalex": "W2997166225",
+  "status": "ok",
+  "title": "An Autotuning Protocol to Rapidly Build Autotuners"
+ },
+ "10.2172_1136783": {
+  "abstract": "Multigrid methods are widely used to accelerate the convergence of iterative solvers for linear systems used in a number of different application areas. In this report, we describe miniGMG, our compact geometric multigrid benchmark designed to proxy the multigrid solves found in AMR applications. We explore optimization techniques for geometric multigrid on existing and emerging multicore systems including the Opteron-based Cray XE6, Intel Sandy Bridge and Nehalem-based Infiniband clusters, as well as manycore-based architectures including NVIDIA's Fermi and Kepler GPUs and Intel's Knights Corner (KNC) co-processor. This report examines a variety of novel techniques including communication-aggregation, threaded wavefront-based DRAM communication-avoiding, dynamic threading decisions, SIMDization, and fusion of operators. We quantify performance through each phase of the V-cycle for both single-node and distributed-memory experiments and provide detailed analysis for each class of optimization. Results show our optimizations yield significant speedups across a variety of subdomain sizes while simultaneously demonstrating the potential of multi- and manycore processors to dramatically accelerate single-node performance. However, our analysis also indicates that improvements in networks and communication will be essential to reap the potential of manycore processors in large-scale multigrid calculations.",
+  "doi": "10.2172/1136783",
+  "openalex": "W313895472",
+  "status": "ok",
+  "title": "Implementation and Optimization of miniGMG - a Compact Geometric Multigrid Benchmark"
+ },
+ "10.2172_1176882": {
+  "abstract": "This grant supported the ZettaBricks and OpenTuner projects. ZettaBricks is a new implicitly parallel language and compiler where defining multiple implementations of multiple algorithms to solve a problem is the natural way of programming. ZettaBricks makes algorithmic choice a first class construct of the language. Choices are provided in a way that also allows our compiler to tune at a finer granularity. The ZettaBricks compiler autotunes programs by making both fine-grained as well as algorithmic choices. Choices also include different automatic parallelization techniques, data distributions, algorithmic parameters, transformations, and blocking. Additionally, ZettaBricks introduces novel techniques to autotune algorithms for different convergence criteria. When choosing between various direct and iterative methods, the ZettaBricks compiler is able to tune a program in such a way that delivers near-optimal efficiency for any desired level of accuracy. The compiler has the flexibility of utilizing different convergence criteria for the various components within a single algorithm, providing the user with accuracy choice alongside algorithmic choice. OpenTuner is a generalization of the experience gained in building an autotuner for ZettaBricks. OpenTuner is a new open source framework for building domain-specific multi-objective program autotuners. OpenTuner supports fully-customizable configuration representations, an extensible technique representation to allow for domain-specific techniques, and an easy to use interface for communicating with the program to be autotuned. A key capability inside OpenTuner is the use of ensembles of disparate search techniques simultaneously; techniques that perform well will dynamically be allocated a larger proportion of tests.",
+  "doi": "10.2172/1176882",
+  "openalex": "W2465978700",
+  "status": "ok",
+  "title": "ZettaBricks: A Language Compiler and Runtime System for Anyscale Computing"
+ },
+ "10.2172_1468962": {
+  "abstract": "many scientific applications. We also show that with autotuning we can attain near Roofline (a performance bound for a computation and target architecture) performance across the key operations in the miniGMG benchmark for both CPU- and GPU-based architectures as well as for a multiple stencil discretizations and smoothers. We show that our technology is readily interoperable with MPI resulting in performance at scale equal to that obtained via hand-optimized MPI+CUDA implementation.",
+  "doi": "10.2172/1468962",
+  "openalex": "W2563529472",
+  "status": "ok",
+  "title": "Compiler optimizations and autotuning for stencils and geometric multigrid"
+ },
+ "10.23860_diss-convey-christian-2013": {
+  "abstract": "Let D be a DAG and let X be any non-empty subset of D's vertices. X is a convex set of D if D contains a path that originates in X, and then leaves X, and then re-enters X. This work presents basic convexity algorithms for creating, growing, and shrinking convex sets using two different approaches: predecessor and successor sets, and topological orderings. It shows that the algorithms based on predecessor and successor sets typically have higher asymptotic running times than those based on topological ordering. However, when creating a convex set based upon a potentially non-convex set of \"seed\" vertices, the use of predecessor and successor sets permits the creation of a convex set which is the uniquely smallest superset of the seeds. This work also considers the problem of stochastically searching for a global minimum over all convex sets of a given DAG, using the basic convexity algorithms described above. This work demonstrates the existence of such an algorithm that, when run for a finite but bounded number of iterations, the probability of it covering the entire search space approaches one. This work presents one possible mapping which extends this work's optimization of a single parallel task to the optimization of task-parallel programs with mutiple tasks. This mapping is studied experimentally. The results demonstrate a minor (5%) speed improvement over a human-crafted parallelization of the same program, suggesting the possible merit in this work's approach to automated parallel-program optimization.",
+  "doi": "10.23860/diss-convey-christian-2013",
+  "openalex": "W2171508144",
+  "status": "ok",
+  "title": "Towards Efficient Stochastic Optimization of Functions of Convex Sets"
+ },
+ "10.48550_arxiv.1102.5328": {
+  "abstract": "Tuning numerical libraries has become more difficult over time, as systems get more sophisticated. In particular, modern multicore machines make the behaviour of algorithms hard to forecast and model. In this paper, we tackle the issue of tuning a dense QR factorization on multicore architectures. We show that it is hard to rely on a model, which motivates us to design a fully empirical approach. We exhibit few strong empirical properties that enable us to efficiently prune the search space. Our method is automatic, fast and reliable. The tuning process is indeed fully performed at install time in less than one and ten minutes on five out of seven platforms. We achieve an average performance varying from 97% to 100% of the optimum performance depending on the platform. This work is a basis for autotuning the PLASMA library and enabling easy performance portability across hardware systems.",
+  "doi": "10.48550/arxiv.1102.5328",
+  "openalex": "W1872261699",
+  "status": "ok",
+  "title": "Fully Empirical Autotuned QR Factorization For Multicore Architectures"
+ },
+ "10.48550_arxiv.1805.03441": {
+  "abstract": "In the last decade, machine learning based compilation has moved from an an obscure research niche to a mainstream activity. In this article, we describe the relationship between machine learning and compiler optimisation and introduce the main concepts of features, models, training and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine learning based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.48550/arxiv.1805.03441",
+  "openalex": "W2802910567",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "10.5555_2190025.2190056": {
+  "abstract": "Abstract—Approximating ideal program outputs is a common technique for solving computationally difficult problems, for adhering to processing or timing constraints, and for performance optimization in situations where perfect precision is not necessary. To this end, programmers often use approximation algorithms, iterative methods, data resampling, and other heuristics. However, programming such variable accuracy algorithms presents difficult challenges since the optimal algorithms and parameters may change with different accuracy requirements and usage environments. This problem is further compounded when multiple variable accuracy algorithms are nested together due to the complex way that accuracy requirements can propagate across algorithms and because of the size of the set of allowable compositions. As a result, programmers often deal with this issue in an ad-hoc manner that can sometimes violate sound programming practices such as maintaining library abstractions. In this paper, we propose language extensions that expose trade-offs between time and accuracy to the compiler. The compiler performs fully automatic compile-time and installtime autotuning and analyses in order to construct optimized algorithms to achieve any given target accuracy. We present novel compiler techniques and a structured genetic tuning algorithm to search the space of candidate algorithms and accuracies in the presence of recursion and sub-calls to other variable accuracy code. These techniques benefit both the library writer, by providing an easy way to describe and search the parameter and algorithmic choice space, and the library user, by allowing high level specification of accuracy requirements which are then met automatically without the need for the user to understand any algorithm-specific parameters. Additionally, we present a new suite of benchmarks, written in our language, to examine the efficacy of our techniques. Our experimental results show that by relaxing accuracy requirements, we can easily obtain performance improvements ranging from 1.1x to orders of magnitude of speedup.",
+  "doi": "10.5555/2190025.2190056",
+  "openalex": "W2094190665",
+  "status": "ok",
+  "title": "Language and compiler support for auto-tuning variable-accuracy algorithms"
+ },
+ "10.5555_2388996.2389126": {
+  "abstract": "Multigrid methods are widely used to accelerate the convergence of iterative solvers for linear systems used in a number of different application areas. In this paper, we explore optimization techniques for geometric multigrid on existing and emerging multicore systems including the Opteron-based Cray XE6, Intel® Xeon® E5-2670 and X5550 processor-based Infiniband clusters, as well as the new Intel® Xeon Phi coprocessor (Knights Corner). Our work examines a variety of novel techniques including communication-aggregation, threaded wavefront-based DRAM communication-avoiding, dynamic threading decisions, SIMDization, and fusion of operators. We quantify performance through each phase of the V-cycle for both single-node and distributed-memory experiments and provide detailed analysis for each class of optimization. Results show our optimizations yield significant speedups across a variety of subdomain sizes while simultaneously demonstrating the potential of multi- and manycore processors to dramatically accelerate single-node performance. However, our analysis also indicates that improvements in networks and communication will be essential to reap the potential of manycore processors in large-scale multigrid calculations. © 2012 IEEE.",
+  "doi": "10.5555/2388996.2389126",
+  "openalex": "W2087479145",
+  "status": "ok",
+  "title": "Optimization of geometric multigrid for emerging multi- and manycore processors"
+ },
+ "10.5705_ss.202017.0138": {
+  "abstract": null,
+  "doi": "10.5705/ss.202017.0138",
+  "openalex": "W2605914769",
+  "status": "no_abstract",
+  "title": "Surrogate-Assisted Tuning for Computer Experiments with Qualitative and Quantitative Parameters"
+ },
+ "oa-W1483258291": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2014.",
+  "doi": null,
+  "openalex": "W1483258291",
+  "status": "ok",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "oa-W1593214441": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2011.",
+  "doi": null,
+  "openalex": "W1593214441",
+  "status": "ok",
+  "title": "Evolutionary algorithms for compiler-enabled program autotuning"
+ },
+ "oa-W164329846": {
+  "abstract": "Dense linear algebra(DLA) is one of the most important softwares in high performance computing. It is also important for it’s wide usage in other application domains like machine learning, gaming, speech processing, image processing, etc. The introduction of new machines from vendor provides us opportunities to optimize DLA libraries for the new machines and thus exploit their power. Unfortunately the optimization phase is not straightforward all the time. The most important part of DLA libraries are it’s basic linear algebra subprograms(BLAS) kernels. The optimum code of a certain BLAS kernel in two different machines with different semiconductor process can be different even if they share the same features in terms of instruction set architecture, memory hierarchy and clock speed. It has become an tradition to optimize BLAS for upcoming machines. Vendors like Intel, AMD and IBM maintain highly optimized BLAS libraries targeting their own CPUs. In the GPU sector, NVIDIA is also providing CUBLAS for it’s accelerator cards like GTX280, Tesla2050. There has been few research in academia to optimize BLAS for GPUs. But the area is still new and presents numerous cases/opportunities for improvements. The existing BLAS for GPUs are not highly optimized for DLA algorithms. For example, vendors don’t have highly optimized BLAS for rectangular shaped problem size. Level 2 BLAS e.g. symmetric matrix matrix multiplication, which are very important for memory bound operations like tridiagonalization, performs poorly. In certain GPUs like GTX280 BLAS kernels have performance dips due to partition camping phenomenon in global memory modules. More importantly the existing BLASs are not optimized for generic",
+  "doi": null,
+  "openalex": "W164329846",
+  "status": "ok",
+  "title": "Accelerating Dense Linear Algebra for GPUs, Multicores and Hybrid Architectures: an Autotuned and Algorithmic Approach"
+ },
+ "oa-W2291405489": {
+  "abstract": "FACULTY OF PHYSICAL SCIENCES AND ENGINEERING DEPARTMENT OF ELECTRONICS AND COMPUTER SCIENCE Doctor of Philosophy by Tristan Aubrey-Jones Distributed memory architectures such as Linux clusters have become increasingly common but remain difficult to program. We target this problem and present a novel technique to automatically generate data distribution plans, and subsequently MPI implementations in C++, from programs written in a functional core language. This framework encodes distributed data layouts as types, which are then used both to search (via type inference) for optimal data distribution plans and to generate the MPI implementations. The main novelty of our approach is that it supports multiple collections, distributed arrays, maps, and lists, rather than just arrays. We introduce the core language and explain our formalization of distributed data layouts. We describe how to search for data distribution plans using a type inference algorithm, and how we generate MPI implementations in C++ from such plans. We then show how our types can be extended to support local data layouts and improved array distributions. We also show how a theorem prover and suitable equational theories can be used to yield a better (i.e., more complete) type inference algorithm. We then describe the design of our implementation, and explain how we use a runtime performance-feedback directed search algorithm to find the best data distribution plans for different input programs. Finally, we present some conceptual and experimental evaluation which analyzes the capabilities of our approach, and shows that our implementation can find distributed memory implementations of several example programs, and that the performance of generated programs is similar to that of hand-coded versions.",
+  "doi": null,
+  "openalex": "W2291405489",
+  "status": "ok",
+  "title": "Synthesizing imperative distributed-memory implementations from functional data-parallel programs"
+ },
+ "oa-W2741786448": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2741786448",
+  "status": "no_abstract",
+  "title": "Fully Empirical Autotuned QR Factorization For"
+ },
+ "oa-W2762510038": {
+  "abstract": "Performance problems commonly exist in many kinds of real-world applications, including smartphone apps, databases, web servers, as well as large-scale data analytical systems. The pervasive use of managed languages such as Java and C#, which often blow up memory usage in unpredictable ways, further exacerbates these problems. A great deal of evidence from various application communities shows that seemingly insignificant performance problems can lead to severe scalability reductions and even financial losses.Performance problems are notoriously difficult to find and fix in real-world systems. First, visible performance degradation is often an accumulation of the effects of a great number of invisible problems that scatter all over the program. These problems only manifest for particular workloads or when the input size is large enough. Hence, it is extremely difficult, if not impossible, for developers to catch performance problems early during testing before they go out to production and are experienced by users. Fixing these problems is equally difficult. Developing a fix requires the understanding of the root cause, which can be both time-consuming and labor-intensive given the complexity of large software systems. Furthermore, for modern applications such as data analytical systems, application developers often write only a simple layer of user logic (e.g., Map/Reduce programs), treating the underlying system as a blackbox. It would not be possible to come up with a fix if the problem is located deeply in the system code.There is a rich literature in techniques that can find and fix performance problems in managed programs. However, the existing works all suffer from one or more of the following drawbacks: (1) lacking a general way to describe different kinds of performance problems, (2) lacking effective test oracles that can capture invisible performance problems under small workloads, (3) lacking effective debugging support that can help developers find the root cause when a bug manifests, and (4) lacking a systematic approach that can effectively tune memory usage in data-intensive systems. As a result, performance bugs still escape to production runs, hurt user experience, degrade system throughput, and waste computational resources. For modern Big Data systems, most of which are written in managed languages, performance problems become increasingly critical, causing scalability degradation, unacceptable latency, and even execution failures leading to wide-range crashes and financial losses.In this dissertation, we propose a set of dynamic techniques that can help developers find and fix memory-related performance problems in both programs running on a single machine and data-intensive systems deployed on large clusters. Specifically, this dissertation makes the following three major contributions. The first contribution is the design of an instrumentation specification language (ISL) in which one can easily describe the symptoms and counter-evidence of performance problems. The language supports two primary actions amplify and deamplify, which can help developers capture invisible problems by “blowing up” the effect of the performance bugs and reduce false warnings. The second contribution is the development of a general performance testing framework named PerfBlower, which can efficiently profile program executions, continuously amplify the problems specified with the ISL language, and report reference-path-based diagnostic information, making it easy for the user to understand the root cause of a reported problem and develop a fix. The third contribution is the design and implementation of interruptible task, a new type of data-parallel tasks that can be interrupted upon memory pressure—with part or all of their used memory reclaimed—and resumed when the pressure goes away, to help large-scale data analytical systems such as Hadoop and Hyracks survive memory pressure.To evaluate these techniques, we have performed an extensive set of experiments using real-world programs and datasets. Our experimental results demonstrate that the techniques proposed in this dissertation can effectively detect and fix memory-related performance problems in both single-machine programs and distributed data-parallel systems. These techniques are also easy to use—users can quickly describe performance problems using ISL and/or develop interruptible tasks to improve the performance of their application code without understanding the underlying systems. These techniques can be readily employed in practice to help real-world developers in various testing and tuning scenarios.",
+  "doi": null,
+  "openalex": "W2762510038",
+  "status": "ok",
+  "title": "Detecting and Fixing Memory-Related Performance Problems in Managed Languages"
+ },
+ "oa-W2767350163": {
+  "abstract": "This paper presents a new application of a particular machine learning technique for improving wind forecasting. The technique, known as kernel regression, is somewhat similar to fuzzy logic in that both make predictions based on the similarity of the current state to historical training states. Unlike fuzzy logic systems, kernel regression relaxes the requirement for explicit event classifications and instead leverages the training set to form an implicit multidimensional joint density and compute a conditional expectation given any available data. The need for faster, highly accurate, and cost-effective predictive techniques for wind power forecasting is becoming imperative as wind energy becomes a larger contributor to the energy mix in places throughout the world. Several approaches that depend on large computing resources are already in use today; however, high performance computing can help us not only solve existing computational problems faster or with larger inputs, but also create and implement new real-time forecasting mechanisms. In wind power forecasting, like in many other scientific domains, it is often important to be able to tune the tradeoff between accuracy and computational efficiency. The work presented here represents the first steps toward building a portable, parallel, auto-tunable forecasting program where the user can select a desired level of accuracy, and the program will respond with the fastest machine-specific parallel algorithm that achieves the accuracy target. Even though tremendous progress has been made in wind forecasting in the recent years, there remains significant work to refine and automate the synthesis of meteorological data for use by wind farm and grid operators, for both planning and operational purposes. This presentation will demonstrate the effectiveness of computationally tunable machine learning techniques for improving wind power prediction, with the goal of finding better ways to deliver accurate forecasts and estimates in a timely fashion.",
+  "doi": null,
+  "openalex": "W2767350163",
+  "status": "ok",
+  "title": "Leveraging High Performance Computation for Statistical Wind Prediction"
+ },
+ "s2-10674941c1f41ed5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Lawrence Berkeley National Laboratory Recent Work Title Leveraging High Performance Computation for Statistical Wind Prediction Permalink"
+ },
+ "s2-16d4d62982ac6515": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Evolutionary algorithms for compiler-enabled program autotuning"
+ },
+ "s2-65c30ebffe526aa5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Detecting and Fixing Memory-Related Performance Problems in Managed Languages"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-9568ccfb22dd8e92": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Synthesizing imperative distributed-memory implementations from functional data-parallel programs"
+ },
+ "s2-994c8784f7a58916": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automatic code generation for massively parallel applications in computational fluid dynamics"
+ },
+ "s2-c79f75577e0ffb42": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "s2-d5a932ed4eee7c6b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fully Empirical Autotuned QR Factorization For Multicore Architectures"
+ },
+ "s2-eb02559bacbf289b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fully Empirical Autotuned QR Factorization For"
+ },
+ "s2-f21482369538cdfe": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimization of Geometric Multigrid for Emerging Multi-and Manycore Processors"
+ },
+ "s2-fbec8e97804620e4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Accelerating Dense Linear Algebra for GPUs, Multicores and Hybrid Architectures: an Autotuned and Algorithmic Approach"
+ },
+ "s2-fde4128f852f8e4f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compilers"
+ },
+ "s2-ffe5fb981ab8b0d2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Leveraging High Performance Computation for Statistical Wind Prediction"
+ }
+}

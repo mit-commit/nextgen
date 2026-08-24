@@ -1,0 +1,338 @@
+{
+ "10.1007_978-3-030-34238-8": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-34238-8",
+  "openalex": "W3007748037",
+  "status": "no_abstract",
+  "title": "Binary Code Fingerprinting for Cybersecurity"
+ },
+ "10.1007_978-3-030-34238-8_2": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-34238-8_2",
+  "openalex": "W3008624017",
+  "status": "no_abstract",
+  "title": "Binary Analysis Overview"
+ },
+ "10.1016_j.jpdc.2022.01.014": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2022.01.014",
+  "openalex": "W4210420798",
+  "status": "no_abstract",
+  "title": "A fast and concise parallel implementation of the 8x8 2D forward and inverse DCTs using halide"
+ },
+ "10.1088_1674-4926_41_2_021403": {
+  "abstract": "Abstract Recent years, the deep learning algorithm has been widely deployed from cloud servers to terminal units. And researchers proposed various neural network accelerators and software development environments. In this article, we have reviewed the representative neural network accelerators. As an entirety, the corresponding software stack must consider the hardware architecture of the specific accelerator to enhance the end-to-end performance. And we summarize the programming environments of neural network accelerators and optimizations in software stack. Finally, we comment the future trend of neural network accelerator and programming environments.",
+  "doi": "10.1088/1674-4926/41/2/021403",
+  "openalex": "W3008441107",
+  "status": "ok",
+  "title": "A survey of neural network accelerator with software development environments"
+ },
+ "10.1109_access.2023.3345660": {
+  "abstract": "Filtering is a fundamental tool in image processing, and its acceleration affects many applications. Therefore, various algorithmic and hardware accelerations have been proposed for filtering. Recursive processing using infinite impulse response (IIR) filtering is an efficient algorithm, and various hardware acceleration methods have been applied to IIR filtering. In addition, a domain-specific language (DSL) of RecFilter was proposed to generate efficient IIR code for various hardware applications as an extension of image processing language, Halide. Recursive filters based on sliding discrete cosine transform (SDCT) have been the most efficient approximations in recent years. For hardware acceleration, parallelization of recursive filters is challenging. One of the most efficient methods is tile-based parallelization. However, even if a function is optimized and modularized, it is not sufficiently optimized for applications where various pre/post-processing steps are coupled before and after filtering. Additionally, multiplatform deployment requires reimplementation of the code. In this study, we extended Halide for SDCT convolutions to realize efficient computing of image processing applications with filtering, named SlidingConv. The experimental results showed that SlidingConv is faster than the hand-tuned CPU code and 1/1900 of the hand-tuned code length, running more efficiently than de facto libraries like OpenCV. To verify its efficiency, we deployed the code on various hardware (x86/64 CPU with AVX2/AVX-512, ARM CPU, and GPU). In addition, we verified that the proposed method can accelerate image processing with pre/post-processing for filtering. Our code is available at https://fukushimalab.github.io/SlidingConv/.",
+  "doi": "10.1109/access.2023.3345660",
+  "openalex": "W4390075000",
+  "status": "ok",
+  "title": "SlidingConv: Domain-Specific Description of Sliding Discrete Cosine Transform Convolution for Halide"
+ },
+ "10.1109_cluster.2017.40": {
+  "abstract": "We evaluate the vector performance of the Halide domain-specific language for a computational photography application targeted at Android devices. Our application has existing implementations in C++ and ARM NEON and these are used as a baseline for performance comparisons with Halide. We give a very brief introduction to Halide concepts and describe the structure of our application. We describe how each stage of the algorithm is implemented and measure the performance of our Halide implementation on 3 popular vector architectures, x86-64 AVX2, ARMv7 NEON and ARMv8.",
+  "doi": "10.1109/cluster.2017.40",
+  "openalex": "W2757253585",
+  "status": "ok",
+  "title": "Halide Vectorization for Android Photography Applications — A Case Study"
+ },
+ "10.1109_ispa-bdcloud-socialcom-sustaincom57177.2022.00116": {
+  "abstract": "The stencil computation is a memory centric computation, where memory access becomes a bottleneck. Therefore locality improvement method like temporal blocking is essential to improve the speed. Introducing temporal blocking, however, introduces heavy programming costs. This paper proposes a methodology to implement efficient stencil software with temporal blocking easier using the domain-specific language Halide. Generally, boundary conditions, such as Neumann and Dirichlet boundary conditions, are needed in stencil computations. Also user-defined boundary computations may be needed in general fluid dynamics applications. We indicate a pitfall in combining temporal blocking and boundary conditions on Halide and show a solution to improve performance. We also apply our methodology to the Hotspot3D bench-mark from Rodinia benchmark suite and demonstrate 3.5 to 5.0 times performance improvement over the original OpenMP implementation.",
+  "doi": "10.1109/ispa-bdcloud-socialcom-sustaincom57177.2022.00116",
+  "openalex": "W4360764691",
+  "status": "ok",
+  "title": "Efficient Stencil Computation with Temporal Blocking by Halide DSL"
+ },
+ "10.1109_pact.2019.00013": {
+  "abstract": "Fast numerical libraries have been a cornerstone of scientific computing for decades, but this comes at a price. Programs may be tied to vendor specific software ecosystems resulting in polluted, non-portable code. As we enter an era of heterogeneous computing, there is an explosion in the number of accelerator libraries required to harness specialized hardware. We need a system that allows developers to exploit ever-changing accelerator libraries, without over-specializing their code. As we cannot know the behavior of future libraries ahead of time, this paper develops a scheme that assists developers in matching their code to new libraries, without requiring the source code for these libraries. Furthermore, it can recover equivalent code from programs that use existing libraries and automatically port them to new interfaces. It first uses program synthesis to determine the meaning of a library, then maps the synthesized description into generalized constraints which are used to search the program for replacement opportunities to present to the developer. We applied this approach to existing large applications from the scientific computing and deep learning domains. Using our approach, we show speedups ranging from 1.1× to over 10× on end to end performance when using accelerator libraries.",
+  "doi": "10.1109/pact.2019.00013",
+  "openalex": "W2967028725",
+  "status": "ok",
+  "title": "Type-Directed Program Synthesis and Constraint Generation for Library Portability"
+ },
+ "10.1109_pact52795.2021.00012": {
+  "abstract": "Porting specialized application components to new platforms is difficult. This is particularly true if the components depend on proprietary libraries, or specific hardware. To tackle this, existing work has sought to recover high-level descriptions of application components to ease their retargeting. However, existing schemes are either too limited, targeting just one application domain, or too weak, making them ill-suited to recovering real-world programs. Additionally, many rely on help in the form of problem-specific user annotations or complex specifications. This paper develops a new approach using gray-box program synthesis, which recovers code by automatically constructing a program to match the behavior of an unknown component. However, unlike other synthesis approaches, it exploits the dynamic or gray-box behavior of a component to guide recovery. For example, the execution time, memory access patterns or observed instruction traces can all be used to direct synthesis. We evaluate our technique (HAZE) extensively against existing program synthesizers and a domain-specific lifter. Our scheme is able to generalize effectively across domains, synthesizing and lifting more programs than prior techniques, without any external assistance. We validate our methodology using bounded model checking, demonstrating that our synthesized programs are correct. Finally, we apply our approach to machine learning workloads, obtaining significant speedups automatically.",
+  "doi": "10.1109/pact52795.2021.00012",
+  "openalex": "W3207800553",
+  "status": "ok",
+  "title": "Program Lifting using Gray-Box Behavior"
+ },
+ "10.1109_pact58117.2023.00012": {
+  "abstract": "MLIR is an emerging compiler infrastructure for modern hardware, but existing programs cannot take advantage of MLIR's high-performance compilation if they are described in lower-level general purpose languages. Consequently, to avoid programs needing to be rewritten manually, this has led to efforts to automatically raise lower-level to higher-level dialects in MLIR. However, current methods rely on manually-defined raising rules, which limit their applicability and make them challenging to maintain as MLIR dialects evolve. We present mlirSynth - a novel approach which translates programs from lower-level MLIR dialects to high-level ones without manually defined rules. Instead, it uses available dialect definitions to construct a program space and searches it effectively using type constraints and equivalences. We demonstrate its effectiveness by raising C programs to two distinct high-level MLIR dialects, which enables us to use existing high-level dialect specific compilation flows. On Polybench, we show a greater coverage than previous approaches, resulting in geomean speedups of 2.5x (Intel) and 3.4x (AMD) over state-of-the-art compilation flows for the C programming language. mlirSynth also enables retargetability to domain-specific accelerators, resulting in a geomean speedup of 21.6x on a TPU.",
+  "doi": "10.1109/pact58117.2023.00012",
+  "openalex": "W4390280319",
+  "status": "ok",
+  "title": "mlirSynth: Automatic, Retargetable Program Raising in Multi-Level IR Using Program Synthesis"
+ },
+ "10.1109_pact65351.2025.00029": {
+  "abstract": "Recently, we have observed a steady growth in specialized hardware accelerators. These accelerators are typically programmed in high-level domain-specific languages (DSLs), enabling compilers to generate efficient code for rapidly evolving heterogeneous hardware. However, rewriting existing code to exploit DSL compiler performance is an onerous programmer task. This has led to recent interest in automatically translating or lifting code to DSLs. Current lifting techniques use language models or program synthesis to translate code. Although language models have proved remarkably successful in related translation tasks, they are prone to hallucinations. Program synthesis approaches are accurate but do not scale to complex tensor DSLs. This paper presents a novel approach, Guess, Measure & Edit; that exploits both language models and compiler technology to lift existing code to high-level DSLs. Given a source program, it uses a language model to guess an initial equivalent target program. It then compiles or lowers the guess and the original program, and measures the low-level distance between them using program similarity metrics. It iteratively uses these low-level metrics to guide high-level edits to the guess until it is correct. To validate this approach, we develop KONRUL which correctly lifts existing tensor algebra C code to einsum notation, the basis of tensor contraction DSLs. Our evaluation shows that KONRUL is fast and accurate, lifting 98% of an extensive benchmark suite and significantly outperforming 4 state-of-theart lifting schemes. KONRUL is scalable and is the only approach to correctly lift higher-dimensional tensor contraction code. Our lifted programs result in geomean speedups of $4.07 \\times$ and $38.30 \\times$ when ported to a multi-core CPU and GPU respectively.",
+  "doi": "10.1109/pact65351.2025.00029",
+  "openalex": "W4417403874",
+  "status": "ok",
+  "title": "Guess, Measure & Edit: Using Lowering to Lift Tensor Code"
+ },
+ "10.1109_sbac-pad49847.2020.00032": {
+  "abstract": "The Inverse Discrete Cosine Transform (IDCT) is commonly used for image and video decoding. Due to the ubiquitous nature of this application area, very efficient implementations of the IDCT transform are of great importance and have lead to the development of highly optimized libraries. The popular libjpeg-turbo library contains 1000s of lines of handwritten assembly code utilizing SIMD instruction sets for a variety of architectures. We present an alternative approach, implementing the 8x8 2D IDCT written in the image processing language Halide - a high-level, functional language that allows for concise, portable, parallel and very efficient code. We show how less than 100 lines of Halide can replace over 1000 lines of code for each architecture in the libjpeg-turbo library to perform JPEG decoding. The Halide implementation is compared for ARMv8 and x86-64 SIMD extensions and shows a 5-25 percent performance improvement over the SIMD code in libjpeg-turbo while also being much easier to maintain and port to new architectures.",
+  "doi": "10.1109/sbac-pad49847.2020.00032",
+  "openalex": "W3093893562",
+  "status": "ok",
+  "title": "A Fast and Concise Parallel Implementation of the 8x8 2D IDCT using Halide"
+ },
+ "10.1145_2854038.2854056": {
+  "abstract": "Complete comprehension of loop codes is desirable for a variety of program optimizations. Compilers perform static code analyses and transformations, such as loop tiling or memory partitioning, by constructing and manipulating formal representations of the source code. Runtime systems observe and characterize application behavior to drive resource management and allocation, including dependence detection and parallelization, or scheduling. However, the source codes of target applications are not always available to the compiler or runtime system in an analyzable form. It becomes necessary to find alternate ways to model application behavior. This paper presents a novel mathematical framework to rebuild loops from their memory access traces. An exploration engine traverses a tree-like solution space, driven by the access strides in the trace. It is guaranteed that the engine will find the minimal affine nest capable of reproducing the observed sequence of accesses by exploring this space in a brute force fashion, but most real traces will not be tractable in this way. Methods for an efficient solution space traversal based on mathematical properties of the equation systems which model the solution space are proposed. The experimental evaluation shows that these strategies achieve efficient loop reconstruction, processing hundreds of gigabytes of trace data in minutes. The proposed approach is capable of correctly and minimally reconstructing 100% of the static control parts in PolyBench/C applications. As a side effect, the trace reconstruction process can be used to efficiently compress trace files. The proposed tool can also be used for dynamic access characterization, predicting over 99% of future memory accesses.",
+  "doi": "10.1145/2854038.2854056",
+  "openalex": "W2288283395",
+  "status": "ok",
+  "title": "Trace-based affine reconstruction of codes"
+ },
+ "10.1145_2908080.2908117": {
+  "abstract": "This paper demonstrates a novel combination of program synthesis and verification to lift stencil computations from low-level Fortran code to a high-level summary expressed using a predicate language. The technique is sound and mostly automated, and leverages counter-example guided inductive synthesis (CEGIS) to find provably correct translations. Lifting existing code to a high-performance description language has a number of benefits, including maintainability and performance portability. For example, our experiments show that the lifted summaries can enable domain specific compilers to do a better job of parallelization as compared to an off-the-shelf compiler working on the original code, and can even support fully automatic migration to hardware accelerators such as GPUs. We have implemented verified lifting in a system called STNG and have evaluated it using microbenchmarks, mini-apps, and real-world applications. We demonstrate the benefits of verified lifting by first automatically summarizing Fortran source code into a high-level predicate language, and subsequently translating the lifted summaries into Halide, with the translated code achieving median performance speedups of 4.1X and up to 24X for non-trivial stencils as compared to the original implementation.",
+  "doi": "10.1145/2908080.2908117",
+  "openalex": "W2412440871",
+  "status": "ok",
+  "title": "Verified lifting of stencil computations"
+ },
+ "10.1145_2968455.2968514": {
+  "abstract": "Static binary translation is a technique that allows an executable program for a given architecture to be translated into a different one, with a reduced overhead compared to emulators and dynamic binary translators. The main downside of the static approach lies in the absence of runtime information, which is available in other solutions. In particular, one of the key issues consists in the identification of data and code in the program, and, more specifically, in the detection of basic block start addresses (jump targets). The presence of indirect jump instructions whose target is not immediately evident, in particular due to C switch statements, makes the recovery of jump targets a challenging task.",
+  "doi": "10.1145/2968455.2968514",
+  "openalex": "W2530629736",
+  "status": "ok",
+  "title": "A jump-target identification method for multi-architecture static binary translation"
+ },
+ "10.1145_2980983.2908117": {
+  "abstract": "This paper demonstrates a novel combination of program synthesis and verification to lift stencil computations from low-level Fortran code to a high-level summary expressed using a predicate language. The technique is sound and mostly automated, and leverages counter-example guided inductive synthesis (CEGIS) to find provably correct translations. Lifting existing code to a high-performance description language has a number of benefits, including maintainability and performance portability. For example, our experiments show that the lifted summaries can enable domain specific compilers to do a better job of parallelization as compared to an off-the-shelf compiler working on the original code, and can even support fully automatic migration to hardware accelerators such as GPUs. We have implemented verified lifting in a system called STNG and have evaluated it using microbenchmarks, mini-apps, and real-world applications. We demonstrate the benefits of verified lifting by first automatically summarizing Fortran source code into a high-level predicate language, and subsequently translating the lifted summaries into Halide, with the translated code achieving median performance speedups of 4.1X and up to 24X for non-trivial stencils as compared to the original implementation.",
+  "doi": "10.1145/2980983.2908117",
+  "openalex": "W4231970275",
+  "status": "ok",
+  "title": "Verified lifting of stencil computations"
+ },
+ "10.1145_3106343": {
+  "abstract": "Specialized Digital Signal Processors (DSPs), which can be found in a wide range of modern devices, play an important role in power-efficient, high-performance image processing. Applications including camera sensor post-processing and computer vision benefit from being (partially) mapped onto such DSPs. However, due to their specialized instruction sets and dependence on low-level code optimization, developing applications for DSPs is more time-consuming and error-prone than for general-purpose processors. Halide is a domain-specific language (DSL) that enables low-effort development of portable, high-performance imaging pipelines—a combination of qualities that is hard, if not impossible, to find among DSP programming models. We propose a set of extensions and modifications to Halide to generate code for DSP C compilers, focusing specifically on diverse SIMD target instruction sets and heterogeneous scratchpad memory hierarchies. We implement said techniques for a commercial DSP found in an Intel Image Processing Unit (IPU), demonstrating that this solution can be used to achieve performance within 20% of highly tuned, manually written C code, while leading to a reduction in code complexity. By comparing performance of Halide algorithms using our solution to results on CPU and GPU targets, we confirm the value of using DSP targets with Halide.",
+  "doi": "10.1145/3106343",
+  "openalex": "W2582073145",
+  "status": "ok",
+  "title": "Extending Halide to Improve Software Development for Imaging DSPs"
+ },
+ "10.1145_3173162.3173182": {
+  "abstract": "Heterogeneous accelerators often disappoint. They provide the prospect of great performance, but only deliver it when using vendor specific optimized libraries or domain specific languages. This requires considerable legacy code modifications, hindering the adoption of heterogeneous computing. This paper develops a novel approach to automatically detect opportunities for accelerator exploitation. We focus on calculations that are well supported by established APIs: sparse and dense linear algebra, stencil codes and generalized reductions and histograms. We call them idioms and use a custom constraint-based Idiom Description Language (IDL) to discover them within user code. Detected idioms are then mapped to BLAS libraries, cuSPARSE and clSPARSE and two DSLs: Halide and Lift. We implemented the approach in LLVM and evaluated it on the NAS and Parboil sequential C/C++ benchmarks, where we detect 60 idiom instances. In those cases where idioms are a significant part of the sequential execution time, we generate code that achieves 1.26x to over 20x speedup on integrated and external GPUs.",
+  "doi": "10.1145/3173162.3173182",
+  "openalex": "W2789599444",
+  "status": "ok",
+  "title": "Automatic Matching of Legacy Code to Heterogeneous APIs"
+ },
+ "10.1145_3276954.3276959": {
+  "abstract": "As modern computation platforms become increasingly complex, their programming interfaces are increasingly difficult to use. This complexity is especially inappropriate given the relatively simple core functionality that many of the computations implement. We present a new approach for obtaining software that executes on modern computing platforms with complex programming interfaces. Our approach starts with a simple seed program, written in the language of the developer's choice, that implements the desired core functionality. It then systematically generates inputs and observes the resulting outputs to learn the core functionality. It finally automatically regenerates new code that implements the learned core functionality on the target computing platform. This regenerated code contains boilerplate code for the complex programming interfaces that the target computing platform presents. By providing a productive new mechanism for capturing and encapsulating knowledge about how to use modern complex interfaces, this new approach promises to greatly reduce the developer effort required to obtain secure, robust software that executes on modern computing platforms.",
+  "doi": "10.1145/3276954.3276959",
+  "openalex": "W2898334666",
+  "status": "ok",
+  "title": "Active learning for inference and regeneration of computer programs that store and retrieve data"
+ },
+ "10.1145_3296957.3173182": {
+  "abstract": "Heterogeneous accelerators often disappoint. They provide the prospect of great performance, but only deliver it when using vendor specific optimized libraries or domain specific languages. This requires considerable legacy code modifications, hindering the adoption of heterogeneous computing. This paper develops a novel approach to automatically detect opportunities for accelerator exploitation. We focus on calculations that are well supported by established APIs: sparse and dense linear algebra, stencil codes and generalized reductions and histograms. We call them idioms and use a custom constraint-based Idiom Description Language (IDL) to discover them within user code. Detected idioms are then mapped to BLAS libraries, cuSPARSE and clSPARSE and two DSLs: Halide and Lift. We implemented the approach in LLVM and evaluated it on the NAS and Parboil sequential C/C++ benchmarks, where we detect 60 idiom instances. In those cases where idioms are a significant part of the sequential execution time, we generate code that achieves 1.26x to over 20x speedup on integrated and external GPUs.",
+  "doi": "10.1145/3296957.3173182",
+  "openalex": "W3015614227",
+  "status": "ok",
+  "title": "Automatic Matching of Legacy Code to Heterogeneous APIs"
+ },
+ "10.1145_3355089.3356549": {
+  "abstract": "This paper presents Dexter, a new tool that automatically translates image processing functions from a low-level general-purpose language to a high-level domain-specific language (DSL), allowing them to leverage cross-platform optimizations enabled by DSLs. Rather than building a classical syntax-driven compiler to do this translation, Dexter leverages recent advances in program synthesis and program verification, along with a new domain-specific synthesis algorithm, to translate C++ image processing code to the Halide DSL, while guaranteeing semantic equivalence. This new synthesis algorithm scales and generalizes to much larger and more complex functions than prior work, including the ability to handle tiling, conditionals, and multi-stage pipelines in the original low-level code. To demonstrate the effectiveness of our approach, we evaluate Dexter using real-world image processing functions from Adobe Photoshop, a widely used multi-platform image processing program. Our results show that Dexter can translate 264 out of 353 functions in our test set, with the original implementations ranging from 20 to 150 lines of code. By leveraging Halide's advanced auto-scheduling capabilities, we get median speedups of 7.03× and 4.52× for Dexter-translated functions as compared to the original implementations on Intel and ARM architectures, respectively.",
+  "doi": "10.1145/3355089.3356549",
+  "openalex": "W2988261654",
+  "status": "ok",
+  "title": "Automatically translating image processing libraries to halide"
+ },
+ "10.1145_3360583": {
+  "abstract": "Despite decades of progress, static analysis tools still have great difficulty dealing with programs that combine arithmetic, loops, dynamic memory allocation, and linked data structures. In this paper we draw attention to two fundamental reasons for this difficulty: First, typical underlying program abstractions are low-level and inherently scalar, characterizing compound entities like data structures or results computed through iteration only indirectly. Second, to ensure termination, analyses typically project away the dimension of time, and merge information per program point, which incurs a loss in precision. As a remedy, we propose to make collective operations first-class in program analysis – inspired by Σ-notation in mathematics, and also by the success of high-level intermediate languages based on @map/reduce@ operations in program generators and aggressive optimizing compilers for domain-specific languages (DSLs). We further propose a novel structured heap abstraction that preserves a symbolic dimension of time, reflecting the program’s loop structure and thus unambiguously correlating multiple temporal points in the dynamic execution with a single point in the program text. This paper presents a formal model, based on a high-level intermediate analysis language, a practical realization in a prototype tool that analyzes C code, and an experimental evaluation that demonstrates competitive results on a series of benchmarks. Remarkably, our implementation achieves these results in a fully semantics-preserving strongest-postcondition model, which is a worst-case for analysis/verification. The underlying ideas, however, are not tied to this model and would equally apply in other settings, e.g., demand-driven invariant inference in a weakest-precondition model. Given its semantics-preserving nature, our implementation is not limited to analysis for verification, but can also check program equivalence, and translate legacy C code to high-performance DSLs.",
+  "doi": "10.1145/3360583",
+  "openalex": "W2980011154",
+  "status": "ok",
+  "title": "Precise reasoning with structured time, structured heaps, and collective operations"
+ },
+ "10.1145_3373376.3378503": {
+  "abstract": "The adoption of hardware accelerators, such as FPGAs, into general-purpose computation pipelines continues to rise, but programming models for these devices lag far behind their CPU counterparts. Legacy programs must often be rewritten at very low levels of abstraction, requiring intimate knowledge of the target accelerator architecture. While techniques such as high-level synthesis can help port some legacy software, many programs perform poorly without manual, architecture-specific optimization.",
+  "doi": "10.1145/3373376.3378503",
+  "openalex": "W3011811968",
+  "status": "ok",
+  "title": "Accelerating Legacy String Kernels via Bounded Automata Learning"
+ },
+ "10.1145_3377555.3377893": {
+  "abstract": "Sparse linear algebra is central to many scientific programs, yet compilers fail to optimize it well. High-performance libraries are available, but adoption costs are significant. Moreover, libraries tie programs into vendor-specific software and hardware ecosystems, creating non-portable code.",
+  "doi": "10.1145/3377555.3377893",
+  "openalex": "W3002820667",
+  "status": "ok",
+  "title": "Automatically harnessing sparse acceleration"
+ },
+ "10.1145_3425898.3426952": {
+  "abstract": "This paper is concerned with synthesizing programs based on black-box oracles: we are interested in the case where there exists an executable implementation of a component or library, but its internal structure is unknown. We are provided with just an API or function signature, and aim to synthesize a program with equivalent behavior.",
+  "doi": "10.1145/3425898.3426952",
+  "openalex": "W3092371116",
+  "status": "ok",
+  "title": "Modeling black-box components with probabilistic synthesis"
+ },
+ "10.1145_3497776.3517775": {
+  "abstract": "This paper introduces QRANE, a tool that produces the affine intermediate representation (IR) from a quantum program expressed in Quantum Assembly language such as OpenQASM. QRANE finds subsets of quantum gates prescribed by the same operation type and linear relationships, and constructs a structured program representation expressed with polyhedral iteration domains and access relations, all while preserving the original semantics of the quantum program. We explore various policies for deciding amongst different delinearization strategies and discuss their effect on the quality of the reconstruction. Our evaluation demonstrates the high coverage and efficiency obtained with QRANE while enabling research on the benefits of affine transformations for large quantum circuits. Specifically, QRANE reconstructs affine iteration domains of up to 6 dimensions and up to 184 points per domain.",
+  "doi": "10.1145/3497776.3517775",
+  "openalex": "W4220682704",
+  "status": "ok",
+  "title": "QRANE: lifting QASM programs to an affine IR"
+ },
+ "10.1145_3519939.3523439": {
+  "abstract": "Specialized hardware accelerators continue to be a source of performance improvement. However, such specialization comes at a programming price. The fundamental issue is that of a mismatch between the diversity of user code and the functionality of fixed hardware, limiting its wider uptake. Here we focus on a particular set of accelerators: those for Fast Fourier Transforms. We present FACC (Fourier ACcelerator Compiler), a novel approach to automatically map legacy code to Fourier Transform accelerators. It automatically generates drop-in replacement adapters using Input-Output (IO)-based program synthesis that bridge the gap between user code and accelerators. We apply FACC to unmodified GitHub C programs of varying complexity and compare against two existing approaches. We target FACC to a high-performance library, FFTW, and two hardware accelerators, the NXP PowerQuad and the Analog Devices FFTA, and demonstrate mean speedups of 9x, 17x and 27x respectively",
+  "doi": "10.1145/3519939.3523439",
+  "openalex": "W4281862314",
+  "status": "ok",
+  "title": "Bind the gap: compiling real software to hardware FFT accelerators"
+ },
+ "10.1145_3578360.3580262": {
+  "abstract": "Dedicated tensor accelerators demonstrate the importance of linear algebra in modern applications. Such accelerators have the potential for impressive performance gains, but require programmers to rewrite code using vendor APIs - a barrier to wider scale adoption. Recent work overcomes this by matching and replacing patterns within code, but such approaches are fragile and fail to cope with the diversity of real-world codes.",
+  "doi": "10.1145/3578360.3580262",
+  "openalex": "W4318620922",
+  "status": "ok",
+  "title": "Matching Linear Algebra and Tensor Code to Specialized Hardware Accelerators"
+ },
+ "10.1145_3696443.3708956": {
+  "abstract": "Tensor domain specific languages (DSLs) achieve substantial performance due to high-level compiler optimization and hardware acceleration. However, to achieve such performance for existing applications requires the programmer to manual rewrite their legacy code in evolving Tensor DSLs. Prior efforts to automate this translation face significant scalability issues which greatly reduces their applicability to real-world code. This paper presents Tensorize, a novel MLIR-based compiler approach to automatically lift legacy code to high level Tensor DSLs using program synthesis. Tensorizeuses a symbolic trace of the legacy program as a specification and automatically selects sketches from the target Tensor DSLs to drive the program synthesis. It uses an algebraic solver to rapidly simplify the specification, resulting in a fast, automatic approach that is correct by design. We evaluate Tensorizeon several legacy code benchmarks and compare against state-of-the-art techniques. Tensorizeis able to lift more code than prior schemes, is an order of magnitude faster in synthesis time, and guarantees correctness by construction.",
+  "doi": "10.1145/3696443.3708956",
+  "openalex": "W4407857939",
+  "status": "ok",
+  "title": "Tensorize: Fast Synthesis of Tensor Programs from Legacy Code using Symbolic Tracing, Sketching and Solving"
+ },
+ "10.1145_3763159": {
+  "abstract": "We introduce Stencil-Lifting, a novel system for automatically converting stencil kernels written in low-level languages within legacy code into semantically equivalent Domain-Specific Language (DSL) implementations. Targeting the efficiency bottlenecks of existing verified lifting systems, Stencil-Lifting achieves scalable stencil kernel abstraction through two key innovations. First, we propose a hierarchical recursive lifting theory that represents stencil kernels, structured as nested loops, using invariant subgraphs, which are customized data dependency graphs capturing loop-carried computations and structural invariants. Each vertex in the invariant subgraph is associated with a predicate-based summary that encodes its computational semantics. Enforcing self-consistency across these summaries enables a derivation of correct loop invariants and postconditions, without the need for external verification. Second, we design a hierarchical recursive lifting algorithm that guarantees termination through a convergent recursive process, avoiding the inefficiencies of search-based synthesis while efficiently deriving valid summaries with formally proven completeness. We evaluate Stencil-Lifting on diverse stencil benchmarks from real-world applications. Experiment results demonstrate that Stencil-Lifting achieves 31.6× and 5.8× speedups compared to the state-of-the-art verified lifting systems STNG and Dexter, respectively. Our work significantly improves the efficiency of translating stencil kernels into DSL implementations, effectively bridging the gap between legacy code and modern DSL-based paradigms.",
+  "doi": "10.1145/3763159",
+  "openalex": "W4414977249",
+  "status": "ok",
+  "title": "Stencil-Lifting: Hierarchical Recursive Lifting System for Extracting Summary of Stencil Kernel in Legacy Codes"
+ },
+ "10.1145_3771775.3786281": {
+  "abstract": "Linear algebra libraries and tensor domain-specific languages are able to deliver high performance for modern scientific and machine learning workloads. While there has been recent work in automatically translating legacy software to use these libraries/DSLs using pattern matching and program lifting, this has been largely limited to dense linear algebra.",
+  "doi": "10.1145/3771775.3786281",
+  "openalex": "W7125916650",
+  "status": "ok",
+  "title": "Accelerating Sparse Algebra with Program Synthesis"
+ },
+ "10.2172_1470989": {
+  "abstract": "Technologies for verification and debugging have made significant strides in the context of general systems software. An investment in such technologies to make them applicable for High Performance Computing (HPC) could lead to substantial improvements in the productivity and sustainability of HPC software development. Such improvements will be essential to fully exploit new exascale computer architectures. Without such investment, there is the possibility of a substantial crisis in our ability to advance the field of HPC, as the complexity of our architectures, algorithms, and applications is moving beyond the ability of our developers. As HPC is of strategic importance to our nation, forming the bedrock of its scientific and technological capabilities, such investment is highly warranted.",
+  "doi": "10.2172/1470989",
+  "openalex": "W2620503297",
+  "status": "ok",
+  "title": "Report of the HPC Correctness Summit, January 25-26, 2017, Washington, DC"
+ },
+ "10.25394_pgs.11413206.v1": {
+  "abstract": "The availability of modern hardware with large amounts of memory created a shift in the development of data-centric software; from optimizing I/O operations to optimizing computation. As a result, the main challenge has become using the memory hierarchy (cache, RAM, distributed, etc) efficiently. In order to overcome this difficulty, programmers of data-centric programs need to use low-level APIs such as Pthreads or MPI to manually optimize their software because of the intrinsic difficulties and the low productivity of these APIs. Data-centric systems such as Apache Spark are becoming more and more popular. These kinds of systems offer a much simpler interface and allow programmers and scientists to write in a few lines what would have been thousands of lines of low-level MPI code. The core benefit of these systems comes from the introduction of deferred APIs; the code written by the programmer is actually building a graph representation of the computation that has to be executed. This graph can then be optimized and compiled to achieve higher performance. In this dissertation, we analyze the limitations of current data-centric systems such as Apache Spark, on relational and heterogeneous workloads interacting with machine learning frameworks. We show that the compilation of queries in multiples stages and the interfacing with external systems is a key impediment to performance because of their inability to optimize across code boundaries. We present Flare, an accelerator for data-centric software, which provides performance comparable to the state of the art relational systems while keeping the expressiveness of high-level deferred APIs. Flare displays order of magnitude speed up on programs combining relational processing and machine learning frameworks such as TensorFlow. We look at the impact of compilation on short-running jobs and propose an on-stack-replacement mechanism for generative programming to decrease the overhead introduced by the compilation step. We show that this mechanism can also be used in a more generic way within source-to-source compilers. We develop a new kind of static analysis that allows the reverse engineering of legacy codes in order to optimize them with Flare. The novelty of the analysis is also useful for more generic problems such as formal verification of programs using dynamic allocation. We have implemented a prototype that successfully verifies programs within the SV-COMP benchmark suite.",
+  "doi": "10.25394/pgs.11413206.v1",
+  "openalex": "W2996444042",
+  "status": "ok",
+  "title": "IMPROVING PERFORMANCE OF DATA-CENTRIC SYSTEMS THROUGH FINE-GRAINED CODE GENERATION"
+ },
+ "10.48550_arxiv.2104.09669": {
+  "abstract": "We present BIEBER (Byte-IdEntical Binary parsER), the first system to model and regenerate a full working parser from instrumented program executions. To achieve this, BIEBER exploits the regularity (e.g., header fields and array-like data structures) that is commonly found in file formats. Key generalization steps derive strided loops that parse input file data and rewrite concrete loop bounds with expressions over input file header bytes. These steps enable BIEBER to generalize parses of specific input files to obtain parsers that operate over input files of arbitrary size. BIEBER also incrementally and efficiently infers a decision tree that reads file header bytes to route input files of different types to inferred parsers of the appropriate type. The inferred parsers and decision tree are expressed in an IR; separate backends (C and Perl in our prototype) can translate the IR into the same language as the original program (for a safer drop-in replacement), or automatically port to a different language. An empirical evaluation shows that BIEBER can successfully regenerate parsers for six file formats (waveform audio [1654 files], MT76x0 .BIN firmware containers [5 files], OS/2 1.x bitmap images [9 files], Windows 3.x bitmaps [9971 files], Windows 95/NT4 bitmaps [133 files], and Windows 98/2000 bitmaps [859 files]), correctly parsing 100% (>= 99.98% when using standard held-out cross-validation) of the corresponding corpora. The regenerated parsers contain automatically inserted safety checks that eliminate common classes of errors such as memory errors. We find that BIEBER can help reverse-engineer file formats, because it automatically identifies predicates for the decision tree that relate to key semantics of the file format. We also discuss how BIEBER helped us detect and fix two new bugs in stb_image as well as independently rediscover and fix a known bug.",
+  "doi": "10.48550/arxiv.2104.09669",
+  "openalex": "W3152724219",
+  "status": "ok",
+  "title": "Inferring Drop-in Binary Parsers from Program Executions"
+ },
+ "10.48550_arxiv.2210.01075": {
+  "abstract": "Due to their widespread use on heterogeneous hardware devices, deep learning (DL) models are compiled into executables by DL compilers to fully leverage low-level hardware primitives. This approach allows DL computations to be undertaken at low cost across a variety of computing platforms, including CPUs, GPUs, and various hardware accelerators. We present BTD (Bin to DNN), a decompiler for deep neural network (DNN) executables. BTD takes DNN executables and outputs full model specifications, including types of DNN operators, network topology, dimensions, and parameters that are (nearly) identical to those of the input models. BTD delivers a practical framework to process DNN executables compiled by different DL compilers and with full optimizations enabled on x86 platforms. It employs learning-based techniques to infer DNN operators, dynamic analysis to reveal network architectures, and symbolic execution to facilitate inferring dimensions and parameters of DNN operators. Our evaluation reveals that BTD enables accurate recovery of full specifications of complex DNNs with millions of parameters (e.g., ResNet). The recovered DNN specifications can be re-compiled into a new DNN executable exhibiting identical behavior to the input executable. We show that BTD can boost two representative attacks, adversarial example generation and knowledge stealing, against DNN executables. We also demonstrate cross-architecture legacy code reuse using BTD, and envision BTD being used for other critical downstream tasks like DNN security hardening and patching.",
+  "doi": "10.48550/arxiv.2210.01075",
+  "openalex": "W4302013158",
+  "status": "ok",
+  "title": "Decompiling x86 Deep Neural Network Executables"
+ },
+ "10.7282_t3-0edj-bf23": {
+  "abstract": "OpenMP is a popular application programming interface (API) used to write shared-memory parallel programs. It supports a wide range of parallel constructs to express different types of parallelism, including fork-join and task-based parallelism. Using OpenMP, developers can incrementally parallelize a program by adding parallelism to it until their performance goals are met.In this dissertation, we address the problem of assisting developers in meeting the two primary goals of writing parallel programs in OpenMP: performance and correctness. First, writing OpenMP programs that achieve scalable performance is challenging. An OpenMP program that achieves reasonable speedup on a low core count system may not achieve scalable speedup when ran on a system with a larger number of cores. Traditional profilers report program regions where significant serial work is performed. In a parallel program, optimizing such regions may not improve performance since it may not improve its parallelism. To address this problem, we introduce OMP-Adviser, a parallelism-centric performance analysis tool for OpenMP programs with what-if analyses. We propose a novel OpenMP series-parallel graph (OSPG) that precisely captures the series-parallel relations between different fragments of the program's execution. The OSPG, along with fine-grained measurements, constitute OMP-Adviser's performance model. OMP-Adviser identifies serialization bottlenecks by measuring inherent parallelism in the program and its OpenMP constructs. OMP-Adviser's what-if analysis assists developers to identify regions that have to be optimized first for the program to achieve scalable speedup. While a lack of inherent parallelism is a sufficient condition for a program not to have scalable speedup, too much parallelism can lead to excessive runtime and scheduling overheads, resulting in lower performance. We address this issue by extending OMP-Adviser to measure tasking overheads. By attributing this additional information to different OpenMP constructs in the program, OMP-Adviser can identify tasking cut-offs that achieve the right balance between a program's parallelism and its scheduling overheads for a given input. Further, we design a differential analysis technique that enables OMP-Adviser to identify program regions experiencing scalability bottlenecks caused by secondary effects of execution. Second, writing correct parallel programs is challenging due to the possibility of bugs such as deadlocks, livelocks, and data races that do not manifest when writing a serial program. A data race occurs when two parallel fragments of the program access the same memory location while one of the accesses is a write. Data races are common in OpenMP applications. Due to the exponential number of possible instruction and thread interleaving in parallel applications, identifying and reproducing data races using manual or automated testing techniques is impractical. Hence, specialized data race detection tools have been proposed to identify data races. We propose OMP-Racer, a novel apparent data race detector for OpenMP that supports a large call of OpenMP applications. To detect data races, OMP-Racer constructs the program's OSPG to encode the logical series-parallel relation for different serial fragments of the program. By capturing the program's logical series-parallel relations, OMP-Racer can detect data races in possible thread interleavings of the program for a given input. Thus, alleviating the need for schedule exploration. Compared to other OpenMP data race detectors, OMP-Racer can correctly identify races in a larger subset of OpenMP that use task-dependencies and locks, while achieving similar overheads.Our results with testing the OMP-Adviser and OMP-Racer prototypes with 40 OpenMP applications and benchmarks indicate their respective effectiveness in performance analysis and data race detection. Furthermore, it demonstrates the usefulness of our proposed OSPG data structure in enabling the creation of different types of analysis tools for OpenMP applications.",
+  "doi": "10.7282/t3-0edj-bf23",
+  "openalex": "W3197625063",
+  "status": "ok",
+  "title": "Performance profilers and debugging tools for openMP applications"
+ },
+ "10.7488_era_309": {
+  "abstract": "The scaling limitations of multi-core processor development have led to a diversification of the processor cores used within individual computers. Heterogeneous computing has become widespread, involving the cooperation of several structurally different processor cores. Central processor (CPU) cores are most frequently complemented with graphics processors (GPUs), which despite their name are suitable for many highly parallel computations besides computer graphics. Furthermore, deep learning accelerators are rapidly gaining relevance. Many applications could profit from heterogeneous computing but are held back by the surrounding software ecosystems. Heterogeneous systems are a challenge for compilers in particular, which usually target only the increasingly marginalised homogeneous CPU cores. Therefore, heterogeneous acceleration is primarily accessible via libraries and domain-specific languages (DSLs), requiring application rewrites and resulting in vendor lock-in. This thesis presents a compiler method for automatically targeting heterogeneous hardware from existing sequential C/C++ source code. A new constraint programming method enables the declarative specification and automatic detection of computational idioms within compiler intermediate representation code. Examples of computational idioms are stencils, reductions, and linear algebra. Computational idioms denote algorithmic structures that commonly occur in performance-critical loops. Consequently, well-designed accelerator DSLs and libraries support computational idioms with their programming models and function interfaces. The detection of computational idioms in their middle end enables compilers to incorporate DSL and library backends for code generation. These backends leverage domain knowledge for the efficient utilisation of heterogeneous hardware. The constraint programming methodology is first derived on an abstract model and then implemented as an extension to LLVM. Two constraint programming languages are designed to target this implementation: the Compiler Analysis Description Language (CAnDL), and the extended Idiom Detection Language (IDL). These languages are evaluated on a range of different compiler problems, culminating in a complete heterogeneous acceleration pipeline integrated with the Clang C/C++ compiler. This pipeline was evaluated on the established benchmark collections NPB and Parboil. The approach was applicable to 10 of the benchmark programs, resulting in significant speedups from 1.26× on “histo” to 275× on “sgemm” when starting from sequential baseline versions. In summary, this thesis shows that the automatic recognition of computational idioms during compilation enables the heterogeneous acceleration of sequential C/C++ programs. Moreover, the declarative specification of computational idioms is derived in novel declarative programming languages, and it is demonstrated that constraint programming on Single Static Assignment intermediate code is a suitable method for their automatic detection.",
+  "doi": "10.7488/era/309",
+  "openalex": "W3023977240",
+  "status": "ok",
+  "title": "From constraint programming to heterogeneous parallelism"
+ },
+ "oa-W2967554924": {
+  "abstract": "Fast numerical libraries have been a cornerstone of scientific computing for decades, but this comes at a price. Programs may be tied to vendor specific software ecosystems resulting in polluted, non-portable code. As we enter an era of heterogeneous computing, there is an explosion in the number of accelerator libraries required to harness specialized hardware. We need a system that allows developers to exploit ever-changing accelerator libraries, without over-specializing their code. \r\nAs we cannot know the behavior of future libraries ahead of time, this paper develops a scheme that assists developers in matching their code to new libraries, without requiring the source code for these libraries. \r\nFurthermore, it can recover equivalent code from programs that use existing libraries and automatically port them to new interfaces. It first uses program synthesis to determine the meaning of a library, then maps the synthesized description into generalized constraints which are used to search the program for replacement opportunities to present to the developer. \r\nWe applied this approach to existing large applications from the scientific computing and deep learning domains. Using our approach, we show speedups ranging from 1.1$\\times$ to over 10$\\times$ on end to end performance when using accelerator libraries.",
+  "doi": null,
+  "openalex": "W2967554924",
+  "status": "ok",
+  "title": "Type-Directed Program Synthesis and Constraint Generation for Accelerator Library Portability"
+ },
+ "oa-W2987290330": {
+  "abstract": "Fast numerical libraries have been a cornerstone of scientific computing for decades, but this comes at a price. Programs may be tied to vendor specific software ecosystems resulting in polluted, non-portable code. As we enter an era of heterogeneous computing, there is an explosion in the number of accelerator libraries required to harness specialized hardware. We need a system that allows developers to exploit ever-changing accelerator libraries, without over-specializing their code. As we cannot know the behavior of future libraries ahead of time, this paper develops a scheme that assists developers in matching their code to new libraries, without requiring the source code for these libraries. Furthermore, it can recover equivalent code from programs that use existing libraries and automatically port them to new interfaces. It first uses program synthesis to determine the meaning of a library, then maps the synthesized description into generalized constraints which are used to search the program for replacement opportunities to present to the developer. We applied this approach to existing large applications from the scientific computing and deep learning domains. Using our approach, we show speedups ranging from 1.1× to over 10× on end to end performance when using accelerator libraries.",
+  "doi": null,
+  "openalex": "W2987290330",
+  "status": "ok",
+  "title": ""
+ },
+ "oa-W3099929288": {
+  "abstract": "Sparse linear algebra is central to many scientific programs, yet compilers fail to optimize it well. High-performance libraries are available, but adoption costs are significant. Moreover, libraries tie programs into vendor-specific software and hardware ecosystems, creating non-portable code.",
+  "doi": null,
+  "openalex": "W3099929288",
+  "status": "ok",
+  "title": ""
+ },
+ "s2-213533b755b70e47": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Extending halide to improve software development for imaging DSPs"
+ },
+ "s2-22bc8c01fd4056bd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Inference and Regeneration of Programs that Store and Retrieve Data"
+ },
+ "s2-66a68386d002983e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Precise Reasoning with Structured Heaps and Collective Operations à la Map / Reduce What Static Analysis can Learn From High-Performance DSLs"
+ },
+ "s2-974660ba8df4b9cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "to improve software development for imaging"
+ },
+ "s2-991673b5db4df438": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving Programming Support for Hardware Accelerators Through Automata Processing Abstractions"
+ },
+ "s2-9c464a93472efaa7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Inferring Drop-in Binary Parsers from Program Executions"
+ },
+ "s2-ac66b1c93cbe8be2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": ": Automatic, Retargetable Program Raising in Multi-Level IR using Program Synthesis"
+ },
+ "s2-baa4422ac7f45480": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "to improve software development for imaging"
+ }
+}

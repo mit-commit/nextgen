@@ -1,0 +1,660 @@
+{
+ "10.1002_9780470050118.ecse386": {
+  "abstract": "Abstract Software instrumentation is a technique that is widely used in software profiling, performance analysis, optimization, testing, error detection, and virtualization. Instrumentation, which involves adding extra code to an application for monitoring some program behavior, can be performed either statically (i.e., at compile time) or dynamically (i.e., at runtime). Static instrumentation techniques range from simple manual techniques to compiler/assembler‐based instrumentation and link‐time or post‐link executable editing. Dynamic instrumentation techniques are often more complex to implement than the static ones, but they can track dynamically linked libraries and indirect branches that are difficult to handle through static instrumentation.",
+  "doi": "10.1002/9780470050118.ecse386",
+  "openalex": "W4234393402",
+  "status": "ok",
+  "title": "Software Instrumentation"
+ },
+ "10.1002_9781118576984.biblio": {
+  "abstract": null,
+  "doi": "10.1002/9781118576984.biblio",
+  "openalex": "W4211085305",
+  "status": "no_abstract",
+  "title": "Bibliography"
+ },
+ "10.1007_978-3-030-80129-8_66": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-80129-8_66",
+  "openalex": "W3184285164",
+  "status": "no_abstract",
+  "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning"
+ },
+ "10.1007_978-3-540-30102-8_16": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-30102-8_16",
+  "openalex": "W1540708577",
+  "status": "no_abstract",
+  "title": "Dynamic Reallocation of Functional Units in Superscalar Processors"
+ },
+ "10.1016_j.cl.2015.03.001": {
+  "abstract": "In this paper, we compose six different Python and Prolog VMs into 4 pairwise compositions: one using C interpreters, one running on the JVM, one using meta-tracing interpreters, and one using a C interpreter and a meta-tracing interpreter. We show that programs that cross the language barrier frequently execute faster in a meta-tracing composition, and that meta-tracing imposes a significantly lower overhead on composed programs relative to mono-language programs.",
+  "doi": "10.1016/j.cl.2015.03.001",
+  "openalex": "W2028053566",
+  "status": "ok",
+  "title": "Approaches to interpreter composition"
+ },
+ "10.1016_j.scico.2016.08.003": {
+  "abstract": "The performance of value classes is highly dependent on how they are represented in the virtual machine. Value class instances are immutable, have no identity, and can only refer to other value objects or primitive values and since they should be very lightweight and fast, it is important to optimize them carefully. In this paper we present a technique to detect and compress common patterns of value class usage to improve memory usage and performance. The technique identifies patterns of frequent value object references and introduces abbreviated forms for them. This allows to store multiple inter-referenced value objects in an inlined memory representation, reducing the overhead stemming from meta-data and object references. Applied to a small prototype and an implementation of the Racket language, we found improvements in memory usage and execution time for several micro-benchmarks.",
+  "doi": "10.1016/j.scico.2016.08.003",
+  "openalex": "W2466900139",
+  "status": "ok",
+  "title": "Adaptive just-in-time value class optimization for lowering memory consumption and improving execution time performance"
+ },
+ "10.1109_cgo.2005.14": {
+  "abstract": "Direct-threaded interpreters use indirect branches to dispatch bytecodes, but deeply-pipelined architectures rely on branch prediction for performance. Due to the poor correlation between the virtual program's control flow and the hardware program counter, which we call the context problem, direct threading's indirect branches are poorly predicted by the hardware, limiting performance. Our dispatch technique, context threading, improves branch prediction and performance by aligning hardware and virtual machine state. Linear virtual instructions are dispatched with native calls and returns, aligning the hardware and virtual PC. Thus, sequential control flow is predicted by the hardware return stack. We convert virtual branching instructions to native branches, mobilizing the hardware's branch prediction resources. We evaluate the impact of context threading on both branch prediction and performance using interpreters for Java and OCaml on the Pentium and PowerPC architectures. On the Pentium IV our technique reduces mean mispredicted branches by 95%. On the PowerPC, it reduces mean branch stall cycles by 75% for OCaml and 82% for Java. Due to reduced branch hazards, context threading reduces mean execution time by 25% for Java and by 19% and 37% for OCaml on the P4 and PPC970, respectively. We also combine context threading with a conservative inlining technique and find its performance comparable to that of selective inlining.",
+  "doi": "10.1109/cgo.2005.14",
+  "openalex": "W2097971372",
+  "status": "ok",
+  "title": "Context Threading: A Flexible and Efficient Dispatch Technique for Virtual Machine Interpreters"
+ },
+ "10.1109_iccc56324.2022.10065707": {
+  "abstract": "Buffer overflow is an important security issue. Many countermeasures have been proposed, e.g., DEP, shadow stack. However, existing DEP is facing the problem of being bypassed by attackers through information leakage attacks. To address the shortcomings of current backward edge pointer integrity protection in preventing buffer overflow attacks, this paper proposes a shadow stack based backward edge pointer integrity protection scheme through dynamic instrumentation, and implements a prototype system based on the DynamoRIO framework. Shadow stack mechanism can achieve effective protection for return address integrity by maintaining a one-to-one mapping relationship between the shadow stack and the program stack. Meanwhile, test cases were designed to evaluate the effectiveness, runtime performance and compatibility of the plugin. Experiment results show that the security plugin is compatible with most programs and can run with an average overhead of about 10%to 15%. This is acceptable when comparing to stack shield with 22% overhead.",
+  "doi": "10.1109/iccc56324.2022.10065707",
+  "openalex": "W4328027520",
+  "status": "ok",
+  "title": "Backward Edge Pointer Protection Technology Based on Dynamic Instrumentation"
+ },
+ "10.1109_jproc.2004.840305": {
+  "abstract": "Virtual machines face significant performance challenges beyond those confronted by traditional static optimizers. First, portable program representations and dynamic language features, such as dynamic class loading, force the deferral of most optimizations until runtime, inducing runtime optimization overhead. Second, modular program representations preclude many forms of whole-program interprocedural optimization. Third, virtual machines incur additional costs for runtime services such as security guarantees and automatic memory management. To address these challenges, vendors have invested considerable resources into adaptive optimization systems in production virtual machines. Today, mainstream virtual machine implementations include substantial infrastructure for online monitoring and profiling, runtime compilation, and feedback-directed optimization. As a result, adaptive optimization has begun to mature as a widespread production-level technology. This paper surveys the evolution and current state of adaptive optimization technology in virtual machines.",
+  "doi": "10.1109/jproc.2004.840305",
+  "openalex": "W2143588523",
+  "status": "ok",
+  "title": "A Survey of Adaptive Optimization in Virtual Machines"
+ },
+ "10.1109_micro.2006.29": {
+  "abstract": "Computer security is severely threatened by software vulnerabilities. Prior work shows that information flow tracking (also referred to as taint analysis) is a promising technique to detect a wide range of security attacks. However, current information flow tracking systems are not very practical, because they either require program annotations, source code, non-trivial hardware extensions, or incur prohibitive runtime overheads. This paper proposes a low overhead, software-only information flow tracking system, called LIFT, which minimizes run-time overhead by exploiting dynamic binary instrumentation and optimizations/or detecting various types of security attacks without requiring any hardware changes. More specifically, LIFT aggressively eliminates unnecessary dynamic information flow tracking, coalesces information checks, and efficiently switches between target programs and instrumented information flow tracking code. We have implemented LIFT on a dynamic binary instrumentation framework on Windows. Our real-system experiments with two real-world server applications, one client application and eighteen attack benchmarks show that LIFT can effectively detect various types of security attacks. LIFT also incurs very low overhead, only 6.2% for server applications, and 3.6 times on average for seven SPEC INT2000 applications. Our dynamic optimizations are very effective in reducing the overhead by a factor of 5-12 times",
+  "doi": "10.1109/micro.2006.29",
+  "openalex": "W2144789413",
+  "status": "ok",
+  "title": "LIFT: A Low-Overhead Practical Information Flow Tracking System for Detecting Security Attacks"
+ },
+ "10.1109_pact.2004.1342540": {
+  "abstract": "JIT compilers produce fast code, whereas interpreters are easy to port between architectures. We propose to combine the advantages of these language implementation techniques as follows: we generate native code by concatenating and patching machine code fragments taken from interpreter-derived code (generated by a C compiler); we completely eliminate the interpreter dispatch overhead and accesses to the interpreted code by patching jump target addresses and other constants into the fragments. In this paper we present the basic idea, discuss some issues in more detail, and present results from a proof-of-concept implementation, providing speedups of up to 1.87 over the fastest previous interpreter-based technique, and performance comparable to simple native-code compilers. The effort required for retargeting our implementation from the 386 to the PPC architecture was less than a person-day.",
+  "doi": "10.1109/pact.2004.1342540",
+  "openalex": "W4232728563",
+  "status": "ok",
+  "title": "Retargeting JIT compilers by using C-compiler generated executable code"
+ },
+ "10.1109_pact.2004.23": {
+  "abstract": null,
+  "doi": "10.1109/pact.2004.23",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Retargeting JIT compilers by using C-compiler generated executable code"
+ },
+ "10.1109_qrs-c.2019.00053": {
+  "abstract": "Soft errors are becoming more prominent in modern computing systems due to the increasing integration of chips. These faults pose a major challenge for memories and logic circuits in high performance microprocessors. In this paper, a tool based on PIN was designed to simulate soft error, which can implement hardware fault injection at the machine code level. Our tool is based on binary instrumentation that supports an accurate and low-cost fault injection. We apply the tool to five classic machine learning programs and analyze the programs' weakness to soft errors by simulating bit flips. We investigate the soft fault effect on performance and accuracy according to experimental results. Our study reveals that these programs are highly sensitive to soft errors, therefore, the tool provides a new effective approach for future resiliency research.",
+  "doi": "10.1109/qrs-c.2019.00053",
+  "openalex": "W2980142988",
+  "status": "ok",
+  "title": "B-SEFI: A Binary Level Soft Error Fault Injection Tool"
+ },
+ "10.1109_sbac-pad.2017.16": {
+  "abstract": "For a long time the Instruction Set Architecture (ISA) has been the firm contract between software and hardware. This firm contract plays an important role by decoupling the development of software from hardware micro-architectural features, enabling both to evolve independently. Nonetheless, it also condemns the ISA to become larger, more cluttered and inefficient as new instructions are incorporated over the years and deprecated instructions are left untouched to keep legacy compatibility. In this work we propose OpenISA, a flexible ISA that enables both the software and the hardware to evolve independently and discuss how OpenISA 1.0 was designed to enable efficient OpenISA software emulation on alien ISAs, which is key to free the user from hardware lock-ins. Our results show that software compiled to OpenISA can be latter emulated on x86 and ARM processors with very little overhead achieving near native performance, under 10% for the majority of programs.",
+  "doi": "10.1109/sbac-pad.2017.16",
+  "openalex": "W2767583729",
+  "status": "ok",
+  "title": "The Case for Flexible ISAs: Unleashing Hardware and Software"
+ },
+ "10.1145_1059579.1059591": {
+  "abstract": "We present techniques for eliminating dispatch overhead in a virtual machine interpreter using a lightweight just-in-time native-code compilation. In the context of the Tcl VM, we convert bytecodes to native Sparc code, by concatenating the native instructions used by the VM to implement each bytecode instruction. We thus eliminate the dispatch loop. Furthermore, immediate arguments of bytecode instructions are substituted into the native code using runtime specialization. Native code output from the C compiler is not amenable to relocation by copying; fix-up of the code is required for correct execution. The dynamic instruction count improvement from eliding dispatch depends on the length in native instructions of each bytecode opcode implementation. These are relatively long in Tcl, but dispatch is still a significant overhead. However, their length also causes our technique to overflow the instruction cache. Furthermore, our native compilation consumes runtime. Some benchmarks run up to three times faster, but roughly half slow down, or exhibit little change.",
+  "doi": "10.1145/1059579.1059591",
+  "openalex": "W2011153745",
+  "status": "ok",
+  "title": "Catenation and specialization for Tcl virtual machine performance"
+ },
+ "10.1145_1094811.1094837": {
+  "abstract": "We describe a highly practical program specializer for Java programs. The specializer is powerful, because it specializes optimistically, using (potentially transient) constants in the heap; it is precise, because it specializes using data structures that are only partially invariant; it is deployable, because it is hidden in a JIT compiler and does not require any user annotations or offline preprocessing; it is simple, because it uses existing JIT compiler ingredients; and it is fast, because it specializes programs in under 1s.These properties are the result of (1) a new algorithm for selecting specializable code fragments, based on a notion of influence; (2) a precise store profile for identifying constant heap locations; and (3) an efficient invalidation mechanism for monitoring optimistic assumptions about heap constants. Our implementation of the specializer in the Jikes RVM has low overhead, selects specialization points that would be chosen manually, and produces speedups ranging from a factor of 1.2 to 6.4, comparable with annotation-guided specializers.",
+  "doi": "10.1145/1094811.1094837",
+  "openalex": "W2031165841",
+  "status": "ok",
+  "title": "Runtime specialization with optimistic heap analysis"
+ },
+ "10.1145_1103845.1094837": {
+  "abstract": "We describe a highly practical program specializer for Java programs. The specializer is powerful, because it specializes optimistically, using (potentially transient) constants in the heap; it is precise, because it specializes using data structures that are only partially invariant; it is deployable, because it is hidden in a JIT compiler and does not require any user annotations or offline preprocessing; it is simple, because it uses existing JIT compiler ingredients; and it is fast, because it specializes programs in under 1s.These properties are the result of (1) a new algorithm for selecting specializable code fragments, based on a notion of influence; (2) a precise store profile for identifying constant heap locations; and (3) an efficient invalidation mechanism for monitoring optimistic assumptions about heap constants. Our implementation of the specializer in the Jikes RVM has low overhead, selects specialization points that would be chosen manually, and produces speedups ranging from a factor of 1.2 to 6.4, comparable with annotation-guided specializers.",
+  "doi": "10.1145/1103845.1094837",
+  "openalex": "W4244705742",
+  "status": "ok",
+  "title": "Runtime specialization with optimistic heap analysis"
+ },
+ "10.1145_1105634.1105657": {
+  "abstract": null,
+  "doi": "10.1145/1105634.1105657",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Mixed mode execution with context threading"
+ },
+ "10.1145_1254810.1254823": {
+  "abstract": "The design of new programming languages benefits from interpretation, which can provide a simple initial implementation, flexibility to explore new language features, and portability to many platforms. The only downside is speed of execution, as there remains a large performance gap between even efficient interpreters and mixed-mode systems that include a just-in-time compiler (or JIT for short). Augmenting an interpreter with a JIT, however, is not a small task. Today, JITs used for Java™ are loosely-coupled with the interpreter, with callsites of methods being the only transition point between interpreted and native code. To compile whole methods, the JIT must duplicate a sizable amount of functionality already provided by the interpreter, leading to a \"big bang\" development effort before the JIT can be deployed. Instead, adding a JIT to an interpreter would be easier if it were possible to leverage the existing functionality.",
+  "doi": "10.1145/1254810.1254823",
+  "openalex": "W2110403837",
+  "status": "ok",
+  "title": "YETI"
+ },
+ "10.1145_1297027.1297072": {
+  "abstract": "A comfort zone is a tested region of a system's input space within which it has been observed to behave acceptably. To keep systems operating within their comfort zones, we advocate the interposition of rectifiers between systems and their input sources. Rectifiers are designed to transform inputs to ensure that they are within the comfort zone before they are presented to the system. Rectifiers enforce a highly constrained input format and, if necessary, discard information to force inputs to conform to this format. Potential benefits of this approach include the elimination of errors and vulnerabilities, the excision of undesirable excess functionality from large, complex systems, and a simplification of the computing environment.",
+  "doi": "10.1145/1297027.1297072",
+  "openalex": "W2131687992",
+  "status": "ok",
+  "title": "Living in the comfort zone"
+ },
+ "10.1145_1297105.1297072": {
+  "abstract": "A comfort zone is a tested region of a system's input space within which it has been observed to behave acceptably. To keep systems operating within their comfort zones, we advocate the interposition of rectifiers between systems and their input sources. Rectifiers are designed to transform inputs to ensure that they are within the comfort zone before they are presented to the system. Rectifiers enforce a highly constrained input format and, if necessary, discard information to force inputs to conform to this format. Potential benefits of this approach include the elimination of errors and vulnerabilities, the excision of undesirable excess functionality from large, complex systems, and a simplification of the computing environment. We have developed a rectifier for email messages and used this rectifier to force messages into a specific constrained form. Our results show that this rectifier can successfully produce messages that keep the Pine email client strictly within code previously confirmed (during a small testing and training session) to function acceptably. Our results also show that the rectifier completely eliminates a security vulnerability in the Pine email client. And finally, the rectifier is able to accomplish these goals while still preserving an acceptable amount of information from the original messages.",
+  "doi": "10.1145/1297105.1297072",
+  "openalex": "W4252304704",
+  "status": "ok",
+  "title": "Living in the comfort zone"
+ },
+ "10.1145_1346281.1346321": {
+  "abstract": "Speck (Speculative Parallel Check) is a system thataccelerates powerful security checks on commodity hardware by executing them in parallel on multiple cores. Speck provides an infrastructure that allows sequential invocations of a particular security check to run in parallel without sacrificing the safety of the system. Speck creates parallelism in two ways. First, Speck decouples a security check from an application by continuing the application, using speculative execution, while the security check executes in parallel on another core. Second, Speck creates parallelism between sequential invocations of a security check by running later checks in parallel with earlier ones. Speck provides a process-level replay system to deterministically and efficiently synchronize state between a security check and the original process.We use Speck to parallelize three security checks: sensitive data analysis, on-access virus scanning, and taint propagation. Running on a 4-core and an 8-core computer, Speck improves performance 4x and 7.5x for the sensitive data analysis check, 3.3x and 2.8x for theon-access virus scanning check, and 1.6x and 2x for the taint propagation check.",
+  "doi": "10.1145/1346281.1346321",
+  "openalex": "W2242837385",
+  "status": "ok",
+  "title": "Parallelizing security checks on commodity hardware"
+ },
+ "10.1145_1353534.1346321": {
+  "abstract": "Speck (Speculative Parallel Check) is a system thataccelerates powerful security checks on commodity hardware by executing them in parallel on multiple cores. Speck provides an infrastructure that allows sequential invocations of a particular security check to run in parallel without sacrificing the safety of the system. Speck creates parallelism in two ways. First, Speck decouples a security check from an application by continuing the application, using speculative execution, while the security check executes in parallel on another core. Second, Speck creates parallelism between sequential invocations of a security check by running later checks in parallel with earlier ones. Speck provides a process-level replay system to deterministically and efficiently synchronize state between a security check and the original process.We use Speck to parallelize three security checks: sensitive data analysis, on-access virus scanning, and taint propagation. Running on a 4-core and an 8-core computer, Speck improves performance 4x and 7.5x for the sensitive data analysis check, 3.3x and 2.8x for theon-access virus scanning check, and 1.6x and 2x for the taint propagation check.",
+  "doi": "10.1145/1353534.1346321",
+  "openalex": "W4239500195",
+  "status": "ok",
+  "title": "Parallelizing security checks on commodity hardware"
+ },
+ "10.1145_1353535.1346321": {
+  "abstract": "Speck (Speculative Parallel Check) is a system thataccelerates powerful security checks on commodity hardware by executing them in parallel on multiple cores. Speck provides an infrastructure that allows sequential invocations of a particular security check to run in parallel without sacrificing the safety of the system. Speck creates parallelism in two ways. First, Speck decouples a security check from an application by continuing the application, using speculative execution, while the security check executes in parallel on another core. Second, Speck creates parallelism between sequential invocations of a security check by running later checks in parallel with earlier ones. Speck provides a process-level replay system to deterministically and efficiently synchronize state between a security check and the original process.We use Speck to parallelize three security checks: sensitive data analysis, on-access virus scanning, and taint propagation. Running on a 4-core and an 8-core computer, Speck improves performance 4x and 7.5x for the sensitive data analysis check, 3.3x and 2.8x for theon-access virus scanning check, and 1.6x and 2x for the taint propagation check.",
+  "doi": "10.1145/1353535.1346321",
+  "openalex": "W4230705741",
+  "status": "ok",
+  "title": "Parallelizing security checks on commodity hardware"
+ },
+ "10.1145_1353536.1346321": {
+  "abstract": "Speck (Speculative Parallel Check) is a system thataccelerates powerful security checks on commodity hardware by executing them in parallel on multiple cores. Speck provides an infrastructure that allows sequential invocations of a particular security check to run in parallel without sacrificing the safety of the system. Speck creates parallelism in two ways. First, Speck decouples a security check from an application by continuing the application, using speculative execution, while the security check executes in parallel on another core. Second, Speck creates parallelism between sequential invocations of a security check by running later checks in parallel with earlier ones. Speck provides a process-level replay system to deterministically and efficiently synchronize state between a security check and the original process.We use Speck to parallelize three security checks: sensitive data analysis, on-access virus scanning, and taint propagation. Running on a 4-core and an 8-core computer, Speck improves performance 4x and 7.5x for the sensitive data analysis check, 3.3x and 2.8x for theon-access virus scanning check, and 1.6x and 2x for the taint propagation check.",
+  "doi": "10.1145/1353536.1346321",
+  "openalex": "W4234536960",
+  "status": "ok",
+  "title": "Parallelizing security checks on commodity hardware"
+ },
+ "10.1145_1375581.1375606": {
+  "abstract": "Abstract We present a new technique for determining how much informationabout a program's secret inputs is revealed by its public outputs. In",
+  "doi": "10.1145/1375581.1375606",
+  "openalex": "W2144992712",
+  "status": "ok",
+  "title": "Quantitative information flow as network flow capacity"
+ },
+ "10.1145_1379022.1375606": {
+  "abstract": "We present a new technique for determining how much information about a program's secret inputs is revealed by its public outputs. In contrast to previous techniques based on reachability from secret inputs (tainting), it achieves a more precise quantitative result by computing a maximum flow of information between the inputs and outputs. The technique uses static control-flow regions to soundly account for implicit flows via branches and pointer operations, but operates dynamically by observing one or more program executions and giving numeric flow bounds specific to them (e.g., \"17 bits\"). The maximum flow in a network also gives a minimum cut (a set of edges that separate the secret input from the output), which can be used to efficiently check that the same policy is satisfied on future executions. We performed case studies on 5 real C, C++, and Objective C programs, 3 of which had more than 250K lines of code. The tool checked multiple security policies, including one that was violated by a previously unknown bug.",
+  "doi": "10.1145/1379022.1375606",
+  "openalex": "W4230176856",
+  "status": "ok",
+  "title": "Quantitative information flow as network flow capacity"
+ },
+ "10.1145_1555754.1555812": {
+  "abstract": "In response to the emergence of multicore processors, various novel and sophisticated execution models have been introduced to fully utilize these processors. One such execution model is Thread-Level Speculation (TLS), which allows potentially dependent threads to execute speculatively in parallel. While TLS offers significant performance potential for applications that are otherwise non-parallel, extracting efficient speculative threads in the presence of complex control flow and ambiguous data dependences is a real challenge. This task is further complicated by the fact that the performance of speculative threads is often architecture-dependent, input-sensitive, and exhibits phase behaviors. Thus we propose dynamic performance tuning mechanisms that determine where and how to create speculative threads at runtime.",
+  "doi": "10.1145/1555754.1555812",
+  "openalex": "W2008451057",
+  "status": "ok",
+  "title": "Dynamic performance tuning for speculative threads"
+ },
+ "10.1145_1555815.1555812": {
+  "abstract": "In response to the emergence of multicore processors, various novel and sophisticated execution models have been introduced to fully utilize these processors. One such execution model is Thread-Level Speculation (TLS), which allows potentially dependent threads to execute speculatively in parallel. While TLS offers significant performance potential for applications that are otherwise non-parallel, extracting efficient speculative threads in the presence of complex control flow and ambiguous data dependences is a real challenge. This task is further complicated by the fact that the performance of speculative threads is often architecture-dependent, input-sensitive, and exhibits phase behaviors. Thus we propose dynamic performance tuning mechanisms that determine where and how to create speculative threads at runtime. This paper describes the design, implementation, and evaluation of hardware and software support that takes advantage of runtime performance profiles to extract efficient speculative threads. In our proposed framework, speculative threads are monitored by hardware-based performance counters and their performance impact is estimated. The creation of speculative threads is adjusted based on the estimation. This paper proposes speculative threads performance estimation techniques, that are capable of correctly determining whether speculation can improve performance for loops that corresponds to 83.8% of total loop execution time across all benchmarks. This paper also examines several dynamic performance tuning policies and finds that the best tuning policy achieves an overall speedup of 36.8%on a set of benchmarks from SPEC2000 suite, which outperforms static thread management by 9.5%.",
+  "doi": "10.1145/1555815.1555812",
+  "openalex": "W3004321568",
+  "status": "ok",
+  "title": "Dynamic performance tuning for speculative threads"
+ },
+ "10.1145_1565824.1565827": {
+  "abstract": "We attempt to apply the technique of Tracing JIT Compilers in the context of the PyPy project, i.e., to programs that are interpreters for some dynamic languages, including Python. Tracing JIT compilers can greatly speed up programs that spend most of their time in loops in which they take similar code paths. However, applying an unmodified tracing JIT to a program that is itself a bytecode interpreter results in very limited or no speedup. In this paper we show how to guide tracing JIT compilers to greatly improve the speed of bytecode interpreters. One crucial point is to unroll the bytecode dispatch loop, based on two kinds of hints provided by the implementer of the bytecode interpreter. We evaluate our technique by applying it to two PyPy interpreters: one is a small example, and the other one is the full Python interpreter.",
+  "doi": "10.1145/1565824.1565827",
+  "openalex": "W1993335798",
+  "status": "ok",
+  "title": "Tracing the meta-level"
+ },
+ "10.1145_1640134.1640147": {
+  "abstract": "Creating an interpreter is a simple and fast way to implement a dynamic programming language. With this ease also come major drawbacks. Interpreters are significantly slower than compiled machine code because they have a high dispatch overhead and cannot perform optimizations. To overcome these limitations, interpreters are commonly combined with just-in-time compilers to improve the overall performance. However, this means that a just-in-time compiler has to be implemented for each language.",
+  "doi": "10.1145/1640134.1640147",
+  "openalex": "W1986991427",
+  "status": "ok",
+  "title": "Optimization of dynamic languages using hierarchical layering of virtual machines"
+ },
+ "10.1145_1837513.1640147": {
+  "abstract": "Creating an interpreter is a simple and fast way to implement a dynamic programming language. With this ease also come major drawbacks. Interpreters are significantly slower than compiled machine code because they have a high dispatch overhead and cannot perform optimizations. To overcome these limitations, interpreters are commonly combined with just-in-time compilers to improve the overall performance. However, this means that a just-in-time compiler has to be implemented for each language. We explore the approach of taking an interpreter of a dynamic language and running it on top of an optimizing trace-based virtual machine, i.e., we run a guest VM on top of a host VM . The host VM uses trace recording to observe the guest VM executing the application program. Each recorded trace represents a sequence of guest VM bytecodes corresponding to a given execution path through the application program. The host VM optimizes and compiles these traces to machine code, thus eliminating the need for a custom just-in-time compiler for the guest VM. The guest VM only needs to provide basic information about its interpreter loop to the host VM.",
+  "doi": "10.1145/1837513.1640147",
+  "openalex": "W3045798957",
+  "status": "ok",
+  "title": "Optimization of dynamic languages using hierarchical layering of virtual machines"
+ },
+ "10.1145_2069172.2069181": {
+  "abstract": "Meta-tracing JIT compilers can be applied to a variety of different languages without explicitly encoding language semantics into the compiler. So far, they lacked a way to give the language implementor control over runtime feedback. This restricted their performance. In this paper we describe the mechanisms in PyPy's meta-tracing JIT that can be used to control runtime feedback in language-specific ways. These mechanisms are flexible enough to express classical VM techniques such as maps and runtime type feedback.",
+  "doi": "10.1145/2069172.2069181",
+  "openalex": "W2010448353",
+  "status": "ok",
+  "title": "Runtime feedback in a meta-tracing JIT for efficient dynamic languages"
+ },
+ "10.1145_2151024.2151035": {
+  "abstract": "Code quality and compilation speed are two challenges to JIT compilers, while selective compilation is commonly used to trade-off these two issues. Meanwhile, with more and more Java applications running in mobile devices, selective compilation meets many problems. Since these applications always have flat execution profile and short live time, a lightweight JIT technique without losing code quality is extremely needed. However, the overhead of compiling stack-based Java bytecode to heterogeneous register-based machine code is significant in embedded devices. This paper presents a fast and effective JIT technique for mobile devices, building on a register-based Java bytecode format which is more similar to the underlying machine architecture. Through a comprehensive study on the characteristics of Java applications, we observe that virtual registers used by more than 90% Java methods can be directly fulfilled by 11 physical registers. Based on this observation, this paper proposes Swift, a novel JIT compiler on register-based bytecode, which generates native code for RISC machines. After mapping virtual registers to physical registers, the code is generated efficiently by looking up a translation table. And the code quality is guaranteed by the static compiler which is used to generate register-based bytecode. Besides, we design two lightweight optimizations and an efficient code unloader to make Swift more suitable for embedded environment. As the prevalence of Android, a prototype of Swift is implemented upon DEX bytecode which is the official distribution format of Android applications.",
+  "doi": "10.1145/2151024.2151035",
+  "openalex": "W2099268876",
+  "status": "ok",
+  "title": "Swift"
+ },
+ "10.1145_2355585.2355586": {
+  "abstract": "Efficiently utilizing multicore processors to improve their performance potentials demands extracting thread-level parallelism from the applications. Various novel and sophisticated execution models have been proposed to extract thread-level parallelism from sequential programs. One such execution model, Thread-Level Speculation (TLS), allows potentially dependent threads to execute speculatively in parallel. However, TLS execution is inherently unpredictable, and consequently incorrect speculation could degrade performance for the multicore systems. Existing approaches have focused on using the compilers to select sequential program regions to apply TLS. Our research shows that even the state-of-the-art compiler makes suboptimal decisions, due to the unpredictability of TLS execution. Thus, we propose to dynamically optimize TLS performance. This article describes the design, implementation, and evaluation of a runtime thread dispatching mechanism that adjusts the behaviors of speculative threads based on their efficiency. In the proposed system, speculative threads are monitored by hardware-based performance counters and their performance impact is evaluated with a novel methodology that takes into account various unique TLS characteristics. Thread dispatching policies are devised to adjust the behaviors of speculative threads accordingly. With the help of the runtime evaluation, where and how to create speculative threads is better determined. Evaluated with all the SPEC CPU2000 benchmark programs written in C, the dynamic dispatching system outperforms the state-of-the-art compiler-based thread management techniques by 9.4% on average. Comparing to sequential execution, we achieve 1.37X performance improvement on a four-core CMP-based system.",
+  "doi": "10.1145/2355585.2355586",
+  "openalex": "W1979593478",
+  "status": "ok",
+  "title": "Dynamically dispatching speculative threads to improve sequential execution"
+ },
+ "10.1145_2365864.2151035": {
+  "abstract": "Code quality and compilation speed are two challenges to JIT compilers, while selective compilation is commonly used to trade-off these two issues. Meanwhile, with more and more Java applications running in mobile devices, selective compilation meets many problems. Since these applications always have flat execution profile and short live time, a lightweight JIT technique without losing code quality is extremely needed. However, the overhead of compiling stack-based Java bytecode to heterogeneous register-based machine code is significant in embedded devices. This paper presents a fast and effective JIT technique for mobile devices, building on a register-based Java bytecode format which is more similar to the underlying machine architecture. Through a comprehensive study on the characteristics of Java applications, we observe that virtual registers used by more than 90% Java methods can be directly fulfilled by 11 physical registers. Based on this observation, this paper proposes Swift, a novel JIT compiler on register-based bytecode, which generates native code for RISC machines. After mapping virtual registers to physical registers, the code is generated efficiently by looking up a translation table. And the code quality is guaranteed by the static compiler which is used to generate register-based bytecode. Besides, we design two lightweight optimizations and an efficient code unloader to make Swift more suitable for embedded environment. As the prevalence of Android, a prototype of Swift is implemented upon DEX bytecode which is the official distribution format of Android applications. Swift is evaluated with three benchmarks (SPECjvm98, EmbeddedCaffeineMark3 and JemBench2) on two different ARM SOCs: S3C6410 (armv6) and OMAP3530 (armv7). The results show that Swift achieves a speedup of 3.13 over the best-performing interpreter on the selected benchmarks. Compared with the state-of-the-art JIT compiler in Android, JITC-Droid, Swift achieves a speedup of 1.42.",
+  "doi": "10.1145/2365864.2151035",
+  "openalex": "W4245102070",
+  "status": "ok",
+  "title": "Swift"
+ },
+ "10.1145_2508168.2508172": {
+  "abstract": "JavaScript is the language of the ubiquitous Web, but it only poorly supports event-driven functional programs due to its single-threaded, asynchronous nature and lack of rich control flow operators. We present Whalesong, a compiler from Racket that generates JavaScript code that masks these problems. We discuss the implementation strategy using delimited continuations, an interface to the DOM, and an FFI for adapting JavaScript libraries to add new platform-dependent reactive features. In the process, we also describe extensions to Racket's functional event-driven programming model. We also briefly discuss the implementation details.",
+  "doi": "10.1145/2508168.2508172",
+  "openalex": "W2125897312",
+  "status": "ok",
+  "title": "Whalesong"
+ },
+ "10.1145_2542142.2542146": {
+  "abstract": "Language composition approaches have traditionally suffered from poor performance. In this paper we hypothesise that meta-tracing provides a means to compose independent language interpreters while retaining the performance levels of each. To study this approach, we compose Python and Prolog interpreters to form Unipycation. We present a case study of its use and a suite of micro-benchmarks which give us some understanding of its cross-language performance.",
+  "doi": "10.1145/2542142.2542146",
+  "openalex": "W2143322757",
+  "status": "ok",
+  "title": "Unipycation"
+ },
+ "10.1145_2578856.2508172": {
+  "abstract": "JavaScript is the language of the ubiquitous Web, but it only poorly supports event-driven functional programs due to its single-threaded, asynchronous nature and lack of rich control flow operators. We present Whalesong, a compiler from Racket that generates JavaScript code that masks these problems. We discuss the implementation strategy using delimited continuations, an interface to the DOM, and an FFI for adapting JavaScript libraries to add new platform-dependent reactive features. In the process, we also describe extensions to Racket's functional event-driven programming model. We also briefly discuss the implementation details.",
+  "doi": "10.1145/2578856.2508172",
+  "openalex": "W4229928981",
+  "status": "ok",
+  "title": "Whalesong"
+ },
+ "10.1145_2695664.2695837": {
+  "abstract": "The performance of value classes is highly dependent on how they are represented in the virtual machine. Value class instances are immutable, have no identity, and can only refer to other value classes or primitives and since they should be very lightweight and fast, it is important to optimize them well. In this paper we present a technique to detect and compress commonly occurring patterns of value class usage to improve memory usage and performance. microbenchmarks show two to ten-fold speedup of a small prototypical implementation over the implementation of value classes in other object-oriented language implementations.",
+  "doi": "10.1145/2695664.2695837",
+  "openalex": "W2103291536",
+  "status": "ok",
+  "title": "Adaptive just-in-time value class optimization"
+ },
+ "10.1145_2784731.2784740": {
+  "abstract": "We present Pycket, a high-performance tracing JIT compiler for Racket. Pycket supports a wide variety of the sophisticated features in Racket such as contracts, continuations, classes, structures, dynamic binding, and more. On average, over a standard suite of benchmarks, Pycket outperforms existing compilers, both Racket's JIT and other highly-optimizing Scheme compilers. Further, Pycket provides much better performance for Racket proxies than existing systems, dramatically reducing the overhead of contracts and gradual typing. We validate this claim with performance evaluation on multiple existing benchmark suites. The Pycket implementation is of independent interest as an application of the RPython meta-tracing framework (originally created for PyPy), which automatically generates tracing JIT compilers from interpreters. Prior work on meta-tracing focuses on bytecode interpreters, whereas Pycket is a high-level interpreter based on the CEK abstract machine and operates directly on abstract syntax trees. Pycket supports proper tail calls and first-class continuations. In the setting of a functional language, where recursion and higher-order functions are more prevalent than explicit loops, the most significant performance challenge for a tracing JIT is identifying which control flows constitute a loop---we discuss two strategies for identifying loops and measure their impact.",
+  "doi": "10.1145/2784731.2784740",
+  "openalex": "W2097013380",
+  "status": "ok",
+  "title": "Pycket: a tracing JIT for a functional language"
+ },
+ "10.1145_2858949.2784740": {
+  "abstract": "We present Pycket, a high-performance tracing JIT compiler for Racket. Pycket supports a wide variety of the sophisticated features in Racket such as contracts, continuations, classes, structures, dynamic binding, and more. On average, over a standard suite of benchmarks, Pycket outperforms existing compilers, both Racket's JIT and other highly-optimizing Scheme compilers. Further, Pycket provides much better performance for Racket proxies than existing systems, dramatically reducing the overhead of contracts and gradual typing. We validate this claim with performance evaluation on multiple existing benchmark suites. The Pycket implementation is of independent interest as an application of the RPython meta-tracing framework (originally created for PyPy), which automatically generates tracing JIT compilers from interpreters. Prior work on meta-tracing focuses on bytecode interpreters, whereas Pycket is a high-level interpreter based on the CEK abstract machine and operates directly on abstract syntax trees. Pycket supports proper tail calls and first-class continuations. In the setting of a functional language, where recursion and higher-order functions are more prevalent than explicit loops, the most significant performance challenge for a tracing JIT is identifying which control flows constitute a loop---we discuss two strategies for identifying loops and measure their impact.",
+  "doi": "10.1145/2858949.2784740",
+  "openalex": "W4243257852",
+  "status": "ok",
+  "title": "Pycket: a tracing JIT for a functional language"
+ },
+ "10.1145_3281287.3281294": {
+  "abstract": "Building high performance virtual machines for dynamic languages usually requires significant development effort. They may require an interpreter and one or more compilation phases to generate efficient code. In addition, they may require several static analyses using custom intermediate representation(s). This paper presents techniques used to implement virtual machines for dynamic languages with relatively low development effort and good performance. These techniques allow compiling directly from the abstract syntax tree to target machine code while still enabling useful optimizations and without using any intermediate representation. We have used these techniques to implement a JIT compiler for Scheme. We show that performance of the generated code competes with the code generated by mature Scheme implementations.",
+  "doi": "10.1145/3281287.3281294",
+  "openalex": "W2898295052",
+  "status": "ok",
+  "title": "Building JIT compilers for dynamic languages with low development effort"
+ },
+ "10.1145_3477132.3483564": {
+  "abstract": "Ethereum is an emerging distributed computing platform that supports a decentralized replicated virtual machine at a large scale. Transactions in Ethereum are specified in smart contracts, disseminated through broadcast, accepted into the chain of blocks, and then executed on each node. In this new Dissemination-Consensus-Execution (DiCE) paradigm, the time interval between when a transaction is known (during the dissemination phase) to when the transaction is executed (after the consensus phase) offers a window of opportunity to accelerate transaction processing through speculative execution. However, the traditional speculative execution, which hinges on the ability to predict the future accurately, is inadequate because of DiCE's many-future nature.",
+  "doi": "10.1145/3477132.3483564",
+  "openalex": "W3203382244",
+  "status": "ok",
+  "title": "Forerunner"
+ },
+ "10.1145_3624007.3624050": {
+  "abstract": "Abstract syntax tree (AST) interpreters allow implementing programming languages in a straight-forward way. However, AST interpreters implemented in object-oriented languages, such as e.g. in Java, often suffer from two serious performance issues. First, these interpreters commonly implement AST nodes by leveraging class inheritance and polymorphism, leading to many polymorphic call sites in the interpreter implementation and hence lowering interpreter performance. Second, widely used implementations of these interpreters throw costly runtime exceptions to model the control flow. Even though Just-in-Time (JIT) compilation mitigates these issues, performance in the first stages of the program execution remains poor.",
+  "doi": "10.1145/3624007.3624050",
+  "openalex": "W4387793707",
+  "status": "ok",
+  "title": "Automatically Generated Supernodes for AST Interpreters Improve Virtual-Machine Performance"
+ },
+ "10.1145_3696443.3708923": {
+  "abstract": "The Extended Berkeley Packet Filter (eBPF) is a sandboxed virtual machine that runs on operating systems with kernel privileges. Currently, eBPF programs are either translated from a subset of C, called Restricted C, or from bindings available for languages such as Rust or Python. This paper describes Honey Potion, a compiler that compiles Elixir to eBPF binaries. Translation is challenging, for it must not only preserve semantics, but also satisfy the eBPF verifier, which requires proofs of in-bounds memory accesses and termination. The translator relies heavily on this last constraint---ensured termination---to implement different optimizations: constant propagation, type specialization and partial evaluation. Honey Potion is publicly available, and has been used in the development of many eBPF applications, such as packet routers, process monitors and event loggers. To the best of our knowledge, Honey Potion is the first translator of a functional programming language to eBPF.",
+  "doi": "10.1145/3696443.3708923",
+  "openalex": "W4407857619",
+  "status": "ok",
+  "title": "Honey Potion: An eBPF Backend for Elixir"
+ },
+ "10.1155_2020_8702017": {
+  "abstract": "To protect core functions, applications often utilize the countermeasure techniques such as antidebugging to avoid analysis by outsiders, especially the malware. Dynamic binary instrumentation is commonly used in the analysis of binary programs. However, it can be easily detected and has stability and applicability problems as it involves program rewriting and just-in-time compilation. This paper proposes a new lightweight analysis method for binary programs with the assistance of hardware features and the operating system kernel, named BAHK, which can automatically analyze the target program by stealth and has wide applicability. With the support of underlying infrastructures, this paper designs several optimization strategies and specific analysis approaches at instruction level to reduce the impact of fine-grained analysis on the performance of target program so that it can be well applied in practice. The experimental results show that the proposed method has good stealthiness, low memory consumption, and positive user experience. In some cases, it shows better analysis performance than the traditional dynamic binary instrumentation method. Finally, the real case studies further show its feasibility and effectiveness.",
+  "doi": "10.1155/2020/8702017",
+  "openalex": "W3000565003",
+  "status": "ok",
+  "title": "BAHK: Flexible Automated Binary Analysis Method with the Assistance of Hardware and System Kernel"
+ },
+ "10.15439_2015f139": {
+  "abstract": "In this paper, the performance research on CPython's latest interpreter is presented, concluding that bytecode dispatching takes about 25 percent of total execution time on average. Based on this observation, a novel bytecode dispatching mechanism is proposed to reduce the time spent on this phase to a minimum. With this mechanism, the blocks associated with each kind of bytecodes are rewritten in hand-tuned assembly, their opcodes are renumbered, and their memory spaces are rescheduled. With these preparations, this new bytecode dispatching mechanism replaces the time-consuming memory reading operations with rapid operations on registers. This mechanism is implemented in CPython-3.3.0. Experiments on lots of benchmarks demonstrate its correctness and efficiency. The comparison between original CPython and optimized CPython shows that this new mechanism achieves about 8.5 percent performance improvement on average. For some particular benchmarks, the maximum improvement is up to 18 percentages.",
+  "doi": "10.15439/2015f139",
+  "openalex": "W1956498553",
+  "status": "ok",
+  "title": "Performance Research and Optimization on CPython’s Interpreter"
+ },
+ "10.18130_v3hj6r": {
+  "abstract": "Building a modern software system has increasingly become a complex and difficult to manage task.",
+  "doi": "10.18130/v3hj6r",
+  "openalex": "W2955802563",
+  "status": "ok",
+  "title": "Persistent Storage for Program Metadata"
+ },
+ "10.23940_ijpe.18.10.p8.23092319": {
+  "abstract": null,
+  "doi": "10.23940/ijpe.18.10.p8.23092319",
+  "openalex": "W2899044810",
+  "status": "no_abstract",
+  "title": "An Optimization Method for XML Twig Query"
+ },
+ "10.4230_lipics.ecoop.2016.3": {
+  "abstract": "Although run-time language composition is common, it normally takes the form of a crude Foreign Function Interface (FFI). While useful, such compositions tend to be coarse-grained and slow. In this paper we introduce a novel fine-grained syntactic composition of PHP and Python which allows users to embed each language inside the other, including referencing variables across languages. This composition raises novel design and implementation challenges. We show that good solutions can be found to the design challenges; and that the resulting implementation imposes an acceptable performance overhead of, at most, 2.6x.",
+  "doi": "10.4230/lipics.ecoop.2016.3",
+  "openalex": "W2903318108",
+  "status": "ok",
+  "title": "Fine-grained Language Composition: A Case Study"
+ },
+ "10.4230_lipics.ecoop.2016.4": {
+  "abstract": "This artifact contains: the SQPyte prototype, a JIT for executing SQLite queries; and PyPy-SQPyte, a version of the PyPy Python VM which embeds SQPyte. In addition, a benchmark suite is included, which allows performance comparison against standard SQLite and the Java embedded database H2.",
+  "doi": "10.4230/lipics.ecoop.2016.4",
+  "openalex": "W2553134972",
+  "status": "ok",
+  "title": "Making an Embedded DBMS JIT-friendly"
+ },
+ "10.48550_arxiv.1512.03207": {
+  "abstract": "While database management systems (DBMSs) are highly optimized, interactions across the boundary between the programming language (PL) and the DBMS are costly, even for in-process embedded DBMSs. In this paper, we show that programs that interact with the popular embedded DBMS SQLite can be significantly optimized - by a factor of 3.4 in our benchmarks - by inlining across the PL / DBMS boundary. We achieved this speed-up by replacing parts of SQLite's C interpreter with RPython code and composing the resulting meta-tracing virtual machine (VM) - called SQPyte - with the PyPy VM. SQPyte does not compromise stand-alone SQL performance and is 2.2% faster than SQLite on the widely used TPC-H benchmark suite.",
+  "doi": "10.48550/arxiv.1512.03207",
+  "openalex": "W2193573313",
+  "status": "ok",
+  "title": "Making an Embedded DBMS JIT-friendly"
+ },
+ "10.48550_arxiv.2503.04389": {
+  "abstract": "We present Pydrofoil, a multi-stage compiler that generates instruction set simulators (ISSs) from processor instruction set architectures (ISAs) expressed in the high-level, verification-oriented ISA specification language Sail. Pydrofoil shows a > 230x speedup over the C-based ISS generated by Sail on our benchmarks, and is based on the following insights. (i) An ISS is effectively an interpreter loop, and tracing just-in-time (JIT) compilers have proven effective at accelerating those, albeit mostly for dynamically typed languages. (ii) ISS workloads are highly atypical, dominated by intensive bit manipulation operations. Conventional compiler optimisations for general-purpose programming languages have limited impact for speeding up such workloads. We develop suitable domain-specific optimisations. (iii) Neither tracing JIT compilers, nor ahead-of-time (AOT) compilation alone, even with domain-specific optimisations, suffice for the generation of performant ISSs. Pydrofoil therefore implements a hybrid approach, pairing an AOT compiler with a tracing JIT built on the meta-tracing PyPy framework. AOT and JIT use domain-specific optimisations. Our benchmarks demonstrate that combining AOT and JIT compilers provides significantly greater performance gains than using either compiler alone.",
+  "doi": "10.48550/arxiv.2503.04389",
+  "openalex": "W4416113120",
+  "status": "ok",
+  "title": "Pydrofoil: accelerating Sail-based instruction set simulators"
+ },
+ "10.5555_1025127.1025995": {
+  "abstract": "JIT compilers produce fast code, whereas interpreters are easy to port between architectures. We propose to combine the advantages of these language implementation techniques as follows: we generate native code by concatenating and patching machine code fragments taken from interpreter-derived code (generated by a C compiler); we completely eliminate the interpreter dispatch overhead and accesses to the interpreted code by patching jump target addresses and other constants into the fragments. In this paper we present the basic idea, discuss some issues in more detail, and present results from a proof-of-concept implementation, providing speedups of up to 1.87 over the fastest previous interpreter-based technique, and performance comparable to simple native-code compilers. The effort required for retargeting our implementation from the 386 to the PPC architecture was less than a person-day.",
+  "doi": "10.5555/1025127.1025995",
+  "openalex": "W2000422467",
+  "status": "ok",
+  "title": "Retargeting JIT Compilers by using C-Compiler Generated Executable Code"
+ },
+ "oa-W1033736411": {
+  "abstract": "As hardware performance and dependability have dramatically improved in the past few decades, the software dependability issues are becoming increasingly important. Unfortunately, many studies show that software bugs can greatly affect software dependability during production runs. To improve software dependability during production runs, this dissertation proposes to address software bugs at multiple levels by leveraging support from the hardware, OS, and runtime. \r\nThe proposed multi-level defenses address software bugs and their effects at different stages of program execution. At the first level, this dissertation proposes a low-overhead tool, called SafeMem, to detect memory leaks and memory corruption bugs by exploiting a novel usage of existing ECC memory. The experiments with seven real-world applications show that SafeMem detects all tested bugs with low overhead (only 1.6%-14.4%). \r\nUnfortunately, some bugs may still slip through the first-level defense and may be exploited by security attacks. At the second level, this dissertation proposes a low-overhead, software-only information flow tracking system, called LIFT, to detect a wide range of security attacks that exploiting software bugs. LIFT incurs low-overhead by exploiting dynamic binary translation and optimizations. The experiments show that LIFT can effectively detect a wide range of security attacks and incurs low overhead, only 6.2% for the server application, and 3.6 times on average for seven SPEC INT2000 applications. The proposed dynamic optimizations effectively reduce the overhead by a factor of 5-12 times. \r\nWithout any further actions for the detected bugs or exploitations at the previous two levels of defenses, what the target system can do is to shut down itself to prevent potential damages, thus is unavailable to users. At the third-level, this dissertation proposes an innovative technique, called Rx, to quickly recover programs from many types of software bugs, both deterministic and non-deterministic. The experiments show that Rx can survive all tested software failures and provides transparent fast recovery within 0.017-0.16 seconds, 21-51 times faster than the whole system program restart approach for all but one case (CVS). \r\nIn summary, it can effectively improve software dependability during production runs by addressing software bugs at multiple levels with support from the hardware, OS, and runtime.",
+  "doi": null,
+  "openalex": "W1033736411",
+  "status": "ok",
+  "title": "System support for improving software dependability during production runs"
+ },
+ "oa-W1502691374": {
+  "abstract": "We present a new approach for tracking programs' use of data througharbitrary calculations, to determine how much information about secretinputs is revealed by public outputs. Using a fine-grained dynamicbit-tracking analysis, the technique measures the information revealedduring a particular execution. The technique accounts for indirectflows, e.g. via branches and pointer operations. Two kinds ofuntrusted annotation improve the precision of the analysis. Animplementation of the technique based on dynamic binary translation isdemonstrated on real C, C++, and Objective C programs of up to half amillion lines of code. In case studies, the tool checked multiplesecurity policies, including one that was violated by a previouslyunknown bug.",
+  "doi": null,
+  "openalex": "W1502691374",
+  "status": "ok",
+  "title": "Quantitative Information-Flow Tracking for C and Related Languages"
+ },
+ "oa-W1526863280": {
+  "abstract": "Interpreters are widely used to implement portable language runtime environments. Programs written in these languages may benefit from performance beyond that obtainable by optimizing interpretation alone. A modern high-performance mixed-mode virtual machine (VM) includes a method-based Just In Time (JIT) compiler. A method-based JIT, however, requires the up-front development of a complex compilation infrastructure before any performance benefits are realized. Ideally, the architecture for a mixed-mode VM could detect and execute a variety of shapes of hot regions of a virtual program. Our VM architecture is based on context threading. It supports powerful,",
+  "doi": null,
+  "openalex": "W1526863280",
+  "status": "ok",
+  "title": "Mixed mode execution with context threading"
+ },
+ "oa-W1605103507": {
+  "abstract": "University of Minnesota Ph.D. dissertation. November 2011. Major: Computer science. Advisor: Prof. Antonia Zhai. 1 computer file (PDF); xii, 128 pages, appendices A-B",
+  "doi": null,
+  "openalex": "W1605103507",
+  "status": "ok",
+  "title": "Exploiting parallelism in multicore processors through dynamic optimizations."
+ },
+ "oa-W1919920699": {
+  "abstract": "Although run-time language composition is common, it normally takes the form of a crude Foreign Function Interface (FFI). While useful, such compositions tend to be coarse-grained and slow. In this paper we introduce a novel fine-grained syntactic composition of PHP and Python which allows users to embed each language inside the other, including referencing variables across languages. This composition raises novel design and implementation challenges. We show that good solutions can be found to the design challenges; and that the resulting implementation imposes an acceptable performance overhead of, at most, just over 2x.",
+  "doi": null,
+  "openalex": "W1919920699",
+  "status": "ok",
+  "title": "Fine-grained Language Composition."
+ },
+ "oa-W2131166200": {
+  "abstract": "Thesis (M. Eng. and S.B.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2131166200",
+  "status": "ok",
+  "title": "An API for Dynamic Partial Evaluation under DynamoRIO"
+ },
+ "oa-W2133318222": {
+  "abstract": "An information-flow security policy constrains a computer system's end-to-end use of information, even as it is transformed in computation. For instance, a policy would not just restrict what secret data could be revealed directly, but restrict any output that might allow inferences about the secret. Expressing such a policy quantitatively, in terms of a specific number of bits of information, is often an effective program-independent way of distinguishing what scenarios should be allowed and disallowed. \r\nThis thesis describes a family of new techniques for measuring how much information about a program's secret inputs is revealed by its public outputs on a particular execution, in order to check a quantitative policy on realistic systems. Our approach builds on dynamic tainting, tracking at runtime which bits might contain secret information, and also uses static control-flow regions to soundly account for implicit flows via branches and pointer operations. We introduce a new graph model that bounds information flow by the maximum flow between inputs and outputs in a flow network representation of an execution. The flow bounds obtained with maximum flow are much more precise than those based on tainting alone (which is equivalent to graph reachability). The bounds are a conservative estimate of channel capacity: the amount of information that could be transmitted by an adversary making an arbitrary choice of secret inputs. \r\nWe describe an implementation named Flowcheck, built using the Valgrind framework for x86/Linux binaries, and use it to perform case studies on six real C, C++, and Objective C programs, three of which have more than 250,000 lines of code. We used the tool to check the confidentiality of a different kind of information appropriate to each program. Its results either verified that the information was appropriately kept secret on the examined executions, or revealed unacceptable leaks, in one case due to a previously unknown bug. (Copies available exclusively from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307. Ph. 617-253-5668; Fax 617-253-1690.)",
+  "doi": null,
+  "openalex": "W2133318222",
+  "status": "ok",
+  "title": "Quantitative information-flow tracking for real systems"
+ },
+ "oa-W2155943969": {
+  "abstract": "Thesis (Ph. D.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2155943969",
+  "status": "ok",
+  "title": "Efficient, transparent, and comprehensive runtime code manipulation"
+ },
+ "oa-W2159628020": {
+  "abstract": "Traditional parallelism detection in compilers is performed by means of static analysis and more specifically data and control dependence analysis. The information that is available at compile time, however, is inherently limited and therefore restricts the parallelisation opportunities. Furthermore, applications written in C – which represent the majority of today’s scientific, embedded and system software – utilise many lowlevel features and an intricate programming style that forces the compiler to even more conservative assumptions. Despite the numerous proposals to handle this uncertainty at compile time using speculative optimisation and parallelisation, the software industry still lacks any pragmatic approaches that extracts coarse-grain parallelism to exploit the multiple processing units of modern commodity hardware. This thesis introduces a novel approach for extracting and exploiting multiple forms of coarse-grain parallelism from sequential applications written in C. We utilise profiling information to overcome the limitations of static data and control-flow analysis enabling more aggressive parallelisation. Profiling is performed using an instrumentation scheme operating at the Intermediate Representation (Ir) level of the compiler. In contrast to existing approaches that depend on low-level binary tools and debugging information, Ir-profiling provides precise and direct correlation of profiling information back to the Ir structures of the compiler. Additionally, our approach is orthogonal to existing automatic parallelisation approaches and additional fine-grain parallelism may be exploited. We demonstrate the applicability and versatility of the proposed methodology using two studies that target different forms of parallelism. First, we focus on the exploitation of loop-level parallelism that is abundant in many scientific and embedded applications. We evaluate our parallelisation strategy against the Nas and Spec Fp benchmarks and two different multi-core platforms (a shared-memory Intel Xeon Smp and a heterogeneous distributed-memory Ibm Cell blade). Empirical evaluation shows that our approach not only yields significant improvements when compared with state-of- the-art parallelising compilers, but comes close to and sometimes exceeds the performance of manually parallelised codes. On average, our methodology achieves 96% of the performance of the hand-tuned parallel benchmarks on the Intel Xeon platform, and a significant speedup for the Cell platform. The second study, addresses the problem of partially sequential loops, typically found in implementations of multimedia codecs. We develop a more powerful whole-program representation based on the Program Dependence Graph (Pdg) that supports profiling, partitioning and codegeneration for pipeline parallelism. In addition we demonstrate how this enhances conventional pipeline parallelisation by incorporating support for multi-level loops and pipeline stage replication in a uniform and automatic way. Experimental results using a set of complex multimedia and stream processing benchmarks confirm the effectiveness of the proposed methodology that yields speedups up to 4.7 on a eight-core Intel Xeon machine.",
+  "doi": null,
+  "openalex": "W2159628020",
+  "status": "ok",
+  "title": "Profile-driven Parallelisation of Sequential Programs"
+ },
+ "oa-W2160553703": {
+  "abstract": "Producing quality code is one of the most important goals of an optimizing compiler. Analyzing code quality is therefore an essential activity in compiler engineering. By motivating new optimizations and diagnosing regressions, it takes a bottleneck position in the process. However, it has been highly empirical, and dependent on architectures and tools. This makes it a difficult and time-consuming task, and its productivity is unpredictable and usually low. This paper proposes two novel approaches for code quality analysis. The first ap-proach focuses on the key scenario in compiler construction, the computation-intensive benchmarks. We observed that the workload upon the processor dominates the execu-tion time of such benchmarks. Therefore, we use the compiler to parse the workload. By doing this, the compiler applies its static analysis power to identify its own code quality issues and potentials. We have implemented a software system for this ap-proach and integrated it with our daily testing infrastructure. It automates the code quality analysis for Spec benchmarks, and provides developers relevant information in",
+  "doi": null,
+  "openalex": "W2160553703",
+  "status": "ok",
+  "title": "Improving the Productivity of Compiler Code Quality Analysis"
+ },
+ "oa-W2170861439": {
+  "abstract": "Embedded software development has recently changed with advances in computing. Rather than fully co-designing software and hardware to perform a relatively simple task, nowadays embedded and mobile devices are designed as a platform where multiple applications can be run, new applications can be added, and existing applications can be updated. In this scenario, traditional constraints in embedded systems design (i.e., performance, memory and energy consumption and real-time guarantees) are more difficult to address. New concerns (e.g., security) have become important and increase software complexity as well.\r\n\r\nIn general-purpose systems, Dynamic Binary Translation (DBT) has been used to address these issues with services such as Just-In-Time (JIT) compilation, dynamic optimization, virtualization, power management and code security. In embedded systems, however, DBT is not usually employed due to performance, memory and power overhead.\r\n\r\nThis dissertation presents StrataX, a low-overhead DBT framework for embedded systems. StrataX addresses the challenges faced by DBT in embedded systems using novel techniques. To reduce DBT overhead, StrataX loads code from NAND-Flash storage and translates it into a Scratchpad Memory (SPM), a software-managed on-chip SRAM with limited capacity. SPM has similar access latency as a hardware cache, but consumes less power and chip area.\r\n\r\nStrataX manages SPM as a software instruction cache, and employs victim compression and pinning to reduce retranslation cost and capture frequently executed code in the SPM. To prevent performance loss due to excessive code expansion, StrataX minimizes the amount of code inserted by DBT to maintain control of program execution. When a hardware instruction cache is available, StrataX dynamically partitions translated code among the SPM and main memory. With these techniques, StrataX has low performance overhead relative to native execution for MiBench programs. Further, it simplifies embedded software and hardware design by operating transparently to applications without any special hardware support. StrataX achieves sufficiently low overhead to make it feasible to use DBT in embedded systems to address important design goals and requirements.",
+  "doi": null,
+  "openalex": "W2170861439",
+  "status": "ok",
+  "title": "DYNAMIC BINARY TRANSLATION FOR EMBEDDED SYSTEMS WITH SCRATCHPAD MEMORY"
+ },
+ "oa-W2224837848": {
+  "abstract": "Thesis (S.M.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2003.",
+  "doi": null,
+  "openalex": "W2224837848",
+  "status": "ok",
+  "title": "Dynamic optimization of interpreters using DynamoRIO"
+ },
+ "oa-W2257961880": {
+  "abstract": "Commodity operating systems are traditionally tuned to improve performance, but in the pursuit of faster operation, reliability is sacrificed. Therefore, common abstractions, such as asynchronous file system I/O, explicitly relax reliability guarantees (e.g., delay writes to disk by 30 seconds) in favor of better performance. The main concern of this thesis is to mitigate the performance/reliability tradeoff through the use of a general purpose mechanism, called Speculator, which implements multi-process speculative execution within the Linux kernel. Speculator is a tool for masking the latency of predictable, but slow, operations. It allows a critical, synchronous operation to be executed asynchronously. Thus, additional work is completed without sacrificing the benefits (i.e., the guarantees) of synchronous execution. Support for speculative execution is implemented using three techniques. First, Speculator tracks and propagates the causal dependencies (via speculations) of a process via inter-process communication mechanisms such as files, pipes, FIFOS and UNIX sockets. Second, Speculator buffers the output of speculative processes until the speculations upon which the output depends have been committed. Finally, should a speculation fail, Speculator can roll back each dependent kernel object and process. This dissertation shows that Speculator can be used to create new abstractions that replace synchronous abstractions within local file systems, distributed file systems and runtime security checks. Abstractions built using Speculator allow a pro grammer to develop applications for a reliable, synchronous abstraction while obtaining the performance of one that is asynchronous. Specifically, by using Speculator to build new abstractions, I can virtually eliminate the overhead of synchronous I/O for local file systems, build a distributed file system that provides strong consistency and safety guarantees while out-performing existing systems with weaker guarantees, and accelerate slow, sequential runtime security checks by parallelizing them across many cores. Finally, the speculative abstractions that I have built do not require application modification; the benefits of speculation are transparent.",
+  "doi": null,
+  "openalex": "W2257961880",
+  "status": "ok",
+  "title": "Speculative execution within a commodity operating system."
+ },
+ "oa-W2258200126": {
+  "abstract": "Thesis (M.Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2003.",
+  "doi": null,
+  "openalex": "W2258200126",
+  "status": "ok",
+  "title": "Dynamic optimization if IA-32 applications under DynamoRIO"
+ },
+ "oa-W2520143678": {
+  "abstract": "Automatic malware analysis is an essential part of today's computer security practices. Nearly one million malware samples were delivered to the analysts on a daily basis on year 2014 alone while the number of samples submitted for analysis increases almost exponentially each year. Given the size of the threat we are facing today and the amount of malicious codes emerging every day, the ability to automatically analyze unknown and unwanted software is critically important more than ever. On the other hand, malware writers adapt their malicious codes to new security measurements to protect them from being exposed and detected. This is usually achieved by employing obfuscation techniques that complicate the reverse engineering and analysis of the code by adding lots of unnecessary and irrelevant computations. Most of the malicious samples found in the wild are obfuscated and equipped with complicated anti-analysis defenses intended to hide the malicious intent of the malware by defeating the analysis and/or increasing the analysis time. Deobfuscation (reversing the obfuscation) requires automatic techniques to extract the original logic embedded in the obfuscated code for further analysis. Presumably the deobfuscated code requires less analysis time and is easier to analyze compared to the obfuscated one. Previous approaches in this regard target specific types of obfuscations by making strong assumptions about the underlying protection scheme leaving opportunities for the adversaries to attack. This work addresses this limitation by proposing new program analysis techniques that are effective against code obfuscations while being generic by minimizing the assumptions about the underlying code. We found that standard program analysis techniques, including well-known data and control flow analyses and/or symbolic execution, suffer from imprecision due to the obfuscation and show how to mitigate this loss of precision. Using more precise program analysis techniques, we propose a deobfuscation technique that is successful in reversing the complex obfuscation techniques such as virtualization-obfuscation and/or Return-Oriented Programming (ROP).",
+  "doi": null,
+  "openalex": "W2520143678",
+  "status": "ok",
+  "title": "Automatic Deobfuscation and Reverse Engineering of Obfuscated Code"
+ },
+ "oa-W2919905281": {
+  "abstract": "Functional programming offers an accessible and powerful algebraic model for computing. JavaScript is the language of the ubiquitous Web, but it does not support functional programs well due to its single-threaded, asynchronous nature and lack of rich control flow operators. The purpose of this work is to extend JavaScript to a language environment that satisfies the needs of functional programs on the Web. This extended language environment uses sophisticated control operators to provide an event-driven functional programming model that cooperates with the browser's DOM, along with synchronous access to JavaScript's asynchronous APIs. The results of this work are used toward two projects: (1) a programming environment called WeScheme that runs in the web browser and supports a functional programming curriculum, and (2) a tool-chain called Moby that compiles event-driven functional programs to smartphones, with access to phone-specific features.",
+  "doi": null,
+  "openalex": "W2919905281",
+  "status": "ok",
+  "title": "Building Web Based Programming Environments for Functional Programming"
+ },
+ "oa-W3103391685": {
+  "abstract": "Abstract. In this paper, we compose six different Python and Prolog VMs into 4 pairwise compositions: one using C interpreters; one running on the JVM; one using meta-tracing interpreters; and one using a C inter-preter and a meta-tracing interpreter. We show that programs that cross the language barrier frequently execute faster in a meta-tracing compo-sition, and that meta-tracing imposes a significantly lower overhead on composed programs relative to mono-language programs. 1",
+  "doi": null,
+  "openalex": "W3103391685",
+  "status": "ok",
+  "title": "Approaches to interpreter composition"
+ },
+ "s2-012622167239db2c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "DYNAMIC BINARY TRANSLATION FOR EMBEDDED SYSTEMS WITH SCRATCHPAD MEMORY"
+ },
+ "s2-094eeb3788608501": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "System Support for Improving Software Dependability During Production Runs"
+ },
+ "s2-1153f1935e4b22db": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Quantitative information-flow tracking for real systems"
+ },
+ "s2-1f2a561ab7263bd0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Area 1 (Virtual Machines and Compilation)"
+ },
+ "s2-21cf4c61b6b3380e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Building Web Based Programming Environments for Functional Programming"
+ },
+ "s2-285f43dc1dbd4419": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Speculative execution within a commodity operating system"
+ },
+ "s2-326cdcbce0831d87": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient, transparent, and comprehensive runtime code manipulation"
+ },
+ "s2-333ea43ab30ae453": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Meta-tracing makes a fast Racket"
+ },
+ "s2-347cfa2d2e911748": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SQL-to-Opcode Compiler Tokenizer Parser Opcode Generator Query Planner Core Backend"
+ },
+ "s2-369a44df6afc2c41": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploiting parallelism in multicore processors through dynamic optimizations."
+ },
+ "s2-386e6665ee450aa3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SQL-to-Opcode Compiler Tokenizer Parser Opcode Generator Query Planner Core Backend"
+ },
+ "s2-46b8cb17ed6f76a5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "New techniques for adaptive program optimization"
+ },
+ "s2-57fb481b98a8b08f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic optimization if IA-32 applications under DynamoRIO"
+ },
+ "s2-5be49c92222663cc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic optimization of interpreters using DynamoRIO"
+ },
+ "s2-709435654ae1281f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SQL-to-Opcode Compiler Tokenizer Parser Opcode Generator Query Planner Core Backend"
+ },
+ "s2-7ca94f0449ffe837": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fine-grained Language Composition"
+ },
+ "s2-9395ddef8a354568": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving the Productivity of Compiler Code Quality Analysis"
+ },
+ "s2-943e3233300620d0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Profile-driven parallelisation of sequential programs"
+ },
+ "s2-98496c6c56794434": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Simple optimizing JIT compilation of higher-order dynamic programming languages"
+ },
+ "s2-ca9b4e12a9897376": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Quantitative Information-Flow Tracking for C and Related Languages"
+ },
+ "s2-d1a0e44ec323cca1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An API for Dynamic Partial Evaluation under DynamoRIO"
+ },
+ "s2-df3a7c3b90190a91": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automatic Deobfuscation and Reverse Engineering of Obfuscated Code"
+ }
+}

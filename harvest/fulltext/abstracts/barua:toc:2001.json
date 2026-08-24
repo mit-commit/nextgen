@@ -1,0 +1,289 @@
+{
+ "10.1007_978-3-540-39920-9_24": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-39920-9_24",
+  "openalex": "W1524811490",
+  "status": "no_abstract",
+  "title": "Partitioning for DSP Software Synthesis"
+ },
+ "10.1007_978-3-642-28365-9_4": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-28365-9_4",
+  "openalex": "W1625061266",
+  "status": "no_abstract",
+  "title": "Exploiting Both Pipelining and Data Parallelism with SIMD Reconfigurable Architecture"
+ },
+ "10.1093_ietisy_e90-d.12.1977": {
+  "abstract": "In these days, many dynamically reconfigurable architectures have been introduced to fill the gap between ASICs and software-programmed processors such as GPPs and DSPs. These reconfigurable architectures have shown to achieve higher performance compared to software-programmed processors. However, reconfigurable architectures suffer from a significant reconfiguration overhead and a speedup limitation. By reducing the reconfiguration overhead, the overall performance of reconfigurable architectures can be improved. Therefore, we will describe temporal partitioning, which are able to amortize the reconfiguration overhead at synthesis phase or compilation time. Our temporal partitioning methodology splits a configuration context into temporal partitions to amortize reconfiguration overhead. And then, we will present benchmark results to demonstrate the effectiveness of our methodology.",
+  "doi": "10.1093/ietisy/e90-d.12.1977",
+  "openalex": "W2065706859",
+  "status": "ok",
+  "title": "Temporal Partitioning to Amortize Reconfiguration Overhead for Dynamically Reconfigurable Architectures"
+ },
+ "10.1109_cicc.2005.1568651": {
+  "abstract": "Several application domains, including multimedia and network processing, are highly memory intensive, making memory a bottleneck to designing higher performance and lower power application-specific integrated circuits (ASICs). Design methodologies based on innovative architectures, namely distributed logic-memory architectures and computation-unit integrated memories, have been shown to improve circuit performance significantly. In this paper, these design methodologies are discussed and evaluated through the implementation of an ASIC for the JPEG still image compression standard. The implemented system is capable of stand-alone image compression, and has been synthesized using the TSMC 0.13/spl mu/m 1.20V eight-layer metal CMOS process. A four-way distributed implementation can achieve an execution time of 2.23ms (a speed-up of 2.87/spl times/) for a 128 /spl times/ 128 input image at the cost of chip area overhead of 51.4% while the energy-delay product is reduced by 2.35/spl times/. Design metrics of various other implementations are also compared.",
+  "doi": "10.1109/cicc.2005.1568651",
+  "openalex": "W2134585988",
+  "status": "ok",
+  "title": "Eliminating memory bottlenecks for a JPEG encoder through distributed logic-memory architecture and computation-unit integrated memory"
+ },
+ "10.1109_iccad.2003.159669": {
+  "abstract": "Memory-intensive applications present unique challenges to an ASIC designer in terms of the choice of memory organization, memory size requirements, bandwidth and access latencies, etc. The high potential of single-chip distributed logic-memory architectures in addressing many of these issues has been recognized in general-purpose computing, and more recently in ASIC design. However, such architectures will be adopted widely by designers only when general techniques and tools for efficient high-level synthesis (HLS) of multi-partitioned ASICs become available. The techniques presented in this paper are motivated by the fact that many memory-intensive applications exhibit irregular array data access patterns (due to conditionals in loop nests, etc.). Synthesis should, therefore, be capable of determining a partitioned architecture, wherein array data and computations may have to be heterogeneously distributed for achieving the best performance speedup. Furthermore, the synthesis methodology should not be restricted by the nature of array index functions (affine or otherwise) in a behavior. Therefore, our methodology employs simulation to provide information about the access patterns of array data references in a behavior, which is used by the rest of our analysis. We use a combination of clustering and min-cut style partitioning techniques to partition the behavior into sub-behaviors while considering various factors including data access locality, balanced workloads, inter-partition communication, etc. Finally, we also employ an iterative improvement strategy to determine the best way of distributing array data into physical memory in each partition. Our experiments with several benchmark applications show that the proposed techniques can yield partitioned architectures that can achieve up to 2.2X performance speed-up over conventional HLS solutions, while achieving up to 1.6A\" performance speedup over the best homogeneous partitioning solution feasible.",
+  "doi": "10.1109/iccad.2003.159669",
+  "openalex": "W4238232829",
+  "status": "ok",
+  "title": "Synthesis of heterogeneous distributed architectures for memory-intensive applications"
+ },
+ "10.1109_iccad.2004.1382682": {
+  "abstract": "High-level synthesis (HLS) of memory-intensive applications has featured several innovations in terms of enhancements made to the basic memory organization and data layout. However, increasing performance and energy demands faced by application-specific integrated circuits (ASIC) are forcing designers to alter the fundamental architectural template of the HLS output, namely, a controller-datapath associated with a memory subsystem (monolithic, banked, etc.). We propose an architectural template for the HLS output that consists of a controller-datapath circuit associated with a memory subsystem into which computation units have been integrated. The enhanced memory subsystem is called computation-unit integrated memory (CIM). A CIM offers higher memory bandwidth (relative to what is offered through the system bus) to computation units present locally within it and reduces the overall communication between the memory subsystem and the controller-datapath, thus providing a template highly suitable for deriving efficient implementations of memory-intensive applications. This work addresses the challenge of providing an automatic synthesis framework for a CIM-based architecture. Our framework can analyze the various trade-offs involved in selecting suitable operations in a behavior for execution using a CIM and generate a high-performance, low-overhead implementation. Experiments with several behaviors indicate that an average performance improvement of 1.88/spl times/ (a maximum of 2.63/spl times/) is possible with very low area overheads. The energy-delay product improves by an average of 2.1/spl times/ (maximum of 3.4/spl times/).",
+  "doi": "10.1109/iccad.2004.1382682",
+  "openalex": "W1587944565",
+  "status": "ok",
+  "title": "High-level synthesis using computation-unit integrated memories"
+ },
+ "10.1109_interact.2005.9": {
+  "abstract": "This paper describes multigrain parallel processing on a compiler cooperative chip multiprocessor. The multigrain parallel processing hierarchically exploits multiple grains of parallelism such as coarse grain task parallelism, loop iteration level parallelism and statement level near-fine grain parallelism. The chip multiprocessor has been designed to attain high effective performance, cost effectiveness and high software productivity by supporting the optimizations of the multigrain parallelizing compiler, which is developed by Japanese Millennium Project IT21 \"Advance Parallelizing Compiler\". To achieve full potential of multigrain parallel processing, the chip multiprocessor integrates simple single-issue processors having distributed shared data memory for both optimal use of data locality and scalar data transfer, local data memory for processor private data, in addition to centralized shared memory for shared data among processors. This paper focuses on the scalability of the chip multiprocessor having up to eight processors on a chip by exploiting of the multigrain parallelism from SPECfp95 programs. When microSPARC like the simple processor core is used under assumption of 90 nm technology and 2.8 GHz, the evaluation results show the speedups for eight processors and four processors reach 7.1 and 3.9, respectively. Similarly, when 400 MHz is assumed for embedded usage, the speedups reach 7.8 and 4.0, respectively.",
+  "doi": "10.1109/interact.2005.9",
+  "openalex": "W2157909040",
+  "status": "ok",
+  "title": "Multigrain Parallel Processing on Compiler Cooperative Chip Multiprocessor"
+ },
+ "10.1109_issrew.2014.75": {
+  "abstract": "The knowledge of pointer behavior is very important for static analysis tools, especially the ones aiming at detecting C and related programming languages. But due to the usage of structure and the weakly typed feature of C-like programming languages, obtaining such knowledge is not an easy work. In this paper, we present a modeling method based on 3-valued matrix. This model enables us to perform flow-sensitive points-to analysis to obtain the knowledge of pointer behavior. And specially, it relies on offsets instead of access paths to denote disjoint objects in the memory space, thereby addressing the issue mentioned just before. And moreover, the so-called 3-valued matrix is a compact representation of points-to sets. Such a representation is a key part for designating an effective flow-sensitive points-to analysis. We implement a prototype of our method, and give it an evaluation on a set of open source benchmarks. The experimental results prove the effectiveness of our method, and show that it is suitable for exploring large programs with reasonable accuracy.",
+  "doi": "10.1109/issrew.2014.75",
+  "openalex": "W2092320889",
+  "status": "ok",
+  "title": "A Memory Model Based on Three-Valued Matrix for Static Defect Detection"
+ },
+ "10.1109_iwia.2003.1262783": {
+  "abstract": "It seems that instruction level parallelism (ILP) approach, which has been used by various superscalar processors and VLIW processors for a long time, reaches its limitation of performance improvement. To obtain scalable performance improvement, cost effectiveness and high productivity even in the era of one billion transistors, the cooperative work between software and hardware is getting increasingly important. For this reason, the authors have developed OSCAR (Optimally SCheduled Advanced multiprocessoR) Chip Multiprocessor (OSCAR CMP) and OSCAR multigrain compiler simultaneously. To preserve the scalability in the future, OSCAR CMP has mechanisms for efficient use of parallelism and data locality, and for hiding data transfer overhead. These mechanisms can be fully controlled by the OSCAR multigrain compiler. In this paper, the authors focus on multigrain parallel processing on OSCAR CMP, which enables us to exploit loop iteration level parallelism and coarse grain task parallelism in addition to ILP from the entire of a program. Performance of multigrain parallel processing on OSCAR CMP architecture is evaluated using SPEC fp 2000/95 benchmark suite. When microSPARC like single issue core is used, OSCAR CMP gives us from 1.77 to 3.96 times speedup for four processors against single processor. In addition, OSCAR CMP is compared with Sun UltraSPARC II like processor to evaluate cost effectiveness. As a result, OSCAR CMP gives us 1.66 times better performance on the average under the condition that OSCAR CMP and UltraSPARC II are built from almost same number of transistors.",
+  "doi": "10.1109/iwia.2003.1262783",
+  "openalex": "W2146727697",
+  "status": "ok",
+  "title": "Multigrain parallel processing on OSCAR CMP"
+ },
+ "10.1109_mascots.2018.00022": {
+  "abstract": "The following topics are dealt with: storage management; cache storage; pattern clustering; cloud computing; optimisation; flash memories; resource allocation; scheduling; parallel processing; data mining.",
+  "doi": "10.1109/mascots.2018.00022",
+  "openalex": "W2899826618",
+  "status": "ok",
+  "title": "Quantifying and Optimizing Data Access Parallelism on Manycores"
+ },
+ "10.1109_tcad.2005.862749": {
+  "abstract": "High-level synthesis (HLS) of memory-intensive applications has featured several innovations in terms of enhancements made to the basic memory organization and data layout. However, increasing performance and energy demands faced by application-specific integrated circuits (ASICs) are forcing designers to alter the fundamental architectural template of the HLS output, namely, a controller datapath associated with a memory subsystem (monolithic, partitioned, etc.). An architectural template for the HLS output that consists of a controller-datapath circuit associated with a memory subsystem into which computation units have been integrated is proposed. The enhanced memory subsystem is called computation-unit integrated memory (CIM). A CIM offers higher memory bandwidth (relative to what is offered through the system bus) to computation units present locally within it and reduces the overall communication between the memory subsystem and the controller datapath, thus providing a template highly suitable for deriving efficient implementations of memory-intensive applications. This paper addresses the challenge of providing a systematic synthesis framework for a CIM-based architecture. This framework can analyze the various tradeoffs involved in selecting suitable operations in a behavior for execution using a CIM and generate a high-performance low-overhead implementation. Efficient data reuse of register files have also been fully exploited to further improve system performance. Experiments with several behaviors indicate that an average performance improvement of 2.02times(a maximum of 2.70times) is possible with very low area overheads. The energy-delay product improves by an average of 2.5times(maximum of 3.8times)",
+  "doi": "10.1109/tcad.2005.862749",
+  "openalex": "W2113598446",
+  "status": "ok",
+  "title": "Use of Computation-Unit Integrated Memories in High-Level Synthesis"
+ },
+ "10.1109_tvlsi.2007.904096": {
+  "abstract": "Memory-intensive applications present unique challenges to an application-specific integrated circuit (ASIC) designer in terms of the choice of memory organization, memory size requirements, bandwidth and access latencies, etc. The high potential of single-chip distributed logic-memory architectures in addressing many of these issues has been recognized in general-purpose computing, and more recently, in ASIC design. The high-level synthesis (HLS) techniques presented in this paper are motivated by the fact that many memory-intensive applications exhibit irregular array data access patterns. Synthesis should, therefore, be capable of determining a partitioned architecture, wherein array data and computations may have to be heterogeneously distributed for achieving the best performance speed-up. We use a combination of clustering and min-cut style partitioning techniques to yield distributed architectures, based on simulation profiling while considering various factors including data access locality, balanced workloads, inter-partition communication, etc. Our experiments with several benchmark applications show that the proposed techniques yielded two-way partitioned architectures that can achieve upto 2.1 x (average of 1.9 x) performance speed-up over conventional HLS solutions, while achieving upto 1.5 x (average of 1.4 x) performance speed-up over the best homogeneous partitioning solution feasible. At the same time, the reduction in the energy-delay product over conventional single-memory designs is upto 2.7 x (average of 2.0 x). A larger amount of partitioning makes further system performance improvement achievable at the cost of chip area.",
+  "doi": "10.1109/tvlsi.2007.904096",
+  "openalex": "W2030905142",
+  "status": "ok",
+  "title": "Generation of Heterogeneous Distributed Architectures for Memory-Intensive Applications Through High-Level Synthesis"
+ },
+ "10.1145_1023833.1023849": {
+  "abstract": "As on-chip networks become prevalent in multiprocessor systems-on-a-chip and multi-core processors, they will be an integral part of the design flow of such systems. With power increasingly the primary constraint in chips, the tool chain in systems design, from simulation infrastructures to compilers and synthesis frameworks, needs to take network power into account, motivating the need for early-stage communication power analysis.While there has been substantial research in network performance analysis that enabled critical insights into network design, no power analysis frameworks for networks exist. In this paper, we propose such a framework that takes as input message flows, and derives a power profile of the network fabric, capturing both the spatial variance across the network fabric as well as the temporal variance across application execution time. Our analysis is based on link utilization as the unit of abstraction for network power, with contention among message flows modeled through propagation of overflow areas in link utilization functions. When validated against Orion, a cycle-accurate network power simulator, we show that relative trends in network power are well-preserved. We then demonstrate potential uses of our analysis framework through three case studies, from speedup of multiprocessor and network simulations, to facilitating power-aware communication synthesis and compiler code placement.",
+  "doi": "10.1145/1023833.1023849",
+  "openalex": "W2043276498",
+  "status": "ok",
+  "title": "High-level power analysis for on-chip networks"
+ },
+ "10.1145_1480881.1480911": {
+  "abstract": "Pointer analysis is a prerequisite for many program analyses, and the effectiveness of these analyses depends on the precision of the pointer information they receive. Two major axes of pointer analysis precision are flow-sensitivity and context-sensitivity, and while there has been significant recent progress regarding scalable context-sensitive pointer analysis, relatively little progress has been made in improving the scalability of flow-sensitive pointer analysis.",
+  "doi": "10.1145/1480881.1480911",
+  "openalex": "W2154847114",
+  "status": "ok",
+  "title": "Semi-sparse flow-sensitive pointer analysis"
+ },
+ "10.1145_1594834.1480911": {
+  "abstract": "Pointer analysis is a prerequisite for many program analyses, and the effectiveness of these analyses depends on the precision of the pointer information they receive. Two major axes of pointer analysis precision are flow-sensitivity and context-sensitivity, and while there has been significant recent progress regarding scalable context-sensitive pointer analysis, relatively little progress has been made in improving the scalability of flow-sensitive pointer analysis. This paper presents a new interprocedural, flow-sensitive pointer analysis algorithm that combines two ideas-semi-sparse analysis and a novel use of BDDs-that arise from a careful understanding of the unique challenges that face flow-sensitive pointer analysis. We evaluate our algorithm on 12 C benchmarks ranging from 11K to 474K lines of code. Our fastest algorithm is on average 197x faster and uses 4.6x less memory than the state of the art, and it can analyze programs that are an order of magnitude larger than the previous state of the art.",
+  "doi": "10.1145/1594834.1480911",
+  "openalex": "W3011557297",
+  "status": "ok",
+  "title": "Semi-sparse flow-sensitive pointer analysis"
+ },
+ "10.1145_1669112.1669159": {
+  "abstract": "Building hardware prototypes for computer architecture research is challenging. Unfortunately, development of the required software tools (compilers, debuggers, runtime) is even more challenging, which means these systems rarely run real applications. To overcome this issue, when developing our prototype platform, we used the Tensilica processor generator to produce a customized processor and corresponding software tools and libraries. While this base processor was very different from the streamlined custom processor we initially imagined, it allowed us to focus on our main objective---the design of a reconfigurable CMP memory system---and to successfully tape out an 8-core CMP chip with only a small group of designers. One person was able to handle processor configuration and hardware generation, support of a complete software tool chain, as well as developing the custom runtime software to support three different programming models. Having a sophisticated software tool chain not only allowed us to run more applications on our machine, it once again pointed out the need to use optimized code to get an accurate evaluation of architectural features.",
+  "doi": "10.1145/1669112.1669159",
+  "openalex": "W2162154969",
+  "status": "ok",
+  "title": "Using a configurable processor generator for computer architecture prototyping"
+ },
+ "10.1145_1749603.1749604": {
+  "abstract": "Reconfigurable computing platforms offer the promise of substantially accelerating computations through the concurrent nature of hardware structures and the ability of these architectures for hardware customization. Effectively programming such reconfigurable architectures, however, is an extremely cumbersome and error-prone process, as it requires programmers to assume the role of hardware designers while mastering hardware description languages, thus limiting the acceptance and dissemination of this promising technology. To address this problem, researchers have developed numerous approaches at both the programming languages as well as the compilation levels, to offer high-level programming abstractions that would allow programmers to easily map applications to reconfigurable architectures. This survey describes the major research efforts on compilation techniques for reconfigurable computing architectures. The survey focuses on efforts that map computations written in imperative programming languages to reconfigurable architectures and identifies the main compilation and synthesis techniques used in this mapping.",
+  "doi": "10.1145/1749603.1749604",
+  "openalex": "W1997358129",
+  "status": "ok",
+  "title": "Compiling for reconfigurable computing"
+ },
+ "10.1145_3711119": {
+  "abstract": "Despite recent increase in research on improvement of non-functional properties of software, such as energy usage or program size, there is a lack of standard benchmarks for such work. This absence hinders progress in the field, and raises questions about the representativeness of current benchmarks of real-world software. To address these issues and facilitate further research on improvement of non-functional properties of software, we conducted a comprehensive survey on the benchmarks used in the field thus far. We searched five major online repositories of research work, collecting 5,499 publications (4,066 unique), and systematically identified relevant papers to construct a rich and diverse corpus of 425 relevant studies. We find that execution time is the most frequently improved property in research work (63%), while multi-objective improvement is rarely considered (7%). Static approaches for improvement of non-functional software properties are prevalent (51%), with exploratory approaches (18% evolutionary and 15% non-evolutionary) increasingly popular in the last 10 years. Only 39% of the 425 papers describe work that uses benchmark suites, rather than single software, of those SPEC is most popular (63 papers). We also provide recommendations for future work, noting, for instance, lack of benchmarks for non-functional improvement that covers Python, JavaScript, or mobile devices. All the details regarding the 425 identified papers are available on our dedicated webpage: https://bloa.github.io/nfunc_survey .",
+  "doi": "10.1145/3711119",
+  "openalex": "W4406874869",
+  "status": "ok",
+  "title": "A Comprehensive Survey of Benchmarks for Improvement of Software's Non-Functional Properties"
+ },
+ "10.1145_502217.502223": {
+  "abstract": "This paper presents a technique for the efficient compiler management of software-exposed heterogeneous memory. In many lower-end embedded chips, often used in micro-controllers and DSP processors, heterogeneous memory units such as scratch-pad SRAM, internal DRAM, external DRAM and ROM are visible directly to the software, without automatic management by a hardware caching mechanism. Instead the memory units are mapped to different portions of the address space. Caches are avoided because of their cost and power consumption, and because they make it difficult to guarantee real-time performance. For this important class of embedded chips, the allocation of data to different memory units to maximize performance is the responsibility of the software.Current practice typically leaves it to the programmer to partition the data among the different memory units. We present a compiler strategy that automatically partitions the data among the memory units. We show that this strategy is optimal among all static partitions for global and stack data, and a good heuristic for heap data. For global and stack data, the scheme is provably equal to or better than any other compiler scheme or set of programmer annotations. Preliminary results show the benefits of optimal allocation: with just 20% of the data in SRAM, the formulation is able to decrease the runtime by 39% on average for our benchmarks vs. allocating all data to slow memory, without any programmer involvement. For some programs, less than 5% of data in SRAM achieves a similar speedup.",
+  "doi": "10.1145/502217.502223",
+  "openalex": "W1989831720",
+  "status": "ok",
+  "title": "Heterogeneous memory management for embedded systems"
+ },
+ "10.1145_513829.513853": {
+  "abstract": "Finding an optimal assignment of program variables into registers and memory is prohibitively difficult in code generation for application specific instruction-set processors (ASIPs). This is mainly because, in order to meet stringent speed and power requirements for embedded applications, ASIPs commonly employ non-orthogonal architectures which are typically characterized by irregular data paths, heterogeneous registers and multiple memory banks. As a result, existing techniques mainly developed for relatively regular, orthogonal general-purpose processors (GPPs) are obsolete for these recently emerging ASIP architectures. In this paper, we attempt to tackle this issue by exploiting conventional graph coloring and maximum spanning tree (MST) algorithms with special constraints added to handle the non-orthogonality of ASIP architectures. The results in our study indicate that our algorithm finds a fairly good assignment of variables into heterogeneous registers and multi-memories while it runs extremely faster than previous work that employed exceedingly expensive algorithms to address this issue.",
+  "doi": "10.1145/513829.513853",
+  "openalex": "W2036480385",
+  "status": "ok",
+  "title": "Efficient register and memory assignment for non-orthogonal architectures via graph coloring and MST algorithms"
+ },
+ "10.1145_566225.513853": {
+  "abstract": "Finding an optimal assignment of program variables into registers and memory is prohibitively difficult in code generation for application specific instruction-set processors (ASIPs). This is mainly because, in order to meet stringent speed and power requirements for embedded applications, ASIPs commonly employ non-orthogonal architectures which are typically characterized by irregular data paths, heterogeneous registers and multiple memory banks. As a result, existing techniques mainly developed for relatively regular, orthogonal general-purpose processors (GPPs) are obsolete for these recently emerging ASIP architectures. In this paper, we attempt to tackle this issue by exploiting conventional graph coloring and maximum spanning tree (MST) algorithms with special constraints added to handle the non-orthogonality of ASIP architectures. The results in our study indicate that our algorithm finds a fairly good assignment of variables into heterogeneous registers and multi-memories while it runs extremely faster than previous work that employed exceedingly expensive algorithms to address this issue.",
+  "doi": "10.1145/566225.513853",
+  "openalex": "W4244053151",
+  "status": "ok",
+  "title": "Efficient register and memory assignment for non-orthogonal architectures via graph coloring and MST algorithms"
+ },
+ "10.1145_581888.581891": {
+  "abstract": "This article presents a technique for the efficient compiler management of software-exposed heterogeneous memory. In many lower-end embedded chips, often used in microcontrollers and DSP processors, heterogeneous memory units such as scratch-pad SRAM, internal DRAM, external DRAM, and ROM are visible directly to the software, without automatic management by a hardware caching mechanism. Instead, the memory units are mapped to different portions of the address space. Caches are avoided due to their cost and power consumption, and because they make it difficult to guarantee real-time performance. For this important class of embedded chips, the allocation of data to different memory units to maximize performance is the responsibility of the software.Current practice typically leaves it to the programmer to partition the data among different memory units. We present a compiler strategy that automatically partitions the data among the memory units. We show that this strategy is optimal, relative to the profile run, among all static partitions for global and stack data. For the first time, our allocation scheme for stacks distributes the stack among multiple memory units. For global and stack data, the scheme is provably equal to or better than any other compiler scheme or set of programmer annotations. Results from our benchmarks show a 44.2% reduction in runtime from using our distributed stack strategy vs. using a unified stack, and a further 11.8% reduction in runtime from using a linear optimization strategy for allocation vs. a simpler greedy strategy; both in the case of the SRAM size being 20% of the total data size. For some programs, less than 5% of data in SRAM achieves a similar speedup.",
+  "doi": "10.1145/581888.581891",
+  "openalex": "W2163270257",
+  "status": "ok",
+  "title": "An optimal memory allocation scheme for scratch-pad-based embedded systems"
+ },
+ "10.1145_966137.966140": {
+  "abstract": "Most vendors of digital signal processors (DSPs) support a Harvard architecture, which has two or more memory buses, one for program and one or more for data and allow the processor to access multiple words of data from memory in a single instruction cycle. Also, many existing fixed-point DSPs are known to have an irregular architecture with heterogeneous registers, which contains multiple register files that are distributed and dedicated to different sets of instructions. Although there have been several studies conducted to efficiently assign data to multimemory banks, most of them assumed processors with relatively simple, homogeneous general-purpose registers. Thus, several vendor-provided compilers for DSPs that we examined were unable to efficiently assign data to multiple data memory banks, thereby often failing to generate highly optimized code for their machines. As a consequence, programmers for these DSPs often manually assign program variables to memories so as to fully utilize multimemory banks in their code. This paper reports on our recent attempt to address this problem by presenting an algorithm that helps the compiler to efficiently assign data to multimemory banks. Our algorithm differs from previous work in that it assigns variables to memory banks in separate, decoupled code generation phases, instead of a single, tightly coupled phase. The experimental results have revealed that our decoupled algorithm greatly simplifies our code generation process; thus our compiler runs extremely fast, yet generates target code that is comparable in quality to the code generated by a coupled approach.",
+  "doi": "10.1145/966137.966140",
+  "openalex": "W2054629523",
+  "status": "ok",
+  "title": "Fast memory bank assignment for fixed-point digital signal processors"
+ },
+ "10.5573_jsts.2015.15.6.634": {
+  "abstract": "Coarse-Grained Reconfigurable Architecture (CGRA) is a very promising platform that provides fast turn-around-time as well as very high energy efficiency for multimedia applications. One of the problems with CGRAs, however, is application mapping, which currently does not scale well with geometrically increasing numbers of cores. To mitigate the scalability problem, this paper discusses how to use the SIMD (Single Instruction Multiple Data) paradigm for CGRAs. While the idea of SIMD is not new, SIMD can complicate the mapping problem by adding an additional dimension of iteration mapping to the already complex problem of operation and data mapping, which are all interdependent, and can thus significantly affect performance through memory bank conflicts. In this paper, based on a new architecture called SIMD reconfigurable architecture, which allows SIMD execution at multiple levels of granularity, we present how to minimize bank conflicts considering all three related sub-problems, for various RA organizations. We also present data tiling and evaluate a conflictfree scheduling algorithm as a way to eliminate bank conflicts for a certain class of mapping problem.",
+  "doi": "10.5573/jsts.2015.15.6.634",
+  "openalex": "W2261539089",
+  "status": "ok",
+  "title": "Scalable Application Mapping for SIMD Reconfigurable Architecture"
+ },
+ "10.70675_99a3f74az999fz4999z87e4z324cadb9046e": {
+  "abstract": "Approches découplées aux problèmes d'allocations de registres et de mémoires locales Malgré la hiérarchie mémoire utilisée dans les ordinateurs modernes, il convient toujours d'optimiser l'utilisation des registres du processeur et des mémoires locales gérées de manières logicielles (mémoires locales) présentes dans beaucoup de systèmes embarqués, de processeurs graphiques (GPUs) et de multiprocesseurs. Lors de la compilation, d'un code source vers un langage machine, deux optimisations de la mémoire revêtent une importance capitale : l'allocation de registres et l'allocation de mémoires locales. Dans ce manuscrit de thèse nous nous intéressons à des approches découplées, qui traitent séparément les problèmes d'allocation et d'assignation, permettant d'améliorer les allocations de registres et de mémoires locales. Dans la première partie de la thèse, nous nous penchons sur le problème de l'allocation de registres. Tout d'abord, nous proposons dans le contexte des compilateurs-juste-à-temps, une allocation de registres fractionnées (split register allocation). Avec cette approche l'allocation de registres est effectuée en deux étapes: une faite durant la phase de compilation statique et l'autre pendant la phase de compilation dynamique. Ce qui permet de réduire le temps d'exécution des programmes avec un impact négligeable sur le temps de compilation. Ensuite Nous introduisons une allocation de registres incrémentale qui permet de résoudre d'une manière quasi-optimale le problème d'allocation. Cette méthode est pseudo-polynomiale alors que le problème d'allocation est NP-complet même à l'intérieur d'un « basic block ». Dans la deuxième partie de la thèse nous nous intéressons au problème de l'allocation de mémoires locales. Au vu des dernières avancées dans le domaine de l'allocation de registres, nous étudions dans quelle mesure le problème d'allocation pourrait être séparé de celui de l'assignation dans le contexte des mémoires locales. Dans un premier temps nous validons expérimentalement que les problèmes d'allocation et d'assignation peuvent être résolus séparément. Ensuite, nous procédons à une étude plus théorique d'une approche découplée de l'allocation de mémoires locales. Cela permet d'introduire de nouveaux résultats sur le « submarine-building problem », une variante du « ship-building problem », que nous avons défini. L'un de ces résultats met en évidence pour la première fois une différence de complexité (P vs. NP-complet) entre les graphes d'intervalles et les graphes d'intervalles unitaires. Dans la troisième partie de la thèse nous proposons une nouvelle heuristique, appelée « clustering allocator » fondée sur la construction de sous-graphes stables d'un graphe d'interférence, permettant de découpler aussi bien le problème d'allocation pour les registres que pour les mémoires locales. Cette nouvelle heuristique se veut le pont qui permettra de réconcilier les problèmes d'allocations de registres et de mémoires locales.",
+  "doi": "10.70675/99a3f74az999fz4999z87e4z324cadb9046e",
+  "openalex": "W7143485253",
+  "status": "ok",
+  "title": "Decoupled approaches to register and software controlled memory allocations"
+ },
+ "oa-W2101609933": {
+  "abstract": "Pointer analysis is a fundamental enabling technology for program analysis. By improving the scalability of precise pointer analysis we can make a positive impact across a wide range of program analyses used for many different purposes, including program verification and model checking, optimization and parallelization, program understanding, hardware synthesis, and more. In this thesis we present a suite of new algorithms aimed at improving pointer analysis scalability. These new algorithms make inclusion-based analysis (the most precise flow- and context-insensitive pointer analysis) over 4× faster while using 7× less memory than the previous state-of-the-art; they also enable flow-sensitive pointer analysis to handle programs with millions of lines of code, two orders of magnitude greater than the previous state-of-the-art. \r\nWe present a formal framework for describing the space of pointer analysis approximations. The space of possible approximations is complex and multidimensional, and until now has not been well-defined in a formal manner. We believe that the framework is useful as a method to meaningfully compare the precision of the multitude of existing pointer analyses, as well as aiding in the systematic exploration of the entire space of approximations.",
+  "doi": null,
+  "openalex": "W2101609933",
+  "status": "ok",
+  "title": "Pointer analysis: building a foundation for effective program analysis"
+ },
+ "oa-W2105437824": {
+  "abstract": "Abstract — Memory-intensive applications present unique challenges to an ASIC designer in terms of the choice of memory organization, memory size requirements, bandwidth and access latencies, etc. The high potential of single-chip distributed logicmemory architectures in addressing many of these issues has been recognized in general-purpose computing, and more recently in ASIC design. However, such architectures will be adopted widely by designers only when general techniques and tools for efficient high-level synthesis (HLS) of multi-partitioned ASICs become available. The techniques presented in this paper are motivated by the fact that many memoryintensive applications exhibit irregular array data access patterns (due to conditionals in loop nests, etc.). Synthesis should, therefore, be capable of determining a partitioned architecture, wherein array data and computations may have to be heterogeneously distributed for achieving the best performance speedup. Furthermore, the synthesis methodology should not be restricted by the nature of array index functions (affine or otherwise) in a behavior. Therefore, our methodology employs simulation to provide information about the access patterns of array data references in a behavior, which is used by the rest of our analysis. We use a combination of clustering and min-cut style partitioning techniques to partition the behavior into sub-behaviors while considering various factors including data access locality, balanced workloads, inter-partition communication, etc. Finally, we also employ an iterative improvement strategy to determine the best way of distributing array data into physical memory in each partition. Our experiments with several benchmark applications show that the proposed techniques can yield partitioned architectures that can achieve upto performance speed-up over conventional HLS solutions, while achieving upto performance speedup over the best homogeneous partitioning solution feasible. I.",
+  "doi": null,
+  "openalex": "W2105437824",
+  "status": "ok",
+  "title": "Synthesis of heterogeneous distributed architectures for memory-intensive applications"
+ },
+ "oa-W2182984857": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2182984857",
+  "status": "no_abstract",
+  "title": "2001 In dex IEEE Trans ac tions on Computers Vol. 50"
+ },
+ "oa-W2226565119": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2226565119",
+  "status": "ok",
+  "title": "Modeling the scalability of acrylic stream programs"
+ },
+ "oa-W2234067922": {
+  "abstract": "Thesis (M. Eng. and S.B.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2234067922",
+  "status": "ok",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "oa-W763565936": {
+  "abstract": "Signal processing applications usually encounter multi-dimensional real-time performance requirements and restrictions on resources, which makes software implementation complex. Although major advances have been made in embedded processor technology for this application domain---in particular, in technology for programmable digital signal processors---traditional compiler techniques applied to such platforms do not generate machine code of desired quality. As a result, low-level, human-driven fine-tuning of software implementations is needed, and we are therefore in need of more effective strategies for software implementation for signal processing applications. \r\nIn this thesis, a number of important memory and performance optimization problems are addressed for translating high-level representations of signal processing applications into embedded software implementations. This investigation centers around signal-processing-oriented dataflow models of computation. This form of dataflow provides a coarse grained modeling approach that is well-suited to the signal processing domain and is increasingly supported by commercial and research-oriented tools for design and implementation of signal processing systems. \r\nWell-developed dataflow models of signal processing systems expose high-level application structure that can be used by designers and design tools to guide optimization of hardware and software implementations. This thesis advances the suite of techniques available for optimization of software implementations that are derived from the application structure exposed from dataflow representations. In addition, the specialized architecture of programmable digital signal processors is considered jointly with dataflow-based analysis to streamline the optimization process for this important family of embedded processors. The specialized features of programmable digital signal processors that are addressed in this thesis include parallel memory banks to facilitate data parallelism, and signal-processing-oriented addressing modes and address register management capabilities. \r\nThe problems addressed in this thesis involve several inter-related features, and therefore an integrated approach is required to solve them effectively. This thesis proposes such an integrated approach, and develops the approach through formal problem formulations, in-depth theoretical analysis, and extensive experimentation.",
+  "doi": null,
+  "openalex": "W763565936",
+  "status": "ok",
+  "title": "Integrated software synthesis for signal processing applications"
+ },
+ "oa-W94606558": {
+  "abstract": "High-performance computing engines often provide product-defining functionality within consumer devices. These devices are traditionally implemented using either ASICs or embedded processors. ASICS are inflexible and require high design cost while embedded processors provide inadequate compute power and efficiency for specialized applications. This work describes the ACRES (Architecture and Compiler for REconfigurable Systems) platform that combines the flexibility of a programmable technology and the efficiency of custom hardware without incurring high-cost, high-risk chip development. The ACRES platform consists of a programmable computing fabric architecture and an associated spatial compiler. A spatial compilation procedure ties together novel configurable elements including interconnect, memory and distributed control. A key compilation feature is early spatial planning that influences subsequent architectural decisions. Operation scheduling follows and uses accurate latency information to generate efficient execution schedules. This paper describes the motivating assumptions, key ideas and technologies advocated in the ACRES platform. Implementation and evaluation is the topic of future work.",
+  "doi": null,
+  "openalex": "W94606558",
+  "status": "ok",
+  "title": "ACRES Architecture and Compilation"
+ },
+ "s2-11bf39c2eb595260": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "s2-779f9a5e5741df4a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Modeling the scalability of acrylic stream programs"
+ },
+ "s2-7814d9cb824871b7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Pointer analysis: building a foundation for effective program analysis"
+ },
+ "s2-8669d508f89ec3d8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Data Partit ioning for DSP Software Synthesis"
+ },
+ "s2-a75ad2bd9cfb1bd3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "ACRES Architecture and Compilation"
+ },
+ "s2-adb802eb34b9f2f5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A portable MATLAB front-end for tiled microprocessors"
+ },
+ "s2-ae8b15bc8271a773": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiled microprocessors"
+ },
+ "s2-bd370c892535cd42": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Integrated Software Synthesis for Signal Processing Applications"
+ },
+ "s2-db18a61e6b125fdd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "2001 In dex IEEE Trans ac tions on Computers Vol. 50"
+ }
+}

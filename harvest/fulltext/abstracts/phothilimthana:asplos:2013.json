@@ -1,0 +1,765 @@
+{
+ "10.1002_cpe.3424": {
+  "abstract": "Summary Open Computing Language (OpenCL) is an open, functionally portable programming model for a large range of highly parallel processors. To provide users with access to the underlying platforms, OpenCL has explicit support for features such as local memory and vector data types (VDTs). However, these are often low‐level, hardware‐specific features, which can be detrimental to performance on different platforms. In this paper, we focus on VDTs and investigate their usage in a systematic way. First, we propose two different approaches (inter‐vdtandintra‐vdt) to use VDTs in OpenCL kernels, and show how to translate scalar OpenCL kernels to vectorized ones. After obtaining vectorized code, we evaluate the performance effects of using VDTs with two types of benchmarks: micro‐benchmarks and macro‐benchmarks. With micro‐benchmarks, we study the execution model of VDTs and the role of the compiler‐aided vectorizer on five devices. With macro‐benchmarks, we explore the changes of memory access patterns before and after using VDTs, and the resulting performance impact. Not only our evaluation provides insights into how OpenCL's VDTs are mapped on different processors, but it also indicates that using such data types introduces changes in both computation and memory accesses. Based on the lessons learned, we discuss how to deal with performance portability in the presence of VDTs. Copyright © 2014 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.3424",
+  "openalex": "W1743745388",
+  "status": "ok",
+  "title": "Evaluating vector data type usage in OpenCL kernels"
+ },
+ "10.1002_cpe.6267": {
+  "abstract": "Abstract Task‐based execution of graph workloads allows various ordered and unordered implementations, with tasks representing dependencies between graph vertices and edges. This work explores graph algorithms in the context of ordered and unordered task‐based implementations, that trade‐off work‐efficiency with parallelism. The monotonicity of convergent graph solutions is the reason behind the trade‐off between work‐efficiency and parallelism. This trade‐off results in variable performance‐based choices within and across different machines (CPUs and GPUs), graph algorithms, implementations (ordered, relaxed, and unordered). Input graphs also augment this choice space, with this work analyzing temporally changing graphs in addition to the static graphs explored by prior works. These algorithmic and architectural choices are first explored in this work, and it is seen that different graph workload‐input combinations perform optimally on diverse architectural configurations. The resulting choice space is analyzed and this work represents it in the form of characteristic variables that correlate with each choice space. Using these characteristic variables, this work proposes analytical and neural network models to correlate these choice spaces to find the best performing implementation. The variables and the prediction models proposed in this work are also integrated with a state‐of‐the‐art performance predictor on a multiaccelerator setup, and shows geometric performance gains of 54% on a CPU, 14% on a GPU, and 31.5% in a multiaccelerator setup over baseline implementations without performance prediction.",
+  "doi": "10.1002/cpe.6267",
+  "openalex": "W3159543207",
+  "status": "ok",
+  "title": "A performance predictor for implementation selection of parallelized static and temporal graph algorithms"
+ },
+ "10.1002_cta.2494": {
+  "abstract": "Summary Programming modern embedded vision systems brings various challenges, due to the steep learning curve for programmers and the different characteristics of the devices. Quasar, a new high‐level programming language and development environment, considerably simplifies the development. Quasar has a compiler that detects and optimizes parallel programming patterns and a heterogeneous runtime that distributes the computational load over the available compute devices (CPUs and Graphical Processing Unit [GPUs]). In this paper, we focus on runtime aspects of Quasar. We show that with good approximation, the execution time of a GPU kernel function can be factorized in a compile‐time‐specific component and a runtime‐specific component. We show that this approximation leads to a computationally simple runtime load balancing rule. Moreover, the load balancing rule permits efficient implicit concurrency of kernel functions and automatic scaling to multiple compute devices (eg, multi‐CPU/GPU systems). Based on an appropriate mathematical scheduling model, we investigate the command queue size trade‐off between memory usage and device utilization. The result is a programming environment for embedded vision systems for which automatic parallelization and implicit concurrency detection allow scaling the program efficiently to multi‐CPU/GPU systems. Finally, benchmark results are provided to demonstrate the performance of our approach compared with OpenACC and CUDA (Compute Unified Device Architecture).",
+  "doi": "10.1002/cta.2494",
+  "openalex": "W2885059024",
+  "status": "ok",
+  "title": "Dataflow management, dynamic load balancing, and concurrent processing for real‐time embedded vision applications using Quasar"
+ },
+ "10.1007_978-3-030-35225-7_13": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-35225-7_13",
+  "openalex": "W2990216003",
+  "status": "no_abstract",
+  "title": "Mozart : Efficient Composition of Library Functions for Heterogeneous Execution"
+ },
+ "10.1007_978-3-030-95391-1_48": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-95391-1_48",
+  "openalex": "W4213273010",
+  "status": "no_abstract",
+  "title": "OptCL: A Middleware to Optimise Performance for High Performance Domain-Specific Languages on Heterogeneous Platforms"
+ },
+ "10.1007_978-3-319-14313-2_12": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-14313-2_12",
+  "openalex": "W1782597376",
+  "status": "no_abstract",
+  "title": "Optimized Selection of Runtime Mode for the Reconfigurable PRAM-NUMA Architecture REPLICA Using Machine-Learning"
+ },
+ "10.1007_s10766-014-0328-3": {
+  "abstract": null,
+  "doi": "10.1007/s10766-014-0328-3",
+  "openalex": "W2030055158",
+  "status": "no_abstract",
+  "title": "An Autotuning Engine for the 3D Fast Wavelet Transform on Clusters with Hybrid CPU + GPU Platforms"
+ },
+ "10.1007_s11227-017-2093-8": {
+  "abstract": null,
+  "doi": "10.1007/s11227-017-2093-8",
+  "openalex": "W2624717853",
+  "status": "no_abstract",
+  "title": "Enable back memory and global synchronization on LLC buffer"
+ },
+ "10.1007_s11227-019-02749-1": {
+  "abstract": null,
+  "doi": "10.1007/s11227-019-02749-1",
+  "openalex": "W2908634196",
+  "status": "no_abstract",
+  "title": "NoT: a high-level no-threading parallel programming method for heterogeneous systems"
+ },
+ "10.1007_s11390-015-1500-y": {
+  "abstract": null,
+  "doi": "10.1007/s11390-015-1500-y",
+  "openalex": "W2034135205",
+  "status": "no_abstract",
+  "title": "CUDA-NP: Realizing Nested Thread-Level Parallelism in GPGPU Applications"
+ },
+ "10.1016_j.ascom.2016.01.001": {
+  "abstract": null,
+  "doi": "10.1016/j.ascom.2016.01.001",
+  "openalex": "W2223263137",
+  "status": "no_abstract",
+  "title": "Real-time dedispersion for fast radio transient surveys, using auto tuning on many-core accelerators"
+ },
+ "10.1016_j.future.2015.05.013": {
+  "abstract": null,
+  "doi": "10.1016/j.future.2015.05.013",
+  "openalex": "W597221597",
+  "status": "no_abstract",
+  "title": "Enforcing CPU allocation in a heterogeneous IaaS"
+ },
+ "10.1016_j.jocs.2015.04.032": {
+  "abstract": null,
+  "doi": "10.1016/j.jocs.2015.04.032",
+  "openalex": "W2031805789",
+  "status": "no_abstract",
+  "title": "Auto-tuning techniques for linear algebra routines on hybrid platforms"
+ },
+ "10.1016_j.sysarc.2015.09.001": {
+  "abstract": null,
+  "doi": "10.1016/j.sysarc.2015.09.001",
+  "openalex": "W2110219193",
+  "status": "no_abstract",
+  "title": "Buffer allocation for real-time streaming applications running on heterogeneous multi-processors without back-pressure"
+ },
+ "10.1038_s41598-024-75711-8": {
+  "abstract": "Rapid development realms of parallel architectures and its heterogeneity have inspired researchers to invent new scheduling strategies to efficiently distribute workloads among these architectures in a way that may lead to better performance. This paper presents a comprehensive study on optimizing resource utilization for large-scale problems by employing architecture-aware scheduling techniques. We conducted a series of experiments to measure the execution times of various architectures with different problem sizes. These experiments have been conducted multiple times to minimize measurement variance. The findings from these experiments are utilized to develop a scheduling strategy that enables faster completion of larger data-parallel problems while maximizing resource utilization. The proposed approach makes performance enhancement with 16.7% for large data size. It has a significant impact on enhancing computational efficiency and reducing costs in high-performance computing environments.",
+  "doi": "10.1038/s41598-024-75711-8",
+  "openalex": "W4403968171",
+  "status": "ok",
+  "title": "Optimizing resource utilization for large scale problems through architecture aware scheduling"
+ },
+ "10.1109_cluster.2017.122": {
+  "abstract": "Modernizing production-grade, often legacy applications to take advantage of modern multi-core and many-core architectures can be a difficult and costly undertaking. This is especially true currently, as it is unclear which architectures will dominate future systems. The complexity of these codes can mean that parallelisation for a given architecture requires significant re-engineering. One way to assess the benefit of such an exercise would be to use mini-applications that are representative of the legacy programs.In this paper, we investigate different implementations of TeaLeaf, a mini-application from the Mantevo suite that solves the linear heat conduction equation. TeaLeaf has been ported to use many parallel programming models, including OpenMP, CUDA and MPI among others. It has also been re-engineered to use the OPS embedded DSL and template libraries Kokkos and RAJA. We use these different implementations to assess the performance portability of each technique on modern multi-core systems.While manually parallelising the application targeting and optimizing for each platform gives the best performance, this has the obvious disadvantage that it requires the creation of different versions for each and every platform of interest. Frameworks such as OPS, Kokkos and RAJA can produce executables of the program automatically that achieve comparable portability. Based on a recently developed performance portability metric, our results show that OPS and RAJA achieve an application performance portability score of 71% and 77% respectively for this application.",
+  "doi": "10.1109/cluster.2017.122",
+  "openalex": "W2747274098",
+  "status": "ok",
+  "title": "Achieving Performance Portability for a Heat Conduction Solver Mini-Application on Modern Multi-core Systems"
+ },
+ "10.1109_estimedia.2014.6962342": {
+  "abstract": "The goal of buffer allocation for real-time streaming applications, modeled as dataflow graphs, is to minimize total memory consumption while reserving sufficient space for each production without overwriting any live tokens and guaranteeing the satisfaction of real-time constraints. We present a buffer allocation solution for dataflow graphs scheduled on a system without back-pressure. Our contributions are 1)We extend the available dataflow techniques by applying best-case analysis. 2) We introduce dominator based relative life-time analysis. For our benchmark set, it exhibits up to 12% savings on memory consumption compared to traditional absolute life-time analysis. 3)We investigate the effect of variation in execution times on the buffer sizes for systems without back-pressure. It turns out that reducing the variation in execution times reduces the buffer sizes. 4)We compare the buffer allocation techniques for systems with and without backpressure. For our benchmark set, we show that the system with back-pressure reduces the total memory consumption by as much as 28 % compared to the system without back-pressure. Our benchmark set includes wireless communications and multimedia applications.",
+  "doi": "10.1109/estimedia.2014.6962342",
+  "openalex": "W2140299452",
+  "status": "ok",
+  "title": "Buffer allocation for real-time streaming on a multi-processor without back-pressure"
+ },
+ "10.1109_hpcc-smartcity-dss50907.2020.00079": {
+  "abstract": "Distributed deep learning frameworks train large deep leaning workload with multiple training jobs on shared distributed GPU servers. There are new challenges when scheduling resources for these systems. Modern deep learning training jobs tend to consume large amount of GPU memory. A training job has an iterative nature that causes the memory usage fluctuate overtime. Jobs sharing a host may suffer from significant performance degradation caused by memory overload in runtime. Moreover, even without memory overloads, deep learning training jobs still experience different levels of performance interference when sharing a GPU device. This paper studies these two issues. We introduced an opportunistic memory sharing model to allocate resources for training jobs with time-varying memory requirements. Based on this model, we introduced an opportunistic Job Placement Problem (OJPP) for shared GPU clusters that seeks job placement configurations using minimum number of GPU devices and guarantees user-defined performance requirements. We proposed a greedy algorithm and a heuristic algorithm with computational complexities of $O(n\\log n)$ and $O(n^{2}\\log n)$, respectively, to solve the problem. Extensive experiments are conducted using a GPU cluster to verify the correctness, effectiveness, and the scalability of our approaches. The proposed approach achieved over 80% percent of the standalone performance, in term of average job completion time, with less than 30% extra resources consumption.",
+  "doi": "10.1109/hpcc-smartcity-dss50907.2020.00079",
+  "openalex": "W3157329630",
+  "status": "ok",
+  "title": "Job Placement Strategy with Opportunistic Resource Sharing for Distributed Deep Learning Clusters"
+ },
+ "10.1109_hpcsim.2016.7568415": {
+  "abstract": "Reducing energy consumption is a challenge that is faced on a daily basis by teams from the high-performance computing as well as the embedded domains. This issue is mostly approached from an hardware perspective by devising architectures that put energy efficiency as a primary target, often at the cost of processing power. Lately, computing platforms have become more and more heterogeneous, but the exploitation of these additional capabilities is so complex from the application developer's perspective that their optimization is often limited. In this paper we present a transparent, on-the-fly optimization scheme that allows a generic application to automatically and dynamically exploit the available computing units to partition its computational load. We have called our approach Heterogeneous Platform Accelerator (HPA). The idea is to use profiling to select a computing-intensive candidate for acceleration, and then distribute the computations to the different units by off-loading blocks of code to them. This is done automatically at run-time, thus requiring no effort from the developer and adapting to the current input data and load. Using an NVIDIA Jetson TK1 board, we validate our proposal on several benchmarks and on a real-world software package, the Unix text editor ed. The results we achieve substantiate our claim that not only HPA results in faster processing speed, but also in a considerable reduction in energy dissipation.",
+  "doi": "10.1109/hpcsim.2016.7568415",
+  "openalex": "W2275520256",
+  "status": "ok",
+  "title": "HPA: An opportunistic approach to embedded energy efficiency"
+ },
+ "10.1109_icip.2013.6738436": {
+  "abstract": "2D image convolution is ubiquitous in image processing and computer vision problems such as feature extraction. Exploiting parallelism is a common strategy for accelerating convolution. Parallel processors keep getting faster, but algorithms such as image convolution remain memory bounded on parallel processors such as GPUs. Therefore, reducing memory communication is fundamental to accelerating image convolution. To reduce memory communication, we reorganize the convolution algorithm to prefetch image regions to register, and we do more work per thread with fewer threads. To enable portability to future architectures, we implement a convolution autotuner that sweeps the design space of memory layouts and loop unrolling configurations. We focus on convolution with small filters (2×2-7×7), but our techniques can be extended to larger filter sizes. Depending on filter size, our speedups on two NVIDIA architectures range from 1.2× to 4.5× over state-of-the-art GPU libraries.",
+  "doi": "10.1109/icip.2013.6738436",
+  "openalex": "W2072912074",
+  "status": "ok",
+  "title": "Communication-minimizing 2D convolution in GPU registers"
+ },
+ "10.1109_icppw.2015.21": {
+  "abstract": "With the wide adoption of high-performance processors and accelerators, large-scale computer vision applications have gained great performance improvement. However, it often requires extensive experiments and expertise to achieve optimal performance from manually-tuned programs, and the programs often need to be re-tuned when transplanted to a different platform, or using a different system configuration. To overcome this problem, in this paper we proposed Hetro CV, a programmer-directed auto-tuning framework and runtime for computer vision applications on heterogeneous CPU-MIC platform. In Hetro CV auto-tuning framework, computation units in the application pipeline are categorized in to one of three patterns: Map, Stencil and MapReduce, and program statistics are extracted from units' meta-information. Machine learning is adopted to train models for each pattern using the tuned parameters and program statistics from trial run sets, so that when a new unit is presented, Hetro CV auto tuner can use the corresponding trained model to generate optimized tuning parameters. In Hetro CV runtime, performance models for processor and co-processor are built to predict the prospective execution time of each computation unit in the application pipeline. We adopted the maximum-throughput mapping strategy, thus each unit would be mapped dynamically to the processor/co-processor queue, which would generate the minimum overall execution time. Experiments on two medical image processing applications running on heterogeneous platform composed of Intel Xeon CPU and Intel Phi co-processor showed advanced performance over naive Open MP tuning and Genetic Algorithm (GA) based heuristic tuning.",
+  "doi": "10.1109/icppw.2015.21",
+  "openalex": "W2296475476",
+  "status": "ok",
+  "title": "HetroCV: Auto-tuning Framework and Runtime for Image Processing and Computer Vision Applications on Heterogeneous Platform"
+ },
+ "10.1109_iiswc.2016.7581278": {
+  "abstract": "Graph analytics is becoming ever more ubiquitous in today's world. However, situational dynamic changes in input graphs, such as changes in traffic and weather patterns, lead to variations in concurrency. Moreover, graph algorithms are known to have data dependent loops and fine-grain synchronization that makes them hard to scale on parallel machines. Recent trends in computing indicate the rise of massively-threaded machines, such as Graphic Processing Units (GPUs). It is of paramount importance to adopt these graph algorithms efficiently on these GPU machines. However, concurrency variations are expected to play a formidable role in achieving good GPU performance. This paper performs an in-depth characterization of GPU architectural choices for graph benchmarks executing on a diverse set of input graphs. The analysis shows that performance improves by a geometric mean of 40% when optimal threads are spawned on a GPU relative to a naive choice that maximizes total thread count. Moreover, an additional 41% performance is achieved when the number of threads per GPU work group is reduced to a setting that optimizes exploitable hardware concurrency. It is also shown that algorithmic auto-tuning coupled with the right architectural choices co-optimize GPU performance.",
+  "doi": "10.1109/iiswc.2016.7581278",
+  "openalex": "W2529597500",
+  "status": "ok",
+  "title": "GPU concurrency choices in graph analytics"
+ },
+ "10.1109_ipdps.2014.24": {
+  "abstract": "A lot of effort from academia and industry has been invested in exploring the suitability of low-power embedded technologies for HPC. Although state-of-the-art embedded systems-on-chip (SoCs) inherently contain GPUs that could be used for HPC, their performance and energy capabilities have never been evaluated. Two reasons contribute to the above. Primarily, embedded GPUs until now, have not supported 64-bit floating point arithmetic - a requirement for HPC. Secondly, embedded GPUs did not provide support for parallel programming languages such as OpenCL and CUDA. However, the situation is changing, and the latest GPUs integrated in embedded SoCs do support 64-bit floating point precision and parallel programming models. In this paper, we analyze performance and energy advantages of embedded GPUs for HPC. In particular, we analyze ARM Mali-T604 GPU - the first embedded GPUs with OpenCL Full Profile support. We identify, implement and evaluate software optimization techniques for efficient utilization of the ARM Mali GPU Compute Architecture. Our results show that, HPC benchmarks running on the ARM Mali-T604 GPU integrated into Exynos 5250 SoC, on average, achieve speed-up of 8.7X over a single Cortex-A15 core, while consuming only 32% of the energy. Overall results show that embedded GPUs have performance and energy qualities that make them candidates for future HPC systems.",
+  "doi": "10.1109/ipdps.2014.24",
+  "openalex": "W2142805836",
+  "status": "ok",
+  "title": "Energy Efficient HPC on Embedded SoCs: Optimization Techniques for Mali GPU"
+ },
+ "10.1109_ipdps.2017.99": {
+  "abstract": "Heterogeneous computing systems, e.g., those with accelerators than the host CPUs, offer the accelerated performance for a variety of workloads. However, most parallel programming models require platform dependent, time-consuming hand-tuning efforts for collectively using all the resources in a system to achieve efficient results. In this work, we explore the use of OpenMP parallel language extensions to empower users with the ability to design applications that automatically and simultaneously leverage CPUs and accelerators to further optimize use of available resources. We believe such automation will be key to ensuring codes adapt to increases in the number and diversity of accelerator resources for future computing systems. The proposed system combines language extensions to OpenMP, load-balancing algorithms and heuristics, and a runtime system for loop distribution across heterogeneous processing elements. We demonstrate the effectiveness of our automated approach to program on systems with multiple CPUs, GPUs, and MICs.",
+  "doi": "10.1109/ipdps.2017.99",
+  "openalex": "W2725808128",
+  "status": "ok",
+  "title": "HOMP: Automated Distribution of Parallel Loops and Data in Highly Parallel Accelerator-Based Systems"
+ },
+ "10.1109_mascots.2016.35": {
+  "abstract": "In this paper we propose a novel approach to heterogeneous embedded systems programmability using a task-graph based framework called Diplomat. Diplomat is a task-graph framework that exploits the potential of static dataflow modeling and analysis to deliver performance estimation and CPU/GPU mapping. An application has to be specified once, and then the framework can automatically propose good mappings. We evaluate Diplomat with a computer vision application on two embedded platforms. Using the Diplomat generation we observed a 16% performance improvement on average and up to a 30% improvement over the best existing hand-coded implementation.",
+  "doi": "10.1109/mascots.2016.35",
+  "openalex": "W2482187483",
+  "status": "ok",
+  "title": "Diplomat: Mapping of Multi-kernel Applications Using a Static Dataflow Abstraction"
+ },
+ "10.1109_mcsoc.2015.38": {
+  "abstract": "The Open Computing Language (OpenCL) is designed to provide a platform-independent specification for programming heterogenous computing systems. The performance of an OpenCL program, however, is not easily transferrable from one platform to another. Auto-tuning is among the techniques that address this situation by automating the performance optimization of OpenCL programs via systematically applying program transformations. We introduce a novel auto-tuning framework to generate OpenCL programs and report on a case study computing an approximate discrete Radon transform. Experiments on four different graphics processing units indicate that, for a wide range of problem sizes and input parameters, the execution times of the auto-tuned OpenCL programs are smaller than those of three hand-tuned CUDA implementations.",
+  "doi": "10.1109/mcsoc.2015.38",
+  "openalex": "W2010055229",
+  "status": "ok",
+  "title": "The Approximate Discrete Radon Transform: A Case Study in Auto-Tuning of OpenCL Implementations"
+ },
+ "10.1109_micro.2016.7783715": {
+  "abstract": "The diversity of microarchitecture designs in heterogeneous computing systems allows programs to achieve high performance and energy efficiency, but results in substantial software re-development cost for each type or generation of hardware. To mitigate this cost, a performance portable programming system is required. One fundamental difference between architectures that makes performance portability challenging is the hierarchical organization of their computing elements. To address this challenge, we introduce TANGRAM, a kernel synthesis framework that composes architecture-neutral computations and composition rules into high-performance kernels customized for different architectural hierarchies. TANGRAM is based on an extensible architectural model that can be used to specify a variety of architectures. This model is coupled with a generic design space exploration and composition algorithm that can generate multiple composition plans for any specified architecture. A custom code generator then compiles these plans for the target architecture while performing various optimizations such as data placement and tuning. We show that code synthesized by TANGRAM for different types and generations of devices achieves no less than 70% of the performance of highly optimized vendor libraries such as Intel MKL and NVIDIA CUBLAS/CUSPARSE.",
+  "doi": "10.1109/micro.2016.7783715",
+  "openalex": "W4230614322",
+  "status": "ok",
+  "title": "Efficient kernel synthesis for performance portable programming"
+ },
+ "10.1109_mm.2017.16": {
+  "abstract": "Situational dynamic changes in graph analytic algorithm implementations give rise to efficiency challenges in concurrent hardware, such as GPUs and large-scale multicores. These performance variations stem from input dependence, such as the density and degree of the graph being processed. Consequently, concurrency control becomes challenging, because the complex data-dependent behavior in these workloads exhibits a range of plausible algorithmic and architectural choices. This article addresses the question of how to efficiently harness the multidimensional search space of such choices for graph analytic workloads in a real-time execution environment. A key insight is that architectural choices are sufficient to yield a concurrency control setting that is comparable to the optimal setup that optimizes both algorithmic and architectural choices. The authors propose a situationally adaptive scheduler (SAS) that learns the architectural choices offline using synthetically generated graphs. SAS-assisted execution in a real-time setup provides geometric performance gains of 40 percent for a large-scale GPU (Nvidia GTX-970), 35 percent for a smaller GPU (Nvidia GTX- 750Ti), and 30 percent for a large-scale multicore (Intel Xeon Phi).",
+  "doi": "10.1109/mm.2017.16",
+  "openalex": "W2594624655",
+  "status": "ok",
+  "title": "Efficient Situational Scheduling of Graph Workloads on Single-Chip Multicores and GPUs"
+ },
+ "10.1109_newcas.2013.6573641": {
+  "abstract": "In this paper, we present a comparative performance study of a 2D Gaussian blur kernel mapped to a heterogeneous multi-core CPU/GPU platform. In this study, the kernel workgroup, the Gaussian kernel and the image sizes are considered variable parameters. We aim to gain insight into how well the execution and data movement times evolve across each computing device in varying the values of these parameters. The profiling information of kernels are extracted from a quad-core Intel CPU-only and an AMD Radeon 7700 GPU-only mappings onto the OpenCL's execution model. Simulation results show that for small values of the referred parameters, it is beneficial to use a multi-core CPU implementation, whereas for higher values, it is advantageous to use a GPU-based platform.",
+  "doi": "10.1109/newcas.2013.6573641",
+  "openalex": "W1972487987",
+  "status": "ok",
+  "title": "A 2D Gaussian smoothing kernel mapped to heterogeneous platforms"
+ },
+ "10.1109_pact52795.2021.00008": {
+  "abstract": "Search-based techniques have been demonstrated effective in solving complex optimization problems that arise in domain-specific compilers for machine learning (ML). Unfortunately, deploying such techniques in production compilers is impeded by two limitations. First, prior works require factorization of a computation graph into smaller subgraphs over which search is applied. This decomposition is not only non-trivial but also significantly limits the scope of optimization. Second, prior works require search to be applied in a single stage in the compilation flow, which does not fit with the multi-stage layered architecture of most production ML compilers. This paper presents Xtat, an autotuner for production ML compilers that can tune both graph-level and subgraph-level optimizations across multiple compilation stages. Xtat applies Xtat-M, a flexible search methodology that defines a search formulation for joint optimizations by accurately modeling the interactions between different compiler passes. Xtat tunes tensor layouts, operator fusion decisions, tile sizes, and code generation parameters in XLA, a production ML compiler, using various search strategies. In an evaluation across 150 ML training and inference models on Tensor Processing Units (TPUs) at Google, Xtat offers up to 2.4x and an average 5% execution time speedup over the heavily-optimized XLA compiler.",
+  "doi": "10.1109/pact52795.2021.00008",
+  "openalex": "W3205943341",
+  "status": "ok",
+  "title": "A Flexible Approach to Autotuning Multi-Pass Machine Learning Compilers"
+ },
+ "10.1109_soca.2013.15": {
+  "abstract": "Over the last decades, graphics processing units have developed from special-purpose graphics accelerators to general-purpose massively parallel co-processors. In recent years they gained increased traction in high performance computing, as they provide superior computational performance in terms of runtime and energy consumption for a wide range of problems. In this survey, we review their employment in distributed computing for a broad range of application scenarios. Common characteristics and a classification of the most relevant use cases are described. Furthermore, we discuss possible future developments of the use of general purpose graphics processing units in the area of service-oriented architecture. The aim of this work is to inspire future research in this field and to give guidelines on when and how to incorporate this new hardware technology.",
+  "doi": "10.1109/soca.2013.15",
+  "openalex": "W2039504384",
+  "status": "ok",
+  "title": "General-Purpose Graphics Processing Units in Service-Oriented Architectures"
+ },
+ "10.1109_tc.2014.2375202": {
+  "abstract": "Heterogeneous multiprocessor systems, which are composed of a mix of processing elements, such as commodity multicore processors, graphics processing units (GPUs), and others, have been widely used in scientific computing community. Software applications incorporate the code designed and optimized for different types of processing elements in order to exploit the computing power of such heterogeneous computing systems. In this paper, we consider the problem of optimal distribution of the workload of data-parallel scientific applications between processing elements of such heterogeneous computing systems. We present a solution that uses functional performance models (FPMs) of processing elements and FPM-based data partitioning algorithms. Efficiency of this approach is demonstrated by experiments with parallel matrix multiplication and numerical simulation of lid-driven cavity flow on hybrid servers and clusters.",
+  "doi": "10.1109/tc.2014.2375202",
+  "openalex": "W2093326633",
+  "status": "ok",
+  "title": "Data Partitioning on Multicore and Multi-GPU Platforms Using Functional Performance Models"
+ },
+ "10.1109_tc.2025.3558606": {
+  "abstract": "Heterogeneous systems with hardware accelerators are increasingly common, and various optimized implementations/algorithms exist for computation kernels. However, no single best combination ofcode version and device(C&D) can outper-form others across all input cases, demanding a method to select the best C&D pair based on input. We presentmachinelearning-basedcode version anddevice selection method, namedMLCD, that uses input data characteristics to select the best C&D pair dynamically. We also apply active learning to reduce the number of samples needed to construct the model. Demonstrated on two different CPU-GPU systems, MLCD achieves near-optimal speed-up regardless of which systems tested. Concretely, reporting results from system one with mid-end hardwares, it achieves 99.9%, 95.6%, 99.9%, and 98.6% of the optimal acceleration attainable through the ideal choice of C&D pairs in General Matrix Multiply, PageRank, N-body Simulation, and K-Motif Counting, respectively. MLCD achieves a speed-up of 2.57×, 1.58×, 2.68×, and 1.09× compared to baselines without MLCD. Additionally, MLCD handles end-to-end applications, achieving up to 10% and 46% speed-up over GPU-only and CPU-only solutions with Graph Neural Networks. Furthermore, it achieves 7.28× average speed-up in execution latency over the state-of-the-art approach and determines suitable code versions for unseen input 108− 1010× faster.",
+  "doi": "10.1109/tc.2025.3558606",
+  "openalex": "W4409262434",
+  "status": "ok",
+  "title": "MLCD: Machine Learning-Based Code Version and Device Selection for Heterogeneous Systems"
+ },
+ "10.1109_tpds.2017.2755657": {
+  "abstract": "Tuning the kernel work-group size for GPUs is a challenging problem. In this paper, using the performance counters provided by GPUs, we characterize a large body of OpenCL kernels to identify the performance factors that affect the choice of a good work-group size. Based on the characterization, we realize that the most influential performance factors with regard to the work-group size include occupancy, coalesced global memory accesses, cache contention, and variation in the amount of workload in the kernel. By tackling the performance factors one by one, we propose auto-tuning techniques that selects the best work-group size and shape for GPU kernels. We show the effectiveness of our auto-tuner by evaluating it with a set of 54 OpenCL kernels on three different NVIDIA GPUs and one AMD GPU. On average, the auto-tuner needs to spend no more than 8 percent of the time required by an exhaustive search to find an optimal work-group size. The execution time of the selected sub-optimal work-group size is at most 1.14x slower than that of the optimal work-group size found by the exhaustive search, on average.",
+  "doi": "10.1109/tpds.2017.2755657",
+  "openalex": "W2758013740",
+  "status": "ok",
+  "title": "An Auto-Tuner for OpenCL Work-Group Size on GPUs"
+ },
+ "10.1109_tpds.2024.3429010": {
+  "abstract": "From edge to exascale, computer architectures are becoming more heterogeneous and complex. The systems typically have fat nodes, with multicore CPUs and multiple hardware accelerators such as GPUs, FPGAs, and DSPs. This complexity is causing a crisis in programming systems and performance portability. Several programming systems are working to address these challenges, but the increasing architectural diversity is forcing software stacks and applications to be specialized for each architecture. As we show, all of these approaches critically depend on their software framework for discovery, execution, scheduling, and data orchestration. To address this challenge, we believe that a more agile and proactive software framework is essential to increase performance portability and improve user productivity. To this end, we have designed and implemented IRIS: a performance-portable framework for cross-platform heterogeneous computing. IRIS can discover available resources, manage multiple diverse programming platforms (e.g., CUDA, Hexagon, HIP, Level Zero, OpenCL, OpenMP) simultaneously in the same execution, respect data dependencies, orchestrate data movement proactively, and provide for user-configurable scheduling. To simplify data movement, IRIS introduces a shared virtual device memory with relaxed consistency among different heterogeneous devices. IRIS also adds an automatic kernel workload partitioning technique using the polyhedral model so that it can resize kernels for a wide range of devices. Our evaluation on three architectures, ranging from Qualcomm Snapdragon to a Summit supercomputer node, shows that IRIS improves portability across a wide range of diverse heterogeneous architectures with negligible overhead.",
+  "doi": "10.1109/tpds.2024.3429010",
+  "openalex": "W4400810584",
+  "status": "ok",
+  "title": "IRIS: A Performance-Portable Framework for Cross-Platform Heterogeneous Computing"
+ },
+ "10.1145_2503210.2503285": {
+  "abstract": "Work division between the processor and accelerator is a common theme in modern heterogenous computing. Recent efforts (such as LEO and OpenAcc) provide directives that allow the developer to mark code regions in the original application from which offloadable tasks can be generated by the compiler. Auto-tuners and runtime schedulers work with the options (i.e., offloadable tasks) generated at compile time, which is limited by the directives specified by the developer. There is no provision for offload restructuring.",
+  "doi": "10.1145/2503210.2503285",
+  "openalex": "W2008142099",
+  "status": "ok",
+  "title": "Semi-automatic restructuring of offloadable tasks for many-core accelerators"
+ },
+ "10.1145_2555243.2555254": {
+  "abstract": "Parallel programs consist of series of code sections with different thread-level parallelism (TLP). As a result, it is rather common that a thread in a parallel program, such as a GPU kernel in CUDA programs, still contains both se-quential code and parallel loops. In order to leverage such parallel loops, the latest Nvidia Kepler architecture intro-duces dynamic parallelism, which allows a GPU thread to start another GPU kernel, thereby reducing the overhead of launching kernels from a CPU. However, with dynamic parallelism, a parent thread can only communicate with its child threads through global memory and the overhead of launching GPU kernels is non-trivial even within GPUs. In this paper, we first study a set of GPGPU benchmarks that contain parallel loops, and highlight that these bench-marks do not have a very high loop count or high degrees of TLP. Consequently, the benefits of leveraging such par-allel loops using dynamic parallelism are too limited to offset its overhead. We then present our proposed solution to exploit nested parallelism in CUDA, referred to as CUDA-NP. With CUDA-NP, we initially enable a high number of threads when a GPU program starts, and use control flow to activate different numbers of threads for different code sections. We implemented our proposed CUDA-NP framework using a directive-based compiler approach. For a GPU kernel, an application developer only needs to add OpenMP-like pragmas for parallelizable code sections. Then, our CUDA-NP compiler automatically gen-erates the optimized GPU kernels. It supports both the reduction and the scan primitives, explores different ways to distribute parallel loop iterations into threads, and effi-ciently manages on-chip resource. Our experiments show that for a set of GPGPU benchmarks, which have already been optimized and contain nested parallelism, our pro-posed CUDA-NP framework further improves the perfor-mance by up to 6.69 times and 2.18 times on average.",
+  "doi": "10.1145/2555243.2555254",
+  "openalex": "W2123440268",
+  "status": "ok",
+  "title": "CUDA-NP"
+ },
+ "10.1145_2568225.2568297": {
+  "abstract": "Reducing the energy usage of software is becoming more important in many environments, in particular, battery-powered mobile devices, embedded systems and data centers. Recent empirical studies indicate that software engineers can support the goal of reducing energy usage by making design and implementation decisions in ways that take into consideration how such decisions impact the energy usage of an application. However, the large number of possible choices and the lack of feedback and information available to software engineers necessitates some form of automated decision-making support. This paper describes the first known automated support for systematically optimizing the energy usage of applications by making code-level changes. It is effective at reducing energy usage while freeing developers from needing to deal with the low-level, tedious tasks of applying changes and monitoring the resulting impacts to the energy usage of their application. We present a general framework, SEEDS, as well as an instantiation of the framework that automatically optimizes Java applications by selecting the most energy-efficient library implementations for Java's Collections API. Our empirical evaluation of the framework and instantiation show that it is possible to improve the energy usage of an application in a fully automated manner for a reasonable cost.",
+  "doi": "10.1145/2568225.2568297",
+  "openalex": "W1966533006",
+  "status": "ok",
+  "title": "SEEDS: a software engineer's energy-optimization decision support framework"
+ },
+ "10.1145_2608253": {
+  "abstract": "Because of tight power and energy constraints, industry is progressively shifting toward heterogeneous system-on-chip (SoC) architectures composed of a mix of general-purpose cores along with a number of accelerators. However, such SoC architectures can be very challenging to efficiently program for the vast majority of programmers, due to numerous programming approaches and languages. Libraries, on the other hand, provide a simple way to let programmers take advantage of complex architectures, which does not require programmers to acquire new accelerator-specific or domain-specific languages. Increasingly, library-based, also called algorithm-centric, programming approaches propose to generalize the usage of libraries and to compose programs around these libraries, instead of using libraries as mere complements. In this article, we present a software framework for achieving performance portability by leveraging a generalized library-based approach. Inspired by the notion of a component, as employed in software engineering and HW/SW codesign, we advocate nonexpert programmers to write simple wrapper code around existing libraries to provide simple but necessary semantic information to the runtime. To achieve performance portability, the runtime employs machine learning (simulated annealing) to select the most appropriate accelerator and its parameters for a given algorithm. This selection factors in the possibly complex composition of algorithms used in the application, the communication among the various accelerators, and the tradeoff between different objectives (i.e., accuracy, performance, and energy). Using a set of benchmarks run on a real heterogeneous SoC composed of a multicore processor and a GPU, we show that the runtime overhead is fairly small at 5.1% for the GPU and 6.4% for the multi-core. We then apply our accelerator selection approach to a simulated SoC platform containing multiple inexact accelerators. We show that accelerator selection together with hardware parameter tuning achieves an average 46.2% energy reduction and a speedup of 2.1× while meeting the desired application error target.",
+  "doi": "10.1145/2608253",
+  "openalex": "W2171601645",
+  "status": "ok",
+  "title": "Performance Portability Across Heterogeneous SoCs Using a Generalized Library-Based Approach"
+ },
+ "10.1145_2628071.2628088": {
+  "abstract": "Many processors today integrate a CPU and GPU on the same die, which allows them to share resources like physical memory and lowers the cost of CPU-GPU communication. As a consequence, programmers can effectively utilize both the CPU and GPU to execute a single application. This paper presents novel adaptive scheduling techniques for integrated CPU-GPU processors. We present two online profiling-based scheduling algorithms: naïve and asymmetric. Our asymmetric scheduling algorithm uses low-overhead online profiling to automatically partition the work of data-parallel kernels between the CPU and GPU without input from application developers. It does profiling on the CPU and GPU in a way that it doesn't penalize GPU-centric workloads that run significantly faster on the GPU. It adapts to application characteristics by addressing: 1) load imbalance via irregularity caused by, e.g., data-dependent control flow, 2) different amounts of work on each kernel call, and 3) multiple kernels with different characteristics. Unlike many existing approaches primarily targeting NVIDIA discrete GPUs, our scheduling algorithm does not require offline processing.",
+  "doi": "10.1145/2628071.2628088",
+  "openalex": "W2169049902",
+  "status": "ok",
+  "title": "Adaptive heterogeneous scheduling for integrated GPUs"
+ },
+ "10.1145_2692916.2555254": {
+  "abstract": "Parallel programs consist of series of code sections with different thread-level parallelism (TLP). As a result, it is rather common that a thread in a parallel program, such as a GPU kernel in CUDA programs, still contains both se-quential code and parallel loops. In order to leverage such parallel loops, the latest Nvidia Kepler architecture intro-duces dynamic parallelism, which allows a GPU thread to start another GPU kernel, thereby reducing the overhead of launching kernels from a CPU. However, with dynamic parallelism, a parent thread can only communicate with its child threads through global memory and the overhead of launching GPU kernels is non-trivial even within GPUs. In this paper, we first study a set of GPGPU benchmarks that contain parallel loops, and highlight that these bench-marks do not have a very high loop count or high degrees of TLP. Consequently, the benefits of leveraging such par-allel loops using dynamic parallelism are too limited to offset its overhead. We then present our proposed solution to exploit nested parallelism in CUDA, referred to as CUDA-NP. With CUDA-NP, we initially enable a high number of threads when a GPU program starts, and use control flow to activate different numbers of threads for different code sections. We implemented our proposed CUDA-NP framework using a directive-based compiler approach. For a GPU kernel, an application developer only needs to add OpenMP-like pragmas for parallelizable code sections. Then, our CUDA-NP compiler automatically gen-erates the optimized GPU kernels. It supports both the reduction and the scan primitives, explores different ways to distribute parallel loop iterations into threads, and effi-ciently manages on-chip resource. Our experiments show that for a set of GPGPU benchmarks, which have already been optimized and contain nested parallelism, our pro-posed CUDA-NP framework further improves the perfor-mance by up to 6.69 times and 2.18 times on average.",
+  "doi": "10.1145/2692916.2555254",
+  "openalex": "W4236883517",
+  "status": "ok",
+  "title": "CUDA-NP"
+ },
+ "10.1145_2751205.2751217": {
+  "abstract": "Accelerators, such as Graphic Processing Units (GPUs), are increasingly popular components of modern parallel systems. This move towards heterogeneity, however, has not progressed through all layers of system software. There is no transparent Operating System (OS) support for the management and sharing of accelerators between users and applications. Consequently, there is also no support for OS-level virtualization (containers) targeting heterogeneous software. This paper presents a secure, user-space virtualization layer that integrates the accelerator resources of a system with the standard multi-tasking and user-space virtualization facilities of commodity Linux OS. It targets heterogeneous commodity systems found in data center nodes and requires no modification to the OS, OpenCL or application. It eliminates high setup overhead, enables fine-grained sharing of mixed-vendor accelerator resources and provides resource and platform aware scheduling. The average throughput improvement across workloads and mixed-vendor platform configurations varies from 1.29x to 3.87x speedup over existing schemes. Our approach outperforms both vendor accelerator sharing facilities and message passing solutions.",
+  "doi": "10.1145/2751205.2751217",
+  "openalex": "W1981939634",
+  "status": "ok",
+  "title": "PALMOS"
+ },
+ "10.1145_2784731.2784754": {
+  "abstract": "Computers have become increasingly complex with the emergence of heterogeneous hardware combining multicore CPUs and GPUs. These parallel systems exhibit tremendous computational power at the cost of increased programming effort resulting in a tension between performance and code portability. Typically, code is either tuned in a low-level imperative language using hardware-specific optimizations to achieve maximum performance or is written in a high-level, possibly functional, language to achieve portability at the expense of performance. We propose a novel approach aiming to combine high-level programming, code portability, and high-performance. Starting from a high-level functional expression we apply a simple set of rewrite rules to transform it into a low-level functional representation, close to the OpenCL programming model, from which OpenCL code is generated. Our rewrite rules define a space of possible implementations which we automatically explore to generate hardware-specific OpenCL implementations. We formalize our system with a core dependently-typed lambda-calculus along with a denotational semantics which we use to prove the correctness of the rewrite rules. We test our design in practice by implementing a compiler which generates high performance imperative OpenCL code. Our experiments show that we can automatically derive hardware-specific implementations from simple functional high-level algorithmic expressions offering performance on a par with highly tuned code for multicore CPUs and GPUs written by experts.",
+  "doi": "10.1145/2784731.2784754",
+  "openalex": "W1997978901",
+  "status": "ok",
+  "title": "Generating performance portable code using rewrite rules: from high-level functional expressions to high-performance OpenCL code"
+ },
+ "10.1145_2788396": {
+  "abstract": "As both CPUs and GPUs become employed in a wide range of applications, it has been acknowledged that both of these Processing Units (PUs) have their unique features and strengths and hence, CPU-GPU collaboration is inevitable to achieve high-performance computing. This has motivated a significant amount of research on heterogeneous computing techniques, along with the design of CPU-GPU fused chips and petascale heterogeneous supercomputers. In this article, we survey Heterogeneous Computing Techniques (HCTs) such as workload partitioning that enable utilizing both CPUs and GPUs to improve performance and/or energy efficiency. We review heterogeneous computing approaches at runtime, algorithm, programming, compiler, and application levels. Further, we review both discrete and fused CPU-GPU systems and discuss benchmark suites designed for evaluating Heterogeneous Computing Systems (HCSs). We believe that this article will provide insights into the workings and scope of applications of HCTs to researchers and motivate them to further harness the computational powers of CPUs and GPUs to achieve the goal of exascale performance.",
+  "doi": "10.1145/2788396",
+  "openalex": "W1864199185",
+  "status": "ok",
+  "title": "A Survey of CPU-GPU Heterogeneous Computing Techniques"
+ },
+ "10.1145_2854038.2854040": {
+  "abstract": "Accelerators, such as Graphic Processing Units (GPUs), are popular components of modern parallel systems. Their energy-efficient performance make them attractive components for modern data center nodes. However, they lack control for fair resource sharing amongst multiple users. This paper presents a runtime and Just In Time compiler that enable resource sharing control and software managed scheduling on accelerators. It is portable and transparent, requiring no modification or recompilation of existing systems or user applications. We provide an extensive evaluation of our scheme with over 40,000 different workloads on 2 platforms and we deliver fairness improvements ranging from 6.8x to 13.66x. In addition, we also deliver system throughput speedups ranging from 1.13x to 1.31x.",
+  "doi": "10.1145/2854038.2854040",
+  "openalex": "W2289256051",
+  "status": "ok",
+  "title": "Portable and transparent software managed scheduling on accelerators for fair resource sharing"
+ },
+ "10.1145_2854038.2854052": {
+  "abstract": "Energy efficiency is now a top design goal for all computing systems, from fitness trackers and tablets, where it affects battery life, to cloud computing centers, where it directly impacts operational cost, maintainability, and environmental impact. Today's widespread integrated CPU-GPU processors combine a CPU and a GPU compute device with different power-performance characteristics. For these integrated processors, hardware vendors implement automatic power management policies that are typically not exposed to the end-user. Furthermore, these policies often vary between different processor generations and SKUs. As a result, it is challenging to design a generally-applicable energy-aware runtime to schedule work onto both the CPU and GPU of such integrated CPU-GPU processors to optimize energy consumption. We propose a new black-box scheduling technique to reduce energy use by effectively partitioning work across the CPU and GPU cores of integrated CPU-GPU processors. Our energy-aware scheduler combines a power model with information about the runtime behavior of a specific workload. This power model is computed once for each processor to characterize its power consumption for different kinds of workloads. On two widely different platforms, a high-end desktop system and a low-power tablet, our energy-aware runtime yields an energy-delay product that is 96% and 93%, respectively, of the near-ideal Oracle energy-delay product on a diverse set of workloads.",
+  "doi": "10.1145/2854038.2854052",
+  "openalex": "W2318697942",
+  "status": "ok",
+  "title": "A black-box approach to energy-aware scheduling on integrated CPU-GPU systems"
+ },
+ "10.1145_2858949.2784754": {
+  "abstract": "Computers have become increasingly complex with the emergence of heterogeneous hardware combining multicore CPUs and GPUs. These parallel systems exhibit tremendous computational power at the cost of increased programming effort resulting in a tension between performance and code portability. Typically, code is either tuned in a low-level imperative language using hardware-specific optimizations to achieve maximum performance or is written in a high-level, possibly functional, language to achieve portability at the expense of performance. We propose a novel approach aiming to combine high-level programming, code portability, and high-performance. Starting from a high-level functional expression we apply a simple set of rewrite rules to transform it into a low-level functional representation, close to the OpenCL programming model, from which OpenCL code is generated. Our rewrite rules define a space of possible implementations which we automatically explore to generate hardware-specific OpenCL implementations. We formalize our system with a core dependently-typed lambda-calculus along with a denotational semantics which we use to prove the correctness of the rewrite rules. We test our design in practice by implementing a compiler which generates high performance imperative OpenCL code. Our experiments show that we can automatically derive hardware-specific implementations from simple functional high-level algorithmic expressions offering performance on a par with highly tuned code for multicore CPUs and GPUs written by experts.",
+  "doi": "10.1145/2858949.2784754",
+  "openalex": "W3043123483",
+  "status": "ok",
+  "title": "Generating performance portable code using rewrite rules: from high-level functional expressions to high-performance OpenCL code"
+ },
+ "10.1145_2884045.2884046": {
+  "abstract": "Parallel accelerators such as GPUs are notoriously hard to program; exploiting their full performance potential is a job best left for ninja programmers. High-level programming languages coupled with optimizing compilers have been proposed to attempt to address this issue. However, they rely on device-specific heuristics or hard-coded library implementations to achieve good performance resulting in non-portable solutions that need to be re-optimized for every new device.",
+  "doi": "10.1145/2884045.2884046",
+  "openalex": "W2258220747",
+  "status": "ok",
+  "title": "Performance portable GPU code generation for matrix multiplication"
+ },
+ "10.1145_2884781.2884869": {
+  "abstract": "We created detailed profiles of the energy consumed by common operations done on Java List, Map, and Set abstractions. The results show that the alternative data types for these abstractions differ significantly in terms of energy consumption depending on the operations. For example, an ArrayList consumes less energy than a LinkedList if items are inserted at the middle or at the end, but consumes more energy than a LinkedList if items are inserted at the start of the list. To explain the results, we explored the memory usage and the bytecode executed during an operation. Expensive computation tasks in the analyzed bytecode traces appeared to have an energy impact, but memory usage did not contribute. We evaluated our profiles by using them to selectively replace Collections types used in six applications and libraries. We found that choosing the wrong Collections type, as indicated by our profiles, can cost even 300% more energy than the most efficient choice. Our work shows that the usage context of a data structure and our measured energy profiles can be used to decide between alternative Collections implementations.",
+  "doi": "10.1145/2884781.2884869",
+  "openalex": "W2344496621",
+  "status": "ok",
+  "title": "Energy profiles of Java collections classes"
+ },
+ "10.1145_2903150.2903152": {
+  "abstract": "Integrated GPU platforms are a cost-effective and energy-efficient option for accelerating data-intensive applications. While these platforms have reduced overhead of offloading computation to the GPU and potential for fine-grained resource scheduling, there remain several open challenges. First, substantial application knowledge is required to leverage GPU acceleration capabilities. Second, static application profiling is inadequate for extracting performance from graph applications that exhibit input-dependent, irregular runtime behaviors. Third, naive scheduling of applications on both CPU and GPU devices may degrade performance due to memory contention.",
+  "doi": "10.1145/2903150.2903152",
+  "openalex": "W2417801432",
+  "status": "ok",
+  "title": "Accelerating graph applications on integrated GPU platforms via instrumentation-driven optimizations"
+ },
+ "10.1145_2907294.2907302": {
+  "abstract": "We propose IMPACC, an MPI+OpenACC framework for heterogeneous accelerator clusters. IMPACC tightly integrates MPI and OpenACC, while exploiting the shared memory parallelism in the target system. IMPACC dynamically adapts the input MPI+OpenACC applications on the target heterogeneous accelerator clusters to fully exploit target system-specific features. IMPACC provides the programmers with the unified virtual address space, automatic NUMA-friendly task-device mapping, efficient integrated communication routines, seamless streamlining of asynchronous executions, and transparent memory sharing. We have implemented IMPACC and evaluated its performance using three heterogeneous accelerator systems, including Titan supercomputer. Results show that IMPACC can achieve easier programming, higher performance, and better scalability than the current MPI+OpenACC model.",
+  "doi": "10.1145/2907294.2907302",
+  "openalex": "W2413075413",
+  "status": "ok",
+  "title": "IMPACC"
+ },
+ "10.1145_2968455.2968521": {
+  "abstract": "Graphics Processing Units (GPUs) are used as general purpose parallel accelerators in a wide range of applications. They are found in most computing systems, and mobile devices are no exception. The recent availability of programming APIs such as OpenCL for mobile GPUs promises to open up new types of applications on these devices.",
+  "doi": "10.1145/2968455.2968521",
+  "openalex": "W2484342675",
+  "status": "ok",
+  "title": "Matrix multiplication beyond auto-tuning"
+ },
+ "10.1145_3133895": {
+  "abstract": "Heterogeneous hardware is central to modern advances in performance and efficiency. Mainstream programming models for heterogeneous architectures, however, sacrifice safety and expressiveness in favor of low-level control over performance details. The interfaces between hardware units consist of verbose, unsafe APIs; hardware-specific languages make it difficult to move code between units; and brittle preprocessor macros complicate the task of specializing general code for efficient accelerated execution. We propose a unified low-level programming model for heterogeneous systems that offers control over performance, safe communication constructs, cross-device code portability, and hygienic metaprogramming for specialization. The language extends constructs from multi-stage programming to separate code for different hardware units, to communicate between them, and to express compile-time code optimization. We introduce static staging, a different take on multi-stage programming that lets the compiler generate all code and communication constructs ahead of time. To demonstrate our approach, we use static staging to implement BraidGL, a real-time graphics programming language for CPU-GPU systems. Current real-time graphics software in OpenGL uses stringly-typed APIs for communication and unsafe preprocessing to generate specialized GPU code variants. In BraidGL, programmers instead write hybrid CPU-GPU software in a unified language. The compiler statically generates target-specific code and guarantees safe communication between the CPU and the graphics pipeline stages. Example scenes demonstrate the language's productivity advantages: BraidGL eliminates the safety and expressiveness pitfalls of OpenGL and makes common specialization techniques easy to apply. The case study demonstrates how static staging can express core placement and specialization in general heterogeneous programming.",
+  "doi": "10.1145/3133895",
+  "openalex": "W2761451340",
+  "status": "ok",
+  "title": "Static stages for heterogeneous programming"
+ },
+ "10.1145_3173162.3173181": {
+  "abstract": "The demand for thread-level-parallelism (TLP) on commodity processors is endless as it is essential for gaining performance and saving energy. However, TLP in today's programs is limited by dependences that must be satisfied at run time. We have found that for nondeterministic programs, some of these actual dependences can be satisfied with alternative data that can be generated in parallel, thus boosting the program's TLP. Satisfying these dependences with alternative data nonetheless produces final outputs that match those of the original nondeterministic program. To demonstrate the practicality of our technique, we describe the design, implementation, and evaluation of our compilers, autotuner, profiler, and runtime, which are enabled by our proposed C++ programming language extensions. The resulting system boosts the performance of six well-known nondeterministic and multi-threaded benchmarks by 158.2% (geometric mean) on a 28-core Intel-based platform.",
+  "doi": "10.1145/3173162.3173181",
+  "openalex": "W2793307102",
+  "status": "ok",
+  "title": "Unconventional Parallelization of Nondeterministic Applications"
+ },
+ "10.1145_3173162.3173182": {
+  "abstract": "Heterogeneous accelerators often disappoint. They provide the prospect of great performance, but only deliver it when using vendor specific optimized libraries or domain specific languages. This requires considerable legacy code modifications, hindering the adoption of heterogeneous computing. This paper develops a novel approach to automatically detect opportunities for accelerator exploitation. We focus on calculations that are well supported by established APIs: sparse and dense linear algebra, stencil codes and generalized reductions and histograms. We call them idioms and use a custom constraint-based Idiom Description Language (IDL) to discover them within user code. Detected idioms are then mapped to BLAS libraries, cuSPARSE and clSPARSE and two DSLs: Halide and Lift. We implemented the approach in LLVM and evaluated it on the NAS and Parboil sequential C/C++ benchmarks, where we detect 60 idiom instances. In those cases where idioms are a significant part of the sequential execution time, we generate code that achieves 1.26x to over 20x speedup on integrated and external GPUs.",
+  "doi": "10.1145/3173162.3173182",
+  "openalex": "W2789599444",
+  "status": "ok",
+  "title": "Automatic Matching of Legacy Code to Heterogeneous APIs"
+ },
+ "10.1145_3194242": {
+  "abstract": "Thread coarsening on GPUs combines the work of several threads into one. We show how thread coarsening can be implemented as a fully automated compile-time optimisation that estimates the optimal coarsening factor based on a low-cost, approximate static analysis of cache line re-use and an occupancy prediction model. We evaluate two coarsening strategies on three different NVidia GPU architectures. For NVidia reduction kernels we achieve a maximum speedup of 5.08x, and for the Rodinia benchmarks we achieve a mean speedup of 1.30x over 8 of 19 kernels that were determined safe to coarsen.",
+  "doi": "10.1145/3194242",
+  "openalex": "W2808709390",
+  "status": "ok",
+  "title": "Predictable Thread Coarsening"
+ },
+ "10.1145_3296957.3173181": {
+  "abstract": "The demand for thread-level-parallelism (TLP) on commodity processors is endless as it is essential for gaining performance and saving energy. However, TLP in today's programs is limited by dependences that must be satisfied at run time. We have found that for nondeterministic programs, some of these actual dependences can be satisfied with alternative data that can be generated in parallel, thus boosting the program's TLP. Satisfying these dependences with alternative data nonetheless produces final outputs that match those of the original nondeterministic program. To demonstrate the practicality of our technique, we describe the design, implementation, and evaluation of our compilers, autotuner, profiler, and runtime, which are enabled by our proposed C++ programming language extensions. The resulting system boosts the performance of six well-known nondeterministic and multi-threaded benchmarks by 158.2% (geometric mean) on a 28-core Intel-based platform.",
+  "doi": "10.1145/3296957.3173181",
+  "openalex": "W4236577769",
+  "status": "ok",
+  "title": "Unconventional Parallelization of Nondeterministic Applications"
+ },
+ "10.1145_3296957.3173182": {
+  "abstract": "Heterogeneous accelerators often disappoint. They provide the prospect of great performance, but only deliver it when using vendor specific optimized libraries or domain specific languages. This requires considerable legacy code modifications, hindering the adoption of heterogeneous computing. This paper develops a novel approach to automatically detect opportunities for accelerator exploitation. We focus on calculations that are well supported by established APIs: sparse and dense linear algebra, stencil codes and generalized reductions and histograms. We call them idioms and use a custom constraint-based Idiom Description Language (IDL) to discover them within user code. Detected idioms are then mapped to BLAS libraries, cuSPARSE and clSPARSE and two DSLs: Halide and Lift. We implemented the approach in LLVM and evaluated it on the NAS and Parboil sequential C/C++ benchmarks, where we detect 60 idiom instances. In those cases where idioms are a significant part of the sequential execution time, we generate code that achieves 1.26x to over 20x speedup on integrated and external GPUs.",
+  "doi": "10.1145/3296957.3173182",
+  "openalex": "W3015614227",
+  "status": "ok",
+  "title": "Automatic Matching of Legacy Code to Heterogeneous APIs"
+ },
+ "10.1145_3368826.3377906": {
+  "abstract": "As interest in randomization has grown within the computing community, the number of pseudorandom value generators (PRVGs) at developers' disposal dramatically increased. Today, developers lack the tools necessary to obtain optimal behavior from their PRVGs. We provide the first deep study into the tradeoffs among the PRVGs in the C++ standard, finding no silver bullet for all programs and architectures. With this in mind, we have built PRV Jeeves, the first fully automatic PRVG selector. We demonstrate that when compiling widely-used, highly optimized programs with PRV Jeeves, we are able to cut execution time by 34% on average. This enhancement comes at no cost to developers.",
+  "doi": "10.1145/3368826.3377906",
+  "openalex": "W3008747696",
+  "status": "ok",
+  "title": "Introducing the pseudorandom value generator selection in the compilation toolchain"
+ },
+ "10.1145_3373376.3378465": {
+  "abstract": "Memory capacity is a key bottleneck for training large scale neural networks. Intel® Optane#8482; DC PMM (persistent memory modules) which are available as NVDIMMs are a disruptive technology that promises significantly higher read bandwidth than traditional SSDs at a lower cost per bit than traditional DRAM. In this work we show how to take advantage of this new memory technology to minimize the amount of DRAM required without compromising performance significantly. Specifically, we take advantage of the static nature of the underlying computational graphs in deep neural network applications to develop a profile guided optimization based on Integer Linear Programming (ILP) called AutoTM to optimally assign and move live tensors to either DRAM or NVDIMMs. Our approach can replace 50% to 80% of a system's DRAM with PMM while only losing a geometric mean 27.7% performance. This is a significant improvement over first-touch NUMA, which loses 71.9% of performance. The proposed ILP based synchronous scheduling technique also provides 2x performance over using DRAM as a hardware-controlled cache for very large networks.",
+  "doi": "10.1145/3373376.3378465",
+  "openalex": "W3010830594",
+  "status": "ok",
+  "title": "AutoTM: Automatic Tensor Movement in Heterogeneous Memory Systems using Integer Linear Programming"
+ },
+ "10.1145_3497776.3517777": {
+  "abstract": "Graphics Processing Units (GPUs) are notoriously hard to optimize for manually. What is needed are good automatic code generators and optimizers. Accelerate, Futhark and Lift demonstrated that a functional approach is well suited for this challenge. Lift, for instance, uses a system of rewrite rules with a multi-stage approach. Algorithmic optimizations are first explored, followed by hardware-specific optimizations such as using shared memory and mapping parallelism.",
+  "doi": "10.1145/3497776.3517777",
+  "openalex": "W4221136811",
+  "status": "ok",
+  "title": "Mapping parallelism in a functional IR through constraint satisfaction: a case study on convolution for mobile GPUs"
+ },
+ "10.13140_rg.2.1.1237.0806": {
+  "abstract": "Over the past decade, the design of microprocessors has been shifting to a new model where the microprocessor has multiple homogeneous processing units, aka cores, as a result of heat dissipation and energy consumption issues. Meanwhile, the demand for heterogeneity increases in computing systems due to the need for high performance computing in recent years. The current trend in gaining high computing power is to incorporate specialized processing resources such as manycore Graphic Processing Units in multicore systems, thus making a computing system heterogeneous. Maximum performance of data-parallel scientific applications on heterogeneous platforms can be achieved by balancing the load between heterogeneous processing elements. Data parallel applications can be load balanced by applying data partitioning with respect to the performance of the platform’s computing devices. However, load balancing on such platforms is complicated by several factors, such as contention for shared system resources, non-uniform memory access, limited GPU memory and slow bandwidth of PCIe, which connects the host processor and the GPU. In this thesis, we present methods of performance modeling and performance measurement on dedicated multicore and multi-GPU systems. We model a multicore and multi-GPU system by a set of heterogeneous abstract processors determined by the configuration of the parallel application. Each abstract processor represents a processing unit made of one or a group of processing elements executing one computational kernel of the application. We group processing units by shared resources, and measure the performance of processing units in each group simultaneously, thereby taking into account the influence of resource contention. We investigate the impact of resource contention, and the impact of process mapping on systems of NUMA architecture on the performance of processing units. Using the proposed method for measuring performance, we built functional performance models of abstract processors, and partition data of data parallel applications using these performance models to balance the workload. We evaluate the proposed methods with two typical data parallel applications, namely parallel matrix multiplication and numerical simulation of lid-driven cavity flow. Experimental results demonstrate that data partitioning algorithms based on functional performance models built using proposed methods are able to balance the workload of data parallel applications on heterogeneous multicore and multi-GPU platforms.",
+  "doi": "10.13140/rg.2.1.1237.0806",
+  "openalex": "W2187539704",
+  "status": "ok",
+  "title": "Optimization of Data-Parallel Scientific Applications on Highly Heterogeneous Modern HPC Platforms"
+ },
+ "10.15439_2018f169": {
+  "abstract": "Due to the ever changing characteristics of the newly provided hardware, there is the permanent requirement of designing and re-designing software adequately to meet the basic hardware conditions. Especially for well-established software, easy portability of the functional as well as the non-functional properties, such as runtime performance or energy efficiency, would be beneficial, so that the software adapts automatically to the given hardware conditions. In this article, we explore the autotuning potential of several methods from scientific computing. In particular, we consider time-stepping methods and investigate the effect of relevant tuning parameters of the different methods. We also address the question, whether offline or online autotuning approaches are appropriate for the specific method. The methods from scientific computing considered are particle simulation methods, solution methods for differential equations, as well as sparse matrix computations.",
+  "doi": "10.15439/2018f169",
+  "openalex": "W2892969459",
+  "status": "ok",
+  "title": "On the Autotuning Potential of Time-stepping methods from Scientific Computing"
+ },
+ "10.1631_fitee.1500032": {
+  "abstract": "OpenCL is an open heterogeneous programming framework. Although OpenCL programs are functionally portable, they do not provide performance portability, so code transformation often plays an irreplaceable role. When adapting GPU-specific OpenCL kernels to run on multi-core/many-core CPUs, coarsening the thread granularity is necessary and thus has been extensively used. However, locality concerns exposed in GPU-specific OpenCL code are usually inherited without analysis, which may give side-effects on the CPU performance. Typically, the use of OpenCL’s local memory on multi-core/many-core CPUs may lead to an opposite performance effect, because local-memory arrays no longer match well with the hardware and the associated synchronizations are costly. To solve this dilemma, we actively analyze the memory access patterns using array-access descriptors derived from GPU-specific kernels, which can thus be adapted for CPUs by (1) removing all the unwanted local-memory arrays together with the obsolete barrier statements and (2) optimizing the coalesced kernel code with vectorization and locality re-exploitation. Moreover, we have developed an automated tool chain that makes this transformation of GPU-specific OpenCL kernels into a CPU-friendly form, which is accompanied with a scheduler that forms a new OpenCL runtime. Experiments show that the automated transformation can improve OpenCL kernel performance on a multi-core CPU by an average factor of 3.24. Satisfactory performance improvements are also achieved on Intel’s many-integrated-core coprocessor. The resultant performance on both architectures is better than or comparable with the corresponding OpenMP performance.",
+  "doi": "10.1631/fitee.1500032",
+  "openalex": "W2100254322",
+  "status": "ok",
+  "title": "Improving performance portability for GPU-specific OpenCL kernels on multi-core/many-core CPUs by analysis-based transformations"
+ },
+ "10.17635_lancaster_thesis_371": {
+  "abstract": "Contemporary software systems often have millions of lines of code that interact over complex infrastructures. The development of such systems is very challenging due to the increasing complexity of services and the high level of dynamism of current operating environments. In order to support the development and management of such systems, autonomic computing concepts have gained significant importance. The majority of autonomic computing approaches show significant levels of expert dependency in designing adaptive solutions. These approaches usually rely on human-made models and policies to support and guide software adaptation at runtime. These approaches mainly suffer from: i) a significant upfront effort demanded to create such solutions, which adds to the complexity of creating autonomous systems, and ii) unreliability given the high levels of uncertainty in current operating environments, leading the system to degraded performance and error states when subjected to unpredicted operating conditions and unexpected software interactions. Motivated by the problems and limitations of state-of-the-art autonomic computing solutions, this thesis introduces the concept of Emergent Software Systems. These systems are autonomously composed at runtime from discovered components, and are autonomously optimised based on the operating conditions, being able to build their own understanding of their environment and constituent parts. This thesis defines Emergent Software Systems, presenting the challenges of implementing such approach, and presents a fully functioning emergent systems framework that demonstrates this concept in real-world, fully functioning datacentre-based software.",
+  "doi": "10.17635/lancaster/thesis/371",
+  "openalex": "W2927094313",
+  "status": "ok",
+  "title": "Emergent software systems"
+ },
+ "10.21236_ad1003173": {
+  "abstract": "With heterogeneous computing increasingly a prevalent component in the science and engineering fields, benchmarking has become even more important for evaluation of each new architecture. The main issue is having a benchmarking code that uses sound benchmarking methodologies that accurately predict performance and provide a fair comparison between architectures. This technical report describes methodologies that have been developed at the US Army Research Laboratory ARL. It examines the procedure on how to implement a new benchmark application program that will be added to the suite already in development. Also discussed is the algorithm, its relevance to US Army applications, its implementation, and the results from running it on the algorithm on the ARL Department of Defense Supercomputing Resource Centers High Performance Computers.",
+  "doi": "10.21236/ad1003173",
+  "openalex": "W2511609626",
+  "status": "ok",
+  "title": "Integrating the Nqueens Algorithm into a Parameterized Benchmark Suite"
+ },
+ "10.21236_ada613693": {
+  "abstract": "The Legion programming system from Stanford University was developed to address the specific needs of portable parallel heterogeneous programming with emphasis on program data. Data-centric Legion abstracts the underlying hardware such that the focus is algorithmic development rather than the idiosyncrasies of different computing architectures. Legion is part of a small but growing movement to treat parallel programming design and development in a task-oriented fashion and, as of this writing, is the only one to address this paradigm dynamically. This work employs a gravitational n-body simulation as a vehicle to introduce Legion to a wider audience of parallel programmers.",
+  "doi": "10.21236/ada613693",
+  "openalex": "W424704358",
+  "status": "ok",
+  "title": "Building Task-Oriented Applications: An Introduction to the Legion Programming Paradigm"
+ },
+ "10.21608_ijicis.2025.358362.1375": {
+  "abstract": "The Motif finding problem is important in bioinformatics, aiming to find recurring sequences in biological data. These motifs, are important for understanding how genes work, how proteins function, and how cells operate. Accurately detecting these patterns is essential for understanding of biology, aiding in scientific research, and developing treatments for diseases. Addressing the motif finding problem efficiently across heterogeneous CPU architectures presents significant challenges in computational efficiency and resource utilization. The variation in the number and speed of cores across CPUs requires developing scheduling strategies to efficiently distribute workloads among these architectures. This paper presents an efficient strategy for optimizing task distribution across heterogeneous CPU architectures. The proposed approach makes performance enhancement with 9 % solving Motif finding problem in CPU heterogeneous architectures. This improvement significantly speed up the process of identifying important biological patterns, making bioinformatics research quicker and more cost-effective. In addition, it has a significant impact on enhancing computational efficiency and reducing costs in high-performance computing environments.",
+  "doi": "10.21608/ijicis.2025.358362.1375",
+  "openalex": "W4409863947",
+  "status": "ok",
+  "title": "Scheduling Motif Finding Problem Across Heterogeneous CPU Architectures"
+ },
+ "10.2172_1176882": {
+  "abstract": "This grant supported the ZettaBricks and OpenTuner projects. ZettaBricks is a new implicitly parallel language and compiler where defining multiple implementations of multiple algorithms to solve a problem is the natural way of programming. ZettaBricks makes algorithmic choice a first class construct of the language. Choices are provided in a way that also allows our compiler to tune at a finer granularity. The ZettaBricks compiler autotunes programs by making both fine-grained as well as algorithmic choices. Choices also include different automatic parallelization techniques, data distributions, algorithmic parameters, transformations, and blocking. Additionally, ZettaBricks introduces novel techniques to autotune algorithms for different convergence criteria. When choosing between various direct and iterative methods, the ZettaBricks compiler is able to tune a program in such a way that delivers near-optimal efficiency for any desired level of accuracy. The compiler has the flexibility of utilizing different convergence criteria for the various components within a single algorithm, providing the user with accuracy choice alongside algorithmic choice. OpenTuner is a generalization of the experience gained in building an autotuner for ZettaBricks. OpenTuner is a new open source framework for building domain-specific multi-objective program autotuners. OpenTuner supports fully-customizable configuration representations, an extensible technique representation to allow for domain-specific techniques, and an easy to use interface for communicating with the program to be autotuned. A key capability inside OpenTuner is the use of ensembles of disparate search techniques simultaneously; techniques that perform well will dynamically be allocated a larger proportion of tests.",
+  "doi": "10.2172/1176882",
+  "openalex": "W2465978700",
+  "status": "ok",
+  "title": "ZettaBricks: A Language Compiler and Runtime System for Anyscale Computing"
+ },
+ "10.2991_amcce-17.2017.171": {
+  "abstract": "More and more scientific problems are now using GPGPU to solve. However , the existing GPGPU did not give a good solution for the problems such as recursive calls and multiple calls problems. Our proposed NKGPGPU model is a descriptive model that solves the key issues of the NK-GPGPU, including hardware architecture, task organization, task execution, and task scheduling. We also prove the validity of our model by optimizing an existing GPGPU performance prediction model.",
+  "doi": "10.2991/amcce-17.2017.171",
+  "openalex": "W2599083492",
+  "status": "ok",
+  "title": "NK-GPGPU A GPGPU model for nested kernels"
+ },
+ "10.3233_978-1-61499-381-0-203": {
+  "abstract": "Hybrid GPU/CPU clusters are becoming very popular in the scientific computing community, as attested by the number of such systems present in the Top 500 list. In this paper, we address one of the key algorithms for scientific applications: the computation of sparse matrix-vector products that lies at the heart of iterative solvers for sparse linear systems.",
+  "doi": "10.3233/978-1-61499-381-0-203",
+  "openalex": "W2241264454",
+  "status": "ok",
+  "title": "Heterogeneous Sparse Matrix Computations on Hybrid GPU/CPU Platforms"
+ },
+ "10.3233_apc200074": {
+  "abstract": "Today's computer architectures are increasingly specialized and heterogeneous configurations of computational units are common. To provide efficient programming of these systems while still achieving good performance, including performance portability across platforms, high-level parallel programming libraries and tool-chains are used, such as the skeleton programming framework SkePU. SkePU works on heterogeneous systems by automatically generating program components, \"user functions\", for multiple different execution units in the system, such as CPU and GPU, from a high-level C++ program. This work extends this multibackend approach by providing the possibility for the programmer to provide additional variants of these user functions tailored for different scenarios, such as platform constraints. This paper introduces the overall approach of multi-variant user functions, provides several use cases including explicit SIMD vectorization for supported hardware, and evaluates the result of these optimizations that can be achieved using this extension.",
+  "doi": "10.3233/apc200074",
+  "openalex": "W3023568124",
+  "status": "ok",
+  "title": "Multi-Variant User Functions for Platform-Aware Skeleton Programming"
+ },
+ "10.3384_9789179291969": {
+  "abstract": "Madrid and member of the ISO C++ Standardization Committee, for being available when we need consultation and for valuable insight into the",
+  "doi": "10.3384/9789179291969",
+  "openalex": "W4210852018",
+  "status": "ok",
+  "title": "Pattern-based Programming Abstractions for Heterogeneous Parallel Computing"
+ },
+ "10.3384_diss.diva-104310": {
+  "abstract": "This thesis adresses issues associated with efficiently programming modern heterogeneous GPU-based systems, containing multicore CPUs and one or more programmable Graphics Processing Units (GPUs). We use ideas from component-based programming to address programming, performance and portability issues of these heterogeneous systems. Specifically, we present three approaches that all use the idea of having multiple implementations for each computation; performance is achieved/retained either a) by selecting a suitable implementation for each computation on a given platform or b) by dividing the computation work across different implementations running on CPU and GPU devices in parallel.",
+  "doi": "10.3384/diss.diva-104310",
+  "openalex": "W189558000",
+  "status": "ok",
+  "title": "Performance-aware component composition for GPU-based systems"
+ },
+ "10.3384_lic.diva-111333": {
+  "abstract": "In this thesis we describe techniques for code generation and global optimization for a PRAM-NUMA multicore architecture. We specifically focus on the REPLICA architecture which is a family massively multithreaded very long instruction word (VLIW) chip multiprocessors with chained functional units that has a reconfigurable emulated shared on-chip memory. The on-ship memory system supports two execution modes, PRAM and NUMA, which can be switched between at run-time. PRAM mode is considered the standard execution mode and targets mainly applications with very high thread level parallelism (TLP). In contrast, NUMA mode is optimized for sequential legacy applications and applications with low amount of TLP. Different versions of the REPLICA architecture have different number of cores, hardware threads and functional units. In order to utilize the REPLICA architecture efficiently we have made several contributions to the development of a compiler for REPLICA target code generation. It supports both code generation for PRAM mode and NUMA mode and can generate code for different versions of the processor pipeline (i.e. for different numbers of functional units). It includes optimization phases to increase the utilization of the available functional units. We have also contributed to quantitative the evaluation of PRAM and NUMA mode. The results show that PRAM mode often suits programs with irregular memory access patterns and control flow best while NUMA mode suites regular programs better. However, for a particular program it is not always obvious which mode, PRAM or NUMA, will show best performance. To tackle this we contributed a case study for generic stencil computations, using machine learning derived cost models in order to automatically select at runtime which mode to execute in. We extended this to also include a sequence of kernels.",
+  "doi": "10.3384/lic.diva-111333",
+  "openalex": "W2157689882",
+  "status": "ok",
+  "title": "Code Generation and Global Optimization Techniques for a Reconfigurable PRAM-NUMA Multicore Architecture"
+ },
+ "10.3384_lic.diva-170194": {
+  "abstract": "Today's society is increasingly software-driven and dependent on powerful computer technology. Therefore it is important that advancements in the low-level processor hardware are made available for exploitation by a growing number of programmers of differing skill level. However, as we are approaching the end of Moore's law, hardware designers are finding new and increasingly complex ways to increase the accessible processor performance. It is getting more and more difficult to effectively target these processing resources without expert knowledge in parallelization, heterogeneous computation, communication, synchronization, and so on. To ensure that the software side can keep up, advanced programming environments and frameworks are needed to bridge the widening gap between hardware and software. One such example is the pattern-centric skeleton programming model and in particular the SkePU project. The work presented in this thesis first redesigns the SkePU framework based on modern C++ variadic template metaprogramming and state-of-the-art compiler technology. It then explores new ways to improve performance: by providing new patterns, improving the data access locality of existing ones, and using both static and dynamic knowledge about program flow. The work combines novel ideas with practical evaluation of the approach on several applications. The advancements also include the first skeleton API that allows variadic skeletons, new data containers, and finally an approach to make skeleton programming more customizable without compromising universal portability.",
+  "doi": "10.3384/lic.diva-170194",
+  "openalex": "W3093534755",
+  "status": "ok",
+  "title": "Designing a Modern Skeleton Programming Framework for Parallel and Heterogeneous Systems"
+ },
+ "10.48550_arxiv.1502.02389": {
+  "abstract": "Computing systems have become increasingly complex with the emergence of heterogeneous hardware combining multicore CPUs and GPUs. These parallel systems exhibit tremendous computational power at the cost of increased programming effort. This results in a tension between achieving performance and code portability. Code is either tuned using device-specific optimizations to achieve maximum performance or is written in a high-level language to achieve portability at the expense of performance. We propose a novel approach that offers high-level programming, code portability and high-performance. It is based on algorithmic pattern composition coupled with a powerful, yet simple, set of rewrite rules. This enables systematic transformation and optimization of a high-level program into a low-level hardware specific representation which leads to high performance code. We test our design in practice by describing a subset of the OpenCL programming model with low-level patterns and by implementing a compiler which generates high performance OpenCL code. Our experiments show that we can systematically derive high-performance device-specific implementations from simple high-level algorithmic expressions. The performance of the generated OpenCL code is on par with highly tuned implementations for multicore CPUs and GPUs written by experts",
+  "doi": "10.48550/arxiv.1502.02389",
+  "openalex": "W2104502231",
+  "status": "ok",
+  "title": "Patterns and Rewrite Rules for Systematic Code Generation (From High-Level Functional Patterns to High-Performance OpenCL Code)"
+ },
+ "10.48550_arxiv.2402.00986": {
+  "abstract": "A compiler's intermediate representation (IR) defines a program's execution plan by encoding its instructions and their relative order. Compiler optimizations aim to replace a given execution plan with a semantically-equivalent one that increases the program's performance for the target architecture. Alternative representations of an IR, like the Program Dependence Graph (PDG), aid this process by capturing the minimum set of constraints that semantically-equivalent execution plans must satisfy. Parallel programming like OpenMP extends a sequential execution plan by adding the possibility of running instructions in parallel, creating a parallel execution plan. Recently introduced parallel IRs, like TAPIR, explicitly encode a parallel execution plan. These new IRs finally make it possible for compilers to change the parallel execution plan expressed by programmers to better fit the target parallel architecture. Unfortunately, parallel IRs do not help compilers in identifying the set of parallel execution plans that preserve the original semantics. In other words, we are still lacking an alternative representation of parallel IRs to capture the minimum set of constraints that parallel execution plans must satisfy to be semantically-equivalent. Unfortunately, the PDG is not an ideal candidate for this task as it was designed for sequential code. We propose the Parallel Semantics Program Dependence Graph (PS-PDG) to precisely capture the salient program constraints that all semantically-equivalent parallel execution plans must satisfy. This paper defines the PS-PDG, justifies the necessity of each extension to the PDG, and demonstrates the increased optimization power of the PS-PDG over an existing PDG-based automatic-parallelizing compiler. Compilers can now rely on the PS-PDG to select different parallel execution plans while maintaining the same original semantics.",
+  "doi": "10.48550/arxiv.2402.00986",
+  "openalex": "W4391555650",
+  "status": "ok",
+  "title": "The Parallel Semantics Program Dependence Graph"
+ },
+ "10.5555_3195638.3195653": {
+  "abstract": "The diversity of microarchitecture designs in heterogeneous computing systems allows programs to achieve high performance and energy efficiency, but results in substantial software re-development cost for each type or generation of hardware. To mitigate this cost, a performance portable programming system is required. One fundamental difference between architectures that makes performance portability challenging is the hierarchical organization of their computing elements. To address this challenge, we introduce TANGRAM, a kernel synthesis framework that composes architecture-neutral computations and composition rules into high-performance kernels customized for different architectural hierarchies. TANGRAM is based on an extensible architectural model that can be used to specify a variety of architectures. This model is coupled with a generic design space exploration and composition algorithm that can generate multiple composition plans for any specified architecture. A custom code generator then compiles these plans for the target architecture while performing various optimizations such as data placement and tuning. We show that code synthesized by TANGRAM for different types and generations of devices achieves no less than 70% of the performance of highly optimized vendor libraries such as Intel MKL and NVIDIA CUBLAS/CUSPARSE.",
+  "doi": "10.5555/3195638.3195653",
+  "openalex": "W2554770544",
+  "status": "ok",
+  "title": "Efficient kernel synthesis for performance portable programming"
+ },
+ "10.5555_3291168.3291217": {
+  "abstract": "Developing server applications that offload computation to a NIC accelerator is complex and laborious. Developers have to explore the design space, which includes semantic changes for different offloading strategies, as well as variations on parallelization, program-to-resource mapping, and communication strategies for program components across devices.We therefore design FLOEM -- a language, compiler, and runtime -- for programming NIC-accelerated applications. FLOEM enables offload design exploration by providing programming abstractions to assign computation to hardware resources; control mapping of logical queues to physical queues; access fields of a packet and its metadata without manually marshaling a packet; use a NIC to memoize expensive computation; and interface with an external application. The compiler infers which data must be transferred between the CPU and NIC and generates a complete cache implementation, while the runtime transparently optimizes DMA throughput. We use FLOEM to explore NIC-offloading designs of real-world applications, including a key-value store and a distributed real-time data analytics system; improve their throughput by 1.3-3.6× and by 75-96%, respectively, over a CPU-only implementation.",
+  "doi": "10.5555/3291168.3291217",
+  "openalex": "W2898662643",
+  "status": "ok",
+  "title": "Floem: a programming system for NIC-accelerated network applications"
+ },
+ "10.7488_era_309": {
+  "abstract": "The scaling limitations of multi-core processor development have led to a diversification of the processor cores used within individual computers. Heterogeneous computing has become widespread, involving the cooperation of several structurally different processor cores. Central processor (CPU) cores are most frequently complemented with graphics processors (GPUs), which despite their name are suitable for many highly parallel computations besides computer graphics. Furthermore, deep learning accelerators are rapidly gaining relevance. Many applications could profit from heterogeneous computing but are held back by the surrounding software ecosystems. Heterogeneous systems are a challenge for compilers in particular, which usually target only the increasingly marginalised homogeneous CPU cores. Therefore, heterogeneous acceleration is primarily accessible via libraries and domain-specific languages (DSLs), requiring application rewrites and resulting in vendor lock-in. This thesis presents a compiler method for automatically targeting heterogeneous hardware from existing sequential C/C++ source code. A new constraint programming method enables the declarative specification and automatic detection of computational idioms within compiler intermediate representation code. Examples of computational idioms are stencils, reductions, and linear algebra. Computational idioms denote algorithmic structures that commonly occur in performance-critical loops. Consequently, well-designed accelerator DSLs and libraries support computational idioms with their programming models and function interfaces. The detection of computational idioms in their middle end enables compilers to incorporate DSL and library backends for code generation. These backends leverage domain knowledge for the efficient utilisation of heterogeneous hardware. The constraint programming methodology is first derived on an abstract model and then implemented as an extension to LLVM. Two constraint programming languages are designed to target this implementation: the Compiler Analysis Description Language (CAnDL), and the extended Idiom Detection Language (IDL). These languages are evaluated on a range of different compiler problems, culminating in a complete heterogeneous acceleration pipeline integrated with the Clang C/C++ compiler. This pipeline was evaluated on the established benchmark collections NPB and Parboil. The approach was applicable to 10 of the benchmark programs, resulting in significant speedups from 1.26× on “histo” to 275× on “sgemm” when starting from sequential baseline versions. In summary, this thesis shows that the automatic recognition of computational idioms during compilation enables the heterogeneous acceleration of sequential C/C++ programs. Moreover, the declarative specification of computational idioms is derived in novel declarative programming languages, and it is demonstrated that constraint programming on Single Static Assignment intermediate code is a suitable method for their automatic detection.",
+  "doi": "10.7488/era/309",
+  "openalex": "W3023977240",
+  "status": "ok",
+  "title": "From constraint programming to heterogeneous parallelism"
+ },
+ "noid-56116dcb5d1f80bf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Generating Performance Portable Code using Rewrite Rules"
+ },
+ "oa-W1013332305": {
+  "abstract": "Today’s computers have processors with multiple cores that allow several applications to execute simultaneously. The way resources are allocated to an application affects whether performance objectives, such as quality of service (QoS), are satisfied. To ensure objectives are met, resources must be carefully but quickly allocated in response to changing runtime conditions. \r\nTraditional approaches to resource allocation take place either purely online or offline. Online methods do not scale to large, multiple core systems because there are too many allocations to evaluate at runtime. Offline methods cannot handle unanticipated workloads or changes. A hybrid approach could combine the lower runtime overhead of offline approaches with the flexibility of online approaches. \r\nThis thesis introduces AUTO, a hybrid solution to perform resource allocation. AUTO dynamically adjusts thread count, core count, and core type. It does so in accordance with a user-provided policy to meet performance objectives. AUTO’s capabilities come from four prediction techniques. The first technique builds and uses models that consider CPU contention and application scalability in order to select co-running applications’ thread counts. The second technique predicts applications’ preferred thread-to-core mappings. The predictions are thread count independent and are translated into concrete thread-to-core mappings based on resource availability. The third technique predicts application performance under thread-to-core mappings. The final technique selects thread count and core count for applications on a system with cores of different capabilities. \r\nAUTO was tested in several scenarios. In each scenario, it was shown to be an effective, efficient solution to resource allocation. First, it was used to select the thread count of one or more co-running applications. Second, it was used to select application thread-to-core mappings. Third, it was used to make predictions about application performance under thread-to-core mappings. Finally, it was used to select both thread count and core type for applications on a computer with cores of different capabilities. AUTO’s resource allocation and models allow for more effective and more efficient policies. By using hybrid online and offline techniques, AUTO solves the problem of allocating threads and cores to meet performance objectives.",
+  "doi": null,
+  "openalex": "W1013332305",
+  "status": "ok",
+  "title": "Predicting application performance for chip multiprocessors"
+ },
+ "oa-W1483258291": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2014.",
+  "doi": null,
+  "openalex": "W1483258291",
+  "status": "ok",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "oa-W2261685355": {
+  "abstract": "While contemporary GPU architectures are heavily biased towards the execution of predictably regular data parallelism, many real application domains are based around data structures which are naturally sparse and irregular. In this paper we demonstrate that high level programming and high performance GPU execution for sparse, irregular problems are not mutually exclusive. Our insight is that this can be achieved by capturing sparsity and irregularity friendly implementations within the target space of a patternoriented, high-level compilation and transformation system. By working in a language rather than a library, we benefit from the ability to generate implementations by program-specific composition of building blocks which capture detailed, low-level implementation choices. Using sparse matrix-vector multiplication as a case study, we show that the resulting system produces implementations for which the performance is competitive with, and sometimes outperforms that obtained with leading ad-hoc approaches. We show that there are correlations between good implementation choices and simple measurable properties of the irregularity present in problem instances. These can be used to design heuristics which navigate the implementation space effectively. In a case study, we implement a number of versions of sparse matrix-vector multiplication, and achieve promising preliminary performance results. On very regular sparse matrices we are able to achieve up to 1.8x the performance of the state-of-the-art sparse matrix-vector implementation from the clSPARSE libray, and up to 0.7x the performance on very irregular applications. [Copyright notice will appear here once ’preprint’ option is removed.]",
+  "doi": null,
+  "openalex": "W2261685355",
+  "status": "ok",
+  "title": "Compositional Compilation for Sparse, Irregular Data Parallelism"
+ },
+ "oa-W2261936932": {
+  "abstract": "With the end of Dennard scaling and emergence of dark silicon, the bets are high on heterogeneous architectures to achieve both application performance and energy efficiency. However, diversity in heterogeneous architectures poses severe programming challenges in terms of data layout, memory coherence, task partitioning, data distribution, and sharing of virtual addresses. Existing high-level programming languages are inadequate to address these new architectural features since they lack the necessary abstractions to address the challenges mentioned above. It is necessary for existing languages to be extended minimally with high-level constructs while maintaining existing standards of portability, performance, and productivity. The compiler and runtime together must efficiently map these constructs to a target architecture. We develop Concord, a C++ based programming model that extends the Intel Threading Building Blocks onto integrated heterogeneous CPU+GPU architectures that do not share the same virtual address between CPU and GPU. Concord supports many C++ features including virtual functions. We implement Shared Virtual Memory to map applications with pointer intensive data structures onto heterogeneous architectures that do not share the same virtual address. We introduce Heterogeneous Habanero-C (H2C), an implementation of the Habanero execution model targeting modern heterogeneous architectures with multiple devices. H2C provides high-level constructs to specify the computation, communication and synchronization in a given application. The H2C compiler and runtime frameworks efficiently map these high-level constructs onto the underlying heterogeneous hardware. The highlights of H2C include: a data layout framework to generate code with best data layout suited for a given memory hierarchy; constructs to specify a task partition, leaving the complex analysis of determining the resultant data distribution to the compiler; and a unified event framework that allows a programmer to write applications with a macro data-flow model onto heterogeneous architectures. Experimental results show Concord and H2C provide good portability, productivity, and performance. In the future, we believe heterogeneous architectures will be more diverse and more pervasive. We believe programming systems like H2C and Concord that have a tight integration of language, compiler and runtime are the right way to target current and future heterogeneous systems.",
+  "doi": null,
+  "openalex": "W2261936932",
+  "status": "ok",
+  "title": "Portable Programming Models for Heterogeneous Platforms"
+ },
+ "s2-1d4fd3e36025609d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scheduling strategies for parallel patterns on heterogeneous architectures"
+ },
+ "s2-32a42a310af92522": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient and portable multi-tasking for heterogeneous systems"
+ },
+ "s2-34ab289a6c9662a2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "H ET MR : Hybrid Deployment of MapReduce Jobs on Heterogeneous Hardware"
+ },
+ "s2-430af9797a44dfeb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Portable Programming Models for Heterogeneous Platforms"
+ },
+ "s2-4bd5a2244311832b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Predicting application performance for chip multiprocessors"
+ },
+ "s2-508b454f54198a94": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Floem: A Programming System for NIC-Accelerated Network Applications"
+ },
+ "s2-59df001bb5fb3fe1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Performance-Portable Benchmarking Methods for Investigating Heterogeneous Computing Platforms"
+ },
+ "s2-63c880433fc32199": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automatic performance optimisation of parallel programs for GPUs via rewrite rules"
+ },
+ "s2-64d2af5337d38899": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Programming Abstractions and Synthesis-Aided Compilation for Emerging Computing Platforms"
+ },
+ "s2-6e1dd2b9e2957f94": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimization of Data-Parallel Scientific Applications on Highly Heterogeneous Modern HPC Platforms"
+ },
+ "s2-6f4cb2b59e635198": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Accelerating Software Pipelines Using Streaming Caches"
+ },
+ "s2-72a321a7d14ee91a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "NEW EMBEDDED COMPUTING ARCHITECTURE USING HETEROGENEOUS PROCESSORS FOR FAST PROCESSING AND LOWER COMPLEXITY"
+ },
+ "s2-768a63aede6e2b23": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploring Parallel Algorithmic Choices for Graph Analytics"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-8a5fe6b6ed9f0e3c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Patterns and Rewrite Rules for Systematic Code Generation (From High-Level Functional Patterns to High-Performance OpenCL Code)"
+ },
+ "s2-91737e09dff329e8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Multi-ariant User Functions for Platform-ware Skeleton Programming"
+ },
+ "s2-9691871ddc9eec02": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compositional Compilation for Sparse, Irregular Data Parallelism"
+ },
+ "s2-9f24854757c6e7d2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Shared resource management for efficient heterogeneous computing"
+ },
+ "s2-baa3ab2fecd13e05": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Edinburgh Research Explorer Compositional Compilation for Sparse , Irregular Data Parallelism"
+ },
+ "s2-cad7e5c715654b34": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Runtime specialization for heterogeneous CPU-GPU platforms"
+ },
+ "s2-d0e83cfa864aad6c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Towards Enhancing Performance, Programmability, and Portability in Heterogeneous Computing"
+ },
+ "s2-e00334f9746afeb9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Edinburgh Research Explorer Generating Performance Portable Code using Rewrite Rules: From High-Level Functional Expressions to High-Performance OpenCL Code"
+ },
+ "s2-ed9c9389ac2af49d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Modeling and buffer analysis of real-time streaming radio applications scheduled on heterogeneous multiprocessors"
+ }
+}

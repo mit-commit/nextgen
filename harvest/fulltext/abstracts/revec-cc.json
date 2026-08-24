@@ -1,0 +1,86 @@
+{
+ "10.1007_978-3-030-72789-5_2": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-72789-5_2",
+  "openalex": "W3149949061",
+  "status": "no_abstract",
+  "title": "PostSLP: Cross-Region Vectorization of Fully or Partially Vectorized Code"
+ },
+ "10.1007_s10766-025-00797-0": {
+  "abstract": "Abstract Legacy code is hard to refactor, and often times, the effort needed to rejuvenate old code is substantial. In particular, compiler intrinsics are often used for clearly and unambiguously expressing low-level vectorization. It is not uncommon for C++ codebases to make use of compiler intrinsics, especially if high performance is critical. Nevertheless, they can be verbose and hard to debug. The C++ standard library introduces std::simd, which is emerging as a high level abstraction for expressing vectorization, allowing for more readable and portable code. Additionally, many of the transformations from compiler intrinsics to std::simd expressions are straightforward and mechanical. However, refactoring code from compiler intrinsics to std::simd can be time-consuming and bug-prone, especially when unfamiliar with the new syntax. With the help of static analysis techniques, it is possible to automatize the process, and ensure code correctness when applying the transformation. In this paper, we introduce a set of techniques to assist developers in the process of migrating existing code bases to a standardized approach for expressing vectorization that is portable to multiple architectures.",
+  "doi": "10.1007/s10766-025-00797-0",
+  "openalex": "W4409186857",
+  "status": "ok",
+  "title": "Code Rejuvenation: From Vector Compiler Intrinsics to Portable Standardized SIMD"
+ },
+ "10.1109_access.2024.3372990": {
+  "abstract": "The Single Instruction Multiple Data (SIMD) architecture, supported by various high-performance computing platforms, efficiently utilizes data-level parallelism. The SIMD model is used in traditional CPUs, dedicated vector systems, and accelerators such as GPUs, vector extensions, and Xeon Phi. It provides performance throughput in computation-intensive and data-parallel applications. Despite the similarity of data-processing principles between these architectures, porting various programming models between the reviewed platforms is challenging. Furthermore, enhancing the programmability of these architectures is an important feature for utilizing their emerging computing power and simplifying programming complexity. This paper reviews the basic principles of optimization techniques to run asynchronous Multiple Instruction Multiple Data (MIMD) on SIMD accelerators. It also surveys several GPU programming paradigms and application programming interfaces (APIs) and classifies these frameworks into different groups based on their criteria. In addition, a review of studies that performed a comparison of the collaborative execution of GPUs with CPUs and Xeon Phi is presented in this paper. This study will be beneficial for developers and researchers in the field of computer architecture and parallel computing of intensive scientific applications, specifically for early-stage high-performance computing researchers, to obtain a brief overview of performance optimization opportunities as well as the challenges of existing SIMD platforms.",
+  "doi": "10.1109/access.2024.3372990",
+  "openalex": "W4392405760",
+  "status": "ok",
+  "title": "MIMD Programs Execution Support on SIMD Machines: A Holistic Survey"
+ },
+ "10.1109_iiswc59245.2023.00036": {
+  "abstract": "Vector processing has become commonplace in today’s CPU microarchitectures. Vector instructions improve performance and energy which is crucial for resource-constraint mobile devices. The research community currently lacks a comprehensive benchmark suite to study the benefits of vector processing for mobile devices. This paper presents Swan—an extensive vector processing benchmark suite for mobile applications. Swan consists of a diverse set of data-parallel workloads from four commonly used mobile applications: operating system, web browser, audio/video messaging application, and PDF rendering engine. Using Swan benchmark suite, we conduct a detailed analysis of the performance, power, and energy consumption of vectorized workloads, and show that: (a) Vectorized kernels increase the pressure on cache hierarchy due to the higher rate of memory requests. (b) Vector processing is more beneficial for workloads with lower precision operations and higher cache hit rates. (c) Limited Instruction-Level Parallelism and strided memory accesses to multi-dimensional data structures prevent vector processing benefits from scaling with more SIMD functional units and wider registers. (d) Despite lower computation throughput than domain-specific accelerators, such as GPU, vector processing outperforms these accelerators for kernels with lower operation counts. Finally, we show five common computation patterns in mobile data-parallel workloads that dominate the execution time.",
+  "doi": "10.1109/iiswc59245.2023.00036",
+  "openalex": "W4387951101",
+  "status": "ok",
+  "title": "Vector-Processing for Mobile Devices: Benchmark and Analysis"
+ },
+ "10.1145_3378678.3391874": {
+  "abstract": "With the rising impact of the memory wall, selecting the adequate data-structure implementation for a given kernel has become a performance-critical issue. This paper presents a new methodology to solve the data-layout decision problem by adapting an input implementation to the host hardware-memory hierarchy. The proposed method automatically identifies, for a given input software, the most performing data-layout implementation for each selected variable by analyzing the memory-access pattern. The proposed method is designed to be embedded within a general-purpose compiler. Experiments on PolybenchC benchmark, recursive-bilateral filter and jpeg-compression kernels, show that our method accurately determines the optimized data structure implementation. These optimized implementations allow reaching an execution-time speed-up up to 48.9X and a L3-miss reduction up to 98.1X, on an X86 processor implementing an Intel Xeon with three levels of data-caches using the least recently used cache-replacement policy.",
+  "doi": "10.1145/3378678.3391874",
+  "openalex": "W3031127412",
+  "status": "ok",
+  "title": "Data-layout optimization based on memory-access-pattern analysis for source-code performance improvement"
+ },
+ "10.1145_3453933.3454016": {
+  "abstract": "System virtualization is a fundamental technology that enables many important applications. However, existing virtualization techniques suffer from a critical limitation due to their limited exploitation of host SIMD hardware resources, especially when a guest application does not have inherently fine-grained data-level parallelism. To bridge this utilization gap and unleash the full potential of host SIMD resources, this paper proposes an effective and unconventional SIMD exploitation technique. The proposed exploitation takes advantage of ample host SIMD registers and powerful host SIMD instructions to generate more efficient host binary code for guest applications even without any fine-grained data-level parallelism. It also mitigates the shortage of general-purpose registers on the host platform, as well as improves the efficiency of accessing guest registers. We have implemented the exploitation in an extensively-used virtualization platform, QEMU. Experimental results on a comprehensive list of benchmarks from PARSEC, SPEC-CPU2017, and Google Octane JavaScript benchmark suite show that an average of 2.2X performance speedup can be achieved for AArch64 binaries on an x86-64 host machine. We believe the proposed technique will provide a new perspective for our community to rethink the exploitation of SIMD hardware resources.",
+  "doi": "10.1145/3453933.3454016",
+  "openalex": "W3156850084",
+  "status": "ok",
+  "title": "Effective exploitation of SIMD resources in cross-ISA virtualization"
+ },
+ "10.1145_3519939.3523719": {
+  "abstract": "The emergence of new architectures create a recurring challenge to ensure that existing programs still work on them. Manually porting legacy code is often impractical. Static binary translation (SBT) is a process where a program’s binary is automatically translated from one architecture to another, while preserving their original semantics. However, these SBT tools have limited support to various advanced architectural features. Importantly, they are currently unable to translate concurrent binaries. The main challenge arises from the mismatches of the memory consistency model specified by the different architectures, especially when porting existing binaries to a weak memory model architecture.",
+  "doi": "10.1145/3519939.3523719",
+  "openalex": "W4281927845",
+  "status": "ok",
+  "title": "Lasagne: a static binary translator for weak memory model architectures"
+ },
+ "10.1145_3559009.3569663": {
+  "abstract": "SIMD (Single Instruction Multiple Data) instructions apply the same operation to multiple elements simultaneously. Compilers transform codes to exploit SIMD instructions through auto-vectorization. Control flow can lead to challenges for auto-vectorization tools because compilers conservatively assume branches are divergent. However, it is common that all SIMD lanes follow the same control-path at run-time, a property we call dynamic uniformity. In this paper, we present VecRC (an auto-vectorizer with run-time checks), a novel compile-time technique that uses run-time checks to test for dynamically uniform control flows. Under the assumption of dynamic uniformity, we perform several compile-time analyses that improve control flow auto-vectorization vs state-of-the-art approaches. VecRC leverages dynamic uniformity to vectorize loops with control-dependent loop-carried dependences. Existing strategies use speculation to optimistically execute vector code, and must correct any incorrect computation due to violated run-time assumptions. VecRC performs compile-time analysis based on uniformity to support such dependences without the overhead of speculation. We propose a probability-based cost model to predict the profitability of run-time checks to eliminate the need for specialized profiling or expensive auto-tuning required in existing methods. VecRC is evaluated in LLVM on a diverse range of benchmarks including SPEC2017, NPB, Parboil, TSVC, and Rodinia on Intel Skylake and IBM Power 9 architectures. On the Skylake architecture, geometric mean speedups of 1.31x, 1.20x, 1.19x, and 1.06x over Region Vectorizer, GCC, Clang, and ICC are obtained with VecRC on real benchmark code.",
+  "doi": "10.1145/3559009.3569663",
+  "openalex": "W4318328068",
+  "status": "ok",
+  "title": "Combining Run-Time Checks and Compile-Time Analysis to Improve Control Flow Auto-Vectorization"
+ },
+ "10.1145_3578360.3580265": {
+  "abstract": "The Java Vector API is a new module introduced in Java 16, allowing developers to concisely express vector computations. The API promises both high performance, achieved via the runtime compilation of vector operations to hardware vector instructions, and portability. To the best of our knowledge, there is no study evaluating the performance of the new Java Vector API. To bridge this gap, we propose JVBench, to the best of our knowledge, the first open-source benchmark suite for the Java Vector API. JVBench extensively exercises the features introduced by the Java Vector API, resulting in high API coverage. We use JVBench to evaluate the performance and portability of the Java Vector API on multiple architectures supporting different vector instruction sets. We compare the performance of the Java Vector API on our benchmarks w.r.t. other semantically equivalent implementations, including scalar (non-auto-vectorized) Java code as well as Java code auto-vectorized by the Just in Time (JIT) compiler. Finally, we report patterns and anti-patterns on the use of the Java Vector API significantly affecting application performance.",
+  "doi": "10.1145/3578360.3580265",
+  "openalex": "W4321184681",
+  "status": "ok",
+  "title": "Java Vector API: Benchmarking and Performance Analysis"
+ },
+ "10.1145_3677333.3678151": {
+  "abstract": "Advanced processors incorporate SIMD extensions to execute data-parallel operations efficiently. As technology advances, new generations of SIMD extensions evolve with longer vector register lengths, making target-specific program non-portable. To address this issue, architectures with vector length agnostic (VLA) programming models have emerged, which can scale across implementations with varying register lengths. However, utilizing SIMD hardware commonly involves programming with target-specific intrinsics. Despite VLA’s scalability within the same ISA, intrinsics programs designed for one VLA target would still encounter portability issues when deployed on other VLA architectures. Although automatic rewriting techniques exist, rewriting strategies for VLA architectures are a relatively new area of research with limited studies available. In this work, we present our rewriting strategies based on the open-source intrinsics rewriting library, SIMD Everywhere (SIMDe), for porting Arm SVE intrinsics to RISC-V Vector Extension (RVV). Our method efficiently transforms masks for predicated instructions between SVE and RVV formats. Additionally, we introduce algorithms for removing redundant mask computation. In our experiment, we evaluate our approach using compute kernels collected from the Arm SVE programming example document that are written in SVE intrinsics. Compared to the scalar implementations provided in the document, which are further vectorized by the compiler, our rewritten RVV still achieves speedup ranging from 1.39× to 28.9× in terms of dynamic instruction count.",
+  "doi": "10.1145/3677333.3678151",
+  "openalex": "W4401454459",
+  "status": "ok",
+  "title": "Rewriting and Optimizing Vector Length Agnostic Intrinsics from Arm SVE to RVV"
+ },
+ "10.1145_3779212.3790127": {
+  "abstract": "Binary translation is a powerful approach to support cross-architecture emulation of unmodified binaries in increasingly heterogeneous computing environments. However, binary translation systems face correctness issues, due to the strong-on-weak memory model mismatch (e.g., from x86-64 to Arm/RISC-V) for concurrent programs. Besides, the current landscape of binary translation systems is fundamentally limited in terms of completeness for static systems and performance for dynamic ones.",
+  "doi": "10.1145/3779212.3790127",
+  "openalex": "W7134888851",
+  "status": "ok",
+  "title": "Arancini: A Hybrid Binary Translator for Weak Memory Model Architectures"
+ },
+ "10.1155_2022_1832522": {
+  "abstract": "SIMD extensions provide an efficient energy consumption platform to support mobile systems. How to use SIMD instructions to improve program performance is a challenge. SLP (superword level parallelism) is an efficient solution to exploit the parallelism, oriented to SIMD, between statements in the basic blocks, and it has been widely used in almost all the mainstream compilers. SLP relies on finding isomorphic statements to pack together into vectors. However, the capability of autovectorization for nonisomorphic statements is insufficient. In this paper, we introduce SLP‐E, a novel autovectorization method that can automatically vectorize the codes which contain nonisomorphic statements, translate the nonisomorphic statements into the isomorphic statements by equivalent extended transformation of expressions, and vectorize the isomorphic statements. SLP‐E improves the application scope and benefits of SLP. We implement the SLP‐E in LLVM and compare it with prior approaches. A set of applications that benefit from autovectorization are taken from the SPEC CPU 2017 benchmark to compare our approach and prior techniques. Experimental results show that SLP‐E achieves more than 43.9% speedup, on average, over other similar methods.",
+  "doi": "10.1155/2022/1832522",
+  "openalex": "W4220766896",
+  "status": "ok",
+  "title": "An SLP Vectorization Method Based on Equivalent Extended Transformation"
+ }
+}

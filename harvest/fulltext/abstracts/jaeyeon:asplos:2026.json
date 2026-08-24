@@ -1,0 +1,16 @@
+{
+ "10.48550_arxiv.2604.17198": {
+  "abstract": "Sparse tensor algebra is challenging to efficiently parallelize due to the irregular, data-dependent, and potentially skewed structure of sparse computation. We propose the first partitioning algorithm that provably load balances the computation of any sparse tensor algebra expression across parallel execution units. Our algorithm generalizes parallel merging algorithms to any number of operands, and to multi-dimensional, hierarchical sparse data structures. We implement our algorithm within an existing sparse tensor algebra compilation framework to automatically generate parallel sparse tensor algebra kernels that target multi-core CPUs and GPUs. We show that our generated code is competitive with hand-implemented parallelization strategies used by vendor libraries like Intel MKL and NVIDIA cuSPARSE (geo-means of $0.73$--$3.4\\times$) and \\textsc{Taco} (geo-means of $1.0$--$2.4\\times$), and significantly outperforms general-purpose strategies for sparse tensor expressions where specialized algorithms have not been developed (geo-means of $2.0$--$6.4\\times$).",
+  "doi": "10.48550/arxiv.2604.17198",
+  "openalex": "W7155046096",
+  "status": "ok",
+  "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution"
+ },
+ "10.48550_arxiv.2606.20855": {
+  "abstract": "Sparse tensors represent data that is mostly zero or some other compressible fill pattern. Such datasets can be massive, so optimized tensor algebra libraries and compilers have been developed to exploit these patterns to improve performance. Existing systems, however, frequently lack support for parallelism, especially when outputs are sparse or multiple inputs are sparse. We propose WingSpan, a sparse tensor language enabling unrestricted parallel programming. WingSpan supports arbitrary composition of parallel loops and data structures, matching or exceeding the performance of hand-optimized parallel routines on critical kernels such as SpGEMM. We also introduce a dependence theory for the safety of parallel programs involving sparse tensors and structures beyond sparsity.",
+  "doi": "10.48550/arxiv.2606.20855",
+  "openalex": "W7165642973",
+  "status": "ok",
+  "title": "WingSpan: Concurrency and Dependence for Sparse and Structured Tensor Compilers"
+ }
+}

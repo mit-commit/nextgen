@@ -1,0 +1,219 @@
+{
+ "10.1007_11916291_1": {
+  "abstract": null,
+  "doi": "10.1007/11916291_1",
+  "openalex": "W1514769748",
+  "status": "no_abstract",
+  "title": "Automated Interpretation of Agent Behaviour"
+ },
+ "10.1007_3-540-35767-x_18": {
+  "abstract": null,
+  "doi": "10.1007/3-540-35767-x_18",
+  "openalex": "W2104643467",
+  "status": "no_abstract",
+  "title": "An Adaptive Scheme for Dynamic Parallelization"
+ },
+ "10.1007_978-3-319-11164-3_11": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-11164-3_11",
+  "openalex": "W108320310",
+  "status": "no_abstract",
+  "title": "Speculative Program Parallelization with Scalable and Decentralized Runtime Verification"
+ },
+ "10.1007_978-3-319-43659-3_17": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-43659-3_17",
+  "openalex": "W2527038815",
+  "status": "no_abstract",
+  "title": "Code Bones: Fast and Flexible Code Generation for Dynamic and Speculative Polyhedral Optimization"
+ },
+ "10.1007_978-3-540-69330-7_21": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-69330-7_21",
+  "openalex": "W1598901422",
+  "status": "no_abstract",
+  "title": "Software Thread Level Speculation for the Java Language and Virtual Machine Environment"
+ },
+ "10.1007_978-3-540-75444-2_45": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-75444-2_45",
+  "openalex": "W1936019662",
+  "status": "no_abstract",
+  "title": "Speculative Parallelization – Eliminating the Overhead of Failure"
+ },
+ "10.1007_978-3-540-89740-8_16": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-89740-8_16",
+  "openalex": "W190163119",
+  "status": "no_abstract",
+  "title": "Compiler-Driven Dependence Profiling to Guide Program Parallelization"
+ },
+ "10.1016_j.procs.2011.04.044": {
+  "abstract": "Speculative software parallelism has gained renewed interest recently as a mechanism to leverage multiple cores on emerging architectures. Two major mechanisms have been used to implement speculation-based parallelism in software, software transactional memory and speculative threads. We propose a third mechanism based on checkpoint restart. With recent developments in checkpoint restart technology this has become an attractive alternative. The approach has the potential advantage of the conceptual simplicity of transactional memory and flexibility of speculative threads. Since many checkpoint restart systems work with large distributed memory programs, this provides an automatic way to perform distributed speculation over clusters. Additionally, since checkpoint restart systems are primarily designed for fault tolerance, using the same system for speculation could provide fault tolerance within speculative execution as well when it is embedded in large-scale applications where fault tolerance is desirable. In this paper we use a series of micro-benchmarks to study the relative performance of a speculative system based on the DMTCP checkpoint restart system and compare it against a thread level speculative system. We highlight the relative merits of each approach and draw some lessons that could be used to guide future developments in speculative systems.",
+  "doi": "10.1016/j.procs.2011.04.044",
+  "openalex": "W2050895853",
+  "status": "ok",
+  "title": "Distributed Speculative Parallelization using Checkpoint Restart"
+ },
+ "10.1109_32.908957": {
+  "abstract": "Explicitly stated program invariants can help programmers by identifying program properties that must be preserved when modifying code. In practice, however, these invariants are usually implicit. An alternative to expecting programmers to fully annotate code with invariants is to automatically infer likely invariants from the program itself. This research focuses on dynamic techniques for discovering invariants from execution traces. This article reports three results. First, it describes techniques for dynamically discovering invariants, along with an implementation, named Daikon, that embodies these techniques. Second, it reports on the application of Daikon to two sets of target programs. In programs from Gries's work (1981) on program derivation, the system rediscovered predefined invariants. In a C program lacking explicit invariants, the system discovered invariants that assisted a software evolution task. These experiments demonstrate that, at least for small programs, invariant inference is both accurate and useful. Third, it analyzes scalability issues, such as invariant detection runtime and accuracy, as functions of test suites and program points instrumented.",
+  "doi": "10.1109/32.908957",
+  "openalex": "W3106729728",
+  "status": "ok",
+  "title": "Dynamically discovering likely program invariants to support program evolution"
+ },
+ "10.1109_hpcc.2014.148": {
+  "abstract": "Barrier are synchronization operations widely used by compiler and programmer, it is flexible and convenient but there are some defects. Threads arrive at barrier ahead of other threads have to wait the subsequent threads. This lead to some waste of time. Our experiments show that up to 35% of the total execution time is wasted on synchronization. Inspired by this, we propose barrier speculation which allows faster threads running speculatively with its own temporary data instead of waiting at barrier for synchronization. To control the max number barriers that threads can speculatively pass through, we also propose two risk control strategies: waiting in place risk control strategy and roll back re-speculate risk control strategy. Our evaluation results show that our barrier speculation together with two risk control strategies can achieve 5.7% and 6.3% overall program execution time reduction on average respectively when compared with conventional synchronization.",
+  "doi": "10.1109/hpcc.2014.148",
+  "openalex": "W2085019617",
+  "status": "ok",
+  "title": "A Speculative Mechanism for Barrier Synchronization"
+ },
+ "10.1109_iccad.2011.6105317": {
+  "abstract": "We propose a cooperation between the programmer, the compiler and the runtime system to identify, exploit and efficiently exercise the parallelism available in many pointer based applications. Our parallelization strategy, called Cooperative Parallelization, is driven by programmer directives as well as runtime information. We show that minimal information from the programmer can be combined with runtime information to extract latent parallelism in many pointer intensive applications that involve trees and linked lists. We implemented a compilation framework which automatically parallelizes programs annotated with parallelism directives. We evaluated our approach on a collection of linked list and tree based applications. Our results show that we can achieve speedups of up to 15× on a sixteen-core platform. We also compared our approach to OpenMP both qualitatively and quantitatively.",
+  "doi": "10.1109/iccad.2011.6105317",
+  "openalex": "W4245824980",
+  "status": "ok",
+  "title": "Cooperative parallelization"
+ },
+ "10.1109_ipdpsw.2014.163": {
+  "abstract": "This paper presents a preliminary performance model for hardware Thread-Level Speculation (TLS) in the IBM Blue Gene/Q computer. The model analyzes the TLS behavior and its overhead. We model the scenario when there are 0, 1 and 2 conflicts. The model shows good performance prediction and is verified with experiments. This study helps to understand potential gains from using special purpose TLS hardware to accelerate the performance of codes that, in a strict sense, require serial processing to avoid memory conflicts.",
+  "doi": "10.1109/ipdpsw.2014.163",
+  "openalex": "W1989854935",
+  "status": "ok",
+  "title": "Performance Modeling for Hardware Thread-Level Speculation"
+ },
+ "10.1109_qsic.2012.46": {
+  "abstract": "Multicore processors are becoming ubiquitous in embedded systems. To take advantage of multicore processor, a great number of previously designed embedded applications need reengineering processes before they are ported to run accurately and efficiently. Massive refactoring of sequential programs to multi-thread programs is required. Parallelisation refactoring is generally implemented by programmers. As multicore processors become more and more complex, the potential human error in the refactoring process increased dramatically. To provide the necessary assurance of correctness, a program transformation framework to validate the parallelised programs is proposed, which is a formal approach to transforming the multi-thread program while validating if the functional behaviour of the existing sequential program is preserved.",
+  "doi": "10.1109/qsic.2012.46",
+  "openalex": "W1980312926",
+  "status": "ok",
+  "title": "A Program Transformation Framework for Multicore Software Reengineering"
+ },
+ "10.1109_sies.2011.5953686": {
+  "abstract": "Web Applications have become increasingly popular as they allow developers to use an uniform platform for user interactions. The dynamic programming language JavaScript used in most Web Applications has performance penalties, that have been addressed by traditional optimization techniques. We have found that while the performance gain of such techniques are positive for a set of established benchmarks, it often fails to improve the performance of real-life Web Applications. We suggest Thread-Level Speculation (TLS) at the JavaScript function level to automatically extract parallelism to gain performance. There have been multiple TLS proposals in both hardware and software, but little work has been done within JavaScript. Currently we are implementing our TLS ideas in a state-of-the-art JavaScript engine targeted for embedded mobile devices.",
+  "doi": "10.1109/sies.2011.5953686",
+  "openalex": "W2146158712",
+  "status": "ok",
+  "title": "Thread-level speculation as an optimization technique in Web Applications — Initial results"
+ },
+ "10.1145_1082473.1082562": {
+  "abstract": "Software comprehension (understanding software structure and behavior) is essential for developing, maintaining, and improving software. This is particularly true of agent-based systems, in which the actions of autonomous agents are affected by numerous factors, such as events in a dynamic environment, local uncertain beliefs, and intentions of other agents. Existing comprehension tools are not suited to such large, concurrent software and do not leverage concepts of the agent-oriented paradigm to aid the user in understanding the software's behavior. To address the software comprehension of agent-based systems, this research proposes a method and accompanying tool that automates some of the manual tasks performed by the human user during software comprehension, such as explanation generation and knowledge verification.",
+  "doi": "10.1145/1082473.1082562",
+  "openalex": "W2071388157",
+  "status": "ok",
+  "title": "Comprehending agent software"
+ },
+ "10.1145_1108768.1108809": {
+  "abstract": "Speculative multithreading (SpMT) is a promising optimisation technique for achieving faster execution of sequential programs on multiprocessor hardware. Analysis of and data acquisition from such systems is however difficult and complex, and is typically limited to a specific hardware design and simulation environment. We have implemented a flexible, software-based speculative multithreading architecture within the context of a full-featured Java virtual machine. We consider the entire Java language and provide a complete set of support features for speculative execution, including return value prediction. Using our system we are able to generate extensive dynamic analysis information, analyse the effects of runtime feedback, and determine the impact of incorporating static, offline information. Our approach allows for accurate analysis of Java SpMT on existing, commodity multiprocessor hardware, and provides a vehicle for further experimentation with speculative approaches and optimisations.",
+  "doi": "10.1145/1108768.1108809",
+  "openalex": "W2119539611",
+  "status": "ok",
+  "title": "SableSpMT"
+ },
+ "10.1145_1108792.1108809": {
+  "abstract": "Speculative multithreading (SpMT) is a promising optimisation technique for achieving faster execution of sequential programs on multiprocessor hardware. Analysis of and data acquisition from such systems is however difficult and complex, and is typically limited to a specific hardware design and simulation environment. We have implemented a flexible, software-based speculative multithreading architecture within the context of a full-featured Java virtual machine. We consider the entire Java language and provide a complete set of support features for speculative execution, including return value prediction. Using our system we are able to generate extensive dynamic analysis information, analyse the effects of runtime feedback, and determine the impact of incorporating static, offline information. Our approach allows for accurate analysis of Java SpMT on existing, commodity multiprocessor hardware, and provides a vehicle for further experimentation with speculative approaches and optimisations.",
+  "doi": "10.1145/1108792.1108809",
+  "openalex": "W4240687373",
+  "status": "ok",
+  "title": "SableSpMT"
+ },
+ "10.1145_1183401.1183407": {
+  "abstract": "Recent research in thread-level speculation (TLS) has proposed several mechanisms for optimistic execution of difficult-to-analyze serial codes in parallel. Though it has been shown that TLS helps to achieve higher levels of parallelism, evaluation of the unique performance potential of TLS, i.e., performance gain that be achieved only through speculation, has not received much attention. In this paper, we evaluate this aspect, by separating the speedup achievable via true TLP (thread-level parallelism) and TLS, for the SPEC CPU2000 benchmark. Further, we dissect the performance potential of each type of speculation --- control speculation, data dependence speculation and data value speculation. To the best of our knowledge, this is the first dissection study of its kind. Assuming an oracle TLS mechanism --- which corresponds to perfect speculation and zero threading overhead --- whereby the execution time of a candidate program region (for speculative execution) can be reduced to zero, our study shows that, at the loop-level, the upper bound on the arithmetic mean and geometric mean speedup achievable via TLS across SPEC CPU2000 is 39.16% (standard deviation = 31.23) and 18.18% respectively.",
+  "doi": "10.1145/1183401.1183407",
+  "openalex": "W1481234801",
+  "status": "ok",
+  "title": "On the performance potential of different types of speculative thread-level parallelism"
+ },
+ "10.1145_2686036": {
+  "abstract": "JavaScript is a sequential programming language that has a large potential for parallel execution in Web applications. Thread-level speculation can take advantage of this, but it has a large memory overhead. In this article, we evaluate the effects of adjusting various parameters for thread-level speculation. Our results clearly show that thread-level speculation is a useful technique for taking advantage of multicore architectures for JavaScript in Web applications, that nested speculation is required in thread-level speculation, and that the execution characteristics of Web applications significantly reduce the needed memory, the number of threads, and the depth of our speculation.",
+  "doi": "10.1145/2686036",
+  "openalex": "W2166503548",
+  "status": "ok",
+  "title": "The Effects of Parameter Tuning in Software Thread-Level Speculation in JavaScript Engines"
+ },
+ "10.1145_2821505": {
+  "abstract": "Current parallelizing compilers can tackle applications exercising regular access patterns on arrays or affine indices, where data dependencies can be expressed in a linear form. Unfortunately, there are cases that independence between statements of code cannot be guaranteed and thus the compiler conservatively produces sequential code. Programs that involve extensive pointer use, irregular access patterns, and loops with unknown number of iterations are examples of such cases. This limits the extraction of parallelism in cases where dependencies are rarely or never triggered at runtime. Speculative parallelism refers to methods employed during program execution that aim to produce a valid parallel execution schedule for programs immune to static parallelization. The motivation for this article is to review recent developments in the area of compiler-driven software speculation for thread-level parallelism and how they came about. The article is divided into two parts. In the first part the fundamentals of speculative parallelization for thread-level parallelism are explained along with a design choice categorization for implementing such systems. Design choices include the ways speculative data is handled, how data dependence violations are detected and resolved, how the correct data are made visible to other threads, or how speculative threads are scheduled. The second part is structured around those design choices providing the advances and trends in the literature with reference to key developments in the area. Although the focus of the article is in software speculative parallelization, a section is dedicated for providing the interested reader with pointers and references for exploring similar topics such as hardware thread-level speculation, transactional memory, and automatic parallelization.",
+  "doi": "10.1145/2821505",
+  "openalex": "W2274823567",
+  "status": "ok",
+  "title": "Compiler-Driven Software Speculation for Thread-Level Parallelism"
+ },
+ "10.1145_302405.302467": {
+  "abstract": "Article Free Access Share on Dynamically discovering likely program invariants to support program evolution Authors: Michael D. Ernst Dept. of Computer Science & Engineering, University of Washington, Box 352350, Seattle WA Dept. of Computer Science & Engineering, University of Washington, Box 352350, Seattle WAView Profile , Jake Cockrell Dept. of Computer Science & Engineering, University of Washington, Box 352350, Seattle WA Dept. of Computer Science & Engineering, University of Washington, Box 352350, Seattle WAView Profile , William G. Griswold Dept. of Computer Science & Engineering, University of California San Diego, 0114, La Jolla, CA Dept. of Computer Science & Engineering, University of California San Diego, 0114, La Jolla, CAView Profile , David Notkin Dept. of Computer Science & Engineering, University of Washington, Box 352350, Seattle WA Dept. of Computer Science & Engineering, University of Washington, Box 352350, Seattle WAView Profile Authors Info & Claims ICSE '99: Proceedings of the 21st international conference on Software engineeringMay 1999 Pages 213–224https://doi.org/10.1145/302405.302467Published:16 May 1999Publication History 249citation1,521DownloadsMetricsTotal Citations249Total Downloads1,521Last 12 Months208Last 6 weeks71 Get Citation AlertsNew Citation Alert added!This alert has been successfully added and will be sent to:You will be notified whenever a record that you have chosen has been cited.To manage your alert preferences, click on the button below.Manage my AlertsNew Citation Alert!Please log in to your account Save to BinderSave to BinderCreate a New BinderNameCancelCreateExport CitationPublisher SiteeReaderPDF",
+  "doi": "10.1145/302405.302467",
+  "openalex": "W2103318645",
+  "status": "ok",
+  "title": "Dynamically discovering likely program invariants to support program evolution"
+ },
+ "10.5555_2132325.2132358": {
+  "abstract": "Abstract—We propose a cooperation between the programmer, the compiler and the runtime system to identify, exploit and efficiently exercise the parallelism available in many pointer based applications. Our parallelization strategy, called Cooperative Parallelization, is driven by programmer directives as well as runtime information. We show that minimal information from the programmer can be combined with runtime information to extract latent parallelism in many pointer intensive applications that involve trees and linked lists. We implemented a compilation framework which automatically parallelizes programs annotated with parallelism directives. We evaluated our approach on a collection of linked list and tree based applications. Our results show that we can achieve speedups of up to 15x on a sixteen-core platform. We also compared our approach to OpenMP both qualitatively and quantitatively. I.",
+  "doi": "10.5555/2132325.2132358",
+  "openalex": "W2295116072",
+  "status": "ok",
+  "title": "Cooperative parallelization"
+ },
+ "oa-W1155193034": {
+  "abstract": "Previous studies have shown that there are large diﬀerences between the workload of established JavaScript benchmarks and popular Web Applications. It has also been shown that popular optimization techniques, such as just-in-time compilation, many times degrade the performance of Web Applications. Further, since JavaScript is a sequential language it cannot take advantage of multicore processors. In this paper, we propose to use Thread-Level Speculation (TLS) as an alternative optimization technique for Web Applications written in JavaScript. Our TLS approach is based on speculation at the function level. We have implemented TLS in WebKit, a state-of-the-art web browser and JavaScript engine. Our results show speedups between 2 and 8 on eight cores for seven popular Web Applications, without any JavaScript source code changes at all. The results also show few roll-backs and the additional memory requirements for our speculation is up to 17.8 MB for the studied Web Applications.",
+  "doi": null,
+  "openalex": "W1155193034",
+  "status": "ok",
+  "title": "The Effect of Thread-Level Speculation on a Set of Well-known Web Applications"
+ },
+ "oa-W1762633329": {
+  "abstract": "Thread Level Speculation (TLS) has been suggested as a mean to automatically (or semi-automatically) extract parallelism from sequential programs. While there have been multiple attempts both in hardware and software to implement real time TLS, to the best of our knowledge all attempts have so far been on a byte code level or with statically typed languages. In this study, we examine the potential of TLS for Web Applications, using the popular scripting language JavaScript(JS).We have chosen to execute the programs by traversing their parse trees, taking advantage of information from the programming language that are normally lost when compiled to, e.g., byte code. We have performed a test where we automatically have divided the execution of the parsing tree among 1, 2, 4, and 8 cores for four benchmark programs. We have found that this approach has a small number of rollbacks (i.e. error correction when speculation fails) and significantly increases the performance of our benchmarks.",
+  "doi": null,
+  "openalex": "W1762633329",
+  "status": "ok",
+  "title": "Thread-Level Speculation for Web Applications"
+ },
+ "oa-W191718398": {
+  "abstract": "Speculative multithreading holds the potential to substantially improve the execution performance of sequential programs by leveraging the resources of multiple execution contexts (e.g., processors or threads). For unstructured non-numeric programs, the three key challenges of parallelization are (1) predicting the sequence of tasks (i.e., groups of instructions) that corresponds to the correct sequential execution of the program, (2) providing each task with the values it needs to execute (i.e., its live-in values), and (3) tolerating the communication latency between processors. To overcome these challenges, we propose a new execution model that differs from previous speculative multithreading models because of its master/slave nature. In this model, one execution context—the master—executes a speculative approximation of the original program—the distilled program—that allows it to anticipate future control- and data-flow and explicitly orchestrate the parallel execution. Because the control flow in the two programs roughly corresponds, the master can accurately predict the sequence of tasks by mapping its program counter (PC) in the distilled program to a task start PC in the original program. Furthermore, speculative state (e.g., register and memory values) generated by the execution of the distilled program serves as predicted live-in values for the tasks. These predictions reduce the impact of communication latency on execution performance. We present an analytical model that shows that, if predictions made by the master are accurate, the execution performance closely tracks that of the distilled program. The distilled program can execute faster than the original program for two reasons: (1) it generates only a subset of the state generated by the original program, and (2) it need not perform the predictable portion of the computation, because the predictions will be verified by the parallelized execution of the original program. We perform an initial exploration of the potential of distilled programs, showing that dynamic instruction count can be reduced significantly with minimal impact on accuracy. 1",
+  "doi": null,
+  "openalex": "W191718398",
+  "status": "ok",
+  "title": "Master/Slave Speculative Parallelization with Distilled Programs"
+ },
+ "oa-W1940715185": {
+  "abstract": "Thread Level Speculation at function level has been sug-gested as a method to automatically (or semi-automatically) extract parallelism from sequential programs. While there have been multiple implementations in both hardware and software, little work has been done in the context of dynamic programming languages such as JavaScript. In this paper we evaluate the effects of a simple Thread Level Speculation approach, implemented on top of the Rhino1 7R2 JavaScript engine. The evalauation is done using the well-known JavaScript benchmark suite V8. More specifically, we have measured the effects of our null return value pre-diction approach for function calls, conflicts with variables in a global scope, and the effects on the execution time. The results show that our strategy to speculate on return values is successful, that conflicts with global variables oc-cur, and for several applications are the execution time im-proved, while the performance decrease for some applica-tions due to speculation overhead. 1.",
+  "doi": null,
+  "openalex": "W1940715185",
+  "status": "ok",
+  "title": "An alternative optimization technique for JavaScript engines"
+ },
+ "oa-W2155943969": {
+  "abstract": "Thesis (Ph. D.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2004.",
+  "doi": null,
+  "openalex": "W2155943969",
+  "status": "ok",
+  "title": "Efficient, transparent, and comprehensive runtime code manipulation"
+ },
+ "oa-W2183241441": {
+  "abstract": "Previous studies have shown that there are large differences between the workload of established JavaScript benchmarks and popular Web Applications. It has also been shown that popular optimization techniques, such as just-in-time compilation, many times degrade the performance of Web Applications. Further, since JavaScript is a sequential languag e it cannot take advantage of multicore processors. Modern web browsers have support for ’Web Workers’ which allows the programmer to execute tasks in parallel. However, it uses a message passing model and it is still the programmer’s responsibility to extract parallelism. In this paper, we propose to use Thread-Level Speculation (TLS) as an optimization technique for Web Applications written in JavaScript and executing it on multicore processors. Our TLS approach is based on speculation at the function level. We have implemented TLS in Squirrelfish, a stateof-the-art JavaScript engine used in the WebKit browser environment. Our results show speedups of up to 8.4 on a dual quad-core machine for 15 popular web applications, without any JavaScript source code changes at all. The results also show few roll-backs and the additional memory requirements for our speculation is up to 33.0 MB for the studied Web Applications.",
+  "doi": null,
+  "openalex": "W2183241441",
+  "status": "ok",
+  "title": "Using Thread-Level Speculation to Improve the Performance of JavaScript Execution in Web Applications"
+ },
+ "oa-W2269131302": {
+  "abstract": "International audience",
+  "doi": null,
+  "openalex": "W2269131302",
+  "status": "ok",
+  "title": "Does dynamic and speculative parallelization enable advanced parallelizing and optimizing code transformations?"
+ },
+ "oa-W586214199": {
+  "abstract": "Dans cette thèse, nous décrivons la conception et l'implémentation d'une plate-forme logicielle de spéculation de threads, ou fils d'exécution, appelée VMAD, pour \"Virtual Machine for Advanced Dynamic analysis and transformation\", et dont la fonction principale est d'être capable de paralléliser de manière spéculative un nid de boucles séquentiel de différentes façons, en ré-ordonnançant ses itérations. La transformation à appliquer est sélectionnée au cours de l'exécution avec pour objectifs de minimiser le nombre de retours arrières et de maximiser la performance. Nous effectuons des transformations de code en appliquant le modèle polyédrique que nous avons adapté à la parallélisation spéculative au cours de l'exécution. Pour cela, nous construisons au préalable un patron de code qui est \"patché\" par notre \"runtime\", ou support d'exécution logiciel, selon des informations de profilage collectées sur des échantillons du temps d'exécution. L'adaptabilité est assurée en considérant des tranches de code de tailles différentes, qui sont exécutées successivement, chacune étant parallélisée différemment, ou exécutée en séquentiel, selon le comportement des accès à la mémoire observé. Nous montrons, sur plusieurs programmes que notre plate-forme offre de bonnes performances, pour des codes qui n'auraient pas pu être traités efficacement par les systèmes spéculatifs de threads proposés précédemment.",
+  "doi": null,
+  "openalex": "W586214199",
+  "status": "ok",
+  "title": "Adapting the polytope model for dynamic and speculative parallelization"
+ },
+ "oa-W764926107": {
+  "abstract": "Depuis plusieurs années, le nombre de cœurs de calcul dans les processeurs ne cesse d'augmenter à chaque nouvelle génération. Les processeurs multi-cœurs sont maintenant très fréquents mais le développement de logiciels séquentiels reste une pratique très courante. Pour pallier à ce problème, des outils de parallélisation automatique ont été proposés mais ils ne sont pas encore prêts pour une utilisation à grande échelle. Nous proposons d'étendre les outils existants dans trois directions différentes. Premièrement, on peut remarquer que le code source de certains programmes n'est pas disponible. Nous proposons donc un système de parallélisation statique de code binaire qui permet de paralléliser un application séquentielle déjà compilée. Ensuite, on peut s'apercevoir que la performance d'un programme dépend du contexte d'exécution dans lequel il s'exécute. Nous présentons donc un système qui permet de sélectionner une version d'un programme parmi plusieurs afin d'exploiter au mieux les particularités du contexte d'exécution courant. Enfin, étant donné que certains programmes sont difficiles à analyser statiquement, nous proposons un système de parallélisation spéculative permettant d'appliquer dynamiquement des transformations de code complexes sur ces programmes. Ces trois systèmes utilisent le modèles polyédrique comme une boîte à outil permettant d'analyser, de transformer ou de paralléliser les programmes. En travaillant à différentes phases de la vie des programmes, ils forment une approche globale qui étend les techniques de parallélisation existantes.",
+  "doi": null,
+  "openalex": "W764926107",
+  "status": "ok",
+  "title": "Static and Dynamic Methods of Polyhedral Compilation for an Efficient Execution in Multicore Environments"
+ }
+}

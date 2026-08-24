@@ -1,0 +1,44 @@
+{
+ "10.1109_ipdpsw63119.2024.00129": {
+  "abstract": "eCC++ is a new compiler construction framework for embedding domain-specific programming languages within C++. That is, the host language is C++, the guest language is the DSL to be embedded in C++, and eCC++ is the tool that enables the embedding. The eCC++ framework is composed of three main components: a front-end, an API for program verification based on a functional and declarative intermediate representation (IR), and a Multi-Level Intermediate Representation (MLIR) code generator. The eCC++ front-end consists of a library of C++ classes and operators that can be used to define the guest language. Guest sources are compiled with any standard C++ compiler, and when run, the resulting executable generates an eCC++ IR representation of the program, which can be verified within the eCC++ framework. Finally, eCC++ allows for high-level and domain-specific optimizations before generating MLIR. In summary, eCC++ aims to act as a generic front-end that enables embedding guest languages into C++, and provides necessary compiler technology for program verification, targeting the existing capabilities in the MLIR infrastructure. The paper evaluates the eCC++ expressiveness and usability describing the process of embedding GraphIt, a high-performance graph language in C++.",
+  "doi": "10.1109/ipdpsw63119.2024.00129",
+  "openalex": "W4401019067",
+  "status": "ok",
+  "title": "eCC++ : A Compiler Construction Framework for Embedded Domain-Specific Languages"
+ },
+ "10.1145_3652620.3676881": {
+  "abstract": "Interactive debuggers are valuable tools to localize defects within programs, but are costly to implement. We argue that existing solutions to generate or configure debuggers for DSLs are not fully satisfying. In this work, we present a novel debugging architecture tailored for the debugging of heterogeneous DSLs, while limiting the effort required from language engineers. This approach enables the use of domain-specific debugging operations, such as breakpoint types and step types. Our architecture relies on language protocols, including a reinterpretation of DAP for the integration of a configurable domain-specific debugger within existing IDEs.",
+  "doi": "10.1145/3652620.3676881",
+  "openalex": "W4403935801",
+  "status": "ok",
+  "title": "Language Protocols for Domain-Specific Debugging"
+ },
+ "10.1145_3656396": {
+  "abstract": "Modern network applications and environments, ranging from data centers and IoT devices to AR/VR headsets and underwater robotics, present diverse requirements that cannot be satisfied by the all-or-nothing approach of TCP and UDP protocols. Network researchers and engineers need to create highly tailored protocols targeting individual problem domains. Existing library-based approaches either fall short on the flexibility in features or offer them at a significant performance overhead. To address this challenge, we present NetBlocks, a domain-specific language, and compiler for designing ad-hoc protocols and generating their highly optimized host network stack implementations. NetBlocks DSL input allows users to configure protocols by selecting and customizing features. Unlike other DSL compilers, NetBlocks also allows network researchers to extend the system and add more features easily without any prior compiler knowledge. Our design and implementation employ a high-performance Aspect-Oriented Programming framework written with the staging framework BuildIt. We also introduce a novel Layout Customization Layer that allows \"staging packet layouts\" alongside the implementation, which is critical for getting the best performance out of the protocol when possible, while allowing the practitioners to maintain compatibility with existing protocol layers where needed. Our evaluations on three applications ranging across deployments in data centers and underwater acoustic networks demonstrate a trade-off between performance (both latency and throughput) and selected features allowing the user to only pay-for-what-they-use.",
+  "doi": "10.1145/3656396",
+  "openalex": "W4399851254",
+  "status": "ok",
+  "title": "NetBlocks: Staging Layouts for High-Performance Custom Host Network Stacks"
+ },
+ "10.1145_3689492.3690044": {
+  "abstract": "Debugging is hard. Interactive debuggers are mostly the same. They show you a stack, a way to sample the state of the stack, and, if the debugger is live, a way to step through execution. The standard interactive debugger for a general-purpose programming language provided by a mainstream IDE mostly offers a low-level interface in terms of generic language constructs to track down and fix bugs. A custom debugger, such as those developed for specific application domains, offers alternative interfaces more suitable to the specific execution context of the program being debugged. Custom debuggers offering contextual debugging views and actions can greatly improve our ability to reason about the current problem. Implementing such custom debuggers, however, is non-trivial, and poses a barrier to improving the debugging experience. In this paper we introduce moldable exceptions, a lightweight mechanism to adapt a debugger’s interface based on contextual information provided by a raised exception. We present, through a series of examples, how moldable exceptions can enhance a live programming environment.",
+  "doi": "10.1145/3689492.3690044",
+  "openalex": "W4402953617",
+  "status": "ok",
+  "title": "Moldable Exceptions"
+ },
+ "10.1145_3708359.3712152": {
+  "abstract": null,
+  "doi": "10.1145/3708359.3712152",
+  "openalex": "W4408614911",
+  "status": "no_abstract",
+  "title": "More than Marketing? On the Information Value of AI Benchmarks for Practitioners"
+ },
+ "s2-8e105628fe6d1454": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Implementing block-sparse matrix multiplication kernels using Triton"
+ }
+}

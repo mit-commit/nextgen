@@ -1,0 +1,240 @@
+{
+ "10.1007_978-3-030-80129-8_66": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-80129-8_66",
+  "openalex": "W3184285164",
+  "status": "no_abstract",
+  "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning"
+ },
+ "10.1007_s00778-010-0183-9": {
+  "abstract": null,
+  "doi": "10.1007/s00778-010-0183-9",
+  "openalex": "W2071225564",
+  "status": "no_abstract",
+  "title": "Engineering scalable, cache and space efficient tries for strings"
+ },
+ "10.1016_j.cl.2015.01.003": {
+  "abstract": null,
+  "doi": "10.1016/j.cl.2015.01.003",
+  "openalex": "W2019718260",
+  "status": "no_abstract",
+  "title": "A methodology for speeding up loop kernels by exploiting the software information and the memory architecture"
+ },
+ "10.1109_icaft66710.2025.11452818": {
+  "abstract": null,
+  "doi": "10.1109/icaft66710.2025.11452818",
+  "openalex": "W7147577340",
+  "status": "no_abstract",
+  "title": "A Survey on High Performance Memory Pool Allocation for Fixed Size Linked List"
+ },
+ "10.1109_ictta.2008.4530212": {
+  "abstract": "One of the most important concerns that large-scale object-oriented developers are faced with, is to keep the right number of server objects in the main memory in order to respond quickly to client requests. On the other hand, the memory size that these server objects consume should not exceed the upper-bound memory size determined for the server process. Also, the mechanism to keep the right objects in the main memory should keep the hit ratio for the requested objects more than a predefined value, (e.g. 75%). In this paper we introduce ALMAS (Application-Level Memory mAnagement Service), an application-level service that keeps the right number of objects in a defined size of memory to obtain a desired hit-ratio. In this service all of the objects are kept in several object pools, each of which applies a set of policies like eviction policy to its objects. To evaluate this service, we have implemented a prototype in order to compare the performance of ALMAS with the mechanisms are used in a typical operating system. Implementation results show better response time for light-weight objects, managed by this service, compared to the ones which are manipulated by an operating system.",
+  "doi": "10.1109/ictta.2008.4530212",
+  "openalex": "W2026648311",
+  "status": "ok",
+  "title": "ALMAS: An Application-Level Memory Management Service"
+ },
+ "10.1109_ipdps.2010.5470428": {
+  "abstract": "Abstract—Dynamic memory management is one of the most expensive but ubiquitous operations in many C/C++ applications. Additional features such as security checks, while desirable, further worsen memory management overheads. With advent of multicore architecture, it is important to investigate how dynamic memory management overheads for sequential applications can be reduced. In this paper, we propose a new approach for accelerating dynamic memory management on multicore architecture, by offloading dynamic management functions to a separate thread that we refer to as memory management thread (MMT). We show that an efficient MMT design can give significant performance improvement by extracting parallelism while being agnostic to the underlying memory management library algorithms and data structures. We also show how parallelism provided by MMT can be beneficial for high overhead memory management tasks, for example, security checks related to memory management. We evaluate MMT on heap allocation-intensive benchmarks running on an Intel core 2 quad platform for two widelyused memory allocators: Doug Lea’s and PHKmalloc allocators. On average, MMT achieves a speedup ratio of 1.19× for both allocators, while both the application and memory management libraries are unmodified and are oblivious to the parallelization scheme. For PHKmalloc with security checks turned on, MMT reduces the security check overheads from 21 % to only 1 % on average. I.",
+  "doi": "10.1109/ipdps.2010.5470428",
+  "openalex": "W2105214485",
+  "status": "ok",
+  "title": "MMT: Exploiting fine-grained parallelism in dynamic memory management"
+ },
+ "10.1109_mascots50786.2020.9285963": {
+  "abstract": "The introduction of NVDIMM memory devices has encouraged the use of DRAM/NVM based hybrid memory systems to increase the memory-per-core ratio in compute nodes and obtain possible energy and cost benefits. However, Non-Volatile Memory (NVM) is slower than DRAM in terms of read/write latency. This difference in performance will adversely affect memory-bound applications. Traditionally, data prefetching at the hardware level has been used to increase the number of cache hits to mitigate performance degradation. However, software (SW) prefetching has not been used effectively to reduce the effects of high memory access latencies. Also, the current cache hierarchy and hardware (HW) prefetching are not optimized for a hybrid memory system. We hypothesize that HW and SW prefetching can complement each other in placing data in caches and the Data Translation Look-aside Buffer (DTLB) prior to their references, and by doing so adaptively, highly varying access latencies in a DRAM/NVM hybrid memory system are taken into account. This work contributes an adaptive SW prefetch method based on the characterization of read/write/unroll prefetch distances for NVM and DRAM. Prefetch performance is characterized via custom benchmarks based on STREAM2 specifications in a multicore MPI runtime environment and compared to the performance of the standard SW prefetch pass in GCC. Furthermore, the effects of HW prefetching on kernels executing on hybrid memory system are evaluated. Experimental results indicate that SW prefetching targeted to populate the DTLB results in up to 26% performance improvement when symbiotically used in conjunction with HW prefetching, as opposed to only HW prefetching. Based on our findings, changes to GCC's prefetch-loop-arrays compiler pass are proposed to take advantage of DTLB prefetching in a hybrid memory system for kernels that are frequently used in HPC applications.",
+  "doi": "10.1109/mascots50786.2020.9285963",
+  "openalex": "W3114998063",
+  "status": "ok",
+  "title": "Symbiotic HW Cache and SW DTLB Prefetching for DRAM/NVM Hybrid Memory"
+ },
+ "10.1109_tc.2023.3302731": {
+  "abstract": "This paper presents VCMalloc, a custom memory allocator based on a new dynamic memory management approach that keeps data allocated in a contiguous form in memory. It can preserve the virtual contiguity of data even after performing different memory operations like “Reallocation” and “Free” without consuming much system resources. A novel control plane that we call a “Memory Management System” is introduced with a set of algorithms for the physical-virtual memory mappings, assuring fast, efficient, and safe tracking of data and user pointers. The proposed allocator prioritizes virtual contiguity while it keeps the physical memory completely up to the operating system to manage. It was tested and compared with the current implementation of Malloc as well as a state-of-the-art memory allocator MIMalloc in the recent versions of the Microsoft Windows operating system. For the allocator itself, a considerable performance increase has been achieved in basic operations of up to 28% increase in allocation speed and 26% in reallocation speed. The data structures allocated by VCMalloc have shown remarkable performance increases of up to 31% faster for matrix multiplication. Furthermore, VCMalloc has also demonstrated its superiority in real-world SPEC CPU 2017 benchmark applications.",
+  "doi": "10.1109/tc.2023.3302731",
+  "openalex": "W4385627187",
+  "status": "ok",
+  "title": "VCMalloc: A Virtually Contiguous Memory Allocator"
+ },
+ "10.1145_1269843.1269850": {
+  "abstract": "Various scratchpad allocation strategies have been developed in the past. Most of them target the reduction of energy consumption. These approaches share the necessity of having direct access to the scratchpad memory. In earlier embedded systems this was always true, but with the increasing complexity of tasks systems have to perform, an additional operating system layer between the hardware and the application is becoming mandatory. This paper presents an approach to integrate a scratchpad memory manager into the operating system. The goal is to minimize energy consumption. In contrast to previous work, compile time knowledge about the application's behavior is taken into account. A set of fast heuristic allocation methods is proposed in this paper. An in-depth study and comparison of achieved energy savings and cycle reductions was performed. The results show that even in the highly dynamic environment of an operating system equipped embedded system, up to 83% energy consumption reduction can be achieved.",
+  "doi": "10.1145/1269843.1269850",
+  "openalex": "W2108991328",
+  "status": "ok",
+  "title": "Operating system integrated energy aware scratchpad allocation strategies for multiprocess applications"
+ },
+ "10.1145_1274971.1275000": {
+  "abstract": "Software or hardware data cache prefetching is an efficient way to hide cache miss latency. However effectiveness of the issued prefetches have to be monitored in order to maximize their positive impact while minimizing their negative impact on performance. In previous proposed dynamic frameworks, the monitoring scheme is either achieved using processor performance counters or using specific hardware. In this work, we propose a prefetching strategy which does not use any specific hardware component or processor performance counter. Our dynamic framework wants to be portable on any modern processor architecture providing at least a prefetch instruction. Opportunity and effectiveness of prefetching loads is simply guided by the time spent to effectively obtain the data. Every load of a program is monitored periodically and can be either associated to a dynamically inserted prefetch instruction or not. It can be associated to a prefetch instruction at some disjoint periods of the whole program run as soon as it is efficient. Our framework has been implemented for Itanium-2 machines. It involves several dynamic instrumentations of the binary code whose overhead is limited to only 4% on average. On a large set of benchmarks, our system is able to speed up some programs by 2%--143%.",
+  "doi": "10.1145/1274971.1275000",
+  "openalex": "W1991050699",
+  "status": "ok",
+  "title": "Performance driven data cache prefetching in a dynamic software optimization system"
+ },
+ "10.1145_1621960.1621967": {
+  "abstract": "Dynamic memory management is one of the most ubiquitous and expensive operations in many C/C++ applications. Some C/C++ programs might spend up to one third of their execution time in dynamic memory management routines. With multicore processors as a mainstream architecture, it is important to investigate how dynamic memory management can exploit the multi-core parallelism for speeding up sequential programs.",
+  "doi": "10.1145/1621960.1621967",
+  "openalex": "W2117836573",
+  "status": "ok",
+  "title": "Memory management thread for heap allocation intensive sequential applications"
+ },
+ "10.1145_1671970.1921704": {
+  "abstract": "A key decision when developing in-memory computing applications is choice of a mechanism to store and retrieve strings. The most efficient current data structures for this task are the hash table with move-to-front chains and the burst trie, both of which use linked lists as a substructure, and variants of binary search tree. These data structures are computationally efficient, but typical implementations use large numbers of nodes and pointers to manage strings, which is not efficient in use of cache. In this article, we explore two alternatives to the standard representation: the simple expedient of including the string in its node, and, for linked lists, the more drastic step of replacing each list of nodes by a contiguous array of characters. Our experiments show that, for large sets of strings, the improvement is dramatic. For hashing, in the best case the total space overhead is reduced to less than 1 bit per string. For the burst trie, over 300MB of strings can be stored in a total of under 200MB of memory with significantly improved search time. These results, on a variety of data sets, show that cache-friendly variants of fundamental data structures can yield remarkable gains in performance.",
+  "doi": "10.1145/1671970.1921704",
+  "openalex": "W2038371276",
+  "status": "ok",
+  "title": "Redesigning the string hash table, burst trie, and BST to exploit cache"
+ },
+ "10.1145_1772954.1772969": {
+  "abstract": "Dynamic memory allocation is widely used in modern programs. General-purpose heap allocators often focus more on reducing their run-time overhead and memory space utilization, but less on exploiting the characteristics of their allocated heap objects. This paper presents a lightweight dynamic optimizer, named Dynamic Pool Allocation (DPA), which aims to exploit the affinity of the allocated heap objects and improve their layout at run-time. DPA uses an adaptive partial call chain with heuristics to aggregate affinitive heap objects into dedicated memory regions, called memory pools. We examine the factors that could affect the effectiveness of such layout. We have implemented DPA and measured its performance on several SPEC CPU 2000 and 2006 benchmarks that use extensive heap objects. Evaluations show that it could achieve an average speed up of 12.1% and 10.8% on two x86 commodity machines respectively using GCC -O3, and up to 82.2% for some benchmarks.",
+  "doi": "10.1145/1772954.1772969",
+  "openalex": "W2035024447",
+  "status": "ok",
+  "title": "On improving heap memory layout by dynamic pool allocation"
+ },
+ "10.1145_2086696.2086705": {
+  "abstract": "With the advent of multicore systems, the gap between processor speed and memory latency has grown worse because of their complex interconnect. Sophisticated techniques are needed more than ever to improve an application's spatial and temporal locality. This paper describes an optimization that aims to improve heap data layout by structure-splitting. It also provides runtime address checking by piggybacking on the existing page protection mechanism to guarantee the correctness of such optimization that has eluded many previous attempts due to safety concerns. The technique can be applied to both sequential and parallel programs at either compile time or runtime. However, we focus primarily on sequential programs (i.e., single-threaded programs) at runtime in this paper. Experimental results show that some benchmarks in SPEC 2000 and 2006 can achieve a speedup of up to 142.8%.",
+  "doi": "10.1145/2086696.2086705",
+  "openalex": "W1971578705",
+  "status": "ok",
+  "title": "On-the-fly structure splitting for heap objects"
+ },
+ "10.1145_2854038.2854050": {
+  "abstract": "Alias analysis is one of the most fundamental techniques that compilers use to optimize languages with pointers. However, in spite of all the attention that this topic has received, the current state-of-the-art approaches inside compilers still face challenges regarding precision and speed. In particular, pointer arithmetic, a key feature in C and C++, is yet to be handled satisfactorily. This paper presents a new alias analysis algorithm to solve this problem. The key insight of our approach is to combine alias analysis with symbolic range analysis. This combination lets us disambiguate fields within arrays and structs, effectively achieving more precision than traditional algorithms. To validate our technique, we have implemented it on top of the LLVM compiler. Tests on a vast suite of benchmarks show that we can disambiguate several kinds of C idioms that current state-of-the-art analyses cannot deal with. In particular, we can disambiguate 1.35x more queries than the alias analysis currently available in LLVM. Furthermore, our analysis is very fast: we can go over one million assembly instructions in 10 seconds.",
+  "doi": "10.1145/2854038.2854050",
+  "openalex": "W2291222735",
+  "status": "ok",
+  "title": "Symbolic range analysis of pointers"
+ },
+ "10.1145_3368826.3377914": {
+  "abstract": "Today, general-purpose memory allocators dominate the landscape of dynamic memory management. While these solutions can provide reasonably good behaviour across a wide range of workloads, it is an unfortunate reality that their behaviour for any particular workload can be highly suboptimal. By catering primarily to average and worst-case usage patterns, these allocators deny programs the advantages of domain-specific optimisations, and thus may inadvertently place data in a manner that hinders performance, generating unnecessary cache misses and load stalls.",
+  "doi": "10.1145/3368826.3377914",
+  "openalex": "W3000488335",
+  "status": "ok",
+  "title": "HALO: post-link heap-layout optimisation"
+ },
+ "10.1145_3373376.3378450": {
+  "abstract": "At global user population scale, important microservices in warehouse-scale data centers can grow to account for an enormous installed base of servers. With the end of Dennard scaling, successive server generations running these microservices exhibit diminishing performance returns. Hence, it is imperative to understand how important microservices spend their CPU cycles to determine acceleration opportunities across the global server fleet. To this end, we first undertake a comprehensive characterization of the top seven microservices that run on the compute-optimized data center fleet at Facebook.",
+  "doi": "10.1145/3373376.3378450",
+  "openalex": "W3012143782",
+  "status": "ok",
+  "title": "Accelerometer"
+ },
+ "10.1145_3495243.3560545": {
+  "abstract": "This paper proposes Mandheling, the first system that enables highly resource-efficient on-device training by orchestrating mixed-precision training with on-chip Digital Signal Processor (DSP) offloading. Mandheling fully explores the advantages of DSP in integer-based numerical calculations using four novel techniques: (1) a CPU-DSP co-scheduling scheme to situationally mitigate the overhead from DSP-unfriendly operators; (2) a self-adaptive rescaling algorithm to reduce the overhead of dynamic rescaling in backward propagation; (3) a batch-splitting algorithm to improve DSP cache efficiency; (4) a DSP compute subgraph-reusing mechanism to eliminate the preparation overhead on DSP. We have fully implemented Mandheling and demonstrated its effectiveness through extensive experiments. The results show that, compared to the state-of-the-art DNN engines from TFLite and MNN, Mandheling reduces per-batch training time by 5.5X and energy consumption by 8.9X on average. In end-to-end training tasks, Mandheling reduces convergence time by up to 10.7X and energy consumption by 13.1X, with only 1.9%--2.7% accuracy loss compared to the FP32 precision setting.",
+  "doi": "10.1145/3495243.3560545",
+  "openalex": "W4306178406",
+  "status": "ok",
+  "title": "Mandheling"
+ },
+ "10.1145_3498361.3538928": {
+  "abstract": "On-device learning is a promising technique for emerging privacy-preserving machine learning paradigms. However, through quantitative experiments, we find that commodity mobile devices cannot well support state-of-the-art DNN training with a large enough batch size, due to the limited local memory capacity. To fill the gap, we propose Melon, a memory-friendly on-device learning framework that enables the training tasks with large batch size beyond the physical memory capacity. Melon judiciously retrofits existing memory saving techniques to fit into resource-constrained mobile devices, i.e., recomputation and micro-batch. Melon further incorporates novel techniques to deal with the high memory fragmentation and memory adaptation. We implement and evaluate Melon with various typical DNN models on commodity mobile devices. The results show that Melon can achieve up to 4.33× larger batch size under the same memory budget. Given the same batch size, Melon achieves 1.89× on average (up to 4.01×) higher training throughput, and saves up to 49.43% energy compared to competitive alternatives. Furthermore, Melon reduces 78.59% computation on average in terms of memory budget adaptation.",
+  "doi": "10.1145/3498361.3538928",
+  "openalex": "W4282974189",
+  "status": "ok",
+  "title": "Melon"
+ },
+ "10.1145_3696443.3708960": {
+  "abstract": "Analyses of heap-intensive applications show that a small fraction of heap objects account for the majority of heap accesses and data cache misses. Prior works like HDS and HALO have shown that allocating hot objects in separate memory regions can improve spatial locality leading to better application performance. However, these techniques are constrained in two primary ways, limiting their gains. First, these techniques have Imperfect Separation, polluting the hot memory region with several cold objects. Second, reordering of objects across allocations is not possible as the original object allocation order is preserved. This paper presents a novel technique that achieves near perfect separation of hot objects via a new context mechanism that efficiently identifies hot objects with high precision. This technique, named PreFix, is based upon Preallocating memory for a Fixed small number of hot objects. The program, guided by profiles, is instrumented to compute context information derived from dynamic object identifiers, that precisely identifies hot object allocations that are then placed at predetermined locations in the preallocated memory. The preallocated memory region for hot objects provides the flexibility to reorder objects across allocations and allows colocation of objects that are part of a hot data stream (HDS), improving spatial locality. The runtime overhead of identifying hot objects is not significant as this optimization is only focused on a small number of static hot allocation sites and dynamic hot objects. While there is an increase in the program's memory foot-print, it is manageable and can be controlled by limiting the size of the preallocated memory. In addition, PreFix incorporates an object recycling optimization that reuses the same preallocated space to store different objects whose lifetimes are not expected to overlap. Our experiments with 13 heap-intensive applications yield reductions in execution times ranging from 2.77% to 74%. On average PreFix reduces execution time by 21.7% compared to 7.3% by HDS and 14% by HALO. This is due to PreFix's precision in hot object identification, hot object colocation, and low runtime overhead.",
+  "doi": "10.1145/3696443.3708960",
+  "openalex": "W4407848649",
+  "status": "ok",
+  "title": "PreFix: Optimizing the Performance of Heap-Intensive Applications"
+ },
+ "10.3724_sp.j.1016.2011.00665": {
+  "abstract": null,
+  "doi": "10.3724/sp.j.1016.2011.00665",
+  "openalex": "W2331744199",
+  "status": "no_abstract",
+  "title": "Dynamic Pool Allocation on Improving Heap Data Locality"
+ },
+ "10.48550_arxiv.2210.16471": {
+  "abstract": "In this paper, we examine a ready-to-use, robust, and computationally fast fixed-size memory pool manager with no-loops and no-memory overhead that is highly suited towards time-critical systems such as games. The algorithm achieves this by exploiting the unused memory slots for bookkeeping in combination with a trouble-free indexing scheme. We explain how it works in amalgamation with straightforward step-by-step examples. Furthermore, we compare just how much faster the memory pool manager is when compared with a system allocator (e.g., malloc) over a range of allocations and sizes.",
+  "doi": "10.48550/arxiv.2210.16471",
+  "openalex": "W1532344523",
+  "status": "ok",
+  "title": "Fast Efficient Fixed-Size Memory Pool: No Loops and No Overhead"
+ },
+ "10.70675_c67e8053z267fz4ae3zab50ze739326ec124": {
+  "abstract": "Analyses de mémoire à bas cout pour des compilateurs efficaces La rapidité, la consommation énergétique et l'efficacité des systèmes logiciels et matériels sont devenues les préoccupations majeures de la communauté informatique de nos jours. Gérer de manière correcte et efficace les problématiques mémoire est essentiel pour le développement des programmes de grande tailles sur des architectures de plus en plus complexes. Dans ce contexte, cette thèse contribue aux domaines de l'analyse mémoire et de la compilation tant sur les aspects théoriques que sur les aspects pratiques et expérimentaux. Outre l'étude approfondie de l'état de l'art des analyses mémoire et des différentes limitations qu'elles montrent, notre contribution réside dans la conception et l'évaluation de nouvelles analyses qui remédient au manque de précision des techniques publiées et implémentées. Nous nous sommes principalement attachés à améliorer l'analyse de pointeurs appartenant à une même structure de données, afin de lever une des limitations majeures des compilateurs actuels. Nous développons nos analyses dans le cadre général de l'interprétation abstraite « non dense ». Ce choix est motivé par les aspects de correction et d'efficacité : deux critères requis pour une intégration facile dans un compilateur. La première analyse que nous concevons est basée sur l'analyse d'intervalles des variables entières ; elle utilise le fait que deux pointeurs définis à l'aide d'un même pointeur de base n'aliasent pas si les valeurs possibles des décalages sont disjointes. La seconde analyse que nous développons est inspirée du domaine abstrait des Pentagones ; elle génère des relations d'ordre strict entre des paires de pointeurs comparables. Enfin, nous combinons et enrichissons les deux analyses précédentes dans un cadre plus général. Ces analyses ont été implémentées dans le compilateur LLVM. Nous expérimentons et évaluons leurs performances, et les comparons aux implémentations disponibles selon deux métriques : le nombre de paires de pointeurs pour lesquelles nous inférons le non-aliasing et les optimisations rendues possibles par nos analyses",
+  "doi": "10.70675/c67e8053z267fz4ae3zab50ze739326ec124",
+  "openalex": "W7148504845",
+  "status": "ok",
+  "title": "Low-cost memory analyses for efficient compilers"
+ },
+ "oa-W1826158585": {
+  "abstract": "Use-after-free vulnerabilities exploiting so-called dangling pointers to deallocated objects are just as dangerous as buffer overflows: they may enable arbitrary code execution. Unfortunately, state-of-the-art defenses against use-after-free vulnerabilities require compiler support, pervasive source code modifications, or incur high performance overheads. This paper presents and evaluates Cling, a memory allocator designed to thwart these attacks at runtime. Cling utilizes more address space, a plentiful resource on modern machines, to prevent typeunsafe address space reuse among objects of different types. It infers type information about allocated objects at runtime by inspecting the call stack of memory allocation routines. Cling disrupts a large class of attacks against use-after-free vulnerabilities, notably including those hijacking the C++ virtual function dispatch mechanism, with low CPU and physical memory overhead even for allocation intensive applications. 1",
+  "doi": null,
+  "openalex": "W1826158585",
+  "status": "ok",
+  "title": "Cling: A memory allocator to mitigate dangling pointers"
+ },
+ "oa-W2144466847": {
+  "abstract": "The large discrepancy between the speed of caches and main memory makes efficient memory management more important than ever. This report gives an overview of the current state of the art in memory management, and how then can be used to make the most of hardware systems like cache hierarchies and hardware prefetchers. Pooled allocation, automatic splitting of objects, pointer compression and copying garbage collection are identified as four promising areas, and it is noted that few if any existing systems offer functionality for all four. Furthermore the report describes the design and implementation of a new software package called Object-Local Heaps (OLH). Object-Local Heaps includes a pooled allocator and a compacting garbage collector to avoid memory fragmentation; as well as structure splitting and pointer compression to conserve memory, better utilize caches and improve the performance of hardware prefechers. The main contribution lies showing how these separate ideas can be combined. The system is tested and evaluated using micro-benchmarks. It is found that Object-Local Heaps can increase the throughput by an order of magnitude when iterating over linked structures, compared to an implementation in pure C that is subject to some fragmentation. The throughput when accessing individual fields in objects of two or more fields can also be more than doubled compared to a program that iterates over a standard C++ vector. Additional overhead renders the system unsuitable for search trees and similar structures however, as they require multiple random accesses throughout pools. A red-black tree from the C++ standard template library is more than twice as fast as an equivalent using Object-Local Heaps. Pooled allocation is identified as the most worthwhile feature to integrate in a production language, structure splitting and pointer compression have to be applied more carefully, and might not be suitable for the general case. Some of the shortcomings of Object-Local Heaps could be overcome by using hierarchical memory layouts for search trees, others by leveraging compiler support to reduce latency in general. In conclusion this work shows that automatic memory management can provide opportunities for significant performance gains as well as safety and convenience.",
+  "doi": null,
+  "openalex": "W2144466847",
+  "status": "ok",
+  "title": "Optimizing Memory Management with Object-Local Heaps"
+ },
+ "oa-W2525410340": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2525410340",
+  "status": "no_abstract",
+  "title": "Analyzing and Accelerating Runtime Systems on Multicore Architecture"
+ },
+ "s2-0b3431b2295f81e0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Contributions to program analysis: expressivity and scalability"
+ },
+ "s2-2aa026e7d986152c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Towards Enabling Low-Level Memory Optimisations at the High-Level with Ownership Annotations"
+ },
+ "s2-657f23bb021951c1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Actes des deuxièmes journées nationales du Groupement de Recherche CNRS du Génie de la Programmation et du Logiciel"
+ },
+ "s2-93166907dd365e55": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cling: A Memory Allocator to Mitigate Dangling Pointers"
+ },
+ "s2-a265112584f955da": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "HASH TÁBLÁK TELJESÍTMÉNYÉNEK MODELLEZÉSE ÉS OPTIMALIZÁLÁSA MODELING AND OPTIMIZING HASH TABLES Ph.D. thesis booklet"
+ },
+ "s2-a9899d22a0c2f245": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing Memory Management with Object-Local Heaps"
+ },
+ "s2-b5d2cf1855bdddfa": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing Memory Management with Object-Local"
+ },
+ "s2-dff860fa0b595f9f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "ANÁLISE SIMBÓLICA DE INTERVALOS DE PONTEIROS"
+ }
+}

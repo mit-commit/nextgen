@@ -1,0 +1,527 @@
+{
+ "10.1007_978-3-032-06818-7_18": {
+  "abstract": null,
+  "doi": "10.1007/978-3-032-06818-7_18",
+  "openalex": "W7117971842",
+  "status": "no_abstract",
+  "title": "PAK-MAN: Enhancing Parallel Bayesian Optimization of Cloud and HPC Systems via Machine Learning"
+ },
+ "10.1007_978-3-319-17473-0_14": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-17473-0_14",
+  "openalex": "W2185810726",
+  "status": "no_abstract",
+  "title": "Change Detection Based Parallelism Mapping: Exploiting Offline Models and Online Adaptation"
+ },
+ "10.1007_978-3-319-52709-3_22": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-52709-3_22",
+  "openalex": "W2582993444",
+  "status": "no_abstract",
+  "title": "Mapping Medley: Adaptive Parallelism Mapping with Varying Optimization Goals"
+ },
+ "10.1007_s11227-019-02914-6": {
+  "abstract": null,
+  "doi": "10.1007/s11227-019-02914-6",
+  "openalex": "W2948121826",
+  "status": "no_abstract",
+  "title": "Simplifying and implementing service level objectives for stream parallelism"
+ },
+ "10.1109_cgo.2019.8661177": {
+  "abstract": "Many programs or algorithms are largely parameterized, especially those based on heuristics. The quality of the results depends on the parameter setting. Different inputs often have different optimal settings. Program tuning is hence of great importance. Existing tuning techniques treat the program as a black-box and hence cannot leverage the internal program states to achieve better tuning. We propose a white-box tuning technique that is implemented as a library. The user can compose complex program tuning tasks by adding a small number of library calls to the original program and providing a few callback functions. Our experiments on 13 widely-used real-world programs show that our technique substantially improves data processing results and outperforms OpenTuner, the state-of-the-art black-box tuning technique.",
+  "doi": "10.1109/cgo.2019.8661177",
+  "openalex": "W4244919398",
+  "status": "ok",
+  "title": "White-Box Program Tuning"
+ },
+ "10.1109_ecrts.2014.32": {
+  "abstract": "We present CoAdapt, a runtime that coordinates accuracy-aware applications, which expose accuracy/performance tradeoffs, with power-aware systems, which manage power/performance tradeoffs. This is a challenging problem because decisions made at one level affect, and often counteract, decisions made at the other, leading to unpredictable behavior. Prior approaches have coordinated application and system, but provide a guarantee in only a single dimension (i.e., just one of performance, power, or accuracy). In contrast, CoAdapt addresses the full performance/power/accuracy problem space with an adaptive runtime control system that guarantees behavior in any two of these dimensions, while optimizing the third. We implement CoAdapt on a Linux/x86 platform and show it predictably stabilizes to the desired behavior, adapts to phases in application workload, and supports dynamic changes to behavioral goals.",
+  "doi": "10.1109/ecrts.2014.32",
+  "openalex": "W2017291426",
+  "status": "ok",
+  "title": "CoAdapt: Predictable Behavior for Accuracy-Aware Applications Running on Power-Aware Systems"
+ },
+ "10.1109_hpca.2014.6835974": {
+  "abstract": "Despite the proliferation of multi-core and multi-threaded architectures, exploiting implicit parallelism for a single semantic thread is still a crucial component in achieving high performance. Look-ahead is a tried-and-true strategy in uncovering implicit parallelism, but a conventional, monolithic out-of-order core quickly becomes resource-inefficient when looking beyond a small distance. A more decoupled approach with an independent, dedicated look-ahead thread on a separate thread context can be a more flexible and effective implementation, especially in a multi-core environment. While capable of generating significant performance gains, the look-ahead agent often becomes the new speed limit. Fortunately, the look-ahead thread has no hard correctness constraints and presents new opportunities for optimizations. One such opportunity is to exploit “weak” dependences. Intuitively, not all dependences are equal. Some links in a dependence chain are weak enough that removing them in the look-ahead thread does not materially affect the quality of look-ahead but improves the speed. While there are some common patterns of weak dependences, they can not be generalized as heuristics in generating better code for the look-ahead thread. A primary reason is that removing a false weak dependence can be exceedingly costly. Nevertheless, a trial-and-error approach can reliably identify opportunities for improving the look-ahead thread and quantify the benefits. A framework based on genetic algorithm can help search for the right set of changes to the look-ahead thread. In the set of applications where the speed of look-ahead has become the new limit, this method is found to improve the overall system performance by up to 1.48x with a geometric mean of 1.14x over the baseline decoupled look-ahead system, while reducing energy consumption by 11%.",
+  "doi": "10.1109/hpca.2014.6835974",
+  "openalex": "W2059800349",
+  "status": "ok",
+  "title": "Accelerating decoupled look-ahead via weak dependence removal: A metaheuristic approach"
+ },
+ "10.1109_icppw.2015.21": {
+  "abstract": "With the wide adoption of high-performance processors and accelerators, large-scale computer vision applications have gained great performance improvement. However, it often requires extensive experiments and expertise to achieve optimal performance from manually-tuned programs, and the programs often need to be re-tuned when transplanted to a different platform, or using a different system configuration. To overcome this problem, in this paper we proposed Hetro CV, a programmer-directed auto-tuning framework and runtime for computer vision applications on heterogeneous CPU-MIC platform. In Hetro CV auto-tuning framework, computation units in the application pipeline are categorized in to one of three patterns: Map, Stencil and MapReduce, and program statistics are extracted from units' meta-information. Machine learning is adopted to train models for each pattern using the tuned parameters and program statistics from trial run sets, so that when a new unit is presented, Hetro CV auto tuner can use the corresponding trained model to generate optimized tuning parameters. In Hetro CV runtime, performance models for processor and co-processor are built to predict the prospective execution time of each computation unit in the application pipeline. We adopted the maximum-throughput mapping strategy, thus each unit would be mapped dynamically to the processor/co-processor queue, which would generate the minimum overall execution time. Experiments on two medical image processing applications running on heterogeneous platform composed of Intel Xeon CPU and Intel Phi co-processor showed advanced performance over naive Open MP tuning and Genetic Algorithm (GA) based heuristic tuning.",
+  "doi": "10.1109/icppw.2015.21",
+  "openalex": "W2296475476",
+  "status": "ok",
+  "title": "HetroCV: Auto-tuning Framework and Runtime for Image Processing and Computer Vision Applications on Heterogeneous Platform"
+ },
+ "10.1109_jproc.2018.2817118": {
+  "abstract": "In the last decade, machine-learning-based compilation has moved from an obscure research niche to a mainstream activity. In this paper, we describe the relationship between machine learning and compiler optimization and introduce the main concepts of features, models, training, and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine-learning-based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.1109/jproc.2018.2817118",
+  "openalex": "W2962724414",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimization"
+ },
+ "10.1109_mcsoc.2016.11": {
+  "abstract": "This paper proposes an online auto-tuning approach for computing kernels. Differently from existing online auto-tuners, which regenerate code with long compilation chains from the source to the binary code, our approach consists on deploying auto-tuning directly at the level of machine code generation. This allows auto-tuning to pay off in very short-running applications. As a proof of concept, our approach is demonstrated in two benchmarks, which execute during hundreds of milliseconds to a few seconds only. In a CPU-bound kernel, the average speedups achieved are 1.10 to 1.58 depending on the target micro-architecture, up to 2.53 in the most favourable conditions (all run-time overheads included). In a memory-bound kernel, less favourable to our runtime auto-tuning optimizations, the average speedups are 1.04 to 1.10, up to 1.30 in the best configuration. Despite the short execution times of our benchmarks, the overhead of our runtime auto-tuning is between 0.2 and 4.2 % only of the total application execution times. By simulating the CPU-bound application in 11 different CPUs, we showed that, despite the clear hardware disadvantage of In-Order (IO) cores vs. Out-of-Order (OOO) equivalent cores, online auto-tuning in IO CPUs obtained an average speedup of 1.03 and an energy efficiency improvement of 39 % over the SIMD reference in OOO CPUs.",
+  "doi": "10.1109/mcsoc.2016.11",
+  "openalex": "W2560290201",
+  "status": "ok",
+  "title": "Pushing the Limits of Online Auto-Tuning: Machine Code Optimization in Short-Running Kernels"
+ },
+ "10.1109_tc.2018.2883597": {
+  "abstract": "In the autonomic computing context, the system is perceived as a set of autonomous elements capable of self-management, where end-users define high-level goals and the system shall adapt to achieve the desired behaviour. Runtime adaptation creates several optimization opportunities, especially if we consider approximate computing applications, where it is possible to trade off the accuracy of the result and the performance. Given that modern systems are limited by the power dissipated, autonomic computing is an appealing approach to increase the computation efficiency. In this paper, we introduce mARGOt, a dynamic autotuning framework to enhance the target application with an adaptation layer to provide self-optimization capabilities. The framework is implemented as a C++ library that works at function-level and provides to the application a mechanism to adapt in a reactive and a proactive way. Moreover, the application is capable to change dynamically its requirements and to learn online the underlying application-knowledge. We evaluated the proposed framework in three real-life scenarios, ranging from embedded to HPC applications. In the three use cases, experimental results demonstrate how, thanks to mARGOt, it is possible to increase the computation efficiency by adapting the application at runtime with a limited overhead.",
+  "doi": "10.1109/tc.2018.2883597",
+  "openalex": "W2903046887",
+  "status": "ok",
+  "title": "mARGOt: A Dynamic Autotuning Framework for Self-Aware Approximate Computing"
+ },
+ "10.1109_tcad.2022.3197980": {
+  "abstract": "Dynamic resources management in reconfigurable processors often manifests as a hard online decision-making task, which should yield premier solutions that must meet Quality-of-Service (QoS) requirements while maximizing the system’s efficiency. Most prior works rely on a hard-to-train predictor to model the complicated relationships between processor configurations and performance. To decide the proper resource allocation, the predictor needs to tentatively evaluate a group of possible configurations, and then decide the best configuration for the workload. This tedious process has an expensive runtime overhead for resource configuration in processors. Besides, prior works focus on improving the prediction accuracy, however, higher performance prediction cannot guarantee a good system outcome. Inspired by recent advances in adversarial learning, we present a generative adversarial network (GAN)-based framework, Amphis, which can directly generate the on-demand processor configuration for any scheduled-in application. By evaluating Amphis on a reconfigurable processor with 18 different workloads, our results demonstrate that the GAN-based method provides tremendous overhead reduction (up to 90%) compared to the SOTA prediction-based method WNNM while providing higher resource utilization.",
+  "doi": "10.1109/tcad.2022.3197980",
+  "openalex": "W4308479918",
+  "status": "ok",
+  "title": "Amphis: Managing Reconfigurable Processor Architectures With Generative Adversarial Learning"
+ },
+ "10.1145_2541940.2541950": {
+  "abstract": "Businesses and Academics are increasingly turning to Infrastructure as a Service (IaaS) Clouds such as Amazon's Elastic Compute Cloud (EC2) to fulfill their computing needs. Unfortunately, current IaaS systems provide a severely restricted pallet of rentable computing options which do not optimally fit the workloads that they are executing. We address this challenge by proposing and evaluating a manycore architecture, called the Sharing Architecture, specifically optimized for IaaS systems by being reconfigurable on a sub-core basis. The Sharing Architecture enables better matching of workload to micro-architecture resources by replacing static cores with Virtual Cores which can be dynamically reconfigured to have different numbers of ALUs and amount of Cache. This reconfigurability enables many of the same benefits of heterogeneous multicores, but in a homogeneous fabric, and enables the reuse and resale of resources on a per ALU or per KB of cache basis. The Sharing Architecture leverages Distributed ILP techniques, but is designed in a way to be independent of recompilation. In addition, we introduce an economic model which is enabled by the Sharing Architecture and show how different users who have varying needs can be better served by such a flexible architecture. We evaluate the Sharing Architecture across a benchmark suite of Apache, SPECint, and parts of PARSEC, and find that it can achieve up to a 5x more economically efficient market when compared to static architecture multicores. We implemented the Sharing Architecture in Verilog and present area overhead results.",
+  "doi": "10.1145/2541940.2541950",
+  "openalex": "W2077583081",
+  "status": "ok",
+  "title": "The sharing architecture"
+ },
+ "10.1145_2644865.2541950": {
+  "abstract": "Businesses and Academics are increasingly turning to Infrastructure as a Service (IaaS) Clouds such as Amazon's Elastic Compute Cloud (EC2) to fulfill their computing needs. Unfortunately, current IaaS systems provide a severely restricted pallet of rentable computing options which do not optimally fit the workloads that they are executing. We address this challenge by proposing and evaluating a manycore architecture, called the Sharing Architecture, specifically optimized for IaaS systems by being reconfigurable on a sub-core basis. The Sharing Architecture enables better matching of workload to micro-architecture resources by replacing static cores with Virtual Cores which can be dynamically reconfigured to have different numbers of ALUs and amount of Cache. This reconfigurability enables many of the same benefits of heterogeneous multicores, but in a homogeneous fabric, and enables the reuse and resale of resources on a per ALU or per KB of cache basis. The Sharing Architecture leverages Distributed ILP techniques, but is designed in a way to be independent of recompilation. In addition, we introduce an economic model which is enabled by the Sharing Architecture and show how different users who have varying needs can be better served by such a flexible architecture. We evaluate the Sharing Architecture across a benchmark suite of Apache, SPECint, and parts of PARSEC, and find that it can achieve up to a 5x more economically efficient market when compared to static architecture multicores. We implemented the Sharing Architecture in Verilog and present area overhead results.",
+  "doi": "10.1145/2644865.2541950",
+  "openalex": "W3005567702",
+  "status": "ok",
+  "title": "The sharing architecture"
+ },
+ "10.1145_2654822.2541950": {
+  "abstract": "Businesses and Academics are increasingly turning to Infrastructure as a Service (IaaS) Clouds such as Amazon's Elastic Compute Cloud (EC2) to fulfill their computing needs. Unfortunately, current IaaS systems provide a severely restricted pallet of rentable computing options which do not optimally fit the workloads that they are executing. We address this challenge by proposing and evaluating a manycore architecture, called the Sharing Architecture, specifically optimized for IaaS systems by being reconfigurable on a sub-core basis. The Sharing Architecture enables better matching of workload to micro-architecture resources by replacing static cores with Virtual Cores which can be dynamically reconfigured to have different numbers of ALUs and amount of Cache. This reconfigurability enables many of the same benefits of heterogeneous multicores, but in a homogeneous fabric, and enables the reuse and resale of resources on a per ALU or per KB of cache basis. The Sharing Architecture leverages Distributed ILP techniques, but is designed in a way to be independent of recompilation. In addition, we introduce an economic model which is enabled by the Sharing Architecture and show how different users who have varying needs can be better served by such a flexible architecture. We evaluate the Sharing Architecture across a benchmark suite of Apache, SPECint, and parts of PARSEC, and find that it can achieve up to a 5x more economically efficient market when compared to static architecture multicores. We implemented the Sharing Architecture in Verilog and present area overhead results.",
+  "doi": "10.1145/2654822.2541950",
+  "openalex": "W3174900494",
+  "status": "ok",
+  "title": "The sharing architecture"
+ },
+ "10.1145_2660193.2660236": {
+  "abstract": "There are many domain libraries, but despite the performance benefits of compilation, domain-specific languages are comparatively rare due to the high cost of implementing an optimizing compiler. We propose commensal compilation, a new strategy for compiling embedded domain-specific languages by reusing the massive investment in modern language virtual machine platforms. Commensal compilers use the host language's front-end, use host platform APIs that enable back-end optimizations by the host platform JIT, and use an autotuner for optimization selection. The cost of implementing a commensal compiler is only the cost of implementing the domain-specific optimizations. We demonstrate the concept by implementing a commensal compiler for the stream programming language StreamJIT atop the Java platform. Our compiler achieves performance 2.8 times better than the StreamIt native code (via GCC) compiler with considerably less implementation effort.",
+  "doi": "10.1145/2660193.2660236",
+  "openalex": "W2026725014",
+  "status": "ok",
+  "title": "StreamJIT"
+ },
+ "10.1145_2694344.2694373": {
+  "abstract": "In many deployments, computer systems are underutilized -- meaning that applications have performance requirements that demand less than full system capacity. Ideally, we would take advantage of this under-utilization by allocating system resources so that the performance requirements are met and energy is minimized. This optimization problem is complicated by the fact that the performance and power consumption of various system configurations are often application -- or even input -- dependent. Thus, practically, minimizing energy for a performance constraint requires fast, accurate estimations of application-dependent performance and power tradeoffs. This paper investigates machine learning techniques that enable energy savings by learning Pareto-optimal power and performance tradeoffs. Specifically, we propose LEO, a probabilistic graphical model-based learning system that provides accurate online estimates of an application's power and performance as a function of system configuration. We compare LEO to (1) offline learning, (2) online learning, (3) a heuristic approach, and (4) the true optimal solution. We find that LEO produces the most accurate estimates and near optimal energy savings.",
+  "doi": "10.1145/2694344.2694373",
+  "openalex": "W2124275906",
+  "status": "ok",
+  "title": "A Probabilistic Graphical Model-based Approach for Minimizing Energy Under Performance Constraints"
+ },
+ "10.1145_2714064.2660236": {
+  "abstract": "There are many domain libraries, but despite the performance benefits of compilation, domain-specific languages are comparatively rare due to the high cost of implementing an optimizing compiler. We propose commensal compilation , a new strategy for compiling embedded domain-specific languages by reusing the massive investment in modern language virtual machine platforms. Commensal compilers use the host language's front-end, use host platform APIs that enable back-end optimizations by the host platform JIT, and use an autotuner for optimization selection. The cost of implementing a commensal compiler is only the cost of implementing the domain-specific optimizations. We demonstrate the concept by implementing a commensal compiler for the stream programming language StreamJIT atop the Java platform. Our compiler achieves performance 2.8 times better than the StreamIt native code (via GCC) compiler with considerably less implementation effort.",
+  "doi": "10.1145/2714064.2660236",
+  "openalex": "W4241156817",
+  "status": "ok",
+  "title": "StreamJIT"
+ },
+ "10.1145_2775054.2694373": {
+  "abstract": "In many deployments, computer systems are underutilized -- meaning that applications have performance requirements that demand less than full system capacity. Ideally, we would take advantage of this under-utilization by allocating system resources so that the performance requirements are met and energy is minimized. This optimization problem is complicated by the fact that the performance and power consumption of various system configurations are often application -- or even input -- dependent. Thus, practically, minimizing energy for a performance constraint requires fast, accurate estimations of application-dependent performance and power tradeoffs. This paper investigates machine learning techniques that enable energy savings by learning Pareto-optimal power and performance tradeoffs. Specifically, we propose LEO, a probabilistic graphical model-based learning system that provides accurate online estimates of an application's power and performance as a function of system configuration. We compare LEO to (1) offline learning, (2) online learning, (3) a heuristic approach, and (4) the true optimal solution. We find that LEO produces the most accurate estimates and near optimal energy savings.",
+  "doi": "10.1145/2775054.2694373",
+  "openalex": "W4247589477",
+  "status": "ok",
+  "title": "A Probabilistic Graphical Model-based Approach for Minimizing Energy Under Performance Constraints"
+ },
+ "10.1145_2786763.2694373": {
+  "abstract": "In many deployments, computer systems are underutilized -- meaning that applications have performance requirements that demand less than full system capacity. Ideally, we would take advantage of this under-utilization by allocating system resources so that the performance requirements are met and energy is minimized. This optimization problem is complicated by the fact that the performance and power consumption of various system configurations are often application -- or even input -- dependent. Thus, practically, minimizing energy for a performance constraint requires fast, accurate estimations of application-dependent performance and power tradeoffs. This paper investigates machine learning techniques that enable energy savings by learning Pareto-optimal power and performance tradeoffs. Specifically, we propose LEO, a probabilistic graphical model-based learning system that provides accurate online estimates of an application's power and performance as a function of system configuration. We compare LEO to (1) offline learning, (2) online learning, (3) a heuristic approach, and (4) the true optimal solution. We find that LEO produces the most accurate estimates and near optimal energy savings.",
+  "doi": "10.1145/2786763.2694373",
+  "openalex": "W4247802564",
+  "status": "ok",
+  "title": "A Probabilistic Graphical Model-based Approach for Minimizing Energy Under Performance Constraints"
+ },
+ "10.1145_2815400.2815403": {
+  "abstract": "Energy consumption limits battery life in mobile devices and increases costs for servers and data centers. Approximate computing addresses energy concerns by allowing applications to trade accuracy for decreased energy consumption. Approximation frameworks can guarantee accuracy or performance and generally reduce energy usage; however, they provide no energy guarantees. Such guarantees would be beneficial for users who have a fixed energy budget and want to maximize application accuracy within that budget. We address this need by presenting JouleGuard: a runtime control system that coordinates approximate applications with system resource usage to provide control theoretic formal guarantees of energy consumption, while maximizing accuracy. We implement JouleGuard and test it on three different platforms (a mobile, tablet, and server) with eight different approximate applications created from two different frameworks. We find that JouleGuard respects energy budgets, provides near optimal accuracy, adapts to phases in application workload, and provides better outcomes than application approximation or system resource adaptation alone. JouleGuard is general with respect to the applications and systems it controls, making it a suitable runtime for a number of approximate computing frameworks.",
+  "doi": "10.1145/2815400.2815403",
+  "openalex": "W2080663940",
+  "status": "ok",
+  "title": "JouleGuard"
+ },
+ "10.1145_2968456.2974043": {
+  "abstract": "The IoT will host a large number of co-existing cyber-physical applications. Continuous change, application interference, environment dynamics and uncertainty lead to complex effects which must be controlled to give performance and application guarantees. Application and platform self-configuration and self-awareness are one paradigm to approach this challenge. They can leverage context knowledge to control platform and application functions and their interaction. They could play a dominant role in large scale cyber-physical systems and systems-of-systems, simply because no person can oversee the whole system functionality and dynamics.",
+  "doi": "10.1145/2968456.2974043",
+  "openalex": "W2530038769",
+  "status": "ok",
+  "title": "Self-aware systems for the internet-of-things"
+ },
+ "10.1145_3173162.3173184": {
+  "abstract": "Many modern computing systems must provide reliable latency with minimal energy. Two central challenges arise when allocating system resources to meet these conflicting goals: (1) complexity modern hardware exposes diverse resources with complicated interactions and (2) dynamics latency must be maintained despite unpredictable changes in operating environment or input. Machine learning accurately models the latency of complex, interacting resources, but does not address system dynamics; control theory adjusts to dynamic changes, but struggles with complex resource interaction. We therefore propose CALOREE, a resource manager that learns key control parameters to meet latency requirements with minimal energy in complex, dynamic en- vironments. CALOREE breaks resource allocation into two sub-tasks: learning how interacting resources affect speedup, and controlling speedup to meet latency requirements with minimal energy. CALOREE deines a general control system whose parameters are customized by a learning framework while maintaining control-theoretic formal guarantees that the latency goal will be met. We test CALOREE's ability to deliver reliable latency on heterogeneous ARM big.LITTLE architectures in both single and multi-application scenarios. Compared to the best prior learning and control solutions, CALOREE reduces deadline misses by 60% and energy consumption by 13%.",
+  "doi": "10.1145/3173162.3173184",
+  "openalex": "W2792814682",
+  "status": "ok",
+  "title": "CALOREE"
+ },
+ "10.1145_3296957.3173184": {
+  "abstract": "Many modern computing systems must provide reliable latency with minimal energy. Two central challenges arise when allocating system resources to meet these conflicting goals: (1) complexity modern hardware exposes diverse resources with complicated interactions and (2) dynamics latency must be maintained despite unpredictable changes in operating environment or input. Machine learning accurately models the latency of complex, interacting resources, but does not address system dynamics; control theory adjusts to dynamic changes, but struggles with complex resource interaction. We therefore propose CALOREE, a resource manager that learns key control parameters to meet latency requirements with minimal energy in complex, dynamic en- vironments. CALOREE breaks resource allocation into two sub-tasks: learning how interacting resources affect speedup, and controlling speedup to meet latency requirements with minimal energy. CALOREE deines a general control system whose parameters are customized by a learning framework while maintaining control-theoretic formal guarantees that the latency goal will be met. We test CALOREE's ability to deliver reliable latency on heterogeneous ARM big.LITTLE architectures in both single and multi-application scenarios. Compared to the best prior learning and control solutions, CALOREE reduces deadline misses by 60% and energy consumption by 13%.",
+  "doi": "10.1145/3296957.3173184",
+  "openalex": "W4255863226",
+  "status": "ok",
+  "title": "CALOREE"
+ },
+ "10.1145_3307650.3326633": {
+  "abstract": "Machine learning and artificial intelligence are invaluable for computer systems optimization: as computer systems expose more resources for management, ML/AI is necessary for modeling these resources' complex interactions. The standard way to incorporate ML/AI into a computer system is to first train a learner to accurately predict the system's behavior as a function of resource usage---e.g., to predict energy efficiency as a function of core usage---and then deploy the learned model as part of a system---e.g., a scheduler. In this paper, we show that (1) continued improvement of learning accuracy may not improve the systems result, but (2) incorporating knowledge of the systems problem into the learning process improves the systems results even though it may not improve overall accuracy. Specifically, we learn application performance and power as a function of resource usage with the systems goal of meeting latency constraints with minimal energy. We propose a novel generative model which improves learning accuracy given scarce data, and we propose a multi-phase sampling technique, which incorporates knowledge of the systems problem. Our results are both positive and negative. The generative model improves accuracy, even for state-of-the-art learning systems, but negatively impacts energy. Multi-phase sampling reduces energy consumption compared to the state-of-the-art, but does not improve accuracy. These results imply that learning for systems optimization may have reached a point of diminishing returns where accuracy improvements have little effect on the systems outcome. Thus we advocate that future work on learning for systems should de-emphasize accuracy and instead incorporate the system problem's structure into the learner.",
+  "doi": "10.1145/3307650.3326633",
+  "openalex": "W2951768877",
+  "status": "ok",
+  "title": "Generative and multi-phase learning for computer systems optimization"
+ },
+ "10.1145_3314221.3314593": {
+  "abstract": "Most traditional software systems are not built with the artificial intelligence support (AI) in mind. Among them, some may require human interventions to operate, e.g., the manual specification of the parameters in the data processing programs, or otherwise, would behave poorly. We propose a novel framework called Autonomizer to autonomize these systems by installing the AI into the traditional programs. Autonomizeris general so it can be applied to many real-world applications. We provide the primitives and the run-time support, where the primitives abstract common tasks of autonomization and the runtime support realizes them transparently. With the support of Autonomizer, the users can gain the AI support with little engineering efforts. Like many other AI applications, the challenge lies in the feature selection, which we address by proposing multiple automated strategies based on the program analysis. Our experiment results on nine real-world applications show that the autonomization only requires adding a few lines to the source code.Besides, for the data-processing programs, Autonomizer improves the output quality by 161% on average over the default settings. For the interactive programs such as game/driving,Autonomizer achieves higher success rate with lower training time than existing autonomized programs.",
+  "doi": "10.1145/3314221.3314593",
+  "openalex": "W2953594004",
+  "status": "ok",
+  "title": "Programming support for autonomizing software"
+ },
+ "10.1145_3485730.3493446": {
+  "abstract": "Edge video analytics based on deep learning has become an important building block for many modern intelligent applications such as mobile augmented reality and autonomous driving. Various mechanisms have been developed to handle dynamic wireless networks, compute resource availability, and achieve high analytics accuracy via filtering, DNN compression, pruning, and adaptation. So far, limited attention has been paid to timeliness---providing strict service-level objectives (SLO) for edge video analytics pipelines, which is essential for the usability of user-interactive and mission-critical intelligent applications. In this paper, we analyze the challenges in achieving SLO for edge video analytics and present a system design for timely edge video analytics over the air leveraging a simple yet effective idea---feedback control. Our preliminary evaluation based on a system prototype and real-world network traces shows the potential of our design. We also discuss the limitations, calling for future work.",
+  "doi": "10.1145/3485730.3493446",
+  "openalex": "W3212832037",
+  "status": "ok",
+  "title": "Better Never Than Late"
+ },
+ "10.1145_3503222.3507775": {
+  "abstract": "Adaptive sampling is a powerful family of algorithms for managing energy consumption on low-power sensors. These algorithms use captured measurements to control the sensor's collection rate, leading to near-optimal error under energy constraints. Adaptive sampling's data-driven nature, however, comes at a cost in privacy. In this work, we demonstrate how the collection rates of general adaptive policies leak information about captured measurements. Further, individual adaptive policies display this leakage on multiple tasks. This result presents a challenge in maintaining privacy for sensors using energy-efficient batched communication. In this context, the size of measurement batches exposes the sampling policy's collection rate. Thus, an attacker who monitors the encrypted link between sensor and server can use message lengths to uncover information about the captured values. We address this side-channel by introducing a framework called Adaptive Group Encoding (AGE) that protects any periodic adaptive sampler. AGE uses quantization to encode all batches as fixed-length messages, making message sizes independent of the collection rate. AGE reduces the quantization error through a series of transformations. The proposed framework preserves the low error of adaptive sampling while preventing information leakage and incurring negligible energy overhead.",
+  "doi": "10.1145/3503222.3507775",
+  "openalex": "W4214614280",
+  "status": "ok",
+  "title": "Protecting adaptive sampling from information leakage on low-power sensors"
+ },
+ "10.1145_3563835.3567655": {
+  "abstract": "Adaptive computing systems automatically monitor their behavior and dynamically adjust their own configuration parameters—or knobs—to ensure that user goals are met despite unpredictable external disturbances to the system. A major limitation of prior adaptation frameworks is that their internal adaptation logic is implemented for a specific, narrow set of goals and knobs, which impedes the development of complex adaptive systems that must meet different goals using different sets of knobs for different deployments, or even change goals during one deployment.",
+  "doi": "10.1145/3563835.3567655",
+  "openalex": "W4310517597",
+  "status": "ok",
+  "title": "GOAL: Supporting General and Dynamic Adaptation in Computing Systems"
+ },
+ "10.1145_3577193.3593712": {
+  "abstract": "As diverse high-performance computing (HPC) systems are built, many opportunities arise for applications to solve larger problems than ever before. Given the significantly increased complexity of these HPC systems and application tuning, empirical performance tuning, such as autotuning, has emerged as a promising approach in recent years. Despite its effectiveness, autotuning is often a computationally expensive approach. Transfer learning (TL)-based autotuning seeks to address this issue by leveraging the data from prior tuning. Current TL methods for autotuning spend significant time modeling the relationship between parameter configurations and performance, which is ineffective for few-shot (that is, few empirical evaluations) tuning on new tasks. We introduce the first generative TL-based autotuning approach based on the Gaussian copula (GC) to model the high-performing regions of the search space from prior data and then generate high-performing configurations for new tasks. This allows a sampling-based approach that maximizes few-shot performance and provides the first probabilistic estimation of the few-shot budget for effective TL-based autotuning. We compare our generative TL approach with state-of-the-art autotuning techniques on several benchmarks. We find that the GC is capable of achieving 64.37% of peak few-shot performance in its first evaluation. Furthermore, the GC model can determine a few-shot transfer budget that yields up to 33.39× speedup, a dramatic improvement over the 20.58× speedup using prior techniques.",
+  "doi": "10.1145/3577193.3593712",
+  "openalex": "W4381327277",
+  "status": "ok",
+  "title": "Transfer-learning-based Autotuning using Gaussian Copula"
+ },
+ "10.1145_3669940.3707259": {
+  "abstract": null,
+  "doi": "10.1145/3669940.3707259",
+  "openalex": "W4407218307",
+  "status": "no_abstract",
+  "title": "DarwinGame: Playing Tournaments for Tuning Applications in Noisy Cloud Environments"
+ },
+ "10.1184_r1_7798289.v1": {
+  "abstract": "Maximizing performance on modern multicore hardware demands aggressive optimizations. Large amounts of legacy code are written for sequential hardware, and parallelization of this code is an important goal. Some programs are written for one parallel platform, but must be periodically updated for other platforms, or updated with the existing platform’s changing characteristics – for example, by splitting work at a different granularity or tiling work to fit in a cache. A programmer tasked with this work will likely refactor the code in ways that diverge from its original implementation’s step-by-step operation, but nevertheless computes correct results. Unfortunately, because modern compilers are unaware of the higher-level structure of a program, they are largely unable to perform this work automatically. First, they generally preserve the operation of the original program at the language-semantics level, down to implementation details. Thus parallelization transforms are often hindered by false dependencies between data-structure operations that are semantically commutative. For example, reordering (e.g.) two tree insertions would produce a different program heap even though the tree elements are identical. Second, by analyzing the program at this low level, they are generally unable to derive invariants at a higher level, such as that no two pointers in a particular list alias each other. Both of these shortcomings hinder modern parallelization analyses from reaching the performance that a human programmer can achieve by refactoring. In this thesis, we introduce an enhanced compiler and runtime system that can parallelize sequential loops in a program by reasoning about a program’s high-level semantics. We make three contributions. First, we enhance the compiler to reason about data structures as first-class values: operations on maps and lists, and traversals over them, are encoded directly. Semantic models map library data types that implement these standard containers to the IR intrinsics. This enables the compiler to reason about commutativity of various operations, and provides a basis for deriving data-structure invariants. Second, we present distinctness analysis, a type of static alias analysis that is specially designed to derive results for parallelization that are just as precise as needed, while remaining simple and widely applicable. This analysis discovers non-aliasing across loop iterations, which is a form of flow-sensitivity that nevertheless is much simpler than past work’s closed-form analysis of linear indexing of data structures. Finally, for cases when infrequent occurrences rule out a loop parallelization, or when static analysis cannot prove the parallelization to be safe, we leverage dynamic checks. Our hybrid static-dynamic approach extends the logic of our static alias analysis to find a set of checks to perform at runtime, and then uses the implications of these checks in its static reasoning. With the proper runtime techniques, these dynamic checks can be used to parallelize many loops without any speculation or rollback overhead. This system, which we have proven sound, performs significantly better than prior standard loopparallelization techniques. We argue that a compiler and runtime system with built-in data-structure primitives, simple but effective alias-analysis extensions, and some carefully-placed dynamic checks is a promising platform for macro-scale program transforms such as loop parallelization, and potentially many other lines of future work.",
+  "doi": "10.1184/r1/7798289.v1",
+  "openalex": "W2918836331",
+  "status": "ok",
+  "title": "Finding and Exploiting Parallelism with Data-Structure-Aware Static and Dynamic Analysis"
+ },
+ "10.14529_jsfi150205": {
+  "abstract": "The chances to reach Exascale or Ultrascale Computing are strongly connected with the problem of the energy consumption for processing applications. For physical as well as economical reasons, the energy consumption has to be reduced significantly to make Ultrascale Computing possible. The research efforts towards energy-saving mechanisms of the hardware has already led to energy-aware hardware systems available today. However, hardware mechanisms can only obtain an energy reduction if software can exploit them such that energy-efficient computing actually results. In the software area, there also exists a multitude of research approaches towards energy saving. These research approaches and results are often isolated either on the system software level or the application organization level, reflecting the expertise of the corresponding research group. The challenge of reducing the energy consumption dramatically to make Ultrascale Computing possible are so ambitions that a concerted action combining all these software levels and research efforts seems reasonable. In this article, we demonstrate the current research efforts and results related to energy in the diverse areas of software. Moreover, we conclude with open problems and questions concerning energy-related techniques with an emphasis on the application algorithmic side.",
+  "doi": "10.14529/jsfi150205",
+  "openalex": "W1915110896",
+  "status": "ok",
+  "title": "Energy-efficient Algorithms for Ultrascale Systems"
+ },
+ "10.17635_lancaster_thesis_371": {
+  "abstract": "Contemporary software systems often have millions of lines of code that interact over complex infrastructures. The development of such systems is very challenging due to the increasing complexity of services and the high level of dynamism of current operating environments. In order to support the development and management of such systems, autonomic computing concepts have gained significant importance. The majority of autonomic computing approaches show significant levels of expert dependency in designing adaptive solutions. These approaches usually rely on human-made models and policies to support and guide software adaptation at runtime. These approaches mainly suffer from: i) a significant upfront effort demanded to create such solutions, which adds to the complexity of creating autonomous systems, and ii) unreliability given the high levels of uncertainty in current operating environments, leading the system to degraded performance and error states when subjected to unpredicted operating conditions and unexpected software interactions. Motivated by the problems and limitations of state-of-the-art autonomic computing solutions, this thesis introduces the concept of Emergent Software Systems. These systems are autonomously composed at runtime from discovered components, and are autonomously optimised based on the operating conditions, being able to build their own understanding of their environment and constituent parts. This thesis defines Emergent Software Systems, presenting the challenges of implementing such approach, and presents a fully functioning emergent systems framework that demonstrates this concept in real-world, fully functioning datacentre-based software.",
+  "doi": "10.17635/lancaster/thesis/371",
+  "openalex": "W2927094313",
+  "status": "ok",
+  "title": "Emergent software systems"
+ },
+ "10.2172_1176882": {
+  "abstract": "This grant supported the ZettaBricks and OpenTuner projects. ZettaBricks is a new implicitly parallel language and compiler where defining multiple implementations of multiple algorithms to solve a problem is the natural way of programming. ZettaBricks makes algorithmic choice a first class construct of the language. Choices are provided in a way that also allows our compiler to tune at a finer granularity. The ZettaBricks compiler autotunes programs by making both fine-grained as well as algorithmic choices. Choices also include different automatic parallelization techniques, data distributions, algorithmic parameters, transformations, and blocking. Additionally, ZettaBricks introduces novel techniques to autotune algorithms for different convergence criteria. When choosing between various direct and iterative methods, the ZettaBricks compiler is able to tune a program in such a way that delivers near-optimal efficiency for any desired level of accuracy. The compiler has the flexibility of utilizing different convergence criteria for the various components within a single algorithm, providing the user with accuracy choice alongside algorithmic choice. OpenTuner is a generalization of the experience gained in building an autotuner for ZettaBricks. OpenTuner is a new open source framework for building domain-specific multi-objective program autotuners. OpenTuner supports fully-customizable configuration representations, an extensible technique representation to allow for domain-specific techniques, and an easy to use interface for communicating with the program to be autotuned. A key capability inside OpenTuner is the use of ensembles of disparate search techniques simultaneously; techniques that perform well will dynamically be allocated a larger proportion of tests.",
+  "doi": "10.2172/1176882",
+  "openalex": "W2465978700",
+  "status": "ok",
+  "title": "ZettaBricks: A Language Compiler and Runtime System for Anyscale Computing"
+ },
+ "10.48550_arxiv.1707.04245": {
+  "abstract": "Modern software systems in many application areas offer to the user a multitude of parameters, switches and other customisation hooks. Humans tend to have difficulties determining the best configurations for particular applications. Modern optimising compilers are an example of such software systems; their many parameters need to be tuned for optimal performance, but are often left at the default values for convenience. In this work, we automatically determine compiler parameter settings that result in optimised performance for particular applications. Specifically, we apply a state-of-the-art automated parameter configuration procedure based on cutting-edge machine learning and optimisation techniques to two prominent JavaScript compilers and demonstrate that significant performance improvements, more than 35% in some cases, can be achieved over the default parameter settings on a diverse set of benchmarks.",
+  "doi": "10.48550/arxiv.1707.04245",
+  "openalex": "W2735866612",
+  "status": "ok",
+  "title": "Hot-Rodding the Browser Engine: Automatic Configuration of JavaScript Compilers"
+ },
+ "10.48550_arxiv.1802.09180": {
+  "abstract": "Modern data processing applications execute increasingly sophisticated analysis that requires operations beyond traditional relational algebra. As a result, operators in query plans grow in diversity and complexity. Designing query optimizer rules and cost models to choose physical operators for all of these novel logical operators is impractical. To address this challenge, we develop Cuttlefish, a new primitive for adaptively processing online query plans that explores candidate physical operator instances during query execution and exploits the fastest ones using multi-armed bandit reinforcement learning techniques. We prototype Cuttlefish in Apache Spark and adaptively choose operators for image convolution, regular expression matching, and relational joins. Our experiments show Cuttlefish-based adaptive convolution and regular expression operators can reach 72-99% of the throughput of an all-knowing oracle that always selects the optimal algorithm, even when individual physical operators are up to 105x slower than the optimal. Additionally, Cuttlefish achieves join throughput improvements of up to 7.5x compared with Spark SQL's query optimizer.",
+  "doi": "10.48550/arxiv.1802.09180",
+  "openalex": "W2788511578",
+  "status": "ok",
+  "title": "Cuttlefish: A Lightweight Primitive for Adaptive Query Processing"
+ },
+ "10.48550_arxiv.1805.03441": {
+  "abstract": "In the last decade, machine learning based compilation has moved from an an obscure research niche to a mainstream activity. In this article, we describe the relationship between machine learning and compiler optimisation and introduce the main concepts of features, models, training and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine learning based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.48550/arxiv.1805.03441",
+  "openalex": "W2802910567",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "10.48550_arxiv.1911.00119": {
+  "abstract": "An increasing number of software applications incorporate runtime Deep Neural Networks (DNNs) to process sensor data and return inference results to humans. Effective deployment of DNNs in these interactive scenarios requires meeting latency and accuracy constraints while minimizing energy, a problem exacerbated by common system dynamics. Prior approaches handle dynamics through either (1) system-oblivious DNN adaptation, which adjusts DNN latency/accuracy tradeoffs, or (2) application-oblivious system adaptation, which adjusts resources to change latency/energy tradeoffs. In contrast, this paper improves on the state-of-the-art by coordinating application- and system-level adaptation. ALERT, our runtime scheduler, uses a probabilistic model to detect environmental volatility and then simultaneously select both a DNN and a system resource configuration to meet latency, accuracy, and energy constraints. We evaluate ALERT on CPU and GPU platforms for image and speech tasks in dynamic environments. ALERT's holistic approach achieves more than 13% energy reduction, and 27% error reduction over prior approaches that adapt solely at the application or system level. Furthermore, ALERT incurs only 3% more energy consumption and 2% higher DNN-inference error than an oracle scheme with perfect application and system knowledge.",
+  "doi": "10.48550/arxiv.1911.00119",
+  "openalex": "W3030408490",
+  "status": "ok",
+  "title": "ALERT: Accurate Learning for Energy and Timeliness"
+ },
+ "10.48550_arxiv.2108.10701": {
+  "abstract": "Many applications in important problem domains such as machine learning and computer vision are streaming applications that take a sequence of inputs over time. It is challenging to find knob settings that optimize the run-time performance of such applications because the optimal knob settings are usually functions of inputs, computing platforms, time as well as user's requirements, which can be very diverse. Most prior works address this problem by offline profiling followed by training models for control. However, profiling-based approaches incur large overhead before execution; it is also difficult to redeploy them in other run-time configurations. In this paper, we propose Sonic, a sampling-based online controller for long-running streaming applications that does not require profiling ahead of time. Within each phase of a streaming application's execution, Sonic utilizes the beginning portion to sample the knob space strategically and aims to pick the optimal knob setting for the rest of the phase, given a user-specified constrained optimization problem. A hybrid approach of machine learning regressions and Bayesian optimization are used for better overall sampling choices. Sonic is implemented independent of application, device, input, performance objective and constraints. We evaluate Sonic on traditional parallel benchmarks as well as on deep learning inference benchmarks across multiple platforms. Our experiments show that when using Sonic to control knob settings, application run-time performance is only 5.3% less than if optimal knob settings were used, demonstrating that Sonic is able to find near-optimal knob settings under diverse run-time configurations without prior knowledge quickly.",
+  "doi": "10.48550/arxiv.2108.10701",
+  "openalex": "W3194670281",
+  "status": "ok",
+  "title": "Sonic: A Sampling-based Online Controller for Streaming Applications"
+ },
+ "10.48550_arxiv.2204.10451": {
+  "abstract": "Modern computer systems need to execute under strict safety constraints (e.g., a power limit), but doing so often conflicts with their ability to deliver high performance (i.e. minimal latency). Prior work uses machine learning to automatically tune hardware resources such that the system execution meets safety constraints optimally. Such solutions monitor past system executions to learn the system's behavior under different hardware resource allocations before dynamically tuning resources to optimize the application execution. However, system behavior can change significantly between different applications and even different inputs of the same applications. Hence, the models learned using data collected a priori are often suboptimal and violate safety constraints when used with new applications and inputs. To address this limitation, we introduce the concept of an execution space, which is the cross product of hardware resources, input features, and applications. To dynamically and safely allocate hardware resources from the execution space, we present SCOPE, a resource manager that leverages a novel safe exploration framework. We evaluate SCOPE's ability to deliver improved latency while minimizing power constraint violations by dynamically configuring hardware while running a variety of Apache Spark applications. Compared to prior approaches that minimize power constraint violations, SCOPE consumes comparable power while improving latency by up to 9.5X. Compared to prior approaches that minimize latency, SCOPE achieves similar latency but reduces power constraint violation rates by up to 45.88X, achieving almost zero safety constraint violations across all applications.",
+  "doi": "10.48550/arxiv.2204.10451",
+  "openalex": "W4224854602",
+  "status": "ok",
+  "title": "SCOPE: Safe Exploration for Dynamic Computer Systems Optimization"
+ },
+ "10.48550_arxiv.2502.14987": {
+  "abstract": null,
+  "doi": "10.48550/arxiv.2502.14987",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Taming and Controlling Performance and Energy Trade-offs Automatically in Network Applications"
+ },
+ "10.48550_arxiv.2509.11000": {
+  "abstract": "Performance-influence models are beneficial for understanding how configurations affect system performance, but their creation is challenging due to the exponential growth of configuration spaces. While gray-box approaches leverage selective \"structural knowledge\" (like the module execution graph of the system) to improve modeling, the relationship between this knowledge, a system's characteristics (we call them \"structural aspects\"), and potential model improvements is not well understood. This paper addresses this gap by formally investigating how variations in structural aspects (e.g., the number of modules and options per module) and the level of structural knowledge impact the creation of \"opportunities\" for improved \"modular performance modeling\". We introduce and quantify the concept of modeling \"hardness\", defined as the inherent difficulty of performance modeling. Through controlled experiments with synthetic system models, we establish an \"analytical matrix\" to measure these concepts. Our findings show that modeling hardness is primarily driven by the number of modules and configuration options per module. More importantly, we demonstrate that both higher levels of structural knowledge and increased modeling hardness significantly enhance the opportunity for improvement. The impact of these factors varies by performance metric; for ranking accuracy (e.g., in debugging task), structural knowledge is more dominant, while for prediction accuracy (e.g., in resource management task), hardness plays a stronger role. These results provide actionable insights for system designers, guiding them to strategically allocate time and select appropriate modeling approaches based on a system's characteristics and a given task's objectives.",
+  "doi": "10.48550/arxiv.2509.11000",
+  "openalex": "W4414691297",
+  "status": "ok",
+  "title": "Hardness, Structural Knowledge, and Opportunity: An Analytical Framework for Modular Performance Modeling"
+ },
+ "10.5445_ir_1000119646": {
+  "abstract": null,
+  "doi": "10.5445/ir/1000119646",
+  "openalex": "W3028782475",
+  "status": "no_abstract",
+  "title": "Autotuning for Automatic Parallelization on Heterogeneous Systems"
+ },
+ "10.70675_a8cfc344z0739z4f9bz9422z96a95c83b50e": {
+  "abstract": "Dans les systèmes informatiques, la consommation énergétique est devenue le facteur le plus limitant de la croissance de performance observée pendant les décennies précédentes. Conséquemment, les paradigmes d'architectures d'ordinateur et de développement logiciel doivent changer si nous voulons éviter une stagnation de la performance durant les décennies à venir.Dans ce nouveau scénario, des nouveaux designs architecturaux et micro-architecturaux peuvent offrir des possibilités d'améliorer l'efficacité énergétique des ordinateurs, grâce à la spécialisation matérielle, comme par exemple les configurations de cœurs hétérogènes, des nouvelles unités de calcul et des accélérateurs. D'autre part, avec cette nouvelle tendance, le développement logiciel devra faire face au manque de portabilité de la performance entre les matériels toujours en évolution et à l'écart croissant entre la performance exploitée par les programmeurs et la performance maximale exploitable du matériel. Pour traiter ce problème, la contribution de cette thèse est une méthodologie et la preuve de concept d'un cadriciel d'auto-tuning à la volée pour les systèmes embarqués. Le cadriciel proposé peut à la fois adapter du code à une micro-architecture inconnue avant la compilation et explorer des possibilités d'auto-tuning qui dépendent des données d'entrée d'un programme.Dans le but d'étudier la capacité de l'approche proposée à adapter du code à des différentes configurations micro-architecturales, j'ai développé un cadriciel de simulation de processeurs hétérogènes ARM avec exécution dans l'ordre ou dans le désordre, basé sur les simulateurs gem5 et McPAT. Les expérimentations de validation ont démontré en moyenne des erreurs absolues temporels autour de 7 % comparé aux ARM Cortex-A8 et A9, et une estimation relative d'énergie et de performance à 6 % près pour le benchmark Dhrystone 2.1 comparée à des CPUs Cortex-A7 et A15 (big.LITTLE). Les résultats de validation temporelle montrent que gem5 est beaucoup plus précis que les simulateurs similaires existants, dont les erreurs moyennes sont supérieures à 15 %.Un composant important du cadriciel d'auto-tuning à la volée proposé est un outil de génération dynamique de code, appelé deGoal. Il définit un langage dédié dynamique et bas-niveau pour les noyaux de calcul. Pendant cette thèse, j'ai porté deGoal au jeu d'instructions ARM Thumb-2 et créé des nouvelles fonctionnalités pour l'auto-tuning à la volée. Une validation préliminaire dans des processeurs ARM ont montré que deGoal peut en moyenne générer du code machine avec une qualité équivalente ou supérieure comparé aux programmes de référence écrits en C, et même par rapport à du code vectorisé à la main.La méthodologie et la preuve de concept de l'auto-tuning à la volée dans des processeurs embarqués ont été développées autour de deux applications basées sur noyau de calcul, extraits de la suite de benchmark PARSEC 3.0 et de sa version vectorisée à la main PARVEC.Dans l'application favorable, des accélérations de 1.26 et de 1.38 ont été observées sur des cœurs réels et simulés, respectivement, jusqu'à 1.79 et 2.53 (toutes les surcharges dynamiques incluses).J'ai aussi montré par la simulation que l'auto-tuning à la volée d'instructions SIMD aux cœurs d'exécution dans l'ordre peut surpasser le code de référence vectorisé exécuté par des cœurs d'exécution dans le désordre similaires, avec une accélération moyenne de 1.03 et une amélioration de l'efficacité énergétique de 39 %.L'application défavorable a été choisie pour montrer que l'approche proposée a une surcharge négligeable lorsque des versions de noyau plus performantes ne peuvent pas être trouvées.En faisant tourner les deux applications sur les processeurs réels, la performance de l'auto-tuning à la volée est en moyenne seulement 6 % en dessous de la performance obtenue par la meilleure implémentation de noyau trouvée statiquement.",
+  "doi": "10.70675/a8cfc344z0739z4f9bz9422z96a95c83b50e",
+  "openalex": "W7147106161",
+  "status": "ok",
+  "title": "Génération dynamique de code pour l'optimisation énergétique"
+ },
+ "oa-W1483258291": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2014.",
+  "doi": null,
+  "openalex": "W1483258291",
+  "status": "ok",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "oa-W2099265502": {
+  "abstract": "Modern day hardware platforms are parallel and diverse, ranging from mobiles to data centers. Mainstream parallel applications execute in the same system competing for resources. This resource contention may lead to a drastic degradation in a program’s performance. In addition, the execution environment composed of workloads and hardware resources, is dynamic and unpredictable. Efficient matching of program parallelism to machine parallelism under uncertainty is hard. The mapping policies that determine the optimal allocation of work to threads should anticipate these variations. This thesis proposes solutions to the mapping of parallel programs in dynamic environments. It employs predictive modelling techniques to determine the best degree of parallelism. Firstly, this thesis proposes a machine learning-based model to determine the optimal thread number for a target program co-executing with varying workloads. For this purpose, this offline trained model uses static code features and dynamic runtime information as input. Next, this thesis proposes a novel solution to monitor the proposed offline model and adjust its decisions in response to the environment changes. It develops a second predictive model for determining how the future environment should be, if the current thread prediction was optimal. Depending on how close this prediction was to the actual environment, the predicted thread numbers are adjusted. Furthermore, considering the multitude of potential execution scenarios where no single policy is best suited in all cases, this work proposes an approach based on the idea of mixture of experts. It considers a number of offline experts or mapping policies, each specialized for a given scenario, and learns online the best expert that is optimal for the current execution. When evaluated on highly dynamic executions, these solutions are proven to surpass default, state-of-art adaptive and analytic approaches.",
+  "doi": null,
+  "openalex": "W2099265502",
+  "status": "ok",
+  "title": "Adaptive parallelism mapping in dynamic environments using machine learning"
+ },
+ "oa-W2186990924": {
+  "abstract": "Modern radio telescopes, such as the Low Frequency Array (LOFAR) in the north of the Netherlands, process the signal from the sky in software rather than expensive special purpose hardware, This gives the astronomers an unprecedented flexibility to perform a vast amount of various scientific experiments. However, designing the actual software that would give optimal performance for many different experiments, possibly also running on different hardware is a challenging task. Since optimizing the software by hand to fit the various experiments and hardware is unfeasible, we employ a technique called parameter auto-tuning to find the optimal solution. Auto-tuning is based on a construction of a more generic software which has the ability to explore its parameter space and choose the values optimal for the experiment and hardware at hand. In our work we devise a systematic approach for auto-tuning signal processing pipelines which is not limited to radio astronomy and can be easily extended to other fields as well. Since the computations in radio astronomy are suitable candidates for parallelization, we exploit the power of GPUs. For that purpose we use the OpenCL programming standard. Furthermore, we combine OpenCL with Java to gain the advantages of higher level programming language such as greater productivity and code portability.",
+  "doi": null,
+  "openalex": "W2186990924",
+  "status": "ok",
+  "title": "Auto-tuning a LOFAR radio astronomy pipeline in JavaCL"
+ },
+ "oa-W2365452125": {
+  "abstract": "through all the software levels seems reasonable. In this article, we discuss the current research eorts and results related to energy eciency in the diverse areas of software. We conclude with open problems and",
+  "doi": null,
+  "openalex": "W2365452125",
+  "status": "ok",
+  "title": "Algorithms for Ultrascale Systems"
+ },
+ "oa-W2418123271": {
+  "abstract": "Energy efficiency and timeliness (i.e., predictable job latency) are two essential - yet opposing - concerns for embedded systems. Hard timing guarantees require conservative resource allocation while energy minimization requires aggressively releasing resources and occasionally violating timing constraints. Recent work on approximate computing, however, opens up a new dimension of optimization: application accuracy. In this paper, we use approximate computing to achieve both hard timing guarantees and energy efficiency. Specifically, we propose MEANTIME: a runtime system that delivers hard latency guarantees and energy-minimal resource usage through small accuracy reductions. We test MEANTIME on a real Linux/ARM system with six applications. Overall, we find that MEANTIME never violates real-time deadlines and sacrifices a small amount (typically less than 2%) of accuracy while reducing energy to 54% of a conservative, full accuracy approach.",
+  "doi": null,
+  "openalex": "W2418123271",
+  "status": "ok",
+  "title": "MEANTIME: achieving both minimal energy and timeliness with approximate computing"
+ },
+ "oa-W3123327479": {
+  "abstract": "Programming heterogeneous parallel systems, such as the SoCs (System-on-Chip) on mobile and edge devices is extremely difficult; the diverse parallel hardware they contain exposes vastly different hardware instruction sets, parallelism models and memory systems. Moreover, a wide range of diverse hardware and software approximation techniques are available for applications targeting heterogeneous SoCs, further exacerbating the programmability challenges. In this thesis, we alleviate the programmability challenges of such systems using flexible compiler intermediate representation solutions, in order to benefit from the performance and superior energy efficiency of heterogeneous systems.\\nFirst, we develop Heterogeneous Parallel Virtual Machine (HPVM), a parallel program representation for heterogeneous systems, designed to enable functional and performance portability across popular parallel hardware. HPVM is based on a hierarchical dataflow graph with side effects. HPVM successfully supports three important capabilities for programming heterogeneous systems: a compiler intermediate representation (IR), a virtual instruction set (ISA), and a basis for runtime scheduling. We use the HPVM representation to implement an HPVM prototype, defining the HPVM IR as an extension of the Low Level Virtual Machine (LLVM) IR. Our results show comparable performance with optimized OpenCL kernels for the target hardware from a single HPVM representation using translators from HPVM virtual ISA to native code, IR optimizations operating directly on the HPVM representation, and the capability for supporting flexible runtime scheduling schemes from a single HPVM representation.\\nWe extend HPVM to ApproxHPVM, introducing hardware-independent approximation metrics in the IR to enable maintaining accuracy information at the IR level and mapping of application-level end-to-end quality metrics to system level \"knobs\". The approximation metrics quantify the acceptable accuracy loss for individual computations. Application programmers only need to specify high-level, and end-to-end, quality metrics, instead of detailed parameters for individual approximation methods. The ApproxHPVM system then automatically tunes the accuracy requirements of individual computations and maps them to approximate hardware when possible. ApproxHPVM results show significant performance and energy improvements for popular deep learning benchmarks.\\nFinally, we extend to ApproxHPVM to ApproxTuner, a compiler and runtime system for approximation. ApproxTuner extends ApproxHPVM with a wide range of hardware and software approximation techniques. It uses a three step approximation tuning strategy, a combination of development-time, install-time, and dynamic tuning. Our strategy ensures software portability, even though approximations have highly hardware-dependent performance, and enables efficient dynamic approximation tuning despite the expensive offline steps. ApproxTuner results show significant performance and energy improvements across 7 Deep Neural Networks and 3 image processing benchmarks, and ensures that high-level end-to-end quality specifications are satisfied during adaptive approximation tuning.",
+  "doi": null,
+  "openalex": "W3123327479",
+  "status": "ok",
+  "title": "Heterogeneous parallel virtual machine: A portable program representation and compiler for performance and energy optimizations on heterogeneous parallel systems"
+ },
+ "oa-W3149185107": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W3149185107",
+  "status": "no_abstract",
+  "title": "StreamJIT: A Commensal Compiler for High-Performance Stream Programming"
+ },
+ "s2-03c38b9b1fa58085": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Auto-tuning a LOFAR radio astronomy pipeline in JavaCL"
+ },
+ "s2-07d78e8071d3e970": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "White-Box Tuning for Better Data Processing"
+ },
+ "s2-0b0206e9fcc31b1e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Algorithms for Ultrascale Systems"
+ },
+ "s2-19d773b91b296638": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Combining Machine Learning and Control to Manage Computing System Complexity and Dynamics ∗"
+ },
+ "s2-2493fa3b08d7f9ba": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Coordinating Application and System Adaptation for Performance , Power , and Accuracy Management"
+ },
+ "s2-309352addd5225ef": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning and Understanding for Intelligent Extreme Scale Scientific Computing and Discovery DOE Workshop Report"
+ },
+ "s2-30a21c7db94b9307": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MEANTIME: Achieving Both Minimal Energy and Timeliness with Approximate Computing"
+ },
+ "s2-48fc6096d481bb70": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning and Understanding for Intelligent Extreme Scale Scientifc Computing and Discovery"
+ },
+ "s2-56ffb90a179c2190": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The sharing architecture"
+ },
+ "s2-67a458329b7d64e1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Hot-Rodding the Browser Engine: Automatic Configuration of JavaScript Compilers"
+ },
+ "s2-6d4ba9893273612f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic Autotuning of Algorithmic Skeletons Informatics Research Proposal"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-85feacccf072770d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "ALERT: Accurate Anytime Learning for Energy and Timeliness"
+ },
+ "s2-98d48cb20b41c9c7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Auto-tuning a LOFAR radio astronomy pipeline in JavaCL"
+ },
+ "s2-9abc08a2162038a2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Sonic: A Sampling-based Online Controller for Streaming Applications"
+ },
+ "s2-9ecbf77e1b28e88d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Approximate computing for high energy-efficiency in internet-of-things applications. (Calcul approximatif à haute efficacité énergétique pour des applications de l'IoT)"
+ },
+ "s2-af35ff2a41ca9bcc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Case for Runtime Coordination of Accuracy-aware Applications and Power-aware Systems"
+ },
+ "s2-c79f75577e0ffb42": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "s2-e14d8eaef138f76c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Bayesian Learning for Hardware and Software Conﬁguration Co-Optimization"
+ },
+ "s2-e168d0e171ce6863": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Big Data for LITTLE Cores Combining Learning and Control for Mobile Energy Efficiency"
+ },
+ "s2-ed67d67b5ec12816": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cuttlefish: A Lightweight Primitive for Adaptive Query Processing"
+ },
+ "s2-ee4449e2cebfc314": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Adaptive parallelism mapping in dynamic environments using machine learning"
+ },
+ "s2-fde4128f852f8e4f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compilers"
+ }
+}

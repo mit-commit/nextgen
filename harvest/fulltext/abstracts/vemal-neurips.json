@@ -1,0 +1,177 @@
+{
+ "10.1002_cpe.6724": {
+  "abstract": "Abstract A major challenge for many database management tasks including admission control, query scheduling, progress monitoring and self‐driving data storage systems is to enhance queries performances which are based on computational models known as database cost models. One of the most challenging aspects of developing accurate database cost models is identifying their parameters and capturing their relationships, consequently we can derive the query execution cost on the basis of a specific database hosted on a given platform. Furthermore, the highly dynamic workload (i.e., a set of queries) and the query execution variation lead to performance degradation risk, therefore cost models need to be improved by considering newer software configuration and future workload characteristics. In this article, we propose a framework called DeepCM that is based on a min–max optimization for building robust database cost model against uncertainty parameters. Furthermore, our framework is based on Robust Deep Neural Networks to build database cost models that guarantee a high accuracy regardless of variations from software configuration and workload characteristics. Several experiments have been done to evaluate the robustness of produced cost models and findings show that DeepCM provides a high cost model prediction accuracy and stable performance.",
+  "doi": "10.1002/cpe.6724",
+  "openalex": "W4200231493",
+  "status": "ok",
+  "title": "DeepCM: Deep neural networks to improve accuracy prediction of database cost models"
+ },
+ "10.1109_icde53745.2022.00192": {
+  "abstract": "Listing all k-cliques is a fundamental problem in graph mining, with applications in finance, biology, and social network analysis. However, owing to the exponential growth of the search space as$k$increases, listing all k-cliques is algorithmically challenging. DDegree and DDegCol are the state-of-the-art algorithms that exploit ordering heuristics based on degree ordering and color ordering, respectively. Both DDegree and DDegCol induce high time and space overhead for set intersections cause they construct and maintain all induced subgraphs. Meanwhile, it is non-trivial to implement the data level parallelism to further accelerate on DDegree and DDegCol. In this paper, we propose two efficient algorithms SDegree and BitCol for k-clique listing. We mainly focus on accelerating the set intersections for k-clique listing. Both SDegree and BitCol exploit the data level parallelism for further acceleration with single instruction multiple data (SIMD) or vector instruction sets. Furthermore, we propose two preprocessing techniques Pre-Core and Pre-List, which run in linear time. The preprocessing techniques significantly reduce the size of the original graph and prevent exploring a large number of invalid nodes. In the theoretical analysis, our algorithms have a comparable time complexity and a slightly lower space complexity than the state-of-the-art algorithms. The comprehensive experiments reveal that our algorithms outperform the state-of-the-art algorithms by 3.75x for degree ordering and 5.67x for color ordering on average.",
+  "doi": "10.1109/icde53745.2022.00192",
+  "openalex": "W4289533829",
+  "status": "ok",
+  "title": "Efficient $k-\\text{clique}$ Listing with Set Intersection Speedup"
+ },
+ "10.1109_icse43902.2021.00079": {
+  "abstract": "We propose a data-driven method for synthesizing static analyses to detect side-channel information leaks in cryptographic software. Compared to the conventional way of manually crafting such static analyzers, which can be tedious, error prone and suboptimal, our learning-based technique is not only automated but also provably sound. Our analyzer consists of a set of type-inference rules learned from the training data, i.e., example code snippets annotated with the ground truth. Internally, we use syntax-guided synthesis (SyGuS) to generate new recursive features and decision tree learning (DTL) to generate analysis rules based on these features. We guarantee soundness by proving each learned analysis rule via a technique called query containment checking. We have implemented our technique in the LLVM compiler and used it to detect power side channels in C programs that implement cryptographic protocols. Our results show that, in addition to being automated and provably sound during synthesis, our analyzer can achieve the same empirical accuracy as two state-of-the-art, manually-crafted analyzers while being 300X and 900X faster, respectively.",
+  "doi": "10.1109/icse43902.2021.00079",
+  "openalex": "W3160380391",
+  "status": "ok",
+  "title": "Data-Driven Synthesis of Provably Sound Side Channel Analyses"
+ },
+ "10.1109_llvm-hpc56686.2022.00006": {
+  "abstract": "Loop distribution (loop fission) is a well known compiler optimization that splits the loop into multiple loops. Loop distribution can be seen as an enabler of various other optimizations with different goals, like, the parallelizability of the loop, the vectorizability of the loop, its locality characteristics. In this work, we present a Reinforcement Learning (RL) based approach to efficiently perform loop-distribution with the twin goals of optimizing for both vectorization as well as locality. Broadly, we generate the SCC Dependence Graph (SDG) for each loop of the program. Our RL model learns to predict the distribution order of the loop by performing topological walk of the graph. The reward to our model is computed using the instruction cost and number of cache misses of the loop. As the RL models need data for training purposes, we also propose a novel strategy to extend the training set by generating new loops. We show our results on x86 architecture on various benchmarks: from TSVC, LLVM-Test-Suite, PolyBench and PolyBench-NN. Our framework achieves an average improvement of 3.63% on TSVC, 4.61% on LLVM-Test-Suite Microbenchmarks, 1.78% on PolyBench and 1.95% on PolyBench-NN benchmark suites for execution time. The baseline is O3 compiler option of LLVM. We also show the improvements of our method on other performance metrics like Instruction Per Cycle (IPC), Number of loops distributed & vectorized, and L1 cache performance.",
+  "doi": "10.1109/llvm-hpc56686.2022.00006",
+  "openalex": "W4318603191",
+  "status": "ok",
+  "title": "Reinforcement Learning assisted Loop Distribution for Locality and Vectorization"
+ },
+ "10.1109_mm.2020.3012883": {
+  "abstract": "Machine learning has the potential to significantly improve systems, but only under certain conditions. We describe a taxonomy to help identify whether or not machine learning should be applied to particular systems problems, and which approaches are most promising. We believe that this taxonomy can help practitioners and researchers decide how to most effectively use machine learning in their systems, and provide the community with a framework and vocabulary to discuss different approaches for applying machine learning in systems.",
+  "doi": "10.1109/mm.2020.3012883",
+  "openalex": "W3046439596",
+  "status": "ok",
+  "title": "A Taxonomy of ML for Systems Problems"
+ },
+ "10.1109_pact52795.2021.00014": {
+  "abstract": "Real-time inference is the key technology that enables a variety of latency-critical intelligent services such as autonomous driving and augmented reality. Heterogeneous embedded systems that consist of various computing devices with widely-different architectural and system-level characteristics are emerging as a promising solution for real-time inference. Despite extensive prior works, it still remains unexplored to design and implement a practical system that enables efficient real-time inference on heterogeneous embedded systems. To bridge this gap, we propose HERTI, a reinforcement learning-augmented system for efficient real-time inference on heterogeneous embedded systems. HERTI efficiently explores the state space and robustly finds an efficient state that significantly improves the efficiency of the target inference workload while satisfying its deadline constraint through reinforcement learning. Our quantitative evaluation conducted on a real heterogeneous embedded system demonstrates the effectiveness of HERTI in that HERTI achieves high inference efficiency in multiple metrics (i.e., energy and energy-delay product) with a strong deadline guarantee in contrast to the state-of-the-art techniques, delivers larger gains as the inference deadline and the system heterogeneity increase, provides strong generality for hyper-parameter tuning, and significantly reduces the training time through its estimation-based approach across all the evaluated inference workloads and scenarios.",
+  "doi": "10.1109/pact52795.2021.00014",
+  "openalex": "W3205504880",
+  "status": "ok",
+  "title": "HERTI: A Reinforcement Learning-Augmented System for Efficient Real-Time Inference on Heterogeneous Embedded Systems"
+ },
+ "10.1145_3372799.3397167": {
+  "abstract": "Modern compilers are still built using technology that existed decades ago. These include basic algorithms and techniques for lexing, parsing, data-flow analysis, data dependence analysis, vectorization, register allocation, instruction selection, and instruction scheduling. It is high time that we modernize our compiler toolchain.",
+  "doi": "10.1145/3372799.3397167",
+  "openalex": "W3030671731",
+  "status": "ok",
+  "title": "Compiler 2.0"
+ },
+ "10.1145_3486607.3486748": {
+  "abstract": "Surrogates, models that mimic the behavior of programs, form the basis of a variety of development workflows. We study three surrogate-based design patterns, evaluating each in case studies on a large-scale CPU simulator.",
+  "doi": "10.1145/3486607.3486748",
+  "openalex": "W3207455984",
+  "status": "ok",
+  "title": "Programming with neural surrogates of programs"
+ },
+ "10.1145_3494523": {
+  "abstract": "It has been a long time that computer architecture and systems are optimized for efficient execution of machine learning (ML) models. Now, it is time to reconsider the relationship between ML and systems and let ML transform the way that computer architecture and systems are designed. This embraces a twofold meaning: improvement of designers’ productivity and completion of the virtuous cycle. In this article, we present a comprehensive review of the work that applies ML for computer architecture and system design. First, we perform a high-level taxonomy by considering the typical role that ML techniques take in architecture/system design, i.e., either for fast predictive modeling or as the design methodology. Then, we summarize the common problems in computer architecture/system design that can be solved by ML techniques and the typical ML techniques employed to resolve each of them. In addition to emphasis on computer architecture in a narrow sense, we adopt the concept that data centers can be recognized as warehouse-scale computers; sketchy discussions are provided in adjacent computer systems, such as code generation and compiler; we also give attention to how ML techniques can aid and transform design automation. We further provide a future vision of opportunities and potential directions and envision that applying ML for computer architecture and systems would thrive in the community.",
+  "doi": "10.1145/3494523",
+  "openalex": "W3131242057",
+  "status": "ok",
+  "title": "A Survey of Machine Learning for Computer Architecture and Systems"
+ },
+ "10.1145_3563838.3567679": {
+  "abstract": "Optimizing compilers rely on many hand-crafted heuristics to guide the optimization process. However, the interactions between different optimizations makes their design a difficult task. We propose using machine learning models to either replace such heuristics or to support their development process, for example, by identifying important code features. Especially in static compilation, machine learning has been shown to outperform hand-crafted heuristics. We applied our approach in a state-of-the-art dynamic compiler, the GraalVM compiler. Our models predict an unroll factor for vectorized loops for which the GraalVM compiler developers have not been able to design satisfactory heuristics. Thereby, we identified features to describe vectorized loops and empirically evaluated the impact of different training data, features or model parameters on the accuracy of the learned models. When deployed in the GraalVM dynamic compiler, our models produce significant speedups of 8-11%, on average. Furthermore, large speedups unveiled a performance bug in the compiler which was fixed after our report. Our work shows that machine learning can be used to improve a dynamic compiler directly by replacing existing vectorization heuristics or indirectly by helping compiler developers to design better hand-crafted heuristics.",
+  "doi": "10.1145/3563838.3567679",
+  "openalex": "W4310506314",
+  "status": "ok",
+  "title": "Improving Vectorization Heuristics in a Dynamic Compiler with Machine Learning Models"
+ },
+ "10.1145_3578360.3580273": {
+  "abstract": "We aim to automate decades of research and experience in register allocation, leveraging machine learning. We tackle this problem by embedding a multi-agent reinforcement learning algorithm within LLVM, training it with the state of the art techniques. We formalize the constraints that precisely define the problem for a given instruction-set architecture, while ensuring that the generated code preserves semantic correctness. We also develop a gRPC based framework providing a modular and efficient compiler interface for training and inference. Our approach is architecture independent: we show experimental results targeting Intel x86 and ARM AArch64. Our results match or out-perform the heavily tuned, production-grade register allocators of LLVM.",
+  "doi": "10.1145/3578360.3580273",
+  "openalex": "W4226372463",
+  "status": "ok",
+  "title": "RL4ReAl: Reinforcement Learning for Register Allocation"
+ },
+ "10.1145_3587278": {
+  "abstract": "This volume contains papers presented at the 2023 2nd International Workshop on Extreme Heterogeneity Solutions (ExHET 2023), an in-person/virtual event held on February 25th, 2023. This year we received five paper submissions, of which three were accepted as oral presentations. Each contributed paper was rigorously peer-reviewed by reviewers drawn from a large pool of technical committee members and other international reviewers in related fields.",
+  "doi": "10.1145/3587278",
+  "openalex": "W4383219880",
+  "status": "ok",
+  "title": "Proceedings of the 2nd International Workshop on Extreme Heterogeneity Solutions"
+ },
+ "10.1145_3620666.3651348": {
+  "abstract": "Obtaining high-performance implementations of tensor programs such as deep neural networks on a wide range of hardware remains a challenging task. Search-based tensor program optimizers can automatically find high-performance programs on a given hardware platform, but the search process in existing tools suffer from low efficiency, requiring hours or days of time to discover good programs due to the size of the search space.",
+  "doi": "10.1145/3620666.3651348",
+  "openalex": "W4395106432",
+  "status": "ok",
+  "title": "Felix: Optimizing Tensor Programs with Gradient Descent"
+ },
+ "10.1145_3727638": {
+  "abstract": "Automatic code optimization enables developers to write high-level code relying on compilers to optimize it and generate efficient code for target hardware. State-of-the-art methods for automatic code optimization leverage deep learning to build cost models that predict the impact of code optimizations on execution time. However, these models are typically limited in terms of the size and complexity of the programs they support. This research presents a novel approach to developing deep learning-based cost models that address these limitations. Our approach introduces a new program representation that efficiently represents programs with complex structures and large sizes such as varying loop depths, buffer numbers, and dimensions. Furthermore, we propose a novel deep learning architecture, that can handle this dynamic program representation. This allows the model to work on larger and more complex programs than those it was trained on. We implemented this model in Tiramisu, a state-of-the-art compiler. Our evaluation shows that our proposed model can generalize to programs larger than those seen during training, while the original Tiramisu cost model cannot. We also show that such generality does not lead to a significant increase in our proposed model’s Mean Absolute Percentage Error or a decrease in the quality of code optimizations found when the model is used for automatic code optimization. In contrast, our proposed model on average achieves a 41.89% improvement in speed compared to the original cost model when both models are trained on the same dataset, showing better generalization over unseen programs. This is a significant advantage over previous approaches, which typically do not support program sizes beyond those seen during the training.",
+  "doi": "10.1145/3727638",
+  "openalex": "W4409061765",
+  "status": "ok",
+  "title": "Supporting Dynamic Program Sizes in Deep Learning-Based Cost Models for Code Optimization"
+ },
+ "10.20944_preprints202401.0208.v1": {
+  "abstract": "Tuning tensor program generation involves navigating a vast search space to find optimal program transformations and measurements for a program on target hardware. The complexity of this process is further amplified by the exponential combinations of transformations, especially in heterogeneous environments. This research addresses these challenges by introducing a novel approach that learns the joint neural network and hardware features space, facilitating knowledge transfer to new, unseen target hardware. A comprehensive analysis is conducted on the existing state-of-the-art dataset, TenSet, including a thorough examination of test split strategies and the proposal of methodologies for dataset pruning. Leveraging an attention-inspired technique, we tailor the tuning of tensor programs to embed both neural network and hardware-specific features. Notably, our approach substantially reduces the dataset size by up to 53% compared to the baseline without compromising Pairwise Comparison Accuracy (PCA). Furthermore, our proposed methodology demonstrates competitive or improved mean inference times with only 25%40% of the baseline tuning time across various networks and target hardware. The attention-based tuner can effectively utilize schedules learned from previous hardware program measurements to optimize tensor program tuning on previously unseen hardware, achieving a top-5 accuracy exceeding 90%. This research introduces a significant advancement in auto-tuning tensor program generation, addressing the complexities associated with heterogeneous environments and showcasing promising results regarding efficiency and accuracy.",
+  "doi": "10.20944/preprints202401.0208.v1",
+  "openalex": "W4390562550",
+  "status": "ok",
+  "title": "Cross-Feature Transfer Learning For Efficient Tensor Program Generation"
+ },
+ "10.31274_td-20240329-302": {
+  "abstract": "Stagnation of Moore's law has led to the increased adoption of parallel programming for enhancing performance of scientific applications. Frequently occurring code and design patterns in scientific applications are often used for transforming serial code to parallel. But, identifying these patterns is not easy. To this end, we propose using Graph Neural Networks for modeling code flow graphs to identify patterns in such parallel code. Additionally, identifying the runtime parameters for best performing parallel code is also challenging. We propose a pattern-guided deep learning based tuning approach, to help identify the best runtime parameters for OpenMP loops. Overall, we aim to identify commonly occurring patterns in parallel loops and use these patterns to guide auto-tuning efforts. We validate our hypothesis on 20 different applications from Polybench, and STREAM benchmark suites. This deep learning-based approach can identify the considered patterns with an overall accuracy of 91%. We validate the usefulness of using patterns for auto-tuning on tuning the number of threads, scheduling policies and chunk size on a single socket system, and the thread count and affinity on a multi-socket machine. Our approach achieves geometric mean speedups of 1.1x and 4.7x respectively over default OpenMP configurations, compared to brute-force speedups of 1.27x and 4.93x respectively.",
+  "doi": "10.31274/td-20240329-302",
+  "openalex": "W4393304048",
+  "status": "ok",
+  "title": "Evaluation of Graph Neural Networks for code pattern detection and autotuning of OpenMP loops"
+ },
+ "10.3390_app14020513": {
+  "abstract": "Tuning tensor program generation involves navigating a vast search space to find optimal program transformations and measurements for a program on the target hardware. The complexity of this process is further amplified by the exponential combinations of transformations, especially in heterogeneous environments. This research addresses these challenges by introducing a novel approach that learns the joint neural network and hardware features space, facilitating knowledge transfer to new, unseen target hardware. A comprehensive analysis is conducted on the existing state-of-the-art dataset, TenSet, including a thorough examination of test split strategies and the proposal of methodologies for dataset pruning. Leveraging an attention-inspired technique, we tailor the tuning of tensor programs to embed both neural network and hardware-specific features. Notably, our approach substantially reduces the dataset size by up to 53% compared to the baseline without compromising Pairwise Comparison Accuracy (PCA). Furthermore, our proposed methodology demonstrates competitive or improved mean inference times with only 25–40% of the baseline tuning time across various networks and target hardware. The attention-based tuner can effectively utilize schedules learned from previous hardware program measurements to optimize tensor program tuning on previously unseen hardware, achieving a top-5 accuracy exceeding 90%. This research introduces a significant advancement in autotuning tensor program generation, addressing the complexities associated with heterogeneous environments and showcasing promising results regarding efficiency and accuracy.",
+  "doi": "10.3390/app14020513",
+  "openalex": "W4390672384",
+  "status": "ok",
+  "title": "Cross-Feature Transfer Learning for Efficient Tensor Program Generation"
+ },
+ "10.48550_arxiv.2004.08140": {
+  "abstract": "GPUs are a key enabler of the revolution in machine learning and high performance computing, functioning as de facto co-processors to accelerate large-scale computation. As the programming stack and tool support have matured, GPUs have also become accessible to programmers, who may lack detailed knowledge of the underlying architecture and fail to fully leverage the GPU's computation power. GEVO (Gpu optimization using EVOlutionary computation) is a tool for automatically discovering optimization opportunities and tuning the performance of GPU kernels in the LLVM representation. GEVO uses population-based search to find edits to GPU code compiled to LLVM-IR and improves performance on desired criteria while retaining required functionality. We demonstrate that GEVO improves the execution time of the GPU programs in the Rodinia benchmark suite and the machine learning models, SVM and ResNet18, on NVIDIA Tesla P100. For the Rodinia benchmarks, GEVO improves GPU kernel runtime performance by an average of 49.48% and by as much as 412% over the fully compiler-optimized baseline. If kernel output accuracy is relaxed to tolerate up to 1% error, GEVO can find kernel variants that outperform the baseline version by an average of 51.08%. For the machine learning workloads, GEVO achieves kernel performance improvement for SVM on the MNIST handwriting recognition (3.24X) and the a9a income prediction (2.93X) datasets with no loss of model accuracy. GEVO achieves 1.79X kernel performance improvement on image classification using ResNet18/CIFAR-10, with less than 1% model accuracy reduction.",
+  "doi": "10.48550/arxiv.2004.08140",
+  "openalex": "W3016562408",
+  "status": "ok",
+  "title": "GEVO: GPU Code Optimization using Evolutionary Computation"
+ },
+ "10.48550_arxiv.2012.01470": {
+  "abstract": "Compiler architects increasingly look to machine learning when building heuristics for compiler optimization. The promise of automatic heuristic design, freeing the compiler engineer from the complex interactions of program, architecture, and other optimizations, is alluring. However, most machine learning methods cannot replicate even the simplest of the abstract interpretations of data flow analysis that are critical to making good optimization decisions. This must change for machine learning to become the dominant technology in compiler heuristics. To this end, we propose ProGraML - Program Graphs for Machine Learning - a language-independent, portable representation of whole-program semantics for deep learning. To benchmark current and future learning techniques for compiler analyses we introduce an open dataset of 461k Intermediate Representation (IR) files for LLVM, covering five source programming languages, and 15.4M corresponding data flow results. We formulate data flow analysis as an MPNN and show that, using ProGraML, standard analyses can be learned, yielding improved performance on downstream compiler optimization tasks.",
+  "doi": "10.48550/arxiv.2012.01470",
+  "openalex": "W3109289290",
+  "status": "ok",
+  "title": "Deep Data Flow Analysis"
+ },
+ "10.48550_arxiv.2102.06753": {
+  "abstract": "We propose a data-driven method for synthesizing a static analyzer to detect side-channel information leaks in cryptographic software. Compared to the conventional way of manually crafting such a static analyzer, which can be labor intensive, error prone and suboptimal, our learning-based technique is not only automated but also provably sound. Our analyzer consists of a set of type-inference rules learned from the training data, i.e., example code snippets annotated with ground truth. Internally, we use syntax-guided synthesis (SyGuS) to generate new features and decision tree learning (DTL) to generate type-inference rules based on these features. We guarantee soundness by formally proving each learned rule via a technique called Datalog query containment checking. We have implemented our technique in the LLVM compiler and used it to detect power side channels in C programs. Our results show that, in addition to being automated and provably sound during synthesis, the learned analyzer also has the same empirical accuracy as two state-of-the-art, manually crafted analyzers while being 300X and 900X faster, respectively.",
+  "doi": "10.48550/arxiv.2102.06753",
+  "openalex": "W3133457832",
+  "status": "ok",
+  "title": "Data-Driven Synthesis of Provably Sound Side Channel Analyses"
+ },
+ "10.48550_arxiv.2102.10769": {
+  "abstract": "This paper studies Imitation Learning from Observations alone (ILFO) where the learner is presented with expert demonstrations that consist only of states visited by an expert (without access to actions taken by the expert). We present a provably efficient model-based framework MobILE to solve the ILFO problem. MobILE involves carefully trading off strategic exploration against imitation - this is achieved by integrating the idea of optimism in the face of uncertainty into the distribution matching imitation learning (IL) framework. We provide a unified analysis for MobILE, and demonstrate that MobILE enjoys strong performance guarantees for classes of MDP dynamics that satisfy certain well studied notions of structural complexity. We also show that the ILFO problem is strictly harder than the standard IL problem by presenting an exponential sample complexity separation between IL and ILFO. We complement these theoretical results with experimental simulations on benchmark OpenAI Gym tasks that indicate the efficacy of MobILE. Code for implementing the MobILE framework is available at https://github.com/rahulkidambi/MobILE-NeurIPS2021.",
+  "doi": "10.48550/arxiv.2102.10769",
+  "openalex": "W3171469166",
+  "status": "ok",
+  "title": "MobILE: Model-Based Imitation Learning From Observation Alone"
+ },
+ "10.48550_arxiv.2111.12055": {
+  "abstract": "GPU compilers are complex software programs with many optimizations specific to target hardware. These optimizations are often controlled by heuristics hand-designed by compiler experts using time- and resource-intensive processes. In this paper, we developed a GPU compiler autotuning framework that uses off-policy deep reinforcement learning to generate heuristics that improve the frame rates of graphics applications. Furthermore, we demonstrate the resilience of these learned heuristics to frequent compiler updates by analyzing their stability across a year of code check-ins without retraining. We show that our machine learning-based compiler autotuning framework matches or surpasses the frame rates for 98% of graphics benchmarks with an average uplift of 1.6% up to 15.8%.",
+  "doi": "10.48550/arxiv.2111.12055",
+  "openalex": "W3216276593",
+  "status": "ok",
+  "title": "Generating GPU Compiler Heuristics using Reinforcement Learning"
+ },
+ "10.48550_arxiv.2311.10800": {
+  "abstract": "There is a growing interest in enhancing compiler optimizations with ML models, yet interactions between compilers and ML frameworks remain challenging. Some optimizations require tightly coupled models and compiler internals,raising issues with modularity, performance and framework independence. Practical deployment and transparency for the end-user are also important concerns. We propose ML-Compiler-Bridge to enable ML model development within a traditional Python framework while making end-to-end integration with an optimizing compiler possible and efficient. We evaluate it on both research and production use cases, for training and inference, over several optimization problems, multiple compilers and its versions, and gym infrastructures.",
+  "doi": "10.48550/arxiv.2311.10800",
+  "openalex": "W4388890638",
+  "status": "ok",
+  "title": "The Next 700 ML-Enabled Compiler Optimizations"
+ },
+ "oa-W3168189449": {
+  "abstract": "Machine learning (ML) is increasingly seen as a viable approach for building compiler optimization heuristics, but many ML methods cannot replicate even the simplest of the data flow analyses that are critical to making good optimization decisions. We posit that if ML cannot do that, then it is insufficiently able to reason about programs. We formulate data flow analyses as supervised learning tasks and introduce a large open dataset of programs and their corresponding labels from several analyses. We use this dataset to benchmark ML methods and show that they struggle on these fundamental program reasoning tasks. We propose ProGraML - Program Graphs for Machine Learning - a language-independent, portable representation of program semantics. ProGraML overcomes the limitations of prior works and yields improved performance on downstream optimization tasks.",
+  "doi": null,
+  "openalex": "W3168189449",
+  "status": "ok",
+  "title": "ProGraML: A Graph-based Program Representation for Data Flow Analysis and Compiler Optimizations"
+ },
+ "oa-W3207748736": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W3207748736",
+  "status": "no_abstract",
+  "title": "TenSet: A Large-scale Program Performance Dataset for Learned Tensor Compilers"
+ }
+}

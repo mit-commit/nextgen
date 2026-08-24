@@ -1,0 +1,100 @@
+{
+ "10.1002_cpe.3973": {
+  "abstract": "Summary A Graphics Processing Unit (GPU) is a parallel computing coprocessor specialized in accelerating vector operations. The enormous heterogeneity of parallel computing platforms justifies and motivates the development of automated optimization tools and techniques. The Algorithm Selection Problem consists in finding a combination of algorithms, or a configuration of an algorithm, that optimizes the solution of a set of problem instances. An autotuner solves the Algorithm Selection Problem using search and optimization techniques. In this paper, we implement an autotuner for the Compute Unified Device Architecture compiler's parameters using the OpenTuner framework. The autotuner searches for a set of compilation parameters that optimizes the time to solve a problem. We analyze the performance speedups, in comparison with high‐level compiler optimizations, achieved in three different GPU devices, for 17 heterogeneous GPU applications, 12 of which are from the Rodinia Benchmark Suite. The autotuner often beats the compiler's high‐level optimizations, but underperformed for some problems. We achieved over 2x speedup forGaussian Eliminationand almost 2x speedup forHeart Wall, both problems from the Rodinia Benchmark, and over 4x speedup for a matrix multiplication algorithm. Copyright © 2017 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.3973",
+  "openalex": "W2554342856",
+  "status": "ok",
+  "title": "Autotuning CUDA compiler parameters for heterogeneous applications using the OpenTuner framework"
+ },
+ "10.1007_978-3-662-46663-6_6": {
+  "abstract": null,
+  "doi": "10.1007/978-3-662-46663-6_6",
+  "openalex": "W2161508914",
+  "status": "no_abstract",
+  "title": "A Backend Extension Mechanism for PQL/Java with Free Run-Time Optimisation"
+ },
+ "10.1109_icrc.2017.8123649": {
+  "abstract": "The deceleration of transistor feature size scaling has motivated growing adoption of specialized accelerators implemented as GPUs, FPGAs, ASICs, and more recently new types of computing such as neuromorphic, bio-inspired, ultra low energy, reversible, stochastic, optical, quantum, combinations, and others unforeseen. There is a tension between specialization and generalization, with the current state trending to master slave models where accelerators (slaves) are instructed by a general purpose system (master) running an Operating System (OS). Traditionally, an OS is a layer between hardware and applications and its primary function is to manage hardware resources and provide a common abstraction to applications. Does this function, however, apply to new types of computing paradigms? This paper revisits OS functionality for memristor-based accelerators. We explore one accelerator implementation, the Dot Product Engine (DPE), for a select pattern of applications in machine learning, imaging, and scientific computing and a small set of use cases. We explore typical OS functionality, such as reconfiguration, partitioning, security, virtualization, and programming. We also explore new types of functionality, such as precision and trustworthiness of reconfiguration. We claim that making an accelerator, such as the DPE, more general will result in broader adoption and better utilization.",
+  "doi": "10.1109/icrc.2017.8123649",
+  "openalex": "W2771276626",
+  "status": "ok",
+  "title": "Generalize or Die: Operating Systems Support for Memristor-Based Accelerators"
+ },
+ "10.1109_sbac-padw.2017.26": {
+  "abstract": "Stream processing applications have high-demanding performance requirements that are hard to tackle using traditional parallel models on modern many-core architectures, such as GPUs. On the other hand, recent dataflow computing models can naturally exploit parallelism for a wide class of applications. This work presents an extension to an existing dataflow library for Java. The library extension implements high-level constructs with multiple command queues to enable the superposition of memory operations and kernel executions on GPUs. Experimental results show that significant speedup can be achieved for a subset of well-known stream processing applications: Volume Ray-Casting, Path-Tracing and Sobel Filter.",
+  "doi": "10.1109/sbac-padw.2017.26",
+  "openalex": "W2768694329",
+  "status": "ok",
+  "title": "Dataflow Programming for Stream Processing"
+ },
+ "10.1145_2712386.2712400": {
+  "abstract": "Stream processing or data-flow programming is a compute paradigm that has been around for decades in many forms yet has failed garner the same attention as other mainstream languages and libraries (e.g., C++ or OpenMP [15]). Stream processing has great promise: the ability to safely exploit extreme levels of parallelism. There have been many implementations, both libraries and full languages. The full languages implicitly assume that the streaming paradigm cannot be fully exploited in legacy languages, while library approaches are often preferred for being integrable with the vast expanse of legacy code that exists in the wild. Libraries, however are often criticized for yielding to the shape of their respective languages. RaftLib aims to fully exploit the stream processing paradigm, enabling a full spectrum of streaming graph optimizations while providing a platform for the exploration of integrability with legacy C/C++ code. RaftLib is built as a C++ template library, enabling end users to utilize the robust C++ standard library along with RaftLib's pipeline parallel framework. RaftLib supports dynamic queue optimization, automatic parallelization, and real-time low overhead performance monitoring.",
+  "doi": "10.1145/2712386.2712400",
+  "openalex": "W1978411591",
+  "status": "ok",
+  "title": "RaftLib"
+ },
+ "10.1145_2737924.2737994": {
+  "abstract": "Stream programming languages employ FIFO (first-in, first-out) semantics to model data channels between producers and consumers. A FIFO data channel stores tokens in a buffer that is accessed indirectly via read- and write-pointers. This indirect token-access decouples a producer’s write-operations from the read-operations of the consumer, thereby making dataflow implicit. For a compiler, indirect token-access obscures data-dependencies, which renders standard optimizations ineffective and impacts stream program performance negatively. In this paper we propose a transformation for structured stream programming languages such as StreamIt that shifts FIFO buffer management from run-time to compile-time and eliminates splitters and joiners, whose task is to distribute and merge streams. To show the effectiveness of our lowering transformation, we have implemented a StreamIt to C compilation framework. We have developed our own intermediate representation (IR) called LaminarIR, which facilitates the transformation. We report on the enabling effect of the LaminarIR on LLVM’s optimizations, which required the conversion of several standard StreamIt benchmarks from static to randomized input, to prevent computation of partial results at compile-time. We conducted our experimental evaluation on the Intel i7-2600K, AMD Opteron 6378, Intel Xeon Phi 3120A and ARM Cortex-A15 platforms. Our LaminarIR reduces data-communication on average by 35.9% and achieves platform-specific speedups between 3.73x and 4.98x over StreamIt. We reduce memory accesses by more than 60% and achieve energy savings of up to 93.6% on the Intel i7-2600K.",
+  "doi": "10.1145/2737924.2737994",
+  "openalex": "W2050298645",
+  "status": "ok",
+  "title": "LaminarIR: compile-time queues for structured streams"
+ },
+ "10.1145_2813885.2737994": {
+  "abstract": "Stream programming languages employ FIFO (first-in, first-out) semantics to model data channels between producers and consumers. A FIFO data channel stores tokens in a buffer that is accessed indirectly via read- and write-pointers. This indirect token-access decouples a producer’s write-operations from the read-operations of the consumer, thereby making dataflow implicit. For a compiler, indirect token-access obscures data-dependencies, which renders standard optimizations ineffective and impacts stream program performance negatively. In this paper we propose a transformation for structured stream programming languages such as StreamIt that shifts FIFO buffer management from run-time to compile-time and eliminates splitters and joiners, whose task is to distribute and merge streams. To show the effectiveness of our lowering transformation, we have implemented a StreamIt to C compilation framework. We have developed our own intermediate representation (IR) called LaminarIR, which facilitates the transformation. We report on the enabling effect of the LaminarIR on LLVM’s optimizations, which required the conversion of several standard StreamIt benchmarks from static to randomized input, to prevent computation of partial results at compile-time. We conducted our experimental evaluation on the Intel i7-2600K, AMD Opteron 6378, Intel Xeon Phi 3120A and ARM Cortex-A15 platforms. Our LaminarIR reduces data-communication on average by 35.9% and achieves platform-specific speedups between 3.73x and 4.98x over StreamIt. We reduce memory accesses by more than 60% and achieve energy savings of up to 93.6% on the Intel i7-2600K.",
+  "doi": "10.1145/2813885.2737994",
+  "openalex": "W2997081332",
+  "status": "ok",
+  "title": "LaminarIR: compile-time queues for structured streams"
+ },
+ "10.1145_3039207": {
+  "abstract": "Big data is revolutionizing how all sectors of our economy do business, including telecommunication, transportation, medical, and finance. Big data comes in two flavors: data at rest and data in motion. Processing data in motion is stream processing . Stream processing for big data analytics often requires scale that can only be delivered by a distributed system, exploiting parallelism on many hosts and many cores. One such distributed stream processing system is IBM Streams. Early customer experience with IBM Streams uncovered that another core requirement is extensibility, since customers want to build high-performance domain-specific operators for use in their streaming applications. Based on these two core requirements of distribution and extensibility, we designed and implemented the Streams Processing Language (SPL). This article describes SPL with an emphasis on the language design, distributed runtime, and extensibility mechanism. SPL is now the gateway for the IBM Streams platform, used by our customers for stream processing in a broad range of application domains.",
+  "doi": "10.1145/3039207",
+  "openalex": "W2591953675",
+  "status": "ok",
+  "title": "SPL"
+ },
+ "10.1177_1094342016672542": {
+  "abstract": "Stream processing is a compute paradigm that has been around for decades, yet until recently has failed to garner the same attention as other mainstream languages and libraries (e.g. C++, OpenMP, MPI). Stream processing has great promise: the ability to safely exploit extreme levels of parallelism to process huge volumes of streaming data. There have been many implementations, both libraries and full languages. The full languages implicitly assume that the streaming paradigm cannot be fully exploited in legacy languages, while library approaches are often preferred for being integrable with the vast expanse of extant legacy code. Libraries, however are often criticized for yielding to the shape of their respective languages. RaftLib aims to fully exploit the stream processing paradigm, enabling a full spectrum of streaming graph optimizations, while providing a platform for the exploration of integrability with legacy C/C++ code. RaftLib is built as a C++ template library, enabling programmers to utilize the robust C++ standard library, and other legacy code, along with RaftLib’s parallelization framework. RaftLib supports several online optimization techniques: dynamic queue optimization, automatic parallelization, and real-time low overhead performance monitoring.",
+  "doi": "10.1177/1094342016672542",
+  "openalex": "W2538779768",
+  "status": "ok",
+  "title": "RaftLib: A C++ template library for high performance stream parallel processing"
+ },
+ "10.14778_3137765.3137797": {
+  "abstract": "Top-k queries over data streams is a well studied problem. There exists numerous systems allowing to process continuous queries over sliding windows. At the opposite, non-append only streams call for ad-hoc solutions, e.g. tailor-made solutions implemented in a mainstream programming language. In the meantime, the Stream API and lambda expressions have been added in Java 8, thus gaining powerful operations for data stream processing. However, the Java Collections Framework does not provide data structures to safely and conveniently support sorted collections of evolving data. In this paper, we demonstrate Upsortable, an annotation-based approach that allows to use existing sorted collections from the standard Java API for dynamic data management. Our approach relies on a combination of pre-compilation abstract syntax tree modifications and runtime analysis of bytecode. Upsortable offers the developer a safe and time-efficient solution for developing top-k queries on data streams while keeping a full compatibility with standard Java.",
+  "doi": "10.14778/3137765.3137797",
+  "openalex": "W4321508288",
+  "status": "ok",
+  "title": "Upsortable"
+ },
+ "10.4230_lipics.ecoop.2015.591": {
+  "abstract": "Streaming libraries have become ubiquitous in object-oriented languages, with recent offerings in Java, C#, and Scala. All such libraries, however, suffer in terms of extensibility: there is no way to change the semantics of a streaming pipeline (e.g., to fuse filter operators, to perform computations lazily, to log operations) without changes to the library code. Furthermore, in some languages it is not even possible to add new operators (e.g., a zip operator, in addition to the standard map, filter, etc.) without changing the library. We address such extensibility shortcomings with a new design for streaming libraries. The architecture underlying this design borrows heavily from Oliveira and Cook's object algebra solution to the expression problem, extended with a design that exposes the push/pull character of the iteration, and an encoding of higher-kinded polymorphism. We apply our design to Java and show that the addition of full extensibility is accompanied by high performance, matching or exceeding that of the original, highly-optimized Java streams library.",
+  "doi": "10.4230/lipics.ecoop.2015.591",
+  "openalex": "W2181305810",
+  "status": "ok",
+  "title": "Streams a la carte: Extensible Pipelines with Object Algebras"
+ },
+ "10.5753_wscad.2015.14268": {
+  "abstract": "In this paper we implement an autotuner for the compilation ﬂags of GPU algorithms using the OpenTuner framework. An autotuner is a program that ﬁnds a combination of algorithms, or a conﬁguration of an algorithm, that optimizes the solution of a given problem instance or set of instances. We analyse the performance gained after autotuning compilation ﬂags for parallel algorithms in three GPU devices, and show that it is possible to improve upon the high-level optimizations of the CUDA compiler. One of the experimental settings achieved a 30% speedup.",
+  "doi": "10.5753/wscad.2015.14268",
+  "openalex": "W3162678246",
+  "status": "ok",
+  "title": "Autotuning GPU Compiler Parameters Using OpenTuner"
+ },
+ "oa-W2563147835": {
+  "abstract": "Because the demand for high performance with big data processing and distributed computing is increasing, the stream programming paradigm has been revisited for its abundance of parallelism in virtue of independent actors that communicate via data channels. The synchronous data-flow (SDF) programming model is frequently adopted with stream programming languages for its convenience to express stream programs as a set of nodes connected by data channels. Static data-rates of SDF programming model enable program transformations that greatly improve the performance of SDF programs on multicore architectures. The major application domain is for SDF programs are digital signal processing, audio, video, graphics kernels, networking, and security. This thesis makes the following three contributions that improve the performance of SDF programs: First, a new intermediate representation (IR) called LaminarIR is introduced. LaminarIR replaces FIFO queues with direct memory accesses to reduce the data communication overhead and explicates data dependencies between producer and consumer nodes. We provide transformations and their formal semantics to convert conventional, FIFO-queue based program representations to LaminarIR. Second, a compiler framework to perform sound and semantics-preserving program transformations from FIFO semantics to LaminarIR. We employ static program analysis to resolve token positions in FIFO queues and replace them by direct memory accesses. Third, a communication-cost-aware program orchestration method to establish a foundation of LaminarIR parallelization on multicore architectures. The LaminarIR framework, which consists of the aforementioned contributions together with the benchmarks that we used with the experimental evaluation, has been open-sourced to advocate further research on improving the performance of stream programming languages.",
+  "doi": null,
+  "openalex": "W2563147835",
+  "status": "ok",
+  "title": "Semantic-Preserving Transformations for Stream Program Orchestration on Multicore Architectures"
+ },
+ "oa-W2743053061": {
+  "abstract": "International audience",
+  "doi": null,
+  "openalex": "W2743053061",
+  "status": "ok",
+  "title": "Upsortable: Programming Top-K Queries Over Data Streams"
+ }
+}

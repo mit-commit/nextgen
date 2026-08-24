@@ -1,0 +1,450 @@
+{
+ "10.1002_cpe.2954": {
+  "abstract": "SUMMARY The popularity of multimedia applications made them a major theme in embedded systems. The key component for supporting multimedia application well is embedded processor. Thus, we have designed and implemented an embedded processor, called UniDual processor, to achieve this objective. Its key features are the integration of instructions of reduced instruction set computers (RISCs) and digital signal processors (DSPs) as well as the support of special instruction set and shared‐based clustered register architecture. However, an important issue of UniDual that remains open is how to efficiently allocate registers. In this paper, we present a scheduling and instruction transformation approach to resolve the aforementioned issue. The proposed approach schedules instructions and then transforms overlapped instructions into RISC and DSP instructions by taking communication overhead and hardware limitations into account. Compared with the greedy approach, the evaluation shows that our work is relatively effective in performance and code size reduction. Copyright © 2012 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.2954",
+  "openalex": "W2104456922",
+  "status": "ok",
+  "title": "Instruction scheduling and transformation for a VLIW unified reduced instruction set computer/digital signal processor processor with shared register architecture"
+ },
+ "10.1002_spe.826": {
+  "abstract": "Abstract Clustered architecture processors are preferred for embedded systems because centralized register file architectures scale poorly in terms of clock rate, chip area, and power consumption. Scheduling for clustered architectures involves spatial concerns (where to schedule) as well as temporal concerns (when to schedule). Various clustered VLIW configurations, connectivity types, and inter‐cluster communication models present different performance trade‐offs to a scheduler. The scheduler is responsible for resolving the conflicting requirements of exploiting the parallelism offered by the hardware and limiting the communication among clusters to achieve better performance. In this paper, we describe our experience with developing a pragmatic scheme and also a generic graph‐matching‐based framework for cluster scheduling based on a generic and realistic clustered machine model. The proposed scheme effectively utilizes the exact knowledge of available communication slots, functional units, and load on different clusters as well as future resource and communication requirements known only at schedule time. The proposed graph‐matching‐based framework for cluster scheduling resolves the phase‐ordering and fixed‐ordering problem associated with earlier schemes for scheduling clustered VLIW architectures. The experimental evaluation in the context of a state‐of‐art commercial clustered architecture (using real‐world benchmark programs) reveals a significant performance improvement over the earlier proposals, which were mostly evaluated using compiled simulation of hypothetical clustered architectures. Our results clearly highlight the importance of considering the peculiarities of commercial clustered architectures and the hard‐nosed performance measurement. Copyright © 2007 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/spe.826",
+  "openalex": "W4252454950",
+  "status": "ok",
+  "title": "Pragmatic integrated scheduling for clustered VLIW architectures"
+ },
+ "10.1002_spe.v38_3": {
+  "abstract": null,
+  "doi": "10.1002/spe.v38:3",
+  "openalex": "W2001508659",
+  "status": "no_abstract",
+  "title": "Special Issue on ‘Spam Detection’ Software: Practice and Experience (SPE)"
+ },
+ "10.1007_11602569_53": {
+  "abstract": null,
+  "doi": "10.1007/11602569_53",
+  "openalex": "W2104715885",
+  "status": "no_abstract",
+  "title": "Integrating a New Cluster Assignment and Scheduling Algorithm into an Experimental Retargetable Code Generation Framework"
+ },
+ "10.1007_11602569_54": {
+  "abstract": null,
+  "doi": "10.1007/11602569_54",
+  "openalex": "W1529768310",
+  "status": "no_abstract",
+  "title": "Cooperative Instruction Scheduling with Linear Scan Register Allocation"
+ },
+ "10.1007_11945918_48": {
+  "abstract": null,
+  "doi": "10.1007/11945918_48",
+  "openalex": "W1500830529",
+  "status": "no_abstract",
+  "title": "Exploring Energy-Performance Trade-Offs for Heterogeneous Interconnect Clustered VLIW Processors"
+ },
+ "10.1007_978-1-4419-0263-4_1": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4419-0263-4_1",
+  "openalex": "W1646056354",
+  "status": "no_abstract",
+  "title": "Tiled Multicore Processors"
+ },
+ "10.1007_978-3-540-24644-2_1": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-24644-2_1",
+  "openalex": "W1607051589",
+  "status": "no_abstract",
+  "title": "Search Space Properties for Mapping Coarse-Grain Pipelined FPGA Applications"
+ },
+ "10.1007_978-3-540-24644-2_2": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-24644-2_2",
+  "openalex": "W1521696338",
+  "status": "no_abstract",
+  "title": "Adapting Convergent Scheduling Using Machine-Learning"
+ },
+ "10.1016_j.jpdc.2012.04.005": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2012.04.005",
+  "openalex": "W2012243436",
+  "status": "no_abstract",
+  "title": "Compiler-assisted energy optimization for clustered VLIW processors"
+ },
+ "10.1016_s1007-0214_10_70065-1": {
+  "abstract": "This paper presents an instruction scheduling and cluster assignment approach for clustered very long instruction words (VLIW) processors. The technique produces high performance code by simultaneously balancing instructions among clusters and minimizing the amount of inter-cluster data communications. The scheme is evaluated based on benchmarks extracted from UTDSP. Results show a significant speedup compared with previously used techniques with speed-ups of up to 44%, with average speed-ups ranging from 140/0 (2-cluster) to 18% (4-cluster).",
+  "doi": "10.1016/s1007-0214(10)70065-1",
+  "openalex": "W2113857255",
+  "status": "ok",
+  "title": "Data dependence graph directed scheduling for clustered VLIW architectures"
+ },
+ "10.1109_cgo.2007.15": {
+  "abstract": "Increasing performance, while at the same time reducing power consumption, is a major design tradeoff in current microprocessors. In this paper, we investigate the potential of using a heterogeneous clustered VLIW microarchitecture. In the proposed microarchitecture, each cluster, the interconnection network and the supporting memory hierarchy can run at different frequencies and voltages. Some of the clusters can then be configured to be performance-oriented and run at high frequency, while the other clusters can be configured to be low-power-oriented and run at lower frequencies, thus reducing overall consumption. For this heterogeneous design to be effective, we need to select the most suitable frequencies and voltages for each component. We propose a scheme to choose these parameters based on a model that estimates the energy consumption and the execution time of floating-point codes at compile time. Finally, we present a modulo scheduling technique based on graph partitioning that exploits the opportunities presented on heterogeneous clustered microarchitectures. Results show that the Energy-Delay product (ED2) can be significantly reduced by 15% on average for a microarchitecture with 4-clusters and by as much as 35% for selected programs",
+  "doi": "10.1109/cgo.2007.15",
+  "openalex": "W2099220296",
+  "status": "ok",
+  "title": "Heterogeneous Clustered VLIW Microarchitectures"
+ },
+ "10.1109_cgo.2007.39": {
+  "abstract": "This paper presents an instruction scheduling and cluster assignment approach for clustered processors. The proposed technique makes use of a novel representation named the scheduling graph which describes all possible schedules. A powerful deduction process is applied to this graph, reducing at each step the set of possible schedules. In contrast to traditional list scheduling techniques, the proposed scheme tries to establish relations among instructions rather than assigning each instruction to a particular cycle. The main advantage is that wrong or poor schedules can be anticipated and discarded earlier. In addition, cluster assignment of instructions is performed using another novel concept called virtual clusters, which define sets of instructions that must execute in the same cluster. These clusters are managed during the deduction process to identify incompatibilities among instructions. The mapping of virtual to physical clusters is postponed until the scheduling of the instructions has finalized. The advantages this novel approach features include: (1) accurate scheduling information when assigning, and, (2) accurate information of the cluster assignment constraints imposed by scheduling decisions. We have implemented and evaluated the proposed scheme with superblocks extracted from Speclnt95 and MediaBench. The results show that this approach produces better schedules than the previous state-of-the-art. Speed-ups are up to 15%, with average speed-ups ranging from 2.5% (2-Clusters) to 9.5% (4-Clusters)",
+  "doi": "10.1109/cgo.2007.39",
+  "openalex": "W2109906966",
+  "status": "ok",
+  "title": "Virtual Cluster Scheduling Through the Scheduling Graph"
+ },
+ "10.1109_cit.2010.69": {
+  "abstract": "In this paper, we propose a multi-criteria job scheduler for scheduling a continuous stream of batch jobs on largescale computing farms, called Convergent Scheduling 2.0 (CS 2.0), which is an enhancement of the scheduler described in. CS 2.0 exploits a set of heuristics that drive the scheduler in taking decisions. Each heuristics manages a specific constraint, and contributes to compute the measurement of the matching degree between a job and a machine. Scheduling choices are taken both to meet the QoS requested by the submitted jobs and to optimize the exploitation of hardware and software resources. In order to validate CS 2.0, we compared it versus two common job scheduling algorithms: Easy and Flexible backfilling. CS 2.0 demonstrated to be able to compute good assignments that allow a better exploitation of resources with respect to the other algorithms.",
+  "doi": "10.1109/cit.2010.69",
+  "openalex": "W2039041987",
+  "status": "ok",
+  "title": "A Multi-criteria Job Scheduling Framework for Large Computing Farms"
+ },
+ "10.1109_hpcc.2012.29": {
+  "abstract": "A hardware scheduler for many-core architectures enables fast scheduling and allocation of fine granularity tasks to all cores. We present performance evaluation of a hardware scheduler for HyperCore, a many-core architecture. The evaluation is based on an architectural simulator, using multiple benchmarks representing a wide variety of inherent parallelism. Several architectural improvements are proposed, and various configurations of the scheduler are simulated. The results are analyzed, and are used to highlight the potential and the possible pitfalls of the architecture. It is shown that a scheduler with a capacity to schedule and terminate 10 instances per cycle, along with a task queue of as little as two slots near each core, is sufficient to utilize 256 cores. Other scheduling configurations are also analyzed.",
+  "doi": "10.1109/hpcc.2012.29",
+  "openalex": "W2106461096",
+  "status": "ok",
+  "title": "Performance of a Hardware Scheduler for Many-core Architecture"
+ },
+ "10.1109_interact.2011.8": {
+  "abstract": "A fundamental problem in compiler optimization, which has increased in importance due to the spread of multi-core architectures, is to find parallelism in sequential programs. Current processors can only be fully taken advantage of if workload is distributed over the available processors. In this paper we look at distributing instructions in a block of code over multi-cluster processors, the instruction assignment problem. The optimal assignment of instructions in blocks of code on multiple processors is known to be NP-complete. In this paper we present a constraint programming approach for scheduling instructions on multi-cluster systems that feature fast inter-processor communication. We employ a problem decomposition technique to solve the problem in a hierarchical manner where an instance of the master problem solves multiple sub-problems to derive a solution. We found that our approach was able to achieve an improvement of 6-20 percent, on average, over the state-of-the-art techniques on superblocks from SPEC 2000 benchmarks.",
+  "doi": "10.1109/interact.2011.8",
+  "openalex": "W2151410027",
+  "status": "ok",
+  "title": "A Constraint Programming Approach for Instruction Assignment"
+ },
+ "10.1109_ipdps.2007.370381": {
+  "abstract": "Embedded media applications have to satisfy real-time, low power consumption and silicon area constraints. These applications spend most of the execution time in the iteration of a few kernels; such kernels are typically made of independent operations, which can be executed in parallel. Clustered architectures are a solution designed to exploit the high instruction level parallelism (ILP) of the media kernels, to keep a good level of scalability and to match the strict constraints of the embedded domains. Within this category, architectures with reconfigurable connections between clusters are of particular interest. The enhanced flexibility allows them to handle several different data-paths effectively, hence multiple applications; this is a key economic factor in the semiconductor world, in which the cost of the masks significantly increases at every technological advance. This papers describes hierarchical cluster assignment (HCA), a compilation technique that deals with the problem of mapping the computation of multimedia kernels onto the clusters of the target machine. HCA exploits the hierarchical structure of the clusters of the target architectures; it works by decomposing the problem of cluster assignment into a sequence of simpler sub-problems, each of them involving a subset of the kernel instructions and a subset of the machine clusters. A prototype of this methodology has been implemented in a flexible framework and tested on machine models based on the DSPfabric architecture.",
+  "doi": "10.1109/ipdps.2007.370381",
+  "openalex": "W2155233826",
+  "status": "ok",
+  "title": "Hierarchical Cluster Assignment for Coarse-Grain Reconfigurable Coprocessors"
+ },
+ "10.1109_ipdpsw.2010.5470711": {
+  "abstract": "The aim of this work is to study the problem of scheduling fine grain task graphs on hierarchical distributed systems with communication delay. We consider as a case study how to schedule the instructions on a processor that implements incomplete bypass ( ST200). We show first how this problem can be expressed as scheduling unitary tasks on a hierarchical architecture with heavy communications between clustered units. The proposed analysis is generic and can be extended to other challenging problems like scheduling in clusters of multi-cores. Our main result is an approximation algorithm based on list scheduling whose approximation ratio is the minimum of two expressions, the first one depends on the number of clusters while the second one depends on the communication delay. Experiments run on random graphs and on structured graphs demonstrate the effectiveness of the proposed approach.",
+  "doi": "10.1109/ipdpsw.2010.5470711",
+  "openalex": "W1981352631",
+  "status": "ok",
+  "title": "Scheduling instructions on hierarchical machines"
+ },
+ "10.1109_ipdpsw.2010.5470906": {
+  "abstract": "The technological trend towards smaller feature size and related implications of reduced threshold voltage and increased number of transistors pose a power management challenge. Leakage power dominates total processor power in smaller technologies. In VLIW and clustered VLIW architectures, the large number of functional units with relatively simpler issue logic contribute significantly to the overall power consumption. The underutilization of functional units (because of inherent limitations in ILP among others) causes a significant amount of this power to be consumed in the form of leakage power. Architectural schemes proposed in the past suffer from a limited program view thereby compromising a good amount of energy savings in the form of extra transitions to/from low leakage mode. Energy aware scheduling in the context of VLIW architectures has mostly focused on acyclic scheduling. In this paper, we propose a simple and integrated compiler directed scheme that obtains significant energy savings in functional units for VLIW and clustered VLIW and works equally well for both cyclic as well as acyclic scheduled regions. Our compiler directed scheme increases energy savings in functional units up to 9% and 26% in VLIW architecture and clustered VLIW architecture respectively. We provide a preliminary experimental analysis of our algorithms using the Trimaran 4.0 compiler infrastructure.",
+  "doi": "10.1109/ipdpsw.2010.5470906",
+  "openalex": "W2040665680",
+  "status": "ok",
+  "title": "Integrated energy-aware cyclic and acyclic scheduling for clustered VLIW processors"
+ },
+ "10.1109_isca.2004.1310759": {
+  "abstract": "This paper evaluates the Raw microprocessor. Raw addresses the challenge of building a general-purpose architecture that performs well on a larger class of stream and embedded computing applications than existing microprocessors, while still running existing ILP-based sequential programs with reasonable performance in the face of increasing wire delays. Raw approaches this challenge by implementing plenty of on-chip resources - including logic, wires, and pins - in a tiled arrangement, and exposing them through a new ISA, so that the software can take advantage of these resources for parallel applications. Raw supports both ILP and streams by routing operands between architecturally-exposed functional units over a point-to-point scalar operand network. This network offers low latency for scalar data transport. Raw manages the effect of wire delays by exposing the interconnect and using software to orchestrate both scalar and stream data transport. We have implemented a prototype Raw microprocessor in IBM's 180 nm, 6-layer copper, CMOS 7SF standard-cell ASIC process. We have also implemented ILP and stream compilers. Our evaluation attempts to determine the extent to which Raw succeeds in meeting its goal of serving as a more versatile, general-purpose processor. Central to achieving this goal is Raw's ability to exploit all forms of parallelism, including ILP, DLP, TLP, and Stream parallelism. Specifically, we evaluate the performance of Raw on a diverse set of codes including traditional sequential programs, streaming applications, server workloads and bit-level embedded computation. Our experimental methodology makes use of a cycle-accurate simulator validated against our real hardware. Compared to a 180nm Pentium-III, using commodity PC memory system components, Raw performs within a factor of 2/spl times/ for sequential applications with a very low degree of ILP, about 2/spl times/ to 9/spl times/ better for higher levels of ILP, and 10/spl times/-100/spl times/ better when highly parallel applications are coded in a stream language or optimized by hand. The paper also proposes a new versatility metric and uses it to discuss the generality of Raw.",
+  "doi": "10.1109/isca.2004.1310759",
+  "openalex": "W4244452576",
+  "status": "ok",
+  "title": "Evaluation of the raw microprocessor: an exposed-wire-delay architecture for ILP and streams"
+ },
+ "10.1109_isca52012.2021.00085": {
+  "abstract": "The need for speed in modern data-intensive work-loads and the rise of \"dark silicon\" in the semiconductor industry are pushing for larger, faster, and more energy and area-efficient architectures, such as Reconfigurable Dataflow Accelerators (RDAs). Nevertheless, challenges remain in developing mechanisms to effectively utilize the compute power of these large-scale RDAs. To address these challenges, we present SARA, a compiler that employs a novel mapping strategy to efficiently utilize large-scale RDAs. Starting from a single-threaded imperative abstraction, SARA spatially maps a program onto RDA's distributed resources, exploiting dataflow parallelism within and across hyperblocks to saturate the compute throughput of an RDA. SARA introduces (a) compiler-managed memory consistency (CMMC), a control paradigm that hierarchically pipelines a nested and data-dependent control-flow graph onto a dataflow architecture, and (b) a compilation flow that decomposes the program graph across distributed heterogeneous resources to hide low-level RDA constraints from programmers. Our evaluation shows that SARA achieves close to perfect performance scaling on a recently proposed RDA—Plasticine. Over a mix of deep-learning, graph-processing, and streaming applications, SARA achieves a 1.9× geo-mean speedup over a Tesla V100 GPU using only 12% of the silicon area.",
+  "doi": "10.1109/isca52012.2021.00085",
+  "openalex": "W3190681843",
+  "status": "ok",
+  "title": "SARA: Scaling a Reconfigurable Dataflow Accelerator"
+ },
+ "10.1109_micro.2007.17": {
+  "abstract": "The trends in enterprise IT toward service-oriented computing, server consolidation, and virtual computing point to a future in which workloads are becoming increasingly diverse in terms of performance, reliability, and availability requirements. It can be expected that more and more applications with diverse requirements will run on a CMP and share platform resources such as the lowest level cache and off-chip bandwidth. In this environment, it is desirable to have microarchitecture and software support that can provide a guarantee of a certain level of performance, which we refer to as performance Quality of Service. In this paper, we investigate a framework that would be needed for a CMP to fully provide QoS. We found that the ability of a CMP to partition platform resources alone is not sufficient for fully providing QoS. We also need an appropriate way to specify a QoS target, and an admission control policy that accepts jobs only when their QoS targets can be satisfied. We also found that providing strict QoS often leads to a significant reduction in throughput due to resource fragmentation. We propose novel throughput optimization techniques that include: (1) exploiting various QoS execution modes, and (2) a microarchitecture technique that steals excess resources from a job while still meeting its QoS target. We evaluated our QoS framework with a full system simulation of a 4-core CMP and a recent version of the Linux Operating System. We found that compared to an unoptimized scheme, the throughput can be improved by up to 47%, making the throughput significantly closer to a non-QoS CMP.",
+  "doi": "10.1109/micro.2007.17",
+  "openalex": "W2150181997",
+  "status": "ok",
+  "title": "A Framework for Providing Quality of Service in Chip Multi-Processors"
+ },
+ "10.1109_micro.2007.32": {
+  "abstract": "The microprocessor industry has moved toward chip multiprocessor (CMP) designs as a means of utilizing the increasing transistor counts in the face of physical and micro-architectural limitations. Despite this move, CMPs do not directly improve the performance of single-threaded codes, a characteristic of most applications. In order to support parallelization of general-purpose applications, computer architects have proposed CMPs with lightweight scalar communication mechanisms (R. Rangan et al., 2004), (K. Sankaralingam, et al., 2003), (M.B. Taylor et al., 2005). Despite such support, most existing compiler multi-threading techniques have generally demonstrated little effectiveness in extracting parallelism from non-scientific applications (W. Lee et al., 1998), (W. Lee et al., 2002), (K. Rich and M. Farrens, 2004). The main reason for this is that such techniques are mostly restricted to extracting parallelism within straight-line regions of code. In this paper, we first propose a framework that enables global multi-threaded instruction scheduling in general. We then describe GREMIO, a scheduler built using this framework. GREMIO operates at a global scope, at the procedure level, and uses control dependence analysis to extract non-speculative thread-level parallelism from sequential codes. Using a fully automatic compiler implementation of GREMIO and a validated processor model, this paper demonstrates gains for a dual-core CMP model running a variety of codes. Our experiments demonstrate the advantage of exploiting global scheduling for multithreaded architectures, and present gains in a detailed comparison with the decoupled software pipelining (DSWP) multi-threading technique (G. Ottoni et al., 2005). Furthermore, our experiments show that adding GREMIO to a compiler with DSWP improves the average speedup from 16.5% to 32.8% for important benchmark functions when utilizing two cores, indicating the importance of this technique in making compilers extract threads effectively.",
+  "doi": "10.1109/micro.2007.32",
+  "openalex": "W3148731126",
+  "status": "ok",
+  "title": "Global Multi-Threaded Instruction Scheduling"
+ },
+ "10.1109_pact.2004.1342543": {
+  "abstract": "Technology trends present new challenges for processor architectures and their instruction schedulers. Growing transistor density increases the number of execution units on a single chip, and decreasing wire transmission speeds causes long and variable on-chip latencies. These trends severely limit the two dominant conventional architectures: dynamic issue superscalars, and static placement and issue VLIWs. We present a new execution model in which the hardware and static scheduler instead work cooperatively, called static placement dynamic issue (SPDI). This paper focuses on the static instruction scheduler for SPDI. We identify and explore three issues SPDI schedulers must consider - locality, contention, and depth of speculation. We evaluate a range of SPDI scheduling algorithms executing on an explicit data graph execution (EDGE) architecture. We find that a surprisingly simple one achieves an average of 5.6 instructions-per-cycle (IPC) for SPEC2000 64-wide issue machine, and is within 80% of the performance without on-chip latencies. These results suggest that the compiler is effective at balancing on-chip latency and parallelism, and that the division of responsibilities between the compiler and the architecture is well suited to future systems.",
+  "doi": "10.1109/pact.2004.1342543",
+  "openalex": "W4235875145",
+  "status": "ok",
+  "title": "Static placement, dynamic issue (SPDI) scheduling for EDGE architectures"
+ },
+ "10.1109_pact.2004.26": {
+  "abstract": null,
+  "doi": "10.1109/pact.2004.26",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Static placement, dynamic issue (SPDI) scheduling for EDGE architectures"
+ },
+ "10.1109_pact.2007.4336209": {
+  "abstract": null,
+  "doi": "10.1109/pact.2007.4336209",
+  "openalex": "W4238986727",
+  "status": "no_abstract",
+  "title": "Reducing Energy Consumption of On-Chip Networks Through a Hybrid Compiler-Runtime Approach"
+ },
+ "10.1109_pact.2007.58": {
+  "abstract": "This paper investigates a compiler-runtime approach for reducing power consumption in the context of the network-on-chip (NoC) based chip multiprocessor (CMP) architectures. Our proposed approach is based on the observation that the same communication patterns across the nodes of a mesh based CMP repeat themselves in successive iterations of a loop nest. The approach collects the link usage statistics during the execution of the first few iterations of a given loop nest and computes the slack (allowable delay) for each communication transaction. This information is subsequently utilized in selecting the most appropriate voltage levels for the communication links (and the corresponding frequencies) in executing the remaining iterations of the loop nest. The results with the benchmarks from the MediaBench suite show that, not only this hybrid approach generates better energy savings than a pure hardware-directed voltage scaling scheme, but it also leads to much less performance degradation than the latter. Specifically, the average energy savings achieved by the pure hardware based scheme and our approach are 24.9% and 38.1%, respectively, and the corresponding performance overhead numbers are 8.3% and 2.1%. Our results also show that the hybrid approach generates much better savings than two proposed pure compiler based schemes. In addition, our experimental evaluation indicates that the energy savings obtained through the proposed approach are very close to optimal savings (within 3%) under the same performance bound.",
+  "doi": "10.1109/pact.2007.58",
+  "openalex": "W2152753702",
+  "status": "ok",
+  "title": "Reducing Energy Consumption of On-Chip Networks Through a Hybrid Compiler-Runtime Approach"
+ },
+ "10.1145_1028176.1006733": {
+  "abstract": "This paper evaluates the Raw microprocessor. Raw addresses thechallenge of building a general-purpose architecture that performswell on a larger class of stream and embedded computing applicationsthan existing microprocessors, while still running existingILP-based sequential programs with reasonable performance in theface of increasing wire delays. Raw approaches this challenge byimplementing plenty of on-chip resources - including logic, wires,and pins - in a tiled arrangement, and exposing them through a newISA, so that the software can take advantage of these resources forparallel applications. Raw supports both ILP and streams by routingoperands between architecturally-exposed functional units overa point-to-point scalar operand network. This network offers lowlatency for scalar data transport. Raw manages the effect of wiredelays by exposing the interconnect and using software to orchestrateboth scalar and stream data transport.We have implemented a prototype Raw microprocessor in IBM's180 nm, 6-layer copper, CMOS 7SF standard-cell ASIC process. Wehave also implemented ILP and stream compilers. Our evaluationattempts to determine the extent to which Raw succeeds in meetingits goal of serving as a more versatile, general-purpose processor.Central to achieving this goal is Raw's ability to exploit all formsof parallelism, including ILP, DLP, TLP, and Stream parallelism.Specifically, we evaluate the performance of Raw on a diverse setof codes including traditional sequential programs, streaming applications,server workloads and bit-level embedded computation.Our experimental methodology makes use of a cycle-accurate simulatorvalidated against our real hardware. Compared to a 180 nmPentium-III, using commodity PC memory system components, Rawperforms within a factor of 2x for sequential applications with a verylow degree of ILP, about 2x to 9x better for higher levels of ILP, and10x-100x better when highly parallel applications are coded in astream language or optimized by hand. The paper also proposes anew versatility metric and uses it to discuss the generality of Raw.",
+  "doi": "10.1145/1028176.1006733",
+  "openalex": "W2150007533",
+  "status": "ok",
+  "title": "Evaluation of the Raw Microprocessor"
+ },
+ "10.1145_1111037.1111055": {
+  "abstract": "Increasing complexity in the communication patterns of embedded applications parallelized over multiple processing units makes it difficult to continue using the traditional bus-based on-chip communication techniques. The main contribution of this paper is to demonstrate the importance of compiler technology in reducing power consumption of applications designed for emerging multi processor, NoC (Network-on-Chip) based embedded systems. Specifically, we propose and evaluate a compiler-directed approach to NoC power management in the context of array-intensive applications, used frequently in embedded image/video processing. The unique characteristic of the compiler-based approach proposed in this paper is that it increases the idle periods of communication channels by reusing the same set of channels for as many communication messages as possible. The unused channels in this case take better advantage of the underlying power saving mechanism employed by the network architecture. However, this channel reuse optimization should be applied with care as it can hurt performance if two or more simultaneous communications are mapped onto the same set of channels. Therefore, the problem addressed in this paper is one of reducing the number of channels used to implement a set of communications without increasing the communication latency significantly. To test the effectiveness of our approach, we implemented it within an optimizing compiler and performed experiments using twelve application codes and a network simulation environment. Our experiments show that the proposed compiler-based approach is very successful in practice and works well under both hardware based and software based channel turn-off schemes.",
+  "doi": "10.1145/1111037.1111055",
+  "openalex": "W2026192802",
+  "status": "ok",
+  "title": "Compiler-directed channel allocation for saving power in on-chip networks"
+ },
+ "10.1145_1133981.1134004": {
+  "abstract": "While scalable NoC (Network-on-Chip) based communication architectures have clear advantages over long point-to-point communication channels, their power consumption can be very high. In contrast to most of the existing hardware-based efforts on NoC power optimization, this paper proposes a compiler-directed approach where the compiler decides the appropriate voltage/frequency levels to be used for each communication channel in the NoC. Our approach builds and operates on a novel graph based representation of a parallel program and has been implemented within an optimizing compiler and tested using 12 embedded benchmarks. Our experiments indicate that the proposed approach behaves better - from both performance and power perspectives - than a hardwarebased scheme and the energy savings it achieves are very close to the savings that could be obtained from an optimal, but hypothetical voltage/frequency scaling scheme.",
+  "doi": "10.1145/1133981.1134004",
+  "openalex": "W4239166840",
+  "status": "ok",
+  "title": "Reducing NoC energy consumption through compiler-directed channel voltage scaling"
+ },
+ "10.1145_1168857.1168876": {
+  "abstract": "This paper explores hierarchical instruction scheduling for a tiled processor. Our results show that at the top level of the hierarchy, a simple profile-driven algorithm effectively minimizes operand latency. After this schedule has been partitioned into large sections, the bottom-level algorithm must more carefully analyze program structure when producing the final schedule.Our analysis reveals that at this bottom level, good scheduling depends upon carefully balancing instruction contention for processing elements and operand latency between producer and consumer instructions. We develop a parameterizable instruction scheduler that more effectively optimizes this trade-off. We use this scheduler to determine the contention-latency sweet spot that generates the best instruction schedule for each application. To avoid this application-specific tuning, we also determine the parameters that produce the best performance across all applications. The result is a contention-latency setting that generates instruction schedules for all applications in our workload that come within 17% of the best schedule for each.",
+  "doi": "10.1145/1168857.1168876",
+  "openalex": "W2144271506",
+  "status": "ok",
+  "title": "Instruction scheduling for a tiled dataflow architecture"
+ },
+ "10.1145_1176760.1176778": {
+  "abstract": "Coarse-grained reconfigurable architectures (CGRAs) present an appealing hardware platform by providing the potential for high computation throughput, scalability, low cost and energy efficiency. CGRAs consist of an array of function units and register files generally organized as a two dimensional grid. The most difficult challenge with deploying CGRAs is compiler scheduling technology that can map software implementations of compute intensive loops onto the array. Traditional schedulers are not suitable because they do not take into account the explicit routing of operand values that is necessary. In essence, the problem of binding operations to time slots and resources is extended to also include explicit routing of operands from producers to consumers. To tackle this problem, this paper introduces a software pipelining technique for mapping loop bodies onto CGRAs, referred to as modulo graph embedding. We leverage graph embedding from graph theory, which is used to draw graphs onto a target space. The loop body is essentially drawn onto the CGRA mesh, subject to modulo resource usage constraints. Modulo graph embedding is effective because it can take into account the communication structure of the loop body during mapping. On average, a compute utilization of 56-68% is achieved for a set of loop kernels across three 4x4 CGRA designs.",
+  "doi": "10.1145/1176760.1176778",
+  "openalex": "W2140169558",
+  "status": "ok",
+  "title": "Modulo graph embedding"
+ },
+ "10.1145_1176887.1176921": {
+  "abstract": "Miniaturization of devices and the ensuing decrease in the threshold voltage has led to a substantial increase in the leakage component of the total processor energy consumption. Relatively simpler issue logic and the presence of a large number of function units in the VLIW and the clustered VLIW architectures attribute a large fraction of this leakage energy consumption in the functional units. However, functional units are not fully utilized in the VLIW architectures because of the inherent variations in the ILP of the programs. This underutilization is even more pronounced in the context of clustered VLIW architectures because of the contentions for the limited number of slow intercluster communication channels which lead to many short idle cycles.In the past, some architectural schemes have been proposed to obtain leakage energy bene .ts by aggressively exploiting the idleness of functional units. However, presence of many short idle cycles cause frequent transitions from the active mode to the sleep mode and vice-versa and adversely a ffects the energy benefits of a purely hardware based scheme. In this paper, we propose and evaluate a compiler instruction scheduling algorithm that assist such a hardware based scheme in the context of VLIW and clustered VLIW architectures. The proposed scheme exploits the scheduling slacks of instructions to orchestrate the functional unit mapping with the objective of reducing the number of transitions in functional units thereby keeping them off for a longer duration. The proposed compiler-assisted scheme obtains a further 12% reduction of energy consumption of functional units with negligible performance degradation over a hardware-only scheme for a VLIW architecture. The benefits are 15% and 17% in the context of a 2-clustered and a 4-clustered VLIW architecture respectively. Our test bed uses the Trimaran compiler infrastructure.",
+  "doi": "10.1145/1176887.1176921",
+  "openalex": "W2127292616",
+  "status": "ok",
+  "title": "Compiler-assisted leakage energy optimization for clustered VLIW architectures"
+ },
+ "10.1145_1346281.1346310": {
+  "abstract": "The recent shift in the industry towards chip multiprocessor (CMP) designs has brought the need for multi-threaded applications to mainstream computing. As observed in several limit studies, most of the parallelization opportunities require looking for parallelism beyond local regions of code. To exploit these opportunities, especially for sequential applications, researchers have recently proposed global multi-threaded instruction scheduling techniques, including DSWP and GREMIO. These techniques simultaneously schedule instructions from large regions of code, such as arbitrary loop nests or whole procedures, and have been shown to be effective at extracting threads for many applications. A key enabler of these global instruction scheduling techniques is the Multi-Threaded Code Generation (MTCG) algorithm proposed in [16], which generates multi-threaded code for any partition of the instructions into threads. This algorithm inserts communication and synchronization instructions in order to satisfy all inter-thread dependences.",
+  "doi": "10.1145/1346281.1346310",
+  "openalex": "W2154128005",
+  "status": "ok",
+  "title": "Communication optimizations for global multi-threaded instruction scheduling"
+ },
+ "10.1145_1356058.1356075": {
+  "abstract": "In the embedded domain, custom hardware in the form of ASICs is often used to implement critical parts of applications when performance and energy efficiency goals cannot be met with software implementations on a general purpose processor or DSP. The downsides of using ASICs include high non-recurring engineering costs, inability to accommodate changes in the application after production, and inability to reuse hardware for new applications. However, by allowing a degree of post-programmability, the hardware can retain high performance and energy efficiency while increasing flexibility and reusability. The difficulty with programmable custom hardware lies in mapping new applications onto an existing datapath that is both sparse and irregular. This paper proposes a constraint-driven modulo scheduler that maps software-pipelineable loops onto programmable loop accelerator hardware. The scheduler is able to target accelerators with widely varying levels of datapath functional capability and connectivity, and thus, varying degrees of programmability. The paper investigates the ability of the scheduler to map new loops onto existing hardware, which depends on both the degree of programmability of the hardware as well as the similarity of the new loop to the original loop for which the hardware was designed.",
+  "doi": "10.1145/1356058.1356075",
+  "openalex": "W2134886942",
+  "status": "ok",
+  "title": "Modulo scheduling for highly customized datapaths to increase hardware reusability"
+ },
+ "10.1145_1362622.1362695": {
+  "abstract": "In this paper, we propose a new method, called Convergent Scheduling, for scheduling a continuous stream of batch jobs on the machines of large-scale computing farms. This method exploits a set of heuristics that guide the scheduler in making decisions. Each heuristics manages a specific problem constraint, and contributes to carry out a value that measures the degree of matching between a job and a machine. Scheduling choices are taken to meet the QoS requested by the submitted jobs, and optimizing the usage of hardware and software resources. We compared it with some of the most common job scheduling algorithms, i.e. Backfilling, and Earliest Deadline First. Convergent Scheduling is able to compute good assignments, while being a simple and modular algorithm.",
+  "doi": "10.1145/1362622.1362695",
+  "openalex": "W2155012575",
+  "status": "ok",
+  "title": "A job scheduling framework for large computing farms"
+ },
+ "10.1145_1391469.1391628": {
+  "abstract": "The problem attacked in this paper is one of automatically mapping an application onto a Network-on-Chip (NoC) based chip multiprocessor (CMP) architecture in a locality-aware fashion. The proposed compiler approach has four major steps: task scheduling, processor mapping, data mapping, and packet routing. In the first step, the application code is parallelized and the resulting parallel threads are assigned to virtual processors. The second step implements a virtual processor-to-physical processor mapping. The goal of this mapping is to ensure that the threads that are expected to communicate frequently with each other are assigned to neighboring processors as much as possible. In the third step, data elements are mapped to memories attached to CMP nodes. The main objective of this mapping is to place a given data item into a node which is close to the nodes that access it. The last step of our approach determines the paths (between memories and processors) for data to travel in an energy efficient manner. In this paper, we describe the compiler algorithms we implemented in detail and present an experimental evaluation of the framework. In our evaluation, we test our entire framework as well as the impact of omitting some of its steps. This experimental analysis clearly shows that the proposed framework reduces energy consumption of our applications significantly (27.41% on average over a pure performance oriented application mapping strategy) as a result of improved locality of data accesses.",
+  "doi": "10.1145/1391469.1391628",
+  "openalex": "W2126799727",
+  "status": "ok",
+  "title": "Application mapping for chip multiprocessors"
+ },
+ "10.1145_1454115.1454140": {
+  "abstract": "Coarse-grained reconfigurable architectures (CGRAs) present an appealing hardware platform by providing the potential for high computation throughput, scalability, low cost, and energy efficiency. CGRAs consist of an array of function units and register files often organized as a two dimensional grid. The most difficult challenge in deploying CGRAs is compiler scheduling technology that can efficiently map software implementations of compute intensive loops onto the array. Traditional schedulers focus on the placement of operations in time and space. With CGRAs, the challenge of placement is compounded by the need to explicitly route operands from producers to consumers. To systematically attack this problem, we take an edge-centric approach to modulo scheduling that focuses on the routing problem as its primary objective. With edge-centric modulo scheduling (EMS), placement is a by-product of the routing process, and the schedule is developed by routing each edge in the dataflow graph. Routing cost metrics provide the scheduler with a global perspective to guide selection. Experiments on a wide variety of compute-intensive loops from the multimedia domain show that EMS improves throughput by 25% over traditional iterative modulo scheduling, and achieves 98% of the throughput of simulated annealing techniques at a fraction of the compilation time.",
+  "doi": "10.1145/1454115.1454140",
+  "openalex": "W2122171990",
+  "status": "ok",
+  "title": "Edge-centric modulo scheduling for coarse-grained reconfigurable architectures"
+ },
+ "10.1145_1950413.1950441": {
+  "abstract": "Modern FPGAs are used to implement a wide range of circuits, many of which have coarse-grained and fine-grained components. The ever-increasing size of these circuits places great demand on CAD tools to synthesize circuits faster and without loss in quality. Synthesizing coarse-grained components onto fine-grained FPGA resources is inefficient, and past attempts to optimize FPGAs for word-oriented datapaths have met with limited success. This paper presents a CAD flow to fully compile Verilog into a configuration bitstream for a new type of FPGA with time-multiplexed coarse-grained resources. We demonstrate two approaches with gains of 61x and 42x in synthesis time on average compared to QuartusII, but due to time-multiplexing and current synthesis limitations we achieve circuit speeds of 14x and 8.5x slower on average. We show the tools can also trade density for maximum clock frequency.",
+  "doi": "10.1145/1950413.1950441",
+  "openalex": "W2047143252",
+  "status": "ok",
+  "title": "A CAD framework for Malibu"
+ },
+ "10.1145_2512470": {
+  "abstract": "Many embedded processors use clustering to scale up instruction-level parallelism in a cost-effective manner. In a clustered architecture, the registers and functional units are partitioned into smaller units and clusters communicate through register-to-register copy operations. Texas Instruments, for example, has a series of architectures for embedded processors which are clustered. Such an architecture places a heavier burden on the compiler, which must now assign instructions to clusters (spatial scheduling), assign instructions to cycles (temporal scheduling), and schedule copy operations to move data between clusters. We consider instruction scheduling of local blocks of code on clustered architectures to improve performance. Scheduling for space and time is known to be a hard problem. Previous work has proposed greedy approaches based on list scheduling to simultaneously perform spatial and temporal scheduling and phased approaches based on first partitioning a block of code to do spatial assignment and then performing temporal scheduling. Greedy approaches risk making mistakes that are then costly to recover from, and partitioning approaches suffer from the well-known phase ordering problem. In this article, we present a constraint programming approach for scheduling instructions on clustered architectures. We employ a problem decomposition technique that solves spatial and temporal scheduling in an integrated manner. We analyze the effect of different hardware parameters—such as the number of clusters, issue-width, and intercluster communication cost—on application performance. We found that our approach was able to achieve an improvement of up to 26%, on average, over a state-of-the-art technique on superblocks from SPEC 2000 benchmarks.",
+  "doi": "10.1145/2512470",
+  "openalex": "W2013962395",
+  "status": "ok",
+  "title": "A constraint programming approach for integrated spatial and temporal scheduling for clustered architectures"
+ },
+ "10.1145_781131.781165": {
+  "abstract": "Clustered architectures are a solution to the bottleneck of centralized register files in superscalar and VLIW processors. The main challenge associated with clustered architectures is compiler support to effectively partition operations across the available resources on each cluster. In this work, we present a novel technique for clustering operations based on graph partitioning methods. Our approach incorporates new methods of assigning weights to nodes and edges within the dataflow graph to guide the partitioner. Nodes are assigned weights to reflect their resource usage within a cluster, while a slack distribution method intelligently assigns weights to edges to reflect the cost of inserting moves across clusters. A multilevel graph partitioning algorithm, which globally divides a dataflow graph into multiple parts in a hierarchical manner, uses these weights to efficiently generate estimates for the quality of partitions. We found that our algorithm was able to achieve an average of 20% improvement in DSP kernels and 5% improvement in SPECint2000 for a four-cluster architecture.",
+  "doi": "10.1145/781131.781165",
+  "openalex": "W4247115961",
+  "status": "ok",
+  "title": "Region-based hierarchical operation partitioning for multicluster processors"
+ },
+ "10.14288_1.0072193": {
+  "abstract": "Modern Field-Programmable Gate Arrays (FPGAs) are used to implement a wide range of ever-larger circuits, many of which have both coarse-grained and fine-grained components. Past research into coarse-grained FPGAs optimized for such circuits have only demonstrated a 10% density advantage. In contrast, time-multiplexing of fine-grained FPGAs has demonstrated a 14x density improvement. This leaves an open question whether a time-multiplexed, coarse-grained FPGA can provide a similar density advantage. Even more important is whether the coarse-grained circuit structure can be exploited by Computer-Aided Design (CAD) tools to significantly reduce compile times. This thesis investigates a new type of FPGA in which coarse-grained, time-multiplexed resources are added to a traditional FPGA. Through time-multiplexing, density and compile time are improved. By retaining fine-grained logic and routing resources, performance does not suffer as much as in past attempts. This thesis also presents two CAD flows, M-CAD and M-HOT, to compile Verilog for this new FPGA. Both flows speed up compile times by more than 10x, which has not been demonstrated with any other flow (even flows that sacrifice quality). They can also achieve a circuit density greater than modern FPGAs, and can trade density for performance, something most FPGA CAD flows cannot do. At maximum density, M-HOT flow achieves a 26.1x compile time speedup, 2.5x the density, and 0.5x the performance of a commercial FPGA and CAD tool. At maximum performance, M-HOT achieves 1.0x density, and 0.7x performance. In contrast, M-CAD is a bit faster than M-HOT but achieves a lower quality result. In M-CAD, there are situations where the placer needs temporal information from the scheduler to make good decisions. Instead, M-HOT divides the circuit into heights to keep the integrated placement, routing, and scheduling problem tractable, but compile time suffers if there are too few heights. Although we show there is at most a theoretical 1.6x or 2.0x clock frequency improvement still remaining in M-HOT or M-CAD, respectively, the amount achievable may be far less. Future work should focus on improving the front-end synthesis, the coarse/fine-grained interface, and the coarse/fine-grained partitioning to provide higher quality input to the back-end CAD flow.",
+  "doi": "10.14288/1.0072193",
+  "openalex": "W2185510847",
+  "status": "ok",
+  "title": "CAD algorithms and performance of Malibu : an FPGA with time-multiplexed coarse-grained elements"
+ },
+ "10.18130_v3479c": {
+  "abstract": "With the number of cores increasing rapidly but the performance per core increasing slowly at best, software must be parallelized in order to improve performance. Manual parallelization is often prohibitively time-consuming and error-prone (especially due to data races and memory-consistency complexities), and some portions of code may simply be too difficult to understand or refactor for parallelization. Most existing automatic parallelization techniques are performed statically at compile time and require source code to be analyzed, leaving a large fraction of software behind.",
+  "doi": "10.18130/v3479c",
+  "openalex": "W2181332314",
+  "status": "ok",
+  "title": "Trace-Based Dynamic Binary Parallelization"
+ },
+ "s2-11bf39c2eb595260": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spatial software pipelining on distributed architectures for sparse matrix codes"
+ },
+ "s2-2ca32925c857d0c4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automatic Design of Efficient Application-centric Architectures"
+ },
+ "s2-40a5dec731f624d5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Critical Path Heuristic for Automatic Parallelization"
+ },
+ "s2-48aadc42bcad2744": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An OS-based alternative to full hardware coherence on tiled chip-multiprocessors"
+ },
+ "s2-6400e5b3f0fec747": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler Parallelization Techniques for Tiled Multicore Processors"
+ },
+ "s2-65e53d1c74b63f72": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Multi-Threaded Instruction Scheduling : Technique and Initial Results"
+ },
+ "s2-6d7ba609b16339dc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Search-based Optimization for Compiler Machine-code Generation"
+ },
+ "s2-844904dd40a3b40e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Brick and mortar chip fabrication"
+ },
+ "s2-985297711b3ab0ad": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Instruction scheduling optimizations for energy efficient VLIW processors"
+ },
+ "s2-985c116e8637220d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Raw fabric hardware implementation and characterization"
+ },
+ "s2-a0b2bd7f21ada8d4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global instruction scheduling for multi-threaded architectures"
+ },
+ "s2-a5c26f5dcef9449e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Using Machine-Learning"
+ },
+ "s2-a7975c347a215028": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Feasibility of Dynamic Binary Parallelization"
+ },
+ "s2-ac3f6ad02a7b4f5a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Pessimistic Unnecessary Gap in Time Time ( B ) Optimistic Time Stall on Use Data Arrives Data Arrives"
+ },
+ "s2-b2309292ea30002c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Appears in the International Conference on Architectural Support for Pro gramming Languages and Operating Systems A Spatial Path Scheduling Algorithm for EDGE Architectures"
+ },
+ "s2-bfd8915b0cf4cf88": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software orchestration of instruction level parallelism on tiled processor architectures"
+ },
+ "s2-d940464ba78ab538": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The acceleration of structural microarchitectural simulation via scheduling"
+ },
+ "s2-da15297b872773a2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic Binary Parallelization"
+ },
+ "s2-ebc7333f8284a150": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Combinatorial Problems in Compiler Optimization"
+ },
+ "s2-ef7cce84e065d433": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Polymorphic Pipeline Array: A Flexible Multicore Accelerator for Mobile Multimedia Applications"
+ },
+ "s2-f4b82b5817c10e91": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cooperative Data and Computation Partitioning for Decentralized Architectures"
+ }
+}

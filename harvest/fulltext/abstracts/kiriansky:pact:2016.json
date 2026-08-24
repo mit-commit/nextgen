@@ -1,0 +1,373 @@
+{
+ "10.1002_spe.3065": {
+  "abstract": "Abstract Recently, big data specific technologies have been emerging, includingdomain‐specific languages,software frameworks,databases,third‐party libraries, and so forth. These techniques are successful in concealing the low‐level details by producing high‐level code, which is passed through the conventional compilation cycle for generating hardware operable code. Several optimization opportunities exist in the compiler which can assist in meeting the processing deadlines of big data workloads, through optimized machine code. However, the existing iterative compilation techniques are not enough for the exploration of big data applications. In this regard, anovel enginehas been presented for exploiting the compiler optimization space of big data workloads. The engine is comprised oftrainingandtestingphases. During the training stage, the big data application is optimized withMitigates the Compiler Phase‐ordering (MiCOMP)andgenetic algorithm (GA)optimization sequences, which are executed with train datasets. In the testing stage, the test datasets are executed only for the best 300 optimization sequences discovered at the training stage. The proposed engine has been tested withgraph mining,machine learning, andtext searchcategories of big data applications using a wide range of real‐world and synthetic datasets. Overall, the engine is , , and faster than Iterative Optimization for the Data Center (IODC), MiCOMP, and GA respectively in exploiting the compiler search space for big data workloads. Further, the integration ofbest‐10andbest‐3techniques with the engine brings a speedup of and . The compiler level exploitation of general‐purpose machines incurs no extra overhead, no heavy computing, and no personnel cost. Also, the overall performance of big data specialized software solutions can be enhanced by compiling their high‐level code with suitable compiler optimizations.",
+  "doi": "10.1002/spe.3065",
+  "openalex": "W4200417996",
+  "status": "ok",
+  "title": "Toward a novel engine for compiler optimization space exploration of big data workloads"
+ },
+ "10.1109_access.2020.3030562": {
+  "abstract": "Big data is a ”relative” concept. It is the combination of data, application, and platform properties. Recently, big data specific technologies have emerged, including software frameworks, databases, hardware accelerators, storage technologies, etc. However, the automatic selection of these solutions for big data computations remains a non-trivial task. Presently, the big data tools are selected by analyzing the problem manually, or by using several performance prediction techniques. The manual identification is based on the data properties only, whereas the performance predictors only estimate basic execution metrics without linking them with big data (3Vs) thresholds. Hence, both ways of identification are mostly incorrect, which can lead to inefficient use of 3Vs optimizations, resulting into global inefficiency, reduced system performance, increasing power consumption, requiring greater effort on the part of the programming team, and misallocation of the hardware resources required for the task. In this regard, a novel framework has been proposed for automatic detection of 3Vs (Volume, Velocity, Variety) of big data, using machine learning. The detection is done through static code features, data, and platform properties, leading to relevant tool selection, and code generation, with minimal overheads, lesser programmer interventions, higher usability, and portability. Instead of handling each application with big data specialized solutions, or manually identifying the 3Vs, the framework can automatically detect and link the 3Vs to the relevant optimizations. Several standard applications have been tested using the proposed framework. In the case of volume, the average detection accuracy is up to 97.8% for seen and 95.9% for unseen applications. In the case of velocity, the average detection accuracy is up to 97.3% for seen and 92.6% for unseen applications. There is no margin of error in variety detection, as it has straightforward computations without any predictions. Furthermore, an airline recommendation system case study strengthens the effectiveness of the proposed approach.",
+  "doi": "10.1109/access.2020.3030562",
+  "openalex": "W3094129830",
+  "status": "ok",
+  "title": "Towards a Novel Framework for Automatic Big Data Detection"
+ },
+ "10.1109_bigdata.2017.8257937": {
+  "abstract": "Large-scale applications implemented in today's high performance graph frameworks heavily underutilize modern hardware systems. While many graph frameworks have made substantial progress in optimizing these applications, we show that it is still possible to achieve up to 5× speedups over the fastest frameworks by greatly improving cache utilization. Previous systems have applied out-of-core processing techniques from the memory/disk boundary to the cache/DRAM boundary. However, we find that blindly applying such techniques is ineffective because the much smaller performance gap between cache and DRAM requires new designs for achieving scalable performance and low overhead. We present Cagra, a cache optimized inmemory graph framework. Cagra uses a novel technique, CSR Segmenting, to break the vertices into segments that fit in last level cache, and partitions the graph into subgraphs based on the segments. Random accesses in each subgraph are limited to one segment at a time, eliminating the much slower random accesses to DRAM. The intermediate updates from each subgraph are written into buffers sequentially and later merged using a low overhead parallel cache-aware merge. Cagra achieves speedups of up to 5× for PageRank, Collaborative Filtering, Label Propagation and Betweenness Centrality over the best published results from state-of-the-art graph frameworks, including GraphMat, Ligra and GridGraph.",
+  "doi": "10.1109/bigdata.2017.8257937",
+  "openalex": "W2962865652",
+  "status": "ok",
+  "title": "Making caches work for graph analytics"
+ },
+ "10.1109_cgo51591.2021.9370321": {
+  "abstract": "The performance of graph programs depends highly on the algorithm, the size and structure of the input graphs, as well as the features of the underlying hardware. No single set of optimizations or one hardware platform works well across all settings. To achieve high performance, the programmer must carefully select which set of optimizations and hardware platforms to use. The GraphIt programming language makes it easy for the programmer to write the algorithm once and optimize it for different inputs using a scheduling language. However, GraphIt currently has no support for generating highperformance code for GPUs. Programmers must resort to re-implementing the entire algorithm from scratch in a low-level language with an entirely different set of abstractions and optimizations in order to achieve high performance on GPUs. We propose G2, an extension to the GraphIt compiler framework, that achieves high performance on both CPUs and GPUs using the same algorithm specification. G2 significantly expands the optimization space of GPU graph processing frameworks with a novel GPU scheduling language and compiler that enables combining load balancing, edge traversal direction, active vertexset creation, active vertexset processing ordering, and kernel fusion optimizations. G2 also introduces two performance optimizations, Edge-based Thread Warps CTAs load balancing (ETWC) and EdgeBlocking, to expand the optimization space for GPUs. ETWC improves load balancing by dynamically partitioning the edges of each vertex into blocks that are assigned to threads, warps, and CTAs for execution. EdgeBlocking improves the locality of the program by reordering the edges and restricting random memory accesses to fit within the L2 cache. We evaluate G2 on 5 algorithms and 9 input graphs on both Pascal and Volta generation NVIDIA GPUs, and show that it achieves up to 5.11× speedup over state-of-the-art GPU graph processing frameworks, and is the fastest on 66 out of the 90 experiments.",
+  "doi": "10.1109/cgo51591.2021.9370321",
+  "openalex": "W3138165103",
+  "status": "ok",
+  "title": "Compiling Graph Applications for GPU s with GraphIt"
+ },
+ "10.1109_cgo57630.2024.10444817": {
+  "abstract": "Compiler research and development has treated computation as the primary driver of performance improvements in C/C++ programs, leaving memory optimizations as a secondary consideration. Developers are currently handed the arduous task of describing both the semantics and layout of their data in memory, either manually or via libraries, prematurely lowering high-level data collections to a low-level view of memory for the compiler. Thus, the compiler can only glean conservative information about the memory in a program, e.g., alias analysis, and is further hampered by heavy memory optimizations. This paper proposes the Memory Object Intermediate Representation (MEMOIR), a language-agnostic SSA form for sequential and associative data collections, objects, and the fields contained therein. At the core of Memoir is a decoupling of the memory used to store data from that used to logically organize data. Through its SSA form, Memoir compilers can perform element-level analysis on data collections, enabling static analysis on the state of a collection or object at any given program point. To illustrate the power of this analysis, we perform dead element elimination, resulting in a 26.6% speedup on mcf from SPECINT 2017. With the degree of freedom to mutate memory layout, our Memoir compiler performs field elision and dead field elimination, reducing peak memory usage of mcf by 20.8%.",
+  "doi": "10.1109/cgo57630.2024.10444817",
+  "openalex": "W4392265899",
+  "status": "ok",
+  "title": "Representing Data Collections in an SSA Form"
+ },
+ "10.1109_hpca53966.2022.00047": {
+  "abstract": "Many application domains perform irregular memory updates. Irregular accesses lead to inefficient use of conventional cache hierarchies. To make better use of the cache, we focus on Propagation Blocking (PB), a software-based cache locality optimization initially designed for graph processing applications. We make two contributions in this work. First, we show that PB generalizes beyond graph processing applications to any application with unordered parallelism and irregular memory updates. Second, we identify the inefficiencies of a PB execution on conventional multicore processors and propose architecture support to further improve the performance gains from PB. Our proposed architecture, COBRA, optimizes the PB execution of a range of applications with irregular memory updates, offering speedups of up to 3.78x compared to PB (1.74x on average).",
+  "doi": "10.1109/hpca53966.2022.00047",
+  "openalex": "W4280626107",
+  "status": "ok",
+  "title": "Improving Locality of Irregular Updates with Hardware Assisted Propagation Blocking"
+ },
+ "10.1109_hpec49654.2021.9622817": {
+  "abstract": "Due to the ability of graphs to model diverse real-world scenarios such as social networks, roads, or biological networks, effective graph processing techniques are of critical importance to a wide array of fields. As a consequence of the growth of data volumes, some graphs have already outgrown the memory capacities of single servers. In such cases, it is desirable to partition and keep the entire graph in a distributed memory space into order to bring the resources of a computing cluster to bear on the problem. This approach introduces a number of challenges, such as communication bottlenecks and low hardware utilization. However, it is difficult to effectively measure the impact of innovations addressing these challenges due to a lack of standardization in the domain of distributed graph processing. This research study was inspired by, and builds off of, the widely-used GAP Benchmark Suite (GAPBS), which was developed to provide an effective baseline and consistent set of evaluation methodologies for shared memory multiprocessor graph processing systems. We design and develop a new benchmark suite called DMM-GAPBS, a distributed-memory-model GAPBS. We adapt the GAPBS graph building infrastructure and algorithms, but utilize OpenSHMEM to enable a distributed memory environment, in the hope of providing a modular, extensible baseline for the distributed graph processing community. In order to showcase our design and implementation for processing graphs that cannot fit within a single server, we present the results of executing the DMM-GAPBS benchmark kernels on two large synthetic graphs distributed across sixteen nodes of an enterprise class system.",
+  "doi": "10.1109/hpec49654.2021.9622817",
+  "openalex": "W4200132737",
+  "status": "ok",
+  "title": "DMM-GAPBS: Adapting the GAP Benchmark Suite to a Distributed Memory Model"
+ },
+ "10.1109_ipdps.2017.112": {
+  "abstract": "Reducing communication is an important objective, as it can save energy or improve the performance of a communication-bound application. The graph algorithm PageRank computes the importance of vertices in a graph, and it serves as an important benchmark for graph algorithm performance. If the input graph to PageRank has poor locality, the execution will need to read many cache lines from memory, some of which may not be fully utilized. We present propagation blocking, an optimization to improve spatial locality, and we demonstrate its application to PageRank. In contrast to cache blocking which partitions the graph, we partition the data transfers between vertices (propagations). If the input graph has poor locality, our approach will reduce communication. Our approach reduces communication more than conventional cache blocking if the input graph is sufficiently sparse or if number of vertices is sufficiently large relative to the cache size. To evaluate our approach, we use both simple analytic models to gain insights and precise hardware performance counter measurements to compare implementations on a suite of 8 real-world and synthetic graphs. We demonstrate our parallel implementations substantially outperform prior work in execution time and communication volume. Although we present results for PageRank, propagation blocking could be generalized to SpMV (sparse matrix multiplying dense vector) or other graph programming models.",
+  "doi": "10.1109/ipdps.2017.112",
+  "openalex": "W2730999914",
+  "status": "ok",
+  "title": "Reducing Pagerank Communication via Propagation Blocking"
+ },
+ "10.1109_ipdpsw.2018.00122": {
+  "abstract": "Due to worsening machine balance, a lightweight irregular application can utilize only a small fraction of the peak computational capacity on modern processors. Performance of such an application is also unpredictable due to the scattered data accesses. Even though some architectural features are commonly found in most of the modern processors (such as a cache system, hardware prefetchers etc.), their design parameters differ widely from one processor to another. Therefore, a performance improving programming technique still needs extensive tuning to gain maximum benefit on a target processor. In this scenario, achieving portable performance becomes difficult. This work proposes a block streaming machine model and hypothesizes that an algorithm based on the model has predictable execution time. To enable adaptation of this model for irregular applications, we also provide algorithmic transformations that can be used to replace the scattered accesses with streaming accesses in a cost predictable way. Further, we experimentally demonstrate usefulness of the model and the transformations for static lightweight irregular computations such as those performed by a numerical partial differential equation solver.",
+  "doi": "10.1109/ipdpsw.2018.00122",
+  "openalex": "W2885230832",
+  "status": "ok",
+  "title": "A Block Streaming Model for Irregular Applications"
+ },
+ "10.1109_isca52012.2021.00087": {
+  "abstract": "Irregular applications, such as graph analytics and sparse linear algebra, exhibit frequent indirect, data-dependent accesses to single or short sequences of elements that cause high main memory traffic and limit performance. Data compression is a promising way to accelerate irregular applications by reducing memory traffic. However, software compression adds substantial overheads, and prior hardware compression techniques work poorly on the complex access patterns of irregular applications.We present SpZip, an architectural approach that makes data compression practical for irregular algorithms. SpZip accelerates the traversal, decompression, and compression of the data structures used by irregular applications. In addition, these activities run in a decoupled fashion, hiding both memory access and decompression latencies. To support the wide range of access patterns in these applications, SpZip is programmable, and uses a novel Dataflow Configuration Language to specify programs that traverse and generate compressed data. Our SpZip implementation leverages dataflow execution and time-multiplexing to implement programmability cheaply. We evaluate SpZip on a simulated multicore system running a broad set of graph and linear algebra algorithms. SpZip outperforms prior state-of-the art software-only (hardware-accelerated) systems by gmean 3.0× (1.5×) and reduces memory traffic by 1.7× (1.4×). These benefits stem from both reducing data movement due to compression, and offloading expensive traversal and (de)compression operations.",
+  "doi": "10.1109/isca52012.2021.00087",
+  "openalex": "W3188321821",
+  "status": "ok",
+  "title": "SpZip: Architectural Support for Effective Data Compression In Irregular Applications"
+ },
+ "10.1109_ispass57527.2023.00029": {
+  "abstract": "Sparse linear algebra kernels achieve sub-optimal performance due to their poor cache locality. Matrix reordering is an effective pre-processing optimization that improves cache locality and performance of these kernels. While many reordering techniques have been proposed, most prior work on matrix reordering suffer from two key limitations: (1) they evaluate their reordering proposal on a small set of arbitrarily-selected inputs and (2) they do not quantify the additional headroom for improvement after reordering is applied. To address these two limitations, we perform a detailed characterization of reordering techniques across a broad set of 50 input matrices where we quantify the ability of matrix reordering techniques to bring sparse linear algebra kernels close to hardware limits. Our analysis reveals that community-based matrix reordering is most effective at optimizing the execution of sparse linear algebra kernels, bringing the cuSPARSE SpMV kernel to within 54% of ideal run time on an NVIDIA A6000 GPU on average. However, community-based reordering is not uniformly effective across all 50 input matrices. We investigate the reasons when community-based reordering falls short and propose an enhanced version of community-based reordering that provides up to 1.57× additional performance improvements for the SpMV kernel.",
+  "doi": "10.1109/ispass57527.2023.00029",
+  "openalex": "W4381886097",
+  "status": "ok",
+  "title": "Community-based Matrix Reordering for Sparse Linear Algebra Optimization"
+ },
+ "10.1109_llvmhpc54804.2021.00009": {
+  "abstract": "Sparse tensor algebra is widely used in many applications, including scientific computing, machine learning, and data analytics. The performance of sparse tensor algebra kernels strongly depends on the intrinsic characteristics of the input tensors, hence many storage formats are designed for tensors to achieve optimal performance for particular applications/architectures, which makes it challenging to implement and optimize every tensor operation of interest on a given architecture. We propose a tensor algebra domain-specific language (DSL) and compiler framework to automatically generate kernels for mixed sparse-dense tensor algebra operations. The proposed DSL provides high-level programming abstractions that resemble the familiar Einstein notation to represent tensor algebra operations. The compiler introduces a new Sparse Tensor Algebra dialect built on top of LLVM’s extensible MLIR compiler infrastructure for efficient code generation while covering a wide range of tensor storage formats. Our compiler also leverages input-dependent code optimization to enhance data locality for better performance. Our results show that the performance of automatically generated kernels outperforms the state-of-the-art sparse tensor algebra compiler, with up to 20.92x, 6.39x, and 13.9x performance improvement over state-of-the-art tensor algebra compilers, for parallel SpMV, SpMM, and TTM, respectively.",
+  "doi": "10.1109/llvmhpc54804.2021.00009",
+  "openalex": "W4200390336",
+  "status": "ok",
+  "title": "A High Performance Sparse Tensor Algebra Compiler in MLIR"
+ },
+ "10.1109_micro.2018.00010": {
+  "abstract": "Graph processing is increasingly bottlenecked by main memory accesses. On-chip caches are of little help because the irregular structure of graphs causes seemingly random memory references. However, most real-world graphs offer significant potential locality—it is just hard to predict ahead of time. In practice, graphs have well-connected regions where relatively few vertices share edges with many common neighbors. If these vertices were processed together, graph processing would enjoy significant data reuse. Hence, a graph's traversal schedule largely determines its locality. This paper explores online traversal scheduling strategies that exploit the community structure of real-world graphs to improve locality. Software graph processing frameworks use simple, locality-oblivious scheduling because, on general-purpose cores, the benefits of locality-aware scheduling are outweighed by its overheads. Software frameworks rely on offline preprocessing to improve locality. Unfortunately, preprocessing is so expensive that its costs often negate any benefits from improved locality. Recent graph processing accelerators have inherited this design. Our insight is that this misses an opportunity: Hardware acceleration allows for more sophisticated, online locality-aware scheduling than can be realized in software, letting systems significantly improve locality without any preprocessing. To exploit this insight, we present bounded depth-first scheduling (BDFS), a simple online locality-aware scheduling strategy. BDFS restricts each core to explore one small, connected region of the graph at a time, improving locality on graphs with good community structure. We then present HATS, a hardware-accelerated traversal scheduler that adds just 0.4% area and 0.2% power over general-purpose cores. We evaluate BDFS and HATS on several algorithms using large real-world graphs. On a simulated 16-core system, BDFS reduces main memory accesses by up to 2.4x and by 30% on average. However, BDFS is too expensive in software and degrades performance by 21% on average. HATS eliminates these overheads, allowing BDFS to improve performance by 83% on average (up to 3.1x) over a locality-oblivious software implementation and by 31% on average (up to 2.1x) over specialized prefetchers.",
+  "doi": "10.1109/micro.2018.00010",
+  "openalex": "W2904192253",
+  "status": "ok",
+  "title": "Exploiting Locality in Graph Analytics through Hardware-Accelerated Traversal Scheduling"
+ },
+ "10.1109_micro61859.2024.00058": {
+  "abstract": "Chiplets are transforming computer system designs, allowing system designers to combine heterogeneous computing resources at unprecedented scales. Breaking larger, mono-lithic chips into smaller, connected chip lets helps performance continue scaling, avoids die size limitations, improves yield, and reduces design and integration costs. However, chip let-based designs introduce an additional level of hierarchy, which causes indirection and non-uniformity. This clashes with typ-ical heterogeneous systems: unlike CPU-based multi-chiplet systems, heterogeneous systems do not have significant OS support or complex coherence protocols to mitigate the impact of this indirection. Thus, exploiting locality across application phases is harder in multi-chiplet heterogeneous systems. We propose CPElide, which utilizes information already avail-able in heterogeneous systems' embedded microprocessor (the command processor) to track inter-chiplet data dependencies and aggressively perform implicit synchronization only when necessary, instead of conservatively like the state-of-the-art HMG. Across 24 workloads CPElide improves average performance (13%, 19%), energy (14%, 11 %), and network traffic (14%,17%), respectively, over current approaches and HMG.",
+  "doi": "10.1109/micro61859.2024.00058",
+  "openalex": "W4404954969",
+  "status": "ok",
+  "title": "CPElide: Efficient Multi-Chiplet GPU Implicit Synchronization"
+ },
+ "10.1109_micro61859.2024.00095": {
+  "abstract": "The rising cost of data movement poses a significant challenge to future computing systems. The call to arms for novel data-centric systems has spawned a wave of near-data computing (NDC) architectures that move compute closer to data. Despite large benefits promised by NDC, prior designs suffer from limited applicability and difficult programming. This paper identifies the commonalities and differences across NDC designs to develop Leviathan, a unified architecture and programming interface for near-cache NDC. We build a taxonomy of NDC and identify the key dimensions as what, where, and when to compute. Leviathan provides a simple reactive-programming interface and automatically executes actions near data at the right time and place. The ability to integrate multiple NDC paradigms makes Leviathan the only general-purpose system to support a variety of specialized NDC designs. Across a range of NDC-specialized applications, Leviathan improves performance by 1.5×-3.7× and reduces energy by 22%-77% vs. a baseline multicore, while adding only ≈6% area compared to the last-level cache.",
+  "doi": "10.1109/micro61859.2024.00095",
+  "openalex": "W4404954970",
+  "status": "ok",
+  "title": "Leviathan: A Unified System for General-Purpose Near-Data Computing"
+ },
+ "10.1109_sc41405.2020.00090": {
+  "abstract": "Graph analytics applications often target large-scale web and social networks, which are typically power-law graphs. Graph algorithms can often be recast as generalized Sparse Matrix-Vector multiplication (SpMV) operations, making SpMV optimization important for graph analytics. However, executing SpMV on large-scale power-law graphs results in highly irregular memory access patterns with poor cache utilization. Worse, we find that existing SpMV locality and vectorization optimizations are largely ineffective on modern out-of-order (OOO) processors-they are not faster (or only marginally so) than the standard Compressed Sparse Row (CSR) SpMV implementation. To improve performance for power-law graphs on modern OOO processors, we propose Locality-Aware Vectorization (LAV). LAV is a new approach that leverages a graph's power-law nature to extract locality and enable effective vectorization for SpMV-like memory access patterns. LAV splits the input matrix into a dense and a sparse portion. The dense portion is stored in a new representation, which is vectorization-friendly and exploits data locality. The sparse portion is processed using the standard CSR algorithm. We evaluate LAV with several graphs on an Intel Skylake-SP processor, and find that it is faster than CSR (and prior approaches) by an average of 1.5x. LAV reduces the number of DRAM accesses by 35% on average, with only a 3.3% memory overhead.",
+  "doi": "10.1109/sc41405.2020.00090",
+  "openalex": "W3131215857",
+  "status": "ok",
+  "title": "Speeding Up SpMV for Power-Law Graph Analytics by Enhancing Locality & Vectorization"
+ },
+ "10.1109_tc.2020.2990302": {
+  "abstract": "The performance of modern processors is often limited by execution stalls resulting from long memory access latencies. Compile-time optimizations, deep cache hierarchies and prefetching mechanisms already provide significant performance gains, by performing memory accesses in parallel with computation. However, they are reaching a throughput improvement limit. Hence, new solutions that effectively exploit the memory access patterns to improve processing throughput are required. To achieve this objective, a new compiler-assisted data streaming method is proposed. It leverages static analysis and code transformations with an on-chip data streaming support as a viable alternative to prefetching mechanisms for regular code structures. Static analysis is used to identify and encode memory accesses with a dedicated representation. Then, a code transformation algorithm detaches data indexation and address calculation from computation, allowing for a significant code reduction. An on-chip data stream controller, attached to the L1 data cache, is used to autonomously generate memory accesses from the pattern representation and reorganize the data transfers in streams, with the aid of stream buffers. When compared with state-of-the-art prefetchers, the proposed solution provides up to 26 percent of code reduction, an IPC improvement of 2.4x, and an average performance improvement of 40 percent.",
+  "doi": "10.1109/tc.2020.2990302",
+  "openalex": "W3021821229",
+  "status": "ok",
+  "title": "Compiler-Assisted Data Streaming for Regular Code Structures"
+ },
+ "10.1109_tc.2021.3086069": {
+  "abstract": "Modern-day graph workloads operate on huge graphs through pointer chasing which leads to high last-level cache (LLC) miss rates and limited memory-level parallelism (MLP). Simultaneous Multi-Threading (SMT) effectively hides the memory access latencies for multi-threaded graph workloads provided that sufficient threads are supported in hardware. Unfortunately, providing a sufficiently large number of physical threads incurs an unjustifiably high hardware cost for commodity SMT processors which typically implement only two physical hardware threads. Ideally, we would like to achieve aggressive-SMT performance when running graph workloads on modest commodity processors. In this paper, we propose Virtualized Multi-Threading (VMT), a low-overhead multi-threading paradigm for accelerating graph workloads on commodity processors. Unlike prior multi-threading paradigms, VMT virtualizes both the physical hardware threads and the architecture state: VMT maps a large number of logical software threads to a small number of physical hardware threads, while maintaining the architecture state of the logical threads in the processor's cache hierarchy. Implemented on top of a quad-core 2-way SMT processor, VMT achieves an average speedup of 1.74× for a set of representative graph workloads, while incurring minimal hardware cost (195 bytes per core to support up to 32 logical threads). VMT's low hardware cost paves the way for implementation in commodity processors.",
+  "doi": "10.1109/tc.2021.3086069",
+  "openalex": "W3171882720",
+  "status": "ok",
+  "title": "VMT: Virtualized Multi-Threading for Accelerating Graph Workloads on Commodity Processors"
+ },
+ "10.1109_tkde.2023.3243169": {
+  "abstract": "We proposeLightNE 2.0, a cost-effective, scalable, automated, and high-quality network embedding system that scales to graphs with hundreds of billions of edges on a single machine. In contrast to the mainstream belief that distributed architecture and GPUs are needed for large-scale network embedding with good quality, we prove that we can achieve higher quality, better scalability, lower cost, and faster runtime with shared-memory, CPU-only architecture.LightNE 2.0combines two theoretically grounded embedding methods NetSMF and ProNE. We introduce the following techniques to network embedding for the first time: (1) a newly proposed downsampling method to reduce the sample complexity of NetSMF while preserving its theoretical advantages; (2) a high-performance parallel graph processing stack GBBS to achieve high memory efficiency and scalability; (3) sparse parallel hash table to aggregate and maintain the matrix sparsifier in memory; (4) a fast randomized singular value decomposition (SVD) enhanced by power iteration and fast orthonormalization to improve vanilla randomized SVD in terms of both efficiency and effectiveness; (5) Intel MKL for proposed fast randomized SVD and spectral propagation; and (6) a fast and lightweight AutoML library FLAML for automated hyperparameter tuning. Experimental results show thatLightNE 2.0can be up to 84× faster than GraphVite, 30× faster than PBG and 9× faster than NetSMF while delivering better performance.LightNE 2.0can embed very large graph with 1.7 billion nodes and 124 billion edges in half an hour on a CPU server, while other baselines cannot handle very large graphs of this scale.",
+  "doi": "10.1109/tkde.2023.3243169",
+  "openalex": "W4319459101",
+  "status": "ok",
+  "title": "Towards Lightweight and Automated Representation Learning System for Networks"
+ },
+ "10.1145_3240302.3240416": {
+  "abstract": "Applications from big data analytics, machine learning, and high performance computing, amongst others, operate on large inputs, which can place capacity pressure on caches. Further, some rely on operations over a dynamically determined subset of the inputs, e.g., through indirection, random sampling, or hashing. These sparse accesses can have widely varying amounts of locality, depending on the specific input. In the worst case, they have poor spatial and temporal locality, and for these low-locality accesses, modern processors fetch full cache lines and insert them into on-chip caches; however the lines get evicted before seeing much reuse, if any. This leads to long memory latencies, inefficient interconnect and memory bandwidth utilization, and cache pollution.",
+  "doi": "10.1145/3240302.3240416",
+  "openalex": "W2907493734",
+  "status": "ok",
+  "title": "Dynamic fine-grained sparse memory accesses"
+ },
+ "10.1145_3243176.3243185": {
+  "abstract": "Modern out-of-order processors have increased capacity to exploit instruction level parallelism (ILP) and memory level parallelism (MLP), e.g., by using wide superscalar pipelines and vector execution units, as well as deep buffers for inflight memory requests. These resources, however, often exhibit poor utilization rates on workloads with large working sets, e.g., in-memory databases, key-value stores, and graph analytics, as compilers and hardware struggle to expose ILP and MLP from the instruction stream automatically.",
+  "doi": "10.1145/3243176.3243185",
+  "openalex": "W2810575954",
+  "status": "ok",
+  "title": "Cimple: instruction and memory level parallelism"
+ },
+ "10.1145_3276491": {
+  "abstract": "The performance bottlenecks of graph applications depend not only on the algorithm and the underlying hardware, but also on the size and structure of the input graph. As a result, programmers must try different combinations of a large set of techniques, which make tradeoffs among locality, work-efficiency, and parallelism, to develop the best implementation for a specific algorithm and type of graph. Existing graph frameworks and domain specific languages (DSLs) lack flexibility, supporting only a limited set of optimizations. This paper introduces GraphIt, a new DSL for graph computations that generates fast implementations for algorithms with different performance characteristics running on graphs with different sizes and structures. GraphIt separates what is computed (algorithm) from how it is computed (schedule). Programmers specify the algorithm using an algorithm language, and performance optimizations are specified using a separate scheduling language. The algorithm language simplifies expressing the algorithms, while exposing opportunities for optimizations. We formulate graph optimizations, including edge traversal direction, data layout, parallelization, cache, NUMA, and kernel fusion optimizations, as tradeoffs among locality, parallelism, and work-efficiency. The scheduling language enables programmers to easily search through this complicated tradeoff space by composing together a large set of edge traversal, vertex data layout, and program structure optimizations. The separation of algorithm and schedule also enables us to build an autotuner on top of GraphIt to automatically find high-performance schedules. The compiler uses a new scheduling representation, the graph iteration space, to model, compose, and ensure the validity of the large number of optimizations. We evaluate GraphIt’s performance with seven algorithms on graphs with different structures and sizes. GraphIt outperforms the next fastest of six state-of-the-art shared-memory frameworks (Ligra, Green-Marl, GraphMat, Galois, Gemini, and Grazelle) on 24 out of 32 experiments by up to 4.8×, and is never more than 43% slower than the fastest framework on the other experiments. GraphIt also reduces the lines of code by up to an order of magnitude compared to the next fastest framework.",
+  "doi": "10.1145/3276491",
+  "openalex": "W2898231337",
+  "status": "ok",
+  "title": "GraphIt: a high-performance graph DSL"
+ },
+ "10.1145_3332466.3374527": {
+  "abstract": "While there has been significant work on parallel graph processing, there has been very surprisingly little work on high-performance hypergraph processing. This paper presents a collection of efficient parallel algorithms for hypergraph processing, including algorithms for betweenness centrality, maximal independent set, k-core decomposition, hypertrees, hyperpaths, connected components, PageRank, and single-source shortest paths. For these problems, we either provide new parallel algorithms or more efficient implementations than prior work. Furthermore, our algorithms are theoretically-efficient in terms of work and depth. To implement our algorithms, we extend the Ligra graph processing framework to support hypergraphs, and our implementations benefit from graph optimizations including switching between sparse and dense traversals based on the frontier size, edge-aware parallelization, using buckets to prioritize processing of vertices, and compression. Our experiments on a 72-core machine and show that our algorithms obtain excellent parallel speedups, and are significantly faster than algorithms in existing hypergraph processing frameworks.",
+  "doi": "10.1145/3332466.3374527",
+  "openalex": "W2998830375",
+  "status": "ok",
+  "title": "Practical parallel hypergraph algorithms"
+ },
+ "10.1145_3352460.3358254": {
+  "abstract": "Many applications perform frequent scatter update operations to large data structures. For example, in push-style graph algorithms, processing each vertex requires updating the data of all its neighbors. Neighbors are often scattered over the whole graph, so these scatter updates have poor spatial and temporal locality. In current systems, scatter updates suffer high synchronization costs and high memory traffic. These drawbacks make push-style execution unattractive, and, when algorithms allow it, programmers gravitate towards pull-style implementations based on gather reads instead.",
+  "doi": "10.1145/3352460.3358254",
+  "openalex": "W2980119420",
+  "status": "ok",
+  "title": "PHI"
+ },
+ "10.1145_3373376.3378497": {
+  "abstract": "In order to scale, future systems will need to dramatically reduce data movement. Data movement is expensive in current designs because (i) traditional memory hierarchies force computation to happen unnecessarily far away from data and (ii) processing-in-memory approaches fail to exploit locality.",
+  "doi": "10.1145/3373376.3378497",
+  "openalex": "W3011446983",
+  "status": "ok",
+  "title": "Livia"
+ },
+ "10.1145_3448016.3457329": {
+  "abstract": "We propose LightNE, a cost-effective, scalable, and high quality network embedding system that scales to graphs with hundreds of billions of edges on a single machine. In contrast to the mainstream belief that distributed architecture and GPUs are needed for large-scale network embedding with good quality, we prove that we can achieve higher quality, better scalability, lower cost and faster runtime with shared-memory, CPU-only architecture. LightNE combines two theoretically grounded embedding methods NetSMF and ProNE. We introduce the following techniques to network embedding for the first time: (1) a newly proposed downsampling method to reduce the sample complexity of NetSMF while preserving its theoretical advantages; (2) a high-performance parallel graph processing stack GBBS to achieve high memory efficiency and scalability; (3) sparse parallel hash table to aggregate and maintain the matrix sparsifier in memory; and (4) Intel MKL for efficient randomized SVD and spectral propagation.",
+  "doi": "10.1145/3448016.3457329",
+  "openalex": "W3159506417",
+  "status": "ok",
+  "title": "LightNE: A Lightweight Graph Processing System for Network Embedding"
+ },
+ "10.1145_3470496.3527379": {
+  "abstract": "Current systems hide data movement from software behind the load-store interface. Software's inability to observe and respond to data movement is the root cause of many inefficiencies, including the growing fraction of execution time and energy devoted to data movement itself. Recent specialized memory-hierarchy designs prove that large data-movement savings are possible. However, these designs require custom hardware, raising a large barrier to their practical adoption.",
+  "doi": "10.1145/3470496.3527379",
+  "openalex": "W4281734203",
+  "status": "ok",
+  "title": "täkō"
+ },
+ "10.1145_3572848.3577506": {
+  "abstract": "Sparse Matrix-Vector Multiplication (SpMV) is an essential sparse kernel. Numerous methods have been developed to accelerate SpMV. However, no single method consistently gives the highest performance across a wide range of matrices. For this reason, a performance prediction model is needed to predict the best SpMV method for a given sparse matrix. Unfortunately, predicting SpMV's performance is challenging due to the diversity of factors that impact it.",
+  "doi": "10.1145/3572848.3577506",
+  "openalex": "W4321466355",
+  "status": "ok",
+  "title": "WISE"
+ },
+ "10.1145_3640542": {
+  "abstract": "Performance in scientific and engineering applications such as computational physics, algebraic graph problems or Convolutional Neural Networks (CNN), is dominated by the manipulation of large sparse matrices—matrices with a large number of zero elements. Specialized software using data formats for sparse matrices has been optimized for the main kernels of interest: SpMV and SpMSpM matrix multiplications, but due to the indirect memory accesses, the performance is still limited by the memory hierarchy of conventional computers. Recent work shows that specific hardware accelerators can reduce memory traffic and improve the execution time of sparse matrix multiplication, compared to the best software implementations. The performance of these sparse hardware accelerators depends on the choice of the sparse format, COO , CSR , etc, the algorithm, inner-product , outer-product , Gustavson , and many hardware design choices. In this article, we propose a systematic survey which identifies the design choices of state-of-the-art accelerators for sparse matrix multiplication kernels. We introduce the necessary concepts and then present, compare, and classify the main sparse accelerators in the literature, using consistent notations. Finally, we propose a taxonomy for these accelerators to help future designers make the best choices depending on their objectives.",
+  "doi": "10.1145/3640542",
+  "openalex": "W4390946831",
+  "status": "ok",
+  "title": "Dedicated Hardware Accelerators for Processing of Sparse Matrices and Vectors: A Survey"
+ },
+ "10.1145_3695053.3731015": {
+  "abstract": "Indirect memory accesses frequently appear in applications where memory bandwidth is a critical bottleneck.Prior indirect memory access proposals, such as indirect prefetchers, runahead execution, fetchers, and decoupled access/execute architectures, primarily focus on improving memory access latency by loading data ahead of computation but still rely on the DRAM controllers to reorder memory requests and enhance memory bandwidth utilization.DRAM controllers have limited visibility to future memory accesses due to the small capacity of request buffers and the restricted memorylevel parallelism of conventional core and memory systems.We introduce DX100, a programmable data access accelerator for indirect memory accesses.DX100 is shared across cores to offload bulk indirect memory accesses and associated address calculation operations.DX100 reorders, interleaves, and coalesces memory requests to improve DRAM row-buffer hit rate and memory bandwidth utilization.DX100 provides a general-purpose ISA to support diverse access types, loop patterns, conditional accesses",
+  "doi": "10.1145/3695053.3731015",
+  "openalex": "W4411486154",
+  "status": "ok",
+  "title": "DX100: Programmable Data Access Accelerator for Indirection"
+ },
+ "10.14778_3380750.3380751": {
+  "abstract": "In this paper, we propose a new parallelism model denoted as MPI * X and suggest a linear algebra-based graph analytics system, namely, Graphite, which effectively employs it. MPI * X promotes thread-based partitioning to distribute computation and communication across threads on a cluster of machines, while eliminating the need for unnecessary thread synchronizations. Consequently, it contrasts with the traditional MPI + X parallelism model , which utilizes process-based partitioning to distribute data among processes as a way to scale out on a cluster of machines (the MPI part), then splits each partition into subpartitions among the threads of each process as a method to scale up within a machine (the X part). Besides adopting MPI * X, Graphite is NUMA-aware. In particular, it assigns threads to partitions in a way that exploits CPU and memory affinity, alongside leveraging faster MPI shared memory transport. Moreover, it adopts a variant of the popular GAS (Gather, Apply, and Scatter) computing model, thus decoupling the computation of partitions from the communication of partial results. Lastly, it supports thread-level asynchrony, which does not only overlap the computation with communication, but further interleaves multiple communications. We compared Graphite against GraphPad, Gemini, and LA3 graph analytics systems in an HPC environment using different graph applications. Results show that Graphite is roughly up to 3X faster than these state-of-the-art systems.",
+  "doi": "10.14778/3380750.3380751",
+  "openalex": "W3011623296",
+  "status": "ok",
+  "title": "Graphite"
+ },
+ "10.14778_3457390.3457397": {
+  "abstract": "For applications in which small-sized random accesses frequently occur for datasets that exceed DRAM capacity, placing the datasets on SSD can result in poor application performance. For the read-intensive case we focus on in this paper, low latency flash memory with microsecond read latency is a promising solution. However, when they are used in large numbers to achieve high IOPS (Input/Output operations Per Second), the CPU processing involved in IO requests is an overhead. To tackle the problem, we propose a new access method combining two approaches: 1) optimizing issuance and completion of the IO requests to reduce the CPU overhead. 2) utilizing many contexts with lightweight context switches by stackless coroutines. These reduce the CPU overhead per request to less than 10 ns, enabling read access with DRAM-like overhead, while the access latency longer than DRAM can be hidden by the context switches. We apply the proposed method to graph algorithms such as BFS (Breadth First Search), which involves many small-sized random read accesses. In our evaluation, the large graph data is placed on microsecond-latency flash memories within prototype boards, and it is accessed by the proposed method. As a result, for the synthetic and real-world graphs, the execution times of the graph algorithms are 88--141% of those when all the data are placed in DRAM.",
+  "doi": "10.14778/3457390.3457397",
+  "openalex": "W3164035230",
+  "status": "ok",
+  "title": "Approaching DRAM performance by using microsecond-latency flash memory for small-sized random read accesses"
+ },
+ "10.15803_ijnc.9.1_70": {
+  "abstract": "Due to worsening machine balance, a lightweight irregular application can utilize only a small fraction of the peak computational capacity on modern processors. Performance of such an application is also unpredictable due to the scattered data accesses. Even though architectural features such as a cache system, hardware prefetchers etc., that reduce the cost of irregular access, are commonly found in most of the modern processors, their design parameters differ widely from one processor to another. Therefore, a performance improving programming technique still needs extensive tuning to gain maximum benefit on a target processor. In this scenario, achieving portable performance becomes difficult. This work proposes a block streaming machine model and hypothesizes that an algorithm based on the model has predictable execution time. To enable adaptation of this model for irregular applications, we also provide algorithmic transformations that can be used to replace the scattered accesses with streaming accesses in a cost predictable way. Further, we experimentally demonstrate usefulness of the model and the transformations for static lightweight irregular computations such as those performed by a numerical partial differential equation solver on modern multicore processors.",
+  "doi": "10.15803/ijnc.9.1_70",
+  "openalex": "W2911203022",
+  "status": "ok",
+  "title": "A Shared Memory Parallel Block Streaming Model for Irregular Applications"
+ },
+ "10.48550_arxiv.1608.01362": {
+  "abstract": "Modern hardware systems are heavily underutilized when running large-scale graph applications. While many in-memory graph frameworks have made substantial progress in optimizing these applications, we show that it is still possible to achieve up to 4 $\\times$ speedups over the fastest frameworks by greatly improving cache utilization. Previous systems have applied out-of-core processing techniques from the memory/disk boundary to the cache/DRAM boundary. However, we find that blindly applying such techniques is ineffective because of the much smaller performance gap between DRAM and cache. We present two techniques that take advantage of the cache with minimal or no instruction overhead. The first, frequency based clustering, groups together frequently accessed vertices to improve the utilization of each cache line with no runtime overhead. The second, CSR segmenting, partitions the graph to restrict all random accesses to the cache, makes all DRAM access sequential, and merges partition results using a very low overhead cache-aware merge. Both techniques can be easily implemented on top of optimized graph frameworks. Our techniques combined give speedups of up to 4 $\\times$ for PageRank, Label Propagation and Collaborative Filtering, and 2 $\\times$ for Betweenness Centrality over the best published results",
+  "doi": "10.48550/arxiv.1608.01362",
+  "openalex": "W2782794456",
+  "status": "ok",
+  "title": "Making Caches Work for Graph Analytics"
+ },
+ "10.48550_arxiv.1904.02241": {
+  "abstract": "Efficient Graph processing is challenging because of the irregularity of graph algorithms. Using GPUs to accelerate irregular graph algorithms is even more difficult to be efficient, since GPU's highly structured SIMT architecture is not a natural fit for irregular applications. With lots of previous efforts spent on subtly mapping graph algorithms onto the GPU, the performance of graph processing on GPUs is still highly memory-latency bound, leading to low utilization of compute resources. Random memory accesses generated by the sparse graph data structure are the major causes of this significant memory access latency. Simply applying the conventional cache blocking technique proposed for matrix computation have limited benefit due to the significant overhead on the GPU. We propose GraphCage, a cache centric optimization framework for highly efficient graph processing on GPUs. We first present a throughput-oriented cache blocking scheme (TOCAB) in both push and pull directions. Comparing with conventional cache blocking which suffers repeated accesses when processing large graphs on GPUs, TOCAB is specifically optimized for the GPU architecture to reduce this overhead and improve memory access efficiency. To integrate our scheme into state-of-the-art implementations without significant overhead, we coordinate TOCAB with load balancing strategies by considering the sparsity of subgraphs. To enable cache blocking for traversal-based algorithms, we consider the benefit and overhead in different iterations with different working set sizes, and apply TOCAB for topology-driven kernels in pull direction. Evaluation shows that GraphCage can improve performance by 2 ~ 4x compared to hand optimized implementations and state-of-the-art frameworks (e.g. CuSha and Gunrock), with less memory consumption than CuSha.",
+  "doi": "10.48550/arxiv.1904.02241",
+  "openalex": "W2931791443",
+  "status": "ok",
+  "title": "GraphCage: Cache Aware Graph Processing on GPUs"
+ },
+ "10.48550_arxiv.2011.08451": {
+  "abstract": "Extensive prior research has focused on alleviating the characteristic poor cache locality of graph analytics workloads. However, graph pre-processing tasks remain relatively unexplored. In many important scenarios, graph pre-processing tasks can be as expensive as the downstream graph analytics kernel. We observe that Propagation Blocking (PB), a software optimization designed for SpMV kernels, generalizes to many graph analytics kernels as well as common pre-processing tasks. In this work, we identify the lingering inefficiencies of a PB execution on conventional multicores and propose architecture support to eliminate PB's bottlenecks, further improving the performance gains from PB. Our proposed architecture -- COBRA -- optimizes the PB execution of both graph processing and pre-processing alike to provide end-to-end speedups of up to 4.6x (3.5x on average).",
+  "doi": "10.48550/arxiv.2011.08451",
+  "openalex": "W3105028439",
+  "status": "ok",
+  "title": "Optimizing Graph Processing and Preprocessing with Hardware Assisted Propagation Blocking"
+ },
+ "10.48550_arxiv.2012.07990": {
+  "abstract": "The performance of graph programs depends highly on the algorithm, the size and structure of the input graphs, as well as the features of the underlying hardware. No single set of optimizations or one hardware platform works well across all settings. To achieve high performance, the programmer must carefully select which set of optimizations and hardware platforms to use. The GraphIt programming language makes it easy for the programmer to write the algorithm once and optimize it for different inputs using a scheduling language. However, GraphIt currently has no support for generating high performance code for GPUs. Programmers must resort to re-implementing the entire algorithm from scratch in a low-level language with an entirely different set of abstractions and optimizations in order to achieve high performance on GPUs. We propose GG, an extension to the GraphIt compiler framework, that achieves high performance on both CPUs and GPUs using the same algorithm specification. GG significantly expands the optimization space of GPU graph processing frameworks with a novel GPU scheduling language and compiler that enables combining graph optimizations for GPUs. GG also introduces two performance optimizations, Edge-based Thread Warps CTAs load balancing (ETWC) and EdgeBlocking, to expand the optimization space for GPUs. ETWC improves load balancing by dynamically partitioning the edges of each vertex into blocks that are assigned to threads, warps, and CTAs for execution. EdgeBlocking improves the locality of the program by reordering the edges and restricting random memory accesses to fit within the L2 cache. We evaluate GG on 5 algorithms and 9 input graphs on both Pascal and Volta generation NVIDIA GPUs, and show that it achieves up to 5.11x speedup over state-of-the-art GPU graph processing frameworks, and is the fastest on 66 out of the 90 experiments.",
+  "doi": "10.48550/arxiv.2012.07990",
+  "openalex": "W3118850762",
+  "status": "ok",
+  "title": "Compilation Techniques for Graph Algorithms on GPUs"
+ },
+ "10.48550_arxiv.2102.05187": {
+  "abstract": "Tensor algebra is widely used in many applications, such as scientific computing, machine learning, and data analytics. The tensors represented real-world data are usually large and sparse. There are tens of storage formats designed for sparse matrices and/or tensors and the performance of sparse tensor operations depends on a particular architecture and/or selected sparse format, which makes it challenging to implement and optimize every tensor operation of interest and transfer the code from one architecture to another. We propose a tensor algebra domain-specific language (DSL) and compiler infrastructure to automatically generate kernels for mixed sparse-dense tensor algebra operations, named COMET. The proposed DSL provides high-level programming abstractions that resemble the familiar Einstein notation to represent tensor algebra operations. The compiler performs code optimizations and transformations for efficient code generation while covering a wide range of tensor storage formats. COMET compiler also leverages data reordering to improve spatial or temporal locality for better performance. Our results show that the performance of automatically generated kernels outperforms the state-of-the-art sparse tensor algebra compiler, with up to 20.92x, 6.39x, and 13.9x performance improvement, for parallel SpMV, SpMM, and TTM over TACO, respectively.",
+  "doi": "10.48550/arxiv.2102.05187",
+  "openalex": "W3126614467",
+  "status": "ok",
+  "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR"
+ },
+ "10.7488_era_309": {
+  "abstract": "The scaling limitations of multi-core processor development have led to a diversification of the processor cores used within individual computers. Heterogeneous computing has become widespread, involving the cooperation of several structurally different processor cores. Central processor (CPU) cores are most frequently complemented with graphics processors (GPUs), which despite their name are suitable for many highly parallel computations besides computer graphics. Furthermore, deep learning accelerators are rapidly gaining relevance. Many applications could profit from heterogeneous computing but are held back by the surrounding software ecosystems. Heterogeneous systems are a challenge for compilers in particular, which usually target only the increasingly marginalised homogeneous CPU cores. Therefore, heterogeneous acceleration is primarily accessible via libraries and domain-specific languages (DSLs), requiring application rewrites and resulting in vendor lock-in. This thesis presents a compiler method for automatically targeting heterogeneous hardware from existing sequential C/C++ source code. A new constraint programming method enables the declarative specification and automatic detection of computational idioms within compiler intermediate representation code. Examples of computational idioms are stencils, reductions, and linear algebra. Computational idioms denote algorithmic structures that commonly occur in performance-critical loops. Consequently, well-designed accelerator DSLs and libraries support computational idioms with their programming models and function interfaces. The detection of computational idioms in their middle end enables compilers to incorporate DSL and library backends for code generation. These backends leverage domain knowledge for the efficient utilisation of heterogeneous hardware. The constraint programming methodology is first derived on an abstract model and then implemented as an extension to LLVM. Two constraint programming languages are designed to target this implementation: the Compiler Analysis Description Language (CAnDL), and the extended Idiom Detection Language (IDL). These languages are evaluated on a range of different compiler problems, culminating in a complete heterogeneous acceleration pipeline integrated with the Clang C/C++ compiler. This pipeline was evaluated on the established benchmark collections NPB and Parboil. The approach was applicable to 10 of the benchmark programs, resulting in significant speedups from 1.26× on “histo” to 275× on “sgemm” when starting from sequential baseline versions. In summary, this thesis shows that the automatic recognition of computational idioms during compilation enables the heterogeneous acceleration of sequential C/C++ programs. Moreover, the declarative specification of computational idioms is derived in novel declarative programming languages, and it is demonstrated that constraint programming on Single Static Assignment intermediate code is a suitable method for their automatic detection.",
+  "doi": "10.7488/era/309",
+  "openalex": "W3023977240",
+  "status": "ok",
+  "title": "From constraint programming to heterogeneous parallelism"
+ },
+ "oa-W2477639108": {
+  "abstract": "Modern hardware systems are heavily underutilized when running large-scale graph applications. While many in-memory graph frameworks have made substantial progress in optimizing these applications, we show that it is still possible to achieve up to 4 $\\times$ speedups over the fastest frameworks by greatly improving cache utilization. Previous systems have applied out-of-core processing techniques from the memory/disk boundary to the cache/DRAM boundary. However, we find that blindly applying such techniques is ineffective because of the much smaller performance gap between DRAM and cache. We present two techniques that take advantage of the cache with minimal or no instruction overhead. The first, frequency based clustering, groups together frequently accessed vertices to improve the utilization of each cache line with no runtime overhead. The second, CSR segmenting, partitions the graph to restrict all random accesses to the cache, makes all DRAM access sequential, and merges partition results using a very low overhead cache-aware merge. Both techniques can be easily implemented on top of optimized graph frameworks. Our techniques combined give speedups of up to 4 $\\times$ for PageRank, Label Propagation and Collaborative Filtering, and 2 $\\times$ for Betweenness Centrality over the best published results",
+  "doi": null,
+  "openalex": "W2477639108",
+  "status": "ok",
+  "title": "Optimizing Cache Performance for Graph Analytics."
+ },
+ "oa-W2897764559": {
+  "abstract": "Modern out-of-order processors have increased capacity to exploit instruction level parallelism (ILP) and memory level parallelism (MLP), e.g., by using wide superscalar pipelines and vector execution units, as well as deep buffers for inflight memory requests. These resources, however, often exhibit poor utilization rates on workloads with large working sets, e.g., in-memory databases, key-value stores, and graph analytics, as compilers and hardware struggle to expose ILP and MLP from the instruction stream automatically. In this paper, we introduce the IMLP (Instruction and Memory Level Parallelism) task programming model. IMLP tasks execute as coroutines that yield execution at annotated long-latency operations, e.g., memory accesses, divisions, or unpredictable branches. IMLP tasks are interleaved on a single thread, and integrate well with thread parallelism and vectorization. Our DSL embedded in C++, Cimple, allows exploration of task scheduling and transformations, such as buffering, vectorization, pipelining, and prefetching. We demonstrate state-of-the-art performance on core algorithms used in in-memory databases that operate on arrays, hash tables, trees, and skip lists. Cimple applications reach 2.5× throughput gains over hardware multithreading on a multi-core, and 6.4× single thread speedup.",
+  "doi": null,
+  "openalex": "W2897764559",
+  "status": "ok",
+  "title": "Cimple: instruction and memory level parallelism: a DSL for uncovering ILP and MLP"
+ },
+ "oa-W2911811856": {
+  "abstract": "When developing new data-intensive applications, one faces a build-or-buy decision: use an existing off-the-shelf data management sys-tem (DMS) or implement a custom solution. While off-the-shelfsystems offer quick results, they lack the flexibility to accommo-date the changing requirements of long-term projects. Building asolution from scratch in a general-purpose programming language,however, comes with long-term development costs that may not bejustified. What is lacking is a middle ground or, more precisely,a clear migration path from off-the-shelf Data Management Sys-tems to customized applications in general-purpose programminglanguages. There is, in effect, a no man’s land that neither compilernor database researchers have claimed.We believe that this problem is an opportunity for the databasecommunity to claim a stake. We need to invest effort to transfer theoutcomes of data management research into fields of programminglanguages and compilers. The common complaint that other fieldsare re-inventing database techniques bears witness to the need forthat knowledge transfer. In this paper, we motivate the necessityfor data management techniques in general-purpose programminglanguages and outline a number of specific opportunities for knowl-edge transfer. This effort will not only cover the no man’s land butalso broaden the impact of data management research.",
+  "doi": null,
+  "openalex": "W2911811856",
+  "status": "ok",
+  "title": "Thriving in the No Man's Land between compilers and databases"
+ },
+ "s2-3b874ce8d1fedd7f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing Cache Performance for Graph Analytics"
+ },
+ "s2-52b8aaebb8258de1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Queue Streaming Model , Part 2 : Algorithms"
+ },
+ "s2-5dcc03e712700425": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR"
+ },
+ "s2-76031ea3119e8407": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compliation Techniques for Graphs Algorithms on GPUs"
+ },
+ "s2-7eec96cff72fb7ab": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing Graph Processing and Preprocessing with Hardware Assisted Propagation Blocking"
+ },
+ "s2-9485118b7fe936d1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "GraphCage: Cache Aware Graph Processing on GPUs"
+ },
+ "s2-974a06b07fc2d51b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compilation Techniques for Graph Algorithms on GPUs"
+ },
+ "s2-a5ab86415af3467f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving performance and security of indirect memory references on speculative execution machines"
+ },
+ "s2-b3a9ab860c110bff": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Thriving in the No Man's Land between Compilers and Databases"
+ },
+ "s2-e6477f756c5f8a0f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cache-Guided Scheduling : Exploiting Caches to Maximize Locality in Graph Processing"
+ },
+ "s2-e95351c9a2bc8ca4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "GraphIt - A High-Performance DSL for Graph Analytics"
+ }
+}

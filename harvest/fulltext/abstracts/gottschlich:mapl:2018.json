@@ -1,0 +1,667 @@
+{
+ "10.1007_978-3-030-53288-8_3": {
+  "abstract": "Deep neural networks are increasingly being used as controllers for safety-critical systems. Because neural networks are opaque, certifying their correctness is a significant challenge. To address this issue, several neural network verification approaches have recently been proposed. However, these approaches afford limited scalability, and applying them to large networks can be challenging. In this paper, we propose a framework that can enhance neural network verification techniques by using over-approximation to reduce the size of the network—thus making it more amenable to verification. We perform the approximation such that if the property holds for the smaller (abstract) network, it holds for the original as well. The over-approximation may be too coarse, in which case the underlying verification tool might return a spurious counterexample. Under such conditions, we perform counterexample-guided refinement to adjust the approximation, and then repeat the process. Our approach is orthogonal to, and can be integrated with, many existing verification techniques. For evaluation purposes, we integrate it with the recently proposed Marabou framework, and observe a significant improvement in Marabou’s performance. Our experiments demonstrate the great potential of our approach for verifying larger neural networks.",
+  "doi": "10.1007/978-3-030-53288-8_3",
+  "openalex": "W2982540258",
+  "status": "ok",
+  "title": "An Abstraction-Based Framework for Neural Network Verification"
+ },
+ "10.1007_978-3-030-67445-8_7": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-67445-8_7",
+  "openalex": "W3129058387",
+  "status": "no_abstract",
+  "title": "Augmenting Deep Neural Networks with Scenario-Based Guard Rules"
+ },
+ "10.1007_978-3-030-93733-1_8": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-93733-1_8",
+  "openalex": "W3200741746",
+  "status": "no_abstract",
+  "title": "SampleFix: Learning to Generate Functionally Diverse Fixes"
+ },
+ "10.1007_978-3-662-65011-0_4": {
+  "abstract": null,
+  "doi": "10.1007/978-3-662-65011-0_4",
+  "openalex": "W4285133491",
+  "status": "no_abstract",
+  "title": "Konzeptionelle Grenzen"
+ },
+ "10.1007_978-3-662-68290-6_4": {
+  "abstract": null,
+  "doi": "10.1007/978-3-662-68290-6_4",
+  "openalex": "W4393353673",
+  "status": "no_abstract",
+  "title": "Conceptual Limitations"
+ },
+ "10.1007_s10766-024-00778-9": {
+  "abstract": "Abstract Multi-core shared memory architectures have become ubiquitous in computing hardware nowadays. As a result, there is a growing need to fully utilize these architectures by introducing appropriate parallelization schemes, such as OpenMP worksharing-loop constructs, to applications. However, most developers find introducing OpenMP directives to their code hard due to pervasive pitfalls in managing parallel shared memory. To assist developers in this process, many compilers, as well as source-to-source (S2S) translation tools, have been developed over the years, tasked with inserting OpenMP directives into code automatically. In addition to having limited robustness to their input format, these compilers still do not achieve satisfactory coverage and precision in locating parallelizable code and generating appropriate directives. Recently, many data-driven AI-based code completion (CC) tools, such as GitHub CoPilot, have been developed to ease and improve programming productivity. Leveraging the insights from existing AI-based programming-assistance tools, this work presents a novel AI model that can serve as a parallel-programming assistant. Specifically, our model, named PragFormer , is tasked with identifying loops that can benefit from conversion to parallel worksharing-loop construct (OpenMP directive) and even predict the need for specific data-sharing attributes clauses on the fly. We created a unique database, named Open-OMP , specifically for this goal. Open-OMP contains over 32,000 unique code snippets from different domains, half of which contain OpenMP directives, while the other half do not. We experimented with different model design parameters for these tasks and showed that our best-performing model outperforms a statistically-trained baseline as well as a state-of-the-art S2S compiler. In fact, it even outperforms the popular generative AI model of ChatGPT. In the spirit of advancing research on this topic, we have already released source code for PragFormer as well as Open-OMP dataset to public. Moreover, an interactive demo of our tool, as well as a Hugging Face webpage to experiment with our tool, are already available.",
+  "doi": "10.1007/s10766-024-00778-9",
+  "openalex": "W4403816928",
+  "status": "ok",
+  "title": "PragFormer: Data-Driven Parallel Source Code Classification with Transformers"
+ },
+ "10.1038_s41467-021-22951-1": {
+  "abstract": "The experimental execution of chemical reactions is a context-dependent and time-consuming process, often solved using the experience collected over multiple decades of laboratory work or searching similar, already executed, experimental protocols. Although data-driven schemes, such as retrosynthetic models, are becoming established technologies in synthetic organic chemistry, the conversion of proposed synthetic routes to experimental procedures remains a burden on the shoulder of domain experts. In this work, we present data-driven models for predicting the entire sequence of synthesis steps starting from a textual representation of a chemical equation, for application in batch organic chemistry. We generated a data set of 693,517 chemical equations and associated action sequences by extracting and processing experimental procedure text from patents, using state-of-the-art natural language models. We used the attained data set to train three different models: a nearest-neighbor model based on recently-introduced reaction fingerprints, and two deep-learning sequence-to-sequence models based on the Transformer and BART architectures. An analysis by a trained chemist revealed that the predicted action sequences are adequate for execution without human intervention in more than 50% of the cases.",
+  "doi": "10.1038/s41467-021-22951-1",
+  "openalex": "W3157679602",
+  "status": "ok",
+  "title": "Inferring experimental procedures from text-based representations of chemical reactions"
+ },
+ "10.1103_physrevresearch.3.033278": {
+  "abstract": "We apply deep-neural-network-based techniques to quantum state classification and reconstruction. Our methods demonstrate high classification accuracies and reconstruction fidelities, even in the presence of noise and with little data. Using optical quantum states as examples, we first demonstrate how convolutional neural networks (CNNs) can successfully classify several types of states distorted by, e.g., additive Gaussian noise or photon loss. We further show that a CNN trained on noisy inputs can learn to identify the most important regions in the data, which potentially can reduce the cost of tomography by guiding adaptive data collection. Secondly, we demonstrate reconstruction of quantum-state density matrices using neural networks that incorporate quantum-physics knowledge. The knowledge is implemented as custom neural-network layers that convert outputs from standard feed-forward neural networks to valid descriptions of quantum states. Any standard feed-forward neural-network architecture can be adapted for quantum state tomography (QST) with our method. We present further demonstrations of our proposed QST technique with conditional generative adversarial networks (QST-CGAN) [Ahmed et al., Phys. Rev. Lett. 127, 140502 (2021)]. We motivate our choice of a learnable loss function within an adversarial framework by demonstrating that the QST-CGAN outperforms, across a range of scenarios, generative networks trained with standard loss functions. For pure states with additive or convolutional Gaussian noise, the QST-CGAN is able to adapt to the noise and reconstruct the underlying state. The QST-CGAN reconstructs states using up to two orders of magnitude fewer iterative steps than iterative and accelerated projected-gradient-based maximum-likelihood estimation (MLE) methods. We also demonstrate that the QST-CGAN can reconstruct both pure and mixed states from two orders of magnitude fewer randomly chosen data points than these MLE methods. Our paper opens possibilities to use state-of-the-art deep-learning methods for quantum state classification and reconstruction under various types of noise.",
+  "doi": "10.1103/physrevresearch.3.033278",
+  "openalex": "W3109511590",
+  "status": "ok",
+  "title": "Classification and reconstruction of optical quantum states with deep neural networks"
+ },
+ "10.1109_ms.2018.2886831": {
+  "abstract": "The Defense Advanced Research Projects Agency (DARPA) Building Resource Adaptive Software Systems (BRASS) program is an ambitious effort to improve the resilience and longevity of complex software systems. Its vision seeks a principled integration of adaptive reasoning into all aspects of the software design cycle.",
+  "doi": "10.1109/ms.2018.2886831",
+  "openalex": "W2915246379",
+  "status": "ok",
+  "title": "Building Resource Adaptive Software Systems"
+ },
+ "10.1109_ms.2019.2895948": {
+  "abstract": null,
+  "doi": "10.1109/ms.2019.2895948",
+  "openalex": "W4214683653",
+  "status": "no_abstract",
+  "title": "IEEE Computer Graphics and Applications"
+ },
+ "10.1109_sist61674.2026.11596367": {
+  "abstract": null,
+  "doi": "10.1109/sist61674.2026.11596367",
+  "openalex": "W7168268899",
+  "status": "no_abstract",
+  "title": "Customizable Methodology for Structured Analysis of Software with in Isolated Computational Environments to Secure Critical IT Infrastructures"
+ },
+ "10.1111_cgf.14775": {
+  "abstract": "Abstract Procedural models (i.e. symbolic programs that output visual data) are a historically‐popular method for representing graphics content: vegetation, buildings, textures, etc. They offer many advantages: interpretable design parameters, stochastic variations, high‐quality outputs, compact representation, and more. But they also have some limitations, such as the difficulty of authoring a procedural model from scratch. More recently, AI‐based methods, and especially neural networks, have become popular for creating graphic content. These techniques allow users to directly specify desired properties of the artifact they want to create (via examples, constraints, or objectives), while a search, optimization, or learning algorithm takes care of the details. However, this ease of use comes at a cost, as it's often hard to interpret or manipulate these representations. In this state‐of‐the‐art report, we summarize research on neurosymbolic models in computer graphics: methods that combine the strengths of both AI and symbolic programs to represent, generate, and manipulate visual data. We survey recent work applying these techniques to represent 2D shapes, 3D shapes, and materials & textures. Along the way, we situate each prior work in a unified design space for neurosymbolic models, which helps reveal underexplored areas and opportunities for future research.",
+  "doi": "10.1111/cgf.14775",
+  "openalex": "W4377832123",
+  "status": "ok",
+  "title": "Neurosymbolic Models for Computer Graphics"
+ },
+ "10.1145_3385412.3386027": {
+  "abstract": "Syntax-guided synthesis (SyGuS) aims to find a program satisfying semantic specification as well as user-provided structural hypotheses. There are two main synthesis approaches: enumerative synthesis, which repeatedly enumerates possible candidate programs and checks their correctness, and deductive synthesis, which leverages a symbolic procedure to construct implementations from specifications. Neither approach is strictly better than the other: automated deductive synthesis is usually very efficient but only works for special grammars or applications; enumerative synthesis is very generally applicable but limited in scalability.",
+  "doi": "10.1145/3385412.3386027",
+  "openalex": "W3033316151",
+  "status": "ok",
+  "title": "Reconciling enumerative and deductive program synthesis"
+ },
+ "10.1145_3394450.3397469": {
+  "abstract": "Several programming languages use garbage collectors (GCs) to automatically manage memory for the programmer. Such collectors must decide when to look for unreachable objects to free, which can have a large performance impact on some applications. In this preliminary work, we propose a design for a learned garbage collector that autonomously learns over time when to perform collections. By using reinforcement learning, our design can incorporate user-defined reward functions, allowing an autonomous garbage collector to learn to optimize the exact metric the user desires (e.g., request latency or queries per second). We conduct an initial experimental study on a prototype, demonstrating that an approach based on tabular Q learning may be promising.",
+  "doi": "10.1145/3394450.3397469",
+  "openalex": "W3033163100",
+  "status": "ok",
+  "title": "Learned garbage collection"
+ },
+ "10.1145_3399579.3399863": {
+  "abstract": "The proliferation of commodity based big data platforms and an exponential increase in the research in machine learning techniques lead to a change in application development paradigm from traditional control-flow Software 1.0 to data-flow Software 2.0 programming paradigm e.g. use of machine learning based models over customer-scoring methods for generating recommendations. The Software 2.0 paradigm is a data-driven programming that requires specialized data management to get clean, governed and unbiased data sets, well defined neural network architectures for building a model, efficient model training, extensive testing and high performance deployment. Unlike Software 1.0 paradigm, a Software 2.0 program's output is probabilistic in nature as the correctness is highly dependent on the size and quality of the input data, however the program's performance is deterministic. This has led to the research in specialized hardware and high performance architectures for deep-learning algorithms. Also, the nature of Software 2.0 paradigm brings in heterogeneity in the whole life cycle starting from an application development until its deployment in the production environment and hence posing numerous architecture and performance challenges.",
+  "doi": "10.1145/3399579.3399863",
+  "openalex": "W3035789818",
+  "status": "ok",
+  "title": "A Vision on Accelerating Enterprise IT System 2.0"
+ },
+ "10.1145_3401071.3401659": {
+  "abstract": "Recent research has shown that learned models can outperform state-of-the-art index structures in size and lookup performance. While this is a very promising result, existing learned structures are often cumbersome to implement and are slow to build. In fact, most approaches that we are aware of require multiple training passes over the data.",
+  "doi": "10.1145/3401071.3401659",
+  "openalex": "W3033065823",
+  "status": "ok",
+  "title": "RadixSpline"
+ },
+ "10.1145_3448016.3452838": {
+  "abstract": "Recent efforts applying machine learning techniques to query optimization have shown few practical gains due to substantive training overhead, inability to adapt to changes, and poor tail performance. Motivated by these difficulties, we introduce Bao (the \\underlineBa ndit \\underlineo ptimizer). Bao takes advantage of the wisdom built into existing query optimizers by providing per-query optimization hints. Bao combines modern tree convolutional neural networks with Thompson sampling, a well-studied reinforcement learning algorithm. As a result, Bao automatically learns from its mistakes and adapts to changes in query workloads, data, and schema. Experimentally, we demonstrate that Bao can quickly learn strategies that improve end-to-end query execution performance, including tail latency, for several workloads containing long-running queries. In cloud environments, we show that Bao can offer both reduced costs and better performance compared with a commercial system.",
+  "doi": "10.1145/3448016.3452838",
+  "openalex": "W3176153696",
+  "status": "ok",
+  "title": "Bao: Making Learned Query Optimization Practical"
+ },
+ "10.1145_3460945.3464954": {
+  "abstract": "Software debugging has been shown to utilize upwards of half of developers’ time. Yet, machine programming (MP), the field concerned with the automation of software (and hardware) development, has recently made strides in both research and production-quality automated debugging systems. In this paper we present ControlFlag, a self-supervised MP system that aims to improve debugging by attempting to detect idiosyncratic pattern violations in software control structures. ControlFlag also suggests possible corrections in the event an anomalous pattern is detected. We present ControlFlag’s design and provide an experimental evaluation and analysis of its efficacy in identifying potential programming errors in production-quality software. As a first concrete evidence towards improving software quality, ControlFlag has already found an anomaly in CURL that has been acknowledged and fixed by its developers. We also discuss future extensions of ControlFlag.",
+  "doi": "10.1145/3460945.3464954",
+  "openalex": "W3099341715",
+  "status": "ok",
+  "title": "ControlFlag: a self-supervised idiosyncratic pattern detection system for software control structures"
+ },
+ "10.1145_3460945.3464955": {
+  "abstract": "Automating locality optimization is still an open problem for compiler writers. Compiler-based approaches, guided by analytical cost models have achieved some success in matching high performance libraries on a restricted set of computations such as general matrix multiply (GEMM). On the other hand, library-based approaches may present some open scalability concerns. Recent developments in convolutional neural networks has seen an explosion of models, each with differing combinations of parameters. Manually tuning each of these configurations can take many development months. Further, these operations are called multiple times during machine learning training, which necessitates highly optimized implementations. 2D convolutional operators are unique in that they consist of 7-deep loop nests with different loops carrying reuse for different tensors, making the problem of identifying an optimal loop ordering hard. We devise a machine learning-based compiler which learns a regression model, correlating performance with the loop order. We integrate this model with other traditional compiler analysis for transformations such as loop unrolling and vectorization, relying on the MultiLevel Intermediate Representation (MLIR) compiler framework. We achieve an average speedup of 1.67x and 1.41x against oneDNN for 2D convolution forward and weight update kernels respectively. We are also at 0.88x and 0.96x the performance of oneDNN’s best performing implementation which applies additional data layout transformations.",
+  "doi": "10.1145/3460945.3464955",
+  "openalex": "W3173462777",
+  "status": "ok",
+  "title": "Predictive data locality optimization for higher-order tensor computations"
+ },
+ "10.1145_3464509.3464885": {
+  "abstract": "Data warehouses organize data in a columnar format to enable faster scans and better compression. Modern systems offer a variety of column encodings that can reduce storage footprint and improve query performance. Selecting a good encoding scheme for a particular column is an optimization problem that depends on the data, the query workload, and the underlying hardware.",
+  "doi": "10.1145/3464509.3464885",
+  "openalex": "W3163308175",
+  "status": "ok",
+  "title": "LEA: A Learned Encoding Advisor for Column Stores"
+ },
+ "10.1145_3542700.3542703": {
+  "abstract": "Recent efforts applying machine learning techniques to query optimization have shown few practical gains due to substantive training overhead, inability to adapt to changes, and poor tail performance. Motivated by these difficulties, we introduce Bao (the Bandit optimizer). Bao takes advantage of the wisdom built into existing query optimizers by providing per-query optimization hints. Bao combines modern tree convolutional neural networks with Thompson sampling, a well-studied reinforcement learning algorithm. As a result, Bao automatically learns from its mistakes and adapts to changes in query workloads, data, and schema. Experimentally, we demonstrate that Bao can quickly learn strategies that improve end-to-end query execution performance, including tail latency, for several workloads containing longrunning queries. In cloud environments, we show that Bao can offer both reduced costs and better performance compared with a commercial system.",
+  "doi": "10.1145/3542700.3542703",
+  "openalex": "W4281754544",
+  "status": "ok",
+  "title": "Bao"
+ },
+ "10.1145_3549034.3561176": {
+  "abstract": "Machine programming (MP) is an emerging field at the intersection of deterministic and probabilistic computing, and it aims to assist software and hardware engineers, among other applications. Along with powerful compute resources, MP systems often rely on vast amount of open-source code to learn interesting properties about code and programming and solve problems in the areas of debugging, code recommendation, auto-completion, etc. Unfortunately, several of the existing MP systems either do not consider quality of code repositories or use atypical quality measures than those typically used in software engineering community to select them. As such, impact of quality of code repositories on the performance of these systems needs to be studied.",
+  "doi": "10.1145/3549034.3561176",
+  "openalex": "W4308653673",
+  "status": "ok",
+  "title": "Are machine programming systems using right source-code measures to select code repositories?"
+ },
+ "10.1145_3578360.3580272": {
+  "abstract": "Optimizing compilers for efficient machine learning are more important than ever due to the rising ubiquity of the application domain in numerous facets of life. Predictive model-guided compiler optimization is sometimes used to derive sequences of loop transformations that optimize the performance of the machine learning computations. However, training-data generation for these models often requires the traversal of prohibitively expensive schedule spaces and executing code variants corresponding to different schedule options. The size of these search spaces can quickly explode when predicting the combined effects of multiple loop transformations. This paper characterizes a learning strategy for deriving transformation sequences called Composed Singular Prediction (CSP). Instead of a monolithic cost model that predicts the profitability of a given transformation sequence, CSP exploits a collection of cost models, each trained on a particular loop transformation domain. In a case study, a domain-specific compiler deploys the learned models to predict loop tiling and loop permutation schedules to perform data locality optimization of Conv2d kernels. The system achieves performance improvements up to 4.0x against Intel oneDNN while saving ~ 105.3x in training data collection time compared to exhaustive exploration of the design space.",
+  "doi": "10.1145/3578360.3580272",
+  "openalex": "W4321184661",
+  "status": "ok",
+  "title": "Efficiently Learning Locality Optimizations by Decomposing Transformation Domains"
+ },
+ "10.1145_3624062.3624063": {
+  "abstract": "Computational science has made rapid progress in recent years, leading to ever increasing demand for supercomputing resources. For scientific applications that leverage such resources, Message Passing Interface (MPI) plays a crucial role in enabling distributed memory parallelization across multiple nodes. However, parallelizing MPI code manually, and specifically, performing domain decomposition, is a challenging and error-prone task.",
+  "doi": "10.1145/3624062.3624063",
+  "openalex": "W4388581326",
+  "status": "ok",
+  "title": "MPI-RICAL: Data-Driven MPI Distributed Parallelism Assistance with Transformers"
+ },
+ "10.1145_3729336": {
+  "abstract": "Program synthesis aims at the automatic generation of programs based on given specifications. Despite significant progress, the inherent complexity of synthesis tasks and the interplay among intention, invention and adaptation limit its scope. A promising yet challenging avenue is the integration of concurrency to enhance synthesis algorithms. While some efforts have applied basic concurrency by parallelizing search spaces, more intricate synthesis scenarios involving interdependent subproblems remain unexplored. In this paper, we focus on string transformation as the target domain and introduce the first concurrent synthesis algorithm that enables asynchronous coordination between deductive and enumerative processes, featuring an asynchronous deducer for dynamic task decomposition, a versatile enumerator for resolving enumeration requests, and an accumulative case splitter for if-then-else condition/branch search and assembling. Our implementation, Synthphonia exhibits substantial performance improvements over state-of-the-art synthesizers, successfully solving 116 challenging string transformation tasks for the first time.",
+  "doi": "10.1145/3729336",
+  "openalex": "W4411260236",
+  "status": "ok",
+  "title": "A Concurrent Approach to String Transformation Synthesis"
+ },
+ "10.1145_3776736": {
+  "abstract": "Automatic software generation based on some specification is known as program synthesis . Most existing approaches formulate program synthesis as a search problem with discrete parameters. In this article, we present a novel formulation of program synthesis as a continuous optimization problem using an evolutionary approach, known as Covariance Matrix Adaptation Evolution Strategy. We then propose several mapping schemes to convert the continuous formulation into actual programs and propose different restart policies for the evolutionary approach. This is the first work that demonstrates the feasibility of continuous approach in synthesizing complex programs, not just simple toy programs. We compare our system, Genesys , to several recent program synthesis techniques (in both discrete and continuous domains). We find that Genesys synthesizes more programs within a fixed time budget than those existing schemes. For example, for programs of length 10, Genesys synthesizes 28% more programs than those existing schemes within the same time budget.",
+  "doi": "10.1145/3776736",
+  "openalex": "W4416187200",
+  "status": "ok",
+  "title": "G enesys : A Novel Evolutionary Program Synthesis Tool with Continuous Optimization"
+ },
+ "10.14778_3476311.3476392": {
+  "abstract": "In recent years, we have seen increased interest in applying machine learning to system problems. For example, there has been work on applying machine learning to improve query optimization, indexing, storage layouts, scheduling, log-structured merge trees, sorting, compression, and sketches, among many other data management tasks. Arguably, the ideas behind these techniques are similar: machine learning is used to model the data and/or workload in order to derive a more efficient algorithm or data structure. Ultimately, these techniques will allow us to build \"instance-optimized\" systems: that is, systems that self-adjust to a given workload and data distribution to provide unprecedented performance without the need for tuning by an administrator. While many of these techniques promise orders-of-magnitude better performance in lab settings, there is still general skepticism about how practical the current techniques really are. The following is intended as a progress report on ML for Systems and its readiness for real-world deployments, with a focus on our projects done as part of the Data Systems and AI Lab (DSAIL) at MIT By no means is it a comprehensive overview of all existing work, which has been steadily growing over the past several years not only in the database community but also in the systems, networking, theory, PL, and many other adjacent communities.",
+  "doi": "10.14778/3476311.3476392",
+  "openalex": "W3198700550",
+  "status": "ok",
+  "title": "Towards instance-optimized data systems"
+ },
+ "10.14778_3554821.3554892": {
+  "abstract": "Machine programming is an emerging research area that improves the software development life cycle from design through deployment. We present a tutorial on machine programming research highlighting aspects relevant to the data systems community. We divide this tutorial into three parts: We begin with an introduction to machine programming introducing its three pillars: intention, invention, and adaptation. Then, we provide an overview of the data ecosystem central to all machine programming systems, highlighting challenges and novel opportunities relevant to the data systems community. Finally, we describe recent advances in machine programming research and how these directions use various data sets to improve the ease of creating and maintaining performant software systems.",
+  "doi": "10.14778/3554821.3554892",
+  "openalex": "W4312301458",
+  "status": "ok",
+  "title": "Machine programming"
+ },
+ "10.14778_3594512.3594531": {
+  "abstract": "This paper presents AdaChain , a learning-based blockchain framework that adaptively chooses the best permissioned blockchain architecture to optimize effective throughput for dynamic transaction workloads. AdaChain addresses the challenge in Blockchain-as-a-Service (BaaS) environments, where a large variety of possible smart contracts are deployed with different workload characteristics. AdaChain supports automatically adapting to an underlying, dynamically changing workload through the use of reinforcement learning. When a promising architecture is identified, AdaChain switches from the current architecture to the promising one at runtime in a secure and correct manner. Experimentally, we show that AdaChain can converge quickly to optimal architectures under changing workloads and significantly outperform fixed architectures in terms of the number of successfully committed transactions, all while incurring low additional overhead.",
+  "doi": "10.14778/3594512.3594531",
+  "openalex": "W4381621957",
+  "status": "ok",
+  "title": "AdaChain: A Learned Adaptive Blockchain"
+ },
+ "10.14778_3641204.3641216": {
+  "abstract": "This paper articulates our vision for a learning-based untrustworthy distributed database. We focus on permissioned blockchain systems as an emerging instance of untrustworthy distributed databases and argue that as novel smart contracts, modern hardware, and new cloud platforms arise, future-proof permissioned blockchain systems need to be designed with full-stack adaptivity in mind. At the application level, a future-proof system must adaptively learn the best-performing transaction processing paradigm and quickly adapt to new hardware and unanticipated workload changes on the fly. Likewise, the Byzantine consensus layer must dynamically adjust itself to the workloads, faulty conditions, and network configuration while maintaining compatibility with the transaction processing paradigm. At the infrastructure level, cloud providers must enable cross-layer adaptation, which identifies performance bottlenecks and possible attacks, and determines at runtime the degree of resource disaggregation that best meets application requirements. Within this vision of the future, our paper outlines several research challenges together with some preliminary approaches.",
+  "doi": "10.14778/3641204.3641216",
+  "openalex": "W4396571386",
+  "status": "ok",
+  "title": "Towards Full Stack Adaptivity in Permissioned Blockchains"
+ },
+ "10.15480_882.2460": {
+  "abstract": "This volume contains research contributions by an international group of authors addressing innovative and technology-based approaches for logistics and supply chains. They present business models and investment options for enhanced strategic decision making as well as recent approaches for supply chain analytics and risk management. This volume, edited by Wolfgang Kersten, Thorsten Blecker and Christian Ringle, provides valuable insights into the digitalization of Supply Chain Management and Logistics with regard to: Innovation and Technology Management, Advanced Manufacturing and Industry 4.0. Supply Chain Analytics, Risk and Security Management",
+  "doi": "10.15480/882.2460",
+  "openalex": "W3002094345",
+  "status": "ok",
+  "title": "Artificial intelligence and digital transformation in supply chain management : innovative approaches for supply chains"
+ },
+ "10.15480_882.2476": {
+  "abstract": "Purpose: This paper aims to give an overview about the current state of research in the field of machine learning methods in demand planning. A cross-industry analysis for current machine learning approaches within the field of demand planning provides a decision-making support for the manufacturing industry. Methodology: Based on a literature research, the applied machine learning methods in the field of demand planning are identified. The literature research focuses on machine learning applications across industries wherein demand planning plays a major role. Findings: This comparative analysis of machine learning approaches provides/creates a decision support for the selection of algorithms and linked databases. Furthermore, the paper shows the industrial applicability of the presented methods in different use cases from various industries and formulates research needs to enable an integration of machine learning algorithms into the manufacturing industry. Originality: The article provides a systematic and cross-industry overview of the use of machine learning methods in demand planning. It shows the link between established planning processes and new technologies to identify future areas of research",
+  "doi": "10.15480/882.2476",
+  "openalex": "W3138981582",
+  "status": "ok",
+  "title": "Machine learning in demand planning : cross-industry overview"
+ },
+ "10.21203_rs.3.rs-3254961_v1": {
+  "abstract": null,
+  "doi": "10.21203/rs.3.rs-3254961/v1",
+  "openalex": "W4386293436",
+  "status": "no_abstract",
+  "title": "PragFormer: Data-driven Parallel Source Code Classification with Transformers"
+ },
+ "10.26434_chemrxiv.13118423": {
+  "abstract": "The experimental execution of chemical reactions is a context-dependent and time-consuming process, often solved using the experience collected over multiple decades of laboratory work or searching similar, already executed, experimental protocols. Although data-driven schemes, such as retrosynthetic models, are becoming established technologies in synthetic organic chemistry, the conversion of proposed synthetic routes to experimental procedures remains a burden on the shoulder of domain experts. In this work, we present, for the first time, data-driven models for predicting the entire sequence of synthesis steps starting from a textual representation of a chemical equation. We generated a data set of 693,517 chemical equations and associated action sequences by extracting and processing experimental procedure text from patents, using state-of-the-art natural language models. We used the attained data set to train three different models: a nearest-neighbor model based on recently-introduced reaction fingerprints, and two deep-learning sequence-to-sequence models based on the Transformer and BART architectures. When evaluated on the ground truth data, the best performing model (transformer) achieves an accuracy of 72.7% for single action predictions, and a 100% match of the full action sequence for 3.6% of experimental procedures. An analysis by a trained chemist revealed that the predicted action sequences are adequate for execution without human intervention in more than 50% of the cases.",
+  "doi": "10.26434/chemrxiv.13118423",
+  "openalex": "W4247259022",
+  "status": "ok",
+  "title": "Inferring Experimental Procedures from Text-Based Representations of Chemical Reactions"
+ },
+ "10.26434_chemrxiv.13118423.v1": {
+  "abstract": "The experimental execution of chemical reactions is a context-dependent and time-consuming process, often solved using the experience collected over multiple decades of laboratory work or searching similar, already executed, experimental protocols. Although data-driven schemes, such as retrosynthetic models, are becoming established technologies in synthetic organic chemistry, the conversion of proposed synthetic routes to experimental procedures remains a burden on the shoulder of domain experts. In this work, we present, for the first time, data-driven models for predicting the entire sequence of synthesis steps starting from a textual representation of a chemical equation. We generated a data set of 693,517 chemical equations and associated action sequences by extracting and processing experimental procedure text from patents, using state-of-the-art natural language models. We used the attained data set to train three different models: a nearest-neighbor model based on recently-introduced reaction fingerprints, and two deep-learning sequence-to-sequence models based on the Transformer and BART architectures. When evaluated on the ground truth data, the best performing model (transformer) achieves an accuracy of 72.7% for single action predictions, and a 100% match of the full action sequence for 3.6% of experimental procedures. An analysis by a trained chemist revealed that the predicted action sequences are adequate for execution without human intervention in more than 50% of the cases.",
+  "doi": "10.26434/chemrxiv.13118423.v1",
+  "openalex": "W3200680528",
+  "status": "ok",
+  "title": "Inferring Experimental Procedures from Text-Based Representations of Chemical Reactions"
+ },
+ "10.29007_699q": {
+  "abstract": "Deep neural networks (DNNs) are revolutionizing the way complex systems are de- signed, developed and maintained. As part of the life cycle of DNN-based systems, there is often a need to modify a DNN in subtle ways that affect certain aspects of its behav- ior, while leaving other aspects of its behavior unchanged (e.g., if a bug is discovered and needs to be fixed, without altering other functionality). Unfortunately, retraining a DNN is often difficult and expensive, and may produce a new DNN that is quite different from the original. We leverage recent advances in DNN verification and propose a technique for modifying a DNN according to certain requirements, in a way that is provably minimal, does not require any retraining, and is thus less likely to affect other aspects of the DNN’s behavior. Using a proof-of-concept implementation, we demonstrate the usefulness and potential of our approach in addressing two real-world needs: (i) measuring the resilience of DNN watermarking schemes; and (ii) bug repair in already-trained DNNs.",
+  "doi": "10.29007/699q",
+  "openalex": "W3029066813",
+  "status": "ok",
+  "title": "Minimal Modifications of Deep Neural Networks using Verification"
+ },
+ "10.48550_arxiv.1709.07536": {
+  "abstract": "The field of machine programming (MP), the automation of the development of software, is making notable research advances. This is, in part, due to the emergence of a wide range of novel techniques in machine learning. In this paper, we apply MP to the automation of software performance regression testing. A performance regression is a software performance degradation caused by a code change. We present AutoPerf - a novel approach to automate regression testing that utilizes three core techniques: (i) zero-positive learning, (ii) autoencoders, and (iii) hardware telemetry. We demonstrate AutoPerf's generality and efficacy against 3 types of performance regressions across 10 real performance bugs in 7 benchmark and open-source programs. On average, AutoPerf exhibits 4% profiling overhead and accurately diagnoses more performance bugs than prior state-of-the-art approaches. Thus far, AutoPerf has produced no false negatives.",
+  "doi": "10.48550/arxiv.1709.07536",
+  "openalex": "W2947703459",
+  "status": "ok",
+  "title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions"
+ },
+ "10.48550_arxiv.2002.09030": {
+  "abstract": "We introduce the notion of property signatures, a representation for programs and program specifications meant for consumption by machine learning algorithms. Given a function with input type $τ_{in}$ and output type $τ_{out}$, a property is a function of type: $(τ_{in}, τ_{out}) \\rightarrow \\texttt{Bool}$ that (informally) describes some simple property of the function under consideration. For instance, if $τ_{in}$ and $τ_{out}$ are both lists of the same type, one property might ask `is the input list the same length as the output list?'. If we have a list of such properties, we can evaluate them all for our function to get a list of outputs that we will call the property signature. Crucially, we can `guess' the property signature for a function given only a set of input/output pairs meant to specify that function. We discuss several potential applications of property signatures and show experimentally that they can be used to improve over a baseline synthesizer so that it emits twice as many programs in less than one-tenth of the time.",
+  "doi": "10.48550/arxiv.2002.09030",
+  "openalex": "W2994962993",
+  "status": "ok",
+  "title": "Learning to Represent Programs with Property Signatures"
+ },
+ "10.48550_arxiv.2003.11118": {
+  "abstract": "The simplified parse tree (SPT) presented in Aroma, a state-of-the-art code recommendation system, is a tree-structured representation used to infer code semantics by capturing program \\emph{structure} rather than program \\emph{syntax}. This is a departure from the classical abstract syntax tree, which is principally driven by programming language syntax. While we believe a semantics-driven representation is desirable, the specifics of an SPT's construction can impact its performance. We analyze these nuances and present a new tree structure, heavily influenced by Aroma's SPT, called a \\emph{context-aware parse tree} (CAPT). CAPT enhances SPT by providing a richer level of semantic representation. Specifically, CAPT provides additional binding support for language-specific techniques for adding semantically-salient features, and language-agnostic techniques for removing syntactically-present but semantically-irrelevant features. Our research quantitatively demonstrates the value of our proposed semantically-salient features, enabling a specific CAPT configuration to be 39\\% more accurate than SPT across the 48,610 programs we analyzed.",
+  "doi": "10.48550/arxiv.2003.11118",
+  "openalex": "W3013727537",
+  "status": "ok",
+  "title": "Context-Aware Parse Trees"
+ },
+ "10.48550_arxiv.2004.00348": {
+  "abstract": "We present a new approach to the type inference problem for dynamic languages. Our goal is to combine \\emph{logical} constraints, that is, deterministic information from a type system, with \\emph{natural} constraints, that is, uncertain statistical information about types learnt from sources like identifier names. To this end, we introduce a framework for probabilistic type inference that combines logic and learning: logical constraints on the types are extracted from the program, and deep learning is applied to predict types from surface-level code properties that are statistically associated. The foremost insight of our method is to constrain the predictions from the learning procedure to respect the logical constraints, which we achieve by relaxing the logical inference problem of type prediction into a continuous optimisation problem. We build a tool called OptTyper to predict missing types for TypeScript files. OptTyper combines a continuous interpretation of logical constraints derived by classical static analysis of TypeScript code, with natural constraints obtained from a deep learning model, which learns naming conventions for types from a large codebase. By evaluating OptTyper, we show that the combination of logical and natural constraints yields a large improvement in performance over either kind of information individually and achieves a 4% improvement over the state-of-the-art.",
+  "doi": "10.48550/arxiv.2004.00348",
+  "openalex": "W3014820760",
+  "status": "ok",
+  "title": "OptTyper: Probabilistic Type Inference by Optimising Logical and Natural Constraints"
+ },
+ "10.48550_arxiv.2004.03814": {
+  "abstract": "Query optimization remains one of the most challenging problems in data management systems. Recent efforts to apply machine learning techniques to query optimization challenges have been promising, but have shown few practical gains due to substantive training overhead, inability to adapt to changes, and poor tail performance. Motivated by these difficulties and drawing upon a long history of research in multi-armed bandits, we introduce Bao (the BAndit Optimizer). Bao takes advantage of the wisdom built into existing query optimizers by providing per-query optimization hints. Bao combines modern tree convolutional neural networks with Thompson sampling, a decades-old and well-studied reinforcement learning algorithm. As a result, Bao automatically learns from its mistakes and adapts to changes in query workloads, data, and schema. Experimentally, we demonstrate that Bao can quickly (an order of magnitude faster than previous approaches) learn strategies that improve end-to-end query execution performance, including tail latency. In cloud environments, we show that Bao can offer both reduced costs and better performance compared with a sophisticated commercial system.",
+  "doi": "10.48550/arxiv.2004.03814",
+  "openalex": "W3015439172",
+  "status": "ok",
+  "title": "Bao: Learning to Steer Query Optimizers"
+ },
+ "10.48550_arxiv.2004.13301": {
+  "abstract": "Several programming languages use garbage collectors (GCs) to automatically manage memory for the programmer. Such collectors must decide when to look for unreachable objects to free, which can have a large performance impact on some applications. In this preliminary work, we propose a design for a learned garbage collector that autonomously learns over time when to perform collections. By using reinforcement learning, our design can incorporate user-defined reward functions, allowing an autonomous garbage collector to learn to optimize the exact metric the user desires (e.g., request latency or queries per second). We conduct an initial experimental study on a prototype, demonstrating that an approach based on tabular Q learning may be promising.",
+  "doi": "10.48550/arxiv.2004.13301",
+  "openalex": "W3022287275",
+  "status": "ok",
+  "title": "Learned Garbage Collection"
+ },
+ "10.48550_arxiv.2004.14541": {
+  "abstract": "Recent research has shown that learned models can outperform state-of-the-art index structures in size and lookup performance. While this is a very promising result, existing learned structures are often cumbersome to implement and are slow to build. In fact, most approaches that we are aware of require multiple training passes over the data. We introduce RadixSpline (RS), a learned index that can be built in a single pass over the data and is competitive with state-of-the-art learned index models, like RMI, in size and lookup performance. We evaluate RS using the SOSD benchmark and show that it achieves competitive results on all datasets, despite the fact that it only has two parameters.",
+  "doi": "10.48550/arxiv.2004.14541",
+  "openalex": "W3023346860",
+  "status": "ok",
+  "title": "RadixSpline: A Single-Pass Learned Index"
+ },
+ "10.48550_arxiv.2006.03863": {
+  "abstract": "Deep neural networks (DNNs) are becoming prevalent, often outperforming manually-created systems. Unfortunately, DNN models are opaque to humans, and may behave in unexpected ways when deployed. One approach for allowing safer deployment of DNN models calls for augmenting them with hand-crafted override rules, which serve to override decisions made by the DNN model when certain criteria are met. Here, we propose to bring together DNNs and the well-studied scenario-based modeling paradigm, by expressing these override rules as simple and intuitive scenarios. This approach can lead to override rules that are comprehensible to humans, but are also sufficiently expressive and powerful to increase the overall safety of the model. We describe how to extend and apply scenario-based modeling to this new setting, and demonstrate our proposed technique on multiple DNN models.",
+  "doi": "10.48550/arxiv.2006.03863",
+  "openalex": "W3033534077",
+  "status": "ok",
+  "title": "Guarded Deep Learning using Scenario-Based Modeling"
+ },
+ "10.48550_arxiv.2006.05265": {
+  "abstract": "Code semantics similarity can be used for many tasks such as code recommendation, automated software defect correction, and clone detection. Yet, the accuracy of such systems has not yet reached a level of general purpose reliability. To help address this, we present Machine Inferred Code Similarity (MISIM), a neural code semantics similarity system consisting of two core components: (i)MISIM uses a novel context-aware semantics structure, which was purpose-built to lift semantics from code syntax; (ii)MISIM uses an extensible neural code similarity scoring algorithm, which can be used for various neural network architectures with learned parameters. We compare MISIM to four state-of-the-art systems, including two additional hand-customized models, over 328K programs consisting of over 18 million lines of code. Our experiments show that MISIM has 8.08% better accuracy (using MAP@R) compared to the next best performing system.",
+  "doi": "10.48550/arxiv.2006.05265",
+  "openalex": "W3165978460",
+  "status": "ok",
+  "title": "MISIM: A Neural Code Semantics Similarity System Using the Context-Aware Semantics Structure"
+ },
+ "10.48550_arxiv.2007.10568": {
+  "abstract": "In this extended abstract, we propose a new technique for query scheduling with the explicit goal of reducing disk reads and thus implicitly increasing query performance. We introduce SmartQueue, a learned scheduler that leverages overlapping data reads among incoming queries and learns a scheduling strategy that improves cache hits. SmartQueue relies on deep reinforcement learning to produce workload-specific scheduling strategies that focus on long-term performance benefits while being adaptive to previously-unseen data access patterns. We present results from a proof-of-concept prototype, demonstrating that learned schedulers can offer significant performance improvements over hand-crafted scheduling heuristics. Ultimately, we make the case that this is a promising research direction at the intersection of machine learning and databases.",
+  "doi": "10.48550/arxiv.2007.10568",
+  "openalex": "W3045448621",
+  "status": "ok",
+  "title": "Buffer Pool Aware Query Scheduling via Deep Reinforcement Learning"
+ },
+ "10.48550_arxiv.2007.14381": {
+  "abstract": "Program synthesis is challenging largely because of the difficulty of search in a large space of programs. Human programmers routinely tackle the task of writing complex programs by writing sub-programs and then analyzing their intermediate results to compose them in appropriate ways. Motivated by this intuition, we present a new synthesis approach that leverages learning to guide a bottom-up search over programs. In particular, we train a model to prioritize compositions of intermediate values during search conditioned on a given set of input-output examples. This is a powerful combination because of several emergent properties. First, in bottom-up search, intermediate programs can be executed, providing semantic information to the neural network. Second, given the concrete values from those executions, we can exploit rich features based on recent work on property signatures. Finally, bottom-up search allows the system substantial flexibility in what order to generate the solution, allowing the synthesizer to build up a program from multiple smaller sub-programs. Overall, our empirical evaluation finds that the combination of learning and bottom-up search is remarkably effective, even with simple supervised learning approaches. We demonstrate the effectiveness of our technique on two datasets, one from the SyGuS competition and one of our own creation.",
+  "doi": "10.48550/arxiv.2007.14381",
+  "openalex": "W3045764482",
+  "status": "ok",
+  "title": "BUSTLE: Bottom-Up Program Synthesis Through Learning-Guided Exploration"
+ },
+ "10.48550_arxiv.2012.12964": {
+  "abstract": "Synthesizing programs from examples requires searching over a vast, combinatorial space of possible programs. In this search process, a key challenge is representing the behavior of a partially written program before it can be executed, to judge if it is on the right track and predict where to search next. We introduce a general technique for representing partially written programs in a program synthesis engine. We take inspiration from the technique of abstract interpretation, in which an approximate execution model is used to determine if an unfinished program will eventually satisfy a goal specification. Here we learn an approximate execution model implemented as a modular neural network. By constructing compositional program representations that implicitly encode the interpretation semantics of the underlying programming language, we can represent partial programs using a flexible combination of concrete execution state and learned neural representations, using the learned approximate semantics when concrete semantics are not known (in unfinished parts of the program). We show that these hybrid neuro-symbolic representations enable execution-guided synthesizers to use more powerful language constructs, such as loops and higher-order functions, and can be used to synthesize programs more accurately for a given search budget than pure neural approaches in several domains.",
+  "doi": "10.48550/arxiv.2012.12964",
+  "openalex": "W3117509207",
+  "status": "ok",
+  "title": "Representing Partial Programs with Blended Abstract Semantics"
+ },
+ "10.48550_arxiv.2102.01687": {
+  "abstract": "Program synthesis is an active research field in academia, national labs, and industry. Yet, work directly applicable to scientific computing, while having some impressive successes, has been limited. This report reviews the relevant areas of program synthesis work for scientific computing, discusses successes to date, and outlines opportunities for future work. This report is the result of the Workshop on Program Synthesis for Scientific Computing was held virtually on August 4-5 2020 (https://prog-synth-science.github.io/2020/).",
+  "doi": "10.48550/arxiv.2102.01687",
+  "openalex": "W3127812279",
+  "status": "ok",
+  "title": "Report of the Workshop on Program Synthesis for Scientific Computing"
+ },
+ "10.48550_arxiv.2203.10452": {
+  "abstract": "Many approaches to program synthesis perform a search within an enormous space of programs to find one that satisfies a given specification. Prior works have used neural models to guide combinatorial search algorithms, but such approaches still explore a huge portion of the search space and quickly become intractable as the size of the desired program increases. To tame the search space blowup, we propose training a neural model to learn a hands-on search policy for bottom-up synthesis, instead of relying on a combinatorial search algorithm. Our approach, called CrossBeam, uses the neural model to choose how to combine previously-explored programs into new programs, taking into account the search history and partial program executions. Motivated by work in structured prediction on learning to search, CrossBeam is trained on-policy using data extracted from its own bottom-up searches on training tasks. We evaluate CrossBeam in two very different domains, string manipulation and logic programming. We observe that CrossBeam learns to search efficiently, exploring much smaller portions of the program space compared to the state-of-the-art.",
+  "doi": "10.48550/arxiv.2203.10452",
+  "openalex": "W4226225224",
+  "status": "ok",
+  "title": "CrossBeam: Learning to Search in Bottom-Up Program Synthesis"
+ },
+ "10.48550_arxiv.2204.03758": {
+  "abstract": "When writing programs, people have the ability to tackle a new complex task by decomposing it into smaller and more familiar subtasks. While it is difficult to measure whether neural program synthesis methods have similar capabilities, what we can measure is whether they compositionally generalize, that is, whether a model that has been trained on the simpler subtasks is subsequently able to solve more complex tasks. In this paper, we focus on measuring the ability of learned program synthesizers to compositionally generalize. We first characterize several different axes along which program synthesis methods would be desired to generalize, e.g., length generalization, or the ability to combine known subroutines in new ways that do not occur in the training data. Based on this characterization, we introduce a benchmark suite of tasks to assess these abilities based on two popular existing datasets, SCAN and RobustFill. Finally, we make first attempts to improve the compositional generalization ability of Transformer models along these axes through novel attention mechanisms that draw inspiration from a human-like decomposition strategy. Empirically, we find our modified Transformer models generally perform better than natural baselines, but the tasks remain challenging.",
+  "doi": "10.48550/arxiv.2204.03758",
+  "openalex": "W4223571431",
+  "status": "ok",
+  "title": "Compositional Generalization and Decomposition in Neural Program Synthesis"
+ },
+ "10.48550_arxiv.2204.07225": {
+  "abstract": "Machine programming (MP) is concerned with automating software development. According to studies, software engineers spend upwards of 50% of their development time debugging software. To help accelerate debugging, we present MP-CodeCheck (MPCC). MPCC is an MP system that attempts to identify anomalous code patterns within logical program expressions. In designing MPCC, we developed two novel programming language representations, the formations of which are critical in its ability to exhaustively and efficiently process the billions of lines of code that are used in its self-supervised training. To quantify MPCC's performance, we compare it against ControlFlag, a state-of-the-art self-supervised code anomaly detection system; we find that MPCC is more spatially and temporally efficient. We demonstrate MPCC's anomalous code detection capabilities by exercising it on a variety of open-source GitHub repositories and one proprietary code base. We also provide a brief qualitative study on some of the different classes of code anomalies that MPCC can detect to provide an abbreviated insight into its capabilities.",
+  "doi": "10.48550/arxiv.2204.07225",
+  "openalex": "W4224035669",
+  "status": "ok",
+  "title": "MP-CodeCheck: Evolving Logical Expression Code Anomaly Learning with Iterative Self-Supervision"
+ },
+ "10.48550_arxiv.2211.00828": {
+  "abstract": "Automatic software generation based on some specification is known as program synthesis. Most existing approaches formulate program synthesis as a search problem with discrete parameters. In this paper, we present a novel formulation of program synthesis as a continuous optimization problem and use a state-of-the-art evolutionary approach, known as Covariance Matrix Adaptation Evolution Strategy to solve the problem. We then propose a mapping scheme to convert the continuous formulation into actual programs. We compare our system, called GENESYS, with several recent program synthesis techniques (in both discrete and continuous domains) and show that GENESYS synthesizes more programs within a fixed time budget than those existing schemes. For example, for programs of length 10, GENESYS synthesizes 28% more programs than those existing schemes within the same time budget.",
+  "doi": "10.48550/arxiv.2211.00828",
+  "openalex": "W4308166027",
+  "status": "ok",
+  "title": "Synthesizing Programs with Continuous Optimization"
+ },
+ "10.48550_arxiv.2303.15308": {
+  "abstract": "Traditional query optimizers are designed to be fast and stateless: each query is quickly optimized using approximate statistics, sent off to the execution engine, and promptly forgotten. Recent work on learned query optimization have shown that it is possible for a query optimizer to \"learn from its mistakes,\" correcting erroneous query plans the next time a plan is produced. But what if query optimizers could avoid mistakes entirely? This paper presents the idea of learned query superoptimization. A new generation of query superoptimizers could autonomously experiment to discover optimal plans using exploration-driven algorithms, iterative Bayesian optimization, and program synthesis. While such superoptimizers will take significantly longer to optimize a given query, superoptimizers have the potential to massively accelerate a large number of important repetitive queries being executed on data systems today.",
+  "doi": "10.48550/arxiv.2303.15308",
+  "openalex": "W4361194359",
+  "status": "ok",
+  "title": "Learned Query Superoptimization"
+ },
+ "10.48550_arxiv.2305.13504": {
+  "abstract": "Neural machine translation (NMT) methods developed for natural language processing have been shown to be highly successful in automating translation from one natural language to another. Recently, these NMT methods have been adapted to the generation of program code. In NMT for code generation, the task is to generate output source code that satisfies constraints expressed in the input. In the literature, a variety of different input scenarios have been explored, including generating code based on natural language description, lower-level representations such as binary or assembly (neural decompilation), partial representations of source code (code completion and repair), and source code in another language (code translation). In this paper we survey the NMT for code generation literature, cataloging the variety of methods that have been explored according to input and output representations, model architectures, optimization techniques used, data sets, and evaluation methods. We discuss the limitations of existing methods and future research directions",
+  "doi": "10.48550/arxiv.2305.13504",
+  "openalex": "W4378464560",
+  "status": "ok",
+  "title": "Neural Machine Translation for Code Generation"
+ },
+ "10.48550_arxiv.2306.02049": {
+  "abstract": "Search is an important technique in program synthesis that allows for adaptive strategies such as focusing on particular search directions based on execution results. Several prior works have demonstrated that neural models are effective at guiding program synthesis searches. However, a common drawback of those approaches is the inability to handle iterative loops, higher-order functions, or lambda functions, thus limiting prior neural searches from synthesizing longer and more general programs. We address this gap by designing a search algorithm called LambdaBeam that can construct arbitrary lambda functions that compose operations within a given DSL. We create semantic vector representations of the execution behavior of the lambda functions and train a neural policy network to choose which lambdas to construct during search, and pass them as arguments to higher-order functions to perform looping computations. Our experiments show that LambdaBeam outperforms neural, symbolic, and LLM-based techniques in an integer list manipulation domain.",
+  "doi": "10.48550/arxiv.2306.02049",
+  "openalex": "W4379538728",
+  "status": "ok",
+  "title": "LambdaBeam: Neural Program Search with Higher-Order Functions and Lambdas"
+ },
+ "10.48550_arxiv.2308.06815": {
+  "abstract": "We propose cloud oracles, an alternative to machine learning for online optimization of cloud configurations. Our cloud oracle approach guarantees complete accuracy and explainability of decisions for problems that can be formulated as parametric convex optimizations. We give experimental evidence of this technique's efficacy and share a vision of research directions for expanding its applicability.",
+  "doi": "10.48550/arxiv.2308.06815",
+  "openalex": "W4385848885",
+  "status": "ok",
+  "title": "Optimizing the cloud? Don't train models. Build oracles!"
+ },
+ "10.48550_arxiv.2408.06432": {
+  "abstract": "This paper presents BFTBrain, a reinforcement learning (RL) based Byzantine fault-tolerant (BFT) system that provides significant operational benefits: a plug-and-play system suitable for a broad set of hardware and network configurations, and adjusts effectively in real-time to changing fault scenarios and workloads. BFTBrain adapts to system conditions and application needs by switching between a set of BFT protocols in real-time. Two main advances contribute to BFTBrain's agility and performance. First, BFTBrain is based on a systematic, thorough modeling of metrics that correlate the performance of the studied BFT protocols with varying fault scenarios and workloads. These metrics are fed as features to BFTBrain's RL engine in order to choose the best-performing BFT protocols in real-time. Second, BFTBrain coordinates RL in a decentralized manner which is resilient to adversarial data pollution, where nodes share local metering values and reach the same learning output by consensus. As a result, in addition to providing significant operational benefits, BFTBrain improves throughput over fixed protocols by $18\\%$ to $119\\%$ under dynamic conditions and outperforms state-of-the-art learning based approaches by $44\\%$ to $154\\%$.",
+  "doi": "10.48550/arxiv.2408.06432",
+  "openalex": "W4402426857",
+  "status": "ok",
+  "title": "BFTBrain: Adaptive BFT Consensus with Reinforcement Learning"
+ },
+ "10.48550_arxiv.2601.04327": {
+  "abstract": "Parallel programming is central to HPC and AI, but producing code that is correct and fast remains challenging, especially for OpenMP GPU offload, where data movement and tuning dominate. Autonomous coding agents can compile, test, and profile on target hardware, but outputs are brittle without domain scaffolding. We present ParaCodex, an HPC-engineer workflow that turns a Codex-based agent into an autonomous OpenMP GPU offload system using staged hotspot analysis, explicit data planning, correctness gating, and profiling-guided refinement. We evaluate translation from serial CPU kernels to OpenMP GPU offload kernels on HeCBench, Rodinia, and NAS. After excluding five kernels, ParaCodex succeeded on all 31 valid kernels. The generated kernels improved GPU time over reference OpenMP implementations in 25/31 cases, achieving geometric-mean speedups of 3x on HeCBench and 5x on Rodinia, and outperforming a zero-shot Codex baseline on all suites. We also evaluate CUDA to OpenMP offload translation on ParEval, where ParaCodex maintains high compilation and validation rates in code-only and end-to-end settings.",
+  "doi": "10.48550/arxiv.2601.04327",
+  "openalex": "W7119848665",
+  "status": "ok",
+  "title": "ParaCodex: A Profiling-Guided Autonomous Coding Agent for Reliable Parallel Code Generation and Translation"
+ },
+ "10.48550_arxiv.2602.04181": {
+  "abstract": "Low-level database operators often admit multiple physical implementations (\"kernels\") that are semantically equivalent but have vastly different performance characteristics depending on the input data distribution. Existing database systems typically rely on static heuristics or worst-case optimal defaults to select these kernels, often missing significant performance opportunities. In this work, we propose CAKE (Counterfactual Adaptive Kernel Execution), a system that learns to select the optimal kernel for each data \"morsel\" using a microsecond-scale contextual multi-armed bandit. CAKE circumvents the high latency of traditional reinforcement learning by exploiting the cheapness of counterfactuals -- selectively running multiple kernels to obtain full feedback -- and compiling policies into low-latency regret trees. Experimentally, we show that CAKE can reduce end-to-end workload latency by up to 2x compared to state-of-the-art static heuristics.",
+  "doi": "10.48550/arxiv.2602.04181",
+  "openalex": "W7128018830",
+  "status": "ok",
+  "title": "Piece of CAKE: Adaptive Execution Engines via Microsecond-Scale Learning"
+ },
+ "10.48550_arxiv.2606.09120": {
+  "abstract": "Recent Byzantine Fault Tolerant (BFT) protocols achieve strong performance by combining the low-latency advantages of leader-based BFT protocols with the high-throughput benefits of DAG-based data dissemination. Despite exposing a wide spectrum of internal tunable parameters, these protocols typically rely on static and heuristic configurations, which leads to performance degradation under dynamic workloads, heterogeneous network conditions, and evolving adversarial behaviors. In this paper, we present AutoPilot, a reinforcement learning-based framework that continuously monitors runtime conditions and dynamically adjusts protocol parameters online to optimize consensus performance. To ensure robustness, AutoPilot coordinates learning in a decentralized manner, providing resilience against adversarial data pollution. We implement AutoPilot on top of Autobahn, a state-of-the-art, highspeed, robust BFT protocol, and evaluate it across diverse dynamic environments. Experimental results demonstrate that AutoPilot quickly converges to the optimal configuration under changing environments, reduces end-to-end latency by 49.8% compared to the default protocol configuration, and outperforms random configuration exploration by 73.3%.",
+  "doi": "10.48550/arxiv.2606.09120",
+  "openalex": "W7164048084",
+  "status": "ok",
+  "title": "AutoPilot: Learning to Steer High Speed Robust BFT"
+ },
+ "10.5220_0009097601260136": {
+  "abstract": "Deep neural networks (DNNs) are becoming prevalent, often outperforming manually-created systems. Unfortunately, DNN models are opaque to humans, and may behave in unexpected ways when deployed. One approach for allowing safer deployment of DNN models calls for augmenting them with hand-crafted override rules, which serve to override decisions made by the DNN model when certain criteria are met. Here, we propose to bring together DNNs and the well-studied scenario-based modeling paradigm, by expressing these override rules as simple and intuitive scenarios. This approach can lead to override rules that are comprehensible to humans, but are also sufficiently expressive and powerful to increase the overall safety of the model. We describe how to extend and apply scenario-based modeling to this new setting, and demonstrate our proposed technique on multiple DNN models.",
+  "doi": "10.5220/0009097601260136",
+  "openalex": "W3011236511",
+  "status": "ok",
+  "title": "Guarded Deep Learning using Scenario-based Modeling"
+ },
+ "oa-W2751134272": {
+  "abstract": "This report presents the results of a friendly competition for formal verification of continuous and hybrid systems with piecewise constant dynamics. The friendly competition took place as part of the workshop Applied Verification for Continuous and Hybrid Systems (ARCH) in 2019. In this third edition, six tools have been applied to solve five different benchmark problems in the category for piecewise constant dynamics: BACH, Lyse, Hy- COMP, PHAVer/SX, PHAVerLite, and VeriSiMPL. Compared to last year, a new tool has participated (HyCOMP) and PHAVerLite has replaced PHAVer-lite. The result is a snap- shot of the current landscape of tools and the types of benchmarks they are particularly suited for. Due to the diversity of problems, we are not ranking tools, yet the presented results probably provide the most complete assessment of tools for the safety verification of continuous and hybrid systems with piecewise constant dynamics up to this date.",
+  "doi": null,
+  "openalex": "W2751134272",
+  "status": "ok",
+  "title": "EPiC Series in Computing"
+ },
+ "oa-W2973225701": {
+  "abstract": "The problem of automatic software generation is known as Machine Programming. In this work, we propose a framework based on genetic algorithms to solve this problem. Although genetic algorithms have been used successfully for many problems, one criticism is that hand-crafting its fitness function, the test that aims to effectively guide its evolution, can be notably challenging. Our framework presents a novel approach to learn the fitness function using neural networks to predict values of ideal fitness functions. We also augment the evolutionary process with a minimally intrusive search heuristic. This heuristic improves the framework's ability to discover correct programs from ones that are approximately correct and does so with negligible computational overhead. We compare our approach with several state-of-the-art program synthesis methods and demonstrate that it finds more correct programs with fewer candidate program generations.",
+  "doi": null,
+  "openalex": "W2973225701",
+  "status": "ok",
+  "title": "Learning Fitness Functions for Genetic Algorithms"
+ },
+ "oa-W3015119114": {
+  "abstract": "Traditional code transformation structures, such as abstract syntax trees (ASTs), conteXtual flow graphs (XFGs), and more generally, compiler intermediate representations (IRs), may have limitations in extracting higher-order semantics from code. While work has already begun on higher-order semantics lifting (e.g., Aroma's simplified parse tree (SPT), verified lifting's lambda calculi, and Halide's intentional domain specific language (DSL)), research in this area is still immature. To continue to advance this research, we present the program-derived semantics graph, a new graphical structure to capture semantics of code. The PSG is designed to provide a single structure for capturing program semantics at multiple levels of abstraction. The PSG may be in a class of emerging structural representations that cannot be built from a traditional set of predefined rules and instead must be learned. In this paper, we describe the PSG and its fundamental structural differences compared to state-of-the-art structures. Although our exploration into the PSG is in its infancy, our early results and architectural analysis indicate it is a promising new research direction to automatically extract program semantics.",
+  "doi": null,
+  "openalex": "W3015119114",
+  "status": "ok",
+  "title": "Software Language Comprehension using a Program-Derived Semantic Graph"
+ },
+ "oa-W3034313155": {
+  "abstract": "Code similarity systems are integral to a range of applications from code recommendation to automated construction of software tests and defect mitigation. In this paper, we present Machine Inferred Code Similarity (MISIM), a novel end-to-end code similarity system that consists of two core components. First, MISIM uses a novel context-aware similarity structure, which is designed to aid in lifting semantic meaning from code syntax. Second, MISIM provides a neural-based code similarity scoring system, which can be implemented with various neural network algorithms and topologies with learned parameters. We compare MISIM to three other state-of-the-art code similarity systems: (i) code2vec, (ii) Neural Code Comprehension, and (iii) Aroma. In our experimental evaluation across 45,780 programs, MISIM consistently outperformed all three systems, often by a large factor (upwards of 40.6x).",
+  "doi": null,
+  "openalex": "W3034313155",
+  "status": "ok",
+  "title": "MISIM: An End-to-End Neural Code Similarity System."
+ },
+ "oa-W3102139284": {
+  "abstract": "Deep neural networks are increasingly being used as controllers for safety-critical systems. Because neural networks are opaque, certifying their correctness is a significant challenge. To address this issue, several neural network verification approaches have recently been proposed. However, these approaches afford limited scalability, and applying them to large networks can be challenging. In this paper, we propose a framework that can enhance neural network verification techniques by using over-approximation to reduce the size of the network—thus making it more amenable to verification. We perform the approximation such that if the property holds for the smaller (abstract) network, it holds for the original as well. The over-approximation may be too coarse, in which case the underlying verification tool might return a spurious counterexample. Under such conditions, we perform counterexample-guided refinement to adjust the approximation, and then repeat the process. Our approach is orthogonal to, and can be integrated with, many existing verification techniques. For evaluation purposes, we integrate it with the recently proposed Marabou framework, and observe a significant improvement in Marabou’s performance. Our experiments demonstrate the great potential of our approach for verifying larger neural networks.",
+  "doi": null,
+  "openalex": "W3102139284",
+  "status": "ok",
+  "title": "An Abstraction-Based Framework for Neural Network Verification"
+ },
+ "oa-W3131414961": {
+  "abstract": "Synthesizing programs from examples requires searching over a vast, combinatorial space of possible programs. In this search process, a key challenge is representing the behavior of a partially written program before it can be executed, to judge if it is on the right track and predict where to search next. We introduce a general technique for representing partially written programs in a program synthesis engine. We take inspiration from the technique of abstract interpretation, in which an approximate execution model is used to determine if an unfinished program will eventually satisfy a goal specification. Here we \\emph{learn} an approximate execution model implemented as a modular neural network. By constructing compositional program representations that implicitly encode the interpretation semantics of the underlying programming language, we can represent partial programs using a flexible combination of concrete execution state and learned neural representations, using the learned approximate semantics when concrete semantics are not known (in unfinished parts of the program). We show that these hybrid neuro-symbolic representations enable execution-guided synthesizers to use more powerful language constructs, such as loops and higher-order functions, and can be used to synthesize programs more accurately for a given search budget than pure neural approaches in several domains.",
+  "doi": null,
+  "openalex": "W3131414961",
+  "status": "ok",
+  "title": "Representing Partial Programs with Blended Abstract Semantics"
+ },
+ "oa-W3164310701": {
+  "abstract": "Quantitative program synthesis aims to generate a program that satisfies not only boolean specifications but also quantitative objectives. Nonetheless, obtaining precise quantitative objectives per se can be a challenging task. In this paper, we propose comparative synthesis, a bootstrapping quantitative synthesis framework in which an indeterminate objective and a satisfying program are synthesized in tandem. The key idea is to make comparative queries to learn the user's preference over candidate programs, with which objectives can be conjectured. These objectives, which are indeterminate as they can be refined along the course of user interaction, guide the search of satisfying programs. \r\nWithin the comparative synthesis framework, we developed two novel comparative synthesis procedures (CLPs) with the aim of minimizing the number of queries to the user. We prove that both CLPs converge and use them in two case studies: generating bandwidth allocations for network design and solving SyGuS benchmarks with syntactic objectives. Experiments show that our framework can successfully synthesize satisfying/optimal solutions by making queries only, without a priori knowledge about the quantitative objective.",
+  "doi": null,
+  "openalex": "W3164310701",
+  "status": "ok",
+  "title": "Comparative Synthesis: Learning Optimal Programs with Indeterminate Objectives."
+ },
+ "s2-0d93d1943ebd0372": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MISIM: A Novel Code Similarity System."
+ },
+ "s2-1d18e15d4313ce2a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "PROGRAMSYNTHESIS FOR SCIENTIFIC COMPUTING"
+ },
+ "s2-270897709b9e32ec": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "OptTyper: Probabilistic Type Inference by Optimising Logical and Natural Constraints"
+ },
+ "s2-30a156f17ca8f54a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "BUSTLE: Bottom-up program-Synthesis Through Learning-guided Exploration"
+ },
+ "s2-369c493bb9b0f37c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Report of the Workshop on Program Synthesis for Scientific Computing"
+ },
+ "s2-3ab05ea2bcf9410f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Context-Aware Parse Trees"
+ },
+ "s2-3ed83236a1ccad03": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MISIM: An End-to-End Neural Code Similarity System"
+ },
+ "s2-4116e65ef8a05c82": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Representing Partial Programs with Blended Abstract Semantics"
+ },
+ "s2-4d6c31599cefddf9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Learned Query Superoptimization (Extended Abstract)"
+ },
+ "s2-65119dd0d6526ef6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MISIM: A Novel Code Similarity System"
+ },
+ "s2-67ca19a19bf8a56b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Comparative Synthesis: Learning Optimal Programs with Indeterminate Objectives"
+ },
+ "s2-683e0cf68992fdf7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Zero-Positive Learning Approach for Diagnosing Software Performance Regressions"
+ },
+ "s2-6cd4d3dfe21ff36f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Visual Language for Composable Inductive Programming"
+ },
+ "s2-74802bbe9a283de3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Learning Fitness Functions for Machine Programming"
+ },
+ "s2-748545afe27cace4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software Language Comprehension using a Program-Derived Semantics Graph"
+ },
+ "s2-7fe7627c77ffd26a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Learning Fitness Functions for Genetic Algorithms"
+ },
+ "s2-890bcd7f1ab9fc73": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MIT Open Access Articles The three pillars of machine programming"
+ },
+ "s2-a48743b889db1faf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Toward Code Generation: A Survey and Lessons from Semantic Parsing"
+ },
+ "s2-b2ac9095344bec35": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Geometric Perspectives on Program Synthesis and Semantics"
+ },
+ "s2-b7f6f4ced1901c5c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SampleFix: Learning to Correct Programs by Sampling Diverse Fixes"
+ },
+ "s2-bd0a28c26da9e9aa": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software Language Comprehension using a Program-Derived Semantic Graph"
+ },
+ "s2-bd0ed34897bcf69d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "PerfRL: A Small Language Model Framework for Efficient Code Optimization"
+ },
+ "s2-ca25e449e26edff4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Buffer Pool Aware Query Scheduling via Deep Reinforcement Learning"
+ },
+ "s2-e41452747ac0674a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Learning to Represent Programs with Property Signatures"
+ },
+ "s2-f5eb526492798dd7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Survey on Semantic Parsing for Machine Programming"
+ },
+ "s2-fd0bccf5e7c1fb5d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MISIM: A Neural Code Semantics Similarity System Using the Context-Aware Semantics Structure"
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "10.1109_cgo53902.2022.9741280": {
+  "abstract": "Domain-Specific Languages (DSLs) provide the optimum balance between generalization and specialization that is crucial to getting the best performance for a particular domain. DSLs like Halide and GraphIt and their rich scheduling languages allow users to generate an implementation best suited for the algorithm and input. DSLs also provide the right abstraction for generating code for diverse architectures like GPUs, CPUs, and hardware accelerators. DSL compilers are massive, typically spanning tens of thousands of lines of code and need a frontend, some analysis and transformation passes, and target-specific code generation. These implementations usually require a great deal of compiler knowledge and domain experts cannot prototype DSLs without getting compiler experts involved.Using multi-stage programming in a high-level language like Scala, OCaml, or C++, is a great solution because it provides easy-to-use frontend and automatic code generation abilities. The DSL writers typically implement their abstraction as a library in the multi-stage programming language and use it to generate specialized code by providing partial inputs. This solves the problem only partially because DSLs like GraphIt have shown that several domain-specific analyses and transformations need to be performed to get the best performance. Special care has to be taken when targeting massively parallel architectures like GPUs where factors like load balancing, warp divergence, coalesced memory accesses play a critical role.In this paper, we demonstrate how to build an end-to-end DSL compiler framework and a graph DSL using multi-stage programming in C++. We show how the staged types can be extended to perform domain-specific data flow and control flow analyses and transformations. We also show how our generated CUDA code matches the performance of the code generated from the state-of-the-art graph DSL, GraphIt. We achieve all this in a very small fraction (8.4%) of the code size required to implement the traditional DSL compiler.",
+  "doi": "10.1109/cgo53902.2022.9741280",
+  "openalex": "W4221038596",
+  "status": "ok",
+  "title": "GraphIt to CUDA Compiler in 2021 LOC: A Case for High-Performance DSL Implementation via Staging with BuilDSL"
+ },
+ "10.1109_isca52012.2021.00087": {
+  "abstract": "Irregular applications, such as graph analytics and sparse linear algebra, exhibit frequent indirect, data-dependent accesses to single or short sequences of elements that cause high main memory traffic and limit performance. Data compression is a promising way to accelerate irregular applications by reducing memory traffic. However, software compression adds substantial overheads, and prior hardware compression techniques work poorly on the complex access patterns of irregular applications.We present SpZip, an architectural approach that makes data compression practical for irregular algorithms. SpZip accelerates the traversal, decompression, and compression of the data structures used by irregular applications. In addition, these activities run in a decoupled fashion, hiding both memory access and decompression latencies. To support the wide range of access patterns in these applications, SpZip is programmable, and uses a novel Dataflow Configuration Language to specify programs that traverse and generate compressed data. Our SpZip implementation leverages dataflow execution and time-multiplexing to implement programmability cheaply. We evaluate SpZip on a simulated multicore system running a broad set of graph and linear algebra algorithms. SpZip outperforms prior state-of-the art software-only (hardware-accelerated) systems by gmean 3.0× (1.5×) and reduces memory traffic by 1.7× (1.4×). These benefits stem from both reducing data movement due to compression, and offloading expensive traversal and (de)compression operations.",
+  "doi": "10.1109/isca52012.2021.00087",
+  "openalex": "W3188321821",
+  "status": "ok",
+  "title": "SpZip: Architectural Support for Effective Data Compression In Irregular Applications"
+ },
+ "10.1109_isca59077.2024.00061": {
+  "abstract": "Existing tiled manycore architectures propose to convert abundant silicon resources into general-purpose parallel processors with unmatched computational density and programmability. However, as we approach 100 K cores in one chip, conventional manycore architectures struggle to navigate three key axes: scalability, programmability, and density. Many manycores sacrifice programmability for density; or scalability for programmability. In this paper, we explore HammerBlade, which simultaneously achieves scalability, programmability and density. HammerBlade is a fully open-source RISC-V manycore architecture, which has been silicon-validated with a 2048-core ASIC implementation using a 14/16nm process. We evaluate the system using a suite of parallel benchmarks that captures a broad spectrum of computation and communication patterns.",
+  "doi": "10.1109/isca59077.2024.00061",
+  "openalex": "W4401211850",
+  "status": "ok",
+  "title": "Scalable, Programmable and Dense: The HammerBlade Open-Source RISC-V Manycore"
+ },
+ "10.1109_isca66397.2026.00088": {
+  "abstract": null,
+  "doi": "10.1109/isca66397.2026.00088",
+  "openalex": "W7172442817",
+  "status": "no_abstract",
+  "title": "Intermittence-Aware Speculative Page Coloring for Secure NVM"
+ },
+ "10.1109_mm.2022.3173405": {
+  "abstract": "To overcome the current performance wall, data streaming and data-flow computing paradigms have been gradually making their way into the general-purpose domain. However, the proliferation of such paradigms is often hindered by the lack of compilation support, as their execution model is usually incompatible with the internal static single-assignment form used in modern compilers. Accordingly, we propose a new compilation flow that leverages the LLVM infrastructure to automatically extract and encode the memory access pattern and computation data-flow graph with streaming representations. The proposed compilation flow is used to generate code for the recently presented Unlimited Vector Extension, which tackles the shortcomings of vector-length agnostic single-instruction multiple-data extensions by deploying a data streaming paradigm with implicit memory access and loop control. We show that our proposed tool is capable of detecting, representing, and vectorizing a much wider range of loop patterns than existing solutions while providing significant performance gains.",
+  "doi": "10.1109/mm.2022.3173405",
+  "openalex": "W4285143823",
+  "status": "ok",
+  "title": "Compiling for Vector Extensions With Stream-Based Specialization"
+ },
+ "10.1109_tcad.2021.3103825": {
+  "abstract": "Future CPU-manycore heterogeneous systems can provide high peak throughput by integrating thousands of simple, independent, energy-efficient cores in a single die. However, there are two key challenges to translating this high peak throughput into improved end-to-end workload performance: 1) manycore co-processors rely on simple hardware putting significant demands on the software programmer and 2) manycore co-processors use in-order cores that struggle to tolerate long memory latencies. To address the manycore programmability challenge, this article presents a dense and sparse tensor processing framework based on PyTorch that enables domain experts to easily accelerate off-the-shelf workloads on CPU-manycore heterogeneous systems. To address the manycore memory latency challenge, we use our extended PyTorch framework to explore the potential for decoupled access/execute (DAE) software and hardware mechanisms. More specifically, we propose two software-only techniques, naïve-software DAE and systolic-software DAE, along with a lightweight hardware access accelerator to further improve area-normalized throughput. We evaluate our techniques using a combination of PyTorch operator microbenchmarking and real-world PyTorch workloads running on a detailed register-transfer-level model of a 128-core manycore architecture. Our evaluation on three real-world dense and sparse tensor workloads suggests these workloads can achieve approximately 2–$6\\times $performance improvement when scaled to a future 2000-core CPU-manycore heterogeneous system compared to an 18-core out-of-order CPU baseline, while potentially achieving higher area-normalized throughput and improved energy efficiency compared to general-purpose graphics processing units.",
+  "doi": "10.1109/tcad.2021.3103825",
+  "openalex": "W3189151771",
+  "status": "ok",
+  "title": "A Tensor Processing Framework for CPU-Manycore Heterogeneous Systems"
+ },
+ "10.1145_3489517.3530431": {
+  "abstract": "Domain-specific languages (DSLs) improve developer productivity by abstracting away low-level details of an algorithm's implementation within a specialized domain. These languages often provide powerful primitives to describe complex operations, potentially granting flexibility during compilation to target hardware acceleration. This work proposes PriMax, a novel methodology to effectively map DSL applications to hardware accelerators. It builds decision trees based on benchmark results, which select between distinct implementations of accelerated primitives to maximize a target performance metric. In our graph analytics case study with two accelerators, PriMax produces a geometric mean speedup of 1.57x over a multicore CPU, higher than either target accelerator alone, and approaching the maximum 1.58x speedup attainable with these target accelerators.",
+  "doi": "10.1145/3489517.3530431",
+  "openalex": "W4293024090",
+  "status": "ok",
+  "title": "PriMax"
+ },
+ "10.1145_3489517.3530641": {
+  "abstract": "The ADA Center set out in 2018 to reignite innovation in computing and to enable the design of computing systems for the 2030 decade. It planned to do so by developing novel hardware architecture solutions, embracing emerging devices at the system's scale, and crafting new design flows that are accessible to a much larger engineering population than today. This work provides a retrospective of ADA's accomplishments, and lessons learned along the way. It also provides a discussion of future research directions informed by the ADA Center's learning.",
+  "doi": "10.1145/3489517.3530641",
+  "openalex": "W4400106278",
+  "status": "ok",
+  "title": "ADA, the Center for Applications Driving Architectures: accomplishments and vision forward"
+ },
+ "10.1145_3550454.3555430": {
+  "abstract": "Meshes are an indispensable representation in many graphics applications because they provide conformal spatial discretizations. However, mesh-based operations are often slow due to unstructured memory access patterns. We propose MeshTaichi, a novel mesh compiler that provides an intuitive programming model for efficient mesh-based operations. Our programming model hides the complex indexing system from users and allows users to write mesh-based operations using reference-style neighborhood queries. Our compiler achieves its high performance by exploiting data locality. We partition input meshes and prepare the wanted relations by inspecting users' code during compile time. During run time, we further utilize on-chip memory (shared memory on GPU and L1 cache on CPU) to access the wanted attributes of mesh elements efficiently. Our compiler decouples low-level optimization options with computations, so that users can explore different localized data attributes and different memory orderings without changing their computation code. As a result, users can write concise code using our programming model to generate efficient mesh-based computations on both CPU and GPU backends. We test MeshTaichi on a variety of physically-based simulation and geometry processing applications with both triangle and tetrahedron meshes. MeshTaichi achieves a consistent speedup ranging from 1.4× to 6×, compared to state-of-the-art mesh data structures and compilers.",
+  "doi": "10.1145/3550454.3555430",
+  "openalex": "W4311802434",
+  "status": "ok",
+  "title": "MeshTaichi"
+ },
+ "10.1145_3567512.3567513": {
+  "abstract": "Domain-specific language compilers need to close the gap between the domain abstractions of the language and the low-level concepts of the target platform.This can be challenging to achieve for compilers targeting multiple platforms with potentially very different computing paradigms.In this paper, we present a multi-target, multi-paradigm DSL compiler for algorithmic graph processing. Our approach centers around an intermediate representation and reusable, composable transformations to be shared between the different compiler targets. These transformations embrace abstractions that align closely with the concepts of a particular target platform, and disallow abstractions that are semantically more distant. We report on our experience implementing the compiler and highlight some of the challenges and requirements for applying language workbenches in industrial use cases.",
+  "doi": "10.1145/3567512.3567513",
+  "openalex": "W4310506228",
+  "status": "ok",
+  "title": "A Multi-target, Multi-paradigm DSL Compiler for Algorithmic Graph Processing"
+ },
+ "10.1145_3582016.3582020": {
+  "abstract": "Manycore architectures integrate hundreds of cores on a single chip by using simple cores and simple memory systems usually based on software-managed scratchpad memories (SPMs). However, such architectures are notoriously challenging to program, since the programmers need to manually manage all aspects of data movement and synchronization for both correctness and performance. We argue that this manycore programmability challenge is one of the key barriers to achieving the promise of manycore architectures. At the same time, the dynamic task parallel programming model is enjoying considerable success in addressing the programmability challenge of multi-core processors with tens of complex cores and hardware cache coherence.",
+  "doi": "10.1145/3582016.3582020",
+  "openalex": "W4327930438",
+  "status": "ok",
+  "title": "Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories"
+ },
+ "10.1145_3735452.3735533": {
+  "abstract": "Due to hardware customization capabilities, FPGA-based graph processing accelerators achieve significantly higher energy efficiency than many general-purpose computing engines. However, designing these accelerators remains a substantial challenge for high-level users. To overcome the programming barrier, FPGA-based accelerator design frameworks on top of generic graph processing programming models have been developed to automate accelerator generation through pre-built templates. However, they often tightly couple graph processing algorithms, programming models and processing paradigms, and accelerator architectures, which severely limits the expression scope of the algorithms and may also restrict the performance when the generated accelerators fail to suit dynamic processing patterns of the graph processing algorithms.",
+  "doi": "10.1145/3735452.3735533",
+  "openalex": "W4411267575",
+  "status": "ok",
+  "title": "Graphitron: A Domain Specific Language for FPGA-Based Graph Processing Accelerator Generation"
+ },
+ "10.3390_a18070445": {
+  "abstract": "Graph analytics has grown increasingly popular as a model for data analytics across a variety of domains. This has prompted an emergence of solutions for large-scale graph analytics, many of which integrate user-facing domain-specific languages (DSLs) to support graph processing operations. These DSLs fall into two categories: query-based DSLs for graph-pattern matching and graph algorithm DSLs. While graph query DSLs are now standardized, research on DSLs for algorithmic graph processing remains fragmented and lacks a cohesive framework. To address this gap, we conduct a systematic literature review of algorithmic graph processing DSLs aimed at large-scale graph analytics. Our findings reveal the prevalence of property graphs (with 60% of surveyed DSLs explicitly adopting this model), as well as notable similarities in syntax and features. This allows us to identify a common template that can serve as the foundation for a standardized graph algorithm model, improving portability and unifying design between different DSLs and graph analytics toolkits. We additionally find that, despite achieving remarkable performance and scalability, only 20% of surveyed DSLs see real-life adoption. Incidentally, all DSLs for which user documentation is available are developed as part of academia–industry collaborations or in fully industrial contexts. Based on these results, we provide a comprehensive overview of the current research landscape, along with a roadmap of recommendations and future directions to enhance reusability and interoperability in large-scale graph analytics across industry and academia.",
+  "doi": "10.3390/a18070445",
+  "openalex": "W4412513957",
+  "status": "ok",
+  "title": "Domain-Specific Languages for Algorithmic Graph Processing: A Systematic Literature Review"
+ },
+ "10.48550_arxiv.2407.12575": {
+  "abstract": "FPGA-based graph processing accelerators, enabling extensive customization, have demonstrated significant energy efficiency over general computing engines like CPUs and GPUs. Nonetheless, customizing accelerators to diverse graph processing algorithms with distinct computational patterns remains challenging and error-prone for high-level application users. To this end, template-based approaches have been developed to automate the graph processing accelerator generation. Although these frameworks significantly enhance the design productivity, the templates often result in closely coupled algorithms, programming models, and architectures, severely limiting the versatility of the targeted graph processing algorithms and their applicability to high-level users. Furthermore, the limitations of the frameworks are usually ambiguous due to the absence of a rigorous grammar definition. To overcome these challenges, we introduce Graphitron, a domain-specific language (DSL), which allows users to generate customized accelerators for a wide range of graph processing algorithms on FPGAs without engaging with the complexities of low-level FPGA designs. Graphitron, by defining vertices and edges as primitive data types, naturally facilitates the description of graph algorithms using edge-centric or vertex-centric programming models. The Graphitron back-end employs a suite of hardware optimization techniques including pipelining, data shuffling, and memory access optimization that are independent with the specific algorithms, supporting the creation of versatile graph processing accelerators. Our experiments indicate that accelerators crafted using Graphitron achieve comparable performance to that generated with template-based design framework. Moreover, it exhibits exceptional flexibility in algorithm expression and significantly enhance accelerator design productivity.",
+  "doi": "10.48550/arxiv.2407.12575",
+  "openalex": "W4403750785",
+  "status": "ok",
+  "title": "Graphitron: A Domain Specific Language for FPGA-based Graph Processing Accelerator Generation"
+ },
+ "10.48550_arxiv.2601.02653": {
+  "abstract": "Many program transformations and optimizations require information about the future behavior of the program. A standard way to obtain this information is to build an intermediate program representation, then use a backwards program analysis to propagate relevant information against the flow of control back to the transformation/optimization site. We instead propose to use prophecy variables, which predict information about the future execution of the program, to enable such transformations and optimizations. We implement prophecy variables in BuildIt, a lightweight domain specific language implementation system. BuildIt uses staged compilation to implement high performance domain specific languages embedded within a standard general purpose programming language (C++). The BuildIt first phase uses standard C++ program execution to generate optimized C, C++, and CUDA second phase code. This approach enables BuildIt to eliminate programming language implementation components such as parsers and intermediate representations, delivering a dramatic decrease in the engineering effort required to implement domain specific languages. The combination of prophecy variables and repeated forward program execution enables BuildIt to extend this approach to include transformations and optimizations that require information about the future execution of the program without backwards analyses and without the engineering overhead associated with implementing these analyses. We formalize the use of prophecy variables for this purpose, discuss the implementation of prophecy variables and repeated execution in BuildIt, and present experimental results for BuildIt computations that benefit from optimizations enabled by the information that prophecy variables provide.",
+  "doi": "10.48550/arxiv.2601.02653",
+  "openalex": "W7118951270",
+  "status": "ok",
+  "title": "Backwards Data-Flow Analysis using Prophecy Variables in the BuildIt System"
+ }
+}

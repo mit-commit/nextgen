@@ -1,0 +1,226 @@
+{
+ "10.1109_cgo53902.2022.9741280": {
+  "abstract": "Domain-Specific Languages (DSLs) provide the optimum balance between generalization and specialization that is crucial to getting the best performance for a particular domain. DSLs like Halide and GraphIt and their rich scheduling languages allow users to generate an implementation best suited for the algorithm and input. DSLs also provide the right abstraction for generating code for diverse architectures like GPUs, CPUs, and hardware accelerators. DSL compilers are massive, typically spanning tens of thousands of lines of code and need a frontend, some analysis and transformation passes, and target-specific code generation. These implementations usually require a great deal of compiler knowledge and domain experts cannot prototype DSLs without getting compiler experts involved.Using multi-stage programming in a high-level language like Scala, OCaml, or C++, is a great solution because it provides easy-to-use frontend and automatic code generation abilities. The DSL writers typically implement their abstraction as a library in the multi-stage programming language and use it to generate specialized code by providing partial inputs. This solves the problem only partially because DSLs like GraphIt have shown that several domain-specific analyses and transformations need to be performed to get the best performance. Special care has to be taken when targeting massively parallel architectures like GPUs where factors like load balancing, warp divergence, coalesced memory accesses play a critical role.In this paper, we demonstrate how to build an end-to-end DSL compiler framework and a graph DSL using multi-stage programming in C++. We show how the staged types can be extended to perform domain-specific data flow and control flow analyses and transformations. We also show how our generated CUDA code matches the performance of the code generated from the state-of-the-art graph DSL, GraphIt. We achieve all this in a very small fraction (8.4%) of the code size required to implement the traditional DSL compiler.",
+  "doi": "10.1109/cgo53902.2022.9741280",
+  "openalex": "W4221038596",
+  "status": "ok",
+  "title": "GraphIt to CUDA Compiler in 2021 LOC: A Case for High-Performance DSL Implementation via Staging with BuilDSL"
+ },
+ "10.1109_cgo57630.2024.10444812": {
+  "abstract": "Modern GPUs are designed for regular problems and suffer from load imbalance when processing irregular data. Prior to our work, a domain expert selects the best kernel to map fine-grained irregular parallelism to a GPU. We instead propose Seer, an abstraction for producing a simple, reproduceable, and understandable decision tree selector model which performs runtime kernel selection for irregular workloads. To showcase our framework, we conduct a case study in Sparse Matrix Vector Multiplication (SpMV), in which Seer predicts the best strategy for a given dataset with an improvement of 2× over the best single iteration kernel across the entire SuiteSparse Matrix Collection dataset.",
+  "doi": "10.1109/cgo57630.2024.10444812",
+  "openalex": "W4392266035",
+  "status": "ok",
+  "title": "Seer: Predictive Runtime Kernel Selection for Irregular Problems"
+ },
+ "10.1109_hpca61900.2025.00108": {
+  "abstract": "Thanks to their scalable parallel processing capability, GPUs are promising computing resources for graph processing, in which identical operations are applied to a large number of edges and vertices. However, the sparsity and skewness of real-world graphs cause imbalanced workloads across GPU threads within the same warp, thus impeding efficient processing on the GPU. To mitigate this workload imbalance problem, existing works propose workload balancing hardware and software schemes. However, these solutions often suffer from additional memory overhead or increased computations and communication overheads during inter-warp and intra-warp synchronization. This work proposes a new hardware-software collaborative graph processing framework, SparseWeaver, that converts sparse operations in graph processing into dense operations using graph topology and makes the workloads balanced across GPU threads. Based on the analysis of common patterns in software schemes, we propose Weaver, a new lightweight GPU functional unit microarchitecture that fully leverages the benefits of the GPU architecture and exploits memory access locality. We prototype SparseWeaver on the open-source RISC-V Vortex GPU and demonstrate 2.36 times faster execution time compared to state-of-the-art schemes while incurring a low area overhead of 0.045% from increased dedicated logic registers.",
+  "doi": "10.1109/hpca61900.2025.00108",
+  "openalex": "W4409248714",
+  "status": "ok",
+  "title": "SparseWeaver: Converting Sparse Operations as Dense Operations on GPUs for Graph Workloads"
+ },
+ "10.1109_iccd65941.2025.00018": {
+  "abstract": "Recently, large-scale graph processing on CPU-GPU heterogeneous platforms has attracted considerable attention. However, disparities in memory bandwidth and parallel computational capabilities between CPUs and GPUs, coupled with the irregular structure of graphs and the inherent unpredictability of graph algorithms, often lead to inefficient utilization of CPU-GPU hardware resources, ultimately degrading graph processing performance. To address this, we propose and implement CoDgraph, a co-design framework for high-performance graph processing on CPU-GPU heterogeneous platforms. Specifically, we introduce a fine-grained partitioning strategy to balance workloads, minimize communication overhead, and enhance data locality. Next, we develop an adaptive co-scheduling computing scheme, leveraging a cost model that accounts for CPU and GPU hardware resources to improve system utilization. Finally, to further optimize largescale graph processing, we design and implement an efficient overlapping pipeline execution mode that employs asynchronous parallel execution. Extensive evaluations demonstrate that CoDgraph outperforms state-of-the-art CPU and CPU-GPU graph processing systems, including Ligra (CoDgraph is$14.59 \\times$faster on average) and Subway (CoDgraph is$4.17 \\times$faster on average). In addition, CoDgraph also has comparable performance to the advanced in-memory graph processing Tigr on GPU and shows good scalability for different graph scales and CPU-GPU heterogeneous platforms.",
+  "doi": "10.1109/iccd65941.2025.00018",
+  "openalex": "W7117544369",
+  "status": "ok",
+  "title": "A Co-Design Framework for Graph Processing on CPU-GPU Heterogeneous Platforms"
+ },
+ "10.1109_icfpt52863.2021.9609832": {
+  "abstract": "We discuss the concept of FPGA-unfriendliness, the property of certain algorithms, programs, or domains which may limit their applicability to FPGAs. Specifically, we look at graph analysis, which has recently seen increased interest in combination with High-Level Synthesis, but has yet to find great success compared to established acceleration mechanisms. To this end, we make use of Xilinx's Vitis Graph Library to implement Single-Source Shortest Paths (SSSP) and PageRank (PR), and present a custom kernel written from the ground up for Distinctiveness Centrality (DC, a novel graph centrality measure). We use public datasets to test these implementations, and analyse power consumption and execution time. Our comparisons against published data for GPU and CPU execution show FPGA slowdowns in execution time between around 18.5x and 328x for SSSP, and around 1.8x and 195x for PR, respectively. In some instances, we obtained FPGA speedups versus CPU of up to 2.5x for PR. Regarding DC, results show speedups from 0.1x to 3.5x, and energy efficiency increases from 0.8x to 6x. Lastly, we provide some insights regarding the applicability of FPGAs in FPGA-unfriendly domains, and comment on the future as FPGA and HLS technology advances.",
+  "doi": "10.1109/icfpt52863.2021.9609832",
+  "openalex": "W3217243479",
+  "status": "ok",
+  "title": "FPGAs as General-Purpose Accelerators for Non-Experts via HLS: The Graph Analysis Example"
+ },
+ "10.1109_iiswc53511.2021.00019": {
+  "abstract": "Machine learning on graph data has gained significant interest because of its applicability to various domains ranging from product recommendations to drug discovery. While there is a rapid growth in the algorithmic community, the computer architecture community has so far focused on a subset of graph learning algorithms including Graph Convolution Network (GCN), and a few others. In this paper, we study another, more scalable, graph learning algorithm based on random walks, which operates on dynamic input graphs and has attracted less attention in the architecture community compared to GCN. We propose high-performance CPU and GPU implementations of two important graph learning tasks, that cover a broad class of applications, using random walks on continuous-time dynamic graphs: link prediction and node classification. We show that the resulting workload exhibits distinct characteristics, measured in terms of irregularity, core and memory utilization, and cache hit rates, compared to graph traversals, deep learning, and GCN. We further conduct an in-depth performance analysis focused on both algorithm and hardware to guide future software optimization and architecture exploration. The algorithm-focused study presents a rich trade-off space between algorithmic performance and runtime complexity to identify optimization opportunities. We find an optimal hyperparameter setting that strikes balance in this trade-off space. Using this setting, we also perform a detailed microarchitectural characterization to analyze hardware behavior of these applications and uncover execution bottlenecks, which include high cache misses and dependency-related stalls. The outcome of our study includes recommendations for further performance optimization, and open-source implementations for future investigation.",
+  "doi": "10.1109/iiswc53511.2021.00019",
+  "openalex": "W4285338635",
+  "status": "ok",
+  "title": "A Deep Dive Into Understanding The Random Walk-Based Temporal Graph Learning"
+ },
+ "10.1109_ipdpsw63119.2024.00129": {
+  "abstract": "eCC++ is a new compiler construction framework for embedding domain-specific programming languages within C++. That is, the host language is C++, the guest language is the DSL to be embedded in C++, and eCC++ is the tool that enables the embedding. The eCC++ framework is composed of three main components: a front-end, an API for program verification based on a functional and declarative intermediate representation (IR), and a Multi-Level Intermediate Representation (MLIR) code generator. The eCC++ front-end consists of a library of C++ classes and operators that can be used to define the guest language. Guest sources are compiled with any standard C++ compiler, and when run, the resulting executable generates an eCC++ IR representation of the program, which can be verified within the eCC++ framework. Finally, eCC++ allows for high-level and domain-specific optimizations before generating MLIR. In summary, eCC++ aims to act as a generic front-end that enables embedding guest languages into C++, and provides necessary compiler technology for program verification, targeting the existing capabilities in the MLIR infrastructure. The paper evaluates the eCC++ expressiveness and usability describing the process of embedding GraphIt, a high-performance graph language in C++.",
+  "doi": "10.1109/ipdpsw63119.2024.00129",
+  "openalex": "W4401019067",
+  "status": "ok",
+  "title": "eCC++ : A Compiler Construction Framework for Embedded Domain-Specific Languages"
+ },
+ "10.1109_isca52012.2021.00041": {
+  "abstract": "We live in a new Cambrian Explosion of hardware devices. The end of conventional processor scaling has driven research and industry practice to explore a new generation of approaches. The old DNA of architecture design, including vectors, threads, shared or private memories, coherence or message passing, dataflow or von Neumann execution, are hybridized together in new and exciting ways. Each new architecture exposes a unique hardware-level API. Performance and energy efficiency are critically dependent on how well programs can use these APIs. One approach is to implement custom libraries for each new hardware architecture and application domain. A more scalable approach is to utilize a portable compiler infrastructure tailored to the application domain that makes it easy to generate efficient code for a diverse set of architectures with minimal porting effort.We propose the Unified GraphIt Compiler framework (UGC), which does exactly this for graph applications. UGC achieves portability with reasonable effort by decoupling the architecture-independent algorithm from the architecture-specific schedules and backends. We introduce a new domain-specific intermediate representation, GraphIR, that is key to this decoupling. GraphIR encodes high-level algorithm and optimization information needed for hardware-specific code generation, making it easy to develop different backends (GraphVMs) for diverse architectures, including CPUs, GPUs, and next-generation hardware such as Swarm and the HammerBlade manycore. We also build scheduling language extensions that make it easy to expose optimization decisions like load balancing strategies, blocking for locality, and other data structure choices. We evaluate UGC on five algorithms and 10 input graphs on these 4 distinct architectures and show that UGC enables implementing optimizations that can provide up to 53× speedup over programmer-generated straightforward implementations.",
+  "doi": "10.1109/isca52012.2021.00041",
+  "openalex": "W3189388815",
+  "status": "ok",
+  "title": "Taming the Zoo: The Unified GraphIt Compiler Framework for Novel Architectures"
+ },
+ "10.1109_ispass57527.2023.00039": {
+  "abstract": "Social network graphs follow a power-law distribution, enabling us to exploit the GPU’s hierarchical execution model for efficient computation through a degree-aware kernel computation approach. In this approach, nodes are mapped to different levels of parallelism on the GPU, depending upon their in-degree. To take advantage of this execution model, the nodes must be arranged in decreasing order of in-degree. However, doing so distorts the community structure (a property responsible for providing memory locality during computation), impacting the degree-aware kernel’s performance gain. To balance ordering by in-degree and community structure, we propose DRBS, a graph reordering algorithm that sorts the graph nodes while preserving enough community structure to enhance cache efficiency.",
+  "doi": "10.1109/ispass57527.2023.00039",
+  "openalex": "W4381886095",
+  "status": "ok",
+  "title": "Degree-Aware Kernel Mapping for Graph Processing on GPUs"
+ },
+ "10.1145_3559009.3569686": {
+  "abstract": "Only with a right schedule and a right topology layout, a graph algorithm can be efficiently processed on GPUs. Existing GPU graph processing frameworks try to find an optimal schedule and topology layout for an algorithm via iterative search, but they fail to find the optimal configuration because their schedules and topology layouts are tightly coupled in their processing models. Moreover, their tightly coupled schedules and topology layouts make it difficult for developers to extend the tuning space. To easily enlarge the tuning space of GPU graph processing, this work proposes a new GPU graph processing abstraction scheme that fully decouples schedules, topology layouts, and algorithms from each other with abstraction interfaces. Moreover, this work proposes GRAssembler, a new GPU graph processing framework that efficiently integrates the decoupled schedule, topology layout, and algorithm without abstraction overhead. Thanks to the efficient decoupling and integration, GRAssembler increases the tuning space from 336 to 4,480 and achieves 30.4% higher performance on geomean average, compared to the state-of-the-art GPU graph processing framework.",
+  "doi": "10.1145/3559009.3569686",
+  "openalex": "W4318328352",
+  "status": "ok",
+  "title": "Decoupling Schedule, Topology Layout, and Algorithm to Easily Enlarge the Tuning Space of GPU Graph Processing"
+ },
+ "10.1145_3570638": {
+  "abstract": "In the past decade, Graphics Processing Units have played an important role in the field of high-performance computing and they still advance new fields such as IoT, autonomous vehicles, and exascale computing. It is therefore important to understand how to extract performance from these processors, something that is not trivial. This survey discusses various optimization techniques found in 450 articles published in the last 14 years. We analyze the optimizations from different perspectives which shows that the various optimizations are highly interrelated, explaining the need for techniques such as auto-tuning.",
+  "doi": "10.1145/3570638",
+  "openalex": "W4308968707",
+  "status": "ok",
+  "title": "Optimization Techniques for GPU Programming"
+ },
+ "10.1145_3572848.3577434": {
+  "abstract": "We propose a GPU fine-grained load-balancing abstraction that decouples load balancing from work processing and aims to support both static and dynamic schedules with a programmable interface to implement new load-balancing schedules. Prior to our work, the only way to unleash the GPU's potential on irregular problems has been to workload-balance through application-specific, tightly coupled load-balancing techniques.",
+  "doi": "10.1145/3572848.3577434",
+  "openalex": "W4316116762",
+  "status": "ok",
+  "title": "A Programming Model for GPU Load Balancing"
+ },
+ "10.1145_3575693.3575723": {
+  "abstract": "As graph neural networks (GNNs) have achieved great success in many graph learning problems, it is of paramount importance to support their efficient execution. Different graphs and different operators present different patterns during execution. However, there is still a gap in the existing GNN acceleration research to explore adaptive parallelism. We show that existing GNN frameworks rely on handwritten static kernels, which fail to achieve the best performance across different graph operators and input graph structures. In this work, we propose uGrapher, a unified interface that achieves general high performance for different graph operators and datasets. The existing GNN frameworks can easily integrate our design for its simple and unified API. We take a principled approach that decouples a graph operator’s computation and schedule to achieve that. We first build a GNN-specific operator abstraction that incorporates the semantics of graph tensors and graph loops. We explore various schedule strategies based on the abstraction that can balance the well-established trade-off relationship between parallelism, locality, and efficiency. Our evaluation shows that uGrapher can bring up to 29.1× (3.5× on average) performance improvement over the state-of-the-art baselines on two studied NVIDIA GPUs.",
+  "doi": "10.1145/3575693.3575723",
+  "openalex": "W4318541535",
+  "status": "ok",
+  "title": "uGrapher: High-Performance Graph Operator Computation via Unified Abstraction for Graph Neural Networks"
+ },
+ "10.1145_3579990.3580014": {
+  "abstract": "Compiled Domain Specific Languages are taking over various high-performance domains because of their ability to exploit the domain knowledge and apply optimizations that produce the most specialized code. A lot of research has gone into making DSLs more performant and easy to prototype. But the Achilles heel for DSLs is still the lack of debugging support that provides an end-to-end picture to the user and improves the productivity of both the DSL designer and the end-user. Conventional techniques extend the compilers, the debugging information format, and the debuggers themselves to provide more information than what the debugger can provide when attached to the generated code. Such an approach quickly stops scaling as adding extensions to large and complex debuggers hampers DSL designer productivity. We present D2X, a DSL debugging infrastructure that works with most standard debuggers without any modifications and is easily extensible to capture all the domain specific information the end-user cares about. We show that we can add debugging support to the state-of-the-art graph DSL GraphIt with as little as 1.4% changes to the compiler code base. We also apply our techniques to a meta-programming DSL framework BuildIt so that any DSLs built on top of BuildIt get debugging support without any modifications further boosting the productivity of future DSL designers.",
+  "doi": "10.1145/3579990.3580014",
+  "openalex": "W4321496247",
+  "status": "ok",
+  "title": "D2X: An eXtensible conteXtual Debugger for Modern DSLs"
+ },
+ "10.1145_3587135.3592199": {
+  "abstract": "Graph neural networks (GNNs) are powerful tools for exploring and learning from graph structures and features. As such, achieving high-performance execution for GNNs becomes crucially important. Prior works have proposed to explore the sparsity (i.e., low density) in the input graph to accelerate GNNs, which uses the full-graph-level or block-level sparsity format. We show that they fail to balance the sparsity benefit and kernel execution efficiency. In this paper, we propose a novel system, referred to as AdaptGear, that addresses the challenge of optimizing GNNs performance by leveraging kernels tailored to the density characteristics at the subgraph level. Meanwhile, we also propose a method that dynamically chooses the optimal set of kernels for a given input graph. Our evaluation shows that AdaptGear can achieve a significant performance improvement, up to 6.49× (1.87× on average), over the state-of-the-art works on two mainstream NVIDIA GPUs across various datasets.",
+  "doi": "10.1145/3587135.3592199",
+  "openalex": "W4385585374",
+  "status": "ok",
+  "title": "AdaptGear"
+ },
+ "10.1145_3605731.3605746": {
+  "abstract": "Single-Source Shortest Path (SSSP) algorithm is a common routine in graph processing and has been extensively studied on Graphics Processing Unit (GPU). Despite the powerful parallelism resources and high memory bandwidth provided by GPU, the performance of the SSSP algorithm is hindered by several bottlenecks, such as irregular memory access, load imbalance, and redundant operations. In this paper, three optimizations are proposed to boost the performance of the SSSP algorithm on GPU, including property-driven reordering, adaptive load balancing, and bucket-aware asynchronous execution. Property-driven reordering is employed to improve the data locality and work efficiency. Adaptive load balancing brings a higher utilization of software and hardware GPU resources. Bucket-aware asynchronous execution presents a bucket-based approach for asynchronous implementation to accelerate the convergence of SSSP search.",
+  "doi": "10.1145/3605731.3605746",
+  "openalex": "W4386515876",
+  "status": "ok",
+  "title": "A Bucket-aware Asynchronous Single-Source Shortest Path Algorithm on GPU"
+ },
+ "10.1145_3620665.3640421": {
+  "abstract": "Most distributed graph analytics systems such as Gemini, Gluon, and SympleGraph support a computational model in which node properties are updated iteratively using properties of adjacent neighbors of those nodes. However, there are many algorithms that cannot be expressed in this model, such as the Louvain algorithm for community detection and the Shiloach-Vishkin algorithm for connected components. These algorithms may be more efficient or may produce better quality output than simpler algorithms that can be expressed using updates only from adjacent vertices.",
+  "doi": "10.1145/3620665.3640421",
+  "openalex": "W4394999106",
+  "status": "ok",
+  "title": "Kimbap: A Node-Property Map System for Distributed Graph Analytics"
+ },
+ "10.1145_3640537.3641569": {
+  "abstract": "An exact profiler inserts counters in a program to record how many times each edge of that program's control-flow graph has been traversed during an execution of it. It is common practice to instrument only edges in the complement of a minimum spanning tree of the program's control-flow graph, following the algorithm proposed by Knuth and Stevenson in 1973. Yet, even with this optimization, the overhead of exact profiling is high. As a consequence, mainstream profile-guided code optimizers resort to sampling, i.e., approximate, profiling, instead of exact frequency counts. This paper introduces a technique to reduce the overhead of exact profiling. We show that it is possible to use the values of variables incremented by constant steps within loops---henceforth called SESE counters---as a replacement for some profiling counters. Such affine variables are common, for they include the induction variable of typical loops. This technique, although simple, is effective. We have implemented it in the LLVM compilation infrastructure. Standard Knuth-Stevenson instrumentation increases the running time of the 135 programs in the LLVM test suite from 648 seconds to 817. The optimization suggested in this paper brings this time down to 738 seconds. In the 949 Jotai programs, standard instrumentation increases the number of processed x86 instructions from 2.96 billion to 3.34 billion, whereas the proposed technique causes 3.07 billion instructions to be fetched.",
+  "doi": "10.1145/3640537.3641569",
+  "openalex": "W4391951339",
+  "status": "ok",
+  "title": "Reducing the Overhead of Exact Profiling by Reusing Affine Variables"
+ },
+ "10.1145_3644712": {
+  "abstract": "Graph Neural Networks (GNNs) are an emerging class of deep learning models specifically designed for graph-structured data. They have been effectively employed in a variety of real-world applications, including recommendation systems, drug development, and analysis of social networks. The GNN computation includes regular neural network operations and general graph convolution operations, which take most of the total computation time. Though several recent works have been proposed to accelerate the computation for GNNs, they face the limitations of heavy pre-processing, low efficiency atomic operations, and unnecessary kernel launches. In this article, we designTLPGNN, a lightweight two-level parallelism paradigm for GNN computation. First, we conduct a systematic analysis of the hardware resource usage of GNN workloads to understand the characteristics of GNN workloads deeply. With the insightful observations, we then divide the GNN computation into two levels, i.e.,vertex parallelismfor the first level andfeature parallelismfor the second. Next, we employ a novel hybrid dynamic workload assignment to address the imbalanced workload distribution. Furthermore, we fuse the kernels to reduce the number of kernel launches and cache the frequently accessed data into registers to avoid unnecessary memory traffic. To scaleTLPGNNto multi-GPU environments, we propose an edge-aware row-wise 1-D partition method to ensure a balanced workload distribution across different GPU devices. Experimental results on various benchmark datasets demonstrate the superiority of our approach, achieving substantial performance improvement over state-of-the-art GNN computation systems, including Deep Graph Library (DGL), GNNAdvisor, and FeatGraph, with speedups of 6.1×, 7.7×, and 3.0×, respectively, on average. Evaluations of multiple-GPUTLPGNNalso demonstrate that our solution achieves both linear scalability and a well-balanced workload distribution.",
+  "doi": "10.1145/3644712",
+  "openalex": "W4391682413",
+  "status": "ok",
+  "title": "TLPGNN: A Lightweight Two-level Parallelism Paradigm for Graph Neural Network Computation on Single and Multiple GPUs"
+ },
+ "10.1145_3676642.3736121": {
+  "abstract": "Graph neural networks (GNNs) are gaining popularity in diverse application domains and growing in complexity.As a result, it is crucial to achieve high-performance GNN execution.Among various techniques, algebraic transformations, including operator reordering and operator fusion, have been successfully applied to improve the computation and memory access efficiencies of DNN models.However,",
+  "doi": "10.1145/3676642.3736121",
+  "openalex": "W4413014939",
+  "status": "ok",
+  "title": "Voyager: Input-Adaptive Algebraic Transformations for High-Performance Graph Neural Networks"
+ },
+ "10.1145_3769792": {
+  "abstract": "Given an edge-weighted graph and a set of potentially overlapping vertex groups, a group Steiner tree (GST) is a minimum weight tree that includes at least one vertex in each group. Finding GSTs serves as a classical approach to keyword search in relational databases. Existing studies use CPUs to find optimal GSTs in a serial way, and remain slow in some cases. No prior work has applied GPUs to meet this challenge. To fill this gap, first, we propose a parallel-friendly GST solution framework, by breaking the traditional bottom-up dynamic programming order. Second, since a direct execution of this framework on GPUs faces a severe workload imbalance problem, we develop a GST-customized load balancing approach. Specifically, we employ kernel fusion and global memory coalescing techniques to efficiently utilize different parallel granularities to match divergent tree construction workloads. Third, since existing pruning methods cannot be directly applied to a parallel scheme, we modify feasible pruning procedures to reduce the computation burden, and rigorously prove the solution correctness. Furthermore, inspired by recent applications, we present a novel dynamic programming algorithm for finding optimal diameter-bounded GSTs on GPUs. Experiments on various real datasets show that the proposed techniques achieve a speedup of 48-2390× over state-of-the-art methods, and can handle some large weighted graphs where existing solutions are too slow to be applied, and thus could greatly improve the user experience in related applications.",
+  "doi": "10.1145/3769792",
+  "openalex": "W4417070631",
+  "status": "ok",
+  "title": "Fast Optimal Group Steiner Tree Search using GPUs"
+ },
+ "10.1145_3771286": {
+  "abstract": "Temporal subgraph matching aims to identify subgraphs in temporal networks that satisfy both structural and temporal constraints, with applications ranging from social network analysis to fraud detection. As this NP-hard problem involves massive computation on large graphs, GPU acceleration becomes critical. However, existing edge-centric approaches suffer from computational redundancy, inefficient memory management, and limited scalability on large graphs, hindering efficient GPU acceleration. To address these challenges, we propose GTSM, 1 a GPU-optimized temporal subgraph matching system featuring three innovations: (1) A multi-edge-centric paradigm that reduces redundant search space through multi-edge compressions along with an efficient decompression algorithm; (2) A memory-bound optimization that maximizes GPU resource utilization; (3) A heterogeneous BFS-DFS execution model where CPU performs Breadth-First Search (BFS) to ensure load balancing across GPUs. Experiments demonstrate that GTSM achieves a 5.5×-93.2× speedup over the state-of-the-art GPU systems, while solving 10%–40% more queries. With our heterogeneous execution model, our system achieves near-linear scaling in multi-GPU configurations.",
+  "doi": "10.1145/3771286",
+  "openalex": "W4414982164",
+  "status": "ok",
+  "title": "GTSM: A multi-edge-centric temporal subgraph matching framework on GPUs"
+ },
+ "10.1145_3774934.3786461": {
+  "abstract": "All-Pairs Shortest Path (APSP), a fundamental problem in graph analytics, can be solved efficiently by reducing the computational workload through vertex reordering. However, it fails on GPUs due to fine-grained granularity, shape, and dependency irregularities, which cause severe hardware underutilization. We introduce ROME, a system that tames these irregularities by spatially restructuring computation into regularized workloads and temporally overlapping them with an asynchronous pipeline. ROME achieves 14.7-244.5× speedup over the state-of-the-art multicore CPU solution and 11.2-338.0× speedup over the state-of-the-art GPU solution. Notably, our results achieve mostly above 20% and up to 34.7% of peak min-plus OPs across all tested graphs.",
+  "doi": "10.1145/3774934.3786461",
+  "openalex": "W7125943623",
+  "status": "ok",
+  "title": "ROME: Maximizing GPU Efficiency for All-Pairs Shortest Path via Taming Fine-Grained Irregularities"
+ },
+ "10.1145_3817060": {
+  "abstract": "Graph sampling plays a critical role in graph learning applications, notably within Graph Neural Networks (GNNs). Typically, the performance of GPU-based graph sampling is determined by the efficiency of sampling kernels. Different sampling methods excel under different conditions, and no single method consistently outperforms others in all scenarios. As sampling applications become increasingly complex, graph-related sparse operations can dominate the computational workload, with performance heavily influenced by storage formats. In this article, we propose DGS, a GPU-based graph sampling framework that can detach the kernel implementation from computation logic. In addition to sampling kernels, DGS jointly optimizes sparse graph kernels. It can adaptively switch between different execution strategies based on various inputs. Experiments show that DGS outperforms current state-of-the-art GPU sampling frameworks, achieving speedups ranging from 1.1× to 92.0×. This adaptability and performance improvement establish DGS as a highly effective and efficient solution for diverse graph sampling scenarios.",
+  "doi": "10.1145/3817060",
+  "openalex": "W7161762006",
+  "status": "ok",
+  "title": "DGS: A GPU-based Adaptive Graph Sampling Framework"
+ },
+ "10.1360_ssi-2024-0282": {
+  "abstract": "In recent years, graph neural networksGNNs) have gained significant attention for their exceptional ability to learn and reason with non-Euclidean data. However, real-world graph structures often involve complex higher-order relationships between vertices, typically represented as hypergraphs. To effectively capture these intricate features and underlying semantic information in hypergraphs, numerous hypergraph neural networkHGNN) models have been proposed. Despite the development of various software systems that leverage the high parallel computing power of GPUs to accelerate HGNN training, these systems still face challenges such as excessive redundant computationand frequent data communication leading to suboptimal GPU utilization. Moreover, these systems are limited to training HGNN models on relatively small-scale graphs. To address these issues, we observed that multiple hyperedge computations often repeatedly access and compute the identical vertex feature vectors due to significant topological overlap between hyperedges in hypergraphs when handling the HyperGNN models. Based on this observation, we propose RHGNN a redundancy-elimination HyperGNN training system tailored for CPU-GPU heterogeneous environments. RHGNN exploits the overlapping characteristics of hyperedges to optimize the computation and updating of hyperedge and vertex features, significantly reducing CPU-GPU data communication overhead. Specifically, RHGNN presents a novel hyperedge-centric redundancy elimination approach, enabling the system to load the feature vectors of vertices to optimize communication, allowing a single load operation to serve multiple hyperedge and vertex feature computations. In addition, RHGNN implements an efficient hyperdegree-aware hierarchy caching mechanism that prioritizes frequently accessed vertex feature vectors and intermediate results on the GPU, further reducing communication costs. To validate the effectiveness of RHGNN, we compared its performance against the state-of-the-art HGNN software systems DGL, PyG, and HyperGef. Experimental results demonstrate that RHGNN achieves a performance improvement of 2.5×∼3.4× over PyG, 2.1×∼3.1× over DGL, and 1.4×∼2.3× over HyperGef in HGNN model training, respectively.",
+  "doi": "10.1360/ssi-2024-0282",
+  "openalex": "W4407207402",
+  "status": "ok",
+  "title": "An efficient high throughput system of hypergraph neural network under CPU-GPU heterogeneous environments"
+ },
+ "10.3390_electronics13173464": {
+  "abstract": "In recent years, various graph computing architectures have been proposed to process graph data that represent complex dependencies between different objects in the world. The designs of the processing element (PE) in traditional graph computing accelerators are often optimized for specific graph algorithms or tasks, which limits their flexibility in processing different types of graph algorithms, or the parallel configuration that can be supported by their PE arrays is inefficient. To achieve both flexibility and efficiency, this paper proposes Grapher, a reconfigurable graph computing accelerator based on an optimized PE array, efficiently supporting multiple graph algorithms, enhancing parallel computation, and improving adaptability and system performance through dynamic hardware resource configuration. To verify the performance of Grapher, this paper selected six datasets from the Stanford Network Analysis Project (SNAP) database for testing. Compared with the existing typical graph frameworks Ligra, Gemini, and GraphBIG, the processing time for the six datasets using the BFS, CC, and PR algorithms was reduced by up to 39.31%, 35.43%, and 27.67%, respectively. The energy efficiency has also been improved by 1.8× compared to Hitgraph and 4.7× compared to ThunderGP.",
+  "doi": "10.3390/electronics13173464",
+  "openalex": "W4402130313",
+  "status": "ok",
+  "title": "Grapher: A Reconfigurable Graph Computing Accelerator with Optimized Processing Elements"
+ },
+ "10.37099_mtu.dc.etdr_1564": {
+  "abstract": "Parallel graph processing is central to analytical computer science applications, and GPUs have proven to be an ideal platform for parallel graph processing. Existing GPU graph processing frameworks present performance improvements but often neglect two issues: the unpredictability of a given input graph and the energy consumption of the graph processing. Our prototype software, EEGraph (Energy Efficiency of Graph processing), is a flexible system consisting of several graph processing algorithms with configurable parameters for vertex update synchronization, vertex activation, and memory management along with a lightweight software-based GPU energy measurement scheme. We observe relationships between different configurations of our software, performance, and GPU energy for processing in-memory and out-of-memory graphs. The ideal parameters are discovered for specific input graphs by analyzing the observed relationships. We also present the utility of subgraph generation to predict the performance and energy consumption of complete graph configurations. EEGraph improves upon state-of-the-art GPU-based graph processing software by 2.08 times for performance and 1.60 times for GPU energy for processing in-memory graph datasets. Additionally, EEGraph improves upon the state-of-the-art by 3.30 times for performance and 1.63 times for GPU energy for processing large out-of-memory graph datasets.",
+  "doi": "10.37099/mtu.dc.etdr/1564",
+  "openalex": "W4377088229",
+  "status": "ok",
+  "title": "EXPLORING HIGH PERFORMANCE AND ENERGY EFFICIENT GRAPH PROCESSING ON GPU"
+ },
+ "10.48550_arxiv.2511.17594": {
+  "abstract": "Sparse GNN aggregations (CSR SpMM/SDDMM) vary widely in performance with degree skew, feature width, and GPU micro-architecture. We present AutoSAGE, an input-aware CUDA scheduler that chooses tiling and mapping per input using a lightweight estimate refined by on-device micro-probes, with a guardrail that safely falls back to vendor kernels and a persistent cache for deterministic replay. AutoSAGE covers SpMM and SDDMM and composes into a CSR attention pipeline (SDDMM -> row-softmax -> SpMM). On Reddit and OGBN-Products, it matches vendor baselines at bandwidth-bound feature widths and finds gains at small widths; on synthetic sparsity and skew stress tests it achieves up to 4.7x kernel-level speedups. We release CUDA sources, Python bindings, a reproducible harness, and replayable cache logs.",
+  "doi": "10.48550/arxiv.2511.17594",
+  "openalex": "W7106658186",
+  "status": "ok",
+  "title": "AutoSAGE: Input-Aware CUDA Scheduling for Sparse GNN Aggregation (SpMM/SDDMM) and CSR Attention"
+ },
+ "10.48550_arxiv.2601.02653": {
+  "abstract": "Many program transformations and optimizations require information about the future behavior of the program. A standard way to obtain this information is to build an intermediate program representation, then use a backwards program analysis to propagate relevant information against the flow of control back to the transformation/optimization site. We instead propose to use prophecy variables, which predict information about the future execution of the program, to enable such transformations and optimizations. We implement prophecy variables in BuildIt, a lightweight domain specific language implementation system. BuildIt uses staged compilation to implement high performance domain specific languages embedded within a standard general purpose programming language (C++). The BuildIt first phase uses standard C++ program execution to generate optimized C, C++, and CUDA second phase code. This approach enables BuildIt to eliminate programming language implementation components such as parsers and intermediate representations, delivering a dramatic decrease in the engineering effort required to implement domain specific languages. The combination of prophecy variables and repeated forward program execution enables BuildIt to extend this approach to include transformations and optimizations that require information about the future execution of the program without backwards analyses and without the engineering overhead associated with implementing these analyses. We formalize the use of prophecy variables for this purpose, discuss the implementation of prophecy variables and repeated execution in BuildIt, and present experimental results for BuildIt computations that benefit from optimizations enabled by the information that prophecy variables provide.",
+  "doi": "10.48550/arxiv.2601.02653",
+  "openalex": "W7118951270",
+  "status": "ok",
+  "title": "Backwards Data-Flow Analysis using Prophecy Variables in the BuildIt System"
+ },
+ "10.5281_zenodo.5555384": {
+  "abstract": "Machine learning on graph data has gained significant interest because of its applicability to various domains ranging from product recommendations to drug discovery. While there is a rapid growth in the algorithmic community, the com-puter architecture community has so far focused on a subset of graph learning algorithms including Graph Convolution Network(GCN), and a few others. In this paper, we study another, more scalable, graph learning algorithm based on random walks, which operates on dynamic input graphs and has attracted less attention in the architecture community compared to GCN. We propose high-performance CPU and GPU implementations of two key graph learning tasks, that cover a broad class of applications, using random walks on continuous-time dynamic graphs: link prediction and node classification. We show that the resulting workload exhibits distinct characteristics, measured in terms of irregularity, core and memory utilization, and cache hit rates, compared to graph traversals, deep learning, and GCN. We further conduct an in-depth performance analysis focused on both algorithm and hardware to guide future software optimization and architecture exploration. The algorithm-focused study presents a rich trade-off space between algorithmic performance and runtime complexity to identify optimization opportunities. We find an optimal hyperparameter setting that strikes balance in this trade-off space. Using this setting, we also perform a detailed microarchitectural characterization to analyze hardware behavior of these applications and uncover execution bottlenecks, which include high cache misses and dependency-related stalls. The outcome of our study includes recommendations for further performance optimization, and open-source implementations for future investigation.",
+  "doi": "10.5281/zenodo.5555384",
+  "openalex": "W3212503094",
+  "status": "ok",
+  "title": "A Deep Dive Into Understanding TheRandom Walk-Based Temporal Graph Learning"
+ },
+ "s2-9d5f91b8e93e4e01": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Survey on Key Technologies of Graph Processing Systems Based on Multi-core CPU and GPU Platforms"
+ },
+ "s2-b9a25457f1bac214": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Einsum-Enabled Design Space for Graph Algorithms: A BFS Case Study"
+ }
+}

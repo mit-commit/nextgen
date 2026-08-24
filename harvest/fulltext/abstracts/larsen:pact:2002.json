@@ -1,0 +1,611 @@
+{
+ "10.1002_cpe.3424": {
+  "abstract": "Summary Open Computing Language (OpenCL) is an open, functionally portable programming model for a large range of highly parallel processors. To provide users with access to the underlying platforms, OpenCL has explicit support for features such as local memory and vector data types (VDTs). However, these are often low‐level, hardware‐specific features, which can be detrimental to performance on different platforms. In this paper, we focus on VDTs and investigate their usage in a systematic way. First, we propose two different approaches (inter‐vdtandintra‐vdt) to use VDTs in OpenCL kernels, and show how to translate scalar OpenCL kernels to vectorized ones. After obtaining vectorized code, we evaluate the performance effects of using VDTs with two types of benchmarks: micro‐benchmarks and macro‐benchmarks. With micro‐benchmarks, we study the execution model of VDTs and the role of the compiler‐aided vectorizer on five devices. With macro‐benchmarks, we explore the changes of memory access patterns before and after using VDTs, and the resulting performance impact. Not only our evaluation provides insights into how OpenCL's VDTs are mapped on different processors, but it also indicates that using such data types introduces changes in both computation and memory accesses. Based on the lessons learned, we discuss how to deal with performance portability in the presence of VDTs. Copyright © 2014 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.3424",
+  "openalex": "W1743745388",
+  "status": "ok",
+  "title": "Evaluating vector data type usage in OpenCL kernels"
+ },
+ "10.1002_spe.751": {
+  "abstract": "Abstract To achieve maximum efficiency, modern embedded processors for media applications exploit single instruction multiple data (SIMD) instructions. SIMD instructions provide a form of vectorization where a large machine word is viewed as a vector of subwords and the same operation is performed on all subwords in parallel. Systematic usage of SIMD instructions can significantly improve program performance. With C becoming the dominant language for programming embedded devices, there is a clear need for C compilers that use SIMD instructions whenever appropriate. However, SIMD instructions typically require each memory access to be aligned with the instruction's data access size. Therefore an important problem in designing the compiler is to determine whether a C pointer is aligned, i.e. whether it refers to the beginning of a machine word. In this paper, we describe our SIMD generation algorithm and present an analysis method which determines the alignment of pointers at compile time. The alignment information is used to reduce the number of dynamic alignment checks and the overhead incurred by them. Our method uses an interprocedural analysis which propagates pointer alignment information in function bodies and through function calls. The effectiveness of our method is supported by experimental results which show that in typical programs the alignments of about 50% of the pointers can be statically determined. Copyright © 2006 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/spe.751",
+  "openalex": "W4245712643",
+  "status": "ok",
+  "title": "Compiler optimizations for processors with SIMD instructions"
+ },
+ "10.1002_spe.v37_1": {
+  "abstract": "To achieve maximum efficiency, modern embedded processors for media applications exploit single instruction multiple data (SIMD) instructions. SIMD instructions provide a form of vectorization where a large machine word is viewed as a vector of subwords and the same operation is performed on all subwords in parallel. Systematic usage of SIMD instructions can significantly improve program performance. With C becoming the dominant language for programming embedded devices, there is a clear need for C compilers that use SIMD instructions whenever appropriate. However, SIMD instructions typically require each memory access to be aligned with the instruction's data access size. Therefore an important problem in designing the compiler is to determine whether a C pointer is aligned, i.e. whether it refers to the beginning of a machine word. In this paper, we describe our SIMD generation algorithm and present an analysis method which determines the alignment of pointers at compile time. The alignment information is used to reduce the number of dynamic alignment checks and the overhead incurred by them. Our method uses an interprocedural analysis which propagates pointer alignment information in function bodies and through function calls. The effectiveness of our method is supported by experimental results which show that in typical programs the alignments of about 50p of the pointers can be statically determined. Copyright © 2006 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/spe.v37:1",
+  "openalex": "W2033844396",
+  "status": "ok",
+  "title": "Compiler optimizations for processors with SIMD instructions"
+ },
+ "10.1007_978-1-4419-1176-6": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4419-1176-6",
+  "openalex": "W1578902392",
+  "status": "no_abstract",
+  "title": "C Compilers for ASIPs: Automatic Compiler Generation with LISA"
+ },
+ "10.1007_978-3-540-24644-2_1": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-24644-2_1",
+  "openalex": "W1607051589",
+  "status": "no_abstract",
+  "title": "Search Space Properties for Mapping Coarse-Grain Pipelined FPGA Applications"
+ },
+ "10.1007_978-3-540-24644-2_2": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-24644-2_2",
+  "openalex": "W1521696338",
+  "status": "no_abstract",
+  "title": "Adapting Convergent Scheduling Using Machine-Learning"
+ },
+ "10.1007_978-3-540-24644-2_27": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-24644-2_27",
+  "openalex": "W1856176155",
+  "status": "no_abstract",
+  "title": "A Preliminary Study on the Vectorization of Multimedia Applications for Multimedia Extensions"
+ },
+ "10.1007_978-3-540-71229-9_1": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-71229-9_1",
+  "openalex": "W1499418450",
+  "status": "no_abstract",
+  "title": "New Algorithms for SIMD Alignment"
+ },
+ "10.1007_978-3-540-71410-1_16": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-71410-1_16",
+  "openalex": "W1782035903",
+  "status": "no_abstract",
+  "title": "Grids: A Domain for Analyzing the Distribution of Numerical Values"
+ },
+ "10.1007_978-3-642-19861-8_13": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-19861-8_13",
+  "openalex": "W1559264847",
+  "status": "no_abstract",
+  "title": "Data Layout Transformation for Stencil Computations on Short-Vector SIMD Architectures"
+ },
+ "10.1007_s10766-008-0071-8": {
+  "abstract": null,
+  "doi": "10.1007/s10766-008-0071-8",
+  "openalex": "W1967002099",
+  "status": "no_abstract",
+  "title": "A Case Study on Compiler Optimizations for the Intel® CoreTM 2 Duo Processor"
+ },
+ "10.1007_s11265-013-0754-2": {
+  "abstract": null,
+  "doi": "10.1007/s11265-013-0754-2",
+  "openalex": "W1998727168",
+  "status": "no_abstract",
+  "title": "Loop Transforming for Reducing Data Alignment on Multi-Core SIMD Processors"
+ },
+ "10.1016_j.parco.2013.06.004": {
+  "abstract": null,
+  "doi": "10.1016/j.parco.2013.06.004",
+  "openalex": "W2037740397",
+  "status": "no_abstract",
+  "title": "Efficient multimedia coprocessor with enhanced SIMD engines for exploiting ILP and DLP"
+ },
+ "10.1093_comjnl_bxm099": {
+  "abstract": "The volume and complexity of data processed by today's personal computers are increasing exponentially, placing incredible demands on the microprocessors. In the meantime, computing performance that can be achieved by increasing the clock speed of a microprocessor is reaching to physical limits thus making the architectural solutions more prominent. Due to this an important architectural feature is added to recent microprocessors, single instruction multiple data (SIMD), which is a set of instructions that can speed up an application performance by allowing basic operation to be performed on multiple data elements in parallel with fewer instructions. The SIMD computational technique was introduced in the IA-32 Intel® architecture with MMX technology and then further enhanced with Intel's introduction of streaming SIMD extensions (SSE), SSE 2 (SSE2) and SSE 3 (SSE3). Although programming using these SIMD extensions enables software to achieve higher performance, several exiting scientific applications are not affected. This paper gives an overview of SIMD multimedia extensions. The features of these extensions are introduced. Available methods for programming with multimedia instruction sets are discussed. It also reviews recent trends to use multimedia extensions to accelerate many applications such as multimedia, scientific and engineering applications, and argues for further use in other significant computationally intensive applications.",
+  "doi": "10.1093/comjnl/bxm099",
+  "openalex": "W2042984424",
+  "status": "ok",
+  "title": "A Review of SIMD Multimedia Extensions and their Usage in Scientific and Engineering Applications"
+ },
+ "10.1109_cgo.2005.18": {
+  "abstract": "When generating codes for today's multimedia extensions, one of the major challenges is to deal with memory alignment issues. While hand programming still yields best performing SIMD codes, it is both time consuming and error prone. Compiler technology has greatly improved, including techniques that simdize loops with misaligned accesses by automatically rearranging misaligned memory streams in registers. Current techniques are applicable to runtime alignments, but they aggressively reduce the alignment overhead only when all alignments are known at compile time. This paper presents two major enhancements to the state of the art, improving both performance and coverage. First, we propose a novel technique to simdize loops with runtime alignment nearly as efficiently as those with compile-time misalignment. Runtime alignment is pervasive in real applications because it is either part of the algorithms, or it is an artifact of the compiler's inability to extract accurate alignment information from complex applications. Second, we incorporate length conversion operations, e.g., conversions between data of different sizes, into the alignment handling framework. Length conversions are pervasive in multimedia applications where mixed integer types are often used. Supporting length conversion can greatly improve the coverage of simdizable loops. Experimental results indicate that our runtime alignment technique achieves a 19% to 32% speedup increase over prior art for a benchmark stressing the impact of misaligned data. We also demonstrate speedup factors of up to 8.11 for real benchmarks over sequential execution.",
+  "doi": "10.1109/cgo.2005.18",
+  "openalex": "W2079834329",
+  "status": "ok",
+  "title": "Efficient SIMD Code Generation for Runtime Alignment and Length Conversion"
+ },
+ "10.1109_cgo.2005.33": {
+  "abstract": "In this paper, we describe how to extend the concept of superword-level parallelization (SLP), used for multimedia extension architectures, so that it can be applied in the presence of control flow constructs. Superword-level parallelization involves identifying scalar instructions in a large basic block that perform the same operation, and, if dependences do not prevent it, combining them into a superword operation on a multi-word object. A key insight is that we can use techniques related to optimizations for architectures supporting predicated execution, even for multimedia ISAs that do not provide hardware predication. We derive large basic blocks with predicated instructions to which SLP can be applied. We describe how to minimize overheads for superword predicates and re-introduce control flow for scalar operations. We discuss other extensions to SLP to address common features of real multimedia codes. We present automatically-generated performance results on 8 multimedia codes to demonstrate the power of this approach. We observe speedups ranging from 1.97X to 15.07X as compared to both sequential execution and SLP alone.",
+  "doi": "10.1109/cgo.2005.33",
+  "openalex": "W1966324811",
+  "status": "ok",
+  "title": "Superword-Level Parallelism in the Presence of Control Flow"
+ },
+ "10.1109_cgo.2006.25": {
+  "abstract": "The recent proliferation of the single instruction multiple data (SIMD) model has lead to a wide variety of implementations. These have been incorporated into many platforms, from gaming machines and DSPs to general purpose architectures. In this paper, we present an automatic vectorizer as implemented in GCC, the most multi-targetable compiler available today. We discuss the considerations involved in developing a multi-platform vectorization technology, and demonstrate how our vectorization scheme is suited to a variety of SIMD architectures. Experiments on four different SIMD platforms demonstrate that our automatic vectorization scheme is able to efficiently support individual platforms, achieving significant speedups on key kernels.",
+  "doi": "10.1109/cgo.2006.25",
+  "openalex": "W2127324789",
+  "status": "ok",
+  "title": "Multi-platform Auto-vectorization"
+ },
+ "10.1109_cgo.2011.5764683": {
+  "abstract": "Just-in-Time (JIT) compiler technology offers portability while facilitating target- and context-specific specialization. Single-Instruction-Multiple-Data (SIMD) hardware is ubiquitous and markedly diverse, but can be difficult for JIT compilers to efficiently target due to resource and budget constraints. We present our design for a synergistic auto-vectorizing compilation scheme. The scheme is composed of an aggressive, generic offline stage coupled with a lightweight, target-specific online stage. Our method leverages the optimized intermediate results provided by the first stage across disparate SIMD architectures from different vendors, having distinct characteristics ranging from different vector sizes, memory alignment and access constraints, to special computational idioms. We demonstrate the effectiveness of our design using a set of kernels that exercise innermost loop, outer loop, as well as straight-line code vectorization, all automatically extracted by the common offline compilation stage. This results in performance comparable to that provided by specialized monolithic offline compilers. Our framework is implemented using open-source tools and standards, thereby promoting interoperability and extendibility.",
+  "doi": "10.1109/cgo.2011.5764683",
+  "openalex": "W2121176848",
+  "status": "ok",
+  "title": "Vapor SIMD: Auto-vectorize once, run everywhere"
+ },
+ "10.1109_em-com.2009.5403000": {
+  "abstract": "SIMD extension is one of the most effective ways to exploit data level parallelism in current microprocessor design. But limited by some constraints, such as memory address alignment and in consecutive memory access, data permutation operations are usually needed before SIMD calculations, which impede us to exploit more parallelism. In this paper, an implicit data permutation mechanism is proposed. With our approach, original explicit data permutation can be split into two stages: explicit pattern setting and implicit data reorganization. The first stage is performed by scalar instructions and the second one is triggered implicitly when a vector register is read. It provides new chance for further optimization. To make this mechanism programmable, several new scalar instructions are extended and corresponding compilation strategies are also proposed. Experimental results show that oriented to multimedia benchmarks, 1.18x speedup can be achieved over current SIMD optimization techniques on average.",
+  "doi": "10.1109/em-com.2009.5403000",
+  "openalex": "W2543027172",
+  "status": "ok",
+  "title": "Implicit Data Permutation for SIMD Devices"
+ },
+ "10.1109_hpca.2003.1183551": {
+  "abstract": "The bypass paths and multiported register files in microprocessors serve as an implicit interconnect to communicate operand values among pipeline stages and multiple ALU. Previous superscalar designs implemented this interconnect using centralized structures that do not scale with increasing ILP demands. In search of scalability, recent microprocessor designs in industry and academia exhibit a trend towards distributed resources such as partitioned register files, banked caches, multiple independent compute pipelines, and even multiple program counters. Some of these partitioned microprocessor designs have begun to implement bypassing and operand transport using point-to-point interconnects rather than centralized networks. We call interconnects optimized for scalar data transport, whether centralized or distributed, scalar operand networks. Although these networks share many of the challenges of multiprocessor networks such as scalability and deadlock avoidance, they have many unique requirements, including ultra-low latencies (a few cycles versus tens of cycles) and ultra-fast operation-operand matching. This paper discusses the unique properties of scalar operand networks, examines alternative ways of implementing them, and describes in detail the implementation of one such network in the Raw microprocessor. The paper analyzes the performance of these networks for ILP workloads and the sensitivity of overall ILP performance to network properties.",
+  "doi": "10.1109/hpca.2003.1183551",
+  "openalex": "W1573851380",
+  "status": "ok",
+  "title": "Scalar operand networks: on-chip interconnect for ILP in partitioned architectures"
+ },
+ "10.1109_hpca.2010.5416631": {
+  "abstract": "SIMD devices have gained widespread acceptance in modern microprocessor designs for their superior performance for multimedia applications. However, there are three remaining limitations to the efficient utilization of SIMD devices in general-purpose computer systems: memory alignment, data reorganization and control flow. This paper presents SIF, an efficient SIMD interface framework that addresses these three shortcomings without modifying existing ISA. It is designed around a permutation vector register file (PVRF) and it adds new extended instructions to set internal permutation state in SIMD datapath rather than putting the permutation state setting bits in every instruction. The implicit permutation capability provided by PVRF results in zero overhead, which frees the handling of three limitations by using permutation instructions. To further reduce the state setting instructions in SIMD datapath, a technique that moves the workloads from SIMD pipeline into scalar pipeline is also introduced. With the help of proposed compilation algorithm, SIF can efficiently transform regular SIMD codes into SIF codes which make it easily integrated in all existing SIMD devices. We implemented these techniques in a vectorizing compiler and experimental results show that most of the permutation overhead instructions can be eliminated and distinct performance speedup can be achieved, which is 37% higher than current SIMD techniques on average.",
+  "doi": "10.1109/hpca.2010.5416631",
+  "openalex": "W1986704057",
+  "status": "ok",
+  "title": "SIF: Overcoming the limitations of SIMD devices via implicit permutation"
+ },
+ "10.1109_hpca.2010.5463057": {
+  "abstract": "Multimedia extensions based on Single-Instruction Multiple-Data (SIMD) units are widespread. They are used both in processors and accelerators (e.g., the Cell SPEs), since some time ago. SIMD units have usually big memory alignment constraints in order to meet power requirements and design simplicity. This increases the complexity of the code generated by the compiler, as in the general case, the compiler cannot be sure of the proper alignment of data. For that, the ISA provides either unaligned memory load and store instructions, or a special set of instructions to perform the realignments in software. In this paper, we propose a hardware realignment unit that takes advantage of the DMA transfers needed in accelerators with local memories. While the data is being transferred, it is realigned on the fly by our realignment unit, and stored with the proper alignment in the accelerator memory. The accelerator can then access the data with no special instructions. Finally, the data is realigned properly also when put back to main memory. Our experiments with four applications show that with our approach, the bandwidth of the DMA transfers is not penalized. And the performance of the synthetic benchmarks shows that aligned code is 1.5 to 2 times better with respect using unaligned code.",
+  "doi": "10.1109/hpca.2010.5463057",
+  "openalex": "W1980884328",
+  "status": "ok",
+  "title": "DMA++: on the fly data realignment for on-chip memories"
+ },
+ "10.1109_icppw.2006.57": {
+  "abstract": "In retargeting loop-based code for multimedia instruction set extensions, a critical issue is that vector data types of mixed precision within a loop body complicate the parallelization process since corresponding array elements are misaligned in the packed vectors. This paper presents a reverse-engineering approach to parallelization which extracts from the source code a multidimensional dataflow graph representation with explicit parallel semantics. The multidimensional annotations facilitate generating vector data type conversion code during code synthesis. This representation is independent of sequential artifacts, allowing code synthesis to proceed based on an abstract data-parallel model of the program and the constraints imposed by the architecture, such as vector length and available data types. Our results show that this representation facilitates parallelization of a wider range of loops than traditional vectorization. The results of this parallelization indicate loop speedups of 2 to 27 times over sequential execution",
+  "doi": "10.1109/icppw.2006.57",
+  "openalex": "W2125740167",
+  "status": "ok",
+  "title": "Multidimensional Dataflow-based Parallelization for Multimedia Instruction Set Extensions"
+ },
+ "10.1109_ipdps.2005.94": {
+  "abstract": "Multimedia extensions (MME) are architectural extensions to general-purpose processors to boost the performance of multimedia workloads. Today, in-line assembly code, intrinsic functions and library routines are the most common means to program these extensions. A promising alternative is to exploit vectorization technology to automatically generate MME instructions from programs written in standard high-level languages. However, despite the early success of automatic vectorization for traditional vector supercomputers, state-of-the-art vectorizing compilers for multimedia extensions have yet to demonstrate their effectiveness, especially on multimedia workloads. In this paper, we conducted an empirical study on the vectorization of media processing programs for multimedia extensions. Our study identified several new issues that are not handled by traditional vectorizers. These issues arise partly as the result of the unique features of MME architectures, partly due to the characteristics of media processing applications. We proposed several techniques to address some of these issues. We further assessed the effectiveness of our techniques by manually applying them to a set of multimedia programs. In addition, we found that further optimizations after vectorization are essential to benefit from multimedia extensions. In our experiments, 23 of 34 core procedures from the Berkeley Media Benchmark (BMW) were manually vectorized and 14 procedures achieved speedups of 1.10 to 3.39 on a Pentium 4 processor.",
+  "doi": "10.1109/ipdps.2005.94",
+  "openalex": "W2143964612",
+  "status": "ok",
+  "title": "An empirical study on the vectorization of multimedia applications for multimedia extensions"
+ },
+ "10.1109_ipdps.2007.370641": {
+  "abstract": "Compiler technology for multimedia extensions must effectively utilize not only the SIMD compute engines but also the various levels of the memory hierarchy: superword registers, multi-level caches and TLB. In this paper, we describe a compiler that combines optimization across all levels of the memory hierarchy with automatic generation of SIMD code for multimedia extensions. At the high-level, model-guided empirical optimization is used to transform code to optimize for all levels of the memory hierarchy. This compiler interacts with a backend compiler exploiting superword-level parallelism that takes sequential code as input and produces SIMD code. This paper discusses how we have combined these technologies into a single framework. Through a case study with matrix multiply, we observe performance results that outperform the hand-tuned Intel MKL library, and achieve performance that is within 4% of the ATLAS self-tuning library with architectural defaults and more than 4X faster than the native Intel compiler.",
+  "doi": "10.1109/ipdps.2007.370641",
+  "openalex": "W2115089829",
+  "status": "ok",
+  "title": "Model-Guided Empirical Optimization for Multimedia Extension Architectures: A Case Study"
+ },
+ "10.1109_isca45697.2020.00024": {
+  "abstract": "Multicores are now ubiquitous, but programmers still write sequential code. Speculative parallelization is an enticing approach to parallelize code while retaining the ease of sequential programming, making parallelism pervasive. However, prior speculative parallelizing compilers and architectures achieved limited speedups due to high costs of recovering from misspeculation and hardware scalability bottlenecks. We present T4, a parallelizing compiler that successfully leverages recent hardware features for speculative execution, which present new opportunities and challenges for automatic parallelization. T4 transforms sequential programs into trees of tiny timestamped tasks. T4 introduces novel compiler techniques to expose parallelism aggressively across the entire program, breaking applications into tiny tasks of tens of instructions each. Task trees unfold their branches in parallel to enable high task-spawn throughput while exploiting selective aborts to recover from misspeculation cheaply. T4 exploits parallelism across function calls, loops, and loop nests; performs new transformations to reduce task spawn costs and avoid false sharing; and exploits data locality among fine-grain tasks. As a result, T4 scales several hard-to-parallelize SPECCPU2006 benchmarks to tens of cores, on which prior work attained little or no speedup.",
+  "doi": "10.1109/isca45697.2020.00024",
+  "openalex": "W3043382192",
+  "status": "ok",
+  "title": "T4: Compiling Sequential Code for Effective Speculative Parallelization in Hardware"
+ },
+ "10.1109_iscas.2010.5537700": {
+  "abstract": "Single-instruction-multiple-data (SIMD) devices have been widely incorporated into baseline instruction level parallelism (ILP) processors to enable more efficient data level parallelism (DLP) support. This paper addresses the unsolved problem of the need to permute the SIMD elements packed in registers for maximum parallelism performance. An implicit data permutation (IDP) mechanism is proposed for handling various permutation operations without performance overhead. Various ways can be used to implement IDP mechanism. One way is to modify the baseline processors with permutation vector register file (PVRF) and associated new extended instructions. The PVRF allows accessing the data by using permutation pattern in addition to the existing row pattern. This method is described in detail and experimental results show that distinct performance speedup can be achieved, which is 47% higher than current SIMD techniques on average.",
+  "doi": "10.1109/iscas.2010.5537700",
+  "openalex": "W2020102020",
+  "status": "ok",
+  "title": "Permutation optimization for SIMD devices"
+ },
+ "10.1109_micro.2002.1176243": {
+  "abstract": "Convergent scheduling is a general framework for cluster assignment and instruction scheduling on spatial architectures. A convergent scheduler is composed of independent passes, each implementing a heuristic that addresses a particular problem or constraint. The passes share a simple, common interface that provides spatial and temporal preference for each instruction. Preferences are not absolute; instead, the interface allows a pass to express the confidence of its preferences, as well as preferences for multiple space and time slots. A pass operates by modifying these preferences. By applying a series of passes that address all the relevant constraints, the convergent scheduler can produce a schedule that satisfies all the important constraints. Because all passes are independent and need to understand only one interface to interact with each other, convergent scheduling simplifies the problem of handling multiple constraints and co-developing different heuristics. We have applied convergent scheduling to two spatial architectures: the Raw processor and a clustered VLIW machine. It is able to successfully handle traditional constraints such as parallelism, load balancing, and communication minimization, as well as constraints due to preplaced instructions, which are instructions with predetermined cluster assignment. Convergent scheduling is able to obtain an average performance improvement of 21% over the existing space-time scheduler of the Raw processor, and an improvement of 14% over state-of-the-art assignment and scheduling techniques on a clustered VLIW architecture.",
+  "doi": "10.1109/micro.2002.1176243",
+  "openalex": "W4239187837",
+  "status": "ok",
+  "title": "Convergent scheduling"
+ },
+ "10.1109_micro.2005.20": {
+  "abstract": "An emerging trend in processor design is the addition of short vector instructions to general-purpose and embedded ISAs. Frequently, these extensions are employed using traditional vectorization technology first developed for supercomputers. In contrast, scalar hardware is typically targeted using ILP techniques such as software pipelining. This paper presents a novel approach for exploiting vector parallelism in software pipelined loops. The proposed methodology (i) lowers the burden on the scalar resources by offloading computation to the vector functional units, (ii) explicitly manages communication of operands between scalar and vector instructions, (in) naturally handles misaligned vector memory operations, and (iv) partially (or fully) inhibits the optimization when vectorization will decrease performance. Our approach results in better resource utilization and allows for software pipelining with shorter initiation intervals. The proposed optimization is applied in the compiler backend, where vectorization decisions are more amenable to cost analysis. This is unique in that traditional vectorization optimizations are usually carried out at the statement level. Although our technique most naturally complements statically scheduled machines, we believe it is applicable to any architecture that tightly integrates support for instruction and data level parallelism. We evaluate our methodology using nine SPEC FP benchmarks. In comparison to software pipelining, our approach achieves a maximum speedup of 1.38times, with an average of 1.11times",
+  "doi": "10.1109/micro.2005.20",
+  "openalex": "W2168093120",
+  "status": "ok",
+  "title": "Exploiting Vector Parallelism in Software Pipelined Loops"
+ },
+ "10.1109_micro.2010.38": {
+  "abstract": "Accelerating program performance via SIMD vector units is very common in modern processors, as evidenced by the use of SSE, MMX, VSE, and VSX SIMD instructions in multimedia, scientific, and embedded applications. To take full advantage of the vector capabilities, a compiler needs to generate efficient vector code automatically. However, most commercial and open-source compilers fall short of using the full potential of vector units, and only generate vector code for simple innermost loops. In this paper, we present the design and implementation of an auto-vectorization framework in the back-end of a dynamic compiler that not only generates optimized vector code but is also well integrated with the instruction scheduler and register allocator. The framework includes a novel compile-time efficient dynamic programming-based vector instruction selection algorithm for straight-line code that expands opportunities for vectorization in the following ways: (1) scalar packing explores opportunities of packing multiple scalar variables into short vectors; (2) judicious use of shuffle and horizontal vector operations, when possible; and (3) algebraic reassociation expands opportunities for vectorization by algebraic simplification. We report performance results on the impact of autovectorization on a set of standard numerical benchmarks using the Jikes RVM dynamic compilation environment. Our results show performance improvement of up to 57.71% on an Intel Xeon processor, compared to non-vectorized execution, with a modest increase in compile-time in the range from 0.87% to 9.992%. An investigation of the SIMD parallelization performed by v11.1 of the Intel Fortran Compiler (IFC) on three benchmarks shows that our system achieves speedup with vectorization in all three cases and IFC does not. Finally, a comparison of our approach with an implementation of the Superword Level Parallelization (SLP) algorithm from, shows that our approach yields a performance improvement of up to 13.78% relative to SLP.",
+  "doi": "10.1109/micro.2010.38",
+  "openalex": "W2104378884",
+  "status": "ok",
+  "title": "Efficient Selection of Vector Instructions Using Dynamic Programming"
+ },
+ "10.1109_pact.2002.1106003": {
+  "abstract": "In this paper, we describe an algorithm and implementation of locality optimizations for architectures with instruction sets such as Intel's SSE and Motorola's AltiVec that support operations on superwords, i.e., aggregate objects consisting of several machine words. We treat the large superword register file as a compiler-controlled cache, thus avoiding unnecessary memory accesses by exploiting reuse in superword registers. This research is distinguished from previous work on exploiting reuse in scalar registers because it considers not only temporal but also spatial reuse. As compared to optimizations to exploit reuse in cache, the compiler must also manage replacement, and thus, explicitly name registers in the generated code. We describe an implementation of our approach integrated with a compiler that exploits superword-level parallelism (SLP). We present a set of results derived automatically on 4 multimedia kernels and 2 scientific benchmarks. Our results show speedups ranging from 1.3 to 2.8X on the 6 programs as compared to using SLP alone, and we eliminate the majority of memory accesses.",
+  "doi": "10.1109/pact.2002.1106003",
+  "openalex": "W4256507744",
+  "status": "ok",
+  "title": "Compiler-controlled caching in superword register files for multimedia extension architectures"
+ },
+ "10.1109_pact.2005.33": {
+  "abstract": "Developed for multimedia and game applications, as well as other numerically intensive workloads, the CELL processor provides support both for highly parallel codes, which have high computation and memory requirements, and for scalar codes, which require fast response time and a full-featured programming environment. This first generation CELL processor implements on a single chip a Power Architecture processor with two levels of cache, and eight attached streaming processors with their own local memories and globally coherent DMA engines. In addition to processor-level parallelism, each processing element has a Single Instruction Multiple Data (SIMD) unit that can process from 2 double precision floating points up to 16 bytes per instruction.",
+  "doi": "10.1109/pact.2005.33",
+  "openalex": "W2144643978",
+  "status": "ok",
+  "title": "Optimizing Compiler for the CELL Processor"
+ },
+ "10.1109_snpd.2015.7176233": {
+  "abstract": "Structure references are commonly-used at the core of applications in a multitude of domains such as image processing, signal processing, especially the scientific and engineering applications. SIMD instruction sets, as SSE, AVX, AltiVec and 3DNow, provide a promising and widely available avenue for enhancing performance on modern processors. However existing memory accessing shackles limit the achieved performance for structure reference on modern SIMD architectures. In this paper, we propose a novel data layout transformation technology that addresses the accessing obstacles, along with a static analysis technique for detecting the legal loops in where this transformation is suitable. And this approach is implemented in the Optimizing Compiler Open64. The experimental results show that the proposed method can translate application with structure access into vectorizable codes, thereby advancing the execution efficiency adequately.",
+  "doi": "10.1109/snpd.2015.7176233",
+  "openalex": "W1520098010",
+  "status": "ok",
+  "title": "Data layout transformation for structure vectorization on SIMD architectures"
+ },
+ "10.1109_tc.2010.255": {
+  "abstract": "Multimedia extensions based on Single-Instruction Multiple-Data (SIMD) units are widespread. They have been used, for some time, in processors and accelerators (e.g., the Cell SPEs). SIMD units usually have significant memory alignment constraints in order to meet power requirements and design simplicity. This increases the complexity of the code generated by the compiler as, in the general case, the compiler cannot be sure of the proper alignment of data. For that, the ISA provides either unaligned memory load and store instructions, or a special set of instructions to perform realignments in software. In this paper, we propose a hardware realignment unit that takes advantage of the DMA transfers needed in accelerators with local memories. While the data are being transferred, it is realigned on the fly by our realignment unit, and stored at the desired alignment in the accelerator memory. This mechanism can help programmers to better organize data in the accelerator memory so that the accelerator can possibly access the data with no special instructions. Finally, the data are realigned properly also when put back to main memory. Our experiments with nine applications show that with our approach, the bandwidth of the DMA transfers is not penalized.",
+  "doi": "10.1109/tc.2010.255",
+  "openalex": "W1978111236",
+  "status": "ok",
+  "title": "DMA++: On the Fly Data Realignment for On-Chip Memories"
+ },
+ "10.1145_1065910.1065931": {
+  "abstract": "Short vector (SIMD) instructions are useful in signal processing, multimedia, and scientific applications. They offer higher performance, lower energy consumption, and better resource utilization. However, compilers still do not have good support for SIMD instructions, and often the code has to be written manually in assembly language or using compiler builtin functions. Also, in some applications, higher parallelism could be achieved if compilers inserted permutation instructions that reorder the data in registers. In this paper we describe how we create SIMD instructions from regular code, and determine ordering of individual operations in the SIMD instructions to minimize the number of permutation instructions. Individual memory operations are grouped into SIMD operations based on their effective addresses. The SIMD data flow graph is then constructed by following data dependences from SIMD memory operations. Then, the orderings of operations are propagated from SIMD memory operations into the graph.We also describe our approach to compute decomposition of a given permutation into the permutation instructions of the target architecture. Experiments with our prototype compiler show that this approach scales well with the number of operations in SIMD instructions (SIMD width) and can be used to compile a number of important kernels, achieving up to 35% speedup.",
+  "doi": "10.1145/1065910.1065931",
+  "openalex": "W1965638741",
+  "status": "ok",
+  "title": "Generation of permutations for SIMD processors"
+ },
+ "10.1145_1133981.1133996": {
+  "abstract": null,
+  "doi": "10.1145/1133981.1133996",
+  "openalex": "W4245987756",
+  "status": "no_abstract",
+  "title": "Optimizing data permutations for SIMD devices"
+ },
+ "10.1145_1134760.1134769": {
+  "abstract": "We present Vector LLVA, a virtual instruction set architecture (VISA) that exposes extensive static information about vector parallelism while avoiding the use of hardware-specific parameters. We provide both arbitrary-length vectors (for targets that allow vectors of arbitrary length, or where the target length is not known) and fixed-length vectors (for targets that have a fixed vector length, such as subword SIMD extensions), together with a rich set of operations on both vector types. We have implemented translators that compile (1) Vector LLVA written with arbitrary-length vectors to the Motorola RSVP architecture and (2) Vector LLVA written with fixed-length vectors to both AltiVec and Intel SSE2. Our translatorgenerated code achieves speedups competitive with handwritten native code versions of several benchmarks on all three architectures. These experiments show that our V-ISA design captures vector parallelism for two quite different classes of architectures and provides virtual object code portability within the class of subword SIMD architectures.",
+  "doi": "10.1145/1134760.1134769",
+  "openalex": "W2016158659",
+  "status": "ok",
+  "title": "Vector LLVA"
+ },
+ "10.1145_1254766.1254809": {
+  "abstract": "Set-associative caches are traditionally managed using hardware-based lookup and replacement schemes that have high energy overheads. Ideally, the caching strategy should be tailored to the application's memory needs, thus enabling optimal use of this on-chip storage to maximize performance while minimizing power consumption. However, doing this in hardware alone is difficult due to hardware complexity, high power dissipation, overheads of dynamic discovery of application characteristics, and increased likelihood of making locally optimal decisions. The compiler can instead determine the caching strategy by analyzing the application code and providing hints to the hardware. We propose a hardware/software co-managed partitioned cache architecture in which enhanced load/store instructions are used to control fine-grain data placement within a set of cache partitions. In comparison to traditional partitioning techniques, load and store instructions can individually specify the set of partitions for lookup and replacement. This fine grain control can avoid conflicts, thus providing the performance benefits of highly associative caches, while saving energy by eliminating redundant tag and data array accesses. Using four direct-mapped partitions, we eliminated 25% of the tag checks and recorded an average 15% reduction in the energy-delay product compared to a hardware-managed 4-way set-associative cache.",
+  "doi": "10.1145/1254766.1254809",
+  "openalex": "W2124484867",
+  "status": "ok",
+  "title": "Compiler-managed partitioned data caches for low power"
+ },
+ "10.1145_1450095.1450121": {
+  "abstract": "Automatic vectorization of programs for partitioned-ALU SIMD (Single Instruction Multiple Data) processors has been difficult because of not only data dependency issues but also non-aligned and irregular data access problems. A non-aligned or irregular data access operation incurs many overhead cycles for data alignment. Moreover, this causes difficulty in efficient code generation and hinders automatic vectorization. In this paper, we employ special memory access hardware for improving the performance of SIMD processors; one is the split line buffer and the other is the packing buffer. The former solves the non-aligned memory access problem, while the latter simplifies irregular and stride data access. The addition of these hardware units not only requires very small changes to the instruction set architecture but also contributes to the significant performance improvement by vectorizing more loops and reducing the overhead cycles. We have also developed an auto-vectorization compiler which utilizes these special hardware units. Experiments have been conducted to compare the proposed method with the conventional one, which show 50% increase in the number of vectorized loops and 77% increase in the total performance of an MPEG2 encoder program.",
+  "doi": "10.1145/1450095.1450121",
+  "openalex": "W2104508714",
+  "status": "ok",
+  "title": "Efficient vectorization of SIMD programs with non-aligned and irregular data access hardware"
+ },
+ "10.1145_1454115.1454119": {
+  "abstract": "Vectorization has been an important method of using data-level parallelism to accelerate scientific workloads on vector machines such as Cray for the past three decades. In the last decade it has also proven useful for accelerating multi-media and embedded applications on short SIMD architectures such as MMX, SSE and AltiVec. Most of the focus has been directed at innermost loops, effectively executing their iterations concurrently as much as possible. Outer loop vectorization refers to vectorizing a level of a loop nest other than the innermost, which can be beneficial if the outer loop exhibits greater data-level parallelism and locality than the innermost loop. Outer loop vectorization has traditionally been performed by interchanging an outer-loop with the innermost loop, followed by vectorizing it at the innermost position. A more direct unroll-and-jam approach can be used to vectorize an outer-loop without involving loop interchange, which can be especially suitable for short SIMD architectures.",
+  "doi": "10.1145/1454115.1454119",
+  "openalex": "W2118031182",
+  "status": "ok",
+  "title": "Outer-loop vectorization"
+ },
+ "10.1145_1509864.1509866": {
+  "abstract": "Retargetable C compilers are currently widely used to quickly obtain compiler support for new embedded processors and to perform early processor architecture exploration. A partially inherent problem of the retargetable compilation approach, though, is the limited code quality as compared to hand-written compilers or assembly code due to the lack of dedicated optimizations techniques. This problem can be circumvented by designing flexible, retargetable code optimization techniques that apply to a certain range of target architectures. This article focuses on target machines with SIMD instruction support, a common feature in embedded processors for multimedia applications. However, SIMD optimization is known to be a difficult task since SIMD architectures are largely nonuniform, support only a limited set of data types and impose several memory alignment constraints. Additionally, such techniques require complicated loop transformations, which are tailored to the SIMD architecture in order to exhibit the necessary amount of parallelism in the code. Thus, integrating the SIMD optimization and the required loop transformations together in a single retargeting formalism is an ambitious challenge. In this article, we present an efficient and quickly retargetable SIMD code optimization framework that is integrated into an industrial retargetable C compiler. Experimental results for different processors demonstrate that the proposed technique applies to real-life target machines and that it produces code quality improvements close to the theoretical limit.",
+  "doi": "10.1145/1509864.1509866",
+  "openalex": "W2064508949",
+  "status": "ok",
+  "title": "A SIMD optimization framework for retargetable compilers"
+ },
+ "10.1145_2086696.2086729": {
+  "abstract": "Automatic vectorization is critical to enhancing performance of compute-intensive programs on modern processors. However, there is much room for improvement over the auto-vectorization capabilities of current production compilers through careful vector-code synthesis that utilizes a variety of loop transformations (e.g., unroll-and-jam, interchange, etc.). As the set of transformations considered is increased, the selection of the most effective combination of transformations becomes a significant challenge: Currently used cost models in vectorizing compilers are often unable to identify the best choices. In this paper, we address this problem using machine learning models to predict the performance of SIMD codes. In contrast to existing approaches that have used high-level features of the program, we develop machine learning models based on features extracted from the generated assembly code. The models are trained offline on a number of benchmarks and used at compile-time to discriminate between numerous possible vectorized variants generated from the input code. We demonstrate the effectiveness of the machine learning model by using it to guide automatic vectorization on a variety of tensor contraction kernels, with improvements ranging from 2× to 8× over Intel ICC's auto-vectorized code. We also evaluate the effectiveness of the model on a number of stencil computations and show good improvement over auto-vectorized code.",
+  "doi": "10.1145/2086696.2086729",
+  "openalex": "W2064441385",
+  "status": "ok",
+  "title": "Using machine learning to improve automatic vectorization"
+ },
+ "10.1145_2150976.2151014": {
+  "abstract": "Single-instruction multiple-data (SIMD) accelerators provide an energy-efficient platform to scale the performance of mobile systems while still retaining post-programmability. The central challenge is translating the parallel resources of the SIMD hardware into real application performance. In scientific applications, automatic vectorization techniques have proven quite effective at extracting large levels of data-level parallelism (DLP). However, vectorization is often much less effective for media applications due to low trip count loops, complex control flow, and non-uniform execution behavior. As a result, SIMD lanes remain idle due to insufficient DLP. To attack this problem, this paper proposes a new vectorization pass called SIMD Defragmenter to uncover hidden DLP that lurks below the surface in the form of instruction-level parallelism (ILP). The difficulty is managing the data packing/unpacking overhead that can easily exceed the benefits gained through SIMD execution. The SIMD degragmenter overcomes this problem by identifying groups of compatible instructions (subgraphs) that can be executed in parallel across the SIMD lanes. By SIMDizing in bulk at the subgraph level, packing/unpacking overhead is minimized. On a 16-lane SIMD processor, experimental results show that SIMD defragmentation achieves a mean 1.6x speedup over traditional loop vectorization and a 31% gain over prior research approaches for converting ILP to DLP.",
+  "doi": "10.1145/2150976.2151014",
+  "openalex": "W2124273985",
+  "status": "ok",
+  "title": "SIMD defragmenter"
+ },
+ "10.1145_2854038.2854054": {
+  "abstract": "Existing loop vectorization techniques can exploit either intra- or inter-iteration SIMD parallelism alone in a code region if one part of the region vectorized for one type of parallelism has data dependences (called mixed-parallelism-inhibiting dependences) on the other part of the region vectorized for the other type of parallelism. In this paper, we consider a class of loops that exhibit both types of parallelism (i.e., mixed SIMD parallelism) in its code regions that contain mixed-parallelism-inhibiting data dependences. We present a new compiler approach for exploiting such mixed SIMD parallelism effectively by reducing the data reorganization overhead incurred when one type of parallelism is switched to the other. Our auto-vectorizer is simple and has been implemented in LLVM (3.5.0). We evaluate it on seven benchmarks with mixed SIMD parallelism selected from SPEC and NAS benchmark suites and demonstrate its performance advantages over the state-of-the-art.",
+  "doi": "10.1145/2854038.2854054",
+  "openalex": "W2288740281",
+  "status": "ok",
+  "title": "Exploiting mixed SIMD parallelism by reducing data reorganization overhead"
+ },
+ "10.1145_2886101": {
+  "abstract": "Existing vectorization techniques are ineffective for loops that exhibit little loop-level parallelism but some limited superword-level parallelism (SLP). We show that effectively vectorizing such loops requires partial vector operations to be executed correctly and efficiently, where the degree of partial SIMD parallelism is smaller than the SIMD datapath width. We present a simple yet effective SLP compiler technique called P aver (PArtial VEctorizeR), formulated and implemented in LLVM as a generalization of the traditional SLP algorithm, to optimize such partially vectorizable loops. The key idea is to maximize SIMD utilization by widening vector instructions used while minimizing the overheads caused by memory access, packing/unpacking, and/or masking operations, without introducing new memory errors or new numeric exceptions. For a set of 9 C/C++/Fortran applications with partial SIMD parallelism, P aver achieves significantly better kernel and whole-program speedups than LLVM on both Intel’s AVX and ARM’s NEON.",
+  "doi": "10.1145/2886101",
+  "openalex": "W2333659671",
+  "status": "ok",
+  "title": "A Compiler Approach for Exploiting Partial SIMD Parallelism"
+ },
+ "10.1145_3276480": {
+  "abstract": "Modern microprocessors are equipped with single instruction multiple data (SIMD) or vector instruction sets which allow compilers to exploit superword level parallelism (SLP), a type of fine-grained parallelism. Current SLP auto-vectorization techniques use heuristics to discover vectorization opportunities in high-level language code. These heuristics are fragile, local and typically only present one vectorization strategy that is either accepted or rejected by a cost model. We present goSLP, a novel SLP auto-vectorization framework which solves the statement packing problem in a pairwise optimal manner. Using an integer linear programming (ILP) solver, goSLP searches the entire space of statement packing opportunities for a whole function at a time, while limiting total compilation time to a few minutes. Furthermore, goSLP optimally solves the vector permutation selection problem using dynamic programming. We implemented goSLP in the LLVM compiler infrastructure, achieving a geometric mean speedup of 7.58% on SPEC2017fp, 2.42% on SPEC2006fp and 4.07% on NAS benchmarks compared to LLVM’s existing SLP auto-vectorizer.",
+  "doi": "10.1145/3276480",
+  "openalex": "W2798960592",
+  "status": "ok",
+  "title": "goSLP: globally optimized superword level parallelism framework"
+ },
+ "10.1145_3302516.3307357": {
+  "abstract": "Modern microprocessors are equipped with Single Instruction Multiple Data (SIMD) or vector instructions which expose data level parallelism at a fine granularity. Programmers exploit this parallelism by using low-level vector intrinsics in their code. However, once programs are written using vector intrinsics of a specific instruction set, the code becomes non-portable. Modern compilers are unable to analyze and retarget the code to newer vector instruction sets. Hence, programmers have to manually rewrite the same code using vector intrinsics of a newer generation to exploit higher data widths and capabilities of new instruction sets. This process is tedious, error-prone and requires maintaining multiple code bases. We propose Revec, a compiler optimization pass which revectorizes already vectorized code, by retargeting it to use vector instructions of newer generations. The transformation is transparent, happening at the compiler intermediate representation level, and enables performance portability of hand-vectorized code.",
+  "doi": "10.1145/3302516.3307357",
+  "openalex": "W2911593804",
+  "status": "ok",
+  "title": "Revec: program rejuvenation through revectorization"
+ },
+ "10.1145_3406536": {
+  "abstract": "Compiling sequential C programs for Connex-S, a competitive, scalable and customizable, wide vector accelerator for intensive embedded applications with 32 to 4,096 16-bit integer lanes and a limited capacity local scratchpad memory, is challenging. Our compiler toolchain uses the LLVM framework and targets OPINCAA, a JIT vector assembler and coordination C++ library for Connex-S accelerating computations for an arbitrary CPU. Therefore, we address in the compiler middle end aspects of efficient vectorization, communication, and synchronization. We perform quantitative static analysis of the program useful, among others, for the symbolic-size compiler memory allocator and the coordination mechanism of OPINCAA. We also discuss the LLVM back end for the Connex-S processor and the methodology to automatically generate instruction selection code for emulating efficiently arithmetic and logical operations for non-native types such as 32-bit integer and 16-bit floating-point. By using JIT vector assembling and by encoding the vector length of Connex-S as a parameter in the generated OPINCAA program, we achieve vector-length agnosticism to support execution on distinct embedded devices, such as several digital cameras with different resolutions, each equipped with custom-width Connex-S accelerators meant to save energy for the image processing kernels. Since Connex-S has a limited capacity local scratchpad memory of 256 KB normally, we present how we also use the PPCG C-to-C code generator to perform data tiling to minimize the total kernel execution time, subject to fitting larger program data in the local memory. We devise an accurate cost model for the Connex-S accelerator to choose optimal performance tile sizes at compile time. We successfully compile several simple benchmarks frequently used, for example, in high-performance and computer vision embedded applications. We report speedup factors of up to 11.33 when running them on a Connex-S accelerator with 128 16-bit integer lanes w.r.t. the dual-core ARM Cortex A9 host clocked at a frequency 6.67 times higher, with a total of two 128-bit Neon SIMD units.",
+  "doi": "10.1145/3406536",
+  "openalex": "W3092642880",
+  "status": "ok",
+  "title": "A Vector-Length Agnostic Compiler for the Connex-S Accelerator with Scratchpad Memory"
+ },
+ "10.1145_3458817.3476149": {
+  "abstract": "Stencil computations represent a very common class of nested loops in scientific and engineering applications. Exploiting vector units in modern CPUs is crucial to achieving peak performance. Previous vectorization approaches often consider the data space, in particular the innermost unit-strided loop. It leads to the well-known data alignment conflict problem that vector loads are overlapped due to the data sharing between continuous stencil computations. This paper proposes a novel temporal vectorization scheme for stencils. It vectorizes the stencil computation in the iteration space and assembles points with different time coordinates in one vector. The temporal vectorization leads to a small fixed number of vector reorganizations that is irrelevant to the vector length, stencil order, and dimension. Furthermore, it is also applicable to Gauss-Seidel stencils, whose vectorization is not well-studied. The effectiveness of the temporal vectorization is demonstrated by various Jacobi and Gauss-Seidel stencils.",
+  "doi": "10.1145/3458817.3476149",
+  "openalex": "W3205799311",
+  "status": "ok",
+  "title": "Temporal vectorization for stencils"
+ },
+ "10.1145_3710848.3710886": {
+  "abstract": "Stencil computation plays a pivotal role in numerous scientific and engineering applications. Previous studies have extensively investigated vectorization techniques to enhance in-core parallelism; however, the performance bottleneck caused by data alignment conflicts (DAC) has not been effectively resolved in all dimensions. This paper proposes Jigsaw, a conflict-free vectorization method to reduce DAC across all dimensions by tessellating swizzled finest-grained lanes. Jigsaw comprises three key components: Lane-based Butterfly Vectorization, SVD-based Dimension Flattening, and Iteration-based Temporal Merging. These components effectively address DAC across spatial and temporal dimensions. Experimental results on different machines demonstrate that Jigsaw could achieve a significant improvement compared to the state-of-the-art techniques, with an average speedup of 2.31x on various stencil kernels.",
+  "doi": "10.1145/3710848.3710886",
+  "openalex": "W4408029485",
+  "status": "ok",
+  "title": "Jigsaw: Toward Conflict-free Vectorized Stencil Computation by Tessellating Swizzled Registers"
+ },
+ "10.1145_996841.996853": {
+  "abstract": "When vectorizing for SIMD architectures that are commonly employed by today's multimedia extensions, one of the new challenges that arise is the handling of memory alignment. Prior research has focused primarily on vectorizing loops where all memory references are properly aligned. An important aspect of this problem, namely, how to vectorize misaligned memory references, still remains unaddressed.This paper presents a compilation scheme that systematically vectorizes loops in the presence of misaligned memory references. The core of our technique is to automatically reorganize data in registers to satisfy the alignment requirement imposed by the hardware. To reduce the data reorganization overhead, we propose several techniques to minimize the number of data reorganization operations generated. During the code generation, our algorithm also exploits temporal reuse when aligning references that access contiguous memory across loop iterations. Our code generation scheme guarantees to never load the same data associated with a single static access twice. Experimental results indicate near peak speedup factors, e.g., 3.71 for 4 data per vector and 6.06 for 8 data per vector, respectively, for a set of loops where 75% or more of the static memory references are misaligned.",
+  "doi": "10.1145/996841.996853",
+  "openalex": "W2099404643",
+  "status": "ok",
+  "title": "Vectorization for SIMD architectures with alignment constraints"
+ },
+ "10.23919_date.2017.7927148": {
+  "abstract": "Many embedded processors do not support floating-point arithmetic in order to comply with strict cost and power consumption constraints. But, they generally provide support for SIMD as a mean to improve performance for little cost overhead. Achieving good performance when targeting such processors requires the use of fixed-point arithmetic and efficient exploitation of SIMD data-path. To reduce time-to-market, automatic SIMDization - such as superword level parallelism (SLP) extraction - and float-to-fixed-point conversion methodologies have been proposed. In this paper we show that applying these transformations independently is not efficient. We propose a SLP-aware word length optimization algorithm to jointly perform float-to-fixed-point conversion and SLP extraction. We implement the proposed approach in a source-to-source compiler framework and evaluate it on several embedded processors. Experimental results illustrate the validity of our approach.",
+  "doi": "10.23919/date.2017.7927148",
+  "openalex": "W2606595195",
+  "status": "ok",
+  "title": "Superword level parallelism aware word length optimization"
+ },
+ "10.3929_ethz-a-010144458": {
+  "abstract": null,
+  "doi": "10.3929/ethz-a-010144458",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "A basic linear algebra compiler for embedded processors"
+ },
+ "10.5821_dissertation-2117-94621": {
+  "abstract": "Despite the fact that the most viable L1 memories in processors are caches, on-chip local memories have been a great topic of consideration lately. Local memories are an interesting design option due to their many benefits: less area occupancy, reduced energy consumption and fast and constant access time. These benefits are especially interesting for the design of modern multicore processors since power and latency are important assets in computer architecture today. Also, local memories do not generate coherency traffic which is important for the scalability of the multicore systems. Unfortunately, local memories have not been well accepted in modern processors yet, mainly due to their poor programmability. Systems with on-chip local memories do not have hardware support for transparent data transfers between local and global memories, and thus ease of programming is one of the main impediments for the broad acceptance of those systems. This thesis addresses software and hardware optimizations regarding the programmability, and the usage of the on-chip local memories in the context of both single-core and multicore systems. Software optimizations are related to the software caching techniques. Software cache is a robust approach to provide the user with a transparent view of the memory architecture; but this software approach can suffer from poor performance. In this thesis, we start optimizing traditional software cache by proposing a hierarchical, hybrid software-cache architecture. Afterwards, we develop few optimizations in order to speedup our hybrid software cache as much as possible. As the result of the software optimizations we obtain that our hybrid software cache performs from 4 to 10 times faster than traditional software cache on a set of NAS parallel benchmarks. We do not stop with software caching. We cover some other aspects of the architectures with on-chip local memories, such as the quality of the generated code and its correspondence with the quality of the buffer management in local memories, in order to improve performance of these architectures. Therefore, we run our research till we reach the limit in software and start proposing optimizations on the hardware level. Two hardware proposals are presented in this thesis. One is about relaxing alignment constraints imposed in the architectures with on-chip local memories and the other proposal is about accelerating the management of local memories by providing hardware support for the majority of actions performed in our software cache. Malgrat les memòries cau encara son el component basic pel disseny del subsistema de memòria, les memòries locals han esdevingut una alternativa degut a les seves característiques pel que fa a l’ocupació d’àrea, el seu consum energètic i el seu rendiment amb un temps d’accés ràpid i constant. Aquestes característiques son d’especial interès quan les properes arquitectures multi-nucli estan limitades pel consum de potencia i la latència del subsistema de memòria.Les memòries locals pateixen de limitacions respecte la complexitat en la seva programació, fet que dificulta la seva introducció en arquitectures multi-nucli, tot i els avantatges esmentats anteriorment. Aquesta tesi presenta un seguit de solucions basades en programari i maquinari específicament dissenyat per resoldre aquestes limitacions.Les optimitzacions del programari estan basades amb tècniques d'emmagatzematge de memòria cau suportades per llibreries especifiques. La memòria cau per programari és un sòlid mètode per proporcionar a l'usuari una visió transparent de l'arquitectura, però aquest enfocament pot patir d'un rendiment deficient. En aquesta tesi, es proposa una estructura jeràrquica i híbrida. Posteriorment, desenvolupem optimitzacions per tal d'accelerar l’execució del programari que suporta el disseny de la memòria cau. Com a resultat de les optimitzacions realitzades, obtenim que el nostre disseny híbrid es comporta de 4 a 10 vegades més ràpid que una implementació tradicional de memòria cau sobre un conjunt d’aplicacions de referencia, com son els “NAS parallel benchmarks”.El treball de tesi inclou altres aspectes de les arquitectures amb memòries locals, com ara la qualitat del codi generat i la seva correspondència amb la qualitat de la gestió de memòria intermèdia en les memòries locals, per tal de millorar el rendiment d'aquestes arquitectures. La tesi desenvolupa propostes basades estrictament en el disseny de nou maquinari per tal de millorar el rendiment de les memòries locals quan ja no es possible realitzar mes optimitzacions en el programari. En particular, la tesi presenta dues propostes de maquinari: una relaxa les restriccions imposades per les memòries locals respecte l’alineament de dades, l’altra introdueix maquinari específic per accelerar les operacions mes usuals sobre les memòries locals.",
+  "doi": "10.5821/dissertation-2117-94621",
+  "openalex": "W847016180",
+  "status": "ok",
+  "title": "Software caching techniques and hardware optimizations for on-chip local memories"
+ },
+ "10.5821_dissertation-2117-96011": {
+  "abstract": "SIMD instruction sets are a key feature in current general purpose and high performance architectures. SIMD instructions apply in parallel the same operation to a group of data, commonly known as vector. A single SIMD/vector instruction can, thus, replace a sequence of scalar instructions. Consequently, the number of instructions can be greatly reduced leading to improved execution times. However, SIMD instructions are not widely exploited by the vast majority of programmers. In many cases, taking advantage of these instructions relies on the compiler. Nevertheless, compilers struggle with the automatic vectorization of codes. Advanced programmers are then compelled to exploit SIMD units by hand, using low-level hardware-specific intrinsics. This approach is cumbersome, error prone and not portable across SIMD architectures. This thesis targets OpenMP to tackle the underuse of SIMD instructions from three main areas of the programming model: language constructions, compiler code optimizations and runtime algorithms. We choose the Intel Xeon Phi coprocessor (Knights Corner) and its 512-bit SIMD instruction set for our evaluation process. We make four contributions aimed at improving the exploitation of SIMD instructions in this scope. Our first contribution describes a compiler vectorization infrastructure suitable for OpenMP. This infrastructure targets for-loops and whole functions. We define a set of attributes for expressions that determine how the code is vectorized. Our vectorization infrastructure also implements support for several advanced vector features. This infrastructure is proven to be effective in the vectorization of complex codes and it is the basis upon which we build the following two contributions. The second contribution introduces a proposal to extend OpenMP 3.1 with SIMD parallelism. Essential parts of this work have become key features of the SIMD proposal included in OpenMP 4.0. We define the \"simd\" and \"simd for\" directives that allow programmers to describe SIMD parallelism of loops and whole functions. Furthermore, we propose a set of optional clauses that leads the compiler to generate a more efficient vector code. These SIMD extensions improve the programming efficiency when exploiting SIMD resources. Our evaluation on the Intel Xeon Phi coprocessor shows that our SIMD proposal allows the compiler to efficiently vectorize codes poorly or not vectorized automatically with the Intel C/C++ compiler. In the third contribution, we propose a vector code optimization that enhances overlapped vector loads. These vector loads redundantly read from memory scalar elements already loaded by other vector loads. Our vector code optimization improves the memory usage of these accesses by means of building a vector register cache and exploiting register-to-register instructions. Our proposal also includes a new clause (overlap) in the context of the SIMD extensions for OpenMP of our first contribution. This new clause allows enabling, disabling and tuning this optimization on demand. The last contribution tackles the exploitation of SIMD instructions in the OpenMP barrier and reduction primitives. We propose a new combined barrier and reduction tree scheme specifically designed to make the most of SIMD instructions. Our barrier algorithm takes advantage of simultaneous multi-threading technology (SMT) and it utilizes SIMD memory instructions in the synchronization process. The four contributions of this thesis are an important step in the direction of a more common and generalized use of SIMD instructions. Our work is having an outstanding impact on the whole OpenMP community, ranging from users of the programming model to compiler and runtime implementations. Our proposals in the context of OpenMP improves the programmability of the programming model, the overhead of runtime services and the execution time of applications by means of a better use of SIMD. Los juegos de instrucciones SIMD son un componente clave en las arquitecturas de propósito general y de alto rendimiento actuales. Estas instrucciones aplican en paralelo la misma operación a un conjunto de datos, conocido como vector. Una instrucción SIMD/vectorial puede sustituir una secuencia de instrucciones escalares. Así, el número de instrucciones puede ser reducido considerablemente, dando lugar a mejores tiempos de ejecución. No obstante, las instrucciones SIMD no son explotadas ampliamente por la mayoría de programadores. En general, beneficiarse de estas instrucciones depende del compilador. Sin embargo, los compiladores tienen dificultades con la vectorización automática de códigos por lo que los programadores avanzados se ven obligados a explotar las unidades SIMD manualmente, empleando intrínsecas de bajo nivel específicas del hardware. Esta aproximación es costosa, propensa a errores y no portable entre arquitecturas. Esta tesis se centra en el modelo de programación OpenMP para abordar el poco uso de las instrucciones SIMD desde tres áreas: construcciones del lenguaje, optimizaciones de código del compilador y algoritmos del runtime. Hemos escogido el coprocesador Intel Xeon Phi (Knights Corner) y su juego de instrucciones SIMD de 512 bits para nuestra evaluación. Realizamos cuatro contribuciones para mejorar la explotación de las instrucciones SIMD en este ámbito. Nuestra primera contribución describe una infraestructura de vectorización de compilador adecuada para OpenMP. Esta infraestructura tiene como objetivo la vectorización de bucles y funciones. Para ello definimos un conjunto de atributos que determina como se vectoriza el código. Nuestra evaluación demuestra la efectividad de esta infraestructura en la vectorización de códigos complejos. Esta infraestructura es la base de las dos propuestas siguientes. En la segunda contribución proponemos una extensión SIMD para de OpenMP 3.1. Partes esenciales de este trabajo se han convertido en características clave de la propuesta sobre SIMD incluida en OpenMP 4.0. Definimos las directivas ‘simd’ y ‘simd for’ que permiten a los programadores describir paralelismo SIMD de bucles y funciones. Además, proponemos un conjunto de cláusulas opcionales que permiten que el compilador genere código vectorial más eficiente. Nuestra evaluación muestra que nuestra propuesta SIMD permite al compilador vectorizar eficientemente códigos pobremente o no vectorizados automáticamente con el compilador Intel C/C++.",
+  "doi": "10.5821/dissertation-2117-96011",
+  "openalex": "W4384824998",
+  "status": "ok",
+  "title": "SIMD@OpenMP : a programming model approach to leverage SIMD features"
+ },
+ "10.70675_2a7514afzb62bz4f55zbbb9zae5d63ed5f8f": {
+  "abstract": "Optimisation SIMD de la largeur des mots pour la conversion de virgule flottante en virgule fixe pour des processeurs embarqués Afin de limiter leur coût et/ou leur consommation électrique, certains processeurs embarqués sacrifient le support matériel de l'arithmétique à virgule flottante. Pourtant, pour des raisons de simplicité, les applications sont généralement spécifiées en utilisant l'arithmétique à virgule flottante. Porter ces applications sur des processeurs embarqués de ce genre nécessite une émulation logicielle de l'arithmétique à virgule flottante, qui peut sévèrement dégrader la performance. Pour éviter cela, l'application est converti pour utiliser l'arithmétique à virgule fixe, qui a l'avantage d'être plus efficace à implémenter sur des unités de calcul entier. La conversion de virgule flottante en virgule fixe est une procédure délicate qui implique des compromis subtils entre performance et précision de calcul. Elle permet, entre autre, de réduire la taille des données pour le coût de dégrader la précision de calcul. Par ailleurs, la plupart de ces processeurs fournissent un support pour le calcul vectoriel de type SIMD (Single Instruction Multiple Data) afin d'améliorer la performance. En effet, cela permet l'exécution d'une opération sur plusieurs données en parallèle, réduisant ainsi le temps d'exécution. Cependant, il est généralement nécessaire de transformer l'application pour exploiter les unités de calcul vectoriel. Cette transformation de vectorisation est sensible à la taille des données ; plus leurs tailles diminuent, plus le taux de vectorisation augmente. Il apparaît donc un compromis entre vectorisation et précision de calcul. Plusieurs travaux ont proposé des méthodologies permettant, d'une part la conversion automatique de virgule flottante en virgule fixe, et d'autre part la vectorisation automatique. Dans l'état de l'art, ces deux transformations sont considérées indépendamment, pourtant elles sont fortement liées. Dans ce contexte, nous étudions la relation entre ces deux transformations, dans le but d'exploiter efficacement le compromis entre performance et précision de calcul. Ainsi, nous proposons d'abord un algorithme amélioré pour l'extraction de parallélisme SLP (Superword Level Parallelism ; une technique de vectorisation). Puis, nous proposons une nouvelle méthodologie permettant l'application conjointe de la conversion de virgule flottante en virgule fixe et de l'exploitation du SLP. Enfin, nous implémentons cette approche sous forme d'un flot de compilation source-à-source complètement automatisé, afin de valider ces travaux. Les résultats montrent l'efficacité de cette approche, dans l'exploitation du compromis entre performance et précision, vis-à-vis d'une approche classique considérant ces deux transformations indépendamment.",
+  "doi": "10.70675/2a7514afzb62bz4f55zbbb9zae5d63ed5f8f",
+  "openalex": "W7148321446",
+  "status": "ok",
+  "title": "SIMD-aware word length optimization for floating-point to fixed-point conversion targeting embedded processors"
+ },
+ "10.70675_f936172az1621z462bza9b4zbc0cf4d28052": {
+  "abstract": "Dans cette thèse, nous nous intéressons à des noeuds critiques du calcul du risque de contrepartie, la valorisation rapide des produits dérivées et de leurs sensibilités. Nous proposons plusieurs méthodes mathématiques et informatiques pour répondre à cette problématique. Nous contribuons à quatre domaines différents: une extension de la méthode Vibrato et l'application des méthodes multilevel Monte Carlo pour le calcul des grecques à ordre élevé n>1 avec une technique de différentiation automatique. La troisième contribution concerne l'évaluation des produits Américain, ici nous nous servons d'un schéma pararéel pour l'accélération du processus de valorisation et nous faisons également une application pour la résolution d'une équation différentielle stochastique rétrograde. La quatrième contribution est la conception d'un moteur de calcul performant à architecture parallèle.",
+  "doi": "10.70675/f936172az1621z462bza9b4zbc0cf4d28052",
+  "openalex": "W7148598475",
+  "status": "ok",
+  "title": "Quelques algorithmes rapides pour la finance quantitative"
+ },
+ "10.7763_ijcte.2016.v8.1047": {
+  "abstract": "Due to disjoint memory references and non-aligned memory references, existing SIMD compilers can't vectorize loops containing indirect array utilizing SIMD (single instruction multiple data) instructions. However, addressing this problem is inevitable, since many important applications extensively use this program pattern to reduce memory and computation requirement. In this paper, we propose a new efficient code generation technique for indirect array. For an irregular indirect array access, we adopt two separately registers to store the array base and the index address. It significantly contributes to the performance improvement by vectorizing more loops and reducing the overheads. We also developed this method in our auto-vectorization compiler SW-VEC. The experimental results show that the proposed method can translate applications within direct array access into high-performance targeted vectorized codes, thereby advancing the execution efficiency adequately.",
+  "doi": "10.7763/ijcte.2016.v8.1047",
+  "openalex": "W2805427650",
+  "status": "ok",
+  "title": "An SIMD Code Generation Technology for Indirect Array"
+ },
+ "oa-W3103937600": {
+  "abstract": "© 2019 Copyright held by the owner/author(s). Modern microprocessors are equipped with Single Instruction Multiple Data (SIMD) or vector instructions which expose data level parallelism at a fine granularity. Programmers exploit this parallelism by using low-level vector intrinsics in their code. However, once programs are written using vector intrinsics of a specific instruction set, the code becomes non-portable. Modern compilers are unable to analyze and retarget the code to newer vector instruction sets. Hence, programmers have to manually rewrite the same code using vector intrinsics of a newer generation to exploit higher data widths and capabilities of new instruction sets. This process is tedious, error-prone and requires maintaining multiple code bases. We propose Revec, a compiler optimization pass which revectorizes already vectorized code, by retargeting it to use vector instructions of newer generations. The transformation is transparent, happening at the compiler intermediate representation level, and enables performance portability of hand-vectorized code. Revec can achieve performance improvements in real-world performance critical kernels. In particular, Revec achieves geometric mean speedups of 1.160× and 1.430× on fast integer unpacking kernels, and speedups of 1.145× and 1.195× on hand-vectorized x265 media codec kernels when retargeting their SSE-series implementations to use AVX2 and AVX-512 vector instructions respectively. We also extensively test Revec’s impact on 216 intrinsic-rich implementations of image processing and stencil kernels relative to hand-retargeting.",
+  "doi": null,
+  "openalex": "W3103937600",
+  "status": "ok",
+  "title": "Revec: program rejuvenation through revectorization"
+ },
+ "oa-W3125750521": {
+  "abstract": "Modern microprocessors are equipped with single instruction multiple data (SIMD) or vector instruction sets which allow compilers to exploit superword level parallelism (SLP), a type of fine-grained parallelism. Current SLP auto-vectorization techniques use heuristics to discover vectorization opportunities in high-level language code. These heuristics are fragile, local and typically only present one vectorization strategy that is either accepted or rejected by a cost model. We present goSLP, a novel SLP auto-vectorization framework which solves the statement packing problem in a pairwise optimal manner. Using an integer linear programming (ILP) solver, goSLP searches the entire space of statement packing opportunities for a whole function at a time, while limiting total compilation time to a few minutes. Furthermore, goSLP optimally solves the vector permutation selection problem using dynamic programming. We implemented goSLP in the LLVM compiler infrastructure, achieving a geometric mean speedup of 7.58% on SPEC2017fp, 2.42% on SPEC2006fp and 4.07% on NAS benchmarks compared to LLVM’s existing SLP auto-vectorizer.",
+  "doi": null,
+  "openalex": "W3125750521",
+  "status": "ok",
+  "title": "goSLP: globally optimized superword level parallelism framework"
+ },
+ "s2-1a694d0287e8832b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compilation techniques for short-vector instructions"
+ },
+ "s2-212d009f0969f507": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Programming and compiling for embedded SIMD architectures"
+ },
+ "s2-317d20c78564ee82": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploiting Vector Parallelism in Software Pipelined LoopsTopology Control"
+ },
+ "s2-4b60bb7fcae5449f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Library generation for linear transforms"
+ },
+ "s2-4c0cec7bac1065c8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "C Compilers for ASIPs: Automatic Compiler Generation with LISA"
+ },
+ "s2-515f23d6ecf606fb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Convergent scheduling : a flexible and extensible scheduling framework for clustered VLIW architectures"
+ },
+ "s2-74694cb040279021": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler optimizations for architectures supporting superword-level parallelism"
+ },
+ "s2-762dec9f0f3d7d33": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Level Loop Subgraph Superword Scope Loop body Group of instructions Instruction Vectorization advantage High Middle Small Coverage Small High High Vectorization granularity FinerCoarser"
+ },
+ "s2-7da4fc231885d041": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Performance Impact of Misaligned Accesses in SIMD Extensions"
+ },
+ "s2-80f9f2e0e530b4b9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Interprocedural analysis of low-level code"
+ },
+ "s2-900dae4a938f1dac": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Proceedings of the GCC Developers' Summit"
+ },
+ "s2-9116ce13ff5a00fc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Pointer Alignment Analysis for Processors with SIMD Instructions"
+ },
+ "s2-930b408e8cb65c11": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Complexity of SIMD Alignment"
+ },
+ "s2-9bb3f0f51b90b787": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Vectorization and Register Reuse in High Performance Computing"
+ },
+ "s2-a3b41aaaf4b1c736": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiling Vector Programs for SIMD Devices"
+ },
+ "s2-a5c26f5dcef9449e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Using Machine-Learning"
+ },
+ "s2-a8f4421527419530": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scalar Operand Networks: Design, Implementation, and Analysis"
+ },
+ "s2-b148b917c7c60151": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Data layout types : a type-based approach to automatic data layout transformations for improved SIMD vectorisation"
+ },
+ "s2-b1f7e7ac378b8cd4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Static Dependence Analysis in an Infrastructure for Automatic Parallelization"
+ },
+ "s2-b7aa3736a00d9832": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Retargetable code generation based on an architecture description language"
+ },
+ "s2-bfd8915b0cf4cf88": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Software orchestration of instruction level parallelism on tiled processor architectures"
+ },
+ "s2-d1ea39ba7719d02d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Libra: Achieving Efficient Instruction- and Data- Parallel Execution for Mobile Applications."
+ },
+ "s2-e1571db76d43798b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Linear Domain for Analyzing the Distribution of Numerical Values 1 by"
+ },
+ "s2-e1e6eb1576663e6a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploiting Superword-Level Locality in Multimedia Extension Architectures"
+ },
+ "s2-e44061ec22666a1e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Selective Vectorization for Short-Vector Instructions"
+ },
+ "s2-f28b26ffc61da2c1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Grid domains for analysing software"
+ },
+ "s2-f32289e1f904d74d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "goSLP: Globally Optimized Superword Level Parallelism Framework"
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "10.1016_j.jpdc.2024.104941": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2024.104941",
+  "openalex": "W4399732797",
+  "status": "no_abstract",
+  "title": "SpChar: Characterizing the sparse puzzle via decision trees"
+ },
+ "10.1109_cgo57630.2024.10444827": {
+  "abstract": "Achieving high performance for Sparse Matrix-Matrix Multiplication (SpMM) has received increasing research attention, especially on multi-core CPUs, due to the large input data size in applications such as graph neural networks (GNNs). Most existing solutions for SpMM computation follow the ahead-of-time (AOT) compilation approach, which compiles a program entirely before it is executed. AOT compilation for SpMM faces three key limitations: unnecessary memory access, additional branch overhead, and redundant instructions. These limitations stem from the fact that crucial information pertaining to SpMM is not known until runtime. In this paper, we propose JITSpMM, a just-in-time (JIT) assembly code generation framework to accelerated SpMM computation on multi-core CPUs with SIMD extensions. First, JITSpMM integrates the JIT assembly code generation technique into three widely-used workload division methods for SpMM to achieve balanced workload distribution among CPU threads. Next, with the availability of runtime information, JITSpMM employs a novel technique, coarse-grain column merging, to maximize instruction-level parallelism by unrolling the performance-critical loop. Furthermore, JITSpMM intelligently allocates registers to cache frequently accessed data to minimizing memory accesses, and employs selected SIMD instructions to enhance arithmetic throughput. We conduct a performance evaluation of JITSpMM and compare it two AOT baselines. The first involves existing SpMM implementations compiled using the Intel icc compiler with auto-vectorization. The second utilizes the highly-optimized SpMM routine provided by Intel MKL. Our results show that JITSpMM provides an average improvement of 3.8× and 1.4×, respectively.",
+  "doi": "10.1109/cgo57630.2024.10444827",
+  "openalex": "W4392265904",
+  "status": "ok",
+  "title": "JITSPMM: Just-in-Time Instruction Generation for Accelerated Sparse Matrix-Matrix Multiplication"
+ },
+ "10.1145_3600092": {
+  "abstract": "The convolutional neural network (CNN) is an important deep learning method, which is widely used in many fields. However, it is very time consuming to implement the CNN where convolution usually takes most of the time. There are many zero values in feature maps and filters, which leads to redundant calculations and memory accesses if dense methods are used to compute convolution. Many works recently have made use of sparsity to skip the calculations for zero values to reduce the inference time of the CNN. On the graphics processing unit platform, current works cannot fully exploit the sparsity of the feature map and achieve satisfactory performance. Therefore, we design a new parallel strategy to transform the feature map into a new storage format to avoid the redundant computation of zero values on graphics processing units. Also considering the sparsity in the feature map, we propose a fused storage format to combine the convolution operation with the following pooling operation, to further improve the performance. We carry out experiments with mainstream CNN models and achieve better performance compared with cuDNN and cuSPARSE. For VGG-19, ResNet-50, DenseNet-121, and RegNetX-16GF, 1.97×, 2.23×, 2.74×, and 1.58× speedups respectively are obtained over cuDNN. The speedups over cuSPARSE respectively are 2.10×, 1.83×, 2.35×, and 1.35× when only using the first method.",
+  "doi": "10.1145/3600092",
+  "openalex": "W4378573650",
+  "status": "ok",
+  "title": "Accelerating Convolutional Neural Network by Exploiting Sparsity on GPUs"
+ },
+ "10.1145_3620665.3640402": {
+  "abstract": "State-of-the-art domain specific architectures (DSAs) work with sparse data, and need hardware support for index data-structures [31, 43, 57, 61]. Indexes are more space-efficient for sparse-data, and reduce DRAM bandwidth, if data reuse can be managed. However, indexes exhibit dynamic accesses, chase pointers, and need to walk-and-search. This inflates the working set and thrashes the cache. We observe that the cache organization itself is responsible for this behavior.",
+  "doi": "10.1145/3620665.3640402",
+  "openalex": "W4394998545",
+  "status": "ok",
+  "title": "METAL: Caching Multi-level Indexes in Domain-Specific Architectures"
+ },
+ "10.1145_3656403": {
+  "abstract": "Arrays are a fundamental abstraction to represent collections of data. It is often possible to exploit structural properties of the data stored in an array ( e.g ., repetition or sparsity) to develop a specialised representation optimised for space efficiency. Formally reasoning about correctness of manipulations with such structured data is challenging, as they are often composed of multiple loops with non-trivial invariants. In this work, we observe that specifications for structured data manipulations can be phrased as hypersafety properties, i.e ., predicates that relate traces of k programs. To turn this observation into an effective verification methodology, we developed the Logic for Graceful Tensor Manipulation (LGTM), a new Hoare-style relational separation logic for specifying and verifying computations over structured data. The key enabling idea of LGTM is that of parametrised hypersafety specifications that allow the number k of the program components to depend on the program variables . We implemented LGTM as a foundational embedding into Coq, mechanising its rules, meta-theory, and the proof of soundness. Furthermore, we developed a library of domain-specific tactics that automate computer-aided hypersafety reasoning, resulting in pleasantly short proof scripts that enjoy a high degree of reuse. We argue for the effectiveness of relational reasoning about structured data in LGTM by specifying and mechanically proving correctness of 13 case studies including computations on compressed arrays and efficient operations over multiple kinds of sparse tensors.",
+  "doi": "10.1145/3656403",
+  "openalex": "W4394710775",
+  "status": "ok",
+  "title": "Mechanised Hypersafety Proofs about Structured Data"
+ },
+ "10.1145_3669940.3707225": {
+  "abstract": null,
+  "doi": "10.1145/3669940.3707225",
+  "openalex": "W4407197217",
+  "status": "no_abstract",
+  "title": "RANGE-BLOCKS: A Synchronization Facility for Domain-Specific Architectures"
+ },
+ "10.1145_3720473": {
+  "abstract": "From FORTRAN to NumPy, tensors have revolutionized how we express computation. However, tensors in these, and almost all prominent systems, can only handle dense rectilinear integer grids. Real world tensors often contain underlying structure, such as sparsity, runs of repeated values, or symmetry. Support for structured data is fragmented and incomplete. Existing frameworks limit the tensor structures and program control flow they support to better simplify the problem. In this work, we propose a new programming language, Finch, which supports both flexible control flow and diverse data structures. Finch facilitates a programming model which resolves the challenges of computing over structured tensors by combining control flow and data structures into a common representation where they can be co-optimized. Finch automatically specializes control flow to data so that performance engineers can focus on experimenting with many algorithms. Finch supports a familiar programming language of loops, statements, ifs, breaks, etc., over a wide variety of tensor structures, such as sparsity, run-length-encoding, symmetry, triangles, padding, or blocks. Finch reliably utilizes the key properties of structure, such as structural zeros, repeated values, or clustered non-zeros. We show that this leads to dramatic speedups in operations such as SpMV and SpGEMM, image processing, and graph analytics.",
+  "doi": "10.1145/3720473",
+  "openalex": "W4409310702",
+  "status": "ok",
+  "title": "Finch: Sparse and Structured Tensor Programming with Control Flow"
+ },
+ "10.1145_3720506": {
+  "abstract": "Tensor algebra is a crucial component for data-intensive workloads such as machine learning and scientific computing. As the complexity of data grows, scientists often encounter a dilemma between the highly specialized dense tensor algebra and efficient structure-aware algorithms provided by sparse tensor algebra. In this paper, we introduce DASTAC, a framework to propagate the tensors’s captured high-level structure down to low-level code generation by incorporating techniques such as automatic data layout compression, polyhedral analysis, and affine code generation. Our methodology reduces memory footprint by automatically detecting the best data layout, heavily benefits from polyhedral optimizations, leverages further optimizations, and enables parallelization through MLIR. Through extensive experimentation, we show that DASTAC can compete if not significantly outperform specialized hand-tuned implementation by experts. We observe 0.16x 44.83x and 1.37x - 243.78x speed-up for single- and multi-threaded cases, respectively.",
+  "doi": "10.1145/3720506",
+  "openalex": "W4409311444",
+  "status": "ok",
+  "title": "Compressed and Parallelized Structured Tensor Algebra"
+ },
+ "10.1145_3771775.3786267": {
+  "abstract": "Sparse tensor algebra plays an important role in many scientific and engineering applications, yet existing sparse libraries and compilers face challenges when the output tensor is sparse. Array-based storage formats, such as CSR, require costly memory reallocations and rely on intermediate tensors (workspaces) to handle sparse scattering into the output, which limits performance and scalability. We introduce a new approach that employs our proposed flexible map-based storage format to directly support sparse scattering into the output without requiring extra workspaces. Our system then applies code and storage-specific optimizations to maximize efficiency. Experimental results across a range of kernels and datasets demonstrate an average speedup of 8.06× over a state-of-the-art compiler and 5.28× over a sparse tensor library.",
+  "doi": "10.1145/3771775.3786267",
+  "openalex": "W7125963162",
+  "status": "ok",
+  "title": "Optimizing Sparse Tensor Compilation for Sparse Output"
+ },
+ "10.1145_3808256": {
+  "abstract": "Trees can accelerate queries that search or aggregate values over large collections. They achieve this by storing metadata that enables quick pruning (or inclusion) of subtrees when predicates on that metadata can prove that none (or all) of the data in a subtree affect the query result. Existing systems implement this pruning logic manually for each query predicate and data structure. We generalize and mechanize this class of optimization. Our method derives conditions for when subtrees can be pruned (or included wholesale), expressed in terms of the metadata available at each node. We efficiently generate these conditions using symbolic interval analysis, extended with new rules to handle geometric predicates (e.g., intersection, containment). Additionally, our compiler fuses compound queries (e.g., reductions on filters) into a single tree traversal. These techniques enable the automatic derivation of generalized single-index and dual-index tree joins that support a wide class of join predicates beyond standard equality and range predicates. The generated traversals match the behavior of expert-written code that implements query-specific traversals, and can asymptotically outperform the linear scans and nested-loop joins that existing systems fall back to when hand-written cases do not apply.",
+  "doi": "10.1145/3808256",
+  "openalex": "W7155180477",
+  "status": "ok",
+  "title": "Bonsai: Compiling Queries to Pruned Tree Traversals"
+ },
+ "10.48550_arxiv.2304.06944": {
+  "abstract": "Sparse matrix computation is crucial in various modern applications, including large-scale graph analytics, deep learning, and recommender systems. The performance of sparse kernels varies greatly depending on the structure of the input matrix, making it difficult to gain a comprehensive understanding of sparse computation and its relationship to inputs, algorithms, and target machine architecture. Despite extensive research on certain sparse kernels, such as Sparse Matrix-Vector Multiplication (SpMV), the overall family of sparse algorithms has yet to be investigated as a whole. This paper introduces SpChar, a workload characterization methodology for general sparse computation. SpChar employs tree-based models to identify the most relevant hardware and input characteristics, starting from hardware and input-related metrics gathered from Performance Monitoring Counters (PMCs) and matrices. Our analysis enables the creation of a characterization loop that facilitates the optimization of sparse computation by mapping the impact of architectural features to inputs and algorithmic choices. We apply SpChar to more than 600 matrices from the SuiteSparse Matrix collection and three state-of-the-art Arm CPUs to determine the critical hardware and software characteristics that affect sparse computation. In our analysis, we determine that the biggest limiting factors for high-performance sparse computation are (1) the latency of the memory system, (2) the pipeline flush overhead resulting from branch misprediction, and (3) the poor reuse of cached elements. Additionally, we propose software and hardware optimizations that designers can implement to create a platform suitable for sparse computation. We then investigate these optimizations using the gem5 simulator to achieve a significant speedup of up to 2.63x compared to a CPU where the optimizations are not applied.",
+  "doi": "10.48550/arxiv.2304.06944",
+  "openalex": "W4366197791",
+  "status": "ok",
+  "title": "SpChar: Characterizing the Sparse Puzzle via Decision Trees"
+ },
+ "10.48550_arxiv.2402.14118": {
+  "abstract": "Artificial intelligence workloads, especially transformer models, exhibit emergent sparsity in which computations perform selective sparse access to dense data. The workloads are inefficient on hardware designed for dense computations and do not map well onto sparse data representations. We build a vectorized and parallel matrix-multiplication system A X B = C that eliminates unnecessary computations and avoids branches based on a runtime evaluation of sparsity. We use a combination of dynamic code lookup to adapt to the specific sparsity encoded in the B matrix and preprocessing of sparsity maps of the A and B matrices to compute conditional branches once for the whole computation. For a wide range of sparsity, from 60% to 95% zeros, our implementation performs fewer instructions and increases performance when compared with Intel MKL's dense or sparse matrix multiply routines. Benefits can be as large as 2 times speedup and 4 times fewer instructions.",
+  "doi": "10.48550/arxiv.2402.14118",
+  "openalex": "W4392120487",
+  "status": "ok",
+  "title": "Masked Matrix Multiplication for Emergent Sparsity"
+ },
+ "10.48550_arxiv.2407.13726": {
+  "abstract": "Tensor algebra is a crucial component for data-intensive workloads such as machine learning and scientific computing. As the complexity of data grows, scientists often encounter a dilemma between the highly specialized dense tensor algebra and efficient structure-aware algorithms provided by sparse tensor algebra. In this paper, we introduce DASTAC, a framework to propagate the tensors's captured high-level structure down to low-level code generation by incorporating techniques such as automatic data layout compression, polyhedral analysis, and affine code generation. Our methodology reduces memory footprint by automatically detecting the best data layout, heavily benefits from polyhedral optimizations, leverages further optimizations, and enables parallelization through MLIR. Through extensive experimentation, we show that DASTAC achieves 1 to 2 orders of magnitude speedup over TACO, a state-of-the-art sparse tensor compiler, and StructTensor, a state-of-the-art structured tensor algebra compiler, with a significantly lower memory footprint.",
+  "doi": "10.48550/arxiv.2407.13726",
+  "openalex": "W4402346403",
+  "status": "ok",
+  "title": "Compressing Structured Tensor Algebra"
+ },
+ "10.48550_arxiv.2606.20855": {
+  "abstract": "Sparse tensors represent data that is mostly zero or some other compressible fill pattern. Such datasets can be massive, so optimized tensor algebra libraries and compilers have been developed to exploit these patterns to improve performance. Existing systems, however, frequently lack support for parallelism, especially when outputs are sparse or multiple inputs are sparse. We propose WingSpan, a sparse tensor language enabling unrestricted parallel programming. WingSpan supports arbitrary composition of parallel loops and data structures, matching or exceeding the performance of hand-optimized parallel routines on critical kernels such as SpGEMM. We also introduce a dependence theory for the safety of parallel programs involving sparse tensors and structures beyond sparsity.",
+  "doi": "10.48550/arxiv.2606.20855",
+  "openalex": "W7165642973",
+  "status": "ok",
+  "title": "WingSpan: Concurrency and Dependence for Sparse and Structured Tensor Compilers"
+ }
+}

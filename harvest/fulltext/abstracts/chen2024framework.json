@@ -1,0 +1,9 @@
+{
+ "10.1109_icaice68195.2025.11382376": {
+  "abstract": "Multidimensional array access is a primary performance bottleneck in High-Performance Computing (HPC). Modern compilers typically flatten multi-dimensional index computations into a single offset expression, thereby obscuring the hierarchical invariance inherent in the address calculation that corresponds to the loop nesting structure. This flattening prevents standard optimizations like Loop-Invariant Code Motion (LICM) from being effective. This paper proposes a Hierarchical Address Decomposition (HAD) method, which reconstructs address computations in LLVM into a chained intermediate representation that is isomorphic to the loop nest. This transformation explicitly exposes pointer-level invariants, enabling them to be automatically hoisted by the standard LICM pass. Furthermore, this paper introduces a model-guided promotion strategy that leverages a cost model to balance the benefits of optimization against the overhead of the transformation. Experimental results on SPEC CPU bench-marks (481.wrf and 621.wrf_s) demonstrate that HAD achieves up to a 1.08x speedup, validating its effectiveness and portability for multidimensional array access optimization.",
+  "doi": "10.1109/icaice68195.2025.11382376",
+  "openalex": "W7129696276",
+  "status": "ok",
+  "title": "A Hierarchical Address Decomposition Method for Multidimensional Array Access Optimization"
+ }
+}

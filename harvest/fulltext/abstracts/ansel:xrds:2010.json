@@ -1,0 +1,338 @@
+{
+ "10.1002_cpe.4127": {
+  "abstract": "Summary This paper explores autotuning strategies for serial divide‐and‐conquer stencil computations, comparing the efficacy of traditional “heuristic” autotuning with that of “pruned‐exhaustive” autotuning. We present a pruned‐exhaustive autotuner called Ztune that searches for optimal divide‐and‐conquer trees for stencil computations. Ztune uses three pruning properties—space‐time equivalence, divide subsumption, and favored dimension—that greatly reduce the size of the search domain without significantly sacrificing the quality of the autotuned code. We compared the performance of Ztune with that of a state‐of‐the‐art heuristic autotuner called OpenTuner in tuning the divide‐and‐conquer algorithm used in Pochoir stencil compiler. Over a nightly run on ten application benchmarks across two machines with different hardware configurations, the Ztuned code ran 5%–12%faster on average, and the OpenTuner tuned code ran from 9%slower to 2%faster on average, than Pochoir's default code. In the best case, the Ztuned code ran 40%faster, and the OpenTuner tuned code ran 33%faster than Pochoir's code. Whereas the autotuning time of Ztune for each benchmark could be measured in minutes, to achieve comparable results, the autotuning time of OpenTuner was typically measured in hours or days. Surprisingly, for some benchmarks, Ztune actually autotuned faster than the time it takes to perform the stencil computation once.",
+  "doi": "10.1002/cpe.4127",
+  "openalex": "W2750218732",
+  "status": "ok",
+  "title": "Autotuning divide‐and‐conquer stencil computations"
+ },
+ "10.1002_cpe.6267": {
+  "abstract": "Abstract Task‐based execution of graph workloads allows various ordered and unordered implementations, with tasks representing dependencies between graph vertices and edges. This work explores graph algorithms in the context of ordered and unordered task‐based implementations, that trade‐off work‐efficiency with parallelism. The monotonicity of convergent graph solutions is the reason behind the trade‐off between work‐efficiency and parallelism. This trade‐off results in variable performance‐based choices within and across different machines (CPUs and GPUs), graph algorithms, implementations (ordered, relaxed, and unordered). Input graphs also augment this choice space, with this work analyzing temporally changing graphs in addition to the static graphs explored by prior works. These algorithmic and architectural choices are first explored in this work, and it is seen that different graph workload‐input combinations perform optimally on diverse architectural configurations. The resulting choice space is analyzed and this work represents it in the form of characteristic variables that correlate with each choice space. Using these characteristic variables, this work proposes analytical and neural network models to correlate these choice spaces to find the best performing implementation. The variables and the prediction models proposed in this work are also integrated with a state‐of‐the‐art performance predictor on a multiaccelerator setup, and shows geometric performance gains of 54% on a CPU, 14% on a GPU, and 31.5% in a multiaccelerator setup over baseline implementations without performance prediction.",
+  "doi": "10.1002/cpe.6267",
+  "openalex": "W3159543207",
+  "status": "ok",
+  "title": "A performance predictor for implementation selection of parallelized static and temporal graph algorithms"
+ },
+ "10.1007_s10472-022-09793-3": {
+  "abstract": null,
+  "doi": "10.1007/s10472-022-09793-3",
+  "openalex": "W4280577325",
+  "status": "no_abstract",
+  "title": "Hyperparameter autotuning of programs with HybridTuner"
+ },
+ "10.1007_s10766-021-00709-y": {
+  "abstract": null,
+  "doi": "10.1007/s10766-021-00709-y",
+  "openalex": "W3163253001",
+  "status": "no_abstract",
+  "title": "A Parallel Skeleton for Divide-and-conquer Unbalanced and Deep Problems"
+ },
+ "10.1007_s11227-021-04259-5": {
+  "abstract": "Abstract Efficiently implementing the divide-and-conquer pattern of parallelism in distributed memory systems is very relevant, given its ubiquity, and difficult, given its recursive nature and the need to exchange tasks and data among the processors. This task is noticeably further complicated in the presence of multi-core systems, where hybrid parallelism must be exploited to attain the best performance, and when unbalanced and deep workloads are considered, as additional measures must be taken to load balance and avoid deep recursion problems. In this manuscript a parallel skeleton that fulfills all these requirements while providing high levels of usability is presented. In fact, the evaluation shows that our proposal is on average 415.32% faster than MPI codes and 229.18% faster than MPI + OpenMP benchmarks, while offering an average improvement in the programmability metrics of 131.04% over MPI alternatives and 155.18% over MPI + OpenMP solutions.",
+  "doi": "10.1007/s11227-021-04259-5",
+  "openalex": "W4207079790",
+  "status": "ok",
+  "title": "A highly optimized skeleton for unbalanced and deep divide-and-conquer algorithms on multi-core clusters"
+ },
+ "10.1007_s11265-009-0342-7": {
+  "abstract": null,
+  "doi": "10.1007/s11265-009-0342-7",
+  "openalex": "W2002887759",
+  "status": "no_abstract",
+  "title": "Video Streaming with Network Coding"
+ },
+ "10.1007_s11277-015-2929-6": {
+  "abstract": null,
+  "doi": "10.1007/s11277-015-2929-6",
+  "openalex": "W1433761070",
+  "status": "no_abstract",
+  "title": "An Enhanced Buffer Management for Handover in WiMedia WLP-Based Mobile IP Networks"
+ },
+ "10.1038_s41586-023-06004-9": {
+  "abstract": "Abstract Fundamental algorithms such as sorting or hashing are used trillions of times on any given day1. As demand for computation grows, it has become critical for these algorithms to be as performant as possible. Whereas remarkable progress has been achieved in the past2, making further improvements on the efficiency of these routines has proved challenging for both human scientists and computational approaches. Here we show how artificial intelligence can go beyond the current state of the art by discovering hitherto unknown routines. To realize this, we formulated the task of finding a better sorting routine as a single-player game. We then trained a new deep reinforcement learning agent, AlphaDev, to play this game. AlphaDev discovered small sorting algorithms from scratch that outperformed previously known human benchmarks. These algorithms have been integrated into the LLVM standard C++ sort library3. This change to this part of the sort library represents the replacement of a component with an algorithm that has been automatically discovered using reinforcement learning. We also present results in extra domains, showcasing the generality of the approach.",
+  "doi": "10.1038/s41586-023-06004-9",
+  "openalex": "W4379739787",
+  "status": "ok",
+  "title": "Faster sorting algorithms discovered using deep reinforcement learning"
+ },
+ "10.1063_5.0122363": {
+  "abstract": null,
+  "doi": "10.1063/5.0122363",
+  "openalex": "W4375935255",
+  "status": "no_abstract",
+  "title": "Prediction of stock closing price PT. Telkom Indonesia with LSTM method"
+ },
+ "10.1109_aide69088.2026.11544757": {
+  "abstract": "Modern computing systems increasingly feature heterogeneous architectures combining multicore CPUs with GPU accelerators, yet effectively distributing workloads across these diverse processing units remains challenging. This paper presents a comprehensive benchmarking study of machine learning-based adaptive scheduling for image convolution operations across CPU and GPU resources. We evaluate 96 experimental configurations spanning four diverse datasets with image sizes ranging from 28×28 to 224×224 pixels on a production system featuring dual Intel Xeon processors and an NVIDIA Tesla V100 GPU. Our RandomForest-based scheduler learns optimal device and thread count selection from historical performance data. Results demonstrate a critical performance crossover point: CPU-based OpenMP parallelization achieves superior performance for small images (up to 1.76× faster than GPU), while GPU acceleration dominates for larger images (11.80× speedup over sequential, 2.15× faster than best CPU). The adaptive scheduler achieves competitive performance with an 8.8% average gap to optimal, successfully navigating the CPU-GPU performance tradeoff without manual tuning. This work provides reference benchmarks and a complete reproducible artifact for future heterogeneous scheduling research.",
+  "doi": "10.1109/aide69088.2026.11544757",
+  "openalex": "W7163686493",
+  "status": "ok",
+  "title": "CROSS-Sched: A Crossover-Aware ML Scheduler and its Benchmarking on Heterogeneous Systems"
+ },
+ "10.1109_ceec.2011.5995833": {
+  "abstract": "Denial of Service (DoS) is a significant security threat in the internet. The availability of different forms of DoS makes devising solutions hard. The attackers could hide their identity behind legitimate users or spoof the source address of the packets. Therefore, differentiating between legitimate packets and attacker packets becomes difficult. The traceback of the origin of the attack plays a major role in DoS mitigation. In this paper, different traceback methodologies are introduced. In addition, our key observations about one of the techniques, which could help in an enhancement, are presented.",
+  "doi": "10.1109/ceec.2011.5995833",
+  "openalex": "W2104374196",
+  "status": "ok",
+  "title": "IP traceback methodologies"
+ },
+ "10.1109_cgo.2011.5764677": {
+  "abstract": "Approximating ideal program outputs is a common technique for solving computationally difficult problems, for adhering to processing or timing constraints, and for performance optimization in situations where perfect precision is not necessary. To this end, programmers often use approximation algorithms, iterative methods, data resampling, and other heuristics. However, programming such variable accuracy algorithms presents difficult challenges since the optimal algorithms and parameters may change with different accuracy requirements and usage environments. This problem is further compounded when multiple variable accuracy algorithms are nested together due to the complex way that accuracy requirements can propagate across algorithms and because of the size of the set of allowable compositions. As a result, programmers often deal with this issue in an ad-hoc manner that can sometimes violate sound programming practices such as maintaining library abstractions. In this paper, we propose language extensions that expose trade-offs between time and accuracy to the compiler. The compiler performs fully automatic compile-time and installtime autotuning and analyses in order to construct optimized algorithms to achieve any given target accuracy. We present novel compiler techniques and a structured genetic tuning algorithm to search the space of candidate algorithms and accuracies in the presence of recursion and sub-calls to other variable accuracy code. These techniques benefit both the library writer, by providing an easy way to describe and search the parameter and algorithmic choice space, and the library user, by allowing high level specification of accuracy requirements which are then met automatically without the need for the user to understand any algorithm-specific parameters. Additionally, we present a new suite of benchmarks, written in our language, to examine the efficacy of our techniques. Our experimental results show that by relaxing accuracy requirements, we can easily obtain performance improvements ranging from 1.1× to orders of magnitude of speedup.",
+  "doi": "10.1109/cgo.2011.5764677",
+  "openalex": "W4251875201",
+  "status": "ok",
+  "title": "Language and compiler support for auto-tuning variable-accuracy algorithms"
+ },
+ "10.1109_iscas.2010.5538044": {
+  "abstract": "This paper suggests an enhancement of an existing method for the multiobjective optimization known as GAM (goal attainment method). In our proposal, the GAM algorithm is combined with a mechanism that automatically provides a set of parameters (weights, coordinates of the reference point) for which the method generates noninferior solutions uniformly spread over a suitably selected part of the Pareto front. The resulting set of solutions is then presented in a suitable graphic form so that the solution representing the most satisfactory tradeoff can be easily chosen. The whole algorithm was implemented as a program and tested on several RF design examples (video, low-noise, and power amplifiers), whose optimization results are also presented. For a comparison, the first design example was also solved by another method known as WMM (weighted metrics method).",
+  "doi": "10.1109/iscas.2010.5538044",
+  "openalex": "W2090025624",
+  "status": "ok",
+  "title": "Multiobjective optimization with an asymptotically uniform coverage of Pareto front"
+ },
+ "10.1109_isitia.2015.7220011": {
+  "abstract": "In today's digital era with the development of various types of gadgets causes the growth of traffic and the number of internet service on the network. To provide the maximum monitoring system that can determine service availability, network conditions, uptime and downtime. Protocol monitoring system used in this research is the Simple Network Management Protocol (SNMP). Due to the use of SNMP protocol generates monitoring data in the form raw data, it is necessary to use intermediaries applications so in order to make process monitoring become more efficient with the appearance of the graph. To optimize the monitoring system this research design, manufacture and testing the technique for all interfaces that exist on the agent. The aim of testing this new technique is to determine the availability of devices and system availability with multiple testing, ie; the test of application, network mapping, network conditions, TCP trafic, bandwidth optimization and sms notification.",
+  "doi": "10.1109/isitia.2015.7220011",
+  "openalex": "W1608083461",
+  "status": "ok",
+  "title": "Design and implementation fast response system monitoring server using Simple Network Management Protocol (SNMP)"
+ },
+ "10.1109_jproc.2018.2873289": {
+  "abstract": "In this paper, we address the question of how to automatically map computational kernels to highly efficient code for a wide range of computing platforms and establish the correctness of the synthesized code. More specifically, we focus on two fundamental problems that software developers are faced with: performance portability across the ever-changing landscape of parallel platforms and correctness guarantees for sophisticated floating-point code. The problem is approached as follows: We develop a formal framework to capture computational algorithms, computing platforms, and program transformations of interest, using a unifying mathematical formalism we call operator language (OL). Then we cast the problem of synthesizing highly optimized computational kernels for a given machine as a strongly constrained optimization problem that is solved by search and a multistage rewriting system. Since all rewrite steps are semantics preserving, our approach establishes equivalence between the kernel specification and the synthesized program. This approach is implemented in the SPIRAL system, and we demonstrate it with a selection of computational kernels from the signal and image processing domain, software-defined radio, and robotic vehicle control. Our target platforms range from mobile devices, desktops, and server multicore processors to large-scale high-performance and supercomputing systems, and we demonstrate performance comparable to expertly hand-tuned code across kernels and platforms.",
+  "doi": "10.1109/jproc.2018.2873289",
+  "openalex": "W2898200251",
+  "status": "ok",
+  "title": "SPIRAL: Extreme Performance Portability"
+ },
+ "10.1109_pervasive.2015.7087183": {
+  "abstract": "Network covert channel generally use for leak the information by violating the security policies. It allows the attacker to send as well as receive secret information without being detected by the network administrator or warden in the network. There are several ways to implement such covert channels; Storage covert channel and Timing covert channel. However there is always some possibility of these covert channels being identified depending on their behaviour. In this paper, we propose, an active warden, which normalizes incoming and outgoing network traffic for eliminating all possible storage based covert channels. It is specially design for TCP sequence number because this field is a maximum capacity vehicle for storage based covert channel. Our experimental result shows that propose active warden model eliminates covert communication up to 99%, while overt communication is as intact.",
+  "doi": "10.1109/pervasive.2015.7087183",
+  "openalex": "W1983192439",
+  "status": "ok",
+  "title": "Active warden for TCP sequence number base covert channel"
+ },
+ "10.1109_tc.2008.42": {
+  "abstract": "Testing security systems is challenging because a system's authors have to play the double role of attackers and defenders. Red team/blue team exercises are an invaluable mechanism for security testing. They partition researchers into two competing teams of attackers and defenders, enabling them to create challenging and realistic test scenarios. While such exercises provide valuable insight into vulnerabilities of security systems, they are very expensive and thus rarely performed. In this paper we describe a red team/blue team exercise, sponsored by DARPA's FTN program, and performed October 2002 --- May 2003. The goal of the exercise was to evaluate a collaborative DDoS defense, comprised of a distributed system, COSSACK, and a stand-alone defense, D-WARD. The role of the blue team was played by developers of the tested systems from USC/ISI and UCLA, the red team included researchers from Sandia National Laboratory, and all the coordination, experiment execution, result collection and analysis was performed by the white team from BBN Technologies. This exercise was of immense value to all involved --- it uncovered significant vulnerabilities in tested systems, pointed out desirable characteristics in DDoS defense systems (e.g., avoiding reliance on timing mechanisms), and taught us many lessons about testing of DDoS defenses.",
+  "doi": "10.1109/tc.2008.42",
+  "openalex": "W2134552827",
+  "status": "ok",
+  "title": "Testing a Collaborative DDoS Defense In a Red Team/Blue Team Exercise"
+ },
+ "10.1109_tifs.2012.2231861": {
+  "abstract": "Covert channels via the widely used TCP/IP protocols have become a new challenging issue for network security. In this paper, we analyze the information hiding in TCP/IP protocols and propose a new effective method to detect the existence of hidden information in TCP initial sequence numbers (ISNs), which is known as one of the most difficult covert channels to be detected. Our method uses phase space reconstruction to create a processing space called reconstructed phase space, where a statistical model is proposed for detecting covert channels in TCP ISNs. Based on the model, a classification algorithm is developed to identify the existence of information hidden in ISNs. Simulation results have demonstrated that our proposed detection method outperforms the state-of-the-art technique in terms of high detection accuracy and greatly reduced computational complexity. Instead of offline processing as the state-of-the-art does, our new scheme can be used for online detection.",
+  "doi": "10.1109/tifs.2012.2231861",
+  "openalex": "W2036068512",
+  "status": "ok",
+  "title": "Detecting Covert Channels in Computer Networks Based on Chaos Theory"
+ },
+ "10.1145_2513228.2513239": {
+  "abstract": "A system framework supporting run-time dynamic adaptation of parallel applications is proposed. The framework consists of a run-time manager and an API. The run-time manager profiles applications and guides adaption of applications at run-time for optimization and adaptation to the changes of environment such as the number of cores to use. With the proposed API, a range of different parallelization can be provided inside of an application, and the run-time manager chooses an appropriate parallelization at run-time. With the aid of the proposed run-time manager, a program can adapt/morph itself to dynamic changes in the system resources and/or performance requirements at run-time. The proposed adaptive run-time manager monitors and guides the applications to make the system adaptable at run-time.",
+  "doi": "10.1145/2513228.2513239",
+  "openalex": "W2003735733",
+  "status": "ok",
+  "title": "A system framework and API for run-time adaptable parallel software"
+ },
+ "10.1145_3330345.3331057": {
+  "abstract": "Driven by deep learning, there has been a surge of specialized processors for matrix multiplication, referred to as Tensor Core Units (TCUs). These TCUs are capable of performing matrix multiplications on small matrices (usually 4 × 4 or 16 × 16) to accelerate HPC and deep learning workloads. Although TCUs are prevalent and promise increase in performance and/or energy efficiency, they suffer from over specialization as only matrix multiplication on small matrices is supported. In this paper we express both reduction and scan in terms of matrix multiplication operations and map them onto TCUs. To our knowledge, this paper is the first to try to broaden the class of algorithms expressible as TCU operations and is the first to show benefits of this mapping in terms of: program simplicity, efficiency, and performance. We implemented the reduction and scan algorithms using NVIDIA's V100 TCUs and achieved 89% -- 98% of peak memory copy bandwidth. Our results are orders of magnitude faster (up to 100 × for reduction and 3 × for scan) than state-of-the-art methods for small segment sizes (common in HPC and deep learning applications). Our implementation achieves this speedup while decreasing the power consumption by up to 22% for reduction and 16% for scan.",
+  "doi": "10.1145/3330345.3331057",
+  "openalex": "W2901549770",
+  "status": "ok",
+  "title": "Accelerating reduction and scan using tensor core units"
+ },
+ "10.1145_3410463.3414670": {
+  "abstract": "Deep learning is emerging as a promising technique for building predictive models to support code-related tasks like performance optimization and code vulnerability detection. One of the critical aspects of building a successful predictive model is having the right representation to characterize the model input for the given task. Existing approaches in the area typically treat the program structure as a sequential sequence but fail to capitalize on the rich semantics of data and control flow information, for which graphs are a proven representation structure.",
+  "doi": "10.1145/3410463.3414670",
+  "openalex": "W3090891670",
+  "status": "ok",
+  "title": "Deep Program Structure Modeling Through Multi-Relational Graph-based Learning"
+ },
+ "10.1145_3437984.3458841": {
+  "abstract": "RocksDB is a general-purpose embedded key-value store used in multiple different settings. Its versatility comes at the cost of complex tuning configurations. This paper investigates maximizing the throughput of RocksDB 10 operations by auto-tuning ten parameters of varying ranges. Off-the-shelf optimizers struggle with high-dimensional problem spaces and require a large number of training samples.",
+  "doi": "10.1145/3437984.3458841",
+  "openalex": "W3139820007",
+  "status": "ok",
+  "title": "High-Dimensional Bayesian Optimization with Multi-Task Learning for RocksDB"
+ },
+ "10.1145_3517207.3526977": {
+  "abstract": "Current auto-tuners struggle with computer systems due to their large complex parameter space and high evaluation cost. We propose BoGraph, an auto-tuning framework that builds a graph of the system components before optimizing it using causal structure learning. The graph contextualizes the system via decomposition of the parameter space for faster convergence and handling of many parameters. Furthermore, BoGraph exposes an API to encode experts' knowledge of the system via performance models and a known dependency structure of the components. We evaluated BoGraph via a hardware design case study achieving 5x -- 7x improvement in energy and latency over the default in a variety of tasks.",
+  "doi": "10.1145/3517207.3526977",
+  "openalex": "W4221100879",
+  "status": "ok",
+  "title": "BoGraph"
+ },
+ "10.12785_ijcnt_020303": {
+  "abstract": "Exhaustion of the address space of current version of Internet Protocol (IPv4) actuated the development of next-generation Internet Protocol version 6 (IPv6). Even though the deployment of IPv6 has not progressed as per the predictions given by the technologists, primarily the reason being lack of awareness about IPv6 as well as the technical immaturity of people about the same as compared to IPv4. Now for IPv4 and IPv6 to coexist, various IPv6 transition mechanisms have been developed, in addition to that Multiprotocol Label Switching (MPLS) is a switching technology that regulates data traffic and packet forwarding in a complex network to make data forwarding decisions. The various applications of MPLS are VPN'S (Virtual Private Network), TE (Traffic Engineering), QoS (Quality of Service), AToM (any transport over MPLS). Nowadays keeping in view the explosive growth of Internet Traffic, primarily the cause being high definition audio/video, and multicast routing protocols are run over unicast routing protocols to provide efficient routing of such applications. This unicasting and multicasting has been proven to be efficient with minimum delay than the traditional IPv4 and IPv6 networks. In this paper, we compare the MPLS enabled networks with the traditional networks (IPv4/IPv6) for unicast and multicast traffic, and also the routing protocol comparison is shown by employing different routing protocols like RIP, OSPF, IGRP and EIGRP over the MPLS network. Simulation environment was created to evaluate the comparative performance of network traffic behavior. The results of the simulation conclude that MPLS enabled networks perform better than the traditional networks with lesser Jitter, lesser delay and better throughput.",
+  "doi": "10.12785/ijcnt/020303",
+  "openalex": "W2921240186",
+  "status": "ok",
+  "title": "Performance Analysis of Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6) over MPLS"
+ },
+ "10.17577_ijertv4is070583": {
+  "abstract": null,
+  "doi": "10.17577/ijertv4is070583",
+  "openalex": "W1600529425",
+  "status": "no_abstract",
+  "title": "Study and Analysis of AODV and DSDV Routing Protocols Over Zigbee Network for Different Topologies under FTP Traffic Pattern"
+ },
+ "10.17863_cam.71866": {
+  "abstract": "RocksDB is a general-purpose embedded key-value store used in multiple different settings. Its versatility comes at the cost of complex tuning configurations. This paper investigates maximizing the throughput of RocksDB IO operations by auto-tuning ten parameters of varying ranges. Off-theshelf optimizers struggle with high-dimensional problem spaces and require a large number of training samples. We propose two techniques to tackle this problem: multitask modeling and dimensionality reduction through clustering. By incorporating adjacent optimization in the model, the model converged faster and found complicated settings that other tuners could not find. This approach had an additional computational complexity overhead, which we mitigated by manually assigning parameters to each sub-goal through our knowledge of RocksDB. The model is then incorporated in a standard Bayesian Optimization loop to find parameters that maximize RocksDB’s IO throughput. Our method achieved x1.3 improvement when benchmarked against a simulation of Facebook’s social graph traffic, and converged in ten optimization steps compared to other state-of-the-art methods that required fifty steps.",
+  "doi": "10.17863/cam.71866",
+  "openalex": "W3161651181",
+  "status": "ok",
+  "title": "High-Dimensional Bayesian Optimization with Multi-Task Learning for RocksDB."
+ },
+ "10.18046_syt.v15i41.2441": {
+  "abstract": "Telemedicine systems are revolutionizing applications in the health sector, to the point where people are monitored remotely. This article presents a telemedicine system for transmission of electrocardiographic data (ECG) using TCP/IP protocol in real time. The communication system consists of the stage of instrumentation that includes amplifiers and filters. TCP/IP communication system was used to transmit and tele-monitor the subjects. We performed tests with 30 subjects, in addition was determined by the percentage of error of information loss had an average value of 0.25%.",
+  "doi": "10.18046/syt.v15i41.2441",
+  "openalex": "W2748649120",
+  "status": "ok",
+  "title": "Telemedicine system based on ECG signals and in the TCP/IP protocol using a sparse space"
+ },
+ "10.3389_fdata.2021.657218": {
+  "abstract": "The execution of complex distributed applications in exascale systems faces many challenges, as it involves empirical evaluation of countless code variations and application runtime parameters over a heterogeneous set of resources. To mitigate these challenges, the research field of autotuning has gained momentum. The autotuning automates identifying the most desirable application implementation in terms of code variations and runtime parameters. However, the complexity and size of the exascale systems make the autotuning process very difficult, especially considering the number of parameter variations that have to be identified. Therefore, we introduce a novel approach for autotuning exascale applications based on a genetic multi-objective optimization algorithm integrated within the ASPIDE exascale computing framework. The approach considers multi-dimensional search space with support for pluggable objective functions, including execution time and energy requirements. Furthermore, the autotuner employs a machine learning-based event detection approach to detect events and anomalies during application execution, such as hardware failures or communication bottlenecks.",
+  "doi": "10.3389/fdata.2021.657218",
+  "openalex": "W3216316990",
+  "status": "ok",
+  "title": "Autotuning of Exascale Applications With Anomalies Detection"
+ },
+ "10.5120_1896-2527": {
+  "abstract": "A Mobile Ad Hoc Network (MANET) is a network consisting of a collection of nodes capable of communicating with each other without aid from a network infrastructure. Each node participating in the network works both as host and a router and must therefore is willing to forward packets for other nodes. For this purpose, a routing protocol is needed. The most important characteristics of MANET is the dynamic topology, nodes can change position dynamically therefore a need of a routing protocol that quickly adapts to topology changes. In this paper for experimental purpose, Investigators considered 150m x 150m, 250m x 250m, 350m x 350m, 450m x 450m, 550m x550m, 650m x 650m & 750m x 750m terrain area and illustrate the Drop packet analysis using DSR protocol parameters for wireless network scenario. The Dynamic Source Routing protocol, a simple as well as an efficient routing protocol is designed particularly for use in multi-hop wireless ad hoc networks, allows the network to be entirely self-organizing and self-configuring, without the requirement of any presented network infrastructure or the administration. All aspects of the protocol work entirely on-demand, permitting the routing packet overhead to scale automatically to only which needed to respond to various changes in the different routes currently in use.",
+  "doi": "10.5120/1896-2527",
+  "openalex": "W2165005811",
+  "status": "ok",
+  "title": "DSR Routing Protocol in Wireless Ad-hoc Networks: Drop Analysis"
+ },
+ "s2-00aaf99c2d567a52": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Information Assurance Certification Paper"
+ },
+ "s2-02fbb5b667610e26": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Performance Comparison of transport protocols , UDP and UDP-Lite for transmission of Different Video Codecs over MANETs"
+ },
+ "s2-386a1482ae7a5a28": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Information Assurance Certification Paper"
+ },
+ "s2-38c5b089a3bc75c5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Information Assurance Certification Paper"
+ },
+ "s2-394caabf54fade04": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "2.1 Basic Introduction to Computer Networking 2.2 Transmission Control Protocol (tcp) 2.2.1 Tcp Mechanisms for Reliable Transport Background on Tcp and Wireless Networking"
+ },
+ "s2-3a406f05a18f5438": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spectrum Policy in the Age of Broadband: Issues for Congress [August 20, 2010]"
+ },
+ "s2-3bc6c92a385f04d2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Comprehensive Taxonomy of DDoS Attacks and Defense Mechanism Applying in a Smart Classification"
+ },
+ "s2-54079413352cf168": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "ANOVA-based Clustering Approach For Similarity Aggregation In Underwater Wireless Sensor Networks Using An Enhanced K-means Algorithm"
+ },
+ "s2-5b4da47528fe80c2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Internet of Things : Exploring and Securing a Future Concept"
+ },
+ "s2-5ba0405e92004d1f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning and Self-Adaptability in Concurrency Libraries"
+ },
+ "s2-617980ea26aa2097": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "On Mathematical Model of Traffic Control"
+ },
+ "s2-71ba16051238be62": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Construcción de un sub-sistema de software que permita generar movilidad de agentes artificiales de acuerdo con el rol que ellos desempeñan sobre el Sistema TLÖN cuyos recursos se comparten a través de una red Ad Hoc"
+ },
+ "s2-72393d483b1c8f5f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Mathematical Analogue Traffic System Model"
+ },
+ "s2-8b2bdae79a43a7a7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Architectural support for irregular programs and performance monitoring for heterogeneous systems"
+ },
+ "s2-92ded9f195244866": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Information Assurance Certification Paper"
+ },
+ "s2-9fac40dabcd6dc3b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Information Assurance Certification Paper"
+ },
+ "s2-c16dc76fd8e1f5ae": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global Information Assurance Certification Paper"
+ },
+ "s2-e5c50760da15f898": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Programming and mapping strategies for embedded computing runtime adaptability"
+ },
+ "s2-f15592007cc86e79": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Distributed Security Scheme to Secure Data Communication between Class-0 IoT Devices and the Internet"
+ }
+}

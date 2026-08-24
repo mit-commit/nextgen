@@ -1,0 +1,107 @@
+{
+ "10.1007_978-3-032-18470-2_3": {
+  "abstract": null,
+  "doi": "10.1007/978-3-032-18470-2_3",
+  "openalex": "W7161782075",
+  "status": "no_abstract",
+  "title": "Enhancing JavaScript Code Autocompletion by Fine-Tuning StarCoder"
+ },
+ "10.1007_s11227-025-08034-8": {
+  "abstract": "Abstract Large language model (LLM)-based program generation tasks are hindered by high computational demands. These challenges, along with high deployment costs, often pose a barrier to practical applications. To address these, we propose a novel data-augmented multi-LLM model routing approach that classifies prompts based on whether they should be processed on a weak LLM engine or a strong LLM. Experimental results show up to 16 times better efficiency compared to the existing cascaded approaches, while preserving the inference accuracy. Thus, the proposed method optimally allocates prompts across multiple LLMs, reducing computational costs while maintaining inference accuracy.",
+  "doi": "10.1007/s11227-025-08034-8",
+  "openalex": "W4416298066",
+  "status": "ok",
+  "title": "A data-augmented model routing framework for efficient LLM deployment in edge–cloud environments"
+ },
+ "10.1016_j.cose.2024.103974": {
+  "abstract": "Passwords play a crucial role in authentication, ensuring that only authorised entities can access sensitive information. However, user password choices are often weak and predictable, making them susceptible to cyber-attacks. Additionally, hard-coded credentials in source code can expose organisations and infrastructure to significant risks. This paper explores the patterns of passwords used by developers, examining their similarities to those of typical users. We also investigate the efficacy of large language models (LLMs) in identifying hard-coded credentials in source code. Our findings suggest that developers foster more complex and, hence, more secure password selection patterns than regular users. Nevertheless, they can use worse patterns when the context allows them. The latter, combined with the ample commits in public code repositories containing secrets, exemplifies the need for more targeted awareness campaigns and tighter integration of code security tools in the development lifecycle. Finally, we explore the capacity of LLMs to detect hard-coded credentials, highlighting their differences and limitations.",
+  "doi": "10.1016/j.cose.2024.103974",
+  "openalex": "W4400237083",
+  "status": "ok",
+  "title": "Decoding developer password patterns: A comparative analysis of password extraction and selection practices"
+ },
+ "10.1016_j.eswa.2024.124912": {
+  "abstract": "The integration of large language models (LLMs) into various cybersecurity pipelines has become increasingly prevalent, enabling the automation of numerous manual tasks and often surpassing human performance. Recognising this potential, cybersecurity researchers and practitioners are actively investigating the application of LLMs to process vast volumes of heterogeneous data for anomaly detection, potential bypass identification, attack mitigation, and fraud prevention. Moreover, LLMs’ advanced capabilities in generating functional code, interpreting code context, and code summarisation present significant opportunities for reverse engineering and malware deobfuscation. In this work, we comprehensively examine the deobfuscation capabilities of state-of-the-art LLMs. Specifically, we conducted a detailed evaluation of four prominent LLMs using real-world malicious scripts from the notorious Emotet malware campaign. Our findings reveal that while current LLMs are not yet perfectly accurate, they demonstrate substantial potential in efficiently deobfuscating payloads. This study highlights the importance of fine-tuning LLMs for specialised tasks, suggesting that such optimisation could pave the way for future AI-powered threat intelligence pipelines to combat obfuscated malware. Our contributions include a thorough analysis of LLM performance in malware deobfuscation, identifying strengths and limitations, and discussing the potential for integrating LLMs into cybersecurity frameworks for enhanced threat detection and mitigation. Our experiments illustrate that LLMs can automatically and accurately extract the necessary indicators of compromise from a real-world campaign with an accuracy of 69.56% and 88.78% for the URLs and the corresponding domains of the droppers, respectively.",
+  "doi": "10.1016/j.eswa.2024.124912",
+  "openalex": "W4401171110",
+  "status": "ok",
+  "title": "Assessing LLMs in malicious code deobfuscation of real-world malware campaigns"
+ },
+ "10.1016_j.infsof.2025.107954": {
+  "abstract": "Domain-specific languages (DSLs) are essential for modeling specialized concepts, offering greater fluency and efficiency than general-purpose languages. However, their adoption is often hindered by steep learning curves, limited tools, and complex implementations. While large language models (LLMs) can generate DSL code from natural language, their performance is limited in niche areas due to a lack of training on specific DSL definitions. This paper introduces DSL-Xpert 2.0, a tool that addresses these challenges by using LLMs to generate DSL code effortlessly. Integrating grammar prompting and few-shot learning ensures the effective handling of proprietary DSLs. In addition, advanced features such as automatic grammar validation, input/output correction, and integration with platforms like OpenAI, HuggingFace, and WebLLM provide robust, reliable results while simplifying workflows for novices and experts. To further demonstrate the tool’s practical value, this paper provides a running example illustrating its workflow and a complementary user survey conducted across multiple DSLs of varying complexity, following the Technology Acceptance Model (TAM), to evaluate its impact on easing the DSL learning curve. With a user-friendly and flexible design, DSL-Xpert 2.0 supports a wide range of DSL designs with minimal configuration. Its intuitive interface allows developers to focus on innovative problem-solving rather than technical complexities. Findings from the user survey confirm that DSL-Xpert 2.0 effectively reduces the learning effort required to work with DSLs and is perceived as both useful and easy to use. Additionally, this paper provides a detailed performance analysis across various LLMs, showcasing the adaptability and effectiveness of the tool. By simplifying DSL development and lowering entry barriers, DSL-Xpert 2.0 accelerates adoption and innovation, positioning itself as a valuable resource for domain-specific projects.",
+  "doi": "10.1016/j.infsof.2025.107954",
+  "openalex": "W4415746504",
+  "status": "ok",
+  "title": "DSL-Xpert 2.0: Enhancing LLM-driven code generation for domain-specific languages"
+ },
+ "10.1016_j.infsof.2026.108207": {
+  "abstract": null,
+  "doi": "10.1016/j.infsof.2026.108207",
+  "openalex": "W7163743508",
+  "status": "no_abstract",
+  "title": "Quality attributes, challenges, and solutions for designing GenAI-enabled systems"
+ },
+ "10.1109_cain66642.2025.00015": {
+  "abstract": "Retrieval Augmented Generation (RAG) is increasingly employed in building Generative AI applications, yet their evaluation often relies on manual, trial-and-error processes. Automating this evaluation process involves generating test data to trigger failures involving context comprehension, data formatting, specificity, and content completeness. Random question-answer generation is insufficient. However, prior works rely on standard QA datasets, benchmarks and tactics that are not tailored to the specific domain requirements. Hence, current approaches and datasets do not trigger sufficiently broad and context-specific failures. In this paper, we introduce evaluation scenarios that describe the process of generating question-answer pairs from content indexed by RAG pipelines, and they are designed to trigger a wider range of failures and to simplify automation. This enables developers to identify and address weaknesses more effectively. We validate our approach on five open-source RAG pipelines using three datasets. Our approach triggers high failure rates, by generating prompts that combine multiple questions (up to 91% failure rate) highlighting the need for developers to prioritize handling such queries. We generated failure rates of 60% in an academic domain dataset and 53% and 64% in open-domain datasets. Compared to existing state-of-the-art methods, our approach triggers 77% more failures on average per RAG pipeline and 53% more failures on average per dataset, offering a mechanism to support developers to improve the RAG pipeline quality.",
+  "doi": "10.1109/cain66642.2025.00015",
+  "openalex": "W4411337556",
+  "status": "ok",
+  "title": "RAGProbe: Breaking RAG Pipelines with Evaluation Scenarios"
+ },
+ "10.1109_ice_itmc65658.2025.11106622": {
+  "abstract": "This paper presents a study in which authors examine the potential of leveraging large language models to generate instructional content for eXtended Reality environments. Considering the IEEE ARLEM standard as a framework for structuring data, it could be integrated and interpreted by existing authoring tools. In terms of methods, authors have adopted an exploratory approach in testing various strategies. A case study focusing on the use of an eXtended Reality authoring tool for teaching operating procedures is presented. Finally, this exploratory work shows that while simple prompts can produce scenarios with satisfactory quality, imposing a structured schema through more complex prompts leads to less reliable outcomes.",
+  "doi": "10.1109/ice/itmc65658.2025.11106622",
+  "openalex": "W4413158703",
+  "status": "ok",
+  "title": "Leveraging Large Language Models for Automated XR Instructional Content Generation"
+ },
+ "10.22495_rgcv15i2p13": {
+  "abstract": "The use of artificial intelligence (AI) in financial forecasting has become increasingly significant in finance and accounting, offering improved precision in predicting key financial indicators such as revenue and net income. The purpose of this study is to explore the relationship between AI models’ benchmark scores and their predictive accuracy, addressing a gap in the literature regarding comprehensive evaluations of AI performance across financial metrics. Recent research highlights AI’s potential to outperform traditional statistical methods, with deep learning and ensemble models demonstrating notable accuracy in predicting stock prices and financial ratios (Khattak et al., 2023; Cao, 2021). By analyzing the 2020–2022 financial records of ten publicly listed corporations this research implements zero-shot prompt approaches for forecasting 2023 revenue and net income. Research findings demonstrate AI models can effectively boost financial prediction accuracy and such accuracy remains essential for business choices and risk protocols. Practical steps for AI reliability enhancement focus on using top-quality data with transparency and methods to control algorithmic biases. The research is relevant because it adds to AI finance understanding in academia while generating practical applications that guide industry professionals toward future exploration of financial AI applications.",
+  "doi": "10.22495/rgcv15i2p13",
+  "openalex": "W4411243029",
+  "status": "ok",
+  "title": "Can ChatGPT predict stock prices? Evaluating artificial intelligence-driven financial forecasting and risk management"
+ },
+ "10.48550_arxiv.2406.13161": {
+  "abstract": "Large Language Models (LLMs) have become increasingly capable of handling diverse tasks with the aid of well-crafted prompts and integration of external tools, but as task complexity rises, the workflow involving LLMs can be complicated and thus challenging to implement and maintain. To address this challenge, we propose APPL, A Prompt Programming Language that acts as a bridge between computer programs and LLMs, allowing seamless embedding of prompts into Python functions, and vice versa. APPL provides an intuitive and Python-native syntax, an efficient parallelized runtime with asynchronous semantics, and a tracing module supporting effective failure diagnosis and replaying without extra costs. We demonstrate that APPL programs are intuitive, concise, and efficient through three representative scenarios: Chain-of-Thought with self-consistency (CoT-SC), ReAct tool use agent, and multi-agent chat. Experiments on three parallelizable workflows further show that APPL can effectively parallelize independent LLM calls, with a significant speedup ratio that almost matches the estimation.",
+  "doi": "10.48550/arxiv.2406.13161",
+  "openalex": "W4399912456",
+  "status": "ok",
+  "title": "APPL: A Prompt Programming Language for Harmonious Integration of Programs and Large Language Model Prompts"
+ },
+ "10.48550_arxiv.2410.22370": {
+  "abstract": "The applications of generative AI have become extremely impressive, and the interplay between users and AI is even more so. Current human-AI interaction literature has taken a broad look at how humans interact with generative AI, but it lacks specificity regarding the user interface designs and patterns used to create these applications. Therefore, we present a survey that comprehensively presents taxonomies of how a human interacts with AI and the user interaction patterns designed to meet the needs of a variety of relevant use cases. We focus primarily on user-guided interactions, surveying interactions that are initiated by the user and do not include any implicit signals given by the user. With this survey, we aim to create a compendium of different user-interaction patterns that can be used as a reference for designers and developers alike. In doing so, we also strive to lower the entry barrier for those attempting to learn more about the design of generative AI applications.",
+  "doi": "10.48550/arxiv.2410.22370",
+  "openalex": "W4404342183",
+  "status": "ok",
+  "title": "Survey of User Interface Design and Interaction Techniques in Generative AI Applications"
+ },
+ "10.48550_arxiv.2512.02966": {
+  "abstract": "We introduce the first principled framework, Lumos, for specifying and formally certifying Language Model System (LMS) behaviors. Lumos is an imperative probabilistic programming DSL over graphs, with constructs to generate independent and identically distributed prompts for LMS. It offers a structured view of prompt distributions via graphs, forming random prompts from sampled subgraphs. Lumos supports certifying LMS for arbitrary prompt distributions via integration with statistical certifiers. We provide hybrid (operational and denotational) semantics for Lumos, providing a rigorous way to interpret the specifications. Using only a small set of composable constructs, Lumos can encode existing LMS specifications, including complex relational and temporal specifications. It also facilitates specifying new properties - we present the first safety specifications for vision-language models (VLMs) in autonomous driving scenarios developed with Lumos. Using these, we show that the state-of-the-art VLM Qwen-VL exhibits critical safety failures, producing incorrect and unsafe responses with at least 90% probability in right-turn scenarios under rainy driving conditions, revealing substantial safety risks. Lumos's modular structure allows easy modification of the specifications, enabling LMS certification to stay abreast with the rapidly evolving threat landscape. We further integrate a prompt-level deterministic verifier to obtain guarantees over the privacy of the LLM generation distribution over a prompt distribution. Lumos is simple to program in, requiring only a few constructs, as evidenced by state-of-the-art large language models generating correct Lumos specifications in zero-shot settings. Lumos is the first systematic and extensible language-based framework for specifying and certifying LMS behaviors, paving the way for a wider adoption of LMS certification.",
+  "doi": "10.48550/arxiv.2512.02966",
+  "openalex": "W4417011602",
+  "status": "ok",
+  "title": "Lumos: Let there be Language Model System Certification"
+ },
+ "s2-9d32f8c47f4c3c1f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "CogniConsole: Externalizing Inference-Time Control as a Formal Abstraction for Reliable LLM Interactions"
+ },
+ "s2-a393d3e0677c2269": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Appendix: A survey on large language models for software engineering"
+ },
+ "s2-eedfc7ee0907166d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "NVIDIA-labs OO Agents: Native Python Object-Oriented Agents"
+ }
+}

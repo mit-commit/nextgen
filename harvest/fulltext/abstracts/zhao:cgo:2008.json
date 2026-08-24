@@ -1,0 +1,436 @@
+{
+ "10.1002_cpe.1760": {
+  "abstract": "Abstract Many profilers for virtual execution environments, such as the Java virtual machine (JVM), are implemented with low‐level bytecode instrumentation techniques, which is tedious, error‐prone, and complicates maintenance and extension of the tools. In order to reduce the development time and cost, we promote building profilers for the JVM using high‐level aspect‐oriented programming (AOP). We show that the use of aspects yields concise profilers that are easy to develop, extend, and maintain, because low‐level instrumentation details are hidden from the tool developer. In order to build efficient profilers, we introduce inter‐advice communication, an extension to common AOP languages that enables efficient data passing between advices that are woven into the same method using local variables. We illustrate our approach with two case studies. First, we show that an existing, instrumentation‐based tool for listener latency profiling can be easily recast as an aspect. Second, we present an aspect for comprehensive calling context profiling. In order to reduce profiling overhead, our aspect parallelizes application execution and profile creation, resulting in a speedup of 110% on a machine with more than two cores, compared with a primitive, non‐parallel approach. Copyright © 2011 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.1760",
+  "openalex": "W2100052503",
+  "status": "ok",
+  "title": "Flexible and efficient profiling with aspect‐oriented programming"
+ },
+ "10.1007_978-3-642-24151-2_13": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-24151-2_13",
+  "openalex": "W112476737",
+  "status": "no_abstract",
+  "title": "MT-Profiler: A Parallel Dynamic Analysis Framework Based on Two-Stage Sampling"
+ },
+ "10.1007_978-3-642-31202-1_5": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-31202-1_5",
+  "openalex": "W1906860997",
+  "status": "no_abstract",
+  "title": "A Comparison of the Influence of Different Multi-core Processors on the Runtime Overhead for Application-Level Monitoring"
+ },
+ "10.1007_s13198-019-00799-5": {
+  "abstract": null,
+  "doi": "10.1007/s13198-019-00799-5",
+  "openalex": "W2945981973",
+  "status": "no_abstract",
+  "title": "Analysis of cache behaviour and software optimizations for faster on-chip network simulations"
+ },
+ "10.1016_b978-0-12-800162-2.00002-6": {
+  "abstract": null,
+  "doi": "10.1016/b978-0-12-800162-2.00002-6",
+  "openalex": "W2398906666",
+  "status": "no_abstract",
+  "title": "Exploiting Hardware Monitoring in Software Engineering"
+ },
+ "10.1109_acsac63791.2024.00053": {
+  "abstract": "The increased parallelism in modern processors has sparked interest in offloading security policy enforcement to processes or hardware operating in parallel with the main application. This approach can reduce application latency, enhance security, and improve compatibility. However, existing software solutions often incur high overheads and are susceptible to memory corruption attacks, while hardware solutions tend to be inflexible and require substantial modifications to the processor. In this paper, we present Sidecar, a novel approach that offloads security checks to run concurrently with applications by leveraging the debugging infrastructure available in commodity processors. Specifically, we utilize software-driven logging (SDL) extensions in Intel and Arm processors to create secure, append-only channels between applications and security monitors. We build and evaluate a prototype of Sidecar for the x86-64 and Aarch64 architectures. To demonstrate its utility, we adapt well-known security de-fenses within Sidecar, providing control-flow integrity (CFI), shadow call stacks (SCS), and memory error checking (ASan). Our evaluation shows that these extensions perform better on the Intel architecture. In terms of defenses, Sidecar reduces the latency of CFI in the tested real-world applications by an average of 30%, offers enhanced security with similar overhead for SCS, and is versatile enough to support complex defenses like ASan. Furthermore, our security monitor for CFI+SCS is 30 times more efficient compared to previous work.",
+  "doi": "10.1109/acsac63791.2024.00053",
+  "openalex": "W4408565886",
+  "status": "ok",
+  "title": "Sidecar: Leveraging Debugging Extensions in Commodity Processors to Secure Software"
+ },
+ "10.1109_cgo.2013.6494982": {
+  "abstract": "Profile-guided optimization possesses huge potential to save costs for datacenters. Hardware performance monitoring units enable profiling with negligible overhead and they have been proven to be effective to help programmers find code regions to optimize by monitoring datacenter applications continuously on live traffic. However, these hardware features are inflexible and often buggy, limiting the types of data that can be gathered. Instrumentation-based profiling can complement or replace hardware functionality by providing more flexible and targeted information gathering. Unfortunately, the overhead of existing instrumentation mechanisms prevents their use in production runs. In order to be used in datacenters, we need a profiling mechanism to impose overheads of less than a few percent, in terms of both throughput and latency, while still generating meaningful profile data. This paper presents instant profiling, an instrumentation sampling technique using dynamic binary translation. Instead of instrumenting the entire execution, instant profiling periodically interleaves native execution and instrumented execution according to configurable profiling duration and frequency parameters. It further reduces the latency degradation of initial profiling phases by pre-populating a software code cache. We evaluate the performance and effectiveness of this new profiling technique on the SPEC CINT2006 benchmark suite and two datacenter application benchmarks. We show that it is well-suited for deployment to datacenters by incurring less than 6% slowdown and 3% computational overhead on average.",
+  "doi": "10.1109/cgo.2013.6494982",
+  "openalex": "W2022666100",
+  "status": "ok",
+  "title": "Instant profiling: Instrumentation sampling for profiling datacenter applications"
+ },
+ "10.1109_emsoft.2013.6658603": {
+  "abstract": "Program analysis tools are essential for understanding programs, analyzing performance, and optimizing code. Some of these tools use code instrumentation to extract information at runtime. The instrumentation process can alter program behavior such as timing behavior and memory consumption. Time-sensitive programs, however, must meet specific timing constraints and thus require that the instrumentation process, for instance, bounds the timing overhead. Time-aware instrumentation techniques try to honor the timing constraints of such programs. All previous techniques, however, support only static source-code instrumentation methods. Hence, they become impractical beyond microcontroller code for instrumenting large programs along with all their library dependencies. In this work, we propose DIME, a time-aware dynamic binary instrumentation technique that adds an adjustable bound on the timing overhead to the program under analysis. We implement DIME using the dynamic instrumentation framework, Pin. Quantitative evaluation of the three implementation alternatives shows an average reduction of the instrumentation overhead by 12, 7, and 3 folds compared to native Pin. Instrumenting the VLC media player and a laser beam stabilization experiment demonstrate the practicality and scalability of DIME.",
+  "doi": "10.1109/emsoft.2013.6658603",
+  "openalex": "W4232520646",
+  "status": "ok",
+  "title": "DIME: Time-aware dynamic binary instrumentation using rate-based resource allocation"
+ },
+ "10.1109_ispass.2015.7095815": {
+  "abstract": "Computer system designers need a deep understanding of end users' workload in order to arrive at an optimum design. Unfortunately, many end users will not share their software to designers due to the proprietary or confidential nature of their software. Researchers have proposed workload cloning, which is a process of extracting statistics that summarize the behavior of users' workloads through profiling, followed by using them to drive the generation of a representative synthetic workload (clone). Clones can be used in place of the original workloads to evaluate computer system performance, helping designers to understand the behavior of users workload on the simulated machine models without the users having to disclose proprietary or sensitive information about the original workload. In this paper, we propose infusing environment-specific information into the clone. This Environment-Specific Clone (ESC) enables the simulation of hypothetical cache configurations directly on a machine with a different cache configuration. We validate ESC on both real systems as well as cache simulations. Furthermore, we present a case study of how page mapping affects cache performance. ESC enables such a study at native machine speed by infusing the page mapping information into clones, without needing to modify the OS or hardware. We then analyze the factors that determine how page mapping impact cache performance, and how various applications are affected differently.",
+  "doi": "10.1109/ispass.2015.7095815",
+  "openalex": "W2014208552",
+  "status": "ok",
+  "title": "Emulating cache organizations on real hardware using performance cloning"
+ },
+ "10.1109_ispass.2018.00030": {
+  "abstract": "Hardware/software co-design and software profiling rest on the ability to perform a range of workload analyses. State-of-the-art tools and methods used in such analyses utilize either custom solutions or complex frameworks. There are two problems with this approach: 1) duplicated development work when moving to new and unsupported frameworks or platforms, and 2) the additional burden of in-depth knowledge required to develop the analysis tools. This work presents a methodology to solve these inefficiencies by decoupling workload analysis from the underlying techniques used to observe the workload. The interface is designed to be cross-platform and presents workloads as a set of configurable events with scalable levels-of-detail. An implementation of the methodology, PRISM, is presented which leverages two popular dynamic binary instrumentation tools, Valgrind and DynamoRIO, and additionally Intel PT via Linux perf. The goals of the methodology are three-fold: modularity, flexibility, and productivity. Three analyses are conducted using PRISM to demonstrate these properties: 1) discrepancies are assessed between workloads generated with Valgrind, DynamoRIO, and perf, 2) scalability of a complex Valgrind trace generation tool is improved, and 3) prototyping of a new dynamic loop detection and data-dependence tool is demonstrated. The average overhead of PRISM compared to in-framework analysis is 33% in the worse case and under 1% during typical analysis.",
+  "doi": "10.1109/ispass.2018.00030",
+  "openalex": "W2805103555",
+  "status": "ok",
+  "title": "Towards Cross-Framework Workload Analysis via Flexible Event-Driven Interfaces"
+ },
+ "10.1109_mascots.2017.19": {
+  "abstract": "Software systems with quality of service (QoS), such as database management systems and web servers, are ubiquitous. Such systems must meet strict performance requirements. Instrumentation is a useful technique for the analysis and debugging of QoS systems. Dynamic binary instrumentation (DBI) extracts runtime information to comprehend system's behavior and detect performance bottlenecks. However, existing DBI tools are intrusive; adding unacceptable delay to the program execution. Such delay alters the performance requirements and degrades the overall quality and the user experience of the system. Moreover, the delay may change the system behavior, thus, producing misleading run-time information. This paper presents QDIME, a QoS-aware dynamic binary instrumentation technique that respects system's performance requirements. QDIME takes a user-defined QoS threshold as an input and periodically gathers QoS feedback from the system under analysis to decide its instrumentation budget. We implemented QDIME on top of PIN, a popular DBI framework. We evaluated QDIME with Gzip, MySQL server, Apache HTTP server, and Redis. The experiments show that QDIME respects the user-defined QoS threshold and, thus, improves the performance of the monitored application by manifolds. QDIME is able to provide up to 100% instrumentation coverage with an average of 92% when compared to PIN. Moreover, QDIME reduces the slow-down factor of the instrumented application by 1.41, 5.67, and 10.26 folds for Sys-trace, Call-trace, and Branch-profile respectively. A release of QDIME is available for download at https://github.com/pansy-arafa/qdime.",
+  "doi": "10.1109/mascots.2017.19",
+  "openalex": "W2768493132",
+  "status": "ok",
+  "title": "QDIME: QoS-Aware Dynamic Binary Instrumentation"
+ },
+ "10.1109_micro.2010.49": {
+  "abstract": "As multicore processors are deployed in mainstream computing, the need for software tools to help parallelize programs is increasing dramatically. Data-dependence profiling is an important technique to exploit parallelism in programs. More specifically, manual or automatic parallelization can use the outcomes of data-dependence profiling to guide where to parallelize in a program. However, state-of-the-art data-dependence profiling techniques are not scalable as they suffer from two major issues when profiling large and long-running applications: (1) runtime overhead and (2) memory overhead. Existing data-dependence profilers are either unable to profile large-scale applications or only report very limited information. In this paper, we propose a scalable approach to data-dependence profiling that addresses both runtime and memory overhead in a single framework. Our technique, called SD3, reduces the runtime overhead by parallelizing the dependence profiling step itself. To reduce the memory overhead, we compress memory accesses that exhibit stride patterns and compute data dependences directly in a compressed format. We demonstrate that SD3reduces the runtime overhead when profiling SPEC 2006 by a factor of 4.1× and 9.7× on eight cores and 32 cores, respectively. For the memory overhead, we successfully profile SPEC 2006 with the reference input, while the previous approaches fail even with the train input. In some cases, we observe more than a 20× improvement in memory consumption and a 16× speedup in profiling time when 32 cores are used.",
+  "doi": "10.1109/micro.2010.49",
+  "openalex": "W2147801215",
+  "status": "ok",
+  "title": "SD3: A Scalable Approach to Dynamic Data-Dependence Profiling"
+ },
+ "10.1109_micro.2016.7783762": {
+  "abstract": "This paper presents Spectral Profiling, a new method for profiling program execution without instrumenting or otherwise affecting the profiled system. Spectral Profiling monitors EM emanations unintentionally produced by the profiled system, looking for spectral “spikes” produced by periodic program activity (e.g. loops). This allows Spectral Profiling to determine which parts of the program have executed at what time. By analyzing the frequency and shape of the spectral “spike”, Spectral Profiling can obtain additional information such as the per-iteration execution time of a loop. The key advantage of Spectral Profiling is that it can monitor a system as-is, without program instrumentation, system activity, etc. associated with the profiling itself, i.e. it completely eliminates the “Observer's Effect” and allows profiling of programs whose execution is performance-dependent and/or programs that run on even the simplest embedded systems that have no resources or support for profiling. We evaluate the effectiveness of Spectral Profiling by applying it to several benchmarks from MiBench suite on a real system, and also on a cycle-accurate simulator. Our results confirm that Spectral Profiling yields useful information about the runtime behavior of a program, allowing Spectral Profiling to be used for profiling in systems where profiling infrastructure is not available, or where profiling overheads may perturb the results too much (“Observer's Effect”).",
+  "doi": "10.1109/micro.2016.7783762",
+  "openalex": "W4253642498",
+  "status": "ok",
+  "title": "Spectral profiling: Observer-effect-free profiling by monitoring EM emanations"
+ },
+ "10.1109_saner.2016.106": {
+  "abstract": "Software instrumentation techniques are widely used in program analysis tasks such as program profiling, vulnerability discovering, and security-oriented transforming. In this paper, we present an instrumentation tool called UROBOROS, which supports static instrumentation on stripped binaries. Due to the lack of relocation and debug information, reverse engineering of stripped binaries is challenging. Compared with the previous work, UROBOROS can provide complete, easy-to-use, transparent, and efficient static instrumentation on stripped binaries. UROBOROS supports complete instrumentation by statically recovering the relocatable program (including both code and data sections) and the control flow structures from binary code. UROBOROS provides a rich API to access and manipulate different levels of the program tructure. The instrumentation facilities of UROBOROS are easy-to-use, users with no binary rewriting and patching skills can directly manipulate stripped binaries to perform smooth program transformations. Distinguished from most instrumentation tools that need to patch the instrumentation code as new sections, UROBOROS can directly inline the instrumentation code into the disassembled program, which provides transparent instrumentation on stripped binaries. For efficiency, in the rewritten output of existing tools, frequent control transfers between the attached and original sections can incur a considerable performance penalty. However, the output from UROBOROS incurs no extra cost because the original and instrumentation code are connected by \"fall-through\" transfers. We perform comparative evaluations between UROBOROS and the state-of-the-art binary instrumentation tools, including DynInst and Pin. To demonstrate the versatility of UROBOROS, we also implement two real-world reengineering tasks which could be challenging for other instrumentation tools to accomplish. Our experimental results show that UROBOROS outperforms theexisting binary instrumentation tools with better performance, lower labor cost, and a broader scope of applications.",
+  "doi": "10.1109/saner.2016.106",
+  "openalex": "W2407989913",
+  "status": "ok",
+  "title": "UROBOROS: Instrumenting Stripped Binaries with Static Reassembling"
+ },
+ "10.1109_sbac-pad.2014.35": {
+  "abstract": "Dynamic Binary Modification (DBM) tools are useful for cross-platform execution of binaries and are powerful run time environments that allow execution optimizations, instrumentation and profiling. These tools have also been used as enablers for control-flow integrity verification, a process that consists in the observation and analysis of a program's execution path focusing on the detection of anomalies, such as those arising from flow corruption based software attacks. Even though this class of tools helps us in identifying a myriad of attacks, it is typically expensive at run time and introduce significant overhead to the program execution. Considering their inherent high cost, further expanding the capabilities of such tools for detection of program flow anomalies can slow down the analysis to the point that it is unfeasible to run it in real world workflows. In this paper we present a mechanism for including program flow verification in DBMs that uses asynchronous analysis and applies different parallel-programming techniques that leverage current multi-core systems to control the overhead of our analysis. Our mechanism was tested against synthetic program flow corruption use cases and correctly detected all detours. With our new optimizations, we show that our system achieves an slowdown of only 1.46x, while a naively implemented verification system face 4.22x of overhead.",
+  "doi": "10.1109/sbac-pad.2014.35",
+  "openalex": "W1999299814",
+  "status": "ok",
+  "title": "Leveraging Optimization Methods for Dynamically Assisted Control-Flow Integrity Mechanisms"
+ },
+ "10.1109_tc.2012.182": {
+  "abstract": "As multicore processors are deployed in mainstream computing, the need for software tools to help parallelize programs is increasing dramatically. Data-dependence profiling is an important program analysis technique to exploit parallelism in serial programs. More specifically, manual, semiautomatic, or automatic parallelization can use the outcomes of data-dependence profiling to guide where and how to parallelize in a program. However, state-of-the-art data-dependence profiling techniques consume extremely huge resources as they suffer from two major issues when profiling large and long-running applications: 1) runtime overhead and 2) memory overhead. Existing data-dependence profilers are either unable to profile large-scale applications with a typical resource budget or only report very limited information. In this paper, we propose an efficient approach to data-dependence profiling that can address both runtime and memory overhead in a single framework. Our technique, called SD$({}^3)$, reduces the runtime overhead by parallelizing the dependence profiling step itself. To reduce the memory overhead, we compress memory accesses that exhibit stride patterns and compute data dependences directly in a compressed format. We demonstrate that SD$({}^3)$ reduces the runtime overhead when profiling SPEC 2006 by a factor of 4.1× and 9.7× on eight cores and 32 cores, respectively. For the memory overhead, we successfully profile 22 SPEC 2006 benchmarks with the reference input, while the previous approaches fail even with the train input. In some cases, we observe more than a 20× improvement in memory consumption and a 16× speedup in profiling time when 32 cores are used. We also demonstrate the usefulness of SD$({}^3)$ by showing manual parallelization followed by data dependence profiling results.",
+  "doi": "10.1109/tc.2012.182",
+  "openalex": "W2015974582",
+  "status": "ok",
+  "title": "SD3: An Efficient Dynamic Data-Dependence Profiling Mechanism"
+ },
+ "10.1109_tse.2015.2396514": {
+  "abstract": "Performance is a crucial attribute for most software, making performance analysis an important software engineering task. The difficulty is that modern applications are challenging to analyse for performance. Many profiling techniques used in real-world software development struggle to provide useful results when applied to large-scale object-oriented applications. There is a substantial body of research into software performance generally but currently there exists no survey of this research that would help identify approaches useful for object-oriented software. To provide such a review we performed a systematic mapping study of empirical performance analysis approaches that are applicable to object-oriented software. Using keyword searches against leading software engineering research databases and manual searches of relevant venues we identified over 5,000 related articles published since January 2000. From these we systematically selected 253 applicable articles and categorised them according to ten facets that capture the intent, implementation and evaluation of the approaches. Our mapping study results allow us to highlight the main contributions of the existing literature and identify areas where there are interesting opportunities. We also find that, despite the research including approaches specifically aimed at object-oriented software, there are significant challenges in providing actionable feedback on the performance of large-scale object-oriented applications.",
+  "doi": "10.1109/tse.2015.2396514",
+  "openalex": "W2046440499",
+  "status": "ok",
+  "title": "Performance Analysis for Object-Oriented Software: A Systematic Mapping"
+ },
+ "10.1145_1504176.1504189": {
+  "abstract": "The efficient mapping of program parallelism to multi-core processors is highly dependent on the underlying architecture. This paper proposes a portable and automatic compiler-based approach to mapping such parallelism using machine learning. It develops two predictors: a data sensitive and a data insensitive predictor to select the best mapping for parallel programs. They predict the number of threads and the scheduling policy for any given program using a model learnt off-line. By using low-cost profiling runs, they predict the mapping for a new unseen program across multiple input data sets. We evaluate our approach by selecting parallelism mapping configurations for OpenMP programs on two representative but different multi-core platforms (the Intel Xeon and the Cell processors). Performance of our technique is stable across programs and architectures. On average, it delivers above 96% performance of the maximum available on both platforms. It achieve, on average, a 37% (up to 17.5 times) performance improvement over the OpenMP runtime default scheme on the Cell platform. Compared to two recent prediction models, our predictors achieve better performance with a significant lower profiling cost.",
+  "doi": "10.1145/1504176.1504189",
+  "openalex": "W2166536280",
+  "status": "ok",
+  "title": "Mapping parallelism to multi-cores"
+ },
+ "10.1145_1594835.1504189": {
+  "abstract": "The efficient mapping of program parallelism to multi-core processors is highly dependent on the underlying architecture. This paper proposes a portable and automatic compiler-based approach to mapping such parallelism using machine learning. It develops two predictors: a data sensitive and a data insensitive predictor to select the best mapping for parallel programs. They predict the number of threads and the scheduling policy for any given program using a model learnt off-line. By using low-cost profiling runs, they predict the mapping for a new unseen program across multiple input data sets. We evaluate our approach by selecting parallelism mapping configurations for OpenMP programs on two representative but different multi-core platforms (the Intel Xeon and the Cell processors). Performance of our technique is stable across programs and architectures. On average, it delivers above 96% performance of the maximum available on both platforms. It achieve, on average, a 37% (up to 17.5 times ) performance improvement over the OpenMP runtime default scheme on the Cell platform. Compared to two recent prediction models, our predictors achieve better performance with a significant lower profiling cost.",
+  "doi": "10.1145/1594835.1504189",
+  "openalex": "W2998249817",
+  "status": "ok",
+  "title": "Mapping parallelism to multi-cores"
+ },
+ "10.1145_1639949.1640101": {
+  "abstract": "Software has spent the bounty of Moore's law by solving harder problems and exploiting abstractions, such as high-level languages, virtual machine technology, binary rewriting, and dynamic analysis. Abstractions make programmers more productive and programs more portable, but usually slow them down. Since Moore's law is now delivering multiple cores instead of faster processors, future systems must either bear a relatively higher cost for abstractions or use some cores to help tolerate abstraction costs. This paper presents the design, implementation, and evaluation of a novel concurrent, configurable dynamic analysis framework that efficiently utilizes multicore cache architectures. It introduces Cache-friendly Asymmetric Buffering (CAB), a lock-free ring-buffer that implements efficient communication between application and analysis threads. We guide the design and implementation of our framework with a model of dynamic analysis overheads. The framework implements exhaustive and sampling event processing and is analysis-neutral. We evaluate the framework with five popular and diverse analyses, and show performance improvements even for lightweight, low-overhead analyses. Efficient inter-core communication is central to high performance parallel systems and we believe the CAB design gives insight into the subtleties and difficulties of attaining it for dynamic analysis and other parallel software.",
+  "doi": "10.1145/1639949.1640101",
+  "openalex": "W2168874123",
+  "status": "ok",
+  "title": "A concurrent dynamic analysis framework for multicore hardware"
+ },
+ "10.1145_1640089.1640101": {
+  "abstract": "Software has spent the bounty of Moore's law by solving harder problems and exploiting abstractions, such as high-level languages, virtual machine technology, binary rewriting, and dynamic analysis. Abstractions make programmers more productive and programs more portable, but usually slow them down. Since Moore's law is now delivering multiple cores instead of faster processors, future systems must either bear a relatively higher cost for abstractions or use some cores to help tolerate abstraction costs.",
+  "doi": "10.1145/1640089.1640101",
+  "openalex": "W4232090211",
+  "status": "ok",
+  "title": "A concurrent dynamic analysis framework for multicore hardware"
+ },
+ "10.1145_1791194.1791202": {
+  "abstract": "Dynamic binary instrumentation systems are useful tools for a wide range of tasks including program analysis, security policy enforcement, and architectural simulation. The overhead of such systems is a primary concern, as some tasks introduce as much as several orders of magnitude slowdown. A large portion of this overhead stems from both data collection and analysis. In this paper, we present a method to reduce overhead by decoupling data collection from analysis. We accomplish this by buffering the data for analysis in bulk. We implement buffering as an extension to Pin, a popular dynamic instrumentation system. For collecting a memory trace, we see an average improvement of nearly 4x compared to the best-known implementation of buffering using the existing Pin API.",
+  "doi": "10.1145/1791194.1791202",
+  "openalex": "W2011847291",
+  "status": "ok",
+  "title": "Improving instrumentation speed via buffering"
+ },
+ "10.1145_1880037.1880038": {
+  "abstract": "Profiling and online analysis are important tasks in program understanding and feedback-directed optimization. However, fine-grained profiling and online analysis tend to seriously slow down the application. To cope with the slowdown, one may have to terminate the process early or resort to sampling. The former tends to distort the result because of warm-up effects. The latter runs the risk of missing important effects because sampling was turned off during the time that these effects appeared. A promising approach is to make use of the parallel processing capabilities of the now ubiquitous multicore processors to speed up the profiling and analysis process. In this article, we present Pipelined Profiling and Analysis (PiPA), which is a novel technique for parallelizing dynamic program profiling and analysis by taking advantage of multicore systems. In essence, the application under examination is profiled using a dynamic instrumentation tool. Optimized instrumentation code outputs the profile information in a succinct format, that we call the REP format, to buffers. This lightweight trace compression minimizes the processing overhead impinged on the application whenever a buffer is full. Another thread recovers the required information from the REP buffer. The recovered full profile is then divided up and passed to multiple threads for further analysis. To achieve the best performance, the entire system has to be well-balanced. We have implemented prototypes of PiPA using two dynamic instrumentation systems, namely DynamoRIO and Pin, thereby demonstrating its portability. Our experiments show that PiPA is able to speed up the overall profiling and analysis tasks significantly. Compared to the more than 100× slowdown of Cachegrind and the 32× slowdown of Pin dcache, we achieved a mere 10.2× slowdown on an 8-core system. In this paper, we will also describe the insights we gained in obtaining the balance needed for PiPA to perform optimally.",
+  "doi": "10.1145/1880037.1880038",
+  "openalex": "W1964104501",
+  "status": "ok",
+  "title": "PiPA"
+ },
+ "10.1145_2151024.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application.",
+  "doi": "10.1145/2151024.2151043",
+  "openalex": "W2133692747",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2259016.2259048": {
+  "abstract": "Parallelization is attractive for speeding up dynamic program analysis on multicores. However, inter-thread communication overhead may outweigh any benefit from parallel execution. We propose deferred methods, a high-level Java framework to accelerate dynamic analysis on multicores. To minimize inter-thread communication overhead, invocations to analysis methods are automatically aggregated in thread-local buffers that are processed when full. In contrast to other approaches, our framework supports custom buffer processing strategies, eases pre-processing of buffers to reduce contention on shared data structures, and offers a synchronization mechanism to wait for the completion of previously invoked deferred methods. We also present a novel adaptive buffer processing strategy that parallelizes the analysis only when the observed workload leaves some CPU cores under-utilized. Using a profiler as case study, we show that deferred methods with the adaptive buffer processing strategy yield an average speedup of factor 4.09 on a quad-core machine. The speedup stems both from parallelization and from reduced contention.",
+  "doi": "10.1145/2259016.2259048",
+  "openalex": "W2032282161",
+  "status": "ok",
+  "title": "Deferred methods"
+ },
+ "10.1145_2304576.2304584": {
+  "abstract": "Execution-driven data dependence profiling has gained significant interest as a tool to compensate the weakness of static data dependence analysis. Although such dependence profiling is valid for specific inputs only, its result can be used in many ways for program parallelization. Unfortunately, traditional hash-based dependence profiling can take tremendous memory and machine time, which severely limits its practical use. In this paper, we propose new compiler-based techniques to perform fast loop-level data dependence profiling. Firstly, using type consistency and alias information, our compiler embeds memory tags into the data structures in the original program such that memory addresses can be efficiently compared for dependence testing. This approach avoids the bytewise hashing overhead in conventional profiling methods. Secondly, we prove that a partial dependence graph obtained from profiling is sufficient for loop-level reordering transformations and parallelization. Such partial dependence graph can be obtained very fast, without having to exhaustively enumerate all dependence edges. Thirdly, our compiler partitions the profiling task into independent slices. Such slices can be profiled in parallel, producing subgraphs which are eventually combined automatically into the complete data dependence graph by the compiler. Experiments show that these techniques significantly reduce the memory use and shorten the profiling time (by an order of magnitude for several SPEC2006 benchmarks). Benchmarks too big to profile at all loop levels by previous methods can now be profiled fully within several hours.",
+  "doi": "10.1145/2304576.2304584",
+  "openalex": "W2018931757",
+  "status": "ok",
+  "title": "Fast loop-level data dependence profiling"
+ },
+ "10.1145_2338965.2336756": {
+  "abstract": "Retrofitting existing software for the increasingly dominant multicore microprocessors has a strong appeal from the economic point of view. One of the key issues in such an effort is to fully understand the data dependences in the existing software. Unfortunately, current compilers have quite limited ability to analyze data dependences. Therefore, execution-driven data dependence profiling has gained significant interest because it can resolve memory access ambiguity exactly during program execution, which allows data dependences to be analyzed exactly. Although such dependence profiling is valid for specific inputs only, the insight it provides can be highly valuable to software engineers in their parallelization effort. On the other hand, dependence profiling itself can take tremendous memory and machine time. In this paper, we propose a novel dependence profiling method which, with the support of several new compiler and runtime techniques, partitions the profiling task into many independent slices, each requiring significantly less memory. Different slices can be profiled in parallel, producing subgraphs which are eventually combined automatically into the complete data dependence graph by the compiler. The slices can be extracted with different degrees of granularity. Experiments show that, for several well-known benchmark programs, our parallel scheme shortens the profiling time by a few orders of magnitude.",
+  "doi": "10.1145/2338965.2336756",
+  "openalex": "W2140242465",
+  "status": "ok",
+  "title": "Multi-slicing: a compiler-supported parallel approach to data dependence profiling"
+ },
+ "10.1145_2365864.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application. Transparency has historically been provided on an ad-hoc basis, as a reaction to observed problems in target applications. This paper identifies a necessary set of transparency requirements for running mainstream Windows and Linux applications. We discuss possible solutions to each transparency issue, evaluate tradeoffs between different choices, and identify cases where maintaining transparency is not practically solvable. We believe this will provide a guideline for better design and implementation of transparent dynamic instrumentation, as well as other similar process virtualization systems using software code caches.",
+  "doi": "10.1145/2365864.2151043",
+  "openalex": "W2996990589",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2508859.2516704": {
+  "abstract": "Dynamic data flow tracking (DFT) is a technique broadly used in a variety of security applications that, unfortunately, exhibits poor performance, preventing its adoption in production systems. We present ShadowReplica, a new and efficient approach for accelerating DFT and other shadow memory-based analyses, by decoupling analysis from execution and utilizing spare CPU cores to run them in parallel. Our approach enables us to run a heavyweight technique, like dynamic taint analysis (DTA), twice as fast, while concurrently consuming fewer CPU cycles than when applying it in-line. DFT is run in parallel by a second shadow thread that is spawned for each application thread, and the two communicate using a shared data structure. We avoid the problems suffered by previous approaches, by introducing an off-line application analysis phase that utilizes both static and dynamic analysis methodologies to generate optimized code for decoupling execution and implementing DFT, while it also minimizes the amount of information that needs to be communicated between the two threads. Furthermore, we use a lock-free ring buffer structure and an N-way buffering scheme to efficiently exchange data between threads and maintain high cache-hit rates on multi-core CPUs. Our evaluation shows that ShadowReplica is on average ~2.3× faster than in-line DFT (~2.75× slowdown over native execution) when running the SPEC CPU2006 benchmark, while similar speed ups were observed with command-line utilities and popular server software. Astoundingly, ShadowReplica also reduces the CPU cycles used up to 30%.",
+  "doi": "10.1145/2508859.2516704",
+  "openalex": "W2019641142",
+  "status": "ok",
+  "title": "ShadowReplica"
+ },
+ "10.1145_2517208.2517219": {
+  "abstract": "Dynamic analysis tools are often implemented using instrumentation, particularly on managed runtimes including the Java Virtual Machine (JVM). Performing instrumentation robustly is especially complex on such runtimes: existing frameworks offer limited coverage and poor isolation, while previous work has shown that apparently innocuous instrumentation can cause deadlocks or crashes in the observed application. This paper describes ShadowVM, a system for instrumentation-based dynamic analyses on the JVM which combines a number of techniques to greatly improve both isolation and coverage. These centre on the offload of analysis to a separate process; we believe our design is the first system to enable genuinely full bytecode coverage on the JVM. We describe a working implementation, and use a case study to demonstrate its improved coverage and to evaluate its runtime overhead.",
+  "doi": "10.1145/2517208.2517219",
+  "openalex": "W2114257355",
+  "status": "ok",
+  "title": "ShadowVM"
+ },
+ "10.1145_2637365.2517219": {
+  "abstract": "Dynamic analysis tools are often implemented using instrumentation, particularly on managed runtimes including the Java Virtual Machine (JVM). Performing instrumentation robustly is especially complex on such runtimes: existing frameworks offer limited coverage and poor isolation, while previous work has shown that apparently innocuous instrumentation can cause deadlocks or crashes in the observed application. This paper describes ShadowVM, a system for instrumentation-based dynamic analyses on the JVM which combines a number of techniques to greatly improve both isolation and coverage. These centre on the offload of analysis to a separate process; we believe our design is the first system to enable genuinely full bytecode coverage on the JVM. We describe a working implementation, and use a case study to demonstrate its improved coverage and to evaluate its runtime overhead.",
+  "doi": "10.1145/2637365.2517219",
+  "openalex": "W4231677933",
+  "status": "ok",
+  "title": "ShadowVM"
+ },
+ "10.1145_2656045.2656062": {
+  "abstract": "Software instrumentation has been a convenient and portable approach for dynamic analysis, debugging, or profiling of program execution. Unfortunately, instrumentation may change the temporal behavior of multi-threaded program execution and result in different ordering of thread operations, which is called probe effect. While the approaches to reduce instrumentation overhead, to enable reproducible execution, and to enforce deterministic threading have been studied, no research has yet answered if an instrumented execution has the same behavior as the program execution without any instrumentation and how the execution gets changed if there were any. In this paper, we propose a simulation-based analysis to detect the changes of execution event ordering that are induced by instrumentation operations. The execution model of a program is constructed from the trace of instrumented program execution and is used in a simulation analysis where instrumentation overhead is removed. As a consequence, we can infer the ordering of events in the original program execution and verify the existence of probe effect resulted from instrumentation.",
+  "doi": "10.1145/2656045.2656062",
+  "openalex": "W2002222606",
+  "status": "ok",
+  "title": "On the existence of probe effect in multi-threaded embedded programs"
+ },
+ "10.1145_2749469.2750401": {
+  "abstract": "Developers and architects spend a lot of time trying to understand and eliminate performance problems. Unfortunately, the root causes of many problems occur at a fine granularity that existing continuous profiling and direct measurement approaches cannot observe. This paper presents the design and implementation of Shim, a continuous profiler that samples at resolutions as fine as 15 cycles; three to five orders of magnitude finer than current continuous profilers. Shim's fine-grain measurements reveal new behaviors, such as variations in instructions per cycle (IPC) within the execution of a single function. A Shim observer thread executes and samples autonomously on unutilized hardware. To sample, it reads hardware performance counters and memory locations that store software state. Shim improves its accuracy by automatically detecting and discarding samples affected by measurement skew. We measure Shim's observer effects and show how to analyze them. When on a separate core, Shim can continuously observe one software signal with a 2% overhead at a ~1200 cycle resolution. At an overhead of 61%, Shim samples one software signal on the same core with SMT at a ~15 cycle resolution. Modest hardware changes could significantly reduce overheads and add greater analytical capability to Shim. We vary prefetching and DVFS policies in case studies that show the diagnostic power of fine-grain IPC and memory bandwidth results. By repurposing existing hardware, we deliver a practical tool for fine-grain performance microscopy for developers and architects.",
+  "doi": "10.1145/2749469.2750401",
+  "openalex": "W1973718751",
+  "status": "ok",
+  "title": "Computer performance microscopy with S him"
+ },
+ "10.1145_2776893": {
+  "abstract": "Parallel programs can be characterized by task graphs encoding instructions, memory accesses, and the parallel work’s dependencies, while representing any threading library and architecture. This article presents Contech, a high performance framework for generating dynamic task graphs from arbitrary parallel programs, and a novel representation enabling programmers and compiler optimizations to understand and exploit program aspects. The Contech framework supports a variety of languages (including C, C++, and Fortran), parallelization libraries, and ISAs (including × 86 and ARM). Running natively for collection speed and minimizing program perturbation, the instrumentation shows 4 × improvement over a Pin-based implementation on PARSEC and NAS benchmarks.",
+  "doi": "10.1145/2776893",
+  "openalex": "W1037867572",
+  "status": "ok",
+  "title": "Contech"
+ },
+ "10.1145_2872887.2750401": {
+  "abstract": "Developers and architects spend a lot of time trying to understand and eliminate performance problems. Unfortunately, the root causes of many problems occur at a fine granularity that existing continuous profiling and direct measurement approaches cannot observe. This paper presents the design and implementation of S him , a continuous profiler that samples at resolutions as fine as 15 cycles; three to five orders of magnitude finer than current continuous profilers. S him 's fine-grain measurements reveal new behaviors, such as variations in instructions per cycle (IPC) within the execution of a single function. A S him observer thread executes and samples autonomously on unutilized hardware. To sample, it reads hardware performance counters and memory locations that store software state. S him improves its accuracy by automatically detecting and discarding samples affected by measurement skew. We measure S him 's observer effects and show how to analyze them. When on a separate core, S him can continuously observe one software signal with a 2% overhead at a ~1200 cycle resolution. At an overhead of 61%, S him samples one software signal on the same core with SMT at a ~15 cycle resolution. Modest hardware changes could significantly reduce overheads and add greater analytical capability to S him . We vary prefetching and DVFS policies in case studies that show the diagnostic power of fine-grain IPC and memory bandwidth results. By repurposing existing hardware, we deliver a practical tool for fine-grain performance microscopy for developers and architects.",
+  "doi": "10.1145/2872887.2750401",
+  "openalex": "W4230043734",
+  "status": "ok",
+  "title": "Computer performance microscopy with S him"
+ },
+ "10.1145_3008661": {
+  "abstract": "Many performance optimizations rely on or are enhanced by runtime profile information. However, both offline and online profiling techniques suffer from intrinsic and practical limitations that affect the quality of delivered profile data. The quality of profile data is its ability to accurately predict (relevant aspects of) future program behavior. While these limitations are known, their impact on the effectiveness of profile-guided optimizations, compared to the ideal performance, is not as well understood. We define ideal performance for adaptive optimizations as that achieved with a precise profile of future program behavior. In this work, we study and quantify the performance impact of fundamental profiling limitations by comparing the effectiveness of typical adaptive optimizations when using the best profiles generated by offline and online schemes against a baseline where the adaptive optimization is given access to profile information about the future execution of the program. We model and compare the behavior of three adaptive JVM optimizations—heap memory management using object usage profiles, code cache management using method usage profiles, and selective just-in-time compilation using method hotness profiles—for the Java DaCapo benchmarks. Our results provide insight into the advantages and drawbacks of current profiling strategies and shed light on directions for future profiling research.",
+  "doi": "10.1145/3008661",
+  "openalex": "W2564747820",
+  "status": "ok",
+  "title": "Impact of Intrinsic Profiling Limitations on Effectiveness of Adaptive Optimizations"
+ },
+ "10.1145_3357526.3357537": {
+  "abstract": "Recent trends have led to the adoption of larger and more complex memory systems, often with multiple tiers of memory performance within the same platform. To utilize complex memory systems efficiently, current data management strategies must be altered to map usage demands to the underlying hardware. Applications, as the generators of memory accesses, are well-suited to guide this process, but building and maintaining separate source code versions for different memory systems is not feasible in most cases. One potential solution is to employ automated program profiling and analysis to facilitate the production of application-based guidance. By attaching memory usage information to static or lightweight program features, compilers and runtime systems can generate fine-grained guidance without additional efforts from users or developers. Recent works have employed this approach with some success, but it is not clear which program features are most useful for guiding data management.",
+  "doi": "10.1145/3357526.3357537",
+  "openalex": "W2983621075",
+  "status": "ok",
+  "title": "Evaluating the effectiveness of program data features for guiding memory management"
+ },
+ "10.18130_v3479c": {
+  "abstract": "With the number of cores increasing rapidly but the performance per core increasing slowly at best, software must be parallelized in order to improve performance. Manual parallelization is often prohibitively time-consuming and error-prone (especially due to data races and memory-consistency complexities), and some portions of code may simply be too difficult to understand or refactor for parallelization. Most existing automatic parallelization techniques are performed statically at compile time and require source code to be analyzed, leaving a large fraction of software behind.",
+  "doi": "10.18130/v3479c",
+  "openalex": "W2181332314",
+  "status": "ok",
+  "title": "Trace-Based Dynamic Binary Parallelization"
+ },
+ "10.25911_5dc92b0c30999": {
+  "abstract": "Profiling is the most popular approach to diagnosing performance problems of computer systems. Profiling records run-time system behavior by monitoring software and hardware events either exhaustively or--because of high costs and strong observer effect--periodically. Sampling rates thus determine visibility: the higher the sample rates, the finer-grain behavior observable, and thus the better profilers can help developers analyze and address performance problems. Unfortunately, the sample rates of current profilers are extremely low because of the perturbations generated by their sampling mechanisms. Consequently, current profilers cannot observe insightful fine-grain system behavior. Despite the gigahertz speeds of modern processors, sampling frequencies have been at a standstill--between 1 KHz and 100 KHz--to limit perturbation. This million-cycle gap between two sequential samples blinds profilers to fine-grain behaviors, thus missing root causes of performance problems and potential solutions. My thesis is that by exploiting existing underutilized multicore hardware the sample rates of profilers can be increased by orders of magnitude, leading to new profiling approaches, new discoveries of insightful behavior, and new optimizations. The insights and contributions of this thesis are: 1) We view computer systems as high-frequency signal generators. The high-frequency hardware and software signals that reflect fine-grain system behavior are observable in signal channels: performance counters and shared memory locations. We introduce Shim, a new profiling approach that continuously samples signal channels at resolutions as fine as 15 cycles, which is three to five orders of magnitude finer than current sampling approaches. Shim automatically filters out noisy samples to produce high-fidelity signals. 2) Shim's high-frequency profiling enables a new approach to analyzing and controlling fine-grain system behaviors. We design Tailor, a real-time latency controller for latency-critical web services. Tailor uses a Shim-based high-frequency profiler and an application-level network proxy to continuously monitor and promptly act on the system behaviors that are hazardous to request latency. 3) Shim's fine-grain control of system components enables a new class of online profile-guided optimizations. We introduce Elfen, a Shim-based job scheduler that borrows cycles in short idle periods of latency-critical workloads for batch workloads. Elfen improves CPU utilization significantly without interfering with latency-critical requests by monitoring status changes of latency-critical requests with Shim, and taking real-time scheduling actions. The history of science shows that an order of magnitude or more improvement in measurement fidelity leads to fundamental new discoveries. This thesis fundamentally alters which software and hardware signals are observable on existing systems, and demonstrates that observing these signals stimulates new optimization opportunities.",
+  "doi": "10.25911/5dc92b0c30999",
+  "openalex": "W2985882805",
+  "status": "ok",
+  "title": "SHIM and Its Applications"
+ },
+ "10.48456_tr-831": {
+  "abstract": "The transition to multi-core processors has yielded a fundamentally new sort of computer. Software can no longer benefit passively from improvements in processor technology, but must perform its computations in parallel if it is to take advantage of the continued increase in processing power. Software development has yet to catch up, and with good reason: parallel programming is hard, error-prone and often unrewarding. In this dissertation, I consider the programmability challenges of the multi-core era, and examine three angles of attack. I begin by reviewing alternative programming paradigms which aim to address these changes, and investigate two popular alternatives with a controlled pilot experiment. The results are inconclusive, and subsequent studies in that field have suffered from similar weakness. This leads me to conclude that empirical user studies are poor tools for designing parallel programming systems. I then consider one such alternative paradigm, transactional memory, which has promising usability characteristics but suffers performance overheads so severe that they mask its benefits. By modelling an ideal inter-core communication mechanism, I propose using our embarrassment of parallel riches to mitigate these overheads. By pairing “helper” processors with application threads, I offload the overheads of software transactional memory, thereby greatly mitigating the problem of serial overhead. Finally, I address the mechanics of inter-core communication. Due to the use of cache coherence to preserve the programming model of previous processors, explicitly communicating between the cores of any modern multi-core processor is painfully slow. The schemes proposed so far to alleviate this problem are complex, insufficiently general, and often introduce new resources which cannot be virtualised transparently by a time-sharing operating system. I propose and describe an asynchronous remote store instruction, which is issued by one core and completed asynchronously by another into its own local cache. I evaluate several patterns of parallel communication, and determine that the use of remote stores greatly increases the performance of common synchronisation kernels. I quantify the benefit to the feasibility of fine-grained parallelism. To finish, I use this mechanism to implement my parallel STM scheme, and demonstrate that it performs well, reducing overheads significantly.",
+  "doi": "10.48456/tr-831",
+  "openalex": "W2507674012",
+  "status": "ok",
+  "title": "Communication for programmability and performance on multi-core processors"
+ },
+ "10.5555_3195638.3195710": {
+  "abstract": "This paper presents Spectral Profiling, a new method for profiling program execution without instrumenting or otherwise affecting the profiled system. Spectral Profiling monitors EM emanations unintentionally produced by the profiled system, looking for spectral spikes produced by periodic program activity (e.g. loops). This allows Spectral Profiling to determine which parts of the program have executed at what time. By analyzing the frequency and shape of the spectral spike, Spectral Profiling can obtain additional information such as the per-iteration execution time of a loop. The key advantage of Spectral Profiling is that it can monitor a system as-is, without program instrumentation, system activity, etc. associated with the profiling itself, i.e. it completely eliminates the Observer's Effect and allows profiling of programs whose execution is performance-dependent and/or programs that run on even the simplest embedded systems that have no resources or support for profiling. We evaluate the effectiveness of Spectral Profiling by applying it to several benchmarks from MiBench suite on a real system, and also on a cycle-accurate simulator. Our results confirm that Spectral Profiling yields useful information about the runtime behavior of a program, allowing Spectral Profiling to be used for profiling in systems where profiling infrastructure is not available, or where profiling overheads may perturb the results too much (Observer's Effect).",
+  "doi": "10.5555/3195638.3195710",
+  "openalex": "W2564479312",
+  "status": "ok",
+  "title": "Spectral profiling: observer-effect-free profiling by monitoring EM emanations"
+ },
+ "10.70675_95d71994z104dz4d0dz9835zf4a7adab2954": {
+  "abstract": "Optimisation dynamique de code binaire par des transformations vectorielles Les applications ne sont pas toujours optimisées pour le matériel sur lequel elles s'exécutent, comme les logiciels distribués sous forme binaire, ou le déploiement des programmes dans des fermes de calcul. On se concentre sur la maximisation de l'efficacité du processeur pour les extensions SIMD. Nous montrons que de nombreuses boucles compilées pour x86 SSE peuvent être converties dynamiquement en versions AVX plus récentes et plus puissantes. Nous obtenons des accélérations conformes à celles d'un compilateur natif ciblant AVX. De plus, on vectorise en temps réel des boucles scalaires. Nous avons intégré des logiciels libres pour (1) transformer dynamiquement le binaire vers la forme de représentation intermédiaire, (2) abstraire et vectoriser les boucles fréquemment exécutées dans le modèle polyédrique (3) enfin les compiler. Les accélérations obtenues sont proches du nombre d'éléments pouvant être traités simultanément par l'unité SIMD.",
+  "doi": "10.70675/95d71994z104dz4d0dz9835zf4a7adab2954",
+  "openalex": "W7148276923",
+  "status": "ok",
+  "title": "Runtime optimization of binary through vectorization transformations"
+ },
+ "10.7916_d8mg7p9d": {
+  "abstract": "Data Flow Tracking (DFT) is a technique broadly used in a variety of security applications such as attack detection, privacy leak detection, and policy enforcement. Although effective, DFT inherits the high overhead common to in-line monitors which subsequently hinders their adoption in production systems. Typically, the runtime overhead of DFT systems range from 3× to 100× when applied to pure binaries, and 1.5× to 3× when inserted during compilation. Many performance optimization approaches have been introduced to mitigate this problem by relaxing propagation policies under certain conditions but these typically introduce the issue of inaccurate taint tracking that leads to over-tainting or under-tainting. Despite acknowledgement of these performance / accuracy trade-offs, the DFT literature consistently fails to provide insights about their implications. A core reason, we believe, is the lack of established methodologies to understand accuracy. In this dissertation, we attempt to address both efficiency and accuracy issues. To this end, we begin with libdft, a DFT framework for COTS binaries running atop commodity OSes and we then introduce two major optimization approaches based on statically and dynamically analyzing program binaries. The first optimization approach extracts DFT tracking logics and abstracts them using TFA. We then apply classic compiler optimizations to eliminate redundant tracking logic and minimize interference with the target program. As a result, the optimization can achieve 2× speed-up over base-line performance measured for libdft. The second optimization approach decouples the tracking logic from execution to run them in parallel leveraging modern multi-core innovations. We apply his approach again applied to libdft where it can run four times as fast, while concurrently consuming fewer CPU cycles. We then present a generic methodology and tool for measuring the accuracy of arbitrary DFT systems in the context of real applications. With a prototype implementation for the Android framework – TaintMark, we have discovered that TaintDroid’s various performance optimizations lead to serious accuracy issues, and that certain optimizations should be removed to vastly improve accuracy at little performance cost. The TaintMark approach is inspired by blackbox differential testing principles to test for inaccuracies in DFTs, but it also addresses numerous practical challenges that arise when applying those principles to real, complex applications. We introduce the TaintMark methodology by using it to understand taint tracking accuracy trade-offs in TaintDroid, a well-known DFT system for Android. While the aforementioned works focus on the efficiency and accuracy issues of DFT systems that dynamically track data flow, we also explore another design choice that statically tracks information flow by analyzing and instrumenting the application source code. We apply this approach to the different problem of integer error detection in order to reduce the number of false alarmings.",
+  "doi": "10.7916/d8mg7p9d",
+  "openalex": "W2279560118",
+  "status": "ok",
+  "title": "On Efficiency and Accuracy of Data Flow Tracking Systems"
+ },
+ "oa-W1610688982": {
+  "abstract": "Taint analysis has a wide variety of compelling applica-tions in security tasks, from software attack detection to data lifetime analysis. Static taint analysis propagates taint values following all possible paths with no need for concrete execution, but is generally less accurate than dynamic analysis. Unfortunately, the high performance penalty incurred by dynamic taint analyses makes its de-ployment impractical in production systems. To amelio-rate this performance bottleneck, recent research efforts aim to decouple data flow tracking logic from program execution. We continue this line of research in this paper and propose pipelined symbolic taint analysis, a novel technique for parallelizing and pipelining taint analy-sis to take advantage of ubiquitous multi-core platforms. We have developed a prototype system called TaintPipe. TaintPipe performs very lightweight runtime logging to produce compact control flow profiles, and spawns mul-tiple threads as different stages of a pipeline to carry out symbolic taint analysis in parallel. Our experiments show that TaintPipe imposes low overhead on applica-tion runtime performance and accelerates taint analysis significantly. Compared to a state-of-the-art inlined dy-namic data flow tracking tool, TaintPipe achieves 2.38 times speedup for taint analysis on SPEC 2006 and 2.43 times for a set of common utilities, respectively. In ad-dition, we demonstrate the strength of TaintPipe such as natural support of multi-tag taint analysis with several security applications. 1",
+  "doi": null,
+  "openalex": "W1610688982",
+  "status": "ok",
+  "title": "TaintPipe: pipelined symbolic taint analysis"
+ },
+ "oa-W2122107598": {
+  "abstract": "Multi-core processors are now ubiquitous and are widely seen as the most viable means of delivering performance with increasing transistor densities. However, this potential can only be realised if the application programs are suitably parallel. Applications can either be written in parallel from scratch or converted from existing sequential programs. Regardless of how applications are parallelised, the code must be efficiently mapped onto the underlying platform to fully exploit the hardware’s potential. This thesis addresses the problem of finding the best mappings of data and streaming parallelism—two types of parallelism that exist in broad and important domains such as scientific, signal processing and media applications. Despite significant progress having been made over the past few decades, state-of-the-art mapping approaches still largely rely upon hand-crafted, architecture-specific heuristics. Developing a heuristic by hand, however, often requiresmonths of development time. Asmulticore designs become increasingly diverse and complex, manually tuning a heuristic for a wide range of architectures is no longer feasible. What are needed are innovative techniques that can automatically scale with advances in multi-core technologies. In this thesis two distinct areas of computer science, namely parallel compiler design and machine learning, are brought together to develop new compiler-based mapping techniques. Using machine learning, it is possible to automatically build highquality mapping schemes, which adapt to evolving architectures, with little human involvement. First, two techniques are proposed to find the best mapping of data parallelism. The first technique predicts whether parallel execution of a data parallel candidate is profitable on the underlying architecture. On a typical multi-core platform, it achieves almost the same (and sometimes a better) level of performance when compared to the manually parallelised code developed by independent experts. For a profitable candidate, the second technique predicts how many threads should be used to execute the candidate across different program inputs. The second technique achieves, on average, over 96% of the maximum available performance on two different multi-core platforms. Next, a new approach is developed for partitioning stream applications. This approach predicts the ideal partitioning structure for a given stream application. Based on the prediction, a compiler can rapidly search the program space (without executing any code) to generate a good partition. It achieves, on average, a 1.90x speedup over the already tuned partitioning scheme of a state-of-the-art streaming compiler.",
+  "doi": null,
+  "openalex": "W2122107598",
+  "status": "ok",
+  "title": "Machine learning based mapping of data and streaming parallelism to multi-cores"
+ },
+ "oa-W2171430165": {
+  "abstract": "Effective parallelization of fine-grained tasks, such as in dynamic program analysis, is challenging because thread communication overheads may outweigh the benefits of parallelism. In this paper, we address this issue with deferred methods, a novel Java framework that aggregates invocations of analysis methods in thread-local buffers and processes them altogether when a buffer is full. The framework supports pluggable buffer processing strategies. We present an adaptive strategy that combines synchronous buffer processing (by the thread that has filled the buffer) and asynchronous buffer processing (using a thread pool). This strategy adapts at runtime to the CPU utilization of the workload and exploits under-utilized cores when possible. As case studies, we consider two dynamic program analyses, a profiler and a data race detector, which we apply to standard benchmarks. A thorough performance evaluation confirms that our framework together with the adaptive buffer processing strategy yields an average speedup of factor 2.2–2.7 for our case studies on two different quad-core machines.",
+  "doi": null,
+  "openalex": "W2171430165",
+  "status": "ok",
+  "title": "Exploiting Under-Utilized Cores with Deferred Methods"
+ },
+ "oa-W2525728793": {
+  "abstract": "Power dissipation limits and design complexity have made the microprocessor industry less successful in improving the performance of monolithic processors, even though semiconductor technology continues to scale. Consequently, chip multiprocessors (CMPs) have become a standard for all ranges of computing from cellular phones to high-performance servers. As sufficient thread level parallelism (TLP) is necessary to exploit the computational power provided by CMPs, most performance-aware programmers need to parallelize their programs. For shared memory multi-threaded programs, synchronization mechanisms such as mutexes, barriers, and condition variables, are used to enforce the threads to interact with each other in the way the programmers intended. However, employing synchronization operations in both correct and efficient way at the same time is extremely difficult, and there have been trade-offs between programmability and efficiency of using synchronizations. This thesis proposes a collection of works that increase the programmability and efficiency of concurrent programs by intelligently managing the synchronization operations. First, we focus on mutex locks and unlocks. Many concurrency bug detection tools and automated bug fixers rely on the precise identification of critical sections guarded by lock/unlock operations. We suggest a practical lock/unlock pairing mechanism that combines static analysis with dynamic instrumentation to identify critical sections in POSIX multi-threaded C/C++ programs. Second, we present Dynamic Core Boosting (DCB) to accelerate critical paths in multi-thread programs. Inter-thread dependencies through synchronizations form critical paths. These critical paths are major performance bottlenecks for concurrent programs, and they are exacerbated by workload imbalances in performance asymmetric CMPs. DCB coordinates its compiler, runtime subsystem, and architecture to mitigates such performance bottlenecks. Finally, we propose exploiting synchronization operations for better energy efficiency through dynamic power management.",
+  "doi": null,
+  "openalex": "W2525728793",
+  "status": "ok",
+  "title": "intelligent management of inter-thread synchronization dependencies for concurrent programs"
+ },
+ "oa-W2898991513": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2898991513",
+  "status": "no_abstract",
+  "title": "Instant Proﬁling: Instrumentation Sampling for Proﬁling Datacenter Applications"
+ },
+ "s2-074382026c2f6697": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Potential of Dynamic Binary Parallelization"
+ },
+ "s2-0b1082fec27ec38f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "CONCURRENCY AND COMPUTATION : PRACTICE AND EXPERIENCE Concurrency Computat"
+ },
+ "s2-214de24e545c4ac0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Intelligent Management of Inter-Thread Synchronization Dependencies for Concurrent Programs"
+ },
+ "s2-2784864964db743a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "TaintPipe: Pipelined Symbolic Taint Analysis"
+ },
+ "s2-2e3f24f115c734ca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine learning based mapping of data and streaming parallelism to multi-cores"
+ },
+ "s2-3006a679c782e3e9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Rapid Development of Flexible and Efficient Dynamic Program Analysis Tools"
+ },
+ "s2-3ad0d32ef7b0cdbd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Enabling efficient online profiling of homogeneous and heterogeneous multicore systems"
+ },
+ "s2-4ed4f40468206c64": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimization of naïve dynamic binary instrumentation Tools"
+ },
+ "s2-65a3cb0faa1a76cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Instant Proﬁling: Instrumentation Sampling for Proﬁling Datacenter Applications"
+ },
+ "s2-83c4701525c8bd2c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Collecting and representing parallel programs with high performance instrumentation"
+ },
+ "s2-9a5718d0541be125": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Communication for programmability and performance on multi-core processors"
+ },
+ "s2-a1aedcbba8b136ff": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Università Della Svizzera Italiana Usi Technical Report Series in Informatics Exploiting Under-utilized Cores with Deferred Methods"
+ },
+ "s2-cfb80e7fc9216fdd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scaling managed runtime systems for future multicore hardware"
+ },
+ "s2-f385607bd321ea23": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Contech : Parallel Program Representation and High Performance Instrumentation"
+ }
+}

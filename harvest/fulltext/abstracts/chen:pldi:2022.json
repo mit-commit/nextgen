@@ -1,0 +1,184 @@
+{
+ "10.1007_978-981-95-8399-7_30": {
+  "abstract": null,
+  "doi": "10.1007/978-981-95-8399-7_30",
+  "openalex": "W7151369245",
+  "status": "no_abstract",
+  "title": "Tiling-Aware Vectorization Framework for Perfect Loop Nests in MLIR"
+ },
+ "10.1007_s11227-026-08404-w": {
+  "abstract": null,
+  "doi": "10.1007/s11227-026-08404-w",
+  "openalex": "W7134134865",
+  "status": "no_abstract",
+  "title": "Compiler-based loop unrolling optimization for dual-SIMD extensions"
+ },
+ "10.1109_ase63991.2025.00040": {
+  "abstract": "Democracy is crucial to a cryptocurrency ecosystem, as the diversity of miners (farms, personal computers, web clients, or even cloud functions) underlays the credibility of the cryptocurrency. Among miners, web clients used to be the vast majority, e.g., 50M+ as of March 2018. As time went on, however, cryptomining was gradually monopolized by mining farms with dedicated hardware (e.g., ASICs), and web clients scaled down to ∼0.1M. To suppress mining farms, certain cryptocurrencies (like Monero) adopted new mining algorithms such as RandomX whose execution relies on general-purpose hardware architectures. Unfortunately, this further impairs web-based cryptomining as web clients cannot provide the desired architecture support to these algorithms. This paper explores how to revive software democracy of efficient web-based crypto-mining, using a novel program transformation technique termed Vectra. Vectra employs just-in-time (JIT) transformations of mining programs for web architectures; it effectively identifies and merges isomorphic instructions upon execution. Vectra ensures correct transformations based on symbolic constraints of the instructions. Real-world deployments show that Vectra reduces WASM instructions by about 7× and achieves a 3× –16× speedup for web cryptomining in diverse execution environments like PCs, mobile phones, and serverless platforms, which translates to a high (69%–274%) return-on-investment (ROI) for common users.",
+  "doi": "10.1109/ase63991.2025.00040",
+  "openalex": "W7125975878",
+  "status": "ok",
+  "title": "Democratizing the Cryptocurrency Ecosystem by Just-In-Time Transformation of Mining Programs"
+ },
+ "10.1109_cbase67452.2025.11335498": {
+  "abstract": "Modern AI workloads demand efficient compilation strategies that can leverage parallel architectures and vectorization capabilities. Scalar Replacement of Aggregates (SROA) is one of the key compiler optimizations that promotes aggregate data structures to individual scalar variables, eliminating unnecessary memory operations and enabling register allocation, thereby establishing the foundation for subsequent scalar parallelization and vectorization optimizations. However, SROA’s type selection strategy often converts arrays into integer types, which obscures the original structure and impairs subsequent vectorization opportunities. This paper presents the first formal analysis of SROA’s type selection algorithm, identifies conditions under which structural information loss occurs, and proposes structurepreserving algorithms with proven correctness guarantees.",
+  "doi": "10.1109/cbase67452.2025.11335498",
+  "openalex": "W7125251123",
+  "status": "ok",
+  "title": "Formal Analysis and Optimization of Scalar Replacement of Aggregates"
+ },
+ "10.1109_hpec62836.2024.10938486": {
+  "abstract": "This paper focuses on framework designed and developed by integrating multiple profiler modules to profile HPC applications. There is a constant demand for application performance on High Performance Computing (HPC) systems. Multiple software tools are currently available in the performance profiling realm to help application developers to profile and identify performance bottlenecks. Application developers strive to achieve the optimum execution of applications on available hardware resources using the profiling tools of their choice. They have to comprehend all the information provided by the tools and identify the bottlenecks to arrive at possible modifications. To assimilate the bottlenecks information from the profiling tool's outputs and representations, one requires experience and expertise in the application algorithm, programming methodologies, domain knowledge, and hardware resources. Many a time it is challenging for the developers to make changes in the application program based on the profiler output. We have developed a profile and analysis framework to identify the bottlenecks in an HPC application and help the developers improve application performance. The framework is developed by augmenting the existing opensource profilers with analysing capabilities for bottleneck identification and potential performance suggestions. This paper describes the architecture of the software framework and the benefits of the adopted mechanism.",
+  "doi": "10.1109/hpec62836.2024.10938486",
+  "openalex": "W4409133375",
+  "status": "ok",
+  "title": "Augmenting HPC Profilers with Analysis Capabilities"
+ },
+ "10.1109_iccad66269.2025.11240863": {
+  "abstract": "High-performance computing (HPC) and hardware acceleration increasingly rely on dataflow architectures to achieve scalable parallelism and efficiency. High-level synthesis (HLS) facilitates accelerator design from high-level programs, but conventional tools often require intrusive source-level modifications and struggle to optimize irregular workloads. Dynamically scheduled HLS frameworks offer a promising direction for addressing control flow divergence and memory irregularity by generating dataflow accelerators. However, they lack compile-time parallelism optimizations such as vectorization and incur significant hardware overhead. Moreover, modern compilers can generate vectorized code using memory access and computational patterns. Nevertheless, in programs with irregular control flow or data-dependent behavior, such patterns are unknown until runtime, limiting the effectiveness of static vectorization strategies.To address these challenges, we propose DynVec, a unified vector-dataflow framework that integrates dynamic scheduling and vectorization to exploit runtime parallelism beyond conventional models. We address the vectorization of irregular kernels through an MLIR-based context-aware vectorizer that effectively identifies vectorizable operations and, through dataflow scheduling, generates a vector-dataflow execution graph that explicitly models control flow constructs, data and control interfaces, and memory operations. DynVec encapsulates high-level elastic units designed with built-in vectorization support, allowing customizable and adaptive execution behavior. Our compiler preserves the structural hierarchy of the kernel by combining vector and scalar operations in a bottom-up, type-safe manner. Experiments show that our approach achieves significant speedup compared to state-of-the-art HLS implementations across various regular and irregular applications. Moreover, compared to hybrid accelerators that separately support dynamic parallelism and vectorization, DynVec delivers superior performance.",
+  "doi": "10.1109/iccad66269.2025.11240863",
+  "openalex": "W4416429512",
+  "status": "ok",
+  "title": "DynVec: An End-to-End Framework for Efficient Vector-Dataflow Execution"
+ },
+ "10.1109_micro61859.2024.00024": {
+  "abstract": "Static dependence analysis is critical for optimizations such as vectorization and loop-invariant code motion. However, traditional static dependence analysis is often imprecise, making these optimizations less effective. To address this issue, production compilers use loop versioning to rule out some categories of memory dependencies at run time. However, loop versioning is loop-centric and usually tied to specific optimizations (e.g., loop vectorization), making it less effective for non-loop optimizations such as superword-level parallelism (SLP) vectorization. In this paper, we propose a fine-grained versioning framework to rule out program dependencies at run time. Our framework is general and not tailored to any specific optimizations. To use our system, a client optimization specifies groups of instructions (or loops) whose independence is desired but unprovable statically. In response, our system duplicates the appropriate instructions and guards the original ones with run-time checks to guarantee their independence; if the checks fail, the duplicated instructions execute instead. In a case study, we extended an existing SLP vectorizer with minimal modifications using our framework, resulting in a 1.17× speedup over Clang's vectorizers on TSVC and a 1.51× speedup on PolyBench. In both benchmarks, we encountered programs that could not be vectorized with loop versioning alone. In a second case study, we used our framework to implement a more aggressive variant of redundant load elimination than the one implemented by Clang. Our redundant load elimination results in a 1.012× speedup on the SPEC 2017 Floating Point benchmarks, with the maximum speedup being 1.064×.",
+  "doi": "10.1109/micro61859.2024.00024",
+  "openalex": "W4404954474",
+  "status": "ok",
+  "title": "A Framework for Fine-Grained Program Versioning"
+ },
+ "10.1117_12.3068620": {
+  "abstract": "Superword Level Parallelism (SLP) vectorization, a key technique in automatic vectorization, has found widespread application in mainstream compilers. The SLP vectorization targets Single Instruction Multiple Data (SIMD) and vector computing instructions. Following loop unrolling, it identifies and extracts code segments as vectorization opportunities, replacing them with vectorized code. However, the degree of loop unrolling is often limited, which can hinder the generation of architecture-aligned vector code and cause missed vectorization opportunities. To address these challenges, we propose the Initial Seed-Oriented Superword Level Parallelism (ISOSLP). By focusing on seed mining, ISOSLP reduces the code expansion typically associated with outer loop unrolling and addresses the limitations imposed by register constraints. Additionally, the approach incorporates loop linearization to minimize loop jumping overhead. Our experimental results demonstrate that our proposed method achieves an average speedup of 9.9x in typical signal processing algorithms, compared to the multi-loop automatic vectorization method without optimization",
+  "doi": "10.1117/12.3068620",
+  "openalex": "W4410496905",
+  "status": "ok",
+  "title": "Superword level parallelism vectorization method for signal processing algorithms oriented to double loops"
+ },
+ "10.1145_3563838.3567679": {
+  "abstract": "Optimizing compilers rely on many hand-crafted heuristics to guide the optimization process. However, the interactions between different optimizations makes their design a difficult task. We propose using machine learning models to either replace such heuristics or to support their development process, for example, by identifying important code features. Especially in static compilation, machine learning has been shown to outperform hand-crafted heuristics. We applied our approach in a state-of-the-art dynamic compiler, the GraalVM compiler. Our models predict an unroll factor for vectorized loops for which the GraalVM compiler developers have not been able to design satisfactory heuristics. Thereby, we identified features to describe vectorized loops and empirically evaluated the impact of different training data, features or model parameters on the accuracy of the learned models. When deployed in the GraalVM dynamic compiler, our models produce significant speedups of 8-11%, on average. Furthermore, large speedups unveiled a performance bug in the compiler which was fixed after our report. Our work shows that machine learning can be used to improve a dynamic compiler directly by replacing existing vectorization heuristics or indirectly by helping compiler developers to design better hand-crafted heuristics.",
+  "doi": "10.1145/3563838.3567679",
+  "openalex": "W4310506314",
+  "status": "ok",
+  "title": "Improving Vectorization Heuristics in a Dynamic Compiler with Machine Learning Models"
+ },
+ "10.1145_3578360.3580270": {
+  "abstract": "This paper introduces lazification, a code transformation technique that replaces strict with lazy evaluation of function parameters whenever such modification is deemed profitable. The transformation is designed for an imperative, low-level program representation. It involves a static analysis to identify function calls that are candidates for lazification, plus the generation of closures to be lazily activated. Code extraction uses an adaptation of the classic program slicing technique adjusted for the static single assignment representation. If lazification is guided by profiling information, then it can deliver speedups even on traditional benchmarks that are heavily optimized. We have implemented lazification on LLVM 14.0, and have applied it on the C/C++ programs from the LLVM test-suite and from SPEC CPU2017. We could observe statistically significant speedups over clang -O3 on some large programs, including a speedup of 11.1% on Prolang's Bison without profiling support and a speedup of 4.6% on SPEC CPU2017's perlbench (one of the largest programs in the SPEC collection) with profiling support.",
+  "doi": "10.1145/3578360.3580270",
+  "openalex": "W4321185086",
+  "status": "ok",
+  "title": "Lazy Evaluation for the Lazy: Automatically Transforming Call-by-Value into Call-by-Need"
+ },
+ "10.1145_3579990.3580019": {
+  "abstract": "Achieving peak throughput on modern CPUs requires maximizing the use of single-instruction, multiple-data (SIMD) or vector compute units. Single-program, multiple-data (SPMD) programming models are an effective way to use high-level programming languages to target these ISAs. Unfortunately, many SPMD frameworks have evolved to have either overly-restrictive language specifications or under-specified programming models, and this has slowed the widescale adoption of SPMD-style programming. This paper introduces Parsimony (PARallel SIMd), a SPMD programming approach built with semantics designed to be compatible with multiple languages and to cleanly integrate into the standard optimizing compiler toolchains for those languages. We first explain the Parsimony programming model semantics and how they enable a standalone compiler IR-to-IR pass that can perform vectorization independently of other passes, improving the language and toolchain compatibility of SPMD programming. We then demonstrate a LLVM prototype of the Parsimony approach that matches the performance of ispc, a popular but more restrictive SPMD approach, and achieves 97% of the performance of hand-written AVX-512 SIMD intrinsics on over 70 benchmarks ported from the Simd Library. We finally discuss where Parsimony has exposed parts of existing language and compiler flows where slight improvements could further enable improved SPMD program vectorization.",
+  "doi": "10.1145/3579990.3580019",
+  "openalex": "W4321496225",
+  "status": "ok",
+  "title": "Parsimony: Enabling SIMD/Vector Programming in Standard Compiler Flows"
+ },
+ "10.1145_3582016.3582046": {
+  "abstract": "SIMD extensions are widely adopted in multi-core processors to exploit data-level parallelism. However, when co-running workloads on different cores, compute-intensive workloads cannot take advantage of the underutilized SIMD lanes allocated to memoryintensive workloads, reducing the overall performance. This paper proposes Occamy, a SIMD co-processor that can be shared by multiple CPU cores, so that their co-running workloads can spatially share its SIMD lanes. The key idea is to enable elastic spatial sharing by dynamically partitioning all the SIMD lanes across different workloads based on their phase behaviors, so that each workload may execute in variable-length SIMD mode. We also introduce an Occamy compiler to support such variable-length vectorization by analyzing such phase behaviors and generating the vectorized code that works with varying vector lengths. We demonstrate that Occamy can improve SIMD utilization, and consequently, performance over three representative SIMD architectures, with negligible chip area cost.",
+  "doi": "10.1145/3582016.3582046",
+  "openalex": "W4327911853",
+  "status": "ok",
+  "title": "Occamy: Elastically Sharing a SIMD Co-processor across Multiple CPU Cores"
+ },
+ "10.1145_3623278.3624768": {
+  "abstract": "Modern vector processors support a wide variety of instructions for fixed-point digital signal processing. These instructions support a proliferation of rounding, saturating, and type conversion modes, and are often fused combinations of more primitive operations. While these are common idioms in fixed-point signal processing, it is difficult to use these operations in portable code. It is challenging for programmers to write down portable integer arithmetic in a C-like language that corresponds exactly to one of these instructions, and even more challenging for compilers to recognize when these instructions can be used. Our system, Pitchfork, defines a portable fixed-point intermediate representation, FPIR, that captures common idioms in fixed-point code. FPIR can be used directly by programmers experienced with fixed-point, or Pitchfork can automatically lift from integer operations into FPIR using a term-rewriting system (TRS) composed of verified manual and automatically-synthesized rules. Pitchfork then lowers from FPIR into target-specific fixed-point instructions using a set of target-specific TRSs. We show that this approach improves runtime performance of portably-written fixed-point signal processing code in Halide, across a range of benchmarks, by geomean 1.31x on x86 with AVX2, 1.82x on ARM Neon, and 2.44x on Hexagon HVX compared to a standard LLVM-based compiler flow, while maintaining or improving existing compile times.",
+  "doi": "10.1145/3623278.3624768",
+  "openalex": "W4391623920",
+  "status": "ok",
+  "title": "Fast Instruction Selection for Fast Digital Signal Processing"
+ },
+ "10.1145_3640537.3641562": {
+  "abstract": "Optimizing compilers employ a rich set of transformations that generate highly efficient code for a variety of source languages and target architectures. These transformations typically operate on general control flow constructs which trigger a range of optimization opportunities, such as moving code to less frequently executed paths, and more. Regular loop nests are specifically relevant for accelerating certain domains, leveraging architectural features including vector instructions, hardware-controlled loops and data flows, provided their internal control-flow is eliminated. Compilers typically apply predicating if-conversion late, in their backend, to remove control-flow undesired by the target. Until then, transformations triggered by control-flow constructs that are destined to be removed may end up doing more harm than good. We present an approach that leverages the existing powerful and general optimization flow of LLVM when compiling for targets without control-flow in loops. Rather than trying to teach various transformations how to avoid misoptimizing for such targets, we propose to introduce an aggressive if-conversion pass as early as possible, along with carefully addressing pass-ordering implications. This solution outperforms the traditional compilation flow with only a modest tuning effort, thereby offering a robust and promising compilation approach for branch-restricted targets.",
+  "doi": "10.1145/3640537.3641562",
+  "openalex": "W4391951359",
+  "status": "ok",
+  "title": "If-Convert as Early as You Must"
+ },
+ "10.1145_3696443.3708917": {
+  "abstract": "Fully Homomorphic Encryption (FHE), particularly the CKKS scheme, enables computation on encrypted data, facilitating secure task offloading to untrusted servers. CKKS allows packing multiple complex values into a single ciphertext, crucial for fixed-point arithmetic in machine learning, while leveraging SIMD parallelism at the plaintext level. However, operations such as reductions can degrade performance by creating a large number of bubbles (or gaps) in intermediate ciphertexts, leading to wasted computational resources. We introduce Qiwu, a ciphertext-level vectorization approach that enhances performance by fusing multiple ciphertexts containing bubbles. Qiwu uses a DSL to specify zero bubbles in input ciphertexts and nonzero bubbles in output ciphertexts, employs data-flow analysis to track them, and formulates a fusion plan guided by a cost-benefit assessment. Implemented in an existing FHE compiler, Qiwu was evaluated on four applications (including three machine learning tasks) and three kernels. It achieves speedups of up to 18.0× on CPUs, averaging 3.4× (geometric mean), compared to the state-of-the-art compiler that exploit only plaintext-level parallelism.",
+  "doi": "10.1145/3696443.3708917",
+  "openalex": "W4407857379",
+  "status": "ok",
+  "title": "Qiwu: Exploiting Ciphertext-Level SIMD Parallelism in Homomorphic Encryption Programs"
+ },
+ "10.1145_3696443.3708950": {
+  "abstract": "Most compilers convert all iterations of a vectorizable loop into vector operations to decrease processing time. This paper proposes Scalar Interpolation, a technique that inserts scalar operations into vectorized loops to increase the utilization of execution units in processors with distinct pipelines for scalar and vector processing. Scalar interpolation inserts scalar operations for an entire iteration of the sequential loop to avoid data movements between vector and scalar registers. A challenge to introducing scalar interpolation is creating a static cost model to guide the compiler’s decision to interpolate scalar operations in a loop. An alternative to a static cost model is to perform auto-tuning in a loop to dynamically discover a sweet spot for the scalar interpolation factor. A performance study on an LLVM-based prototype reveals speedups of up to 30% on Intel Xeon (x86) with a static analysis of the cost model, and 43% on Kunpeng-920 (AArch64) with auto-tuning.",
+  "doi": "10.1145/3696443.3708950",
+  "openalex": "W4407857386",
+  "status": "ok",
+  "title": "Scalar Interpolation: A Better Balance between Vector and Scalar Execution for SuperScalar Architectures"
+ },
+ "10.1145_3750720.3757288": {
+  "abstract": "Superword-Level Parallelism (SLP) vectorization is a widely used compiler technique that transforms straight-line scalar code into efficient vector code by identifying and grouping independent, isomorphic instructions. Traditional SLP implementations typically initiate from store instructions and traverse upward along the def-use chain, making a single, local vectorization decision without being aware of the global knowledge. However, this heuristic strategy can be suboptimal due to the vectorization order, which can hinder performance and vectorization opportunities.",
+  "doi": "10.1145/3750720.3757288",
+  "openalex": "W7116374312",
+  "status": "ok",
+  "title": "Enhancing SLP Vectorization through Hybrid Slice Selection"
+ },
+ "10.1145_3763146": {
+  "abstract": "This paper introduces the continuous tensor abstraction, allowing indices to take real-number values (e.g., A[3.14]). It also presents continuous tensor algebra expressions, such as C x,y = A x,y * B x,y , where indices are defined over a continuous domain. This work expands the traditional tensor model to include continuous tensors. Our implementation supports piecewise-constant tensors, on which infinite domains can be processed in finite time. We also introduce a new tensor format for efficient storage and a code generation technique for automatic kernel generation. For the first time, our abstraction expresses domains like computational geometry and computer graphics in the language of tensor programming. Our approach demonstrates competitive or better performance to hand-optimized kernels in leading libraries across diverse applications. Compared to hand-implemented libraries on a CPU, our compiler-based implementation achieves an average speedup of 9.20× on 2D radius search with ∼60× fewer lines of code (LoC), 1.22× on genomic interval overlapping queries (with ∼18× LoC saving), and 1.69× on trilinear interpolation in Neural Radiance Field (with ∼6× LoC saving).",
+  "doi": "10.1145/3763146",
+  "openalex": "W4415007445",
+  "status": "ok",
+  "title": "The Continuous Tensor Abstraction: Where Indices Are Real"
+ },
+ "10.1145_3797905.3807866": {
+  "abstract": "The performance benefits of vectorization are often limited by data movement, which remains a dominant bottleneck in modern processors. To mitigate this bottleneck, data stream-based mechanisms have been recently proposed, allowing general-purpose architectures to specialize memory accesses, leading to a reduction of load-to-use latency and loop code optimizations. However, compiler support for stream-based execution remains limited. Accordingly, this paper presents S2VEC, an LLVM-based compilation toolchain that automatically extracts, represents, and optimizes memory access patterns as data streams to enable stream-specialized vector execution. At its core, the Stream-Dataflow IR models computation as a dataflow over parameterized data streams, bridging the gap between conventional compiler infrastructures and stream-oriented architectures. By transforming complex and indirect memory accesses into linearized stream representations, S2VEC simplifies vectorization and expands its applicability to complex memory access patterns. When targeting a RISC-V stream-vector ISA extension, S2VEC demonstrates improved vectorization coverage and produces code comparable to hand-optimized implementations. Conducted evaluations on a gem5-based in-order stream-vector model show an overall speedup of 5.9 × over an equivalently provisioned RVV-based in-order core and 1.5 × over a wide out-of-order processor, demonstrating the performance benefits of compiler-driven stream specialization.",
+  "doi": "10.1145/3797905.3807866",
+  "openalex": "W7167056961",
+  "status": "ok",
+  "title": "S2VEC: Compiler-Driven Stream Specialization for Linearized Vectorization"
+ },
+ "10.34133_icomputing.0113": {
+  "abstract": "The single instruction multiple data (SIMD) capability in modern processors is critical to improving the performance of current compute-intensive programs. Modern compilers use vectorization techniques to exploit the SIMD capability, by detecting data parallelism in scalar source code and transforming a group of scalar instructions into vector-based instructions. In this study, we focus on one of the most common vectorization techniques, a technique called loop-based vectorization, which targets loops and optimizes their performance by grouping multiple occurrences of the same operation across loop iterations into a single SIMD instruction. We propose a data-driven graph-based learning framework for automatic vectorization, called autograph , which takes an input program, extracts the loops, and then learns a structured representation to automatically predict the correct vectorization and interleaving factors. Our proposed framework utilizes deep reinforcement learning to learn an optimal policy (observations to actions) from an intelligent agent in a SIMD environment, and automatically injects the predicted vectorization pragmas into the input program. We conducted an extensive evaluation on multiple benchmark datasets and comparisons with state-of-the-art baselines. Our results show that autograph achieves on average 2.49× performance improvement for Polybench compared to NeuroVectorizer and 3.69× compared to the baseline -O3.",
+  "doi": "10.34133/icomputing.0113",
+  "openalex": "W4409447834",
+  "status": "ok",
+  "title": "A Graph-Based Learning Framework for Compiler Loop Auto-Vectorization"
+ },
+ "10.48550_arxiv.2507.16808": {
+  "abstract": "Register Transfer Level(RTL) code optimization is crucial for achieving high performance and low power consumption in digital circuit design. However, traditional optimization methods often rely on manual tuning and heuristics, which can be time-consuming and error-prone. Recent studies proposed to leverage Large Language Models(LLMs) to assist in RTL code optimization. LLMs can generate optimized code snippets based on natural language descriptions, potentially speeding up the optimization process. However, existing approaches have not thoroughly evaluated the effectiveness of LLM-Based code optimization methods for RTL code with complex timing logic. To address this gap, we conducted a comprehensive empirical investigation to assess the capability of LLM-Based RTL code optimization methods in handling RTL code with complex timing logic. In this study, we first propose a new benchmark for RTL optimization evaluation. It comprises four subsets, each corresponding to a specific area of RTL code optimization. Then we introduce a method based on metamorphosis to systematically evaluate the effectiveness of LLM-Based RTL code optimization methods.Our key insight is that the optimization effectiveness should remain consistent for semantically equivalent but more complex code. After intensive experiments, we revealed several key findings. (1) LLM-Based RTL optimization methods can effectively optimize logic operations and outperform existing compiler-based methods. (2) LLM-Based RTL optimization methods do not perform better than existing compiler-based methods on RTL code with complex timing logic, particularly in timing control flow optimization and clock domain optimization. This is primarily attributed to the challenges LLMs face in understanding timing logic in RTL code. Based on these findings, we provide insights for further research in leveraging LLMs for RTL code optimization.",
+  "doi": "10.48550/arxiv.2507.16808",
+  "openalex": "W4417440394",
+  "status": "ok",
+  "title": "Rethinking LLM-Based RTL Code Optimization Via Timing Logic Metamorphosis"
+ },
+ "10.48550_arxiv.2510.04890": {
+  "abstract": "Modern processors increasingly rely on SIMD instruction sets, such as AVX and RVV, to significantly enhance parallelism and computational performance. However, production-ready compilers like LLVM and GCC often fail to fully exploit available vectorization opportunities due to disjoint vectorization passes and limited extensibility. Although recent attempts in heuristics and intermediate representation (IR) designs have attempted to address these problems, efficiently simplifying control flow analysis and accurately identifying vectorization opportunities remain challenging tasks. To address these issues, we introduce a novel vectorization pipeline featuring two specialized IR extensions: SIR, which encodes high-level structural information, and VIR, which explicitly represents instruction dependencies through data dependency analysis. Leveraging the detailed dependency information provided by VIR, we develop a flexible and extensible vectorization framework. This approach substantially improves interoperability across vectorization passes and expands the search space for identifying isomorphic instructions, ultimately enhancing both the scope and efficiency of automatic vectorization. Experimental evaluations demonstrate that our proposed vectorization pipeline achieves significant performance improvements, delivering speedups of up to 53% and 58% compared to LLVM and GCC, respectively.",
+  "doi": "10.48550/arxiv.2510.04890",
+  "openalex": "W4414972649",
+  "status": "ok",
+  "title": "Retrofitting Control Flow Graphs in LLVM IR for Auto Vectorization"
+ },
+ "10.5802_crmeca.334": {
+  "abstract": "SoNICS is a new CFD software which builds upon the experience acquired in the years developing and extending the elsA CFD tool implemented at ONERA and used in industry. This article presents an overview of the SoNICS design and workflow, the motivation for this new tool, its structure and how it manages the user configuration (including the input mesh) to produce in the end a graph of tasks to schedule. In particular, we will discuss how well-studied concepts like variability, task graphs and compilations passes are cornerstones of the SoNICS workflow and allow for: a relatively easy evolution and maintenance of the code-base; a relatively straightforward user experience; and good performances.",
+  "doi": "10.5802/crmeca.334",
+  "openalex": "W4416933821",
+  "status": "ok",
+  "title": "SoNICS: design and workflow of a new CFD software"
+ },
+ "s2-28521f993fa856b1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "VecTrans: Enhancing Compiler Auto-Vectorization through LLM-Assisted Code Transformations"
+ },
+ "s2-c31baf63af0689ca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Biscotti: An Approach to Parallel Scheduling for Vectorized Encrypted Arithmetic Circuits"
+ },
+ "s2-ea598ca568efba62": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An early version of the content in Chapter 2-5 of this thesis was submitted as"
+ }
+}

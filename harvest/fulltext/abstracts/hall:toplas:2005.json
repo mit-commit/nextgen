@@ -1,0 +1,730 @@
+{
+ "10.1007_11532378_13": {
+  "abstract": null,
+  "doi": "10.1007/11532378_13",
+  "openalex": "W1881686332",
+  "status": "no_abstract",
+  "title": "A Code Isolator: Isolating Code Fragments from Large Programs"
+ },
+ "10.1007_978-3-540-71528-3_13": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-71528-3_13",
+  "openalex": "W1506705824",
+  "status": "no_abstract",
+  "title": "Automatic Discovery of Coarse-Grained Parallelism in Media Applications"
+ },
+ "10.1007_978-3-642-36036-7_5": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-36036-7_5",
+  "openalex": "W58073954",
+  "status": "no_abstract",
+  "title": "A Hybrid Approach to Proving Memory Reference Monotonicity"
+ },
+ "10.1007_978-3-642-39640-3_38": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-39640-3_38",
+  "openalex": "W9387966",
+  "status": "no_abstract",
+  "title": "Detection of Probabilistic Dangling References in Multi-core Programs Using Proof-Supported Tools"
+ },
+ "10.1007_s10766-005-3581-7": {
+  "abstract": null,
+  "doi": "10.1007/s10766-005-3581-7",
+  "openalex": "W2067202220",
+  "status": "no_abstract",
+  "title": "Empirical Optimization for a Sparse Linear Solver: A Case Study"
+ },
+ "10.1016_j.jpdc.2010.08.013": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2010.08.013",
+  "openalex": "W1978163937",
+  "status": "no_abstract",
+  "title": "Transparent runtime parallelization of the R scripting language"
+ },
+ "10.1080_10798587.2011.10643220": {
+  "abstract": "Abstract The Affine partitioning framework, which unifies many useful program transforms such as unimodular transformations, loop fusion, fission, scaling, reindexing, and statement reordering, has been proved to be successful in automatic discovery of the loop-level parallelization in programs. The affine partition algorithm was improved from the aspects of compile-time and runtime efficiency in this paper. Firstly, it improves compile-time speed of affine partition algorithm by using of generalized GCD test which is a basic dependence testing algorithm. This paper proved that generalized GCD test has a strong relationship with affine partition algorithm which can improve the compiling speed of the affine partition algorithm. Secondly, a method is put forward to select an optimal solution among the infinite legal solutions of the affine partition algorithm which ensures the minimum communication volume and the simplified processor space expression. Proved by experiments, the two innovations mentioned abo...",
+  "doi": "10.1080/10798587.2011.10643220",
+  "openalex": "W2023703253",
+  "status": "ok",
+  "title": "Improved Affine Partition Algorithm for Compile-Time and Runtime Performance"
+ },
+ "10.1109_ccgrid.2015.159": {
+  "abstract": "To migrate complex sequential code to multicore, profiling is often used on sequential executions to find opportunities for parallelization. In non-scientific code, the potential parallelism often resides in while-loops rather than for-loops. The do-all model used in the past by many studies cannot detect this type of parallelism. A new, task-based model has been used by a number of recent studies and shown safe for general loops and functions. This paper presents a feedback-based compiler that measures the amount of safe task parallelism in a program and ranks the potential candidates. It solves two problems unique for task analysis. The first is the relation between loop parallelism and function parallelism. The second is the effect of the calling context. The new tool is built in the GCC compiler and used to analyze the entire suite of SPEC 2006 integer benchmarks.",
+  "doi": "10.1109/ccgrid.2015.159",
+  "openalex": "W1667270618",
+  "status": "ok",
+  "title": "Assessing Safe Task Parallelism in SPEC 2006 INT"
+ },
+ "10.1109_cgo.2015.7054201": {
+  "abstract": "Subscripts using induction variables that cannot be expressed as a formula in terms of the enclosing-loop indices appear in the low-level implementation of common programming abstractions such as Alter, or stack operations and pose significant challenges to automatic parallelization. Because the complexity of such induction variables is often due to their conditional evaluation across the iteration space of loops we name them Conditional Induction Variables (CIV). This paper presents a flow-sensitive technique that summarizes both such CIV-based and affine subscripts to program level, using the same representation. Our technique requires no modifications of our dependence tests, which is agnostic to the original shape of the subscripts, and is more powerful than previously reported dependence tests that rely on the pairwise disambiguation of read-write references. We have implemented the CIV analysis in our parallelizing compiler and evaluated its impact on five Fortran benchmarks. We have found that that there are many important loops using CIV subscripts and that our analysis can lead to their scalable parallelization. This in turn has led to the parallelization of the benchmark programs they appear in.",
+  "doi": "10.1109/cgo.2015.7054201",
+  "openalex": "W4237770736",
+  "status": "ok",
+  "title": "Scalable conditional induction variables (CIV) analysis"
+ },
+ "10.1109_cgo.2015.7054205": {
+  "abstract": "With heterogeneous computing on the rise, executing programs efficiently on different devices from a single source code has become increasingly important. OpenCL, having a bulk-synchronous programming model, has been proposed as a framework for writing such performance-portable programs. Execution order of work-items in a program is unconstrained except at barrier synchronization events, giving some freedom to an implementation when scheduling work-items between synchronization points. Many OpenCL (and CUDA) compilers have been designed for targeting multicore CPU architectures. However, scheduling work-items in prior work has been done with primary focus on correctness and vectorization. To the best of our knowledge, no existing implementations consider the impact of work-item scheduling on data locality. We propose an OpenCL compiler that performs data-locality-centric work-item scheduling. By analyzing the memory addresses accessed in loops within a kernel, our technique can make better decisions on how to schedule work-items to construct better memory access patterns, thereby improving performance. Our approach achieves geomean speedups of 3.32× over AMD's and 1.71 × over Intel's implementations on Parboil and Rodinia benchmarks.",
+  "doi": "10.1109/cgo.2015.7054205",
+  "openalex": "W4256213682",
+  "status": "ok",
+  "title": "Locality-centric thread scheduling for bulk-synchronous programming models on CPU architectures"
+ },
+ "10.1109_cgo68049.2026.11394846": {
+  "abstract": "We describe LEGO, a new approach to optimizing data movement whereby code is expressed as a layout-independent computation and composed with layouts for data and computation. This code generator organization derives complex indexing expressions associated with hierarchical parallel code and data movement for GPUs. LEGO maps from layout specification to indexing expressions, and can be integrated into existing compilers and code templates. It facilitates the explo-ration of data layouts in combination with other optimizations. We demonstrate LEGO’s integration with the Triton and MLIR compilers, and with CUDA templates. We show that LEGO is capable of deriving performance competitive with Triton, and shows broad applicability for data and thread layout mapping optimizations in its integration with CUDA and MLIR.",
+  "doi": "10.1109/cgo68049.2026.11394846",
+  "openalex": "W7131067420",
+  "status": "ok",
+  "title": "LEGO: A Layout Expression Language for Code Generation of Hierarchical Mapping"
+ },
+ "10.1109_hpcsim.2016.7568436": {
+  "abstract": "High-Performance Computing (HPC) is becoming increasingly required by scientists of all branches in order to achieve their desired research results. However, carrying out their research in an HPC center can be a difficult task when they are new to parallel programming. These users need support in the parallelization and optimization of their codes, in order to obtain reliable results as well as make efficient use of the available resources. For this purpose, a novel code analyzer for automatic parallelization of sequential codes is presented, focused on resource management of a supercomputing center, where efficient scheduling decisions and energy saving become key challenges. Thus, this paper aims to introduce the analyzer so as to demonstrate the importance of using it, specially in terms of efficiency, when running parallel codes in HPC centers.",
+  "doi": "10.1109/hpcsim.2016.7568436",
+  "openalex": "W2519880423",
+  "status": "ok",
+  "title": "Towards automatic parallelization of sequential programs and efficient use of resources in HPC centers"
+ },
+ "10.1109_icise.2010.5690981": {
+  "abstract": "The Affine partitioning framework unifies many useful program transforms such as unimodular transformations, loop fusion, fission, scaling, reindexing, and statement reordering. The affine partitioning algorithm put forward by the SUIF compiler team has been proved to be successful in automatic discovery of the loop-level parallelization in programs. Generalized GCD Test is a basic dependence testing algorithm. In this paper, we proved that generalized GCD test has a strong relationship with affine partitioning algorithm. Then we presented an improved affine partitioning algorithm based on generalized GCD test. We illustrated that the compiling speed of affine partitioning algorithm can be significantly improved by our method.",
+  "doi": "10.1109/icise.2010.5690981",
+  "openalex": "W2534845553",
+  "status": "ok",
+  "title": "A generalized GCD test based affine partitioning algorithm"
+ },
+ "10.1109_ipdps.2011.21": {
+  "abstract": "Basic data flow patterns that we call \\textbf{performance idioms}, such as stream, transpose, reduction, random access and stencil, are common in scientific numerical applications. We hypothesize that a small number of idioms can cover most programming constructs that dominate the execution time of scientific codes and can be used to approximate the application performance. To check these hypotheses, we proposed an automatic idioms recognition method and implemented the method, based on the open source compiler Open64. With the NAS Parallel Benchmark (NPB) as a case study, the prototype system is about $90%$ accurate compared with idiom classification by a human expert. Our results showed that the above five idioms suffice to cover $100%$ of the six NPB codes (MG, CG, FT, BT, SP and LU). We also compared the performance of our idiom benchmarks with their corresponding instances in the NPB codes on two different platforms with different methods. The approximation accuracy is up to $96.6%$. The contribution is to show that a small set of idioms can cover more complex codes, that idioms can be recognized automatically, and that suitably defined idioms may approximate application performance.",
+  "doi": "10.1109/ipdps.2011.21",
+  "openalex": "W2107896023",
+  "status": "ok",
+  "title": "Automatic Recognition of Performance Idioms in Scientific Applications"
+ },
+ "10.1109_sc41404.2022.00036": {
+  "abstract": "We present a technique for introducing and op-timizing the use of memory in a functional array language, aimed at GPU execution, that supports correct-by-construction parallelism. Using linear memory access descriptors as building blocks, we define a notion of memory in the compiler IR that enables cost-free change-of-layout transformations (e.g., slicing, transposition), whose results can even be carried across control flow such as ifs/loops without manifestation in memory. The memory notion allows a graceful transition to an unsafe IR that is automatically optimized (1) to mix reads and writes to the same array inside a parallel construct, and (2) to map semantically different arrays to the same memory block. The result is code similar to what imperative users would write. Our evaluation shows that our optimizations have significant impact (1.1 x -2 x) and result in performance competitive to hand-written code from challenging benchmarks, such as Rodinia's NW, LUD, Hotspot.",
+  "doi": "10.1109/sc41404.2022.00036",
+  "openalex": "W4321636600",
+  "status": "ok",
+  "title": "Memory Optimizations in an Array Language"
+ },
+ "10.1109_sc41404.2022.00063": {
+  "abstract": "We present a technique for applying reverse mode automatic differentiation (AD) on a non-recursive second-order functional array language that supports nested parallelism and is primarily aimed at efficient GPU execution. The key idea is to eliminate the need for a tape by relying on redundant execution to bring into each new scope all program variables that may be needed by the differentiated code. Efficient execution is enabled by the observation that perfectly nested scopes do not introduce re-execution and that such perfect nests can be readily produced by application of known compiler transformations. Our technique differentiates loops and bulk-parallel operators-e.g., map, reduce(-by-index), scan, and scatter-by specific rewrite rules and aggressively optimizes the resulting nested-parallel code. We report an evaluation that compares with established AD solutions and demonstrates competitive performance on ten common benchmarks from recent applied AD literature.",
+  "doi": "10.1109/sc41404.2022.00063",
+  "openalex": "W4321636553",
+  "status": "ok",
+  "title": "AD for an Array Language with Nested Parallelism"
+ },
+ "10.1109_tvlsi.2011.2107923": {
+  "abstract": "Design space exploration is a delicate process whose success lays on the designers' shoulders. It is often based on a trial-and-error approach. Some basic metrics can be used to guide this process. In this paper, we explore accelerating loops from C-based specifications. We built a framework in which a design style, such as software-oriented or application-specific instruction-set processor (ASIP)-oriented design, can be specified. We also propose an exploration process that allows targeting the main aspects that limit acceleration and the actions that can be made to improve it. The process is based on new loop-oriented metrics that provide insight in key design issues. They help to determine which aspects of the design between data accesses and arithmetic logic unit (ALU)/control operations limit or allow leveraging loop acceleration opportunities. We profile some benchmarks from the signal and image processing fields, such as the Turbo Decoder and the JPEG algorithms, to illustrate how loop-oriented metrics help to point out aspects that limit or improve loop acceleration. The loop acceleration process was also used to explore design architectures that can leverage, as much as possible, the loop acceleration opportunities of the sum of absolute differences (SAD) algorithm.",
+  "doi": "10.1109/tvlsi.2011.2107923",
+  "openalex": "W2108917009",
+  "status": "ok",
+  "title": "Loop Acceleration Exploration for ASIP Architecture"
+ },
+ "10.1145_1150019.1136512": {
+  "abstract": "We present Program Demultiplexing (PD), an execution paradigm that creates concurrency in sequential programs by \"demultiplexing\" methods (functions or subroutines). Call sites of a demultiplexed method in the program are associated with handlers that allow the method to be separated from the sequential program and executed on an auxiliary processor. The demultiplexed execution of a method (and its handler) is speculative and occurs when the inputs of the method are (speculatively) available, which is typically far in advance of when the method is actually called in the sequential execution. A trigger, composed of predicates that are based on program counters and memory write addresses, launches the speculative execution of the method on another processor. Our implementation of PD is based on a full-system execution-based chip multi-processor simulator with software to generate triggers and handlers from an x86- program binary. We evaluate eight integer benchmarks from the SPEC2000 suite .programs written in C with no explicit concurrency and/or motivation to create concurrency. and achieve a harmonic mean speedup of 1.8x with our implementation of PD.",
+  "doi": "10.1145/1150019.1136512",
+  "openalex": "W2142501881",
+  "status": "ok",
+  "title": "Program Demultiplexing"
+ },
+ "10.1145_1250734.1250760": {
+  "abstract": "Many sequential applications are difficult to parallelize because of unpredictable control flow, indirect data access, and input-dependent parallelism. These difficulties led us to build a software system for behavior oriented parallelization (BOP), which allows a program to be parallelized based on partial information about program behavior, for example, a user reading just part of the source code, or a profiling tool examining merely one or few executions.",
+  "doi": "10.1145/1250734.1250760",
+  "openalex": "W2158308706",
+  "status": "ok",
+  "title": "Software behavior oriented parallelization"
+ },
+ "10.1145_1273442.1250760": {
+  "abstract": "Many sequential applications are difficult to parallelize because of unpredictable control flow, indirect data access, and input-dependent parallelism. These difficulties led us to build a software system for behavior oriented parallelization (BOP), which allows a program to be parallelized based on partial information about program behavior, for example, a user reading just part of the source code, or a profiling tool examining merely one or few executions. The basis of BOP is programmable software speculation, where a user or an analysis tool marks possibly parallel regions in the code, and the run-time system executes these regions speculatively. It is imperative to protect the entire address space during speculation. The main goal of the paper is to demonstrate that the general protection can be made cost effective by three novel techniques: programmable speculation, critical-path minimization, and value-based correctness checking. On a recently acquired multi-core, multi-processor PC, the BOP system reduced the end-to-end execution time by integer factors for a Lisp interpreter, a data compressor, a language parser, and a scientific library, with no change to the underlying hardware or operating system.",
+  "doi": "10.1145/1273442.1250760",
+  "openalex": "W3015929788",
+  "status": "ok",
+  "title": "Software behavior oriented parallelization"
+ },
+ "10.1145_1274971.1275008": {
+  "abstract": "Sensitivity Analysis (SA) is a novel compiler technique that complements, and integrates with, static automatic parallelization analysis for the cases when relevant program behavior is input sensitive. In this paper we show how SA can extract all the input dependent, statically unavailable, conditions for which loops can be dynamically parallelized. SA generates a sequence of sufficient conditions which, when evaluated dynamically in order of their complexity, can each validate the dynamic parallel execution of the corresponding loop. For example, SA can first attempt to validate parallelization by checking simple conditions related to loop bounds. If such simple conditions cannot be met, then validating dynamic parallelization may require evaluating conditions related to the entire memory reference trace of a loop, thus decreasing the benefits of parallel execution.",
+  "doi": "10.1145/1274971.1275008",
+  "openalex": "W1988777345",
+  "status": "ok",
+  "title": "Sensitivity analysis for automatic parallelization on multi-cores"
+ },
+ "10.1145_2254064.2254124": {
+  "abstract": "This paper presents a fully automatic approach to loop parallelization that integrates the use of static and run-time analysis and thus overcomes many known difficulties such as nonlinear and indirect array indexing and complex control flow. Our hybrid analysis framework validates the parallelization transformation by verifying the independence of the loop's memory references. To this end it represents array references using the USR (uniform set representation) language and expresses the independence condition as an equation, S=0, where S is a set expression representing array indexes. Using a language instead of an array-abstraction representation for S results in a smaller number of conservative approximations but exhibits a potentially-high runtime cost. To alleviate this cost we introduce a language translation F from the USR set-expression language to an equally rich language of predicates (F(S) ==> S = 0). Loop parallelization is then validated using a novel logic inference algorithm that factorizes the obtained complex predicates (F(S)) into a sequence of sufficient independence conditions that are evaluated first statically and, when needed, dynamically, in increasing order of their estimated complexities. We evaluate our automated solution on 26 benchmarks from PERFECT-Club and SPEC suites and show that our approach is effective in parallelizing large, complex loops and obtains much better full program speedups than the Intel and IBM Fortran compilers.",
+  "doi": "10.1145/2254064.2254124",
+  "openalex": "W2096862145",
+  "status": "ok",
+  "title": "Logical inference techniques for loop parallelization"
+ },
+ "10.1145_2345156.2254124": {
+  "abstract": "This paper presents a fully automatic approach to loop parallelization that integrates the use of static and run-time analysis and thus overcomes many known difficulties such as nonlinear and indirect array indexing and complex control flow. Our hybrid analysis framework validates the parallelization transformation by verifying the independence of the loop's memory references. To this end it represents array references using the USR (uniform set representation) language and expresses the independence condition as an equation, S =0, where S is a set expression representing array indexes. Using a language instead of an array-abstraction representation for S results in a smaller number of conservative approximations but exhibits a potentially-high runtime cost. To alleviate this cost we introduce a language translation F from the USR set-expression language to an equally rich language of predicates ( F ( S ) ==> S = 0). Loop parallelization is then validated using a novel logic inference algorithm that factorizes the obtained complex predicates (F( S )) into a sequence of sufficient independence conditions that are evaluated first statically and, when needed, dynamically, in increasing order of their estimated complexities. We evaluate our automated solution on 26 benchmarks from PERFECT-Club and SPEC suites and show that our approach is effective in parallelizing large, complex loops and obtains much better full program speedups than the Intel and IBM Fortran compilers.",
+  "doi": "10.1145/2345156.2254124",
+  "openalex": "W4235730175",
+  "status": "ok",
+  "title": "Logical inference techniques for loop parallelization"
+ },
+ "10.1145_2364474.2364484": {
+  "abstract": "This paper presents a real-world pricing kernel for financial derivatives and evaluates the language and compiler tool chain that would allow expressive, hardware-neutral algorithm implementation and efficient execution on graphics-processing units (GPU). The language issues refer to preserving algorithmic invariants, e.g., inherent parallelism made explicit by map-reduce-scan functional combinators. Efficient execution is achieved by manually; applying a series of generally-applicable compiler transformations that allows the generated-OpenCL code to yield speedups as high as 70x and 540x on a commodity mobile and desktop GPU, respectively.",
+  "doi": "10.1145/2364474.2364484",
+  "openalex": "W2100232637",
+  "status": "ok",
+  "title": "Financial software on GPUs"
+ },
+ "10.1145_2502323.2502328": {
+  "abstract": "Fusion is one of the most important code transformations as it has the potential to substantially optimize both the memory hierarchy time overhead and, sometimes asymptotically, the space requirement.",
+  "doi": "10.1145/2502323.2502328",
+  "openalex": "W1997744477",
+  "status": "ok",
+  "title": "A T2 graph-reduction approach to fusion"
+ },
+ "10.1145_2512466": {
+  "abstract": "Multimedia applications require a significantly higher level of performance than previous workloads of embedded systems. They have driven digital signal processor (DSP) makers to adopt high-performance architectures like VLIW (Very-Long Instruction Word). Despite many efforts to exploit instruction-level parallelism (ILP) in the application, the speed is a fraction of what it could be, limited by the difficulty of finding enough independent instructions to keep all of the processor's functional units busy. This article proposes Software Thread Integration (STI) for instruction-level parallelism. STI is a software technique for interleaving multiple threads of control into a single implicitly multithreaded one. We use STI to improve the performance on ILP processors by merging parallel procedures into one, increasing the compiler's scope and hence allowing it to create a more efficient instruction schedule. Assuming the parallel procedures are given, we define a methodology for finding the best performing integrated procedure with a minimum compilation time. We quantitatively estimate the performance impact of integration, allowing various integration scenarios to be compared and ranked via profitability analysis. During integration of threads, different ILP-improving code transformations are selectively applied according to the control structure and the ILP characteristics of the code, driven by interactions with software pipelining. The estimated profitability is verified and corrected by an iterative compilation approach, compensating for possible estimation inaccuracy. Our modeling methods combined with limited compilation quickly find the best integration scenario without requiring exhaustive integration.",
+  "doi": "10.1145/2512466",
+  "openalex": "W2006020173",
+  "status": "ok",
+  "title": "Software thread integration for instruction-level parallelism"
+ },
+ "10.1145_2544137.2544141": {
+  "abstract": "This paper describes a loop transformation framework that extends a polyhedral representation of loop nests to represent and transform computations with non-affine index arrays in loop bounds and subscripts via a new interface between compile-time and run-time abstractions. Polyhedra scanning code generation, which historically applies an affine mapping to the subscript expressions of the statements in a loop nest, is modified to apply non-affine mappings involving index arrays that are represented at compile time by uninterpreted functions; non-affine loop bounds involving index arrays are also represented. When appropriate, an inspector is utilized to capture the non-affine subscript mappings, and a generalized loop coalescing transformation is introduced as a non-affine transformation to support non-affine loop bounds. With this support, complex sequences of new and existing transformations can then be composed. We demonstrate the effectiveness of this framework by optimizing sparse matrix vector multiplication operations targeting GPUs for different matrix structures and parallelization strategies. This approach achieves performance that is comparable to or greater than the hand-tuned CUSP library; for two of the implementations it achieves an average 1.14× improvement over CUSP across a collection of sparse matrices, while the third performs on average within 8% of CUSP.",
+  "doi": "10.1145/2544137.2544141",
+  "openalex": "W2025278624",
+  "status": "ok",
+  "title": "Non-affine Extensions to Polyhedral Code Generation"
+ },
+ "10.1145_2581122.2544141": {
+  "abstract": "This paper describes a loop transformation framework that extends a polyhedral representation of loop nests to represent and transform computations with non-affine index arrays in loop bounds and subscripts via a new interface between compile-time and run-time abstractions. Polyhedra scanning code generation, which historically applies an affine mapping to the subscript expressions of the statements in a loop nest, is modified to apply non-affine mappings involving index arrays that are represented at compile time by uninterpreted functions; non-affine loop bounds involving index arrays are also represented. When appropriate, an inspector is utilized to capture the non-affine subscript mappings, and a generalized loop coalescing transformation is introduced as a non-affine transformation to support non-affine loop bounds. With this support, complex sequences of new and existing transformations can then be composed. We demonstrate the effectiveness of this framework by optimizing sparse matrix vector multiplication operations targeting GPUs for different matrix structures and parallelization strategies. This approach achieves performance that is comparable to or greater than the hand-tuned CUSP library; for two of the implementations it achieves an average 1.14× improvement over CUSP across a collection of sparse matrices, while the third performs on average within 8% of CUSP.",
+  "doi": "10.1145/2581122.2544141",
+  "openalex": "W4295539146",
+  "status": "ok",
+  "title": "Non-affine Extensions to Polyhedral Code Generation"
+ },
+ "10.1145_2627373.2627388": {
+  "abstract": "This paper presents an analysis for bounds checking of array subscripts that lifts checking assertions to program level under the form of an arbitrarily-complex predicate (inspector), whose runtime evaluation guards the execution of the code of interest. Separating the predicate from the computation makes it more amenable to optimization, and allows it to be split into a cascade of sufficient conditions of increasing complexity that optimizes the common-inspection path. While synthesizing the bounds checking invariant resembles type checking techniques, we rely on compiler simplification and runtime evaluation rather than employing complex inference and annotation systems that might discourage the non-specialist user. We integrate the analysis in the compiler's repertoire of Futhark: a purely-functional core language supporting map-reduce nested parallelism on regular arrays, and show how the high-level language invariants enable a relatively straightforward analysis. Finally, we report a qualitative evaluation of our technique on three real-world applications from the financial domain that indicates that the runtime overhead of predicates is negligible.",
+  "doi": "10.1145/2627373.2627388",
+  "openalex": "W1989792478",
+  "status": "ok",
+  "title": "Bounds Checking"
+ },
+ "10.1145_2636228.2636238": {
+  "abstract": "We present a shape inference analysis for a purely-functional language, named Futhark, that supports nested parallelism via array combinators such as map, reduce, filter}, and scan}. Our approach is to infer code for computing precise shape information at run-time, which in the most common cases can be effectively optimized by standard compiler optimizations. Instead of restricting the language or sacrificing ease of use, the language allows the occasional shape-dynamic, and even shape-misbehaving, constructs. Inherently shape-dynamic code is treated with a fall-back technique that preserves, asymptotically, the number of operations of the program and that computes and returns the array's shape alongside with its value. This approach leads to a shape-dependent system with existentially-quantified types, where static shape inference corresponds to eliminating existential quantifications from the types of program expressions.",
+  "doi": "10.1145/2636228.2636238",
+  "openalex": "W2024712769",
+  "status": "ok",
+  "title": "Size slicing"
+ },
+ "10.1145_2712386.2712392": {
+  "abstract": "The free lunch of ever increasing clock frequencies is over. Performance-critical sequential software must be parallelized, and this is tedious, hard, buggy, knowledge-intensive, and time-consuming. In order to assist software engineers appropriately, parallelization tools need to consider detection, transformation, correctness, and performance all together.",
+  "doi": "10.1145/2712386.2712392",
+  "openalex": "W1967885990",
+  "status": "ok",
+  "title": "Patty"
+ },
+ "10.1145_2897511": {
+  "abstract": "This article makes three contributions regarding reverse-engineering of executables. First, techniques are presented for recovering a precise and correct stack-memory model in executables while addressing executable-specific challenges such as indirect control transfers. Next, the enhanced memory model is employed to define a novel symbolic analysis framework for executables that can perform the same types of program analyses as source-level tools. Third, a demand-driven framework is presented to enhance the scalability of the symbolic analysis framework. Existing symbolic analysis frameworks for executables fail to simultaneously maintain the properties of correct representation, a precise stack-memory model, and scalability. Furthermore, they ignore memory-allocated variables when defining symbolic analysis mechanisms. Our methods do not use symbolic, relocation or debug information, which are usually absent in deployed binaries. We describe our framework, highlighting the novel intellectual contributions of our approach and demonstrating its efficacy and robustness. Our techniques improve the precision of existing stack-memory models by 25%, enhance scalability of our basic symbolic analysis mechanism by 10×, and successfully uncovers five previously undiscovered information-flow vulnerabilities in several widely used programs.",
+  "doi": "10.1145/2897511",
+  "openalex": "W2342473256",
+  "status": "ok",
+  "title": "A Stack Memory Abstraction and Symbolic Analysis Framework for Executables"
+ },
+ "10.1145_2898354": {
+  "abstract": "Commodity many-core hardware is now mainstream, but parallel programming models are still lagging behind in efficiently utilizing the application parallelism. There are (at least) two principal reasons for this. First, real-world programs often take the form of a deeply nested composition of parallel operators, but mapping the available parallelism to the hardware requires a set of transformations that are tedious to do by hand and beyond the capability of the common user. Second, the best optimization strategy, such as what to parallelize and what to efficiently sequentialize, is often sensitive to the input dataset and therefore requires multiple code versions that are optimized differently, which also raises maintainability problems. This article presents three array-based applications from the financial domain that are suitable for gpgpu execution. Common benchmark-design practice has been to provide the same code for the sequential and parallel versions that are optimized for only one class of datasets. In comparison, we document (1) all available parallelism via nested map-reduce functional combinators, in a simple Haskell implementation that closely resembles the original code structure, (2) the invariants and code transformations that govern the main trade-offs of a data-sensitive optimization space, and (3) report target cpu and multiversion gpgpu code together with an evaluation that demonstrates optimization trade-offs and other difficulties. We believe that this work provides useful insight into the language constructs and compiler infrastructure capable of expressing and optimizing such applications, and we report in-progress work in this direction.",
+  "doi": "10.1145/2898354",
+  "openalex": "W2472217442",
+  "status": "ok",
+  "title": "FinPar"
+ },
+ "10.1145_301104.301112": {
+  "abstract": "This paper presents an evaluation of a new analysis for parallelizing compilers called predicated array data-flow analysis. This analysis extends array data-flow analysis for parallelization and privatization to associate predicates with data-flow values. These predicates can be used to derive conditions under which dependences can be eliminated or privatization is possible. These conditions can be used both to enhance compile-time analysis and to introduce run-time tests that guard safe execution of a parallelized version of a computation. As compared to previous work that combines predicates with array data-flow analysis, our approach is distinguished by two features: (1) it derives low-cost, run-time parallelization tests; and, (2) it incorporates predicate embedding and predicate extraction, which translate between the domain of predicates and data-flow values to derive more precise analysis results. We present extensive experimental results across three benchmark suites and one additi...",
+  "doi": "10.1145/301104.301112",
+  "openalex": "W1966848517",
+  "status": "ok",
+  "title": "Evaluation of predicated array data-flow analysis for automatic parallelization"
+ },
+ "10.1145_3062341.3062354": {
+  "abstract": "Futhark is a purely functional data-parallel array language that offers a machine-neutral programming model and an optimising compiler that generates OpenCL code for GPUs.",
+  "doi": "10.1145/3062341.3062354",
+  "openalex": "W2644985445",
+  "status": "ok",
+  "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates"
+ },
+ "10.1145_3140587.3062354": {
+  "abstract": "Futhark is a purely functional data-parallel array language that offers a machine-neutral programming model and an optimising compiler that generates OpenCL code for GPUs. This paper presents the design and implementation of three key features of Futhark that seek a suitable middle ground with imperative approaches. First, in order to express efficient code inside the parallel constructs, we introduce a simple type system for in-place updates that ensures referential transparency and supports equational reasoning. Second, we furnish Futhark with parallel operators capable of expressing efficient strength-reduced code, along with their fusion rules. Third, we present a flattening transformation aimed at enhancing the degree of parallelism that (i) builds on loop interchange and distribution but uses higher-order reasoning rather than array-dependence analysis, and (ii) still allows further locality-of-reference optimisations. Finally, an evaluation on 16 benchmarks demonstrates the impact of the language and compiler features and shows application-level performance competitive with hand-written GPU code.",
+  "doi": "10.1145/3140587.3062354",
+  "openalex": "W4235593108",
+  "status": "ok",
+  "title": "Futhark: purely functional GPU-programming with nested parallelism and in-place array updates"
+ },
+ "10.1145_329366.301112": {
+  "abstract": "This paper presents an evaluation of a new analysis for parallelizing compilers called predicated array data-flow analysis . This analysis extends array data-flow analysis for parallelization and privatization to associate predicates with data-flow values. These predicates can be used to derive conditions under which dependences can be eliminated or privatization is possible. These conditions can be used both to enhance compile-time analysis and to introduce run-time tests that guard safe execution of a parallelized version of a computation.As compared to previous work that combines predicates with array data-flow analysis, our approach is distinguished by two features: (1) it derives low-cost, run-time parallelization tests; and, (2) it incorporates predicate embedding and predicate extraction , which translate between the domain of predicates and data-flow values to derive more precise analysis results. We present extensive experimental results across three benchmark suites and one additional program, demonstrating that predicated array data-flow analysis parallelizes more than 40% of the remaining inherently parallel loops left unparallelized by the SUIF compiler and that it yields improved speedups for 5 programs.",
+  "doi": "10.1145/329366.301112",
+  "openalex": "W4240983189",
+  "status": "ok",
+  "title": "Evaluation of predicated array data-flow analysis for automatic parallelization"
+ },
+ "10.1145_3293883.3295707": {
+  "abstract": "Compilation techniques for nested-parallel applications that can adapt to hardware and dataset characteristics are vital for unlocking the power of modern hardware. This paper proposes such a technique, which builds on flattening and is applied in the context of a functional data-parallel language. Our solution uses the degree of utilized parallelism as the driver for generating a multitude of code versions, which together cover all possible mappings of the application's regular nested parallelism to the levels of parallelism supported by the hardware. These code versions are then combined into one program by guarding them with predicates, whose threshold values are automatically tuned to hardware and dataset characteristics. Our unsupervised method---of statically clustering datasets to code versions---is different from autotuning work that typically searches for the combination of code transformations producing a single version, best suited for a specific dataset or on average for all datasets.",
+  "doi": "10.1145/3293883.3295707",
+  "openalex": "W2913154098",
+  "status": "ok",
+  "title": "Incremental flattening for nested data parallelism"
+ },
+ "10.1145_3729266": {
+  "abstract": "A core design principle of C++ is that users should only incur costs for features they actually use, both in terms of performance and code size. A notable exception to this rule is the run-time type information (RTTI) data, used for dynamic downcasts, exceptions, and run-time type introspection. For classes that define at least one virtual method, compilers generate RTTI data that uniquely identifies the type, including a string for the type name. In large programs with complex type inheritance hierarchies, this RTTI data can grow substantially in size. Moreover, dynamic casting algorithms are linear in the type hierarchy size, causing some programs to spend considerable time on these casts. The common workaround is to use the -fno-rtti compiler flag, which disables RTTI data generation. However, this approach has significant drawbacks, such as disabling polymorphic exceptions and dynamic casts, and requiring the flag to be applied across the entire program due to ABI changes. In this paper, we propose a new link-time optimization to mitigate both the performance and size overhead associated with dynamic casts and RTTI data. Our optimization replaces costly library calls for downcasts with short instruction sequences and eliminates unnecessary RTTI data by modifying vtables to remove RTTI slots. Our prototype, implemented in the LLVM compiler, demonstrates an average speedup of 1.4%, as well as an average binary size reduction of 1.7%.",
+  "doi": "10.1145/3729266",
+  "openalex": "W4411260251",
+  "status": "ok",
+  "title": "Link-Time Optimization of Dynamic Casts in C++ Programs"
+ },
+ "10.1145_3808304": {
+  "abstract": "In functional data-parallel programs, index array computations are separated into sequences of bulk-parallel operators—map, prefix sum, scatter—and used to gather or scatter data array elements, thus determining data array properties. This programming style is problematic for general-purpose verification frameworks (e.g., Dafny, F*, Liquid Haskell), which are flexible and powerful, but require verbose annotations and non-trivial user proofs, making them inaccessible to non-experts. We present a compiler approach to verifying array properties with high automation, aimed at making verification of data-parallel programs more accessible to users without verification expertise. We support a small but powerful predefined set of properties—equivalence, range, injectivity, bijectivity, monotonicity, filtering, partitioning—that enable the compiler to (automatically) reason at a higher level of abstraction. We evaluate our approach on challenging applications with non-linear indexing, including graph algorithms, Cooley-Tukey FFT, filtering, multi-way partitioning, and flattened irregular nested parallel programs that are difficult to verify, such as batch operations on arrays of different sizes.",
+  "doi": "10.1145/3808304",
+  "openalex": "W7163912889",
+  "status": "ok",
+  "title": "Verifying Array Properties in Pure Data-Parallel Programs"
+ },
+ "10.1155_1999_490628": {
+  "abstract": "This paper demonstrates that significant improvements to automatic parallelization technology require that existing systems be extended in two ways: (1) they must combine high‐quality compile‐time analysis with low‐cost run‐time testing; and (2) they must take control flow into account during analysis. We support this claim with the results of an experiment that measures the safety of parallelization at run time for loops left unparallelized by the Stanford SUIF compiler’s automatic parallelization system. We present results of measurements on programs from two benchmark suites – SPECFP95 and NAS sample benchmarks – which identify inherently parallel loops in these programs that are missed by the compiler. We characterize remaining parallelization opportunities, and find that most of the loops require run‐time testing, analysis of control flow, or some combination of the two. We present a new compile‐time analysis technique that can be used to parallelize most of these remaining loops. This technique is designed to not only improve the results of compile‐time parallelization, but also to produce low‐cost, directed run‐time tests that allow the system to defer binding of parallelization until run‐time when safety cannot be proven statically. We call this approach predicated array data‐flow analysis. We augment array data‐flow analysis, which the compiler uses to identify independent and privatizable arrays, by associating predicates with array data‐flow values. Predicated array data‐flow analysis allows the compiler to derive “optimistic” data‐flow values guarded by predicates; these predicates can be used to derive a run‐time test guaranteeing the safety of parallelization.",
+  "doi": "10.1155/1999/490628",
+  "openalex": "W2065789159",
+  "status": "ok",
+  "title": "Combining Compile‐Time and Run‐Time Parallelization"
+ },
+ "10.1201_b11417-14": {
+  "abstract": "The applications that seemmost likely to benefit frommajor advances in computational power and drive future processor development appear increasingly throughput oriented, with products optimized more for data or task parallelism depending on their market focus (e.g., HPC vs. transactional vs. multimedia). Examples include the simulation of large physical systems, data mining, and ray tracing. Throughputoriented workload design emphasizes many small cores because they eliminate most of the hardware needed to speed up the performance of an individual thread. These simple cores are then multithreaded, so that when any one thread stalls, other threads can run and every core can continue to be used to maximize the application’s overall throughput. Multithreading in turn relaxes requirements for high performance on any individual thread. Small, simple cores therefore provide greater throughput per unit of chip area and greater throughput within a given power or cooling constraint. The high throughput provided by “manycore” organizations has been recognized by most major processor vendors. To understand the implications of rapidly increasing parallelism on both hardware and software design, we believe it is most productive to look at the design of modern GPUs (Graphics Processing Units). A decade ago, GPUs were fixed-function hardware devices designed specifically to accelerate graphics APIs such as OpenGL and Direct3D. In contrast to the fixed-function devices of the past, today’s GPUs are fully programmable microprocessors with general-purpose architectures. Having evolved in response to the needs of computer graphics-an application domain with tremendous inherent parallelism but increasing need for general-purpose programmabilitythe GPU is already a general-purpose manycore processor with greater peak performance than any other commodity processor. GPUs simply include some additional hardware that typical, general-purpose CPUs do not, mainly units such as rasterizers that accelerate the rendering of 3D polygons and texture units that accelerate filtering and blending of images. Most of these units are not needed when using the GPU as a general-purpose manycore processor, although some can be useful, such as texture caches and GPU instruction-set support for some transcendental functions. Because GPUs are general-purpose manycore processors, they are typically programmed in a fashion similar to traditional parallel programming models, with a single-program, multiple data (SPMD) model for launching a large number of concurrent threads, a unified memory, and standard synchronization mechanisms. High-end GPUs cost just hundreds of dollars and provide teraflop performance while creating, executing, and retiring literally billions of parallel threads per second, exhibiting a scale of parallelism that is orders of magnitude higher than other platforms and truly embodies the manycore paradigm. GPUs are now used in a wide range of computational science and engineering applications, and are supported by several major libraries and commercial software products.",
+  "doi": "10.1201/b11417-14",
+  "openalex": "W4214497478",
+  "status": "ok",
+  "title": "Scalable Manycore Computing with CUDA"
+ },
+ "10.21236_ada563246": {
+  "abstract": "Abstract : Basic data flow patterns that we call performance idioms, such as stream, transpose, reduction, random access and stencil, are common in scientific numerical applications. We hypothesize that a small number of idioms can cover most programming constructs that dominate the execution time of scientific codes and can be used to approximate the application performance. To check these hypotheses, we built an automatic idioms recognition method tool and applied it to the UHPC Challenge problems.",
+  "doi": "10.21236/ada563246",
+  "openalex": "W291681784",
+  "status": "ok",
+  "title": "Test and Evaluation of Architecture-Aware Compiler Environment"
+ },
+ "10.23940_ijpe.19.11.p5.28712881": {
+  "abstract": "GCC compiler is a retargetable compiler program that was developed to increase the efficiency of programs in the GNU system. In recent years, compiler optimization based on data dependency analysis has become an important research area of modern compilers. Existing GCC compilers can only conduct dependency analysis on perfect nested loops. In order to better explore the coarse-grained parallelism of the nested loops, we propose a dependence test method that can deal with the branch nested loops. Firstly, we identify the branch nested loop in the programs. Then, we analyze the relationship between the array subscript and the outer index variable of the branch nested loop. Finally, we calculate the distance vector of the outer loop index variable and determine whether the loop has dependence through distance vector detection. Experimental results show that our method can correctly and effectively analyze the dependence relationship of branch nested loops.",
+  "doi": "10.23940/ijpe.19.11.p5.28712881",
+  "openalex": "W2997098728",
+  "status": "ok",
+  "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop"
+ },
+ "10.26053_0h-n2q9-he00": {
+  "abstract": null,
+  "doi": "10.26053/0h-n2q9-he00",
+  "openalex": "W2599487174",
+  "status": "no_abstract",
+  "title": "An integrated compiler and runtime framework for sparse matrix codes"
+ },
+ "10.3724_sp.j.1001.2012.04178": {
+  "abstract": "传统的分布存储并行编译系统大多是在共享存储并行编译系统的基础上开发的.共享存储并行编译系统的并行识别技术适合 OpenMP 代码生成,实现方式是将所有嵌套循环都按照相同的识别方法进行处理,用于分布存储并行编译系统必然会导致无法高效发掘程序的并行性.分布存储并行编译系统应根据嵌套循环结构的特点进行分类处理,提出适合 MPI 代码生成的并行识别技术.为解决上述问题,根据嵌套循环的结构和 MPI 并行程序的特点,提出了一种新的嵌套循环分类方法,并针对不同的嵌套循环分别提出了相应的并行识别技术.实验结果表明,与采用传统并行识别技术的分布存储并行编译系统相比,按照所提方法对嵌套循环进行分类,采用相应并行识别技术的编译系统能够更高效地识别基准程序中的并行循环,自动生成的 MPI 并行代码其性能加速比提高了 20%以上.",
+  "doi": "10.3724/sp.j.1001.2012.04178",
+  "openalex": "W2320292756",
+  "status": "ok",
+  "title": "Parallelism Recognition Technology Based on Nested Loops Classifying"
+ },
+ "10.3923_itj.2013.1673.1684": {
+  "abstract": null,
+  "doi": "10.3923/itj.2013.1673.1684",
+  "openalex": "W2330095989",
+  "status": "no_abstract",
+  "title": "Parallel Techniques of the Sequential Codes Based on Multi-core"
+ },
+ "10.3923_rjasci.2016.900.909": {
+  "abstract": null,
+  "doi": "10.3923/rjasci.2016.900.909",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Enhancing the performance of decoupled software pipeline through backward slicing"
+ },
+ "10.48456_tr-882": {
+  "abstract": "Although multicore processors have been the norm for a decade, programmers still struggle to write parallel general-purpose applications, resulting in underutilised on-chip resources. Automatic parallelisation is a promising approach to improving the performance of such applications without burdening the programmer. I explore various techniques for automatically extracting parallelism which span the spectrum from conservative parallelisation, where transformations must be proven correct by the compiler, to optimistic parallelisation, where speculative execution allows the compiler to generate potentially unsafe code, with runtime supports to ensure correct execution. Firstly I present a limit study of conservative parallelisation. I use a novel runtime profiling technique to find all data dependences which occur during execution and build an oracle data dependence graph. This oracle is used as input to the HELIX compiler which automatically generates parallelised code. In this way, the compiler is no longer limited by the inadequacies of compile-time dependence analysis and the performance of the generated code represents the upper limit of what can be achieved by HELIX-style parallelisation. I show that, despite shortcomings in the compile-time analysis, the oracle-parallelised code is no better than that ordinarily produced by HELIX. Secondly I present a limit study of optimistic parallelisation. I implement a dataflow timing model that allows each instruction to execute as early as possible in an idealistic, zero-overhead machine, thus giving a theoretical limit to the parallelism which can be exploited. The study shows that considerable extra parallelism is available which, due to its dynamic nature, cannot be exploited by HELIX, even with the oracle dependence analysis. Finally I demonstrate the design of a practical parallelisation system which combines the best aspects of both the conservative and optimistic parallelisation styles. I use runtime profiling to detect which HELIX-identified dependences cause frequent conflicts and synchronise these while allowing other code to run speculatively. This judicious speculation model achieves superior performance to HELIX and approaches the theoretical limit in many cases.",
+  "doi": "10.48456/tr-882",
+  "openalex": "W2507252446",
+  "status": "ok",
+  "title": "Discovering and exploiting parallelism in DOACROSS loops"
+ },
+ "10.48550_arxiv.1012.1641": {
+  "abstract": "Multicore parallel programming has some very difficult problems such as deadlocks during synchronizations and race conditions brought by concurrency. Added to the difficulty is the lack of a simple, well-accepted computing model for multicore architectures--because of that it is hard to develop powerful programming environments and debugging tools. To tackle the challenges, we promote a generalized stream computing model, inspired by previous researches on stream computing, that unifies parallelization strategies for programming language design, compiler design and operating system design. Our model provides a high-level abstraction in designing language constructs to convey concepts of concurrent operations, in organizing a program's runtime layout for parallel execution, and in scheduling concurrent instruction blocks through runtime and/or operating systems. In this paper, we give a high-level description of the proposed model: we define the foundation of the model, show its simplicity through algebraic/computational operation analysis, illustrate a programming framework enabled by the model, and demonstrate its potential through powerful design options for programming languages, compilers and operating systems.",
+  "doi": "10.48550/arxiv.1012.1641",
+  "openalex": "W1563217556",
+  "status": "ok",
+  "title": "A Generalized Streaming Model for Concurrent Computing"
+ },
+ "10.48550_arxiv.2506.23058": {
+  "abstract": "This paper presents a novel approach to automatically verify properties of pure data-parallel programs with non-linear indexing -- expressed as pre- and post-conditions on functions. Programs consist of nests of second-order array combinators (e.g., map, scan, and scatter) and loops. The key idea is to represent arrays as index functions: programs are index function transformations over which properties are propagated and inferred. Our framework proves properties on index functions by distilling them into algebraic (in)equalities and discharging them to a Fourier-Motzkin-based solver. The framework is practical and accessible: properties are not restricted to a decidable logic, but instead are carefully selected to express practically useful guarantees that can be automatically reasoned about and inferred. These guarantees extend beyond program correctness and can be exploited by the entire compiler pipeline for optimization. We implement our system in the pure data-parallel language Futhark and demonstrate its practicality on seven applications, reporting an average verification time of 1 second. Two case studies show how eliminating dynamic verification in GPU programs results in significant speedups.",
+  "doi": "10.48550/arxiv.2506.23058",
+  "openalex": "W4416510399",
+  "status": "ok",
+  "title": "Verifying Properties of Index Arrays in a Purely-Functional Data-Parallel Language"
+ },
+ "10.5445_ir_1000119646": {
+  "abstract": null,
+  "doi": "10.5445/ir/1000119646",
+  "openalex": "W3028782475",
+  "status": "no_abstract",
+  "title": "Autotuning for Automatic Parallelization on Heterogeneous Systems"
+ },
+ "10.5555_2738600.2738627": {
+  "abstract": "Subscripts using induction variables that cannot be expressed as a formula in terms of the enclosing-loop indices appear in the low-level implementation of common programming abstractions such as Alter, or stack operations and pose significant challenges to automatic parallelization. Because the complexity of such induction variables is often due to their conditional evaluation across the iteration space of loops we name them Conditional Induction Variables (CIV). This paper presents a flow-sensitive technique that summarizes both such civ-based and affine subscripts to program level, using the same representation. Our technique requires no modifications of our dependence tests, which is agnostic to the original shape of the subscripts, and is more powerful than previously reported dependence tests that rely on the pairwise disambiguation of read-write references. We have implemented the civ analysis in our parallelizing compiler and evaluated its impact on five Fortran benchmarks. We have found that that there are many important loops using civ subscripts and that our analysis can lead to their scalable parallelization. This in turn has led to the parallelization of the benchmark programs they appear in.",
+  "doi": "10.5555/2738600.2738627",
+  "openalex": "W2039571393",
+  "status": "ok",
+  "title": "Scalable conditional induction variables (CIV) analysis"
+ },
+ "10.5555_2738600.2738632": {
+  "abstract": "With heterogeneous computing on the rise, executing programs efficiently on different devices from a single source code has become increasingly important. OpenCL, having a bulk-synchronous programming model, has been proposed as a framework for writing such performance-portable programs. Execution order of work-items in a program is unconstrained except at barrier synchronization events, giving some freedom to an implementation when scheduling work-items between synchronization points. Many OpenCL (and CUDA) compilers have been designed for targeting multicore CPU architectures. However, scheduling work-items in prior work has been done with primary focus on correctness and vectorization. To the best of our knowledge, no existing implementations consider the impact of work-item scheduling on data locality. We propose an OpenCL compiler that performs data-locality-centric work-item scheduling. By analyzing the memory addresses accessed in loops within a kernel, our technique can make better decisions on how to schedule work-items to construct better memory access patterns, thereby improving performance. Our approach achieves geomean speedups of 3.32× over AMD's and 1.71 × over Intel's implementations on Parboil and Rodinia benchmarks.",
+  "doi": "10.5555/2738600.2738632",
+  "openalex": "W2138767187",
+  "status": "ok",
+  "title": "Locality-centric thread scheduling for bulk-synchronous programming models on CPU architectures"
+ },
+ "oa-W141381105": {
+  "abstract": "Analyzing and optimizing programs from their executables has received a lot of attention recently in the research community. There has been a tremendous amount of activity in executable-level research targeting varied applications such as security vulnerability analysis, untrusted code analysis, malware analysis, program testing, and binary optimizations. The vision of this dissertation is to advance the field of static analysis of executables and bridge the gap between source-level analysis and executable analysis. The main thesis of this work is scalable static binary rewriting and analysis using compiler-level intermediate representation without relying on the presence of metadata information such as debug or symbolic information. In spite of a significant overlap in the overall goals of several source-code methods and executables-level techniques, several sophisticated transformations that are well-understood and implemented in source-level infrastructures have yet to become available in executable frameworks. It is a well known fact that a standalone executable without any meta data is less amenable to analysis than the source code. Nonetheless, we believe that one of the prime reasons behind the limitations of existing executable frameworks is that current executable frameworks define their own intermediate representations (IR) which are significantly more constrained than an IR used in a compiler. Intermediate representations used in existing binary frameworks lack high level features like abstract stack, variables, and symbols and are even machine dependent in some cases. This severely limits the application of well-understood compiler transformations to executables and necessitates new research to make them applicable. In the first part of this dissertation, we present techniques to convert the binaries to the same high-level intermediate representation that compilers use. We propose methods to segment the flat address space in an executable containing undifferentiated blocks of memory. We demonstrate the inadequacy of existing variable identification methods for their promotion to symbols and present our methods for symbol promotion. We also present methods to convert the physically addressed stack in an executable to an abstract stack. The proposed methods are practical since they do not employ symbolic, relocation, or debug information which are usually absent in deployed executables. We have integrated our techniques with a prototype x86 binary framework called \\emph{SecondWrite} that uses LLVM as the IR. The robustness of the framework is demonstrated by handling executables totaling more than a million lines of source-code, including several real world programs. In the next part of this work, we demonstrate that several well-known source-level analysis frameworks such as symbolic analysis have limited effectiveness in the executable domain since executables typically lack higher-level semantics such as program variables. The IR should have a precise memory abstraction for an analysis to effectively reason about memory operations. Our first work of recovering a compiler-level representation addresses this limitation by recovering several higher-level semantics information from executables. In the next part of this work, we propose methods to handle the scenarios when such semantics cannot be recovered. First, we propose a hybrid static-dynamic mechanism for recovering a precise and correct memory model in executables in presence of executable-specific artifacts such as indirect control transfers. Next, the enhanced memory model is employed to define a novel symbolic analysis framework for executables that can perform the same types of program analysis as source-level tools. Frameworks hitherto fail to simultaneously maintain the properties of correct representation and precise memory model and ignore memory-allocated variables while defining symbolic analysis mechanisms. We exemplify that our framework is robust, efficient and it significantly improves the performance of various traditional analyses like global value numbering, alias analysis and dependence analysis for executables. Finally, the underlying representation and analysis framework is employed for two separate applications. First, the framework is extended to define a novel static analysis framework, \\emph{DemandFlow}, for identifying information flow security violations in program executables. Unlike existing static vulnerability detection methods for executables, DemandFlow analyzes memory locations in addition to symbols, thus improving the precision of the analysis. DemandFlow proposes a novel demand-driven mechanism to identify and precisely analyze only those program locations and memory accesses which are relevant to a vulnerability, thus enhancing scalability. DemandFlow uncovers six previously undiscovered format string and directory traversal vulnerabilities in popular ftp and internet relay chat clients. Next, the framework is extended to implement a platform-specific optimization for embedded processors. Several embedded systems provide the facility of locking one or more lines in the cache. We devise the first method in literature that employs instruction cache locking as a mechanism for improving the average-case run-time of general embedded applications. We demonstrate that the optimal solution for instruction cache locking can be obtained in polynomial time. Since our scheme is implemented inside a binary framework, it successfully addresses the portability concern by enabling the implementation of cache locking at the time of deployment when all the details of the memory hierarchy are available.",
+  "doi": null,
+  "openalex": "W141381105",
+  "status": "ok",
+  "title": "A compiler level intermediate representation based binary analysis system and its applications"
+ },
+ "oa-W147450094": {
+  "abstract": "The need for suitable software abstractions is proportional to the complexity of the underlying\\ncomputer architecture. Even though language technology has made significant contributions\\nover the years, many hard decisions have been delegated to the compiler. Naturally, compilers\\nare only as efficient as the algorithms they contain. \\nIn this thesis we consider an approach to detecting commuting operations that give the same\\nresult independent of execution order. Our approached is based on analyzing commutativity of\\nany pair of statements rather than just consecutive function calls. This will allow us to detect\\nopportunities for parallelization that previous conservative approaches would ignore or miss be-\\ncause of context-insensitivity.",
+  "doi": null,
+  "openalex": "W147450094",
+  "status": "ok",
+  "title": "Increasing parallelizing compiler efficiency using commutative functions"
+ },
+ "oa-W1607754794": {
+  "abstract": "In this report we sketch a polymorphic type and effect inference system for ensuring deterministic execution of parallel programs containing shared mutable state. It differs from that of Gifford and Lucassen in being based on Hindley Milner polymorphism and in formalizing the operational semantics of parallel and sequential computation.",
+  "doi": null,
+  "openalex": "W1607754794",
+  "status": "ok",
+  "title": "Effect inference for deterministic parallelism"
+ },
+ "oa-W186462353": {
+  "abstract": "With the emergence of multi-core processors into the mainstream, parallel programming is no longer the specialized domain it once was. There is a growing need for systems to allow programmers to more easily reason about data dependencies and inherent parallelism in general purpose programs. Many of these programs are written in popular imperative programming languages like Java and C]. In this thesis I present a system for reasoning about side-effects of evaluation in an abstract and composable manner that is suitable for use by both programmers and automated tools such as compilers. The goal of developing such a system is to both facilitate the automatic exploitation of the inherent parallelism present in imperative programs and to allow programmers to reason about dependencies which may be limiting the parallelism available for exploitation in their applications. Previous work on languages and type systems for parallel computing has tended to focus on providing the programmer with tools to facilitate the manual parallelization of programs; programmers must decide when and where it is safe to employ parallelism without the assistance of the compiler or other automated tools. None of the existing systems combine abstraction and composition with parallelization and correctness checking to produce a framework which helps both programmers and automated tools to reason about inherent parallelism. In this work I present a system for abstractly reasoning about side-effects and data dependencies in modern, imperative, object-oriented languages using a type and effect system based on ideas from Ownership Types. I have developed sufficient conditions for the safe, automated detection and exploitation of a number task, data and loop parallelism patterns in terms of ownership relationships.  To validate my work, I have applied my ideas to the C] version 3.0 language to produce a language extension called Zal. I have implemented a compiler for the Zal language as an extension of the GPC] research compiler as a proof of concept of my system. I have used it to parallelize a number of real-world applications to demonstrate the feasibility of my proposed approach. In addition to this empirical validation, I present an argument for the correctness of the type system and language semantics I have proposed as well as sketches of proofs for the correctness of the sufficient conditions for parallelization proposed.",
+  "doi": null,
+  "openalex": "W186462353",
+  "status": "ok",
+  "title": "A framework for reasoning about inherent parallelism in modern object-oriented languages"
+ },
+ "oa-W1880444039": {
+  "abstract": "Continuing exponential growth in transistor density and diminishing returns from the increasing transistor count have forced processor manufacturers to pack multiple processor cores onto a single chip. These processors, known as multi-core processors, generally do not improve the performance of single-threaded applications. \r\nAutomatic parallelization has a key role to play in improving the performance of legacy and newly written single-threaded applications in this new multi-threaded era. Automatic parallelizations transform single-threaded code into a semantically equivalent multi-threaded code by preserving the dependences of the original code. This dissertation proposes two new automatic parallelization techniques that differ from related existing techniques in their handling of dependences. This difference in dependence handling enables the proposed techniques to outperform related techniques. \r\nThe first technique is known as parallel-stage decoupled software pipelining (PS-DSWP). PS-DSWP extends pipelined parallelization techniques like DSWP by allowing certain pipelined stages to be executed by multiple threads. Such a parallel execution of pipelined stages requires distinguishing inter-iteration dependences of the loop being parallelized from the rest of the dependences. The applicability and effectiveness of PS-DSWP is further enhanced by applying speculation to remove some dependences. \r\nThe second technique, known as speculative iteration chunk execution (Spice), uses value speculation to ignore inter-iteration dependences, enabling speculative execution of chunks of iterations in parallel. Unlike other value-speculation based parallelization techniques, Spice speculates only a few dynamic instances of those inter-iteration dependences. \r\nBoth these techniques are implemented in the VELOCITY compiler and are evaluated using a multi-core Itanium 2 simulator. PS-DSWP results in a geometric mean loop speedup of 2.13 over single-threaded performance with five threads on a set of loops from five benchmarks. The use of speculation improves the performance of PS-DSWP resulting in a geometric mean loop speedup of 3.67 over single-threaded performance on a set of loops from six benchmarks. Spice shows a geometric mean loop speedup of 2.01 on a set of loops from four benchmarks. Based on the above experimental results and qualitative and quantitative comparisons with related techniques, this dissertation demonstrates the effectiveness of the proposed techniques.",
+  "doi": null,
+  "openalex": "W1880444039",
+  "status": "ok",
+  "title": "Parallelization techniques with improved dependence handling"
+ },
+ "oa-W2123298469": {
+  "abstract": "Recently, the microprocessor industry has moved toward multi-core or chip multiprocessor (CMP) designs as a means of utilizing the increasing transistor counts in the face of physical and micro-architectural limitations. Despite this move, CMPs do not directly improve the performance of single-threaded codes, a characteristic of most applications. In effect, the move to CMPs has shifted even more the task of improving performance from the hardware to the software.\r\nSince developing parallel applications has long been recognized as significantly harder than developing sequential ones, it is very desirable to have automatic tools to extract thread-level parallelism (TLP) from sequential applications. Unfortunately, automatic parallelization has only been successful in the restricted domains of scientific and data-parallel applications, which usually have regular array-based memory accesses and little control flow. In order to support parallelization of general-purpose applications, computer architects have proposed CMPs with light-weight, fine-grained (scalar) communication mechanisms. Despite such support, most existing multi-threading compilation techniques have generally demonstrated little effectiveness in extracting parallelism from non-scientific applications. The main reason for this is that such techniques are mostly restricted to extracting parallelism within local, straight-line regions of code. As observed in several limit studies, local regions of code contain limited parallelism, and control dependence analysis and multiple control units are necessary to extract most of the parallelism opportunities.\r\nThis thesis describes a general compiler framework for Global Multi-Threaded (GMT) instruction scheduling, i.e. to simultaneously schedule instructions from a global region of code to extract TLP for multi-threaded architectures. Our compiler framework is based on a Program Dependence Graph (PDG) representation, efficient graph partitioning algorithms, and novel multi-threaded code generation algorithms. Central to this framework are our multi-threaded code generation algorithms, which produce efficient code for arbitrary partitions of the PDG into threads. Based on this framework, three thread-partitioning strategies for GMT instructions scheduling are proposed. The first one, called GREMIO, extends list-scheduling to target multi-threaded architectures and to operate on global code regions. The second technique, called Decoupled Software Pipelining (DSWP), extracts pipelined TLP from arbitrary loop nests. We also propose Parallel-Stage DSWP, an extension of DSWP that allows multiple threads to concurrently execute the same stage of the pipeline. These techniques are implemented in the VELOCITY compiler and evaluated on an accurate CMP simulator built on top of validated Itanium 2 core models. The experiments show that our techniques balance applicability and scalability differently, with each technique resulting in the best speedup in different scenarios. Overall, the results demonstrate the effectiveness of the proposed compilation techniques, with significant speedups on a number of real benchmark applications written in C.",
+  "doi": null,
+  "openalex": "W2123298469",
+  "status": "ok",
+  "title": "Global instruction scheduling for multi-threaded architectures"
+ },
+ "oa-W2148718702": {
+  "abstract": "Instruction level parallelism (ILP) limitations have forced processor manufacturers to develop multi-core platforms with the expectation that programs will be able to exploit thread level parallelism (TLP). Multi-core programming shifts the burden of locating additional performance away from computer hardware to the software developers, who often attempt high-level redesigns focused on exposing thread level parallelism, as well as explore aggressive optimizations for sequential codes. \r\nPrecise dynamic analysis can provide useful guidance for program optimization efforts, including efforts to find and extract thread level parallelism. Unfortunately, finding regions of code amenable to further optimization efforts requires analyzing traces that can quickly grow in size. Analysis of large dynamic traces (e.g. one billion instructions or more) is often impractical for commodity hardware. \r\nAn ideal representation for dynamic trace data would provide compression. However, decompressing large software traces, even if decompressed data is never permanently stored, would make many analysis impractical. A better solution would allow analysis of the compressed data, without a costly decompression step. Prior works have developed trace compressors that generate an analyzable representation, but often limit the precision or scope of analyses. \r\nZero-suppressed binary decision diagram (ZDDs) exhibit many of the desired properties of an ideal trace representation. This thesis shows: (1) dynamic trace data may be represented by zero-suppressed binary decision diagrams (ZDDs); (2) ZDDs allow many analyses to scale; (3) encoding traces as ZDDs can be performed in a reasonable amount of time; and, (4) ZDD-based analyses, such as irrelevant instruction detection and potential coarse-grained thread level parallelism extraction, can reveal a number of performance opportunities in sequential programs.",
+  "doi": null,
+  "openalex": "W2148718702",
+  "status": "ok",
+  "title": "Dynamic trace analysis with zero-suppressed bdds"
+ },
+ "oa-W2152517291": {
+  "abstract": "Video games are a performance hungry application domain with a complexity that often rivals operating systems. These performance and complexity issues in combination with tight development times and large teams means that consistent, specialized and pervasive support for parallelism is of paramount importance. The Cascade project is focused on designing solutions to support this application domain. In this paper we describe how the Cascade runtime extends the industry standard job/task graph execution model with a new approach for managing shared state. Traditional task graph models dictate that tasks making conflicting accesses to shared state must be linked by a dependency, even if there is no explicit logical ordering on their execution. In cases where it is difficult to understand if such implicit dependencies exist, the programer would create more dependencies than needed, which results in constrained graphs with large monolithic tasks and limited parallelism. By using the results of off-line code analysis and information exposed at runtime, the Cascade runtime automatically determines scenarios where implicit dependencies exist and schedules tasks to avoid data races. This technique is called Synchronization via Scheduling (SvS) and we present its two implementations. The first implementation uses Bloom filter based ‘signatures ’ and the second relies on automatic data partitioning which has optimization potential independent of SvS. Our experiments show that SvS succeeds in achieving a high degree of parallelism and allows for finer grained tasks. However, we find that one consequence of sufficiently [Copyright notice will appear here once ’preprint ’ option is removed.] fine-grained tasks is that the time to dispatch them exceeds their execution time, even using a highly optimized scheduler/manager. Fine-grained tasks, however, are a necessary condition for sufficient parallelism and overall performance gains, so this finding motivates further inquiry into how tasks are managed. 1.",
+  "doi": null,
+  "openalex": "W2152517291",
+  "status": "ok",
+  "title": "Synchronization via scheduling: managing shared state in video games"
+ },
+ "oa-W2161222618": {
+  "abstract": "Multiprocessor systems, particularly chip multiprocessors, have emerged as the predominant organization for future microprocessors. Systems with 4, 8, and 16 cores are already shipping and a future with 32 or more cores is easily conceivable. Unfortunately, multiple cores do not always directly improve application performance, particularly for a single legacy application. Consequently, parallelizing applications to execute on multiple cores is essential. \r\nParallel programming models and languages could be used to create multi-threaded applications. However, moving to a parallel programming model only increases the complexity and cost involved in software development. Many automatic thread extraction techniques have been explored to address these costs. \r\nUnfortunately, the amount of parallelism that has been automatically extracted using these techniques is generally insufficient to keep many cores busy. Though there are many reasons for this, the main problem is that extensions are needed to take full advantage of these techniques. For example, many important loops are not parallelized because the compiler lacks the necessary scope to apply the optimization. Additionally, the sequential programming model forces programmers to define a single legal application outcome, rather than allowing for a range of legal outcomes, leading to conservative dependences that prevent parallelization. \r\nThis dissertation integrates the necessary parallelization techniques, extending them where necessary, to enable automatic thread extraction. In particular, this includes an expanded optimization scope, which facilitates the optimization of large loops, leading to parallelism at higher levels in the application. Additionally, this dissertation shows that many unnecessary dependences can be broken with the help of the programmer using natural, simple extensions to the sequential programming model. \r\nThrough a case study of several applications, including several C benchmarks in the SPEC CINT2000 suite, this dissertation shows how scalable parallelism can be extracted. By changing only 38 source code lines out of 100,000, several of the applications were parallelizable by automatic thread extraction techniques, yielding a speedup of 3.64x on 32 cores.",
+  "doi": null,
+  "openalex": "W2161222618",
+  "status": "ok",
+  "title": "The velocity compiler: extracting efficient multicore execution from legacy sequential codes"
+ },
+ "oa-W21782772": {
+  "abstract": "In a multi-threaded execution, threads may negatively interfere when their private data contends for shared cache or positively interact when the data brought in by one thread is used by other threads. This paper presents a model of such cache behavior to predict locality without exhaustive simulation and provide insight into trends. The new model extends prior work that assumes no data sharing and uniform thread interleaving. Based on a single pass over an interleaved execution trace, we compute a set of per-thread statistics that includes the effect of thread interleaving and data sharing. The per-thread statistics is then composed to predict performance for all cache sizes, either for sub-clusters of threads or for futuristic environments with a larger number of similar threads. We evaluate and validate our model against exhaustive simulation using a server application running on a quad-core machine and productivity, multimedia and gaming applications running on a dual-core machine. The results indicate that our model is accurate and relies on incorporating both irregular thread interleaving and data sharing to achieve this accuracy. In addition, it identifies and separates individual factors affecting locality and scalability and hence opens new possibilities in performance tuning, program scheduling, and hardware cache design for concurrent applications. 1.",
+  "doi": null,
+  "openalex": "W21782772",
+  "status": "ok",
+  "title": "A Composable Model for Analyzing Locality of Multi-threaded Programs"
+ },
+ "oa-W2239185640": {
+  "abstract": "Coarse-grained task parallelism exists in sequential code and can be leveraged to boost the use of chip multi-processors. However, large tasks may execute thousands of lines of code and are often too complex to analyze and manage statically. This report describes a programming system called \\emph{suggestible parallelization}. It consists of a programming interface and a support system. The interface is a small language with three primitives for marking possibly parallel tasks and their possible dependences. The support system is implemented in software and ensures correct parallel execution through speculative parallelization, speculative communication and speculative memory allocation. It manages parallelism dynamically to tolerate unevenness in task size, inter-task delay and hardware speed. When evaluated using four full-size benchmark applications, suggestible parallelization obtains up to a 6 times speedup over 10 processors for sequential legacy applications up to 35 thousand lines in size. The overhead of software speculation is not excessively high compared to unprotected parallel execution.",
+  "doi": null,
+  "openalex": "W2239185640",
+  "status": "ok",
+  "title": "A Language of Suggestions for Program Parallelization"
+ },
+ "oa-W2258596252": {
+  "abstract": "Commodity many-core hardware is now mainstream, driven in particular by the evolution of general purpose graphics programming units (GPGPUs), but parallel programming models are lagging behind in effectively exploiting the available application parallelism. There are two principal reasons. First, real-world applications often exhibit a rich composition of nested parallelism, whose statical extraction requires a set of (compiler) transformations that are tedious to do by hand and may be beyond the capability of the common user. Second, the best optimization strategy, with respect to what to parallelize and what to sequentialize, is often sensitive to the input dataset, and as such, it may require several code versions, maintained and optimized differently for different classes of datasets. This paper studies three such array-based applications from the financial domain, which are suitable for GPGPU execution. For each application, we (i) describe all available parallelism via nested map-reduce functional combinators, (ii) describe the invariants and code transformations that govern the main trade-offs of a rich, dataset-sensitive optimizations space, and (iii) report target CPU and GPGPU code together with an evaluation that demonstrates optimization trade-offs and other difficulties. Finally, we believe this work provides useful insight into the language constructs and compiler infrastructure capable of expressing and optimizing such applications, and we report inprogress work in this direction.",
+  "doi": null,
+  "openalex": "W2258596252",
+  "status": "ok",
+  "title": "A Financial Benchmark for GPGPU Compilation"
+ },
+ "oa-W227418731": {
+  "abstract": "Most computing users today have access to clusters of multi-core computers. To fully utilize a cluster, one must combine two levels of parallelism: shared-memory parallelism within a machine and distributed memory parallelism across machines. Such programming is difficult. Either a user has to mix two programming languages in a single program and use fixed computation and data partitioning between the two, or the user has to rewrite a program from scratch. Even after careful programming, a program may still have hidden concurrency bugs. Users who are accustomed to sequential programming do not find the same level of debugging and performance analysis support especially for a distributed environment. The paper presents a language of suggestions for distributive parallelization. The suggestion language is designed for a user or a profiling-based tool to annotate possible parallelism in C/C++ programs by inserting hints. The hints are safe against any type of misuse and expressive enough to specify independent, pipelined, and speculative parallel execution on a cluster of multi-core computers.",
+  "doi": null,
+  "openalex": "W227418731",
+  "status": "ok",
+  "title": "Distributive Program Parallelization Using a Suggestion Language"
+ },
+ "oa-W2274989117": {
+  "abstract": "North Carolina State University Theses Computer Science.;North Carolina State University Theses Computer Science.",
+  "doi": null,
+  "openalex": "W2274989117",
+  "status": "ok",
+  "title": "Towards Transparent Parallel Processing on Multi-core Computers"
+ },
+ "oa-W2301530079": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2301530079",
+  "status": "no_abstract",
+  "title": "Compiler and runtime techniques for bulk-synchronous programming models on CPU architectures"
+ },
+ "oa-W2557948553": {
+  "abstract": "Speculative optimizers of modern compilers are designed on techniques for probabilistic static analyses of programs. For imperative and object-oriented multi-core programs, this paper focuses on the problem of revealing probabilistic dangling references. This important problem is treated in this paper via type systems. Besides being simply structured, the type systems provide suitable frameworks for proof-carrying code applications. One class of such applications is that ofmobile codeshaving limitedresources.Using the proposedtechnique, each analysis case is supported by a correctness proof in the form of a type derivation. Most important concurrent constructs such as fork-join constructs, conditionally spawned cores, and parallel loops are treated in this paper. This is done for both of imperative and object- oriented parallel programs. The paper proves the soundness of presented techniques using a probabilistic operational semantics for the language models.",
+  "doi": null,
+  "openalex": "W2557948553",
+  "status": "ok",
+  "title": "Probabilistic Dangling References of Imperative and Object-Oriented Multi-Core Programs"
+ },
+ "oa-W2593891803": {
+  "abstract": "Concurrent programming can improve performance. However, it comes with two drawbacks.\\nFirst, concurrent programs can be more difficult to design and reason about than their sequential\\ncounterparts. Second, error conditions that do not exist in sequential programs, such as data race\\nconditions and deadlock, can make concurrent programs more unreliable. To make concurrent\\nprogramming simpler and more reliable, while still providing sufficient performance gains, we\\npresent a concurrency framework based on an existing concurrency initiation mechanism called\\n“Early-Reply”.\\nEarly-Reply is based on the idea that some functions can produce final return values long before\\nthey terminate. Concurrent execution begins when return value of a function is returned to the\\ncaller, allowing the rest of the work of the function to be done on an auxiliary thread. The\\nsimpler sequential programming model can be used by the caller, because the concurrency is\\ninitiated and hidden within the function body. Pike and Sridhar recognized Early-Reply as a way\\nfor sequential programs to get the benefits of concurrent execution. They also discussed using\\nobject-oriented programming to serialize access to data that needs synchronization. Our work\\nexpands on their approach and provides an actual C++ implementation of an Early-Reply based\\nframework.\\nOur framework simplifies concurrent programming for both users and implementers by allowing\\ndevelopers to use sequential reasoning, and by providing a minimal framework interface.\\nConcurrent programming is made more reliable by combining the concurrency synchronization\\nand initiation into one mechanism within the framework, which isolates where race conditions\\nand deadlock can occur. Furthermore, this isolation facilitates the development of a simple set\\nof coding guidelines that can be used by developers (through inspection) or static analysis tools\\n(through verification) to eliminate race conditions and deadlocks. As a motivating example, we parallelize an instructional compiler that processes multiple input\\nsource files. For each input file; the parsing and semantic analysis execute on the calling thread,\\nwhile the code optimization and object code generation execute on an auxiliary thread.\\nSpeedups of 1.5 to 1.7 were observed on a dual processor confirming that sufficient performance\\ngains are possible.",
+  "doi": null,
+  "openalex": "W2593891803",
+  "status": "ok",
+  "title": "Verifiable early-reply with C++"
+ },
+ "oa-W34197133": {
+  "abstract": "Executing sequential code in parallel on a multithreaded machine has been an elusive goal for many years. It has recently become quite important due to the widespread introduction of multi-cores in PCs. Automatic multi-threading could not be achieved so far because classic compiler analysis was not powerful enough and program behavior was found to be in many cases input dependent. Run time, speculative thread level parallelization, introduced in 1995, was a welcome but somewhat different avenue for advancing parallelization coverage. In this paper we introduce a novel analysis technique, Hybrid Analysis (HA), which unifies static and dynamic memory reference techniques into a seamless compiler framework which extracts almost maximum available parallelism from scientific codes and generates minimum run time overhead. We will present how we can extract maximum information from the quantities that could not be sufficiently analyzed through static compiler methods and generate sufficient conditions which, when evaluated dynamically, can validate optimizations. A large number of experiments confirm the viability of our techniques, which have been fully implemented in the Polaris",
+  "doi": null,
+  "openalex": "W34197133",
+  "status": "ok",
+  "title": "Compiler technology for migrating sequential code to multi-threaded Architectures"
+ },
+ "s2-066edaf9b374a9cb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Generalized Streaming Model for Concurrent Computing"
+ },
+ "s2-17424db6a78148ae": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A compiler level intermediate representation based binary analysis system and its applications"
+ },
+ "s2-17a60d28d0bdb190": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler Technology for Migrating Sequential Code to Multi-threaded Architectures"
+ },
+ "s2-268888432b316c25": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Synchronization via scheduling: managing shared state in video games"
+ },
+ "s2-3169eb95234327ab": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Probabilistic Dangling References of Imperative and Object-Oriented Multi-Core Programs"
+ },
+ "s2-34d3809309a07233": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Never Reprogram Again"
+ },
+ "s2-3f29974a9cdae1e6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Pattern-based Transformation Approach to Parallelise Software Systems using a System Dependency Graph"
+ },
+ "s2-4f1cf2a9244816dc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Composable Model for Analyzing Locality of Multi-threaded Programs"
+ },
+ "s2-52b67ed99851a8b2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimization of Imperative Functional Parallel Programs with Non-local Program Transformations"
+ },
+ "s2-5404c458a257bcda": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Distributive Program Parallelization Using a Suggestion Language"
+ },
+ "s2-541945cdb24ba7a5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Pattern-Based Detection and Utilization of Potential Parallelism in Software Systems"
+ },
+ "s2-583d79f0e9def487": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Runtime Information Integration into System Dependency Graphs"
+ },
+ "s2-5ef1ae20aa715c57": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Language of Suggestions for Program Parallelization"
+ },
+ "s2-6d80bec2ab72e133": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Area Optimisation in SystemC Hardware Compilation �"
+ },
+ "s2-6fcedb679018fdd6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallelization techniques with improved dependence handling"
+ },
+ "s2-72dda3ec17afce23": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler and runtime techniques for bulk-synchronous programming models on CPU architectures"
+ },
+ "s2-7ba265a3cf22f094": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Verifiable early-reply with C++"
+ },
+ "s2-7ce6007074046048": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An Integrated Compiler and Runtime Framework for Sparse Matrix Codes"
+ },
+ "s2-9567e4d6024508b8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The velocity compiler: extracting efficient multicore execution from legacy sequential codes"
+ },
+ "s2-9adf9496f9d2dd99": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "IMPROVED DEPENDENCE HANDLING"
+ },
+ "s2-a0b2bd7f21ada8d4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Global instruction scheduling for multi-threaded architectures"
+ },
+ "s2-b1236bf5da10badf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Effect inference for deterministic parallelism"
+ },
+ "s2-b14a1fd4e7e88b26": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A framework for reasoning about inherent parallelism in modern object-oriented languages"
+ },
+ "s2-bc35b1c1f11d0142": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Extending GCC with a multigrain parallelism adaptation framework for MPSoCs"
+ },
+ "s2-bd727f7b8409fb37": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic trace analysis with zero-suppressed bdds"
+ },
+ "s2-bf9ce41b4b9a68e2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Financial Benchmark for GPGPU Compilation Christian Andretta Vivien Begot Jost Berthold Martin Elsman"
+ },
+ "s2-c7dbc25a136f309e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Sensitivity Analysis for Migrating Programs to Multi-Cores"
+ },
+ "s2-d01556a8bae70b1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Towards Transparent Parallel Processing on Multi-core Computers"
+ },
+ "s2-d863a24735b05975": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Increasing parallelizing compiler efficiency using commutative functions"
+ },
+ "s2-e43affbb2fe8fdbf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Discovering and exploiting parallelism in DOACROSS loops"
+ },
+ "s2-ec836d5acd8fcbe6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Financial Benchmark for GPGPU Compilation"
+ },
+ "s2-f7b209d55c2c80aa": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automated Optimization of a Computation for Different Architectures"
+ }
+}

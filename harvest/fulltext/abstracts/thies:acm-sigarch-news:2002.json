@@ -1,0 +1,107 @@
+{
+ "10.1007_11512622_25": {
+  "abstract": null,
+  "doi": "10.1007/11512622_25",
+  "openalex": "W1557887167",
+  "status": "no_abstract",
+  "title": "Generating Stream Based Code from Plain C"
+ },
+ "10.1109_iccd.2011.6081431": {
+  "abstract": "This paper proposes an architecturally redundant cache-coherence architecture (ARCc) that combines the directory and shared-NUCA based coherence protocols to improve performance, energy and dependability. Both coherence mechanisms co-exist in the hardware and ARCc enables seamless transition between the two protocols. We present an online analytical model implemented in the hardware that predicts performance and triggers a transition between the two coherence protocols at application-level granularity. The ARCc architecture delivers up to 1.6× higher performance and up to 1.5× lower energy consumption compared to the directory-based counterpart. It does so by identifying applications which benefit from the large shared cache capacity of shared-NUCA because of lower off-chip accesses, or where remote-cache word accesses are efficient.",
+  "doi": "10.1109/iccd.2011.6081431",
+  "openalex": "W2268723810",
+  "status": "ok",
+  "title": "ARCc: A case for an architecturally redundant cache-coherence architecture for large multicores"
+ },
+ "10.1109_icws.2004.1314732": {
+  "abstract": "WSLAs can be viewed as describing the service aspect of Web services. By their nature, Web services are distributed. Therefore, integrating support code into a Web service application is potentially costly and error prone. Viewed from this AOP perspective, then, we present a method for integrating WSLAs into code generation using the AXpect weaver, the AOP technology for Infopipes. This helps to localize the code physically and therefore increase the eventual maintainability and enhance the reuse of the WSLA code. We then illustrate the weavers capability by using a WSLA document to codify constraints and metrics for a streaming image application that requires CPU resource monitoring.",
+  "doi": "10.1109/icws.2004.1314732",
+  "openalex": "W4213038326",
+  "status": "ok",
+  "title": "Code generation for WSLAs using AXpect"
+ },
+ "10.1109_icws.2004.33": {
+  "abstract": "WSLAs can be viewed as describing the service aspect of web services. By their nature, web services are distributed. Therefore, integrating support code into a web service application is potentially costly and error prone. Viewed from this AOP perspective, then, we present a method for integrating WSLAs into code generation using the AXpect weaver, the AOP technology for Infopipes. This helps to localize the code physically and therefore increase the eventual maintainability and enhance the reuse of the WSLA code. We then illustrate the weavers capability by using a WSLA document to codify constraints and metrics for a streaming image application that requires CPU resource monitoring.",
+  "doi": "10.1109/icws.2004.33",
+  "openalex": "W1991470108",
+  "status": "ok",
+  "title": "Code generation for WSLAs using AXpect"
+ },
+ "10.1109_ipdps.2009.5161081": {
+  "abstract": "Streaming is emerging as an important programming model for multicores. Streaming provides an elegant way to express task decomposition and inter-task communication, while hiding laborious orchestration details such as load balancing, assignment (of stream computation to nodes) and computation/communication scheduling from the programmer. This paper develops a novel communication optimization for streaming applications based on the observation that streaming computations typically involve large, systematic data transfers between known communicating pairs of nodes over extended periods of time. From the above observation, we advocate a family of routing algorithms that expend some over overheads to compute disjoint paths for stream communication. Disjoint-path routing is an attractive design point because (a) the overheads of discovering disjoint paths are amortized over large periods of time and (b) the benefits of disjoint path routing are significant for bandwidth-sensitive streaming applications. We develop one instance of disjoint-path routing called tentacle routing-a backtracking, best-effort technique. On a 4 times 4 (6 times 6) system, tentacle routing results in 55% (84%) and 28% (41%) mean throughput improvement for high-network-contention streaming applications, and for all streaming applications, respectively.",
+  "doi": "10.1109/ipdps.2009.5161081",
+  "openalex": "W2136249948",
+  "status": "ok",
+  "title": "Disjoint-path routing: Efficient communication for streaming applications"
+ },
+ "oa-W1493524241": {
+  "abstract": "StreamIt is a language specifically designed for modern streaming applications. A certain important class of these applications operates on streams of bits. This paper presents the motivation for a bit-packing optimization to be implemented in the StreamIt compiler for the RAW Architecture. This technique aims to pack bits into integers so that operations can be performed on multiple bits at once thus increasing the performance of these applications considerably. This paper gives some simple example applications to illustrate the various conditions where this technique can be applied and also analyses some of its limitations.",
+  "doi": null,
+  "openalex": "W1493524241",
+  "status": "ok",
+  "title": "Bit-Packing Optimization for StreamIt"
+ },
+ "oa-W2321248633": {
+  "abstract": "Stream programs represent an important class of high-performance computations. Defined by their regular processing of sequences of data, stream programs appear most commonly in the context of audio, video, and digital signal processing, though also in networking, encryption, and other areas. Stream programs can be naturally represented as a graph of independent actors that communicate explicitly over data channels. In this work we focus on programs where the input and output rates of actors are known at compile time, enabling aggressive transformations by the compiler; this model is known as synchronous dataflow.\r\nWe develop a new programming language, StreamIt, that empowers both programmers and compiler writers to leverage the unique properties of the streaming domain. StreamIt offers several new abstractions, including hierarchical single-input single-output streams, composable primitives for data reordering, and a mechanism called teleport messaging that enables precise event handling in a distributed environment. We demonstrate the feasibility of developing applications in StreamIt via a detailed characterization of our 34,000-line benchmark suite, which spans from MPEG-2 encoding/decoding to GMTI radar processing. We also present a novel dynamic analysis for migrating legacy C programs into a streaming representation.\r\nThe central premise of stream programming is that it enables the compiler to perform powerful optimizations. We support this premise by presenting a suite of new transformations. We describe the first translation of stream programs into the compressed domain, enabling programs written for uncompressed data formats to automatically operate directly on compressed data formats (based on LZ77). This technique offers a median speedup of 15x on common video editing operations. We also review other optimizations developed in the StreamIt group, including automatic parallelization (offering an 11x mean speedup on the 16-core Raw machine), optimization of linear computations (offering a 5.5x average speedup on a Pentium 4), and cache-aware scheduling (offering a 3.5x mean speedup on a StrongARM 1100). While these transformations are beyond the reach of compilers for traditional languages such as C, they become tractable given the abundant parallelism and regular communication patterns exposed by the stream programming model. (Copies available exclusively from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307. Ph. 617-253-5668; Fax 617-253-1690.)",
+  "doi": null,
+  "openalex": "W2321248633",
+  "status": "ok",
+  "title": "Language and compiler support for stream programs"
+ },
+ "oa-W78688708": {
+  "abstract": "New parallel architectures are emerging to meet the increased computational demands of streaming applications. This creates a need for high-level, architecture-independent languages. One such language is StreamIt, designed around the notions of streams and stream transformers, which allows efficient mapping to a variety of architectures. This paper presents our approach of compiling StreamIt applications to the XPP reconfigurable array architecture. We focus mainly on the compiler back end. Although StreamIt exposes the parallelism in the stream program, still a thorough analysis is needed to adapt it to the target architecture. A code generator has been designed for the XPP. It has been demonstrated that by applying optimizations, performance comparable to the low level NML implementation can be achieved. Moreover, the construction of the compiler makes it possible to port StreamIt applications to multiprocessor architectures by doing some architecture specific modifications in the back end.",
+  "doi": null,
+  "openalex": "W78688708",
+  "status": "ok",
+  "title": "Compiling Stream-Language Applications to a Reconfigurable Array Processor"
+ },
+ "s2-2991ca04be6ad485": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Bit-Packing Optimization for StreamIt"
+ },
+ "s2-6257c9d0c725320f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Language and compiler support for stream programs"
+ },
+ "s2-8043c45cdec9de38": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiling Stream-Language Applications to a Reconfigurable Array Processor"
+ },
+ "s2-a005cbe3d5638ec4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Recognizing Linear Data Transformations in StreamIt"
+ },
+ "s2-a313d108b441d825": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Programming & Implementation of Streaming Applications Master's Thesis in Computer System Engineering Programming & Implementation of Streaming Applications Master's Thesis in Computer System Engineering Preface"
+ },
+ "s2-cc24eab217f6df1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Research Statement Languages, Compilers, and Tools for Multicore Architectures"
+ },
+ "s2-e454ac36ab555f1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler techniques for scalable performance of stream programs on multicore architectures"
+ }
+}

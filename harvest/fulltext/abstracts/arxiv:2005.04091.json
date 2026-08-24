@@ -1,0 +1,72 @@
+{
+ "10.1109_access.2022.3176385": {
+  "abstract": "Emerging Artificial Intelligence (AI) systems are revolutionizing computing and data processing approaches with their strong impact on society. Data is processed with automated labelling pipelines rather than providing it as input to the system. The innovative nature increases the overall performance of monitoring/detection/reaction mechanisms for efficient system resource management. However, due to hardware-driven design limitations, networking and trust mechanisms are not flexible and adaptive enough to be able to interact and control the resources dynamically. Novel adaptive software-driven design approaches can enable us to build growing intelligent mechanisms with software-defined networking (SDN) features by virtualizing network functionalities with maximized features. These challenges and critical feature sets have been identified and introduced into this survey with their scientific background for AI systems and growing intelligent mechanisms. Furthermore, obstacles and research challenges between 1950-2021 are explored and discussed with a focus on recent years. The challenges are categorized according to three defined architectural perspectives (central, decentral/autonomous, distributed/hybrid) for emerging trusted distributed AI mechanisms. Therefore, resiliency and robustness can be assured in a dynamic context with an end-to-end Trusted Execution Environment (TEE) for growing intelligent mechanisms and systems. Furthermore, as presented in the paper, the trust measurement, quantification, and justification methodologies on top of Trusted Distributed AI (TDAI) can be applied in emerging distributed systems and their underlying diverse application domains, which will be explored and experimented in our future related works.",
+  "doi": "10.1109/access.2022.3176385",
+  "openalex": "W4285230083",
+  "status": "ok",
+  "title": "A Survey on Trusted Distributed Artificial Intelligence"
+ },
+ "10.1109_hpca53966.2022.00069": {
+  "abstract": "Several deep neural network (DNN) accelerators have been designed to exploit the sparsity exhibited by DNN activations and weights. State-of-the-art sparse accelerators can be described as either Pixel-first or Channel-first accelerators, each with its unique dataflow and compression format aiding its dataflow. The former expends significant energy updating neuron partial sums, while the latter expends significant energy in handling the index metadata. This work introduces a novel microarchitecture and dataflow that reconciles these trade-offs by adopting a Pixel-first compression and Channel-first dataflow. The proposed microarchitecture has a simpler index-generation logic combined with an accumulator buffer hierarchy and crossbar with low wiring overhead. The compression format and dataflow promote high temporal locality in neuron updates, further lowering energy. Finally, we introduce work partitions across processing elements that naturally lead to load balance without offline analysis. Compared to four state-of-the-art baselines, the proposed architecture, CANDLES, significantly outperforms three and matches the performance of the fourth. In terms of energy, CANDLES is between 2.5× and 5.6× more energy-efficient than these four baselines.",
+  "doi": "10.1109/hpca53966.2022.00069",
+  "openalex": "W4280557024",
+  "status": "ok",
+  "title": "CANDLES: Channel-Aware Novel Dataflow-Microarchitecture Co-Design for Low Energy Sparse Neural Network Acceleration"
+ },
+ "10.1145_3410463.3414654": {
+  "abstract": "In recent years, there has been a flurry of research in deep neural network pruning and compression. Early approaches prune weights individually. However, it is difficult to take advantage of the resulting unstructured sparsity patterns on modern hardware like GPUs. As a result, pruning strategies which impose sparsity structures in the weights have become more popular. However,these structured pruning approaches typically lead to higher losses in accuracy than unstructured pruning. In this paper, we present SparseRT, a code generator that leverage unstructured sparsity toaccelerate sparse linear algebra operations in deep learning inference on GPUs. For 1x1 convolutions and fully connected layers, we demonstrate geometric mean of speedups of 3.4x over the equivalent dense computation at 90% sparsity and 5.4x at 95% sparsity when evaluated on hundreds of test cases in deep learning. For sparse 3x3 convolutions, we show speedups of over 5x on use casesin ResNet-50.",
+  "doi": "10.1145/3410463.3414654",
+  "openalex": "W3090912412",
+  "status": "ok",
+  "title": "SparseRT"
+ },
+ "10.1145_3524059.3532364": {
+  "abstract": "Rapid progress in deep learning is leading to a diverse set of quickly changing models, with a dramatically growing demand for compute. However, as frameworks specialize performance optimization to patterns in popular networks, they implicitly constrain novel and diverse models that drive progress in research. We empower deep learning researchers by defining a flexible and user-customizable pipeline for optimizing training of arbitrary deep neural networks, based on data movement minimization. The pipeline begins with standard networks in PyTorch or ONNX and transforms computation through progressive lowering. We define four levels of general-purpose transformations, from local intra-operator optimizations to global data movement reduction. These operate on a data-centric graph intermediate representation that expresses computation and data movement at all levels of abstraction, including expanding basic operators such as convolutions to their underlying computations. Central to the design is the interactive and introspectable nature of the pipeline. Every part is extensible through a Python API, and can be tuned interactively using a GUI. We demonstrate competitive performance or speedups on ten different networks, with interactive optimizations discovering new opportunities in EfficientNet.",
+  "doi": "10.1145/3524059.3532364",
+  "openalex": "W3206016067",
+  "status": "ok",
+  "title": "A data-centric optimization framework for machine learning"
+ },
+ "10.1145_3544559": {
+  "abstract": "Sparse tensors arise in problems in science, engineering, machine learning, and data analytics. Programs that operate on such tensors can exploit sparsity to reduce storage requirements and computational time. Developing and maintaining sparse software by hand, however, is a complex and error-prone task. Therefore, we propose treating sparsity as a property of tensors, not a tedious implementation task, and letting a sparse compiler generate sparse code automatically from a sparsity-agnostic definition of the computation. This article discusses integrating this idea into MLIR.",
+  "doi": "10.1145/3544559",
+  "openalex": "W4290648346",
+  "status": "ok",
+  "title": "Compiler Support for Sparse Tensor Computations in MLIR"
+ },
+ "10.1145_3600006.3613139": {
+  "abstract": "Dynamic sparsity, where the sparsity patterns are unknown until runtime, poses a significant challenge to deep learning. The state-of-the-art sparsity-aware deep learning solutions are restricted to pre-defined, static sparsity patterns due to significant overheads associated with preprocessing. Efficient execution of dynamic sparse computation often faces the misalignment between the GPU-friendly tile configuration for efficient execution and the sparsity-aware tile shape that minimizes coverage wastes (non-zero values in tensor).",
+  "doi": "10.1145/3600006.3613139",
+  "openalex": "W4387302777",
+  "status": "ok",
+  "title": "PIT: Optimization of Dynamic Sparse Deep Learning Models via Permutation Invariant Transformation"
+ },
+ "10.1145_3771775.3786269": {
+  "abstract": "Fully Homomorphic Encryption (FHE) enables computations to be performed directly on encrypted data without requiring decryption, providing strong privacy guarantees. However, FHE remains computationally expensive, and writing efficient FHE programs is a complex, error-prone, and time-consuming task that demands significant cryptographic expertise. Programmers are often unaware of available optimizations, and applying them manually requires substantial effort. In this paper, we present CHEHAB, a compiler that automatically vectorizes scalar code, optimizes it, and generates highly efficient FHE programs. CHEHAB supports both structured and unstructured code and takes as input programs written in a domain-specific language embedded in C++. It relies on a Term Rewriting System (TRS) based on equality saturation to simplify and transform programs. CHEHAB targets two key challenges in FHE compilation: (1) automatic vectorization of scalar code, and (2) reduction of instruction execution latency and ciphertext noise growth. By leveraging equality saturation, CHEHAB explores a large optimization space to reduce instruction count and circuit depth while improving vector utilization. Experimental evaluation on a set of representative kernels shows that CHEHAB outperforms Coyote, a state-of-the-art vectorizing compiler for FHE. On average, CHEHAB generates code that is 7.38× faster at runtime, incurs 2.49× less accumulated noise, and achieves 251× faster compilation time. CHEHAB is released as an open-source compiler to support reproducibility and further research in FHE compilation.",
+  "doi": "10.1145/3771775.3786269",
+  "openalex": "W7125896844",
+  "status": "ok",
+  "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption"
+ },
+ "10.22323_1.396.0419": {
+  "abstract": "A variational study of two-nucleon systems with lattice quantum chromodynamics is performed using a wide range of interpolating operators: dibaryon operators built from products of momentum-projected nucleons, hexaquark operators built from six spatially localized quarks, and quasi-local operators inspired by two-nucleon bound-state wavefunctions in nuclear effective field theories. Correlation-function matrices involving products of these operators are constructed by computing timeslice-to-all quark propagators with sparsening techniques. Comparisons between results obtained using the same gauge-field ensemble but different interpolating-operator sets demonstrate that interpolating-operator dependence can lead to significant effects on the two-nucleon energy spectra obtained using both variational and non-variational methods.",
+  "doi": "10.22323/1.396.0419",
+  "openalex": "W4280496507",
+  "status": "ok",
+  "title": "Fifty ways to build a deuteron: a variational calculation of two-nucleon systems"
+ },
+ "10.48550_arxiv.2007.00072": {
+  "abstract": "Transformers are one of the most important machine learning workloads today. Training one is a very compute-intensive task, often taking days or weeks, and significant attention has been given to optimizing transformers. Despite this, existing implementations do not efficiently utilize GPUs. We find that data movement is the key bottleneck when training. Due to Amdahl's Law and massive improvements in compute performance, training has now become memory-bound. Further, existing frameworks use suboptimal data layouts. Using these insights, we present a recipe for globally optimizing data movement in transformers. We reduce data movement by up to 22.91% and overall achieve a 1.30x performance improvement over state-of-the-art frameworks when training a BERT encoder layer and 1.19x for the entire BERT. Our approach is applicable more broadly to optimizing deep neural networks, and offers insight into how to tackle emerging performance bottlenecks.",
+  "doi": "10.48550/arxiv.2007.00072",
+  "openalex": "W3038827379",
+  "status": "ok",
+  "title": "Data Movement Is All You Need: A Case Study on Optimizing Transformers"
+ },
+ "oa-W3010035731": {
+  "abstract": "Many neural network pruning algorithms proceed in three steps: train the network to completion, remove unwanted structure to compress the network, and retrain the remaining structure to recover lost accuracy. The standard retraining technique, fine-tuning, trains the unpruned weights from their final trained values using a small fixed learning rate. In this paper, we compare fine-tuning to alternative retraining techniques. Weight rewinding (as proposed by Frankle et al., (2019)), rewinds unpruned weights to their values from earlier in training and retrains them from there using the original training schedule. Learning rate rewinding (which we propose) trains the unpruned weights from their final values using the same learning rate schedule as weight rewinding. Both rewinding techniques outperform fine-tuning, forming the basis of a network-agnostic pruning algorithm that matches the accuracy and compression ratios of several more network-specific state-of-the-art techniques.",
+  "doi": null,
+  "openalex": "W3010035731",
+  "status": "ok",
+  "title": "Comparing Rewinding and Fine-tuning in Neural Network Pruning"
+ }
+}

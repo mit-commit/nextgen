@@ -1,0 +1,163 @@
+{
+ "10.1007_978-3-030-92121-7_29": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-92121-7_29",
+  "openalex": "W4205696435",
+  "status": "no_abstract",
+  "title": "HybridTuner: Tuning with Hybrid Derivative-Free Optimization Initialization Strategies"
+ },
+ "10.1007_978-3-642-29178-4": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-29178-4",
+  "openalex": "W4300854805",
+  "status": "no_abstract",
+  "title": "Applications of Evolutionary Computation"
+ },
+ "10.1007_s10472-022-09793-3": {
+  "abstract": null,
+  "doi": "10.1007/s10472-022-09793-3",
+  "openalex": "W4280577325",
+  "status": "no_abstract",
+  "title": "Hyperparameter autotuning of programs with HybridTuner"
+ },
+ "10.1109_cec48606.2020.9185646": {
+  "abstract": "The efficiency of tensor operators is key to implement fast deep learning models. However, identifying the fastest implementation of a tensor operator for a target hardware is challenging. A wide range of different configurations have to be considered, and the evaluation of a configuration is time consuming as it requires compilation and execution of the operator. A common approach to address these issues is to boost traditional optimization algorithms with a surrogate modet, i.e., a machine learning model that approximates the objective function and is cheap to query compared to the target hardware. However, as the surrogate model grows in complexity, so does the time needed to train and maintain it. In this work, we propose to use an evolutionary optimizer and augment it with a non-parametric surrogate model (a weighted k-Nearest-Neighbor regression). We evaluate our approach on the convolution layers of a ResNetl8, and show a convergence speedup of up to 1.4×; when compared to baseline operator tuners.",
+  "doi": "10.1109/cec48606.2020.9185646",
+  "openalex": "W3083117669",
+  "status": "ok",
+  "title": "Evolutionary Algorithm with Non-parametric Surrogate Model for Tensor Program optimization"
+ },
+ "10.1109_jproc.2018.2817118": {
+  "abstract": "In the last decade, machine-learning-based compilation has moved from an obscure research niche to a mainstream activity. In this paper, we describe the relationship between machine learning and compiler optimization and introduce the main concepts of features, models, training, and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine-learning-based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.1109/jproc.2018.2817118",
+  "openalex": "W2962724414",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimization"
+ },
+ "10.1109_tai.2025.3545792": {
+  "abstract": "Appropriate selection of search operators plays a critical role in meta-heuristic algorithm design. Adaptive selection of suitable operators to the characteristics of different optimization stages is an important task that owns promising potential to improve the performance of a meta-heuristic algorithm. A variety of adaptive operator selection methods have been proposed in last decades, from the machine learning and optimization communities. However, the existing studies have not been systematically reviewed so far. To fill the gap, this article provides a comprehensive survey of adaptive operator selection for meta-heuristics. According to the information required for selection, adaptive operator selection methods are classified into two categories: 1) stateless methods; and 2) state-based methods. Each category is further summarized into several key components. The strategies of each component belonging to the two categories are reviewed respectively. The motivation, strengths and weaknesses of the proposed strategies are also discussed. Furthermore, studied meta-heuristics and optimization problems in the literature are summarized. The effects from the difference of meta-heuristics and problems to the specific design of methods are discussed, together with the guidance of selecting the suitable method in different application scenarios. At the end, emerging challenges that could guide further research are discussed.",
+  "doi": "10.1109/tai.2025.3545792",
+  "openalex": "W4407946303",
+  "status": "ok",
+  "title": "Adaptive Operator Selection for Meta-Heuristics: A Survey"
+ },
+ "10.1145_2628071.2628092": {
+  "abstract": "Program autotuning has been shown to achieve better or more portable performance in a number of domains. However, autotuners themselves are rarely portable between projects, for a number of reasons: using a domain-informed search space representation is critical to achieving good results; search spaces can be intractably large and require advanced machine learning techniques; and the landscape of search spaces can vary greatly between different problems, sometimes requiring domain specific search techniques to explore efficiently.",
+  "doi": "10.1145/2628071.2628092",
+  "openalex": "W2100218206",
+  "status": "ok",
+  "title": "OpenTuner"
+ },
+ "10.2172_1176882": {
+  "abstract": "This grant supported the ZettaBricks and OpenTuner projects. ZettaBricks is a new implicitly parallel language and compiler where defining multiple implementations of multiple algorithms to solve a problem is the natural way of programming. ZettaBricks makes algorithmic choice a first class construct of the language. Choices are provided in a way that also allows our compiler to tune at a finer granularity. The ZettaBricks compiler autotunes programs by making both fine-grained as well as algorithmic choices. Choices also include different automatic parallelization techniques, data distributions, algorithmic parameters, transformations, and blocking. Additionally, ZettaBricks introduces novel techniques to autotune algorithms for different convergence criteria. When choosing between various direct and iterative methods, the ZettaBricks compiler is able to tune a program in such a way that delivers near-optimal efficiency for any desired level of accuracy. The compiler has the flexibility of utilizing different convergence criteria for the various components within a single algorithm, providing the user with accuracy choice alongside algorithmic choice. OpenTuner is a generalization of the experience gained in building an autotuner for ZettaBricks. OpenTuner is a new open source framework for building domain-specific multi-objective program autotuners. OpenTuner supports fully-customizable configuration representations, an extensible technique representation to allow for domain-specific techniques, and an easy to use interface for communicating with the program to be autotuned. A key capability inside OpenTuner is the use of ensembles of disparate search techniques simultaneously; techniques that perform well will dynamically be allocated a larger proportion of tests.",
+  "doi": "10.2172/1176882",
+  "openalex": "W2465978700",
+  "status": "ok",
+  "title": "ZettaBricks: A Language Compiler and Runtime System for Anyscale Computing"
+ },
+ "10.25439_rmt.27580371": {
+  "abstract": "Many real-world combinatorial optimisation problems (COPs) are too complex to be handled in polynomial time using exact methods. One way to solve such problems is using approximation or heuristic algorithms which produce good quality solutions within a reasonable amount of time. Local searches are a class of approximation algorithms for dealing with COPs and have been shown to be very effective in solving large-scale COPs. Several local search algorithms have been proposed in literature where different ones use different rules or mechanisms to approach the search space of a given COP. However, due to the complexity and variability of characteristics in different COPs, it is very different to decide which local search algorithm should be used. Indeed, it is very different to design a single local search algorithm that can perform well across a diverse set of COP instances. Furthermore, even for a given local search algorithm, its performance critically hinges on the setting of its internal components, such as the operators/parameters that should be included or adjusted, and this may vary from one instance to another. To deal with these issues, this thesis proposes bi-level hyper-heuristic approaches that use various local and diverse sets of operators for solving COPs. The proposed frameworks control the selection of the local search algorithm and operators that should be used at each decision point. The appropriate mix of the local search algorithm with the operators are determined adaptively during the search process. In this thesis, the search spaces of the local search algorithm and operators are formulated as bi-level heuristic search spaces that interact with each other during the selection process. This thesis introduces two new hyper-heuristic approaches. One approach comprises a two-stage hyper-heuristic local search to adaptively select local search algorithm and its components. The local search algorithms are selected in the first stage and the operators for the selected local search are chosen in the second stage. The two stages interact with each other by exchanging information in order to arrive at a better decision. The second approach is based on two interleaved ant colonies that integrates the strengths of several local search algorithms and their components. This new framework is an improvement on its predecessor in several respects, but the key contributions are related to the designing of dual ant colonies and the use of multiple evaluation criteria. We formulate the search spaces of local search algorithms and their components as a graph to be searched by the proposed framework. The dual ant colonies work an interleaved manner as an adaptive selection mechanism where the first one controls the selection of which local search algorithm should be applied, while the second one chooses the local search algorithm components for the selected local search algorithm. These design colonies exploit and exchange information in a co-operative manner to effectively guide the search and the selection process. To test the generality, consistency and performance of the proposed frameworks, two COPs are considered: a multi-capacity bin packing problem (MCBPP) and a google machine reassignment problem (GMRP). Results demonstrate that the proposed frameworks obtain competitive results (if not best results for some instances), on all problem domains when compared to the best-known methods in the literature.",
+  "doi": "10.25439/rmt.27580371",
+  "openalex": "W2988633692",
+  "status": "ok",
+  "title": "Bi-level hyper-heuristic approaches for combinatorial optimisation problems"
+ },
+ "10.48550_arxiv.1512.04152": {
+  "abstract": "We define a novel family of algorithms for the adversarial multi-armed bandit problem, and provide a simple analysis technique based on convex smoothing. We prove two main results. First, we show that regularization via the \\emph{Tsallis entropy}, which includes EXP3 as a special case, achieves the $Θ(\\sqrt{TN})$ minimax regret. Second, we show that a wide class of perturbation methods achieve a near-optimal regret as low as $O(\\sqrt{TN \\log N})$ if the perturbation distribution has a bounded hazard rate. For example, the Gumbel, Weibull, Frechet, Pareto, and Gamma distributions all satisfy this key property.",
+  "doi": "10.48550/arxiv.1512.04152",
+  "openalex": "W2189156363",
+  "status": "ok",
+  "title": "Fighting Bandits with a New Kind of Smoothness"
+ },
+ "10.48550_arxiv.1805.03441": {
+  "abstract": "In the last decade, machine learning based compilation has moved from an an obscure research niche to a mainstream activity. In this article, we describe the relationship between machine learning and compiler optimisation and introduce the main concepts of features, models, training and deployment. We then provide a comprehensive survey and provide a road map for the wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This paper provides both an accessible introduction to the fast moving area of machine learning based compilation and a detailed bibliography of its main achievements.",
+  "doi": "10.48550/arxiv.1805.03441",
+  "openalex": "W2802910567",
+  "status": "ok",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "10.5445_ir_1000119646": {
+  "abstract": null,
+  "doi": "10.5445/ir/1000119646",
+  "openalex": "W3028782475",
+  "status": "no_abstract",
+  "title": "Autotuning for Automatic Parallelization on Heterogeneous Systems"
+ },
+ "oa-W1483258291": {
+  "abstract": "Thesis: Ph. D., Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2014.",
+  "doi": null,
+  "openalex": "W1483258291",
+  "status": "ok",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-1f411fe8db82ee46": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits"
+ },
+ "s2-2782e47c5b0c8a2c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "1 Perturbation Techniques in Online Learning and Optimization"
+ },
+ "s2-28993f151835f15d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Bi-level hyper-heuristic approaches for combinatorial optimisation problems"
+ },
+ "s2-67724cf35d8b87df": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fighting Bandits with a New Kind of Smoothness"
+ },
+ "s2-716b8a99dd90ae04": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tensor Comprehensions: Framework-Agnostic High-Performance Machine Learning Abstractions"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-c79f75577e0ffb42": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compiler Optimisation"
+ },
+ "s2-e5f508a0a4ba00fa": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "DeepTuner : a system for search technique recommendation in program autotuning"
+ },
+ "s2-f55915b736d8964b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Analysis of Perturbation Techniques in Online Learning"
+ },
+ "s2-fde4128f852f8e4f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Machine Learning in Compilers"
+ }
+}

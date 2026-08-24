@@ -1,0 +1,338 @@
+{
+ "10.1002_9781119332015.ch7": {
+  "abstract": "The challenge for stream programming on multicore architectures is to describe stream manipulation, dependent on the application, and adapt this stream to complex and changing multicore architectures. Stream languages are a powerful alternative to program multicore processors for two main reasons: they offer a deterministic execution based on a sound mathematical formalism - synchronous data flow (SDF) and the expression of the parallelism is implicitly described by the stream structure. So far, research efforts in stream-specific languages have focused on two language categories: languages such as Array-OL and Block Parallel describe streams through dependences between filters, and languages such as StreamIt and Brook explicitly manipulate stream operators. A high-level typed DSL, called SLICES, is used to describe the data dependencies. This chapter introduces a formal framework for building correct transformations of intermediary stream language (SJD) programs and an iterative exploration algorithm to optimize a program according to a metric.",
+  "doi": "10.1002/9781119332015.ch7",
+  "openalex": "W2582983959",
+  "status": "ok",
+  "title": "DSL Stream Programming on Multicore Architectures"
+ },
+ "10.1002_cpe.5420": {
+  "abstract": "Summary This paper presents semi‐automatic software refactorings to introduce and tune structured parallelism in sequential Erlang code, as well as to generate code for running computations on GPUs and possibly other accelerators. Our refactorings are based on the lapedo framework for programming heterogeneous multi‐core systems in Erlang. lapedo is based on the PaRTE refactoring tool and also contains (1) a set of hybrid skeletons that target both CPU and GPU processors, (2) novel refactorings for introducing and tuning parallelism, and (3) a tool to generate the GPU offloading and scheduling code in Erlang, which is used as a component of hybrid skeletons. We demonstrate, on four realistic use‐case applications, that we are able to refactor sequential code and produce heterogeneous parallel versions that can achieve significant and scalable speedups of up to 220 over the original sequential Erlang program on a 24‐core machine with a GPU.",
+  "doi": "10.1002/cpe.5420",
+  "openalex": "W2953634222",
+  "status": "ok",
+  "title": "Refactoring for introducing and tuning parallelism for heterogeneous multicore machines in Erlang"
+ },
+ "10.1007_978-3-540-70592-5_5": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-70592-5_5",
+  "openalex": "W1772887859",
+  "status": "no_abstract",
+  "title": "Liquid Metal: Object-Oriented Programming Across the Hardware/Software Boundary"
+ },
+ "10.1007_978-3-540-72905-1_18": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-72905-1_18",
+  "openalex": "W1556382755",
+  "status": "no_abstract",
+  "title": "Optimizing Stream Organization to Improve the Performance of Scientific Computing Applications on the Stream Processor"
+ },
+ "10.1007_s10766-020-00665-z": {
+  "abstract": "Abstract This paper presents a new technique for introducing and tuning parallelism for heterogeneous shared-memory systems (comprising a mixture of CPUs and GPUs), using a combination of algorithmic skeletons (such as farms and pipelines), Monte–Carlo tree search for deriving mappings of tasks to available hardware resources, and refactoring tool support for applying the patterns and mappings in an easy and effective way. Using our approach, we demonstrate easily obtainable, significant and scalable speedups on a number of case studies showing speedups of up to 41 over the sequential code on a 24-core machine with one GPU. We also demonstrate that the speedups obtained by mappings derived by the MCTS algorithm are within 5–15% of the best-obtained manual parallelisation.",
+  "doi": "10.1007/s10766-020-00665-z",
+  "openalex": "W3034444771",
+  "status": "ok",
+  "title": "Programming Heterogeneous Parallel Machines Using Refactoring and Monte–Carlo Tree Search"
+ },
+ "10.1109_cec.2013.6557926": {
+  "abstract": "The single core processor, which has dominated for over 30 years, is now obsolete with recent trends increasing towards parallel systems, demanding a huge shift in programming techniques and practices. Moreover, we are rapidly moving towards an age where almost all programming will be targeting parallel systems. Parallel hardware is rapidly evolving, with large heterogeneous systems, typically comprising a mixture of CPUs and GPUs, becoming the mainstream. Additionally, with this increasing heterogeneity comes increasing complexity: not only does the programmer have to worry about where and how to express the parallelism, they must also express an efficient mapping of resources to the available system. This generally requires in-depth expert knowledge that most application programmers do not have. In this paper we describe a new technique that derives, automatically, optimal mappings for an application onto a heterogeneous architecture, using a Monte Carlo Tree Search algorithm. Our technique exploits high-level design patterns, targeting a set of well-specified parallel skeletons. We demonstrate that our MCTS on a convolution example obtained speedups that are within 5% of the speedups achieved by a hand-tuned version of the same application.",
+  "doi": "10.1109/cec.2013.6557926",
+  "openalex": "W2066381053",
+  "status": "ok",
+  "title": "Mapping parallel programs to heterogeneous CPU/GPU architectures using a Monte Carlo Tree Search"
+ },
+ "10.1109_cgo.2009.20": {
+  "abstract": "The StreamIt programming model has been proposed to exploit parallelism in streaming applications on general purpose multi-core architectures. This model allows programmers to specify the structure of a program as a set of filters that act upon data, and a set of communication channels between them. The StreamIt graphs describe task, data and pipeline parallelism which can be exploited on modern graphics processing units (GPUs), as they support abundant parallelism in hardware. In this paper, we describe the challenges in mapping StreamIt to GPUs and propose an efficient technique to software pipeline the execution of stream programs on GPUs. We formulate this problem - both scheduling and assignment of filters to processors - as an efficient integer linear program (ILP), which is then solved using ILP solvers. We also describe a novel buffer layout technique for GPUs which facilitates exploiting the high memory bandwidth available in GPUs. The proposed scheduling utilizes both the scalar units in GPU, to exploit data parallelism, and multiprocessors, to exploit task and pipeline parallelism. Further it takes into consideration the synchronization and bandwidth limitations of GPUs, and yields speedups between 1.87X and 36.83X over a single threaded CPU.",
+  "doi": "10.1109/cgo.2009.20",
+  "openalex": "W2122080725",
+  "status": "ok",
+  "title": "Software Pipelined Execution of Stream Programs on GPUs"
+ },
+ "10.1109_ipdps.2006.1639343": {
+  "abstract": "Image and video codecs are prevalent in multimedia devices, ranging from embedded systems, to desktop computers, to high-end servers such as HDTV editing consoles. It is not uncommon however that developers create and customize separate coder and decoder implementations for each of the architectures they target. This practice is time consuming and error prone, leading to code that is neither malleable nor portable. This paper describes an implementation of the MPEG-2 decoder using the StreamIt programming language. StreamIt is an architecture-independent stream language that aims to improve programmer productivity, while concomitantly exposing the inherent parallelism and communication topology of the application. The paper shows that MPEG is a good match for the streaming programming model and illustrates the malleability of the implementation using a simple modification to the decoder to support alternate color compression formats. StreamIt allows for modular application development, which increases code reuse, and reduces the complexity of the debugging process since stream components can be verified independently. This in turn leads to greater programmer productivity.",
+  "doi": "10.1109/ipdps.2006.1639343",
+  "openalex": "W4251551397",
+  "status": "ok",
+  "title": "MPEG-2 decoding in a stream programming language"
+ },
+ "10.1109_tpds.2008.170": {
+  "abstract": "The stream architecture is a novel microprocessor architecture with wide application potential. It is critical to study how to use the stream architecture to accelerate scientific computing programs. However, existing stream processors and stream programming languages are not designed for scientific computing. To address this issue, we design and implement a 64-bit stream processor, Fei Teng 64 (FT64), which has a peak performance of 16 Gflops. FT64 supports two kinds of communications, message passing and stream communications, based on which, an interconnection architecture is designed for a FT64-based high-performance computer. This high-performance computer contains multiple modules, with each module containing eight FT64s. We also design a novel stream programming language, stream Fortran 95 (SF95), together with the compiler SF95 compiler, so as to facilitate the development of scientific applications. We test nine typical scientific application kernels on our FT64 platform to evaluate this design. The results demonstrate the effectiveness and efficiency of FT64 and its compiler for scientific computing.",
+  "doi": "10.1109/tpds.2008.170",
+  "openalex": "W2096871350",
+  "status": "ok",
+  "title": "Fei Teng 64 Stream Processing System: Architecture, Compiler, and Programming"
+ },
+ "10.1145_1168857.1168877": {
+  "abstract": "As multicore architectures enter the mainstream, there is a pressing demand for high-level programming models that can effectively map to them. Stream programming offers an attractive way to expose coarse-grained parallelism, as streaming applications (image, video, DSP, etc.) are naturally represented by independent filters that communicate over explicit data channels.In this paper, we demonstrate an end-to-end stream compiler that attains robust multicore performance in the face of varying application characteristics. As benchmarks exhibit different amounts of task, data, and pipeline parallelism, we exploit all types of parallelism in a unified manner in order to achieve this generality. Our compiler, which maps from the StreamIt language to the 16-core Raw architecture, attains a 11.2x mean speedup over a single-core baseline, and a 1.84x speedup over our previous work.",
+  "doi": "10.1145/1168857.1168877",
+  "openalex": "W2165100134",
+  "status": "ok",
+  "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs"
+ },
+ "10.1145_1168917.1168877": {
+  "abstract": "As multicore architectures enter the mainstream, there is a pressing demand for high-level programming models that can effectively map to them. Stream programming offers an attractive way to expose coarse-grained parallelism, as streaming applications (image, video, DSP, etc.) are naturally represented by independent filters that communicate over explicit data channels.In this paper, we demonstrate an end-to-end stream compiler that attains robust multicore performance in the face of varying application characteristics. As benchmarks exhibit different amounts of task, data, and pipeline parallelism, we exploit all types of parallelism in a unified manner in order to achieve this generality. Our compiler, which maps from the StreamIt language to the 16-core Raw architecture, attains a 11.2x mean speedup over a single-core baseline, and a 1.84x speedup over our previous work.",
+  "doi": "10.1145/1168917.1168877",
+  "openalex": "W4235344346",
+  "status": "ok",
+  "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs"
+ },
+ "10.1145_1168918.1168877": {
+  "abstract": "As multicore architectures enter the mainstream, there is a pressing demand for high-level programming models that can effectively map to them. Stream programming offers an attractive way to expose coarse-grained parallelism, as streaming applications (image, video, DSP, etc.) are naturally represented by independent filters that communicate over explicit data channels.In this paper, we demonstrate an end-to-end stream compiler that attains robust multicore performance in the face of varying application characteristics. As benchmarks exhibit different amounts of task, data, and pipeline parallelism, we exploit all types of parallelism in a unified manner in order to achieve this generality. Our compiler, which maps from the StreamIt language to the 16-core Raw architecture, attains a 11.2x mean speedup over a single-core baseline, and a 1.84x speedup over our previous work.",
+  "doi": "10.1145/1168918.1168877",
+  "openalex": "W4237758066",
+  "status": "ok",
+  "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs"
+ },
+ "10.1145_1168919.1168877": {
+  "abstract": "As multicore architectures enter the mainstream, there is a pressing demand for high-level programming models that can effectively map to them. Stream programming offers an attractive way to expose coarse-grained parallelism, as streaming applications (image, video, DSP, etc.) are naturally represented by independent filters that communicate over explicit data channels.In this paper, we demonstrate an end-to-end stream compiler that attains robust multicore performance in the face of varying application characteristics. As benchmarks exhibit different amounts of task, data, and pipeline parallelism, we exploit all types of parallelism in a unified manner in order to achieve this generality. Our compiler, which maps from the StreamIt language to the 16-core Raw architecture, attains a 11.2x mean speedup over a single-core baseline, and a 1.84x speedup over our previous work.",
+  "doi": "10.1145/1168919.1168877",
+  "openalex": "W4254265573",
+  "status": "ok",
+  "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs"
+ },
+ "10.1145_1250662.1250689": {
+  "abstract": "Stream architecture is a novel microprocessor architecture with wide application potential. But as for whether it can be used efficiently in scientific computing, many issues await further study. This paper first gives the design and implementation of a 64-bit stream processor, FT64 (Fei Teng 64), for scientific computing. The carrying out of 64-bit extension design and scientific computing oriented optimization are described in such aspects as instruction set architecture, stream controller, micro controller, ALU cluster, memory hierarchy and interconnection interface here. Second, two kinds of communications as message passing and stream communications are put forward. An interconnection based on the communications is designed for FT64-based high performance computers. Third, a novel stream programming language, SF95 (Stream FORTRAN95), and its compiler, SF95Compiler (Stream FORTRAN95 Compiler), are developed to facilitate the development of scientific applications. Finally, nine typical scientific application kernels are tested and the results show the efficiency of stream architecture for scientific computing.",
+  "doi": "10.1145/1250662.1250689",
+  "openalex": "W1968518918",
+  "status": "ok",
+  "title": "A 64-bit stream processor architecture for scientific applications"
+ },
+ "10.1145_1269843.1269851": {
+  "abstract": "Modern software applications are growing in complexity and demand very intensive use of data. Therefore, a wide variety of data structures are utilized to facilitate the storage and access to these vast amounts of computed information. Additionally, the need for reliable software design and the development of large applications following the object-oriented paradigm increase the amount of dynamic buffers and redundant accesses to the data stored in these buffers. In this paper, we propose a systematic, design optimization methodology to remove these intermediate dynamic buffers, thereby reducing the memory accesses of the targeted applications without altering the input-output behaviour of the algorithms. The reduction is focused on sequences and is especially relevant for embedded systems, which have limited on-chip communication bandwidth and the energy consumption of the memory subsystem is high, due to the energy consumption associated with each memory access. The effectiveness of the proposed methodology is assessed in a 3D reconstruction multimedia application and shows a significant reduction in memory accesses. In addition, the general trends for memory improvement and the scalability of our approach are supported as well by a parameterized benchmark set.",
+  "doi": "10.1145/1269843.1269851",
+  "openalex": "W2025864342",
+  "status": "ok",
+  "title": "Systematic intermediate sequence removal for reduced memory accesses"
+ },
+ "10.1145_1273440.1250689": {
+  "abstract": "Stream architecture is a novel microprocessor architecture with wide application potential. But as for whether it can be used efficiently in scientific computing, many issues await further study. This paper first gives the design and implementation of a 64-bit stream processor, FT64 (Fei Teng 64), for scientific computing. The carrying out of 64-bit extension design and scientific computing oriented optimization are described in such aspects as instruction set architecture, stream controller, micro controller, ALU cluster, memory hierarchy and interconnection interface here. Second, two kinds of communications as message passing and stream communications are put forward. An interconnection based on the communications is designed for FT64-based high performance computers. Third, a novel stream programming language, SF95 (Stream FORTRAN95), and its compiler, SF95Compiler (Stream FORTRAN95 Compiler), are developed to facilitate the development of scientific applications. Finally, nine typical scientific application kernels are tested and the results show the efficiency of stream architecture for scientific computing.",
+  "doi": "10.1145/1273440.1250689",
+  "openalex": "W3015546205",
+  "status": "ok",
+  "title": "A 64-bit stream processor architecture for scientific applications"
+ },
+ "10.1145_1375657.1375679": {
+  "abstract": "This paper describes a graph coloring compiler framework to allocate on-chip SRF(Stream Register File) storage for optimizing scientific applications on stream processors. Our framework consists of first applying enabling optimizations such as loop unrolling to expose stream reuse and opportunities for maximizing parallelism, i.e., overlapping kernel execution and memory transfers.Then the three SRF management tasks are solved in a unified manner via graph coloring: (1) placing streams in the SRF, (2) exploiting stream use, and (3) maximizing parallelism. We evaluate the performance of our compiler framework by actually running nine representative scientific computing kernels on our FT64 stream processor. Our preliminary results show that compiler management achieves an average speedup of 2.3x compared to First-Fit allocation. In comparison with the performance results obtained from running these benchmarks on Itanium 2, an average speedup of 2.1x is observed.",
+  "doi": "10.1145/1375657.1375679",
+  "openalex": "W2026849037",
+  "status": "ok",
+  "title": "Optimizing scientific application loops on stream processors"
+ },
+ "10.1145_1379023.1375679": {
+  "abstract": "This paper describes a graph coloring compiler framework to allocate on-chip SRF(Stream Register File) storage for optimizing scientific applications on stream processors. Our framework consists of first applying enabling optimizations such as loop unrolling to expose stream reuse and opportunities for maximizing parallelism, i.e., overlapping kernel execution and memory transfers.Then the three SRF management tasks are solved in a unified manner via graph coloring: (1) placing streams in the SRF, (2) exploiting stream use, and (3) maximizing parallelism. We evaluate the performance of our compiler framework by actually running nine representative scientific computing kernels on our FT64 stream processor. Our preliminary results show that compiler management achieves an average speedup of 2.3x compared to First-Fit allocation. In comparison with the performance results obtained from running these benchmarks on Itanium 2, an average speedup of 2.1x is observed.",
+  "doi": "10.1145/1379023.1375679",
+  "openalex": "W4240445122",
+  "status": "ok",
+  "title": "Optimizing scientific application loops on stream processors"
+ },
+ "10.1145_2429069.2429123": {
+  "abstract": "We present Sigma*, a novel technique for learning symbolic models of software behavior. Sigma* addresses the challenge of synthesizing models of software by using symbolic conjectures and abstraction. By combining dynamic symbolic execution to discover symbolic input-output steps of the programs and counterexample guided abstraction refinement to over-approximate program behavior, Sigma* transforms arbitrary source representation of programs into faithful input-output models. We define a class of stream filters---programs that process streams of data items---for which Sigma* converges to a complete model if abstraction refinement eventually builds up a sufficiently strong abstraction. In other words, Sigma* is complete relative to abstraction. To represent inferred symbolic models, we use a variant of symbolic transducers that can be effectively composed and equivalence checked. Thus, Sigma* enables fully automatic analysis of behavioral properties such as commutativity, reversibility and idempotence, which is useful for web sanitizer verification and stream programs compiler optimizations, as we show experimentally. We also show how models inferred by Sigma* can boost performance of stream programs by parallelized code generation.",
+  "doi": "10.1145/2429069.2429123",
+  "openalex": "W2044372543",
+  "status": "ok",
+  "title": "Sigma*"
+ },
+ "10.1145_2480359.2429123": {
+  "abstract": "We present Sigma*, a novel technique for learning symbolic models of software behavior. Sigma* addresses the challenge of synthesizing models of software by using symbolic conjectures and abstraction. By combining dynamic symbolic execution to discover symbolic input-output steps of the programs and counterexample guided abstraction refinement to over-approximate program behavior, Sigma* transforms arbitrary source representation of programs into faithful input-output models. We define a class of stream filters---programs that process streams of data items---for which Sigma* converges to a complete model if abstraction refinement eventually builds up a sufficiently strong abstraction. In other words, Sigma* is complete relative to abstraction. To represent inferred symbolic models, we use a variant of symbolic transducers that can be effectively composed and equivalence checked. Thus, Sigma* enables fully automatic analysis of behavioral properties such as commutativity, reversibility and idempotence, which is useful for web sanitizer verification and stream programs compiler optimizations, as we show experimentally. We also show how models inferred by Sigma* can boost performance of stream programs by parallelized code generation.",
+  "doi": "10.1145/2480359.2429123",
+  "openalex": "W4246882217",
+  "status": "ok",
+  "title": "Sigma*"
+ },
+ "10.1145_3062341.3062362": {
+  "abstract": "List comprehensions provide a powerful abstraction mechanism for expressing computations over ordered collections of data declaratively without having to use explicit iteration constructs. This paper puts forth effectful comprehensions as an elegant way to describe list comprehensions that incorporate loop-carried state. This is motivated by operations such as compression/decompression and serialization/deserialization that are common in log/data processing pipelines and require loop-carried state when processing an input stream of data.",
+  "doi": "10.1145/3062341.3062362",
+  "openalex": "W2529401481",
+  "status": "ok",
+  "title": "Fusing effectful comprehensions"
+ },
+ "10.1145_3140587.3062362": {
+  "abstract": "List comprehensions provide a powerful abstraction mechanism for expressing computations over ordered collections of data declaratively without having to use explicit iteration constructs. This paper puts forth effectful comprehensions as an elegant way to describe list comprehensions that incorporate loop-carried state. This is motivated by operations such as compression/decompression and serialization/deserialization that are common in log/data processing pipelines and require loop-carried state when processing an input stream of data. We build on the underlying theory of symbolic transducers to fuse pipelines of effectful comprehensions into a single representation, from which efficient code can be generated. Using background theory reasoning with an SMT solver, our fusion and subsequent reachability based branch elimination algorithms can significantly reduce the complexity of the fused pipelines. Our implementation shows significant speedups over reasonable hand-written code (3.4×, on average) and traditionally fused version of the pipeline (2.6×, on average) for a variety of examples, including scenarios for extracting fields with regular expressions, processing XML with XPath, and running queries over encoded data.",
+  "doi": "10.1145/3140587.3062362",
+  "openalex": "W3085860359",
+  "status": "ok",
+  "title": "Fusing effectful comprehensions"
+ },
+ "10.17863_cam.21221": {
+  "abstract": "Concurrency is often an optimisation, rather than intrinsic to the functional behaviour of a program, i.e., a concurrent program is often intended to achieve the same effect of a simpler sequential counterpart, just faster. Error-free concurrent programming remains a tricky problem, beyond the capabilities of most programmers. Consequently, an attractive alternative to manually developing a concurrent program is to automatically synthesise one. This dissertation presents two novel formal verification-based methods for safely transforming a sequential program into a concurrent one. The first method---an instance of proof-directed synthesis---takes as the input a sequential program and its safety proof, as well as annotations on where to parallelise, and produces a correctly-synchronised parallelised program, along with a proof of that program. The method uses the sequential proof to guide the insertion of synchronisation barriers to ensure that the parallelised program has the same behaviour as the original sequential version. The sequential proof, written in separation logic, need only represent shape properties, meaning we can parallelise complex heap-manipulating programs without verifying every aspect of their behaviour. The second method proposes specification-directed synthesis: given a sequential program, we extract a rich, stateful specification compactly summarising program behaviour, and use that specification for parallelisation. At the heart of the method is a learning algorithm which combines dynamic and static analysis. In particular, dynamic symbolic execution and the computational learning technique grammar induction are used to conjecture input-output specifications, and counterexample-guided abstraction refinement to confirm or refute the equivalence between the conjectured specification and the original program. Once equivalence checking succeeds, from the inferred specifications we synthesise code that executes speculatively in parallel---enabling automated parallelisation of irregular loops that are not necessary polyhedral, disjoint or with a static pipeline structure.",
+  "doi": "10.17863/cam.21221",
+  "openalex": "W2792694035",
+  "status": "ok",
+  "title": "Formal verification-driven parallelisation synthesis"
+ },
+ "10.7916_d8bp08sn": {
+  "abstract": "Multi-core platforms have spread to all corners of the computing industry, and trends in design and power indicate that the shift to multi-core will become even wider-spread in the future. As the number of cores on a chip rises, the complexity of memory systems and on-chip interconnects increases drastically. The programmer inherits this complexity in the form of new responsibilities for task decomposition, synchronization, and data movement within an application, which hitherto have been concealed by complex processing pipelines or deemed unimportant since tasks were largely executed sequentially. To some extent, the need for explicit parallel programming is inevitable, due to limits in the instruction-level parallelism that can be automatically extracted from a program. However, these challenges create a great opportunity for the development of new programming abstractions which hide the low-level architectural complexity while exposing intuitive high-level mechanisms for expressing parallelism. Many models of parallel programming fall into the category of data-centric models, where the structure of an application depends on the role of data and communication in the relationships between tasks. The utilization of the inter-core communication networks and effective scaling to large data sets are decidedly important in designing efficient implementations of parallel applications. The questions of how many low-level architectural details should be exposed to the programmer, and how much parallelism in an application a programmer should expose to the compiler remain open-ended, with different answers depending on the architecture and the application in question. I propose that the key to unlocking the capabilities of multi-core platforms is the development of abstractions and optimizations which match the patterns of data movement in applications with the inter-core communication capabilities of the platforms. After a comparative analysis that confirms and stresses the importance of finding a good match between the programming abstraction, the application, and the architecture, this dissertation proposes two techniques that showcase the power of leveraging data dependency patterns in parallel performance optimizations. Flexible Filters dynamically balance load in stream programs by creating flexibility in the runtime data flow through the addition of redundant stream filters. This technique combines a static mapping with dynamic flow control to achieve light-weight, distributed and scalable throughput optimization. The properties of stream communication, i.e., FIFO pipes, enable flexible filters by exposing the backpressure dependencies between tasks. Next, I present Huckleberry, a novel recursive programming abstraction developed in order to allow programmers to expose data locality in divide-and-conquer algorithms at a high level of abstraction. Huckleberry automatically converts sequential recursive functions with explicit data partitioning into parallel implementations that can be ported across changes in the underlying architecture including the number of cores and the amount of on-chip memory. I then present a performance model for multi-core applications which provides an efficient means to evaluate the trade-offs between the computational and communication requirements of applications together with the hardware resources of a target multi-core architecture. The model encompasses all data-driven abstractions that can be reduced to a task graph representation and is extensible to performance techniques such as Flexible Filters that alter an application's original task graph. Flexible Filters and Huckleberry address the challenges of parallel programming on multi-core architectures by taking advantage of properties specific to the stream and recursive paradigms, and the performance model creates a unifying framework based on the communication between tasks in parallel applications. Combined, these contributions demonstrate that specialization with respect to communication patterns enhances the ability of parallel programming abstractions and optimizations to harvest the power of multi-core platforms.",
+  "doi": "10.7916/d8bp08sn",
+  "openalex": "W2156024465",
+  "status": "ok",
+  "title": "Data-Driven Programming Abstractions and Optimization for Multi-Core Platforms"
+ },
+ "oa-W1527499625": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2009.",
+  "doi": null,
+  "openalex": "W1527499625",
+  "status": "ok",
+  "title": "A hybrid static/dynamic approach to scheduling stream programs"
+ },
+ "oa-W2110552905": {
+  "abstract": "Image and video codecs are prevalent in multimedia applications, ranging from embedded systems, to desktop computers, to high-end servers such as HDTV editing consoles. It is not uncommon however that developers create (from scratch) and customize their codec implementations for each of the architecture targets they intend their coders and decoders to run on. This practice is time consuming anderror prone, leading to code that is not malleable or portable. In this paper we describe an implementation of the MPEG-2 codec using the StreamIt programming language. StreamIt is an architecture-independent stream language that aims to improve programmer productivity, while concomitantly exposing the inherent parallelism and communication topology of the application. We describe why MPEG is a good match forthe streaming programming model, and illustrate the malleability of the implementation using a simple modification to the decoder to support alternate color compression formats. StreamIt allows for modular application development, which also reduces the complexity of the debugging process since stream components can be verifiedindependently. This in turn leads to greater programmer productivity. We implement a fully functional MPEG-2 decoder in StreamIt. The decoder was developed in eight weeks by a single student programmer who did not have any prior experience with MPEG or other video codecs. Many of the MPEG-2 components were subsequently reused to assemble a JPEG codec.",
+  "doi": null,
+  "openalex": "W2110552905",
+  "status": "ok",
+  "title": "MPEG-2 in a Stream Programming Language"
+ },
+ "oa-W2124343693": {
+  "abstract": "Abstract Image and video codecs are prevalent in multime-dia devices, ranging from embedded systems, to desktop",
+  "doi": null,
+  "openalex": "W2124343693",
+  "status": "ok",
+  "title": "MPEG-2 Decoding in a Stream Programming Language"
+ },
+ "oa-W2145791143": {
+  "abstract": "Thesis (M. Eng. and S.B.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2006.",
+  "doi": null,
+  "openalex": "W2145791143",
+  "status": "ok",
+  "title": "Stream Programming for Image and Video Compression"
+ },
+ "oa-W2146172931": {
+  "abstract": "Thesis (M. Eng.)--Massachusetts Institute of Technology, Dept. of Electrical Engineering and Computer Science, 2007.",
+  "doi": null,
+  "openalex": "W2146172931",
+  "status": "ok",
+  "title": "A Streaming Computation Framework for the Cell Processor"
+ },
+ "oa-W2309639351": {
+  "abstract": "We believe that FPGA-like parallel coprocessor accelerators can be programmed efficiently at the “C level” of abstraction. In order to support this claim we define an abstract architectural model of accelerators that conveys the kind of high-level behavior and performance characteristics that the von Neumann model conveys to programmers of conventional processors. Using the model as a guide we define a programming language and compilation strategy that: 1. do not impose programming style restrictions that are not inherent in the model, 2. do not introduce serious inefficiencies, and 3. are performance portable across implementations of the model. \r\nIn this dissertation I describe C-level programming of accelerators broadly, and make three particular contributions to the programmability of accelerators. \r\nEnhanced loop flattening is a new method for translating loop nests with arbitrary static control flow into a form that can be efficiently pipelined with conventional algorithms designed for simple loops. This method advances the goal of supporting a wide set of programming styles with reasonable efficiency. \r\nParallel accelerators have statically managed resources—like local memories—that vary widely in capacity from one implementation to the next. In order to get close to peak performance, applications must be tuned to the specific resources available in a given implementation, and empirical auto-tuning is an attractive way to do that. I propose and evaluate a new probabilistic auto-tuning method that elegantly handles situation where many possible configurations of the application fail to work at all because they exceed some architectural resource limit. \r\nFor many applications, achieving good performance on parallel accelerators requires deep loop pipelining, which requires dramatically reordering the individual operations in the application. Local dependencies between operations can be respected by compilers relatively easily, but non-local dependencies force implementations to choose between conservatively not reordering operations (which might kill performance), proving that reordering preserves the meaning of the program (which is impossible in the general case), or making unsound transformations (which programmers generally dislike). I propose a mostly sequential operational semantics for C-level streaming languages targeted at parallel accelerators that offers enough flexibility to the implementation to achieve good performance, deviates from conventional program-order semantics in fairly modest and understandable ways, and provides tools with which the programmer can control the reordering performed by the implementation. \r\nThese innovations are evaluated in the context of Macah, a new C-like language developed in the Mosaic group at the University of Washington. For validation we use a number of compute-intensive benchmarks developed by members of the Mosaic group and other contributors.",
+  "doi": null,
+  "openalex": "W2309639351",
+  "status": "ok",
+  "title": "c-level programming of parallel coprocessor accelerators"
+ },
+ "oa-W2321248633": {
+  "abstract": "Stream programs represent an important class of high-performance computations. Defined by their regular processing of sequences of data, stream programs appear most commonly in the context of audio, video, and digital signal processing, though also in networking, encryption, and other areas. Stream programs can be naturally represented as a graph of independent actors that communicate explicitly over data channels. In this work we focus on programs where the input and output rates of actors are known at compile time, enabling aggressive transformations by the compiler; this model is known as synchronous dataflow.\r\nWe develop a new programming language, StreamIt, that empowers both programmers and compiler writers to leverage the unique properties of the streaming domain. StreamIt offers several new abstractions, including hierarchical single-input single-output streams, composable primitives for data reordering, and a mechanism called teleport messaging that enables precise event handling in a distributed environment. We demonstrate the feasibility of developing applications in StreamIt via a detailed characterization of our 34,000-line benchmark suite, which spans from MPEG-2 encoding/decoding to GMTI radar processing. We also present a novel dynamic analysis for migrating legacy C programs into a streaming representation.\r\nThe central premise of stream programming is that it enables the compiler to perform powerful optimizations. We support this premise by presenting a suite of new transformations. We describe the first translation of stream programs into the compressed domain, enabling programs written for uncompressed data formats to automatically operate directly on compressed data formats (based on LZ77). This technique offers a median speedup of 15x on common video editing operations. We also review other optimizations developed in the StreamIt group, including automatic parallelization (offering an 11x mean speedup on the 16-core Raw machine), optimization of linear computations (offering a 5.5x average speedup on a Pentium 4), and cache-aware scheduling (offering a 3.5x mean speedup on a StrongARM 1100). While these transformations are beyond the reach of compilers for traditional languages such as C, they become tractable given the abundant parallelism and regular communication patterns exposed by the stream programming model. (Copies available exclusively from MIT Libraries, Rm. 14-0551, Cambridge, MA 02139-4307. Ph. 617-253-5668; Fax 617-253-1690.)",
+  "doi": null,
+  "openalex": "W2321248633",
+  "status": "ok",
+  "title": "Language and compiler support for stream programs"
+ },
+ "oa-W2599872323": {
+  "abstract": "We present Sigma ∗ , a novel technique for learning symbolic models of software behavior. Sigma ∗ addresses the challenge of synthesizing models of software by using symbolic conjectures and abstraction. By combining dynamic symbolic execution to discover symbolic input-output steps of the programs and counterexample guided abstraction refinement to over-approximate program behavior, Sigma ∗ transforms arbitrary source representation of programs into faithful input-output models. We define a class of stream filters—programs that process streams of data items—for which Sigma ∗ converges to a complete model if abstraction refinement eventually builds up a sufficiently strong abstraction. In other words, Sigma ∗ is complete relative to abstraction. To represent inferred symbolic models, we use a variant of symbolic transducers that can be effectively composed and equivalence checked. Thus, Sigma ∗ enables fully automatic analysis of behavioral properties such as commutativity, reversibility and idempotence, which is useful for web sanitizer verification and stream programs compiler optimizations, as we show experimentally. We also show how models inferred by Sigma ∗ can be used to boost performance of stream programs through parallelized code generation. 1.",
+  "doi": null,
+  "openalex": "W2599872323",
+  "status": "ok",
+  "title": "Sigma*: Symbolic Learning of Stream Filters"
+ },
+ "oa-W65963009": {
+  "abstract": "Coprocessor accelerator architectures like FPGAs and GPUs are increasingly used in embedded systems because of their high performance on computation-heavy inner loops of a variety of applications. However, current languages and compilers for these architectures make it challenging to efficiently implement kernels that have complex, input-dependent control flow and data access patterns. In this paper we argue that providing language support for such kernels significantly broadens the applicability of accelerator architectures. We then describe a new language‐called Macah‐and compiler that provide this support. Macah is a “C-level” language, in the sense that it forces programmers to think about some of the abstract architectural characteristics that make accelerators different from conventional processors. However, the compiler still fills in several important architecture-specific details, so that programming in Macah is substantially easier than using hardware description languages or coprocessor-specific assembly languages. We have implemented a prototype Macah compiler that produces simulatable Verilog which represents the input program mapped onto a model of an accelerator. Among other applications, we have programmed a complex kernel taken from video compression in Macah and have it running in simulation.",
+  "doi": null,
+  "openalex": "W65963009",
+  "status": "ok",
+  "title": "Macah: A \"C-Level\" Language for Programming Kernels on Coprocessor Accelerators"
+ },
+ "s2-04646118a1a29878": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A programming model and processor architecture for heterogeneous multicore computers"
+ },
+ "s2-05d185e8914d6492": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Block parallel programming for real-time applications on multi-core processors"
+ },
+ "s2-0d4bc3a471a3eeca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A hybrid static/dynamic approach to scheduling stream programs"
+ },
+ "s2-12a5965959a4f1f8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Ubiquitous Stream Programming to Facilitate the Migration to Multicore Architectures"
+ },
+ "s2-2e17d826b1298f60": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Sigma*: Symbolic Learning of Stream Filters"
+ },
+ "s2-6257c9d0c725320f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Language and compiler support for stream programs"
+ },
+ "s2-88510d30a087deb5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "c-level programming of parallel coprocessor accelerators"
+ },
+ "s2-ae8b15bc8271a773": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiled microprocessors"
+ },
+ "s2-ba77617912535abc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Streaming Computation Framework for the Cell Processor"
+ },
+ "s2-bfc46687c9adef4c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Stream Programming for Image and Video Compression"
+ },
+ "s2-c3d253c08ea741bd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Exploiting Coarse-Grained Task , Data , and Pipeline Parallelism in Stream Programs"
+ },
+ "s2-cc24eab217f6df1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Research Statement Languages, Compilers, and Tools for Multicore Architectures"
+ },
+ "s2-d1ac0c7f25b2391d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MPEG-2 in a Stream Programming Language"
+ },
+ "s2-e454ac36ab555f1b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler techniques for scalable performance of stream programs on multicore architectures"
+ },
+ "s2-f691544291f45d6f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Macah: A \"C-Level\" Language for Programming Kernels on Coprocessor Accelerators"
+ }
+}

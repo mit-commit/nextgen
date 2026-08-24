@@ -1,0 +1,534 @@
+{
+ "10.1007_978-3-031-80512-7_42": {
+  "abstract": null,
+  "doi": "10.1007/978-3-031-80512-7_42",
+  "openalex": "W4405978303",
+  "status": "no_abstract",
+  "title": "Virtual Commissioning Integration in Logistics Operations: An Innovating Approach for Enhanced Efficiency and Sustainability"
+ },
+ "10.1007_978-3-319-62458-7_11": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-62458-7_11",
+  "openalex": "W2765622683",
+  "status": "no_abstract",
+  "title": "Rapid Enriched Simulation Application Development with PUMA"
+ },
+ "10.1016_j.future.2026.108479": {
+  "abstract": "This work describes the Accl++ programming language for heterogeneous computing. Accl++ is embedded in the C++ language and implemented as a C++ library. The language allows for describing device code and execution libraries and includes primitives for runtime compilation (RTC), thereby enabling code portability across disparate devices. Here, we demonstrate Accl++’s capability by coding different benchmarks from different domains. This work also describes an analysis of the overheads introduced by the Accl++ RTC support as well as the performance of the generated code for the Accl++ kernels. Accl++ improves heterogeneous code portability without incurring high levels of overhead. In two different heterogeneous systems—one composed of two 32-core AMD EPYC 7513 CPUs and two NVIDIA A100 GPUs and the other composed of two 12-core AMD EPYC 7272 CPUs and two AMD MI100 GPUs—Accl++ enables the execution of the same binary application with observed RTC overheads in the range of 3%–10% of the total kernel execution time, resulting in performance levels similar to those of native CUDA/HIP/OpenCL code.",
+  "doi": "10.1016/j.future.2026.108479",
+  "openalex": "W7138956649",
+  "status": "ok",
+  "title": "Accl++ : A high-productivity programming language for performance and code portability on heterogeneous systems"
+ },
+ "10.1016_j.jnca.2023.103584": {
+  "abstract": null,
+  "doi": "10.1016/j.jnca.2023.103584",
+  "openalex": "W4318014814",
+  "status": "no_abstract",
+  "title": "Holistic survey on energy aware routing techniques for IoT applications"
+ },
+ "10.1016_j.simpa.2020.100037": {
+  "abstract": "AMGCL is a header-only C++ library for the solution of large sparse linear systems with algebraic multigrid. The method may be used as a black-box solver for computational problems in various fields, since it does not require any information about the underlying geometry. AMGCL provides an efficient, flexible, and extensible implementation of several iterative solvers and preconditioners on top of different backends allowing the acceleration of the solution with the help of OpenMP, OpenCL, or CUDA technologies. Most algorithms have both shared memory and distributed memory implementations. The library is published under a permissive MIT license.",
+  "doi": "10.1016/j.simpa.2020.100037",
+  "openalex": "W3097183828",
+  "status": "ok",
+  "title": "AMGCL —A C++ library for efficient solution of large sparse linear systems"
+ },
+ "10.1016_j.simpat.2018.10.009": {
+  "abstract": null,
+  "doi": "10.1016/j.simpat.2018.10.009",
+  "openalex": "W2898288635",
+  "status": "no_abstract",
+  "title": "Reusability and composability analysis for an agent-based hierarchical modelling and simulation framework"
+ },
+ "10.1101_2020.10.29.361402": {
+  "abstract": "Abstract Exponentially-growing next-generation sequencing data requires high-performance tools and algorithms. Nevertheless, the implementation of high-performance computational genomics software is inaccessible to many scientists because it requires extensive knowledge of low-level software optimization techniques, forcing scientists to resort to high-level software alternatives that are less efficient. Here, we introduce Seq—a Python-based optimization framework that combines the power and usability of high-level languages like Python with the performance of low-level languages like C or C++. Seq allows for shorter, simpler code, is readily usable by a novice programmer, and obtains significant performance improvements over existing languages and frameworks. We showcase and evaluate Seq by implementing seven standard, widely-used applications from all stages of the genomics analysis pipeline, including genome index construction, finding maximal exact matches, long-read alignment and haplotype phasing, and demonstrate its implementations are up to an order of magnitude faster than existing hand-optimized implementations, with just a fraction of the code. By enabling researchers of all backgrounds to easily implement high-performance analysis tools, Seq further opens the door to the democratization and scalability of computational genomics.",
+  "doi": "10.1101/2020.10.29.361402",
+  "openalex": "W3096134169",
+  "status": "ok",
+  "title": "A Python-based optimization framework for high-performance genomics"
+ },
+ "10.1109_cgo51591.2021.9370333": {
+  "abstract": "The simplest implementation of a domain-specific language is to embed it in an existing language using operator overloading. This way, the DSL can inherit parsing, syntax and type checking, error handling, and the toolchain of debuggers and IDEs from the host language. A natural host language choice for most high-performance DSLs is the de-facto high-performance language, C++. However, DSL designers quickly run into the problem of not being able to extract control flows due to a lack of introspection in C++ and have to resort to special functions with lambdas to represent loops and conditionals. This approach introduces unnecessary syntax and does not capture the side effects of updates inside the lambdas in a safe way. We present BuildIt, a type-based multi-stage execution framework that solves this problem by extracting all control flow operators like if-then-else conditionals and for and while loops using a pure library approach. BuildIt achieves this by repeated execution of the program to explore all control flow paths and construct the AST piece by piece. We show that BuildIt can do this without exponential blow-up in terms of output size and execution time. We apply BuildIt's staging capabilities to the state-of-the-art tensor compiler TACO to generate low-level IR for custom-level formats. Thus, BuildIt offers a way to get both generalization and programmability for the user while generating specialized and efficient code. We also demonstrate that BuildIt can generate rich control-flow from relatively simple code by using it to stage an interpreter for an esoteric language. BuildIt changes the way we think about multi-staging as a problem by reducing the PL complexity of a supposedly harder problem requiring features like introspection or specialized compiler support to a set of common features found in most languages.",
+  "doi": "10.1109/cgo51591.2021.9370333",
+  "openalex": "W3139323122",
+  "status": "ok",
+  "title": "BuildIt: A Type-Based Multi-stage Programming Framework for Code Generation in C++"
+ },
+ "10.1109_cgo53902.2022.9741280": {
+  "abstract": "Domain-Specific Languages (DSLs) provide the optimum balance between generalization and specialization that is crucial to getting the best performance for a particular domain. DSLs like Halide and GraphIt and their rich scheduling languages allow users to generate an implementation best suited for the algorithm and input. DSLs also provide the right abstraction for generating code for diverse architectures like GPUs, CPUs, and hardware accelerators. DSL compilers are massive, typically spanning tens of thousands of lines of code and need a frontend, some analysis and transformation passes, and target-specific code generation. These implementations usually require a great deal of compiler knowledge and domain experts cannot prototype DSLs without getting compiler experts involved.Using multi-stage programming in a high-level language like Scala, OCaml, or C++, is a great solution because it provides easy-to-use frontend and automatic code generation abilities. The DSL writers typically implement their abstraction as a library in the multi-stage programming language and use it to generate specialized code by providing partial inputs. This solves the problem only partially because DSLs like GraphIt have shown that several domain-specific analyses and transformations need to be performed to get the best performance. Special care has to be taken when targeting massively parallel architectures like GPUs where factors like load balancing, warp divergence, coalesced memory accesses play a critical role.In this paper, we demonstrate how to build an end-to-end DSL compiler framework and a graph DSL using multi-stage programming in C++. We show how the staged types can be extended to perform domain-specific data flow and control flow analyses and transformations. We also show how our generated CUDA code matches the performance of the code generated from the state-of-the-art graph DSL, GraphIt. We achieve all this in a very small fraction (8.4%) of the code size required to implement the traditional DSL compiler.",
+  "doi": "10.1109/cgo53902.2022.9741280",
+  "openalex": "W4221038596",
+  "status": "ok",
+  "title": "GraphIt to CUDA Compiler in 2021 LOC: A Case for High-Performance DSL Implementation via Staging with BuilDSL"
+ },
+ "10.1109_ipdps.2018.00059": {
+  "abstract": "Linear operators used in iterative methods like conjugate gradient have typically been implemented either as \"\"matrix-driven\"\" subroutines backed by explicit sparse or dense matrices, or as \"\"matrix-free\"\" subroutines that implement specific linear operations directly (e.g. FFTs). The matrix-driven approach is generally more portable because it can target widely-available BLAS libraries, but it can be inefficient in terms of time and space complexity. In contrast, the matrix-free approach is more performant because it leverages structure in operations, but it requires each operator be re-implemented on each new platform. To increase performance and portability, we propose a hybrid approach that represents linear operators as expression trees. Leaf nodes in the tree are either matrix-free or matrix-driven operators, and interior nodes represent mathematical compositions (sums, products, transposes) or structural compositions (stacks, block diagonals, etc.) of the leaf operators. This representation enables expert-guided reordering and fusion transformations that can improve performance or reduce memory pressure. We implement our approach in a domain-specific language called Indigo. We assess Indigo on image reconstruction problems arising in four application areas: magnetic resonance imaging, ptychography, magnetic particle imaging, and fluorescent microscopy. We give performance results from vendor BLAS libraries, and we introduce specializations to Sparse BLAS routines that achieve near-Roofline performance on multi-core, many-core, and GPU systems.",
+  "doi": "10.1109/ipdps.2018.00059",
+  "openalex": "W2807945634",
+  "status": "ok",
+  "title": "Indigo: A Domain-Specific Language for Fast, Portable Image Reconstruction"
+ },
+ "10.1109_ipdpsw63119.2024.00129": {
+  "abstract": "eCC++ is a new compiler construction framework for embedding domain-specific programming languages within C++. That is, the host language is C++, the guest language is the DSL to be embedded in C++, and eCC++ is the tool that enables the embedding. The eCC++ framework is composed of three main components: a front-end, an API for program verification based on a functional and declarative intermediate representation (IR), and a Multi-Level Intermediate Representation (MLIR) code generator. The eCC++ front-end consists of a library of C++ classes and operators that can be used to define the guest language. Guest sources are compiled with any standard C++ compiler, and when run, the resulting executable generates an eCC++ IR representation of the program, which can be verified within the eCC++ framework. Finally, eCC++ allows for high-level and domain-specific optimizations before generating MLIR. In summary, eCC++ aims to act as a generic front-end that enables embedding guest languages into C++, and provides necessary compiler technology for program verification, targeting the existing capabilities in the MLIR infrastructure. The paper evaluates the eCC++ expressiveness and usability describing the process of embedding GraphIt, a high-performance graph language in C++.",
+  "doi": "10.1109/ipdpsw63119.2024.00129",
+  "openalex": "W4401019067",
+  "status": "ok",
+  "title": "eCC++ : A Compiler Construction Framework for Embedded Domain-Specific Languages"
+ },
+ "10.1109_jiot.2018.2820808": {
+  "abstract": "In many cyber-physical systems (CPS), one of the primary challenges is how to disseminate many sensor streams to collaborating entities in a timely, reliable, and scalable manner. However, in CPS, communication and related computation is often unstable and constitutes a serial bottleneck when multiple sensor streams need to be distributed. In this paper, we propose a novel publish-subscribe middleware architecture, called parallel data distribution service (PDDS), to address this problem. To bypass this serial bottleneck effectively, PDDS exploits state-space models for sensor streams both at a publisher and its subscribers. These models are used to estimate true states of monitored physical processes without actual communication. This approach not only reduces the communication overhead significantly, but also provides the tolerance against potential delays and instability in communication. Further, with the model-based methods, many sensor streams can be accessed in parallel since sensor streams can bypass a serial bottleneck, such as network stacks. At the middleware layer, PDDS processes the model-related computation, such as the state estimation, in parallel using modern embedded general-purpose computing on graphics processing units, enabling highly scalable and energy-efficient processing of massive sensor streams. The proposed approach is implemented in a data distribution service middleware using CUDA. Our evaluation results show that the proposed approach can achieve significant energy savings and much higher scalability compared to baseline approaches.",
+  "doi": "10.1109/jiot.2018.2820808",
+  "openalex": "W2795142939",
+  "status": "ok",
+  "title": "PDDS: Scalable Sensor Data Distribution for Cyber-Physical Systems Using GPGPUs"
+ },
+ "10.1109_ldav.2016.7874304": {
+  "abstract": "As our ability to generate large and complex datasets grows, accessing and processing these massive data collections is increasingly the primary bottleneck in scientific analysis. Challenges include retrieving, converting, resampling, and combining remote and often disparately located data ensembles with only limited support from existing tools. In particular, existing solutions rely predominantly on extensive data transfers or large-scale remote computing resources, both of which are inherently offline processes with long delays and substantial repercussions for any mistakes. Such workflows severely limit the flexible exploration and rapid evaluation of new hypotheses that are crucial to the scientific process and thereby impede scientific discovery. Here we present an embedded domain-specific language (EDSL) specifically designed for the interactive exploration of large-scale, remote data. Our EDSL allows users to express a wide range of data analysis operations in a simple and abstract manner. The underlying runtime system transparently resolves issues such as remote data access and resampling while at the same time maintaining interactivity through progressive and interruptible computation. This system enables, for the first time, interactive remote exploration of massive datasets such as the 7km NASA GEOS-5 Nature Run simulation, which previously have been analyzed only offline or at reduced resolution.",
+  "doi": "10.1109/ldav.2016.7874304",
+  "openalex": "W2586127821",
+  "status": "ok",
+  "title": "Embedded domain-specific language and runtime system for progressive spatiotemporal data analysis and visualization"
+ },
+ "10.1109_micro61859.2024.00054": {
+  "abstract": "Solving sparse systems of linear equations is a fundamental primitive in many numeric algorithms. Iterative solvers provide an efficient way of solving large, highly sparse systems. However, iterative solvers are inefficient on existing architectures because they perform computations with (1) poor short-term reuse, which causes frequent off-chip memory traffic; and (2) challenaing data dependences, which limit parallelism. We present Azul, a hardware accelerator that achieves high arithmetic intensity by keeping data in distributed on-chip SRAM. Azul is organized as a grid of tiles, each with a small memory and a simple processing element (PE). This enables keeping solver data on-chip across iterations, achieving high reuse. We present a novel scheduling algorithm that maps data and computation across PEs to avoid communication bottlenecks while achieving high parallelism, and a specialized PE that achieves high utilization of arithmetic units. When tested on a representative set of matrices for sparse iterative solvers, Azul is gmean 217 × faster than state-of-the art GPU implementations, 159× faster than a previously proposed accelerator for sparse iterative solvers, and 90 × faster than a previously proposed distributed-SRAM accelerator.",
+  "doi": "10.1109/micro61859.2024.00054",
+  "openalex": "W4404954854",
+  "status": "ok",
+  "title": "Azul: An Accelerator for Sparse Iterative Solvers Leveraging Distributed On-Chip Memory"
+ },
+ "10.1109_sc.2018.00065": {
+  "abstract": "In this work, we describe ParSy, a framework that uses a novel inspection strategy along with a simple code transformation to optimize parallel sparse algorithms for shared memory processors. Unlike existing approaches that can suffer from load imbalance and excessive synchronization, ParSy uses a novel task coarsening strategy to create well-balanced tasks that can execute in parallel, while maintaining locality of memory accesses. Code using the ParSy inspector and transformation outperforms existing highly-optimized sparse matrix algorithms such as Cholesky factorization on multi-core processors with speedups of 2.8× and 3.1× over the MKL Pardiso and PaStiX libraries respectively.",
+  "doi": "10.1109/sc.2018.00065",
+  "openalex": "W2902699695",
+  "status": "ok",
+  "title": "ParSy: Inspection and Transformation of Sparse Matrix Computations for Parallelism"
+ },
+ "10.1111_cgf.13510": {
+  "abstract": "Abstract This paper describes a general algorithm and a system for load balancing sparse fluid simulations. Automatically distributing sparse fluid simulations efficiently is challenging because the computational load varies across the simulation domain and time. A key challenge with load balancing is that optimal decision making requires knowing the fluid distribution across partitions for future time steps, but computing this state for an arbitrary simulation requires running the simulation itself. The key insight of this paper is that it is possible to predict future load by running a speculative low resolution simulation in parallel. We mathematically formulate the problem of load balancing over multiple time steps and present a polynomial time algorithm to compute an approximate solution to it. Our experimental results show that distributing and speculatively load balancing sparse FLIP simulations over 8 nodes speeds them up by 5.3× to 7.9×, and that speculative load balancing generates assignments that perform within 20% of optimal.",
+  "doi": "10.1111/cgf.13510",
+  "openalex": "W2891032957",
+  "status": "ok",
+  "title": "Distributing and Load Balancing Sparse Fluid Simulations"
+ },
+ "10.1111_cgf.13758": {
+  "abstract": "Abstract We present a linear algebra framework for structured matrices and general optimization problems. The matrices and matrix operations are defined recursively to efficiently capture complex structures and enable advanced compiler optimization. In addition to common dense and sparse matrix types, we define mixed matrices, which allow every element to be of a different type. Using mixed matrices, the low‐ and high‐level structure of complex optimization problems can be encoded in a single type. This type is then analyzed at compile time by a recursive linear solver that picks the optimal algorithm for the given problem. For common computer vision problems, our system yields a speedup of 3–5 compared to other optimization frameworks. The BLAS performance is benchmarked against the MKL library. We achieve a significant speedup in block‐SPMV and block‐SPMM. This work is implemented and released open‐source as a header‐only extension to the C+ + math library Eigen.",
+  "doi": "10.1111/cgf.13758",
+  "openalex": "W2981311979",
+  "status": "ok",
+  "title": "An Efficient Solution to Structured Optimization Problems using Recursive Matrices"
+ },
+ "10.1111_cgf.14607": {
+  "abstract": "Abstract Non‐linear optimization is essential to many areas of geometry processing research. However, when experimenting with different problem formulations or when prototyping new algorithms, a major practical obstacle is the need to figure out derivatives of objective functions, especially when second‐order derivatives are required. Deriving and manually implementing gradients and Hessians is both time‐consuming and error‐prone. Automatic differentiation techniques address this problem, but can introduce a diverse set of obstacles themselves, e.g. limiting the set of supported language features, imposing restrictions on a program's control flow, incurring a significant run time overhead, or making it hard to exploit sparsity patterns common in geometry processing. We show that for many geometric problems, in particular on meshes, the simplest form of forward‐mode automatic differentiation is not only the most flexible, but also actually the most efficient choice. We introduce TinyAD: a lightweight C++ library that automatically computes gradients and Hessians, in particular of sparse problems, by differentiating small (tiny) sub‐problems. Its simplicity enables easy integration; no restrictions on, e.g., looping and branching are imposed. TinyAD provides the basic ingredients to quickly implement first and second order Newton‐style solvers, allowing for flexible adjustment of both problem formulations and solver details. By showcasing compact implementations of methods from parametrization, deformation, and direction field design, we demonstrate how TinyAD lowers the barrier to exploring non‐linear optimization techniques. This enables not only fast prototyping of new research ideas, but also improves replicability of existing algorithms in geometry processing. TinyAD is available to the community as an open source library.",
+  "doi": "10.1111/cgf.14607",
+  "openalex": "W4312348664",
+  "status": "ok",
+  "title": "TinyAD: Automatic Differentiation in Geometry Processing Made Simple"
+ },
+ "10.1145_2930661": {
+  "abstract": "Writing highly performant simulations requires a lot of human effort to optimize for an increasingly diverse set of hardware platforms, such as multi-core CPUs, GPUs, and distributed machines. Since these optimizations cut across both the design of geometric data structures and numerical linear algebra, code reusability and portability is frequently sacrificed for performance. We believe the key to make simulation programmers more productive at developing portable and performant code is to introduce new linguistic abstractions, as in rendering and image processing. In this perspective, we distill the core ideas from our two languages, Ebb and Simit, that are published in this journal.",
+  "doi": "10.1145/2930661",
+  "openalex": "W2503244894",
+  "status": "ok",
+  "title": "Perspectives"
+ },
+ "10.1145_3126908.3126936": {
+  "abstract": "Sympiler is a domain-specific code generator that optimizes sparse matrix computations by decoupling the symbolic analysis phase from the numerical manipulation stage in sparse codes. The computation patterns in sparse numerical methods are guided by the input sparsity structure and the sparse algorithm itself. In many real-world simulations, the sparsity pattern changes little or not at all. Sympiler takes advantage of these properties to symbolically analyze sparse codes at compile time and to apply inspector-guided transformations that enable applying low-level transformations to sparse codes. As a result, the Sympiler-generated code outperforms highly-optimized matrix factorization codes from commonly-used specialized libraries, obtaining average speedups over Eigen and CHOLMOD of 3.8× and 1.5× respectively.",
+  "doi": "10.1145/3126908.3126936",
+  "openalex": "W2614185560",
+  "status": "ok",
+  "title": "Sympiler"
+ },
+ "10.1145_3132188": {
+  "abstract": "Many graphics and vision problems can be expressed as non-linear least squares optimizations of objective functions over visual data, such as images and meshes. The mathematical descriptions of these functions are extremely concise, but their implementation in real code is tedious, especially when optimized for real-time performance on modern GPUs in interactive applications. In this work, we propose a new language, Opt, 1 for writing these objective functions over image- or graph-structured unknowns concisely and at a high level. Our compiler automatically transforms these specifications into state-of-the-art GPU solvers based on Gauss-Newton or Levenberg-Marquardt methods. Opt can generate different variations of the solver, so users can easily explore tradeoffs in numerical precision, matrix-free methods, and solver approaches. In our results, we implement a variety of real-world graphics and vision applications. Their energy functions are expressible in tens of lines of code and produce highly optimized GPU solver implementations. These solvers are competitive in performance with the best published hand-tuned, application-specific GPU solvers, and orders of magnitude beyond a general-purpose auto-generated solver.",
+  "doi": "10.1145/3132188",
+  "openalex": "W2962813113",
+  "status": "ok",
+  "title": "Opt"
+ },
+ "10.1145_3133901": {
+  "abstract": "Tensor algebra is a powerful tool with applications in machine learning, data analytics, engineering and the physical sciences. Tensors are often sparse and compound operations must frequently be computed in a single kernel for performance and to save memory. Programmers are left to write kernels for every operation of interest, with different mixes of dense and sparse tensors in different formats. The combinations are infinite, which makes it impossible to manually implement and optimize them all. This paper introduces the first compiler technique to automatically generate kernels for any compound tensor algebra operation on dense and sparse tensors. The technique is implemented in a C++ library called taco. Its performance is competitive with best-in-class hand-optimized kernels in popular libraries, while supporting far more tensor operations.",
+  "doi": "10.1145/3133901",
+  "openalex": "W2590246587",
+  "status": "ok",
+  "title": "The tensor algebra compiler"
+ },
+ "10.1145_3173551": {
+  "abstract": "Distributing a simulation across many machines can drastically speed up computations and increase detail. The computing cloud provides tremendous computing resources, but weak service guarantees force programs to manage significant system complexity: nodes, networks, and storage occasionally perform poorly or fail. We describe Nimbus, a system that automatically distributes grid-based and hybrid simulations across cloud computing nodes. The main simulation loop is sequential code and launches distributed computations across many cores. The simulation on each core runs as if it is stand-alone: Nimbus automatically stitches these simulations into a single, larger one. To do this efficiently, Nimbus introduces a four-layer data model that translates between the contiguous, geometric objects used by simulation libraries and the replicated, fine-grain objects managed by its underlying cloud computing runtime. Using PhysBAM particle-level set fluid simulations, we demonstrate that Nimbus can run higher detail simulations faster, distribute simulations on up to 512 cores, and run enormous simulations (1024 3 cells). Nimbus automatically manages these distributed simulations, balancing load across nodes and recovering from failures. Implementations of PhysBAM water and smoke simulations as well as an open source heat-diffusion simulation show that Nimbus is general and can support complex simulations. Nimbus can be downloaded from https://nimbus.stanford.edu.",
+  "doi": "10.1145/3173551",
+  "openalex": "W2808883295",
+  "status": "ok",
+  "title": "Automatically Distributing Eulerian and Hybrid Fluid Simulations in the Cloud"
+ },
+ "10.1145_3210377.3210395": {
+  "abstract": "Scientific computing problems are frequently solved using data-graph computations -- algorithms that perform local updates on application-specific data associated with vertices of a graph, over many time steps. The data-graph in such computations is commonly a mesh graph, where vertices have positions in 3D space, and edges connect physically nearby vertices. A scheduler controls the parallel execution of the algorithm. Two classes of parallel schedulers exist: double-buffering and in-place. Double-buffering schedulers do not incur synchronization overheads due to an absence of read-write conflicts, but require two copies of the vertices, as well as a higher iteration count due to a slower convergence rate. Computations for which this difference in convergence rate is significant (e.g., multigrid method) are frequently performed using an in-place scheduler, which incurs synchronization overheads to avoid read-write conflicts on the single copy of vertex data. We present Laika, a deterministic in-place scheduler we created using a principled three-step design strategy for high-performance schedulers. Laika reorders the input graph using a Hilbert space-filling curve to improve cache locality and minimizes parallel coordination overhead by explicitly curbing excess execution parallelism. Consequently, Laika has significantly lower scheduling overhead than alternative in-place schedulers and is even faster per iteration than the parallel double-buffered implementation on a reordered input graph. We derive an improved bound on the expected number of cache misses incurred during a traversal of a graph reordered using a space-filling curve. We also prove that on a mesh graph G = (V, E), Laika performs O(|V| + |E|) total work and achieves linear expected speedup with P = O(|V| / log^2 |V|) workers. On 48 cores, Laika yields 38.4x parallel speedup and empirically fares well against comparably well-engineered alternatives: it runs 6.97--12.60 times faster in geometric mean over a suite of input graphs than other parallel schedulers and 222.57 times faster than the baseline serial implementation.",
+  "doi": "10.1145/3210377.3210395",
+  "openalex": "W2809629215",
+  "status": "ok",
+  "title": "Laika"
+ },
+ "10.1145_3241041": {
+  "abstract": "Many strategies exist for optimizing non-linear distortion energies in geometry and physics applications, but devising an approach that achieves the convergence promised by Newton-type methods remains challenging. In order to guarantee the positive semi-definiteness required by these methods, a numerical eigendecomposition or approximate regularization is usually needed. In this article, we present analytic expressions for the eigensystems at each quadrature point of a wide range of isotropic distortion energies. These systems can then be used to project energy Hessians to positive semi-definiteness analytically. Unlike previous attempts, our formulation provides compact expressions that are valid both in 2D and 3D, and does not introduce spurious degeneracies. At its core, our approach utilizes the invariants of the stretch tensor that arises from the polar decomposition of the deformation gradient. We provide closed-form expressions for the eigensystems for all these invariants, and use them to systematically derive the eigensystems of any isotropic energy. Our results are suitable for geometry optimization over flat surfaces or volumes, and agnostic to both the choice of discretization and basis function. To demonstrate the efficiency of our approach, we include comparisons against existing methods on common graphics tasks such as surface parameterization and volume deformation.",
+  "doi": "10.1145/3241041",
+  "openalex": "W2915668163",
+  "status": "ok",
+  "title": "Analytic Eigensystems for Isotropic Distortion Energies"
+ },
+ "10.1145_3276491": {
+  "abstract": "The performance bottlenecks of graph applications depend not only on the algorithm and the underlying hardware, but also on the size and structure of the input graph. As a result, programmers must try different combinations of a large set of techniques, which make tradeoffs among locality, work-efficiency, and parallelism, to develop the best implementation for a specific algorithm and type of graph. Existing graph frameworks and domain specific languages (DSLs) lack flexibility, supporting only a limited set of optimizations. This paper introduces GraphIt, a new DSL for graph computations that generates fast implementations for algorithms with different performance characteristics running on graphs with different sizes and structures. GraphIt separates what is computed (algorithm) from how it is computed (schedule). Programmers specify the algorithm using an algorithm language, and performance optimizations are specified using a separate scheduling language. The algorithm language simplifies expressing the algorithms, while exposing opportunities for optimizations. We formulate graph optimizations, including edge traversal direction, data layout, parallelization, cache, NUMA, and kernel fusion optimizations, as tradeoffs among locality, parallelism, and work-efficiency. The scheduling language enables programmers to easily search through this complicated tradeoff space by composing together a large set of edge traversal, vertex data layout, and program structure optimizations. The separation of algorithm and schedule also enables us to build an autotuner on top of GraphIt to automatically find high-performance schedules. The compiler uses a new scheduling representation, the graph iteration space, to model, compose, and ensure the validity of the large number of optimizations. We evaluate GraphIt’s performance with seven algorithms on graphs with different structures and sizes. GraphIt outperforms the next fastest of six state-of-the-art shared-memory frameworks (Ligra, Green-Marl, GraphMat, Galois, Gemini, and Grazelle) on 24 out of 32 experiments by up to 4.8×, and is never more than 43% slower than the fastest framework on the other experiments. GraphIt also reduces the lines of code by up to an order of magnitude compared to the next fastest framework.",
+  "doi": "10.1145/3276491",
+  "openalex": "W2898231337",
+  "status": "ok",
+  "title": "GraphIt: a high-performance graph DSL"
+ },
+ "10.1145_3355089.3356506": {
+  "abstract": "3D visual computing data are often spatially sparse. To exploit such sparsity, people have developed hierarchical sparse data structures, such as multi-level sparse voxel grids, particles, and 3D hash tables. However, developing and using these high-performance sparse data structures is challenging, due to their intrinsic complexity and overhead. We propose Taichi , a new data-oriented programming language for efficiently authoring, accessing, and maintaining such data structures. The language offers a high-level, data structure-agnostic interface for writing computation code. The user independently specifies the data structure. We provide several elementary components with different sparsity properties that can be arbitrarily composed to create a wide range of multi-level sparse data structures. This decoupling of data structures from computation makes it easy to experiment with different data structures without changing computation code, and allows users to write computation as if they are working with a dense array. Our compiler then uses the semantics of the data structure and index analysis to automatically optimize for locality, remove redundant operations for coherent accesses, maintain sparsity and memory allocations, and generate efficient parallel and vectorized instructions for CPUs and GPUs. Our approach yields competitive performance on common computational kernels such as stencil applications, neighbor lookups, and particle scattering. We demonstrate our language by implementing simulation, rendering, and vision tasks including a material point method simulation, finite element analysis, a multigrid Poisson solver for pressure projection, volumetric path tracing, and 3D convolution on sparse grids. Our computation-data structure decoupling allows us to quickly experiment with different data arrangements, and to develop high-performance data structures tailored for specific computational tasks. With 1 1 0 th as many lines of code, we achieve 4.55× higher performance on average, compared to hand-optimized reference implementations.",
+  "doi": "10.1145/3355089.3356506",
+  "openalex": "W2977371611",
+  "status": "ok",
+  "title": "Taichi"
+ },
+ "10.1145_3355606": {
+  "abstract": "Deep learning frameworks automate the deployment, distribution, synchronization, memory allocation, and hardware acceleration of models represented as graphs of computational operators. These operators wrap high-performance libraries such as cuDNN or NNPACK. When the computation does not match any predefined library call, custom operators must be implemented, often at high engineering cost and performance penalty, limiting the pace of innovation. To address this productivity gap, we propose and evaluate: (1) a domain-specific language with a tensor notation close to the mathematics of deep learning; (2) a Just-In-Time optimizing compiler based on the polyhedral framework; (3) carefully coordinated linear optimization and evolutionary algorithms to synthesize high-performance CUDA kernels; (4) the transparent integration of our flow into PyTorch and Caffe2, providing the fully automatic synthesis of high-performance GPU kernels from simple tensor algebra. The performance is comparable to, and often exceeds the performance of, highly tuned libraries.",
+  "doi": "10.1145/3355606",
+  "openalex": "W2979365412",
+  "status": "ok",
+  "title": "The Next 700 Accelerated Layers"
+ },
+ "10.1145_3360551": {
+  "abstract": "The scope and scale of biological data are increasing at an exponential rate, as technologies like next-generation sequencing are becoming radically cheaper and more prevalent. Over the last two decades, the cost of sequencing a genome has dropped from $100 million to nearly $100—a factor of over 10 6 —and the amount of data to be analyzed has increased proportionally. Yet, as Moore’s Law continues to slow, computational biologists can no longer rely on computing hardware to compensate for the ever-increasing size of biological datasets. In a field where many researchers are primarily focused on biological analysis over computational optimization, the unfortunate solution to this problem is often to simply buy larger and faster machines. Here, we introduce Seq , the first language tailored specifically to bioinformatics, which marries the ease and productivity of Python with C-like performance. Seq starts with a subset of Python—and is in many cases a drop-in replacement—yet also incorporates novel bioinformatics- and computational genomics-oriented data types, language constructs and optimizations. Seq enables users to write high-level, Pythonic code without having to worry about low-level or domain-specific optimizations, and allows for the seamless expression of the algorithms, idioms and patterns found in many genomics or bioinformatics applications. We evaluated Seq on several standard computational genomics tasks like reverse complementation, k -mer manipulation, sequence pattern matching and large genomic index queries. On equivalent CPython code, Seq attains a performance improvement of up to two orders of magnitude, and a 160× improvement once domain-specific language features and optimizations are used. With parallelism, we demonstrate up to a 650× improvement. Compared to optimized C++ code, which is already difficult for most biologists to produce, Seq frequently attains up to a 2× improvement, and with shorter, cleaner code. Thus, Seq opens the door to an age of democratization of highly-optimized bioinformatics software.",
+  "doi": "10.1145/3360551",
+  "openalex": "W2979985440",
+  "status": "ok",
+  "title": "Seq: a high-performance language for bioinformatics"
+ },
+ "10.1145_3450626.3459671": {
+  "abstract": "High-resolution simulations can deliver great visual quality, but they are often limited by available memory, especially on GPUs. We present a compiler for physical simulation that can achieve both high performance and significantly reduced memory costs, by enabling flexible and aggressive quantization. Low-precision (\"quantized\") numerical data types are used and packed to represent simulation states, leading to reduced memory space and bandwidth consumption. Quantized simulation allows higher resolution simulation with less memory, which is especially attractive on GPUs. Implementing a quantized simulator that has high performance and packs the data tightly for aggressive storage reduction would be extremely labor-intensive and error-prone using a traditional programming language. To make the creation of quantized simulation practical, we have developed a new set of language abstractions and a compilation system. A suite of tailored domain-specific optimizations ensure quantized simulators often run as fast as the full-precision simulators, despite the overhead of encoding-decoding the packed quantized data types. Our programming language and compiler, based on Taichi , allow developers to effortlessly switch between different full-precision and quantized simulators, to explore the full design space of quantization schemes, and ultimately to achieve a good balance between space and precision. The creation of quantized simulation with our system has large benefits in terms of memory consumption and performance, on a variety of hardware, from mobile devices to workstations with high-end GPUs. We can simulate with levels of resolution that were previously only achievable on systems with much more memory, such as multiple GPUs. For example, on a single GPU, we can simulate a Game of Life with 20 billion cells (8× compression per pixel), an Eulerian fluid system with 421 million active voxels (1.6× compression per voxel), and a hybrid Eulerian-Lagrangian elastic object simulation with 235 million particles (1.7× compression per particle). At the same time, quantized simulations create physically plausible results. Our quantization techniques are complementary to existing acceleration approaches of physical simulation: they can be used in combination with these existing approaches, such as sparse data structures, for even higher scalability and performance.",
+  "doi": "10.1145/3450626.3459671",
+  "openalex": "W3183713184",
+  "status": "ok",
+  "title": "QuanTaichi"
+ },
+ "10.1145_3453986": {
+  "abstract": "Large-scale optimization problems at the core of many graphics, vision, and imaging applications are often implemented by hand in tedious and error-prone processes in order to achieve high performance (in particular on GPUs), despite recent developments in libraries and DSLs. At the same time, these hand-crafted solver implementations reveal that the key for high performance is a problem-specific schedule that enables efficient usage of the underlying hardware. In this work, we incorporate this insight into Thallo, a domain-specific language for large-scale non-linear least squares optimization problems. We observe various code reorganizations performed by implementers of high-performance solvers in the literature, and then define a set of basic operations that span these scheduling choices, thereby defining a large scheduling space. Users can either specify code transformations in a scheduling language or use an autoscheduler. Thallo takes as input a compact, shader-like representation of an energy function and a (potentially auto-generated) schedule, translating the combination into high-performance GPU solvers. Since Thallo can generate solvers from a large scheduling space, it can handle a large set of large-scale non-linear and non-smooth problems with various degrees of non-locality and compute-to-memory ratios, including diverse applications such as bundle adjustment, face blendshape fitting, and spatially-varying Poisson deconvolution, as seen in Figure 1. Abstracting schedules from the optimization, we outperform state-of-the-art GPU-based optimization DSLs by an average of 16× across all applications introduced in this work, and even some published hand-written GPU solvers by 30%+.",
+  "doi": "10.1145/3453986",
+  "openalex": "W3203872640",
+  "status": "ok",
+  "title": "Thallo – Scheduling for High-Performance Large-Scale Non-Linear Least-Squares Solvers"
+ },
+ "10.1145_3476576.3476772": {
+  "abstract": "High-resolution simulations can deliver great visual quality, but they are often limited by available memory, especially on GPUs. We present a compiler for physical simulation that can achieve both high performance and significantly reduced memory costs, by enabling flexible and aggressive quantization. Low-precision (\"quantized\") numerical data types are used and packed to represent simulation states, leading to reduced memory space and bandwidth consumption. Quantized simulation allows higher resolution simulation with less memory, which is especially attractive on GPUs. Implementing a quantized simulator that has high performance and packs the data tightly for aggressive storage reduction would be extremely labor-intensive and error-prone using a traditional programming language. To make the creation of quantized simulation practical, we have developed a new set of language abstractions and a compilation system. A suite of tailored domain-specific optimizations ensure quantized simulators often run as fast as the full-precision simulators, despite the overhead of encoding-decoding the packed quantized data types. Our programming language and compiler, based on Taichi, allow developers to effortlessly switch between different full-precision and quantized simulators, to explore the full design space of quantization schemes, and ultimately to achieve a good balance between space and precision. The creation of quantized simulation with our system has large benefits in terms of memory consumption and performance, on a variety of hardware, from mobile devices to workstations with high-end GPUs. We can simulate with levels of resolution that were previously only achievable on systems with much more memory, such as multiple GPUs. For example, on a single GPU, we can simulate a Game of Life with 20 billion cells (8× compression per pixel), an Eulerian fluid system with 421 million active voxels (1.6× compression per voxel), and a hybrid Eulerian-Lagrangian elastic object simulation with 235 million particles (1.7× compression per particle). At the same time, quantized simulations create physically plausible results. Our quantization techniques are complementary to existing acceleration approaches of physical simulation: they can be used in combination with these existing approaches, such as sparse data structures, for even higher scalability and performance.",
+  "doi": "10.1145/3476576.3476772",
+  "openalex": "W4240159054",
+  "status": "ok",
+  "title": "QuanTaichi"
+ },
+ "10.1145_3478513.3480506": {
+  "abstract": "Communicating linear algebra in written form is challenging: mathematicians must choose between writing in languages that produce well-formatted but semantically-underdefined representations such as LaTeX; or languages with well-defined semantics but notation unlike conventional math, such as C++/Eigen. In both cases, the underlying linear algebra is obfuscated by the requirements of esoteric language syntax (as in LaTeX) or awkward APIs due to language semantics (as in C++). The gap between representations results in communication challenges, including underspecified and irrepro-ducible research results, difficulty teaching math concepts underlying complex numerical code, as well as repeated, redundant, and error-prone translations from communicated linear algebra to executable code. We introduce I♥LA, a language with syntax designed to closely mimic conventionally-written linear algebra, while still ensuring an unambiguous, compilable interpretation. Inspired by Markdown, a language for writing naturally-structured plain text files that translate into valid HTML, I♥LA allows users to write linear algebra in text form and compile the same source into LaTeX, C++/Eigen, Python/NumPy/SciPy, and MATLAB, with easy extension to further math programming environments. We outline the principles of our language design and highlight design decisions that balance between readability and precise semantics, and demonstrate through case studies the ability for I♥LA to bridge the semantic gap between conventionally-written linear algebra and unambiguous interpretation in math programming environments.",
+  "doi": "10.1145/3478513.3480506",
+  "openalex": "W3202544060",
+  "status": "ok",
+  "title": "I♥LA"
+ },
+ "10.1145_3520484": {
+  "abstract": "We introduce a code generator that converts unoptimized C++ code operating on sparse data into vectorized and parallel CPU or GPU kernels. Our approach unrolls the computation into a massive expression graph, performs redundant expression elimination, grouping, and then generates an architecture-specific kernel to solve the same problem, assuming that the sparsity pattern is fixed, which is a common scenario in many applications in computer graphics and scientific computing. We show that our approach scales to large problems and can achieve speedups of two orders of magnitude on CPUs and three orders of magnitude on GPUs, compared to a set of manually optimized CPU baselines. To demonstrate the practical applicability of our approach, we employ it to optimize popular algorithms with applications to physical simulation and interactive mesh deformation.",
+  "doi": "10.1145/3520484",
+  "openalex": "W3209648960",
+  "status": "ok",
+  "title": "Sparsity-Specific Code Optimization using Expression Trees"
+ },
+ "10.1145_3528223.3530058": {
+  "abstract": "We introduce Loki, a new framework for robust simulation of fluid, rigid, and deformable objects with non-compromising fidelity on any single element, and capabilities for coupling and representation transitions across multiple elements. Loki adapts multiple best-in-class solvers into a unified framework driven by a declarative state machine where users declare 'what' is simulated but not 'when,' so an automatic scheduling system takes care of mixing any combination of objects. This leads to intuitive setups for coupled simulations such as hair in the wind or objects transitioning from one representation to another, for example bulk water FLIP particles to SPH spray particles to volumetric mist. We also provide a consistent treatment for components used in several domains, such as unified collision and attachment constraints across 1D, 2D, 3D deforming and rigid objects. Distribution over MPI, custom linear equation solvers, and aggressive application of sparse techniques keep performance within production requirements. We demonstrate a variety of solvers within the framework and their interactions, including FLIPstyle liquids, spatially adaptive volumetric fluids, SPH, MPM, and mesh-based solids, including but not limited to discrete elastic rods, elastons, and FEM with state-of-the-art constitutive models. Our framework has proven powerful and intuitive enough for voluntary artist adoption and has delivered creature and FX simulations for multiple major movie productions in the preceding four years.",
+  "doi": "10.1145/3528223.3530058",
+  "openalex": "W4286611155",
+  "status": "ok",
+  "title": "Loki"
+ },
+ "10.1145_3550454.3555430": {
+  "abstract": "Meshes are an indispensable representation in many graphics applications because they provide conformal spatial discretizations. However, mesh-based operations are often slow due to unstructured memory access patterns. We propose MeshTaichi, a novel mesh compiler that provides an intuitive programming model for efficient mesh-based operations. Our programming model hides the complex indexing system from users and allows users to write mesh-based operations using reference-style neighborhood queries. Our compiler achieves its high performance by exploiting data locality. We partition input meshes and prepare the wanted relations by inspecting users' code during compile time. During run time, we further utilize on-chip memory (shared memory on GPU and L1 cache on CPU) to access the wanted attributes of mesh elements efficiently. Our compiler decouples low-level optimization options with computations, so that users can explore different localized data attributes and different memory orderings without changing their computation code. As a result, users can write concise code using our programming model to generate efficient mesh-based computations on both CPU and GPU backends. We test MeshTaichi on a variety of physically-based simulation and geometry processing applications with both triangle and tetrahedron meshes. MeshTaichi achieves a consistent speedup ranging from 1.4× to 6×, compared to state-of-the-art mesh data structures and compilers.",
+  "doi": "10.1145/3550454.3555430",
+  "openalex": "W4311802434",
+  "status": "ok",
+  "title": "MeshTaichi"
+ },
+ "10.1145_3550454.3555507": {
+  "abstract": "Isotropic As-Rigid-As-Possible (ARAP) energy has been popular for shape editing, mesh parametrisation and soft-body simulation for almost two decades. However, a formulation using Cauchy-Green (CG) invariants has always been unclear, due to a rotation-polluted trace term that cannot be directly expressed using these invariants. We show how this incongruent trace term can be understood via an implicit relationship to the CG invariants. Our analysis reveals this relationship to be a polynomial where the roots equate to the trace term, and where the derivatives also give rise to closed-form expressions of the Hessian to guarantee positive semi-definiteness for a fast and concise Newton-type implicit time integration. A consequence of this analysis is a novel analytical formulation to compute rotations and singular values of deformation-gradient tensors without explicit/numerical factorization which is significant, resulting in up-to 3.5× speedup and benefits energy function evaluation for reducing solver time. We validate our energy formulation by experiments and comparison, demonstrating that our resulting eigendecomposition using the CG invariants is equivalent to existing ARAP formulations. We thus reveal isotropic ARAP energy to be a member of the \"Cauchy-Green club\", meaning that it can indeed be defined using CG invariants and therefore that the closed-form expressions of the resulting Hessian are shared with other energies written in their terms.",
+  "doi": "10.1145/3550454.3555507",
+  "openalex": "W4311802175",
+  "status": "ok",
+  "title": "Isotropic ARAP Energy Using Cauchy-Green Invariants"
+ },
+ "10.1145_3550454.3555513": {
+  "abstract": "We introduce a novel approach to describe mesh generation, mesh adaptation, and geometric modeling algorithms relying on changing mesh connectivity using a high-level abstraction. The main motivation is to enable easy customization and development of these algorithms via a declarative specification consisting of a set of per-element invariants, operation scheduling, and attribute transfer for each editing operation. We demonstrate that widely used algorithms editing surfaces and volumes can be compactly expressed with our abstraction, and their implementation within our framework is simple, automatically parallelizable on shared-memory architectures, and with guaranteed satisfaction of the prescribed invariants. These algorithms are readable and easy to customize for specific use cases. We introduce a software library implementing this abstraction and providing automatic shared-memory parallelization.",
+  "doi": "10.1145/3550454.3555513",
+  "openalex": "W4311805945",
+  "status": "ok",
+  "title": "Declarative Specification for Unstructured Mesh Editing Algorithms"
+ },
+ "10.1145_3575693.3575742": {
+  "abstract": "In this paper, we present WACO, a novel method of co-optimizing the format and the schedule of a given sparsity pattern in a sparse tensor program. A core challenge in this paper is the design of a lightweight cost model that accurately predicts the runtime of a sparse tensor program by considering the sparsity pattern, the format, and the schedule. The key idea in addressing this is exploiting a sparse convolutional network to learn meaningful features of the sparsity pattern and embedding a coupled behavior between the format and the schedule using a specially designed schedule template. In addition, within the enormous search space of co-optimization, our novel search strategy, an approximate nearest neighbor search, efficiently and accurately retrieves the best format and schedule for a given sparsity pattern. We evaluated WACO for four different algorithms (SpMV, SpMM, SDDMM, and MTTKRP) on a CPU using 726 different sparsity patterns. Our experimental results showed that WACO outperformed four state-of-the-art baselines, Intel MKL, BestFormat, TACO with a default schedule, and ASpT. Compared to the best of four baselines, WACO achieved 1.43×, 1.18×, 1.14×, and 1.27× average speedups on SpMV, SpMM, SDDMM, and MTTKRP, respectively.",
+  "doi": "10.1145/3575693.3575742",
+  "openalex": "W4318541582",
+  "status": "ok",
+  "title": "WACO: Learning Workload-Aware Co-optimization of the Format and Schedule of a Sparse Tensor Program"
+ },
+ "10.1145_3578360.3580275": {
+  "abstract": "Domain-specific languages (DSLs) are able to provide intuitive high-level abstractions that are easy to work with while attaining better performance than general-purpose languages. Yet, implementing new DSLs is a burdensome task. As a result, new DSLs are usually embedded in general-purpose languages. While low-level languages like C or C++ often provide better performance as a host than high-level languages like Python, high-level languages are becoming more prevalent in many domains due to their ease and flexibility. Here, we present Codon, a domain-extensible compiler and DSL framework for high-performance DSLs with Python's syntax and semantics. Codon builds on previous work on ahead-of-time type checking and compilation of Python programs and leverages a novel intermediate representation to easily incorporate domain-specific optimizations and analyses. We showcase and evaluate several compiler extensions and DSLs for Codon targeting various domains, including bioinformatics, secure multi-party computation, block-based data compression and parallel programming, showing that Codon DSLs can provide benefits of familiar high-level languages and achieve performance typically only seen with low-level languages, thus bridging the gap between performance and usability.",
+  "doi": "10.1145/3578360.3580275",
+  "openalex": "W4321184667",
+  "status": "ok",
+  "title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs"
+ },
+ "10.1145_3579990.3580014": {
+  "abstract": "Compiled Domain Specific Languages are taking over various high-performance domains because of their ability to exploit the domain knowledge and apply optimizations that produce the most specialized code. A lot of research has gone into making DSLs more performant and easy to prototype. But the Achilles heel for DSLs is still the lack of debugging support that provides an end-to-end picture to the user and improves the productivity of both the DSL designer and the end-user. Conventional techniques extend the compilers, the debugging information format, and the debuggers themselves to provide more information than what the debugger can provide when attached to the generated code. Such an approach quickly stops scaling as adding extensions to large and complex debuggers hampers DSL designer productivity. We present D2X, a DSL debugging infrastructure that works with most standard debuggers without any modifications and is easily extensible to capture all the domain specific information the end-user cares about. We show that we can add debugging support to the state-of-the-art graph DSL GraphIt with as little as 1.4% changes to the compiler code base. We also apply our techniques to a meta-programming DSL framework BuildIt so that any DSLs built on top of BuildIt get debugging support without any modifications further boosting the productivity of future DSL designers.",
+  "doi": "10.1145/3579990.3580014",
+  "openalex": "W4321496247",
+  "status": "ok",
+  "title": "D2X: An eXtensible conteXtual Debugger for Modern DSLs"
+ },
+ "10.1145_3592144": {
+  "abstract": "Tasks across diverse application domains can be posed as large-scale optimization problems, these include graphics, vision, machine learning, imaging, health, scheduling, planning, and energy system forecasting. Independently of the application domain, proximal algorithms have emerged as a formal optimization method that successfully solves a wide array of existing problems, often exploiting problem-specific structures in the optimization. Although model-based formal optimization provides a principled approach to problem modeling with convergence guarantees, at first glance, this seems to be at odds with black-box deep learning methods. A recent line of work shows that, when combined with learning-based ingredients, model-based optimization methods are effective, interpretable, and allow for generalization to a wide spectrum of applications with little or no extra training data. However, experimenting with such hybrid approaches for different tasks by hand requires domain expertise in both proximal optimization and deep learning, which is often error-prone and time-consuming. Moreover, naively unrolling these iterative methods produces lengthy compute graphs, which when differentiated via autograd techniques results in exploding memory consumption, making batch-based training challenging. In this work, we introduce ∇-Prox, a domain-specific modeling language and compiler for large-scale optimization problems using differentiable proximal algorithms. ∇-Prox allows users to specify optimization objective functions of unknowns concisely at a high level, and intelligently compiles the problem into compute and memory-efficient differentiable solvers. One of the core features of ∇-Prox is its full differentiability, which supports hybrid model- and learning-based solvers integrating proximal optimization with neural network pipelines. Example applications of this methodology include learning-based priors and/or sample-dependent inner-loop optimization schedulers, learned with deep equilibrium learning or deep reinforcement learning. With a few lines of code, we show ∇-Prox can generate performant solvers for a range of image optimization problems, including end-to-end computational optics, image deraining, and compressive magnetic resonance imaging. We also demonstrate ∇-Prox can be used in a completely orthogonal application domain of energy system planning, an essential task in the energy crisis and the clean energy transition, where it outperforms state-of-the-art CVXPY and commercial Gurobi solvers.",
+  "doi": "10.1145/3592144",
+  "openalex": "W4385288900",
+  "status": "ok",
+  "title": "∇-Prox: Differentiable Proximal Algorithm Modeling for Large-Scale Optimization"
+ },
+ "10.1145_3662181": {
+  "abstract": "Mesh processing algorithms are often communicated via concise mathematical notation (e.g., summation over mesh neighborhoods). However, conversion of notation into working code remains a time-consuming and error-prone process, which requires arcane knowledge of low-level data structures and libraries—impeding rapid exploration of high-level algorithms. We address this problem by introducing a domain-specific language (DSL) for mesh processing called I MESH, which resembles notation commonly used in visual and geometric computing and automates the process of converting notation into code. The centerpiece of our language is a flexible notation for specifying and manipulating neighborhoods of a cell complex, internally represented via standard operations on sparse boundary matrices. This layered design enables natural expression of algorithms while minimizing demands on a code generation backend. In particular, by integrating I MESH with the linear algebra features of the I LA DSL and adding support for automatic differentiation, we can rapidly implement a rich variety of algorithms on point clouds, surface meshes, and volume meshes.",
+  "doi": "10.1145/3662181",
+  "openalex": "W4396555758",
+  "status": "ok",
+  "title": "IMESH: A DSL for Mesh Processing"
+ },
+ "10.1145_3687986": {
+  "abstract": "Optimized parallel implementations on GPU or CPU have dramatically enhanced the fidelity, resolution and accuracy of physical simulations and mesh-based algorithms. However, attaining optimal performance requires expert knowledge and might demand complex code and memory layout optimizations. This adds to the fact that physical simulation algorithms require the implementation of derivatives, which can be a tedious and error-prone process. In recent years, researchers and practitioners have investigated the concept of designing systems that allow for a more expressive definition of mesh-based simulation code. These systems leverage domain-specific languages (DSL), automatic differentiation or symbolic computing to enhance readability of implementations without compromising performance. We follow this line of work and propose a symbolic code generation approach tailored to mesh-based computations on parallel devices. Our system extends related work by incorporating collision handling and a data access synchronization approach, enabling rapid sparse matrix assembly.",
+  "doi": "10.1145/3687986",
+  "openalex": "W4404525873",
+  "status": "ok",
+  "title": "A Mesh-based Simulation Framework using Automatic Code Generation"
+ },
+ "10.1145_3689741": {
+  "abstract": "Color programmers manipulate lights, materials, and the resulting colors from light-material interactions. Existing libraries for color programming provide only a thin layer of abstraction around matrix operations. Color programs are, thus, vulnerable to bugs arising from mathematically permissible but physically meaningless matrix computations. Correct implementations are difficult to write and optimize. We introduce C ooler S pace to facilitate physically correct and computationally efficient color programming. C ooler S pace raises the level of abstraction of color programming by allowing programmers to focus on describing the logic of color physics. Correctness and efficiency are handled by C ooler S pace . The type system in C ooler S pace assigns physical meaning and dimensions to user-defined objects. The typing rules permit only legal computations informed by color physics and perception. Along with type checking, C ooler S pace also generates performance-optimized programs using equality saturation. C ooler S pace is implemented as a Python library and compiles to ONNX, a common intermediate representation for tensor computations. C ooler S pace not only prevents common errors in color programming, but also does so without run-time overhead: even unoptimized C ooler S pace programs out-perform existing Python-based color programming systems by up to 5.7 times; our optimizations provide up to an additional 1.4 times speed-up.",
+  "doi": "10.1145/3689741",
+  "openalex": "W4403160430",
+  "status": "ok",
+  "title": "CoolerSpace: A Language for Physically Correct and Computationally Efficient Color Programming"
+ },
+ "10.1145_3711896.3736551": {
+  "abstract": "Repeated structures in time series (time series motifs) are interesting in their own right and are often used in downstream algorithms for tasks as diverse as classification, clustering, rule-discovery, segmentation, summarization, compression and anomaly detection.If a structure is repeated, that hints at some mechanism of conservation, and the discovery of conserved structure is one of the most basic tools/goals of science.In this survey (which is a companion to a tutorial) I show the two key ideas needed to do successful time series motif discovery.First, making a computationally hard problem tractable; by the use of anytime algorithms, contract algorithms and specialist hardware.I will further review work on how to obtain more meaningful results by considering additional constraints on the returned patterns.For example, class conditional motifs (i.e.shapelets), motifs with a drift (i.e.time series chains), motifs that exist in two or more time series (motif-joins, consensus motifs), range motifs, KNN motifs etc.The companion tutorial is illustrated with novel interesting examples from science, industry, entertainment and medicine.Moreover, the tutorial slides will contain code snippets and a data archive that will allow the community to reproduce all the results and then generalize them to their own domain of interest.",
+  "doi": "10.1145/3711896.3736551",
+  "openalex": "W4412875501",
+  "status": "ok",
+  "title": "Finding Repeated Structures in Time Series: Algorithms and Applications: A Unifying View of Time Series Motifs/Shapelets/Chains and Similar Primitives"
+ },
+ "10.1145_3731207": {
+  "abstract": "Many problems in computer graphics can be formulated as finding the global minimum of a function subject to a set of non-linear constraints (Minimize), or finding all solutions of a system of non-linear constraints (Solve). We introduce MiSo, a domain-specific language and compiler for generating efficient C++ code for low-dimensional Minimize and Solve problems, that uses interval methods to guarantee conservative results while using floating point arithmetic. We demonstrate that MiSo-generated code shows competitive performance compared to hand-optimized codes for several computer graphics problems, including high-order collision detection with non-linear trajectories, surface-surface intersection, and geometrical validity checks for finite element simulation.",
+  "doi": "10.1145/3731207",
+  "openalex": "W4412673603",
+  "status": "ok",
+  "title": "MiSo: A DSL for Robust and Efficient Solve and MInimize Problems"
+ },
+ "10.1145_3764928": {
+  "abstract": "Optimization time integrators are effective at solving complex multi-physics problems including deformable solids with non-linear material models, contact with friction, strain limiting, and so on. For challenging problems, Newton-type optimizers are often used, which necessitates first- and second-order derivatives of the global non-linear objective function. Manually differentiating, implementing, testing, optimizing, and maintaining the resulting code is extremely time-consuming, error-prone, and precludes quick changes to the model, even when using tools that assist with parts of such pipeline. We present SymX, 1 an open source framework that computes the required derivatives of the different energy contributions by symbolic differentiation, generates optimized code, compiles it on-the-fly, and performs the global assembly. The user only has to provide the symbolic expression of each energy for a single representative element in its corresponding discretization and our system will determine the assembled derivatives for the whole simulation. We demonstrate the versatility of SymX in complex simulations featuring different non-linear materials, high-order finite elements, rigid body systems, adaptive discretizations, frictional contact, and coupling of multiple interacting physical systems. SymX’s derivatives offer performance on par with SymPy, an established off-the-shelf symbolic engine, and produces simulations at least one order of magnitude faster than TinyAD, an alternative state-of-the-art integral solution.",
+  "doi": "10.1145/3764928",
+  "openalex": "W4413931766",
+  "status": "ok",
+  "title": "SymX: Energy-based Simulation from Symbolic Expressions"
+ },
+ "10.1145_3807895.3807927": {
+  "abstract": "We present Weber, an interactive and end-to-end, web-based framework for high-performance physics-based simulations that runs entirely in the browser. Weber features a lightweight domain-specific language (DSL) that allows users to define and/or modify simulation models and parameters directly in the browser. Implemented in Rust and compiled to WebAssembly, Weber combines performance, safety, and portability. To address the performance limitations of web environments, Weber integrates several levels of simulation-specific optimizations. We demonstrate that high-performance physics-based simulations can be achieved entirely in the web environment, providing a unified platform for computation, visualization, and experimentation. Results against a native C++ implementation of the Material Point Method show that our method maintains interactive performance while being modestly slower, and greatly improves accessibility and flexibility.",
+  "doi": "10.1145/3807895.3807927",
+  "openalex": "W7166549124",
+  "status": "ok",
+  "title": "Weber: An Efficient and Interactive Framework for Crafting and Simulating Physics in the Web Browser"
+ },
+ "10.1145_3811327": {
+  "abstract": "Incremental Potential Contact (IPC) has emerged as a robust and unifying formulation for contact-rich physical simulation by casting elasticity and collision handling as a single energy minimization problem. Achieving high performance, however, typically requires heavily specialized implementations that hard-code assumptions about energies, primitive types, and parameterizations, creating a major barrier to extensibility. Adding new energies or alternative parameterizations often requires re-deriving first and second-order derivatives, and implementing new assembly logic for the global Hessian and gradient. This challenge is further exacerbated by collision energies, where the same energy definition is often applied to mixed parameterizations, which can lead to a combinatorial explosion of parameterization-specific derivative and assembly cases. In this paper we introduce YASPS, a framework for physical simulation that resolves this limitation by making structural relationships explicit in a differentiable representation. YASPS introduces two relational operators, JOIN and UNION, which encode connectivity and heterogeneous parameterizations directly in the symbolic computation graph. Using symbolic differentiation over these operators, YASPS automatically derives local derivatives, and determines the induced sparsity and block structure of global gradients and Hessians from the same description while avoiding any code explosion induced by mixed-parameterizations. Targeting IPC workloads, YASPS compiles the resulting symbolic graphs into GPU kernels for local energy evaluation, derivative computation, and block-sparse matrix assembly, and solves the resulting Newton systems using a GPU-based iterative solver. This approach achieves performance competitive with state-of-the-art IPC implementations while enabling new energies and parameterizations to be added through localized symbolic definitions, without hand-written derivative or assembly code.",
+  "doi": "10.1145/3811327",
+  "openalex": "W7162474208",
+  "status": "ok",
+  "title": "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation"
+ },
+ "10.1145_3811386": {
+  "abstract": "We introduce a high-performance framework for solving nonconvex optimization problems arising in simulation and geometry processing applications. Our framework especially benefits high-dimensional problems whose unknowns are spatial coordinates in ℝ d and whose objectives are expressed as a sum of element energies over small stencils. The Hessians of these problems have a block-sparse structure, where the nonzero entries are grouped into dense d × d blocks. Many works have exploited this structure to speed up the Hessian-vector products and nodal smoothers of iterative solvers. In contrast, accelerating direct sparse linear solvers, preferred for applications requiring high accuracy on unstructured grids, has been less explored. Our framework leverages block structure to accelerate all phases of a Newton-type minimization algorithm, from sparsity pattern construction to system assembly, matrix factorization, and solves. A fundamental piece of the framework is BlockCatamari, our highly tuned, block-accelerated multifrontal sparse Cholesky code that achieves significantly faster factorizations than existing direct solvers on shared-memory systems. We combine this solver with our fast parallel Hessian assembly routine, heuristics for conditionally enabling per-element Hessian projections, and strategies for minimizing symbolic factorization re-computations. We show that this leads to dramatic speedups on a large suite of benchmark problems involving injective surface parametrization and elasticity simulation with contact, and we further demonstrate the ease with which new energies can be defined at the different levels of abstraction offered by our framework.",
+  "doi": "10.1145/3811386",
+  "openalex": "W7167236796",
+  "status": "ok",
+  "title": "MeshFEM: A Block-accelerated Solver for Nonlinear Finite Elements"
+ },
+ "10.26650_iujts.2020.13.0004": {
+  "abstract": "Culture, which includes all the knowledge of a society, is one of the most important components of translation. When the translator is not able to perceive the cultural symbols of the text or he/she is ignoring the culture of the target language and the target text will lose its function. Thus, the starting point of this study is built on the way in which the monolingual individual perceives a foreign language through comparison and abstraction and how it is received by bilingual individuals, and how it is reflected in the translation process constitutes. This study includes a survey used to examine the cultural competence of the bilingual first-grade students of German Translation and Interpreting at the Istanbul University department of Translation Studies. Furthermore, translation from German to Turkish and vice versa and a translation assessment grid are used to gather data as regards the translation of the recipe for “simit” (Bagel) and “Brezel”. The data acquired from this study is also examined in the context of cultural competence; thus conjectures are provided as regards the cultural competence of bilingual students.",
+  "doi": "10.26650/iujts.2020.13.0004",
+  "openalex": "W3155111923",
+  "status": "ok",
+  "title": "A Study on the Assessment of Cultural Competence in Bilingualism: The Case of German Translation and Interpreting at Istanbul University"
+ },
+ "10.48550_arxiv.1606.00721": {
+  "abstract": "In parallel solution of partial differential equations, a complex stencil update formula that accesses multiple layers of neighboring grid points sometimes must be decomposed into atomic stages, ones that access only immediately neighboring grid points. This paper shows that this requirement can be formulated as constraints of an optimization problem, which is equivalent to the dual of a minimum-cost network flow problem. An optimized decomposition of a single stencil on one set of grid points can thereby be computed efficiently.",
+  "doi": "10.48550/arxiv.1606.00721",
+  "openalex": "W2414060363",
+  "status": "ok",
+  "title": "Decomposition of stencil update formula into atomic stages"
+ },
+ "10.48550_arxiv.1802.04730": {
+  "abstract": "Deep learning models with convolutional and recurrent networks are now ubiquitous and analyze massive amounts of audio, image, video, text and graph data, with applications in automatic translation, speech-to-text, scene understanding, ranking user preferences, ad placement, etc. Competing frameworks for building these networks such as TensorFlow, Chainer, CNTK, Torch/PyTorch, Caffe1/2, MXNet and Theano, explore different tradeoffs between usability and expressiveness, research or production orientation and supported hardware. They operate on a DAG of computational operators, wrapping high-performance libraries such as CUDNN (for NVIDIA GPUs) or NNPACK (for various CPUs), and automate memory allocation, synchronization, distribution. Custom operators are needed where the computation does not fit existing high-performance library calls, usually at a high engineering cost. This is frequently required when new operators are invented by researchers: such operators suffer a severe performance penalty, which limits the pace of innovation. Furthermore, even if there is an existing runtime call these frameworks can use, it often doesn't offer optimal performance for a user's particular network architecture and dataset, missing optimizations between operators as well as optimizations that can be done knowing the size and shape of data. Our contributions include (1) a language close to the mathematics of deep learning called Tensor Comprehensions, (2) a polyhedral Just-In-Time compiler to convert a mathematical description of a deep learning DAG into a CUDA kernel with delegated memory management and synchronization, also providing optimizations such as operator fusion and specialization for specific sizes, (3) a compilation cache populated by an autotuner. [Abstract cutoff]",
+  "doi": "10.48550/arxiv.1802.04730",
+  "openalex": "W2786320458",
+  "status": "ok",
+  "title": "Tensor Comprehensions: Framework-Agnostic High-Performance Machine Learning Abstractions"
+ },
+ "10.48550_arxiv.1803.00419": {
+  "abstract": "High-performance DSL developers work hard to take advantage of modern hardware. The DSL compilers have to build their own complex middle-ends before they can target a common back-end such as LLVM, which only handles single instruction streams with SIMD instructions. We introduce Tiramisu, a common middle-end that can generate efficient code for modern processors and accelerators such as multicores, GPUs, FPGAs and distributed clusters. Tiramisu introduces a novel three-level IR that separates the algorithm, how that algorithm is executed, and where intermediate data are stored. This separation simplifies optimization and makes targeting multiple hardware architectures from the same algorithm easier. As a result, DSL compilers can be made considerably less complex with no loss of performance while immediately targeting multiple hardware or hardware combinations such as distributed nodes with both CPUs and GPUs. We evaluated Tiramisu by creating a new middle-end for the Halide and Julia compilers. We show that Tiramisu extends Halide and Julia with many new capabilities including the ability to: express new algorithms (such as recurrent filters and non-rectangular iteration spaces), perform new complex loop nest transformations (such as wavefront parallelization, loop shifting and loop fusion) and generate efficient code for more architectures (such as combinations of distributed clusters, multicores, GPUs and FPGAs). Finally, we demonstrate that Tiramisu can generate very efficient code that matches the highly optimized Intel MKL gemm (generalized matrix multiplication) implementation, we also show speedups reaching 4X in Halide and 16X in Julia due to optimizations enabled by Tiramisu.",
+  "doi": "10.48550/arxiv.1803.00419",
+  "openalex": "W2791892411",
+  "status": "ok",
+  "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers"
+ },
+ "10.48550_arxiv.1805.00923": {
+  "abstract": "The performance bottlenecks of graph applications depend not only on the algorithm and the underlying hardware, but also on the size and structure of the input graph. Programmers must try different combinations of a large set of techniques to develop the best implementation for a specific algorithm and type of graph. Existing graph frameworks lack flexibility, supporting only a limited set of optimizations. This paper introduces GraphIt, a new DSL for graph computations that generates fast implementations for algorithms with different performance characteristics running on graphs with different sizes and structures. GraphIt separates what is computed (algorithm) from how it is computed (schedule). Programmers specify the algorithm using an algorithm language, and performance optimizations are specified using a scheduling language. The algorithm language simplifies expressing the algorithms. We formulate graph optimizations, including edge traversal direction, data layout, parallelization, cache, NUMA, and kernel fusion optimizations, as tradeoffs among locality, parallelism, and work-efficiency. The scheduling language enables programmers to easily search through this complicated tradeoff space by composing together optimizations. We also built an autotuner to automatically find high-performance schedules. The compiler uses a new scheduling representation, the graph iteration space, to model, compose, and ensure the validity of the large number of optimizations. GraphIt outperforms the next fastest of six state-of-the-art shared-memory frameworks (Ligra, Green-Marl, GraphMat, Galois, Gemini, and Grazelle) on 24 out of 32 experiments by up to 4.8$\\times$, and is never more than 43% slower than the fastest framework on the other experiments. GraphIt also reduces the lines of code by up to an order of magnitude compared to the next fastest framework.",
+  "doi": "10.48550/arxiv.1805.00923",
+  "openalex": "W2798328071",
+  "status": "ok",
+  "title": "GraphIt: A High-Performance DSL for Graph Analytics"
+ },
+ "10.48550_arxiv.1810.00706": {
+  "abstract": "We present the first algorithm for designing volumetric Michell Trusses. Our method uses a parametrization approach to generate trusses made of structural elements aligned with the primary direction of an object's stress field. Such trusses exhibit high strength-to-weight ratios. We demonstrate the structural robustness of our designs via a posteriori physical simulation. We believe our algorithm serves as an important complement to existing structural optimization tools and as a novel standalone design tool itself.",
+  "doi": "10.48550/arxiv.1810.00706",
+  "openalex": "W2893684389",
+  "status": "ok",
+  "title": "Designing Volumetric Truss Structures"
+ },
+ "10.51130_graphicon-2020-2-2-2": {
+  "abstract": "Deep Learning has established itself to be a common occurrence in the business lexicon. The unprecedented success of deep learning in recent years can be attributed to: an abundance of data, availability of gargantuan compute capabilities offered by GPUs, and adoption of open-source philosophy by the researchers and industry. Deep neural networks can be decomposed into a series of different operators. MIOpen, AMD's open-source deep learning primitives library for GPUs, provides highly optimized implementations of such operators, shielding researchers from internal implementation details and hence, accelerating the time to discovery. This paper introduces MIOpen and provides details about the internal workings of the library and supported features. MIOpen innovates on several fronts, such as implementing fusion to optimize for memory bandwidth and GPU launch overheads, providing an auto-tuning infrastructure to overcome the large design space of problem configurations, and implementing different algorithms to optimize convolutions for different filter and input sizes. MIOpen is one of the first libraries to publicly support the bfloat16 data-type for convolutions, allowing efficient training at lower precision without the loss of accuracy.",
+  "doi": "10.51130/graphicon-2020-2-2-2",
+  "openalex": "W2978754339",
+  "status": "ok",
+  "title": "MIOpen: An Open Source Library For Deep Learning Primitives"
+ },
+ "10.5220_0006119802200227": {
+  "abstract": "International audience",
+  "doi": "10.5220/0006119802200227",
+  "openalex": "W2592634844",
+  "status": "ok",
+  "title": "A General Physical-topological Framework using Rule-based Language for Physical Simulation"
+ },
+ "oa-W2583079592": {
+  "abstract": "Thesis: M. Eng. in Computer Science and Engineering, Massachusetts Institute of Technology, Department of Electrical Engineering and Computer Science, 2016.",
+  "doi": null,
+  "openalex": "W2583079592",
+  "status": "ok",
+  "title": "Linear algebra on lattices : Simit language extensions with applications to lattice QCD"
+ },
+ "oa-W2788986803": {
+  "abstract": "Recent advances in compiler theory describe how to compile sparse tensor algebra. Prior work, however, does not describe how to generate efficient code that takes advantage of temporary workspaces. These are often used to hand-optimize important kernels such as sparse matrix multiplication and the matricized tensor times Khatri-Rao product. Without this capability, compilers and code generators cannot automatically generate efficient kernels for many important tensor algebra expressions. We describe a compiler optimization called operator splitting that breaks up tensor sub-computations by introducing workspaces. Our case studies demonstrate that operator splitting is surprisingly general, and our results show that it increases the performance of important generated tensor kernels to match hand-optimized code.",
+  "doi": null,
+  "openalex": "W2788986803",
+  "status": "ok",
+  "title": "Automatic Generation of Sparse Tensor Kernels with Workspaces."
+ },
+ "oa-W2944339581": {
+  "abstract": "The widespread emergence of parallel computers in the last decade has created a substantial programming challenge for application developers who wish to attain peak performance for their applications. Parallel programming requires significant expertise, and programming tools---general-purpose languages, compilers, libraries, etc.---have had limited success in hiding the complexity of parallel architectures. Furthermore, the parallel programming burden is likely to increase as processor core counts grow and memory hierarchies become deeper and more complex.The challenge of delivering productive high-performance computing is especially relevant to computational imaging. One technique in particular, iterative image reconstruction, has emerged as a prominent technique in medical and scientific imaging because it offers enticing application benefits. However, it often demands high-performance implementations that can meet tight application deadlines, and the ongoing development of the iterative reconstruction techniques discourages ad-hoc performance optimization efforts.This work explores productive techniques for implementing fast image reconstruction codes. We present a domain-specific programming language that is expressive enough to represent a variety of important reconstruction problems, but restrictive enough that its programs can be analyzed and transformed to attain good performance on modern multi-core, many-core and GPU platforms. We present case studies from magnetic resonance imaging (MRI), ptychography, magnetic particle imaging, and microscopy that achieve up to 90% of peak performance. We extend our work to the distributed-memory setting for an MRI reconstruction task. There, our approach gets perfect strong scaling for reasonable machine sizes, and sets the best-known reconstruction time for our particular reconstruction task. The results indicate that a domain-specific language can be successful in hiding much of the complexity of implementing fast reconstruction codes.",
+  "doi": null,
+  "openalex": "W2944339581",
+  "status": "ok",
+  "title": "Domain-Specific Techniques for High-Performance Computational Image Reconstruction"
+ },
+ "s2-4816dcfc10a59ec1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Sparse Tensor Algebra Optimizations with Workspaces"
+ },
+ "s2-4a0f88609c2d1d62": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Domain-Specific Techniques for High-Performance Computational Image Reconstruction"
+ },
+ "s2-5112cb160af6f8f9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "AsyncTaichi: On-the-fly Inter-kernel Optimizations for Imperative and Spatially Sparse Programming"
+ },
+ "s2-585cec9677e5cdb0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automatic Generation of Sparse Tensor Kernels with Workspaces"
+ },
+ "s2-716b8a99dd90ae04": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tensor Comprehensions: Framework-Agnostic High-Performance Machine Learning Abstractions"
+ },
+ "s2-79f5235b251cc899": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cache and NUMA optimizations in a domain-specific language for graph processing"
+ },
+ "s2-7e87494443919e63": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "QuanTaichi: A Compiler for Quantized Simulations"
+ },
+ "s2-7f96d6a061b5eb0a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallel algorithms for scheduling data-graph computations"
+ },
+ "s2-96ab46f18b09eb9c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Expert Structured Linear Operator Backend Optimized Operator CustomGPU CUDA CustomCPU MKL Numpy Platform GPU"
+ },
+ "s2-98b1d15fff08aab5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers"
+ },
+ "s2-b9019846bb544298": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Designing Volumetric Truss Structures."
+ },
+ "s2-b9743f5b58b5f67d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Moral Qualities of Space, Historical Consciousness and Symbolic Boundaries in the Beyoğlu District of Istanbul"
+ },
+ "s2-e673de75eef004bd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Linear algebra on lattices : Simit language extensions with applications to lattice QCD"
+ },
+ "s2-e95351c9a2bc8ca4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "GraphIt - A High-Performance DSL for Graph Analytics"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "10.1109_aiccsa66935.2025.11315210": {
+  "abstract": "As the demand for computational power grows, optimizing code through compilers becomes increasingly crucial. In this context, we focus on fully automatic code optimization techniques that automate the process of selecting and applying code transformations for better performance without manual intervention. Understanding how these transformations behave and interact is key to designing more effective optimization strategies. Compiler developers must make numerous design choices when constructing these heuristics. For instance, they may decide whether to allow transformations to be explored in any arbitrary order or to enforce a fixed sequence. While the former may theoretically offer the best performance gains, it significantly increases the search space. This raises an important question: Can a predefined, fixed order of applying transformations speed up the search without severely compromising optimization potential? In this paper, we address this and other related questions that arise in the design of automatic code optimization algorithms. Using a data-driven approach, we generate a large dataset of random programs, apply random optimization sequences, and record their execution times. Through statistical analysis, we provide insights that guide the development of more efficient automatic code optimization algorithms.",
+  "doi": "10.1109/aiccsa66935.2025.11315210",
+  "openalex": "W7118181368",
+  "status": "ok",
+  "title": "A Data-driven Analysis of Code Optimizations"
+ },
+ "10.1109_cgo68049.2026.11394838": {
+  "abstract": "Code optimization is a crucial task that aims to enhance code performance. However, this process is often tedious and complex, highlighting the necessity for automatic code optimization techniques. Reinforcement Learning (RL) has emerged as a promising approach for tackling such complex optimization problems. In this project, we introduce MLIR RL, an RL environment for the MLIR compiler, dedicated to facilitating MLIR compiler research and enabling automatic code optimization. We propose a multi-discrete formulation of the action space where the action space is the Cartesian product of simpler action subspaces. We also propose a new method, called level pointers, to reduce the size of the action space related to the loop interchange transformation. This enables more efficient and effective learning of the policy. To demonstrate the effectiveness of MLIR RL, we train an RL agent to optimize MLIR Linalg code, targeting CPU. The code is generated from two domain-specific frameworks: deep-learning models generated from PyTorch, and LQCD (Lattice Quantum Chromodynamics) code generated from an LQCD compiler. The result of this work is a research environment that allows the community to experiment with novel ideas in RL-driven loop-nest optimization.",
+  "doi": "10.1109/cgo68049.2026.11394838",
+  "openalex": "W7131064502",
+  "status": "ok",
+  "title": "A Reinforcement Learning Environment for Automatic Code Optimization in the MLIR Compiler"
+ },
+ "10.1145_3649153.3649196": {
+  "abstract": "Deep neural network (DNN) accelerators suffer from poor utilization of on-chip memory which potentially reduces performance and energy efficiency. Loop reordering and blocking are used to improve on-chip memory utilization in DNN accelerators. However, existing optimization frameworks are inefficient due to either a prohibitive time complexity of searching the entire search space or due to a sub-optimal choice of optimizations.",
+  "doi": "10.1145/3649153.3649196",
+  "openalex": "W4400224480",
+  "status": "ok",
+  "title": "DNNOPT: A Framework for Efficiently Selecting On-chip Memory Loop Optimizations of DNN Accelerators"
+ },
+ "10.1145_3657282": {
+  "abstract": "Over the past decade, the dominance of deep learning has prevailed across various domains of artificial intelligence, including natural language processing, computer vision, and biomedical signal processing. While there have been remarkable improvements in model accuracy, deploying these models on lightweight devices, such as mobile phones and microcontrollers, is constrained by limited resources. In this survey, we provide comprehensive design guidance tailored for these devices, detailing the meticulous design of lightweight models, compression methods, and hardware acceleration strategies. The principal goal of this work is to explore methods and concepts for getting around hardware constraints without compromising the model’s accuracy. Additionally, we explore two notable paths for lightweight deep learning in the future: deployment techniques for TinyML and Large Language Models. Although these paths undoubtedly have potential, they also present significant challenges, encouraging research into unexplored areas.",
+  "doi": "10.1145/3657282",
+  "openalex": "W4396827044",
+  "status": "ok",
+  "title": "Lightweight Deep Learning for Resource-Constrained Environments: A Survey"
+ },
+ "10.1145_3696443.3708951": {
+  "abstract": "The same computations are often expressed differently across software projects and programming languages. In particular, how computations involving loops are expressed varies due to the many possibilities to permute and compose loops. Since each variant may have unique performance properties, automatic approaches to loop scheduling must support many different optimization recipes. In this paper, we propose a priori loop nest normalization to align loop nests and reduce the variation before the optimization. Specifically, we define and apply normalization criteria, mapping loop nests with different memory access patterns to the same canonical form. Since the memory access pattern is susceptible to loop variations and critical for performance, this normalization allows many loop nests to be optimized by the same optimization recipe. To evaluate our approach, we apply the normalization with optimizations designed for only the canonical form, improving the performance of many different loop nest variants. Across multiple implementations of 15 benchmarks using different languages, we outperform a baseline compiler in C on average by a factor of 21.13, state-of-the-art auto-schedulers such as Polly and the Tiramisu auto-scheduler by 2.31 and 2.89, as well as performance-oriented Python-based frameworks such as NumPy, Numba, and DaCe by 9.04, 3.92, and 1.47. Furthermore, we apply the concept to the CLOUDSC cloud microphysics scheme, an actively used component of the Integrated Forecasting System, achieving a 10% speedup over the highly-tuned Fortran code.",
+  "doi": "10.1145/3696443.3708951",
+  "openalex": "W4407857407",
+  "status": "ok",
+  "title": "A Priori Loop Nest Normalization: Automatic Loop Scheduling in Complex Applications"
+ },
+ "10.1145_3721145.3725766": {
+  "abstract": "Compilers are crucial in optimizing programs and accelerating their execution, particularly for compute-intensive tasks such as training deep learning models and conducting physics simulations.However, optimizing programs automatically using compilers is not trivial.Recent work has attempted to use reinforcement learning (RL) to solve this problem.It has limitations though.Current methods either do not support the optimization of general loop nests or can only be used to optimize loop nests seen during training.In this paper, we propose Pearl, a novel framework that uses deep reinforcement learning to automate compiler code optimization.It uses an RL agent to select the sequence of code optimizations a compiler should apply to make the input code run faster.This agent can optimize general loop nests (i.e., it is not domain-specific) and can generalize to programs unseen during training.To enable the optimization of general loop nests, we propose a novel representation of the action space that allows the RL agent to select on which part of the loop nest a given code optimization should be applied.One of the main challenges that hinder the development of RL agents for optimizing general loop nests is the fact that this task is data-intensive, with each experiment taking weeks.To avoid this problem and enable fast",
+  "doi": "10.1145/3721145.3725766",
+  "openalex": "W4413412026",
+  "status": "ok",
+  "title": "Pearl: Automatic Code Optimization Using Deep Reinforcement Learning"
+ },
+ "10.1145_3727638": {
+  "abstract": "Automatic code optimization enables developers to write high-level code relying on compilers to optimize it and generate efficient code for target hardware. State-of-the-art methods for automatic code optimization leverage deep learning to build cost models that predict the impact of code optimizations on execution time. However, these models are typically limited in terms of the size and complexity of the programs they support. This research presents a novel approach to developing deep learning-based cost models that address these limitations. Our approach introduces a new program representation that efficiently represents programs with complex structures and large sizes such as varying loop depths, buffer numbers, and dimensions. Furthermore, we propose a novel deep learning architecture, that can handle this dynamic program representation. This allows the model to work on larger and more complex programs than those it was trained on. We implemented this model in Tiramisu, a state-of-the-art compiler. Our evaluation shows that our proposed model can generalize to programs larger than those seen during training, while the original Tiramisu cost model cannot. We also show that such generality does not lead to a significant increase in our proposed model’s Mean Absolute Percentage Error or a decrease in the quality of code optimizations found when the model is used for automatic code optimization. In contrast, our proposed model on average achieves a 41.89% improvement in speed compared to the original cost model when both models are trained on the same dataset, showing better generalization over unseen programs. This is a significant advantage over previous approaches, which typically do not support program sizes beyond those seen during the training.",
+  "doi": "10.1145/3727638",
+  "openalex": "W4409061765",
+  "status": "ok",
+  "title": "Supporting Dynamic Program Sizes in Deep Learning-Based Cost Models for Code Optimization"
+ },
+ "10.1145_3771775.3786269": {
+  "abstract": "Fully Homomorphic Encryption (FHE) enables computations to be performed directly on encrypted data without requiring decryption, providing strong privacy guarantees. However, FHE remains computationally expensive, and writing efficient FHE programs is a complex, error-prone, and time-consuming task that demands significant cryptographic expertise. Programmers are often unaware of available optimizations, and applying them manually requires substantial effort. In this paper, we present CHEHAB, a compiler that automatically vectorizes scalar code, optimizes it, and generates highly efficient FHE programs. CHEHAB supports both structured and unstructured code and takes as input programs written in a domain-specific language embedded in C++. It relies on a Term Rewriting System (TRS) based on equality saturation to simplify and transform programs. CHEHAB targets two key challenges in FHE compilation: (1) automatic vectorization of scalar code, and (2) reduction of instruction execution latency and ciphertext noise growth. By leveraging equality saturation, CHEHAB explores a large optimization space to reduce instruction count and circuit depth while improving vector utilization. Experimental evaluation on a set of representative kernels shows that CHEHAB outperforms Coyote, a state-of-the-art vectorizing compiler for FHE. On average, CHEHAB generates code that is 7.38× faster at runtime, incurs 2.49× less accumulated noise, and achieves 251× faster compilation time. CHEHAB is released as an open-source compiler to support reproducibility and further research in FHE compilation.",
+  "doi": "10.1145/3771775.3786269",
+  "openalex": "W7125896844",
+  "status": "ok",
+  "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption"
+ },
+ "10.1145_3779212.3790183": {
+  "abstract": null,
+  "doi": "10.1145/3779212.3790183",
+  "openalex": "W7134985579",
+  "status": "no_abstract",
+  "title": "LOOPRAG: Enhancing Loop Transformation Optimization with Retrieval-Augmented Large Language Models"
+ },
+ "10.48550_arxiv.2412.20179": {
+  "abstract": "The same computations are often expressed differently across software projects and programming languages. In particular, how computations involving loops are expressed varies due to the many possibilities to permute and compose loops. Since each variant may have unique performance properties, automatic approaches to loop scheduling must support many different optimization recipes. In this paper, we propose a priori loop nest normalization to align loop nests and reduce the variation before the optimization. Specifically, we define and apply normalization criteria, mapping loop nests with different memory access patterns to the same canonical form. Since the memory access pattern is susceptible to loop variations and critical for performance, this normalization allows many loop nests to be optimized by the same optimization recipe. To evaluate our approach, we apply the normalization with optimizations designed for only the canonical form, improving the performance of many different loop nest variants. Across multiple implementations of 15 benchmarks using different languages, we outperform a baseline compiler in C on average by a factor of $21.13$, state-of-the-art auto-schedulers such as Polly and the Tiramisu auto-scheduler by $2.31$ and $2.89$, as well as performance-oriented Python-based frameworks such as NumPy, Numba, and DaCe by $9.04$, $3.92$, and $1.47$. Furthermore, we apply the concept to the CLOUDSC cloud microphysics scheme, an actively used component of the Integrated Forecasting System, achieving a 10% speedup over the highly-tuned Fortran code.",
+  "doi": "10.48550/arxiv.2412.20179",
+  "openalex": "W4405955694",
+  "status": "ok",
+  "title": "A Priori Loop Nest Normalization: Automatic Loop Scheduling in Complex Applications"
+ }
+}

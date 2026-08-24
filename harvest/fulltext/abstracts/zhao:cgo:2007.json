@@ -1,0 +1,184 @@
+{
+ "10.1002_cpe.1443": {
+  "abstract": "Abstract Dynamic optimizers modify the binary code of programs at runtime by profiling and optimizing certain aspects of the execution. We present a completely software‐based framework that dynamically optimizes programs for object‐based distributed shared memory (DSM) systems on clusters. In DSM systems, reducing the number of messages between cluster nodes is crucial. Prefetching transfers data in advance from the storage node to the local node so that communication is minimized. Our framework uses a profiler and a dynamic binary rewriter that monitor the access behavior of the application and place prefetches where they are beneficial to speed up the application. In addition, we use two distinct predictors to handle different types of access patterns. A meta‐predictor analyzes the memory access behavior and dynamically enables one of the predictors. Our system also adapts the number of prefetches per request to best fit the application's behavior. The evaluation shows that the performance of our system is better than the manual prefetching. The number of messages sent decreases by up to 90%. Performance gains of up to 80% can be observed on benchmarks. Copyright © 2009 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/cpe.1443",
+  "openalex": "W4231688144",
+  "status": "ok",
+  "title": "A meta‐predictor framework for prefetching in object‐based DSMs"
+ },
+ "10.1007_978-3-540-70592-5_14": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-70592-5_14",
+  "openalex": "W1587499514",
+  "status": "no_abstract",
+  "title": "Online Phase-Adaptive Data Layout Selection"
+ },
+ "10.1007_978-3-540-85451-7_69": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-85451-7_69",
+  "openalex": "W2152915361",
+  "status": "no_abstract",
+  "title": "Automatic Prefetching with Binary Code Rewriting in Object-Based DSMs"
+ },
+ "10.1109_clustr.2008.4663796": {
+  "abstract": "The industry is now in agreement that the future of architecture design lies in multiple cores. As a consequence, all computer systems today, from embedded devices to petascale computing systems, are being developed using multicore processors. Although researchers in industry and academia are exploring many different multicore hardware design choices, most agree that developing portable software that achieves high performance on multicore processors is a major unsolved problem. We now see a plethora of architectural features, with little consensus on how the computation, memory, and communication structures in multicore systems will be organized. The wide disparity in hardware systems available has made it nearly impossible to write code that is portable in functionality while still taking advantage of the performance potential of each system. In this paper, we propose exploring the viability of developing intelligent compilers, focusing on key components that will allow application portability while still achieving high performance.",
+  "doi": "10.1109/clustr.2008.4663796",
+  "openalex": "W2293902057",
+  "status": "ok",
+  "title": "Intelligent compilers"
+ },
+ "10.1109_dcabes.2012.67": {
+  "abstract": "The cache partition mechanism is introduced to solve the problem of contention and pollution of caches in Chip Multiprocessor. One of the key questions is to analyze online the utility characteristics and efficiency of cache requests originating from different sources. Cache request is differentiated by hardware thread context id. Based on the working set model, within a certain sampling time frame, a number of specific cache lines are preserved by modifying the cache address mapping mechanism and its number is the same as that of the hardware threads of the processor, performing statistics on the frequency of Stack Distance under LRU respectively. Based on the characteristic of the frequency distribution of Stack Distance, We propose a metric, L*D, to measure online the recognition of the cache utility efficiency of the working set and providing information for the decision making of cache allocation and management. Experiments performed in multiple Benchmarks in Spec Cpu2000 show that the online monitoring mechanism and quantitative metric discussed in this article have achieved fine-grained online monitoring of the efficiency of cache utility based on the working set. Not only do they allow the online recognition of cache space utility characteristic, but they do also enable the identification of any changes in the efficiency of cache utility, achieving an accuracy of over 75%.",
+  "doi": "10.1109/dcabes.2012.67",
+  "openalex": "W2018757447",
+  "status": "ok",
+  "title": "A Novel Online Measure of Cache Utility Efficiency in Chip Multiprocessor"
+ },
+ "10.1109_icpp.2014.19": {
+  "abstract": "Modern processors typically employ sophisticated prefetching techniques for hiding memory latency. Hardware prefetching has proven very effective and can speed up some SPEC CPU 2006 benchmarks by more than 40% when running in isolation. However, this speedup often comes at the cost of prefetching a significant volume of useless data (sometimes more than twice the data required) which wastes shared last level cache space and off-chip bandwidth. This paper explores how an accurate resource-efficient prefetching scheme can benefit performance by conserving shared resources in multicores. We present a framework that uses low-overhead runtime sampling and fast cache modeling to accurately identify memory instructions that frequently miss in the cache. We then use this information to automatically insert software prefetches in the application. Our prefetching scheme has good accuracy and employs cache bypassing whenever possible. These properties help reduce off-chip bandwidth consumption and last-level cache pollution. While single-thread performance remains comparable to hardware prefetching, the full advantage of the scheme is realized when several cores are used and demand for shared resources grows. We evaluate our method on two modern commodity multicores. Across 180 mixed workloads that fully utilize a multicore, the proposed software prefetching mechanism achieves up to 24% better throughput than hardware prefetching, and performs 10% better on average.",
+  "doi": "10.1109/icpp.2014.19",
+  "openalex": "W2133356510",
+  "status": "ok",
+  "title": "A Case for Resource Efficient Prefetching in Multicores"
+ },
+ "10.1109_pact.2015.35": {
+  "abstract": "Modern processors widely use hardware prefetching to hide memory latency. While aggressive hardware prefetchers can improve performance significantly for some applications, they can limit the overall performance in highly-utilized multicore processors by saturating the offchip bandwidth and wasting last-level cache capacity. Co-executing applications can slowdown due to contention over these shared resources. This work introduces Adaptive Resource Efficient Prefetching (AREP) -- a runtime framework that dynamically combines software prefetching and hardware prefetching to maximize throughput in highly utilized multicore processors. AREP achieves better performance by prefetching data in a resource efficient way -- conserving offchip-bandwidth and last-level cache capacity with accurate prefetching and by applying cache-bypassing when possible. AREP dynamically explores a mix of hardware/software prefetching policies, then selects and applies the best performing policy. AREP is phase-aware and re-explores (at runtime) for the best prefetching policy at phase boundaries. A multitude of experiments with workload mixes and parallel applications on a modern high performance multicore show that AREP can increase throughput by up to 49% (8.1% on average). This is complemented by improved fairness, resulting in average quality of service above 94%.",
+  "doi": "10.1109/pact.2015.35",
+  "openalex": "W1932840510",
+  "status": "ok",
+  "title": "AREP: Adaptive Resource Efficient Prefetching for Maximizing Multicore Performance"
+ },
+ "10.1145_1274971.1275000": {
+  "abstract": "Software or hardware data cache prefetching is an efficient way to hide cache miss latency. However effectiveness of the issued prefetches have to be monitored in order to maximize their positive impact while minimizing their negative impact on performance. In previous proposed dynamic frameworks, the monitoring scheme is either achieved using processor performance counters or using specific hardware. In this work, we propose a prefetching strategy which does not use any specific hardware component or processor performance counter. Our dynamic framework wants to be portable on any modern processor architecture providing at least a prefetch instruction. Opportunity and effectiveness of prefetching loads is simply guided by the time spent to effectively obtain the data. Every load of a program is monitored periodically and can be either associated to a dynamically inserted prefetch instruction or not. It can be associated to a prefetch instruction at some disjoint periods of the whole program run as soon as it is efficient. Our framework has been implemented for Itanium-2 machines. It involves several dynamic instrumentations of the binary code whose overhead is limited to only 4% on average. On a large set of benchmarks, our system is able to speed up some programs by 2%--143%.",
+  "doi": "10.1145/1274971.1275000",
+  "openalex": "W1991050699",
+  "status": "ok",
+  "title": "Performance driven data cache prefetching in a dynamic software optimization system"
+ },
+ "10.1145_1356058.1356083": {
+  "abstract": "Dynamic instrumentation systems are gaining popularity as means of constructing customized program profiling and analysis tools. However, dynamic instrumentation based analysis tools still suffer from performance problems. The overhead of such systems can be broken down into two components - the overhead of dynamic instrumentation and the time consumed in the user-defined analysis tools. While important progress has been made in reducing the performance penalty of the dynamic instrumentation itself, less attention has been paid to the user-defined component. In this paper, we present PiPA - Pipelined Profiling and Analysis, which is a novel technique for parallelizing dynamic program profiling and analysis by taking advantage of multi-core systems. We implemented a prototype of PiPA using the dynamic instrumentation system DynamoRIO. Our experiments show that PiPA is able to speed up the overall profiling and analysis tasks significantly. Compared to the more than 100x slowdown of Cachegrind and the 32x slowdown of Pin dcache, we achieved a mere 10.5x slowdown on an 8-core system.",
+  "doi": "10.1145/1356058.1356083",
+  "openalex": "W2034567497",
+  "status": "ok",
+  "title": "Pipa"
+ },
+ "10.1145_1375634.1375648": {
+  "abstract": "Reuse signature, or reuse distance pattern, is an accurate model for program memory accessing behaviors. It has been studied and shown to be effective in program analysis and optimizations by many recent works. However, the high overhead associated with reuse distance measurement restricts the scope of its application. This paper explores applying sampling in reuse signature collection to reduce the time overhead. We compare different sampling strategies and show that an enhanced systematic sampling with a uniform coverage of all distance ranges can be used to extrapolate the reuse distance distribution. Based on that analysis, we present a novel sampling method with a measurement accuracy of more than 99%. Our average speedup of reuse signature collection is 7.5 while the best improvement observed is 34. This is the first attempt to utilize sampling in measuring reuse signatures. Experiments with varied programs and instrumentation tools show that sampling has great potential in promoting the practical uses of reuse signatures and enabling more optimization opportunities.",
+  "doi": "10.1145/1375634.1375648",
+  "openalex": "W2068424089",
+  "status": "ok",
+  "title": "Sampling-based program locality approximation"
+ },
+ "10.1145_1508244.1508259": {
+  "abstract": "Miss rate curves (MRCs) are useful in a number of contexts. In our research, online L2 cache MRCs enable us to dynamically identify optimal cache sizes when cache-partitioning a shared-cache multicore processor. Obtaining L2 MRCs has generally been assumed to be expensive when done in software and consequently, their usage for online optimizations has been limited. To address these problems and opportunities, we have developed a low-overhead software technique to obtain L2 MRCs online on current processors, exploiting features available in their performance monitoring units so that no changes to the application source code or binaries are required. Our technique, called RapidMRC, requires a single probing period of roughly 221 million processor cycles (147 ms), and subsequently 124 million cycles (83 ms) to process the data. We demonstrate its accuracy by comparing the obtained MRCs to the actual L2 MRCs of 30 applications taken from SPECcpu2006, SPECcpu2000, and SPECjbb2000. We show that RapidMRC can be applied to sizing cache partitions, helping to achieve performance improvements of up to 27%.",
+  "doi": "10.1145/1508244.1508259",
+  "openalex": "W2151326614",
+  "status": "ok",
+  "title": "RapidMRC"
+ },
+ "10.1145_1880037.1880038": {
+  "abstract": "Profiling and online analysis are important tasks in program understanding and feedback-directed optimization. However, fine-grained profiling and online analysis tend to seriously slow down the application. To cope with the slowdown, one may have to terminate the process early or resort to sampling. The former tends to distort the result because of warm-up effects. The latter runs the risk of missing important effects because sampling was turned off during the time that these effects appeared. A promising approach is to make use of the parallel processing capabilities of the now ubiquitous multicore processors to speed up the profiling and analysis process. In this article, we present Pipelined Profiling and Analysis (PiPA), which is a novel technique for parallelizing dynamic program profiling and analysis by taking advantage of multicore systems. In essence, the application under examination is profiled using a dynamic instrumentation tool. Optimized instrumentation code outputs the profile information in a succinct format, that we call the REP format, to buffers. This lightweight trace compression minimizes the processing overhead impinged on the application whenever a buffer is full. Another thread recovers the required information from the REP buffer. The recovered full profile is then divided up and passed to multiple threads for further analysis. To achieve the best performance, the entire system has to be well-balanced. We have implemented prototypes of PiPA using two dynamic instrumentation systems, namely DynamoRIO and Pin, thereby demonstrating its portability. Our experiments show that PiPA is able to speed up the overall profiling and analysis tasks significantly. Compared to the more than 100× slowdown of Cachegrind and the 32× slowdown of Pin dcache, we achieved a mere 10.2× slowdown on an 8-core system. In this paper, we will also describe the insights we gained in obtaining the balance needed for PiPA to perform optimally.",
+  "doi": "10.1145/1880037.1880038",
+  "openalex": "W1964104501",
+  "status": "ok",
+  "title": "PiPA"
+ },
+ "10.1145_1952682.1952688": {
+  "abstract": "In today's multi-core systems, cache contention due to true and false sharing can cause unexpected and significant performance degradation. A detailed understanding of a given multi-threaded application's behavior is required to precisely identify such performance bottlenecks. Traditionally, however, such diagnostic information can only be obtained after lengthy simulation of the memory hierarchy.",
+  "doi": "10.1145/1952682.1952688",
+  "openalex": "W2123065508",
+  "status": "ok",
+  "title": "Dynamic cache contention detection in multi-threaded applications"
+ },
+ "10.1145_2151024.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application.",
+  "doi": "10.1145/2151024.2151043",
+  "openalex": "W2133692747",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2737924.2737974": {
+  "abstract": "Highly optimized programs are prone to bit rot, where performance quickly becomes suboptimal in the face of new hardware and compiler techniques. In this paper we show how to automatically lift performance-critical stencil kernels from a stripped x86 binary and generate the corresponding code in the high-level domain-specific language Halide. Using Halide’s state-of-the-art optimizations targeting current hardware, we show that new optimized versions of these kernels can replace the originals to rejuvenate the application for newer hardware. The original optimized code for kernels in stripped binaries is nearly impossible to analyze statically. Instead, we rely on dynamic traces to regenerate the kernels. We perform buffer structure reconstruction to identify input, intermediate and output buffer shapes. We abstract from a forest of concrete dependency trees which contain absolute memory addresses to symbolic trees suitable for high-level code generation. This is done by canonicalizing trees, clustering them based on structure, inferring higher-dimensional buffer accesses and finally by solving a set of linear equations based on buffer accesses to lift them up to simple, high-level expressions. Helium can handle highly optimized, complex stencil kernels with input-dependent conditionals. We lift seven kernels from Adobe Photoshop giving a 75% performance improvement, four kernels from IrfanView, leading to 4.97× performance, and one stencil from the miniGMG multigrid benchmark netting a 4.25× improvement in performance. We manually rejuvenated Photoshop by replacing eleven of Photoshop’s filters with our lifted implementations, giving 1.12× speedup without affecting the user experience.",
+  "doi": "10.1145/2737924.2737974",
+  "openalex": "W2054907275",
+  "status": "ok",
+  "title": "Helium: lifting high-performance stencil kernels from stripped x86 binaries to halide DSL code"
+ },
+ "10.3929_ethz-a-005782931": {
+  "abstract": null,
+  "doi": "10.3929/ethz-a-005782931",
+  "openalex": "W2134441333",
+  "status": "no_abstract",
+  "title": "Online Optimizations using Hardware Performance Monitors"
+ },
+ "s2-07c131665f4800e7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Operating system management of shared caches on multicore processors"
+ },
+ "s2-2412964b7ab27950": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient Full System Memory Tracing with Simutrace GI Fachgruppentreffen Betriebssysteme (BS) 2014"
+ },
+ "s2-3f011db783863d70": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tolerating Delinquent Loads with Speculative Execution"
+ },
+ "s2-567d2ea6f652f266": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing Performance in Highly Utilized Multicores with Intelligent"
+ },
+ "s2-813dc5738e88f328": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Perf-Insight : A Simple, Scalable Approach to Optimal Data Prefetching in Multicores"
+ },
+ "s2-848b2450052b0fa6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications"
+ },
+ "s2-8b569d9356e282ad": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Simutrace: A Toolkit for Full System Memory Tracing"
+ },
+ "s2-a0f7abe487dfc82d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler-Based Checkpointing and the Potential for Tolerating Delinquent Loads"
+ },
+ "s2-b9c395206852f4e7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Write management mechanisms for systems with non-volatile memory technologies"
+ },
+ "s2-d447758ba29be913": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimizing Performance in Highly Utilized Multicores with Intelligent Prefetching"
+ }
+}

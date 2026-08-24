@@ -1,0 +1,261 @@
+{
+ "10.1007_978-3-031-46077-7_13": {
+  "abstract": null,
+  "doi": "10.1007/978-3-031-46077-7_13",
+  "openalex": "W4388429180",
+  "status": "no_abstract",
+  "title": "Reliable Basic Block Energy Accounting"
+ },
+ "10.1007_978-3-032-35248-4_12": {
+  "abstract": null,
+  "doi": "10.1007/978-3-032-35248-4_12",
+  "openalex": "W7203451139",
+  "status": "no_abstract",
+  "title": "Adaptive Data Augmentation with Bayesian Optimization for Basic Block Throughput Prediction"
+ },
+ "10.1007_s42514-023-00160-0": {
+  "abstract": null,
+  "doi": "10.1007/s42514-023-00160-0",
+  "openalex": "W4386770133",
+  "status": "no_abstract",
+  "title": "Uncovering the performance bottleneck of modern HPC processor with static code analyzer: a case study on Kunpeng 920"
+ },
+ "10.1109_hora58378.2023.10155786": {
+  "abstract": "Recent research on Artificial Neural Networks (ANNs) has shown significant improvement in machine learning over traditional algorithms in many disciplines. This paper contributes to the advances in medical science and AI technologies by exploring this promising technology for real-time cardiovascular complication detection and resuscitation during rescue missions. Previous studies have relied on cloud-based computing or specialized hardware such as graphics processing units (GPUs), which can be expensive and require significant power consumption. Additionally, existing AI models are often not optimized for low-latency processing, hindering their real-time applications. This study proposes a PyTorch-based ANN model with time optimization techniques on the field-programmable gate arrays (FPGAs) hardware platform, providing data privacy and hardware security. Our approach includes intermediate layer saving and layer parameter reuse, reducing computational complexity and memory requirements while maintaining accuracy. The prototype wearable utilizes a Trenz Electronics TE0802 FPGA board with custom PYNQ-Linux software, providing a low-cost, low-power, and high-performance hardware platform. Using the Apache TVM toolchain, our ANN model predicts cardiovascular disease risk and aids rescuers in making rapid and precise clinical decisions. The results demonstrate 95.9% accuracy in detecting cardiovascular complications, with an average execution time of 41.99ms using TVM. Additionally, our time optimization technique achieves reduced inference times of 33%, 55%, and 79% for reusing the saved output files of layers 1, 2, and 3, respectively, as validated through simulations and experiments.",
+  "doi": "10.1109/hora58378.2023.10155786",
+  "openalex": "W4382050433",
+  "status": "ok",
+  "title": "Time-Optimized Detection of Cardiovascular Complications with Artificial Intelligence in Rescue Operations using FPGA-based Wearable"
+ },
+ "10.1109_hpcc-dss-smartcity-dependsys57074.2022.00151": {
+  "abstract": "The performance of high-performance computing (HPC) and other real-world applications is becoming unpre-dictable as the micro-architecture of the modern central processing unit (CPU) turns to be more and more complex. As a consequence, predicting the execution time of a code snippet is notoriously difficult. Basic block throughput predictor, also known as static code analyzer, provides a ubiquitous way to predict the execution time of a basic block, which includes assembly code segments without jump-related instructions. In this article, we build a workflow to faithfully run, collect and analyze basic blocks from real-world applications. Several static code analyzers are introduced, compared and optimized to show which one performs better on accuracy and other metrics on Kunpeng 920 processor. Under extensive experiments, we achieve state-of-the-art 86.7% accuracy in predicting the throughput of all basic blocks.",
+  "doi": "10.1109/hpcc-dss-smartcity-dependsys57074.2022.00151",
+  "openalex": "W4361020073",
+  "status": "ok",
+  "title": "Quantifying Throughput of Basic Blocks on ARM Microarchitectures by Static Code Analyzers: A Case Study on Kunpeng 920"
+ },
+ "10.1109_hpec62836.2024.10938477": {
+  "abstract": "Machine learning models have been found to be effective in predicting compiler heuristics, but are limited by their very long training times. This is because computing the impact of transformations on a code, e.g., through the performance values, involves invoking the downstream compiler. One way to circumvent the cost-computation bottleneck is to devise accurate cost models that can be trained to predict the target metric. In this paper, we develop a neural net based cost function that can accurately predict binary code size for GCC-based compilation. The input to the model is a comprehensive list of features that have been extracted offline from GCC's intermediate tree representation and the compiler flags that need to be evaluated by a compiler tuning workload. To extract the code features, we have built a GIMPLE analysis framework that can generate feature sets from intermediate representations at different stages of the compilation process. Our results show that the cost model has a mean absolute percentage error of just 8%, and a Spearman correlation of 0.98 between predicted and measured binary size of the test applications. We also demonstrate that compiler pass selection for feature extraction has a significant benefit on the accuracy of the model. Finally, we show that the cost model can reduce metric evaluation time by multiple orders of magnitude.",
+  "doi": "10.1109/hpec62836.2024.10938477",
+  "openalex": "W4409132205",
+  "status": "ok",
+  "title": "A Neural Network Based GCC Cost Model for Faster Compiler Tuning"
+ },
+ "10.1109_iiswc55918.2022.00012": {
+  "abstract": "Analytical hardware performance models yield swift estimation of desired hardware performance metrics. However, developing these analytical models for modern processors with sophisticated microarchitectures is an extremely laborious task and requires a firm understanding of target microarchitecture’s internal structure. In this paper, we introduce GRANITE1, a new machine learning model that estimates the throughput of basic blocks across different microarchitectures. GRANITE uses a graph representation of basic blocks that captures both structural and data dependencies between instructions. This representation is processed using a graph neural network that takes advantage of the relational information captured in the graph and learns a rich neural representation of the basic block that allows more precise throughput estimation. Our results establish a new state-of-the-art for basic block performance estimation with an average test error of 6.9% across a wide range of basic blocks and microarchitectures for the x86-64 target. Compared to recent work, this reduced the error by 1.7% wile improving training and inference throughput by approximately 3.0×. In addition, we propose the use of multitask learning with independent multi-layer feed forward decoder networks. Our results show that this technique further improves precision of all learned models while significantly reducing per-microarchitecture training costs. We perform an extensive set of ablation studies and comparisons with prior work, concluding a set of methods to achieve high accuracy for basic block performance estimation.1GRANITE: A GRAph Neural network model for basIc block Throughput Estimation",
+  "doi": "10.1109/iiswc55918.2022.00012",
+  "openalex": "W4311313955",
+  "status": "ok",
+  "title": "GRANITE: A Graph Neural Network Model for Basic Block Throughput Estimation"
+ },
+ "10.1109_iiswc59245.2023.00023": {
+  "abstract": "Basic-block throughput models such as uiCA, IACA, GRANITE, Ithemal, llvm-mca, OSACA, or CQA guide optimizing compilers and help performance engineers identify and eliminate bottlenecks. For this purpose, basic-block throughput models should ideally be fast, accurate, and interpretable.Recent advances have significantly improved accuracy: uiCA, the state-of-the-art model, achieves an error of about 1% relative to measurements across a wide range of microarchitectures. The computational efficiency of throughput models, which is equally important for widespread adoption, especially in compilers, has so far received little attention.In this paper, we introduce Facile, an analytical throughput model that is fast, accurate, and interpretable. Facile analyzes different potential bottlenecks independently and analytically. Due to its compositional nature, Facile’s predictions directly pinpoint the bottlenecks. We evaluate Facile on a wide range of microarchitectures and show that it is almost two orders of magnitude faster than existing models while achieving state-of-the-art accuracy.",
+  "doi": "10.1109/iiswc59245.2023.00023",
+  "openalex": "W4387891338",
+  "status": "ok",
+  "title": "Facile: Fast, Accurate, and Interpretable Basic-Block Throughput Prediction"
+ },
+ "10.1109_ispass48437.2020.00014": {
+  "abstract": "We present nanoBench, a tool for evaluating small microbenchmarks using hardware performance counters on Intel and AMD x86 systems. Most existing tools and libraries are intended to either benchmark entire programs, or program segments in the context of their execution within a larger program. In contrast, nanoBench is specifically designed to evaluate small, isolated pieces of code. Such code is common in microbenchmark-based hardware analysis techniques. Unlike previous tools, nanoBench can execute microbenchmarks directly in kernel space. This allows to benchmark privileged instructions, and it enables more accurate measurements. The reading of the performance counters is implemented with minimal overhead avoiding functions calls and branches. As a consequence, nanoBench is precise enough to measure individual memory accesses. We illustrate the utility of nanoBench at the hand of two case studies. First, we briefly discuss how nanoBench has been used to determine the latency, throughput, and port usage of more than 13,000 instruction variants on recent x86 processors. Second, we show how to generate microbenchmarks to precisely characterize the cache architectures of eleven Intel Core microarchitectures. This includes the most comprehensive analysis of the employed cache replacement policies to date.",
+  "doi": "10.1109/ispass48437.2020.00014",
+  "openalex": "W2985076257",
+  "status": "ok",
+  "title": "nanoBench: A Low-Overhead Tool for Running Microbenchmarks on x86 Systems"
+ },
+ "10.1109_ispras60948.2023.10508160": {
+  "abstract": "Performance modeling is crucial for compiler optimizations, yet existing cost models often suffer from inaccuracies and limited applicability across different architectures. This paper introduces an automated open-source toolkit designed to improve the accuracy of cost models for basic blocks in assembly code. We propose an LLVM-based method for efficient basic block extraction, overcoming the limitations of existing dynamic tracing tools. Our toolkit also includes a robust profiling tool that benchmarks basic blocks across multiple architectures, ensuring minimal measurement variance. Additionally, we present a dataset construction tool that converts basic blocks into graph-based representations, suitable for deep learning models like Graph Neural Networks. Our contributions pave the way for more accurate and versatile performance models, thereby enhancing compiler optimizations.",
+  "doi": "10.1109/ispras60948.2023.10508160",
+  "openalex": "W4396234780",
+  "status": "ok",
+  "title": "Toolkit for Micro-Benchmarking of Assembly Basic Blocks on Modern CPU Architectures"
+ },
+ "10.1109_micro50266.2020.00045": {
+  "abstract": "CPU simulators are useful tools for modeling CPU execution behavior. However, they suffer from inaccuracies due to the cost and complexity of setting their fine-grained parameters, such as the latencies of individual instructions. This complexity arises from the expertise required to design benchmarks and measurement frameworks that can precisely measure the values of parameters at such fine granularity. In some cases, these parameters do not necessarily have a physical realization and are therefore fundamentally approximate, or even unmeasurable. In this paper we present DiffTune, a system for learning the parameters of x86 basic block CPU simulators from coarse-grained end-to-end measurements. Given a simulator, DiffTune learns its parameters by first replacing the original simulator with a differentiable surrogate, another function that approximates the original function; by making the surrogate differentiable, DiffTune is then able to apply gradient-based optimization techniques even when the original function is non-differentiable, such as is the case with CPU simulators. With this differentiable surrogate, DiffTune then applies gradient-based optimization to produce values of the simulator's parameters that minimize the simulator's error on a dataset of ground truth end-to-end performance measurements. Finally, the learned parameters are plugged back into the original simulator. DiffTune is able to automatically learn the entire set of microarchitecture-specific parameters within the Intel x86 simulation model of llvm-mca, a basic block CPU simulator based on LLVM's instruction scheduling model. DiffTune's learned parameters lead llvm-mca to an average error that not only matches but lowers that of its original, expert-provided parameter values.",
+  "doi": "10.1109/micro50266.2020.00045",
+  "openalex": "W3092461782",
+  "status": "ok",
+  "title": "DiffTune: Optimizing CPU Simulator Parameters with Learned Differentiable Surrogates"
+ },
+ "10.1145_3372799.3397167": {
+  "abstract": "Modern compilers are still built using technology that existed decades ago. These include basic algorithms and techniques for lexing, parsing, data-flow analysis, data dependence analysis, vectorization, register allocation, instruction selection, and instruction scheduling. It is high time that we modernize our compiler toolchain.",
+  "doi": "10.1145/3372799.3397167",
+  "openalex": "W3030671731",
+  "status": "ok",
+  "title": "Compiler 2.0"
+ },
+ "10.1145_3385412.3385995": {
+  "abstract": "Achieving peak performance in a computer system requires optimizations in every layer of the system, be it hardware or software. A detailed understanding of the underlying hardware, and especially the processor, is crucial to optimize software. One key criterion for the performance of a processor is its ability to exploit instruction-level parallelism. This ability is determined by the port mapping of the processor, which describes the execution units of the processor for each instruction.",
+  "doi": "10.1145/3385412.3385995",
+  "openalex": "W3018234428",
+  "status": "ok",
+  "title": "PMEvo: portable inference of port mappings for out-of-order processors by evolutionary optimization"
+ },
+ "10.1145_3486607.3486748": {
+  "abstract": "Surrogates, models that mimic the behavior of programs, form the basis of a variety of development workflows. We study three surrogate-based design patterns, evaluating each in case studies on a large-scale CPU simulator.",
+  "doi": "10.1145/3486607.3486748",
+  "openalex": "W3207455984",
+  "status": "ok",
+  "title": "Programming with neural surrogates of programs"
+ },
+ "10.1145_3492321.3519583": {
+  "abstract": "Prefetching which predicts future memory accesses and preloads them from main memory, is a widely-adopted technique to overcome the processor-memory performance gap. Unfortunately, hardware prefetchers implemented in today's processors cannot identify complex and irregular memory access patterns exhibited by modern data-driven applications and hence developers need to rely on software prefetching techniques. We investigate the challenges of enabling effective, automated software data prefetching. Our investigation reveals that the state-of-the-art compiler-based prefetching mechanism falls short in achieving high performance due to its static nature. Based on this insight, we design APT-GET, a novel profile-guided technique that ensures prefetch timeliness by leveraging dynamic execution time information. APT-GET leverages efficient hardware support such as Intel's Last Branch Record (LBR), for collecting application execution profiles with negligible overhead to characterize the execution time of loads. APT-GET then introduces a novel analytical model to find the optimal prefetch-distance and prefetch injection site based on the collected profile to enable timely prefetches. We study APT-GET in the context of 10 real-world applications and demonstrate that it achieves a speedup of up to 1.98× and of 1.30× on average. By ensuring prefetch timeliness, APT-GET improves the performance by 1.25× over the state-of-the-art software data prefetching mechanism.",
+  "doi": "10.1145/3492321.3519583",
+  "openalex": "W4221095718",
+  "status": "ok",
+  "title": "APT-GET"
+ },
+ "10.1145_3524059.3532396": {
+  "abstract": "Performance models that statically predict the steady-state throughput of basic blocks on particular microarchitectures, such as IACA, Ithemal, llvm-mca, OSACA, or CQA, can guide optimizing compilers and aid manual software optimization. However, their utility heavily depends on the accuracy of their predictions. The average error of existing models compared to measurements on the actual hardware has been shown to lie between 9% and 36%. But how good is this? To answer this question, we propose an extremely simple analytical throughput model that may serve as a baseline. Surprisingly, this model is already competitive with the state of the art, indicating that there is significant potential for improvement.",
+  "doi": "10.1145/3524059.3532396",
+  "openalex": "W4282970171",
+  "status": "ok",
+  "title": "uiCA"
+ },
+ "10.1145_3563288": {
+  "abstract": "Microarchitectural code analyzers, i.e., tools that estimate the throughput of machine code basic blocks, are important utensils in the tool belt of performance engineers. Recent tools like llvm-mca, uiCA, and Ithemal use a variety of techniques and different models for their throughput predictions. When put to the test, it is common to see these state-of-the-art tools give very different results. These inconsistencies are either errors, or they point to different and rarely documented assumptions made by the tool designers. In this paper, we present AnICA, a tool taking inspiration from differential testing and abstract interpretation to systematically analyze inconsistencies among these code analyzers. Our evaluation shows that AnICA can summarize thousands of inconsistencies in a few dozen descriptions that directly lead to high-level insights into the different behavior of the tools. In several case studies, we further demonstrate how AnICA automatically finds and characterizes known and unknown bugs in llvm-mca, as well as a quirk in AMD's Zen microarchitectures.",
+  "doi": "10.1145/3563288",
+  "openalex": "W4307886774",
+  "status": "ok",
+  "title": "AnICA: analyzing inconsistencies in microarchitectural code analyzers"
+ },
+ "10.1145_3629520": {
+  "abstract": "Over the last three decades, innovations in the memory subsystem were primarily targeted at overcoming the data movement bottleneck. In this paper, we focus on a specific market trend in memory technology: 3D-stacked memory and caches. We investigate the impact of extending the on-chip memory capabilities in future HPC-focused processors, particularly by 3D-stacked SRAM. First, we propose a method oblivious to the memory subsystem to gauge the upper-bound in performance improvements when data movement costs are eliminated. Then, using the gem5 simulator, we model two variants of a hypothetical LARge Cache processor (LARC), fabricated in 1.5 nm and enriched with high-capacity 3D-stacked cache. With a volume of experiments involving a broad set of proxy-applications and benchmarks, we aim to reveal how HPC CPU performance will evolve, and conclude an average boost of 9.56× for cache-sensitive HPC applications, on a per-chip basis. Additionally, we exhaustively document our methodological exploration to motivate HPC centers to drive their own technological agenda through enhanced co-design.",
+  "doi": "10.1145/3629520",
+  "openalex": "W4388272487",
+  "status": "ok",
+  "title": "At the Locus of Performance: Quantifying the Effects of Copious 3D-Stacked Cache on HPC Workloads"
+ },
+ "10.1145_3640537.3641572": {
+  "abstract": "This paper introduces ORXESTRA, a context-aware execution time prediction model based on Transformers XL, specifically designed to accurately estimate performance in embedded system applications. Unlike traditional machine learning models that often overlook contextual information, resulting in biased predictions for individual isolated basic blocks, ORXESTRA overcomes this limitation by incorporating execution context awareness. By doing so, ORXESTRA effectively accounts for the processor micro-architecture without explicitly modeling micro-architectural elements such as caches, pipelines, and branch predictors. Our evaluations demonstrate ORXESTRA's ability to provide precise timing estimations for different ARM targets (Cortex M4, M7, A53, and A72), surpassing existing machine learning-based approaches in both prediction accuracy and prediction speed.",
+  "doi": "10.1145/3640537.3641572",
+  "openalex": "W4391958321",
+  "status": "ok",
+  "title": "Fast and Accurate Context-Aware Basic Block Timing Prediction using Transformers"
+ },
+ "10.1145_3651295": {
+  "abstract": "The ability to model and predict the execution time of GPU computations is crucial for real-time graphics application development and optimization. While there are many existing methodologies for graphics programmers to provide such estimates, those methods are often vendor-dependent, require the platforms to be tested, or fail to capture the contextual influences among shader instructions. To address this challenge, we propose ShaderPerFormer, a platform-independent, context-aware deep-learning approach to model GPU performance and provide end-to-end performance predictions on a per-shader basis. To provide more accurate predictions, our method contains a separate stage to gather platform-independent shader program trace information. We also provide a dataset consisting of a total of 54,667 fragment shader performance samples on 5 different platforms. Compared to the PILR and SH baseline methods, our approach reduces the average MAPE across five platforms by 8.26% and 25.25%, respectively.",
+  "doi": "10.1145/3651295",
+  "openalex": "W4396852997",
+  "status": "ok",
+  "title": "ShaderPerFormer: Platform-independent Context-aware Shader Performance Predictor"
+ },
+ "10.1145_3715125": {
+  "abstract": "A variety of code analyzers, such as IACA , uiCA , llvm-mca , or Ithemal , strive to statically predict the throughput of a computation kernel. Each analyzer is based on its own simplified CPU model reasoning at the scale of a basic block. Facing this diversity, evaluating their strengths and weaknesses is important to guide both their usage and their enhancement. We present CesASMe , a fully-tooled solution to evaluate code analyzers on C-level benchmarks composed of a benchmark derivation procedure that feeds an evaluation harness. We conclude that memory-carried data dependencies are a major source of imprecision for these tools. We tackle this issue with staticdeps , a static analyzer extracting memory-carried data dependencies, including across loop iterations, from an assembly basic block. We integrate its output to uiCA , a state-of-the-art code analyzer, to evaluate staticdeps ’ impact on a code analyzer’s precision through CesASMe .",
+  "doi": "10.1145/3715125",
+  "openalex": "W4407375809",
+  "status": "ok",
+  "title": "CesASMe and Staticdeps: static detection of memory-carried dependencies for code analyzers"
+ },
+ "10.23919_date54114.2022.9774589": {
+  "abstract": "Many system-level management and optimization techniques need accurate estimates of power consumption and performance. Earlier research has proposed many high-level/source-level estimation modeling works, particularly for basic blocks. However, most of them still need to execute the target software at least once on a fine-grained simulator or real hardware to extract required features. This paper proposes a performance/power prediction framework, called Deep Power Meter (DeepPM), which estimates them accurately only using the compiled binary. Inspired by the deep learning techniques in natural language processing, we convert the program instructions in the form of vectors and predict the average power and performance of basic blocks based on a transformer model. In addition, unlike existing works based on a Long Short-Term Memory (LSTM) model structure, which only works for basic blocks with a small number of instructions, DeepPM provides highly accurate results for long basic blocks, which takes the majority of the execution time for actual application runs. In our evaluation conducted with SPEC2006 benchmark suite, we show that DeepPM can provide accurate prediction for performance and power consumption with 10.2% and 12.3% error, respectively. DeepPM also outperforms the LSTM-based model by up to 67.2% and 34.9% error for performance and power, respectively.",
+  "doi": "10.23919/date54114.2022.9774589",
+  "openalex": "W4280590384",
+  "status": "ok",
+  "title": "DeepPM: Transformer-based Power and Performance Prediction for Energy-Aware Software"
+ },
+ "10.48550_arxiv.2204.02235": {
+  "abstract": "Over the last three decades, innovations in the memory subsystem were primarily targeted at overcoming the data movement bottleneck. In this paper, we focus on a specific market trend in memory technology: 3D-stacked memory and caches. We investigate the impact of extending the on-chip memory capabilities in future HPC-focused processors, particularly by 3D-stacked SRAM. First, we propose a method oblivious to the memory subsystem to gauge the upper-bound in performance improvements when data movement costs are eliminated. Then, using the gem5 simulator, we model two variants of a hypothetical LARge Cache processor (LARC), fabricated in 1.5 nm and enriched with high-capacity 3D-stacked cache. With a volume of experiments involving a broad set of proxy-applications and benchmarks, we aim to reveal how HPC CPU performance will evolve, and conclude an average boost of 9.56x for cache-sensitive HPC applications, on a per-chip basis. Additionally, we exhaustively document our methodological exploration to motivate HPC centers to drive their own technological agenda through enhanced co-design.",
+  "doi": "10.48550/arxiv.2204.02235",
+  "openalex": "W4224329539",
+  "status": "ok",
+  "title": "At the Locus of Performance: Quantifying the Effects of Copious 3D-Stacked Cache on HPC Workloads"
+ },
+ "10.48550_arxiv.2302.06836": {
+  "abstract": "Cost models predict the cost of executing given assembly code basic blocks on a specific microarchitecture. Recently, neural cost models have been shown to be fairly accurate and easy to construct. They can replace heavily engineered analytical cost models used in mainstream compiler workflows. However, their black-box nature discourages their adoption. In this work, we develop the first framework, COMET, for generating faithful, generalizable, and intuitive explanations for neural cost models. We generate and compare COMET's explanations for the popular neural cost model, Ithemal against those for an accurate CPU simulation-based cost model, uiCA. Our empirical findings show an inverse correlation between the prediction errors of Ithemal and uiCA and the granularity of basic block features in COMET's explanations for them, thus indicating potential reasons for the higher error of Ithemal with respect to uiCA.",
+  "doi": "10.48550/arxiv.2302.06836",
+  "openalex": "W4321012232",
+  "status": "ok",
+  "title": "COMET: Neural Cost Model Explanation Framework"
+ },
+ "10.48550_arxiv.2308.13490": {
+  "abstract": "Modern AI models can be represented as computational graphs, where eachnode corresponds to a tensor operation (e.g., matrix multiplication, convolution),and edges represent tensor data flows. Optimizing the executionof these graphs on hardware accelerators such as Tensor Processing Units(TPUs) requires careful selection of compiler configurations that control layoutand tiling strategies.The compilation configuration involves two key types of optimizations:• Layout Configuration: Controls how tensors are arranged in physicalmemory by specifying the dimension order for inputs and outputs ofeach operation node.• Tile Configuration: Controls the tile size of each fused subgraph,impacting data locality and parallelism. Accurately predicting the runtime of AI model graphs under various configurationscan automate and improve the selection of optimal compiler settings,reducing execution time and resource consumption. The Kaggle competition dataset “Google - Fast or Slow? Predict AIModel Runtime” provides runtime data for XLA High Level Optimizer (HLO)graphs running on TPU v3 hardware. This dataset, called TPUGraphs,comprises multiple collections with diverse layouts and tiling configurations,posing a challenging performance prediction task. This work proposes a GRU-based runtime prediction pipeline leveragingopcode runtime features, graph structure dependencies, and configurablenode embeddings. The method consolidates node features, integrates configurationconvolutions, and trains a neural network to predict runtime withmean squared error loss. The approach captures both static graph propertiesand dynamic configuration effects, enabling enhanced runtime estimation toguide compiler heuristics.",
+  "doi": "10.48550/arxiv.2308.13490",
+  "openalex": "W4386228642",
+  "status": "ok",
+  "title": "Runtime Prediction of AI Model Operations Using a GRU-Based Neural Network"
+ },
+ "10.48550_arxiv.2309.15432": {
+  "abstract": "Code is increasingly becoming a core data modality of modern machine learning research impacting not only the way we write code with conversational agents like OpenAI's ChatGPT, Google's Bard, or Anthropic's Claude, the way we translate code from one language into another, but also the compiler infrastructure underlying the language. While modeling approaches may vary and representations differ, the targeted tasks often remain the same within the individual classes of models. Relying solely on the ability of modern models to extract information from unstructured code does not take advantage of 70 years of programming language and compiler development by not utilizing the structure inherent to programs in the data collection. This detracts from the performance of models working over a tokenized representation of input code and precludes the use of these models in the compiler itself. To work towards the first intermediate representation (IR) based models, we fully utilize the LLVM compiler infrastructure, shared by a number of languages, to generate a 182B token dataset of LLVM IR. We generated this dataset from programming languages built on the shared LLVM infrastructure, including Rust, Swift, Julia, and C/C++, by hooking into LLVM code generation either through the language's package manager or the compiler directly to extract the dataset of intermediate representations from production grade programs. Statistical analysis proves the utility of our dataset not only for large language model training, but also for the introspection into the code generation process itself with the dataset showing great promise for machine-learned compiler components.",
+  "doi": "10.48550/arxiv.2309.15432",
+  "openalex": "W4387158113",
+  "status": "ok",
+  "title": "ComPile: A Large IR Dataset from Production Sources"
+ },
+ "10.48550_arxiv.2410.06460": {
+  "abstract": "To keep pace with the rapid advancements in design complexity within modern computing systems, directed graph representation learning (DGRL) has become crucial, particularly for encoding circuit netlists, computational graphs, and developing surrogate models for hardware performance prediction. However, DGRL remains relatively unexplored, especially in the hardware domain, mainly due to the lack of comprehensive and user-friendly benchmarks. This study presents a novel benchmark comprising five hardware design datasets and 13 prediction tasks spanning various levels of circuit abstraction. We evaluate 21 DGRL models, employing diverse graph neural networks and graph transformers (GTs) as backbones, enhanced by positional encodings (PEs) tailored for directed graphs. Our results highlight that bidirected (BI) message passing neural networks (MPNNs) and robust PEs significantly enhance model performance. Notably, the top-performing models include PE-enhanced GTs interleaved with BI-MPNN layers and BI-Graph Isomorphism Network, both surpassing baselines across the 13 tasks. Additionally, our investigation into out-of-distribution (OOD) performance emphasizes the urgent need to improve OOD generalization in DGRL models. This benchmark, implemented with a modular codebase, streamlines the evaluation of DGRL models for both hardware and ML practitioners",
+  "doi": "10.48550/arxiv.2410.06460",
+  "openalex": "W4403345176",
+  "status": "ok",
+  "title": "A Benchmark on Directed Graph Representation Learning in Hardware Designs"
+ },
+ "oa-W3185474937": {
+  "abstract": "Tools to predict the throughput of basic blocks on a specific microarchitecture are useful to optimize software performance and to build optimizing compilers. In recent work, several such tools have been proposed. However, the accuracy of their predictions has been shown to be relatively low. \r\nIn this paper, we identify the most important factors for these inaccuracies. To a significant degree these inaccuracies are due to elements and parameters of the pipelines of recent CPUs that are not taken into account by previous tools. A primary reason for this is that the necessary details are often undocumented. In this paper, we build more precise models of relevant components by reverse engineering using microbenchmarks. Based on these models, we develop a simulator for predicting the throughput of basic blocks. In addition to predicting the throughput, our simulator also provides insights into how the code is executed. \r\nOur tool supports all Intel Core microarchitecture generations released in the last decade. We evaluate it on an improved version of the BHive benchmark suite. On many recent microarchitectures, its predictions are more accurate than the predictions of state-of-the-art tools by more than an order of magnitude.",
+  "doi": null,
+  "openalex": "W3185474937",
+  "status": "ok",
+  "title": "Accurate Throughput Prediction of Basic Blocks on Recent Intel Microarchitectures."
+ },
+ "s2-058fd9df6938a860": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "DiffTune Revisited: A Simple Baseline for Evaluating Learned llvm-mca Parameters"
+ },
+ "s2-17d0a8cd161f6228": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Accurate Throughput Prediction of Basic Blocks on Recent Intel Microarchitectures"
+ },
+ "s2-3b0cf543a730e674": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Understanding High-Level Properties of Low-Level Programs Through Transformers"
+ },
+ "s2-6f17bc1c43b3774f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Renamer: A Transformer Architecture Invariant to Variable Renaming"
+ },
+ "s2-a92563bd5971754a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "COMET: Neural Cost Model Explanation Framework"
+ },
+ "s2-adc234805bfd2dd8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Platform-independent Micro-Benchmarking Suite for Automatic Performance Metrics Collection of Assembly Instructions"
+ },
+ "s2-d4f16dae4ab1d21d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Effectiveness of Transformer Models for Analyzing Low-Level Programs"
+ },
+ "s2-ef76e2328985d1f9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cross-Architecture Automatic Critical Path Detection For In-Core Performance Analysis"
+ },
+ "s2-f7ac9945aa7f7227": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Parametric Microarchitecture Model for Accurate Basic Block Throughput Prediction on Recent Intel CPUs"
+ }
+}

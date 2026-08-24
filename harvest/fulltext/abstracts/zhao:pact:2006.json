@@ -1,0 +1,233 @@
+{
+ "10.1002_spe.1105": {
+  "abstract": "SUMMARY Dynamic slicing is a promising trace based technique that helps programmers in the process of debugging. In order to debug a failed run, dynamic slicing requires the dynamic dependence graph (DDG) information for that particular run. The two major challenges involved in utilizing dynamic slicing as a debugging technique are the efficient computation of the DDG and the efficient computation of the dynamic slice, given the DDG. In this paper, we present an efficient debugger, which first computes the DDG efficiently while the program is executing; dynamic slicing is later performed efficiently on the computed DDG, on demand. To minimize program slowdown during the online computation of DDG, we make the design decision of not outputting the computed dependencies to a file, instead, storing them in memory in a specially allocated fixed size circular buffer. The size of the buffer limits the length of the execution history that can be stored. To maximize the execution history that can be maintained, we introduce optimizations to eliminate the storage of most of the generated dependencies, at the same time ensuring that those that are stored are sufficient to capture the bug. Experiments conducted on CPU‐intensive programs show that our optimizations are able to reduce the trace rate from 16 to 0.8 bytes per executed instruction. This enables us to store the dependence trace history for a window of 20 million executed instructions in a 16‐MB buffer. Our debugger is also very efficient, yielding slicing times of around a second, and only slowing down the execution of the program by a factor of 19 during the online tracing step. Using recently proposed architectural support for monitoring, we are also able to handle multithreaded programs running on multicore processors. Copyright © 2011 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/spe.1105",
+  "openalex": "W1593651251",
+  "status": "ok",
+  "title": "A system for debugging via online tracing and dynamic slicing"
+ },
+ "10.1002_spe.1147": {
+  "abstract": "SUMMARY Many researchers employ various statistical methods to locate faults in faulty programs. Like other researchers, we sometimes have made mistakes in the quest of making statistical fault localization both practical and scientific. In this experience report, we reflect on our work conducted on this topic, organize our isolated experiences in the format of models and errors, and cast them in the context of statistics. Copyright © 2011 John Wiley & Sons, Ltd.",
+  "doi": "10.1002/spe.1147",
+  "openalex": "W2125332617",
+  "status": "ok",
+  "title": "In quest of the science in statistical fault localization"
+ },
+ "10.1007_978-3-540-89740-8_14": {
+  "abstract": null,
+  "doi": "10.1007/978-3-540-89740-8_14",
+  "openalex": "W1565973325",
+  "status": "no_abstract",
+  "title": "Scalable Implementation of Efficient Locality Approximation"
+ },
+ "10.1007_s11227-015-1612-8": {
+  "abstract": null,
+  "doi": "10.1007/s11227-015-1612-8",
+  "openalex": "W2292087705",
+  "status": "no_abstract",
+  "title": "$${\\mathrm{DS}}_{\\mathrm{spirit}}$$ DS spirit : a data dependence and stride reference patterns profiling infrastructure"
+ },
+ "10.1016_b978-0-12-420232-0.00003-9": {
+  "abstract": null,
+  "doi": "10.1016/b978-0-12-420232-0.00003-9",
+  "openalex": "W185047530",
+  "status": "no_abstract",
+  "title": "Hardware and Application Profiling Tools"
+ },
+ "10.1109_dsd.2014.108": {
+  "abstract": "Processor frequency scaling has greatly stagnated over the last few years, making it difficult to continue improving sequential or single-threaded program speed. Hardware and software system developers now need to devise innovative and aggressive schemes to grow sequential software performance. The goal of this work is to assess the potential and feasibility of eliminating dynamically dead instructions (DDI) -- where the results of executed instructions are not used by the program -- to benefit program speed. Specifically, we quantify the ratio of DDI in the dynamic instruction stream for different classes of contemporary programs (general-purpose vs. embedded) and architectures (CISC vs. RISC), and explore characteristics of DDI to assist the design of effective solution mechanisms. To achieve our goal, we develop a robust and portable compiler (GCC) based framework for DDI research, and target this investigation at contemporary x86 and ARM based machines. We find that while a substantial fraction of instructions executed by all classes of programs are dynamically dead, architectural features show a visible impact. Our experiments reveal that a handful of static program instructions contribute a majority of DDI. We further find that DDI are often highly predictable, can be detected within small instruction windows, and a small amount of static context information can significantly benefit DDI detection at run-time. Thus, our research can induce the development and adoption of practical DDI elimination techniques to scale sequential program performance in future processors.",
+  "doi": "10.1109/dsd.2014.108",
+  "openalex": "W1983620611",
+  "status": "ok",
+  "title": "Properties of Dynamically Dead Instructions for Contemporary Architectures"
+ },
+ "10.1109_iccad66269.2025.11240822": {
+  "abstract": "The complexity of host-peripheral interactions during high-load tasks poses significant challenges for system optimization, with existing tracing tools degrading performance by up to 5.39×. We introduce DevTrace, a novel low-overhead tracing framework for peripheral interactions. Its modular architecture separates data collection from kernel-level operations, enabling lightweight tracing with minimal driver modifications across entire classes of devices. By eliminating heavy kernel tracing interrupts, DevTrace reduces overhead to negligible levels while maintaining data accuracy. In edge-based intelligence deployments, DevTrace achieves a 128× reduction in memory usage and approximately 10× lower CPU overhead compared to page-fault-based solutions. It significantly reduces data loss and performance degradation under high-load conditions, establishing it as a reliable tool for analyzing host-peripheral interactions and optimizing performance in resource-constrained environments. We also discuss potential extensions to eBPF to further decouple tracing from driver frameworks.",
+  "doi": "10.1109/iccad66269.2025.11240822",
+  "openalex": "W4416429931",
+  "status": "ok",
+  "title": "DevTrace: Lightweight Plug-In Design for PCIe Transaction Tracing in Edge Intelligence Workloads"
+ },
+ "10.1109_icsm.2007.4362657": {
+  "abstract": "Dynamic slicing is a promising trace based technique that helps programmers in the process of debugging. In order to debug a failed run, dynamic slicing requires the dynamic dependence graph (DDG) information for that particular run. In prior work, address and control-flow traces are collected online and then extensively post-processed offline to yield the DDG, upon which slicing is performed. Unfortunately, the offline post-processing step can be extremely time consuming [21], impeding the use of dynamic slicing as a debugging technique. In this paper, we present ONTRAC, an efficient online tracing system, that directly computes the dynamic dependences online, thus eliminating the expensive offline postprocessing step. To minimize the program slowdown, we make the design decision of not outputting the computed dependences to a file, instead storing them in memory in a specially allocated fixed size circular buffer. The size of the buffer limits the length of the execution history that can be stored. To maximize the execution history that can be maintained, we introduce optimizations to eliminate the storage of most of the generated dependences, at the same time ensuring that those that are stored are sufficient to capture the bug. Our experiments conducted with real bugs confirm the above fact. Other experiments conducted on cpu-intensive programs show that our optimizations are able to reduce the trace-rate from 16 bytes to 0.8 bytes per executed instruction. This enables us to store the dependence trace history for a window of 20 million executed instructions in a 16 MB buffer. ONTRAC is also very efficient, only slowing down the execution by a factor of 19, eliminating the slowdown by a factor of 540 due to post-processing.",
+  "doi": "10.1109/icsm.2007.4362657",
+  "openalex": "W2136795172",
+  "status": "ok",
+  "title": "ONTRAC: A system for efficient ONline TRACing for debugging"
+ },
+ "10.1109_interact.2012.6339623": {
+  "abstract": "Instructions executed by the processor are dynamically dead if the values they produce are not used by the program. Researchers have discovered that a surprisingly large fraction of executed instructions are dynamically dead. Dynamically dead instructions (DDI) can potentially slow-down program execution and waste power. Unfortunately, although the issue of DDI is well-known, there has not been any comprehensive study to understand and explain the occurrence of DDI, evaluate its performance impact, and resolve the problem for contemporary architectures. The goals of our research are to measure the ratio of DDI and systematically characterize them for existing state-of-the-art compilers and popular architectures, and then develop compiler and/or architectural techniques to avoid their execution at runtime. In this paper, we describe our GCC-based framework to instrument binary programs to generate control-flow and data-flow (registers and memory) traces at runtime. We present the distribution and percentage of DDI in our benchmark programs. We find that for the x86 platform, our embedded systems benchmarks compiled with GCC generally contain significantly fewer DDI than those observed in earlier research for other architectures. We also describe the outcome of our manual study to analyze and categorize the instances of dead instructions in our programs into seven distinct categories. We briefly describe our plan to develop compiler and architecture based techniques to eliminate each category of DDI in future programs. We believe that a close synergy between static code generation and program execution techniques may be the most effective strategy to eliminate DDI.",
+  "doi": "10.1109/interact.2012.6339623",
+  "openalex": "W2077616552",
+  "status": "ok",
+  "title": "Understand and categorize dynamically dead instructions for contemporary architectures"
+ },
+ "10.1109_scam.2016.21": {
+  "abstract": "In many tasks of reverse engineering and binary code analysis (e.g., hybrid disassembly, resolving indirect jump, and decoupled taint analysis), the knowledge of detailed dynamic control flow can be of great value. However, the high runtime overhead beset the complete collection of dynamic control flow. The previous efforts on efficient path profiling cannot be directly applied to the obfuscated binary code in which an accurate control flow graph is typically absent. To address these challenges, we present BinCFP, an efficient multi-threaded binary code control flow profiling tool by taking advantage of pervasive multi-core platforms. BinCFP relies on dynamic binary instrumentation to work with the unmodified binary code. The key of BinCFP is a multi-threaded fast buffering scheme that supports processing trace buffers asynchronously. To achieve better performance gains, we also apply a set of optimizations to reduce control flow profile size and instrumentation overhead. Our design enables the complete dynamic control flow collection for an obfuscated binary execution. We have implemented BinCFP on top of Pin. The comparative experiments on SPEC2006 and obfuscated common utility programs show BinCFP outperforms the previous work in several ways. In addition, BinCFP's control flow profile sizes are only about 49.2% that of the conventional design.",
+  "doi": "10.1109/scam.2016.21",
+  "openalex": "W2560945491",
+  "status": "ok",
+  "title": "BinCFP: Efficient Multi-threaded Binary Code Control Flow Profiling"
+ },
+ "10.1145_1275937.1275943": {
+  "abstract": "We describe the design, generation, and compression of the extended whole program path (eWPP), representation that not only captures the control flow history of a program execution but also its data dependence history. This representation is motivated by the observation that, typically, a significant fraction of data dependence history can be recovered from the control flow trace. To capture the remainder of the data dependence history, we introduce disambiguation checks in the program whose control flow signatures capture the results of the checks. The resulting extended control flow trace enables the recovery of otherwise irrecoverable data dependences. The code for the checks is designed to minimize the increase in program execution time and the extended control flow trace size when compared to directly collecting control flow and address traces. Our experiments show that compressed eWPPs are only one-quarter of the size of combined compressed control flow and address traces. However, their collection incurs a 5× increase in runtime overhead relative to the overhead required for directly collecting the control flow and address traces, respectively.",
+  "doi": "10.1145/1275937.1275943",
+  "openalex": "W2053155247",
+  "status": "ok",
+  "title": "Unified control flow and data dependence traces"
+ },
+ "10.1145_1356058.1356083": {
+  "abstract": "Dynamic instrumentation systems are gaining popularity as means of constructing customized program profiling and analysis tools. However, dynamic instrumentation based analysis tools still suffer from performance problems. The overhead of such systems can be broken down into two components - the overhead of dynamic instrumentation and the time consumed in the user-defined analysis tools. While important progress has been made in reducing the performance penalty of the dynamic instrumentation itself, less attention has been paid to the user-defined component. In this paper, we present PiPA - Pipelined Profiling and Analysis, which is a novel technique for parallelizing dynamic program profiling and analysis by taking advantage of multi-core systems. We implemented a prototype of PiPA using the dynamic instrumentation system DynamoRIO. Our experiments show that PiPA is able to speed up the overall profiling and analysis tasks significantly. Compared to the more than 100x slowdown of Cachegrind and the 32x slowdown of Pin dcache, we achieved a mere 10.5x slowdown on an 8-core system.",
+  "doi": "10.1145/1356058.1356083",
+  "openalex": "W2034567497",
+  "status": "ok",
+  "title": "Pipa"
+ },
+ "10.1145_1880037.1880038": {
+  "abstract": "Profiling and online analysis are important tasks in program understanding and feedback-directed optimization. However, fine-grained profiling and online analysis tend to seriously slow down the application. To cope with the slowdown, one may have to terminate the process early or resort to sampling. The former tends to distort the result because of warm-up effects. The latter runs the risk of missing important effects because sampling was turned off during the time that these effects appeared. A promising approach is to make use of the parallel processing capabilities of the now ubiquitous multicore processors to speed up the profiling and analysis process. In this article, we present Pipelined Profiling and Analysis (PiPA), which is a novel technique for parallelizing dynamic program profiling and analysis by taking advantage of multicore systems. In essence, the application under examination is profiled using a dynamic instrumentation tool. Optimized instrumentation code outputs the profile information in a succinct format, that we call the REP format, to buffers. This lightweight trace compression minimizes the processing overhead impinged on the application whenever a buffer is full. Another thread recovers the required information from the REP buffer. The recovered full profile is then divided up and passed to multiple threads for further analysis. To achieve the best performance, the entire system has to be well-balanced. We have implemented prototypes of PiPA using two dynamic instrumentation systems, namely DynamoRIO and Pin, thereby demonstrating its portability. Our experiments show that PiPA is able to speed up the overall profiling and analysis tasks significantly. Compared to the more than 100× slowdown of Cachegrind and the 32× slowdown of Pin dcache, we achieved a mere 10.2× slowdown on an 8-core system. In this paper, we will also describe the insights we gained in obtaining the balance needed for PiPA to perform optimally.",
+  "doi": "10.1145/1880037.1880038",
+  "openalex": "W1964104501",
+  "status": "ok",
+  "title": "PiPA"
+ },
+ "10.1145_2151024.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application.",
+  "doi": "10.1145/2151024.2151043",
+  "openalex": "W2133692747",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2365864.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application. Transparency has historically been provided on an ad-hoc basis, as a reaction to observed problems in target applications. This paper identifies a necessary set of transparency requirements for running mainstream Windows and Linux applications. We discuss possible solutions to each transparency issue, evaluate tradeoffs between different choices, and identify cases where maintaining transparency is not practically solvable. We believe this will provide a guideline for better design and implementation of transparent dynamic instrumentation, as well as other similar process virtualization systems using software code caches.",
+  "doi": "10.1145/2365864.2151043",
+  "openalex": "W2996990589",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2963094": {
+  "abstract": "Complete dynamic control flow is a fundamental kind of execution profile about program executions with a wide range of applications. Tracing the dynamic control flow of program executions for a brief period easily generates a trace consisting of billions of control flow events. The number of events in such a trace is large, making both path tracing and path querying to incur significant slowdowns. A major class of path tracing techniques is to design novel trace representations that can be generated efficiently, and encode the inputted sequences of such events so that the inputted sequences are still derivable from the encoded and smaller representations. The control flow semantics in such representations have, however, become obscure, which makes implementing path queries on such a representation inefficient and the design of such queries complicated. We propose a novel two-phase path tracing framework— Hierarchical Program Path (HPP)—to model the complete dynamic control flow of an arbitrary number of executions of a program. In Phase 1, HPP monitors each execution, and efficiently generates a stream of events, namely HPPTree, representing a novel tree-based representation of control flow for each thread of control in the execution. In Phase 2, given a set of such event streams, HPP identifies all the equivalent instances of the same exercised interprocedural path in all the corresponding HPPTree instances, and represents each such equivalent set of paths with a single subgraph, resulting in our compositional graph-based trace representation, namely, HPPDAG. Thus, an HPPDAG instance has the potential to be significantly smaller in size than the corresponding HPPTree instances, and still completely preserves the control flow semantics of the traced executions. Control flow queries over all the traced executions can also be directly performed on the single HPPDAG instance instead of separately processing the trace representation of each execution followed by aggregating their results. We validate HPP using the SPLASH2 and SPECint 2006 benchmarks. Compared to the existing technique, named BLPT (Ball-Larus-based Path Tracing), HPP generates significantly smaller trace representations and incurs fewer slowdowns to the native executions in online tracing of Phase 1. The HPPDAG instances generated in Phase 2 are significantly smaller than their corresponding BLPT and HPPTree traces. We show that HPPDAG supports efficient backtrace querying, which is a representative path query based on complete control flow trace. Finally, we illustrate the ease of use of HPPDAG by building a novel and highly efficient path profiling technique to demonstrate the applicability of HPPDAG.",
+  "doi": "10.1145/2963094",
+  "openalex": "W2512141937",
+  "status": "ok",
+  "title": "Hierarchical Program Paths"
+ },
+ "10.1145_2970276.2970299": {
+  "abstract": "Taint analysis has been widely applied in ex post facto security applications, such as attack provenance investigation, computer forensic analysis, and reverse engineering. Unfortunately, the high runtime overhead imposed by dynamic taint analysis makes it impractical in many scenarios. The key obstacle is the strict coupling of program execution and taint tracking logic code. To alleviate this performance bottleneck, recent work seeks to offload taint analysis from program execution and run it on a spare core or a different CPU. However, since the taint analysis has heavy data and control dependencies on the program execution, the massive data in recording and transformation overshadow the benefit of decoupling. In this paper, we propose a novel technique to allow very lightweight logging, resulting in much lower execution slowdown, while still permitting us to perform full-featured offline taint analysis. We develop StraightTaint, a hybrid taint analysis tool that completely decouples the program execution and taint analysis. StraightTaint relies on very lightweight logging of the execution information to reconstruct a straight-line code, enabling an offline symbolic taint analysis without frequent data communication with the application. While StraightTaint does not log complete runtime or input values, it is able to precisely identify the causal relationships between sources and sinks, for example. Compared with traditional dynamic taint analysis tools, StraightTaint has much lower application runtime overhead.",
+  "doi": "10.1145/2970276.2970299",
+  "openalex": "W2514041296",
+  "status": "ok",
+  "title": "StraightTaint: decoupled offline symbolic taint analysis"
+ },
+ "10.1145_3358193": {
+  "abstract": "Application analysis and simulation tools are used extensively by embedded system designers to improve existing optimization techniques or develop new ones. We propose the Alleria framework to make it easier for designers to comprehensively collect critical information such as virtual and physical memory addresses, accessed values, and thread schedules about one or more target applications. Such profilers often incur substantial performance overheads that are orders of magnitude larger than native execution time. We discuss how that overhead can be significantly reduced using a novel profiling mechanism called adaptive profiling. We develop a heuristic-based adaptive profiling mechanism and evaluate its performance using single-threaded and multi-threaded applications. The proposed technique can improve profiling throughput by up to 145% and by 37% on an average, enabling Alleria to be used to comprehensively profile applications with a throughput of over 3 million instructions per second.",
+  "doi": "10.1145/3358193",
+  "openalex": "W2979859319",
+  "status": "ok",
+  "title": "Alleria"
+ },
+ "10.1145_3649827": {
+  "abstract": "Memory profiling captures programs’ dynamic memory behavior, assisting programmers in debugging, tuning, and enabling advanced compiler optimizations like speculation-based automatic parallelization. As each use case demands its unique program trace summary, various memory profiler types have been developed. Yet, designing practical memory profilers often requires extensive compiler expertise, adeptness in program optimization, and significant implementation effort. This often results in a void where aspirations for fast and robust profilers remain unfulfilled. To bridge this gap, this paper presents PROMPT, a framework for streamlined development of fast memory profilers. With PROMPT, developers need only specify profiling events and define the core profiling logic, bypassing the complexities of custom instrumentation and intricate memory profiling components and optimizations. Two state-of-the-art memory profilers were ported with PROMPT where all features preserved. By focusing on the core profiling logic, the code was reduced by more than 65% and the profiling overhead was improved by 5.3× and 7.1× respectively. To further underscore PROMPT’s impact, a tailored memory profiling workflow was constructed for a sophisticated compiler optimization client. In 570 lines of code, this redesigned workflow satisfies the client’s memory profiling needs while achieving more than 90% reduction in profiling overhead and improved robustness compared to the original profilers.",
+  "doi": "10.1145/3649827",
+  "openalex": "W4396238970",
+  "status": "ok",
+  "title": "PROMPT: A Fast and Extensible Memory Profiling Framework"
+ },
+ "10.11606_d.55.2019.tde-21082019-154821": {
+  "abstract": "\\n Parallel programs are imperative for improving performance and problem solving, having an increasing demand on implementing efficient parallel programming techniques. This entails new challenges on software testing to ensure their quality and reliability. Structural testing is a technique that allows the identification of concurrency defects by analyzing the internal structure of the program. However, the non-determinism of concurrent programs has implications in the testing activity, requiring the use of structured methods to reveal defects. Testing criteria support the selection of test cases in a systematical form by statically analysing elements of concurrent programs. We found that there are currently gaps in the definition of testing criteria contemplating scenarios with elements that are dynamically evaluated, such as the execution of communication primitives inside loops. The objective of this project is to define structural testing criteria to guide the selection of test cases, improving the reliability of concurrent programs by revealing non-determinism related errors present in repetition structures. We developed a Concurrent Defects Taxonomy, identifying and classifying concurrency types of defects found in related literature. The analysis of such defects, paths inside loops, number of loop iterations, and nested loops allow us to model the proposed structural testing criteria. We define new sets and associations related to communication and synchronization flows for message-passing programs, establishing a model for testing criteria. We implemented the proposed test model in ValiMPI, a testing tool prototype, considering the new concepts defined in our test model, generating required elements and evaluating coverage after constructing loop paths. For the application evaluation of criteria we perform an empirical study with statistical validation, indicating the results for cost, effectiveness and strength. Our experimental evaluation demonstrated that the proposed testing criteria generates required elements that support the identification of concurrency defects occurring in different loop iterations, when having communicational events with non-deterministic behavior.\\n",
+  "doi": "10.11606/d.55.2019.tde-21082019-154821",
+  "openalex": "W2969353897",
+  "status": "ok",
+  "title": "Structural testing criteria for concurrent programs considering loop execution"
+ },
+ "10.12794_metadc500151": {
+  "abstract": "Software applications’ performance is hindered by a variety of factors, but most notably by the well-known CPU-memory speed gap (often known as the memory wall). This results in the CPU sitting idle waiting for data to be brought from memory to processor caches. The addressing used by caches cause non-uniform accesses to various cache sets. The non-uniformity is due to several reasons, including how different objects are accessed by the code and how the data objects are located in memory. Memory allocators determine where dynamically created objects are placed, thus defining addresses and their mapping to cache locations. It is important to evaluate how different allocators behave with respect to the localities of the created objects. Most allocators use a single attribute, the size, of an object in making allocation decisions. Additional attributes such as the placement with respect to other objects, or specific cache area may lead to better use of cache memories. In this dissertation, we proposed and implemented a framework that allows for the development and evaluation of new memory allocation techniques. At the root of the framework is a memory tracing tool called Gleipnir, which provides very detailed information about every memory access, and relates it back to source level objects. Using the traces from Gleipnir, we extended a commonly used cache simulator for generating detailed cache statistics: per function, per data object, per cache line, and identify specific data objects that are conflicting with each other. The utility of the framework is demonstrated with a new memory allocator known as equivalence class allocator. The new allocator allows users to specify cache sets, in addition to object size, where the objects should be placed. We compare this new allocator with two well-known allocators, viz., Doug Lea and Pool allocators.",
+  "doi": "10.12794/metadc500151",
+  "openalex": "W1214594612",
+  "status": "ok",
+  "title": "Framework for Evaluating Dynamic Memory Allocators Including a New Equivalence Class Based Cache-conscious Allocator"
+ },
+ "10.23919_cnsm46954.2019.9012750": {
+  "abstract": "Analysing software and networks can be done using established tools, such as debuggers and packet analysers, but using established tools to analyse network software is difficult and impractical because of the sheer detail the tools present and the performance overheads they typically impose. This makes it difficult to precisely diagnose performance anomalies in network software to identify their causes (is it a DoS attack or a bug?) and determine what needs to be fixed.We present Flowdar: a practical tool for analysing software traces to produce intuitive summaries of network software behaviour by abstracting unimportant details and demultiplexing traces into different sessions' subtraces. Flowdar can use existing state-of-the-art tracing tools for lower overhead during trace gathering for offline analysis. Using Flowdar we can drill down when diagnosing performance anomalies without getting overwhelmed in detail or burdening the system being observed.We show that Flowdar can be applied to existing real-world software and can digest complex behaviour into an intuitive visualisation.",
+  "doi": "10.23919/cnsm46954.2019.9012750",
+  "openalex": "W3010468511",
+  "status": "ok",
+  "title": "Trace-based Behaviour Analysis of Network Servers"
+ },
+ "10.5687_iscie.29.285": {
+  "abstract": "Nowadays, multicore processor is common presence and available everywhere. However, when we try to speedup non-numerical programs, which are used by ordinary users much especially on both desktop and mobile computers, by introducing parallel computation on multicore processors, it is necessary to strictly keep both control and data dependencies between parallel tasks in order to get the correct computation result. In many cases, parallel computation is difficult for non-numerical programs on multicore processors, since these dependencies are complicated. To solve this problem,we propose a method of speculative thread-level parallel computation along the hot path, the most frequently executed control flow, on entire program, assuming the use of the support hardware of speculative multithreading. This utilizes the general property of program codes, that is, the control flow of program tends to be highly biased to quite a small number of path even if the program code contains many possibilities of paths. Our method divides conventional serial program into thread codes along the hot path, and the thread codes are executed in parallel on each processor core on multicore processor. Preliminary performance evaluation by trace-based simulation using SPEC CINT2000, that is the collection of practical programs for performance valuation purpose, shows that the speedup of 2.48 times at maximum and 1.94 times on average can be expected by using our method, as compared to the serial execution.",
+  "doi": "10.5687/iscie.29.285",
+  "openalex": "W2530731493",
+  "status": "ok",
+  "title": "Proposal of a Method of Hot-Path based Speculative Multithreading Targeting Entire Program"
+ },
+ "oa-W1610688982": {
+  "abstract": "Taint analysis has a wide variety of compelling applica-tions in security tasks, from software attack detection to data lifetime analysis. Static taint analysis propagates taint values following all possible paths with no need for concrete execution, but is generally less accurate than dynamic analysis. Unfortunately, the high performance penalty incurred by dynamic taint analyses makes its de-ployment impractical in production systems. To amelio-rate this performance bottleneck, recent research efforts aim to decouple data flow tracking logic from program execution. We continue this line of research in this paper and propose pipelined symbolic taint analysis, a novel technique for parallelizing and pipelining taint analy-sis to take advantage of ubiquitous multi-core platforms. We have developed a prototype system called TaintPipe. TaintPipe performs very lightweight runtime logging to produce compact control flow profiles, and spawns mul-tiple threads as different stages of a pipeline to carry out symbolic taint analysis in parallel. Our experiments show that TaintPipe imposes low overhead on applica-tion runtime performance and accelerates taint analysis significantly. Compared to a state-of-the-art inlined dy-namic data flow tracking tool, TaintPipe achieves 2.38 times speedup for taint analysis on SPEC 2006 and 2.43 times for a set of common utilities, respectively. In ad-dition, we demonstrate the strength of TaintPipe such as natural support of multi-tag taint analysis with several security applications. 1",
+  "doi": null,
+  "openalex": "W1610688982",
+  "status": "ok",
+  "title": "TaintPipe: pipelined symbolic taint analysis"
+ },
+ "oa-W2159516117": {
+  "abstract": "Instructions executed by the processor are dynamically dead if the values they produce are not used by the program. Executing such useless instructions can potentially slow-down program execution and waste power. The goal of this work is to quantify and understand the occurrence of dynamically dead instructions (DDI) for programs compiled using modern compilers for the most relevant contemporary architectures. We expect our extensive study to highlight the issue of DDI and to play a critical role in the development of compiler and/or architectural techniques to avoid DDI execution at runtime. In this thesis, we introduce our novel GCC&ndashbased instrumentation and analysis framework to determine DDI during program execution. We present the ratio and characteristics of DDI in our benchmark programs. We find that programs compiled with GCC (with and without optimizations) execute a significant fraction of DDI on x86 and ARM based machines. Additionally, an ample amount of predication employed by GCC results in a large fraction of executed instructions on the ARM to be dynamically dead. We observe that a handful of static instructions contribute a large majority to the overall DDI in standard benchmark programs. We also find that employing a small amount of static context information can significantly benefit the detection of DDI at run&ndashtime. Additionally, we describe the results of our manual study to analyze and categorize the DDI instances in our x86 benchmarks. We briefly outline compiler and architecture based techniques that can be used to eliminate each category of DDI in future programs. Overall, we believe that a close synergy between compiler and architecture techniques may be the most effective strategy to eliminate DDI to improve sequential program performance and energy efficiency on modern machines.",
+  "doi": null,
+  "openalex": "W2159516117",
+  "status": "ok",
+  "title": "Detecting and Understanding Dynamically Dead Instructions for Contemporary Architectures"
+ },
+ "oa-W2189342169": {
+  "abstract": "A continual growth of the number of transistors per unit area coupled with diminishing returns from traditional microarchitectural and clock frequency improvements has led processor manufacturers to place multiple cores on a single chip. However, only multi-threaded code can fully take advantage of the new multicore processors; legacy single-threaded code does not benefit. Many approaches to parallelization have been explored, including both manual and automatic techniques. Unfortunately, research in this area is impeded by the innate difficulty of exploring code by hand for new possible parallelization schemes. Regardless of whether it is a researcher attempting to discover possible automatic techniques or a programmer trying to make manual parallelization, the benefits of good dependence information are substantial. This thesis provides a profiling and analysis toolset aimed at easing a programmer or researcher’s effort in finding parallelism. The toolset, The Loop-Aware Memory Profile Viewing System (LAMPView), is developed in three parts. The first part is a multi-frontend, multi-target compiler pass written to instrument the code with calls to the Loop-Aware Memory Profiling (LAMP) library. The compile-time",
+  "doi": null,
+  "openalex": "W2189342169",
+  "status": "ok",
+  "title": "LAMPVIEW: A LOOP-AWARE TOOLSET FOR FACILITATING PARALLELIZATION"
+ },
+ "oa-W756483657": {
+  "abstract": "Faults are common-place and inevitable in complex applications. Hence, automated techniques are necessary to analyze failed executions and debug the application to locate the fault. For locating faults in programs, dynamic slices have been shown to be very effective in reducing the effort of debugging. The user needs to inspect only a small subset of program statements to get to the root cause of the fault. While prior work has primarily focussed on single-threaded programs, this dissertation shows how dynamic slicing can be used for fault location in multithreaded programs. This dissertation also shows that dynamic slices can be used to track down faults due to data races in multithreaded programs by incorporating additional data dependences that arise in the presence of many threads. In order to construct the dynamic slices, dependence traces are collected and processed. However, program runs generate traces in the order of Gigabytes in a few seconds. Hence, for multithreaded program runs that are long-running, the process of collecting and storing these traces poses a significant challenge. This dissertation proposes two techniques to overcome this challenge. Experiments indicate that the techniques combined can reduce the size of the traces by 3 orders of magnitude. For applications that are critical and for which down time is highly detrimental, techniques for surviving software failures and letting the execution continue are desired. This dissertation proposes one such technique to recover applications from a class of faults that are caused by the execution environment and prevent the fault in future runs. This technique has been successfully used to avoid faults in a variety of applications caused due to thread scheduling, heap overflow, and malformed user requests. Case studies indicate that, for most environment bugs, the point in the execution where the environment modification is necessary can be clearly pin-pointed by using the proposed system and the fault can be avoided in the first attempt. The case studies also show that the patches needed to prevent the different faults are simple and the overhead induced by the system during the normal run of the application is less than 10%, on average.",
+  "doi": null,
+  "openalex": "W756483657",
+  "status": "ok",
+  "title": "Fault location and avoidance in long-running multithreaded applications"
+ },
+ "s2-177b4cbaa85b905f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "LAMPVIEW: A LOOP-AWARE TOOLSET FOR FACILITATING PARALLELIZATION"
+ },
+ "s2-2784864964db743a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "TaintPipe: Pipelined Symbolic Taint Analysis"
+ },
+ "s2-3ad0d32ef7b0cdbd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Enabling efficient online profiling of homogeneous and heterogeneous multicore systems"
+ },
+ "s2-6c49778dc12a4303": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Detecting and Understanding Dynamically Dead Instructions for Contemporary Architectures"
+ },
+ "s2-aacde441e484d837": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An Overview of Software Performance Analysis Tools and Techniques : From GProf to DTrace"
+ },
+ "s2-b660b851c6d2a033": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fault Location and Avoidance in Long-Running Multithreaded Applications"
+ }
+}

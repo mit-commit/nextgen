@@ -1,0 +1,226 @@
+{
+ "10.1007_978-3-642-03331-5_2": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-03331-5_2",
+  "openalex": "W4235236754",
+  "status": "no_abstract",
+  "title": "Interprozedurale Optimierungen"
+ },
+ "10.1007_978-3-642-17548-0": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-17548-0",
+  "openalex": "W4230059447",
+  "status": "no_abstract",
+  "title": "Compiler Design"
+ },
+ "10.1007_978-3-642-19448-1_11": {
+  "abstract": null,
+  "doi": "10.1007/978-3-642-19448-1_11",
+  "openalex": "W1496757799",
+  "status": "no_abstract",
+  "title": "Constructing Application-Specific Memory Hierarchies on FPGAs"
+ },
+ "10.1016_j.ic.2021.104794": {
+  "abstract": "Given a dynamic set K of k strings of total length n whose characters are drawn from an alphabet of size σ , a keyword dictionary is a data structure built on K that provides lookup, prefix search, and update operations on K . Under the assumption that α = w / lg ⁡ σ characters fit into a single machine word of w bits, we propose a keyword dictionary that represents K in either n lg ⁡ σ + Θ ( k lg ⁡ n ) or | T | lg ⁡ σ + Θ ( k w ) bits of space, where | T | is the number of nodes of a trie representing K . It supports all operations in O ( m / α + lg ⁡ α ) expected time on an input string of length m in the word RAM model. An evaluation of our implementation highlights the practical usefulness of the proposed data structure, especially for prefix searches — one of the most essential keyword dictionary operations.",
+  "doi": "10.1016/j.ic.2021.104794",
+  "openalex": "W3197753456",
+  "status": "ok",
+  "title": "c-trie++: A dynamic trie tailored for fast prefix searches"
+ },
+ "10.1016_j.sysarc.2026.103884": {
+  "abstract": "Modular arithmetic is widely used in modern programs, including applications in cryptography, security checks, hash computations, and low-level system implementations. Existing analysis methods often focus on fixed moduli, limiting their applicability. In this work, we propose a general approach to eliminate the analysis barriers introduced by modular operations in loop programs, which extends Farkas’ Lemma-based invariant constraint solving techniques to programs with general modular operations. We define modular-related variables in the program and present a location-splitting technique to split the original program locations based on modular results and eliminate modular conditions from the transitions. This process results in an equivalent linear transition system free of modular information, which can be further used to generate invariants through constraint solving methods based on Farkas’ Lemma. We integrate this method into the existing StInG toolchain as a publicly available tool, Modular InvG, and evaluate it through a unified pipeline on manually constructed benchmarks and selected SV-COMP benchmarks, including comparisons with a strength-reduction baseline and CPAchecker. Experimental results demonstrate both the practical utility and high efficiency of our approach while preserving analysis precision. This work introduces a new direction for static analysis of programs with generalized modular arithmetic and lays the foundation for further optimization on large-scale benchmarks.",
+  "doi": "10.1016/j.sysarc.2026.103884",
+  "openalex": "W7164657759",
+  "status": "ok",
+  "title": "Modular Invariant Generation via Constraint Solving"
+ },
+ "10.1049_iet-cvi.2013.0101": {
+  "abstract": "This study presents an integer‐only algorithm to exactly recover an image from its discrete projected views that can be computed with the same computational complexity as the fast Fourier transform (FFT). Most discrete transforms for image reconstruction rely on the FFT, via the Fourier slice theorem (FST), in order to compute reconstructions with low‐computational complexity. Consequently, complex arithmetic and floating point representations are needed, the latter of which is susceptible to round‐off errors. This study shows that the slice theorem is valid within integer fields, via modulo arithmetic, using a circulant theory of the Radon transform (RT). The resulting number‐theoretic RT (NRT) provides a representation of images as discrete projections that is always exact and real‐valued. The NRT is ideally suited as part of a discrete tomographic algorithm, an encryption scheme or for when numerical overflow is likely, such as when computing a large number of convolutions on the projections. The low‐computational complexity of the NRT algorithm also provides an efficient method to generate discrete projected views of image data.",
+  "doi": "10.1049/iet-cvi.2013.0101",
+  "openalex": "W2041789001",
+  "status": "ok",
+  "title": "Exact image representation via a number‐theoretic Radon transform"
+ },
+ "10.1109_arith.2005.31": {
+  "abstract": "Integer division on modern processors is expensive compared to multiplication. Previous algorithms for performing unsigned division by an invariant divisor, via reciprocal approximation, suffer in the worst case from a common requirement for n+1 bit multiplication, which typically must be synthesized from n-bit multiplication and extra arithmetic operations. This paper presents, and proves, a hybrid of previous algorithms that replaces n+1 bit multiplication with a single fused multiply-add operation on n-bit operands, thus reducing any n-bit unsigned division to the upper n bits of a multiply-add, followed by a single right shift. An additional benefit is that the prerequisite calculations are simple and fast. On the Itanium/spl reg/ 2 processor, the technique is advantageous for as few as two quotients that share a common run-time divisor.",
+  "doi": "10.1109/arith.2005.31",
+  "openalex": "W2119405406",
+  "status": "ok",
+  "title": "N-Bit Unsigned Division via N-Bit Multiply-Add"
+ },
+ "10.1109_asap.2005.34": {
+  "abstract": "The COMPAAN/LAURA (Stefanov et al., 2004) tool chain maps nested loop applications written in Matlab onto reconfigurable platforms, such as FPGAs. COMPAAN rewrites the original Matlab application as a process network in which the control is parameterized and distributed. This control is given as parameterized polytopes that are expressed in terms of pseudo-linear expressions. These expressions cannot always be mapped efficiently onto hardware as they contain multiplication and integer division operations. This obstructs the data flow through the processes. Therefore, we present in this paper the expression compiler that efficiently maps pseudo-linear expressions onto a dedicated hardware data-path in such a way that the distributed and parameterized control never obstructs the data flow through processors. This compiler employs techniques like number theory axioms, method of difference, and predicated static single assignment code.",
+  "doi": "10.1109/asap.2005.34",
+  "openalex": "W2102577653",
+  "status": "ok",
+  "title": "Expression Synthesis in Process Networks generated by LAURA"
+ },
+ "10.1109_dcc47342.2020.00032": {
+  "abstract": "Given a dynamic set K of k strings of total length n whose characters are drawn from an alphabet of size σ, a keyword dictionary is a data structure built on K that provides locate, prefix search, and update operations on K. Under the assumption that α = w / lg σ characters fit into a single machine word w, we propose a keyword dictionary that represents K in n lg σ + Θ(k lg n) bits of space, supporting all operations in Θ(m / α + lg α) expected time on an input string of length m in the word RAM model. This data structure is underlined with an exhaustive practical evaluation, highlighting the practical usefulness of the proposed data structure, especially for prefix searches - one of the most elementary keyword dictionary operations.",
+  "doi": "10.1109/dcc47342.2020.00032",
+  "openalex": "W3013065284",
+  "status": "ok",
+  "title": "c-Trie++: A Dynamic Trie Tailored for Fast Prefix Searches"
+ },
+ "10.1109_fpl.2009.5272286": {
+  "abstract": "Capacity of FPGAs has grown significantly, leading to increased complexity of designs targeting these chips. Traditional FPGA design methodology using HDLs is no longer sufficient and new methodologies are being sought. An attractive possibility is to use streaming languages. Streaming languages group data into streams, which are processed by computational nodes called kernels. They are suitable for implementation in FPGAs because they expose parallelism, which can be exploited by implementing the application in FPGA logic. Designers can express their designs in a streaming language and target FPGAs without needing a detailed understanding of digital logic design. In this paper we show how the Brook streaming language can be used to simplify design for FPGAs, while providing reasonable performance compared to other methodologies. We show that throughput of streaming applications can be increased through automatic kernel replication. Using our compiler, the FPGA designer can trade off FPGA area and performance by changing the amount of kernel replication. We describe the details of our compiler and present performance and area of a set of benchmarks. We found that throughput scales well with increased replication for most applications.",
+  "doi": "10.1109/fpl.2009.5272286",
+  "openalex": "W1983111999",
+  "status": "ok",
+  "title": "Enhancements to FPGA design methodology using streaming"
+ },
+ "10.1145_1286821.1286825": {
+  "abstract": "We present a unified mathematical framework for analyzing the tradeoffs between parallelism and storage allocation within a parallelizing compiler. Using this framework, we show how to find a good storage mapping for a given schedule, a good schedule for a given storage mapping, and a good storage mapping that is valid for all legal (one-dimensional affine) schedules. We consider storage mappings that collapse one dimension of a multidimensional array, and programs that are in a single assignment form and accept a one-dimensional affine schedule. Our method combines affine scheduling techniques with occupancy vector analysis and incorporates general affine dependences across statements and loop nests. We formulate the constraints imposed by the data dependences and storage mappings as a set of linear inequalities, and apply numerical programming techniques to solve for the shortest occupancy vector. We consider our method to be a first step towards automating a procedure that finds the optimal tradeoff between parallelism and storage space.",
+  "doi": "10.1145/1286821.1286825",
+  "openalex": "W2064375932",
+  "status": "ok",
+  "title": "A step towards unifying schedule and storage optimization"
+ },
+ "10.1145_2535932": {
+  "abstract": "This article describes the design and implementation of a novel compilation flow that implements circuits in FPGAs from a streaming programming language. The streaming language supported is called FPGA Brook and is based on the existing Brook language. It allows system designers to express applications in a way that exposes parallelism, which can be exploited through hardware implementation. FPGA Brook supports replication, allowing parts of an application to be implemented as multiple hardware units operating in parallel. Hardware units are interconnected through FIFO buffers which use the small memory modules available in FPGAs. The FPGA Brook automated design flow uses a source-to-source compiler, developed as a part of this work, and combines it with a commercial behavioral synthesis tool to generate the hardware implementation. A suite of benchmark applications was developed in FPGA Brook and implemented using our design flow. Experimental results indicate that performance of many applications scales well with replication. Our benchmark applications also achieve significantly better results than corresponding implementations using a commercial behavioral synthesis tool. We conclude that using an automated design flow for implementation of streaming applications in FPGAs is a promising methodology.",
+  "doi": "10.1145/2535932",
+  "openalex": "W2067618990",
+  "status": "ok",
+  "title": "Exploiting Task- and Data-Level Parallelism in Streaming Applications Implemented in FPGAs"
+ },
+ "10.1145_3652561.3652573": {
+  "abstract": "Modulo operations on array indices provide a convenient means for specifying cyclic operations on arrays, such as rotations. A naive compilation of such operations involves integer divisions, which often can be avoided by partitioning or rearranging iteration spaces. This paper proposes an optimisation to this effect. The key idea is to systematically replace modulo operations within loops by partitioning such loops and replacing the modulo operations with division-free equivalents.",
+  "doi": "10.1145/3652561.3652573",
+  "openalex": "W4399796620",
+  "status": "ok",
+  "title": "Modulo in high-performance code: strength reduction for modulo-based array indexing in loops"
+ },
+ "10.48550_arxiv.2102.08505": {
+  "abstract": "As we rapidly approach the frontiers of ultra large computing resources, software optimization is becoming of paramount interest to scientific application developers interested in efficiently leveraging all available on-Node computing capabilities and thereby improving a requisite science per watt metric. The scientific application of interest here is the Basic Math Library (BML) that provides a singular interface for linear algebra operation frequently used in the Quantum Molecular Dynamics (QMD) community. The provisioning of a singular interface indicates the presence of an abstraction layer which in-turn suggests commonalities in the code-base and therefore any optimization or tuning introduced in the core of code-base has the ability to positively affect the performance of the aforementioned library as a whole. With that in mind, we proceed with this investigation by performing a survey of the entirety of the BML code-base, and extract, in form of micro-kernels, common snippets of code. We introduce several optimization strategies into these micro-kernels including 1.) Strength Reduction 2.) Memory Alignment for large arrays 3.) Non Uniform Memory Access (NUMA) aware allocations to enforce data locality and 4.) appropriate thread affinity and bindings to enhance the overall multi-threaded performance. After introducing these optimizations, we benchmark the micro-kernels and compare the run-time before and after optimization for several target architectures. Finally we use the results as a guide to propagating the optimization strategies into the BML code-base. As a demonstration, herein, we test the efficacy of these optimization strategies by comparing the benchmark and optimized versions of the code.",
+  "doi": "10.48550/arxiv.2102.08505",
+  "openalex": "W3132664025",
+  "status": "ok",
+  "title": "Performance Optimizations of Recursive Electronic Structure Solvers targeting Multi-Core Architectures (LA-UR-20-26665)"
+ },
+ "10.58088_cna7-hs13": {
+  "abstract": "This is a study in exact computational linear algebra consisting of two parts. First the problem of computing the p -rank of an integer matrix with particular emphasis on the case when the matrix is large and dense, the rank is relatively small, and the prime is tiny (such as p =3). Second is a numeric-symbolic rational linear system solver using an iterative refinement approach. The rank problem arises from the study of difference sets of finite groups and their corresponding strongly regular graphs. The ranks of the adjacency matrices representing these graphs are sought. These matrices, defined in sequences, grow too large for previously known rank algorithms. Prior solutions either require too much memory or are too computationally costly for the scenario of a large matrix with much lower rank. The expected low rank invites us to find find a space- and time-efficient algorithm for this special case. The heuristic methods detailed here form a Monte Carlo algorithm which is essentially optimal when the rank is sufficiently small. Several tools are used in concert with the new algorithm which are vital in computing the rank of some of the larger matrices of the sequences, which contain on the order of peta-entries. A suite of finite-field data compression tools is discussed. Additionally, a framework for distributed- and shared-memory parallelism is detailed. The rational linear system solver produces, for each entry of the solution vector, a rational approximation with denominator a power of two. From this representation, the correct rational entry can be reconstructed. Our method is a numeric-symbolic hybrid in that it uses an approximate numeric solver at each iteration together with a symbolic (exact arithmetic) residual computation and symbolic rational reconstruction. It is able to be output sensitive (i.e. terminate early) with provably correct result. Alternatively, the algorithm may be used without the rational reconstruction to obtain an extended precision floating point approximation of any specified precision. The chief contributions of the method and implementation are confirmed continuation, highly tuned rational reconstruction, and fast, robust performance. All work contained herein contributes to the LinBox library for exact linear algebra.",
+  "doi": "10.58088/cna7-hs13",
+  "openalex": "W2215698150",
+  "status": "ok",
+  "title": "High performance exact linear algebra"
+ },
+ "oa-W2103254943": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W2103254943",
+  "status": "no_abstract",
+  "title": "An Economic and Cultural Commentary"
+ },
+ "oa-W2157566949": {
+  "abstract": "6.2.7 Compatible type and composite type identifier declared in one file?? 6.2.7 Compatible type and composite type Commentary This clause primarily deals with type compatibility across translation units. Few developers are aware of the concept of composite type. It is needed to handle the cases where there is more than one declaration of the same identifier in the same scope and name space. Coding Guidelines Translators are not required to perform type compatibility checks across translation units, and it is very rare to find one that does. Some static analysis tools perform various kinds of cross translation unit type checking. [1] Without automated tool support, these checks are unlikely to be carried out. The approach of these coding guideline is to recommend practices that remove the need to perform these checks, e.g., having a single, textually, point of declaration for identifiers. compatible type if same type qualified type to be compatible pointer types to be compatible array type to be compatible function compatible types footnote",
+  "doi": null,
+  "openalex": "W2157566949",
+  "status": "ok",
+  "title": "The New C Standard (Excerpted material) An Economic and Cultural Commentary"
+ },
+ "oa-W574651484": {
+  "abstract": "New systems have higher and higher requirements in terms of reliability, safety, power consumption and performance. To meet those requirements, a custom processor can be a solution. That is why Thales is developing a processor that includes many features that make its architecture different from common architectures of general-purpose processors. To become widely usable, a fully optimizing compiler is the cornerstone that leads to its success. While most of the existing compilers manage to deal with code optimization for general purpose processors, their efficiency can considerably decrease when optimizing code for a custom processor whose architecture differs from general purpose processors. A new compiler had to be developed to translate C source code into highly optimized assembly code that would be able to deal with this processor's abilities, such as DSP-like instructions, in the best way possible, while introducing key features necessary to meet the requirements of Thales' line of products. Code optimizations have been introduced and enhanced, using pattern detection, control flow analysis or peephole optimization. At the same time, new key features have been added to the compiler, such as a compilation report, built-in functions support, and also fixed-point representation support. Many of these resources were lacking in existing compilers, which brings a noticeable added value to this compiler. As the processor is still under development, tests were carried out using a VHDL simulation model of the processor designed specifically to test the entire platform. The set of tests focused both on general purpose applications, and also on data processing algorithms. The optimization of this compiler led to an 18.3% shorter execution time for the set of tests, while reducing the total program size by 13.1% at least. Moreover, important features that existing compilers are lacking, have been added to the compiler. It helped improving the user-friendliness of the pair compiler/processor and it has proven to be of great interest for programmers.",
+  "doi": null,
+  "openalex": "W574651484",
+  "status": "ok",
+  "title": "Optimization of a compiler for a custom microprocessor"
+ },
+ "s2-12952e9fc2457997": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "High performance exact linear algebra"
+ },
+ "s2-1fdfdd921d24af55": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An Economic and Cultural Commentary"
+ },
+ "s2-4b10986b0c9918e5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Optimization of a compiler for a custom microprocessor"
+ },
+ "s2-4f71506fd097de73": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Building an Application-specific Memory Hierarchy on FPGA"
+ },
+ "s2-69f9e2236d5f147f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Bibliography of Publications on Floating-Point Arithmetic"
+ },
+ "s2-886e69587304b591": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The New C Standard An Economic and Cultural Commentary"
+ },
+ "s2-90ab8b19632f3077": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Loop Transformations for the Optimized Generation of Reconfigurable Hardware"
+ },
+ "s2-9aa9eba4406a50eb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The New C Standard (Excerpted material) An Economic and Cultural Commentary"
+ },
+ "s2-a341623ebc9c9395": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Performance Optimizations of Recursive Electronic Structure Solvers targeting Multi-Core Architectures (LA-UR-20-26665)"
+ },
+ "s2-bd716a5f20a2416c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic Packed Compact Tries Revisited"
+ },
+ "s2-d6c5ee2c9a9009ee": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Stream computing on fpgas"
+ },
+ "s2-e6bade07805a2a48": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Synthesis of a parallel data stream processor from data flow process networks"
+ },
+ "s2-f0cf0468cce1e6e8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Information and Computation"
+ },
+ "s2-f8115663ddcace40": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler-managed memory system for software-exposed architectures"
+ }
+}

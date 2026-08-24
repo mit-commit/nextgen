@@ -1,0 +1,128 @@
+{
+ "10.1109_ipdps.2006.1639284": {
+  "abstract": "In this paper, we present a novel approach for parallel sorting on stream processing architectures. It is based on adaptive bitonic sorting. For sorting n values utilizing p stream processor units, this approach achieves the optimal time complexity O((n log n)/p). While this makes our approach competitive with common sequential sorting algorithms not only from a theoretical viewpoint, it is also very fast from a practical viewpoint. This is achieved by using efficient linear stream memory accesses (and by combining the optimal time approach with algorithms optimized for small input sequences). We present an implementation on modern programmable graphics hardware (GPUs). On GPUs, our optimal parallel sorting approach has shown to be remarkably faster than sequential sorting on the CPU, and it is also faster than previous non-optimal sorting approaches on the GPU for sufficiently large input sequences. Because of the excellent scalability of our algorithm with the number of stream processor units p (up to n/log/sup 2/ n or even n/log n units, depending on the stream architecture), our approach profits heavily from the trend of increasing number of fragment processor units on GPUs, so that we can expect further speed improvement with upcoming GPU generations.",
+  "doi": "10.1109/ipdps.2006.1639284",
+  "openalex": "W4240180700",
+  "status": "ok",
+  "title": "GPU-ABiSort: optimal parallel sorting on stream architectures"
+ },
+ "10.1109_pact.2007.36": {
+  "abstract": "High-rate core-to-core communication is critical for efficient pipeline-parallel software architectures. This paper introduces FastForward, a software-only low-overhead high-rate queue algorithm for pipeline parallelism on multicore architectures. FastForward uses an architecturally- tuned domain-specific adaptation of concurrent lock-free queues to provide low-latency and low-overhead core-to- core communication. Enqueue and dequeue times on a 2 GHz Opteron 270 based system are as low as 36 ns, up to 4x faster than Lamport's solution.",
+  "doi": "10.1109/pact.2007.36",
+  "openalex": "W2156788337",
+  "status": "ok",
+  "title": "FastForward for Efficient Pipeline Parallelism"
+ },
+ "10.1109_tpds.2007.1085": {
+  "abstract": "Chip multiprocessors (CMPs) provide a scalable means of exploiting thread-level parallelism for multitasking or multithreaded applications. However, single-threaded applications will have difficulty dynamically leveraging the statically partitioned resources in a CMP. Such sequential applications may be difficult to statically decompose into threads or may simply be-a legacy code where recompilation is not possible or cost-effective. We present a novel approach to dynamically accelerate the performance of sequential application(s) on multiple cores. Execution is allowed to spill from one core to another when resources on one core have been exhausted. We propose two techniques to enable low-overhead migration between cores: prespilling and locality-based filtering. We develop and analyze an arbitration mechanism to intelligently allocate cores among a set of sequential applications on a CMP. On average, core spilling on an eight-core CMP can accelerate single-threaded performance by 35 percent. We further explore an eight-core CMP running a multiple application workload composed of the entire SPEC 2000 benchmark suite in various combinations and arrival times. Using core spilling to accelerate the current set of running applications in cases where there are idle cores, we achieve up to a 40 percent improvement in performance.",
+  "doi": "10.1109/tpds.2007.1085",
+  "openalex": "W2163580349",
+  "status": "ok",
+  "title": "Accelerating Sequential Applications on CMPs Using Core Spilling"
+ },
+ "10.1145_1105734.1105743": {
+  "abstract": "This paper presents a novel mechanism for barrier synchronization on chip multi-processors (CMPs). By forcing the invalidation of selected I-cache lines, this mechanism starves threads and thus forces their execution to stop. Threads are let free when all have entered the barrier.We evaluated this mechanism using SMTSim and report much better (and most importantly, more flat) performance than lock-based barriers supported by existing microprocessors.",
+  "doi": "10.1145/1105734.1105743",
+  "openalex": "W1988498996",
+  "status": "ok",
+  "title": "Fast synchronization for chip multiprocessors"
+ },
+ "10.1145_1345206.1345215": {
+  "abstract": "Low overhead core-to-core communication is critical for efficient pipeline-parallel software applications. This paper presents FastForward, a cache-optimized single-producer/single-consumer concurrent lock-free queue for pipeline parallelism on multicore architectures, with weak to strongly ordered consistency models. Enqueue and dequeue times on a 2.66 GHz Opteron 2218 based system are as low as 28.5 ns, up to 5x faster than the next best solution. FastForward's effectiveness is demonstrated for real applications by applying it to line-rate soft network processing on Gigabit Ethernet with general purpose commodity hardware.",
+  "doi": "10.1145/1345206.1345215",
+  "openalex": "W2128294826",
+  "status": "ok",
+  "title": "FastForward for efficient pipeline parallelism"
+ },
+ "10.1145_1454115.1454129": {
+  "abstract": "This paper presents ParaMeter, an interactive program analysis and visualization system for large traces. Using ParaMeter, a software developer can locate and analyze regions of code that may yield to parallelization efforts and to possibly extract performance from multicore hardware. The key contributions in the paper are (1) a method to use interactive visualization of traces to find and exploit parallelism, (2) interactive-speed visualization of large-scale trace dependencies, (3) interactive-speed visualization of code interactions, and (4) a BDD variable ordering for DD-compressed traces that results in fast visualization, fast analysis, and good compression. ParaMeter's effectiveness is demonstrated by finding and exploiting parallelism in 175.vpr. Measurements of ParaMeter's visualization algorithms show that they are up to seventy-five thousand times faster than prior approaches.",
+  "doi": "10.1145/1454115.1454129",
+  "openalex": "W2052991586",
+  "status": "ok",
+  "title": "Visualizing potential parallelism in sequential programs"
+ },
+ "10.18260_1-2--15945": {
+  "abstract": "Abstract NOTE: The first page of text has been automatically extracted and included below in lieu of an abstract Problem-Base Learning of Multicore Programming Department of Electrical and Computer Engineering Southern Illinois University Carbondale Carbondale, IL 62901 1. Introduction The computer industry is rapidly moving towards the multicore processors. Manycore processors have been widely used in all computing domains, including desktop, server and embedded computing systems. A multicore processor combines two or more independent processors into a single package, which is capable of executing multiple threads simultaneously. The L2 cache on a multicore processor can be either private or shared, as depicted in Figure 1 (a) and (b), respectively. Clearly, multicore processors can naturally benefit multithreaded programs by running them on different cores concurrently to improve the throughput. However, unlike other advances of microprocessors aiming at the transparent increase of single-threaded performance (e.g., frequency scaling, pipelines, caches, and superscalar architectures), multicore processors cannot automatically reduce the latency of single-threaded programs. In many cases, there is no way to effectively utilize the performance of additional processor cores or hardware threads without writing explicitly multithreaded programs [1]. In other words, the advent of multicore processors necessitates a fundamental shift of software development paradigm, from the traditional single-threaded programming to multithreaded programming, which is a great challenge. Thread Thread 2 Thread Thread 2 1 1 CPU CPU CPU CPU and L1 $ and L1 $ and L1 $ and L1 $ L2 L2 Shared L2 Cache System System L3$/Memory Bus L3$/Memory Bus (a) (b) Figure 1. A dual-core processor with (a) private L2 caches or (b) shared L2 cache. To prepare students for the coming era of multicore computing, I propose to develop a multicore programming course for our senior and graduate students. The goals of this project are to: • Create a course on multicore programming for general-purpose applications, which can be potentially adapted or adopted by the computer engineering or computer science departments at other institutions. • Investigate the effective use of problem-based learning (PBL) in this course to overcome the difficulty of teaching and learning MTP. More specifically, this project is expected to provide useful insights into several key PBL problems,",
+  "doi": "10.18260/1-2--15945",
+  "openalex": "W2622240484",
+  "status": "ok",
+  "title": "Problem Base Learning Of Multi Core Programming"
+ },
+ "10.5555_1898953.1898980": {
+  "abstract": "In this paper, we present a novel approach for parallel sorting on stream processing architectures. It is based on adaptive bitonic sorting. For sorting n values utilizing p stream processor units, this approach achieves the optimal time complexity O((n log n)/p). While this makes our approach competitive with common sequential sorting algorithms not only from a theoretical viewpoint, it is also very fast from a practical viewpoint. This is achieved by using efficient linear stream memory accesses (and by combining the optimal time approach with algorithms optimized for small input sequences). We present an implementation on modern programmable graphics hardware (GPUs). On GPUs, our optimal parallel sorting approach has shown to be remarkably faster than sequential sorting on the CPU, and it is also faster than previous non-optimal sorting approaches on the GPU for sufficiently large input sequences. Because of the excellent scalability of our algorithm with the number of stream processor units p (up to n/log/sup 2/ n or even n/log n units, depending on the stream architecture), our approach profits heavily from the trend of increasing number of fragment processor units on GPUs, so that we can expect further speed improvement with upcoming GPU generations.",
+  "doi": "10.5555/1898953.1898980",
+  "openalex": "W2155119349",
+  "status": "ok",
+  "title": "GPU-ABiSort: optimal parallel sorting on stream architectures"
+ },
+ "oa-W2159634087": {
+  "abstract": "All in-text\\treferences\\tunderlined\\tin\\tblue\\tare\\tlinked\\tto\\tpublications\\ton\\tResearchGate, letting you\\taccess\\tand\\tread\\tthem\\timmediately.",
+  "doi": null,
+  "openalex": "W2159634087",
+  "status": "ok",
+  "title": "Enabling Advanced Code Analysis with BDDs"
+ },
+ "oa-W2181919661": {
+  "abstract": "Queue processors arrange high-speed registers in a first-in first-out queue. All readaccesses are performed in the head of the queue and all writes at the tail. Thiscomputation model is substantially different from conventional random access registermachines and stack machines. Traditional code generation methods cannot be applied toqueue machines, therefore, this doctoral dissertation presents the design and developmentof a parallelizing queue compiler framework. The queue compiler translates any programwritten in C language into queue processor’s machine code. The most importantcharacteristic of the queue compiler is the integration of the queue computing principle inall stages of code generation, making it the first available true queue compiler. Novel andefficient algorithms and data structures have been developed to facilitate and solve all theproblems related to compilation for the queue model. This work is the result of two years ofresearch and development, and it provides efficient solutions to a broad range of problemson queue computing including the principles of compiler development, automatic codegeneration, offset calculation, scheduling, parallelization, optimization, data allocation,and constrained compilation. Internally, the queue compiler is completely different toany other existing compiler, this due to the special characteristics of queue computing.First, control flow and data flow graphs of the input program are generated. Then a setof custom analyses and transformations are performed to compute the offset referencevalues. Finally, the data flow graph is scheduled in a level-order manner to generate thefinal instruction sequence for the target queue machine. The compiler is also capableof producing code for a set of objective functions such as code size, high parallelism,high performance, offset reference control, and queue control. The queue compiler hasbeen successfully completed and any program, including itself, can be compiled into queueobject code. Quantitatively and qualitatively, the generated queue programs are similar tothe ones generated by conventional register compilers in terms of number of instructions,parallelism, code size, and instruction distribution.",
+  "doi": null,
+  "openalex": "W2181919661",
+  "status": "ok",
+  "title": "Parallelizing queue compiler"
+ },
+ "s2-5641b81c45241f1e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "FastForward for Efficient Pipeline Parallelism ; CU-CS-1028-07"
+ },
+ "s2-83f03758f00ad43f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Toward a Toolchain for Pipeline Parallel Programming on CMPs"
+ },
+ "s2-88e440b20f7d4b3e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "FastForward for Concurrent Threaded Pipelines ; CU-CS-1023-07"
+ },
+ "s2-96d18e57f90fc12f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Winter 1-1-2007 FastForward for Concurrent Threaded Pipelines ; CU-CS-1023-07"
+ },
+ "s2-ba632458c8ddd73a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallelizing queue compiler"
+ },
+ "s2-d7e5ea05c23644a2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Harnessing Chip-Multiprocessors with Concurrent Threaded Pipelines"
+ },
+ "s2-e14cf6d768837c81": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Enabling advanced code analysis with BDDs"
+ },
+ "s2-f525bef753fbf3cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Winter 1-1-2007 Harnessing Chip-Multiprocessors with Concurrent Threaded Pipelines ; CU-CS-1024-07"
+ }
+}

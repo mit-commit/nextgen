@@ -1,0 +1,800 @@
+{
+ "10.1007_978-3-030-60939-9_9": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-60939-9_9",
+  "openalex": "W3095403155",
+  "status": "no_abstract",
+  "title": "Transpiling Python to Rust for Optimized Performance"
+ },
+ "10.1007_978-3-031-01869-5": {
+  "abstract": null,
+  "doi": "10.1007/978-3-031-01869-5",
+  "openalex": "W2918033599",
+  "status": "no_abstract",
+  "title": "Data Management in Machine Learning Systems"
+ },
+ "10.1007_s00778-020-00643-4": {
+  "abstract": "Abstract Although compiling queries to efficient machine code has become a common approach for query execution, a number of newly created database system projects still refrain from using compilation. It is sometimes claimed that the intricacies of code generation make compilation-based engines too complex. Also, a major barrier for adoption, especially for interactive ad hoc queries, is long compilation time. In this paper, we examine all stages of compiling query execution engines and show how to reduce compilation overhead. We incorporate the lessons learned from a decade of generating code in HyPer into a design that manages complexity and yields high speed. First, we introduce a code generation framework that establishes abstractions to manage complexity, yet generates code in a single fast pass. Second, we present a program representation whose data structures are tuned to support fast code generation and compilation. Third, we introduce a new compiler backend that is optimized for minimal compile time, and simultaneously, yields superior execution performance to competing approaches, e.g., Volcano-style or bytecode interpretation. We implemented these optimizations in our database system Umbra to show that it is possible to unite fast compilation and fast execution. Indeed, Umbra achieves unprecedentedly low query latencies. On small data sets, it is even faster than interpreter engines like DuckDB and PostgreSQL. At the same time, on large data sets, its throughput is on par with the state-of-the-art compiling system HyPer.",
+  "doi": "10.1007/s00778-020-00643-4",
+  "openalex": "W3170874851",
+  "status": "ok",
+  "title": "Tidy Tuples and Flying Start: fast compilation and fast execution of relational queries in Umbra"
+ },
+ "10.1109_cgo53902.2022.9741278": {
+  "abstract": "Computational models of cognition enable a better understanding of the human brain and behavior, psychiatric and neurological illnesses, clinical interventions to treat illnesses, and also offer a path towards human-like artificial intelligence. Cognitive models are also, however, laborious to develop, requiring composition of many types of computational tasks, and suffer from poor performance as they are generally designed using high-level languages like Python. In this work, we present Distill, a domain-specific compilation tool to accelerate cognitive models while continuing to offer cognitive scientists the ability to develop their models in flexible high-level languages. Distill uses domain-specific knowledge to compile Python-based cognitive models into LLVM IR, carefully stripping away features like dynamic typing and memory management that add performance overheads without being necessary for the underlying computation of the models. The net effect is an average of 27 × performance improvement in model execution over state-of-the-art techniques using Pyston and PyPy. Distill also repurposes classical compiler data flow analyses to reveal properties about data flow in cognitive models that are useful to cognitive scientists. Distill is publicly available, integrated in the PsyNeuLink cognitive modeling environment, and is already being used by researchers in the brain sciences.",
+  "doi": "10.1109/cgo53902.2022.9741278",
+  "openalex": "W4220711797",
+  "status": "ok",
+  "title": "Distill: Domain-Specific Compilation for Cognitive Models"
+ },
+ "10.1109_hpec.2019.8916447": {
+  "abstract": "Composability is a key component to improve programmers' productivity in writing fast market-expanding applications such as parallel machine learning algorithms and big data analytics. These applications exhibit both regular and irregular compute patterns, and are often combined with other functions or libraries to compose a larger program. However, composable parallel processing has taken a back seat in many existing parallel programming libraries, making it difficult to achieve modularity in large-scale parallel programs. In this paper, we introduce a new parallel task programming library using composable tasking graphs. Our library efficiently supports task parallelism together with an intuitive task graph construction and flexible execution API set to enable reusable and composable task dependency graphs. Developers can quickly compose a large parallel program from small and modular parallel building blocks, and easily deploy the program on a multicore machine. We have evaluated our library on real-world applications. Experimental results showed our library can achieve comparable performance to Intel Threading Building Blocks with less coding effort.",
+  "doi": "10.1109/hpec.2019.8916447",
+  "openalex": "W2991469820",
+  "status": "ok",
+  "title": "An Efficient and Composable Parallel Task Programming Library"
+ },
+ "10.1109_icde55515.2023.00276": {
+  "abstract": "Modern data management applications involve complex processing tasks over large volumes of data. Although this falls naturally within the scope of relational databases, many such tasks cannot be expressed in SQL and require additional expressive power achieved via user-defined functions (UDFs). However, efficient processing of UDFs in data engines hinge on dealing with the impedance mismatch between UDF execution and SQL processing. In recent years, the problem of efficient UDF execution in modern data engines has gained significant traction. In this tutorial, we present recent advancements in this area, involving a broad scope of solutions ranging from algebraic, cost-based optimization to low level, physical query optimization, compilation, and execution. We also describe limitations and open issues, and discuss promising future research directions.",
+  "doi": "10.1109/icde55515.2023.00276",
+  "openalex": "W4385270707",
+  "status": "ok",
+  "title": "User-Defined Functions in Modern Data Engines"
+ },
+ "10.1109_icde55515.2023.00298": {
+  "abstract": "As modern data pipelines continue to collect, produce, and store a variety of data formats, extracting and combining value from traditional and context-rich sources such as strings, text, video, audio, and logs becomes a manual process where such formats are unsuitable for RDBMS. To tap into the dark data, domain experts analyze and extract insights and integrate them into the data repositories. This process can involve out-of-DBMS, ad-hoc analysis, and processing resulting in ETL, engineering effort, and suboptimal performance. While AI systems based on ML models can automate the analysis process, they often further generate context-rich answers. Using multiple sources of truth, for either training the models or in the form of knowledge bases, further exacerbates the problem of consolidating the data of interest.We envision an analytical engine co-optimized with components that enable context-rich analysis. Firstly, as the data from different sources or resulting from model answering cannot be cleaned ahead of time, we propose using online data integration via model-assisted similarity operations. Secondly, we aim for a holistic pipeline cost- and rule-based optimization across relational and model-based operators. Thirdly, with increasingly heterogeneous hardware and equally heterogeneous workloads ranging from traditional relational analytics to generative model inference, we envision a system that just-in-time adapts to the complex analytical query requirements. To solve increasingly complex analytical problems, ML offers attractive solutions that must be combined with traditional analytical processing and benefit from decades of database community research to achieve scalability and performance effortless for the end user.",
+  "doi": "10.1109/icde55515.2023.00298",
+  "openalex": "W4385270443",
+  "status": "ok",
+  "title": "Analytical Engines With Context-Rich Processing: Towards Efficient Next-Generation Analytics"
+ },
+ "10.1109_icde60146.2024.00039": {
+  "abstract": "Python data science libraries such as Pandas and NumPy have recently gained immense popularity. Although these libraries are feature-rich and easy to use, their scalability limitations require more robust computational resources. In this paper, we present PyTond, an efficient approach to push the processing of data science workloads down into the database engines that are already known for their big data handling capabilities. Compared to the previous work, by introducing TondIR, our approach can capture a more comprehensive set of workloads and data layouts. Moreover, by doing IR-level optimizations, we generate better SQL code that improves the query processing by the underlying database engine. Our evaluation results show promising performance improvement compared to Python and other alternatives for diverse data science workloads.",
+  "doi": "10.1109/icde60146.2024.00039",
+  "openalex": "W4400909974",
+  "status": "ok",
+  "title": "PyTond: Efficient Python Data Science on the Shoulders of Databases"
+ },
+ "10.1109_icde60146.2024.00427": {
+  "abstract": "Modern data applications in areas such as text mining, document analysis, and data science, involve complex algorithms and logic that cannot be expressed in SQL. Therefore, SQL databases employ user-defined functions (UDFs) to extend their supported functionality. However, this comes at a significant performance cost as UDFs routinely become the bottleneck in query execution. To deal with this problem, we present QFusor, an optimizer plugin for UDF queries in relational databases. QFusor minimizes the performance overheads introduced by the impedance mismatch between the UDF and SQL execution environments by employing techniques such as vectorization, parallelization, tracing JIT compilation, and operator fusion for various types of UDF (scalar, aggregate, table UDFs) and relational operators. QFusor follows a pluggable, engine-agnostic design and can work with several popular SQL databases offering a significant boost in their UDF query performance.",
+  "doi": "10.1109/icde60146.2024.00427",
+  "openalex": "W4400910514",
+  "status": "ok",
+  "title": "QFusor: A UDF Optimizer Plugin for SQL Databases"
+ },
+ "10.1109_icde65448.2025.00171": {
+  "abstract": "Data analysts nowadays are keen to have analytical capabilities involving deep learning (DL). Prediction queries, which combine relational operations with DL models to analyze multi-modal data, provide a powerful facility for smart in-database analysis. However, loose integration systems, which support such queries via User-Defined Functions (UDFs) and external runtimes, often impose high economic costs, particularly in cloud-based environments; while tight integration systems, which implement model inference through a sequence of explic-itly written SQL queries, incur heavy user burdens and huge optimization space. In this paper, we introduce PEPS, an end-to-end analytical database for automatic and efficient prediction query processing. PEPS automates the process of prediction query synthesis and ensures usability through declarative schemes. Additionally, it improves query performance with offline optimization using the DB-oriented Computation Graph Optimization (DBCGO) algorithm and online optimization via heuristic query rewriting. Empirical evaluations show that PEPS offers better usability than baseline methods, provides lower economic costs, and achieves performance speedup compared to advanced Python UDFs.",
+  "doi": "10.1109/icde65448.2025.00171",
+  "openalex": "W4413360959",
+  "status": "ok",
+  "title": "Towards Automatic and Efficient Prediction Query Processing in Analytical Database"
+ },
+ "10.1109_icde65448.2025.00254": {
+  "abstract": "Deploying machine learning (ML) inference pipelines in databases become increasingly prevalent in many applications. In order to avoid data transfer between the database and ML runtimes, existing ML2SQL frameworks parse ML pipelines to a graph consisting of ML operators and then translate it into pure SQL. Nevertheless, they typically rewrite the graph without operator fusion or only consider the fusion between certain operators such as StandardScaler and tree inference. However, there are various operators in ML pipelines, which have rich fusion opportunities between each other. To fully exploit operator fusion for graph rewriting, we classify widely used ML operators and design fusion rules driven by their characteristics. Moreover, rewriting the original graph by fusion rules produces candidate graphs that generate SQLs with different execution time. We employ an enumeration-based strategy to search for the graph with the lowest cost. However, this strategy may suffer from the combination explosion on search space for complex ML pipelines. To reduce this space, we propose a greedy-based strategy by exploiting the independence among ML operators. We implement a novel ML2SQL framework as a portable plugin for databases, namely Craftsman. Our experimental evaluations show that, in comparison to the existing approaches, Craftsman generates efficient SQL queries which achieves an average speedup of 2.9x on popular databases such as DuckDB.",
+  "doi": "10.1109/icde65448.2025.00254",
+  "openalex": "W4413360540",
+  "status": "ok",
+  "title": "Machine Learning Inference Pipeline Execution Using Pure SQL Based on Operator Fusion"
+ },
+ "10.1109_icde65706.2026.00167": {
+  "abstract": null,
+  "doi": "10.1109/icde65706.2026.00167",
+  "openalex": "W7202273754",
+  "status": "no_abstract",
+  "title": "CactusDB: Unlock Co-Optimization Opportunities for SQL Queries and AI/ML Model Inferences"
+ },
+ "10.1109_paw-atm56565.2022.00007": {
+  "abstract": "We present distributed task fusion, a run-time optimization for task-based runtimes operating on parallel and heterogeneous systems. Distributed task fusion dynamically performs an efficient buffering, analysis, and fusion of asynchronously-evaluated distributed operations, reducing the overheads inherent to scheduling distributed tasks in implicitly parallel frameworks and runtimes. We identify the constraints under which distributed task fusion is permissible and describe an implementation in Legate, a domain-agnostic library for constructing portable and scalable task-based libraries. We present performance results using cuNumeric, a Legate library that enables scalable execution of NumPy pipelines on parallel and heterogeneous systems. We realize speedups up to 1.5x with task fusion enabled on up to 32 P100 GPUs, thus demonstrating efficient execution of pipelines involving many successive fine-grained tasks. Finally, we discuss potential future work, including complementary optimizations that could result in additional performance improvements.",
+  "doi": "10.1109/paw-atm56565.2022.00007",
+  "openalex": "W4318605726",
+  "status": "ok",
+  "title": "Task Fusion in Distributed Runtimes"
+ },
+ "10.1109_tkde.2024.3384276": {
+  "abstract": "As modern data pipelines continue to collect, produce, and store various data formats, extracting and combining value from traditional and context-rich sources becomes unsuitable for RDBMS. To tap into the dark data, domain experts analyze and extract insights and integrate them into various data repositories. This can involve out-of-DBMS processing with high manual effort and suboptimal performance. While AI systems based on ML models can automate the analysis, they can further generate context-rich answers. Using multiple data sources and models further exacerbates the problem of consolidating and analyzing the data of interest. We envision an analytical engine co-optimized with components that enable context-rich analysis. Firstly, as all the data from different sources is expensive to clean ahead of time, we propose using online data integration via model-assisted similarity operations. Secondly, we aim for a holistic pipeline cost- and rule-based optimization across relational and model-based operators. Thirdly, with increasingly heterogeneous hardware and workloads ranging from relational analytics to generative model inference, we envision a system that adapts to the complex query requirements at runtime. Composing ML-driven insights with established approaches aims to expand decades of research and systems-building effort in making complex functionality and performance effortless for the end user.",
+  "doi": "10.1109/tkde.2024.3384276",
+  "openalex": "W4393405336",
+  "status": "ok",
+  "title": "Efficient Model-Relational Data Management: Challenges and Opportunities"
+ },
+ "10.1145_3315507.3330199": {
+  "abstract": "In big data analytics, there is currently a large number of data programming models and their respective frontends such as relational tables, graphs, tensors, and streams. This has lead to a plethora of runtimes that typically focus on the efficient execution of just a single frontend. This fragmentation manifests itself today by highly complex pipelines that bundle multiple runtimes to support the necessary models. Hence, joint optimization and execution of such pipelines across these frontend-bound runtimes is infeasible. We propose Arc as the first unified Intermediate Representation (IR) for data analytics that incorporates stream semantics based on a modern specification of streams, windows and stream aggregation, to combine batch and stream computation models. Arc extends Weld, an IR for batch computation and adds support for partitioned, out-of-order stream and window operators which are the most fundamental building blocks in contemporary data streaming.",
+  "doi": "10.1145/3315507.3330199",
+  "openalex": "W2954213583",
+  "status": "ok",
+  "title": "Arc: an IR for batch and stream programming"
+ },
+ "10.1145_3318464.3386146": {
+  "abstract": "As machine learning is applied more widely, data scientists often struggle to find or create end-to-end machine learning systems for specific tasks. The proliferation of libraries and frameworks and the complexity of the tasks have led to the emergence of \"pipeline jungles\" - brittle, ad hoc ML systems. To address these problems, we introduce the Machine Learning Bazaar, a new framework for developing machine learning and automated machine learning software systems. First, we introduce ML primitives, a unified API and specification for data processing and ML components from different software libraries. Next, we compose primitives into usable ML pipelines, abstracting away glue code, data flow, and data storage. We further pair these pipelines with a hierarchy of AutoML strategies - Bayesian optimization and bandit learning. We use these components to create a general-purpose, multi-task, end-to-end AutoML system that provides solutions to a variety of data modalities (image, text, graph, tabular, relational, etc.) and problem types (classification, regression, anomaly detection, graph matching, etc.). We demonstrate 5 real-world use cases and 2 case studies of our approach. Finally, we present an evaluation suite of 456 real-world ML tasks and describe the characteristics of 2.5 million pipelines searched over this task suite.",
+  "doi": "10.1145/3318464.3386146",
+  "openalex": "W2945172243",
+  "status": "ok",
+  "title": "The Machine Learning Bazaar: Harnessing the ML Ecosystem for Effective System Development"
+ },
+ "10.1145_3324884.3416543": {
+  "abstract": "The development of efficient data science applications is often impeded by unbearably long execution time and rapid RAM exhaustion. Since API documentation is the primary information source for troubleshooting, we investigate how performance concerns are documented in popular data science libraries. Our quantitative results reveal the prevalence of data science APIs that are documented in performance-related context and the infrequent maintenance activities on such documentation. Our qualitative analyses further reveal that crowd documentation like Stack Overflow and GitHub are highly complementary to official documentation in terms of the API coverage, the knowledge distribution, as well as the specific information conveyed through performance-related content. Data science practitioners could benefit from our findings by learning a more targeted search strategy for resolving performance issues. Researchers can be more assured of the advantages of integrating both the official and the crowd documentation to achieve a holistic view on the performance concerns in data science development.",
+  "doi": "10.1145/3324884.3416543",
+  "openalex": "W3093621829",
+  "status": "ok",
+  "title": "Understanding performance concerns in the API documentation of data science libraries"
+ },
+ "10.1145_3341301.3359649": {
+  "abstract": "Multilingual data-parallel pipelines, such as Microsoft's Scope and Apache Spark, are widely used in real-world analytical tasks. While the involvement of multiple languages (often including both managed and native languages) provides much convenience in data manipulation and transformation, it comes at a performance cost --- managed languages need a managed runtime, incurring much overhead. In addition, each switch from a managed to a native runtime (and vice versa) requires marshalling or unmarshalling of an ocean of data objects, taking a large fraction of the execution time. This paper presents Niijima, an optimizing compiler for Microsoft's Scope/Cosmos, which can consolidate C#-based user-defined operators (UDOs) across SQL statements, thereby reducing the number of dataflow vertices that require the managed runtime, and thus the amount of C# computations and the data marshalling cost. We demonstrate that Niijima has reduced job latency by an average of 24% and up to 3.3x, on a series of production jobs.",
+  "doi": "10.1145/3341301.3359649",
+  "openalex": "W2981653881",
+  "status": "ok",
+  "title": "Niijima"
+ },
+ "10.1145_3341301.3359652": {
+  "abstract": "Data movement between main memory and the CPU is a major bottleneck in parallel data-intensive applications. In response, researchers have proposed using compilers and intermediate representations (IRs) that apply optimizations such as loop fusion under existing high-level APIs such as NumPy and TensorFlow. Even though these techniques generally do not require changes to user applications, they require intrusive changes to the library itself: often, library developers must rewrite each function using a new IR. In this paper, we propose a new technique called split annotations (SAs) that enables key data movement optimizations over unmodified library functions. SAs only require developers to annotate functions and implement an API that specifies how to partition data in the library. The annotation and API describe how to enable cross-function data pipelining and parallelization, while respecting each function's correctness constraints. We implement a parallel runtime for SAs in a system called Mozart. We show that Mozart can accelerate workloads in libraries such as Intel MKL and Pandas by up to 15x, with no library modifications. Mozart also provides performance gains competitive with solutions that require rewriting libraries, and can sometimes outperform these systems by up to 2x by leveraging existing hand-optimized code.",
+  "doi": "10.1145/3341301.3359652",
+  "openalex": "W2973618001",
+  "status": "ok",
+  "title": "Optimizing data-intensive computations in existing libraries with split annotations"
+ },
+ "10.1145_3357223.3362702": {
+  "abstract": "Result caching is crucial to the performance of data processing systems, but two trends complicate its use. First, immutable datasets make it difficult to efficiently employ powerful result caching techniques like predicate analysis, since predicate analysis typically requires optimized query plans but generating those plans can be costly with data immutability. Second, increased support for user-defined functions (UDFs), which are treated as black boxes by query engines, hinders aggressive result caching. This paper overcomes these problems by introducing 1) a judicious adaptation of predicate analysis on analyzed query plans that avoids unnecessary query optimization, and 2) a UDF translator that transparently compiles UDFs from general purpose languages into native equivalents. We then present Acorn, a concrete implementation of these techniques in Spark SQL that provides speedups of up to 5x across multiple benchmark and real Spark graph processing workloads.",
+  "doi": "10.1145/3357223.3362702",
+  "openalex": "W2987066449",
+  "status": "ok",
+  "title": "Acorn"
+ },
+ "10.1145_3360603": {
+  "abstract": "We present the design and implementation of GVM, the first system for executing Java bytecode entirely on GPUs. GVM is ideal for applications that execute a large number of short-living tasks, which share a significant fraction of their codebase and have similar execution time. GVM uses novel algorithms, scheduling, and data layout techniques to adapt to the massively parallel programming and execution model of GPUs. We apply GVM to generate and execute tests for Java projects. First, we implement a sequence-based test generation on top of GVM and design novel algorithms to avoid redundant test sequences. Second, we use GVM to execute randomly generated test cases. We evaluate GVM by comparing it with two existing Java bytecode interpreters (Oracle JVM and Java Pathfinder), as well as with the Oracle JVM with just-in-time (JIT) compiler, which has been engineered and optimized for over twenty years. Our evaluation shows that sequence-based test generation on GVM outperforms both Java Pathfinder and Oracle JVM interpreter. Additionally, our results show that GVM performs as well as running our parallel sequence-based test generation algorithm using JVM with JIT with many CPU threads. Furthermore, our evaluation on several classes from open-source projects shows that executing randomly generated tests on GVM outperforms sequential execution on JVM interpreter and JVM with JIT.",
+  "doi": "10.1145/3360603",
+  "openalex": "W2980194351",
+  "status": "ok",
+  "title": "Design, implementation, and application of GPU-based Java bytecode interpreters"
+ },
+ "10.1145_3377555.3377892": {
+  "abstract": "Array-based programming languages have shown significant promise for improving performance of column-based in-memory database systems, allowing elegant representation of query execution plans that are also amenable to standard compiler optimization techniques. Use of loop fusion, however, is not straightforward, due to the complexity of built-in functions for implementing complex database operators. In this work, we apply a compiler approach to optimize SQL query execution plans that are expressed in an array-based intermediate representation. We analyze this code to determine shape properties of the data being processed, and use a subsequent optimization phase to fuse multiple database operators into single, compound operations, reducing the need for separate computation and storage of intermediate values. Experimental results on a range of TPC-H queries show that our fusion technique is effective in generating efficient code, improving query time over a baseline system.",
+  "doi": "10.1145/3377555.3377892",
+  "openalex": "W3007378362",
+  "status": "ok",
+  "title": "Improving database query performance with automatic fusion"
+ },
+ "10.1145_3399666.3399911": {
+  "abstract": "Getting the best performance from the ever-increasing number of hardware platforms has been a recurring challenge for data processing systems. In recent years, the advent of data science with its increasingly numerous and complex types of analytics has made this challenge even more difficult. In practice, system designers are overwhelmed by the number of combinations and typically implement a single analytics type on one platform, leading to repeated implementation effort---and a plethora of semi-compatible tools for data scientists.",
+  "doi": "10.1145/3399666.3399911",
+  "openalex": "W3031812611",
+  "status": "ok",
+  "title": "The collection Virtual Machine"
+ },
+ "10.1145_3422604.3425927": {
+  "abstract": "Network APIs such as UNIX sockets, DPDK, Netmap, etc. assume that networks provide only end-to-end connectivity. However, networks increasingly include smart NICs and programmable switches that can implement both network and application functions. Several recent works have shown the benefit of offloading application functionality to the network, but using these approaches requires changing not just the applications, but also network and system configuration. In this paper we propose Bertha, a network API that provides a uniform abstraction for offloads, aiming to simplify their use.",
+  "doi": "10.1145/3422604.3425927",
+  "openalex": "W3095942197",
+  "status": "ok",
+  "title": "Bertha: Tunneling through the Network API"
+ },
+ "10.1145_3437801.3441595": {
+  "abstract": "With the development of the big data ecosystem, large-scale data analytics has become more prevalent in the past few years. Apache Spark, etc., provide a flexible approach for scalable processing upon massive data. However, they are not designed for handling computing-intensive workloads due to the restrictions of JVM runtime. In contrast, GPU has been the de facto accelerator for graphics rendering and deep learning in recent years. Nevertheless, the current architecture makes it difficult to take advantage of GPUs and other accelerators in the big data world.",
+  "doi": "10.1145/3437801.3441595",
+  "openalex": "W3132827856",
+  "status": "ok",
+  "title": "ShadowVM"
+ },
+ "10.1145_3445814.3446725": {
+  "abstract": "Hospitals around the world collect massive amounts of physiological data from their patients every day. Recently, there has been an increase in research interest to subject this data to statistical analysis to gain more insights and provide improved medical diagnoses. Such analyses require complex computations on large volumes of data, demanding efficient data processing systems. This paper shows that currently available data processing solutions either fail to meet the performance requirements or lack simple and flexible programming interfaces. To address this problem, we propose LifeStream, a high-performance stream processing engine for physiological data. LifeStream hits the sweet spot between ease of programming by providing a rich temporal query language support and performance by employing optimizations that exploit the periodic nature of physiological data. We demonstrate that LifeStream achieves end-to-end performance up to 7.5× higher than state-of-the-art streaming engines and 3.2× than hand-optimized numerical libraries on real-world datasets and workloads.",
+  "doi": "10.1145/3445814.3446725",
+  "openalex": "W3135614902",
+  "status": "ok",
+  "title": "LifeStream: a high-performance stream processing engine for periodic streams"
+ },
+ "10.1145_3448016.3452788": {
+  "abstract": "Machine learning (ML) and data science workflows are inherently exploratory. Data scientists pose hypotheses, integrate the necessary data, and run ML pipelines of data cleaning, feature engineering, model selection and hyper-parameter tuning. The repetitive nature of these workflows, and their hierarchical composition from building blocks exhibits high computational redundancy. Existing work addresses this redundancy with coarse-grained lineage tracing and reuse for ML pipelines. This approach allows using existing ML systems, but views entire algorithms as black boxes, and thus, fails to eliminate fine-grained redundancy and to handle internal non-determinism. In this paper, we introduce LIMA, a practical framework for efficient, fine-grained lineage tracing and reuse inside ML systems. Lineage tracing of individual operations creates new challenges and opportunities. We address the large size of lineage traces with multi-level lineage tracing and reuse, as well as lineage deduplication for loops and functions; exploit full and partial reuse opportunities across the program hierarchy; and integrate this framework with task parallelism and operator fusion. The resulting framework performs fine-grained lineage tracing with low overhead, provides versioning and reproducibility, and is able to eliminate fine-grained redundancy. Our experiments on a variety of ML pipelines show performance improvements up to 12.4x.",
+  "doi": "10.1145/3448016.3452788",
+  "openalex": "W3176771520",
+  "status": "ok",
+  "title": "LIMA: Fine-grained Lineage Tracing and Reuse in Machine Learning Systems"
+ },
+ "10.1145_3448016.3457244": {
+  "abstract": "Today's data science pipelines often rely on user-defined functions (UDFs) written in Python. But interpreted Python code is slow, and Python UDFs cannot be compiled to machine code easily.",
+  "doi": "10.1145/3448016.3457244",
+  "openalex": "W3175890395",
+  "status": "ok",
+  "title": "Tuplex"
+ },
+ "10.1145_3456727.3463770": {
+  "abstract": "Network-connected accelerators (NCA), such as programmable switches, ASICs, and FPGAs can speed up operations in data analytics. But so far, integration of NCAs into data analytics systems required manual effort.",
+  "doi": "10.1145/3456727.3463770",
+  "openalex": "W3167759122",
+  "status": "ok",
+  "title": "Jumpgate"
+ },
+ "10.1145_3486001.3486244": {
+  "abstract": "Reinforcement learning optimizes an objective function by learning an optimal policy for taking a sequence of actions in an environment. Offline RL is a mechanism to learn policy offline from pre-generated traces of an agent’s interactions in an environment, accelerating an agent’s initial learning phase. Real-time deployment of RL-based recommenders across geographies could mix online and offline RL algorithms to explore new users’ behavior and exploit old knowledge to learn recommendation policy. In such a scenario, RL agents will be distributed and deployed in multiple locations. In this paper, we share our experiences and learnings in accelerating our in-house offline RL-based recommender system. The recommender system employs a mix of Batch Constrained (BCQ) and distributional RL algorithms for building policy models. We present various acceleration techniques for this system, such as operators’ fusion, performance anti-patterns, heterogeneous deployments, and design space of synchronous and asynchronous distributed training over generative and policy models of the algorithm. We have shown that the presented acceleration techniques could speed up the training of the RL agents on A100 GPUs by a factor of 47 × over a naive code (written by the ML practitioner) implementation on A100.",
+  "doi": "10.1145/3486001.3486244",
+  "openalex": "W3209358509",
+  "status": "ok",
+  "title": "Towards Accelerating Offline RL based Recommender Systems"
+ },
+ "10.1145_3514221.3526045": {
+  "abstract": "In 2013, AmazonWeb Services revolutionized the data warehousing industry by launching Amazon Redshift, the first fully-managed, petabyte-scale, enterprise-grade cloud data warehouse. Amazon Redshift made it simple and cost-effective to efficiently analyze large volumes of data using existing business intelligence tools. This cloud service was a significant leap from the traditional on-premise data warehousing solutions, which were expensive, not elastic, and required significant expertise to tune and operate. Customers embraced Amazon Redshift and it became the fastest growing service in AWS. Today, tens of thousands of customers use Redshift in AWS's global infrastructure to process exabytes of data daily.",
+  "doi": "10.1145/3514221.3526045",
+  "openalex": "W4281718197",
+  "status": "ok",
+  "title": "Amazon Redshift Re-invented"
+ },
+ "10.1145_3514221.3526054": {
+  "abstract": "Many organizations are shifting to a data management paradigm called the \"Lakehouse,\" which implements the functionality of structured data warehouses on top of unstructured data lakes. This presents new challenges for query execution engines. The engine needs to provide good performance on the raw uncurated datasets that are ubiquitous in data lakes, and excellent performance on structured data stored in popular columnar file formats like Apache Parquet. Toward these goals, we present Photon, a vectorized query engine for Lakehouse environments that we developed at Databricks. Photon can outperform existing warehouses on SQL workloads and also supports the Apache Spark API. We discuss the design choices we made in Photon (e.g., vectorization vs. code generation) and describe its integration with our existing SQL and Apache Spark runtimes, its task model, and its memory manager. Photon has accelerated some customer workloads by over 10x and has recently allowed Databricks to set a new audited performance record for the official 100TB TPC-DS benchmark.",
+  "doi": "10.1145/3514221.3526054",
+  "openalex": "W4282585030",
+  "status": "ok",
+  "title": "Photon: A Fast Query Engine for Lakehouse Systems"
+ },
+ "10.1145_3514221.3526141": {
+  "abstract": "Prediction queries are widely used across industries to perform advanced analytics and draw insights from data. They include a data processing part (e.g., for joining, filtering, cleaning, featurizing the datasets) and a machine learning (ML) part invoking one or more trained models to perform predictions. These parts have so far been optimized in isolation, leaving significant opportunities for optimization unexplored. We present Raven, a production-ready system for optimizing prediction queries. Raven follows the enterprise architectural trend of collocating data and ML runtimes. It relies on a unified intermediate representation that captures both data and ML operators in a single graph structure to unlock two families of optimizations. First, it employs logical optimizations that pass information between the data part (and the properties of the underlying data) and the ML part to optimize each other. Second, it introduces logical-to-physical transformations that allow operators to be executed on different run-times (relational, ML, and DNN) and hardware (CPU, GPU). Novel data-driven optimizations determine the runtime to be used for each part of the query to achieve optimal performance. Our evaluation shows that Raven is able to improve performance of prediction queries on Apache Spark and SQL Server by up to 13.1x and 330x, respectively. Finally, for complex models where GPU acceleration is beneficial, Raven provides up to 8× speedup compared to state-of-the-art systems.",
+  "doi": "10.1145/3514221.3526141",
+  "openalex": "W4281626245",
+  "status": "ok",
+  "title": "End-to-end Optimization of Machine Learning Prediction Queries"
+ },
+ "10.1145_3514221.3526142": {
+  "abstract": "Advances in deep learning have led to a resurgence of interest in video analytics. In an exploratory video analytics pipeline, a data scientist often starts by searching for a global trend and then iteratively refines the query until they identify the desired local trend. These queries tend to have overlapping computation and often differ in their predicates. However, these predicates are computationally expensive to evaluate since they contain user-defined functions (UDFs) that wrap around deep learning models.",
+  "doi": "10.1145/3514221.3526142",
+  "openalex": "W4281842097",
+  "status": "ok",
+  "title": "EVA: A Symbolic Approach to Accelerating Exploratory Video Analytics with Materialized Views"
+ },
+ "10.1145_3555041.3589407": {
+  "abstract": "Machine learning (ML) training and scoring fundamentally relies on linear algebra programs and more general tensor computations. Most ML systems utilize distributed parameter servers and similar distribution strategies for mini-batch stochastic gradient descent training. However, many more tasks in the data science and engineering lifecycle can benefit from efficient tensor computations. Examples include primitives for data cleaning, data and model debugging, data augmentation, query processing, numerical simulations, as well as a wide variety of training and scoring algorithms. In this survey tutorial, we first make a case for the importance of optimizing more general tensor computations, and then provide an in-depth survey of existing applications, optimizing compilation techniques, and underlying runtime strategies. Interestingly, there are close connections to data-intensive applications, query rewriting and optimization, as well as query processing and physical design. Our goal for the tutorial is to structure existing work, create common terminology, and identify open research challenges.",
+  "doi": "10.1145/3555041.3589407",
+  "openalex": "W4379390416",
+  "status": "ok",
+  "title": "Optimizing Tensor Computations: From Applications to Compilation and Runtime Techniques"
+ },
+ "10.1145_3589273": {
+  "abstract": "Software systems that learn from data with machine learning (ML) are used in critical decision-making processes. Unfortunately, real-world experience shows that the pipelines for data preparation, feature encoding and model training in ML systems are often brittle with respect to their input data. As a consequence, data scientists have to run different kinds of data centric what-if analyses to evaluate the robustness and reliability of such pipelines, e.g., with respect to data errors or preprocessing techniques. These what-if analyses follow a common pattern: they take an existing ML pipeline, create a pipeline variant by introducing a small change, and execute this pipeline variant to see how the change impacts the pipeline's output score. The application of existing analysis techniques to ML pipelines is technically challenging as they are hard to integrate into existing pipeline code and their execution introduces large overheads due to repeated work. We propose mlwhatif to address these integration and efficiency challenges for data-centric what-if analyses on ML pipelines. mlwhatif enables data scientists to declaratively specify what-if analyses for an ML pipeline, and to automatically generate, optimize and execute the required pipeline variants. Our approach employs pipeline patches to specify changes to the data, operators and models of a pipeline. Based on these patches, we define a multi-query optimizer for efficiently executing the resulting pipeline variants jointly, with four subsumption-based optimization rules. Subsequently, we detail how to implement the pipeline variant generation and optimizer of mlwhatif. For that, we instrument native ML pipelines written in Python to extract dataflow plans with re-executable operators. We experimentally evaluate mlwhatif, and find that its speedup scales linearly with the number of pipeline variants in applicable cases, and is invariant to the input data size. In end-to-end experiments with four analyses on more than 60 pipelines, we show speedups of up to 13x compared to sequential execution, and find that the speedup is invariant to the model and featurization in the pipeline. Furthermore, we confirm the low instrumentation overhead of mlwhatif.",
+  "doi": "10.1145/3589273",
+  "openalex": "W4381328970",
+  "status": "ok",
+  "title": "Automating and Optimizing Data-Centric What-If Analyses on Native Machine Learning Pipelines"
+ },
+ "10.1145_3592980.3595301": {
+  "abstract": "Many useful tasks in data science and machine learning applications can be written as simple variations of matrix multiplication. However, users have difficulty performing such tasks as existing matrix/vector libraries support only a limited class of computations hand-tuned for each unique hardware platform. Users can alternatively write the task as a simple nested loop but current compilers are not sophisticated enough to generate fast code for the task written in this way. To address these issues, we extend an open-source compiler to recognize and optimize these matrix multiplication-like tasks. Our framework, called Amulet, uses both database-style and compiler optimization techniques to generate fast code tailored to its execution environment on CPUs. Amulet achieves speedups on a variety of matrix multiplication-like tasks compared to existing compilers while handling a much broader class of computations compared to libraries.",
+  "doi": "10.1145/3592980.3595301",
+  "openalex": "W4380624127",
+  "status": "ok",
+  "title": "AMULET: Adaptive Matrix-Multiplication-Like Tasks"
+ },
+ "10.1145_3593856.3595889": {
+  "abstract": "With full resource disaggregation on the horizon, it is unclear what the most suitable programming model is that enables dataflow developers to fully harvest the potential that recent hardware developments offer. In our vision, we propose to raise the abstraction level to allow developers to primarily reason about their dataflow and the requirements that need to be met by the underlying system in a declarative fashion. Underneath, the system works with typed memory regions and uses the notion of ownership that allows for more flexible memory management across the different compute devices and the tasks mapped onto them. This requires a holistic approach that crosses multiple layers of the system stack, opening exciting systems research questions.",
+  "doi": "10.1145/3593856.3595889",
+  "openalex": "W4381611599",
+  "status": "ok",
+  "title": "Programming Fully Disaggregated Systems"
+ },
+ "10.1145_3593856.3595906": {
+  "abstract": "Since the inception of computing, we have been reliant on CPU-powered architectures. However, today this reliance is challenged by manufacturing limitations (CMOS scaling), performance expectations (stalled clocks, Turing tax), and security concerns (microarchitectural attacks). To re-imagine our computing architecture, in this work, we take a more radical, but pragmatic approach and propose to eliminate the CPU with its design baggage from data center computing. We integrate three primary pillars of computing, i.e., networking, storage, and computing, into a single, self-hosting, unified CPU-free Data Processing Unit (DPU) called Hyperion. The elimination of the CPU from computing necessitates re-thinking our computing, networking, and storage abstractions, and tackle the associated challenges which we sketch in this paper. We share the blueprint of our work-in-progress, Hyperion's hardware and software stack, and seek feedback.",
+  "doi": "10.1145/3593856.3595906",
+  "openalex": "W4381611684",
+  "status": "ok",
+  "title": "CPU-free Computing: A Vision with a Blueprint"
+ },
+ "10.1145_3595360.3595853": {
+  "abstract": "In this paper, we propose a transpilation-based approach to optimize data science pipelines that comprise database management systems (DBMSes) and data science runtimes (e.g., Python). Our approach allows to identify DBMS-supported operations and translate them into SQL to leverage DBMSes for accelerating data science workloads. The optimization target is twofold: First, to improve data loading, by reducing the amount of data to be transferred between runtimes. Second, to exploit DBMS processing capabilities by \"pushing down\" certain pre-processing operations. Our optimizations are based on an intermediate representation, which allows supporting different data science libraries and DBMSes as frontends and backends respectively, making it suitable for different data science pipelines. Our evaluation with real-world and synthetic datasets shows that our approach can accelerate data science workloads by up to an order of magnitude over state-of-the-art approaches.",
+  "doi": "10.1145/3595360.3595853",
+  "openalex": "W4380928489",
+  "status": "ok",
+  "title": "P2D: A Transpiler Framework for Optimizing Data Science Pipelines"
+ },
+ "10.1145_3617327": {
+  "abstract": "Compiler optimization plays an increasingly important role to boost the performance of machine learning models for data processing and management. With increasingly complex data, the dynamic tensor shape phenomenon emerges for ML models. However, existing ML compilers either can only handle static shape models or expose a series of performance problems for both operator fusion optimization and code generation in dynamic shape scenes. This paper tackles the main challenges of dynamic shape optimization: the fusion optimization without shape value, and code generation supporting arbitrary shapes. To tackle the fundamental challenge of the absence of shape values, it systematically abstracts and excavates the shape information and designs a cross-level symbolic shape representation. With the insight that what fusion optimization relies upon is tensor shape relationships between adjacent operators rather than exact shape values, it proposes the dynamic shape fusion approach based on shape information propagation. To generate code that adapts to arbitrary shapes efficiently, it proposes a compile-time and runtime combined code generation approach. Finally, it presents a complete optimization pipeline for dynamic shape models and implements an industrial-grade ML compiler, named BladeDISC. The extensive evaluation demonstrates that BladeDISC outperforms PyTorch, TorchScript, TVM, ONNX Runtime, XLA, Torch Inductor (dynamic shape), and TensorRT by up to 6.95×, 6.25×, 4.08×, 2.04×, 2.06×, 7.92×, and 4.16× (3.54×, 3.12×, 1.95×, 1.47×, 1.24×, 2.93×, and 1.46× on average) in terms of end-to-end inference speedup on the A10 and T4 GPU, respectively. BladeDISC's source code is publicly available at https://github.com/alibaba/BladeDISC.",
+  "doi": "10.1145/3617327",
+  "openalex": "W4388620366",
+  "status": "ok",
+  "title": "BladeDISC: Optimizing Dynamic Shape Machine Learning Workloads via Compiler Approach"
+ },
+ "10.1145_3649133": {
+  "abstract": "This article presents Sharing User-Defined Aggregate Function (SUDAF), a declarative framework that allows users to write User-defined Aggregate Functions (UDAFs) as mathematical expressions and use them in Structured Query Language statements. SUDAF rewrites partial aggregates of UDAFs using built-in aggregate functions and supports efficient dynamic caching and reusing of partial aggregates. Our experiments show that rewriting UDAFs using built-in functions can significantly speed up queries with UDAFs, and the proposed sharing approach can yield up to two orders of magnitude improvement in query execution time. The article studies also an extension of SUDAF to support sharing partial results between arbitrary queries with UDAFs. We show a connection with the problem of query rewriting using views and introduce a new class of rewritings, called SUDAF rewritings, which enables to use views that have aggregate functions different from the ones used in the input query. We investigate the underlying rewriting-checking and rewriting-existing problem. Our main technical result is a reduction of these problems to, respectively, rewriting-checking and rewriting-existing of the so-called aggregate candidates , a class of rewritings that has been deeply investigated in the literature.",
+  "doi": "10.1145/3649133",
+  "openalex": "W4392139269",
+  "status": "ok",
+  "title": "Sharing Queries with Nonequivalent User-defined Aggregate Functions"
+ },
+ "10.1145_3654968": {
+  "abstract": "Engineering high-performance query execution engines is a challenging task. Query compilation provides excellent performance, but at the same time introduces significant system complexity, as it makes the engine hard to build, debug, and maintain. To overcome this complexity, we propose Nautilus, a framework that combines the ease of use of query interpretation and the performance of query compilation. On the one hand, Nautilus provides an interpretation-based operator interface that enables engineers to implement operators using imperative C++ code to ensure a familiar developer experience. On the other hand, Nautilus mitigates the performance drawbacks of interpretation by introducing a novel trace-based, multi-backend JIT compiler that translates operators into efficient code. As a result, Nautilus bridges the gap between compilation and interpretation and provides the best of both worlds, achieving high performance without sacrificing the productivity of engineers.",
+  "doi": "10.1145/3654968",
+  "openalex": "W4399174589",
+  "status": "ok",
+  "title": "Query Compilation Without Regrets"
+ },
+ "10.1145_3689031.3696100": {
+  "abstract": "Python stands as the preferred language for data science, thanks to its user-friendly syntax and a robust ecosystem that effortlessly accommodates a variety of data types and workloads, such as relational/tabular data, tensors, and graphs. While Python thrives in smaller data settings, it struggles to scale in distributed big data environments. MOKO is an IR-based execution framework designed to extend Python's reach into the distributed big data domain by generating code that can utilize existing systems such as Spark, Dask, Torch, and GRAPE. Moko preserves Python's key features---interoperability, ease of use, and support for multi-model data types and workloads---while enabling efficient execution in a distributed setting. Our evaluation indicates that MOKO can accelerate Python applications by up to 11× across diverse systems, diminish data alignment overhead by 28×, and outperform hand-optimized solutions by 2.5×.",
+  "doi": "10.1145/3689031.3696100",
+  "openalex": "W4408869382",
+  "status": "ok",
+  "title": "Moko: Marrying Python with Big Data Systems"
+ },
+ "10.1145_3704845": {
+  "abstract": "Streaming systems are present throughout modern applications, processing continuous data in real-time. Existing streaming languages have a variety of semantic models and guarantees that are often incompatible. Yet all these languages are considered “streaming”–what do they have in common? In this paper, we identify two general yet precise semantic properties: streaming progress and eager execution. Together, they ensure that streaming outputs are deterministic and kept fresh with respect to streaming inputs. We formally define these properties in the context of Flo, a parameterized streaming language that abstracts over dataflow operators and the underlying structure of streams. It leverages a lightweight type system to distinguish bounded streams, which allow operators to block on termination, from unbounded ones. Furthermore, Flo provides constructs for dataflow composition and nested graphs with cycles. To demonstrate the generality of our properties, we show how key ideas from representative streaming and incremental computation systems—Flink, LVars, and DBSP—have semantics that can be modeled in Flo and guarantees that map to our properties.",
+  "doi": "10.1145/3704845",
+  "openalex": "W4406222444",
+  "status": "ok",
+  "title": "Flo: A Semantic Foundation for Progressive Stream Processing"
+ },
+ "10.1145_3725266": {
+  "abstract": "Combining query answering and data science workloads has become prevalent. An important class of such workloads is top-k queries with a scoring function implemented as an opaque UDF - a black box whose internal structure and scores on the search domain are unavailable. Some typical examples include costly calls to fuzzy classification and regression models. The models may also be changed in an ad-hoc manner. Since the algorithm does not know the scoring function's behavior on the input data, opaque top-k queries become expensive to evaluate exactly or speed up by indexing. Hence, we propose an approximation algorithm for opaque top-k query answering. Our proposed solution is a task-independent hierarchical index and a novel bandit algorithm. The index clusters elements by some cheap vector representation then builds a tree of the clusters. Our bandit is a diminishing returns submodular epsilon-greedy bandit algorithm that maximizes the sum of the solution set's scores. Our bandit models the distribution of scores in each arm using a histogram, then targets arms with fat tails. We prove that our bandit algorithm approaches a constant factor of the optimal algorithm. We evaluate our standalone library on large synthetic, image, and tabular datasets over a variety of scoring functions. Our method accelerates the time required to achieve nearly optimal scores by up to an order of magnitude compared to exhaustive scan while consistently outperforming baseline sampling algorithms.",
+  "doi": "10.1145/3725266",
+  "openalex": "W4409020829",
+  "status": "ok",
+  "title": "Approximating Opaque Top-k Queries"
+ },
+ "10.1145_3728959": {
+  "abstract": "Recent trends in high-performance computing show an increase in the adoption of performance portable frameworks such as Kokkos and interpreted languages such as Python. PyKokkos follows these trends and enables programmers to write performance-portable kernels in Python which greatly increases productivity. One issue that programmers still face is how to organize parallel code, as splitting code into separate kernels simplifies testing and debugging but may result in suboptimal performance. To enable programmers to organize kernels in any way they prefer while ensuring good performance, we present PyFuser , a program analysis framework for automatic fusion of performance portable PyKokkos kernels. PyFuser dynamically traces kernel calls and lazily fuses them once the result is requested by the application. PyFuser generates fused kernels that execute faster due to better reuse of data, improved compiler optimizations, and reduced kernel launch overhead, while not requiring any changes to existing PyKokkos code. We also introduce automated code transformations that further optimize the fused kernels generated by PyFuser . Our experiments show that on average PyFuser achieves speedups compared to unfused kernels of 3.8× on NVIDIA and AMD GPUs, as well as Intel and AMD CPUs.",
+  "doi": "10.1145/3728959",
+  "openalex": "W4411522856",
+  "status": "ok",
+  "title": "Dynamically Fusing Python HPC Kernels"
+ },
+ "10.1145_3786662": {
+  "abstract": "Real-world AI/ML workflows often apply inference computations to feature vectors joined from multiple datasets. To avoid the redundant AI/ML computations caused by repeated data records in the join's output, factorized ML has been proposed to decompose ML computations into sub-computations to be executed on each normalized dataset. However, there is insufficient discussion on how factorized ML could impact AI/ML inference over multi-way joins. To address the limitations, we propose a novel declarative InferF system, focusing on the factorization of arbitrary inference workflows represented as analyzable expressions over the multi-way joins. We formalize our problem to flexibly push down partial factorized computations to qualified nodes in the join tree to minimize the overall inference computation and join costs and propose two algorithms to resolve the problem: (1) a greedy algorithm based on a per-node cost function that estimates the influence on overall latency if a subset of factorized computations is pushed to a node, and (2) a genetic algorithm for iteratively enumerating and evaluating promising factorization plans. We implement InferF on Velox, an open-sourced database engine from Meta, evaluate it on real-world datasets, observed up to 11.3× speedups, and systematically summarized the factors that determine when factorized ML can benefit AI/ML inference workflows.",
+  "doi": "10.1145/3786662",
+  "openalex": "W7151307232",
+  "status": "ok",
+  "title": "InferF: Declarative Factorization of AI/ML Inferences over Joins"
+ },
+ "10.1145_3814885.3816414": {
+  "abstract": null,
+  "doi": "10.1145/3814885.3816414",
+  "openalex": "W7165633829",
+  "status": "no_abstract",
+  "title": "Stageleft: Multi-stage Programming in Standard Rust"
+ },
+ "10.14279_depositonce-8953": {
+  "abstract": "Modern data analysis programs often consist of complex operations. They combine multiple heterogeneous data sources, perform data cleaning and feature transformations, and apply machine learning algorithms to train models on the preprocessed data. Existing systems can execute such end-to-end training pipelines. However, they face unique challenges in their applicability to large scale data. In particular, current approaches either rely on in-memory execution (e.g., Python Pandas and scikit-learn) or they do not provide convenient programming abstractions for specifying data analysis programs (e.g., Apache Flink and Spark). Moreover, these systems do not support optimizations across operations in these pipelines, which also limits their efficient execution. In this thesis, we present our contributions towards a more efficient execution of end-to-end machine learning pipelines for model training. In particular, we discuss the following three contributions: In our first contribution, we propose a programming abstraction in the dynamic language R on top of the distributed dataflow engine Apache Flink. Our abstraction scales to large amounts of data but also hides system specifics of the dataflow engine. We integrate R and the system language Java in a shared runtime to alleviate the performance overhead of current solutions for language integration in case of complex user-defined functions. In our second contribution, we introduce an intermediate representation for data analytics programs, which allows us to optimize the complete training pipeline. We base our approach on a low-level intermediate representation that provides access to the whole program and augments two abstractions on top of it: a layer that unifies the application of user-defined functions enables operator fusion and pushdown; a high-level representation of the operations enables plan variant selection. In our third contribution, we propose a new context-aware operator for dataflow engines, which directly creates an efficient partitioning schema for matrices from normalized data sources. The operator decouples the evaluation of the join predicate from the materialization of the result. This minimizes data shuffling in distributed settings and enables the operator to choose the materialization strategy depending on the shape of the input relations. In summary, we conclude that we need a holistic system design that covers all tiers – programming abstraction, intermediate representation, and execution backend – to overcome the scalability challenges of large-scale data analysis programs.",
+  "doi": "10.14279/depositonce-8953",
+  "openalex": "W2979617296",
+  "status": "ok",
+  "title": "Optimizing end-to-end machine learning pipelines for model training"
+ },
+ "10.14288_1.0394560": {
+  "abstract": "Fundamental data analytics tasks are often simple -- many useful and actionable insights can be garnered by simply filtering, grouping, and summarizing data. However the sheer volume of data to be analyzed, demands of a multi-user operating environment, and limitations of general purpose processors make it challenging to perform these operations efficiently at scale. This thesis presents two techniques that address these challenges to improve the response time of data analytics tasks: (1) Newly emerging programmable network processors can perform data analytics tasks at terabits per second. However, existing data analytics systems, like Apache Spark, cannot readily use network processors because network processors are very limited and cannot execute the tasks generated by existing analytics systems. Using network processors for analytics requires re-designing how existing systems compile and execute data processing tasks. This thesis introduces Jumpgate, a system that enables existing data processing systems to execute relational queries using network processors. Jumpgate compiles client requests to a novel execution model that coordinates execution on heterogeneous network processors. Jumpgate can already improve performance by 1.12-3x on industry standard benchmarks, and paves the way for adopting network processors for data analytics tasks. (2) Analytics systems often process similar queries, either submitted by the same or different users. Cross program memoization (CPM) is a technique to re-use results of prior computations across programs and users. However, CPM is often not enabled because prior implementations have high overhead and are unable to re-use the output of user-defined functions (UDFs). This thesis presents KeyChain, a CPM implementation that identifies equivalent UDFs and has low overhead so CPM can be always be enabled.",
+  "doi": "10.14288/1.0394560",
+  "openalex": "W3092640146",
+  "status": "ok",
+  "title": "Compilation-assisted performance acceleration for data analytics"
+ },
+ "10.14778_3229863.3240493": {
+  "abstract": "In order to democratize data science, we need to fundamentally rethink the current analytics stack, from the user interface to the \"guts.\" Most importantly, enabling a broader range of users to unfold the potential of (their) data requires a change in the interface and the \"protection\" we offer them. On the one hand, visual interfaces for data science have to be intuitive, easy, and interactive to reach users without a strong background in computer science or statistics. On the other hand, we need to protect users from making false discoveries. Furthermore, it requires that technically involved (and often boring) tasks have to be automatically done by the system so that the user can focus on contributing their domain expertise to the problem. In this paper, we present Northstar, the Interactive Data Science System, which we have developed over the last 4 years to explore designs that make advanced analytics and model building more accessible.",
+  "doi": "10.14778/3229863.3240493",
+  "openalex": "W2889073286",
+  "status": "ok",
+  "title": "Northstar"
+ },
+ "10.14778_3342263.3342633": {
+  "abstract": "Machine learning (ML) pipelines for model training and validation typically include preprocessing, such as data cleaning and feature engineering, prior to training an ML model. Preprocessing combines relational algebra and user-defined functions (UDFs), while model training uses iterations and linear algebra. Current systems are tailored to either of the two. As a consequence, preprocessing and ML steps are optimized in isolation. To enable holistic optimization of ML training pipelines, we present Lara, a declarative domain-specific language for collections and matrices. Lara's inter-mediate representation (IR) reflects on the complete program, i.e., UDFs, control flow, and both data types. Two views on the IR enable diverse optimizations. Monads enable operator pushdown and fusion across type and loop boundaries. Combinators provide the semantics of domain-specific operators and optimize data access and cross-validation of ML algorithms. Our experiments on preprocessing pipelines and selected ML algorithms show the effects of our proposed optimizations on dense and sparse data, which achieve speedups of up to an order of magnitude.",
+  "doi": "10.14778/3342263.3342633",
+  "openalex": "W2971290973",
+  "status": "ok",
+  "title": "An intermediate representation for optimizing machine learning pipelines"
+ },
+ "10.14778_3415478.3415487": {
+  "abstract": "Systems for ML inference are widely deployed today, but they typically optimize ML inference workloads using techniques designed for conventional data serving workloads and miss critical opportunities to leverage the statistical nature of ML. In this demo, we present Willump, an optimizer for ML inference that introduces statistically-motivated optimizations targeting ML applications whose performance bottleneck is feature computation. Willump automatically cascades feature computation for classification queries: Willump classifies most data inputs using only high-value, low-cost features selected by a cost model, improving query performance by up to 5 x without statistically significant accuracy loss. In this demo, we use interactive and easily-downloadable Jupyter notebooks to show VLDB attendees which applications Willump can speed up, how to use Willump, and how Willump produces such large performance gains.",
+  "doi": "10.14778/3415478.3415487",
+  "openalex": "W3086652408",
+  "status": "ok",
+  "title": "A demonstration of willump"
+ },
+ "10.14778_3476311.3476372": {
+  "abstract": "Optimizing machine learning (ML) workloads on structured data is a key concern for data platforms. One class of optimizations called \"factorized ML\" helps reduce ML runtimes over multi-table datasets by pushing ML computations down through joins, avoiding the need to materialize such joins. The recent Morpheus systemautomatedfactorized ML toanyML algorithm expressible in linear algebra (LA). But all such prior factorized ML/LA stacks are restricted by their chosen programming language (PL) and runtime environment, limiting their reach in emerging industrial data science environments with many PLs (R, Python, etc.) and even cross-PL analytics workflows. Re-implementing Morpheus from scratch in each PL/environment is amassive developability overheadfor implementation, testing, and maintenance. We tackle this challenge by proposing a new system architecture,Trinity, to enable factorized LA logic to bewritten only onceand easilyreused across many PLs/LA tools in one go. To do this in an extensible and efficient manner without costly data copies, Trinity leverages and extends an emerging industrial polyglot compiler and runtime, Oracle's GraalVM. Trinity enables factorized LA in multiple PLs and even cross-PL workflows. Experiments with real datasets show that Trinity is significantly faster than materialized execution (> 8x speedups in some cases), while being largely competitive to a prior single PL-focused Morpheus stack.",
+  "doi": "10.14778/3476311.3476372",
+  "openalex": "W3198076459",
+  "status": "ok",
+  "title": "Towards a polyglot framework for factorized ML"
+ },
+ "10.14778_3476311.3476410": {
+  "abstract": "In 2011 we showed how to use dynamic code generation to process queries in a data-centric manner. This execution model can produce compact and efficient code and was successfully used by both our own systems and systems of other groups. As the systems become used in practice, additional techniques were developed for shortcomings that did arrive, including low-latency compilation, multi-threading support, and others. This paper gives an overview of the evolution of our query engine within in the last ten years, and points out which problem have to be tackled to bring a compiling system into production usage.",
+  "doi": "10.14778/3476311.3476410",
+  "openalex": "W3196324538",
+  "status": "ok",
+  "title": "Evolution of a compiling query engine"
+ },
+ "10.14778_3484224.3484229": {
+  "abstract": "The enormous quantity of data produced every day together with advances in data analytics has led to a proliferation of data management and analysis systems. Typically, these systems are built around highly specialized monolithic operators optimized for the underlying hardware. While effective in the short term, such an approach makes the operators cumbersome to port and adapt, which is increasingly required due to the speed at which algorithms and hardware evolve. To address this limitation, we present Modularis , an execution layer for data analytics based on sub-operators , i.e., composable building blocks resembling traditional database operators but at a finer granularity. To demonstrate the feasibility and advantages of our approach, we use Modularis to build a distributed query processing system supporting relational queries running on an RDMA cluster, a serverless cloud platform, and a smart storage engine. Modularis requires minimal code changes to execute queries across these three diverse hardware platforms, showing that the sub-operator approach reduces the amount and complexity of the code to maintain. In fact, changes in the platform affect only those sub-operators that depend on the underlying hardware (in our use cases, mainly the sub-operators related to network communication). We show the end-to-end performance of Modularis by comparing it with a framework for SQL processing (Presto), a commercial cluster database (SingleStore), as well as Query-as-a-Service systems (Athena, BigQuery). Modularis outperforms all these systems, proving that the design and architectural advantages of a modular design can be achieved without degrading performance. We also compare Modularis with a hand-optimized implementation of a join for RDMA clusters. We show that Modularis has the advantage of being easily extensible to a wider range of join variants and group by queries, all of which are not supported in the hand-tuned join.",
+  "doi": "10.14778/3484224.3484229",
+  "openalex": "W3211036868",
+  "status": "ok",
+  "title": "Modularis"
+ },
+ "10.14778_3489496.3489501": {
+  "abstract": "Today's users of data processing systems come from different domains, have different levels of expertise, and prefer different programming languages. As a result, analytical workload requirements shifted from relational to polyglot queries involving user-defined functions (UDFs). Although some data processing systems support polyglot queries, they often embed third-party language runtimes. This embedding induces a high performance overhead, as it causes additional data materialization between execution engines. In this paper, we present Babelfish, a novel data processing engine designed for polyglot queries. Babelfish introduces an intermediate representation that unifies queries from different implementation languages. This enables new, holistic optimizations across operator and language boundaries, e.g., operator fusion and workload specialization. As a result, Babelfish avoids data transfers and enables efficient utilization of hardware resources. Our evaluation shows that Babelfish outperforms state-of-the-art data processing systems by up to one order of magnitude and reaches the performance of handwritten code. With Babelfish, we bridge the performance gap between relational and multi-language UDFs and lay the foundation for the efficient execution of future polyglot workloads.",
+  "doi": "10.14778/3489496.3489501",
+  "openalex": "W4210272490",
+  "status": "ok",
+  "title": "Babelfish"
+ },
+ "10.14778_3510397.3510408": {
+  "abstract": "In recent years, complex data mining and machine learning algorithms have become more common in data analytics. Several specialized systems exist to evaluate these algorithms on ever-growing data sets, which are built to efficiently execute different types of complex analytics queries. However, using these various systems comes at a price. Moving data out of traditional database systems is often slow as it requires exporting and importing data, which is typically performed using the relatively inefficient CSV format. Additionally, database systems usually offer strong ACID guarantees, which are lost when adding new, external systems. This disadvantage can be detrimental to the consistency of the results. Most data scientists still prefer not to use classical database systems for data analytics. The main reason why RDBMS are not used is that SQL is difficult to work with due to its declarative and set-oriented nature, and is not easily extensible. We present User-Defined Operators (UDOs) as a concept to include custom algorithms into modern query engines. Users can write idiomatic code in the programming language of their choice, which is then directly integrated into existing database systems. We show that our implementation can compete with specialized tools and existing query engines while retaining all beneficial properties of the database system.",
+  "doi": "10.14778/3510397.3510408",
+  "openalex": "W4285160575",
+  "status": "ok",
+  "title": "User-defined operators"
+ },
+ "10.14778_3611479.3611539": {
+  "abstract": "Data processing systems face the challenge of supporting increasingly diverse workloads efficiently. At the same time, they are already bloated with internal complexity, and it is not clear how new hardware can be supported sustainably. In this paper, we aim to resolve these issues by proposing a unified abstraction layer based on declarative sub-operators in addition to relational operators. By exposing this layer to users, they can express their non-relational workloads declaratively with sub-operators. Furthermore, the proposed sub-operators decouple the semantic implementation of operators from the efficient imperative implementation, reducing the implementation complexity for relational operators. Finally, through fine-grained automatic optimizations, the declarative sub-operators allow for automatic morsel-driven parallelism. We demonstrate the benefits not only by providing a specific set of sub-operators but also implementing them in a compiling query engine. With thorough evaluation and analysis, we show that we can support a richer set of workloads while retaining the development complexity low and being competitive in performance even with specialized systems.",
+  "doi": "10.14778/3611479.3611539",
+  "openalex": "W4386128201",
+  "status": "ok",
+  "title": "Declarative Sub-Operators for Universal Data Processing"
+ },
+ "10.14778_3611540.3611574": {
+  "abstract": "User-defined functions (UDFs) have been widely used to overcome the expressivity limitations of SQL and complement its declarative nature with functional capabilities. UDFs are particularly useful in today's applications that involve complex data analytics and machine learning algorithms and logic. However, UDFs pose significant performance challenges in query processing and optimization, largely due to the mismatch of the UDF execution and SQL processing environments. In this tutorial, we present state-of-the-art methods and systems towards efficient execution of UDFs in SQL queries. We focus on low-level techniques for physical optimization and compilation of UDF queries, describe and compare the core, recent approaches in the area, discuss their advantages and limitations, identify critical gaps in theory and practice, and propose promising future research directions.",
+  "doi": "10.14778/3611540.3611574",
+  "openalex": "W4386768666",
+  "status": "ok",
+  "title": "Efficient Execution of User-Defined Functions in SQL Queries"
+ },
+ "10.14778_3675034.3675052": {
+  "abstract": "Machine learning inference pipelines commonly encountered in data science and industries often require real-time responsiveness due to their user-facing nature. However, meeting this requirement becomes particularly challenging when certain input features require aggregating a large volume of data online. Recent literature on interpretable machine learning reveals that most machine learning models exhibit a notable degree of resilience to variations in input. This suggests that machine learning models can effectively accommodate approximate input features with minimal discernible impact on accuracy. In this paper, we introduce Biathlon, a novel ML serving system that leverages the inherent resilience of models and determines the optimal degree of approximation for each aggregation feature. This approach enables maximum speedup while ensuring a guaranteed bound on accuracy loss. We evaluate Biathlon on real pipelines from both industry applications and data science competitions, demonstrating its ability to meet real-time latency requirements by achieving 5.3× to 16.6× speedup with almost no accuracy loss.",
+  "doi": "10.14778/3675034.3675052",
+  "openalex": "W4401352033",
+  "status": "ok",
+  "title": "Biathlon: Harnessing Model Resilience for Accelerating ML Inference Pipelines"
+ },
+ "10.14778_3746405.3746409": {
+  "abstract": "User-defined functions (UDFs) extend the expressiveness of declarative SQL with functional capabilities, but also pose a core bottleneck in query processing due to the impedance mismatch between the UDF and SQL execution environments, and the limitations of the query optimizers to consistently produce good plans for UDF queries. Research and commercial approaches propose remedies for performant UDF query execution ranging from logical optimization and heuristics to physical optimization and compilation techniques. Each work however follows a different path to evaluate their proposed techniques. Despite the practical significance of optimizing UDF queries, UDFs have not been so far the focus of the database benchmarks. In this paper, we present UDFBench, a UDF-centric database benchmark based on real-world schema and data. We identify the core overheads in UDF query execution and design the UDFBench UDFs and queries to enable experimentation with these overheads, alone or in tandem with others. Finally, to showcase the portability and scope of UDFBench, we present an experimental analysis on five popular databases with different characteristics.",
+  "doi": "10.14778/3746405.3746409",
+  "openalex": "W4413973309",
+  "status": "ok",
+  "title": "The UDFBENCH Benchmark for General-Purpose UDF Queries"
+ },
+ "10.14778_3749646.3749669": {
+  "abstract": "Data processing systems find themselves crushed between two moving tectonic plates: the usage plate driven by the system's users and their requirements; and the environment plate driven by various technological changes. We argue that the existing status quo of constantly adapting and thus bloating the system's implementation is simply unsustainable in the long run. We further argue that now is the right time to take a step back and establish the foundations of future-proof data processing systems that can easily adapt to different workloads and input formats, and that can run efficiently in any type of environment, today and in the future. With our paper, we analyze and learn from prior attempts, identify key design principles, and present our vision on how to design such systems.",
+  "doi": "10.14778/3749646.3749669",
+  "openalex": "W4414004141",
+  "status": "ok",
+  "title": "Towards Designing Future-Proof Data Processing Systems"
+ },
+ "10.2172_1783736": {
+  "abstract": "High-performance computing (HPC) researchers have long envisioned scenarios where application workflows could be improved through the use of programmable processing elements embedded in the network fabric. Recently, vendors have introduced programmable Smart Network Interface Cards (SmartNICs) that enable computations to be offloaded to the edge of the network. There is great interest in both the HPC and high-performance data analytics (HPDA) communities in understanding the roles these devices may play in the data paths of upcoming systems. This paper focuses on characterizing both the networking and computing aspects of NVIDIA’s new BlueField-2 SmartNIC when used in a 100Gb/s Ethernet environment. For the networking evaluation we conducted multiple transfer experiments between processors located at the host, the SmartNIC, and a remote host. These tests illuminate how much effort is required to saturate the network and help estimate the processing headroom available on the SmartNIC during transfers. For the computing evaluation we used the stress-ng benchmark to compare the BlueField-2 to other servers and place realistic bounds on the types of offload operations that are appropriate for the hardware. Our findings from this work indicate that while the BlueField-2 provides a flexible means of processing data at the network’s edge, great care must be taken to not overwhelm the hardware. While the host can easily saturate the network link, the SmartNIC’s embedded processors may not have enough computing resources to sustain more than half the expected bandwidth when using kernel-space packet processing. From a computational perspective, encryption operations, memory operations under contention, and on-card IPC operations on the SmartNIC perform significantly better than the general-purpose servers used for comparisons in our experiments. Therefore, applications that mainly focus on these operations may be good candidates for offloading to the SmartNIC.",
+  "doi": "10.2172/1783736",
+  "openalex": "W3160298851",
+  "status": "ok",
+  "title": "Performance Characteristics of the BlueField-2 SmartNIC"
+ },
+ "10.2200_s00895ed1v01y201901dtm057": {
+  "abstract": null,
+  "doi": "10.2200/s00895ed1v01y201901dtm057",
+  "openalex": "W4211133859",
+  "status": "no_abstract",
+  "title": "Data Management in Machine Learning Systems"
+ },
+ "10.3390_is4si-2017-04025": {
+  "abstract": "The paper reviews existing models for organizing information for machine learning systems in heterogeneous computing environments. In this context, we focus on structured knowledge representations as they have played a key role in enabling machine learning at scale. The paper highlights recent case studies where knowledge structures when combined with the knowledge of the distributed computation graph have accelerated machine-learning applications by 10 times or more. We extend these concepts to the design of Cognitive Distributed Learning Systems to resolve critical bottlenecks in real-time machine learning applications such as Predictive Analytics and Recommender Systems.",
+  "doi": "10.3390/is4si-2017-04025",
+  "openalex": "W2736428863",
+  "status": "ok",
+  "title": "Cognitive Computing Architectures for Machine (Deep) Learning at Scale"
+ },
+ "10.48047_jcr.07.05.472": {
+  "abstract": "This research paper targets to delve into the numerous techniques and techniques for optimizing records processing performance and scalability the usage of the Pandas library in Python. Pandas is broadly mentioned for its records manipulation abilities, but as datasets grow larger and greater complex, the need for green information processing will become more and more critical. The paper will discover superior capabilities of Pandas, including technique chaining, parallelization, and reminiscence optimization techniques, to showcase how these functionalities can be leveraged for progressed performance. Additionally, the examine will look into the integration of Pandas with other Python libraries and equipment, which include Dask for parallel computing and NumPy for array operations, to release further scalability. Real-global case studies and overall performance benchmarks will be provided to illustrate the practical implications of adopting these optimization strategies. The purpose is to offer a complete guide for records scientists, analysts, and researchers on maximizing the potential of Pandas for managing big-scale datasets efficaciously, thereby contributing to advancements in records processing and evaluation methodologies This research paper explores advanced strategies to enhance the efficiency and scalability of information processing the usage of the Pandas library in Python, with a focal point on massive-scale datasets. Traditional Pandas operations, while effective, may additionally face demanding situations in handling expansive and tricky datasets, necessitating novel approaches for most fulfilling performance. The observe investigates key optimization techniques, such as technique chaining, parallelization with Dask, and memory optimization, to streamline records manipulation workflows. Real-global case studies show the sensible implications of these strategies in eventualities which includes economic information analysis and time-series processing. The consequences highlight sizeable overall performance profits finished via the mixing of advanced Pandas functions. This studies aims to provide information scientists, analysts, and researchers with treasured insights into maximizing the capacity of Pandas for efficient and scalable records processing, contributing to the continued evolution of statistics analysis methodologies.",
+  "doi": "10.48047/jcr.07.05.472",
+  "openalex": "W4392875267",
+  "status": "ok",
+  "title": "ENHANCING DATA PROCESSING EFFICIENCY AND SCALABILITY: A COMPREHENSIVE STUDY ON OPTIMIZING DATA MANIPULATION WITH PANDAS (2020)"
+ },
+ "10.48047_resmil.v10i1.14": {
+  "abstract": "This research paper targets to delve into the numerous techniques and techniques for optimizing records processing performance and scalability the usage of the Pandas library in Python. Pandas is broadly mentioned for its records manipulation abilities, but as datasets grow larger and greater complex, the need for green information processing will become more and more critical. The paper will discover superior capabilities of Pandas, including technique chaining, parallelization, and reminiscence optimization techniques, to showcase how these functionalities can be leveraged for progressed performance. Additionally, the examine will look into the integration of Pandas with other Python libraries and equipment, which include Dask for parallel computing and NumPy for array operations, to release further scalability. Real-global case studies and overall performance benchmarks will be provided to illustrate the practical implications of adopting these optimization strategies. The purpose is to offer a complete guide for records scientists, analysts, and researchers on maximizing the potential of Pandas for managing big-scale datasets efficaciously, thereby contributing to advancements in records processing and evaluation methodologies This research paper explores advanced strategies to enhance the efficiency and scalability of information processing the usage of the Pandas library in Python, with a focal point on massive-scale datasets. Traditional Pandas operations, while effective, may additionally face demanding situations in handling expansive and tricky datasets, necessitating novel approaches for most fulfilling performance. The observe investigates key optimization techniques, such as technique chaining, parallelization with Dask, and memory optimization, to streamline records manipulation workflows. Real-global case studies show the sensible implications of these strategies in eventualities which includes economic information analysis and time-series processing. The consequences highlight sizeable overall performance profits finished via the mixing of advanced Pandas functions. This studies aims to provide information scientists, analysts, and researchers with treasured insights into maximizing the capacity of Pandas for efficient and scalable records processing, contributing to the continued evolution of statistics analysis methodologies.",
+  "doi": "10.48047/resmil.v10i1.14",
+  "openalex": "W4393085261",
+  "status": "ok",
+  "title": "Enhancing Data Processing Efficiency and Scalability: A Comprehensive Study on Optimizing Data Manipulation with Pandas"
+ },
+ "10.48550_arxiv.1903.06631": {
+  "abstract": "GPU (graphics processing unit) has been used for many data-intensive applications. Among them, deep learning systems are one of the most important consumer systems for GPU nowadays. As deep learning applications impose deeper and larger models in order to achieve higher accuracy, memory management becomes an important research topic for deep learning systems, given that GPU has limited memory size. Many approaches have been proposed towards this issue, e.g., model compression and memory swapping. However, they either degrade the model accuracy or require a lot of manual intervention. In this paper, we propose two orthogonal approaches to reduce the memory cost from the system perspective. Our approaches are transparent to the models, and thus do not affect the model accuracy. They are achieved by exploiting the iterative nature of the training algorithm of deep learning to derive the lifetime and read/write order of all variables. With the lifetime semantics, we are able to implement a memory pool with minimal fragments. However, the optimization problem is NP-complete. We propose a heuristic algorithm that reduces up to 13.3% of memory compared with Nvidia's default memory pool with equal time complexity. With the read/write semantics, the variables that are not in use can be swapped out from GPU to CPU to reduce the memory footprint. We propose multiple swapping strategies to automatically decide which variable to swap and when to swap out (in), which reduces the memory cost by up to 34.2% without communication overhead.",
+  "doi": "10.48550/arxiv.1903.06631",
+  "openalex": "W2921909549",
+  "status": "ok",
+  "title": "Efficient Memory Management for GPU-based Deep Learning Systems"
+ },
+ "10.48550_arxiv.1906.01974": {
+  "abstract": "Systems for ML inference are widely deployed today, but they typically optimize ML inference workloads using techniques designed for conventional data serving workloads and miss critical opportunities to leverage the statistical nature of ML. In this paper, we present Willump, an optimizer for ML inference that introduces two statistically-motivated optimizations targeting ML applications whose performance bottleneck is feature computation. First, Willump automatically cascades feature computation for classification queries: Willump classifies most data inputs using only high-value, low-cost features selected through empirical observations of ML model performance, improving query performance by up to 5x without statistically significant accuracy loss. Second, Willump accurately approximates ML top-K queries, discarding low-scoring inputs with an automatically constructed approximate model and then ranking the remainder with a more powerful model, improving query performance by up to 10x with minimal accuracy loss. Willump automatically tunes these optimizations' parameters to maximize query performance while meeting an accuracy target. Moreover, Willump complements these statistical optimizations with compiler optimizations to automatically generate fast inference code for ML applications. We show that Willump improves the end-to-end performance of real-world ML inference pipelines curated from major data science competitions by up to 16x without statistically significant loss of accuracy.",
+  "doi": "10.48550/arxiv.1906.01974",
+  "openalex": "W2948964347",
+  "status": "ok",
+  "title": "Willump: A Statistically-Aware End-to-end Optimizer for Machine Learning Inference"
+ },
+ "10.48550_arxiv.1911.02178": {
+  "abstract": "Serverless computing is an approach to cloud computing that allows programmers to run serverless functions in response to external events. Serverless functions are priced at sub-second granularity, support transparent elasticity, and relieve programmers from managing the operating system. Thus serverless functions allow programmers to focus on writing application code, and the cloud provider to manage computing resources globally. Unfortunately, today's serverless platforms exhibit high latency, because it is difficult to maximize resource utilization while minimizing operating costs. This paper presents serverless function acceleration, which is an approach that transparently lowers the latency and resource utilization of a large class of serverless functions. We accomplish this using language-based sandboxing, whereas existing serverless platforms employ more expensive operating system sandboxing technologies, such as containers and virtual machines. OS-based sandboxing is compatible with more programs than language-based techniques. However, instead of ruling out any programs, we use language-based sandboxing when possible, and OS-based sandboxing if necessary. Moreover, we seamlessly transition between language-based and OS-based sandboxing by leveraging the fact that serverless functions must tolerate re-execution for fault tolerance. Therefore, when a serverless function attempts to perform an unsupported operation in the language-based sandbox, we can safely re-execute it in a container. We use a new approach to trace compilation to build source-level, interprocedural, execution trace trees for serverless functions written in JavaScript. We compile trace trees to a safe subset of Rust, validate the compiler output, and link it to a runtime system. We evaluate these techniques in our implementation, which we call Containerless.",
+  "doi": "10.48550/arxiv.1911.02178",
+  "openalex": "W2985424804",
+  "status": "ok",
+  "title": "A Language-based Serverless Function Accelerator"
+ },
+ "10.48550_arxiv.2004.01908": {
+  "abstract": "Getting the best performance from the ever-increasing number of hardware platforms has been a recurring challenge for data processing systems. In recent years, the advent of data science with its increasingly numerous and complex types of analytics has made this challenge even more difficult. In practice, system designers are overwhelmed by the number of combinations and typically implement only one analysis/platform combination, leading to repeated implementation effort -- and a plethora of semi-compatible tools for data scientists. In this paper, we propose the \"Collection Virtual Machine\" (or CVM) -- an extensible compiler framework designed to keep the specialization process of data analytics systems tractable. It can capture at the same time the essence of a large span of low-level, hardware-specific implementation techniques as well as high-level operations of different types of analyses. At its core lies a language for defining nested, collection-oriented intermediate representations (IRs). Frontends produce programs in their IR flavors defined in that language, which get optimized through a series of rewritings (possibly changing the IR flavor multiple times) until the program is finally expressed in an IR of platform-specific operators. While reducing the overall implementation effort, this also improves the interoperability of both analyses and hardware platforms. We have used CVM successfully to build specialized backends for platforms as diverse as multi-core CPUs, RDMA clusters, and serverless computing infrastructure in the cloud and expect similar results for many more frontends and hardware platforms in the near future.",
+  "doi": "10.48550/arxiv.2004.01908",
+  "openalex": "W3015015127",
+  "status": "ok",
+  "title": "The Collection Virtual Machine: An Abstraction for Multi-Frontend Multi-Backend Data Analysis"
+ },
+ "10.48550_arxiv.2010.04804": {
+  "abstract": "Machine Learning (ML) adoption in the enterprise requires simpler and more efficient software infrastructure---the bespoke solutions typical in large web companies are simply untenable. Model scoring, the process of obtaining predictions from a trained model over new data, is a primary contributor to infrastructure complexity and cost as models are trained once but used many times. In this paper we propose HUMMINGBIRD, a novel approach to model scoring, which compiles featurization operators and traditional ML models (e.g., decision trees) into a small set of tensor operations. This approach inherently reduces infrastructure complexity and directly leverages existing investments in Neural Network compilers and runtimes to generate efficient computations for both CPU and hardware accelerators. Our performance results are intriguing: despite replacing imperative computations (e.g., tree traversals) with tensor computation abstractions, HUMMINGBIRD is competitive and often outperforms hand-crafted kernels on micro-benchmarks on both CPU and GPU, while enabling seamless end-to-end acceleration of ML pipelines. We have released HUMMINGBIRD as open source.",
+  "doi": "10.48550/arxiv.2010.04804",
+  "openalex": "W3092207469",
+  "status": "ok",
+  "title": "A Tensor Compiler for Unified Machine Learning Prediction Serving"
+ },
+ "10.48550_arxiv.2205.09681": {
+  "abstract": "The data needed for machine learning (ML) model training, can reside in different separate sites often termed data silos. For data-intensive ML applications, data silos pose a major challenge: the integration and transformation of data demand a lot of manual work and computational resources. With data privacy and security constraints, data often cannot leave the local sites, and a model has to be trained in a decentralized manner. In this work, we present a vision on how to bridge the traditional data integration (DI) techniques with the requirements of modern machine learning. We explore the possibilities of utilizing metadata obtained from data integration processes for improving the effectiveness and efficiency of ML models. We analyze two common use cases over data silos, feature augmentation and federated learning. Bringing data integration and machine learning together, we highlight the new research opportunities from the aspects of systems, representations, factorized learning and federated learning.",
+  "doi": "10.48550/arxiv.2205.09681",
+  "openalex": "W4281249339",
+  "status": "ok",
+  "title": "Amalur: Data Integration Meets Machine Learning"
+ },
+ "10.48550_arxiv.2212.07517": {
+  "abstract": "As modern data pipelines continue to collect, produce, and store a variety of data formats, extracting and combining value from traditional and context-rich sources such as strings, text, video, audio, and logs becomes a manual process where such formats are unsuitable for RDBMS. To tap into the dark data, domain experts analyze and extract insights and integrate them into the data repositories. This process can involve out-of-DBMS, ad-hoc analysis, and processing resulting in ETL, engineering effort, and suboptimal performance. While AI systems based on ML models can automate the analysis process, they often further generate context-rich answers. Using multiple sources of truth, for either training the models or in the form of knowledge bases, further exacerbates the problem of consolidating the data of interest. We envision an analytical engine co-optimized with components that enable context-rich analysis. Firstly, as the data from different sources or resulting from model answering cannot be cleaned ahead of time, we propose using online data integration via model-assisted similarity operations. Secondly, we aim for a holistic pipeline cost- and rule-based optimization across relational and model-based operators. Thirdly, with increasingly heterogeneous hardware and equally heterogeneous workloads ranging from traditional relational analytics to generative model inference, we envision a system that just-in-time adapts to the complex analytical query requirements. To solve increasingly complex analytical problems, ML offers attractive solutions that must be combined with traditional analytical processing and benefit from decades of database community research to achieve scalability and performance effortless for the end user.",
+  "doi": "10.48550/arxiv.2212.07517",
+  "openalex": "W4311724083",
+  "status": "ok",
+  "title": "Analytical Engines With Context-Rich Processing: Towards Efficient Next-Generation Analytics"
+ },
+ "10.48550_arxiv.2306.10585": {
+  "abstract": "Optimizing a stateful dataflow language is a challenging task. There are strict correctness constraints for preserving properties expected by downstream consumers, a large space of possible optimizations, and complex analyses that must reason about the behavior of the program over time. Classic compiler techniques with specialized optimization passes yield unpredictable performance and have complex correctness proofs. But with e-graphs, we can dramatically simplify the process of building a correct optimizer while yielding more consistent results! In this short paper, we discuss our early work using e-graphs to develop an optimizer for a the Hydroflow dataflow language. Our prototype demonstrates that composing simple, easy-to-prove rewrite rules is sufficient to match techniques in hand-optimized systems.",
+  "doi": "10.48550/arxiv.2306.10585",
+  "openalex": "W4381561612",
+  "status": "ok",
+  "title": "Optimizing Stateful Dataflow with Local Rewrites"
+ },
+ "10.48550_arxiv.2311.02781": {
+  "abstract": "Modern data analytics workloads combine relational data processing with machine learning (ML). Most DBMS handle these workloads by offloading these ML operations to external specialized ML systems. While both DBMS and ML systems go to great lengths to optimize performance for their specific workloads, significant performance is lost when used in combination, due to data movement across system boundaries, conversions between incompatible internal data formats, and the lack of cross system optimizations. A key idea to remove these bottlenecks is to integrate existing data manipulation systems with ML systems by building a common intermediate layer (IR). Although this idea has been explored before (Weld, Delite), previous such attempts require significant re-engineering of prior systems and still fall short in achieving best-of-breed performance for individual tasks (e.g., SQL, Deep Learning). Specifically, they rely on re-implementing existing systems using a generic set of operators and fail to match best-of-breed individual performance due to the inability to recover high-level optimizations from this generic IR through compiler analysis. We present Flern, the first intermediate-layer integration between DB and ML systems that are best-of-breed individually, competitive with the best compiled query engines such as HyPer on comprehensive relational benchmarks (TPC-H) and competitive with TensorFlow and PyTorch in state-of-the-art ML models (e.g., DeepSpeech, SqueezeNet, Transformers) and also represents a new state-of-the-art for integration. A key realization is to architect intermediate layers based on generative programming capabilities, which preserves high-level contextual information for cross optimizations and enables the construction of a variety of complex structures and cross system optimizations with minimal effort.",
+  "doi": "10.48550/arxiv.2311.02781",
+  "openalex": "W4388482627",
+  "status": "ok",
+  "title": "Architecting Intermediate Layers for Efficient Composition of Data Management and Machine Learning Systems"
+ },
+ "10.48550_arxiv.2311.15730": {
+  "abstract": "Modern hardware heterogeneity brings efficiency and performance opportunities for analytical query processing. In the presence of continuous data volume and complexity growth, bridging the gap between recent hardware advancements and the data processing tools ecosystem is paramount for improving the speed of ETL and model development. In this paper, we present a comprehensive overview of existing analytical query processing approaches as well as the use and design of systems that use heterogeneous hardware for the task. We then analyze state-of-the-art solutions and identify missing pieces. The last two chapters discuss the identified problems and present our view on how the ecosystem should evolve.",
+  "doi": "10.48550/arxiv.2311.15730",
+  "openalex": "W4389116293",
+  "status": "ok",
+  "title": "Analytical Queries: A Comprehensive Survey"
+ },
+ "10.48550_arxiv.2407.18728": {
+  "abstract": "The Single Instruction Multiple Data (SIMD) parallel paradigm is a well-established and heavily-used hardware-driven technique to increase the single-thread performance in different system domains such as database or machine learning. Depending on the hardware vendor and the specific processor generation/version, SIMD capabilities come in different flavors concerning the register size and the supported SIMD instructions. Due to this heterogeneity and the lack of standardized calling conventions, building high-performance and portable systems is a challenging task. To address this challenge, academia and industry have invested a remarkable effort into creating SIMD abstraction libraries that provide unified access to different SIMD hardware capabilities. However, those one-size-fits-all library approaches are inherently complex, which hampers maintainability and extensibility. Furthermore, they assume similar SIMD hardware designs, which may be invalidated through ARM SVE's emergence. Additionally, while existing SIMD abstraction libraries do a great job of hiding away the specifics of the underlying hardware, their lack of expressiveness impedes crucial algorithm design decisions for system developers. To overcome these limitations, we present TSLGen, a novel end-to-end framework approach for generating an SIMD abstraction library in this paper. We have implemented our TSLGen framework and used our generated Template SIMD Library (TSL) to program various system components from different domains. As we will show, the programming effort is comparable to existing libraries, and we achieve the same performance results. However, our framework is easy to maintain and to extend, which simultaneously supports disruptive changes to the interface by design and exposes valuable insights for assessing provided functionality.",
+  "doi": "10.48550/arxiv.2407.18728",
+  "openalex": "W4402467033",
+  "status": "ok",
+  "title": "Designing and Implementing a Generator Framework for a SIMD Abstraction Library"
+ },
+ "10.48550_arxiv.2505.15124": {
+  "abstract": "In this survey, we will explore the interaction between secure multiparty computation and the area of machine learning. Recent advances in secure multiparty computation (MPC) have significantly improved its applicability in the realm of machine learning (ML), offering robust solutions for privacy-preserving collaborative learning. This review explores key contributions that leverage MPC to enable multiple parties to engage in ML tasks without compromising the privacy of their data. The integration of MPC with ML frameworks facilitates the training and evaluation of models on combined datasets from various sources, ensuring that sensitive information remains encrypted throughout the process. Innovations such as specialized software frameworks and domain-specific languages streamline the adoption of MPC in ML, optimizing performance and broadening its usage. These frameworks address both semi-honest and malicious threat models, incorporating features such as automated optimizations and cryptographic auditing to ensure compliance and data integrity. The collective insights from these studies highlight MPC's potential in fostering collaborative yet confidential data analysis, marking a significant stride towards the realization of secure and efficient computational solutions in privacy-sensitive industries. This paper investigates a spectrum of SecureML libraries that includes cryptographic protocols, federated learning frameworks, and privacy-preserving algorithms. By surveying the existing literature, this paper aims to examine the efficacy of these libraries in preserving data privacy, ensuring model confidentiality, and fortifying ML systems against adversarial attacks. Additionally, the study explores an innovative application domain for SecureML techniques: the integration of these methodologies in gaming environments utilizing ML.",
+  "doi": "10.48550/arxiv.2505.15124",
+  "openalex": "W4415328514",
+  "status": "ok",
+  "title": "A Survey On Secure Machine Learning"
+ },
+ "10.48550_arxiv.2506.02345": {
+  "abstract": "The Pandas API has been central to the success of pandas and its alternatives. Despite its importance, there is no benchmark for it, and we argue that we cannot repurpose existing benchmarks (from other domains) for the Pandas API. In this paper, we introduce requirements that are necessary for a Pandas API enchmark, and present the first benchmark that fulfills them: PandasBench. We argue that it should evaluate the real-world coverage of a technique. Yet, real-world coverage is not sufficient for a useful benchmark, and so we also: cleaned it from irrelevant code, adapted it for benchmark usage, and introduced input scaling. We claim that uniform scaling used in other benchmarks (e.g., TPC-H) is too coarse-grained for PandasBench, and use a non-uniform scaling scheme. PandasBench is the largest Pandas API benchmark to date, with 102 notebooks and 3,721 cells. We used PandasBench to evaluate Modin, Dask, Koalas, and Dias. This is the largest-scale evaluation of all these techniques to date. Prior works report significant speedups using constrained benchmarks, but we show that on a larger benchmark with real-world code, the most notebooks that got a speedup were 8/102 (~8%) for Modin, and 0 for both Koalas and Dask. Dias showed speedups in up to 55 notebooks (~54%), but it rewrites code incorrectly in certain cases, which had not been observed in prior work. Second, we identified many failures: Modin runs only 72/102 (~70%) notebooks, Dask 4 (~4%), Koalas 10 (~10%), and Dias 97 (95%).",
+  "doi": "10.48550/arxiv.2506.02345",
+  "openalex": "W4417095625",
+  "status": "ok",
+  "title": "PandasBench: A Benchmark for the Pandas API"
+ },
+ "10.48550_arxiv.2602.23469": {
+  "abstract": "There is a growing demand for supporting inference queries that combine Structured Query Language (SQL) and Artificial Intelligence / Machine Learning (AI/ML) model inferences in database systems, to avoid data denormalization and transfer, facilitate management, and alleviate privacy concerns. Co-optimization techniques for executing inference queries in database systems without accuracy loss fall into four categories: (O1) Relational algebra optimization treating AI/ML models as black-box user-defined functions (UDFs); (O2) Factorized AI/ML inferences; (O3) Tensor-relational transformation; and (O4) General cross-optimization techniques. However, we found none of the existing database systems support all these techniques simultaneously, resulting in suboptimal performance. In this work, we identify two key challenges to address the above problem: (1) the difficulty of unifying all co-optimization techniques that involve disparate data and computation abstractions in one system; and (2) the lack of an optimizer that can effectively explore the exponential search space. To address these challenges, we present CactusDB, a novel system built atop Velox - a high-performance, UDF-centric database engine, open-sourced by Meta. CactusDB features a three-level Intermediate Representations (IR) that supports relational operators, expression operators, and ML functions to enable flexible optimization of arbitrary sub-computations. Additionally, we propose a novel Monte-Carlo Tree Search (MCTS)-based optimizer with query embedding, co-designed with our unique three-level IR, enabling shared and reusable optimization knowledge across different queries. Evaluation of 12 representative inference workloads and 2,000 randomly generated inference queries on well-known datasets, such as MovieLens and TPCx-AI, shows that CactusDB achieves up to 441 times speedup compared to alternative systems.",
+  "doi": "10.48550/arxiv.2602.23469",
+  "openalex": "W7133195261",
+  "status": "ok",
+  "title": "CACTUSDB: Unlock Co-Optimization Opportunities for SQL and AI/ML Inferences"
+ },
+ "10.48550_arxiv.2606.31238": {
+  "abstract": "Quantifying the marginal impact of individual optimization passes underpins phase ordering, pass selection, optimization design, and analysis of pass/hardware interactions. In LLVM -- the standard backend for C/C++, Rust, and ML stacks via MLIR -- interactions among optimization passes, measurement noise, and pipeline scale make this difficult. We present a systematic, empirical study of the LLVM -O3 optimization pipeline. We decompose the pipeline into cumulative per-pass prefixes. We then measure execution time, compile time, binary size, hardware counters, and RAPL energy across 84,750 measurements covering 113 cumulative prefixes of the -O3 pipeline evaluated on 30 PolyBench/C kernels under rigorous noise mitigation. On these compute-bound affine kernels, the pipeline is non-monotone (6.6-9.7% of transitions regress) and strongly back-loaded (the median non-regressing kernel needs 84.8% of the pipeline for 80% of its speedup). Most gains are driven by a small Pareto-dominant core of passes, while the final -O3 configuration is Pareto-dominated on (size, speedup) for 29 of 30 kernels. We further show that IR instruction count is an unreliable predictor of runtime, that runtime-targeted passes are de facto energy-targeted (30-60% savings), and that the search-free idealized-additive upper bound on losses due to phase interference is 46.35%. These findings enable more informed pass pruning, cost-model calibration, and autotuning.",
+  "doi": "10.48550/arxiv.2606.31238",
+  "openalex": "W7166891708",
+  "status": "ok",
+  "title": "A Multi-Dimensional, Per-Pass Empirical Study of the LLVM Optimization Pipeline"
+ },
+ "10.48786_edbt.2026.21": {
+  "abstract": null,
+  "doi": "10.48786/edbt.2026.21",
+  "openalex": "W7104835283",
+  "status": "no_abstract",
+  "title": "Optimizing UDF Queries in SQL Data Engines"
+ },
+ "10.5220_0006945004000408": {
+  "abstract": null,
+  "doi": "10.5220/0006945004000408",
+  "openalex": "W2887197970",
+  "status": "no_abstract",
+  "title": "Design of a Portable Programming Abstraction for Data Transformations"
+ },
+ "10.5441_002_edbt.2021.35": {
+  "abstract": null,
+  "doi": "10.5441/002/edbt.2021.35",
+  "openalex": "W3150711643",
+  "status": "no_abstract",
+  "title": "HorsePower: Accelerating Database Queries for Advanced Data Analytics"
+ },
+ "oa-W3013478987": {
+  "abstract": "Because of the low arithmetic intensity of relational database operators, the performance of in-memory column stores ought to be bound by main-memory bandwidth, and in practice, highly-optimized operator implementations already achieve close to their peak theoretical performance. By itself, this would imply that hardware acceleration for analytics would be of limited utility, but I show that the emergence of full-query compilation presents new opportunities to reduce memory traffic and trade computation for communication, meaning that database-oriented processors may yet be worth designing.Moreover, the communication costs of queries on a given processor and memory hierarchy are determined by factors below the level of abstraction expressed in traditional query plans, such as how operators are (or are not) fused together, how execution is parallelized and cache-blocked, and how intermediate results are arranged in memory. I present a Scala- embedded programming language called Ressort that exposes these machine-level aspects of query compilation, and which emits parallel C++/OpenMP code as its target to express a greater range of algorithmic variants for each query than would be easy to study by hand.",
+  "doi": null,
+  "openalex": "W3013478987",
+  "status": "ok",
+  "title": "Compiling Communication-Minimizing Query Plans"
+ },
+ "oa-W3105704032": {
+  "abstract": "As machine learning is applied more widely, data scientists often struggle to find or create end-to-end machine learning systems for specific tasks.The proliferation of libraries and frameworks and the complexity of the tasks have led to the emergence of \"pipeline jungles\" -brittle, ad hoc ML systems.To address these problems, we introduce the Machine Learning Bazaar, a new framework for developing machine learning and automated machine learning software systems.First, we introduce ML primitives, a unified API and specification for data processing and ML components from different software libraries.Next, we compose primitives into usable ML pipelines, abstracting away glue code, data flow, and data storage.We further pair these pipelines with a hierarchy of AutoML strategies -Bayesian optimization and bandit learning.We use these components to create a general-purpose, multi-task, end-to-end AutoML system that provides solutions to a variety of data modalities (image, text, graph, tabular, relational, etc.) and problem types (classification, regression, anomaly detection, graph matching, etc.).We demonstrate 5 real-world use cases and 2 case studies of our approach.Finally, we present an evaluation suite of 456 real-world ML tasks and describe the characteristics of 2.5 million pipelines searched over this task suite.",
+  "doi": null,
+  "openalex": "W3105704032",
+  "status": "ok",
+  "title": "The Machine Learning Bazaar: Harnessing the ML Ecosystem for Effective System Development"
+ },
+ "oa-W3179685194": {
+  "abstract": "The continued miniaturization of the technology node increases not only the chip capacity but also the circuit design complexity. How does one efficiently design a chip with millions or billions transistors? This has become a challenging problem in the integrated circuit (IC) design industry, especially for the developers of electronic design automation (EDA) tools. To boost the performance of EDA tools, one promising direction is via parallel computing. In this dissertation, we explore different parallel computing approaches, from CPU to GPU to distributed computing, for EDA applications.\\nNowadays multi-core processors are prevalent from mobile devices to laptops to desktop, and it is natural for software developers to utilize the available cores to maximize the performance of their applications. Therefore, in this dissertation we first focus on multi-threaded programming. We begin by reviewing a C++ parallel programming library called Cpp-Taskflow. Cpp-Taskflow is designed to facilitate programming parallel applications, and has been successfully applied to an EDA timing analysis tool. We will demonstrate Cpp-Taskflow’s programming model and interface, software architecture and execution flow. Then, we improve Cpp-Taskflow in several aspects. First, we enhance Cpp-Taskflow’s usability through restructuring the software architecture. Second, we introduce task graph composition to support composability and modularity, which makes it easier for users to construct large and complex parallel patterns. Third, we add a new task type in Cpp-Taskflow to let users control the graph execution flow. This feature empowers the graph model with the ability to describe complex control flow. Aside from the above enhancements, we have designed a new scheduler to adaptively manage the threads based on available parallelism. The new scheduler uses a simple and effective strategy which can not only prevent resource from being underutilized, but also mitigate resource over-subscription. We have evaluated the new scheduler on both micro-benchmarks and a very-large-scale integration (VLSI) application, and the results show that the new scheduler can achieve good performance and is very energy-efficient.\\nNext we study the applicability of heterogeneous computing, specifically the graphics processing unit (GPU), to EDA. We demonstrate how to use GPU to accelerate VLSI placement, and we show that GPU can bring substantial performance gain to VLSI placement. Finally, as the design size keeps increasing, a more scalable solution will be distributed computing. We introduce a distributed power grid analysis framework built on top of DtCraft. This framework allows users to flexibly partition the design and automatically deploy the computations across several machines. In addition, we propose a job scheduler that can efficiently utilize cluster resource to improve the framework’s performance.",
+  "doi": null,
+  "openalex": "W3179685194",
+  "status": "ok",
+  "title": "Advances in parallel programming for electronic design automation"
+ },
+ "s2-027ef416624e8b35": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Scalable unified data analytics"
+ },
+ "s2-0ee643de086e37ee": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Tensor Compiler for Unified Machine Learning Prediction Serving"
+ },
+ "s2-181321e61a8a068f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient Memory Management for GPU-based Deep Learning Systems"
+ },
+ "s2-2bbe7c182af82c09": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Snek: Overloading Python Semantics via Virtualization"
+ },
+ "s2-3114f4a62d4acdeb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiling Communication-Minimizing Query Plans"
+ },
+ "s2-33c006cf61c88be1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Amazon Redshi � Re-invented"
+ },
+ "s2-3f41ad1e7cf13fb1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The 800 Pound Python in the Machine Learning Room"
+ },
+ "s2-491f5b0c8663ce35": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Willump: A Statistically-Aware End-to-end Optimizer for Machine Learning Inference"
+ },
+ "s2-52abd82526785887": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cognac: Domain-Specific Compilation for Cognitive Models"
+ },
+ "s2-5c573e77829a6060": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Modularis: Modular Data Analytics for Hardware, Software, and Platform Heterogeneity"
+ },
+ "s2-637da8d72a9bd7a3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Willump: A Statistically-Aware End-to-end Optimizer for Machine Learning Inference"
+ },
+ "s2-6e3970ba9bd7353e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Willump: Statistically-Aware Optimizations for Fast Machine Learning Inference"
+ },
+ "s2-855aa04958b3765e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "An Algebra with a Fixpoint Operator for Distributed Data Collections"
+ },
+ "s2-89dd8106fcbde3f6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Snippet from the Black Scholes options pricing benchmark implemented using Intel MKL"
+ },
+ "s2-8a5dfb76be6fff48": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "LifeStream: A High-performance Stream Processing Engine for Waveform Data"
+ },
+ "s2-980cc523a506a7fb": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Producing building blocks for data analytics"
+ },
+ "s2-aca2939659b20615": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Accelerating Database Queries for Advanced Data Analytics: A New Approach"
+ },
+ "s2-ad82ecee32cb5270": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Offload Annotations: Bringing Heterogeneous Computing to Existing Libraries and Workloads"
+ },
+ "s2-b0dfaa3ff89c76cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Cerebro: A Platform for Multi-Party Cryptographic Collaborative Learning"
+ },
+ "s2-b17ced0e966312fd": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Language-based Serverless Function Accelerator"
+ },
+ "s2-b3d6e20da2da940b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Jumpgate: In-Network Processing as a Service for Data Analytics"
+ },
+ "s2-d4f1a9559ea4cd5e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Sharing without Showing: Building Secure Collaborative Systems"
+ },
+ "s2-d5069c04625e3556": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Taming Model Serving Complexity, Performance and Cost: A Compilation to Tensor Computations Approach"
+ },
+ "s2-feca2d7a60da26a0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Loop-Adaptive Execution in Weld"
+ }
+}

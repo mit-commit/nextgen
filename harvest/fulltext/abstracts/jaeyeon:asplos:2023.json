@@ -1,0 +1,275 @@
+{
+ "10.1007_978-981-95-5795-0_4": {
+  "abstract": null,
+  "doi": "10.1007/978-981-95-5795-0_4",
+  "openalex": "W7162466782",
+  "status": "no_abstract",
+  "title": "Accelerating Computation for Scalable Graph Neural Network Training"
+ },
+ "10.1016_j.sysarc.2024.103305": {
+  "abstract": null,
+  "doi": "10.1016/j.sysarc.2024.103305",
+  "openalex": "W4404523834",
+  "status": "no_abstract",
+  "title": "NLTSP: A cost model for tensor program tuning using nested loop trees"
+ },
+ "10.1109_access.2024.3402326": {
+  "abstract": "The relentless growth of modern Machine Learning models has spurred the adoption of sparsification techniques to simplify their architectures and reduce the computational demands. Network pruning has demonstrated success in maintaining original network accuracy while shedding significant portions of the original weights. However, leveraging this sparsity efficiently remains challenging due to computational irregularities, particularly in GPU kernels. A new trend of template-based GPU kernels for semi-structured sparsity shows promise in efficiency but lacks autotuning capabilities to adapt to input dynamics, often underperforming in scenarios where they have not been meticulously hand-tuned. We present STuning-DL, the first pruning-aware autotuner for third-party template-based implementations enabling efficient optimization of sparse kernels for Deep Learning, spanning from high-level aspects (CUDA C++ level) down to GPU-native instructions specifics (assembly-level). STuning-DL tunes and optimizes at run-time sparse kernels’ performance for each input problem, yielding speedups of up to 5.42× on NVIDIA T4-16GB and up to 3.6× on NVIDIA A100-40GB GPU in sparse matrices from real world models compared to existing heuristics from sparse libraries like cuSparse and cuSparseLt.",
+  "doi": "10.1109/access.2024.3402326",
+  "openalex": "W4397026524",
+  "status": "ok",
+  "title": "STuning-DL: Model-Driven Autotuning of Sparse GPU Kernels for Deep Learning"
+ },
+ "10.1109_cgo68049.2026.11395219": {
+  "abstract": "Over the years, many frameworks and optimization techniques have been proposed to accelerate graph neural networks (GNNs). In contrast to the optimizations explored in these systems, we observe that different matrix re-associations of GNN computations lead to novel input-sensitive performance behavior. We leverage this observation to propose GRANII, a system that exposes different compositions of sparse and dense matrix primitives based on different matrix re-associations of GNN computations and selects the best among them based on input attributes. GRANII executes in two stages: (1) an offline compilation stage that enumerates all valid re-associations leading to different sparse-dense matrix compositions and uses input-oblivious pruning techniques to prune away clearly unprofitable candidates, and (2) an online runtime system that explores the remaining candidates and uses lightweight cost models to select the best re-association based on the input graph and the embedding sizes. On a wide range of configurations, GRANII achieves a geo-mean speedup of 1.56× for inference and 1.4× for training across multiple GNN models and systems. We also show GRANII’s technique functions on diverse implementations and with techniques such as sampling.",
+  "doi": "10.1109/cgo68049.2026.11395219",
+  "openalex": "W7131170673",
+  "status": "ok",
+  "title": "GRANII: Selection and Ordering of Primitives in GRAph Neural Networks using Input Inspection"
+ },
+ "10.1109_cluster59578.2024.00036": {
+  "abstract": "Tensor decomposition, a pivotal technique in mining underlying patterns from voluminous and high-dimensional sparse datasets, plays a crucial role in unraveling latent structures within complex data. Among the various methods employed for tensor decomposition, Canonical Polyadic Decomposition (CPD) stands out as a prominent choice, widely embraced across numerous scientific disciplines and practical applications due to its effectiveness in capturing multi-linear relationships. However, the computational efficacy of CPD is significantly hampered by the Matricized Tensor Times Khatri-Rao Product (MTTKRP) operation, which constitutes its primary bottleneck. While of-floading the MTTKRP computation onto Graphics Processing Units (GPUs) has emerged as a prevalent strategy to leverage their parallel processing capabilities for enhancing performance, the inherent sparsity and irregular data access patterns intrinsic to these operations introduce new complexities. Addressing this challenge, we introduce an innovative method-ology ScalFrag designed to accelerate sparse MTTKRP computations on GPU platforms. A key insight underlying our approach is the recognition that the optimal kernel launch configuration-a critical factor influencing GPU performance-varies consider-ably depending on the unique characteristics of the input tensor. We devise a dynamic kernel launch configuration selection mech-anism to tackle this variability. This novel strategy autonomously identifies and applies the most advantageous launch setup tai-lored to each input tensor, optimizing computational efficiency. Additionally, we present a stream-based algorithm for sparse MTTKRP, further overlapping data access time. By leveraging streaming architectures, our algorithm significantly improves data access efficiency, mitigating the bottlenecks associated with the irregularities of sparse tensor patterns. The experimental results show that ScalFrag performs better than the SOTA library ParTI, and is able to find more suitable kernel launch parameter configurations in a short time.",
+  "doi": "10.1109/cluster59578.2024.00036",
+  "openalex": "W4404133484",
+  "status": "ok",
+  "title": "ScalFrag: Efficient Tiled-MTTKRP with Adaptive Launching on GPUs"
+ },
+ "10.1109_hpca61900.2025.00077": {
+  "abstract": "In the realm of recommendation systems, achieving real-time performance in embedding similarity tasks is often hindered by the limitations of traditional Top-K sparse matrix-vector multiplication (SpMV) methods, which suffer from high latency due to inefficient memory access patterns. This paper identifies these critical gaps and introduces AccelES, a novel approach that significantly enhances the efficiency of Top-K SpMV. Our method employs a two-stage calculation scheme: the first stage utilizes a compact, low-bit dataset to quickly identify the most relevant entries, while the second stage performs full-precision calculations solely on this pruned subset, thereby minimizing computational overhead. Furthermore, AccelES incorporates innovative matrix representations, Ultra-CSR and Random-CSR, which optimize memory bandwidth utilization. Experimental results demonstrate that AccelES accelerates performance, surpassing state-of-the-art FPGA, GPU, and CPU solutions by factors of 3.4×, 2.5×, and 153.3×, respectively, under controlled conditions. These advancements not only enhance processing speed but also significantly improve real-time performance in recommendation systems, establishing AccelES as a pivotal contribution to the field of Top-K sparse matrix-vector multiplication.",
+  "doi": "10.1109/hpca61900.2025.00077",
+  "openalex": "W4409248675",
+  "status": "ok",
+  "title": "AccelES: Accelerating Top-K SpMV for Embedding Similarity via Low-bit Pruning"
+ },
+ "10.1109_hpec67600.2025.11196484": {
+  "abstract": "Algorithmic dispatch is essential for performance in linear-algebra–intensive systems. A persistent challenge lies in the treatment of structured matrices. Although such matrices are often described as \"sparse,\" the term structured is more precise, as it highlights exploitable properties—such as bandedness or triangularity—whose algorithmic advantages extend beyond sparsity alone. When the dispatch strategy leaves these structures unrecognized, valuable opportunities for optimization are lost. Recent advances in generative AI offer the promise of linking these silent structures to more effective algorithmic and architectural choices, supplying much of the missing connective tissue in computational linear algebra. However, AI-synthesized dispatch strategies also raise important questions about their theoretical soundness. This work introduces analytical criteria—grounded in time-complexity analysis—to determine when structure-aware dispatch delivers tangible gains. We examine the overheads of structure detection and data-format conversion, characterizing their impact on speedup and slowdown. We illustrate these concepts through a case study on LU factorization applied to banded matrices stored in a dense format, demonstrating results that align with theoretical bounds and reveal substantial gains in both performance and memory usage. These analyses underscore the need for more intelligent dispatch strategies to recognize and exploit silent structures—an underused path to high-performance linear algebra.",
+  "doi": "10.1109/hpec67600.2025.11196484",
+  "openalex": "W4415250929",
+  "status": "ok",
+  "title": "When Structure is Silent: Opportunities for Algorithmic Dispatch in Linear Algebra"
+ },
+ "10.1109_icaibd69640.2026.11637320": {
+  "abstract": null,
+  "doi": "10.1109/icaibd69640.2026.11637320",
+  "openalex": "W7202349322",
+  "status": "no_abstract",
+  "title": "DenStat: Accelerating SpMV Execution via Joint Learning of Density Maps and Statistical Features"
+ },
+ "10.1109_iccd63220.2024.00083": {
+  "abstract": "Sparse tensor computation plays a crucial role in modern deep learning workloads, and its expensive computational cost leads to a strong demand for high-performance oper-ators. However, developing high-performance sparse operators is exceptionally challenging and tedious. Existing vendor operator libraries fail to keep pace with the evolving trends in new algorithms. Sparse tensor compilers simplify the development and optimization of operator, but existing work either requires significant engineering effort for tuning or suffers from limitations in search space and search strategies, which creates unavoidable cost and efficiency issues. In this paper, we propose AutoSparse, a source-to-source auto-tuning framework that targets sparse for-mat and schedule for sparse tensor program. Firstly, AutoSparse designs a sparse tensor DSL based on dynamic computational graph at the front-end, and proposes a sparse tensor program computational pattern extraction and automatic design space generation scheme based on it. Second, AutoSparse's back-end designs an adaptive exploration strategy based on reinforcement learning and heuristic algorithm to find the optimal format and schedule configuration in a large-scale design space. Compared to prior work, developers using AutoSparse do not need to specify tuning design space relied on any compilation or hardware knowledge. We use the SuiteS parse dataset to compare with four state-of-the-art baselines, namely, the high-performance operator library MKL, the manually-based optimisation scheme ASpT, the auto-tuning-based framework TVM-S and WACO. The results demonstrate that AutoSparse achieves average speedups of 1.92-$2.48 \\times. 1.19-6.34 \\times$. and$1.47-2.23\\times$for the SpMV, SpMM, and SDDMM operators, respectively. We will open-source AutoSparse at https://github.com/Qu-Xiangjun/AutoSparse.",
+  "doi": "10.1109/iccd63220.2024.00083",
+  "openalex": "W4406014476",
+  "status": "ok",
+  "title": "AutoSparse: A Source-to-Source Format and Schedule Auto- Tuning Framework for Sparse Tensor Program"
+ },
+ "10.1109_isca59077.2024.00021": {
+  "abstract": "The architectural design-space exploration (or DSE) process-whether manual or automated-benefits greatly from knowing the limits of the metrics of interest in advance. Data movement is rapidly emerging as a critical metric for DSE due to its increasing impact on both performance and energy efficiency. Unfortunately, the commonly used algorithmic minimum (or “compulsory misses”) limit for data movement is extremely loose, limiting its utility in design-space search. In this paper, we present Orojenesis, an approach to compute data movement limits (or bounds) for tensor algorithms. Unlike algorithmic-minimum bounds, Orojenesis comprehends reuse and the ability of a buffer (such as a cache or scratchpad) to exploit reuse to reduce data movement. Orojenesis provides a bound that no dataflow or mapping can possibly exceed under varying onchip buffer capacity constraints, including mappings that fuse a sequence of tensor operations to exploit producer-consumer reuse. Orojenesis produces a plot that shows the relationship between a buffer’s size and the lower data movement limit to/from the next level in a memory hierarchy. This plot, dubbed a ski-slope diagram, allows designers to gain critical insights into the behavior of a workload as a function of storage capacity. This analysis can inform early high-level design decisions before embarking on thorough design space searches. We use Orojenesis to analyze a set of valuable tensor algorithms including batched and grouped matrix multiplications, convolutions, and sequences of operations in Large Language Models (LLMs). Our analysis reveals a range of architectural insights, including the fact that attainable data movement can be orders-of-magnitude higher than algorithmic minimum, that there exists a sweet spot between SRAM and compute resource provisioning for optimal throughput, and that up to $5.6 \\times$ data movement reduction can be achieved with fusion with a buffer capacity of 320 MB for the GPT-3-6.7b LLM.",
+  "doi": "10.1109/isca59077.2024.00021",
+  "openalex": "W4401211619",
+  "status": "ok",
+  "title": "Mind the Gap: Attainable Data Movement and Operational Intensity Bounds for Tensor Algorithms"
+ },
+ "10.1109_metacom57706.2023.00042": {
+  "abstract": "The paper describes research challenges arising from the increasing interest in supporting more immersive and more intelligent environments that enable the next generation of seamless human and physical interactions. These environments span the gamut from augmented-physical to virtual, and are referred to hereafter as the Metaverse. We focus on challenges that constitute a natural extension of Internet of Things (IoT) research. Among the key applications of IoT has always been the integration of physical and cyber environments to endow \"things\" with a better contextual understanding of their surroundings, and endow human users with more seamless means of perception and control, ranging from smart home automation to industrial applications. This IoT vision was based on the premise that the number of physical \"things\" on the Internet will soon significantly outpace humans. Intelligent IoT further envisions a proliferation of edge intelligence with which humans will interact. The paper elaborates the research challenges that extrapolate the above trajectory.",
+  "doi": "10.1109/metacom57706.2023.00042",
+  "openalex": "W4387395078",
+  "status": "ok",
+  "title": "Challenges in Metaverse Research: An Internet of Things Perspective"
+ },
+ "10.1109_tcad.2024.3496882": {
+  "abstract": "Sparse linear algebra (SLA) operations are fundamental building blocks for many important applications, such as data analytics, graph processing, machine learning, and scientific computing. In particular, four compute kernels in SLA are widely used, including sparse-matrix-dense-vector multiplication, sparse-matrix-dense-matrix multiplication, sparse-matrix-sparse-vector multiplication, and sparse-matrix-sparse-matrix multiplication. Recently, an active area of research has emerged to build specialized hardware accelerators for these SLA kernels. However, existing efforts mostly focus on accelerating a single kernel and the proposed accelerator architectures are often limited to a specific compute pattern, such as inner, outer, or row-wise product. This work proposes Vesper, a high-performance and versatile sparse accelerator that supports all four important SLA kernels while being configurable to execute the compute patterns suitable for different kernels under various degrees of sparsity. To enable rapid exploration of the large architectural design and configuration space, we devise an analytical model to estimate the performance of an SLA kernel running on a given hardware configuration using a specific compute pattern. Guided by our model, we build a flexible yet efficient accelerator architecture that maximizes the resource sharing amongst the hardware modules used for different SLA kernels and the associated compute patterns. We evaluate the performance of Vesper using gem5 on a diverse set of matrices from SuiteSparse. Our experiment results show that Vesper achieves a comparable or higher throughput with increased bandwidth efficiency than the state-of-the-art accelerators that are tailor-made for a specific SLA kernel. In addition, we evaluate Vesper on a real-world application called label propagation (LP), an iterative graph-based learning algorithm that involves multiple SLA kernels and exhibits varying degrees of sparsity across iterations. Compared to CPU- and GPU-based executions, Vesper speeds up the LP algorithm by$12.0\\times $and$1.7\\times $, respectively.",
+  "doi": "10.1109/tcad.2024.3496882",
+  "openalex": "W4404317065",
+  "status": "ok",
+  "title": "Vesper: A Versatile Sparse Linear Algebra Accelerator With Configurable Compute Patterns"
+ },
+ "10.1109_tcad.2025.3636442": {
+  "abstract": "Sparse tensor computation is widely used in deep learning and scientific computing. However, diverse sparse data and algorithmic characteristics at the application level, combined with the diversity of hardware platforms, pose significant challenges for efficient sparse tensor program optimization. Manually crafted operator libraries are time-consuming to develop and lack portability. To address this, we propose UniSparTa, a unified sparse tensor program tuning framework that automatically generates high-performance programs. First, we extract unified optimization principles for high-performance sparse tensor programs and propose a domain-specific language (DSL) to automatically generate a high-quality design space without manual intervention. Second, by analyzing the general distribution of the design space, we introduce an adaptive search strategy combining Deep Q-Networks (DQN) and Simulated Annealing (SA). Finally, to avoid the unacceptable time cost of real measurement during tuning, we propose a unified cost model based on multimodal fusion to accurately predict program performance. Furthermore, by leveraging data augmentation and transfer learning, we enable low-cost transfer prediction across different sparse data patterns, algorithms, and hardware platforms. Results show that, compared to the state-of-the-art operator library MKL, the manually optimized scheme ASpT, the tensor compiler TVM, and the sparse tensor tuning framework WACO, UniSparTa achieves average speedups of 1.98×, 2.75×, 6.13×, and 1.75×, respectively. Moreover, UniSparTa significantly accelerates the tuning process.",
+  "doi": "10.1109/tcad.2025.3636442",
+  "openalex": "W4416714611",
+  "status": "ok",
+  "title": "UniSparTa: A Unified Sparse Tensor Program Tuning Framework"
+ },
+ "10.1145_3613424.3623793": {
+  "abstract": "Sparse tensor algebra is a challenging class of workloads to accelerate due to low arithmetic intensity and varying sparsity patterns. Prior sparse tensor algebra accelerators have explored tiling sparse data to increase exploitable data reuse and improve throughput, but typically allocate tile size in a given buffer for the worst-case data occupancy. This severely limits the utilization of available memory resources and reduces data reuse. Other accelerators employ complex tiling during preprocessing or at runtime to determine the exact tile size based on its occupancy.",
+  "doi": "10.1145/3613424.3623793",
+  "openalex": "W4387323274",
+  "status": "ok",
+  "title": "Tailors: Accelerating Sparse Tensor Algebra by Overbooking Buffer Capacity"
+ },
+ "10.1145_3620665.3640427": {
+  "abstract": "Sparse matrix dense matrix multiplication (SpMM) is commonly used in applications ranging from scientific computing to graph neural networks. Typically, when SpMM is executed in a distributed platform, communication costs dominate. Such costs depend on how communication is scheduled. If it is scheduled in a sparsity-unaware manner, such as with collectives, execution is often inefficient due to unnecessary data transfers. On the other hand, if communication is scheduled in a fine-grained sparsity-aware manner, communicating only the necessary data, execution can also be inefficient due to high software overhead.",
+  "doi": "10.1145/3620665.3640427",
+  "openalex": "W4394998401",
+  "status": "ok",
+  "title": "Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM"
+ },
+ "10.1145_3626183.3659985": {
+  "abstract": null,
+  "doi": "10.1145/3626183.3659985",
+  "openalex": "W4399344346",
+  "status": "no_abstract",
+  "title": "Minimum Cost Loop Nests for Contraction of a Sparse Tensor with a Tensor Network"
+ },
+ "10.1145_3627535.3638471": {
+  "abstract": "Convolutional neural networks (CNNs) have achieved remarkable success in various application fields. Although model compression techniques mitigate the ever-increasing resource demands of large CNN models, the compressed models usually exhibit irregular memory access and unstructured sparsity, which are difficult for dominant operators such as sparse convolution to achieve expected performance speedup on popular inference platforms such as GPU. In this paper, we propose Tetris, an efficient sparse convolution approach optimized for GPU. Tetris first fully exploits the input reuse opportunity of sparse convolution to reduce the memory accesses to global memory. It then adopts a stride packed filter (SPF) format and a bank-sensing reorganization scheme to eliminate the irregular memory accesses caused by unstructured sparsity. It also leverages a filter group reorder technique to address load imbalance among threads, and a parameter tuning method to determine the optimal parameters of the sparse convolution implementation. The experiment results show that Tetris outperforms dense/sparse convolution libraries and cutting-edge implementations with promising performance speedup.",
+  "doi": "10.1145/3627535.3638471",
+  "openalex": "W4391958657",
+  "status": "ok",
+  "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU"
+ },
+ "10.1145_3639323": {
+  "abstract": "Sparse operators, i.e., operators that take sparse tensors as input, are of great importance in deep learning models. Due to the diverse sparsity patterns in different sparse tensors, it is challenging to optimize sparse operators by seeking an optimal sparse format, i.e., leading to the lowest operator latency. Existing works propose to decompose a sparse tensor into several parts and search for a hybrid of sparse formats to handle diverse sparse patterns. However, they often make a trade-off between search space and search time: their search spaces are limited in some cases, resulting in limited operator running efficiency they can achieve. In this paper, we try to extend the search space in its breadth (by doing flexible sparse tensor transformations) and depth (by enabling multi-level decomposition). We formally define the multi-level sparse format decomposition problem, which is NP-hard, and we propose a framework STile for it. To search efficiently, a greedy algorithm is used, which is guided by a cost model about the latency of computing a sub-task of the original operator after decomposing the sparse tensor. Experiments of two common kinds of sparse operators, SpMM and SDDMM, are conducted on various sparsity patterns, and we achieve 2.1-18.0× speedup against cuSPARSE on SpMMs and 1.5 - 6.9× speedup against DGL on SDDMM. The search time is less than one hour for any tested sparse operator, which can be amortized.",
+  "doi": "10.1145/3639323",
+  "openalex": "W4393183662",
+  "status": "ok",
+  "title": "STile: Searching Hybrid Sparse Formats for Sparse Deep Learning Operators Automatically"
+ },
+ "10.1145_3669940.3707219": {
+  "abstract": null,
+  "doi": "10.1145/3669940.3707219",
+  "openalex": "W4407217837",
+  "status": "no_abstract",
+  "title": "RASSM: Residue-based Acceleration of Single Sparse Matrix Computation via Adaptive Tiling"
+ },
+ "10.1145_3696443.3708931": {
+  "abstract": "We introduce VEGA, an AI-driven system aimed at easing the development of compiler backends for new targets. Our approach involves categorizing functions from existing backends into function groups, each comprising various target-specific implementations of a standard compiler interface function, abstracted as a single function template. Therefore, generating a new backend involves customizing these function templates to specific target requirements. To capitalize on AI's capabilities in code generation, VEGA maps statements in a target-specific version of a function template into feature vectors, distinguishing between target-independent and target-specific properties. Leveraging a pre-trained model, VEGA can efficiently auto-generate a version of each function template tailored to a specific target, thereby enabling the construction of a complete compiler backend for a new target based solely on its target description files. We evaluated VEGA on three distinct targets: a CPU processor (RISC-V), a customized processor with instruction extensions (RI5CY), and an IoT processor (xCORE). VEGA demonstrated high efficiency, generating compiler backends under an hour, which can substantially enhance developer productivity. Across the three targets, VEGA achieved accuracy rates of 71.5%, 73.2%, and 62.2% for all generated functions, significantly outperforming the traditional fork-flow method, which yielded less than 8% accuracy. Moreover, VEGA provides explicit confidence scores for generated functions and statements, allowing developers to easily identify areas requiring minimal manual intervention. This research has the potential to improve the effectiveness of traditional compiler backend development.",
+  "doi": "10.1145/3696443.3708931",
+  "openalex": "W4407857977",
+  "status": "ok",
+  "title": "VEGA: Automatically Generating Compiler Backends using a Pre-trained Transformer Model"
+ },
+ "10.1145_3721145.3730427": {
+  "abstract": null,
+  "doi": "10.1145/3721145.3730427",
+  "openalex": "W4413411942",
+  "status": "no_abstract",
+  "title": "Loop Fusion in Matrix Multiplications with Sparse Dependence"
+ },
+ "10.1145_3725843.3756095": {
+  "abstract": "Sparse tensor algebra computations are often memory-bound due to irregular access patterns and low arithmetic intensity.We present D2T2 (Data-Driven Tensor Tiling), a framework that optimizes static coordinate-space tiling schemes to minimize memory traffic by identifying and leveraging relevant high-level statistics from input operands.For a given tensor algebra computation, D2T2 collects statistics from input tensors, builds a probability distribution-based model of the tensor computation, and uses it to predict traffic for various tiling configurations.It searches over tile shape and size configurations to minimize total traffic.We evaluate D2T2 against Tailors and DRT, two state of the art tiling schemes for sparse tensor algebra.We find that D2T2 achieves, on average, a 2.54× speedup over Tailors and a 1.13× lower memory bandwidth compared to DRT for sparse-sparse matrix multiplication (SpMSpM).We also achieve 1.22-48.94×lower bandwidth for SpMSpM and up to 34.31× lower bandwidth for tensor operations (TTM and MTTKRP) than conservative static tiling schemes.Unlike prior tiling techniques, D2T2 is deployable without specialized hardware support.On Opal, a 16nm sparse tensor algebra accelerator, D2T2 generated tiling configurations that achieve 1.23-3.34×speedups compared to their original hand-tuned configurations.",
+  "doi": "10.1145/3725843.3756095",
+  "openalex": "W4415285476",
+  "status": "ok",
+  "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra"
+ },
+ "10.1145_3731545.3731588": {
+  "abstract": null,
+  "doi": "10.1145/3731545.3731588",
+  "openalex": "W4414210253",
+  "status": "no_abstract",
+  "title": "HYPERF: End-to-End Autotuning Framework for High-Performance Computing"
+ },
+ "10.1145_3743135": {
+  "abstract": "Scheduling languages express to a compiler—or equivalently, a code generator—a sequence of optimizations to apply. Performance tools that support a scheduling language interface allow exploration of optimizations, i.e., exploratory compilers . While scheduling languages have become a common feature of tools for experts, the proliferation of these languages without unifying common features may be confusing to users. Moreover, we recognize a need to organize the compiler developer community around common exploratory compiler infrastructure, and future advances to address, for example, data layout and data movement. To support a broader set of users may require raising the level of abstraction. This article provides a chronology of scheduling languages, discussing their origins in iterative compilation and autotuning, noting the common features that are used in existing frameworks, and calling for changes to increase their utility and portability.",
+  "doi": "10.1145/3743135",
+  "openalex": "W4411292544",
+  "status": "ok",
+  "title": "Scheduling Language Chronology: Past, Present, and Future"
+ },
+ "10.1145_3763146": {
+  "abstract": "This paper introduces the continuous tensor abstraction, allowing indices to take real-number values (e.g., A[3.14]). It also presents continuous tensor algebra expressions, such as C x,y = A x,y * B x,y , where indices are defined over a continuous domain. This work expands the traditional tensor model to include continuous tensors. Our implementation supports piecewise-constant tensors, on which infinite domains can be processed in finite time. We also introduce a new tensor format for efficient storage and a code generation technique for automatic kernel generation. For the first time, our abstraction expresses domains like computational geometry and computer graphics in the language of tensor programming. Our approach demonstrates competitive or better performance to hand-optimized kernels in leading libraries across diverse applications. Compared to hand-implemented libraries on a CPU, our compiler-based implementation achieves an average speedup of 9.20× on 2D radius search with ∼60× fewer lines of code (LoC), 1.22× on genomic interval overlapping queries (with ∼18× LoC saving), and 1.69× on trilinear interpolation in Neural Radiance Field (with ∼6× LoC saving).",
+  "doi": "10.1145/3763146",
+  "openalex": "W4415007445",
+  "status": "ok",
+  "title": "The Continuous Tensor Abstraction: Where Indices Are Real"
+ },
+ "10.1145_3764585": {
+  "abstract": "Compiler backends are tasked with generating executable machine code for various processors. As the diversity of processors continues to grow, it is imperative for programmers to tailor specific compiler backends to accommodate each one. However, compiler backend development remains a labor-intensive and time-consuming process, with limited automation tools available. Although large language models (LLMs) have demonstrated strong abilities in code completion and code generation tasks, the lack of appropriate datasets for compiler backend development limits the application of LLMs in this field. In this article, we introduce ComBack++, a multilingual dataset covering C/C++, machine description, and TableGen, with 184 backends from GCC and LLVM, four backend-specific tasks. Based on ComBack++, we present BePilot, a compiler backend-specific LLM available in two sizes: BePilot-1.5B and BePilot-7B. We also introduce CB-Retriever , a retriever that constructs few-shot prompts via in-context learning to improve vanilla LLM performance in resource-constrained settings. Experimental results show that BePilot-1.5B and BePilot-7B achieve significantly higher accuracy across four tasks in ComBack++ compared to 12 baseline LLMs (125M–34B parameters). In addition, CB-Retriever consistently boosts the accuracy of six mainstream LLMs. Both BePilot-1.5B and BePilot-7B, as well as vanilla LLMs augmented with CB-Retriever , outperform the traditional manual compiler backend development approach (Fork-Flow) in efficiency across all four tasks in ComBack++. Furthermore, human evaluation by four experienced compiler backend developers confirms that BePilot not only improves development efficiency over Fork-Flow but also surpasses commercial AI programming assistants such as GPT-4o-mini and Gemini2-Flash in terms of code quality. These findings confirm that BePilot and CB-Retriever can substantially enhance compiler backend development efficiency.",
+  "doi": "10.1145/3764585",
+  "openalex": "W4413779626",
+  "status": "ok",
+  "title": "BePilot: An AI Programming Assistant for Compiler Backend Development"
+ },
+ "10.1145_3771775.3786281": {
+  "abstract": "Linear algebra libraries and tensor domain-specific languages are able to deliver high performance for modern scientific and machine learning workloads. While there has been recent work in automatically translating legacy software to use these libraries/DSLs using pattern matching and program lifting, this has been largely limited to dense linear algebra.",
+  "doi": "10.1145/3771775.3786281",
+  "openalex": "W7125916650",
+  "status": "ok",
+  "title": "Accelerating Sparse Algebra with Program Synthesis"
+ },
+ "10.1145_3779212.3790176": {
+  "abstract": "Programming high-performance sparse GPU kernels is notoriously difficult, requiring both substantial effort and deep expertise. Sparse compilers aim to simplify this process, but existing systems fall short in two key ways. First, they are primarily designed for CPUs and rarely produce high-performance GPU code. Second, when computations involve both sparse and dense regions, these compilers often fail to optimize the dense portions effectively. In this paper, we propose a new approach for expressing sparse computations. We start from format-agnostic Einsums over sparse tensors and rewrite them into format-conscious indirect Einsums, which explicitly encode format information by mapping sparse data and metadata onto dense tensor operations through indirect indexing. To execute indirect Einsums, we introduce the Insum compiler, which generates efficient GPU code for these Einsums by lowering to the PyTorch compiler, extended to better support Tensor Core–enabled indirect Einsums. We also present two fixed-length sparse formats, GroupCOO and BlockGroupCOO, designed to fit naturally with indirect Einsums. Our approach achieves 1.14×–3.81× speedups across a range of sparse GPU applications while reducing lines of code by 202×–4491× compared to hand-written implementations. The source code for Insum is publicly available at https://github.com/nullplay/IndirectEinsum.",
+  "doi": "10.1145/3779212.3790176",
+  "openalex": "W7134951474",
+  "status": "ok",
+  "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums"
+ },
+ "10.1145_3795884": {
+  "abstract": "The exponential scaling of Large Language Models (LLMs) has exposed a growing mismatch between computational demands and hardware efficiency. Although model compression is essential for mitigating this gap, two bottlenecks fundamentally limit its effectiveness in practice: (1) high-magnitude activation outliers that degrade the accuracy of conventional uniform quantization, and (2) dynamically varying activation sparsity, that is, difficult to exploit with rigid hardware datapaths. Existing index-based schemes, such as mixed-precision or non-uniform quantization, often incur prohibitive energy and area overheads due to the complex decoding logic required at runtime. In this article, we propose NICE, an index-assisted algorithm-hardware co-design framework that achieves high-efficiency DNN acceleration by synergistically exploiting unstructured weight sparsity and centroid-based activation indexing. The core philosophy of NICE is to reformulate computation-intensive Multiply-Accumulate (MAC) operations into a unified table-lookup (LUT) mechanism. Specifically, we design a new hardware primitive that treats static weight sparsity and dynamic activation indices as lookup coordinates, enabling the direct retrieval of pre-computed or quantized results. Building on this, we develop the NICE Architecture, a systolic array-based accelerator that introduces novel dimensions of data-and-index reuse, effectively alleviating the data-movement bottlenecks of traditional architectures. Experiments show that NICE can achieve 51.3% energy reduction and 3.83x speedup on average.",
+  "doi": "10.1145/3795884",
+  "openalex": "W7128390038",
+  "status": "ok",
+  "title": "NICE: Deep Neural Network Acceleration via Hardware-Friendly Index Assisted Compression"
+ },
+ "10.1145_3808313": {
+  "abstract": "Sparse matrix-vector multiplication (SpMV) is a crucial operation in scientific computing, graph analytics, and machine/deep learning. Its performance is highly sensitive to matrix sparsity patterns, necessitating tailored program designs. This paper introduces SparseZETA, an intelligent auto-tuner that generates high-performance, machine-designed SpMV programs by directly mimicking and composing human-expert actions. To efficiently navigate the vast design space, SparseZETA reformulates auto-tuning as a behavior-cloning problem: rather than costly exploration, it directly synthesizes programs by sequentially predicting actions in a one-pass decision-making process, guided by the real-time state of the evolving, partially constructed program designs. A novel self-training mechanism further accelerates the collection of training data for the prediction models. On NVIDIA A100 (and RTX 2080 Ti) GPUs, SparseZETA achieves average speedups of 1.27×–15.66× (1.44×–19.07×) over existing auto-tuners, human-designed programs, and a sparse compiler. SparseZETA substantially reduces the human effort required to design SpMV programs, including sparse format creation and kernel implementation, cutting the design time from days or even months to an average of 82.52ms per matrix via lightweight inference on only one CPU.",
+  "doi": "10.1145/3808313",
+  "openalex": "W7163867375",
+  "status": "ok",
+  "title": "SparseZETA: Intelligent Auto-tuner for Designing High-Performance SpMV Programs"
+ },
+ "10.48550_arxiv.2406.20037": {
+  "abstract": "Machine-learning models consist of kernels, which are algorithms applying operations on tensors -- data indexed by a linear combination of natural numbers. Examples of kernels include convolutions, transpositions, and vectorial products. There are many ways to implement a kernel. These implementations form the kernel's optimization space. Kernel scheduling is the problem of finding the best implementation, given an objective function -- typically execution speed. Kernel optimizers such as Ansor, Halide, and AutoTVM solve this problem via search heuristics, which combine two phases: exploration and exploitation. The first step evaluates many different kernel optimization spaces. The latter tries to improve the best implementations by investigating a kernel within the same space. For example, Ansor combines kernel generation through sketches for exploration and leverages an evolutionary algorithm to exploit the best sketches. In this work, we demonstrate the potential to reduce Ansor's search time while enhancing kernel quality by incorporating Droplet Search, an AutoTVM algorithm, into Ansor's exploration phase. The approach involves limiting the number of samples explored by Ansor, selecting the best, and exploiting it with a coordinate descent algorithm. By applying this approach to the first 300 kernels that Ansor generates, we usually obtain better kernels in less time than if we let Ansor analyze 10,000 kernels. This result has been replicated in 20 well-known deep-learning models (AlexNet, ResNet, VGG, DenseNet, etc.) running on four architectures: an AMD Ryzen 7 (x86), an NVIDIA A100 tensor core, an NVIDIA RTX 3080 GPU, and an ARM A64FX. A patch with this combined approach was approved in Ansor in February 2024. As evidence of the generality of this search methodology, a similar patch, achieving equally good results, was submitted to TVM's MetaSchedule in June 2024.",
+  "doi": "10.48550/arxiv.2406.20037",
+  "openalex": "W4400222223",
+  "status": "ok",
+  "title": "Explore as a Storm, Exploit as a Raindrop: On the Benefit of Fine-Tuning Kernel Schedulers with Coordinate Descent"
+ },
+ "10.48550_arxiv.2410.19927": {
+  "abstract": "Scheduling languages express to a compiler a sequence of optimizations to apply. Compilers that support a scheduling language interface allow exploration of compiler optimizations, i.e., exploratory compilers. While scheduling languages have become a common feature of tools for expert users, the proliferation of these languages without unifying common features may be confusing to users. Moreover, we recognize a need to organize the compiler developer community around common exploratory compiler infrastructure, and future advances to address, for example, data layout and data movement. To support a broader set of users may require raising the level of abstraction. This paper provides a taxonomy of scheduling languages, first discussing their origins in iterative compilation and autotuning, noting the common features and how they are used in existing frameworks, and then calling for changes to increase their utility and portability.",
+  "doi": "10.48550/arxiv.2410.19927",
+  "openalex": "W4404313484",
+  "status": "ok",
+  "title": "Scheduling Languages: A Past, Present, and Future Taxonomy"
+ },
+ "10.48550_arxiv.2504.11067": {
+  "abstract": "Data-centric ML pipelines extend traditional machine learning (ML) pipelines -- of feature transformations and ML model training -- by outer loops for data cleaning, augmentation, and feature engineering to create high-quality input data. Existing lossless matrix compression applies lightweight compression schemes to numeric matrices and performs linear algebra operations such as matrix-vector multiplications directly on the compressed representation but struggles to efficiently rediscover structural data redundancy. Compressed operations are effective at fitting data in available memory, reducing I/O across the storage-memory-cache hierarchy, and improving instruction parallelism. The applied data cleaning, augmentation, and feature transformations provide a rich source of information about data characteristics such as distinct items, column sparsity, and column correlations. In this paper, we introduce BWARE -- an extension of AWARE for workload-aware lossless matrix compression -- that pushes compression through feature transformations and engineering to leverage information about structural transformations. Besides compressed feature transformations, we introduce a novel technique for lightweight morphing of a compressed representation into workload-optimized compressed representations without decompression. BWARE shows substantial end-to-end runtime improvements, reducing the execution time for training data-centric ML pipelines from days to hours.",
+  "doi": "10.48550/arxiv.2504.11067",
+  "openalex": "W4416052366",
+  "status": "ok",
+  "title": "Morphing-based Compression for Data-centric ML Pipelines"
+ },
+ "10.48550_arxiv.2506.00424": {
+  "abstract": "Sparse tensor programs are essential in deep learning and graph analytics, driving the need for optimized processing. To meet this demand, specialized hardware accelerators are being developed. Optimizing these programs for accelerators is challenging for two reasons: program performance is highly sensitive to variations in sparse inputs, and early-stage accelerators rely on expensive simulators. Therefore, ML-based cost models used for optimizing such programs on general-purpose hardware are often ineffective for early-stage accelerators, as they require large datasets for proper training. To this end, we introduce COGNATE, a novel framework that leverages inexpensive data samples from general-purpose hardware (e.g., CPUs) to train cost models, followed by few-shot fine-tuning on emerging hardware. COGNATE exploits the homogeneity of input features across hardware platforms while effectively mitigating heterogeneity, enabling cost model training with just 5% of the data samples needed by accelerator-specific models to achieve comparable performance. We conduct extensive experiments to demonstrate that COGNATE outperforms existing techniques, achieving average speedups of 1.47x (up to 5.46x) for SpMM and 1.39x (up to 4.22x) for SDDMM.",
+  "doi": "10.48550/arxiv.2506.00424",
+  "openalex": "W4415110270",
+  "status": "ok",
+  "title": "COGNATE: Acceleration of Sparse Tensor Programs on Emerging Hardware using Transfer Learning"
+ },
+ "10.48550_arxiv.2506.15174": {
+  "abstract": "Sparse data structures are commonly used in neural networks to reduce the memory footprint. These data structures are compact but cause irregularities such as random memory accesses, which prevent efficient use of the memory hierarchy. GPUs are a common platform for machine learning practitioners, but running compact data structures on these devices often leads to slow-downs due to inefficient use of computing and memory resources. This paper proposes a new compiler transformation, enumerate-and-sparse-coarsen, that accelerates sparse matrix-matrix multiplication (SPMM) on GPU devices. The transformation increases data reuse in registers and caches while creating more balanced workloads for GPU computing resources. The transformation is tested on sparse neural networks in convolutional and transformer models. On an A100 GPU and across a columns of matrix B (bCols) in $ A \\times B = C$ from range of 32 to 128, the transformation yields a geometric mean speedup of 1.84$\\times$ to 2.27$\\times$ compared to cuBLAS and cuSPARSE baselines, respectively.",
+  "doi": "10.48550/arxiv.2506.15174",
+  "openalex": "W4415333657",
+  "status": "ok",
+  "title": "A Novel Compiler Transformation for Fast Sparse Matrix Multiplication in GPUs"
+ },
+ "10.52202_079017-3567": {
+  "abstract": null,
+  "doi": "10.52202/079017-3567",
+  "openalex": "W4415795438",
+  "status": "no_abstract",
+  "title": "ComBack: A Versatile Dataset for Enhancing Compiler Backend Development Efficiency"
+ },
+ "s2-58244b889726ae26": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Automated Data Selection for Efficient Cost Model Training to Optimize Sparse Matrix Kernels on Emerging Hardware Accelerators"
+ },
+ "s2-bd14e6ce4eeeed62": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SENSEi: Input-Sensitive Compilation for Accelerating GNNs"
+ },
+ "s2-ec0a35e90672141b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Interactive Compiler Scheduling with Strong Guarantees"
+ }
+}

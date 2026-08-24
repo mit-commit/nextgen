@@ -1,0 +1,128 @@
+{
+ "10.1016_j.cels.2021.08.009": {
+  "abstract": "DNA sequencing data continue to progress toward longer reads with increasingly lower sequencing error rates. Here, we define an algorithmic approach, mdBG, that makes use of minimizer-space de Bruijn graphs to enable long-read genome assembly. mdBG achieves orders-of-magnitude improvement in both speed and memory usage over existing methods without compromising accuracy. A human genome is assembled in under 10 min using 8 cores and 10 GB RAM, and 60 Gbp of metagenome reads are assembled in 4 min using 1 GB RAM. In addition, we constructed a minimizer-space de Bruijn graph-based representation of 661,405 bacterial genomes, comprising 16 million nodes and 45 million edges, and successfully search it for anti-microbial resistance (AMR) genes in 12 min. We expect our advances to be essential to sequence analysis, given the rise of long-read sequencing in genomics, metagenomics, and pangenomics. Code for constructing mdBGs is freely available for download at https://github.com/ekimb/rust-mdbg/.",
+  "doi": "10.1016/j.cels.2021.08.009",
+  "openalex": "W3200242814",
+  "status": "ok",
+  "title": "Minimizer-space de Bruijn graphs: Whole-genome assembly of long reads in minutes on a personal computer"
+ },
+ "10.1016_j.ymeth.2023.01.001": {
+  "abstract": "Standard molecular biology laboratories are usually made with complex, sophisticated, and expensive equipment. Unfortunately, most of these labs are not affordable for everyone. In this paper, we show how we built a portable bio lab BioBlocksLab, made of four modules: a centrifuge, a thermocycler, electrophoresis, and an incubator. We also propose a new version of a blockly programming language to describe experimental lab protocols, called BioBlocks 2.0, which is based on the Microsoft MakeCode platform from the open-source project Microsoft Programming Experience Toolkit (PXT). We run BioBlocks programs of real lab protocols to control different hardware modules with biological reagents and get positive results. We offer an easy, affordable, and open-source way for everyone to do experiments with Do-It-Yourself (DIY) portable bio-labs.",
+  "doi": "10.1016/j.ymeth.2023.01.001",
+  "openalex": "W4315642663",
+  "status": "ok",
+  "title": "BioBlocksLab: A portable DIY Bio Lab using BioBlocks language"
+ },
+ "10.1021_acs.jctc.3c01276": {
+  "abstract": "Exascale supercomputers have opened the door to dynamic simulations, facilitated by AI/ML techniques, that model biomolecular motions over unprecedented length and time scales. This new capability holds the potential to revolutionize our understanding of fundamental biological processes. Here we report on some of the major advances that were discussed at a recent CECAM workshop in Pisa, Italy, on the topic with a primary focus on atomic-level simulations. First, we highlight examples of current large-scale biomolecular simulations and the future possibilities enabled by crossing the exascale threshold. Next, we discuss challenges to be overcome in optimizing the usage of these powerful resources. Finally, we close by listing several grand challenge problems that could be investigated with this new computer architecture.",
+  "doi": "10.1021/acs.jctc.3c01276",
+  "openalex": "W4392091290",
+  "status": "ok",
+  "title": "All-Atom Biomolecular Simulation in the Exascale Era"
+ },
+ "10.1038_s41576-022-00551-z": {
+  "abstract": null,
+  "doi": "10.1038/s41576-022-00551-z",
+  "openalex": "W4310964066",
+  "status": "no_abstract",
+  "title": "Navigating bottlenecks and trade-offs in genomic data analysis"
+ },
+ "10.1101_2021.06.09.447586": {
+  "abstract": "Abstract DNA sequencing data continues to progress towards longer reads with increasingly lower sequencing error rates. We focus on the problem of assembling such reads into genomes, which poses challenges in terms of accuracy and computational resources when using cutting-edge assembly approaches, e.g. those based on overlapping reads using minimizer sketches. Here, we introduce the concept of minimizer-space sequencing data analysis, where the minimizers rather than DNA nucleotides are the atomic tokens of the alphabet. By projecting DNA sequences into ordered lists of minimizers, our key idea is to enumerate what we call k-min-mers , that are k-mers over a larger alphabet consisting of minimizer tokens. Our approach, mdBG or minimizer-dBG, achieves orders-of-magnitude improvement in both speed and memory usage over existing methods without much loss of accuracy. We demonstrate three uses cases of mdBG: human genome assembly, metagenome assembly, and the representation of large pangenomes. For assembly, we implemented mdBG in software we call rust-mdbg , resulting in ultra-fast, low memory and highly-contiguous assembly of PacBio HiFi reads. A human genome is assembled in under 10 minutes using 8 cores and 10 GB RAM, and 60 Gbp of metagenome reads are assembled in 4 minutes using 1 GB RAM. For pangenome graphs, we newly allow a graphical representation of a collection of 661,405 bacterial genomes as an mdBG and successfully search it (in minimizer-space) for anti-microbial resistance (AMR) genes. We expect our advances to be essential to sequence analysis, given the rise of long-read sequencing in genomics, metagenomics and pangenomics.",
+  "doi": "10.1101/2021.06.09.447586",
+  "openalex": "W3170003659",
+  "status": "ok",
+  "title": "Minimizer-space de Bruijn graphs"
+ },
+ "10.1101_2022.12.23.521809": {
+  "abstract": "Abstract DNA sequencing data continues to progress towards longer reads with increasingly lower sequencing error rates. We focus on the critical problem of mapping, or aligning, low-divergence sequences from long reads (PacBio HiFi) to a reference genome, which poses challenges in terms of accuracy and computational resources when using cutting-edge read mapping approaches that are designed for all types of alignments. A natural idea would be to optimize efficiency with longer seeds to reduce the probability of extraneous matches; however, contiguous exact seeds quickly reach a sensitivity limit. We introduce mapquik , a novel strategy that creates accurate longer seeds by anchoring alignments through matches of k consecutively-sampled minimizers ( k -min-mers) and only indexing k -min-mers that occur once in the reference genome, thereby unlocking ultra-fast mapping while retaining high sensitivity. We demonstrate that mapquik significantly accelerates the seeding and chaining steps — fundamental bottlenecks to read mapping — for both the human and maize genomes with > 96% sensitivity and near-perfect specificity. On the human genome, mapquik achieves a 30× speed-up over the state-of-the-art tool minimap2 , and on the maize genome, a 350× speed-up over minimap2 , making mapquik the fastest mapper to date. These accelerations are enabled not only by minimizer-space seeding but also a novel heuristic 𝒪( n ) pseudo-chaining algorithm, which improves over the long-standing 𝒪( n log n ) bound. Minimizer-space computation builds the foundation for achieving real-time analysis of long-read sequencing data.",
+  "doi": "10.1101/2022.12.23.521809",
+  "openalex": "W4312118161",
+  "status": "ok",
+  "title": "mapquik: Efficient low-divergence mapping of long reads in minimizer space"
+ },
+ "10.1101_2025.04.05.647342": {
+  "abstract": "Abstract Objective Our goal was to create open-source software for closed-loop EEG–TMS that allows researchers to rapidly prototype and develop novel stimulation paradigms in a high-level programming language. This addresses the limitations of current solutions, which often rely on proprietary hardware and software, limiting their accessibility and customizability, or comprise ad-hoc pipelines tailored to specific use cases. Approach We developed NeuroSimo, a software platform that enables arbitrary EEG–TMS stimulation protocols written in Python, leveraging Python’s ecosystem of scientific, neuroimaging, and machine learning libraries. The core software is written in C++ with an embedded Python interpreter and employs the Robot Operating System (ROS 2) for inter-process communication. NeuroSimo runs on real-time-enabled Linux Ubuntu, using LabJack T4 for pulse triggering, and supports two EEG device models (Bittium NeurOne, BrainProducts actiCHamp) and TMS devices that deliver pulses via trigger signals. The software includes a graphical user interface for configuration and performance monitoring, and supports GPU processing for neural network computations. Main results In brain-state-dependent stimulation using the Phastimate algorithm, which targets TMS pulses to the trough of sensorimotor μ-rhythm, NeuroSimo achieved a median timing error of 0.2 ms (95% CI: 0.2–0.2 ms), a 99th-percentile of 0.6 ms (0.6–0.6 ms), and a maximum of 1.4 ms. Significance As an open-source platform combining Python’s flexibility with real-time closed-loop EEG–TMS, NeuroSimo enables researchers to develop and implement novel therapeutic approaches, marking a significant advance in personalized brain stimulation.",
+  "doi": "10.1101/2025.04.05.647342",
+  "openalex": "W4409304047",
+  "status": "ok",
+  "title": "NeuroSimo: an open-source software for closed-loop EEG- or EMG-guided TMS"
+ },
+ "10.1101_gr.277679.123": {
+  "abstract": "DNA sequencing data continue to progress toward longer reads with increasingly lower sequencing error rates. We focus on the critical problem of mapping, or aligning, low-divergence sequences from long reads (e.g., Pacific Biosciences [PacBio] HiFi) to a reference genome, which poses challenges in terms of accuracy and computational resources when using cutting-edge read mapping approaches that are designed for all types of alignments. A natural idea would be to optimize efficiency with longer seeds to reduce the probability of extraneous matches; however, contiguous exact seeds quickly reach a sensitivity limit. We introduce mapquik, a novel strategy that creates accurate longer seeds by anchoring alignments through matches of k consecutively sampled minimizers ( k -min-mers) and only indexing k -min-mers that occur once in the reference genome, thereby unlocking ultrafast mapping while retaining high sensitivity. We show that mapquik significantly accelerates the seeding and chaining steps—fundamental bottlenecks to read mapping—for both the human and maize genomes with > 96% sensitivity and near-perfect specificity. On the human genome, for both real and simulated reads, mapquik achieves a 37 × speedup over the state-of-the-art tool minimap2, and on the maize genome, mapquik achieves a 410 × speedup over minimap2, making mapquik the fastest mapper to date. These accelerations are enabled from not only minimizer-space seeding but also a novel heuristic O ( n ) pseudochaining algorithm, which improves upon the long-standing O ( n log n ) bound. Minimizer-space computation builds the foundation for achieving real-time analysis of long-read sequencing data.",
+  "doi": "10.1101/gr.277679.123",
+  "openalex": "W4382680160",
+  "status": "ok",
+  "title": "Efficient mapping of accurate long reads in minimizer space with mapquik"
+ },
+ "10.1109_ipec61310.2024.00084": {
+  "abstract": "The quality and accuracy of translation play a crucial role in everyday English communication. To enhance translation quality, a specialized smart proofreading system is developed for commonly used English language variations in this paper. Using Amazon Relational Database Service (RDS), the proposed system designs database structures such as statement relationship tables and translation judgment tables. The application interface is programmed in Python, incorporating various view classes like homepage, editing, and display to create the user interface. Leveraging the IaaS cloud platform of Open Nebula and utilizing bidirectional Long Short-Term Memory (LSTM) algorithms, the server-side encoding module is formulated. An information fusion module for word vectors is established, enabling the creation of an intelligent proofreading module through the construction of word and semantic proofreading units. Finally, the simulation study in black-box testing validates the system’s functionalities, the research of this paper shows a substantial improvement in translation quality and notable proofreading advantages.",
+  "doi": "10.1109/ipec61310.2024.00084",
+  "openalex": "W4403060590",
+  "status": "ok",
+  "title": "Design of an English Translation Intelligent Proofreading System Based on Bidirectional Long Short-term Memory Algorithm"
+ },
+ "10.1145_3578360.3580275": {
+  "abstract": "Domain-specific languages (DSLs) are able to provide intuitive high-level abstractions that are easy to work with while attaining better performance than general-purpose languages. Yet, implementing new DSLs is a burdensome task. As a result, new DSLs are usually embedded in general-purpose languages. While low-level languages like C or C++ often provide better performance as a host than high-level languages like Python, high-level languages are becoming more prevalent in many domains due to their ease and flexibility. Here, we present Codon, a domain-extensible compiler and DSL framework for high-performance DSLs with Python's syntax and semantics. Codon builds on previous work on ahead-of-time type checking and compilation of Python programs and leverages a novel intermediate representation to easily incorporate domain-specific optimizations and analyses. We showcase and evaluate several compiler extensions and DSLs for Codon targeting various domains, including bioinformatics, secure multi-party computation, block-based data compression and parallel programming, showing that Codon DSLs can provide benefits of familiar high-level languages and achieve performance typically only seen with low-level languages, thus bridging the gap between performance and usability.",
+  "doi": "10.1145/3578360.3580275",
+  "openalex": "W4321184667",
+  "status": "ok",
+  "title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs"
+ },
+ "10.1145_3696443.3708963": {
+  "abstract": "Dynamic programming (DP) is a fundamental algorithmic strategy that decomposes large problems into manageable subproblems. It is a cornerstone of many important computational methods in diverse fields, especially in the field of computational genomics, where it is used for sequence comparison. However, as the scale of the data keeps increasing, these algorithms are becoming a major computational bottleneck, and there is a need for strategies that can improve their performance. Here, we present Vectron, a novel auto-vectorization suite that targets array-based DP implementations written in Python and converts them to efficient vectorized counterparts that can efficiently process multiple problem instances in parallel. Leveraging Single Instruction Multiple Data (SIMD) capabilities in modern CPUs, along with Graphics Processing Units (GPUs), Vectron delivers significant speedups, ranging from 10% to more than 20x, over the conventional C++ implementations and manually vectorized and domain-specific state-of-the-art implementations, without necessitating large algorithm or code changes. Vectron's generality enables automatic vectorization of any array-based DP algorithm and, as a result, presents an attractive solution to optimization challenges inherent to DP algorithms.",
+  "doi": "10.1145/3696443.3708963",
+  "openalex": "W4407857640",
+  "status": "ok",
+  "title": "Vectron: A Dynamic Programming Auto-vectorization Framework"
+ },
+ "10.1177_00033197231194234": {
+  "abstract": "The prevalence of concomitant deep vein thrombosis (DVT) and its impact on 30-day outcomes in Hispanic patients with acute pulmonary embolism (PE) is unknown. We retrospectively studied a cohort of Hispanic patients admitted for acute PE to determine the relationship of concomitant DVT to clot burden on chest computer tomography (CT), right heart strain, and 30-day mortality. We identified 391 patients admitted with acute PE; 168 (42.9%) had concomitant DVTs on admission; 39 patients (9.9%) died during the 30-day follow-up: 12 patients without concomitant DVT and 27 with concomitant DVT, respectively ( p < .001). The presence of a proximal DVT independently predicted 30-day mortality even after adjusting for age, gender and admission PE severity index scores (PESI) (hazard ratio [HR] 2.0; 95% confidence interval [CI]: 1.4-3.0, p = .001). Proximal DVTs remained a significant predictor of 30-day mortality in patients with low and intermediate PESI scores (HR 2.5; 95% CI: 1.1-6.0, p = .035). The prevalence of concomitant DVT in Hispanic patients presenting with acute DVT is relatively lower than other ethnic groups. However, a proximal location of a DVT is of significant prognostic relevance. Hispanic patients with acute PE should routinely undergo compression doppler ultrasonography (CDUS) of the lower extremities.",
+  "doi": "10.1177/00033197231194234",
+  "openalex": "W4385607396",
+  "status": "ok",
+  "title": "Prevalence and clinical significance of deep vein thrombosis in Hispanic patients with acute pulmonary embolism"
+ },
+ "10.1186_s12859-025-06168-3": {
+  "abstract": "BACKGROUND: Tandem repeats (TRs) are major sources of genetic variation and important genetic markers. Their expansions are not only involved in gene expression regulation but also associated with many nervous system diseases and cancers. However, there is a lack of an efficient tandem repeat identification tool for seamless integration with larger bioinformatics programs developed with the popular Python language. RESULTS: We introduce pytrf, a Python package for identification of both exact and approximate TRs from genomic sequences. It allows seamless embedding into other programs developed by Python or using in Python interactive environment and Jupyter notebooks. It also provides command line tools for assisting users to find tandem repeats from FASTA/Q files. Compared to other tools, the pytrf shows the highest performance in aspect of running time with comparable peak memory usage. CONCLUSIONS: Pytrf provides simple interfaces and command line tools to facilitate identification of tandem repeats from genomic sequences. Pytrf can easily be installed from PyPI ( https://pypi.org/project/pytrf ) and the source code is freely available at https://github.com/lmdu/pytrf .",
+  "doi": "10.1186/s12859-025-06168-3",
+  "openalex": "W4410980708",
+  "status": "ok",
+  "title": "Pytrf: a python package for finding tandem repeats from genomic sequences"
+ },
+ "10.1186_s13015-022-00210-2": {
+  "abstract": "MOTIVATION: The increasing availability of high-quality genome assemblies raised interest in the characterization of genomic architecture. Major architectural elements, such as common repeats and segmental duplications (SDs), increase genome plasticity that stimulates further evolution by changing the genomic structure and inventing new genes. Optimal computation of SDs within a genome requires quadratic-time local alignment algorithms that are impractical due to the size of most genomes. Additionally, to perform evolutionary analysis, one needs to characterize SDs in multiple genomes and find relations between those SDs and unique (non-duplicated) segments in other genomes. A naïve approach consisting of multiple sequence alignment would make the optimal solution to this problem even more impractical. Thus there is a need for fast and accurate algorithms to characterize SD structure in multiple genome assemblies to better understand the evolutionary forces that shaped the genomes of today. RESULTS: Here we introduce a new approach, BISER, to quickly detect SDs in multiple genomes and identify elementary SDs and core duplicons that drive the formation of such SDs. BISER improves earlier tools by (i) scaling the detection of SDs with low homology to multiple genomes while introducing further 7-33[Formula: see text] speed-ups over the existing tools, and by (ii) characterizing elementary SDs and detecting core duplicons to help trace the evolutionary history of duplications to as far as 300 million years. AVAILABILITY AND IMPLEMENTATION: BISER is implemented in Seq programming language and is publicly available at https://github.com/0xTCG/biser .",
+  "doi": "10.1186/s13015-022-00210-2",
+  "openalex": "W4221035067",
+  "status": "ok",
+  "title": "Fast characterization of segmental duplication structure in multiple genome assemblies"
+ },
+ "10.1186_s13059-022-02841-5": {
+  "abstract": "Secure multiparty computation (MPC) is a cryptographic tool that allows computation on top of sensitive biomedical data without revealing private information to the involved entities. Here, we introduce Sequre, an easy-to-use, high-performance framework for developing performant MPC applications. Sequre offers a set of automatic compile-time optimizations that significantly improve the performance of MPC applications and incorporates the syntax of Python programming language to facilitate rapid application development. We demonstrate its usability and performance on various bioinformatics tasks showing up to 3-4 times increased speed over the existing pipelines with 7-fold reductions in codebase sizes.",
+  "doi": "10.1186/s13059-022-02841-5",
+  "openalex": "W4315567939",
+  "status": "ok",
+  "title": "Sequre: a high-performance framework for secure multiparty computation enables biomedical data sharing"
+ },
+ "oa-W4291285287": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W4291285287",
+  "status": "no_abstract",
+  "title": "Sequre: a high-performance framework for rapid development of secure bioinformatics pipelines."
+ },
+ "s2-39c160bd36f540a6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Prevalence and clinical signi ﬁ cance of deep vein thrombosis in Hispanic patients with acute pulmonary embolism"
+ },
+ "s2-70afeb06c8c3ee13": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Shechi: A Secure Distributed Computation Compiler Based on Multiparty Homomorphic Encryption"
+ }
+}

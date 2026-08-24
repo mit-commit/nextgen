@@ -1,0 +1,142 @@
+{
+ "10.1109_access.2020.3024098": {
+  "abstract": "Heterogeneous computing systems with tightly coupled processors and reconfigurable logic blocks provide great scope to improve software performance by executing each section of code on the processor or custom hardware accelerator that best matches its requirements and the system optimisation goals. This article is motivated by the idea of a software tool that can automatically accomplish the task of deploying code, originally written for a conventional computer, to the processors and reconfigurable logic blocks in a heterogeneous system. We undertake an extensive survey of high-level synthesis tools to determine how close we are to this vision, and to identify any capability gaps. The survey is structured according to a new framework that clearly expresses the relationships between the many tools surveyed. We find that none of the existing tools can deploy general high-level code without manual intervention. Logic synthesis from arbitrary high-level code remains an open problem with dynamic data structures, function pointers and recursion all presenting challenges. Other challenges include automating the tasks of code partitioning, optimisation and design space exploration.",
+  "doi": "10.1109/access.2020.3024098",
+  "openalex": "W3085407124",
+  "status": "ok",
+  "title": "Towards Automatic High-Level Code Deployment on Reconfigurable Platforms: A Survey of High-Level Synthesis Tools and Toolchains"
+ },
+ "10.1109_cgo.2019.8661197": {
+  "abstract": "This paper introduces Tiramisu, a polyhedral framework designed to generate high performance code for multiple platforms including multicores, GPUs, and distributed machines. Tiramisu introduces a scheduling language with novel commands to explicitly manage the complexities that arise when targeting these systems. The framework is designed for the areas of image processing, stencils, linear algebra and deep learning. Tiramisu has two main features: it relies on a flexible representation based on the polyhedral model and it has a rich scheduling language allowing fine-grained control of optimizations. Tiramisu uses a four-level intermediate representation that allows full separation between the algorithms, loop transformations, data layouts, and communication. This separation simplifies targeting multiple hardware architectures with the same algorithm. We evaluate Tiramisu by writing a set of image processing, deep learning, and linear algebra benchmarks and compare them with state-of-the-art compilers and hand-tuned libraries. We show that Tiramisu matches or outperforms existing compilers and libraries on different hardware architectures, including multicore CPUs, GPUs, and distributed machines.",
+  "doi": "10.1109/cgo.2019.8661197",
+  "openalex": "W2949967139",
+  "status": "ok",
+  "title": "Tiramisu: A Polyhedral Compiler for Expressing Fast and Portable Code"
+ },
+ "10.1109_cgo57630.2024.10444801": {
+  "abstract": "This paper addresses the need for automatic and efficient generation of host driver code for arbitrary custom AXI-based accelerators targeting linear algebra algorithms, an important workload in various applications, including machine learning and scientific computing. While existing tools have focused on automating accelerator prototyping, little attention has been paid to the host-accelerator interaction. This paper introduces AXI4MLIR, an extension of the MLIR compiler framework designed to facilitate the automated generation of host-accelerator driver code. With new MLIR attributes and transformations, AXI4MLIR empowers users to specify accelerator features (including their instructions) and communication patterns and exploit the host memory hierarchy. We demonstrate AXI4MLIR's versatility across different types of accelerators and problems, showcasing significant CPU cache reference reductions (up to 56%) and up to a 1.65× speedup compared to manually optimized driver code implementations. AXI4MLIR implementation is open-source and available at: https:/7github.com/AXI4MLIR/axi4mlir.",
+  "doi": "10.1109/cgo57630.2024.10444801",
+  "openalex": "W4392265932",
+  "status": "ok",
+  "title": "AXI4MLIR: User-Driven Automatic Host Code Generation for Custom AXI-Based Accelerators"
+ },
+ "10.1109_hpca51647.2021.00015": {
+  "abstract": "Domain-specific accelerators obtain performance benefits by restricting their algorithmic domain. These accelerators utilize specialized languages constrained to particular hardware, thus trading off expressiveness for high performance. The pendulum has swung from one hardware for all domains (general-purpose processors) to one hardware per individual domain. The middle-ground on this spectrum-which provides a unified computational stack across multiple, but not all, domains- is an emerging and open research challenge. This paper sets out to explore this region and its associated tradeoff between expressiveness and performance by defining a cross-domain stack, dubbed PolyMath. This stack defines a high-level cross-domain language (CDL), called PMLang, that in a modular and reusable manner encapsulates mathematical properties to be expressive across multiple domains-Robotics, Graph Analytics, Digital Signal Processing, Deep Learning, and Data Analytics. PMLang is backed by a recursively-defined intermediate representation allowing simultaneous access to all levels of operation granularity, called sr DFG. Accelerator-specific or domain-specific IRs commonly capture operations in the granularity that best fits a set of Domain-Specific Architectures (DSAs). In contrast, the recursive nature of the sr DFG enables simultaneous access to all the granularities of computation for every operation, thus forming an ideal bridge for converting to various DSA-specific IRs across multiple domains. Our stack unlocks multi-acceleration for end-to-end applications that cross the boundary of multiple domains each comprising different data and compute patterns. Evaluations show that by using PolyMath it is possible to harness accelerators across the five domains to realize an average speedup of 3.3× over a Xeon CPU along with 18.1× reduction in energy. In comparison to Jetson Xavier and Titan XP, cross-domain acceleration offers 1.7× and 7.2× improvement in performance-per-watt, respectively. We measure the cross-domain expressiveness and performance tradeoff by comparing each benchmark against its hand-optimized implementation to achieve 83.9% and 76.8% of the optimal performance for single-domain algorithms and end-to-end applications. For the two case studies of end-to-end applications (comprising algorithms from multiple domains), results show that accelerating all kernels offers an additional 2.0× speedup over CPU, 6.1× improvement in performance-per-watt over Titan Xp, and 2.8× speedup over Jetson Xavier compared to only the one most effective single-domain kernel being accelerated. Finally, we examine the utility and expressiveness of PolyMath through a user study, which shows, on average, PolyMath requires 1.9× less time to implement algorithms from two different domains with 2.5× fewer lines of code relative to Python.",
+  "doi": "10.1109/hpca51647.2021.00015",
+  "openalex": "W3141076774",
+  "status": "ok",
+  "title": "A Computational Stack for Cross-Domain Acceleration"
+ },
+ "10.1109_icfpt52863.2021.9609930": {
+  "abstract": "FPGAs have found their way into data centers as accelerator cards, making reconfigurable computing more accessible for high-performance applications. At the same time, new high-level synthesis compilers like Xilinx Vitis and runtime libraries such as XRT attract software programmers into the reconfigurable domain. While software programmers are familiar with task-level and data-parallel programming, FPGAs often require different types of parallelism. For example, data-driven parallelism is mandatory to obtain satisfactory hardware designs for pipelined dataflow architectures. However, software programmers are often not acquainted with dataflow architectures— resulting in poor hardware designs. In this work we present FLOWER, a comprehensive compiler infrastructure that provides automatic canonical transformations for high-level synthesis from a domain-specific library. This allows programmers to focus on algorithm implementations rather than low-level optimizations for dataflow architectures. We show that FLOWER allows to synthesize efficient implementations for high-performance streaming applications targeting System-on-Chip and FPGA accelerator cards, in the context of image processing and computer vision.",
+  "doi": "10.1109/icfpt52863.2021.9609930",
+  "openalex": "W3215789682",
+  "status": "ok",
+  "title": "FLOWER: A comprehensive dataflow compiler for high-level synthesis"
+ },
+ "10.1109_tcad.2020.3012172": {
+  "abstract": "Field programmable gate arrays (FPGAs) excel in low power and high throughput computations, but they are challenging to program. Traditionally, developers rely on hardware description languages, such as Verilog or VHDL to specify the hardware behavior at the register-transfer level. High-level synthesis (HLS) raises the level of abstraction but still requires FPGA design knowledge. Programmers usually write pragma-annotated C/C++ programs to define the hardware architecture of an application. However, each hardware vendor extends its own C dialect using its own vendor-specific set of pragmas. This prevents portability across different vendors. Furthermore, pragmas are not first-class citizens in the language. This makes it hard to use them in a modular way or design proper abstractions. In this article, we present AnyHLS, an approach to synthesize FPGA designs in a modular and abstract way. AnyHLS is able to raise the abstraction level of the existing HLS tools by resorting to programming language features such as types and higher order functions as follows. It relies on partial evaluation to specialize and to optimize the user application based on a library of abstractions. Then, vendor-specific HLS code is generated for Intel and Xilinx FPGAs. Portability is obtained by avoiding any vendor-specific pragmas at the source code. In order to validate achievable gains in productivity, a library for the domain of image processing is introduced as a case study, and its synthesis results are compared with several state-of-the-art domain-specific language (DSL) approaches for this domain.",
+  "doi": "10.1109/tcad.2020.3012172",
+  "openalex": "W3006236305",
+  "status": "ok",
+  "title": "AnyHLS: High-Level Synthesis With Partial Evaluation"
+ },
+ "10.1145_3295500.3356173": {
+  "abstract": "The ubiquity of accelerators in high-performance computing has driven programming complexity beyond the skill-set of the average domain scientist. To maintain performance portability in the future, it is imperative to decouple architecture-specific programming paradigms from the underlying scientific computations. We present the Stateful DataFlow multiGraph (SDFG), a data-centric intermediate representation that enables separating program definition from its optimization. By combining fine-grained data dependencies with high-level control-flow, SDFGs are both expressive and amenable to program transformations, such as tiling and double-buffering. These transformations are applied to the SDFG in an interactive process, using extensible pattern matching, graph rewriting, and a graphical user interface. We demonstrate SDFGs on CPUs, GPUs, and FPGAs over various motifs --- from fundamental computational kernels to graph analytics. We show that SDFGs deliver competitive performance, allowing domain scientists to develop applications naturally and port them to approach peak hardware performance without modifying the original scientific code.",
+  "doi": "10.1145/3295500.3356173",
+  "openalex": "W2987684178",
+  "status": "ok",
+  "title": "Stateful dataflow multigraphs"
+ },
+ "10.1145_3508352.3549424": {
+  "abstract": "The generation of custom hardware accelerators for applications implemented within high-level productive programming frameworks requires considerable manual effort. To automate this process, we introduce SODA-OPT, a compiler tool that extends the MLIR infrastructure. SODA-OPT automatically searches, outlines, tiles, and pre-optimizes relevant code regions to generate high-quality accelerators through high-level synthesis. SODA-OPT can support any high-level programming framework and domain-specific language that interface with the MLIR infrastructure. By leveraging MLIR, SODA-OPT solves compiler optimization problems with specialized abstractions. Backend synthesis tools connect to SODA-OPT through progressive intermediate representation lowerings. SODA-OPT interfaces to a design space exploration engine to identify the combination of compiler optimization passes and options that provides high-performance generated designs for different backends and targets. We demonstrate the practical applicability of the compilation flow by exploring the automatic generation of accelerators for deep neural networks operators outlined at arbitrary granularity and by combining outlining with tiling on large convolution layers. Experimental results with kernels from the PolyBench benchmark show that our high-level optimizations improve execution delays of synthesized accelerators up to 60x. We also show that for the selected kernels, our solution outperforms the current of state-of-the art in more than 70% of the benchmarks and provides better average speedup in 55% of them. SODA-OPT is an open source project available at https://gitlab.pnnl.gov/sodalite/soda-opt.",
+  "doi": "10.1145/3508352.3549424",
+  "openalex": "W4312121047",
+  "status": "ok",
+  "title": "An MLIR-based Compiler Flow for System-Level Design and Hardware Acceleration"
+ },
+ "10.1145_3532989": {
+  "abstract": "Field Programmable Gate Arrays (FPGAs) are spatial architectures with a heterogeneous reconfigurable fabric. They are state-of-the-art for prototyping, telecommunications, embedded, and an emerging alternative for cloud-scale acceleration. However, FPGA adoption found limitations in their programmability and required knowledge. Therefore, researchers focused on FPGA abstractions and automation tools. Here, we survey three leading digital design abstractions: Hardware Description Languages (HDLs) , High-Level Synthesis (HLS) tools, and Domain-Specific Languages (DSLs) . We review these abstraction solutions, provide a timeline, and propose a taxonomy for each abstraction trend: programming models for HDLs; Intellectual Property (IP) -based or System-based toolchains for HLS; application, architecture, and infrastructure domains for DSLs.",
+  "doi": "10.1145/3532989",
+  "openalex": "W4224924610",
+  "status": "ok",
+  "title": "Pushing the Level of Abstraction of Digital System Design: A Survey on How to Program FPGAs"
+ },
+ "10.1145_3626202.3637566": {
+  "abstract": "This paper aims at high and portable performance for tensor computations across spatial (e.g., FPGAs) and vector architectures (e.g., GPUs). The state-of-the-art usually address performance portability across vector architectures (CPUs and GPUs). However, they either miss FPGAs or do not achieve high performance. Without a common architectural abstraction, they program and optimize spatial and vector devices separately, causing low portability.",
+  "doi": "10.1145/3626202.3637566",
+  "openalex": "W4393576142",
+  "status": "ok",
+  "title": "POPA: Expressing High and Portable Performance across Spatial and Vector Architectures for Tensor Computations"
+ },
+ "10.1155_2019_2624938": {
+  "abstract": "Translating a system requirement into a low-level representation (e.g., register transfer level or RTL) is the typical goal of the design of FPGA-based systems. However, the Design Space Exploration (DSE) needed to identify the final architecture may be time consuming, even when using high-level synthesis (HLS) tools. In this article, we illustrate our hybrid methodology, which uses a frontend for HLS so that the DSE is performed more rapidly by using a higher level abstraction, but without losing accuracy, thanks to the HP-Labs COTSon simulation infrastructure in combination with our DSE tools (MYDSE tools). In particular, this proposed methodology proved useful to achieve an appropriate design of a whole system in a shorter time than trying to design everything directly in HLS. Our motivating problem was to deploy a novel execution model called data-flow threads (DF-Threads) running on yet-to-be-designed hardware. For that goal, directly using the HLS was too premature in the design cycle. Therefore, a key point of our methodology consists in defining the first prototype in our simulation framework and gradually migrating the design into the Xilinx HLS after validating the key performance metrics of our novel system in the simulator. To explain this workflow, we first use a simple driving example consisting in the modelling of a two-way associative cache. Then, we explain how we generalized this methodology and describe the types of results that we were able to analyze in the AXIOM project, which helped us reduce the development time from months/weeks to days/hours.",
+  "doi": "10.1155/2019/2624938",
+  "openalex": "W2985423753",
+  "status": "ok",
+  "title": "Translating Timing into an Architecture: The Synergy of COTSon and HLS (Domain Expertise—Designing a Computer Architecture via HLS)"
+ },
+ "10.17760_d20476846": {
+  "abstract": "System-level design frameworks commonly rely on annotated high-level language code snippets written in C/C++ to perform High-Level Synthesis (HLS). This is especially true when generating designs for specialized accelerators. However, new dataflow and machine learning frameworks use high-level programming languages and only employ C/C++ in their runtimes. This abstraction gap requires the user to translate application code to C/C++, or resort to the composition of pre-configured high-level hardware modules, resulting in a significant productivity gap. To address this gap, we propose SODA-OPT, a front-end compiler that leverages the MLIR framework to automatically partition host code from accelerator code, pre-optimizing the accelerator code to produce better HLS designs. SODA-OPT allows the user to outline and synthesize custom accelerators for a range of high-level applications. SODA-OPT applies optimizations at the appropriate level of abstraction, enabling the generation of high-quality accelerated kernels. This thesis highlights the importance and effectiveness of high-level optimizations applied before the HLS backend. We evaluate our new compilation flow by exploring automated generation of accelerators for deep neural network operators, outlined at arbitrary granularities. Our compiler interfaces to a design space exploration engine, enabling us to identify the best combination of compiler optimization passes and options, resulting in high-performance designs for the selected backend target. Experimental results with key linear algebra kernels show that high-level optimizations expose code structures that result in speedups up to 60x faster when our optimization pipeline is tuned to the target HLS backend.--Author's abstract",
+  "doi": "10.17760/d20476846",
+  "openalex": "W4388761475",
+  "status": "ok",
+  "title": "SODA-OPT: enabling system-level design in MLIR for HLS and beyond"
+ },
+ "10.22152_programming-journal.org_2021_5_8": {
+  "abstract": "In recent years, heterogeneous computing has emerged as the vital way to increase computers' performance and energy efficiency by combining diverse hardware devices, such as Graphics Processing Units (GPUs) and Field Programmable Gate Arrays (FPGAs).The rationale behind this trend is that different parts of an application can be offloaded from the main CPU to diverse devices, which can efficiently execute these parts as co-processors.FPGAs are a subset of the most widely used co-processors, typically used for accelerating specific workloads due to their flexible hardware and energy-efficient characteristics.These characteristics have made them prevalent in a broad spectrum of computing systems ranging from low-power embedded systems to high-end data centers and cloud infrastructures.However, these hardware characteristics come at the cost of programmability.Developers who create their applications using high-level programming languages (e.g., Java, Python, etc.) are required to familiarize with a hardware description language (e.g., VHDL, Verilog) or recently heterogeneous programming models (e.g., OpenCL, HLS) in order to exploit the co-processors' capacity and tune the performance of their applications.Currently, the above-mentioned heterogeneous programming models support exclusively the compilation from compiled languages, such as C and C++.Thus, the transparent integration of heterogeneous co-processors to the software ecosystem of managed programming languages (e.g.Java, Python) is not seamless.In this paper we rethink the engineering trade-offs that we encountered, in terms of transparency and compilation overheads, while integrating FPGAs into high-level managed programming languages.We present a novel approach that enables runtime code specialization techniques for seamless and high-performance execution of Java programs on FPGAs.The proposed solution is prototyped in the context of the Java programming language and TornadoVM; an open-source programming framework for Java execution on heterogeneous hardware.Finally, we evaluate the proposed solution for FPGA execution against both sequential and multithreaded Java implementations showcasing up to 224× and 19.8× performance speedups, respectively, and up to 13.82× compared to TornadoVM running on an Intel integrated GPU.We also provide a break-down analysis of the proposed compiler optimizations for FPGA execution, as a means to project their impact on the applications' characteristics.",
+  "doi": "10.22152/programming-journal.org/2021/5/8",
+  "openalex": "W3097828058",
+  "status": "ok",
+  "title": "Transparent Compiler and Runtime Specializations for Accelerating Managed Languages on FPGAs"
+ },
+ "10.48550_arxiv.1902.10345": {
+  "abstract": "The ubiquity of accelerators in high-performance computing has driven programming complexity beyond the skill-set of the average domain scientist. To maintain performance portability in the future, it is imperative to decouple architecture-specific programming paradigms from the underlying scientific computations. We present the Stateful DataFlow multiGraph (SDFG), a data-centric intermediate representation that enables separating program definition from its optimization. By combining fine-grained data dependencies with high-level control-flow, SDFGs are both expressive and amenable to program transformations, such as tiling and double-buffering. These transformations are applied to the SDFG in an interactive process, using extensible pattern matching, graph rewriting, and a graphical user interface. We demonstrate SDFGs on CPUs, GPUs, and FPGAs over various motifs --- from fundamental computational kernels to graph analytics. We show that SDFGs deliver competitive performance, allowing domain scientists to develop applications naturally and port them to approach peak hardware performance without modifying the original scientific code.",
+  "doi": "10.48550/arxiv.1902.10345",
+  "openalex": "W2970737004",
+  "status": "ok",
+  "title": "Stateful Dataflow Multigraphs: A Data-Centric Model for Performance Portability on Heterogeneous Architectures"
+ },
+ "10.48550_arxiv.2312.14821": {
+  "abstract": "This paper addresses the need for automatic and efficient generation of host driver code for arbitrary custom AXI-based accelerators targeting linear algebra algorithms, an important workload in various applications, including machine learning and scientific computing. While existing tools have focused on automating accelerator prototyping, little attention has been paid to the host-accelerator interaction. This paper introduces AXI4MLIR, an extension of the MLIR compiler framework designed to facilitate the automated generation of host-accelerator driver code. With new MLIR attributes and transformations, AXI4MLIR empowers users to specify accelerator features (including their instructions) and communication patterns and exploit the host memory hierarchy. We demonstrate AXI4MLIR's versatility across different types of accelerators and problems, showcasing significant CPU cache reference reductions (up to 56%) and up to a 1.65x speedup compared to manually optimized driver code implementations. AXI4MLIR implementation is open-source and available at: https://github.com/AXI4MLIR/axi4mlir.",
+  "doi": "10.48550/arxiv.2312.14821",
+  "openalex": "W4390215346",
+  "status": "ok",
+  "title": "AXI4MLIR: User-Driven Automatic Host Code Generation for Custom AXI-Based Accelerators"
+ },
+ "10.5555_3314872.3314896": {
+  "abstract": "This paper introduces Tiramisu, a polyhedral framework designed to generate high performance code for multiple platforms including multicores, GPUs, and distributed machines. Tiramisu introduces a scheduling language with novel extensions to explicitly manage the complexities that arise when targeting these systems. The framework is designed for the areas of image processing, stencils, linear algebra and deep learning. Tiramisu has two main features: it relies on a flexible representation based on the polyhedral model and it has a rich scheduling language allowing fine-grained control of optimizations. Tiramisu uses a four-level intermediate representation that allows full separation between the algorithms, loop transformations, data layouts, and communication. This separation simplifies targeting multiple hardware architectures with the same algorithm. We evaluate Tiramisu by writing a set of image processing, deep learning, and linear algebra benchmarks and compare them with state-of-the-art compilers and hand-tuned libraries. We show that Tiramisu matches or outperforms existing compilers and libraries on different hardware architectures, including multicore CPUs, GPUs, and distributed machines.",
+  "doi": "10.5555/3314872.3314896",
+  "openalex": "W2905135312",
+  "status": "ok",
+  "title": "Tiramisu: a polyhedral compiler for expressing fast and portable code"
+ },
+ "s2-1764d00655804b69": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Multi-Paradigm C++-based Hardware Description Language"
+ },
+ "s2-4d30877ac29bd321": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Stateful Dataflow Multigraphs: A Data-Centric Model for High-Performance Parallel Programs"
+ },
+ "s2-82f3c1b67e1af9a1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiramisu : A Polyhedral Compiler with A Scheduling Language for Targeting High Performance Systems Riyadh"
+ },
+ "s2-f1713ad89e53f60a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiramisu: A Code Optimization Framework for High Performance Systems"
+ }
+}

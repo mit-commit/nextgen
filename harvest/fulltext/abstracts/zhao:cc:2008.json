@@ -1,0 +1,520 @@
+{
+ "10.1002_spe.2602": {
+  "abstract": "Summary Emergence of instrumentation frameworks has vastly contributed to the software engineering practices. As the instrumentation use cases become more complex, complexity of instrumenting programs also increases, leading to a higher risk of software defects, increased development time, and decreased maintainability. In security applications such as symbolic execution and taint analysis, which need to instrument a large number of instruction types, this complexity is prominent. This paper presents an architecture based on the Pin binary instrumentation framework to abstract the low‐level OS and hardware‐dependent implementation details, facilitate code reuse in heavyweight instrumentation use cases, and improve instrumenting program development time. Instructions of x86 and x86‐64 hardware architectures are formally categorized using the Z language based on the Pin framework API. This categorization is used to automate the instrumentation phase on the basis of a configuration list. Furthermore, instrumentation context data such as register data are modeled in an object‐oriented scheme. This makes it possible to focus the instrumenting program development time on writing the essential analysis logics while access to low‐level OS and hardware dependencies are streamlined. The proposed architecture is evaluated by instrumenting 135 instruction types in a concrete symbolic execution engine, resulting in a reduction of the instrumenting program size by 59.7%. Furthermore, performance overhead measure against the SPEC CINT2006 programs is limited to 8.7%.",
+  "doi": "10.1002/spe.2602",
+  "openalex": "W2887515131",
+  "status": "ok",
+  "title": "LDMBL: An architecture for reducing code duplication in heavyweight binary instrumentations"
+ },
+ "10.1007_978-3-319-97226-8_6": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-97226-8_6",
+  "openalex": "W2910653301",
+  "status": "no_abstract",
+  "title": "Unix, Plan 9 and the Lurking Smalltalk"
+ },
+ "10.1016_b978-0-12-374514-9.00002-1": {
+  "abstract": null,
+  "doi": "10.1016/b978-0-12-374514-9.00002-1",
+  "openalex": "W4245574072",
+  "status": "no_abstract",
+  "title": "Bibliography"
+ },
+ "10.1109_access.2020.2991782": {
+  "abstract": "In recent years, an increasing number of Internet of Things (IoT) devices have been employed in various fields, which has caused an increased demand for IoT device testing and analysis. However, due to the strictly limited software interfaces and hardware resources of IoT devices, traditional instrumentation-based testing and analysis technologies cannot be effectively used in IoT devices. In this paper, to address the problems encountered in IoT device detection and analysis using instrumentation methods, we present a prototype novel instrumentation tool, IoTSIT, that is suitable for the static instrumentation of firmware in IoT devices. This tool forcibly writes instrumented code into files while leaving the original program logic intact. A comparison of IoTSIT with several other instrumentation tools confirms that IoTSIT offers advantages in terms of time efficiency and code expansion rate for firmware instrumentation.",
+  "doi": "10.1109/access.2020.2991782",
+  "openalex": "W3022618462",
+  "status": "ok",
+  "title": "IoTSIT: A Static Instrumentation Tool for IoT Devices"
+ },
+ "10.1109_dsn.2015.45": {
+  "abstract": "Memory check pointing is a pivotal technique in systems reliability, with applications ranging from crash recovery to replay debugging. Unfortunately, many traditional memory check pointing use-cases require high-frequency checkpoints, something for which existing application-level solutions are not well-suited. The problem is that they incur either substantial run-time performance overhead, or poor memory usage guarantees. As a result, their application in practice is hampered. This paper presents Lightweight Memory Check pointing (LMC), a new user-level memory check pointing technique that combines low performance overhead with strong memory usage guarantees for high check pointing frequencies. To this end, LMC relies on compiler-based instrumentation to shadow the entire memory address space of the running program and incrementally checkpoint modified memory bytes in a LMC-maintained shadow state. Our evaluation on popular server applications demonstrates the viability of our approach in practice, confirming that LMC imposes low performance overhead with strictly bounded memory usage at runtime.",
+  "doi": "10.1109/dsn.2015.45",
+  "openalex": "W1571050301",
+  "status": "ok",
+  "title": "Lightweight Memory Checkpointing"
+ },
+ "10.1109_icse.2013.6606581": {
+  "abstract": "We present Expositor, a new debugging environment that combines scripting and time-travel debugging to allow programmers to automate complex debugging tasks. The fundamental abstraction provided by Expositor is the execution trace, which is a time-indexed sequence of program state snapshots. Programmers can manipulate traces as if they were simple lists with operations such as map and filter. Under the hood, Expositor efficiently implements traces as lazy, sparse interval trees whose contents are materialized on demand. Expositor also provides a novel data structure, the edit hash array mapped trie, which is a lazy implementation of sets, maps, multisets, and multimaps that enables programmers to maximize the efficiency of their debugging scripts. We have used Expositor to debug a stack overflow and to unravel a subtle data race in Firefox. We believe that Expositor represents an important step forward in improving the technology for diagnosing complex, hard-to-understand bugs.",
+  "doi": "10.1109/icse.2013.6606581",
+  "openalex": "W4238282158",
+  "status": "ok",
+  "title": "Expositor: Scriptable time-travel debugging with first-class traces"
+ },
+ "10.1109_isorc49007.2020.00038": {
+  "abstract": "This paper presents a novel technique and framework for decreasing instrumentation overhead in software systems that utilize dynamic binary instrumentation. First, we introduce a lightweight networking framework combined with an easily extensible BSON implementation as a heavy analysis routine replacement. Secondly, we bind instrumentation and analysis threads to non-overlapping cpu cores—allowing analysis threads to execute faster. Lastly, we utilize a lock-free buffering system to bridge the gap between instrumentation and analysis threads, and minimize the overhead to the instrumentation threads. Using this combination, we managed to write a dynamic binary instrumentation tool (DBI) in Pin using Pin++ that is 1000% faster than its counterpart DBI tool with no buffering.",
+  "doi": "10.1109/isorc49007.2020.00038",
+  "openalex": "W3034385764",
+  "status": "ok",
+  "title": "Using Multi-core Architectures to Improve the Performance of Real-time Dynamic Binary Instrumentation"
+ },
+ "10.1109_pads.2009.24": {
+  "abstract": "A recent work has presented the design and implementation of a software library, named DyMeLoR, supporting transparent log/restore facilities for optimistic simulation objects with generic memory layout. This library offers the possibility to allocate/deallocate memory chunks via standard API, and performs log/restore of the object state via pack/unpack techniques,exploiting ad-hoc meta-data concisely identifying the object state layout at each point in simulation time. In this paper we complement such a library with a software architecture offering the following additional advantages: (i) run-time identification of chunk updates within the dynamic memory map,(ii) reduced checkpoint latency and increased effectiveness in memory usage thanks to log/restore facilities based on (periodic) snapshots of the whole simulation object state, taken via the incremental copy of the modified (dirty) chunks only.Our approach is based on software instrumentation techniques (suited for LINUX and the ELF format), targeting memory update references performed by the application level software, and on a lightweight run-time monitoring mechanism providing minimal overhead while tracking the exact memory addresses and the size of memory areas dirtied by the execution of each event. Also,our design has been oriented to portability across 32-bit and 64-bit Intel compliant architectures, thus covering a wide spectrum of off-the-shelf machines.",
+  "doi": "10.1109/pads.2009.24",
+  "openalex": "W2132164709",
+  "status": "ok",
+  "title": "Di-DyMeLoR: Logging only Dirty Chunks for Efficient Management of Dynamic Memory Based Optimistic Simulation Objects"
+ },
+ "10.1109_qrs54544.2021.00110": {
+  "abstract": "Debugging is a relevant task for finding bugs during software development, maintenance, and evolution. During debugging, developers use modern IDE debuggers to analyze variables, step execution, and set breakpoints. Observing IDE debuggers, we find several breakpoint types. However, what are the breakpoint types? The goal of our study is to map the breakpoint types among IDEs and academic literature. Thus, we mapped the gray literature on the documentation of the nine main IDEs used by developers according to the three public rankings. In addition, we performed a systematic mapping of academic literature over 68 articles describing breakpoint types. Finally, we analyzed the developers understanding of the main breakpoint types through a questionnaire. We present three main contributions: (1) the mapping of breakpoint types (IDEs and literature), (2) compiled definitions of breakpoint types, (3) a breakpoint type taxonomy. Our contributions provide the first step to organize breakpoint IDE taxonomy and lexicon, and support further debugging research.",
+  "doi": "10.1109/qrs54544.2021.00110",
+  "openalex": "W4226410710",
+  "status": "ok",
+  "title": "Mapping breakpoint types: an exploratory study"
+ },
+ "10.1109_seed61283.2024.00016": {
+  "abstract": "In the dynamic landscape of digital threats, robust security measures must not only thwart malicious actors but also provide valuable insights into their tactics and mindset. In this context, the need for defenses that are both proactive and capable of engaging the adversaries becomes evident. These defenses are designed to adapt to evolving threats and provide a nuanced approach to computer system security. Proactive defenses, like honeypots and decoys, play a pivotal role in achieving these dual objectives by offering the ability to both protect systems and gather critical threat intelligence. This paper introduces Maya, a hardware design aimed at enhancing the efficiency of customizable defense systems that proactively counter computer security attacks, while also understanding the adversary's behavioral tactics. We propose a framework utilizing Maya to activate lightweight subroutines that dynamically influence the behavior of malicious programs at the user-kernel interface. By presenting an altered view of the system state to potential attackers, this framework safeguards sensitive resources and thwarts unauthorized access to intended targets. Leveraging the inherent efficiency of hardware, our framework ensures that its actions remain discreet, minimizing the risk of detection and disengagement by adversaries. We assess the effectiveness of Maya against several notorious attack vectors, including ransomware, info-stealers, and timing channels. Additionally, we scrutinize how a MAYA-enabled defense framework impacts legitimate applications that malware detection systems might incorrectly flag. Our evaluation reveals that Maya incurs minimal runtime overhead when handling kernel requests from a suspected process, highlighting an improved efficacy compared to software-based solutions.",
+  "doi": "10.1109/seed61283.2024.00016",
+  "openalex": "W4404057351",
+  "status": "ok",
+  "title": "Maya: Hardware Enhanced Customizable Defenses at the User-Kernel Interface"
+ },
+ "10.1145_1772954.1772960": {
+  "abstract": "Shadow value tools use metadata to track properties of application data at the granularity of individual machine instructions. These tools provide effective means of monitoring and analyzing the runtime behavior of applications. However, the high runtime overhead stemming from fine-grained monitoring often limits the use of such tools. Furthermore, 64-bit architectures pose a new challenge to the building of efficient memory shadowing tools. Current tools are not able to efficiently monitor the full 64-bit address space due to limitations in their shadow metadata translation.",
+  "doi": "10.1145/1772954.1772960",
+  "openalex": "W2052497937",
+  "status": "ok",
+  "title": "Umbra"
+ },
+ "10.1145_1806651.1806667": {
+  "abstract": "Shadow memory is used by dynamic program analysis tools to store metadata for tracking properties of application memory. The efficiency of mapping between application memory and shadow memory has substantial impact on the overall performance of such analysis tools. However, traditional memory mapping schemes that work well on 32-bit architectures cannot easily port to 64-bit architectures due to the much larger 64-bit address space.",
+  "doi": "10.1145/1806651.1806667",
+  "openalex": "W2117322468",
+  "status": "ok",
+  "title": "Efficient memory shadowing for 64-bit architectures"
+ },
+ "10.1145_1815961.1816016": {
+  "abstract": "Light-weight, flexible access control, which allows software to regulate reads and writes to any granularity of memory region, can help improve the reliability of today's multi-module multi-programmer applications, as well as the efficiency of software debugging tools. Unfortunately, access control in today's processors is tied to support for virtual memory, making its use both heavy weight and coarse grain. In this paper, we propose Sentry, an auxiliary level of virtual memory tagging that is entirely subordinate to existing virtual memory-based protection mechanisms and can be manipulated at the user level. We implement these tags in a complexity-effective manner using an M-cache (metadata cache) structure that only intervenes on L1 misses, thereby minimizing changes to the processor core. Existing cache coherence states are repurposed to implicitly validate permissions for L1 hits. Sentry achieves its goal of flexible and light-weight access control without disrupting existing inter-application protection, sidestepping the challenges associated with adding a new protection framework to an existing operating system. We illustrate the benefits of our design point using 1) an Apache-based web server that uses the M-cache to enforce protection boundaries among its modules and 2) a watchpoint-based tool to demonstrate low-overhead debugging. Protection is achieved with very few changes to the source code, no changes to the programming model, minimal modifications to the operating system, and with low overhead incurred only when accessing memory regions for which the additional level of access control is enabled.",
+  "doi": "10.1145/1815961.1816016",
+  "openalex": "W2111506684",
+  "status": "ok",
+  "title": "Sentry"
+ },
+ "10.1145_1816038.1816016": {
+  "abstract": "Light-weight, flexible access control, which allows software to regulate reads and writes to any granularity of memory region, can help improve the reliability of today's multi-module multi-programmer applications, as well as the efficiency of software debugging tools. Unfortunately, access control in today's processors is tied to support for virtual memory, making its use both heavy weight and coarse grain. In this paper, we propose Sentry, an auxiliary level of virtual memory tagging that is entirely subordinate to existing virtual memory-based protection mechanisms and can be manipulated at the user level. We implement these tags in a complexity-effective manner using an M-cache (metadata cache) structure that only intervenes on L1 misses, thereby minimizing changes to the processor core. Existing cache coherence states are repurposed to implicitly validate permissions for L1 hits. Sentry achieves its goal of flexible and light-weight access control without disrupting existing inter-application protection, sidestepping the challenges associated with adding a new protection framework to an existing operating system. We illustrate the benefits of our design point using 1) an Apache-based web server that uses the M-cache to enforce protection boundaries among its modules and 2) a watchpoint-based tool to demonstrate low-overhead debugging. Protection is achieved with very few changes to the source code, no changes to the programming model, minimal modifications to the operating system, and with low overhead incurred only when accessing memory regions for which the additional level of access control is enabled.",
+  "doi": "10.1145/1816038.1816016",
+  "openalex": "W4205839881",
+  "status": "ok",
+  "title": "Sentry"
+ },
+ "10.1145_1950365.1950369": {
+  "abstract": "Diagnosing software failures in the field is notoriously difficult, in part due to the fundamental complexity of trouble-shooting any complex software system, but further exacerbated by the paucity of information that is typically available in the production setting. Indeed, for reasons of both overhead and privacy, it is common that only the run-time log generated by a system (e.g., syslog) can be shared with the developers. Unfortunately, the ad-hoc nature of such reports are frequently insufficient for detailed failure diagnosis. This paper seeks to improve this situation within the rubric of existing practice. We describe a tool, LogEnhancer that automatically enhances existing logging code to aid in future post-failure debugging. We evaluate LogEnhancer on eight large, real-world applications and demonstrate that it can dramatically reduce the set of potential root failure causes that must be considered during diagnosis while imposing negligible overheads.",
+  "doi": "10.1145/1950365.1950369",
+  "openalex": "W2109178099",
+  "status": "ok",
+  "title": "Improving software diagnosability via log enhancement"
+ },
+ "10.1145_1952682.1952688": {
+  "abstract": "In today's multi-core systems, cache contention due to true and false sharing can cause unexpected and significant performance degradation. A detailed understanding of a given multi-threaded application's behavior is required to precisely identify such performance bottlenecks. Traditionally, however, such diagnostic information can only be obtained after lengthy simulation of the memory hierarchy.",
+  "doi": "10.1145/1952682.1952688",
+  "openalex": "W2123065508",
+  "status": "ok",
+  "title": "Dynamic cache contention detection in multi-threaded applications"
+ },
+ "10.1145_2110356.2110360": {
+  "abstract": "Diagnosing software failures in the field is notoriously difficult, in part due to the fundamental complexity of troubleshooting any complex software system, but further exacerbated by the paucity of information that is typically available in the production setting. Indeed, for reasons of both overhead and privacy, it is common that only the run-time log generated by a system (e.g., syslog) can be shared with the developers. Unfortunately, the ad-hoc nature of such reports are frequently insufficient for detailed failure diagnosis. This paper seeks to improve this situation within the rubric of existing practice. We describe a tool, LogEnhancer that automatically “enhances” existing logging code to aid in future post-failure debugging. We evaluate LogEnhancer on eight large, real-world applications and demonstrate that it can dramatically reduce the set of potential root failure causes that must be considered while imposing negligible overheads.",
+  "doi": "10.1145/2110356.2110360",
+  "openalex": "W2096761130",
+  "status": "ok",
+  "title": "Improving Software Diagnosability via Log Enhancement"
+ },
+ "10.1145_2150976.2150993": {
+  "abstract": "Future microprocessors will have more serious memory wall problems since they will include more cores and threads in each chip. Similarly, future applications will have more serious memory bloat problems since they are more often written using object-oriented languages and reusable frameworks. To overcome such problems, the language runtime environments must accurately and efficiently profile how programs access objects. We propose Barrier Profiler, a low-overhead object access profiler using a memory-protection-based approach called pointer barrierization and adaptive overhead reduction techniques. Unlike previous memory-protection-based techniques, pointer barrierization offers per-object protection by converting all of the pointers to a given object to corresponding barrier pointers that point to protected pages. Barrier Profiler achieves low overhead by not causing signals at object accesses that are unrelated to the needed profiles, based on profile feedback and a compiler analysis. Our experimental results showed Barrier Profiler provided sufficiently accurate profiles with 1.3% on average and at most 3.4% performance overhead for allocation-intensive benchmarks, while previous code-instrumentation-based techniques suffered from 9.2% on average and at most 12.6% overhead. The low overhead allows Barrier Profiler to be run continuously on production systems. Using Barrier Profiler, we implemented two new online optimizations to compress write-only character arrays and to adjust the initial sizes of mostly non-accessed arrays. They resulted in speed-ups of up to 8.6% and 36%, respectively.",
+  "doi": "10.1145/2150976.2150993",
+  "openalex": "W2152076924",
+  "status": "ok",
+  "title": "Continuous object access profiling and optimizations to overcome the memory wall and bloat"
+ },
+ "10.1145_2151024.2151043": {
+  "abstract": "Process virtualization provides a virtual execution environment within which an unmodified application can be monitored and controlled while it executes. The provided layer of control can be used for purposes ranging from sandboxing to compatibility to profiling. The additional operations required for this layer are performed clandestinely alongside regular program execution. Software dynamic instrumentation is one method for implementing process virtualization which dynamically instruments an application such that the application's code and the inserted code are interleaved together. DynamoRIO is a process virtualization system implemented using software code cache techniques that allows users to build customized dynamic instrumentation tools. There are many challenges to building such a runtime system. One major obstacle is transparency. In order to support executing arbitrary applications, DynamoRIO must be fully transparent so that an application cannot distinguish between running inside the virtual environment and native execution. In addition, any desired extra operations for a particular tool must avoid interfering with the behavior of the application.",
+  "doi": "10.1145/2151024.2151043",
+  "openalex": "W2133692747",
+  "status": "ok",
+  "title": "Transparent dynamic instrumentation"
+ },
+ "10.1145_2259016.2259032": {
+  "abstract": "Dynamic binary instrumentation systems have become popular frameworks for building custom program analysis tools. For example, Pin [8], Valgrind [9], and DynamoRIO [5] have been used to build a variety of memory checking, thread checking, cache simulation, and profiling tools. However, there has been little emphasis on building custom debugging tools with these frameworks. We introduce PinADX, a set of debugging extensions to the Pin instrumentation framework that allow easy development of custom debugger features on both Linux and Windows. This paper presents the PinADX API, demonstrates its use in a simple debugger extension, discusses the implementation details in the Pin instrumentation system, and shows that the performance is better than a native debugger for some typical debugging tasks. We believe that dynamic instrumentation technology is a powerful tool for building advanced debugging features and that an easy to use API will greatly facilitate the development of such features.",
+  "doi": "10.1145/2259016.2259032",
+  "openalex": "W2073449468",
+  "status": "ok",
+  "title": "PinADX"
+ },
+ "10.1145_2517349": {
+  "abstract": "Welcome to the Proceedings of the 24th ACM Symposium on Operating Systems Principles (SOSP 2013), held at the Nemacolin Woodlands Resort, Farmington, Pennsylvania, USA. This year's program includes 30 papers, and touches on a wide range of computer systems topics, from kernels to big data, from responsiveness to correctness, and from devices to data centers. The program committee made every effort to identify and include some of the most creative and thought-provoking ideas in computer systems today. Each accepted paper was shepherded by a program committee member to make sure the papers are as readable and complete as possible. We hope you will enjoy the program as much as we did in selecting it.",
+  "doi": "10.1145/2517349",
+  "openalex": "W2913465514",
+  "status": "ok",
+  "title": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles"
+ },
+ "10.1145_2517349.2522718": {
+  "abstract": "Dynamic binary translation (DBT) is a powerful technique with several important applications. System-level binary translators have been used for implementing a Virtual Machine Monitor [2] and for instrumentation in the OS kernel [10]. In current designs, the performance overhead of binary translation on kernel-intensive workloads is high. e.g., over 10x slowdowns were reported on the syscall nanobenchmark in [2], 2-5x slowdowns were reported on lmbench microbenchmarks in [10]. These overheads are primarily due to the extra work required to correctly handle kernel mechanisms like interrupts, exceptions, and physical CPU concurrency.",
+  "doi": "10.1145/2517349.2522718",
+  "openalex": "W2042043230",
+  "status": "ok",
+  "title": "Fast dynamic binary translation for the kernel"
+ },
+ "10.1145_2524224.2524226": {
+  "abstract": "In a virtualized datacenter, the Service Level Agreement for an application restricts the Virtual Machines (VMs) placement. An algorithm is in charge of maintaining a placement compatible with the stated constraints.",
+  "doi": "10.1145/2524224.2524226",
+  "openalex": "W2140690734",
+  "status": "ok",
+  "title": "Higher SLA satisfaction in datacenters with continuous VM placement constraints"
+ },
+ "10.1145_2524224.2524234": {
+  "abstract": "Finding, understanding, and fixing bugs in an operating system is challenging. Dynamic binary translation (DBT) systems provide a powerful facility for building program analysis and debugging tools. However, DBT abstractions are too low-level and provide limited contextual information for instrumentation tools.",
+  "doi": "10.1145/2524224.2524234",
+  "openalex": "W2138327801",
+  "status": "ok",
+  "title": "Behave or be watched"
+ },
+ "10.1145_2525528.2525534": {
+  "abstract": "Operating systems and programming languages are often informally evaluated on their conduciveness towards composition. We revisit Dan Ingalls' Smalltalk-inspired position that \"an operating system is a collection of things that don't fit inside a language; there shouldn't be one\", discussing what it means, why it appears not to have materialised, and how we might work towards the same effect in the postmodern reality of today's systems. We argue that the trajectory of the \"file\" abstraction through Unix and Plan 9 culminates in a Smalltalk-style object, with other filesystem calls as a primitive metasystem. Meanwhile, the key features of Smalltalk have many analogues in the fragmented world of Unix programming (including techniques at the library, file and socket level). Based on the themes of unifying OS- and language-level mechanisms, and increasing the expressiveness of the meta-system, we identify some evolutionary approaches to a postmodern realisation of Ingalls' vision, arguing that an operating system is still necessary after all.",
+  "doi": "10.1145/2525528.2525534",
+  "openalex": "W2118409092",
+  "status": "ok",
+  "title": "The operating system"
+ },
+ "10.1145_2544137.2544154": {
+  "abstract": "Uninitialized variables can cause system crashes when used and security vulnerabilities when exploited. With source rather than binary instrumentation, dynamic analysis tools such as MSan can detect uninitialized memory uses at significantly reduced overhead but are still costly.",
+  "doi": "10.1145/2544137.2544154",
+  "openalex": "W2037378467",
+  "status": "ok",
+  "title": "Accelerating Dynamic Detection of Uses of Undefined Values with Static Value-Flow Analysis"
+ },
+ "10.1145_2568225.2568250": {
+  "abstract": "There are many tools that help programmers find code fragments, but most are inexpressive and rely on static information. We present a new technique for synthesizing code that is dynamic (giving accurate results and allowing programmers to reason about concrete executions), easy-to-use (supporting a wide range of correctness specifications), and interactive (allowing users to refine the candidate code snippets). Our implementation, which we call CodeHint, generates and evaluates code at runtime and hence can synthesize real-world Java code that involves I/O, reflection, native calls, and other advanced language features. We have evaluated CodeHint in two user studies and show that its algorithms are efficient and that it improves programmer productivity by more than a factor of two.",
+  "doi": "10.1145/2568225.2568250",
+  "openalex": "W2115733813",
+  "status": "ok",
+  "title": "CodeHint: dynamic and interactive synthesis of code snippets"
+ },
+ "10.1145_2769458.2769482": {
+  "abstract": "The rollback operation is a fundamental building block to support the correct execution of a speculative Time Warp-based Parallel Discrete Event Simulation. In the literature, several solutions to reduce the execution cost of this operation have been proposed, either based on the creation of a checkpoint of previous simulation state images, or on the execution of negative copies of simulation events which are able to undo the updates on the state. In this paper, we explore the practical design and implementation of a state recoverability technique which allows to restore a previous simulation state either relying on checkpointing or on the reverse execution of the state updates occurred while processing events in forward mode. Differently from other proposals, we address the issue of executing backward updates in a fully-transparent and event granularity-independent way, by relying on static software instrumentation (targeting the x86 architecture and Linux systems) to generate at runtime reverse update code blocks (not to be confused with reverse events, proper of the reverse computing approach). These are able to undo the effects of a forward execution while minimizing the cost of the undo operation. We also present experimental results related to our implementation, which is released as free software and fully integrated into the open source ROOT-Sim (ROme OpTimistic Simulator) package. The experimental data support the viability and effectiveness of our proposal.",
+  "doi": "10.1145/2769458.2769482",
+  "openalex": "W2010995020",
+  "status": "ok",
+  "title": "Transparently Mixing Undo Logs and Software Reversibility for State Recovery in Optimistic PDES"
+ },
+ "10.1145_3064911.3064927": {
+  "abstract": "State recoverability is a crucial aspect of speculative Time Warp-based Parallel Discrete Event Simulation. In the literature, we can identify three major classes of techniques to support the correct restoration of a previous simulation state upon the execution of a rollback operation: state checkpointing/restore, manual reverse computation and automatic reverse computation. The latter class has been recently supported by relying either on binary code instrumentation or on source-to-source code transformation. Nevertheless, both solutions are not intrinsically meant to support a reversible execution of third-party shared libraries, which can be pretty useful when implementing complex simulation models.",
+  "doi": "10.1145/3064911.3064927",
+  "openalex": "W2614594879",
+  "status": "ok",
+  "title": "Dealing with Reversibility of Shared Libraries in PDES"
+ },
+ "10.1145_3077583": {
+  "abstract": "The Time Warp synchronization protocol for Parallel Discrete Event Simulation (PDES) is universally considered a viable solution to exploit the intrinsic simulation model parallelism and to provide model execution speedup. Yet it leads the PDES system to execute events in an order that may generate causal inconsistencies that need to be recovered via rollback , which requires restoration of a previous (consistent) simulation state whenever a causality violation is detected. The rollback operation is so critical for the performance of a Time Warp system that it has been extensively studied in the literature for decades to find approaches suitable to optimize it. The proposed solutions can be roughly classified as based on either checkpointing or reverse computing . In this article, we explore the practical design and implementation of a fully new approach based on the runtime generation of so-called undo code blocks , which are blocks of instructions implementing the reverse memory side effects generated by the forward execution of the events. However, this is not done by recomputing the original values to be restored, as instead it occurs in reverse computing schemes. Hence, the philosophy undo code blocks rely on is similar in spirit to that of undo-logs (as a form of checkpointing). Nevertheless, they are not data logs (as instead checkpoints are); rather, they are logs of instructions. Our proposal is fully transparent, thanks to the reliance on static software instrumentation (targeting the x86 architecture and Linux systems). Also, as we show, it can be combined with classical checkpointing to further improve the runtime behavior of the state recoverability support as a function of the workload. We also present experimental results related to our implementation, which is released as free software and fully integrated into the open source ROOT-Sim package. Experimental data support the viability and effectiveness of our proposal.",
+  "doi": "10.1145/3077583",
+  "openalex": "W2618211684",
+  "status": "ok",
+  "title": "Transparently Mixing Undo Logs and Software Reversibility for State Recovery in Optimistic PDES"
+ },
+ "10.1145_3143361.3143398": {
+  "abstract": "Stream processing pipelines operated by current big data streaming frameworks present two problems. First, the pipelines are not flexible, controllable, and programmable enough to accommodate dynamic streaming application needs. Second, the application-level data routing over the pipelines do not exhibit optimal performance for increasingly common one-to-many communication. To address these problems, we propose an SDN-based real-time big data streaming framework called Typhoon, that tightly integrates SDN functionality into a real-time stream framework. By partially offloading application-layer data routing and control to the network layer via SDN interfaces and protocols, Typhoon provides on-the-fly programmability of both the application and network layers, and achieve high-performance data routing. In addition, Typhoon SDN controller exposes cross-layer information, from both the application and the network, to SDN control plane applications to extend the framework's functionality. We introduce several SDN control plane applications to illustrate these benefits.",
+  "doi": "10.1145/3143361.3143398",
+  "openalex": "W2770980005",
+  "status": "ok",
+  "title": "Typhoon"
+ },
+ "10.1145_3180155.3180175": {
+  "abstract": "Debugging is an inevitable activity in most software projects, often difficult and more time-consuming than expected, giving it the nickname the \"dirty little secret of computer science.\" Surprisingly, we have little knowledge on how software engineers debug software problems in the real world, whether they use dedicated debugging tools, and how knowledgeable they are about debugging. This study aims to shed light on these aspects by following a mixed-methods research approach. We conduct an online survey capturing how 176 developers reflect on debugging. We augment this subjective survey data with objective observations on how 458 developers use the debugger included in their integrated development environments (IDEs) by instrumenting the popular Eclipse and IntelliJ IDEs with the purpose-built plugin WatchDog 2.0. To clarify the insights and discrepancies observed in the previous steps, we followed up by conducting interviews with debugging experts and regular debugging users. Our results indicate that IDE-provided debuggers are not used as often as expected, as \"printf debugging\" remains a feasible choice for many programmers. Furthermore, both knowledge and use of advanced debugging features are low. These results call to strengthen hands-on debugging experience in computer science curricula and have already refined the implementation of modern IDE debuggers.",
+  "doi": "10.1145/3180155.3180175",
+  "openalex": "W2794673032",
+  "status": "ok",
+  "title": "On the dichotomy of debugging behavior among programmers"
+ },
+ "10.1145_3194733.3194741": {
+  "abstract": "Memory fault detection has been continuously studied and various detection methods exist. However, there are still remains many memory defects that are difficult to debug. Memory corruption is one of those defects that often cause a system crash. However, there are many cases where the location of the crash is different from the actual location causing the actual memory corruption. These defects are difficult to solve by existing methods.",
+  "doi": "10.1145/3194733.3194741",
+  "openalex": "W2810644268",
+  "status": "ok",
+  "title": "Memory corruption detecting method using static variables and dynamic memory usage"
+ },
+ "10.1145_3297858.3304066": {
+  "abstract": "Programs written for hardware accelerators can often be difficult to debug. Without adequate tool support, program maintenance tasks such as fault localization and debugging can be particularly challenging. In this work, we focus on supporting hardware that is specialized for finite automata processing, a computational paradigm that has accelerated pattern-matching applications across a diverse set of problem domains. While commodity hardware enables high-throughput data analysis, direct interactive debugging (e.g., single-stepping) is not currently supported. We propose a debugging approach for existing commodity hardware that supports step-through debugging and variable inspection of user-written automata processing programs. We focus on programs written in RAPID, a domain-specific language for pattern-matching applications. We develop a prototype of our approach for both Xilinx FPGAs and Micron's Automata Processor that supports simultaneous high-speed processing of data and interactive debugging without requiring modifications to the underlying hardware. Our empirical evaluation demonstrates low clock overheads for our approach across thirteen applications in the ANMLZoo automata processing benchmark suite on FPGAs. Additionally, we evaluate our technique through a human study involving over 60 participants and 20 buggy segments of code. Our generated debugging information increases fault localization accuracy by 22%, or 10 percentage points, in a statistically significant manner (p=0.013).",
+  "doi": "10.1145/3297858.3304066",
+  "openalex": "W2929427024",
+  "status": "ok",
+  "title": "Debugging Support for Pattern-Matching Languages and Accelerators"
+ },
+ "10.1145_3352460.3358307": {
+  "abstract": "Binary instrumentation frameworks are widely used to implement profilers, performance evaluation, error checking, and bug detection tools. While dynamic binary instrumentation tools such as PIN and DynamoRio are supported on CPUs, GPU architectures currently only have limited support for similar capabilities through static compile-time tools, which prohibits instrumentation of dynamically loaded libraries that are foundations for modern high-performance applications. This work presents NVBit, a fast, dynamic, and portable, binary instrumentation framework, that allows users to write instrumentation tools in CUDA/C/C++ and selectively apply that functionality to pre-compiled binaries and libraries executing on NVIDIA GPUs. Using dynamic recompilation at the SASS level, NVBit analyzes GPU kernel register requirements to generate efficient ABI compliant instrumented code without requiring the tool developer to have detailed knowledge of the underlying GPU architecture. NVBit allows basic-block instrumentation, multiple function injections to the same location, inspection of all ISA visible state, dynamic selection of instrumented or uninstrumented code, permanent modification of register state, source code correlation, and instruction removal. NVBit supports all recent NVIDIA GPU architecture families including Kepler, Maxwell, Pascal and Volta and works on any pre-compiled CUDA, OpenACC, OpenCL, or CUDA-Fortran application.",
+  "doi": "10.1145/3352460.3358307",
+  "openalex": "W2979340153",
+  "status": "ok",
+  "title": "NVBit"
+ },
+ "10.1145_3623476": {
+  "abstract": "Welcome to the 16th ACM SIGPLAN International Conference on Software Language Engineering (SLE) held in October 2023 as part of SPLASH 2023. Software Language Engineering (SLE) is a thriving research discipline targeted at establishing an engineering approach to the development, use, and maintenance of software languages, that is, of languages for the specification, modeling and tooling of software. Key topics of interest for SLE include approaches, methodologies and tools for language design and implementation with a focus on techniques for static and behavioral semantics, generative or interpretative approaches (including transformation languages and code generation) as well as meta-languages and tools (including language workbenches). Techniques enabling the testing, simulation or formal verification for language validation purposes are also of particular interest. SLE also accommodates empirical evaluation and experience reports of language engineering tools, such as user studies evaluating usability, performance benchmarks or industrial applications.",
+  "doi": "10.1145/3623476",
+  "openalex": "W4387793627",
+  "status": "ok",
+  "title": "Proceedings of the 16th ACM SIGPLAN International Conference on Software Language Engineering"
+ },
+ "10.1145_3623476.3623526": {
+  "abstract": "Multiverse debugging extends classical and omniscient debugging to allow the exhaustive exploration of non-deterministic and concurrent systems during debug sessions. The introduction of user-defined reductions significantly improves the scalability of the approach. However, the literature fails to recognize the importance of using more expressive logics, besides local-state predicates, to express breakpoints. In this article, we address this problem by introducing temporal breakpoints for multiverse debugging. Temporal breakpoints greatly enhance the expressivity of conditional breakpoints, allowing users to reason about the past and future of computations in the multiverse. Moreover, we show that it is relatively straightforward to extend a language-agnostic multiverse debugger semantics with temporal breakpoints, while preserving its generality. To show the elegance and practicability of our approach, we have implemented a multiverse debugger for the AnimUML modeling environment that supports 3 different temporal breakpoint formalisms: regular-expressions, statecharts, and statechart-based Büchi automata.",
+  "doi": "10.1145/3623476.3623526",
+  "openalex": "W4387512604",
+  "status": "ok",
+  "title": "Temporal Breakpoints for Multiverse Debugging"
+ },
+ "10.1155_2018_8939027": {
+  "abstract": "Reproducing a failure is the first and most important step in debugging because it enables us to understand the failure and track down its source. However, many programs are susceptible to nondeterministic failures that are hard to reproduce, which makes debugging extremely difficult. We first address the reproducibility problem by proposing an OS-level replay system for a uniprocessor environment that can capture and replay nondeterministic events needed to reproduce a failure in Linux interactive and event-based programs. We then present an analysis method, called replay analysis, based on the proposed record and replay system to diagnose concurrency bugs in such programs. The replay analysis method uses a combination of static analysis, dynamic tracing during replay, and delta debugging to identify failure-inducing memory access patterns that lead to concurrency failure. The experimental results show that the presented record and replay system has low-recording overhead and hence can be safely used in production systems to catch rarely occurring bugs. We also present few concurrency bug case studies from real-world applications to prove the effectiveness of the proposed bug diagnosis framework.",
+  "doi": "10.1155/2018/8939027",
+  "openalex": "W2797559551",
+  "status": "ok",
+  "title": "Debugging Nondeterministic Failures in Linux Programs through Replay Analysis"
+ },
+ "10.22152_programming-journal.org_2017_1_12": {
+  "abstract": "Modern software development without reactive programming is hard to imagine.Reactive programming favors a wide class of contemporary software systems that respond to user input, network messages, and other events.While reactive programming is an active field of research, the implementation of reactive concepts remains challenging.In particular, change detection represents a hard but inevitable necessity when implementing reactive concepts.Typically, change detection mechanisms are not intended for reuse but are tightly coupled to the particular change resolution mechanism.As a result, developers often have to re-implement similar abstractions.A reusable primitive for change detection is still missing.To find a suitable primitive, we identify commonalities in existing reactive concepts.We discover a class of reactive concepts, state-based reactive concepts.All state-based reactive concepts share a common change detection mechanism: they detect changes in the evaluation result of an expression.On the basis of the identified common change detection mechanism, we propose active expressions as a reusable primitive.By abstracting the tedious implementation details of change detection, active expressions can ease the implementation of reactive programming concepts.We evaluate the design of active expressions by re-implementing a number of existing state-based reactive concepts using them.The resulting implementations highlight the expressiveness of active expressions.Active expressions enable the separation of essential from non-essential parts when reasoning about reactive programming concepts.By using active expressions as a primitive for change detection, developers of reactive language constructs and runtime support can now focus on the design of how application programmers should be able to react to change.Ultimately, we would like active expressions to encourage experiments with novel reactive programming concepts and with that to yield a wider variety of them to explore.",
+  "doi": "10.22152/programming-journal.org/2017/1/12",
+  "openalex": "W2128324598",
+  "status": "ok",
+  "title": "Active Expressions: Basic Building Blocks for Reactive Programming"
+ },
+ "10.22360_summersim.2018.scsc.003": {
+  "abstract": "Multi-Paradigm Modelling (MPM) has been proposed to tackle the complexities of the systems we build today. MPM proposes to explicitly model all relevant aspects of the system, at the right level(s) of abstraction, using the most appropriate formalism(s), while explicitly modelling the process. This imposes stringent requirements on any tool supporting MPM, such as support for distributed execution, support for multiple users, all while having acceptable performance. In this paper, we wish to aid the development of such complex tools by explicitly modelling the tool using the Parallel DEVS formalism, thereby applying the MPM approach ourselves. This model is applied in two domains: performance evaluation and model debugging. For performance, the DEVS model is used for what-if analysis and automated benchmarks. For debugging, DEVS debuggers are used instead of code debuggers, raising the level of abstraction. In both cases, DEVS yields deterministic execution, aiding in reproducibility.",
+  "doi": "10.22360/summersim.2018.scsc.003",
+  "openalex": "W2893722172",
+  "status": "ok",
+  "title": "DEVS Modelling and Simulation of a Multi-Paradigm Modelling Tool"
+ },
+ "10.26190_unsworks_18208": {
+  "abstract": null,
+  "doi": "10.26190/unsworks/18208",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Accelerating Dynamic Detection of Memory Errors for C Programs via Static Analysis"
+ },
+ "10.26686_wgtn.17149193": {
+  "abstract": "Reverse engineering is an important process employed by both attackers seeking to gain entry to a system as well as the security engineers that protect it. While there are numerous tools developed for this purpose, they often can be tedious to use and rely on prior obtained domain knowledge. After examining a number of contemporary tools, we design and implement a de-noising tool that reduces the human effort needed to perform reverse engineering. The tool takes snapshots of a target program's memory as the user consistently interacts with it. By comparing changes across multiple sets of snapshots, consistent changes in memory that could be attributed to the user action are identified. We go on to demonstrate its use on three Windows applications: Minesweeper, Solitaire and Notepad++. Through assistance from the de-noising tool, we were able to discover information such as the location of mines and values of cards in these two games before they are revealed, and the data structure used for input to Notepad++.",
+  "doi": "10.26686/wgtn.17149193",
+  "openalex": "W4205830068",
+  "status": "ok",
+  "title": "Reverse Engineering of an Obfuscated Binary"
+ },
+ "10.26686_wgtn.17149193.v1": {
+  "abstract": "Reverse engineering is an important process employed by both attackers seeking to gain entry to a system as well as the security engineers that protect it. While there are numerous tools developed for this purpose, they often can be tedious to use and rely on prior obtained domain knowledge. After examining a number of contemporary tools, we design and implement a de-noising tool that reduces the human effort needed to perform reverse engineering. The tool takes snapshots of a target program's memory as the user consistently interacts with it. By comparing changes across multiple sets of snapshots, consistent changes in memory that could be attributed to the user action are identified. We go on to demonstrate its use on three Windows applications: Minesweeper, Solitaire and Notepad++. Through assistance from the de-noising tool, we were able to discover information such as the location of mines and values of cards in these two games before they are revealed, and the data structure used for input to Notepad++.",
+  "doi": "10.26686/wgtn.17149193.v1",
+  "openalex": "W4205806132",
+  "status": "ok",
+  "title": "Reverse Engineering of an Obfuscated Binary"
+ },
+ "10.3390_electronics10172127": {
+  "abstract": "Various methods for memory fault detection have been developed through continuous study. However, many memory defects remain that are difficult to resolve. Memory corruption is one such defect, and can cause system crashes, making debugging important. However, the locations of the system crash and the actual source of the memory corruption often differ, which makes it difficult to solve these defects using the existing methods. In this paper, we propose a method that detects memory defects in which the location causing the defect is different from the actual location, providing useful information for debugging. This study presents a method for the real-time detection of memory defects in software based on data obtained through static and dynamic analysis. The data we used for memory defect analysis were (1) information of static global variables (data, address, size) derived through the analysis of executable binary files, and (2) dynamic memory usage information obtained by tracking memory-related functions that are called during the real-time execution of the process. We implemented the proposed method as a tool and applied it to applications running on the Linux. The results indicate the defect-detection efficacy of our tool for this application. Our method accurately detects defects with different cause and detected-fault locations, and also requires a very low overhead for fault detection.",
+  "doi": "10.3390/electronics10172127",
+  "openalex": "W3198706277",
+  "status": "ok",
+  "title": "Automated Memory Corruption Detection through Analysis of Static Variables and Dynamic Memory Usage"
+ },
+ "10.4233_uuid_b2946104-2092-42bb-a1ee-3b085d110466": {
+  "abstract": "Software developers today crave for feedback, be it from their peers in the form of code review, static analysis tools like their compiler, or the local or remote execution of their tests in the Continuous Integration (CI) environment. With the advent of social coding sites such as GitHub and tight integration of CI services such as Travis CI, software development practices have fundamentally changed. Despite a highly alternated software engineering landscape, however, we still lack a suitable holistic description of contemporary software development practices. Existing descriptions such as the V-model are either too coarse-grained to describe an individual contributor’s workflow, or only regard a subpart of the development process, like Test-Driven Development (TDD). In addition, most existing models are pre- rather than de-scriptive. By contrast, in this thesis, we perform a series of empirical studies to characterize the individual constituents of Feedback-Driven Development (FDD): we study the prevalence and evolution of Automatic Static Analysis Tools (ASATs), we explain the “Last Line Effect,” a phenomenon at the boundary between ASATs and code review, we observe local testing patterns in the Integrated Development Environment (IDE) of developers, compare them to remote testing on the CI server, and, finally, should these quality assurance techniques have failed, we examine how developers debug faults. We then compile this empirical evidence into a model of how today’s software developers work. Our results show that developers employ the different techniques in FDD to best achieve their current task in the most efficient way, often knowingly taking shortcuts to get the job done. While this is efficient in the short term, it also bears risks, namely that prevention and introspection activities fall short: developers might not configure or combine ASATs to their full benefit, they might have wrong perceptions about the amount of time spent on quality-control, quality-related activities such as testing could become an after-thought, and learning about debugging techniques falls short. A relatively rigid, tool-enforced FDD process could help developers in not committing some of these mistakes. Our thesis culminates in the finding that feedback loops are the characterizing criterion of contemporary software development. Our model is flexible enough to accommodate a broad band of modern workflows, despite large variances in how projects use and configure parts of FDD.",
+  "doi": "10.4233/uuid:b2946104-2092-42bb-a1ee-3b085d110466",
+  "openalex": "W2904501359",
+  "status": "ok",
+  "title": "An Empirical Evaluation of Feedback-Driven Software Development"
+ },
+ "10.5281_zenodo.5346846": {
+  "abstract": "This repository contains the breakpoint types study dataset. Abstract Debugging is a relevant task for finding bugs during software development, maintenance, and evolution. During debugging, developers use modern IDE debuggers to analyze variables, step execution, and set breakpoints. Observing IDE debuggers, we find several breakpoint types. However, what are the breakpoint types? The goal of our study is to map the breakpoint types among IDEs and academic literature. Thus, we mapped the gray literature on the documentation of the nine main IDEs used by developers according to the three public rankings. In addition, we performed a systematic mapping of academic literature over 72 articles describing breakpoint types. Finally, we analyzed the developers understanding of the main breakpoint types through a questionnaire. We present three main contributions: (1) the mapping of breakpoint types (IDEs and literature), (2) compiled definitions of breakpoint types, (3) a breakpoint type taxonomy. Our contributions provide the first step to organize breakpoint IDE taxonomy and lexicon, and support further debugging research.",
+  "doi": "10.5281/zenodo.5346846",
+  "openalex": "W3197204261",
+  "status": "ok",
+  "title": "Mapping breakpoint types: an exploratory study"
+ },
+ "10.5281_zenodo.5663903": {
+  "abstract": "This repository contains the breakpoint types study dataset. Abstract Debugging is a relevant task for finding bugs during software development, maintenance, and evolution. During debugging, developers use modern IDE debuggers to analyze variables, step execution, and set breakpoints. Observing IDE debuggers, we find several breakpoint types. However, what are the breakpoint types? The goal of our study is to map the breakpoint types among IDEs and academic literature. Thus, we mapped the gray literature on the documentation of the nine main IDEs used by developers according to the three public rankings. In addition, we performed a systematic mapping of academic literature over 68 articles describing breakpoint types. Finally, we analyzed the developers understanding of the main breakpoint types through a questionnaire. We present three main contributions: (1) the mapping of breakpoint types (IDEs and literature), (2) compiled definitions of breakpoint types, (3) a breakpoint type taxonomy. Our contributions provide the first step to organize breakpoint IDE taxonomy and lexicon, and support further debugging research.",
+  "doi": "10.5281/zenodo.5663903",
+  "openalex": "W4287017899",
+  "status": "ok",
+  "title": "Mapping breakpoint types: an exploratory study"
+ },
+ "10.5555_2486788.2486835": {
+  "abstract": "Abstract—We present EXPOSITOR, a new debugging environment that combines scripting and time-travel debugging to allow developers to automate complex debugging tasks. The fundamental abstraction provided by EXPOSITOR is the execution trace, which is a time-indexed sequence of program state snapshots. Developers can manipulate traces as if they were simple lists with operations such as map and filter. Under the hood, EXPOSITOR efficiently implements traces as lazy, sparse interval trees, whose contents are materialized on demand. EXPOSITOR also provides a novel data structure, the edit hash array mapped trie, which is a lazy implementation of sets, maps, multisets, and multimaps that enables developers to maximize the efficiency of their debugging scripts. We have used EXPOSITOR to debug a stack overflow and to unravel a subtle data race in Firefox. We believe that EXPOSITOR represents an important step forward in improving the technology for diagnosing complex, hard-to-understand bugs. I.",
+  "doi": "10.5555/2486788.2486835",
+  "openalex": "W2162468176",
+  "status": "ok",
+  "title": "Expositor: scriptable time-travel debugging with first-class traces"
+ },
+ "10.7287_peerj.preprints.2743v1": {
+  "abstract": "Debugging software is an inevitable chore, often difficult and more time-consuming than expected, giving it the nickname the “ dirty little secret of computer science.” Surprisingly, we have little knowledge on how software engineers debug software problems in the real world, whether they use dedicated debugging tools, and how knowledgeable they are about debugging. This study aims to shed light on these aspects by following a mixed-methods research approach. We conduct an online survey capturing how 176 developers reflect on debugging. We augment this subjective survey data with objective observations from how 458 developers use the debugger included in their Integrated Development Environments (IDEs) by instrumenting the popular ECLIPSE and INTELLIJ IDEs with our purpose-built plugin WATCHDOG 2.0. To better explain the insights and controversies obtained from the previous steps, we followed up by conducting interviews with debugging experts and regular debugging users. Our results indicate that the the IDE-provided debugger is not used as often as expected, since “printf debugging” remains a feasible choice for many programmers. Furthermore, both knowledge and use of advanced debugging features are low. Our results call to strengthen hands-on debugging experience in Computer Science curricula and can and have already influenced the design of modern IDE debuggers.",
+  "doi": "10.7287/peerj.preprints.2743v1",
+  "openalex": "W2583000271",
+  "status": "ok",
+  "title": "How developers debug"
+ },
+ "oa-W1684317732": {
+  "abstract": "As software is growing in size and complexity, accompanied by vendors ’ increased time-to-market pressure, it has become increasingly difficult to deliver bulletproof software. Consequently, soft-ware systems still fail in the production environment. Once a failure occurs in production systems, it is important for the vendors to trouble-shoot it as quickly as possible since these failures directly affect the customers. Consequently vendors typically invest significant amounts of resources in production failure diagnosis. Unfortunately, diagnosing these production failures is notoriously difficult. Indeed, constrained by both privacy and expense reasons, software vendors often cannot reproduce such failures. Therefore, support engineers and developers continue to rely on the logs printed by the run time system to diagnose the production failures. Unfortunately, the current failure diagnosis experience with log messages, which is colloquially referred as “printf-debugging”, is far from pleasant. First, such diagnosis requires expert knowl-edge and is also too time-consuming, tedious to narrow down root causes. Second, the ad-hoc nature of the log messages is frequently insufficient for detailed failure diagnosis.",
+  "doi": null,
+  "openalex": "W1684317732",
+  "status": "ok",
+  "title": "Improving failure diagnosis via better design and analysis of log messages"
+ },
+ "oa-W197989889": {
+  "abstract": "This paper presents an instrumentation framework for assessing and improving fuzzing, a powerful technique to rapidly detect software vulnerabilities. We address the major current limitation of fuzzing techniques, namely the absence of evaluation metrics and the absence of automated quality assessment techniques for fuzzing approaches. We treat the fuzzing process as a signal and show how derived measures like power and entropy can give an insightful perspective on a fuzzing process. We demonstrate how this perspective can be used to compare the efficiency of several fuzzers, derive stopping conditions for a fuzzing process, or help to identify good candidates for input data. We show through the Linux implementation of our instrumentation framework how the approach was successfully used to assess two different fuzzers on real applications. Our instrumentation framework leverages a tainted data approach and uses data lifetime tracing with an underlying tainted data graph structure.",
+  "doi": null,
+  "openalex": "W197989889",
+  "status": "ok",
+  "title": "Spectral Fuzzing: Evaluation & Feedback"
+ },
+ "oa-W2152389483": {
+  "abstract": "Memory tracing (executing additional code for every memory access of a program) is a powerful technique with many applications, e.g., debugging, taint checking, or tracking dataflow. Current approaches are limited: software-only memory tracing incurs high performance overhead (e.g., for Libdft up to 10×) because every single memory access of the application is checked by additional code that is not part of the original application and hardware is limited to a small set of watched locations.\r\n\r\nThis paper introduces memTrace, a lightweight memory tracing technique that builds on dynamic on-the-fly cross-ISA binary translation of 32-bit code to 64-bit code. Our software-only approach enables memory tracing for unmodified, binary-only ×86 applications using the ×64 extension that is available in current CPUs; no OS extensions or special hardware is required. The additional registers in ×64 and the wider memory addressing enable a low-overhead tracing infrastructure that is protected from the application code (i.e., uses disjunct registers and memory regions). MemTrace handles multi-threaded applications. Two case studies discuss a framework for unlimited read and write watchpoints and an allocation-based memory checker similar in functionality to memgrind.\r\n\r\nThe performance evaluation of memTrace shows that the time overhead is between 1.3× and 3.1× for the SPEC CPU2006 benchmarks, with a geometric mean of 1.97×.",
+  "doi": null,
+  "openalex": "W2152389483",
+  "status": "ok",
+  "title": "Lightweight memory tracing"
+ },
+ "oa-W2188360797": {
+  "abstract": "Finding, understanding, and fixing bugs in software systems is challenging. Dynamic binary translation (DBT) systems provide a powerful facility for building program analysis and debugging tools. However, DBT abstractions are too low-level and provide limited contextual information to instrumentation tools, making it hard to implement such tools. In this theis, we introduce behavioral watchpoints, a new software-based watchpoint framework that simplifies the implementation of DBT-based program analysis and debugging tools. Behavioral watchpoints have two key features: 1) they provide contextual information at the instruction level which are directly available with watchpoints and 2) they enable specializing instruction-level instrumentation with individual data structures. We describe three applications that were easily developed using our watchpoint framework: detecting buffer overflows, detecting read-before-write and memory freeing bugs and detecting memory leaks. We implemented behavioral watchpoints using Granary, a DBT framework for instrumenting operating system kernels. We evaluated the overheads of watchpoints for analyzing and debugging operating system kernel modules and show that these overheads are reasonable.",
+  "doi": null,
+  "openalex": "W2188360797",
+  "status": "ok",
+  "title": "Debugging With Behavioral Watchpoints"
+ },
+ "oa-W2203629570": {
+  "abstract": "Many code fragments are difficult to write. For example, using new and unfamiliar APIs can be a complex task with a steep learning curve. In addition, implementing a complex data structure requires discovering and understanding all of the corner cases. And more and more end users with little to no formal training are trying to write code, whether they be scientists writing simulations or kids writing mobile apps. For all of these reasons and more, programming is a difficult task, which leads to bugs and delays in software.There are many tools that help programmers find code fragments involving complex APIs, but many are somewhat inexpressive and rely on static information. We present a new technique, which we call CodeHint, that generates and evaluates code at runtime and hence can synthesize real-world Java code that involves I/O, reflection, native calls, and other advanced language features. Our approach is dynamic (giving accurate results and allowing programmers to reason about concrete executions), easy-to-use (supporting a wide range of correctness specifications), and interactive (allowing users to refine the candidate code snippets). We evaluate CodeHint and show that its algorithms are efficient and that in two user studies it improves programmer productivity by more than a factor of two.As the second contribution, programmers and end users often find it easy to explain an algorithm on a whiteboard or with pictures in a textbook but struggle to write the code correctly. We propose a new methodology that allows users to program by demonstrating how an algorithm proceeds on concrete inputs. To reduce the burden of these demonstrations on the user, we have developed pruning algorithms to remove ambiguities in the demonstrations and control flow inference algorithms to infer missing conditionals in demonstrations. These two techniques take advantage of the knowledge encoded in the user's partial correctness condition. We show that this approach is effective in practice by analyzing its performance on several common algorithms.",
+  "doi": null,
+  "openalex": "W2203629570",
+  "status": "ok",
+  "title": "Dynamic and Interactive Synthesis of Code Snippets"
+ },
+ "oa-W2539362639": {
+  "abstract": "Delivrable D2.1 for french ANR-08-VERS-017 (Vampire) project",
+  "doi": null,
+  "openalex": "W2539362639",
+  "status": "ok",
+  "title": "Deliverable D2.1 Closed loop fuzzing algorithms"
+ },
+ "oa-W2886049054": {
+  "abstract": "Researchers have recently proposed a number of systems for expressing, \\nverifying, and inferring immutability declarations. These systems are \\noften rigid, and do not support \"abstract immutability\". An abstractly \\nimmutable object is an object o which is immutable from the point of \\nview of any external methods. The C++ programming language is not \\nrigid–it allows developers to express intent by adding immutability \\ndeclarations to methods. Abstract immutability allows for performance \\nimprovements such as caching, even in the presence of writes to object \\nfields. This dissertation presents a system to enforce abstract \\nimmutability. \\n \\nFirst, we explore abstract immutability in real-world systems. We \\nfound that developers often incorrectly use abstract immutability, \\nperhaps because no programming language helps developers correctly \\nimplement abstract immutability. We believe that this omission leads \\nto incorrect usages. Specifically, we wrote a dynamic analysis that \\nreports any writes through immutability declarations. To our knowledge, \\nthis work was the first to explore how objects implement abstract \\nimmutability (or fail to implement it). Our novel study found three \\nuses of abstract immutability: caching, delayed initialization, and \\nunit testing. Unit testing was a surprising application of abstract \\nimmutability, and we believe that the ability to modify state is \\nneeded for proper unit testing. \\n \\nNext, we explore developers' revealed needs for immutability in the \\nsource code. We found that the majority of classes contain a mix of \\nimmutable and mutable methods, with a majority of the overall methods \\nbeing immutable. Immutability systems with only immutable or \\nall-mutating classes are insufficient: developers need immutability \\ndeclarations at method granularity. Our study then combined developer \\nimmutability declarations with results from a static analysis to \\nestimate the true number of immutable methods. The static analysis \\nchecked that no transitive writes to a receiver object occurred. Our \\nresults indicated the need for a sophisticated analysis to check that \\nthese apparently abstractly immutable methods were indeed abstractly \\nimmutable. \\n \\nFinally, we created a novel static analysis which checks that \\ndevelopers follow abstract immutability. Specifically, we define \\nabstract immutability to mean that a class's set of immutable methods \\nis collectively free of writes to exposed fields. Our analysis found \\nincorrect usages of abstract immutability, such as incorrect caching. \\nThis analysis is particularly valuable in the context of code \\nevolution, whereby subsequent programmers may make changes that break \\npreviously-correct cache implementations, for instance. Our work \\nallows developers to trust that their code is abstractly immutable.",
+  "doi": null,
+  "openalex": "W2886049054",
+  "status": "ok",
+  "title": "Enforcing Abstract Immutability"
+ },
+ "oa-W853278132": {
+  "abstract": null,
+  "doi": null,
+  "openalex": "W853278132",
+  "status": "no_abstract",
+  "title": "Network analysis of large scale object oriented software systems"
+ },
+ "s2-03b3bbe9b693d86d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dynamic and Interactive Synthesis of Code Snippets"
+ },
+ "s2-17ed781a529c80df": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Techniques for Transparent Parallelization of Discrete Event Simulation Models"
+ },
+ "s2-2a8e75bc38aeac45": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Fast, effective program analysis for object-level parallelism"
+ },
+ "s2-463578c8d5ab9f88": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving Programming Support for Hardware Accelerators Through Automata Processing Abstractions"
+ },
+ "s2-470ab02a955b0dd0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A specification language for debugging"
+ },
+ "s2-561d1f3afc4d41c4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Lightweight Memory Tracing"
+ },
+ "s2-625be8dbe5a8dfa3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Network analysis of large scale object oriented software systems"
+ },
+ "s2-62e2442128df73f9": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Spectral Fuzzing: Evaluation & Feedback"
+ },
+ "s2-661b9ec0703bdda3": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Di-NONAME-LIB: Logging only Dirty Chunks for Efﬁcient Management of Dynamic Memory Based Optimistic Simulation Objects"
+ },
+ "s2-72236c30a3224b08": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving failure diagnosis via better design and analysis of log messages"
+ },
+ "s2-81075b88d76f0639": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Debugging With Behavioral Watchpoints"
+ },
+ "s2-848b2450052b0fa6": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications"
+ },
+ "s2-98e370993c9116be": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient Memory Shadowing for 64-bit Architectures Citation"
+ },
+ "s2-991673b5db4df438": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Improving Programming Support for Hardware Accelerators Through Automata Processing Abstractions"
+ },
+ "s2-9ef294601918a862": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Deliverable D2.1 Closed loop fuzzing algorithms"
+ },
+ "s2-ba32378787e2c6d1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Path Projection : visualizing program paths"
+ },
+ "s2-fbc5e170b8fc18c4": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Efficient High Frequency Checkpointing for Recovery and Debugging"
+ }
+}

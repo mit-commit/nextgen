@@ -1,0 +1,800 @@
+{
+ "10.1007_978-1-4614-9299-3_2": {
+  "abstract": null,
+  "doi": "10.1007/978-1-4614-9299-3_2",
+  "openalex": "W1842717615",
+  "status": "no_abstract",
+  "title": "Communication and Capability URLs in COAST-based Decentralized Services"
+ },
+ "10.1007_978-3-030-17184-1_18": {
+  "abstract": "Software Fault Isolation (SFI) is a security-enhancing program transformation for instrumenting an untrusted binary module so that it runs inside a dedicated isolated address space, called a sandbox. To ensure that the untrusted module cannot escape its sandbox, existing approaches such as Google’s Native Client rely on a binary verifier to check that all memory accesses are within the sandbox. Instead of relying on a posteriori verification, we design, implement and prove correct a program instrumentation phase as part of the formally verified compiler CompCert that enforces a sandboxing security property a priori . This eliminates the need for a binary verifier and, instead, leverages the soundness proof of the compiler to prove the security of the sandboxing transformation. The technical contributions are a novel sandboxing transformation that has a well-defined C semantics and which supports arbitrary function pointers, and a formally verified C compiler that implements SFI. Experiments show that our formally verified technique is a competitive way of implementing SFI.",
+  "doi": "10.1007/978-3-030-17184-1_18",
+  "openalex": "W2930837359",
+  "status": "ok",
+  "title": "Compiling Sandboxes: Formally Verified Software Fault Isolation"
+ },
+ "10.1007_978-3-319-18467-8_26": {
+  "abstract": null,
+  "doi": "10.1007/978-3-319-18467-8_26",
+  "openalex": "W2405483064",
+  "status": "no_abstract",
+  "title": "ISboxing: An Instruction Substitution Based Data Sandboxing for x86 Untrusted Libraries"
+ },
+ "10.1109_access.2018.2868411": {
+  "abstract": "Binary rewriting techniques are widely used in program vulnerability fixing, obfuscation, security-oriented transforming, and otherpurposes, such as binary profiling and optimization. Over the past decade, most binary instrumentation techniques have been studied on$\\times 86$architecture, specifically focusing onthe challenges of instrumenting non-PIC. In contrast, ARM architecture has received little attention, and statically instrumenting PIC has not been studied in depth. In ARM, owing to its fixed-length instructions, addresses are frequently computed via multiple stages, making it difficult to handle all relative addresses, especially the relative address ofbase-plus-offsetandbase-plus-index addressing. In this paper, we presentREPICA, a static binary instrumentation technique which can rewrite ARM binaries compiled in a position-independent fashion.REPICAcan instrument at anywhere without symbolic information. With the aim of identifying andprocessing relative-addresses accurately, we designed a value-set analysis specialized for PIC of which the domain is in symbolic format. We also identified a new challenge for situations all relative addresses cannot be corrected in an optimized way and solvedthis problem efficiently by the stepwise correction of each relative address. We implemented a prototype ofREPICAand experimented with approximately 1200 COTS binaries and SPECint2006 benchmarks. The experiment showed that all binaries rewritten byREPICAmaintain relative addresses correctly with negligible execution and space overhead. Finally, we exhibit the effectiveness ofREPICAby using it to implement a shadow stack.",
+  "doi": "10.1109/access.2018.2868411",
+  "openalex": "W2889914713",
+  "status": "ok",
+  "title": "REPICA: Rewriting Position Independent Code of ARM"
+ },
+ "10.1109_csf.2014.10": {
+  "abstract": "We present a new technique for architecture portable software fault isolation (SFI), together with a prototype implementation in the Coq proof assistant. Unlike traditional SFI, which relies on analysis of assembly-level programs, we analyze and rewrite programs in a compiler intermediate language, the Cminor language of the Comp Cert C compiler. But like traditional SFI, the compiler remains outside of the trusted computing base. By composing our program transformer with the verified back-end of Comp Cert and leveraging Comp Cert's formally proved preservation of the behavior of safe programs, we can obtain binary modules that satisfy the SFI memory safety policy for any of Comp Cert's supported architectures (currently: Power PC, ARM, and x86-32). This allows the same SFI analysis to be used across multiple architectures, greatly simplifying the most difficult part of deploying trustworthy SFI systems.",
+  "doi": "10.1109/csf.2014.10",
+  "openalex": "W2027827874",
+  "status": "ok",
+  "title": "Portable Software Fault Isolation"
+ },
+ "10.1109_iiswc.2014.6983035": {
+  "abstract": "Recently, scripting languages are becoming popular as languages to develop server-side applications. Modern JavaScript compilers significantly optimize JavaScript code, but their main targets are client-side Web applications. In this paper, we characterize the runtime behaviors of server workloads on an emerging JavaScript server-side framework, Node.js, comparing it to client-side JavaScript code. The runtime profile shows that a large amount (47.5% on average) of the total CPU time is spent in the V8 C++ library used for server workloads, while only 3.2% is for client-side programs. Such high CPU usage in the C++ code limits the performance improvements for server workloads, since recent changes in the performance of client-side workloads are due to optimized JavaScript code. Our analysis of complex calling contexts reveals that function calls to the V8 runtime from the server-side framework to handle JavaScript objects significantly contribute to the high CPU usage in the V8 library (up to 22.5% of the total time and 15.4% on average). We also show that the function calls to the V8 runtime from compiled JavaScript code are another source of the high CPU usage in the V8 library code (up to 24.5% of the total and 18.7% on average). Only a few JavaScript functions that implement the server-side framework API make these function calls to the V8 runtime and contribute to a large amount of the CPU time (up to 6.8% of the total).",
+  "doi": "10.1109/iiswc.2014.6983035",
+  "openalex": "W2048274063",
+  "status": "ok",
+  "title": "Workload characterization of server-side JavaScript"
+ },
+ "10.1109_infocom.2015.7218424": {
+  "abstract": "Web browsers are one of the most important enduser applications to browse, retrieve, and present Internet resources. Malicious or compromised resources may endanger Web users by hijacking web browsers to execute arbitrary malicious code in the victims' systems. Unfortunately, the widely-adopted Just-In-Time compilation (JIT) optimization technique, which compiles source code to native code at runtime, significantly increases this risk. By exploiting JIT compiled code, attackers can bypass all currently deployed defenses. In this paper, we systematically investigate threats against JIT compiled code, and the challenges of protecting JIT compiled code. We propose a general defense solution, JITScope, to enforce Control-Flow Integrity (CFI) on both statically compiled and JIT compiled code. Our solution furthermore enforces the W⊕X policy on JIT compiled code, preventing the JIT compiled code from being overwritten by attackers. We show that our prototype implementation of JITScope on the popular Firefox web browser introduces a reasonably low performance overhead, while defeating existing real-world control flow hijacking attacks.",
+  "doi": "10.1109/infocom.2015.7218424",
+  "openalex": "W1540288238",
+  "status": "ok",
+  "title": "JITScope: Protecting web users from control-flow hijacking attacks"
+ },
+ "10.1109_micro.2014.18": {
+  "abstract": "The construction of trustworthy systems demands that the execution of every piece of code is validated as genuine, that is, the executed codes do exactly what they are supposed to do. Pre-execution validations of code integrity fail to detect run time compromises like code injection, return and jump-oriented programming, and illegal dynamic linking of program modules. We propose and evaluate a generalized mechanism called REV (for Run-time Execution Validator) that can be easily integrated into a contemporary out-of-order processor to validate, as the program executes, the control flow path and instructions executed along the control flow path. To prevent memory from being tainted by compromised code, REV also prevents updates to the memory from a basic block until its execution has been authenticated. Although control flow signature based authentication of an execution has been suggested before for software testing and for restricted cases of embedded systems, their extensions to out-of-order cores is a non-incremental effort from a micro architectural standpoint. Unlike REV, the existing solutions do not scale with binary sizes, require binaries to be altered or require new ISA support and also fail to contain errors and, in general, impose a heavy performance penalty. We show, using a detailed cycle-accurate micro architectural simulator for an out-of-order pipeline implementing the X86 ISA that the performance overhead of REV is limited to 1.87% on the average across the SPEC 2006 benchmarks.",
+  "doi": "10.1109/micro.2014.18",
+  "openalex": "W2062102126",
+  "status": "ok",
+  "title": "Continuous, Low Overhead, Run-Time Validation of Program Executions"
+ },
+ "10.1109_sp.2015.52": {
+  "abstract": "Code-reuse attacks such as return-oriented programming (ROP) pose a severe threat to modern software. Designing practical and effective defenses against code-reuse attacks is highly challenging. One line of defense builds upon fine-grained code diversification to prevent the adversary from constructing a reliable code-reuse attack. However, all solutions proposed so far are either vulnerable to memory disclosure or are impractical for deployment on commodity systems. In this paper, we address the deficiencies of existing solutions and present the first practical, fine-grained code randomization defense, called Read actor, resilient to both static and dynamic ROP attacks. We distinguish between direct memory disclosure, where the attacker reads code pages, and indirect memory disclosure, where attackers use code pointers on data pages to infer the code layout without reading code pages. Unlike previous work, Read actor resists both types of memory disclosure. Moreover, our technique protects both statically and dynamically generated code. We use a new compiler-based code generation paradigm that uses hardware features provided by modern CPUs to enable execute-only memory and hide code pointers from leakage to the adversary. Finally, our extensive evaluation shows that our approach is practical -- we protect the entire Google Chromium browser and its V8 JIT compiler -- and efficient with an average SPEC CPU2006 performance overhead of only 6.4%.",
+  "doi": "10.1109/sp.2015.52",
+  "openalex": "W1605557845",
+  "status": "ok",
+  "title": "Readactor: Practical Code Randomization Resilient to Memory Disclosure"
+ },
+ "10.1109_tifs.2014.2366293": {
+  "abstract": "Denial-of-service (DoS) and distributed DoS (DDoS) are among the major threats to cyber-security, and client puzzle, which demands a client to perform computationally expensive operations before being granted services from a server, is a well-known countermeasure to them. However, an attacker can inflate its capability of DoS/DDoS attacks with fast puzzle-solving software and/or built-in graphics processing unit (GPU) hardware to significantly weaken the effectiveness of client puzzles. In this paper, we study how to prevent DoS/DDoS attackers from inflating their puzzle-solving capabilities. To this end, we introduce a new client puzzle referred to as software puzzle. Unlike the existing client puzzle schemes, which publish their puzzle algorithms in advance, a puzzle algorithm in the present software puzzle scheme is randomly generated only after a client request is received at the server side and the algorithm is generated such that: 1) an attacker is unable to prepare an implementation to solve the puzzle in advance and 2) the attacker needs considerable effort in translating a central processing unit puzzle software to its functionally equivalent GPU version such that the translation cannot be done in real time. Moreover, we show how to implement software puzzle in the generic server-browser model.",
+  "doi": "10.1109/tifs.2014.2366293",
+  "openalex": "W1980193150",
+  "status": "ok",
+  "title": "Software Puzzle: A Countermeasure to Resource-Inflated Denial-of-Service Attacks"
+ },
+ "10.1109_wac.2014.7084334": {
+  "abstract": "A key challenge for any large-scale computation today, whether in “big data” or in handling large-scale web services, has to do with the management of data. In the big data context, the arbitrary separation of storage and computation increases latency and decreases performance. ZeroVM is a lightweight container-based virtualization platform that provides deterministic process execution and isolation. The philosophy behind ZeroVM is to virtualize applications then move the application to the data. This provides the ability to transform or process data in situ, rather than moving data to where the application is located. With the ability to move and execute application next to data, ZeroVM changes the conventional wisdom on infrastructure centric commuting models and enables even more data centric computing models to be used for Big-Data Analytics. The ZeroVM distributed processing framework proposed in this paper presents new opportunities for processing, storing and using data, particularly in big data analytics.",
+  "doi": "10.1109/wac.2014.7084334",
+  "openalex": "W2094226577",
+  "status": "ok",
+  "title": "ZeroVM: secure distributed processing for big data analytics"
+ },
+ "10.1109_wicsa-ecsa.212.15": {
+  "abstract": "Decentralized systems are systems-of-systems whose services are governed by two or more separate organizations under distinct spheres of authority. Coordinated evolution of the various elements of a decentralized system may be difficult, if not impossible, as individual organizations evolve their service offerings in response to organization- and service-specific pressures, including market demand, technology, competitive and cooperative interests, and funding. Consequently, decentralized services offer unique challenges for evolution and adaptation that reach well beyond any one single organizational boundary. However, client-driven service customization and tailoring is a powerful tool for meeting conflicting, independent client demands in an environment where disorderly and uneven service evolution predominates. To this end, we contribute an architectural style, COmputAtional State Transfer (COAST), designed to provide extensive, safe, and secure client-directed customization of decentralized services. COAST combines mechanisms from software architecture, cryptography, security, and programming languages, granting application architects flexible provisioning of their core services and assets while protecting those services and assets from attack and misuse.",
+  "doi": "10.1109/wicsa-ecsa.212.15",
+  "openalex": "W2060095461",
+  "status": "ok",
+  "title": "COAST: An Architectural Style for Decentralized On-Demand Tailored Services"
+ },
+ "10.1145_2043556.2043585": {
+  "abstract": "Fay is a flexible platform for the efficient collection, processing, and analysis of software execution traces. Fay provides dynamic tracing through use of runtime instrumentation and distributed aggregation within machines and across clusters. At the lowest level, Fay can be safely extended with new tracing primitives, including even untrusted, fully-optimized machine code, and Fay can be applied to running user-mode or kernel-mode software without compromising system stability. At the highest level, Fay provides a unified, declarative means of specifying what events to trace, as well as the aggregation, processing, and analysis of those events.",
+  "doi": "10.1145/2043556.2043585",
+  "openalex": "W1982786553",
+  "status": "ok",
+  "title": "Fay"
+ },
+ "10.1145_2046707.2046713": {
+  "abstract": "In many software attacks, inducing an illegal control-flow transfer in the target system is one common step. Control-Flow Integrity (CFI) protects a software system by enforcing a pre-determined control-flow graph. In addition to providing strong security, CFI enables static analysis on low-level code. This paper evaluates whether CFI-enabled static analysis can help build efficient and validated data sandboxing. Previous systems generally sandbox memory writes for integrity, but avoid protecting confidentiality due to the high overhead of sandboxing memory reads. To reduce overhead, we have implemented a series of optimizations that remove sandboxing instructions if they are proven unnecessary by static analysis. On top of CFI, our system adds only 2.7% runtime overhead on SPECint2000 for sandboxing memory writes and adds modest 19% for sandboxing both reads and writes. We have also built a principled data-sandboxing verifier based on range analysis. The verifier checks the safety of the results of the optimizer, which removes the need to trust the rewriter and optimizer. Our results show that the combination of CFI and static analysis has the potential of bringing down the cost of general inlined reference monitors, while maintaining strong security.",
+  "doi": "10.1145/2046707.2046713",
+  "openalex": "W2088383546",
+  "status": "ok",
+  "title": "Combining control-flow integrity and static analysis for efficient and validated data sandboxing"
+ },
+ "10.1145_2382536.2382541": {
+  "abstract": "Applying privilege separation in software development is an effective strategy for limiting the damage of an attack on a software system. In this approach, a software system is separated into a set of communicating protection domains of least privilege. In a privilege-separated system, even if one protection domain is hijacked by an attacker, the rest of the system may still function.",
+  "doi": "10.1145/2382536.2382541",
+  "openalex": "W2035510797",
+  "status": "ok",
+  "title": "Enforcing user-space privilege separation with declarative architectures"
+ },
+ "10.1145_2382553.2382555": {
+  "abstract": "Fay is a flexible platform for the efficient collection, processing, and analysis of software execution traces. Fay provides dynamic tracing through use of runtime instrumentation and distributed aggregation within machines and across clusters. At the lowest level, Fay can be safely extended with new tracing primitives, including even untrusted, fully optimized machine code, and Fay can be applied to running user-mode or kernel-mode software without compromising system stability. At the highest level, Fay provides a unified, declarative means of specifying what events to trace, as well as the aggregation, processing, and analysis of those events. We have implemented the Fay tracing platform for Windows and integrated it with two powerful, expressive systems for distributed programming. Our implementation is easy to use, can be applied to unmodified production systems, and provides primitives that allow the overhead of tracing to be greatly reduced, compared to previous dynamic tracing platforms. To show the generality of Fay tracing, we reimplement, in experiments, a range of tracing strategies and several custom mechanisms from existing tracing frameworks. Fay shows that modern techniques for high-level querying and data-parallel processing of disagreggated data streams are well suited to comprehensive monitoring of software execution in distributed systems. Revisiting a lesson from the late 1960s [Deutsch and Grant 1971], Fay also demonstrates the efficiency and extensibility benefits of using safe, statically verified machine code as the basis for low-level execution tracing. Finally, Fay establishes that, by automatically deriving optimized query plans and code for safe extensions, the expressiveness and performance of high-level tracing queries can equal or even surpass that of specialized monitoring tools.",
+  "doi": "10.1145/2382553.2382555",
+  "openalex": "W1997787524",
+  "status": "ok",
+  "title": "Fay"
+ },
+ "10.1145_2508859.2516649": {
+  "abstract": "Low-level inlined reference monitors weave monitor code into a program for security. To ensure that monitor code cannot be bypassed by branching instructions, some form of control-flow integrity must be guaranteed. Past approaches to protecting monitor code either have high space overhead or do not support separate compilation. We present Monitor Integrity Protection (MIP), a form of coarse-grained control-flow integrity. The key idea of MIP is to arrange instructions in variable-sized chunks and dynamically restrict indirect branches to target only chunk beginnings. We show that this simple idea is effective in protecting monitor code integrity, enjoys low space and execution-time overhead, supports separate compilation, and is largely compatible with an existing compiler toolchain. We also show that MIP enables a separate verifier that completely disassembles a binary and verifies its security. MIP is designed to support inlined reference monitors. As a case study, we have implemented MIP-based Software-based Fault Isolation (SFI) on both x86-32 and x86-64. The evaluation shows that MIP-based SFI has competitive performance with other SFI implementations, while enjoying low space overhead.",
+  "doi": "10.1145/2508859.2516649",
+  "openalex": "W2080379526",
+  "status": "ok",
+  "title": "Monitor integrity protection with space efficiency and separate compilation"
+ },
+ "10.1145_2508859.2516675": {
+  "abstract": "Just-in-time compilers (JITs) are here to stay. Unfortunately, they also provide new capabilities to cyber attackers, namely the ability to supply input programs (in languages such as JavaScript) that will then be compiled to executable code. Once this code is placed and marked as executable, it can then be leveraged by the attacker.",
+  "doi": "10.1145/2508859.2516675",
+  "openalex": "W1978174330",
+  "status": "ok",
+  "title": "Librando"
+ },
+ "10.1145_2517488.2517499": {
+  "abstract": "In PaaS architectures, code execution needs to be isolated to protect tenants from unauthorized access to their data by other tenants and to protect the host system from any type of intrusion by other tenants. In this paper we propose a simple and lightweight framework that provides such code execution isolation units. All design decisions taken for our framework follow well-established design principles for protection mechanisms, such that in our design we put security first. Our framework uses the process barrier and the seccomp filter mechanism to restrict access to memory and to the system call interface. For access to additional resources a request delegation scheme is used. We evaluate our implementation on a small PaaS example architecture. For plain computations, the applied techniques do not introduce any overhead.",
+  "doi": "10.1145/2517488.2517499",
+  "openalex": "W2140080652",
+  "status": "ok",
+  "title": "A versatile code execution isolation framework with security first"
+ },
+ "10.1145_2517840.2517845": {
+  "abstract": "This work intends to bring secure multi-party computation to the masses by designing and implementing a browser-based system that enables non-interactive secure computation. The system, denoted Canon-MPC for \"CAsual NON-interactive secure Multi-Party Computation\", is casual in the sense that participants do not need to install any software and do not need to agree on a time in which they all have to be online in order to run the computation. Rather, each participant can use a web browser to participate in the secure computation. The protocol is executed in a single pass between the participants. Each participant connects to a server once, without requiring other participants to be connected to the server at the same time. The system is appropriate for use by laypersons, since there is no need to install or configure any software except for a web browser.",
+  "doi": "10.1145/2517840.2517845",
+  "openalex": "W2029543841",
+  "status": "ok",
+  "title": "Canon-MPC, a system for casual non-interactive secure multi-party computation using native client"
+ },
+ "10.1145_2535505": {
+  "abstract": "For performance and for incorporating legacy libraries, many Java applications contain native-code components written in unsafe languages such as C and C++. Native-code components interoperate with Java components through the Java Native Interface (JNI). As native code is not regulated by Java's security model, it poses serious security threats to the managed Java world. We introduce a security framework that extends Java's security model and brings native code under control. Leveraging software-based fault isolation, the framework puts native code in a separate sandbox and allows the interaction between the native world and the Java world only through a carefully designed pathway. Two different implementations were built. In one implementation, the security framework is integrated into a Java Virtual Machine (JVM). In the second implementation, the framework is built outside of the JVM and takes advantage of JVM-independent interfaces. The second implementation provides JVM portability, at the expense of some performance degradation. Evaluation of our framework demonstrates that it incurs modest runtime overhead while significantly enhancing the security of Java applications.",
+  "doi": "10.1145/2535505",
+  "openalex": "W2159151855",
+  "status": "ok",
+  "title": "Bringing java's wild native world under control"
+ },
+ "10.1145_2535813.2535824": {
+  "abstract": "Cyber warfare is asymmetric in the current paradigm, with attackers having the high ground over defenders. This asymmetry stems from the situation that attackers have the initiative, while defenders concentrate on passive fortifications. Defenders are constantly patching the newest hole in their defenses and creating taller and thicker walls, without placing guards on those walls to watch for the enemy and react to attacks. Current passive cyber security defenses such as intrusion detection, anti-virus, and hardened software are not sufficient to repel attackers. In fact, in conventional warfare this passivity would be entirely nonsensical, given the available active strategies, such as counterattacks and deception.",
+  "doi": "10.1145/2535813.2535824",
+  "openalex": "W2119746900",
+  "status": "ok",
+  "title": "Booby trapping software"
+ },
+ "10.1145_2568225.2568248": {
+  "abstract": "Testing large software packages can become very time intensive. To address this problem, researchers have investigated techniques such as Test Suite Minimization. Test Suite Minimization reduces the number of tests in a suite by removing tests that appear redundant, at the risk of a reduction in fault-finding ability since it can be difficult to identify which tests are truly redundant. We take a completely different approach to solving the same problem of long running test suites by instead reducing the time needed to execute each test, an approach that we call Unit Test Virtualization. With Unit Test Virtualization, we reduce the overhead of isolating each unit test with a lightweight virtualization container. We describe the empirical analysis that grounds our approach and provide an implementation of Unit Test Virtualization targeting Java applications. We evaluated our implementation, VMVM, using 20 real-world Java applications and found that it reduces test suite execution time by up to 97% (on average, 62%) when compared to traditional unit test execution. We also compared VMVM to a well known Test Suite Minimization technique, finding the reduction provided by VMVM to be four times greater, while still executing every test with no loss of fault-finding ability.",
+  "doi": "10.1145/2568225.2568248",
+  "openalex": "W2050127001",
+  "status": "ok",
+  "title": "Unit test virtualization with VMVM"
+ },
+ "10.1145_2594291.2594293": {
+  "abstract": "Web browsers have become a de facto universal operating system, and JavaScript its instruction set. Unfortunately, running other languages in the browser is not generally possible. Translation to JavaScript is not enough because browsers are a hostile environment for other languages. Previous approaches are either non-portable or require extensive modifications for programs to work in a browser.",
+  "doi": "10.1145/2594291.2594293",
+  "openalex": "W2065659882",
+  "status": "ok",
+  "title": "Doppio"
+ },
+ "10.1145_2594291.2594295": {
+  "abstract": "Control-Flow Integrity (CFI) is a software-hardening technique. It inlines checks into a program so that its execution always follows a predetermined Control-Flow Graph (CFG). As a result, CFI is effective at preventing control-flow hijacking attacks. However, past fine-grained CFI implementations do not support separate compilation, which hinders its adoption.",
+  "doi": "10.1145/2594291.2594295",
+  "openalex": "W1993736952",
+  "status": "ok",
+  "title": "Modular control-flow integrity"
+ },
+ "10.1145_2660267.2660281": {
+  "abstract": "Managed languages such as JavaScript are popular. For performance, modern implementations of managed languages adopt Just-In-Time (JIT) compilation. The danger to a JIT compiler is that an attacker can often control the input program and use it to trigger a vulnerability in the JIT compiler to launch code injection or JIT spraying attacks. In this paper, we propose a general approach called RockJIT to securing JIT compilers through Control-Flow Integrity (CFI). RockJIT builds a fine-grained control-flow graph from the source code of the JIT compiler and dynamically updates the control-flow policy when new code is generated on the fly. Through evaluation on Google's V8 JavaScript engine, we demonstrate that RockJIT can enforce strong security on a JIT compiler, while incurring only modest performance overhead (14.6% on V8) and requiring a small amount of changes to V8's code. Key contributions of RockJIT are a general architecture for securing JIT compilers and a method for generating fine-grained control-flow graphs from C++ code.",
+  "doi": "10.1145/2660267.2660281",
+  "openalex": "W1990465482",
+  "status": "ok",
+  "title": "RockJIT"
+ },
+ "10.1145_2666356.2594293": {
+  "abstract": "Web browsers have become a de facto universal operating system, and JavaScript its instruction set. Unfortunately, running other languages in the browser is not generally possible. Translation to JavaScript is not enough because browsers are a hostile environment for other languages. Previous approaches are either non-portable or require extensive modifications for programs to work in a browser. This paper presents Doppio, a JavaScript-based runtime system that makes it possible to run unaltered applications written in general-purpose languages directly inside the browser. Doppio provides a wide range of runtime services, including a file system that enables local and external (cloud-based) storage, an unmanaged heap, sockets, blocking I/O, and multiple threads. We demonstrate DOPPIO's usefulness with two case studies: we extend Emscripten with Doppio, letting it run an unmodified C++ application in the browser with full functionality, and present DoppioJVM, an interpreter that runs unmodified JVM programs directly in the browser. While substantially slower than a native JVM (between 24X and 42X slower on CPU-intensive benchmarks in Google Chrome), DoppioJVM makes it feasible to directly reuse existing, non compute-intensive code.",
+  "doi": "10.1145/2666356.2594293",
+  "openalex": "W4252983807",
+  "status": "ok",
+  "title": "Doppio"
+ },
+ "10.1145_2666356.2594295": {
+  "abstract": "Control-Flow Integrity (CFI) is a software-hardening technique. It inlines checks into a program so that its execution always follows a predetermined Control-Flow Graph (CFG). As a result, CFI is effective at preventing control-flow hijacking attacks. However, past fine-grained CFI implementations do not support separate compilation, which hinders its adoption. We present Modular Control-Flow Integrity (MCFI), a new CFI technique that supports separate compilation. MCFI allows modules to be independently instrumented and linked statically or dynamically. The combined module enforces a CFG that is a combination of the individual modules' CFGs. One challenge in supporting dynamic linking in multithreaded code is how to ensure a safe transition from the old CFG to the new CFG when libraries are dynamically linked. The key technique we use is to have the CFG represented in a runtime data structure and have reads and updates of the data structure wrapped in transactions to ensure thread safety. Our evaluation on SPECCPU2006 benchmarks shows that MCFI supports separate compilation, incurs low overhead of around 5%, and enhances security.",
+  "doi": "10.1145/2666356.2594295",
+  "openalex": "W3023860284",
+  "status": "ok",
+  "title": "Modular control-flow integrity"
+ },
+ "10.1145_2810103.2813644": {
+  "abstract": "Control-Flow Integrity (CFI) is an effective approach to mitigating control-flow hijacking attacks. Conventional CFI techniques statically extract a control-flow graph (CFG) from a program and instrument the program to enforce that CFG. The statically generated CFG includes all edges for all possible inputs; however, for a concrete input, the CFG may include many unnecessary edges.",
+  "doi": "10.1145/2810103.2813644",
+  "openalex": "W2080313875",
+  "status": "ok",
+  "title": "Per-Input Control-Flow Integrity"
+ },
+ "10.1145_2810103.2813646": {
+  "abstract": "Control flow integrity (CFI) has been proposed as an approach to defend against control-hijacking memory corruption attacks. CFI works by assigning tags to indirect branch targets statically and checking them at runtime. Coarse-grained enforcements of CFI that use a small number of tags to improve the performance overhead have been shown to be ineffective. As a result, a number of recent efforts have focused on fine-grained enforcement of CFI as it was originally proposed. In this work, we show that even a fine-grained form of CFI with unlimited number of tags and a shadow stack (to check calls and returns) is ineffective in protecting against malicious attacks. We show that many popular code bases such as Apache and Nginx use coding practices that create flexibility in their intended control flow graph (CFG) even when a strong static analyzer is used to construct the CFG. These flexibilities allow an attacker to gain control of the execution while strictly adhering to a fine-grained CFI. We then construct two proof-of-concept exploits that attack an unlimited tag CFI system with a shadow stack. We also evaluate the difficulties of generating a precise CFG using scalable static analysis for real-world applications. Finally, we perform an analysis on a number of popular applications that highlights the availability of such attacks.",
+  "doi": "10.1145/2810103.2813646",
+  "openalex": "W2072102701",
+  "status": "ok",
+  "title": "Control Jujutsu"
+ },
+ "10.1145_2872362.2872408": {
+  "abstract": "Heterogeneous Chip Multiprocessors have been shown to provide significant performance and energy efficiency gains over homogeneous designs. Recent research has expanded the dimensions of heterogeneity to include diverse Instruction Set Architectures, called Heterogeneous-ISA Chip Multiprocessors. This work leverages such an architecture to realize substantial new security benefits, and in particular, to thwart Return-Oriented Programming. This paper proposes a novel security defense called HIPStR -- Heterogeneous-ISA Program State Relocation -- that performs dynamic randomization of run-time program state, both within and across ISAs. This technique outperforms the state-of-the-art just-in-time code reuse (JIT-ROP) defense by an average of 15.6%, while simultaneously providing greater security guarantees against classic return-into-libc, ROP, JOP, brute force, JIT-ROP, and several evasive variants.",
+  "doi": "10.1145/2872362.2872408",
+  "openalex": "W2318148966",
+  "status": "ok",
+  "title": "HIPStR"
+ },
+ "10.1145_2976749.2978327": {
+  "abstract": "Failing to properly isolate components in the same address space has resulted in a substantial amount of vulnerabilities. Enforcing the least privilege principle for memory accesses can selectively isolate software components to restrict attack surface and prevent unintended cross-component memory corruption. However, the boundaries and interactions between software components are hard to reason about and existing approaches have failed to stop attackers from exploiting vulnerabilities caused by poor isolation. We present the secure memory views (SMV) model: a practical and efficient model for secure and selective memory isolation in monolithic multithreaded applications. SMV is a third generation privilege separation technique that offers explicit access control of memory and allows concurrent threads within the same process to partially share or fully isolate their memory space in a controlled and parallel manner following application requirements. An evaluation of our prototype in the Linux kernel (TCB < 1,800 LOC) shows negligible runtime performance overhead in real-world applications including Cherokee web server (< 0.69%), Apache httpd web server (< 0.93%), and Mozilla Firefox web browser (< 1.89%) with at most 12 LOC changes.",
+  "doi": "10.1145/2976749.2978327",
+  "openalex": "W2534917055",
+  "status": "ok",
+  "title": "Enforcing Least Privilege Memory Views for Multithreaded Applications"
+ },
+ "10.1145_3062341.3062363": {
+  "abstract": "The maturation of the Web platform has given rise to sophisticated and demanding Web applications such as interactive 3D visualization, audio and video software, and games. With that, efficiency and security of code on the Web has become more important than ever. Yet JavaScript as the only built-in language of the Web is not well-equipped to meet these requirements, especially as a compilation target.",
+  "doi": "10.1145/3062341.3062363",
+  "openalex": "W2625141509",
+  "status": "ok",
+  "title": "Bringing the web up to speed with WebAssembly"
+ },
+ "10.1145_3129743.3129744": {
+  "abstract": "prefatory Share on PrefaceThe Continuing Arms Race: Code-Reuse Attacks and DefensesMarch 2018 Pages xi–xiiihttps://doi.org/10.1145/3129743.3129744Published:01 March 2018Publication History 0citation26DownloadsMetricsTotal Citations0Total Downloads26Last 12 Months4Last 6 weeks1 Get Citation AlertsNew Citation Alert added!This alert has been successfully added and will be sent to:You will be notified whenever a record that you have chosen has been cited.To manage your alert preferences, click on the button below.Manage my AlertsNew Citation Alert!Please log in to your account Save to BinderSave to BinderCreate a New BinderNameCancelCreateExport CitationPublisher SiteGet Access",
+  "doi": "10.1145/3129743.3129744",
+  "openalex": "W4232356069",
+  "status": "ok",
+  "title": "Preface"
+ },
+ "10.1145_3129743.3129745": {
+  "abstract": "chapter Share on How memory safety violations enable exploitation of programs Author: Mathias Payer Purdue University Purdue UniversityView Profile Authors Info & Claims The Continuing Arms Race: Code-Reuse Attacks and DefensesMarch 2018 Pages 1–23https://doi.org/10.1145/3129743.3129745Published:01 March 2018Publication History 1citation76DownloadsMetricsTotal Citations1Total Downloads76Last 12 Months9Last 6 weeks2 Get Citation AlertsNew Citation Alert added!This alert has been successfully added and will be sent to:You will be notified whenever a record that you have chosen has been cited.To manage your alert preferences, click on the button below.Manage my AlertsNew Citation Alert!Please log in to your account Save to BinderSave to BinderCreate a New BinderNameCancelCreateExport CitationPublisher SiteGet Access",
+  "doi": "10.1145/3129743.3129745",
+  "openalex": "W2791808869",
+  "status": "ok",
+  "title": "How memory safety violations enable exploitation of programs"
+ },
+ "10.1145_3129743.3129746": {
+  "abstract": "One important aspect of making Control-Flow Integrity (CFI) practical is to support modularity. In the context of CFI, modularity refers to the ability to perform instrumentation of modules of an application separately, without considering other modules, and to link instrumented modules into an executable on demand. Modularity support is of crucial importance for accommodating dynamic linking, which loads libraries at runtime and is frequently used in modern software systems since it allows different software vendors to work on or update modules independently. Just-In-Time (JIT) compilation also requires modularity support because a piece of newly generated code by a JIT compiler can be considered a module, which is to be \"linked\" with the JIT compiler.",
+  "doi": "10.1145/3129743.3129746",
+  "openalex": "W2791742483",
+  "status": "ok",
+  "title": "Protecting dynamic code"
+ },
+ "10.1145_3129743.3129747": {
+  "abstract": "Almost three decades ago, the Morris Worm infected thousands of UNIX workstations by, among other things, exploiting a buffer-overflow error in the fingerd daemon [Spafford 1989]. Buffer overflows are just one example of a larger class of memory (corruption) errors [Szekeres et al. 2013, van der Veen et al. 2012]. The root of the issue is that systems programming languages---C and its derivatives---expect programmers to access memory correctly and eschew runtime safety checks to maximize performance. There are three possible ways to address the security issues associated with memory corruption. One is to migrate away from these legacy languages that were designed four decades ago, long before computers were networked and thus exposed to remote adversaries. Another is to retrofit the legacy code with runtime safety checks. This is a great option whenever the, often substantial, cost of runtime checking is acceptable. In cases where legacy code must run at approximately the same speed, however, we must fall back to targeted mitigations, which, unlike the other remedies, do not prevent memory corruption. Instead, mitigations make it harder, i.e., more labor intensive, to turn errors into exploits.",
+  "doi": "10.1145/3129743.3129747",
+  "openalex": "W2792845860",
+  "status": "ok",
+  "title": "Diversity and information leaks"
+ },
+ "10.1145_3129743.3129748": {
+  "abstract": "In this chapter, we describe code-pointer integrity (CPI), a new design point that guarantees the integrity of all code pointers in a program (e.g., function pointers, saved return addresses) and thereby prevents all control-flow hijack attacks that exploit memory corruption errors, including attacks that bypass control-flow integrity mechanisms, such as control-flow bending [Carlini et al. 2015e]. We also describe code-pointer separation (CPS), a relaxation of CPI with better performance properties. CPI and CPS offer substantially better security-to-overhead ratios than the state of the art, and they are practical (CPI and CPS were used to protect a complete FreeBSD system and over 100 packages like apache and postgresql), effective (prevented all attacks in the RIPE benchmark), and efficient: on SPEC CPU2006, CPS averages 1.2% overhead for C and 1.9% for C/C++, while CPI's overhead is 2.9% for C and 8.4% for C/C++.",
+  "doi": "10.1145/3129743.3129748",
+  "openalex": "W3138733102",
+  "status": "ok",
+  "title": "Code-pointer integrity"
+ },
+ "10.1145_3129743.3129750": {
+  "abstract": "Typically, code-reuse attacks exhibit unique characteristics in the control flow (and the data flow) that allow for generic protections, regardless of the language an application was programmed in. For example, if one can afford to monitor all return instructions in an application while maintaining a full shadow call stack, even advanced ROP-based attacks [Göktas et al. 2014a, Carlini and Wagner 2014, Davi et al. 2014, Göktaş et al. 2014b, Schuster et al. 2014] cannot be mounted [Frantzen and Shuey 2001, Abadi et al. 2005a, Davi et al. 2011]. In this chapter, we present a form of code-reuse attack we call Counterfeit Object-Oriented Programming (COOP) that is different: COOP exploits the fact that each C++ virtual function is address taken, which means that a static code pointer exists to it. Accordingly, C++ applications usually contain a high ratio of address-taken functions, typically a significantly higher one compared to C applications. If, for example, an imprecise CFI solution does not consider C++ semantics, then these functions are all likely valid indirect call targets [Abadi et al. 2005a] and can thus be abused.",
+  "doi": "10.1145/3129743.3129750",
+  "openalex": "W2792325955",
+  "status": "ok",
+  "title": "Attacking dynamic code"
+ },
+ "10.1145_3129743.3129751": {
+  "abstract": "Control-Flow Integrity (CFI) is a promising and general defense against control-flow hijacking with formal underpinnings. A key insight from the extensive research on CFI is that its effectiveness depends on the precision and coverage of a program's Control-Flow Graph (CFG). Since precise CFG generation is highly challenging and often difficult, many CFI schemes rely on brittle heuristics and imprecise, coarse-grained CFGs. Furthermore, comprehensive, fine-grained CFI defenses implemented purely in software incur overheads that are unacceptably high. In this chapter, we first specify a CFI model that captures many known CFI techniques, including stateless and stateful approaches as well as fine-grained and coarse-grained CFI policies.We then design and implement a novel hardwareenhanced CFI. Key to this approach is a set of dedicated CFI instructions that can losslessly enforce any CFG and diverse CFI policies within our model. Moreover, we fully support multi-tasking and shared libraries, prevent various forms of codereuse attacks, and allow code protected with CFI to interoperate with unprotected legacy code. Our prototype implementation on the SPARC LEON3 is highly efficient with a performance overhead of 1.75% on average when applied to several SPECInt2006 benchmarks and 0.5% when applied to EEMBC's CoreMark benchmark.",
+  "doi": "10.1145/3129743.3129751",
+  "openalex": "W2793437236",
+  "status": "ok",
+  "title": "Hardware control flow integrity"
+ },
+ "10.1145_3129743.3129752": {
+  "abstract": "Memory corruption vulnerabilities are a common problem in software implemented in C/C++. Attackers can exploit these vulnerabilities to steal sensitive data and to seize or disrupt the system on which the software is executed. Memory safety techniques can, in principle, eliminate these vulnerabilities [Nagarakatte et al. 2009, Nagarakatte et al. 2010] but are prohibitively expensive in terms of runtime overhead [Szekeres et al. 2013].",
+  "doi": "10.1145/3129743.3129752",
+  "openalex": "W2794407475",
+  "status": "ok",
+  "title": "Multi-variant execution environments"
+ },
+ "10.1145_3133956.3134037": {
+  "abstract": "Memory-corruption vulnerabilities pose a serious threat to modern computer security. Attackers exploit these vulnerabilities to manipulate code and data of vulnerable applications to generate malicious behavior by means of code-injection and code-reuse attacks. Researchers already demonstrated the power of data-only attacks by disclosing secret data such as cryptographic keys in the past. A large body of literature has investigated defenses against code-injection, code-reuse, and data-only attacks. Unfortunately, most of these defenses are tailored towards statically generated code and their adaption to dynamic code comes with the price of security or performance penalties. However, many common applications, like browsers and document viewers, embed just-in-time compilers to generate dynamic code. The contribution of this paper is twofold: first, we propose a generic data-only attack against JIT compilers, dubbed DOJITA. In contrast to previous data-only attacks that aimed at disclosing secret data, DOJITA enables arbitrary code-execution. Second, we propose JITGuard, a novel defense to mitigate code-injection, code-reuse, and data-only attacks against just-in-time compilers (including DOJITA). JITGuard utilizes Intel's Software Guard Extensions (SGX) to provide a secure environment for emitting the dynamic code to a secret region, which is only known to the JIT compiler, and hence, inaccessible to the attacker. Our proposal is the first solution leveraging SGX to protect the security critical JIT compiler operations, and tackles a number of difficult challenges. As proof of concept we implemented JITGuard for Firefox's JIT compiler SpiderMonkey. Our evaluation shows reasonable overhead of 9.8% for common benchmarks.",
+  "doi": "10.1145/3133956.3134037",
+  "openalex": "W2767198771",
+  "status": "ok",
+  "title": "JITGuard"
+ },
+ "10.1145_3140587.3062363": {
+  "abstract": "The maturation of the Web platform has given rise to sophisticated and demanding Web applications such as interactive 3D visualization, audio and video software, and games. With that, efficiency and security of code on the Web has become more important than ever. Yet JavaScript as the only built-in language of the Web is not well-equipped to meet these requirements, especially as a compilation target. Engineers from the four major browser vendors have risen to the challenge and collaboratively designed a portable low-level bytecode called WebAssembly. It offers compact representation, efficient validation and compilation, and safe low to no-overhead execution. Rather than committing to a specific programming model, WebAssembly is an abstraction over modern hardware, making it language-, hardware-, and platform-independent, with use cases beyond just the Web. WebAssembly has been designed with a formal semantics from the start. We describe the motivation, design and formal semantics of WebAssembly and provide some preliminary experience with implementations.",
+  "doi": "10.1145/3140587.3062363",
+  "openalex": "W4232865065",
+  "status": "ok",
+  "title": "Bringing the web up to speed with WebAssembly"
+ },
+ "10.1145_3265723.3265727": {
+  "abstract": "One cornerstone of computer security is hardware-based isolation mechanisms, among which an emerging technology named Intel Software Guard Extensions (SGX) offers arguably the strongest security on x86 architecture. Intel SGX enables user-level code to create trusted memory regions named enclaves, which are isolated from the rest of the system, including privileged system software. This strong isolation of SGX, however, forbids sharing any trusted memory between enclaves, making it difficult to implement any features or techniques that must share code or data between enclaves. This dilemma between isolation and sharing is especially challenging to system software for SGX (e.g., library OSes), to which both properties are highly desirable.",
+  "doi": "10.1145/3265723.3265727",
+  "openalex": "W2885818845",
+  "status": "ok",
+  "title": "To Isolate, or to Share?"
+ },
+ "10.1145_3297858.3304068": {
+  "abstract": "WebAssembly is the new low-level language for the web and has now been implemented in all major browsers since over a year. To ensure the security, performance, and correctness of future web applications, there is a strong need for dynamic analysis tools for WebAssembly. However, building such tools from scratch requires knowledge of low-level details of the language and its runtime environment. This paper presents Wasabi, the first general-purpose framework for dynamically analyzing WebAssembly. Wasabi provides an easy-to-use, high-level API that supports heavyweight dynamic analyses. It is based on binary instrumentation, which inserts calls to analysis functions written in JavaScript into a WebAssembly binary. Dynamically analyzing WebAssembly comes with several unique challenges, such as the problem of tracing type-polymorphic instructions with analysis functions that have a fixed type, which we address through on-demand monomorphization. Our evaluation on compute-intensive benchmarks and real-world applications shows that Wasabi (i) faithfully preserves the original program behavior, (ii) imposes an overhead that is reasonable for heavyweight dynamic analysis, and (iii) makes it straightforward to implement various dynamic analyses, including instruction counting, call graph extraction, memory access tracing, and taint analysis.",
+  "doi": "10.1145/3297858.3304068",
+  "openalex": "W2888822874",
+  "status": "ok",
+  "title": "Wasabi"
+ },
+ "10.1145_3372297.3417867": {
+  "abstract": "Control-flow integrity (CFI) is a promising technique to mitigate control-flow hijacking attacks. In the past decade, dozens of CFI mechanisms have been proposed by researchers. Despite the claims made by themselves, the security promises of these mechanisms have not been carefully evaluated, and thus are questionable.",
+  "doi": "10.1145/3372297.3417867",
+  "openalex": "W3106633543",
+  "status": "ok",
+  "title": "Finding Cracks in Shields: On the Security of Control Flow Integrity Mechanisms"
+ },
+ "10.1145_3385412.3385968": {
+  "abstract": "We present VeRA, a system for verifying the range analysis pass in browser just-in-time (JIT) compilers. Browser developers write range analysis routines in a subset of C++, and verification developers write infrastructure to verify custom analysis properties. Then, VeRA automatically verifies the range analysis routines, which browser developers can integrate directly into the JIT. We use VeRA to translate and verify Firefox range analysis routines, and it detects a new, confirmed bug that has existed in the browser for six years.",
+  "doi": "10.1145/3385412.3385968",
+  "openalex": "W3033150170",
+  "status": "ok",
+  "title": "Towards a verified range analysis for JavaScript JITs"
+ },
+ "10.1145_3498688": {
+  "abstract": "Software sandboxing or software-based fault isolation (SFI) is a lightweight approach to building secure systems out of untrusted components. Mozilla, for example, uses SFI to harden the Firefox browser by sandboxing third-party libraries, and companies like Fastly and Cloudflare use SFI to safely co-locate untrusted tenants on their edge clouds. While there have been significant efforts to optimize and verify SFI enforcement, context switching in SFI systems remains largely unexplored: almost all SFI systems use heavyweight transitions that are not only error-prone but incur significant performance overhead from saving, clearing, and restoring registers when context switching. We identify a set of zero-cost conditions that characterize when sandboxed code has sufficient structured to guarantee security via lightweight zero-cost transitions (simple function calls). We modify the Lucet Wasm compiler and its runtime to use zero-cost transitions, eliminating the undue performance tax on systems that rely on Lucet for sandboxing (e.g., we speed up image and font rendering in Firefox by up to 29.7% and 10% respectively). To remove the Lucet compiler and its correct implementation of the Wasm specification from the trusted computing base, we (1) develop a static binary verifier , VeriZero, which (in seconds) checks that binaries produced by Lucet satisfy our zero-cost conditions, and (2) prove the soundness of VeriZero by developing a logical relation that captures when a compiled Wasm function is semantically well-behaved with respect to our zero-cost conditions. Finally, we show that our model is useful beyond Wasm by describing a new, purpose-built SFI system, SegmentZero32, that uses x86 segmentation and LLVM with mostly off-the-shelf passes to enforce our zero-cost conditions; our prototype performs on-par with the state-of-the-art Native Client SFI system.",
+  "doi": "10.1145/3498688",
+  "openalex": "W4205586362",
+  "status": "ok",
+  "title": "Isolation without taxation: near-zero-cost transitions for WebAssembly and SFI"
+ },
+ "10.1145_3582016.3582023": {
+  "abstract": "We introduce Hardware-assisted Fault Isolation (HFI), a simple extension to existing processors to support secure, flexible, and efficient in-process isolation. HFI addresses the limitations of existing software-based isolation (SFI) systems including: runtime overheads, limited scalability, vulnerability to Spectre attacks, and limited compatibility with existing code. HFI can seamlessly integrate with current SFI systems (e.g., WebAssembly), or directly sandbox unmodified native binaries. To ease adoption, HFI relies only on incremental changes to the data and control path of existing high-performance processors. We evaluate HFI for x86-64 using the gem5 simulator and compiler-based emulation on a mix of real and synthetic workloads.",
+  "doi": "10.1145/3582016.3582023",
+  "openalex": "W4327930423",
+  "status": "ok",
+  "title": "Going beyond the Limits of SFI: Flexible and Secure Hardware-Assisted In-Process Isolation with HFI"
+ },
+ "10.1145_3607199.3607239": {
+  "abstract": "Renew (Rewriting Newly Executable pages after Writes) unites and extends recent advances in binary code analysis and transformation to solve a longstanding compatibility problem for binary code security hardening algorithms—support for arbitrary dynamically self-modifying code. Self-modification is now a mainstay of many consumer software products, including Just-In-Time (JIT) compiled languages, on-demand component loading, self-extracting installers, and self-hooking APIs; but it poses significant challenges for code hardening algorithms that rely on computationally heavy static analyses, source code information, or compiler-specific code generation patterns. As a result, many of the strongest protection mechanisms for code hardening have remained incompatible or significantly weakened for the large class of software that incorporates self-modification (either directly or within its underlying runtime systems).",
+  "doi": "10.1145/3607199.3607239",
+  "openalex": "W4387321647",
+  "status": "ok",
+  "title": "Renewable Just-In-Time Control-Flow Integrity"
+ },
+ "10.1145_3631526": {
+  "abstract": "Code-reuse attacks have the capability to craft malicious instructions from small code fragments, commonly referred to as “gadgets.” These gadgets are generated by JIT (Just-In-Time) engines as integral components of native instructions, with the flexibility to be embedded in various fields, including Displacement . In this article, we introduce a novel approach for potential gadget insertion, achieved through the manipulation of ModR/M and SIB bytes via JavaScript code. This manipulation influences a JIT engine’s register allocation and code generation algorithms. These newly generated gadgets do not rely on constants and thus evade existing constant blinding schemes. Furthermore, they can be combined with 1-byte constants, a combination that proves to be challenging to defend against using conventional constant blinding techniques. To showcase the feasibility of our approach, we provide proof-of-concept (POC) code for three distinct types of gadgets. Our research underscores the potential for attackers to exploit ModR/M and SIB bytes within JIT-generated native instructions. In response, we propose a practical defense mechanism to mitigate such attacks. We introduce JiuJITsu , a security-enhanced register allocation scheme designed to prevent harmful register assignments during the JIT code generation phase, thereby thwarting the generation of these malicious gadgets. We conduct a comprehensive analysis of JiuJITsu ’s effectiveness in defending against code-reuse attacks. Our findings demonstrate that it incurs a runtime overhead of under 1% when evaluated using JetStream2 benchmarks and real-world websites.",
+  "doi": "10.1145/3631526",
+  "openalex": "W4388281765",
+  "status": "ok",
+  "title": "JiuJITsu: Removing Gadgets with Safe Register Allocation for JIT Code Generation"
+ },
+ "10.1145_3676641.3716274": {
+  "abstract": "Self-modifying code (SMC) allows programs to alter their own instructions, optimizing performance and functionality on x86 processors. Despite its benefits, SMC introduces unique microarchitectural behaviors that can be exploited for malicious purposes. In this paper, we explore the security implications of SMC by examining how specific x86 instructions affecting instruction cache lines lead to measurable timing discrepancies between cache hits and misses. These discrepancies facilitate refined cache attacks, making them less noisy and more effective. We introduce novel attack techniques that leverage these timing variations to enhance existing methods such as Prime+Probe and Flush+Reload. Our advanced techniques allow adversaries to more precisely attack cryptographic keys and create covert channels akin to Spectre across various x86 platforms. Finally, we propose a dynamic detection methodology utilizing hardware performance counters to mitigate these enhanced threats.",
+  "doi": "10.1145/3676641.3716274",
+  "openalex": "W4407384789",
+  "status": "ok",
+  "title": "SMaCk: Efficient Instruction Cache Attacks via Self-Modifying Code Conflicts"
+ },
+ "10.1145_3694715.3695949": {
+  "abstract": "Just-in-time (JIT) compilers make JavaScript run efficiently by replacing slow JavaScript interpreter code with fast machine code. However, this efficiency comes at a cost: bugs in JIT compilers can completely subvert all language-based (memory) safety guarantees, and thereby introduce catastrophic exploitable vulnerabilities. We present Icarus: a new framework for implementing JIT compilers that are automatically, formally verified to be safe, and which can then be converted to C++ that can be linked into browser runtimes. Crucially, we show how to build a JIT with Icarus such that verifying the JIT implementation statically ensures the security of all possible programs that the JIT could ever generate at run-time, via a novel technique called symbolic meta-execution that encodes the behaviors of all possible JIT-generated programs as a single Boogie meta-program which can be efficiently verified by SMT solvers. We evaluate Icarus by using it to re-implement components of Firefox's JavaScript JIT. We show that Icarus can scale up to expressing complex JITs, quickly detects real-world JIT bugs and verifies fixed versions, and yields C++ code that is as fast as hand-written code.",
+  "doi": "10.1145/3694715.3695949",
+  "openalex": "W4404400576",
+  "status": "ok",
+  "title": "Icarus: Trustworthy Just-In-Time Compilers with Symbolic Meta-Execution"
+ },
+ "10.1145_3731598": {
+  "abstract": "Programming Language Virtual Machines (VMs) are composed of several components that together execute and manage languages efficiently. They are deployed in virtually all computing systems through modern web browsers. However, vulnerabilities in any VM component pose a significant threat to security and privacy. In this article, we present a survey of software attacks on Just-In-Time (JIT) compilers, which dynamically produce optimized code at run time. We first present an overview and categorization of software attacks and their vectors as presented in the literature, identifying three main attack classes: code injection, code-reuse, and data-only attacks. We show how each can lead to arbitrary code execution. Next, we present a comprehensive taxonomy of defenses, including diversification, strict memory permissions and capability containment. While some were integrated in modern VMs, we draw recommendations for future protections. Securing JIT compilers remains challenging due to inherent conflicts with security principles, such as W ^ X ( W ritable XOR e X ecutable), and the complexity of JIT optimizations. Finally, we examine how newer architectures, like ARMv8 and RISC-V, face similar threats. With RISC-V’s open architecture offering a promising platform for prototyping VM-specific protections and custom security instructions, we discuss hardware-assisted runtime protections and RISC-V extensions that could enhance VM security.",
+  "doi": "10.1145/3731598",
+  "openalex": "W4409591380",
+  "status": "ok",
+  "title": "War on JITs: Software-Based Attacks and Hybrid Defenses for JIT Compilers - A Comprehensive Survey"
+ },
+ "10.1145_3779212.3790242": {
+  "abstract": "Trusted execution environments (TEEs) provide strong isolation for security-critical applications (enclaves) and their runtime data from potentially malicious operating systems. While TEEs also support secure storage by sealing data and storing it persistently on media, they do not ensure the integrity of sealed data, leaving it vulnerable to deletion or manipulation by an untrusted OS. In this work, we present Trusted Storage, a runtime storage isolation mechanism for TEEs that guarantees the integrity of TEE persistent data. The core design partitions storage into trusted and untrusted regions and enforces access control by locking MMIO regions and monitoring block I/O. To ensure portability, Trusted Storage requires no hardware modifications or additional hardware. We implemented a prototype, Trust-V, on the RISC-V platform. In particular, to support secure operation on legacy devices where security features are limited, Trust-V introduces a Virtual-M mode, a sandboxed privileged execution environment in machine mode, for securely hosting the monitor. Our evaluation demonstrates that, although Trust-V incurs up to 3.86× system overhead, it allows TEE software to reliably store and retrieve persistent data.",
+  "doi": "10.1145/3779212.3790242",
+  "openalex": "W7134956500",
+  "status": "ok",
+  "title": "Trust-V: Toward Secure and Reliable Storage for Trusted Execution Environments"
+ },
+ "10.14419_ijet.v7i1.1.9473": {
+  "abstract": "In a typical DoS attack, the attacker tries to bring the server down. In this case, the attacker sends a lot of bogus queries to the server to consume its computing power and bandwidth. As the server’s bandwidth and computing power are always greater than attacker’s client machine, He seeks help from a group of connected computers. DDoS attack involves a lot of client machines which are hijacked by the attacker (together called as botnet). As the server handles all these requests sent by the attacker, all its resources get consumed and it cannot provide services. In this project, we are more concerned about reducing the computing power on the server side by giving the client a puzzle to solve. To prevent such attacks, we use client puzzle mechanism. In this mechanism, we introduce a client-side puzzle which demands the machine to perform tasks that require more resources (computation power). The client’s request is not directly sent to the server. Moreover, there will be an Intermediate Server to monitor all the requests that are being sent to the main server. Before the client’s request is sent to the server, it must solve a puzzle and send the answer. Intermediate Server is used to validate the answer and give access to the client or block the client from accessing the server.",
+  "doi": "10.14419/ijet.v7i1.1.9473",
+  "openalex": "W2794786925",
+  "status": "ok",
+  "title": "Reducing distributed denial of service (DDoS) attacks using client puzzle mechanism"
+ },
+ "10.14722_ndss.2017.23108": {
+  "abstract": "Author(s): Wilson Lian, Hovav Shacham, Stefan Savage Download: Paper (PDF) Date: 27 Feb 2017 Document Type: Reports Associated Event: NDSS Symposium 2017 Abstract: JIT spraying allows an attacker to subvert a Just- In-Time compiler, introducing instruction sequences useful to the attacker into executable regions of the victim program’s address space as a side effect of compiling seemingly innocuous … Continued",
+  "doi": "10.14722/ndss.2017.23108",
+  "openalex": "W2612710257",
+  "status": "ok",
+  "title": "A Call to ARMs: Understanding the Costs and Benefits of JIT Spraying Mitigations"
+ },
+ "10.14722_ndss.2025.240277": {
+  "abstract": "Efficient cloud computing relies on in-process isolation to optimize performance by running workloads within a single process.Without heavy-weight process isolation, memory safety errors pose a significant security threat by allowing an adversary to extract or corrupt the private data of other colocated tenants.Existing in-process isolation mechanisms are not suitable for modern cloud requirements, e.g., MPK's 16 protection domains are insufficient to isolate thousands of cloud workers per process.Consequently, cloud service providers have a strong need for lightweight in-process isolation on commodity x86 machines.This paper presents TME-Box, a novel isolation technique that enables fine-grained and scalable sandboxing on commodity x86 CPUs.By repurposing Intel TME-MK, which is intended for the encryption of virtual machines, TME-Box offers lightweight and efficient in-process isolation.TME-Box enforces that sandboxes use their designated encryption keys for memory interactions through compiler instrumentation.This cryptographic isolation enables fine-grained access control, from single cache lines to full pages, and supports flexible data relocation.In addition, the design of TME-Box allows the efficient isolation of up to 32K concurrent sandboxes.We present a performance-optimized TME-Box prototype, utilizing x86 segment-based addressing, that showcases geomean performance overheads of 5.2 % for data isolation and 9.7 % for code and data isolation, evaluated with the SPEC CPU2017 benchmark suite.",
+  "doi": "10.14722/ndss.2025.240277",
+  "openalex": "W4408750042",
+  "status": "ok",
+  "title": "TME-Box: Scalable In-Process Isolation through Intel TME-MK Memory Encryption"
+ },
+ "10.17863_cam.54548": {
+  "abstract": "Lack of memory safety in commonly used systems-level languages such as C and C++ results in a constant stream of new exploitable software vulnerabilities and exploit techniques. Many exploit mitigations have been proposed and deployed over the years, yet none address the root issue: lack of memory safety. Most C and C++ implementations assume a memory model based on a linear array of bytes rather than an object-centric view. Whilst more efficient on contemporary CPU architectures, linear addresses cannot encode the target object, thus permitting memory errors such as spatial safety violations (ignoring the bounds of an object). One promising mechanism to provide memory safety is CHERI (Capability Hardware Enhanced RISC Instructions), which extends existing processor architectures with capabilities that provide hardware-enforced checks for all accesses and can be used to prevent spatial memory violations. This dissertation prototypes and evaluates a pure-capability programming model (using CHERI capabilities for all pointers) to provide complete spatial memory protection for traditionally unsafe languages. As the first step towards memory safety, all language-visible pointers can be implemented as capabilities. I analyse the programmer-visible impact of this change and refine the pure-capability programming model to provide strong source-level compatibility with existing code. Second, to provide robust spatial safety, language-invisible pointers (mostly arising from program linkage) such as those used for functions calls and global variable accesses must also be protected. In doing so, I highlight trade-offs between performance and privilege minimization for implicit and programmer-visible pointers. Finally, I present CheriSH, a novel and highly compatible technique that protects against buffer overflows between fields of the same object, hereby ensuring that the CHERI spatial memory protection is complete. I find that the byte-granular spatial safety provided by CHERI pure-capability code is not only stronger than most other approaches, but also incurs almost negligible performance overheads in common cases (0.1% geometric mean) and a worst-case overhead of only 23.3% compared to the insecure MIPS baseline. Moreover, I show that the pure-capability programming model provides near-complete source-level compatibility with existing programs. I evaluate this based on porting large widely used open-source applications such as PostgreSQL and WebKit with only minimal changes: fewer than 0.1% of source lines. I conclude that pure-capability CHERI C/C++ is an eminently viable programming environment offering strong memory protection, good source-level compatibility and low performance overheads.",
+  "doi": "10.17863/cam.54548",
+  "openalex": "W3040448914",
+  "status": "ok",
+  "title": "Complete spatial safety for C and C++ using CHERI capabilities"
+ },
+ "10.21236_ada623732": {
+  "abstract": "Abstract : We describe the results of the research and development of PEASOUP (Preventing Exploits Against Software of Uncertain Provenance), a technology that enables the safe execution of software executables. PEASOUP provides the following capabilities: prevents exploits of number-handling weaknesses and memory-safety weaknesses; prevents OS command injections, OS command argument injections, SQL injections, and denial-of-service exploits based on inducing a null-pointer dereference; and prevents any exploit based on arc-injection or code-injection, regardless of the type of vulnerability targeted for attack. PEASOUP also offers experimental protection against exploit of many concurrency and resource drain vulnerabilities, including: file-system Time-Of-Check-to-Time-Of-Use (TOCTOU) vulnerabilities, use of non-reentrant functions in signal handlers, deadlock vulnerabilities, atomicity violations, memory leaks, and file-handle leaks. The PEASOUP effort advanced the state-of-the-art in automatic machine-code analysis, diversification, confinement, and remediation. Specific results include: a technique for preventing command injection attacks inspired by DNA Shotgun Sequencing, a technique that often allows server programs to remain operational after an attempted null-pointer dereference, improved integer-error analyses, improved protections for heap- and stack-allocated memory, novel techniques for analyzing file input types, and a superior design for a software dynamic translator that prevents attacks against the translator.",
+  "doi": "10.21236/ada623732",
+  "openalex": "W2208150498",
+  "status": "ok",
+  "title": "Preventing Exploits Against Software of Uncertain Provenance (PEASOUP)"
+ },
+ "10.22028_d291-27731": {
+  "abstract": "Today computers store and analyze valuable and sensitive data. As a result we need to protect this data against confidentiality and integrity violations that can result in the illicit release, loss, or modification of a user’s and an organization’s sensitive data such as personal media content or client records. Existing techniques protecting confidentiality and integrity lack either efficiency or are vulnerable to malicious attacks. In this thesis we suggest techniques, Guardat and ERIM, to efficiently and robustly protect persistent and in-memory data. To protect the confidentiality and integrity of persistent data, clients specify per-file policies to Guardat declaratively, concisely and separately from code. Guardat enforces policies by mediating I/O in the storage layer. In contrast to prior techniques, we protect against accidental or malicious circumvention of higher software layers. We present the design and prototype implementation, and demonstrate that Guardat efficiently enforces example policies in a web server. To protect the confidentiality and integrity of in-memory data, ERIM isolates sensitive data using Intel Memory Protection Keys (MPK), a recent x86 extension to partition the address space. However, MPK does not protect against malicious attacks by itself. We prevent malicious attacks by combining MPK with call gates to trusted entry points and ahead-of-time binary inspection. In contrast to existing techniques, ERIM efficiently protects frequently-used session keys of web servers, an in-memory reference monitor’s private state, and managed runtimes from native libraries. These use cases result in high switch rates of the order of 10 5 –10 6 switches/s. Our experiments demonstrate less then 1% runtime overhead per 100,000 switches/s, thus outperforming existing techniques.",
+  "doi": "10.22028/d291-27731",
+  "openalex": "W2949559412",
+  "status": "ok",
+  "title": "Techniques to Protect Confidentiality and Integrity of Persistent and In-Memory Data"
+ },
+ "10.22481_reed.v3i7.10336": {
+  "abstract": "Os avanços em inteligência artificial (IA) trouxeram novas oportunidades e desafios para os pesquisadores lidarem com problemas e sistemas complexos e incertos, que não poderiam ser resolvidos pelos métodos tradicionais. Abordagens tradicionais desenvolvidas para problemas matematicamente bem definidos com modelos precisos podem carecer de autonomia e capacidade de tomada de decisão em ambientes incertos e nebulosos. Este trabalho objetiva, com base em pesquisa bibliográfica, apresentar a IA com o intuito de revelar sua capacidade de abrangência, natureza científica e sua aplicabilidade nos contextos do letramento científico. Contemplar a complexidade de ambos como modos positivos em múltiplas áreas de pesquisas científicas e desenvolvimentos nos processos de ensino e aprendizagem. Aqui pretende-se revelar a urgente necessidade de criação e organização de uma “sociedade brasileira de pesquisas em inteligência artificial e letramento científico” (SBPIALC). A pesquisa revelou uma certa escassez de trabalhos publicados sobre o uso da IA no letramento científico quando comparada com o número de trabalhos encontrados sobre a IA na educação. Entretanto, a IA está habilitada para ser parte integrante das atividades dos pesquisadores, professores e estudantes na produção de conhecimento e letramento científico devido a sua capacidade de coleta e análises de grandes dados de informação.",
+  "doi": "10.22481/reed.v3i7.10336",
+  "openalex": "W4226347932",
+  "status": "ok",
+  "title": "EDUCA AÇÃO COM CIÊNCIA: POR UMA SOCIEDADE BRASILEIRA DE ENSINO E PESQUISAS EM INTELIGÊNCIA ARTIFICIAL E LETRAMENTO CIENTÍFICO"
+ },
+ "10.2307_j.ctv194cpcx.34": {
+  "abstract": null,
+  "doi": "10.2307/j.ctv194cpcx.34",
+  "openalex": "W4254398893",
+  "status": "no_abstract",
+  "title": "Schism"
+ },
+ "10.29007_csq2": {
+  "abstract": "Schism is a small, self-hosting compiler from a subset of R6RS Scheme to WebAssembly, a new portable low-level binary format primarily targeting Web applications. The compiler was under one thousand lines of code when it first became self-hosting, and has since grown to support additional Scheme features. While currently far from a complete Scheme, Schism supports basic control flow, most basic data types and first class procedures. Schism provides an example of a small implementation of a language targeting WebAssembly and demonstrates techniques that may be useful to other languages implementors. As a dynamically typed functional programming language, Scheme is markedly different than languages with good WebAssembly support, like C and C++, and thus shows that WebAssembly has achieved its goal of being able to support a variety of languages. Still, Schism would greatly benefit from new capabilities in WebAssembly such as a proper tail call instruction and garbage collection. Given Schism's small size, it is well-positioned to provide early implementation experience to the WebAssembly standardization process for these new features. In this paper we will discuss the design and implementation of Schism, including compromises made to enable a quick and small implementation, as well as plans for future development on Schism and influence on the WebAssembly standard.",
+  "doi": "10.29007/csq2",
+  "openalex": "W2890641430",
+  "status": "ok",
+  "title": "Schism: A Self-Hosting Scheme to WebAssembly Compiler"
+ },
+ "10.32657_10220_47664": {
+  "abstract": "Exploit development is an arm race between attackers and defenders. In this thesis, I will introduce the development of code reuse attacks in recent years together with control flow integrity (CFI). I will give a deep insight in the CFI based on the binary code and demonstrate how limited those mitigations are against sophisticated code reuse attacks. TypeArmor and vfGuard are believed to be sufficient in defending against vtable reuse attacks. Both techniques use semantic information as the control flow integrity enforcement policy. We propose Layered Object-Oriented Programming (LOOP), an advanced vtable reuse attack, to show that the coarse-grained CFI strategies are still vulnerable to vtable reuse attacks. In LOOP, we introduce argument expansion gadgets and transfer gadgets to respectively bypass TypeArmor and vfGuard. We generalize the characteristics of both gadgets, and develop a tool to discover them at binary level. We demonstrated that under the protection of TypeArmor and vfGuard, Firefox, Adobe Flash Player and Internet Explorer are all vulnerable to LOOP attacks. Furthermore, we evaluate the availability and complexity of both gadgets in common software or libraries. Moreover, we will explain what is JIT spray attack and how constant blinding is expected to defend against such attack. We study the design and implementation of constant blinding mechanism in Flash Player and analyse the weakness in its pseudo random number generator (PRNG). Such weakness can be exploited to recover the seed value in PRNG, thus weakening the constant blinding in Flash Player. We propose two methods to circumvent constant blinding in Flash Player and demonstrate that these two methods are both practical via presenting proof-of-concept attacks based on existing vulnerability. We have reported the issue to Adobe Flash security team and CVE-2017-3000 is assigned to us. Furthermore, we implement a prototype tool Constant Blinding Enhancement (ConBE) based on dynamic instrumentation framework to defend against our proposed attacks. In ConBE, we provide a stronger defence than the official patch of Flash Player. We also study the JIT engine in Edge and Chrome browsers and try to discover the non-blinded constant in the JIT code. We propose Blockade, a grammar-based fuzzing framework, to search for cases where constant numbers are not blinded (nonblinded constant) in JIT code. We revisit the grammar of JavaScript and discover that proper grammar combined with efficient generation policy can greatly help us dig for the non-blinded constant in JIT code. Our work shows that structural information in script language can be utilized to release non-blinded constant number. We run Blockade on Microsoft Edge and Google Chrome. The result shows that in addition to the cases that have been discovered in previous work, our tool is able to find more cases of non-blinded constant. We find that array offset, object field, global variable and even number of statements in script can be used to emit non-blinded constant in JIT code.",
+  "doi": "10.32657/10220/47664",
+  "openalex": "W2923970364",
+  "status": "ok",
+  "title": "Advanced code reuse attacks against modern defences"
+ },
+ "10.3390_cryptography2030020": {
+  "abstract": "Attacks on embedded devices are becoming more and more prevalent, primarily due to the extensively increasing plethora of software vulnerabilities. One of the most dangerous types of these attacks targets application code at run-time. Techniques to detect such attacks typically rely on software due to the ease of implementation and integration. However, these techniques are still vulnerable to the same attacks due to their software nature. In this work, we present a novel hardware-assisted run-time code integrity checking technique where we aim to detect if executable code resident in memory is modified at run-time by an adversary. Specifically, a hardware monitor is designed and attached to the device’s main memory system. The monitor creates page-based signatures (hashes) of the code running on the system at compile-time and stores them in a secure database. It then checks for the integrity of the code pages at run-time by regenerating the page-based hashes (with data segments zeroed out) and comparing them to the legitimate hashes. The goal is for any modification to the binary of a user-level or kernel-level process that is resident in memory to cause a comparison failure and lead to a kernel interrupt which allows the affected application to halt safely.",
+  "doi": "10.3390/cryptography2030020",
+  "openalex": "W2889319263",
+  "status": "ok",
+  "title": "Hardware-Based Run-Time Code Integrity in Embedded Devices"
+ },
+ "10.3390_en16196781": {
+  "abstract": "Low-Level Virtual Machine (LLVM) compiler infrastructure is a useful tool for building just-in-time (JIT) compilers, besides its reliable front end represented by a clang compiler and its elaborated middle end containing different optimizations that improve the runtime performance. This paper specifically addresses the part of building a JIT compiler using an LLVM with the scope of obtaining the hardware architecture details of the underlying machine such as the number of cores and the number of logical cores per processing unit and providing them to the NUMA-BTLP static thread classification algorithm and to the NUMA-BTDM static thread mapping algorithm. Afterwards, the hardware-aware algorithms are run using the JIT compiler within an optimization pass. The JIT compiler in this paper is designed to run on a parallel C/C++ application (which creates threads using Pthreads), before the first time the application is executed on a machine. To achieve this, the JIT compiler takes the native code of the application, obtains the corresponding LLVM IR (Intermediate Representation) for the native code and executes the hardware-aware thread classification and the thread mapping algorithms on the IR. The NUMA-Balanced Task and Loop Parallelism (NUMA-BTLP) and NUMA-Balanced Thread and Data Mapping (NUMA-BTDM) are expected to optimize the energy consumption by up to 15% on the NUMA systems.",
+  "doi": "10.3390/en16196781",
+  "openalex": "W4386996190",
+  "status": "ok",
+  "title": "A Low-Level Virtual Machine Just-In-Time Prototype for Running an Energy-Saving Hardware-Aware Mapping Algorithm on C/C++ Applications That Use Pthreads"
+ },
+ "10.4018_978-1-5225-7353-1.ch002": {
+  "abstract": "This chapter reviews current technologies used to build secure agents. A wide spectrum of mechanisms to provide security to agent-based systems is provided, giving an overview with the main agent-based systems and agent-oriented tools. An evaluation of security mechanisms is done that identifies security weaknesses. This review covers from the initial approaches to the more recent mechanisms. This analysis draws attention to the fact that these systems have traditionally neglected the need of a secure underlying infrastructure.",
+  "doi": "10.4018/978-1-5225-7353-1.ch002",
+  "openalex": "W2907094830",
+  "status": "ok",
+  "title": "A Review of Security Mechanisms for Multi-Agent Systems"
+ },
+ "10.46254_an12.20220473": {
+  "abstract": "Malaysia has set a goal to become known as a halal-hub country in nearly every product category, from food to clothing. Manufacturers and food operators benefit from JAKIM Halal certification since it ensures that their products are halal and may be used as a standard for consumer safety and quality assurance. Lean manufacturing has been linked to higher product quality and overall business performance for decades. Therefore, the study's aim to investigate the relationship between lean manufacturing and product quality in the halal food industry. In this study, a close-ended questionnaire was distributed to 68 employees in the halal food industry in Tanjung Karang, Selangor. The findings show that two of the four product quality components, performance and features, were shown to have a significant correlation with lean manufacturing practices. This shows that by using lean manufacturing practices, more than one of the highest quality aspects of a product may be achieved. These insights will help the associated company improve its manufacturing practices while keeping the quality of its halal products comparable.",
+  "doi": "10.46254/an12.20220473",
+  "openalex": "W4376648428",
+  "status": "ok",
+  "title": "Relationship Between Lean Manufacturing Practice and Product Quality in a Halal Food Industry: A Case Study in Tanjung Karang, Selangor, Malaysia"
+ },
+ "10.46632_7_1_1": {
+  "abstract": "Just-in-time 'management philosophy not process. Originally it referred to the production of goods to meet customer demand exactly, over time, quality and quantity, whether the 'customer' was the final consumer of the product or other ongoing process in the production line. A just-in-time (JIT) innovation management system that aligns green orders from direct providers with production schedules. JIT's innovation program is opposed to intervention strategies, in which manufacturers hold sufficient lists to have sufficient product to meet the growing market demand. It is necessary to create a JIT production plan that monitors the total capacity of your equipment and secures the appropriate dates for your production products for sale. A just-in-time (JIT) innovation management system that aligns green orders from direct providers with production schedules. Companies use this innovative strategy to increase efficiency and reduce waste by acquiring goods only as they need them through the production process, which reduces the cost of goods. This approach requires that producers accurately predict demand. just-in-time integration (JIT) (also a dynamic integration or dynamic integration) [1] is a computer-generated method that involves integration during programming -during operation -rather than pre-execution. Usually, this contains the source code or the most common bytecode translation in the machine code, and is done directly. A system that uses the JIT compiler continuously analyzes the code used and identifies parts of the code where the speed achieved in merging or resizing will exceed the integration of that code. This study aims to compare existing perceptions of the Just-in-Time (JIT) issue with the practice reported by companies in existing art courses. This study aims to contribute to the knowledge of the key features of JIT used in performance reported in powerful studies, and to identify the major benefits of using JIT mentioned by companies applying this philosophy. A just-in-time (JIT) innovation management system that aligns green orders from direct providers with production schedules. ... JIT's innovative program opposes intervention strategies, in which manufacturers hold sufficient lists to have enough product to get the most demanding in the market. In manufacturing, marketing speed and production costs can make or break a company. Short-term production (JIT) is a workflow approach that aims to reduce flow times within production systems, as well as response times from suppliers and customers.",
+  "doi": "10.46632/7/1/1",
+  "openalex": "W4205646132",
+  "status": "ok",
+  "title": "A Study on Just in Time Application in Flexible Manufacturing System"
+ },
+ "10.46632_jemm_7_1_1": {
+  "abstract": "Just-in-time 'management philosophy not process. Originally it referred to the production of goods to meet customer demand exactly, over time, quality and quantity, whether the 'customer' was the final consumer of the product or other ongoing process in the production line. A just-in-time (JIT) innovation management system that aligns green orders from direct providers with production schedules. JIT’s innovation program is opposed to intervention strategies, in which manufacturers hold sufficient lists to have sufficient product to meet the growing market demand. It is necessary to create a JIT production plan that monitors the total capacity of your equipment and secures the appropriate dates for your production products for sale. A just-in-time (JIT) innovation management system that aligns green orders from direct providers with production schedules. Companies use this innovative strategy to increase efficiency and reduce waste by acquiring goods only as they need them through the production process, which reduces the cost of goods. This approach requires that producers accurately predict demand. just-in-time integration (JIT) (also a dynamic integration or dynamic integration) [1] is a computer-generated method that involves integration during programming - during operation - rather than pre-execution. Usually, this contains the source code or the most common bytecode translation in the machine code, and is done directly. A system that uses the JIT compiler continuously analyzes the code used and identifies parts of the code where the speed achieved in merging or resizing will exceed the integration of that code. This study aims to compare existing perceptions of the Just-in-Time (JIT) issue with the practice reported by companies in existing art courses. This study aims to contribute to the knowledge of the key features of JIT used in performance reported in powerful studies, and to identify the major benefits of using JIT mentioned by companies applying this philosophy. A just-in-time (JIT) innovation management system that aligns green orders from direct providers with production schedules. JIT’s innovative program opposes intervention strategies, in which manufacturers hold sufficient lists to have enough product to get the most demanding in the market. In manufacturing, marketing speed and production costs can make or break a company. Short-term production (JIT) is a workflow approach that aims to reduce flow times within production systems, as well as response times from suppliers and customers.",
+  "doi": "10.46632/jemm/7/1/1",
+  "openalex": "W4285483262",
+  "status": "ok",
+  "title": "A Study on Just in Time Application in Flexible Manufacturing System"
+ },
+ "10.48550_arxiv.2406.07429": {
+  "abstract": "Browsers, Library OSes, and system emulators rely on sandboxes and in-process isolation to emulate system resources and securely isolate untrusted components. All access to system resources like system calls (syscall) need to be securely mediated by the application. Otherwise system calls may allow untrusted components to evade the emulator or sandbox monitor, and hence, escape and attack the entire application or system. Existing approaches, such as ptrace, require additional context switches between kernel and userspace, which introduce high performance overhead. And, seccomp-bpf supports only limited policies, which restricts its functionality, or it still requires ptrace to provide assistance. In this paper, we present nexpoline, a secure syscall interception mechanism combining Memory Protection Keys (MPK) and Seccomp or Syscall User Dispatch (SUD). Our approach transforms an application's syscall instruction into a privilege reserved for the trusted monitor within the address space, allowing flexible user defined policy. To execute a syscall, the application must switch contexts via nexpoline. It offers better efficiency than secure interception techniques like ptrace, as nexpoline can intercept syscalls through binary rewriting securely. Consequently, nexpoline ensures the safety, flexibility and efficiency for syscall interception. Notably, it operates without kernel modifications, making it viable on current Linux systems without needing root privileges. Our benchmarks demonstrate improved performance over ptrace in interception overhead while achieving the same security guarantees. When compared to similarly performing firejail, nexpoline supports more complex policies and enables the possibility to emulate system resources.",
+  "doi": "10.48550/arxiv.2406.07429",
+  "openalex": "W4399694445",
+  "status": "ok",
+  "title": "Making 'syscall' a Privilege not a Right"
+ },
+ "10.48550_arxiv.2503.21145": {
+  "abstract": "The most important security benefit of software memory safety is easy to state: for C and C++ software, attackers can exploit most bugs and vulnerabilities to gain full, unfettered control of software behavior, whereas this is not true for most bugs in memory-safe software. Fortunately, this security benefit -- most bugs don't give attackers full control -- can be had for unmodified C/C++ software, without per-application effort. This doesn't require trying to establish memory safety; instead, it is sufficient to eliminate most of the combinatorial ways in which software with corrupted memory can execute. To eliminate these interleavings, there already exist practical compiler and runtime mechanisms that incur little overhead and need no special hardware or platform support. Each of the mechanisms described here is already in production use, at scale, on one or more platforms. By supporting their combined use in development toolchains, the security of all C and C++ software against remote code execution attacks can be rapidly, and dramatically, improved.",
+  "doi": "10.48550/arxiv.2503.21145",
+  "openalex": "W4415062095",
+  "status": "ok",
+  "title": "How to Secure Existing C and C++ Software without Memory Safety"
+ },
+ "10.5120_ijca2016911256": {
+  "abstract": "In today's internet world, Malicious and malfunctioning contents from the internet are regular problems for host systems such as Smartphones, Desktops, Clouds etc. Almost all underlying operating systems provide security from most of the threats. However, we need to add some extra defense to our system. Sandboxing is an important security technique that lets programs run in its isolated environment. A sandbox is a tightly controlled environment where programs run. It provides access to a tightly controlled set of resources for programs, such as memory, scratch space on the disk, network access, and input devices. A program running in the sandbox has just as many permissions as it needs without having additional permissions that could be misused. Sandbox restricts a program to access resources outside the sandbox. Sandbox prevents malicious or malfunctioning programs from accessing rest of the system. Nowadays, most of the mobile operating systems, desktop applications like web browsers, browser plugins, document viewers and cloud computing systems are using sandboxing mechanism to run applications. For the implementation of the sandboxing mechanism, software vendors rely on underlying operating system security features. There are different ways and approaches that can be used to implement sandbox mechanisms. This paper highlights the Linux security features such as Chroot, Cgroups, Capabilities, SCI, Namespaces, Seccomp, Resource Limit, LSMs such as SELinux, Virtualization and grsecurity that can be used in the implementation of the sandboxing mechanism.",
+  "doi": "10.5120/ijca2016911256",
+  "openalex": "W2516241807",
+  "status": "ok",
+  "title": "Sandboxing in Linux: From Smartphone to Cloud"
+ },
+ "10.5120_ijca2017913314": {
+  "abstract": "In Cyber security Denial-of-service (DoS) and distributed DoS (DDoS) are two major threats, and client puzzle, which demands a consumer to perform computationally dear operations before being granted services from a server, is a well-known countermeasure to them. However, a wrongdoer will inflate its capability of DoS/DDoS attacks with quick puzzle solving package and/or intrinsic graphics process unit (GPU) hardware to considerably weaken the effectiveness of consumer puzzles. This paper shows how to stop DoS/DDoS attackers from inflating their puzzle-solving capabilities. To this end, this paper introduces a new consumer puzzle said as software puzzle. Unlike the existing consumer puzzle schemes, which publish their puzzle algorithms in advance, a puzzle algorithmic program in the gift package puzzle theme is at random generated solely once a consumer request is received at the server aspect and therefore the algorithm is generated specified: 1) Associate in Nursing wrongdoer is unable to arrange Associate in Nursing implementation to unravel the puzzle before and 2) the wrongdoer wants extended effort in translating a central process unit puzzle package to its functionally equivalent GPU version such that the interpretation can't be drained real time. Moreover, the paper shows how to implement package puzzle within the generic server-browser model.",
+  "doi": "10.5120/ijca2017913314",
+  "openalex": "W2782213303",
+  "status": "ok",
+  "title": "Software Puzzle Approach: A Measure to Resource-Inflated Denial-of-Service Attack"
+ },
+ "10.5220_0013186700003899": {
+  "abstract": null,
+  "doi": "10.5220/0013186700003899",
+  "openalex": "W4407938125",
+  "status": "no_abstract",
+  "title": "Leash: A Transparent Capability-Based Sandboxing Supervisor for Unix"
+ },
+ "10.5555_3358807.3358817": {
+  "abstract": null,
+  "doi": "10.5555/3358807.3358817",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Not So Fast: Analyzing the Performance of WebAssembly vs. Native Code"
+ },
+ "10.70675_016d77dezc74fz44a7z9a73z954d6ecfd363": {
+  "abstract": "Compilation sécurisée pour la protection de la mémoire Cette thèse porte sur la sécurité des programmes et particulièrement en utilisant la compilation pour parvenir à ses fins. La compilation correspond à la traduction des programmes sources écrits par des humains vers du code machine lisible par nos systèmes. Nous explorons les deux manières possible de faire de la compilation sécurisée : la sécurisation et la préservation. Premièrement, nous avons développé CompCertSFI, un compilateur qui sécurise des modules en les isolant dans des zones mémoires restreintes appelées bac à sable. Ces modules sont ensuite incapables d'accéder à des zones mémoires hors de leur bac à sable, ce qui empêche un module malveillant de corrompre d'autres entités du système. Sur le sujet de la préservation, nous avons défini une notion de Préservation de Flot d'Information qui s'applique aux transformations de programme. Cette propriété, lorsqu'elle est appliquée, permet de s'assurer qu'un programme ne devienne moins sécurité durant sa compilation. Notre propriété de préservation est spécifiquement conçus pour préserver les protections contre les attaques de type canaux cachés. Cette nouvelle catégorie d'attaque utilise des médiums physique comme le temps ou la consommation d'énergie qui ne sont pas pris en compte par les compilateurs actuels.",
+  "doi": "10.70675/016d77dezc74fz44a7z9a73z954d6ecfd363",
+  "openalex": "W7149004435",
+  "status": "ok",
+  "title": "Secure compilation for memory protection"
+ },
+ "10.70675_18773748zcd4az4042z9d40z0471c56ad301": {
+  "abstract": "Plans de données logiciels pour les traitements réseaux en environnements partagés En environnement multi-tenant, les réseaux s'appuient sur un ensemble de ressources matérielles partagées pour permettre à des applications isolés de communiquer avec leurs clients. Cette isolation est garantie par un ensemble de mécanismes à la bordure des réseaux: les mêmes serveurs hébergeant les machines virtuelles doivent notamment déterminer le destinataire approprié pour chaque paquet réseau, copier ces derniers entre zones mémoires isolées et supporter les tunnels permettant l'isolation du trafic lors de son transit sur le coeur de réseau. Ces différentes tâches doivent être accomplies avec aussi peu de ressources matérielles que possible, ces dernières étant tout d'abord destinées aux machines virtuelles. Dans un contexte d'intensification de la demande en haute performance sur les réseaux, les acteurs de l'informatique en nuage ont souvent recours à des équipements matériels spécialisés mais inflexibles, leur permettant d'atteindre les performances requises. Néanmoins, dans cette thèse, nous défendons la possibilité d'améliorer les performances significativement sans avoir recours à de tels équipements. Nous prônons, d'une part, une consolidation des fonctions réseaux au niveau de la couche de virtualisation et, d'autre part, une relocalisation de certaines fonctions réseaux hors des machines virtuelles. À cette fin, nous proposons Oko, un commutateur logiciel extensible qui facilite la consolidation des fonctions réseaux dans la couche de virtualisation. Oko étend les mécanismes de l'état de l'art permettant une mise en cache des règles de commutateurs, ceci afin de permettre une exécution des fonctions réseaux sous forme d'extensions au commutateur. De plus, les extensions sont isolées du coeur du commutateur afin d'empêcher des fautes dans les extensions d'impacter le reste du réseau et de faciliter une mise en place rapide et sûre de nouvelles fonctions réseaux. En permettant aux fonctions réseaux de s'exécuter au sein du commutateur logiciel, sans redirections vers des processus distincts, Oko diminue de moitié le coût lié à l'exécution des fonctions réseaux en moyenne. Notre seconde contribution vise à permettre une exécution de certaines fonctions réseaux en amont des machines virtuelles, au sein de la couche de virtualisation. L'exécution de ces fonctions réseaux hors des machines virtuelles permet d'importants gains de performance, mais lèvent des problématiques d'isolation. Nous réutilisons et améliorons la technique utilisé dans Oko pour isoler les fonctions réseaux et l'étendons avec un mécanisme de partage équitable du temps CPU entre les différentes fonctions réseaux relocalisées.",
+  "doi": "10.70675/18773748zcd4az4042z9d40z0471c56ad301",
+  "openalex": "W7148727617",
+  "status": "ok",
+  "title": "Software Datapaths for Multi-Tenant Packet Processing"
+ },
+ "10.70675_9c6b917azd8a8z44efz8dc0z80b6f6687f74": {
+  "abstract": null,
+  "doi": "10.70675/9c6b917azd8a8z44efz8dc0z80b6f6687f74",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Verifying Software Fault Isolation"
+ },
+ "10.70729_j2013220": {
+  "abstract": "Today's environment e-hotel is very much needed with higher level of security, reliability and integrity.It's very much helpful in decentralized distributed system of a hotel.In this paper we present an integration of hotel management system by ASP .NET with cs.Hotel strategies is to attract customers to employees.Effective Customer care and Hotel guest satisfaction are the factors to develop tourism in local area.",
+  "doi": "10.70729/j2013220",
+  "openalex": "W4405125465",
+  "status": "ok",
+  "title": "Integration of Hotel Management System by ASP.NET"
+ },
+ "noid-d6cf10ca2e732a8d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Code Cache ( RX ) Thread Code Cache ( WR ) Code Cache ( RX ) Code Generator Running Generated Code Running t 1 t 2"
+ },
+ "s2-047fef73865624ed": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Establishing Browser Security Guarantees through Formal Shim Verification"
+ },
+ "s2-0753a1d85b1f407a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Parallel programming for the web"
+ },
+ "s2-105ccee8f1cb8d72": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Isolating legacy applications with Lind"
+ },
+ "s2-183e6d2bea95ebde": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Application Programming Interface for Native Web Applications"
+ },
+ "s2-23e8236644775fd5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Control Flow Integrity for COTS Binaries"
+ },
+ "s2-2c1ca4125e1433b2": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Control Flow Integrity for Real-time Embedded Systems"
+ },
+ "s2-2dbb1ebff4d7b763": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "WashU Scholarly Repository WashU Scholarly Repository"
+ },
+ "s2-2de87f3896351c04": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "SoK: Make JIT-Spray Great Again"
+ },
+ "s2-301c7c742179d238": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Static Binary Instrumentation with Applications to COTS Software Security"
+ },
+ "s2-41c050f5965d6cca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Preventing exploits against memory corruption vulnerabilities"
+ },
+ "s2-4aeec719c6f790df": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "The Role of Software Puzzle in Overcoming the Denial of Service Attacks"
+ },
+ "s2-50697de979081a2d": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "ARCUS: Symbolic Root Cause Analysis of Exploits in Production Systems"
+ },
+ "s2-51d2db6b19d86488": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A SECURE TRUST BASED MULTIHOP COMMUNICATION ON WIRELESS NETWORKS"
+ },
+ "s2-561b416525666b48": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Program Logic and Its Application in Fully Verified Software Fault Isolation"
+ },
+ "s2-566d6a2e65cd8b13": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "JavaScript in JavaScript (js.js): Sandboxing Third-Party Scripts"
+ },
+ "s2-62b353e6ffecef55": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "This Paper Is Included in the Proceedings of the 12th Usenix Symposium on Operating Systems Design and Implementation (osdi '16). Ryoan: a Distributed Sandbox for Untrusted Computation on Secret Data Ryoan: a Distributed Sandbox for Untrusted Computation on Secret Data"
+ },
+ "s2-6d426144f9842e5e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Stronger secrecy for network-facing applications through privilege reduction"
+ },
+ "s2-6f45152ce34b4326": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Reassembleable Disassembling"
+ },
+ "s2-719dfe743343d170": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Washington University Open Scholarship Washington University Open Scholarship"
+ },
+ "s2-7736448fb9e83719": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Donky: Domain Keys - Efficient In-Process Isolation for RISC-V and x86"
+ },
+ "s2-791f88d30b59bff7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Ribbons: A Partially Shared Memory Programming Model"
+ },
+ "s2-7a405df6a900053f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Autotuning programs with algorithmic choice"
+ },
+ "s2-7cd169f365caed84": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "I ����� : Trustworthy Just-In-Time Compilers with Symbolic Meta-Execution"
+ },
+ "s2-969e548175c7d4d1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "STEAK : Security-Transparent Email with Automatically-managed Keys"
+ },
+ "s2-b7a151adb49775cc": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Return to Where? You Can't Exploit What You Can't Find"
+ },
+ "s2-bb6d7daa6975d52b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Dachshund : Digging for and Securing Against ( Non-) Blinded Constants in JIT Code"
+ },
+ "s2-bc61401858c7b74f": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Washington University Open Scholarship Washington University Open Scholarship"
+ },
+ "s2-e3f1dda010dd1188": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Protecting Functional Programs From Low-Level Attackers"
+ },
+ "s2-ea9731836228199e": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MiniBox: A Two-Way Sandbox for x86 Native Code"
+ },
+ "s2-f17450ec18e82229": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Practical Control-Flow Integrity"
+ },
+ "s2-f75414646fcef34a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Elasticlave: An Efficient Memory Model for Enclaves"
+ },
+ "s2-fb719e1a297c090b": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Powerful Mechanism To Avoid Denial Of Service Attack For Providing Data Security Using Software Puzzle"
+ }
+}

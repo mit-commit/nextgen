@@ -1,0 +1,324 @@
+{
+ "10.1007_978-3-030-72789-5_2": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-72789-5_2",
+  "openalex": "W3149949061",
+  "status": "no_abstract",
+  "title": "PostSLP: Cross-Region Vectorization of Fully or Partially Vectorized Code"
+ },
+ "10.1007_s42514-023-00160-0": {
+  "abstract": null,
+  "doi": "10.1007/s42514-023-00160-0",
+  "openalex": "W4386770133",
+  "status": "no_abstract",
+  "title": "Uncovering the performance bottleneck of modern HPC processor with static code analyzer: a case study on Kunpeng 920"
+ },
+ "10.1007_s42514-026-00274-1": {
+  "abstract": null,
+  "doi": "10.1007/s42514-026-00274-1",
+  "openalex": "W7143280384",
+  "status": "no_abstract",
+  "title": "Directive-based automatic function-level vectorization for simplified SIMD exploitation"
+ },
+ "10.1016_j.envsoft.2023.105914": {
+  "abstract": null,
+  "doi": "10.1016/j.envsoft.2023.105914",
+  "openalex": "W4389372296",
+  "status": "no_abstract",
+  "title": "The Strategic Random Search (SRS) – A new global optimizer for calibrating hydrological models"
+ },
+ "10.1016_j.peva.2020.102106": {
+  "abstract": null,
+  "doi": "10.1016/j.peva.2020.102106",
+  "openalex": "W3024161604",
+  "status": "no_abstract",
+  "title": "Vectorization cost modeling for NEON, AVX and SVE"
+ },
+ "10.1109_cgo.2019.8661192": {
+  "abstract": "SLP Auto-vectorization converts straight-line code into vector code. It scans input code for groups of instructions that can be combined into vectors and replaces them with their corresponding vector instructions. This work introduces Super-Node SLP (SN-SLP), a new SLP-style algorithm, optimized for expressions that include a commutative operator (such as addition) and its corresponding inverse element (subtraction). SN-SLP uses the algebraic properties of commutative operators and their inverse elements to enable additional transformations that extend auto-vectorization to cases difficult for state-of-the-art auto-vectorizing compilers. We implemented SN-SLP in LLVM. Our evaluation on a real system demonstrates considerable performance improvements of benchmark code with no significant change in compilation time.",
+  "doi": "10.1109/cgo.2019.8661192",
+  "openalex": "W4245767887",
+  "status": "ok",
+  "title": "Super-Node SLP: Optimized Vectorization for Code Sequences Containing Operators and Their Inverse Elements"
+ },
+ "10.1109_icde55515.2023.00387": {
+  "abstract": "The increasing capacity and reducing cost of the main memory made in-memory data analytics systems widely deployed as they could provide higher throughput and lower latency. Since the data resides in memory, computational throughput becomes a crucial factor in the performance of these systems rather than disk accesses. Single instruction multiple data (SIMD) is an effective mechanism to improve computational performance, which has been well studied to accelerate data analytics systems. However, the state-of-the-art methods focus on using SIMD more efficiently while neglecting scalar execution units.In this paper, we present the hybrid execution framework (HEF) to co-utilize SIMD and scalar execution units for the data analytics workload. We also extend the concept of pack to eliminate the data dependency between adjacent instructions, achieving shorter instruction execution intervals. Experimental results show that the hybrid execution achieves up to 2.38× and 1.45× better performance compared with the purely scalar and SIMD implementation on the star schema benchmark (SSB) queries, respectively. Besides, HEF performs better than the state-of-the-art system Voila for a majority of queries in SSB under all data scales.",
+  "doi": "10.1109/icde55515.2023.00387",
+  "openalex": "W4388031787",
+  "status": "ok",
+  "title": "Co-Utilizing SIMD and Scalar to Accelerate the Data Analytics Workloads"
+ },
+ "10.1109_iiswc47752.2019.9042166": {
+  "abstract": "Compilers and performance engineers use hardware performance models to simplify program optimizations. Performance models provide a necessary abstraction over complex modern processors. However, constructing and maintaining a performance model can be onerous, given the numerous microarchi-tectural optimizations employed by modern processors. Despite their complexity and reported inaccuracy (e.g., deviating from native measurement by more than 30%), existing performance models-such as IACA and llvm-mca-have not been systematically validated, because there is no scalable machine code profiler that can automatically obtain throughput of arbitrary basic blocks while conforming to common modeling assumptions. In this paper, we present a novel profiler that can profile arbitrary memory-accessing basic blocks without any user intervention. We used this profiler to build BHive, a benchmark for systematic validation of performance models of x86-64 basic blocks. We used BHive to evaluate four existing performance models: IACA, llvm-mca, Ithemal, and OSACA. We automatically cluster basic blocks in the benchmark suite based on their utilization of CPU resources. Using this clustering, our benchmark can give a detailed analysis of a performance model's strengths and weaknesses on different workloads (e.g., vectorized vs. scalar basic blocks). We additionally demonstrate that our dataset well captures basic properties of two Google applications: Spanner and Dremel.",
+  "doi": "10.1109/iiswc47752.2019.9042166",
+  "openalex": "W3011000655",
+  "status": "ok",
+  "title": "BHive: A Benchmark Suite and Measurement Framework for Validating x86-64 Basic Block Performance Models"
+ },
+ "10.1109_iiswc59245.2023.00023": {
+  "abstract": "Basic-block throughput models such as uiCA, IACA, GRANITE, Ithemal, llvm-mca, OSACA, or CQA guide optimizing compilers and help performance engineers identify and eliminate bottlenecks. For this purpose, basic-block throughput models should ideally be fast, accurate, and interpretable.Recent advances have significantly improved accuracy: uiCA, the state-of-the-art model, achieves an error of about 1% relative to measurements across a wide range of microarchitectures. The computational efficiency of throughput models, which is equally important for widespread adoption, especially in compilers, has so far received little attention.In this paper, we introduce Facile, an analytical throughput model that is fast, accurate, and interpretable. Facile analyzes different potential bottlenecks independently and analytically. Due to its compositional nature, Facile’s predictions directly pinpoint the bottlenecks. We evaluate Facile on a wide range of microarchitectures and show that it is almost two orders of magnitude faster than existing models while achieving state-of-the-art accuracy.",
+  "doi": "10.1109/iiswc59245.2023.00023",
+  "openalex": "W4387891338",
+  "status": "ok",
+  "title": "Facile: Fast, Accurate, and Interpretable Basic-Block Throughput Prediction"
+ },
+ "10.1109_llvm-hpc56686.2022.00006": {
+  "abstract": "Loop distribution (loop fission) is a well known compiler optimization that splits the loop into multiple loops. Loop distribution can be seen as an enabler of various other optimizations with different goals, like, the parallelizability of the loop, the vectorizability of the loop, its locality characteristics. In this work, we present a Reinforcement Learning (RL) based approach to efficiently perform loop-distribution with the twin goals of optimizing for both vectorization as well as locality. Broadly, we generate the SCC Dependence Graph (SDG) for each loop of the program. Our RL model learns to predict the distribution order of the loop by performing topological walk of the graph. The reward to our model is computed using the instruction cost and number of cache misses of the loop. As the RL models need data for training purposes, we also propose a novel strategy to extend the training set by generating new loops. We show our results on x86 architecture on various benchmarks: from TSVC, LLVM-Test-Suite, PolyBench and PolyBench-NN. Our framework achieves an average improvement of 3.63% on TSVC, 4.61% on LLVM-Test-Suite Microbenchmarks, 1.78% on PolyBench and 1.95% on PolyBench-NN benchmark suites for execution time. The baseline is O3 compiler option of LLVM. We also show the improvements of our method on other performance metrics like Instruction Per Cycle (IPC), Number of loops distributed & vectorized, and L1 cache performance.",
+  "doi": "10.1109/llvm-hpc56686.2022.00006",
+  "openalex": "W4318603191",
+  "status": "ok",
+  "title": "Reinforcement Learning assisted Loop Distribution for Locality and Vectorization"
+ },
+ "10.1109_micro50266.2020.00045": {
+  "abstract": "CPU simulators are useful tools for modeling CPU execution behavior. However, they suffer from inaccuracies due to the cost and complexity of setting their fine-grained parameters, such as the latencies of individual instructions. This complexity arises from the expertise required to design benchmarks and measurement frameworks that can precisely measure the values of parameters at such fine granularity. In some cases, these parameters do not necessarily have a physical realization and are therefore fundamentally approximate, or even unmeasurable. In this paper we present DiffTune, a system for learning the parameters of x86 basic block CPU simulators from coarse-grained end-to-end measurements. Given a simulator, DiffTune learns its parameters by first replacing the original simulator with a differentiable surrogate, another function that approximates the original function; by making the surrogate differentiable, DiffTune is then able to apply gradient-based optimization techniques even when the original function is non-differentiable, such as is the case with CPU simulators. With this differentiable surrogate, DiffTune then applies gradient-based optimization to produce values of the simulator's parameters that minimize the simulator's error on a dataset of ground truth end-to-end performance measurements. Finally, the learned parameters are plugged back into the original simulator. DiffTune is able to automatically learn the entire set of microarchitecture-specific parameters within the Intel x86 simulation model of llvm-mca, a basic block CPU simulator based on LLVM's instruction scheduling model. DiffTune's learned parameters lead llvm-mca to an average error that not only matches but lowers that of its original, expert-provided parameter values.",
+  "doi": "10.1109/micro50266.2020.00045",
+  "openalex": "W3092461782",
+  "status": "ok",
+  "title": "DiffTune: Optimizing CPU Simulator Parameters with Learned Differentiable Surrogates"
+ },
+ "10.1109_micro56248.2022.00044": {
+  "abstract": "More specialized chips are exploiting available high transistor density to expose parallelism at a large scale with more intricate instruction sets. This paper reports on a compilation system GCD2, developed to support complex Deep Neural Network (DNN) workloads on mobile DSP chips. We observe several challenges in fully exploiting this architecture, related to SIMD width, more complex SIMD/vector instructions, and VLIW pipeline with the notion of soft dependencies. GCD2comprises the following contributions: 1) development of matrix layout formats that support the use of different novel SIMD instructions, 2) formulation and solution of a global optimization problem related to choosing the best instruction (and associated layout) for implementation of each operator in a complete DNN, and 3) SDA, an algorithm for packing instructions with consideration for soft dependencies. These solutions are incorporated in a complete compilation system that is extensively evaluated against other systems using 10 large DNN models. Evaluation results show that GCD2outperforms two product-level state-of-the-art end-to-end DNN execution frameworks (TFLite and Qualcomm SNPE) that support mobile DSPs by up to $ 6.0 \\times$ speedup, and outperforms three established compilers (Halide, TVM, and RAKE) by up to $4.5 \\times, 3.4 \\times$ and $4.0 \\times$ speedup, respectively. GCD2is also unique in supporting, real-time execution of certain DNNs, while its implementation enables two major DNNs to execute on a mobile DSP for the first time.",
+  "doi": "10.1109/micro56248.2022.00044",
+  "openalex": "W4308083911",
+  "status": "ok",
+  "title": "GCD2: A Globally Optimizing Compiler for Mapping DNNs to Mobile DSPs"
+ },
+ "10.1145_3243176.3243189": {
+  "abstract": "Auto-vectorization techniques allow the compiler to automatically generate SIMD vector code out of scalar code. SLP is a commonly-used algorithm for converting straight-line code into vector code, which complements the loop-based traditional vectorizers. It works by scanning the input code looking for groups of instructions that can be combined into vectors and replacing them with the corresponding vector instructions. The state-of-the-art SLP algorithm works by attempting to vectorize blocks of code with a fixed vector width and falling back to smaller widths for the whole block upon failure.",
+  "doi": "10.1145/3243176.3243189",
+  "openalex": "W2896938601",
+  "status": "ok",
+  "title": "VW-SLP"
+ },
+ "10.1145_3372799.3394358": {
+  "abstract": "Digital signal processors (DSPs) offer cutting-edge energy efficiency for embedded multimedia computations, but writing high-performance DSP code requires expert tuning. Programmers need to work at a low level of abstraction, manually tailoring vendor-specific instructions to enable vector and VLIW parallelism. Diospyros is a synthesizing compiler that searches for optimal data layouts to enable efficient vectorized code on DSPs. Preliminary results show that for small fixed-size matrix multiply and 2D convolution, Diospyros achieves a 6.4--7.6x speedup compared to vendor-provided optimized kernels, and a 6.5--31.3x speedup over loop-based kernels optimized with the vendor's included compiler.",
+  "doi": "10.1145/3372799.3394358",
+  "openalex": "W3030475914",
+  "status": "ok",
+  "title": "A Synthesis-Aided Compiler for DSP Architectures (WiP Paper)"
+ },
+ "10.1145_3372799.3397167": {
+  "abstract": "Modern compilers are still built using technology that existed decades ago. These include basic algorithms and techniques for lexing, parsing, data-flow analysis, data dependence analysis, vectorization, register allocation, instruction selection, and instruction scheduling. It is high time that we modernize our compiler toolchain.",
+  "doi": "10.1145/3372799.3397167",
+  "openalex": "W3030671731",
+  "status": "ok",
+  "title": "Compiler 2.0"
+ },
+ "10.1145_3377555.3377890": {
+  "abstract": "Loop unrolling is a widely adopted loop transformation, commonly used for enabling subsequent optimizations. Straight-line-code vectorization (SLP) is an optimization that benefits from unrolling. SLP converts isomorphic instruction sequences into vector code. Since unrolling generates repeatead isomorphic instruction sequences, it enables SLP to vectorize more code. However, most production compilers apply these optimizations independently and uncoordinated. Unrolling is commonly tuned to avoid code bloat, not maximizing the potential for vectorization, leading to missed vectorization opportunities.",
+  "doi": "10.1145/3377555.3377890",
+  "openalex": "W3008658471",
+  "status": "ok",
+  "title": "Vectorization-aware loop unrolling with seed forwarding"
+ },
+ "10.1145_3445814.3446692": {
+  "abstract": "Vector instructions are ubiquitous in modern processors. Traditional compiler auto-vectorization techniques have focused on targeting single instruction multiple data (SIMD) instructions. However, these auto-vectorization techniques are not sufficiently powerful to model non-SIMD vector instructions, which can accelerate applications in domains such as image processing, digital signal processing, and machine learning. To target non-SIMD instruction, compiler developers have resorted to complicated, ad hoc peephole optimizations, expending significant development time while still coming up short. As vector instruction sets continue to rapidly evolve, compilers cannot keep up with these new hardware capabilities.",
+  "doi": "10.1145/3445814.3446692",
+  "openalex": "W3152824079",
+  "status": "ok",
+  "title": "VeGen: a vectorizer generator for SIMD and beyond"
+ },
+ "10.1145_3445814.3446707": {
+  "abstract": "Applications targeting digital signal processors (DSPs) benefit from fast implementations of small linear algebra kernels. While existing auto-vectorizing compilers are effective at extracting performance from large kernels, they struggle to invent the complex data movements necessary to optimize small kernels. To get the best performance, DSP engineers must hand-write and tune specialized small kernels for a wide spectrum of applications and architectures. We present Diospyros, a search-based compiler that automatically finds efficient vectorizations and data layouts for small linear algebra kernels. Diospyros combines symbolic evaluation and equality saturation to vectorize computations with irregular structure. We show that a collection of Diospyros-compiled kernels outperform implementations from existing DSP libraries by 3.1× on average, that Diospyros can generate kernels that are competitive with expert-tuned code, and that optimizing these small kernels offers end-to-end speedup for a DSP application.",
+  "doi": "10.1145/3445814.3446707",
+  "openalex": "W3153044352",
+  "status": "ok",
+  "title": "Vectorization for digital signal processors via equality saturation"
+ },
+ "10.1145_3494523": {
+  "abstract": "It has been a long time that computer architecture and systems are optimized for efficient execution of machine learning (ML) models. Now, it is time to reconsider the relationship between ML and systems and let ML transform the way that computer architecture and systems are designed. This embraces a twofold meaning: improvement of designers’ productivity and completion of the virtuous cycle. In this article, we present a comprehensive review of the work that applies ML for computer architecture and system design. First, we perform a high-level taxonomy by considering the typical role that ML techniques take in architecture/system design, i.e., either for fast predictive modeling or as the design methodology. Then, we summarize the common problems in computer architecture/system design that can be solved by ML techniques and the typical ML techniques employed to resolve each of them. In addition to emphasis on computer architecture in a narrow sense, we adopt the concept that data centers can be recognized as warehouse-scale computers; sketchy discussions are provided in adjacent computer systems, such as code generation and compiler; we also give attention to how ML techniques can aid and transform design automation. We further provide a future vision of opportunities and potential directions and envision that applying ML for computer architecture and systems would thrive in the community.",
+  "doi": "10.1145/3494523",
+  "openalex": "W3131242057",
+  "status": "ok",
+  "title": "A Survey of Machine Learning for Computer Architecture and Systems"
+ },
+ "10.1145_3519939.3523701": {
+  "abstract": "Superword-level parallelism (SLP) vectorization is a proven technique for vectorizing straight-line code. It works by replacing independent, isomorphic instructions with equivalent vector instructions. Larsen and Amarasinghe originally proposed using SLP vectorization (together with loop unrolling) as a simpler, more flexible alternative to traditional loop vectorization. However, this vision of replacing traditional loop vectorization has not been realized because SLP vectorization cannot directly reason with control flow.",
+  "doi": "10.1145/3519939.3523701",
+  "openalex": "W4281621335",
+  "status": "ok",
+  "title": "All you need is superword-level parallelism: systematic control-flow vectorization with SLP"
+ },
+ "10.1145_3524059.3532396": {
+  "abstract": "Performance models that statically predict the steady-state throughput of basic blocks on particular microarchitectures, such as IACA, Ithemal, llvm-mca, OSACA, or CQA, can guide optimizing compilers and aid manual software optimization. However, their utility heavily depends on the accuracy of their predictions. The average error of existing models compared to measurements on the actual hardware has been shown to lie between 9% and 36%. But how good is this? To answer this question, we propose an extremely simple analytical throughput model that may serve as a baseline. Surprisingly, this model is already competitive with the state of the art, indicating that there is significant potential for improvement.",
+  "doi": "10.1145/3524059.3532396",
+  "openalex": "W4282970171",
+  "status": "ok",
+  "title": "uiCA"
+ },
+ "10.1145_3582016.3582057": {
+  "abstract": "Fully Homomorphic Encryption (FHE) is a scheme that allows a computational circuit to operate on encrypted data and produce a result that, when decrypted, yields the result of the unencrypted computation. While FHE enables privacy-preserving computation, it is extremely slow. However, the mathematical formulation of FHE supports a SIMD-like execution style, so recent work has turned to vectorization to recover some of the missing performance. Unfortunately, these approaches do not work well for arbitrary computations: they do not account for the high cost of rotating vector operands to allow data to be used in multiple operations. Hence, the cost of rotation can outweigh the benefits of vectorization.",
+  "doi": "10.1145/3582016.3582057",
+  "openalex": "W4327930441",
+  "status": "ok",
+  "title": "Coyote: A Compiler for Vectorizing Encrypted Arithmetic Circuits"
+ },
+ "10.1145_3617232.3624862": {
+  "abstract": "Language-level guarantees---like module runtime isolation for WebAssembly (Wasm)---are only as strong as the compiler that produces a final, native-machine-specific executable. The process of lowering language-level constructions to ISA-specific instructions can introduce subtle bugs that violate security guarantees. In this paper, we present Crocus, a system for lightweight, modular verification of instruction-lowering rules within Cranelift, a production retargetable Wasm native code generator. We use Crocus to verify lowering rules that cover WebAssembly 1.0 support for integer operations in the ARM aarch64 backend. We show that Crocus can reproduce 3 known bugs (including a 9.9/10 severity CVE), identify 2 previously-unknown bugs and an underspecified compiler invariant, and help analyze the root causes of a new bug.",
+  "doi": "10.1145/3617232.3624862",
+  "openalex": "W4394871756",
+  "status": "ok",
+  "title": "Lightweight, Modular Verification for WebAssembly-to-Native Instruction Selection"
+ },
+ "10.1145_3617232.3624873": {
+  "abstract": "Embedded applications extract the best power–performance trade-off from digital signal processors (DSPs) by making extensive use of vectorized execution. Rather than handwriting the many customized kernels these applications use, DSP engineers rely on auto-vectorizing compilers to quickly produce effective code. Building these compilers is a large and error-prone investment, and each new DSP architecture or application-specific ISA customization must repeat this effort to derive a new high-performance compiler. We present Isaria, a framework for automatically generating vectorizing compilers for DSP architectures. Isaria uses equality saturation to search for vectorized DSP code using a system of rewrite rules. Rather than hand-crafting these rules, Isaria automatically synthesizes sound rewrite rules from an ISA specification, discovers phase structure within these rules that improve compilation performance, and schedules their application at compile time while pruning intermediate states of the search. We use Isaria to generate a compiler for an industrial DSP architecture and show that the resulting kernels outperform existing DSP libraries by up to 6.9 × and are competitive with those generated by expert-built compilers. We also demonstrate how Isaria can speed up exploration of new ISA customizations by automatically generating a high-quality vectorizing compiler.",
+  "doi": "10.1145/3617232.3624873",
+  "openalex": "W4394871722",
+  "status": "ok",
+  "title": "Automatic Generation of Vectorizing Compilers for Customizable Digital Signal Processors"
+ },
+ "10.1145_3620666.3651333": {
+  "abstract": "Intel's Vector Neural Network Instruction (VNNI) provides higher efficiency on calculating dense linear algebra (DLA) computations than conventional SIMD instructions. However, existing auto-vectorizers frequently deliver suboptimal utilization of VNNI by either failing to recognize VNNI's unique computation pattern at the innermost loops/basic blocks, or producing inferior code through constrained and rudimentary peephole optimizations/pattern matching techniques. Auto-tuning frameworks might generate proficient code but are hampered by the necessity for sophisticated pattern templates and extensive search processes.",
+  "doi": "10.1145/3620666.3651333",
+  "openalex": "W4395106465",
+  "status": "ok",
+  "title": "Boost Linear Algebra Computation Performance via Efficient VNNI Utilization"
+ },
+ "10.1145_3623278.3624768": {
+  "abstract": "Modern vector processors support a wide variety of instructions for fixed-point digital signal processing. These instructions support a proliferation of rounding, saturating, and type conversion modes, and are often fused combinations of more primitive operations. While these are common idioms in fixed-point signal processing, it is difficult to use these operations in portable code. It is challenging for programmers to write down portable integer arithmetic in a C-like language that corresponds exactly to one of these instructions, and even more challenging for compilers to recognize when these instructions can be used. Our system, Pitchfork, defines a portable fixed-point intermediate representation, FPIR, that captures common idioms in fixed-point code. FPIR can be used directly by programmers experienced with fixed-point, or Pitchfork can automatically lift from integer operations into FPIR using a term-rewriting system (TRS) composed of verified manual and automatically-synthesized rules. Pitchfork then lowers from FPIR into target-specific fixed-point instructions using a set of target-specific TRSs. We show that this approach improves runtime performance of portably-written fixed-point signal processing code in Halide, across a range of benchmarks, by geomean 1.31x on x86 with AVX2, 1.82x on ARM Neon, and 2.44x on Hexagon HVX compared to a standard LLVM-based compiler flow, while maintaining or improving existing compile times.",
+  "doi": "10.1145/3623278.3624768",
+  "openalex": "W4391623920",
+  "status": "ok",
+  "title": "Fast Instruction Selection for Fast Digital Signal Processing"
+ },
+ "10.1145_3640537.3641566": {
+  "abstract": "We address the challenges associated with deploying neural networks on CPUs, with a particular focus on minimizing inference time while maintaining accuracy. Our novel approach is to use the dataflow (i.e., computation order) of a neural network to explore data reuse opportunities using heuristic-guided analysis and a code generation framework, which enables exploration of various Single Instruction, Multiple Data (SIMD) implementations to achieve optimized neural network execution. Our results demonstrate that the dataflow that keeps outputs in SIMD registers while also maximizing both input and weight reuse consistently yields the best performance for a wide variety of inference workloads, achieving up to 3x speedup for 8-bit neural networks, and up to 4.8x speedup for binary neural networks, respectively, over the optimized implementations of neural networks today.",
+  "doi": "10.1145/3640537.3641566",
+  "openalex": "W4391986270",
+  "status": "ok",
+  "title": "YFlows: Systematic Dataflow Exploration and Code Generation for Efficient Neural Network Inference using SIMD Architectures on CPUs"
+ },
+ "10.1145_3656382": {
+  "abstract": "Fully Homomorphic Encryption (FHE) enables computing on encrypted data, letting clients securely offload computation to untrusted servers. While enticing, FHE has two key challenges that limit its applicability: it has high performance overheads (10,000× over unencrypted computation) and it is extremely hard to program. Recent hardware accelerators and algorithmic improvements have reduced FHE’s overheads and enabled large applications to run under FHE. These large applications exacerbate FHE’s programmability challenges. Writing FHE programs directly is hard because FHE schemes expose a restrictive, low-level interface that prevents abstraction and composition. Specifically, FHE requires packing encrypted data into large vectors (tens of thousands of elements long), FHE provides limited operations on these vectors, and values have noise that grows with each operation, which creates unintuitive performance tradeoffs. As a result, translating large applications, like neural networks, into efficient FHE circuits takes substantial tedious work. We address FHE’s programmability challenges with the Fhelipe FHE compiler. Fhelipe exposes a simple, numpy-style tensor programming interface, and compiles high-level tensor programs into efficient FHE circuits. Fhelipe’s key contribution is automatic data packing , which chooses data layouts for tensors and packs them into ciphertexts to maximize performance. Our novel framework considers a wide range of layouts and optimizes them analytically. This lets Fhelipe compile large FHE programs efficiently, unlike prior FHE compilers, which either use inefficient layouts or do not scale beyond tiny programs. We evaluate Fhelipe on both a state-of-the-art FHE accelerator and a CPU. Fhelipe is the first compiler that matches or exceeds the performance of large hand-optimized FHE applications, like deep neural networks, and outperforms a state-of-the-art FHE compiler by gmean 18.5×. At the same time, Fhelipe dramatically simplifies programming, reducing code size by 10× – 48×. CCS Concepts: • Software and its engineering → Compilers; • Security and privacy → Cryptography.",
+  "doi": "10.1145/3656382",
+  "openalex": "W4399851001",
+  "status": "ok",
+  "title": "A Tensor Compiler with Automatic Data Packing for Simple and Efficient Fully Homomorphic Encryption"
+ },
+ "10.1145_3696443.3708917": {
+  "abstract": "Fully Homomorphic Encryption (FHE), particularly the CKKS scheme, enables computation on encrypted data, facilitating secure task offloading to untrusted servers. CKKS allows packing multiple complex values into a single ciphertext, crucial for fixed-point arithmetic in machine learning, while leveraging SIMD parallelism at the plaintext level. However, operations such as reductions can degrade performance by creating a large number of bubbles (or gaps) in intermediate ciphertexts, leading to wasted computational resources. We introduce Qiwu, a ciphertext-level vectorization approach that enhances performance by fusing multiple ciphertexts containing bubbles. Qiwu uses a DSL to specify zero bubbles in input ciphertexts and nonzero bubbles in output ciphertexts, employs data-flow analysis to track them, and formulates a fusion plan guided by a cost-benefit assessment. Implemented in an existing FHE compiler, Qiwu was evaluated on four applications (including three machine learning tasks) and three kernels. It achieves speedups of up to 18.0× on CPUs, averaging 3.4× (geometric mean), compared to the state-of-the-art compiler that exploit only plaintext-level parallelism.",
+  "doi": "10.1145/3696443.3708917",
+  "openalex": "W4407857379",
+  "status": "ok",
+  "title": "Qiwu: Exploiting Ciphertext-Level SIMD Parallelism in Homomorphic Encryption Programs"
+ },
+ "10.1145_3696443.3708950": {
+  "abstract": "Most compilers convert all iterations of a vectorizable loop into vector operations to decrease processing time. This paper proposes Scalar Interpolation, a technique that inserts scalar operations into vectorized loops to increase the utilization of execution units in processors with distinct pipelines for scalar and vector processing. Scalar interpolation inserts scalar operations for an entire iteration of the sequential loop to avoid data movements between vector and scalar registers. A challenge to introducing scalar interpolation is creating a static cost model to guide the compiler’s decision to interpolate scalar operations in a loop. An alternative to a static cost model is to perform auto-tuning in a loop to dynamically discover a sweet spot for the scalar interpolation factor. A performance study on an LLVM-based prototype reveals speedups of up to 30% on Intel Xeon (x86) with a static analysis of the cost model, and 43% on Kunpeng-920 (AArch64) with auto-tuning.",
+  "doi": "10.1145/3696443.3708950",
+  "openalex": "W4407857386",
+  "status": "ok",
+  "title": "Scalar Interpolation: A Better Balance between Vector and Scalar Execution for SuperScalar Architectures"
+ },
+ "10.1145_3771775.3786269": {
+  "abstract": "Fully Homomorphic Encryption (FHE) enables computations to be performed directly on encrypted data without requiring decryption, providing strong privacy guarantees. However, FHE remains computationally expensive, and writing efficient FHE programs is a complex, error-prone, and time-consuming task that demands significant cryptographic expertise. Programmers are often unaware of available optimizations, and applying them manually requires substantial effort. In this paper, we present CHEHAB, a compiler that automatically vectorizes scalar code, optimizes it, and generates highly efficient FHE programs. CHEHAB supports both structured and unstructured code and takes as input programs written in a domain-specific language embedded in C++. It relies on a Term Rewriting System (TRS) based on equality saturation to simplify and transform programs. CHEHAB targets two key challenges in FHE compilation: (1) automatic vectorization of scalar code, and (2) reduction of instruction execution latency and ciphertext noise growth. By leveraging equality saturation, CHEHAB explores a large optimization space to reduce instruction count and circuit depth while improving vector utilization. Experimental evaluation on a set of representative kernels shows that CHEHAB outperforms Coyote, a state-of-the-art vectorizing compiler for FHE. On average, CHEHAB generates code that is 7.38× faster at runtime, incurs 2.49× less accumulated noise, and achieves 251× faster compilation time. CHEHAB is released as an open-source compiler to support reproducibility and further research in FHE compilation.",
+  "doi": "10.1145/3771775.3786269",
+  "openalex": "W7125896844",
+  "status": "ok",
+  "title": "CHEHAB: Automatic Compiler Code Optimization for Fully Homomorphic Encryption"
+ },
+ "10.1145_3779212.3790138": {
+  "abstract": "Fully Homomorphic Encryption (FHE) enables computations directly on encrypted data, but its high computational cost remains a significant barrier. Writing efficient FHE code is a complex task requiring cryptographic expertise, and finding the optimal sequence of program transformations is often intractable. In this paper, we propose CHEHAB RL, a novel framework that leverages deep reinforcement learning (RL) to automate FHE code optimization. Instead of relying on predefined heuristics or combinatorial search, our method trains an RL agent to learn an effective policy for applying a sequence of rewriting rules to automatically vectorize scalar FHE code while reducing instruction latency and noise growth. The proposed approach supports the optimization of both structured and unstructured code. To train the agent, we synthesize a diverse dataset of computations using a large language model (LLM). We integrate our proposed approach into the CHEHAB FHE compiler and evaluate it on a suite of benchmarks, comparing its performance against Coyote, a state-of-the-art vectorizing FHE compiler. The results show that our approach generates code that is 5.3× faster in execution, accumulates 2.54× less noise, while the compilation process itself is 27.9× faster than Coyote (geometric means).",
+  "doi": "10.1145/3779212.3790138",
+  "openalex": "W7134936799",
+  "status": "ok",
+  "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations"
+ },
+ "10.1145_3802600": {
+  "abstract": null,
+  "doi": "10.1145/3802600",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Automatic Generation of Vectorizing Compilers for Customizable Digital Signal Processors"
+ },
+ "10.1155_2021_3264624": {
+  "abstract": "Automatic vectorization is an important technique for compilers to improve the parallelism of programs. With the widespread usage of SIMD (Single Instruction Multiple Data) extensions in modern processors, automatic vectorization has become a hot topic in the research of compiler techniques. Accurately evaluating the effectiveness of automatic vectorization in typical compilers is quite valuable for compiler optimization and design. This paper evaluates the effectiveness of automatic vectorization, analyzes the limitation of automatic vectorization and the main causes, and improves the automatic vectorization technology. This paper firstly classifies the programs by two main factors: program characteristics and transformation methods. Then, it evaluates the effectiveness of automatic vectorization in three well-known compilers (GCC, LLVM, and ICC, including their multiple versions in recent 5 years) through TSVC (Test Suite for Vectorizing Compilers) benchmark. Furthermore, this paper analyzes the limitation of automatic vectorization based on source code analysis, and introduces the differences between academic research and engineering practice in automatic vectorization and the main causes, Finally, it gives some suggestions as to how to improve automatic vectorization capability.",
+  "doi": "10.1155/2021/3264624",
+  "openalex": "W3216357191",
+  "status": "ok",
+  "title": "Evaluation of Compilers’ Capability of Automatic Vectorization Based on Source Code Analysis"
+ },
+ "10.1155_2022_1832522": {
+  "abstract": "SIMD extensions provide an efficient energy consumption platform to support mobile systems. How to use SIMD instructions to improve program performance is a challenge. SLP (superword level parallelism) is an efficient solution to exploit the parallelism, oriented to SIMD, between statements in the basic blocks, and it has been widely used in almost all the mainstream compilers. SLP relies on finding isomorphic statements to pack together into vectors. However, the capability of autovectorization for nonisomorphic statements is insufficient. In this paper, we introduce SLP‐E, a novel autovectorization method that can automatically vectorize the codes which contain nonisomorphic statements, translate the nonisomorphic statements into the isomorphic statements by equivalent extended transformation of expressions, and vectorize the isomorphic statements. SLP‐E improves the application scope and benefits of SLP. We implement the SLP‐E in LLVM and compare it with prior approaches. A set of applications that benefit from autovectorization are taken from the SPEC CPU 2017 benchmark to compare our approach and prior techniques. Experimental results show that SLP‐E achieves more than 43.9% speedup, on average, over other similar methods.",
+  "doi": "10.1155/2022/1832522",
+  "openalex": "W4220766896",
+  "status": "ok",
+  "title": "An SLP Vectorization Method Based on Equivalent Extended Transformation"
+ },
+ "10.48550_arxiv.2310.00574": {
+  "abstract": "We address the challenges associated with deploying neural networks on CPUs, with a particular focus on minimizing inference time while maintaining accuracy. Our novel approach is to use the dataflow (i.e., computation order) of a neural network to explore data reuse opportunities using heuristic-guided analysis and a code generation framework, which enables exploration of various Single Instruction, Multiple Data (SIMD) implementations to achieve optimized neural network execution. Our results demonstrate that the dataflow that keeps outputs in SIMD registers while also maximizing both input and weight reuse consistently yields the best performance for a wide variety of inference workloads, achieving up to 3x speedup for 8-bit neural networks, and up to 4.8x speedup for binary neural networks, respectively, over the optimized implementations of neural networks today.",
+  "doi": "10.48550/arxiv.2310.00574",
+  "openalex": "W4387323688",
+  "status": "ok",
+  "title": "YFlows: Systematic Dataflow Exploration and Code Generation for Efficient Neural Network Inference using SIMD Architectures on CPUs"
+ },
+ "10.48550_arxiv.2510.04890": {
+  "abstract": "Modern processors increasingly rely on SIMD instruction sets, such as AVX and RVV, to significantly enhance parallelism and computational performance. However, production-ready compilers like LLVM and GCC often fail to fully exploit available vectorization opportunities due to disjoint vectorization passes and limited extensibility. Although recent attempts in heuristics and intermediate representation (IR) designs have attempted to address these problems, efficiently simplifying control flow analysis and accurately identifying vectorization opportunities remain challenging tasks. To address these issues, we introduce a novel vectorization pipeline featuring two specialized IR extensions: SIR, which encodes high-level structural information, and VIR, which explicitly represents instruction dependencies through data dependency analysis. Leveraging the detailed dependency information provided by VIR, we develop a flexible and extensible vectorization framework. This approach substantially improves interoperability across vectorization passes and expands the search space for identifying isomorphic instructions, ultimately enhancing both the scope and efficiency of automatic vectorization. Experimental evaluations demonstrate that our proposed vectorization pipeline achieves significant performance improvements, delivering speedups of up to 53% and 58% compared to LLVM and GCC, respectively.",
+  "doi": "10.48550/arxiv.2510.04890",
+  "openalex": "W4414972649",
+  "status": "ok",
+  "title": "Retrofitting Control Flow Graphs in LLVM IR for Auto Vectorization"
+ },
+ "10.48550_arxiv.2601.19367": {
+  "abstract": "Fully Homomorphic Encryption (FHE) enables computations directly on encrypted data, but its high computational cost remains a significant barrier. Writing efficient FHE code is a complex task requiring cryptographic expertise, and finding the optimal sequence of program transformations is often intractable. In this paper, we propose CHEHAB RL, a novel framework that leverages deep reinforcement learning (RL) to automate FHE code optimization. Instead of relying on predefined heuristics or combinatorial search, our method trains an RL agent to learn an effective policy for applying a sequence of rewriting rules to automatically vectorize scalar FHE code while reducing instruction latency and noise growth. The proposed approach supports the optimization of both structured and unstructured code. To train the agent, we synthesize a diverse dataset of computations using a large language model (LLM). We integrate our proposed approach into the CHEHAB FHE compiler and evaluate it on a suite of benchmarks, comparing its performance against Coyote, a state-of-the-art vectorizing FHE compiler. The results show that our approach generates code that is $5.3\\times$ faster in execution, accumulates $2.54\\times$ less noise, while the compilation process itself is $27.9\\times$ faster than Coyote (geometric means).",
+  "doi": "10.48550/arxiv.2601.19367",
+  "openalex": "W7125932374",
+  "status": "ok",
+  "title": "CHEHAB RL: Learning to Optimize Fully Homomorphic Encryption Computations"
+ },
+ "s2-138afed4f7dff561": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "MIT Open Access"
+ },
+ "s2-79aaa6f4f43a900a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "HECO: Fully Homomorphic Encryption Compiler"
+ },
+ "s2-a135a3fc386ad395": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Compiler Auto-Vectorization with Imitation Learning"
+ },
+ "s2-adf46ca474764cb8": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Evaluation of Compilers' Capability of Automatic Vectorization Based on Source Code Analysis"
+ },
+ "s2-b940ec833c1d7d46": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "HECO: Automatic Code Optimizations for Efficient Fully Homomorphic Encryption"
+ },
+ "s2-c31baf63af0689ca": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Biscotti: An Approach to Parallel Scheduling for Vectorized Encrypted Arithmetic Circuits"
+ },
+ "s2-d050295e34704f0c": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Vectorization for Digital Signal Processors via Equality Saturation Extended"
+ },
+ "s2-f7ac9945aa7f7227": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A Parametric Microarchitecture Model for Accurate Basic Block Throughput Prediction on Recent Intel CPUs"
+ }
+}

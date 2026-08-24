@@ -1,0 +1,366 @@
+{
+ "10.1007_978-3-030-20656-7_4": {
+  "abstract": null,
+  "doi": "10.1007/978-3-030-20656-7_4",
+  "openalex": "W2948979561",
+  "status": "no_abstract",
+  "title": "SLOPE: Structural Locality-Aware Programming Model for Composing Array Data Analysis"
+ },
+ "10.1007_s10586-024-04728-5": {
+  "abstract": null,
+  "doi": "10.1007/s10586-024-04728-5",
+  "openalex": "W4403486086",
+  "status": "no_abstract",
+  "title": "A hierarchical data partitioning strategy for irregular applications: a case study in digital pathology"
+ },
+ "10.1016_j.advengsoft.2019.02.002": {
+  "abstract": null,
+  "doi": "10.1016/j.advengsoft.2019.02.002",
+  "openalex": "W2938729867",
+  "status": "no_abstract",
+  "title": "Rapid software prototyping for heterogeneous and distributed platforms"
+ },
+ "10.1016_j.future.2020.10.014": {
+  "abstract": null,
+  "doi": "10.1016/j.future.2020.10.014",
+  "openalex": "W3095435495",
+  "status": "no_abstract",
+  "title": "Easy and efficient agent-based simulations with the OpenABL language and compiler"
+ },
+ "10.1016_j.jpdc.2019.04.019": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2019.04.019",
+  "openalex": "W2902797520",
+  "status": "no_abstract",
+  "title": "Large-scale performance of a DSL-based multi-block structured-mesh application for Direct Numerical Simulation"
+ },
+ "10.1016_j.jpdc.2022.02.004": {
+  "abstract": null,
+  "doi": "10.1016/j.jpdc.2022.02.004",
+  "openalex": "W4212986472",
+  "status": "no_abstract",
+  "title": "Efficient microscopy image analysis on CPU-GPU systems with cost-aware irregular data partitioning"
+ },
+ "10.1109_access.2023.3345660": {
+  "abstract": "Filtering is a fundamental tool in image processing, and its acceleration affects many applications. Therefore, various algorithmic and hardware accelerations have been proposed for filtering. Recursive processing using infinite impulse response (IIR) filtering is an efficient algorithm, and various hardware acceleration methods have been applied to IIR filtering. In addition, a domain-specific language (DSL) of RecFilter was proposed to generate efficient IIR code for various hardware applications as an extension of image processing language, Halide. Recursive filters based on sliding discrete cosine transform (SDCT) have been the most efficient approximations in recent years. For hardware acceleration, parallelization of recursive filters is challenging. One of the most efficient methods is tile-based parallelization. However, even if a function is optimized and modularized, it is not sufficiently optimized for applications where various pre/post-processing steps are coupled before and after filtering. Additionally, multiplatform deployment requires reimplementation of the code. In this study, we extended Halide for SDCT convolutions to realize efficient computing of image processing applications with filtering, named SlidingConv. The experimental results showed that SlidingConv is faster than the hand-tuned CPU code and 1/1900 of the hand-tuned code length, running more efficiently than de facto libraries like OpenCV. To verify its efficiency, we deployed the code on various hardware (x86/64 CPU with AVX2/AVX-512, ARM CPU, and GPU). In addition, we verified that the proposed method can accelerate image processing with pre/post-processing for filtering. Our code is available at https://fukushimalab.github.io/SlidingConv/.",
+  "doi": "10.1109/access.2023.3345660",
+  "openalex": "W4390075000",
+  "status": "ok",
+  "title": "SlidingConv: Domain-Specific Description of Sliding Discrete Cosine Transform Convolution for Halide"
+ },
+ "10.1109_bigcom.2018.00041": {
+  "abstract": "Graphics and imaging applications, especially emerging medical imaging or self-driving cars, demand orders of magnitude more computation, and require efficient image processing pipeline implementations. Halide is domain-specific language and compiler designed to make it easier write high performance image processing code. It separates what is being computed from how to compute, enabling programmers to tune to find a high performance schedule. However, Halide applications suffer poor scalability on large number of CPU cores. In this paper, we first perform a detailed parallelism and performance analysis of Halide applications on a 4x8-physical core Linux system. Our analysis shows that page faults and contention on shared address space as well as unaligned packed data movements are part of reasons for poor scalability. To improve the performance of Halide, we propose a novel thread model-Sthread-and adopt it to reimplement Halide runtime, i.e. Shalide, without modifying the Halide language, compiler and the runtime interface. The Sthread model allows each thread has its own memory management structure, and directly shares heap objects, globals and stack data with other threads. On six image processing benchmarks, Shalide shows better speedup and gives up to 1.53x faster than the original Halide.",
+  "doi": "10.1109/bigcom.2018.00041",
+  "openalex": "W2897315780",
+  "status": "ok",
+  "title": "Making Halide Efficient for Multicore Systems"
+ },
+ "10.1109_cgo.2019.8661197": {
+  "abstract": "This paper introduces Tiramisu, a polyhedral framework designed to generate high performance code for multiple platforms including multicores, GPUs, and distributed machines. Tiramisu introduces a scheduling language with novel commands to explicitly manage the complexities that arise when targeting these systems. The framework is designed for the areas of image processing, stencils, linear algebra and deep learning. Tiramisu has two main features: it relies on a flexible representation based on the polyhedral model and it has a rich scheduling language allowing fine-grained control of optimizations. Tiramisu uses a four-level intermediate representation that allows full separation between the algorithms, loop transformations, data layouts, and communication. This separation simplifies targeting multiple hardware architectures with the same algorithm. We evaluate Tiramisu by writing a set of image processing, deep learning, and linear algebra benchmarks and compare them with state-of-the-art compilers and hand-tuned libraries. We show that Tiramisu matches or outperforms existing compilers and libraries on different hardware architectures, including multicore CPUs, GPUs, and distributed machines.",
+  "doi": "10.1109/cgo.2019.8661197",
+  "openalex": "W2949967139",
+  "status": "ok",
+  "title": "Tiramisu: A Polyhedral Compiler for Expressing Fast and Portable Code"
+ },
+ "10.1109_hpec49654.2021.9622855": {
+  "abstract": "Writing efficient, scalable, and portable HPC synthetic aperture radar (SAR) applications is increasingly challenging due to the growing diversity and heterogeneity in distributed systems. Considerable developer and computational resources are often spent to port applications to new HPC platforms and architectures, which is both time consuming and expensive. Domain-specific languages have been shown to be highly productive for development effort, but additionally achieving both scalable computational efficiency and platform portability remains challenging. The Halide programming language is both productive and efficient for dense data processing, supports common CPU architectures and heterogeneous resources like GPUs, and has previously been extended for distributed processing. We propose to use a distributed Halide implementation for scalable and heterogeneous HPC SAR processing. We implement a backprojection algorithm for SAR image reconstruction and demonstrate scalability on the OLCF Summit supercomputer up to 1,024 compute nodes (43,008 cores, each with 4 hardware threads) with a large 32,768×32,768 dataset, and up to 8 distributed GPUs with a 8,192×8,192 dataset. Our results show excellent scaling and portability to heterogeneous resources, and motivate additional improvements in Halide to better support distributed high-performance signal processing.",
+  "doi": "10.1109/hpec49654.2021.9622855",
+  "openalex": "W4200278036",
+  "status": "ok",
+  "title": "Distributed and Heterogeneous SAR Backprojection with Halide"
+ },
+ "10.1109_ipdps.2018.00085": {
+  "abstract": "This paper presents the design and optimization of a Computational Fluid Dynamics (CFD) solver. Our solver is a structured mesh finite-volume code that simulates the fluid motion of compressible viscous flow at transonic speeds. One of the main challenges in this solver is the interaction between multi-stencils with different computational intensities and distinct memory access patterns. In this paper, we address the above challenge to design a high-performance multi-stencil solver on multicore systems. We use the roofline model as a guideline for choosing optimizations best suited for increasing the computational intensity and achieving a higher percentage of the machine peak performance. We show that optimizations and parallelizations combined, our solver achieves 105×, 159×, and 160× speedup compared to the baseline implementation on Intel Haswell, AMD Abu Dhabi, and Intel Broadwell respectively. We also compare against Domain Specific Languages (DSL), specifically Halide. Our hand-tuned solver outperforms code generated by Halide by up to 24×. Looking forward, we identify new opportunities to improve DSL's to bridge this gap.",
+  "doi": "10.1109/ipdps.2018.00085",
+  "openalex": "W2886219329",
+  "status": "ok",
+  "title": "Roofline Guided Design and Analysis of a Multi-stencil CFD Solver for Multicore Performance"
+ },
+ "10.1109_ipdps64566.2025.00067": {
+  "abstract": "Partial differential equations (PDEs) are crucial in modeling diverse phenomena across scientific disciplines, including seismic and medical imaging, computational fluid dynamics, image processing, and neural networks. Solving these PDEs at scale is an intricate and time-intensive process that demands careful tuning. This paper introduces automated codegeneration techniques specifically tailored for distributed memory parallelism (DMP) to execute explicit finite-difference (FD) stencils at scale, a fundamental challenge in numerous scientific applications. These techniques are implemented and integrated into the Devito DSL and compiler framework, a well-established solution for automating the generation of FD solvers based on a high-level symbolic math input. Users benefit from modeling simulations for real-world applications at a high-level symbolic abstraction and effortlessly harnessing HPC-ready distributedmemory parallelism without altering their source code. This results in drastic reductions both in execution time and developer effort. A comprehensive performance evaluation of Devito's DMP via MPI demonstrates highly competitive strong and weak scaling on CPU and GPU clusters, proving its effectiveness and capability to meet the demands of large-scale scientific simulations.",
+  "doi": "10.1109/ipdps64566.2025.00067",
+  "openalex": "W4412605219",
+  "status": "ok",
+  "title": "Automated MPI-X Code Generation for Scalable Finite-Difference Solvers"
+ },
+ "10.1109_ipdpsw66978.2025.00222": {
+  "abstract": "In this study, we propose independent instruction stream scheduling with the Serial-FMA to Tree-Based Reduction (SFTBR) technique to decompose the stencil computation into multiple independent instruction streams for improved instruction-level parallelism. Furthermore, we propose a locality-aware block scheduling technique for locality-aware multi-level thread parallelism to address the complexities of cache and memory hierarchies on modern ARM many-core processors. Based on the above techniques, we implement a domain-specific compiler, AOStencil, to automatically generate optimized stencil codes on ARM many-core processors with genetic-algorithm-driven parameter tuning.",
+  "doi": "10.1109/ipdpsw66978.2025.00222",
+  "openalex": "W4413146180",
+  "status": "ok",
+  "title": "Towards Efficient Instruction Stream Scheduling for Stencil Computation on ARM Processors"
+ },
+ "10.1109_p3hpc.2018.00009": {
+  "abstract": "Achieving high performance on stencil computations poses a number of challenges on modern architectures. The optimization strategy varies significantly across architectures, types of stencils, and types of applications. The standard approach to adapting stencil computations to different architectures, used by both compilers and application programmers, is through the use of iteration space tiling, whereby the data footprint of the computation and its computation partitioning are adjusted to match the memory hierarchy and available parallelism of different platforms. In this paper, we explore an alternative performance portability strategy for stencils, a data layout library for stencils called bricks, that adapts data footprint and parallelism through fine-grained data blocking. Bricks are designed to exploit the inherent multi-dimensional spatial locality of stencils, facilitating improved code generation that can adapt to CPUs or GPUs, and reducing pressure on the memory system. We demonstrate that bricks are performance-portable across CPU and GPU architectures and afford performance advantages over various tiling strategies, particularly for modern multi-stencil and high-order stencil computations. For a range of stencil computations, we achieve high performance on both the Intel Knights Landing (Xeon Phi) and Skylake (Xeon) CPUs as well as the NVIDIA P100 (Pascal) GPU delivering up to a 5× speedup against tiled code.",
+  "doi": "10.1109/p3hpc.2018.00009",
+  "openalex": "W2903775786",
+  "status": "ok",
+  "title": "Delivering Performance-Portable Stencil Computations on CPUs and GPUs Using Bricks"
+ },
+ "10.1109_sc41404.2022.00064": {
+  "abstract": "We introduce SpDISTAL, a compiler for sparse tensor algebra that targets distributed systems. SpDISTAL combines separate descriptions of tensor algebra expressions, sparse data structures, data distribution, and computation distribution. Thus, it enables distributed execution of sparse tensor algebra expressions with a wide variety of sparse data structures and data distributions. SpDISTAL is implemented as a C++ library that targets a distributed task-based runtime system and can generate code for nodes with both multi-core CPUs and multiple GPUs. SpDISTAL generates distributed code that achieves performance competitive with hand-written distributed functions for specific sparse tensor algebra expressions and that outperforms general interpretation-based systems by one to two orders of magnitude.",
+  "doi": "10.1109/sc41404.2022.00064",
+  "openalex": "W4321636673",
+  "status": "ok",
+  "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations"
+ },
+ "10.1109_sc41405.2020.00089": {
+  "abstract": "Stencil computations are at the core of various Computational Fluid Dynamics (CFD) applications and have been well-studied for several decades. Typically they're highly memory-bound and as a result, numerous tiling algorithms have been proposed to improve its performance. Although efficient, most of these algorithms are designed for single iteration spaces on shared-memory machines. However, in CFD, we are confronted with multi-block structured girds composed of multiple connected iteration spaces distributed across many nodes.In this paper, we propose a pipelined stencil algorithm called Pencil for distributed memory machines that applies to practical CFD problems that span multiple iteration spaces. Based on an in-depth analysis of cache tiling on a single node, we first identify both the optimal combination of MPI and OpenMP for temporal tiling and the best tiling approach, which outperforms the state-of-the-art automatic parallelization tool Pluto by up to $1.92 \\times$. Then, we adopt DeepHalo to decouple the multiple connected iteration spaces so that temporal tiling can be applied to each space. Finally, we achieve overlap by pipelining the computation and communication without sacrificing the advantage from temporal cache tiling. Pencil is evaluated using 4 stencils across 6 numerical schemes on two distributed memory machines with Omni-Path and InfiniBand networks. On the Omni-Path system, Pencil exhibits outstanding weak and strong scalability for up to 128 nodes and outperforms MPI+OpenMP Funneled with space tiling by $1.33- 3.41 \\times$ on a multi-block grid with 32 nodes.",
+  "doi": "10.1109/sc41405.2020.00089",
+  "openalex": "W3132357455",
+  "status": "ok",
+  "title": "Pencil: A Pipelined Algorithm for Distributed Stencils"
+ },
+ "10.1109_tpds.2017.2778161": {
+  "abstract": "The key common bottleneck in most stencil codes is data movement, and prior research has shown that improving data locality through optimisations that optimise across loops do particularly well. However, in many large PDE applications it is not possible to apply such optimisations through compilers because there are many options, execution paths and data per grid point, many dependent on run-time parameters, and the code is distributed across different compilation units. In this paper, we adapt the data locality improving optimisation called tiling for use in large OPS applications both in shared-memory and distributed-memory systems, relying on run-time analysis and delayed execution. We evaluate our approach on a number of applications, observing speedups of 2× on the Cloverleaf 2D/3D proxy applications, which contain 83(2D)/141(3D) loops, 3.5× on the linear solver TeaLeaf, and 1.7× on the compressible Navier-Stokes solver OpenSBLI. We demonstrate strong and weak scalability on up to 4608 cores of CINECA's Marconi supercomputer. We also evaluate our algorithms on Intel's Knights Landing, demonstrating maintained throughput as the problem size grows beyond 16GB, and we do scaling studies up to 8704 cores. The approach is generally applicable to any stencil DSL that provides per loop nest data access information.",
+  "doi": "10.1109/tpds.2017.2778161",
+  "openalex": "W2608177516",
+  "status": "ok",
+  "title": "Loop Tiling in Large-Scale Stencil Codes at Run-Time with OPS"
+ },
+ "10.1109_wolfhpc.2016.07": {
+  "abstract": "This paper presents the automatic parallelization of Stencil codes written in MATLAB for distributed systems. The compiler translates MATLAB source into C code and automatically parallelizes using MPI. For clusters of multi-cores, also a hybrid approach is presented where the generated code combines MPI and OpenMP parallelization. The parallelization concepts are evaluated with two stencil computation benchmarks. The automatically generated code not only outperforms the MATLAB code, but shows also a very good scaling.",
+  "doi": "10.1109/wolfhpc.2016.07",
+  "openalex": "W4247008888",
+  "status": "ok",
+  "title": "Efficient Parallelization of MATLAB Stencil Applications for Multi-core Clusters"
+ },
+ "10.1109_wolfhpc.2016.7": {
+  "abstract": null,
+  "doi": "10.1109/wolfhpc.2016.7",
+  "openalex": null,
+  "status": "openalex_lookup_failed",
+  "title": "Efficient Parallelization of MATLAB Stencil Applications for Multi-core Clusters"
+ },
+ "10.1145_3079079.3079099": {
+  "abstract": "Big data analytics requires high programmer productivity and high performance simultaneously on large-scale clusters. However, current big data analytics frameworks (e.g. Apache Spark) have prohibitive runtime overheads since they are library-based. We introduce a novel auto-parallelizing compiler approach that exploits the characteristics of the data analytics domain such as the map/reduce parallel pattern and is robust, unlike previous auto-parallelization methods. Using this approach, we build High Performance Analytics Toolkit (HPAT), which parallelizes high-level scripting (Julia) programs automatically, generates efficient MPI/C++ code, and provides resiliency. Furthermore, it provides automatic optimizations for scripting programs, such as fusion of array operations. Thus, HPAT is 369X to 2033X faster than Spark on the Cori supercomputer and 20X to 256X times on Amazon AWS.",
+  "doi": "10.1145/3079079.3079099",
+  "openalex": "W2565050701",
+  "status": "ok",
+  "title": "HPAT"
+ },
+ "10.1145_3106343": {
+  "abstract": "Specialized Digital Signal Processors (DSPs), which can be found in a wide range of modern devices, play an important role in power-efficient, high-performance image processing. Applications including camera sensor post-processing and computer vision benefit from being (partially) mapped onto such DSPs. However, due to their specialized instruction sets and dependence on low-level code optimization, developing applications for DSPs is more time-consuming and error-prone than for general-purpose processors. Halide is a domain-specific language (DSL) that enables low-effort development of portable, high-performance imaging pipelines—a combination of qualities that is hard, if not impossible, to find among DSP programming models. We propose a set of extensions and modifications to Halide to generate code for DSP C compilers, focusing specifically on diverse SIMD target instruction sets and heterogeneous scratchpad memory hierarchies. We implement said techniques for a commercial DSP found in an Intel Image Processing Unit (IPU), demonstrating that this solution can be used to achieve performance within 20% of highly tuned, manually written C code, while leading to a reduction in code complexity. By comparing performance of Halide algorithms using our solution to results on CPU and GPU targets, we confirm the value of using DSP targets with Halide.",
+  "doi": "10.1145/3106343",
+  "openalex": "W2582073145",
+  "status": "ok",
+  "title": "Extending Halide to Improve Software Development for Imaging DSPs"
+ },
+ "10.1145_3173551": {
+  "abstract": "Distributing a simulation across many machines can drastically speed up computations and increase detail. The computing cloud provides tremendous computing resources, but weak service guarantees force programs to manage significant system complexity: nodes, networks, and storage occasionally perform poorly or fail. We describe Nimbus, a system that automatically distributes grid-based and hybrid simulations across cloud computing nodes. The main simulation loop is sequential code and launches distributed computations across many cores. The simulation on each core runs as if it is stand-alone: Nimbus automatically stitches these simulations into a single, larger one. To do this efficiently, Nimbus introduces a four-layer data model that translates between the contiguous, geometric objects used by simulation libraries and the replicated, fine-grain objects managed by its underlying cloud computing runtime. Using PhysBAM particle-level set fluid simulations, we demonstrate that Nimbus can run higher detail simulations faster, distribute simulations on up to 512 cores, and run enormous simulations (1024 3 cells). Nimbus automatically manages these distributed simulations, balancing load across nodes and recovering from failures. Implementations of PhysBAM water and smoke simulations as well as an open source heat-diffusion simulation show that Nimbus is general and can support complex simulations. Nimbus can be downloaded from https://nimbus.stanford.edu.",
+  "doi": "10.1145/3173551",
+  "openalex": "W2808883295",
+  "status": "ok",
+  "title": "Automatically Distributing Eulerian and Hybrid Fluid Simulations in the Cloud"
+ },
+ "10.1145_3302424.3303953": {
+  "abstract": "This paper presents Tofu, a system that partitions very large DNN models across multiple GPU devices to reduce per-GPU memory footprint. Tofu is designed to partition a dataflow graph of fine-grained tensor operators used by platforms like MXNet and TensorFlow. In order to automatically partition each operator, we propose to describe the semantics of an operator in a simple language inspired by Halide. To optimally partition different operators in a dataflow graph, Tofu uses a recursive search algorithm that minimizes the total communication cost. Our experiments on an 8-GPU machine show that Tofu enables the training of very large CNN and RNN models. It also achieves 25% - 400% speedup over alternative approaches to train very large models.",
+  "doi": "10.1145/3302424.3303953",
+  "openalex": "W2883830791",
+  "status": "ok",
+  "title": "Supporting Very Large Models using Automatic Dataflow Graph Partitioning"
+ },
+ "10.1145_3437801.3441598": {
+  "abstract": "We present optimizations to improve communication performance by reducing on-node data movement for a class of distributed memory applications. The primary concept is to eliminate the data movement associated with packing and unpacking subsets of the data during communication. With the rapid rise in network injection bandwidth reducing off-node data movement cost, on-node data movement can be significantly more expensive than computation and network communication. This data movement is especially costly for small domains - as in memory-intensive multi-physics codes or when strong scaling to reduce time-to-solution. The optimizations presented include (1) optimizing data layout through indirection to enable pack-free communication; (2) creating contiguous views of memory using memory mapping thus minimizing the number of messages; and (3) applying these techniques to intra-node data movement including CPU-GPU data movement. The benefits of these optimizations are demonstrated in stencil benchmarks against a highly-optimized baseline, reducing communication time by up to 14.4×.",
+  "doi": "10.1145/3437801.3441598",
+  "openalex": "W3132763358",
+  "status": "ok",
+  "title": "Improving communication by optimizing on-node data movement with data layout"
+ },
+ "10.1145_3472456.3473517": {
+  "abstract": "Stencil computation is an indispensable building block of many scientific applications and is widely used by the numerical solvers of partial differential equations (PDEs). Due to the complex computation patterns of different stencils and the various hardware targets (e.g., many-core processors), many domain-specific languages (DSLs) have been proposed to optimize stencil computation. However, existing stencil DSLs mostly focus on the performance optimizations on homogeneous many-core processors such as CPUs and GPUs, and fail to embrace emerging heterogeneous many-core processors such as Sunway. In addition, few of them can support expressing stencil with multiple time dependencies and optimizations from both spatial and temporal dimensions. Moreover, most stencil DSLs are unable to generate codes that can run efficiently in large scale, which limits their practical applicability. In this paper, we propose MSC, a new stencil DSL designed to express stencil computation in both spatial and temporal dimensions. It can generate high-performance stencil codes for large-scale execution on emerging many-core processors. Specially, we design several optimization primitives for improving parallelism and data locality, and a communication library for efficient halo exchange in large scale execution. The experiment results show that our MSC achieves better performance compared to the state-of-the-art stencil DSLs.",
+  "doi": "10.1145/3472456.3473517",
+  "openalex": "W3203437055",
+  "status": "ok",
+  "title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors"
+ },
+ "10.1145_3503222.3507778": {
+  "abstract": "Recent trends towards large machine learning models require both training and inference tasks to be distributed. Considering the huge cost of training these models, it is imperative to unlock optimizations in computation and communication to obtain best performance. However, the current logical separation between computation and communication kernels in machine learning frameworks misses optimization opportunities across this barrier. Breaking this abstraction can provide many optimizations to improve the performance of distributed workloads. However, manually applying these optimizations requires modifying the underlying computation and communication libraries for each scenario, which is both time consuming and error-prone.",
+  "doi": "10.1145/3503222.3507778",
+  "openalex": "W3193985311",
+  "status": "ok",
+  "title": "Breaking the computation and communication abstraction barrier in distributed machine learning workloads"
+ },
+ "10.1145_3519939.3523437": {
+  "abstract": "We introduce DISTAL, a compiler for dense tensor algebra that targets modern distributed and heterogeneous systems. DISTAL lets users independently describe how tensors and computation map onto target machines through separate format and scheduling languages. The combination of choices for data and computation distribution creates a large design space that includes many algorithms from both the past (e.g., Cannon’s algorithm) and the present (e.g., COSMA). DISTAL compiles a tensor algebra domain specific language to a distributed task-based runtime system and supports nodes with multi-core CPUs and multiple GPUs. Code generated by is competitive with optimized codes for matrix multiply on 256 nodes of the Lassen supercomputer and outperforms existing systems by between 1.8x to 3.7x (with a 45.7x outlier) on higher order tensor operations.",
+  "doi": "10.1145/3519939.3523437",
+  "openalex": "W4220690649",
+  "status": "ok",
+  "title": "DISTAL: the distributed tensor algebra compiler"
+ },
+ "10.1145_3605573.3605604": {
+  "abstract": "In this paper, we investigate data movement-reducing and communication-avoiding optimizations and their practicable implementation for large-scale unstructured-mesh applications. Utilizing the high-level abstraction of the OP2 DSL for the unstructured-mesh class of codes, we reason about techniques for reduced communications across a consecutive sequence of loops – a loop-chain. The careful trade-off with increased redundant computation in place of data movement is analyzed for distributed-memory parallelization. A new communication-avoiding (CA) back-end for OP2 is designed, codifying these techniques such that they can be applied automatically to any OP2 application. The back-end is extended to operate on a cluster of GPUs, integrating GPU-to-GPU communication with CUDA, in combination with MPI. The new CA back-end is applied automatically to two non-trivial applications, including the OP2 version of Rolls-Royce’s production CFD application, Hydra. Performance is investigated on both CPU and GPU clusters on representative problems of 8M and 24M node mesh sizes. Results demonstrate how for select configurations the new CA back-end provides between 30 – 65% runtime reductions for the loop-chains in these applications for the mesh sizes on both an HPE Cray EX system and an NVIDIA V100 GPU cluster. We model and examine the determinants and characteristics of a given unstructured-mesh loop-chain that can lead to performance benefits with CA techniques, providing insights into the general feasibility and profitability of using the optimizations for this class of applications.",
+  "doi": "10.1145/3605573.3605604",
+  "openalex": "W4386709692",
+  "status": "ok",
+  "title": "Communication-Avoiding Optimizations for Large-Scale Unstructured-Mesh Applications with OP2"
+ },
+ "10.1145_3620666.3651344": {
+  "abstract": "Domain Specific Languages (DSLs) increase programmer productivity and provide high performance. Their targeted abstractions allow scientists to express problems at a high level, providing rich details that optimizing compilers can exploit to target current- and next-generation supercomputers. The convenience and performance of DSLs come with significant development and maintenance costs. The siloed design of DSL compilers and the resulting inability to benefit from shared infrastructure cause uncertainties around longevity and the adoption of DSLs at scale. By tailoring the broadly-adopted MLIR compiler framework to HPC, we bring the same synergies that the machine learning community already exploits across their DSLs (e.g. Tensorflow, PyTorch) to the finite-difference stencil HPC community. We introduce new HPC-specific abstractions for message passing targeting distributed stencil computations. We demonstrate the sharing of common components across three distinct HPC stencil-DSL compilers: Devito, PSyclone, and the Open Earth Compiler, showing that our framework generates high-performance executables based upon a shared compiler ecosystem.",
+  "doi": "10.1145/3620666.3651344",
+  "openalex": "W4395106400",
+  "status": "ok",
+  "title": "A shared compilation stack for distributed-memory parallelism in stencil DSLs"
+ },
+ "10.1145_3627535.3638489": {
+  "abstract": "Kronecker Matrix-Matrix Multiplication (Kron-Matmul) is the multiplication of a matrix with the Kronecker Product of several smaller matrices. Kron-Matmul is a core operation for many scientific and machine learning computations. State-of-the-art Kron-Matmul implementations utilize existing tensor algebra operations, such as matrix multiplication, transpose, and tensor matrix multiplication. However, this design choice prevents several Kron-Matmul specific optimizations, thus, leaving significant performance on the table.",
+  "doi": "10.1145/3627535.3638489",
+  "openalex": "W4391047420",
+  "status": "ok",
+  "title": "Fast Kronecker Matrix-Matrix Multiplication on GPUs"
+ },
+ "10.1145_3721145.3725760": {
+  "abstract": "Stencil computation is one of the fundamental computational patterns in scientific computing, commonly adopted in solving partial differential equations (PDEs) and a wide range of application fields.However, due to the memory-bound nature, it is challenging to achieve satisfactory performance on the ARM many-core processors with complex computation and memory hierarchies.In this study, we propose independent instruction stream scheduling with the Serial-FMA to Tree-Based Reduction (SFTBR) technique to decompose the stencil computation into multiple independent instruction streams for improved instruction-level parallelism.Furthermore, we propose a locality-aware block scheduling technique for locality-aware multi-level thread parallelism to address the complexities of cache and memory hierarchies on modern ARM many-core processors.Based on the above techniques, we implement a domain-specific compiler, AOStencil, to automatically generate optimized stencil codes on ARM many-core processors with genetic-algorithm-driven parameter tuning.Our evaluation results demonstrate that AOStencil achieves up to 4.39× speedup over the state-ofthe-art domain-specific compilers on Kunpeng and Phytium platforms.",
+  "doi": "10.1145/3721145.3725760",
+  "openalex": "W4413411907",
+  "status": "ok",
+  "title": "Efficient Locality-aware Instruction Stream Scheduling for Stencil Computation on ARM Processors"
+ },
+ "10.48550_arxiv.1611.04934": {
+  "abstract": "Big data analytics requires high programmer productivity and high performance simultaneously on large-scale clusters. However, current big data analytics frameworks (e.g. Apache Spark) have prohibitive runtime overheads since they are library-based. We introduce a novel auto-parallelizing compiler approach that exploits the characteristics of the data analytics domain such as the map/reduce parallel pattern and is robust, unlike previous auto-parallelization methods. Using this approach, we build High Performance Analytics Toolkit (HPAT), which parallelizes high-level scripting (Julia) programs automatically, generates efficient MPI/C++ code, and provides resiliency. Furthermore, it provides automatic optimizations for scripting programs, such as fusion of array operations. Thus, HPAT is 369x to 2033x faster than Spark on the Cori supercomputer and 20x to 256x times on Amazon AWS.",
+  "doi": "10.48550/arxiv.1611.04934",
+  "openalex": "W2950747232",
+  "status": "ok",
+  "title": "HPAT: High Performance Analytics with Scripting Ease-of-Use"
+ },
+ "10.48550_arxiv.1803.00419": {
+  "abstract": "High-performance DSL developers work hard to take advantage of modern hardware. The DSL compilers have to build their own complex middle-ends before they can target a common back-end such as LLVM, which only handles single instruction streams with SIMD instructions. We introduce Tiramisu, a common middle-end that can generate efficient code for modern processors and accelerators such as multicores, GPUs, FPGAs and distributed clusters. Tiramisu introduces a novel three-level IR that separates the algorithm, how that algorithm is executed, and where intermediate data are stored. This separation simplifies optimization and makes targeting multiple hardware architectures from the same algorithm easier. As a result, DSL compilers can be made considerably less complex with no loss of performance while immediately targeting multiple hardware or hardware combinations such as distributed nodes with both CPUs and GPUs. We evaluated Tiramisu by creating a new middle-end for the Halide and Julia compilers. We show that Tiramisu extends Halide and Julia with many new capabilities including the ability to: express new algorithms (such as recurrent filters and non-rectangular iteration spaces), perform new complex loop nest transformations (such as wavefront parallelization, loop shifting and loop fusion) and generate efficient code for more architectures (such as combinations of distributed clusters, multicores, GPUs and FPGAs). Finally, we demonstrate that Tiramisu can generate very efficient code that matches the highly optimized Intel MKL gemm (generalized matrix multiplication) implementation, we also show speedups reaching 4X in Halide and 16X in Julia due to optimizations enabled by Tiramisu.",
+  "doi": "10.48550/arxiv.1803.00419",
+  "openalex": "W2791892411",
+  "status": "ok",
+  "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers"
+ },
+ "10.48550_arxiv.2503.10855": {
+  "abstract": "Modern computing systems increasingly rely on composing heterogeneous devices to improve performance and efficiency. Programming these systems is often unproductive: algorithm implementations must be coupled to system-specific logic, including device-specific optimizations, partitioning, and inter-device communication and synchronization, which requires developing different programs for different system configurations. We propose the Juno language, which represents general purpose applications in an imperative form that can be transformed into parallel, optimized, system-specific code using an expressive and granular imperative scheduling language. We also introduce the Hercules compiler, which uses a novel intermediate representation to represent general and device-specific parallel code in a manner that is easy to analyze and manipulate using schedules. Our system achieves competitive performance with hand-optimized device-specific code (geomean speedups of $1.25\\times$ and $1.48\\times$ on the CPU and GPU) and significantly outperforms a prior general purpose heterogeneous programming system (geomean speedups of $9.31\\times$ and $16.18\\times$ on the CPU and GPU).",
+  "doi": "10.48550/arxiv.2503.10855",
+  "openalex": "W4417281313",
+  "status": "ok",
+  "title": "Hercules: A Compiler for Productive Programming of Heterogeneous Systems"
+ },
+ "10.48550_arxiv.2504.19442": {
+  "abstract": "In this report, we propose Triton-distributed, an extension of existing Triton compiler, to overcome the programming challenges in distributed AI systems. Triton-distributed is the first compiler that supports native overlapping optimizations for distributed AI workloads, providing a good coverage of existing optimizations from different frameworks. First, we integrate communication primitives compliant with the OpenSHMEM standard into the compiler. This enables programmers to utilize these primitives with a higher-level Python programming model. Second, we illustrate how to achieve complex joint optimization of computation, memory access, and communication with the assistance of the compiler. In particular, we show how to use overlapping techniques to hide latency and present our compiler-based programming methods in both single-node and multi-node scenarios. Finally, we showcase the performance of the code generated by our compiler. In a test environment with up to 64 devices, our compiler can fully utilize heterogeneous communication and computation resources to provide effective overlapping and high performance. In many cases, the performance of the generated code can even outperform hand-optimized code. Moreover, the development difficulty and the time cost for development using our compiler are far less than those of low-level programming such as CUDA/C++, which clearly demonstrates significant productivity advantages.",
+  "doi": "10.48550/arxiv.2504.19442",
+  "openalex": "W4416130612",
+  "status": "ok",
+  "title": "Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler"
+ },
+ "10.5555_3019129.3019132": {
+  "abstract": "This paper presents the automatic parallelization of Stencil codes written in MATLAB for distributed systems. The compiler translates MATLAB source into C code and automatically parallelizes using MPI. For clusters of multi-cores, also a hybrid approach is presented where the generated code combines MPI and OpenMP parallelization. The parallelization concepts are evaluated with two stencil computation benchmarks. The automatically generated code not only outperforms the MATLAB code, but shows also a very good scaling.",
+  "doi": "10.5555/3019129.3019132",
+  "openalex": "W2563076175",
+  "status": "ok",
+  "title": "Efficient parallelization of MATLAB stencil applications for multi-core clusters"
+ },
+ "10.5555_3314872.3314896": {
+  "abstract": "This paper introduces Tiramisu, a polyhedral framework designed to generate high performance code for multiple platforms including multicores, GPUs, and distributed machines. Tiramisu introduces a scheduling language with novel extensions to explicitly manage the complexities that arise when targeting these systems. The framework is designed for the areas of image processing, stencils, linear algebra and deep learning. Tiramisu has two main features: it relies on a flexible representation based on the polyhedral model and it has a rich scheduling language allowing fine-grained control of optimizations. Tiramisu uses a four-level intermediate representation that allows full separation between the algorithms, loop transformations, data layouts, and communication. This separation simplifies targeting multiple hardware architectures with the same algorithm. We evaluate Tiramisu by writing a set of image processing, deep learning, and linear algebra benchmarks and compare them with state-of-the-art compilers and hand-tuned libraries. We show that Tiramisu matches or outperforms existing compilers and libraries on different hardware architectures, including multicore CPUs, GPUs, and distributed machines.",
+  "doi": "10.5555/3314872.3314896",
+  "openalex": "W2905135312",
+  "status": "ok",
+  "title": "Tiramisu: a polyhedral compiler for expressing fast and portable code"
+ },
+ "oa-W3160677033": {
+  "abstract": "Modern deep learning workloads run on distributed hardware and are difficult to optimize -- data, model, and pipeline parallelism require a developer to thoughtfully restructure their workload around optimized computation and communication kernels in libraries such as cuBLAS and NCCL. The logical separation between computation and communication leaves performance on the table with missed optimization opportunities across abstraction boundaries. To explore these opportunities, this paper presents CoCoNet, which consists of a compute language to express programs with both computation and communication, a scheduling language to apply transformations on such programs, and a compiler to generate high performance kernels. Providing both computation and communication as first class constructs enables new optimizations, such as overlapping or fusion of communication with computation. CoCoNet allowed us to optimize several data, model and pipeline parallel workloads in existing deep learning systems with very few lines of code. We show significant improvements after integrating novel CoCoNet generated kernels.",
+  "doi": null,
+  "openalex": "W3160677033",
+  "status": "ok",
+  "title": "CoCoNet: Co-Optimizing Computation and Communication for Distributed Machine Learning"
+ },
+ "s2-1d27a56a8133f947": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "This paper is included in the Proceedings of the 16th USENIX Symposium on Operating Systems Design and Implementation."
+ },
+ "s2-213533b755b70e47": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Extending halide to improve software development for imaging DSPs"
+ },
+ "s2-336cab8ad08677bf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Programming Model for Composing Array Data Analysis"
+ },
+ "s2-4ed7bb8568ffef38": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Domain Specific Description in Halide for Randomized Image Convolution"
+ },
+ "s2-6e3748a2c3c08292": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "TD-Orch: Efficient Task-Data Orchestration for Distributed Systems with Application to Graph Processing"
+ },
+ "s2-82f3c1b67e1af9a1": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiramisu : A Polyhedral Compiler with A Scheduling Language for Targeting High Performance Systems Riyadh"
+ },
+ "s2-833e39087f70e91a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Flexible and Efficient Systems for Training Emerging Deep Neural Networks"
+ },
+ "s2-8524d94f482718b7": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "CoCoNet: Co-Optimizing Computation and Communication for Distributed Machine Learning"
+ },
+ "s2-974660ba8df4b9cf": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "to improve software development for imaging"
+ },
+ "s2-98b1d15fff08aab5": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Technical Report about Tiramisu: a Three-Layered Abstraction for Hiding Hardware Complexity from DSL Compilers"
+ },
+ "s2-baa4422ac7f45480": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "to improve software development for imaging"
+ },
+ "s2-cb9dca41a41ba803": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "A unified compiler backend for distributed, cooperative heterogeneous execution"
+ },
+ "s2-f1713ad89e53f60a": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Tiramisu: A Code Optimization Framework for High Performance Systems"
+ },
+ "s2-f7e446ea09c6a1f0": {
+  "abstract": null,
+  "doi": null,
+  "openalex": null,
+  "status": "no_id",
+  "title": "Edinburgh Research Explorer A shared compilation stack for distributed-memory parallelism in stencil DSLs"
+ }
+}

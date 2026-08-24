@@ -499,6 +499,15 @@ raise it to the setup lane.
   external, and 3 Saman-authored works the flag had missed moved in).
   Verified in Chrome on the live page. Non-pilot files await the
   merge-script rerun (taxonomy lane).
+- **List-level Citations sort** (2026-08-24): the publications page's
+  Group & sort control gained a "Citations" option sorting the paper list
+  by the displayed count (`max(verified, gscholar)` from `index.json`),
+  descending. As the primary key it groups under the per-paper popularity
+  sort's count buckets (via `CITATIONS.countBucket`, now a shared export)
+  with a final "No citation data" group; with primary None it is a flat
+  ranked list. Papers without data key as -1 and sort last everywhere.
+  Year grouping stays the default. Verified in Chrome (buckets, in-bucket
+  rank 947>711>705>648>632>631>628, no-data tail, flat mode).
 
 ## Cross-lane requests
 

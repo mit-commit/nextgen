@@ -255,6 +255,7 @@ function monthLabelOf(it){
 // Key extractors (for sorting within groups)
 function keyFor(it, which){
   if (which==='year')     return it.year ? parseInt(it.year,10) : 0; // numeric
+  if (which==='citations') return citeCountOf(it);                   // numeric, -1 = no data
   if (which==='month')    return monthDayValue(it);
   if (which==='type')     return typeLabel(it.itemType || 'misc');   // pretty label
   if (which==='authors')  { var a = listNormalizedAuthors(it); return a.length?a[0]:'zzz'; } // first author
@@ -355,6 +356,15 @@ function createBibLink(it){
       })
     : Promise.resolve()
   ).catch(function(){ CITE_INDEX = null; });
+
+  // The paper's displayed citation count — max(verified, Google Scholar) —
+  // for the list-level "Citations" sort; -1 when the paper has no data,
+  // which sorts it after every counted paper.
+  window.citeCountOf = function(it){
+    var row = CITE_INDEX && CITE_INDEX[bibtexKeyOf(it)];
+    if (!row) return -1;
+    return Math.max(row.verified || 0, row.gscholar || 0);
+  };
 
   var state = {
     mode: 'interactive',     // 'noninteractive' | 'interactive'
@@ -776,6 +786,7 @@ function renderList(mount, items){
         flat.sort(function(a,b){
           if (which==='year') return (keyFor(b,'year') - keyFor(a,'year')); // year desc
           if (which==='month') return (keyFor(b,'month') - keyFor(a,'month'));
+          if (which==='citations') return (keyFor(b,'citations') - keyFor(a,'citations')); // count desc, no-data last
           return cmp(String(keyFor(a,which)).toLowerCase(), String(keyFor(b,which)).toLowerCase());
         });
       })(order[r]);
@@ -826,6 +837,13 @@ function renderList(mount, items){
       var ln = firstAuthorLastName(it); add(ln || 'Other', it);
     } else if (primary==='keywords'){
       var ks = tagsOf(it); if (ks.length){ for (var k2=0;k2<ks.length;k2++) add(ks[k2], it); } else add('Other', it);
+    } else if (primary==='citations'){
+      // Bucket scheme shared with the per-paper popularity sort.
+      var n = keyFor(it, 'citations');
+      var bucket = (n < 0)
+        ? 'No citation data'
+        : (window.CITATIONS ? CITATIONS.countBucket(n) : String(n));
+      add(bucket, it, n); // groupSortValue = max count in bucket → rank order
     }
   }
 
@@ -844,6 +862,13 @@ function renderList(mount, items){
       if (aVal !== bVal) return bVal - aVal;
       return A.toLowerCase().localeCompare(B.toLowerCase());
     }
+    if (primary==='citations'){
+      // Buckets in count order, highest first; "No citation data" last
+      // (its groupSortValue is -1, below every real count).
+      var aC = groupSortValue[A]; if (aC === undefined) aC = -1;
+      var bC = groupSortValue[B]; if (bC === undefined) bC = -1;
+      return bC - aC;
+    }
     return A.toLowerCase().localeCompare(B.toLowerCase());
   });
 
@@ -858,9 +883,15 @@ function renderList(mount, items){
         arr.sort(function(a,b){
           if (which==='year') return (keyFor(b,'year') - keyFor(a,'year'));
           if (which==='month') return (keyFor(b,'month') - keyFor(a,'month'));
+          if (which==='citations') return (keyFor(b,'citations') - keyFor(a,'citations'));
           return cmp(String(keyFor(a,which)).toLowerCase(), String(keyFor(b,which)).toLowerCase());
         });
       })(rest[r2]);
+    }
+    // Inside a citation bucket the list is ranked by count (stable sort:
+    // the remaining keys above become tiebreakers).
+    if (primary==='citations'){
+      arr.sort(function(a,b){ return keyFor(b,'citations') - keyFor(a,'citations'); });
     }
 
     var sec = document.createElement('div');

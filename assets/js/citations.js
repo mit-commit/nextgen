@@ -44,6 +44,16 @@ var CITATIONS = (function(){
     return e;
   }
   function fmt(n){ return Number(n).toLocaleString('en-US'); }
+  /* Citation-count buckets, shared by the per-paper popularity sort and the
+     publications page's citation ordering of the paper list itself. */
+  function countBucket(n){
+    if (n == null) return 'count unknown';
+    if (n >= 1000) return '1,000+ citations';
+    if (n >= 100) return '100–999 citations';
+    if (n >= 10) return '10–99 citations';
+    if (n >= 1) return '1–9 citations';
+    return 'not yet cited';
+  }
   function trackSafe(name, data){
     try { if (typeof track === 'function') track(name, data); } catch (e) {}
   }
@@ -250,14 +260,6 @@ var CITATIONS = (function(){
     mount.appendChild(groupsMount);
     var FN_RANK = {};
     FUNCTIONS.forEach(function(f, i){ FN_RANK[f.key] = i; });
-    function popBucket(n){
-      if (n == null) return 'count unknown';
-      if (n >= 1000) return '1,000+ citations';
-      if (n >= 100) return '100–999 citations';
-      if (n >= 10) return '10–99 citations';
-      if (n >= 1) return '1–9 citations';
-      return 'not yet cited';
-    }
     function renderFlat(rows, showCites){
       var ul = el('ul', 'cite-rows cite-flat');
       for (var i = 0; i < rows.length; i++){
@@ -306,7 +308,7 @@ var CITATIONS = (function(){
         } else {
           var headerOf = (state.sort === 'recency')
             ? function(c){ return c.year ? String(c.year) : 'no year'; }
-            : function(c){ return popBucket(c.cited_by); };
+            : function(c){ return countBucket(c.cited_by); };
           var sorted = sortRows(rows);
           var order = [], byHeader = {};
           for (var i = 0; i < sorted.length; i++){
@@ -379,6 +381,7 @@ var CITATIONS = (function(){
 
   return {
     attachToggle: attachToggle,
+    countBucket: countBucket,
     setDataBase: function(p){ DATA_BASE = p; },
     loadIndex: function(){
       return fetch(DATA_BASE + 'index.json')

@@ -89,6 +89,18 @@ mechanic as the summary toggle. The panel shows, top to bottom:
 No chart library, no dependencies: the bar is three divs, the groups are
 the site's existing toggle pattern.
 
+### Sorting the paper list itself by citations
+
+The page's **Group & sort** control gained a **Citations** option (2026-08-24
+ruling). As the level-1 key it groups the paper list under the same
+count-bucket headers the per-paper popularity sort uses (1,000+ / 100–999 /
+10–99 / 1–9 / not yet cited), ranked descending inside each bucket, with a
+final **No citation data** group for papers without a `data/citations` row.
+With level 1 set to None and Citations at a lower level, the list is one
+flat ranked run — no headers. The sorted figure is the displayed count,
+`max(verified, gscholar)` from `index.json`. Year grouping stays the
+default; Reset restores it.
+
 ## 3. Page structure and integration
 
 Three pieces, all following existing conventions (`publications.js` style:

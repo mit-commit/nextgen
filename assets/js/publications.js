@@ -344,6 +344,18 @@ function createBibLink(it){
 
   var JSON_PATH = 'data/publications.json';
 
+  // Per-paper citation view (assets/js/citations.js, data/citations/).
+  // The index is one small fetch; per-paper data loads only on expand.
+  // If citations.js or the index is absent, CITE_INDEX stays null and the
+  // page renders exactly as before.
+  var CITE_INDEX = null;
+  var citeIndexReady = (window.CITATIONS
+    ? CITATIONS.loadIndex().then(function(idx){
+        CITE_INDEX = (idx && idx.papers) || null;
+      })
+    : Promise.resolve()
+  ).catch(function(){ CITE_INDEX = null; });
+
   var state = {
     mode: 'interactive',     // 'noninteractive' | 'interactive'
     years: {},                  // map of selected year -> true
@@ -734,6 +746,12 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     }
 
     li.appendChild(meta);
+
+    // Citation view toggle (only for papers with a data/citations/ row).
+    if (window.CITATIONS && CITE_INDEX){
+      var citeRow = CITE_INDEX[bibtexKeyOf(it)];
+      if (citeRow) CITATIONS.attachToggle(meta, li, bibtexKeyOf(it), citeRow);
+    }
 
     if (it.price){ var pr=document.createElement('div'); pr.className='pub-price'; pr.appendChild(text(it.price)); li.appendChild(pr); }
 
@@ -1368,7 +1386,11 @@ if (els.sortReset) els.sortReset.onclick = function(){
           rebuildKeywordFacet();
           rebuildAuthorFacet();
 
-          applyFilters(); // initial render and dynamic counts
+          // Wait for the (already in-flight, always-resolving) citations
+          // index before first render so toggles appear on the first paint.
+          citeIndexReady.then(function(){
+            applyFilters(); // initial render and dynamic counts
+          });
         } catch (e) {
           els.errors.textContent = 'Failed to parse publications.json: ' + e.message;
         }

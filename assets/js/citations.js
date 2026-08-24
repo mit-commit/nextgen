@@ -1,14 +1,14 @@
-/* Citation view — prototype controller.
-   Renders the expandable per-paper citation section described in
-   docs/citation-design.md. Data contract: data/citations/SCHEMA.md.
-   Written in the publications.js style (ES5, createElement, no deps);
-   when this graduates, it becomes assets/js/citations.js unchanged except
-   for DATA_BASE. */
+/* Citation view — the expandable per-paper citation section.
+   Design: docs/citation-design.md. Data contract: data/citations/SCHEMA.md.
+   ES5, createElement, no deps. Graduated from prototype/citations.js
+   (kept for reference) with only DATA_BASE and this header changed.
+   publications.js calls CITATIONS.loadIndex() once at boot and
+   CITATIONS.attachToggle() per paper that has a row in the index. */
 
 var CITATIONS = (function(){
   'use strict';
 
-  var DATA_BASE = '../data/citations/';   // site pages use 'data/citations/'
+  var DATA_BASE = 'data/citations/';
 
   /* Plain-language labels for FUNCTION values, in codebook priority order. */
   var FUNCTIONS = [

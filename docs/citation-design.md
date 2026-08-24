@@ -1,10 +1,12 @@
 # The per-paper citation section — design
 
-**Status: awaiting human review.** A working prototype renders the design on
-real pilot data (`prototype/citations.html`, instructions in §8); nothing
-touches the live pages until this document and the prototype are approved.
-The data contract lives in `data/citations/SCHEMA.md`; the classify-corpus
-merge script emits it for the whole corpus.
+**Status: APPROVED and integrated** (human sign-off 2026-08-24, including
+the three sort modes and header toggle). The view is live in
+`publications.html` via `assets/js/citations.js` + the citation block in
+`assets/css/style.css`; the prototype (`prototype/`, §8) is kept as a
+reference implementation. The data contract lives in
+`data/citations/SCHEMA.md`; the classify-corpus merge script emits it for
+the whole corpus.
 
 ## 1. What this is
 
@@ -56,12 +58,16 @@ mechanic as the summary toggle. The panel shows, top to bottom:
 4. **Sort modes** (approved ruling, 2026-08-24): **Impact** (default;
    codebook priority order), **Recency** (year, newest first), and
    **Popularity** (the citing work's own citation count — `cited_by` in the
-   schema — highest first, with a "N cites" chip per row). A **headers
-   on/off** toggle controls the section headers: category groups under
-   Impact, years under Recency, count buckets (1,000+ / 100–999 / 10–99 /
-   1–9 / not yet cited / count unknown) under Popularity. Impact-with-headers
-   keeps the lazily-rendered collapsible groups; every other combination is
-   one flat sorted list.
+   schema — highest first, with a "N cites" chip per row). With **headers
+   on** (the default), all three modes render the same way: collapsible
+   groups, collapsed by default, the count in each header — category
+   groups under Impact, years under Recency, count buckets (1,000+ /
+   100–999 / 10–99 / 1–9 / not yet cited / count unknown) under
+   Popularity, all lazily rendered in one shared style. **Headers off**
+   gives one flat sorted list. Impact keeps our own group's citations in
+   their separate section (the external-impact story); Recency and
+   Popularity incorporate them into the main list, each row marked with an
+   "our group" chip.
 5. **Function groups.** Under Impact with headers: collapsible groups in
    codebook priority order, each
    with a plain-language label, a count, and a one-clause gloss:
@@ -87,8 +93,8 @@ the site's existing toggle pattern.
 Three pieces, all following existing conventions (`publications.js` style:
 ES5, `createElement`, `track()`):
 
-- **`assets/js/citations.js`** (now `prototype/citations.js`, unchanged on
-  graduation except the data path): `CITATIONS.loadIndex()`,
+- **`assets/js/citations.js`** (graduated from `prototype/citations.js`,
+  unchanged except the data path and header): `CITATIONS.loadIndex()`,
   `CITATIONS.attachToggle(metaEl, itemEl, key, indexRow)`, and the view
   renderer. Nothing else on the page needs to know how the view works.
 - **`publications.js`**: two small changes. At startup, fetch

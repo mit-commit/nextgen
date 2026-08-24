@@ -7,37 +7,35 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 [fable] = the human's high-effort tab only.
 
 ## OPEN
-1. [sonnet] **idmap-review** (claims data/idmap*.json): resolve the 41 rows in
-   data/idmap-review.json. Accept a candidate only when venue+year+authors all
-   agree with the publications.json entry; write into data/idmap.json with
-   match: fuzzy_reviewed and then extend the citations/authors inputs so those
-   papers join later passes. Leave genuinely unclear rows with a one-line note.
-2. [sonnet] **fulltext-abstracts** (claims harvest/fulltext/abstracts*): for
-   every citing work of the 8 pilot papers that has NO cached full text, pull
-   title+abstract from OpenAlex (invert the abstract_inverted_index) into
-   harvest/fulltext/abstracts/<key>.json (committed — abstracts are metadata,
-   fine to push). This is the evidence floor for taxonomy work where PDFs are
-   bot-walled.
-3. [sonnet] **citations-s2-pilot** (coordinate with the citations session's
-   claims): ensure the 8 pilot papers' S2 citation records (isInfluential,
-   intents, contexts) are complete even at keyless rate — pilot papers first,
-   rest of the corpus later.
-4. BLOCKED [fable] **taxonomy-pilot**: unblocked by the coordinator when 2+3
-   land. Read the cached citing texts (harvest/fulltext/, local disk), the
-   abstracts, and S2 contexts for the pilot papers; propose a granular citation
-   taxonomy with definitions and examples; classify the pilot corpus; compare
-   against S2 isInfluential. Deliverable: docs/taxonomy-draft.md for the
-   human's critique.
+1. [fable] **taxonomy-pilot** — UNBLOCKED (S2 coverage on the pilot papers is
+   sufficient: 5 of 8 papers near-complete, the two 2002 giants at 80%+ of
+   sampled rows). Evidence per pilot paper, best available per citing work:
+   cached full text (harvest/fulltext/<key>/, local disk), else abstract
+   (harvest/fulltext/abstracts/<key>.json), else S2 contexts/intents from
+   harvest/citations/<key>.json. Steps: (a) read a stratified sample deeply;
+   (b) propose a granular citation taxonomy — dimensions, values, definitions,
+   decision rules, 3 worked examples per value; (c) classify the full pilot
+   corpus with the taxonomy, recording evidence tier per judgment; (d) compare
+   your classes against S2 isInfluential/intents and report agreement and
+   disagreement cases. Deliverable: docs/taxonomy-draft.md + harvest/taxonomy/
+   pilot-classifications.json. This drives the whole citation section design —
+   take the time to get it right.
+2. [sonnet] **idmap-review-rest**: 29 rows remain in data/idmap-review.json
+   after the first resolution pass (12 resolved). For each, fetch the top
+   candidate's landing page / OpenAlex record and check venue+year+authors
+   against publications.json; resolve or mark no_doi_confirmed with a note.
+3. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the pilots
+   to the whole corpus, highest OpenAlex count first. Long-running background
+   work; speeds up when S2_API_KEY appears.
 
 ## RUNNING (do not pick up)
-- citations OpenAlex-first pass + S2 background (its own session)
-- artifacts ACM badge pass, Playwright (its own session)
 - repos-search step 2 (its own session)
 - authors-enrich part 2 (its own session)
 
 ## DONE
-- setup/idmap (151 doi / 135 no_doi / 41 review)
-- artifacts part 1 (10 confirmed, 6 review)
+- setup/idmap (163 resolved / 135 no_doi / 29 review)
+- citations OpenAlex pass (151 papers)
+- artifacts part 1 + ACM badge pass (badges ingested from browser run)
 - repos step 1 (59 live, 2 dead, 268 to search)
 - authors part 1 (369 authors, 149 ORCID, 98 COMMIT)
-- fulltext pilot (85/1067 texts via free routes)
+- fulltext pilot (85/1067 texts) + abstracts floor (528/982)

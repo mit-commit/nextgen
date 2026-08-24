@@ -363,7 +363,7 @@ function createBibLink(it){
   window.citeCountOf = function(it){
     var row = CITE_INDEX && CITE_INDEX[bibtexKeyOf(it)];
     if (!row) return -1;
-    return Math.max(row.verified || 0, row.gscholar || 0);
+    return CITATIONS.displayCount(row); // same figure as the per-paper headline
   };
 
   var state = {

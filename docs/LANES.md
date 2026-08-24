@@ -508,6 +508,16 @@ raise it to the setup lane.
   ranked list. Papers without data key as -1 and sort last everywhere.
   Year grouping stays the default. Verified in Chrome (buckets, in-bucket
   rank 947>711>705>648>632>631>628, no-data tail, flat mode).
+- **Displayed-count hardening** (bug report: list sort showing zero for
+  every paper — not reproducible at HEAD over HTTP; every probe returned
+  the real figures, so the likely cause was a stale-cache pairing of new
+  HTML with an older cached publications.js). Fixed the class of bug
+  regardless: `CITATIONS.displayCount(row)` = max(verified, gscholar ?? 0)
+  is now the single source of truth used by the toggle label, the expanded
+  headline, and the list-level sort; `loadIndex()` fetches with
+  `cache: 'no-store'`; and publications.html versions the two script URLs
+  (`?v=2`) so the HTML/JS pair can never be mixed vintages. Re-verified:
+  Halide ranks first at 1,483, and a gscholar of 2,417 wins the max.
 
 ## Cross-lane requests
 

@@ -54,6 +54,13 @@ var CITATIONS = (function(){
     if (n >= 1) return '1–9 citations';
     return 'not yet cited';
   }
+  /* THE displayed citation figure — max(verified, gscholar ?? 0). Single
+     source of truth for the toggle label, the expanded headline, and the
+     publications page's list-level Citations sort. */
+  function displayCount(row){
+    if (!row) return 0;
+    return Math.max(row.verified || 0, row.gscholar || 0);
+  }
   function trackSafe(name, data){
     try { if (typeof track === 'function') track(name, data); } catch (e) {}
   }
@@ -154,7 +161,7 @@ var CITATIONS = (function(){
     }
 
     /* Headline: displayed count = max(verified, Google Scholar). */
-    var display = Math.max(counts.works, gscholar || 0);
+    var display = displayCount({ verified: counts.works, gscholar: gscholar });
     var head = el('div', 'cite-head');
     head.appendChild(el('span', 'cite-head-count', fmt(display) + ' citations'));
     var src = [fmt(counts.works) + ' verified and analyzed below'];
@@ -346,7 +353,7 @@ var CITATIONS = (function(){
 
   /* ---------- toggle wiring, pub-summary pattern ---------- */
   function attachToggle(metaEl, bodyParent, key, indexRow){
-    var display = Math.max(indexRow.verified, indexRow.gscholar || 0);
+    var display = displayCount(indexRow);
     var div = el('div', 'pub-summary cite-view');   // reuses .open show/hide
     var toggle = el('a', 'pub-action pub-summary-toggle');
     toggle.href = '#';
@@ -382,9 +389,11 @@ var CITATIONS = (function(){
   return {
     attachToggle: attachToggle,
     countBucket: countBucket,
+    displayCount: displayCount,
     setDataBase: function(p){ DATA_BASE = p; },
     loadIndex: function(){
-      return fetch(DATA_BASE + 'index.json')
+      // no-store: a stale cached index must never outlive a data refresh
+      return fetch(DATA_BASE + 'index.json', { cache: 'no-store' })
         .then(function(r){ if (!r.ok) throw new Error('no citations index'); return r.json(); });
     }
   };

@@ -7,51 +7,45 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 [fable] = the human's high-effort tab only.
 
 ## HUMAN RULINGS IN FORCE (2026-08-24)
-- Taxonomy v0.1 APPROVED with one amendment: `mentions` is replaced by two
-  residual values at the bottom of the FUNCTION priority order —
-  `detailed-citation` (multiple cites to our paper, or >=1 sentence targeting
-  it specifically; negative/comparative engagement counts) and
-  `passing-citation` (appears only in multi-paper list sentences). Higher
-  categories always win.
+- Taxonomy v0.2 APPROVED (detailed-citation / passing-citation residuals in
+  place of `mentions`; higher categories always win).
 - Audit trail trusted; no human spot-check before scaling.
 - Dedup policy: fold same-work records by normalized title, keep the
   highest-evidence sibling, before any public-facing counts.
 - Scale to the WHOLE corpus, citation-rich papers first.
 
 ## OPEN
-1. [fable] **taxonomy-amendment** (running in the fable tab): apply the
-   detailed/passing amendment to the codebook and the pilot classifications.
-2. [sonnet] **classify-corpus** — BLOCKED until task 1 pushes the amended
-   codebook. Build curate/classify_citations.py on the SDV auto_curate.py
-   pattern: Anthropic Batch API, model claude-sonnet-4-6, one request per
-   citing work, evidence packed best-first (abstract, S2 contexts, intents),
-   system prompt generated FROM docs/taxonomy-draft.md so the codebook stays
-   the single source of truth. Output one staging record per citing work under
-   harvest/taxonomy/records/<pilotkey>/; --pilot N, --submit --dry-run,
-   --status, --collect, --recover modes; custom_id <=64 chars; MAX_TOKENS
-   generous (thinking eats output budget). Skip the 8 pilot papers (done) and
-   title-only rows (unclassifiable). Order papers by citing-work count
-   descending. Then a merge script folds records + dedup into
-   data/citations/<bibtexKey>.json for the site. Report cost estimate at
-   --dry-run BEFORE submitting the first real batch.
-3. [sonnet] **idmap-review-rest**: 29 rows remain in data/idmap-review.json.
-   For each, fetch the top candidate's landing page / OpenAlex record and check
-   venue+year+authors against publications.json; resolve or mark
-   no_doi_confirmed with a note.
-4. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the pilots
-   to the whole corpus, highest OpenAlex count first. Long-running background
-   work; speeds up when S2_API_KEY appears. Feeds task 2's evidence packs.
+1. [sonnet] **classify-corpus** — UNBLOCKED (codebook v0.2 pushed). Build
+   curate/classify_citations.py on the SDV auto_curate.py pattern: Anthropic
+   Batch API, model claude-sonnet-4-6, key from env ANTHROPIC_BATCH_KEY (do
+   NOT use or set ANTHROPIC_API_KEY — it breaks Claude Code logins), one
+   request per citing work, evidence packed best-first (abstract, S2 contexts,
+   intents), system prompt generated FROM docs/taxonomy-draft.md so the
+   codebook stays the single source of truth. Output one staging record per
+   citing work under harvest/taxonomy/records/<bibtexKey>/; --pilot N,
+   --submit --dry-run, --status, --collect, --recover modes; custom_id <=64
+   chars; generous MAX_TOKENS (thinking eats output budget). Skip the 8 pilot
+   papers and title-only rows. Order papers by citing-work count descending.
+   Then a merge script folds records + dedup into data/citations/<bibtexKey>
+   .json for the site. **Report the --dry-run cost estimate and STOP for
+   human approval before the first real submit.**
+2. [sonnet] **idmap-review-rest**: 29 rows remain in data/idmap-review.json.
+   Resolve via candidate landing page / OpenAlex venue+year+authors check, or
+   mark no_doi_confirmed with a note.
+3. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the pilots,
+   highest OpenAlex count first. Long-running; speeds up when S2_API_KEY
+   appears. Feeds task 1's evidence packs — task 1 classifies what exists and
+   a later sweep picks up stragglers.
 
 ## RUNNING (do not pick up)
-- taxonomy amendment (fable tab)
 - repos-search step 2 (its own session)
 - authors-enrich part 2 (its own session)
 
 ## DONE
 - setup/idmap (163 resolved / 135 no_doi / 29 review)
 - citations OpenAlex pass (151 papers)
-- artifacts part 1 + ACM badge pass (badges ingested from browser run)
+- artifacts part 1 + ACM badge pass
 - repos step 1 (59 live, 2 dead, 268 to search)
 - authors part 1 (369 authors, 149 ORCID, 98 COMMIT)
-- fulltext pilot (85/1067 texts) + abstracts floor (528/982)
-- taxonomy pilot v0.1 (2,459 judged; approved with amendment)
+- fulltext pilot (85/1067) + abstracts floor (528/982)
+- taxonomy v0.1 pilot + v0.2 amendment (mentions -> 349 detailed / 352 passing)

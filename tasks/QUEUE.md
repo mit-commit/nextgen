@@ -9,33 +9,27 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 ## HUMAN RULINGS IN FORCE (2026-08-24)
 - Taxonomy v0.2 APPROVED (detailed-citation / passing-citation residuals in
   place of `mentions`; higher categories always win).
+- **CLASSIFY-CORPUS BATCH SUBMIT APPROVED at the ~$69 estimate — proceed.**
 - Audit trail trusted; no human spot-check before scaling.
 - Dedup policy: fold same-work records by normalized title, keep the
   highest-evidence sibling, before any public-facing counts.
 - Scale to the WHOLE corpus, citation-rich papers first.
+- Prototype/design review: design deemed good so far; final design sign-off
+  pending — live pages remain untouched.
 
 ## OPEN
-1. [sonnet] **classify-corpus** — UNBLOCKED (codebook v0.2 pushed). Build
-   curate/classify_citations.py on the SDV auto_curate.py pattern: Anthropic
-   Batch API, model claude-sonnet-4-6, key from env ANTHROPIC_BATCH_KEY (do
-   NOT use or set ANTHROPIC_API_KEY — it breaks Claude Code logins), one
-   request per citing work, evidence packed best-first (abstract, S2 contexts,
-   intents), system prompt generated FROM docs/taxonomy-draft.md so the
-   codebook stays the single source of truth. Output one staging record per
-   citing work under harvest/taxonomy/records/<bibtexKey>/; --pilot N,
-   --submit --dry-run, --status, --collect, --recover modes; custom_id <=64
-   chars; generous MAX_TOKENS (thinking eats output budget). Skip the 8 pilot
-   papers and title-only rows. Order papers by citing-work count descending.
-   Then a merge script folds records + dedup into data/citations/<bibtexKey>
-   .json for the site. **Report the --dry-run cost estimate and STOP for
-   human approval before the first real submit.**
+1. [sonnet] **classify-corpus — SUBMIT APPROVED.** Run --submit for real,
+   then --status / --collect as batches land; --recover for rule-level
+   failures before any re-call. Key from env ANTHROPIC_BATCH_KEY (never
+   ANTHROPIC_API_KEY). After collect: merge script folds records + dedup into
+   data/citations/<bibtexKey>.json per SCHEMA.md. Report only: records
+   collected, review-queue size, per-function totals.
 2. [sonnet] **idmap-review-rest**: 29 rows remain in data/idmap-review.json.
    Resolve via candidate landing page / OpenAlex venue+year+authors check, or
    mark no_doi_confirmed with a note.
 3. [sonnet] **citations-s2-continue**: extend S2 enrichment beyond the pilots,
    highest OpenAlex count first. Long-running; speeds up when S2_API_KEY
-   appears. Feeds task 1's evidence packs — task 1 classifies what exists and
-   a later sweep picks up stragglers.
+   appears. Stragglers get a later classification sweep.
 
 ## RUNNING (do not pick up)
 - repos-search step 2 (its own session)
@@ -49,3 +43,4 @@ coordinator owns it. Model tag on each task: [sonnet] = any session,
 - authors part 1 (369 authors, 149 ORCID, 98 COMMIT)
 - fulltext pilot (85/1067) + abstracts floor (528/982)
 - taxonomy v0.1 pilot + v0.2 amendment (mentions -> 349 detailed / 352 passing)
+- citation-section design + prototype (prototype/citations.html) — reviewed

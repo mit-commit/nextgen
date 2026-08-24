@@ -169,6 +169,15 @@ def build_paper(key, tax_rows, citing_list, generated):
                         (link_for(c), 'url')):
             if src:
                 e[dst] = src
+        # siblings are dedup'd variants of the same work (arXiv/DOI/venue
+        # clones) with possibly inconsistent citation counts depending on
+        # which index recorded them -- the citing work's own popularity is a
+        # property of the work, not of which variant we kept, so take the
+        # max rather than whichever sibling happened to survive the
+        # evidence-rank sort above. Required-but-nullable per SCHEMA.md, so
+        # always set it (unlike the omit-if-absent fields above).
+        cited_by_values = [c2.get('cited_by') for _, c2 in sibs if c2.get('cited_by') is not None]
+        e['cited_by'] = max(cited_by_values) if cited_by_values else None
         if r['function'] not in ('unknown', 'unclassified'):
             e['centrality'] = r['centrality']
             e['confidence'] = r['confidence']

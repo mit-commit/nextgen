@@ -138,7 +138,10 @@ sibling. If any sibling is `self-version`, drop the whole group.
 
 - `functions` — the paper's **external judged** citation counts per FUNCTION
   value (COMMIT papers and unjudged rows excluded; zero-count values
-  omitted). Lets the publications page compute the paper's **impact score**
+  omitted). Its sibling `centrality` holds the same rows counted by
+  CENTRALITY (`core` / `engaged` / `peripheral`, zero counts omitted) —
+  the page-level centrality buttons show how many shown papers have at
+  least one citation at each level. Lets the publications page compute the paper's **impact score**
   and the aggregate overview without fetching per-paper files. The impact
   score is `Σ weight(function) × count`, with the weights defined once in
   `citations.js` (`CITATIONS.WEIGHTS`) and mirrored here:

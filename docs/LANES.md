@@ -582,6 +582,24 @@ raise it to the setup lane.
   2,491 works). Non-pilot index rows lack `functions` until the
   taxonomy lane's merge rerun — impact shows pilots-only meanwhile.
   style.css?v=4, citations.js?v=5, publications.js?v=4.
+- **Reception/summaries decoupling + tool counts** (2026-08-24): the
+  human reported Show citations "also shows summaries" — the actual
+  Summary sections stay closed (verified by probe); what showed was the
+  reception prose at the top of each pilot panel. Reception is now a
+  collapsed "Reception ▸" section that follows the Show summaries state
+  (CITATIONS.setReceptionVisible), so citations-without-summaries is
+  clean; the head still toggles it per panel. Also added facet-style
+  paper counts to the page-level tools: each citation category shows how
+  many shown papers have ≥1 citation in it, and the centrality buttons
+  show papers with ≥1 core/engaged/peripheral citation — backed by a new
+  per-paper `centrality` count object in index.json (pilots emitted;
+  non-pilot rows await the taxonomy lane's merge rerun).
+  style.css?v=5, citations.js?v=6, publications.js?v=5.
+- **Impact tiers** (2026-08-24): the impact slider's raw number meant
+  nothing to users — it now snaps to five descriptive tiers (all papers /
+  top half / top quarter / top 10% / top 3% by impact), thresholds taken
+  from the corpus impact distribution. Verified: 327 → 89 → 43 → 17 → 5
+  papers across the tiers.
 
 ## Cross-lane requests
 

@@ -80,6 +80,7 @@ var CITATIONS = (function(){
   /* Page-level panel state: every open panel follows these; per-panel
      controls can still diverge afterwards. */
   var gPanel = { sort: 'impact', centrality: 'all', categories: null, search: '' };
+  var gReception = false;  // follows the page's Show summaries state
   function rowMatchesGlobal(c){
     if (gPanel.categories && gPanel.categories.length &&
         gPanel.categories.indexOf(c.function) === -1) return false;
@@ -188,14 +189,32 @@ var CITATIONS = (function(){
       (all[i].commit ? commitPapers : external).push(all[i]);
     }
 
-    /* Reception summary: hand-written prose, rendered first when present. */
+    /* Reception summary: hand-written prose, first in the panel. It is a
+       summary, so it follows the page's Show summaries state; the head
+       toggles it either way. */
     if (data.reception){
+      var recWrap = el('div', 'cite-reception-wrap');
+      var recHead = el('a', 'cite-group-head cite-reception-head');
+      recHead.href = '#';
+      var recArrow = el('span', null, gReception ? '▾ ' : '▸ ');
+      recHead.appendChild(recArrow);
+      recHead.appendChild(el('span', 'cite-group-label', 'Reception'));
+      recWrap.appendChild(recHead);
       var rec = el('div', 'cite-reception');
+      rec.style.display = gReception ? '' : 'none';
       var paras = String(data.reception).split(/\n\n+/);
       for (var rp = 0; rp < paras.length; rp++){
         rec.appendChild(el('p', null, paras[rp]));
       }
-      mount.appendChild(rec);
+      recHead.addEventListener('click', function(ev){
+        ev.preventDefault();
+        var show = rec.style.display === 'none';
+        rec.style.display = show ? '' : 'none';
+        recArrow.textContent = show ? '▾ ' : '▸ ';
+      });
+      recWrap.appendChild(rec);
+      mount.appendChild(recWrap);
+      receptions.push({ el: recWrap, arrow: recArrow, body: rec });
     }
 
     /* Headline: displayed count = max(verified, Google Scholar). */
@@ -408,6 +427,7 @@ var CITATIONS = (function(){
      later (filter changes) follow the global state, like summaries do. */
   var instances = [];
   var panels = [];      // loaded panel controllers, for the page-level tools
+  var receptions = []; // reception sections, following the Show summaries state
   var defaultOpen = false;
   var dataCache = {};   // key -> per-paper JSON, kept for cross-paper analysis
 
@@ -469,6 +489,16 @@ var CITATIONS = (function(){
     bodyParent.appendChild(div);
     instances.push({ el: div, setOpen: setOpen });
     if (defaultOpen) setOpen(true);
+  }
+
+  /* Reception prose follows the page's Show summaries state. */
+  function setReceptionVisible(show){
+    gReception = !!show;
+    receptions = receptions.filter(function(r){ return document.contains(r.el); });
+    for (var i = 0; i < receptions.length; i++){
+      receptions[i].body.style.display = gReception ? '' : 'none';
+      receptions[i].arrow.textContent = gReception ? '▾ ' : '▸ ';
+    }
   }
 
   function setAllOpen(open){
@@ -545,6 +575,7 @@ var CITATIONS = (function(){
     WEIGHTS: WEIGHTS,
     FUNCTIONS: FUNCTIONS,
     setGlobalPanels: setGlobalPanels,
+    setReceptionVisible: setReceptionVisible,
     ensureData: ensureData,
     crossCiters: crossCiters,
     setAllOpen: setAllOpen,

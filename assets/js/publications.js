@@ -1151,6 +1151,43 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     cc.appendChild(btn); cc.appendChild(out); box.appendChild(cc);
   }
 
+  // Paper counts on the page-level citation controls: how many currently
+  // shown papers have at least one external judged citation in each
+  // category / at each centrality (facet-style, from index.json only).
+  function updateCiteToolCounts(items){
+    if (!CITE_INDEX || !window.CITATIONS) return;
+    var catCounts = {}, centCounts = { core: 0, engaged: 0, peripheral: 0 };
+    var seen = {}, withData = 0, i, f;
+    for (i = 0; i < items.length; i++){
+      var k = bibtexKeyOf(items[i]);
+      if (seen[k]) continue;
+      seen[k] = 1;
+      var row = CITE_INDEX[k];
+      if (!row) continue;
+      withData++;
+      for (f in (row.functions || {})){
+        if (row.functions[f] > 0) catCounts[f] = (catCounts[f] || 0) + 1;
+      }
+      var ce = row.centrality || {};
+      for (f in centCounts){ if (ce[f] > 0) centCounts[f]++; }
+    }
+    if (els.citeCats && els.citeCats._catRefs){
+      for (f in els.citeCats._catRefs){
+        var ref = els.citeCats._catRefs[f];
+        ref.node.nodeValue = ref.label + ' (' + (catCounts[f] || 0) + ')';
+      }
+    }
+    if (els.citeCentrality){
+      var bs = els.citeCentrality.querySelectorAll('.type-toggle-btn');
+      for (i = 0; i < bs.length; i++){
+        var v = bs[i].getAttribute('data-v');
+        if (v === 'all') bs[i].textContent = 'All (' + withData + ')';
+        else bs[i].textContent = v.charAt(0).toUpperCase() + v.slice(1) +
+          ' (' + centCounts[v] + ')';
+      }
+    }
+  }
+
   function applyFilters(){
     // recompute dynamic counts first (so user sees availability)
     updateDynamicCounts();
@@ -1174,6 +1211,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     renderList(els.results, items);
 
     renderCiteOverview(items);
+    updateCiteToolCounts(items);
 
     // interactive panel visibility
     els.filtersInteractive.className = (state.mode === 'interactive') ? 'filters-interactive' : 'filters-interactive hidden';
@@ -1183,7 +1221,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     // citation tools
     state.minCites = 0; state.minImpact = 0;
     if (els.minCites){ els.minCites.value = '0'; els.minCitesLabel.textContent = '0'; }
-    if (els.minImpact){ els.minImpact.value = '0'; els.minImpactLabel.textContent = '0'; }
+    if (els.minImpact){ els.minImpact.value = '0'; els.minImpactLabel.textContent = 'all papers'; }
     if (els.citeSearch) els.citeSearch.value = '';
     if (els.citeCats){
       var ccbs = els.citeCats.querySelectorAll('input'), ci;
@@ -1242,6 +1280,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         for (i = 0; i < divs.length; i++){ divs[i].className = 'pub-summary' + (open ? ' open' : ''); }
         var toggles = document.querySelectorAll('.pub-summary-toggle:not(.cite-toggle)'), j;
         for (j = 0; j < toggles.length; j++){ toggles[j].textContent = open ? 'Summary \u25be' : 'Summary \u25b8'; }
+        // Reception prose inside citation panels is a summary too.
+        if (window.CITATIONS) CITATIONS.setReceptionVisible(open);
         track('summaries-toggle-all', { expanded: open });
       };
     }
@@ -1290,7 +1330,10 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
             var label = document.createElement('label'); label.className = 'facet-item';
             var cb = document.createElement('input'); cb.type = 'checkbox'; cb.value = f.key;
             var txt = document.createElement('span'); txt.className = 'facet-text';
-            txt.appendChild(document.createTextNode(f.label)); txt.title = f.gloss;
+            var tn = document.createTextNode(f.label + ' (0)');
+            txt.appendChild(tn); txt.title = f.gloss;
+            if (!els.citeCats._catRefs) els.citeCats._catRefs = {};
+            els.citeCats._catRefs[f.key] = { node: tn, label: f.label };
             cb.onchange = function(){
               selected[f.key] = this.checked;
               var keys = keysSelected(selected);
@@ -1331,16 +1374,36 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       for (k in (CITE_INDEX || {})) m = Math.max(m, CITATIONS.displayCount(CITE_INDEX[k]));
       return m || 1;
     }
-    function maxImpact(){
-      var m = 0, k, v;
+    wireSlider(els.minCites, els.minCitesLabel, maxCites, function(v){ state.minCites = v; });
+
+    // The impact slider speaks in tiers, not raw scores: thresholds are
+    // quantiles of the corpus impact distribution, labels are plain words.
+    var IMPACT_TIERS = [
+      { label: 'all papers',            q: null },
+      { label: 'top half by impact',    q: 0.50 },
+      { label: 'top quarter by impact', q: 0.25 },
+      { label: 'top 10% by impact',     q: 0.10 },
+      { label: 'top 3% by impact',      q: 0.03 }
+    ];
+    function impactQuantile(q){
+      var vals = [], k, v;
       for (k in (CITE_INDEX || {})){
         v = window.CITATIONS ? CITATIONS.impactScore(CITE_INDEX[k]) : null;
-        if (v != null) m = Math.max(m, v);
+        if (v != null) vals.push(v);
       }
-      return m || 1;
+      if (!vals.length) return 0;
+      vals.sort(function(a, b){ return b - a; });
+      var idx = Math.min(vals.length - 1, Math.max(0, Math.round(vals.length * q) - 1));
+      return vals[idx];
     }
-    wireSlider(els.minCites, els.minCitesLabel, maxCites, function(v){ state.minCites = v; });
-    wireSlider(els.minImpact, els.minImpactLabel, maxImpact, function(v){ state.minImpact = v; });
+    if (els.minImpact){
+      els.minImpact.oninput = function(){
+        var tier = IMPACT_TIERS[parseInt(this.value, 10) || 0];
+        state.minImpact = tier.q == null ? 0 : Math.max(1, impactQuantile(tier.q));
+        els.minImpactLabel.textContent = tier.label;
+        applyFilters();
+      };
+    }
 
     if (els.authorSort) {
       els.authorSort.value = state.authorSort;

@@ -136,16 +136,26 @@ citation-tools row (2026-08-24 request):
 - **Citation panels**: Impact/Recency/Popularity and All/Core/Engaged/
   Peripheral button groups that drive every open panel at once (each
   panel's own controls stay usable afterwards), plus a **citing-work
-  search** filtering rows in all panels by title, author, or venue.
+  search** filtering rows in all panels by title, author, or venue. The
+  centrality buttons show **paper counts** — how many shown papers have
+  at least one citation at that level (from `index.json`'s per-paper
+  `centrality` counts).
 - **Citation categories**: a facet listbox of the eleven FUNCTION values
-  (Builds on it, Uses the system, …); selecting values restricts every
-  panel to those categories.
-- **Paper thresholds**: two sliders filtering the paper list itself —
-  minimum citation count (the displayed figure) and minimum **impact
-  score** (`Σ weight(function) × count` over external judged citations;
-  weights in SCHEMA.md, computed from `index.json`'s per-paper
-  `functions` counts). Quadratic slider mapping for fine control at the
-  low end; papers without data are hidden once a threshold is above zero.
+  (Builds on it, Uses the system, …) with **paper counts** per category;
+  selecting values restricts every panel to those categories.
+- **Reception follows Show summaries**: the reception prose at the top of
+  a panel is a summary, so it renders collapsed (a "Reception ▸" head)
+  unless Show summaries is on — Show citations alone gives clean,
+  prose-free panels. The head toggles it per panel either way.
+- **Paper thresholds**: two sliders filtering the paper list itself. The
+  citation slider is numeric (minimum displayed count, quadratic mapping
+  for fine control at the low end). The **impact slider speaks in plain
+  tiers** — all papers / top half / top quarter / top 10% / top 3% by
+  impact — because the raw score (`Σ weight(function) × count`, weights
+  in SCHEMA.md, computed from `index.json`'s per-paper `functions`
+  counts) means nothing to a reader; tier thresholds are quantiles of
+  the corpus impact distribution. Papers without data are hidden once a
+  threshold is above zero.
 - **Aggregate overview**: a box above the list totalling the shown
   papers' citations, combined impact, and detailed/passing judged counts,
   with a **works citing several of these papers** finder that loads the

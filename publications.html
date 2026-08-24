@@ -8,7 +8,7 @@
        To add a publication, append an entry to that file.
        To feature a paper, set "featured": true on its entry (award papers
        with a "price" are featured automatically). -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=5"/>
   <!-- Umami analytics (privacy-friendly, cookieless) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="0501f709-b527-45af-8727-062721122bb4"></script>
 </head>
@@ -184,8 +184,8 @@
                   <div class="cite-tools-row">Citations ≥ <b id="cite-min-cites-label">0</b>
                     <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0">
                   </div>
-                  <div class="cite-tools-row">Impact ≥ <b id="cite-min-impact-label">0</b>
-                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="100" value="0">
+                  <div class="cite-tools-row">Impact: <b id="cite-min-impact-label">all papers</b>
+                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0">
                   </div>
                   <div class="cite-tools-note">Impact weighs each citation by its
                     category (building on a paper counts more than citing it in a
@@ -215,7 +215,7 @@
   <script src="assets/js/common.js"></script>
   <script src="assets/js/pubs.js"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
-  <script src="assets/js/citations.js?v=5"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=4"></script> <!-- the filters controller -->
+  <script src="assets/js/citations.js?v=6"></script>    <!-- per-paper citation view (data/citations/) -->
+  <script src="assets/js/publications.js?v=5"></script> <!-- the filters controller -->
 </body>
 </html>

@@ -205,13 +205,18 @@ def main():
         # External judged function counts: feed the page-level impact score
         # and aggregate overview without loading the per-paper file.
         fn_counts = {}
+        cent_counts = {}
         for e in paper["citations"]:
             if e["split"] and not e.get("commit"):
                 fn_counts[e["function"]] = fn_counts.get(e["function"], 0) + 1
+                c = e.get("centrality")
+                if c in ("core", "engaged", "peripheral"):
+                    cent_counts[c] = cent_counts.get(c, 0) + 1
         index["papers"][key] = {
             "verified": paper["counts"]["works"],
             "gscholar": gs,
             "functions": fn_counts,
+            "centrality": cent_counts,
         }
         c = paper["counts"]
         print(f"{key}: raw={c['records_raw']} works={c['works']} "

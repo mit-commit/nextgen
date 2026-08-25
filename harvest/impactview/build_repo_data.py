@@ -111,6 +111,15 @@ def main():
     # forks etc.); keyed by own_repo, expanded to that ecosystem's papers
     man_path = os.path.join(HERE, 'manual-rows.json')
     manual = json.load(open(man_path))['rows'] if os.path.exists(man_path) else []
+    # embodiment judgments (judge_embodiment.py, human-overridable):
+    # ecosystem rows flow to a paper only through an own repo that
+    # EMBODIES the paper's contribution. Unjudged pairs default to true.
+    emb_path = os.path.join(HERE, 'embodiment.json')
+    embodiment = json.load(open(emb_path)) if os.path.exists(emb_path) else {}
+
+    def embodies(key, repo):
+        j = embodiment.get(key, {}).get(repo)
+        return True if j is None else bool(j.get('embodies'))
     own_map = {}
     for k2 in set(verified) | set(inventory):
         names = set()
@@ -207,6 +216,8 @@ def main():
         # evidence tooltip so multi-ecosystem papers stay legible.
         for r in eco_verified.get(key, []) + [
                 m for m in manual if m['own_repo'].lower() in own_map.get(key, set())]:
+            if r.get('own_repo') and not embodies(key, r['own_repo']):
+                continue
             entry = {'url': r['url'], 'group': r['group'], 'name': r['name'],
                      'evidence': (f"ecosystem of {r['own_repo']}: " if r.get('own_repo') else '')
                                  + (r.get('evidence') or '')}
@@ -237,7 +248,8 @@ def main():
         # index (currently only halide-import.json). Mapped verbatim --
         # no GitHub refetch, no re-judging -- skip only an exact repo the
         # paper already carries under any other role/group.
-        halide_here = halide_rows if 'halide/halide' in own_map.get(key, set()) else []
+        halide_here = halide_rows if ('halide/halide' in own_map.get(key, set())
+                                      and embodies(key, 'halide/Halide')) else []
         for r in halide_here:
             name_l = r['name'].lower()
             if name_l in {n for n, _ in seen}:

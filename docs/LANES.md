@@ -1062,6 +1062,21 @@ raise it to the setup lane.
   student accounts doesn't work; the next lever is reading each
   thesis's own full text for repo URLs/tool names (fulltext-lane
   machinery), and pre-2008 theses predate GitHub entirely.
+- **Embodiment gate** (2026-08-25, human: project papers were all
+  inheriting the full project ecosystem; "some overlap is ok, if it is
+  really an overlap — i.e. the new parts of the paper are captured in
+  that repo"): new judge_embodiment.py batch-judges every (paper,
+  implementation-repo) pair — does the repo contain THIS paper's
+  contribution? 162 pairs, $0.29, 142 embody / 20 do not (keynotes,
+  position papers, surveys, and separately-implemented tools: the
+  StreamIt IDE, Nimble-compiler work, Cagra vs graphit, FROST vs
+  tiramisu, SiblingRivalry-in-PetaBricks vs opentuner). Judgments in
+  harvest/impactview/embodiment.json — human-overridable one-word
+  edits, unjudged pairs default to embodies=true. build_repo_data.py
+  attaches ecosystem rows (hunt, halide-import, manual) and therefore
+  repo-side impact only through embodying anchors; own-repo rows stay
+  on every project paper; descendants stay per-citing-work. Site:
+  162 papers / 4,377 rows.
 - **Halide import expansion** (2026-08-25, human asked why the 2012
   SIGGRAPH and 2013 PLDI Halide papers had different repo sets): the
   only criteria inconsistency was the round-8 halide-import fold, which

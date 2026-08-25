@@ -865,6 +865,23 @@
    "evidence": "contexts"
   },
   {
+   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "Micro",
+   "authors": "Nandeeka Nayak, Toluwanimi O. Odemuyiwa, Shubham Ugare et al.",
+   "url": "https://doi.org/10.1145/3613424.3623791",
+   "cited_by": 19,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Functional collection programming with semi-ring dictionaries",
    "function": "supports-claim",
    "split": "detailed",
@@ -1620,22 +1637,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2023,
-   "venue": "Micro",
-   "authors": "Nandeeka Nayak, Toluwanimi O. Odemuyiwa, Shubham Ugare et al.",
-   "url": "https://doi.org/10.1145/3613424.3623791",
-   "cited_by": 19,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Unified Convolution Framework: A compiler-based approach to support sparse convolutions",
    "function": "detailed-citation",
    "split": "detailed",
@@ -1849,11 +1850,11 @@
    "url": "https://doi.org/10.1109/cgo68049.2026.11394842",
    "cited_by": 0,
    "centrality": "peripheral",
-   "confidence": "high",
+   "confidence": "medium",
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
@@ -2389,5 +2390,5 @@
    "evidence": "title_only"
   }
  ],
- "reception": "Outside the project, the level-format abstraction became a shared vocabulary for sparse compilation. Works that adopt the idea carry it beyond taco's setting: the Sparse Abstract Machine builds a hardware abstraction around per-dimension level formats, Stardust and SpDISTAL take the approach to reconfigurable dataflow and distributed machines, and compiler work on modular sparse workspaces and sparse tensor convolutions reasons in the same terms. Others use taco itself, from GPU code generation in Sgap to query optimization in Galley. Around this core, a larger body of sparse-systems papers cites the work, often in passing, as one of the compilers that made formats a first-class concern."
+ "reception": "Outside the project, the level-format abstraction became a shared vocabulary for sparse compilation. Works that adopt the idea carry it beyond taco's setting: the Sparse Abstract Machine builds a hardware abstraction around per-dimension level formats, Stardust and SpDISTAL take the approach to reconfigurable dataflow and distributed machines, and compiler work on modular sparse workspaces and sparse tensor convolutions reasons in the same terms. Others use taco itself, from GPU code generation in Sgap to query optimization in Galley. Around this core, a larger body of sparse-systems papers cites the work, often in passing, as one of the compilers that made formats a first-class concern. The implementation lives on in the tensor-compiler/taco repository, and an evaluated artifact accompanies the paper."
 }

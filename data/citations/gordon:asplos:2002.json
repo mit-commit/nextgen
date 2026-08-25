@@ -7,7 +7,7 @@
   "records_raw": 513,
   "works": 390,
   "commit": 28,
-  "judged": 297,
+  "judged": 298,
   "gscholar": null
  },
  "citations": [
@@ -149,6 +149,22 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Evaluation of dynamic voltage and frequency scaling for stream programs",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "ACM International Conference on Computing Frontiers",
+   "authors": "Arun Rangasamy, Y. N. Srikant",
+   "url": "https://doi.org/10.1145/2016604.2016654",
+   "cited_by": 5,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "StreamIt on Fleet",
@@ -475,22 +491,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "Hierarchical coarse-grained stream compilation for software defined radio",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 2007,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Yuan Lin, Manjunath Kudlur, Scott Mahlke et al.",
-   "url": "https://doi.org/10.1145/1289881.1289903",
-   "cited_by": 19,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "uses-tool"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Automated space/time scaling of streaming task graphs on field-programmable gate arrays",
@@ -1725,6 +1725,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Dynamic scheduling of stream programs on embedded multi-core processors",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
+   "authors": "Haeseung Lee, Weijia Che, Karam S. Chatha",
+   "url": "https://doi.org/10.1145/2380445.2380465",
+   "cited_by": 13,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Lossless Image Compression Exploiting Streaming Model for Efficient Execution on Multicores",
@@ -3136,6 +3149,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Hierarchical coarse-grained stream compilation for software defined radio",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Yuan Lin, Manjunath Kudlur, Scott Mahlke et al.",
+   "url": "https://doi.org/10.1145/1289881.1289903",
+   "cited_by": 19,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Tiled microprocessors",
    "function": "detailed-citation",
    "split": "detailed",
@@ -3629,19 +3655,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "Dynamic scheduling of stream programs on embedded multi-core processors",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2012,
-   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
-   "authors": "Haeseung Lee, Weijia Che, Karam S. Chatha",
-   "url": "https://doi.org/10.1145/2380445.2380465",
-   "cited_by": 13,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Kernel Partitioning of Streaming Applications: A Statistical Approach to an NP-complete Problem",
@@ -4592,20 +4605,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Evaluation of dynamic voltage and frequency scaling for stream programs",
-   "function": "unknown",
-   "split": null,
-   "year": 2011,
-   "venue": "ACM International Conference on Computing Frontiers",
-   "authors": "Arun Rangasamy, Y. N. Srikant",
-   "url": "https://doi.org/10.1145/2016604.2016654",
-   "cited_by": 5,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Integrated framework for heterogeneous embedded platforms using OpenCL",
    "function": "unknown",
    "split": null,
@@ -5382,5 +5381,5 @@
    "evidence": "title_only"
   }
  ],
- "reception": "Beyond the thesis, external reception runs largely through StreamIt itself: groups retargeting the language treat this paper's partitioning, layout, and communication scheduling as the reference compilation path. Huynh and colleagues mapped streaming applications onto multi-GPU systems, Wang and O'Boyle partitioned stream graphs with machine learning, and StreamX10 carried the approach to X10, while work on throughput-driven synthesis for pipelined multicores measured against it. The larger citation mass is more distant: the paper appears in many works as the example of compiling a stream language onto communication-exposed hardware, and a steady share cites its Raw results as evidence of what static orchestration can achieve."
+ "reception": "Beyond the thesis, external reception runs largely through StreamIt itself: groups retargeting the language treat this paper's partitioning, layout, and communication scheduling as the reference compilation path. Huynh and colleagues mapped streaming applications onto multi-GPU systems, Wang and O'Boyle partitioned stream graphs with machine learning, and StreamX10 carried the approach to X10, while throughput-driven synthesis for pipelined multicores measured against it. The larger citation mass is more distant: the paper appears in many works as the example of compiling a stream language onto communication-exposed hardware, and a steady share cites its Raw results as evidence of what static orchestration can achieve. The StreamIt compiler infrastructure lives on in the bthies/streamit repository."
 }

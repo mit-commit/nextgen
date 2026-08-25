@@ -7,7 +7,7 @@
   "records_raw": 76,
   "works": 66,
   "commit": 5,
-  "judged": 51,
+  "judged": 52,
   "gscholar": null
  },
  "citations": [
@@ -501,6 +501,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Dynamic Fine-Grain Scheduling of Pipeline Parallelism",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Daniel Sánchez, David Lo, Richard M. Yoo et al.",
+   "url": "https://doi.org/10.1109/pact.2011.9",
+   "cited_by": 59,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Parallel bubble sort using stream programming paradigm",
    "function": "passing-citation",
    "split": "passing",
@@ -782,20 +798,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Dynamic Fine-Grain Scheduling of Pipeline Parallelism",
-   "function": "unknown",
-   "split": null,
-   "year": 2011,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Daniel Sánchez, David Lo, Richard M. Yoo et al.",
-   "url": "https://doi.org/10.1109/pact.2011.9",
-   "cited_by": 59,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "An empirical characterization of stream programs and its implications for language and compiler design",
    "function": "unknown",
    "split": null,
@@ -883,5 +885,5 @@
    "evidence": "title_only"
   }
  ],
- "reception": "Outside the group the citation record is modest and stays close to stream compilation. The most engaged use is in mobile sensing, where work on static memory management builds on the schedules and a follow-on line adopts the ideas; scheduling papers such as the buffer-space efficient, deadlock-free work of Park and Dally cite its results as evidence about the code-size and buffer-space tradeoff. Evaluations of other stream systems reuse its benchmarks, and most remaining citations are brief mentions situating new schedulers against StreamIt. It is a paper cited within one community — mostly as background, occasionally as a foundation."
+ "reception": "Outside the group the citation record is modest and stays close to stream compilation. The most engaged use is in mobile sensing, where work on static memory management builds on the schedules and a follow-on line adopts the ideas; the buffer-space efficient, deadlock-free scheduling work of Park and Dally cites its results as evidence about the code-size and buffer-space tradeoff. Evaluations of other stream systems reuse its benchmarks, and most remaining citations are brief mentions situating new schedulers against StreamIt. It is a paper cited within one community — mostly as background, occasionally as a foundation. The StreamIt compiler infrastructure lives on at bthies/streamit."
 }

@@ -32,6 +32,26 @@
    "evidence": "contexts"
   },
   {
+   "title": "Fast Autoscheduling for Sparse ML Frameworks",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2026,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Bobby Yan, Alexander J Root, Trevor Gale et al.",
+   "url": "https://doi.org/10.1109/cgo68049.2026.11394842",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "positions",
+    "exemplifies"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution",
    "function": "uses-tool",
    "split": "detailed",
@@ -474,25 +494,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Fast Autoscheduling for Sparse ML Frameworks",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2026,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Bobby Yan, Alexander J Root, Trevor Gale et al.",
-   "url": "https://doi.org/10.1109/cgo68049.2026.11394842",
-   "cited_by": 0,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "detailed-citation"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "SparseZETA: Intelligent Auto-tuner for Designing High-Performance SpMV Programs",
    "function": "exemplifies",
    "split": "passing",
@@ -589,19 +590,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2023,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Nandeeka Nayak, Toluwanimi O. Odemuyiwa, Shubham Ugare et al.",
-   "url": "https://doi.org/10.48550/arxiv.2304.07931",
-   "cited_by": 19,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
   },
   {
    "title": "Unified Compilation for Lossless Compression and Sparse Computing",
@@ -932,6 +920,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2023,
+   "venue": "Micro",
+   "authors": "Nandeeka Nayak, Toluwanimi O. Odemuyiwa, Shubham Ugare et al.",
+   "url": "https://doi.org/10.1145/3613424.3623791",
+   "cited_by": 19,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "TensorIR: An Abstraction for Automatic Tensorized Program Optimization",
    "function": "passing-citation",
    "split": "passing",
@@ -1128,5 +1129,5 @@
    "evidence": "title_only"
   }
  ],
- "reception": "The uptake runs deepest inside the sparse-compilation community. Mosaic builds its interoperable tensor-algebra compiler on the framework, Stardust extends it toward reconfigurable dataflow hardware, the compilation of modular and general sparse workspaces continues the workspaces line, and the Sparse Abstract Machine, DISTAL, and a compiler for fused relational operations on multisets carry its ideas elsewhere. Others use it as a measuring stick: polyhedral code generation for sparse contraction and register tiling for unstructured sparsity compare against it, and BaCO tunes over its scheduling space. The remaining citations mostly place the paper in lists of sparse tensor compilers, so the record is compact but substantive at its center."
+ "reception": "The uptake runs deepest inside the sparse-compilation community. Mosaic builds its interoperable tensor-algebra compiler on the framework, Stardust extends it toward reconfigurable dataflow hardware, the compilation of modular and general sparse workspaces continues the workspaces line, and the Sparse Abstract Machine, DISTAL, and a compiler for fused relational operations on multisets carry its ideas elsewhere. Others use it as a measuring stick: polyhedral code generation for sparse contraction and register tiling for unstructured sparsity compare against it, and BaCO tunes over its scheduling space. The remaining citations mostly place the paper in lists of sparse tensor compilers, so the record is compact but substantive at its center. The implementation is available in the tensor-compiler/taco repository at the oopsla2020 branch."
 }

@@ -1367,13 +1367,14 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     (function pilotOnlyTemp(){
       var PILOT_KEYS = ['halide:pldi:2013', 'thies:cc:2002', 'taylor:micro:2002',
         'amarasinghe:ijpp:2005', 'petkov:ipdps:2002', 'thies:toplas:2007',
-        'levison:istas:2002', 'netblocks-pldi24'];
+        'levison:istas:2002', 'netblocks-pldi24',
+        'Kjolstad:2017:TTG:3155562.3155683'];
       var on = false;
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'btn';
       btn.textContent = 'Pilot papers only [TEMP]';
-      btn.title = 'Temporary review filter: only the 8 taxonomy-pilot papers';
+      btn.title = 'Temporary review filter: only the 9 taxonomy-pilot papers';
       btn.setAttribute('aria-pressed', 'false');
       btn.style.border = '1px dashed #c60';
       btn.style.color = '#c60';

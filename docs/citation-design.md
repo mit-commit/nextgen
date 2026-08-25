@@ -157,11 +157,11 @@ citation-tools row (2026-08-24 request):
   the corpus impact distribution. Papers without data are hidden once a
   threshold is above zero.
 - **Aggregate overview**: one plain line above the list — "N of M shown
-  papers have T total citations" — with a **works citing several of
-  these papers** finder that loads the
-  shown papers' files through the progressive queue and lists works
-  citing two or more of them (matched by DOI or normalized title;
-  untitled records skipped).
+  papers have T total citations". (A "works citing several of these
+  papers" finder shipped briefly and was removed by the human's call: a
+  reverse index of cross-paper citers deserves a proper implementation,
+  not an on-the-fly scan. `CITATIONS.ensureData`/`crossCiters` remain in
+  citations.js as the seed of that future feature.)
 - **Years** moved from the button grid into a facet listbox styled like
   Topics & Projects and Authors.
 

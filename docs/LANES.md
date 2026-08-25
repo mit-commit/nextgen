@@ -609,6 +609,11 @@ raise it to the setup lane.
   visible), halving its height (299px → 149px) so all three
   citation-tools blocks sit at equal height (176px measured).
   publications.js?v=7.
+- **Cross-citers button removed** (2026-08-24): the human liked the
+  concept but ruled a reverse index of cross-paper citers must be done
+  properly, not as an on-the-fly scan — button dropped from the
+  overview; CITATIONS.ensureData/crossCiters stay in citations.js as
+  the seed of a future proper implementation. publications.js?v=8.
 
 ## Cross-lane requests
 

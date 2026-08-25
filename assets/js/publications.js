@@ -1099,47 +1099,6 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       items.length.toLocaleString('en-US') + ' shown papers have <b>' +
       totalC.toLocaleString('en-US') + '</b> total citations.';
     box.appendChild(l1);
-    var cc = document.createElement('div'); cc.className = 'cite-crossciters';
-    var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'btn';
-    btn.textContent = 'Works citing several of these papers';
-    var out = document.createElement('div');
-    btn.onclick = function(){
-      btn.disabled = true; btn.textContent = 'Loading citation data…';
-      CITATIONS.ensureData(withData.map(function(w){ return w.key; })).then(function(){
-        var titleByKey = {};
-        withData.forEach(function(w){ titleByKey[w.key] = w.title; });
-        var hits = CITATIONS.crossCiters(withData.map(function(w){ return w.key; }));
-        btn.textContent = 'Works citing several of these papers (' + hits.length.toLocaleString('en-US') + ')';
-        btn.disabled = false;
-        out.innerHTML = '';
-        var ul = document.createElement('ul');
-        var cap = Math.min(hits.length, 40);
-        for (var h = 0; h < cap; h++){
-          var li = document.createElement('li');
-          var w = hits[h].work;
-          if (w.url){
-            var a = document.createElement('a'); a.href = w.url; a.target = '_blank';
-            a.rel = 'noopener'; a.textContent = w.title; li.appendChild(a);
-          } else { li.appendChild(document.createTextNode(w.title)); }
-          var which = hits[h].papers.map(function(k){
-            var t = titleByKey[k] || k;
-            return t.length > 34 ? t.slice(0, 34) + '…' : t;
-          }).join('; ');
-          li.appendChild(document.createTextNode(' — cites ' + hits[h].papers.length +
-            ' of these papers (' + which + ')' +
-            (w.cited_by != null ? '; ' + w.cited_by.toLocaleString('en-US') + ' cites of its own' : '')));
-          ul.appendChild(li);
-        }
-        if (hits.length > cap){
-          var more = document.createElement('li');
-          more.textContent = '… and ' + (hits.length - cap).toLocaleString('en-US') + ' more.';
-          ul.appendChild(more);
-        }
-        out.appendChild(ul);
-        track('citations-cross-citers', { papers: withData.length, hits: hits.length });
-      });
-    };
-    cc.appendChild(btn); cc.appendChild(out); box.appendChild(cc);
   }
 
   // Paper counts on the page-level citation controls: how many currently

@@ -1,0 +1,211 @@
+# Own-repo inventory — phase A candidates
+
+Pool: 346 non-fork repos across 121 known owners, minus 115 already-verified repos.
+102 candidate matches; 17 papers would gain their first repo.
+
+Score: 2/title-token overlap + 3 owner-is-author + 1 created-within-window. Mechanical only — review before anything ships.
+
+- `d2x-cgo23` (2023) ← **BuildIt-lang/d2x_cgo23_artifacts** (3★, created 2022) score 13, overlap: contextual, d2x, debugger, dsls, extensible, modern
+    - Artifacts for the CGO 2023 paper titled "D2X: An eXtensible conteXtual Debugger for modern DSLs"
+- `tiramisu` (2019) **[NEW]** ← **Tiramisu-Compiler/tiramisu-compiler.github.io** (2★, created 2018) score 9, overlap: expressing, polyhedral, portable, tiramisu
+    - A polyhedral compiler for expressing fast and portable data parallel algorithms
+- `tiramisu-auto` (2021) **[NEW]** ← **Tiramisu-Compiler/cost_model** (8★, created 2023) score 9, overlap: cost, deep, learning, model
+    - A cost model for compiler performance optimization using deep learning.
+- `Kjolstad:2017:TTG:3155562.3155683` (2017) ← **tensor-compiler/taco-bench** (5★, created 2017) score 7, overlap: algebra, taco, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `ahrens_finch_2025` (2025) ← **finch-tensor/finch-tensor** (26★, created 2025) score 7, overlap: finch, sparse, tensor
+    - Productive Sparse Array Programming
+- `ahrens_finch_2025` (2025) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 7, overlap: finch, sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `shinde:2018` (2019) **[NEW]** ← **tensor-compiler/taco-bench** (5★, created 2017) score 7, overlap: algebra, taco, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `tiramisu-li` (2023) ← **Tiramisu-Compiler/cost_model** (8★, created 2023) score 7, overlap: deep, learning, model
+    - A cost model for compiler performance optimization using deep learning.
+- `Chaudhary:meng-thesis:2026` (2026) ← **willow-ahrens/DSLs_for_HPC** (1★, created 2025) score 5, overlap: domain, specific
+    - Domain Specific Languages for High Performance Computing - 93621 - CS 8803 - DSL
+- `Kjolstad:2017:TTG:3155562.3155683` (2017) ← **tensor-compiler/tensor-compiler.github.io** (1★, created 2017) score 5, overlap: taco, tensor
+    - Website for the TACO project
+- `ahrens_autoscheduling_2022` (2022) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `ahrens_autoscheduling_2022` (2022) ← **Tiramisu-Compiler/cost_model** (8★, created 2023) score 5, overlap: cost, model
+    - A cost model for compiler performance optimization using deep learning.
+- `ahrens_autoscheduling_2022` (2022) ← **Tiramisu-Compiler/cost_model_pretrain** (0★, created 2024) score 5, overlap: cost, model
+    - (no description)
+- `ahrens_finch_2025` (2025) ← **finch-tensor/finch-tensor.github.io** (0★, created 2025) score 5, overlap: finch, tensor
+    - (no description)
+- `ahrens_finch_2025` (2025) ← **psg-mit/spire-artifact** (4★, created 2023) score 5, overlap: control, flow
+    - PLDI'24 Artifact for "The T-Complexity Costs of Error Correction for Control Flow in Quantum Computation".
+- `alexandra:meng-thesis:2023` (2023) ← **finch-tensor/finch-tensor** (26★, created 2025) score 5, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `alexandra:meng-thesis:2023` (2023) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `arxiv:2005.04091` (2020) **[NEW]** ← **Tiramisu-Compiler/tiramisu-compiler.github.io** (2★, created 2018) score 5, overlap: polyhedral, tiramisu
+    - A polyhedral compiler for expressing fast and portable data parallel algorithms
+- `askit-cgo24` (2024) ← **katsumiok/llm-book** (24★, created 2025) score 5, overlap: large, models
+    - Sample code for the book “Understanding Large Language Models: An Introduction to Software Development in the Generative AI Era” (written in Japanese)
+- `bruening:vee:2012` (2012) ← **DynamoRIO/drk** (44★, created 2014) score 5, overlap: dynamic, instrumentation
+    - Dynamic instrumentation of the Linux kernel
+- `buildsl-cgo22` (2022) ← **GraphIt-DSL/GraphIt-DSL.github.io** (0★, created 2019) score 5, overlap: dsl, graphit
+    - (no description)
+- `chen:pldi:2022` (2022) ← **psg-mit/spire-artifact** (4★, created 2023) score 5, overlap: control, flow
+    - PLDI'24 Artifact for "The T-Complexity Costs of Error Correction for Control Flow in Quantum Computation".
+- `chen:pldi:2022` (2022) ← **psg-mit/qcm-artifact** (8★, created 2023) score 5, overlap: control, flow
+    - OOPSLA'24 Artifact for "Quantum Control Machine: The Limits of Control Flow in Quantum Programming".
+- `chou:2018:formats` (2018) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `chou:2022:dynamic-formats` (2022) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `chou:phd-thesis:2022` (2022) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `chou:sm-thesis:2018` (2018) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `fred-taco` (2020) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `graphit` (2018) ← **GraphIt-DSL/GraphIt-DSL.github.io** (0★, created 2019) score 5, overlap: dsl, graphit
+    - (no description)
+- `jaeyeon:asplos:2023` (2023) ← **finch-tensor/finch-tensor** (26★, created 2025) score 5, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `jaeyeon:asplos:2023` (2023) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `jaeyeon:sm-thesis:2023` (2023) ← **finch-tensor/finch-tensor** (26★, created 2025) score 5, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `jaeyeon:sm-thesis:2023` (2023) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `kjolstad:2018:workspaces` (2019) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `kjolstad:oopsla:2017` (2017) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `lerer:dev:2010` (2010) **[NEW]** ← **rrnewton/haskell-lockfree** (112★, created 2011) score 5, overlap: collection, data
+    - A collection of different packages for CAS based data structures.
+- `min:meng-thesis:2016` (2016) **[NEW]** ← **halide/halide_bazel** (2★, created 2016) score 5, overlap: experimental, halide
+    - DEPRECATED, Experimental Bazel build rules for Halide
+- `patel_systec_2025` (2025) ← **finch-tensor/finch-tensor** (26★, created 2025) score 5, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `patel_systec_2025` (2025) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `patel_systec_2025` (2025) ← **radha-patel/SySTeC** (17★, created 2023) score 5, overlap: symmetric, systec
+    - Performant kernels for symmetric tensors 
+- `patricio:2019` (2019) **[NEW]** ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `randomwalk-iiswc21` (2021) ← **Tiramisu-Compiler/cost_model** (8★, created 2023) score 5, overlap: deep, learning
+    - A cost model for compiler performance optimization using deep learning.
+- `ryan:2020` (2020) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `senanayake2020sparse` (2020) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `shinde:2018` (2019) **[NEW]** ← **tensor-compiler/tensor-compiler.github.io** (1★, created 2017) score 5, overlap: taco, tensor
+    - Website for the TACO project
+- `suzanne:2020` (2020) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `thies:ictd:2009` (2009) **[NEW]** ← **rrnewton/haskell-lockfree** (112★, created 2011) score 5, overlap: collection, data
+    - A collection of different packages for CAS based data structures.
+- `tiramisu-auto` (2021) **[NEW]** ← **rrnewton/AMBROSIA** (0★, created 2018) score 5, overlap: based, model
+    - Actor-Model Based Reliable Object System for Internet Applications
+- `tony:2020` (2020) ← **tensor-compiler/taco-bench** (5★, created 2017) score 5, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `tugsuu:2020` (2020) ← **GraphIt-DSL/GraphIt-DSL.github.io** (0★, created 2019) score 5, overlap: dsl, graphit
+    - (no description)
+- `tugsuu:2020` (2020) ← **Tiramisu-Compiler/tiramisu-compiler.github.io** (2★, created 2018) score 5, overlap: algorithms, parallel
+    - A polyhedral compiler for expressing fast and portable data parallel algorithms
+- `willow:phd-thesis:2024` (2024) ← **finch-tensor/finch-tensor** (26★, created 2025) score 5, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `willow:phd-thesis:2024` (2024) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 5, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `Ramirez:sb-thesis:2021` (2021) **[NEW]** ← **willow-ahrens/DSLs_for_HPC** (1★, created 2025) score 4, overlap: domain, specific
+    - Domain Specific Languages for High Performance Computing - 93621 - CS 8803 - DSL
+- `Ricardo:sb-thesis:2021` (2021) **[NEW]** ← **willow-ahrens/DSLs_for_HPC** (1★, created 2025) score 4, overlap: domain, specific
+    - Domain Specific Languages for High Performance Computing - 93621 - CS 8803 - DSL
+- `ahrens_autoscheduling_2022` (2022) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `alexandra:meng-thesis:2023` (2023) ← **tensor-compiler/taco-bench** (5★, created 2017) score 4, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `ansel:cgo:2011` (2011) ← **psg-mit/siren** (0★, created 2023) score 4, overlap: support, variable
+    - Siren is a first-order functional probabilistic programming language, implemented with the hybrid inference interface, with support for inference plans. Distributions encoding annotations can be added to random variables to select the representation of the variable's distribution to be used during inference. 
+- `ansel:mitcsail-tr:2010` (2010) ← **psg-mit/siren** (0★, created 2023) score 4, overlap: support, variable
+    - Siren is a first-order functional probabilistic programming language, implemented with the hybrid inference interface, with support for inference plans. Distributions encoding annotations can be added to random variables to select the representation of the variable's distribution to be used during inference. 
+- `arxiv:2005.04091` (2020) **[NEW]** ← **Tiramisu-Compiler/cost_model** (8★, created 2023) score 4, overlap: deep, learning
+    - A cost model for compiler performance optimization using deep learning.
+- `babb:lcs-tr:1998` (1998) **[NEW]** ← **ychen306/ga2fhir** (0★, created 2015) score 4, overlap: into, smart
+    - Load Variants from GA4GH into SMART-on-FHIR Genomics
+- `chou-pldi20-taco-conversion` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `chou-pldi20-taco-conversion` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `chou:2018:formats` (2018) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `chou:2018:formats` (2018) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `chou:2022:dynamic-formats` (2022) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `chou:2022:dynamic-formats` (2022) ← **tensor-compiler/taco-bench** (5★, created 2017) score 4, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `chou:phd-thesis:2022` (2022) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `chou:phd-thesis:2022` (2022) ← **tensor-compiler/taco-bench** (5★, created 2017) score 4, overlap: algebra, tensor
+    - Repository to reproduce the results from paper "The Tensor Algebra Compiler".
+- `chou:sm-thesis:2018` (2018) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `chou:sm-thesis:2018` (2018) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `cola-dcc` (2021) **[NEW]** ← **willow-ahrens/DSLs_for_HPC** (1★, created 2025) score 4, overlap: domain, specific
+    - Domain Specific Languages for High Performance Computing - 93621 - CS 8803 - DSL
+- `fred-taco` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `fred-taco` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `kjolstad:2018:workspace` (2018) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `kjolstad:2018:workspace` (2018) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `leger:meng-thesis:2004` (2004) **[NEW]** ← **weld-project/pyweld** (6★, created 2019) score 4, overlap: api, under
+    - A new Weld Python API. Under development.
+- `mueller_sparse_2020` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `mueller_sparse_2020` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `parker:meng-thesis:2016` (2016) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `parker:meng-thesis:2016` (2016) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `patricio:2019` (2019) **[NEW]** ← **rrnewton/Haskell-CnC** (17★, created 2011) score 4, overlap: library, runtime
+    - Intel Concurrent Collections for Haskell.  Library and parallel runtime(s).  Now on github rather than darcs.
+- `rawn:oopsla:2021` (2021) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: array, sparse
+    - Productive Sparse Array Programming
+- `ray:phd-thesis:2023` (2023) **[NEW]** ← **rrnewton/concurrent-skiplist** (3★, created 2014) score 4, overlap: based, implementation
+    - An implementation of maps and sets based on a concurrent-skiplist implementation.
+- `rnk:meng-thesis:2011` (2011) ← **DynamoRIO/drk** (44★, created 2014) score 4, overlap: dynamic, instrumentation
+    - Dynamic instrumentation of the Linux kernel
+- `rnk:meng-thesis:2011` (2011) ← **rrnewton/reverie-e9patch** (0★, created 2026) score 4, overlap: binary, instrumentation
+    - Experimental Reverie Linux guest-interception backend using the e9patch dependency for binary instrumentation.
+- `rnk:meng-thesis:2011` (2011) ← **rrnewton/reverie-dynamorio** (0★, created 2026) score 4, overlap: binary, instrumentation
+    - Experimental reverie Linux guest-interception backend using DynamoRio dependency for binary instrumentation.
+- `rnk:meng-thesis:2011` (2011) ← **rrnewton/reverie-sabre** (0★, created 2026) score 4, overlap: binary, instrumentation
+    - Experimental reverie Linux guest-interception backend using Sabre dependency for binary instrumentation.
+- `ryan:2020` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `ryan:2020` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `salsa` (2020) **[NEW]** ← **willow-ahrens/DSLs_for_HPC** (1★, created 2025) score 4, overlap: domain, specific
+    - Domain Specific Languages for High Performance Computing - 93621 - CS 8803 - DSL
+- `senanayake2020sparse` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `senanayake2020sparse` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `seq-nature-biotech` (2021) ← **rrnewton/Python-CnC** (2★, created 2010) score 4, overlap: based, python
+    - [Coming Soonish]  A complete parallel programming environment based on the CnC model.
+- `suzanne:2020` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `suzanne:2020` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `tiramisu-auto` (2021) **[NEW]** ← **rrnewton/Python-CnC** (2★, created 2010) score 4, overlap: based, model
+    - [Coming Soonish]  A complete parallel programming environment based on the CnC model.
+- `tiramisu-auto` (2021) **[NEW]** ← **Tiramisu-Compiler/cost_model_pretrain** (0★, created 2024) score 4, overlap: cost, model
+    - (no description)
+- `tony:2020` (2020) ← **finch-tensor/finch-tensor** (26★, created 2025) score 4, overlap: sparse, tensor
+    - Productive Sparse Array Programming
+- `tony:2020` (2020) ← **finch-tensor/finch-jl-python** (25★, created 2023) score 4, overlap: sparse, tensor
+    - Sparse Tensor Programming in Python powered by Finch.jl
+- `vemal-neurips` (2019) **[NEW]** ← **Tiramisu-Compiler/rl_auto_scheduler** (6★, created 2023) score 4, overlap: auto, learning
+    - Reinforcement learning for compiler performance optimization.
+- `zhao:cc:2008` (2008) **[NEW]** ← **DynamoRIO/drk** (44★, created 2014) score 4, overlap: dynamic, instrumentation
+    - Dynamic instrumentation of the Linux kernel

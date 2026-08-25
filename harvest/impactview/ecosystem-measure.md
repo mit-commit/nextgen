@@ -1,0 +1,58 @@
+# Tier-2 ecosystem measure — all own repos
+
+52 repos. Raw candidates 810 (dependents + README/desc mentions); with the 300-per-signal giant cap: 810 to verify, est ~$8 at $0.01/judgment (generous). Dependents exist only for repos used as packages; mentions catch the rest.
+
+| repo | stars | forks | dependents | mentions | verify (capped) |
+|------|------:|------:|-----------:|---------:|----------------:|
+| halide/Halide | 6,589 | 1,105 | 19 | 232 | 251 |
+| exaloop/codon | 16,833 | 603 | 0 | 107 | 107 |
+| DynamoRIO/dynamorio | 3,144 | 622 | 0 | 103 | 103 |
+| jansel/opentuner | 438 | 126 | 80 | 5 | 85 |
+| weld-project/weld | 3,006 | 252 | 5 | 62 | 67 |
+| DynamoRIO/drmemory | 2,744 | 289 | 0 | 42 | 42 |
+| dmtcp/dmtcp | 469 | 155 | 0 | 28 | 28 |
+| tensor-compiler/taco | 1,366 | 200 | 0 | 18 | 18 |
+| ithemal/Ithemal | 153 | 37 | 0 | 13 | 13 |
+| ithemal/bhive | 42 | 16 | 0 | 9 | 9 |
+| Tiramisu-Compiler/tiramisu | 961 | 137 | 0 | 9 | 9 |
+| BuildIt-lang/buildit | 191 | 26 | 0 | 8 | 8 |
+| seq-lang/seq | 709 | 48 | 0 | 6 | 6 |
+| talnish/iiswc21_rwalk | 2 | 0 | 0 | 5 | 5 |
+| katsumiok/pyaskit | 79 | 4 | 4 | 1 | 5 |
+| katsumiok/ts-askit | 35 | 4 | 3 | 1 | 4 |
+| GraphIt-DSL/graphit | 392 | 48 | 0 | 4 | 4 |
+| spac-proj/SPAC | 0 | 1 | 0 | 3 | 3 |
+| simit-lang/simit | 459 | 52 | 0 | 3 | 3 |
+| finch-tensor/finch-tensor | 26 | 17 | 0 | 3 | 3 |
+| finch-tensor/finch-jl-python | 25 | 5 | 2 | 1 | 3 |
+| Tiramisu-Compiler/cost_model | 8 | 6 | 0 | 3 | 3 |
+| radha-patel/SySTeC | 17 | 0 | 0 | 2 | 2 |
+| nullplay/Workload-Aware-Co-Optimization | 8 | 5 | 0 | 2 | 2 |
+| finch-tensor/Finch.jl | 245 | 31 | 0 | 2 | 2 |
+| exaloop/seq | 59 | 3 | 0 | 2 | 2 |
+| BuildIt-lang/d2x | 9 | 1 | 0 | 2 | 2 |
+| ychen306/vegen | 31 | 10 | 0 | 1 | 1 |
+| willow-ahrens/Pigeon.jl | 0 | 0 | 0 | 1 | 1 |
+| tensor-compiler/taco-bench | 5 | 4 | 0 | 1 | 1 |
+| shoaibkamil/distributed-halide | 2 | 1 | 0 | 1 | 1 |
+| seq-lang/seq-benchmarks | 8 | 0 | 0 | 1 | 1 |
+| rrnewton/StreamIt | 2 | 4 | 0 | 1 | 1 |
+| rnk/dynamorio | 4 | 4 | 0 | 1 | 1 |
+| revec/llvm-revec | 29 | 5 | 0 | 1 | 1 |
+| revec/VectorBench | 30 | 5 | 0 | 1 | 1 |
+| radha-patel/symmetry-benchmarks | 0 | 1 | 0 | 1 | 1 |
+| petabricks/petabricks | 12 | 8 | 0 | 1 | 1 |
+| nullplay/Unified-Convolution-Framework | 10 | 0 | 0 | 1 | 1 |
+| katsumiok/askit-artifact.git | 0 | 0 | — | 1 | 1 |
+| jbosboom/streamjit | 12 | 6 | 0 | 1 | 1 |
+| finch-tensor/FinchBenchmarks | 1 | 2 | 0 | 1 | 1 |
+| dsharlet/slinky | 15 | 5 | 0 | 1 | 1 |
+| bthies/streamit | 71 | 23 | 0 | 1 | 1 |
+| adadima/gstaco | 5 | 0 | 0 | 1 | 1 |
+| BuildIt-lang/net-blocks-pldi24-artifacts | 4 | 1 | 0 | 1 | 1 |
+| BuildIt-lang/d2x_cgo23_artifacts | 3 | 0 | 0 | 1 | 1 |
+| BuildIt-lang/buildit_regex | 4 | 0 | 0 | 1 | 1 |
+| willow-ahrens/taco | 1 | 0 | 0 | 0 | 0 |
+| stevenraphael/Halide | 0 | 0 | 0 | 0 | 0 |
+| manya-bansal/prism | 0 | 0 | — | 0 | 0 |
+| github.com/PythonCompilers | 0 | 0 | — | 0 | 0 |

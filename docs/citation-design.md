@@ -156,9 +156,9 @@ citation-tools row (2026-08-24 request):
   counts) means nothing to a reader; tier thresholds are quantiles of
   the corpus impact distribution. Papers without data are hidden once a
   threshold is above zero.
-- **Aggregate overview**: a box above the list totalling the shown
-  papers' citations, combined impact, and detailed/passing judged counts,
-  with a **works citing several of these papers** finder that loads the
+- **Aggregate overview**: one plain line above the list — "N of M shown
+  papers have T total citations" — with a **works citing several of
+  these papers** finder that loads the
   shown papers' files through the progressive queue and lists works
   citing two or more of them (matched by DOI or normalized title;
   untitled records skipped).

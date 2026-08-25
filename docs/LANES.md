@@ -600,6 +600,10 @@ raise it to the setup lane.
   top half / top quarter / top 10% / top 3% by impact), thresholds taken
   from the corpus impact distribution. Verified: 327 → 89 → 43 → 17 → 5
   papers across the tiers.
+- **Overview simplified** (2026-08-24): the aggregate line now reads
+  just "N of M shown papers have T total citations" — combined impact
+  and the detailed/passing totals dropped per the human's wording.
+  publications.js?v=6.
 
 ## Cross-lane requests
 

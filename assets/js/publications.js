@@ -1084,29 +1084,20 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var box = els.citeOverview;
     if (!box) return;
     if (!CITE_INDEX || !window.CITATIONS){ box.className = 'cite-overview hidden'; return; }
-    var withData = [], totalC = 0, totalI = 0, det = 0, pas = 0, i, f;
-    var DET = {'extends':1,'uses-tool':1,'adopts-idea':1,'uses-benchmark':1,'baseline':1,
-               'positions':1,'surveys':1,'supports-claim':1,'detailed-citation':1};
+    var withData = [], totalC = 0, i;
     for (i = 0; i < items.length; i++){
       var row = CITE_INDEX[bibtexKeyOf(items[i])];
       if (!row) continue;
       withData.push({ key: bibtexKeyOf(items[i]), title: items[i].title || '' });
       totalC += CITATIONS.displayCount(row);
-      var imp = CITATIONS.impactScore(row);
-      if (imp != null) totalI += imp;
-      for (f in (row.functions || {})){
-        if (DET[f]) det += row.functions[f]; else pas += row.functions[f];
-      }
     }
     box.innerHTML = '';
     if (!withData.length){ box.className = 'cite-overview hidden'; return; }
     box.className = 'cite-overview';
     var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
     l1.innerHTML = '<b>' + withData.length.toLocaleString('en-US') + '</b> of ' +
-      items.length.toLocaleString('en-US') + ' shown papers have citation data — <b>' +
-      totalC.toLocaleString('en-US') + '</b> citations, combined impact <b>' +
-      totalI.toLocaleString('en-US') + '</b>. External judged citations: ' +
-      det.toLocaleString('en-US') + ' detailed / ' + pas.toLocaleString('en-US') + ' passing.';
+      items.length.toLocaleString('en-US') + ' shown papers have <b>' +
+      totalC.toLocaleString('en-US') + '</b> total citations.';
     box.appendChild(l1);
     var cc = document.createElement('div'); cc.className = 'cite-crossciters';
     var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'btn';

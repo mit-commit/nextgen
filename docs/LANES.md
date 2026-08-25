@@ -37,7 +37,7 @@ existing `data/*.xml`, `papers/`) belong to nobody. Raise before writing them.
 | **setup** | `data/idmap*.json`, `harvest/idmap*`, `docs/LANES.md` | **active** — all 327 entries of `data/publications.json` resolved; `data/idmap-review.json` is now empty. |
 | **citations** | `harvest/citations/` | **active** — `harvest_citations.py` (two passes: `--pass openalex`, `--pass s2`) has harvested citing-work metadata for every `data/idmap.json` entry with an id: 151 keys in the first sweep, plus 26 keys whose ids only landed with the later idmap-review resolutions (task `citations-s2-continue`, 2026-08-24) — 177 files, 26,192 merged citing works, all S2-enrichable keys enriched. |
 | **artifacts** | `harvest/artifacts/` | **active** — `found.json`/`review.json` built from Crossref+DataCite+OpenAlex (151 DOI'd entries) and a PDF text scan (309 local PDFs); ACM DL badge scraping via browser automation stayed blocked (see log), but a user-supplied `acm_badges.json` (badge markup for all 92 `10.1145` DOIs) was ingested — `found.json` now has 23 entries, 20 with a real ACM badge. All 6 `review.json` rows settled (2 promoted to `found.json`, 4 to `settled_not_own.json`); `review.json` is empty. See `harvest/artifacts/README.md`. |
-| **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. Step 2 (task `repos-search step 2`, 2026-08-24) complete: `search_github.py` scored candidates via the GitHub REST API for all 268 -- 217 strong, 27 weak-only, 24 none -- into `harvest/repos/candidates.json`. Auto-accepts nothing; see lane log. Task `repo-verify` (2026-08-25) in progress: a model pass over all papers' repo evidence (mentions + candidates) to emit `harvest/repos/verified.json`. |
+| **repos** | `harvest/repos/` | **active** — step 1 (in-paper discovery) done: all 353 PDFs scanned, 142 code-host URLs verified into `harvest/repos/mentions.json`, and `harvest/repos/search-plan.json` prepared for the 268 papers with no live repo link. Step 2 (task `repos-search step 2`, 2026-08-24) complete: `search_github.py` scored candidates via the GitHub REST API for all 268 -- 217 strong, 27 weak-only, 24 none -- into `harvest/repos/candidates.json`. Auto-accepts nothing; see lane log. Task `repo-verify` (2026-08-25, complete): `curate/verify_repos.py`, a Batch API model pass over all 303 papers with any repo evidence (24 of 327 have none) -- pilots submitted and pushed first per instruction, spot-checked, then the remaining 295 (~$1.14 total). 183/303 papers got >=1 verified repo (132 implementation, 115 third_party, 16 benchmark, 10 artifact roles; 148 own_group / 125 not); 25 papers have a low-confidence row parked in `harvest/repos/review.json` for human spot-check; 120 genuinely have none (spot-checked several -- old theses/papers, or search candidates that were real projects but unrelated, e.g. "Umbra" collided with a game exploration tool and a CMS). Canonical-over-fork worked as designed (tensor-compiler/taco over manya-bansal/taco; correctly split cases like an author's personal DynamoRIO fork containing thesis work vs. the canonical upstream). See lane log. |
 | **authors** | `harvest/authors/` | **active** — `authors_build.py` parses every `author0` into individual authors, dedupes exactly, enriches from Crossref/OpenAlex, matches `data/people.xml`, and writes `harvest/authors/authors.json` (369 distinct authors) plus `harvest/authors/review.json` (221 flagged rows: 4 name-variant near-misses + 217 from the enrich pass). `enrich_openalex.py` resolves each of the 369 against their own OpenAlex author entity (ORCID or shared-work match, never name alone) into `harvest/authors/enriched.json`; 287/369 resolved (task `authors-enrich verify`, 2026-08-24 — OpenAlex's search quota reset, rerun recovered 24 of the 79 previously-blocked people; 77 genuinely unresolved, 5 ambiguous, 0 still search-blocked; see lane log). |
 | **site-citations** | `docs/citation-design.md`, `docs/impact-view-design.md`, `data/citations/SCHEMA.md`, `data/citations/gscholar.json`, `data/citations/reception.json`, the 8 pilot `data/citations/<bibtexKey>.json` files, `data/citations/index.json` (bootstrap; merge script owns non-pilot rows), `prototype/`, and — for the citation view only — `publications.html`, `assets/js/citations.js`, the citation-view additions in `assets/js/publications.js` + `assets/css/style.css` | **active** — the per-paper citation section, designed, prototyped, human-APPROVED, and now **integrated into `publications.html`** (task `site-integration`, 2026-08-24): one small `index.json` fetch at page load turns on a "Citations (N)" toggle for the 150 papers with data files; per-paper data lazy-loads on first expand. Three sort modes (Impact / Recency / Popularity) with a headers on/off toggle — all three render uniform collapsible groups, collapsed by default with counts (categories / years / count buckets); expanded Summary and Citations panels sit in a lightly-outlined shaded box; Recency and Popularity incorporate own-group citations chip-marked, Impact keeps them in their separate section. `prototype/` kept as reference. `data/citations/SCHEMA.md` remains the contract; non-pilot `<bibtexKey>.json` files belong to the classify-corpus merge. |
 | **fulltext** | `harvest/fulltext/` | **active** — `harvest_fulltext.py` fetches full text of citing works for 8 pilot papers via free routes (OpenAlex OA location, arXiv, Unpaywall, PMC). Cached text/sidecars are gitignored; `harvest/fulltext/manifest.json` (committed) has per-paper yield stats. Does not touch `harvest/citations/`. Task `abstracts-all` (2026-08-24, complete): `harvest_abstracts_all.py` extended the abstract harvest from the 8 pilots to every non-pilot citing work, batch-fetched via OpenAlex's OR filter (100 ids/request) rather than one-by-one -- 167 papers, 21,545 citing works, 14,014 gained a real abstract (65%). Deliberately left the 3 sampled high-cited pilots' abstract files untouched (they're inert for reclassification -- pilots are permanently excluded from `curate/classify_citations.py`'s population). Fed the taxonomy lane's rejudge sweep (see its log). |
@@ -236,6 +236,38 @@ raise it to the setup lane.
   theses/position papers with no released code). API responses cached
   under `harvest/repos/_ghcache/` (gitignored, ~29 MB, 5,230 core +
   78 search requests for the full run).
+- **Step 2b, model verification** (task `repo-verify`, 2026-08-25):
+  `curate/verify_repos.py` runs a Batch API pass (model claude-sonnet-4-6)
+  over every paper's combined repo evidence -- in-paper mentions from
+  `mentions.json` (with the surrounding sentence, since a printed URL is
+  sometimes the paper's own repo and sometimes a bibliography citation to
+  someone else's tool) plus `candidates.json`'s heuristic search hits (with
+  stars/description/created_at for judging real vs. name-collision and
+  canonical vs. fork). System prompt instructs: reject a candidate outright
+  when the only support is name similarity; classify role
+  (implementation/artifact/benchmark/third_party) and own_group
+  independently; keep only the canonical repo when two candidates are
+  clearly the same project (an org repo over a contributor's fork, etc.).
+  Pilots (9 keys) submitted, collected, and spot-checked first per task
+  instruction -- all 8 pilots with evidence came back correct, including
+  two (`levison:istas:2002`, `thies:toplas:2007`) that correctly returned
+  zero repos after the model recognized their only candidates (a Tektronix
+  emulator, a Kubeflow tool, a Spotify chart app) as unrelated name
+  collisions, not a false negative. Pushed, then submitted the remaining
+  295 papers (~$1.14 total, both batches together -- well under the $20
+  line). Zero rule-level rejections across all 303 requests.
+  Result: 183/303 papers have >=1 verified repo (`harvest/repos/
+  verified.json`) -- 132 implementation / 115 third_party / 16 benchmark /
+  10 artifact roles, 148 own_group true; 25 papers have a low-confidence
+  row in `harvest/repos/review.json` for a human spot-check; 120 have
+  none, spot-checked as genuine (old theses, or search hits that are real
+  projects but unrelated -- "Umbra" collided with a game exploration tool
+  and a CMS). Canonical-over-fork worked on inspection: correctly picked
+  `tensor-compiler/taco` over `manya-bansal/taco`, and correctly split a
+  case where an author's personal DynamoRIO fork legitimately contained
+  the thesis's own modifications (kept as a second, `implementation`
+  entry) from the canonical upstream (kept as `third_party`) rather than
+  treating them as duplicates.
 
 ### authors
 

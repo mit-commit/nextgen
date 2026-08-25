@@ -766,6 +766,18 @@ raise it to the setup lane.
   of ≤25 non-pilot papers by citation count. Wave 1 (top 25, est $0.28 —
   auto-submit rule) submitted; reviewer pass next; after wave 1 lands,
   STOP for the human's ~10-paper spot-check per F1.
+- **F1 wave 1 merged** (2026-08-25): the top-25 batch came back 25/25
+  (cost ~$0.28); mechanical screen clean; reviewer pass read every text
+  against docs/summary-style.md — grounding spot-checks all landed
+  (SIFt, Zephyr, FiberSCIP, SweeD all in their packs) and 4 hand-fixes
+  normalized present-anchored repo closers ("continues its life",
+  "is maintained") to the sanctioned "lives on" form. 15 receptions
+  updated (10 already satisfied the style doc — mostly papers without
+  repo data), 10 unchanged; repository sentences now close the texts for
+  the 10 papers with verified repos/artifacts (opentuner, dynamorio,
+  taco + badges, both Halide gateways, three StreamIt papers,
+  petabricks, dmtcp). STOPPED per F1: the human spot-checks ~10 before
+  waves 2-6.
 
 ## Cross-lane requests
 

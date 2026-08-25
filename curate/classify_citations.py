@@ -69,7 +69,13 @@ MAX_TOKENS = 3000       # small JSON object, but Sonnet spends output tokens
                         # deliberating before it writes it, and that comes out
                         # of the same budget -- see auto_curate.py's note.
 PER_BATCH = 400
-FULLTEXT_CHARS = 4000
+FULLTEXT_CHARS = 6000       # budget for keyword-windowed excerpts, not a head
+                            # truncation -- see windowed_fulltext(). A citation
+                            # to a substrate/prior-work paper is typically in
+                            # the intro or related-work section, which for a
+                            # real (non-tiny) paper can start well past the
+                            # first several thousand characters.
+FULLTEXT_WINDOW = 700       # chars of context on each side of a keyword hit
 ABSTRACT_CHARS = 3000
 CONTEXTS_MAX = 12
 
@@ -379,6 +385,85 @@ def load_candidates():
 
 # ---------------------------------------------------------------- the prompt
 
+STOPWORDS = {
+    'using', 'with', 'from', 'that', 'this', 'into', 'over', 'under', 'their',
+    'which', 'about', 'toward', 'towards', 'through', 'language', 'compiler',
+    'system', 'systems', 'programming', 'parallel', 'performance',
+    'optimization', 'analysis', 'design', 'implementation', 'framework',
+    'approach', 'model', 'models', 'computing', 'processing', 'architecture',
+    'general', 'purpose', 'exploiting', 'toward', 'unified', 'practical',
+}
+
+
+def keyword_term_tiers(pub):
+    """Terms to search for, in tiers of decreasing specificity. A generic
+    title word ("Applications", "Streaming") false-matches often enough in
+    an unrelated paper's own prose that it must never dilute a real
+    project-name or author-surname hit -- so callers try one tier at a
+    time and stop at the first tier that finds anything, rather than
+    pooling every tier together."""
+    tiers = []
+    if pub.get('project'):
+        tiers.append([pub['project']])
+    surnames = [s for s in author_surnames(pub.get('author0')) if len(s) >= 4]
+    if surnames:
+        tiers.append(surnames)
+    title = pub.get('title') or ''
+    title_words = [w for w in re.findall(r"[A-Za-z][A-Za-z0-9+#]{3,}", title)
+                  if w.lower() not in STOPWORDS and len(w) >= 7]
+    if title_words:
+        tiers.append(title_words)
+    return tiers
+
+
+def windowed_fulltext(fulltext, pub):
+    """Excerpt(s) around every mention of the cited paper's own name/title
+    terms/authors, rather than a head truncation -- a citation to a
+    substrate paper is typically in the intro or related work, which for a
+    real paper can start well past the first few thousand characters."""
+    tiers = keyword_term_tiers(pub)
+    if not tiers:
+        return fulltext[:FULLTEXT_CHARS]
+
+    low = fulltext.lower()
+    hits = set()
+    for terms in tiers:
+        for term in terms:
+            term_l = term.lower()
+            start = 0
+            while True:
+                i = low.find(term_l, start)
+                if i < 0:
+                    break
+                hits.add(i)
+                start = i + len(term_l)
+        if hits:
+            break   # a weaker/generic tier must never dilute a real hit
+
+    if not hits:
+        return (fulltext[:FULLTEXT_CHARS] + '\n\n[note: none of the cited '
+               "paper's title/project/author terms were found anywhere in "
+               'this text -- it may be under a different name, or in a '
+               'section the PDF extraction missed]')
+
+    windows = []
+    for pos in sorted(hits):
+        s, e = max(0, pos - FULLTEXT_WINDOW), min(len(fulltext), pos + FULLTEXT_WINDOW)
+        if windows and s <= windows[-1][1] + 200:
+            windows[-1] = (windows[-1][0], max(windows[-1][1], e))
+        else:
+            windows.append((s, e))
+
+    out, used = [], 0
+    for s, e in windows:
+        chunk = fulltext[s:e]
+        if used + len(chunk) > FULLTEXT_CHARS:
+            break
+        out.append(f'[excerpt around character {s} of {len(fulltext)}]\n{chunk}')
+        used += len(chunk)
+    return '\n\n'.join(out)
+
+
 def pack_evidence(key, pub, citing, tier, abstract, fulltext):
     parts = [
         f"CITED PAPER (ours): {pub.get('title') or key!r}",
@@ -422,8 +507,9 @@ def pack_evidence(key, pub, citing, tier, abstract, fulltext):
 
     if fulltext:
         parts.append('')
-        parts.append('CITING WORK FULL TEXT (truncated):')
-        parts.append(fulltext[:FULLTEXT_CHARS])
+        parts.append('CITING WORK FULL TEXT (excerpts around mentions of the '
+                     'cited paper, not from the start of the document):')
+        parts.append(windowed_fulltext(fulltext, pub))
 
     return '\n'.join(parts)
 

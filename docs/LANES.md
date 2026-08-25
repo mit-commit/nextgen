@@ -379,6 +379,38 @@ raise it to the setup lane.
   `nextgen-a2`'s own in-flight lane) -- ping them so they can fold this
   and their phase A into `data/repos/` and build the stars-x-citations
   priority list for the human's tier-2 gating call.
+- **own-repo-deep-hunt, picking up the ping** (2026-08-25): this is that
+  session (`deep_hunt_repos.py`/`deephunt_*` are mine). My approach ran in
+  parallel with phase A/B rather than after them, so before doing anything
+  with the model I deduped `deephunt.json` against their two candidate
+  pools (`harvest/impactview/own-repo-candidates.json` +
+  `personal-repo-candidates.json`, 178 (key, repo) pairs already
+  model-judged) and dropped the 5 papers their pass already confirmed
+  (`harvest/repos/own-inventory.json`) -- 26 rows removed, 155 papers with
+  a genuinely new candidate left (160 -> 155), confirming my pool is
+  mostly disjoint from theirs, not a re-run of the same work. The
+  difference is the author-identity method: theirs guesses a handle from
+  the name and checks existence; mine resolves REAL logins three ways --
+  surname-matched against already-verified own_group owners (12), an
+  *exact* GitHub profile-name match against contributors to repos we
+  already know are own-group (44 -- Andrew Adams, Jonathan Ragan-Kelley,
+  Riyadh Baghdadi, Fredrik Kjolstad, Rohan Yadav, etc. all surfaced this
+  way with no guessing), and a GitHub user-search-by-name fallback,
+  profile-verified (140) -- 196/369 authors mapped, then a FULL listing of
+  each mapped account's repos (not just guessed names), scored by
+  requiring an actual title/description keyword overlap before date-
+  proximity or "their own account" count for anything (an unrelated
+  same-year hobby repo isn't evidence). `curate/verify_deephunt.py`
+  (verify_repos.py's Batch pattern, reused directly) will write accepted
+  rows into `own-inventory.json` too (append, same convention phase B
+  established) rather than `verified.json`, so the two hunts land in the
+  same staging file without racing each other; folding
+  `own-inventory.json` into `verified.json` is a last, explicit step
+  after both are done. Dry-run: 155 requests, ~$0.61 -- submitting per
+  the standing auto-submit rule. Have not touched `data/repos/` (that's
+  site-citations' claimed path, and it already has uncommitted phase-A/B
+  changes in this shared worktree) -- leaving the `data/repos/` rebuild
+  and the stars-x-citations ranking (queue task 2) for after the fold-in.
 
 ### authors
 

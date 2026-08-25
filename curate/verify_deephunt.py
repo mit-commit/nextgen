@@ -9,9 +9,15 @@ shape: candidates are scored by title-keyword overlap + date proximity to
 an author's OWN GitHub account, not a generic name-guess search.
 
 Appends accepted (high/medium confidence) rows into harvest/repos/
-verified.json -- appends to a paper's existing list if it already has
-third_party/benchmark rows, never overwrites. Low-confidence rows go to
-harvest/repos/deephunt_review.json.
+own-inventory.json -- the staging file a concurrent session's phase-A/B
+own-repo hunt already established for exactly this purpose (a
+verified.json-shaped row set, kept out of verified.json itself so two
+sessions doing overlapping own-repo hunts in the same round don't race on
+the same file). Appends to a paper's existing list if it already has
+rows, never overwrites. Low-confidence rows go to
+harvest/repos/deephunt_review.json. Folding own-inventory.json into
+verified.json proper is a separate, explicit step
+(curate/fold_own_inventory.py) run once after all concurrent hunts land.
 
     python3 curate/verify_deephunt.py --submit --dry-run
     python3 curate/verify_deephunt.py --submit
@@ -34,7 +40,7 @@ DEEPHUNT_PATH = os.path.join(ROOT, 'harvest', 'repos', 'deephunt.json')
 PUBLICATIONS = os.path.join(ROOT, 'data', 'publications.json')
 
 OUT_DIR = os.path.join(ROOT, 'harvest', 'repos')
-VERIFIED_PATH = os.path.join(OUT_DIR, 'verified.json')
+OWN_INVENTORY_PATH = os.path.join(OUT_DIR, 'own-inventory.json')
 REVIEW_PATH = os.path.join(OUT_DIR, 'deephunt_review.json')
 STATE_PATH = os.path.join(OUT_DIR, '_deephunt_batches.json')
 REQUESTS_DUMP = os.path.join(OUT_DIR, '_deephunt_requests_dry_run.json')
@@ -131,9 +137,9 @@ def load_state():
 
 
 def merge_write(key, high_med, low, verified, review):
-    """Append (not overwrite) into a paper's existing verified.json list --
-    a deep-hunt key may already carry third_party/benchmark rows from the
-    original repo-verify pass."""
+    """Append (not overwrite) into a paper's existing own-inventory.json
+    list -- a concurrent session may already have confirmed a row for
+    this key."""
     if high_med:
         existing = verified.get(key, [])
         seen_urls = {r.get('url') for r in existing}
@@ -194,7 +200,7 @@ def do_status():
 def do_collect():
     state = load_state()
     items = state.get('items', {})
-    verified = json.load(open(VERIFIED_PATH)) if os.path.exists(VERIFIED_PATH) else {}
+    verified = json.load(open(OWN_INVENTORY_PATH)) if os.path.exists(OWN_INVENTORY_PATH) else {}
     review = json.load(open(REVIEW_PATH)) if os.path.exists(REVIEW_PATH) else {}
     needs_review = []
     if os.path.exists(NEEDS_REVIEW_PATH):
@@ -241,7 +247,7 @@ def do_collect():
         json.dump(state, open(STATE_PATH, 'w'), indent=1)
         print(f'{batch["id"]}: collected')
 
-    for path, payload in ((VERIFIED_PATH, verified), (REVIEW_PATH, review)):
+    for path, payload in ((OWN_INVENTORY_PATH, verified), (REVIEW_PATH, review)):
         with open(path, 'w') as fh:
             json.dump(payload, fh, indent=1, sort_keys=True, ensure_ascii=False)
             fh.write('\n')
@@ -257,7 +263,7 @@ def do_recover():
     with open(NEEDS_REVIEW_PATH) as fh:
         rows = [json.loads(l) for l in fh if l.strip()]
 
-    verified = json.load(open(VERIFIED_PATH)) if os.path.exists(VERIFIED_PATH) else {}
+    verified = json.load(open(OWN_INVENTORY_PATH)) if os.path.exists(OWN_INVENTORY_PATH) else {}
     review = json.load(open(REVIEW_PATH)) if os.path.exists(REVIEW_PATH) else {}
     remaining = []
     promoted = 0
@@ -277,7 +283,7 @@ def do_recover():
         merge_write(key, high_med, low, verified, review)
         promoted += 1
 
-    for path, payload in ((VERIFIED_PATH, verified), (REVIEW_PATH, review)):
+    for path, payload in ((OWN_INVENTORY_PATH, verified), (REVIEW_PATH, review)):
         with open(path, 'w') as fh:
             json.dump(payload, fh, indent=1, sort_keys=True, ensure_ascii=False)
             fh.write('\n')

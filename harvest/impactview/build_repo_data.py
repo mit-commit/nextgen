@@ -255,8 +255,16 @@ def main():
                  'using': sum(1 for r in rows if r['group'] in
                               ('builds-on', 'uses', 'benchmarks')),
                  'adopts': sum(1 for r in rows if r['group'] == 'adopts')}
+        # repo-side impact: outside repos weighted by relationship, the
+        # same scale as the citation-function weights (extends 10,
+        # uses-tool 8, uses-benchmark 5, adopts-idea 8) via the unified
+        # taxonomy. Own rows and artifacts are the paper itself, weight 0.
+        rw = {'builds-on': 10, 'uses': 8, 'benchmarks': 5, 'adopts': 8}
+        impact = sum(rw.get(r['group'], 0) for r in rows)
         index['papers'][key] = {'repos': len(rows),
                                 'tiers': {k: v for k, v in tiers.items() if v}}
+        if impact:
+            index['papers'][key]['impact'] = impact
     with open(f'{ROOT}/data/repos/index.json', 'w') as fh:
         json.dump(index, fh, indent=1)
         fh.write('\n')

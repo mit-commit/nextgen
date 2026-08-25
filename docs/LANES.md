@@ -1062,6 +1062,18 @@ raise it to the setup lane.
   student accounts doesn't work; the next lever is reading each
   thesis's own full text for repo URLs/tool names (fulltext-lane
   machinery), and pre-2008 theses predate GitHub entirely.
+- **Composite impact + first-reader tooltips** (2026-08-25, human task
+  2): the paper-threshold Impact slider and the list-level sort (option
+  renamed "Citations" -> "Impact") now share ONE composite score:
+  weighted citation functions + weighted outside-repo relationships
+  (builds-on 10 / uses 8 / benchmarks 5 / adopts 8 — the same scale as
+  the citation weights, precomputed into data/repos/index.json rows as
+  `impact`). Normalization is quantile tiers over the combined corpus;
+  sort groups under tier headers ("Top 3% by impact" ... "No impact
+  data yet"), raw scores never shown. The "Citations >=" slider keeps
+  raw counts. Naming ruling: keep "Impact categories"/"Impact panels"
+  short and explain in tooltips; added succinct first-reader tooltips
+  to every selector (facet labels, buttons, Group & sort, sliders).
 - **Tier-2 corpus-wide fold — the impact view is COMPLETE across all
   three tiers** (2026-08-25): folded the ecosystems lane's
   harvest/ecosystems/verified.json (cb4c064c: 763 candidates from

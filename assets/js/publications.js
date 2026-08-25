@@ -255,7 +255,7 @@ function monthLabelOf(it){
 // Key extractors (for sorting within groups)
 function keyFor(it, which){
   if (which==='year')     return it.year ? parseInt(it.year,10) : 0; // numeric
-  if (which==='citations') return citeCountOf(it);                   // numeric, -1 = no data
+  if (which==='citations'){ var ci = compositeImpactOf(it); return ci == null ? -1 : ci; } // impact, -1 = no data
   if (which==='month')    return monthDayValue(it);
   if (which==='type')     return typeLabel(it.itemType || 'misc');   // pretty label
   if (which==='authors')  { var a = listNormalizedAuthors(it); return a.length?a[0]:'zzz'; } // first author
@@ -382,6 +382,51 @@ function createBibLink(it){
     if (!row) return -1;
     return CITATIONS.displayCount(row); // same figure as the per-paper headline
   };
+
+  // The unified impact score: weighted citation functions plus weighted
+  // outside-repo relationships (same weight table via the shared
+  // taxonomy; repo side precomputed by build_repo_data.py). Null = the
+  // paper has neither citation nor repository data yet.
+  window.compositeImpactOf = function(it){
+    var key = bibtexKeyOf(it);
+    var cRow = CITE_INDEX && CITE_INDEX[key];
+    var rRow = REPO_INDEX && REPO_INDEX[key];
+    if (!cRow && !rRow) return null;
+    var c = (cRow && window.CITATIONS) ? (CITATIONS.impactScore(cRow) || 0) : 0;
+    return c + ((rRow && rRow.impact) || 0);
+  };
+
+  // Quantile thresholds over every paper's composite impact; memoized,
+  // reset when the indexes (re)load.
+  var _impactVals = null;
+  function impactVals(){
+    if (_impactVals) return _impactVals;
+    var vals = [], k, seen = {};
+    for (k in (CITE_INDEX || {})) seen[k] = 1;
+    for (k in (REPO_INDEX || {})) seen[k] = 1;
+    for (k in seen){
+      var v = compositeImpactOf({ bibtexKey: k });
+      if (v != null) vals.push(v);
+    }
+    vals.sort(function(a, b){ return b - a; });
+    _impactVals = vals;
+    return vals;
+  }
+  window.compositeQuantile = function(q){
+    var vals = impactVals();
+    if (!vals.length) return 0;
+    var idx = Math.min(vals.length - 1, Math.max(0, Math.round(vals.length * q) - 1));
+    return vals[idx];
+  };
+  citeIndexReady.then(function(){ _impactVals = null; }); // recompute once real data lands
+  function impactTierLabel(score){
+    if (score == null || score < 0) return 'No impact data yet';
+    if (score >= compositeQuantile(0.03)) return 'Top 3% by impact';
+    if (score >= compositeQuantile(0.10)) return 'Top 10% by impact';
+    if (score >= compositeQuantile(0.25)) return 'Top quarter by impact';
+    if (score >= compositeQuantile(0.50)) return 'Top half by impact';
+    return 'Lower half by impact';
+  }
 
   var state = {
     mode: 'interactive',     // 'noninteractive' | 'interactive'
@@ -886,12 +931,9 @@ function renderList(mount, items){
     } else if (primary==='keywords'){
       var ks = tagsOf(it); if (ks.length){ for (var k2=0;k2<ks.length;k2++) add(ks[k2], it); } else add('Other', it);
     } else if (primary==='citations'){
-      // Bucket scheme shared with the per-paper popularity sort.
+      // Impact tiers (same quantile vocabulary as the Impact slider).
       var n = keyFor(it, 'citations');
-      var bucket = (n < 0)
-        ? 'No citation data'
-        : (window.CITATIONS ? CITATIONS.countBucket(n) : String(n));
-      add(bucket, it, n); // groupSortValue = max count in bucket → rank order
+      add(impactTierLabel(n), it, n); // groupSortValue = max score in tier
     }
   }
 
@@ -1036,8 +1078,7 @@ if (auKeys.length){
     }
     if (state.minImpact > 0 && window.CITATIONS){
       items = items.filter(function(it){
-        var row = CITE_INDEX && CITE_INDEX[bibtexKeyOf(it)];
-        var imp = row ? CITATIONS.impactScore(row) : null;
+        var imp = compositeImpactOf(it);
         return imp != null && imp >= state.minImpact;
       });
     }
@@ -1400,17 +1441,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       { label: 'top 10% by impact',     q: 0.10 },
       { label: 'top 3% by impact',      q: 0.03 }
     ];
-    function impactQuantile(q){
-      var vals = [], k, v;
-      for (k in (CITE_INDEX || {})){
-        v = window.CITATIONS ? CITATIONS.impactScore(CITE_INDEX[k]) : null;
-        if (v != null) vals.push(v);
-      }
-      if (!vals.length) return 0;
-      vals.sort(function(a, b){ return b - a; });
-      var idx = Math.min(vals.length - 1, Math.max(0, Math.round(vals.length * q) - 1));
-      return vals[idx];
-    }
+    var impactQuantile = window.compositeQuantile; // papers + repos, shared
     if (els.minImpact){
       els.minImpact.oninput = function(){
         var tier = IMPACT_TIERS[parseInt(this.value, 10) || 0];

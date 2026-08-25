@@ -41,22 +41,22 @@
 <label><input type="radio" name="mode" value="noninteractive" > Non-interactive</label>
 <label><input type="radio" name="mode" value="interactive" checked> Interactive</label>
               &nbsp;&nbsp;
-              <button id="btn-toggle-summaries" type="button" class="btn" aria-pressed="false">Show summaries</button>
+              <button id="btn-toggle-summaries" type="button" class="btn" aria-pressed="false" title="Open every paper's summary">Show summaries</button>
               &nbsp;&nbsp;
-              <button id="btn-toggle-citations" type="button" class="btn" aria-pressed="false">Show citations</button>
+              <button id="btn-toggle-citations" type="button" class="btn" aria-pressed="false" title="Open every paper's citation panel — who cites it, and how">Show citations</button>
               &nbsp;&nbsp;
-              <button id="btn-toggle-repos" type="button" class="btn" aria-pressed="false">Show repositories</button>
+              <button id="btn-toggle-repos" type="button" class="btn" aria-pressed="false" title="Open every paper's repository panel — its code, and who uses it">Show repositories</button>
               &nbsp;&nbsp;
-              <button id="btn-clear" type="button" class="btn">Clear filters</button>
+              <button id="btn-clear" type="button" class="btn" title="Reset every filter and slider">Clear filters</button>
 	      &nbsp;&nbsp;
-	      <button id="btn-export-bib" type="button" class="btn">Export .bib</button>
+	      <button id="btn-export-bib" type="button" class="btn" title="Download the shown papers as BibTeX">Export .bib</button>
 	      <div class="sort-multilevel">
-  <span class="sort-label">Group & sort:</span>
+  <span class="sort-label" title="Group and order the list, up to four keys deep. Impact blends citations and repository use">Group & sort:</span>
   <label>1
     <select id="sort-1">
         <option value="none">None</option>
       <option value="year" selected>Year</option>
-      <option value="citations">Citations</option>
+      <option value="citations">Impact</option>
       <option value="month">Month</option>
       <option value="keywords">Topics &amp; Projects</option>
       <option value="authors">Authors</option>
@@ -68,7 +68,7 @@
   <label>2
     <select id="sort-2">
         <option value="none">None</option>
-      <option value="citations">Citations</option>
+      <option value="citations">Impact</option>
       <option value="month" selected>Month</option>
       <option value="keywords">Topics &amp; Projects</option>
       <option value="authors">Authors</option>
@@ -81,7 +81,7 @@
   <label>3
     <select id="sort-3">
         <option value="none">None</option>
-      <option value="citations">Citations</option>
+      <option value="citations">Impact</option>
       <option value="authors">Authors</option>
       <option value="authorLast">First author (last name)</option>
       <option value="authorFirst">First author (first name)</option>
@@ -94,7 +94,7 @@
   <label>4
     <select id="sort-4">
         <option value="none">None</option>
-      <option value="citations">Citations</option>
+      <option value="citations">Impact</option>
       <option value="keywords">Topics &amp; Projects</option>
       <option value="authors">Authors</option>
       <option value="authorLast" selected>First author (last name)</option>
@@ -110,17 +110,17 @@
 
             <div id="filters-interactive" class="filters-interactive hidden">
               <div class="filter-block">
-                <div class="filter-label">Title search</div>
+                <div class="filter-label" title="Search paper titles">Title search</div>
                 <input id="facet-title" type="text" class="text-input" placeholder="Search title…">
               </div>
 
               <div class="filter-grid">
                 <div class="filter-block">
-                  <div class="filter-label">Years</div>
+                  <div class="filter-label" title="Filter by publication year">Years</div>
                   <div id="facet-years" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label">Topics &amp; Projects</div>
+                  <div class="filter-label" title="Filter by research topic, or by project / system">Topics &amp; Projects</div>
                   <div class="type-toggle" id="kw-toggle" role="group" aria-label="Filter by topic or project">
                     <button type="button" class="type-toggle-btn active" data-kwmode="topics" aria-pressed="true">Topics</button>
                     <button type="button" class="type-toggle-btn" data-kwmode="projects" aria-pressed="false">Projects</button>
@@ -128,7 +128,7 @@
                   <div id="facet-keywords" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label">Authors</div>
+                  <div class="filter-label" title="Filter by author">Authors</div>
                   <div class="facet-sort-control">
                     <select id="author-sort" aria-label="Sort authors by">
                       <option value="first">First</option>
@@ -142,7 +142,7 @@
                   <div id="facet-authors" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label">Categories</div>
+                  <div class="filter-label" title="Filter by publication type or venue">Categories</div>
                   <div class="type-toggle" id="type-toggle" role="group" aria-label="Categorize publications by">
                     <button type="button" class="type-toggle-btn active" data-mode="type" aria-pressed="true">Type</button>
                     <button type="button" class="type-toggle-btn" data-mode="venue-name" aria-pressed="false">Venue (by Name)</button>
@@ -157,11 +157,11 @@
                    list itself (citation-count and impact sliders). -->
               <div class="filter-grid cite-tools">
                 <div class="filter-block">
-                  <div class="filter-label" title="One taxonomy shared by the citation and repository panels; counts are citing papers and their citations">Impact categories</div>
+                  <div class="filter-label" title="How citing papers and outside repositories use each work — one shared taxonomy. Counts: (papers, by citations)">Impact categories</div>
                   <div id="facet-cite-cats" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label" title="Drives every open citation and repository panel; centrality and search apply to citations">Impact panels</div>
+                  <div class="filter-label" title="Sort and filter inside every open Citations / Repositories panel">Impact panels</div>
                   <div class="cite-tools-row">Sort
                     <span class="type-toggle" id="cite-global-sort">
                       <button type="button" class="type-toggle-btn active" data-v="impact" title="Order citations by what they do: building on the paper ranks above running it, above borrowing its idea, above citing it in a list">Impact</button>
@@ -182,12 +182,12 @@
                   </div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label">Paper thresholds</div>
+                  <div class="filter-label" title="Hide papers below a citation count or impact tier">Paper thresholds</div>
                   <div class="cite-tools-row">Citations ≥ <b id="cite-min-cites-label">0</b>
                     <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0" title="Hide papers with fewer citations than this">
                   </div>
                   <div class="cite-tools-row">Impact: <b id="cite-min-impact-label">all papers</b>
-                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" title="Impact weighs each citation by its category — building on a paper counts more than citing it in a list. Papers without citation data are hidden once a threshold is above zero.">
+                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" title="One score over citing papers AND outside repositories: building on the work counts more than mentioning it. Tiers are percentiles; above zero hides papers without data.">
                   </div>
                 </div>
               </div>
@@ -214,6 +214,6 @@
   <script src="assets/js/pubs.js"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
   <script src="assets/js/citations.js?v=16"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=17"></script> <!-- the filters controller -->
+  <script src="assets/js/publications.js?v=18"></script> <!-- the filters controller -->
 </body>
 </html>

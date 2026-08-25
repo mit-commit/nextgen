@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Commit @ CSAIL — Impact view mock</title>
+  <!-- MOCK for docs/impact-view-design.md (Option B). StreamIt only.
+       Real citations panel + placeholder Repositories panel + the
+       three-register Summary. Serve the repo root over HTTP. -->
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <link rel="stylesheet" href="citations.css"/>
+  <style>
+    .repo-placeholder-chip { background: #c60; color: #fff; }
+    .repo-paper-only { opacity: 0.65; }
+  </style>
+</head>
+<body>
+  <div class="pagewidth">
+    <div class="outer">
+      <div class="main">
+        <div class="menuitem nav">
+          <a class="menuitemlink" href="../index.html">Home</a>
+          <a class="menuitemlink" href="../publications.html">Publications</a>
+        </div>
+        <div style="clear:both"></div>
+        <div class="secbody">
+          <h2 class="grouphead">Impact view — Option B mock</h2>
+          <div class="switchversion">
+            One pilot paper with twin panels: its real <b>Citations</b> and a
+            mocked <b>Repositories</b> (orange = placeholder until the tier-2
+            harvest). Summary shows the three registers. Design:
+            <code>docs/impact-view-design.md</code>.
+          </div>
+          <div id="mock-errors" class="switchversion" style="color:#b00;"></div>
+          <div id="mock-results"></div>
+        </div>
+        <div class="credits">© Commit Group — Massachusetts Institute of Technology — CSAIL</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/common.js"></script>
+  <script src="citations.js"></script>
+  <script src="impact-mock.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    var KEY = 'thies:cc:2002';
+    function text(s){ return document.createTextNode(s); }
+    function normName(n){
+      var t = String(n||'').trim(), c = t.indexOf(',');
+      if (c >= 0){ var last = t.slice(0,c).trim(), first = t.slice(c+1).trim(); if (first) return first + ' ' + last; }
+      return t;
+    }
+
+    Promise.all([
+      getJSON('../data/publications.json'),
+      CITATIONS.loadIndex(),
+      getJSON('../data/citations/reception.json')
+    ]).then(function(res){
+      var pub = res[0].filter(function(p){ return p.bibtexKey === KEY; })[0];
+      var indexRow = res[1].papers[KEY];
+      var reception = res[2][KEY];
+
+      var li = document.createElement('li'); li.className = 'pub-item';
+      var t = document.createElement('div'); t.className = 'pub-title';
+      t.appendChild(text(pub.title + '.')); li.appendChild(t);
+      var al = document.createElement('div'); al.className = 'pub-authors';
+      al.appendChild(text(String(pub.author0||'').split(/\s+and\s+/).map(normName).join(', ') + '.'));
+      li.appendChild(al);
+      var vl = document.createElement('div'); vl.className = 'pub-venue';
+      vl.appendChild(text((pub.booktitle || pub.journal || '') + '.')); li.appendChild(vl);
+      var meta = document.createElement('div'); meta.className = 'pub-meta';
+      meta.appendChild(text((pub.month ? pub.month + ', ' : '') + (pub.year || '') + '. '));
+      li.appendChild(meta);
+
+      // Summary: three registers — paper, reception, repositories.
+      var sumDiv = document.createElement('div');
+      sumDiv.className = 'pub-summary';
+      String(pub.summary).split(/\n\n+/).forEach(function(par){
+        var p = document.createElement('p'); p.innerHTML = par; sumDiv.appendChild(p);
+      });
+      String(reception).split(/\n\n+/).forEach(function(par){
+        var p = document.createElement('p'); p.appendChild(text(par)); sumDiv.appendChild(p);
+      });
+      var repoP = document.createElement('p');
+      repoP.appendChild(text(IMPACT_MOCK.SUMMARY_REPO_SENTENCE + ' '));
+      var mark = document.createElement('b'); mark.style.color = '#c60';
+      mark.appendChild(text('[specimen sentence — mock]')); repoP.appendChild(mark);
+      sumDiv.appendChild(repoP);
+      var sumToggle = document.createElement('a');
+      sumToggle.href = '#'; sumToggle.className = 'pub-action pub-summary-toggle';
+      sumToggle.textContent = 'Summary ▸';
+      sumToggle.addEventListener('click', function(ev){
+        ev.preventDefault();
+        var open = sumDiv.className.indexOf('open') === -1;
+        sumDiv.className = 'pub-summary' + (open ? ' open' : '');
+        sumToggle.textContent = open ? 'Summary ▾' : 'Summary ▸';
+      });
+      meta.appendChild(sumToggle);
+
+      // Citations: the real panel.
+      CITATIONS.attachToggle(meta, li, KEY, indexRow);
+
+      // Repositories: the Option-B mock panel, same toggle mechanics.
+      var repoDiv = document.createElement('div');
+      repoDiv.className = 'pub-summary cite-view';
+      var repoToggle = document.createElement('a');
+      repoToggle.href = '#'; repoToggle.className = 'pub-action pub-summary-toggle cite-toggle';
+      repoToggle.textContent = 'Repositories (' + IMPACT_MOCK.count + ') ▸';
+      var repoBuilt = false;
+      repoToggle.addEventListener('click', function(ev){
+        ev.preventDefault();
+        var open = repoDiv.className.indexOf('open') === -1;
+        repoDiv.className = 'pub-summary cite-view' + (open ? ' open' : '');
+        repoToggle.textContent = 'Repositories (' + IMPACT_MOCK.count + ') ' + (open ? '▾' : '▸');
+        if (open && !repoBuilt){ repoBuilt = true; IMPACT_MOCK.renderPanel(repoDiv); }
+      });
+      meta.appendChild(text(' '));
+      meta.appendChild(repoToggle);
+      li.appendChild(repoDiv);
+      li.appendChild(sumDiv);
+
+      var ul = document.createElement('ul'); ul.className = 'pub-list';
+      ul.appendChild(li);
+      var mount = document.getElementById('mock-results');
+      mount.innerHTML = ''; mount.appendChild(ul);
+    }).catch(function(e){
+      document.getElementById('mock-errors').textContent = String(e);
+    });
+  })();
+  </script>
+</body>
+</html>

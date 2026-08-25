@@ -120,7 +120,14 @@ var CITATIONS = (function(){
   }
 
   /* ---------- a collapsible group of rows (rows built on first open) ---------- */
+  function renderGroupWith(title, gloss, rows, startOpen, rowFn){
+    return renderGroupCore(title, gloss, rows, startOpen, rowFn);
+  }
   function renderGroup(title, gloss, rows, startOpen, showCites){
+    return renderGroupCore(title, gloss, rows, startOpen,
+      function(r){ return renderRow(r, showCites); });
+  }
+  function renderGroupCore(title, gloss, rows, startOpen, rowFn){
     var wrap = el('div', 'cite-group');
     var head = el('a', 'cite-group-head');
     head.href = '#';
@@ -138,7 +145,7 @@ var CITATIONS = (function(){
       if (built) return;
       built = true;
       var ul = el('ul', 'cite-rows');
-      for (var i = 0; i < rows.length; i++) ul.appendChild(renderRow(rows[i], showCites));
+      for (var i = 0; i < rows.length; i++) ul.appendChild(rowFn(rows[i]));
       listWrap.appendChild(ul);
     }
     if (startOpen) build();
@@ -519,8 +526,216 @@ var CITATIONS = (function(){
     return out;
   }
 
+
+  /* ==================== Repositories panel (impact view) ====================
+     Same grammar as the citations panel; data from data/repos/ per
+     data/repos/SCHEMA.md. Unified relationship taxonomy shared with
+     citations; groups with no rows do not render. */
+  var REPO_BASE = DATA_BASE.replace('citations', 'repos');
+  var REPO_GROUPS = [
+    { key: 'own',       label: 'Artifact & own repository',
+      gloss: "the paper's archival artifact first, then its implementation repository" },
+    { key: 'builds-on', label: 'Builds on it',
+      gloss: 'derivative works and forks of the artifact' },
+    { key: 'uses',      label: 'Uses the system',
+      gloss: 'repositories that import or depend on the artifact' },
+    { key: 'benchmarks', label: 'Uses its benchmarks',
+      gloss: "repositories carrying the paper's workload files" },
+    { key: 'adopts',    label: 'Adopts the idea',
+      gloss: 'repositories of citing works that reimplement the idea without the code' }
+  ];
+  function repoStarBucket(n){
+    if (n == null) return 'stars unknown';
+    if (n >= 1000) return '1,000+ stars';
+    if (n >= 100) return '100\u2013999 stars';
+    if (n >= 10) return '10\u201399 stars';
+    return 'under 10 stars';
+  }
+  function renderRepoRow(r){
+    var li = el('li', 'cite-row' + (r.paperOnly ? ' repo-paper-only' : ''));
+    var t = el('span', 'cite-row-title');
+    var label = r.name || r.paper || r.url;
+    if (r.url && !r.gone){
+      var a = el('a', null, label); a.href = r.url; a.target = '_blank'; a.rel = 'noopener';
+      t.appendChild(a);
+    } else {
+      t.appendChild(document.createTextNode(label));
+    }
+    li.appendChild(t);
+    if (r.desc) li.appendChild(el('span', 'cite-row-meta', ' \u2014 ' + r.desc + (/[.!?]$/.test(r.desc) ? '' : '.')));
+    if (r.paperOnly) li.appendChild(el('span', 'cite-row-meta', ' \u2014 no repository located.'));
+    if (r.badges && r.badges.length) li.appendChild(el('span', 'cite-row-meta', ' \u2014 ' + r.badges.join('; ') + '.'));
+    if (r.artifact) li.appendChild(el('span', 'cite-chip', 'artifact'));
+    if (r.sdv) li.appendChild(el('span', 'cite-chip', String(r.sdv).replace(/_/g, ' ')));
+    if (r.stars != null) li.appendChild(el('span', 'cite-chip', fmt(r.stars) + ' \u2605'));
+    if (r.active) li.appendChild(el('span', 'cite-chip', 'active ' + r.active));
+    if (r.archived) li.appendChild(el('span', 'cite-chip', 'archived'));
+    if (r.gone) li.appendChild(el('span', 'cite-chip', 'unavailable'));
+    if (r.evidence) li.title = r.evidence;
+    return li;
+  }
+  function renderRepoPanel(mount, data){
+    mount.innerHTML = '';
+    var repos = data.repos || [];
+    mount.appendChild(el('div', 'cite-head')).appendChild(
+      el('span', 'cite-head-count', fmt(repos.length) + (repos.length === 1 ? ' repository' : ' repositories')));
+    var tier = { own: 0, using: 0, adopts: 0 };
+    repos.forEach(function(r){
+      if (r.group === 'own') tier.own++;
+      else if (r.group === 'adopts') tier.adopts++;
+      else tier.using++;
+    });
+    var nTiers = (tier.own ? 1 : 0) + (tier.using ? 1 : 0) + (tier.adopts ? 1 : 0);
+    if (nTiers > 1){
+      var bar = el('div', 'cite-splitbar');
+      [['cite-seg-detailed', tier.own], ['cite-seg-passing', tier.using],
+       ['cite-seg-unjudged', tier.adopts]].forEach(function(seg){
+        if (!seg[1]) return;
+        var sd = el('div', 'cite-seg ' + seg[0]);
+        sd.style.width = (100 * seg[1] / repos.length).toFixed(2) + '%';
+        bar.appendChild(sd);
+      });
+      mount.appendChild(bar);
+      var legend = el('div', 'cite-legend');
+      [['cite-seg-detailed', 'Own', tier.own],
+       ['cite-seg-passing', 'Builds on or uses it', tier.using],
+       ['cite-seg-unjudged', 'Adopts the idea', tier.adopts]].forEach(function(l){
+        if (!l[2]) return;
+        var sp = el('span', 'cite-legend-item');
+        sp.appendChild(el('span', 'cite-key ' + l[0], ''));
+        sp.appendChild(document.createTextNode(l[1] + ' ' + fmt(l[2])));
+        legend.appendChild(sp);
+      });
+      mount.appendChild(legend);
+    }
+    var state = { sort: 'impact', expanded: repos.length <= 6 };
+    var sortRow = el('div', 'cite-filter');
+    sortRow.appendChild(el('span', 'cite-filter-label', 'Sort by '));
+    var tg = el('span', 'type-toggle'), btns = [];
+    var TIPS = {
+      impact: 'Group by relationship: the artifact and own repository, then the unified categories shared with citations',
+      recency: 'Most recently active first, grouped by year',
+      popularity: "Most-starred first, grouped by magnitude \u2014 stars are the repo world's citation count"
+    };
+    ['impact', 'recency', 'popularity'].forEach(function(v){
+      var b = el('button', 'type-toggle-btn' + (v === state.sort ? ' active' : ''),
+                 v.charAt(0).toUpperCase() + v.slice(1));
+      b.type = 'button'; b.title = TIPS[v];
+      b.addEventListener('click', function(){
+        state.sort = v;
+        btns.forEach(function(x){ x.el.className = 'type-toggle-btn' + (x.v === v ? ' active' : ''); });
+        draw();
+      });
+      btns.push({ v: v, el: b }); tg.appendChild(b);
+    });
+    sortRow.appendChild(tg);
+    var expBtn = el('button', 'type-toggle-btn cite-hdr-toggle' + (state.expanded ? ' active' : ''),
+                    state.expanded ? 'Collapse all' : 'Expand all');
+    expBtn.type = 'button'; expBtn.title = 'Open or close every group below';
+    expBtn.addEventListener('click', function(){
+      state.expanded = !state.expanded;
+      expBtn.className = 'type-toggle-btn cite-hdr-toggle' + (state.expanded ? ' active' : '');
+      expBtn.textContent = state.expanded ? 'Collapse all' : 'Expand all';
+      draw();
+    });
+    sortRow.appendChild(el('span', null, ' '));
+    sortRow.appendChild(expBtn);
+    mount.appendChild(sortRow);
+    var groupsMount = el('div', 'cite-groups');
+    mount.appendChild(groupsMount);
+    function draw(){
+      groupsMount.innerHTML = '';
+      if (state.sort === 'impact'){
+        REPO_GROUPS.forEach(function(g){
+          var rows = repos.filter(function(r){ return r.group === g.key; });
+          if (rows.length) groupsMount.appendChild(
+            renderGroupWith(g.label, g.gloss, rows, state.expanded, renderRepoRow));
+        });
+      } else {
+        var sorted = repos.slice(), headerOf;
+        if (state.sort === 'popularity'){
+          sorted.sort(function(a, b){
+            return ((b.stars != null ? b.stars : -1) - (a.stars != null ? a.stars : -1)); });
+          headerOf = function(r){ return repoStarBucket(r.stars); };
+        } else {
+          sorted.sort(function(a, b){ return (b.active || 0) - (a.active || 0); });
+          headerOf = function(r){ return r.active ? String(r.active) : 'no activity data'; };
+        }
+        var order = [], byH = {};
+        sorted.forEach(function(r){
+          var h = headerOf(r);
+          if (!byH[h]){ byH[h] = []; order.push(h); }
+          byH[h].push(r);
+        });
+        order.forEach(function(h){
+          groupsMount.appendChild(renderGroupWith(h, null, byH[h], state.expanded, renderRepoRow));
+        });
+      }
+    }
+    draw();
+  }
+  var repoInstances = [];
+  var repoDefaultOpen = false;
+  var repoDataCache = {};
+  function attachRepoToggle(metaEl, bodyParent, key, indexRow){
+    var div = el('div', 'pub-summary cite-view');
+    var toggle = el('a', 'pub-action pub-summary-toggle cite-toggle');
+    toggle.href = '#';
+    var n = indexRow.repos;
+    var setArrow = function(open){
+      toggle.textContent = 'Repositories (' + fmt(n) + ') ' + (open ? '\u25be' : '\u25b8');
+    };
+    setArrow(false);
+    var loaded = false;
+    function load(){
+      if (loaded) return;
+      loaded = true;
+      div.appendChild(el('div', 'cite-loading', 'Loading\u2026'));
+      fetchQueue.push(function(){
+        return fetch(REPO_BASE + 'papers/' + encodeURIComponent(key) + '.json')
+          .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+          .then(function(data){ repoDataCache[key] = data; renderRepoPanel(div, data); })
+          .catch(function(e){
+            loaded = false;
+            div.innerHTML = '';
+            div.appendChild(el('div', 'cite-loading', 'Could not load repository data (' + e.message + ').'));
+          });
+      });
+      pumpQueue();
+    }
+    function setOpen(open){
+      var isOpen = div.className.indexOf('open') !== -1;
+      if (open === isOpen) return;
+      div.className = 'pub-summary cite-view' + (open ? ' open' : '');
+      setArrow(open);
+      if (open) load();
+    }
+    toggle.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var willOpen = div.className.indexOf('open') === -1;
+      setOpen(willOpen);
+      if (willOpen) trackSafe('repos-view', { key: key });
+    });
+    metaEl.appendChild(document.createTextNode(' '));
+    metaEl.appendChild(toggle);
+    bodyParent.appendChild(div);
+    repoInstances.push({ el: div, setOpen: setOpen });
+    if (repoDefaultOpen) setOpen(true);
+  }
+  function setAllReposOpen(open){
+    repoInstances = repoInstances.filter(function(i){ return document.contains(i.el); });
+    for (var i = 0; i < repoInstances.length; i++) repoInstances[i].setOpen(open);
+  }
+
   return {
     attachToggle: attachToggle,
+    attachRepoToggle: attachRepoToggle,
+    setAllReposOpen: setAllReposOpen,
+    setRepoDefaultOpen: function(v){ repoDefaultOpen = !!v; },
+    loadRepoIndex: function(){
+      return fetch(REPO_BASE + 'index.json', { cache: 'no-store' })
+        .then(function(r){ if (!r.ok) throw new Error('no repos index'); return r.json(); });
+    },
     countBucket: countBucket,
     displayCount: displayCount,
     impactScore: impactScore,

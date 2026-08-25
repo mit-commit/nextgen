@@ -354,6 +354,10 @@ function createBibLink(it){
   // part of the combined Summary block; storage stays two separate fields
   // so regenerating receptions can never overwrite hand-written summaries.
   var RECEPTIONS = {};
+  // Repository view index (data/repos/index.json) — same pattern: one small
+  // fetch decides which papers get a Repositories toggle; per-paper files
+  // load lazily on expand. Absent index -> no toggles anywhere.
+  var REPO_INDEX = null;
   var citeIndexReady = (window.CITATIONS
     ? Promise.all([
         CITATIONS.loadIndex().then(function(idx){
@@ -362,7 +366,10 @@ function createBibLink(it){
         fetch('data/citations/reception.json', { cache: 'no-store' })
           .then(function(r){ return r.ok ? r.json() : {}; })
           .then(function(rec){ RECEPTIONS = rec || {}; })
-          .catch(function(){ RECEPTIONS = {}; })
+          .catch(function(){ RECEPTIONS = {}; }),
+        CITATIONS.loadRepoIndex()
+          .then(function(idx){ REPO_INDEX = (idx && idx.papers) || null; })
+          .catch(function(){ REPO_INDEX = null; })
       ])
     : Promise.resolve()
   ).catch(function(){ CITE_INDEX = null; });
@@ -398,6 +405,7 @@ function createBibLink(it){
       venueSort: 'name',          // 'name' | 'count' — venue ordering in venue mode
       summaryExpanded: false,     // global default for per-paper summaries
       citationsExpanded: false,   // global default for per-paper citation panels
+      reposExpanded: false,       // global default for per-paper repository panels
       minCites: 0,                // paper threshold: displayed citation count
       minImpact: 0                // paper threshold: weighted impact score
 
@@ -410,6 +418,7 @@ function createBibLink(it){
     btnClear: document.getElementById('btn-clear'),
     btnToggleSummaries: document.getElementById('btn-toggle-summaries'),
     btnToggleCitations: document.getElementById('btn-toggle-citations'),
+    btnToggleRepos: document.getElementById('btn-toggle-repos'),
     years: document.getElementById('facet-years'),
     title: document.getElementById('facet-title'),
     kwBox: document.getElementById('facet-keywords'),
@@ -796,6 +805,11 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
       var citeRow = CITE_INDEX[bibtexKeyOf(it)];
       if (citeRow) CITATIONS.attachToggle(meta, li, bibtexKeyOf(it), citeRow);
     }
+    // Repository view toggle (only for papers with a data/repos/ row).
+    if (window.CITATIONS && REPO_INDEX){
+      var repoRow = REPO_INDEX[bibtexKeyOf(it)];
+      if (repoRow) CITATIONS.attachRepoToggle(meta, li, bibtexKeyOf(it), repoRow);
+    }
 
     if (it.price){ var pr=document.createElement('div'); pr.className='pub-price'; pr.appendChild(text(it.price)); li.appendChild(pr); }
 
@@ -1105,12 +1119,15 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var box = els.citeOverview;
     if (!box) return;
     if (!CITE_INDEX || !window.CITATIONS){ box.className = 'cite-overview hidden'; return; }
-    var withData = [], totalC = 0, i;
+    var withData = [], totalC = 0, totalR = 0, i;
     for (i = 0; i < items.length; i++){
       var row = CITE_INDEX[bibtexKeyOf(items[i])];
-      if (!row) continue;
-      withData.push({ key: bibtexKeyOf(items[i]), title: items[i].title || '' });
-      totalC += CITATIONS.displayCount(row);
+      if (row){
+        withData.push({ key: bibtexKeyOf(items[i]), title: items[i].title || '' });
+        totalC += CITATIONS.displayCount(row);
+      }
+      var rrow = REPO_INDEX && REPO_INDEX[bibtexKeyOf(items[i])];
+      if (rrow) totalR += rrow.repos || 0;
     }
     box.innerHTML = '';
     if (!withData.length){ box.className = 'cite-overview hidden'; return; }
@@ -1118,7 +1135,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
     l1.innerHTML = '<b>' + withData.length.toLocaleString('en-US') + '</b> of ' +
       items.length.toLocaleString('en-US') + ' shown papers have <b>' +
-      totalC.toLocaleString('en-US') + '</b> total citations.';
+      totalC.toLocaleString('en-US') + '</b> total citations' +
+      (totalR ? ' and <b>' + totalR.toLocaleString('en-US') + '</b> repositories' : '') + '.';
     box.appendChild(l1);
   }
 
@@ -1272,6 +1290,20 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
           CITATIONS.setAllOpen(on);      // per-paper files still load lazily
         }
         track('citations-toggle-all', { expanded: on });
+      };
+    }
+
+    if (els.btnToggleRepos) {
+      els.btnToggleRepos.onclick = function(){
+        state.reposExpanded = !state.reposExpanded;
+        var on = state.reposExpanded;
+        els.btnToggleRepos.textContent = on ? 'Hide repositories' : 'Show repositories';
+        els.btnToggleRepos.setAttribute('aria-pressed', on ? 'true' : 'false');
+        if (window.CITATIONS && CITATIONS.setAllReposOpen){
+          CITATIONS.setRepoDefaultOpen(on);
+          CITATIONS.setAllReposOpen(on);
+        }
+        track('repos-toggle-all', { expanded: on });
       };
     }
 

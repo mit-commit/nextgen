@@ -15,6 +15,352 @@
    "active": 2026
   },
   {
+   "url": "https://github.com/googleprojectzero/winafl",
+   "group": "uses",
+   "name": "googleprojectzero/winafl",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: WinAFL uses DynamoRIO as its dynamic instrumentation backend for fuzzing Windows binaries, calling it as a dependency rather than modifying its internals.",
+   "sdv": "api_user",
+   "desc": "A fork of AFL for fuzzing Windows binaries",
+   "stars": 2604,
+   "active": 2026
+  },
+  {
+   "url": "https://github.com/mxmssh/drAFL",
+   "group": "uses",
+   "name": "mxmssh/drAFL",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: drAFL uses DynamoRIO as a dynamic instrumentation library to implement coverage-guided fuzzing, calling its APIs rather than modifying its internals.",
+   "sdv": "api_user",
+   "desc": "AFL + DynamoRIO = fuzzing binaries with no source code on Linux",
+   "stars": 249,
+   "active": 2019
+  },
+  {
+   "url": "https://github.com/BreakingMalware/Selfie",
+   "group": "uses",
+   "name": "BreakingMalware/Selfie",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Selfie is a tool that uses DynamoRIO as a dynamic instrumentation framework to unpack self-modifying code, importing and calling DynamoRIO's published API rather than modifying its internals.",
+   "sdv": "api_user",
+   "desc": "A Tool to Unpack Self-Modifying Code using DynamoRIO",
+   "stars": 141,
+   "active": 2017
+  },
+  {
+   "url": "https://github.com/invictus1306/functrace",
+   "group": "uses",
+   "name": "invictus1306/functrace",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: functrace is a DynamoRIO-based function tracer that uses DynamoRIO's API/client interface to instrument and trace function calls.",
+   "sdv": "api_user",
+   "desc": "A function tracer",
+   "stars": 92,
+   "active": 2019
+  },
+  {
+   "url": "https://github.com/vanhauser-thc/afl-dynamorio",
+   "group": "uses",
+   "name": "vanhauser-thc/afl-dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: This repo integrates DynamoRIO as a dynamic instrumentation backend to run AFL fuzzing, using DynamoRIO's published client/API interface.",
+   "sdv": "api_user",
+   "desc": "run AFL with dynamorio",
+   "stars": 37,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/poul1x/drtaint-arm32",
+   "group": "uses",
+   "name": "poul1x/drtaint-arm32",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Implements a taint analysis tool built on top of DynamoRIO's API/framework for ARM32, directly using DynamoRIO as its runtime infrastructure.",
+   "sdv": "api_user",
+   "desc": "Very WIP taint analysis for DynamoRIO (ARM)",
+   "stars": 4,
+   "active": 2021
+  },
+  {
+   "url": "https://github.com/charles-l/binary-xray",
+   "group": "uses",
+   "name": "charles-l/binary-xray",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A binary instrumentation tool that likely uses DynamoRIO as its dynamic instrumentation backend to trace executing lines of code.",
+   "sdv": "api_user",
+   "desc": "a tool that shows which lines of code are executing in a binary in realtime",
+   "stars": 2,
+   "active": 2023
+  },
+  {
+   "url": "https://github.com/theosotr/fsracer",
+   "group": "uses",
+   "name": "theosotr/fsracer",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: FSRacer uses DynamoRIO as its dynamic binary instrumentation framework to detect filesystem race conditions in JavaScript programs.",
+   "sdv": "api_user",
+   "desc": "Detecting fs-related data racers in JavaScript programs through dynamic binary instrumentation.",
+   "stars": 2,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/agustingianni/CoverageReport",
+   "group": "uses",
+   "name": "agustingianni/CoverageReport",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Wraps DynamoRIO's drcov scripts/tools as a dependency, using its published interface without modifying internals.",
+   "sdv": "api_user",
+   "desc": "Wrappers around DynamoRio's drcov scripts that make them easier to use.",
+   "stars": 2,
+   "active": 2018
+  },
+  {
+   "url": "https://github.com/ptrbman/dynamorio-missing-instructions",
+   "group": "builds-on",
+   "name": "ptrbman/dynamorio-missing-instructions",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO with 102 commits ahead of upstream, likely adding support for missing instructions.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 2,
+   "active": 2024
+  },
+  {
+   "url": "https://github.com/uci-plrg/blackbox",
+   "group": "builds-on",
+   "name": "uci-plrg/blackbox",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: This is a GitHub fork of DynamoRIO with 46 commits ahead of upstream, representing meaningful changes to build a security framework for x86 binaries.",
+   "sdv": "fork",
+   "desc": "Security framework for x86 binaries.",
+   "stars": 2,
+   "active": 2016
+  },
+  {
+   "url": "https://github.com/aklsh/dynamorio",
+   "group": "builds-on",
+   "name": "aklsh/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Named fork of DynamoRIO/dynamorio with 11 commits ahead of upstream, indicating meaningful local changes.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 2,
+   "active": 2023
+  },
+  {
+   "url": "https://github.com/liuhandsome110/drnamorio",
+   "group": "builds-on",
+   "name": "liuhandsome110/drnamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The repo name 'drnamorio' closely resembles 'dynamorio' and being found via mentions with no description suggests it is a personal fork or clone of DynamoRIO.",
+   "sdv": "fork",
+   "stars": 1,
+   "active": 2017
+  },
+  {
+   "url": "https://github.com/bebrws/dynamorio",
+   "group": "builds-on",
+   "name": "bebrws/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO/dynamorio with no description, found via mentions, likely a personal mirror or minor modification.",
+   "sdv": "fork",
+   "stars": 1,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/Kirrito-k423/DynamoRIO-basicBlock-collection",
+   "group": "uses",
+   "name": "Kirrito-k423/DynamoRIO-basicBlock-collection",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The candidate uses DynamoRIO as a tool to collect basic block traces from applications, calling its API/client interface to gather data for BHive benchmarks.",
+   "sdv": "api_user",
+   "desc": "通过DynamoRIO收集各种应用的make test或者其他benchmark的basic-block结果(TB级别的汇编log文件)，通过筛选和去重整理出供BHive测试运行的基本块测试集。",
+   "stars": 1,
+   "active": 2022
+  },
+  {
+   "url": "https://github.com/elamdf/dynamorio",
+   "group": "builds-on",
+   "name": "elamdf/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO/dynamorio with 19 commits ahead of upstream, indicating meaningful local changes.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 1,
+   "active": 2023
+  },
+  {
+   "url": "https://github.com/afa7789/dynamorio_instruction_count",
+   "group": "uses",
+   "name": "afa7789/dynamorio_instruction_count",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: This repo implements a DynamoRIO client tool that uses the DynamoRIO API to count machine instructions, directly calling its published instrumentation interface.",
+   "sdv": "api_user",
+   "desc": "Instruction tool to be used with DynamoRIO that counts the number of machine instructions in a application.",
+   "stars": 0,
+   "active": 2021
+  },
+  {
+   "url": "https://github.com/huyanshuhan/dynamorio",
+   "group": "builds-on",
+   "name": "huyanshuhan/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO with the same name and no meaningful description, found via mentions.",
+   "sdv": "fork",
+   "desc": "dynamorio",
+   "stars": 0,
+   "active": 2018
+  },
+  {
+   "url": "https://github.com/JivanH/dynamorio",
+   "group": "builds-on",
+   "name": "JivanH/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO/dynamorio with no description and 0 stars, found via mentions, indicating it is a personal fork of the upstream repository.",
+   "sdv": "fork",
+   "stars": 0,
+   "active": 2019
+  },
+  {
+   "url": "https://github.com/jiyuzh/dynamorio",
+   "group": "builds-on",
+   "name": "jiyuzh/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Same name and description as the upstream DynamoRIO repo, indicating a GitHub fork/mirror of the tool.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 0,
+   "active": 2023
+  },
+  {
+   "url": "https://github.com/unprosaiclabyrinth/bblogger",
+   "group": "uses",
+   "name": "unprosaiclabyrinth/bblogger",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: bblogger is a DynamoRIO client that uses its API to log basic block traces, directly importing and calling DynamoRIO's published interface.",
+   "sdv": "api_user",
+   "desc": "A basic code block trace logger using DynamoRIO.",
+   "stars": 0,
+   "active": 2025
+  },
+  {
+   "url": "https://github.com/JackKuo-tw/func_usage_tracer",
+   "group": "uses",
+   "name": "JackKuo-tw/func_usage_tracer",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A function tracer tool that uses DynamoRIO as its instrumentation framework to trace function calls in executables.",
+   "sdv": "api_user",
+   "desc": "It traces the specific function of any executable.",
+   "stars": 0,
+   "active": 2021
+  },
+  {
+   "url": "https://github.com/KRVPerera/SimpleDRClient",
+   "group": "uses",
+   "name": "KRVPerera/SimpleDRClient",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A DynamoRIO client is by definition a program that uses DynamoRIO's published client API to instrument or analyze code.",
+   "sdv": "api_user",
+   "desc": "Simple Dynamorio Client",
+   "stars": 0,
+   "active": 2016
+  },
+  {
+   "url": "https://github.com/adutilleul/tma-scope",
+   "group": "uses",
+   "name": "adutilleul/tma-scope",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The repo uses DynamoRIO as a DBI framework to instrument and profile functions with TMAM, directly calling its API without modifying its internals.",
+   "sdv": "api_user",
+   "desc": "Allow to profile a function with the TMAM (Top Down Analysis Methodology)  thanks to DBI (Dynamic Binary Instrumentation).",
+   "stars": 0,
+   "active": 2024
+  },
+  {
+   "url": "https://github.com/plavin/dynamorio-dev",
+   "group": "builds-on",
+   "name": "plavin/dynamorio-dev",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The repo name 'dynamorio-dev' strongly suggests it is a personal development fork of DynamoRIO, and it was found via mentions of the upstream repo.",
+   "sdv": "fork",
+   "stars": 0,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/Entropy-xcy/dynamorio_champsim_tracer",
+   "group": "builds-on",
+   "name": "Entropy-xcy/dynamorio_champsim_tracer",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The repo name suggests it contains a DynamoRIO-based tracer client for ChampSim, which would copy/adapt DynamoRIO client code rather than merely importing it as a library.",
+   "sdv": "derivative_work",
+   "stars": 0,
+   "active": 2025
+  },
+  {
+   "url": "https://github.com/abscosmos/BasicBlockMLToolkit",
+   "group": "uses",
+   "name": "abscosmos/BasicBlockMLToolkit",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The toolkit gathers and analyzes basic blocks, which likely uses DynamoRIO as an instrumentation framework to extract basic block data, making it a direct API user.",
+   "sdv": "api_user",
+   "desc": "Collection of tools related to gathering & analyzing basic blocks, and training & running ML models on them.",
+   "stars": 0,
+   "active": 2026,
+   "archived": true
+  },
+  {
+   "url": "https://github.com/VANDAL/dynamorio-sigil2",
+   "group": "builds-on",
+   "name": "VANDAL/dynamorio-sigil2",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Explicitly a modified fork of DynamoRIO for Sigil2 instrumentation, with 44 commits ahead of upstream.",
+   "sdv": "fork",
+   "desc": "[DEPRECATED] Dynamic Instrumentation Tool Platform - modified for Sigil2",
+   "stars": 0,
+   "active": 2017,
+   "archived": true
+  },
+  {
+   "url": "https://github.com/mnk7/dynamorio",
+   "group": "builds-on",
+   "name": "mnk7/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Named fork of DynamoRIO/dynamorio with 16 commits ahead of upstream, indicating meaningful local changes.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 0,
+   "active": 2018
+  },
+  {
+   "url": "https://github.com/aleden/dynamorio",
+   "group": "builds-on",
+   "name": "aleden/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO with 3 commits ahead of upstream, indicating meaningful local changes.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 0,
+   "active": 2018
+  },
+  {
+   "url": "https://github.com/chaojianhu/dynamorio",
+   "group": "builds-on",
+   "name": "chaojianhu/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO with 1 commit ahead of upstream, indicating at least one local change.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 0,
+   "active": 2017
+  },
+  {
+   "url": "https://github.com/suyashmahar/dynamorio",
+   "group": "builds-on",
+   "name": "suyashmahar/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO with 4 commits ahead of upstream, indicating meaningful local changes.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 0,
+   "active": 2026
+  },
+  {
+   "url": "https://github.com/MikeWalrus/dynamorio",
+   "group": "builds-on",
+   "name": "MikeWalrus/dynamorio",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A GitHub fork of DynamoRIO with 2 commits ahead of upstream, indicating meaningful local changes.",
+   "sdv": "fork",
+   "desc": "Dynamic Instrumentation Tool Platform",
+   "stars": 0,
+   "active": 2024
+  },
+  {
+   "url": "https://github.com/MuhammadMinh/dynamorio-jit",
+   "group": "uses",
+   "name": "MuhammadMinh/dynamorio-jit",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The name 'DynamoRIO-based JIT optimizer' strongly indicates it builds on DynamoRIO as a framework/library rather than modifying its internals.",
+   "sdv": "api_user",
+   "desc": "DynamoRIO-based JIT optimizer",
+   "stars": 3,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/cwshu/DynamoRioClientPrac",
+   "group": "builds-on",
+   "name": "cwshu/DynamoRioClientPrac",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The repo name suggests it is a fork or personal practice repo based on DynamoRIO client development, likely containing DynamoRIO client code.",
+   "sdv": "fork",
+   "stars": 0,
+   "active": 2016
+  },
+  {
    "url": "https://github.com/Fraunhofer-SIT/ASE2025-Terminator",
    "group": "adopts",
    "name": "Fraunhofer-SIT/ASE2025-Terminator",

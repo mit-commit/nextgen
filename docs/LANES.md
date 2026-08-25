@@ -1062,6 +1062,20 @@ raise it to the setup lane.
   student accounts doesn't work; the next lever is reading each
   thesis's own full text for repo URLs/tool names (fulltext-lane
   machinery), and pre-2008 theses predate GitHub entirely.
+- **Tier-2 corpus-wide fold — the impact view is COMPLETE across all
+  three tiers** (2026-08-25): folded the ecosystems lane's
+  harvest/ecosystems/verified.json (cb4c064c: 763 candidates from
+  dependents + README mentions + fork-divergence across all 71 own
+  repos, model-verified to 266 confirmed / 1,241 paper-rows) into
+  data/repos/ — rows GitHub-enriched via the shared cache, own_repo
+  prefixed into the evidence tooltip, deduped against each paper's
+  existing rows, group order own → builds-on → uses → benchmarks →
+  adopts. Site now: 162 papers / 2,024 repo rows, 108 papers with
+  mixed-tier panels (e.g. taco OOPSLA: 3 own + 18 builds-on + 1 uses +
+  3 adopts; Halide: 634 rows with the Halide-world import).
+  Browser-verified on a clean load. The measure step artifacts
+  (measure_ecosystems.py, ecosystem-measure.{json,md}) and the
+  71-repo tier2-priority.md remain the gating record.
 - **F2 impact-view rollout** (2026-08-25, human-ordered before F1's
   remaining waves): the approved Option-B impact view is live for ALL
   papers. New data layer (claimed): `harvest/impactview/build_repo_data.py`

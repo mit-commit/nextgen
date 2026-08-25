@@ -97,9 +97,13 @@ def main():
     eco_tier2 = {}
     if halide_import:
         eco_tier2[halide_import['key']] = halide_import['tier2']
+    # corpus-wide tier-2: model-verified outside users of all 71 own repos
+    # (harvest/ecosystems/verified.json, pre-shaped to SCHEMA.md rows)
+    ecov_path = f'{ROOT}/harvest/ecosystems/verified.json'
+    eco_verified = json.load(open(ecov_path)) if os.path.exists(ecov_path) else {}
 
     papers = {}
-    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_tier2)):
+    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_tier2) | set(eco_verified)):
         # own-inventory rows are tier-1 like verified.json's; 'website'
         # repos stay inventory-only (project pages, not impact)
         rows = verified.get(key, []) + [
@@ -177,6 +181,36 @@ def main():
             if entry['name'].lower() in {n for n, _ in seen}:
                 continue
             seen.add((entry['name'].lower(), 'adopts'))
+            out.append(entry)
+        # tier 2: corpus-wide verified outside users. GitHub-enriched via
+        # the shared cache (264 distinct repos); own_repo goes into the
+        # evidence tooltip so multi-ecosystem papers stay legible.
+        for r in eco_verified.get(key, []):
+            entry = {'url': r['url'], 'group': r['group'], 'name': r['name'],
+                     'evidence': (f"ecosystem of {r['own_repo']}: " if r.get('own_repo') else '')
+                                 + (r.get('evidence') or '')}
+            if r.get('sdv'):
+                entry['sdv'] = r['sdv']
+            fn = fullname_of(r['url']) if 'github.com/' in (r.get('url') or '') else None
+            if fn and token:
+                meta = gh_repo(fn, cache, token)
+                if meta and not meta.get('error'):
+                    entry['name'] = meta['full_name'] or entry['name']
+                    if meta.get('description'):
+                        entry['desc'] = meta['description']
+                    if meta.get('stars') is not None:
+                        entry['stars'] = meta['stars']
+                    if meta.get('pushed'):
+                        entry['active'] = int(meta['pushed'])
+                    if meta.get('archived'):
+                        entry['archived'] = True
+            if entry.get('desc') is None and r.get('desc'):
+                entry['desc'] = r['desc']
+            if entry.get('stars') is None and r.get('stars') is not None:
+                entry['stars'] = r['stars']
+            if entry['name'].lower() in {n for n, _ in seen}:
+                continue
+            seen.add((entry['name'].lower(), entry['group']))
             out.append(entry)
         # tier 2: ecosystem-user rows imported from another repo's own
         # index (currently only halide-import.json). Mapped verbatim --

@@ -37,6 +37,7 @@ RECORDS_DIR = os.path.join(ROOT, 'harvest', 'taxonomy', 'records')
 PILOT_CLASSIFICATIONS = os.path.join(ROOT, 'harvest', 'taxonomy', 'pilot-classifications.json')
 OUT_DIR = os.path.join(ROOT, 'data', 'citations')
 GSCHOLAR_PATH = os.path.join(OUT_DIR, 'gscholar.json')
+RECEPTION_PATH = os.path.join(OUT_DIR, 'reception.json')
 INDEX_PATH = os.path.join(OUT_DIR, 'index.json')
 
 PILOT_KEYS = {
@@ -251,6 +252,7 @@ def main():
              'figures in index.json')
 
     gscholar = json.load(open(GSCHOLAR_PATH)) if os.path.exists(GSCHOLAR_PATH) else {}
+    reception = json.load(open(RECEPTION_PATH)) if os.path.exists(RECEPTION_PATH) else {}
     index = (json.load(open(INDEX_PATH)) if os.path.exists(INDEX_PATH)
              else {'schema': 1, 'generated': None, 'papers': {}})
 
@@ -262,6 +264,8 @@ def main():
         paper = build_paper(key, tax_rows, citing_list, args.generated)
         gs = (gscholar.get(key) or {}).get('count')
         paper['counts']['gscholar'] = gs
+        if reception.get(key):
+            paper['reception'] = reception[key]
         # External judged function/centrality counts: feed the page-level
         # impact score, aggregate overview, and centrality buttons without
         # loading the per-paper file.

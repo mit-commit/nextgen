@@ -94,14 +94,15 @@ def main():
     # unfolded per the round-8 task's literal scope (567 tier-2 rows only).
     halide_path = f'{ROOT}/harvest/ecosystems/halide-import.json'
     halide_import = json.load(open(halide_path)) if os.path.exists(halide_path) else None
-    eco_tier2 = {}
+    # tier2 + tier3: both are Halide-world's own verified rows (tier3 was
+    # scoped out of the original round-8 fold; citing_title becomes the
+    # row's paper label). Expanded to EVERY paper whose own repo is
+    # halide/Halide — the same rule the ecosystem hunt uses — not just
+    # the one canonical paper the round-8 task mapped it to.
+    halide_rows = []
     if halide_import:
-        # tier2 + tier3: both are Halide-world's own verified rows
-        # (tier3 was scoped out of the original round-8 fold; citing_title
-        # becomes the row's paper label)
-        ht = halide_import['tier2'] + [
+        halide_rows = halide_import['tier2'] + [
             dict(r, paper=r.get('citing_title')) for r in halide_import.get('tier3', [])]
-        eco_tier2[halide_import['key']] = ht
     # corpus-wide tier-2: model-verified outside users of all 71 own repos
     # (harvest/ecosystems/verified.json, pre-shaped to SCHEMA.md rows)
     ecov_path = f'{ROOT}/harvest/ecosystems/verified.json'
@@ -122,7 +123,7 @@ def main():
         own_map[k2] = names
 
     papers = {}
-    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_tier2) | set(eco_verified)):
+    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_verified)):
         # own-inventory rows are tier-1 like verified.json's; 'website'
         # repos stay inventory-only (project pages, not impact)
         rows = verified.get(key, []) + [
@@ -236,7 +237,8 @@ def main():
         # index (currently only halide-import.json). Mapped verbatim --
         # no GitHub refetch, no re-judging -- skip only an exact repo the
         # paper already carries under any other role/group.
-        for r in eco_tier2.get(key, []):
+        halide_here = halide_rows if 'halide/halide' in own_map.get(key, set()) else []
+        for r in halide_here:
             name_l = r['name'].lower()
             if name_l in {n for n, _ in seen}:
                 continue

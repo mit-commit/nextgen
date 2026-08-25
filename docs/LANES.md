@@ -1062,6 +1062,16 @@ raise it to the setup lane.
   student accounts doesn't work; the next lever is reading each
   thesis's own full text for repo URLs/tool names (fulltext-lane
   machinery), and pre-2008 theses predate GitHub entirely.
+- **Halide import expansion** (2026-08-25, human asked why the 2012
+  SIGGRAPH and 2013 PLDI Halide papers had different repo sets): the
+  only criteria inconsistency was the round-8 halide-import fold, which
+  keyed Halide-world's 567+143 rows to the single canonical paper
+  instead of the ecosystem rule every other tier-2 source follows.
+  Fixed: the import now expands to every paper whose own repo is
+  halide/Halide (same rule as the hunt). All Halide-anchored papers
+  carry ~775 rows; remaining per-paper differences are genuinely
+  paper-specific (tier-3 descendants attach per citing work). Site:
+  162 papers / 4,246 rows.
 - **Unincorporated-finds audit** (2026-08-25, human caught StreamIt
   missing asolarlez/sketch-frontend): audited every known-but-unfolded
   find. Two found, both now folded: (1) sketch-frontend — verified by

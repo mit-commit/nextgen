@@ -982,6 +982,24 @@ raise it to the setup lane.
   PDF ingestion rejudged 18 rows (17 changed function/centrality).
   Only those 3 pilot files + index.json changed; other pilots,
   gscholar.json, reception.json untouched.
+- **Own-repo inventory + tier-2 priority list** (2026-08-25, human
+  directive: find ALL our repos first — theses especially — then rank
+  the outside-user hunt by stars × citations). Phase A
+  (find_own_repos.py): enumerated the 33 own-group GitHub owners' 346
+  non-fork repos, mechanical match → 102 candidates. Phase B (repos
+  lane, 74be0f6c): personal-account hunt over 191 repo-less papers +
+  model verification of BOTH pools — 13 confirmed / 165 rejected (93%
+  FP rate; auto-accepting either pool would have poisoned the data).
+  Confirmed rows live in harvest/repos/own-inventory.json; the builder
+  now folds them in (role=website rows stay inventory-only — project
+  pages are not impact). Site: 139 papers / 211 rows. Deliverable for
+  the human's gating call: harvest/impactview/tier2-priority.md — all
+  52 own GitHub repos ranked by log-stars + log-citations
+  (gen_tier2_priority.py regenerates). KNOWN GAP, needs a human
+  decision: only 1 of 72 repo-less theses gained a repo — guessing
+  student accounts doesn't work; the next lever is reading each
+  thesis's own full text for repo URLs/tool names (fulltext-lane
+  machinery), and pre-2008 theses predate GitHub entirely.
 - **F2 impact-view rollout** (2026-08-25, human-ordered before F1's
   remaining waves): the approved Option-B impact view is live for ALL
   papers. New data layer (claimed): `harvest/impactview/build_repo_data.py`

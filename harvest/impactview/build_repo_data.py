@@ -76,11 +76,16 @@ def main():
     artifacts = json.load(open(f'{ROOT}/harvest/artifacts/found.json'))
     desc_path = f'{ROOT}/harvest/repos/descendants.json'
     descendants = json.load(open(desc_path)) if os.path.exists(desc_path) else {}
+    inv_path = f'{ROOT}/harvest/repos/own-inventory.json'
+    inventory = json.load(open(inv_path)) if os.path.exists(inv_path) else {}
     cache = json.load(open(GHCACHE)) if os.path.exists(GHCACHE) else {}
 
     papers = {}
-    for key in sorted(set(verified) | set(descendants)):
-        rows = verified.get(key, [])
+    for key in sorted(set(verified) | set(descendants) | set(inventory)):
+        # own-inventory rows are tier-1 like verified.json's; 'website'
+        # repos stay inventory-only (project pages, not impact)
+        rows = verified.get(key, []) + [
+            r for r in inventory.get(key, []) if r.get('role') != 'website']
         out = []
         seen = set()
         for r in rows:

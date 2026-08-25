@@ -96,11 +96,30 @@ def main():
     halide_import = json.load(open(halide_path)) if os.path.exists(halide_path) else None
     eco_tier2 = {}
     if halide_import:
-        eco_tier2[halide_import['key']] = halide_import['tier2']
+        # tier2 + tier3: both are Halide-world's own verified rows
+        # (tier3 was scoped out of the original round-8 fold; citing_title
+        # becomes the row's paper label)
+        ht = halide_import['tier2'] + [
+            dict(r, paper=r.get('citing_title')) for r in halide_import.get('tier3', [])]
+        eco_tier2[halide_import['key']] = ht
     # corpus-wide tier-2: model-verified outside users of all 71 own repos
     # (harvest/ecosystems/verified.json, pre-shaped to SCHEMA.md rows)
     ecov_path = f'{ROOT}/harvest/ecosystems/verified.json'
     eco_verified = json.load(open(ecov_path)) if os.path.exists(ecov_path) else {}
+    # hand-verified rows the automated signals cannot see (renamed embedded
+    # forks etc.); keyed by own_repo, expanded to that ecosystem's papers
+    man_path = os.path.join(HERE, 'manual-rows.json')
+    manual = json.load(open(man_path))['rows'] if os.path.exists(man_path) else []
+    own_map = {}
+    for k2 in set(verified) | set(inventory):
+        names = set()
+        for r in verified.get(k2, []) + inventory.get(k2, []):
+            if (r.get('own_group') and r.get('role') not in ('third_party', 'website')
+                    and 'github.com' in (r.get('url') or '')):
+                fn2 = fullname_of(r['url'])
+                if fn2:
+                    names.add(fn2.lower())
+        own_map[k2] = names
 
     papers = {}
     for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_tier2) | set(eco_verified)):
@@ -185,7 +204,8 @@ def main():
         # tier 2: corpus-wide verified outside users. GitHub-enriched via
         # the shared cache (264 distinct repos); own_repo goes into the
         # evidence tooltip so multi-ecosystem papers stay legible.
-        for r in eco_verified.get(key, []):
+        for r in eco_verified.get(key, []) + [
+                m for m in manual if m['own_repo'].lower() in own_map.get(key, set())]:
             entry = {'url': r['url'], 'group': r['group'], 'name': r['name'],
                      'evidence': (f"ecosystem of {r['own_repo']}: " if r.get('own_repo') else '')
                                  + (r.get('evidence') or '')}

@@ -1062,6 +1062,20 @@ raise it to the setup lane.
   student accounts doesn't work; the next lever is reading each
   thesis's own full text for repo URLs/tool names (fulltext-lane
   machinery), and pre-2008 theses predate GitHub entirely.
+- **Unincorporated-finds audit** (2026-08-25, human caught StreamIt
+  missing asolarlez/sketch-frontend): audited every known-but-unfolded
+  find. Two found, both now folded: (1) sketch-frontend — verified by
+  hand in the mock/design-doc era but never put in real data; now in
+  harvest/impactview/manual-rows.json (NEW: hand-verified ecosystem
+  rows keyed by own_repo, builder-expanded to the ecosystem's papers —
+  the home for renamed-embedded-fork finds the automated signals can't
+  see), rendering on all 30 StreamIt papers as Builds on it. (2)
+  Halide-world's tier-3 (162 verified idea-descendant rows incl.
+  FlashAttention) — scoped out of the round-8 fold, now folded. Site:
+  162 papers / 2,197 rows. REMAINING GAP, flagged to the human: the
+  design doc section-7 fingerprint hunt (namespace archaeology,
+  grammar/IR fingerprints, provenance files) has never run as a
+  harvest — proposed to the ecosystems lane as tier-2 signal #4.
 - **Composite impact + first-reader tooltips** (2026-08-25, human task
   2): the paper-threshold Impact slider and the list-level sort (option
   renamed "Citations" -> "Impact") now share ONE composite score:

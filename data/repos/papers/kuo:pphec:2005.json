@@ -39,10 +39,20 @@
    "url": "https://github.com/asolarlez/sketch-frontend",
    "group": "builds-on",
    "name": "asolarlez/sketch-frontend",
-   "evidence": "ecosystem of bthies/streamit: Renamed embedded fork: sketch.compiler.* embeds StreamIt's grammar/IR with renamed packages, streamit.frontend.* survives in scripts and old trees, and AUTHORS credits the MIT StreamIt team. Verified by hand 2026-08-25 (docs/impact-view-design.md section 7, the sketch-frontend lesson).",
+   "evidence": "ecosystem of bthies/streamit: The candidate contains `streamit.frontend` namespace references and StreamIt-derived parser/test code embedded within the Sketch frontend, indicating it incorporates StreamIt's frontend code as a derivative work.",
    "sdv": "derivative_work",
    "stars": 41,
    "active": 2026
+  },
+  {
+   "url": "https://github.com/ASSERT-KTH/CodRep",
+   "group": "benchmarks",
+   "name": "ASSERT-KTH/CodRep",
+   "evidence": "ecosystem of bthies/streamit: CodRep is a dataset of Java source code diffs; the matched files are task snippets containing StreamIt/at.dms.kjc code fragments used as benchmark/dataset inputs, not as a code dependency.",
+   "sdv": "uses_benchmark",
+   "desc": "58069 Java source code diffs. http://arxiv.org/pdf/1807.03200",
+   "stars": 94,
+   "active": 2019
   }
  ]
 }

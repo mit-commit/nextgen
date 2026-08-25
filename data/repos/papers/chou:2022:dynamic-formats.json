@@ -194,6 +194,118 @@
    "desc": "The Tensor Algebra Compiler (taco) computes sparse tensor expressions on CPUs and GPUs",
    "stars": 0,
    "active": 2025
+  },
+  {
+   "url": "https://github.com/pku-liang/FlexTensor",
+   "group": "benchmarks",
+   "name": "pku-liang/FlexTensor",
+   "evidence": "ecosystem of tensor-compiler/taco: FlexTensor includes a single taco-generated C file as a baseline comparison for benchmarking, not as an integrated library or derivative work.",
+   "sdv": "uses_benchmark",
+   "desc": "Automatic Schedule Exploration and Optimization Framework for Tensor Computations",
+   "stars": 182,
+   "active": 2022
+  },
+  {
+   "url": "https://github.com/HPCRL/jstream_SpMM",
+   "group": "builds-on",
+   "name": "HPCRL/jstream_SpMM",
+   "evidence": "ecosystem of tensor-compiler/taco: The candidate contains taco.h with the internal TACO_TENSOR_T_DEFINED fingerprint, indicating embedded/copied TACO runtime code used directly in the project.",
+   "sdv": "derivative_work",
+   "stars": 3,
+   "active": 2023
+  },
+  {
+   "url": "https://github.com/JWesleySM/c2taco",
+   "group": "benchmarks",
+   "name": "JWesleySM/c2taco",
+   "evidence": "ecosystem of tensor-compiler/taco: C2TACO is a lifting/compilation tool that generates TACO code from C tensor code; the fingerprint match appears in benchmark files containing TACO-generated output, not in the tool's own source, indicating it uses TACO as a target/benchmark rather than integrating its internals.",
+   "sdv": "uses_benchmark",
+   "desc": "C2TACO: Lifting Tensor Code to TACO",
+   "stars": 9,
+   "active": 2026
+  },
+  {
+   "url": "https://github.com/BoiseState-AdaptLab/PolyhedralDataflowIR",
+   "group": "benchmarks",
+   "name": "BoiseState-AdaptLab/PolyhedralDataflowIR",
+   "evidence": "ecosystem of tensor-compiler/taco: The candidate contains TACO-generated output files (C/H files with TACO_TENSOR_T_DEFINED) as benchmark or example outputs, not the TACO source code itself.",
+   "sdv": "uses_benchmark",
+   "stars": 0,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/Qu-Xiangjun/AutoSparse",
+   "group": "builds-on",
+   "name": "Qu-Xiangjun/AutoSparse",
+   "evidence": "ecosystem of tensor-compiler/taco: The repo embeds a copy of TACO's source (including taco/include/taco/taco_tensor_t.h with the TACO_TENSOR_T_DEFINED fingerprint) as part of its auto-tuning framework, making it a derivative work that incorporates TACO's code internally.",
+   "sdv": "derivative_work",
+   "desc": "An auto-tuning framwork for autometic generate high performence sparse tensor program with storage format and schedule exploration.",
+   "stars": 6,
+   "active": 2025
+  },
+  {
+   "url": "https://github.com/SpRegTiling/sparse-register-tiling",
+   "group": "builds-on",
+   "name": "SpRegTiling/sparse-register-tiling",
+   "evidence": "ecosystem of tensor-compiler/taco: The repo embeds a copy of TACO's generated header (taco.h with the TACO_TENSOR_T_DEFINED fingerprint) as part of its sparse register tiling testbed, constituting a derivative/embedded use of TACO's internal code.",
+   "sdv": "derivative_work",
+   "stars": 11,
+   "active": 2024
+  },
+  {
+   "url": "https://github.com/LucasWilkinson/ASpT-mirror",
+   "group": "builds-on",
+   "name": "LucasWilkinson/ASpT-mirror",
+   "evidence": "ecosystem of tensor-compiler/taco: The candidate repo embeds TACO-generated kernel code (identified by the TACO_TENSOR_T_DEFINED fingerprint in multiple .cc files) as part of an SDDMM/SpMM benchmark study, constituting a derivative use of TACO's generated output rather than just calling it as a library.",
+   "sdv": "derivative_work",
+   "desc": "Mirror of http://gitlab.hpcrl.cse.ohio-state.edu/chong/ppopp19_ae, refactoring for understanding",
+   "stars": 17,
+   "active": 2021
+  },
+  {
+   "url": "https://github.com/lrubens/fuseflow-artifact",
+   "group": "builds-on",
+   "name": "lrubens/fuseflow-artifact",
+   "evidence": "ecosystem of tensor-compiler/taco: The candidate embeds a renamed/vendored copy of TACO source files (including taco_tensor_t.h and codegen_c.cpp under sam/compiler/taco/) identified by the TACO_TENSOR_T_DEFINED fingerprint.",
+   "sdv": "derivative_work",
+   "stars": 5,
+   "active": 2026
+  },
+  {
+   "url": "https://github.com/sagpant/taco",
+   "group": "builds-on",
+   "name": "sagpant/taco",
+   "evidence": "ecosystem of tensor-compiler/taco: Contains taco's own header file with its internal fingerprint macro, and is a GitHub fork of the upstream tensor-compiler/taco repository.",
+   "sdv": "fork",
+   "stars": 0,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/pratikfegade/cora_benchmarks",
+   "group": "builds-on",
+   "name": "pratikfegade/cora_benchmarks",
+   "evidence": "ecosystem of tensor-compiler/taco: The repo contains taco source files (taco/utils.cuh with the TACO_TENSOR_T_DEFINED fingerprint), indicating embedded/adapted TACO code rather than just calling it as a library.",
+   "sdv": "derivative_work",
+   "stars": 1,
+   "active": 2022
+  },
+  {
+   "url": "https://github.com/secona/sparse-compile-gpu",
+   "group": "builds-on",
+   "name": "secona/sparse-compile-gpu",
+   "evidence": "ecosystem of tensor-compiler/taco: The fingerprint match on TACO_TENSOR_T_DEFINED inside taco/taco_tensor.h indicates TACO-generated or copied header code is embedded in this GPU compilation project.",
+   "sdv": "derivative_work",
+   "stars": 0,
+   "active": 2026
+  },
+  {
+   "url": "https://github.com/kengwit/MachineLearning",
+   "group": "builds-on",
+   "name": "kengwit/MachineLearning",
+   "evidence": "ecosystem of tensor-compiler/taco: The candidate contains an embedded copy of the taco source tree (taco-master directory with taco's internal header taco_tensor_t.h containing the TACO_TENSOR_T_DEFINED fingerprint), making it a derivative work incorporating taco's code.",
+   "sdv": "derivative_work",
+   "stars": 1,
+   "active": 2019
   }
  ]
 }

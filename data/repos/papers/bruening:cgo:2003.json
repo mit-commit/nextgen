@@ -361,6 +361,83 @@
    "active": 2016
   },
   {
+   "url": "https://github.com/poul1x/drtaint",
+   "group": "uses",
+   "name": "poul1x/drtaint",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: drtaint is a DynamoRIO-based taint tracking tool that uses DynamoRIO as its dynamic instrumentation framework.",
+   "sdv": "api_user",
+   "stars": 1,
+   "active": 2021
+  },
+  {
+   "url": "https://github.com/MarioRose/dynamorio-footprint",
+   "group": "builds-on",
+   "name": "MarioRose/dynamorio-footprint",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Name 'dynamorio-footprint' strongly suggests a DynamoRIO-based project, likely a fork or extension for footprint analysis, with no description to suggest otherwise.",
+   "sdv": "fork",
+   "stars": 1,
+   "active": 2020
+  },
+  {
+   "url": "https://github.com/chubbymaggie/Blackbox",
+   "group": "builds-on",
+   "name": "chubbymaggie/Blackbox",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The matched files include DynamoRIO core internals (core/globals.h, core/x86/audit.c) with DynamoRIO-specific types like dcontext_t and dr_fragment_t, indicating this is a fork of DynamoRIO with added Blackbox client code.",
+   "sdv": "fork",
+   "stars": 7,
+   "active": 2016
+  },
+  {
+   "url": "https://github.com/ratel-enclave/ratel",
+   "group": "builds-on",
+   "name": "ratel-enclave/ratel",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: Ratel embeds DynamoRIO's core code (including the distinctive dcontext_t type in core/globals.h) and adapts it for SGX enclave instruction-level interposition, making it a derivative work rather than a simple API user.",
+   "sdv": "derivative_work",
+   "desc": "Ratel - a new framework for instruction-level interposition on enclaved applications",
+   "stars": 25,
+   "active": 2022
+  },
+  {
+   "url": "https://github.com/Granary/ARMed",
+   "group": "builds-on",
+   "name": "Granary/ARMed",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The fingerprint match of 'dcontext_t' (a distinctive DynamoRIO internal type) in global.h strongly indicates this ARM encoder/decoder project embeds or adapts DynamoRIO internals, consistent with the Granary project which is a known DynamoRIO-based system.",
+   "sdv": "derivative_work",
+   "desc": "ARM Instruction Encoder and Decoder",
+   "stars": 3,
+   "active": 2014
+  },
+  {
+   "url": "https://github.com/xlab-uiuc/dmt",
+   "group": "builds-on",
+   "name": "xlab-uiuc/dmt",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The candidate contains DynamoRIO's internal type 'dcontext_t' in a core globals header, indicating it embeds or substantially adapts DynamoRIO's code as part of its tracer component.",
+   "sdv": "derivative_work",
+   "desc": "Artifact for Direct Memory Translation for Virtualized Clouds [ASPLOS '24]",
+   "stars": 14,
+   "active": 2024
+  },
+  {
+   "url": "https://github.com/solecnugit/Dr.avx",
+   "group": "builds-on",
+   "name": "solecnugit/Dr.avx",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: The candidate contains DynamoRIO's internal type `dcontext_t` in `core/globals.h`, indicating it embeds or substantially adapts DynamoRIO's core code to build a dynamic compilation system for AVX instruction emulation.",
+   "sdv": "derivative_work",
+   "desc": "A Dynamic Compilation System for Seamlessly Executing Hardware-Unsupported Vectorization Instructions",
+   "stars": 2,
+   "active": 2026
+  },
+  {
+   "url": "https://github.com/kumarak/DynamoRIO-ARM",
+   "group": "builds-on",
+   "name": "kumarak/DynamoRIO-ARM",
+   "evidence": "ecosystem of DynamoRIO/dynamorio: A DynamoRIO ARM port with its own commits containing the core DynamoRIO source (dcontext_t in core/globals.h), making it a fork with meaningful changes ahead of upstream.",
+   "sdv": "fork",
+   "desc": "DynamoRIO for ARM ",
+   "stars": 0,
+   "active": 2013
+  },
+  {
    "url": "https://github.com/dcdelia/sniper",
    "group": "adopts",
    "name": "dcdelia/sniper",

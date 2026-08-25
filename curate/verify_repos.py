@@ -125,13 +125,6 @@ still be included (so a human can look at it) but at confidence low, never
 upgraded to look more certain than the evidence supports."""
 
 
-def _github_repo_from_url(url):
-    m = re.match(r'https?://github\.com/([^/]+)/([^/#?]+)', url or '')
-    if not m:
-        return None
-    return (m.group(1) + '/' + m.group(2)).rstrip('.git').lower()
-
-
 def load_evidence():
     mentions = json.load(open(MENTIONS_PATH))
     candidates = json.load(open(CANDIDATES_PATH))

@@ -99,8 +99,9 @@ def main():
     for key, entries in out.items():
         our_title = pubs.get(key, {}).get('title') or key
         for e in entries:
-            if not e.get('located') or not e.get('evidence', '').startswith('light GitHub'):
-                continue
+            evidence = e.get('evidence', '')
+            if not e.get('located') or not evidence.startswith('light GitHub repository search'):
+                continue  # skip already-verified rows (evidence starts "light GitHub search, ...")
             checked += 1
             prompt = (
                 f"SOURCE PAPER (for context, not the one being matched): {our_title!r}\n\n"

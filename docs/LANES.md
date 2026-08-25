@@ -636,6 +636,10 @@ raise it to the setup lane.
   1,483 rows expand, 16 recency year groups inherit the state, collapse
   keeps headers). style.css?v=6, citations.js?v=8, publications.js?v=10.
   Stopped after the 8 pilots for seam critique before the other 144.
+- **Panel trimmed** (2026-08-24): the COMMIT-papers note under the
+  split bar and the codebook provenance footer are removed per the
+  human ("keep it simple") — the COMMIT papers group itself, with its
+  gloss, still carries the separation. style.css?v=7, citations.js?v=9.
 
 ## Cross-lane requests
 

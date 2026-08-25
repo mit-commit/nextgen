@@ -216,11 +216,6 @@ var CITATIONS = (function(){
     if (extPassing.length) legend.appendChild(leg('cite-seg-passing', 'Passing mention', extPassing.length));
     if (extUnjudged.length) legend.appendChild(leg('cite-seg-unjudged', 'Not yet analyzed', extUnjudged.length));
     mount.appendChild(legend);
-    if (commitPapers.length){
-      mount.appendChild(el('div', 'cite-owngroup-note',
-        'Counts above are external. ' + fmt(commitPapers.length) +
-        ' more citations are COMMIT papers (Saman Amarasinghe among the authors); they are listed separately at the bottom.'));
-    }
 
     /* Centrality filter and sort modes (apply to the judged list below). */
     state.sort = gPanel.sort;
@@ -375,10 +370,6 @@ var CITATIONS = (function(){
       drawList();
     } });
 
-    var foot = el('div', 'cite-foot',
-      'Classified with codebook v' + data.codebook + ' (' + data.generated +
-      '); duplicates folded, self-citations by the paper itself excluded.');
-    mount.appendChild(foot);
   }
 
   /* ---------- toggle wiring, pub-summary pattern ---------- */

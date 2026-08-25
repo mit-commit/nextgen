@@ -49,9 +49,6 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    specifically), **passing mention** (this paper appears inside a
    multi-paper citation list), and **not yet analyzed** (no usable
    evidence). For Halide: 598 detailed, 416 passing, 429 not yet analyzed.
-   A one-line note follows: "Counts above are external. 40 more citations
-   are COMMIT papers (Saman Amarasinghe among the authors); they are
-   listed separately at the bottom."
 3. **A centrality filter.** "How central is this paper to the citing work?"
    — All / Core / Engaged / Peripheral buttons, with counts. *Core* means
    the citing work would be fundamentally different without this paper.
@@ -85,8 +82,6 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    year, a `core` chip where earned, and a "via a successor system" chip on
    lineage citations (papers that cite Halide as TVM's ancestor). Rows are
    built lazily, so opening the panel never renders 1,400 rows at once.
-6. **Provenance footer.** "Classified with codebook v0.2 (2026-08-24);
-   duplicates folded, self-citations by the paper itself excluded."
 
 No chart library, no dependencies: the bar is three divs, the groups are
 the site's existing toggle pattern.

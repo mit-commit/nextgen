@@ -189,13 +189,10 @@ var CITATIONS = (function(){
     }
 
 
-    /* Headline: displayed count = max(verified, Google Scholar). */
+    /* Headline: just the displayed count — max(verified, Google Scholar). */
     var display = displayCount({ verified: counts.works, gscholar: gscholar });
     var head = el('div', 'cite-head');
     head.appendChild(el('span', 'cite-head-count', fmt(display) + ' citations'));
-    var src = [fmt(counts.works) + ' verified and analyzed below'];
-    if (gscholar) src.push('Google Scholar reports ' + fmt(gscholar));
-    head.appendChild(el('span', 'cite-head-src', ' — ' + src.join('; ') + '.'));
     mount.appendChild(head);
 
     /* Top-level split over external works. */

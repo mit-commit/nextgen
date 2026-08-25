@@ -643,6 +643,10 @@ raise it to the setup lane.
 - **Group headers simplified** (2026-08-24): "Builds on it 35 — gloss…"
   became "Builds on it (35)" with the gloss as a tooltip, per the human.
   style.css?v=8, citations.js?v=10.
+- **Headline KISS** (2026-08-24): "1,483 citations — 1,483 verified and
+  analyzed below" claimed too much (429 rows are unanalyzed) and said
+  too much; the headline is now just "1,483 citations".
+  style.css?v=9, citations.js?v=11.
 
 ## Cross-lane requests
 

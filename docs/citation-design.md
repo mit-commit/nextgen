@@ -41,9 +41,8 @@ The number is the displayed count: the larger of our verified count and
 Google Scholar's. Clicking expands a panel inside the paper's box, the same
 mechanic as the summary toggle. The panel shows, top to bottom:
 
-1. **Headline.** "1,483 citations — 1,483 verified and analyzed below;
-   Google Scholar reports 2,417." Both numbers appear when both exist; the
-   reader never has to wonder which count they are looking at.
+1. **Headline.** Just "1,483 citations" — the displayed count,
+   `max(verified, gscholar)`, with no qualifying clause.
 2. **The split bar.** One horizontal bar over the external citations, three
    segments: **detailed engagement** (the citing work engages this paper
    specifically), **passing mention** (this paper appears inside a

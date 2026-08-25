@@ -23,15 +23,30 @@ this stays a lightweight per-paper panel.
 Three repository tiers per paper (2026-08-25 ruling), parallel to citation
 categories they echo:
 
-| tier | meaning | citation parallel |
-|---|---|---|
-| Own repository | the paper's implementation/artifact | — (the paper itself) |
-| Repos using it | third-party repos that import/embed/extend the artifact (SDV integration vocabulary: api_user, derivative_work, inherited, fork, …) | `uses-tool` / `extends` |
-| Idea descendants | repos of citing works classified extends/adopts-idea at high centrality | `adopts-idea` / `extends` |
+**One relationship taxonomy for both media** (2026-08-25 ruling: two
+taxonomies under one sort name is not acceptable). The citation
+categories' approved plain-language names are the single group-level
+vocabulary; the SDV integration terms survive as row-level chips and
+evidence, and the three tiers fall out of the unified categories rather
+than being a second scheme:
 
-Repo rows carry: name/owner (linked), one-line description, integration
-type, stars, last-activity year, and evidence (tooltip, like citation
-glosses). The same repo may appear under several papers — expected.
+| unified group | citations mean | repositories mean | tier |
+|---|---|---|---|
+| Artifact & own repository | — | the paper's badged archival artifact (artifacts lane) first, then its implementation repo | own |
+| Builds on it | `extends` | derivative works and forks of the artifact | using it |
+| Uses the system | `uses-tool` | API users and inherited/dependency users | using it |
+| Uses its benchmarks | `uses-benchmark` | repos carrying the paper's workload files | using it |
+| Adopts the idea | `adopts-idea` | repos of citing works classified extends/adopts-idea at high centrality, reimplementing the idea without the code | idea descendants |
+| Measures against it, Positions against it, Surveys it, Cites a result as evidence, Names it as an example, Mentions it specifically, Cites it in a list | bibliographic engagement | *no repo values — the group simply does not render in the Repositories panel* | — |
+
+This also lets the page-level **Citation categories facet govern both
+panels**: selecting "Builds on it" filters citation rows to `extends` and
+repo rows to derivative works/forks — one control, two media.
+
+Repo rows carry: name/owner (linked), one-line description, an SDV
+integration chip (api_user / derivative_work / fork / inherited), stars,
+last-activity year, and evidence (tooltip, like citation glosses). The
+same repo may appear under several papers — expected.
 
 ## 2. Option A — one "Impact" panel with tabs
 
@@ -56,15 +71,17 @@ The Repositories panel **reuses the citation panel's grammar wholesale**:
 1. Headline: "11 repositories".
 2. A three-segment tier bar (own / using it / idea descendants) echoing
    the detailed/passing split bar, with the same legend treatment.
-3. A sort row in the same button language: **Integration | Stars |
-   Recency**, plus the same Expand all / Collapse all. Integration is the
-   default and groups rows by tier — Own repository (1), then the
-   using-it tier grouped by integration type (Derivative works (3),
-   API users (5), Forks (2), …), then Idea descendants (4). Stars and
-   Recency regroup into magnitude buckets (1,000+ stars / 100–999 / …)
-   and years — the exact analogue of the citation panel's Popularity and
-   Recency. Group headers are "Label (N)" with the definition as a
-   tooltip, identical to citation groups.
+3. A sort row with **the same three names as the citations panel** —
+   **Impact | Recency | Popularity** (2026-08-25 ruling: one vocabulary,
+   each panel interpreting it natively) — plus the same Expand all /
+   Collapse all. Impact is the default and groups rows by the unified
+   relationship taxonomy: Artifact & own repository first, then Builds on
+   it, Uses the system, Uses its benchmarks, Adopts the idea — the same
+   names, order, and tooltips as the citations panel, with the SDV
+   integration term as a per-row chip. Popularity regroups by stars magnitude (1,000+ stars /
+   100–999 / …) — stars being the repo world's citation count — and
+   Recency by last-activity year. Group headers are "Label (N)" with the
+   definition as a tooltip, identical to citation groups.
 4. Rows: linked repo name — description; stars chip ("2.1k ★"),
    last-active-year chip, and a paper-parallel chip where the repo is the
    located artifact of a citing work already in the Citations panel

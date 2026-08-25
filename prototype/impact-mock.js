@@ -11,6 +11,10 @@ var IMPACT_MOCK = (function(){
      extends/adopts-idea for StreamIt; their repo fields are placeholder
      or paper-only. */
   var REPOS = [
+    { tier: 'own', name: 'StreamIt artifact (archival)', artifact: true,
+      integration: 'own', year: 2002, placeholder: true,
+      desc: 'specimen of a badged archival artifact row — real entries come from harvest/artifacts/found.json',
+      evidence: 'PLACEHOLDER — papers with ACM/Zenodo artifacts list them here, first' },
     { tier: 'own', name: 'bthies/streamit', url: 'https://github.com/bthies/streamit',
       desc: 'The StreamIt compiler and benchmark suite', integration: 'own',
       stars: 87, year: 2013, placeholder: 'metrics pending harvest',
@@ -46,14 +50,22 @@ var IMPACT_MOCK = (function(){
   ];
 
   var TIER_LABELS = {
-    own: ['Own repository', 'the paper\'s implementation and artifact'],
+    own: ['Artifact & own repository', 'the paper\'s archival artifact first, then its implementation repository'],
     using: ['Repos using it', 'third-party repositories that import, embed, fork, or derive from the artifact'],
     descendant: ['Idea descendants', 'repositories of citing works classified extends or adopts-idea at high centrality']
   };
-  var INTEGRATION_LABELS = {
-    own: 'Own repository', derivative_work: 'Derivative works', api_user: 'API users',
-    fork: 'Forks', inherited: 'Inherited', descendant: 'Idea descendants'
-  };
+  /* Unified relationship taxonomy: same group names as the citations
+     panel; the SDV integration term stays as a per-row chip. */
+  var UNIFIED_GROUPS = [
+    { label: 'Builds on it', types: ['derivative_work', 'fork'],
+      gloss: 'derivative works and forks of the artifact' },
+    { label: 'Uses the system', types: ['api_user', 'inherited'],
+      gloss: 'repositories that import or depend on the artifact' },
+    { label: 'Adopts the idea', types: ['descendant'],
+      gloss: 'repositories of citing works that reimplement the idea without the code' }
+  ];
+  var SDV_CHIP = { derivative_work: 'derivative work', api_user: 'API user',
+                   fork: 'fork', inherited: 'inherited' };
 
   function el(tag, cls, txt){
     var e = document.createElement(tag);
@@ -91,6 +103,8 @@ var IMPACT_MOCK = (function(){
       li.appendChild(sc);
     }
     if (r.year) li.appendChild(el('span', 'cite-chip', 'active ' + r.year));
+    if (SDV_CHIP[r.integration]) li.appendChild(el('span', 'cite-chip', SDV_CHIP[r.integration]));
+    if (r.artifact) li.appendChild(el('span', 'cite-chip', 'artifact'));
     if (r.placeholder === true) li.appendChild(el('span', 'cite-chip repo-placeholder-chip', 'PLACEHOLDER'));
     if (r.evidence) li.title = r.evidence;
     return li;
@@ -139,8 +153,8 @@ var IMPACT_MOCK = (function(){
     });
     mount.appendChild(bar);
     var legend = el('div', 'cite-legend');
-    [['cite-seg-detailed', 'Own', counts.own], ['cite-seg-passing', 'Using it', counts.using],
-     ['cite-seg-unjudged', 'Idea descendants', counts.descendant]].forEach(function(l){
+    [['cite-seg-detailed', 'Own', counts.own], ['cite-seg-passing', 'Builds on or uses it', counts.using],
+     ['cite-seg-unjudged', 'Adopts the idea', counts.descendant]].forEach(function(l){
       if (!l[2]) return;
       var sp = el('span', 'cite-legend-item');
       sp.appendChild(el('span', 'cite-key ' + l[0], ''));
@@ -150,14 +164,15 @@ var IMPACT_MOCK = (function(){
     mount.appendChild(legend);
 
     /* sort row in the citation panel's language */
-    var state = { sort: 'integration', expanded: false };
+    var state = { sort: 'impact', expanded: false };
     var sortRow = el('div', 'cite-filter');
     sortRow.appendChild(el('span', 'cite-filter-label', 'Sort by '));
     var tg = el('span', 'type-toggle');
     var btns = [];
-    var TIPS = { integration: 'Group by tier and integration type — how each repository relates to the artifact',
-                 stars: 'Most-starred first, grouped by magnitude', recency: 'Most recently active first, grouped by year' };
-    ['integration', 'stars', 'recency'].forEach(function(v){
+    var TIPS = { impact: 'Group by relationship depth: the artifact and own repo, then integration type, then idea descendants',
+                 popularity: 'Most-starred first, grouped by magnitude — stars are the repo world\'s citation count',
+                 recency: 'Most recently active first, grouped by year' };
+    ['impact', 'recency', 'popularity'].forEach(function(v){
       var b = el('button', 'type-toggle-btn' + (v === state.sort ? ' active' : ''),
                  v.charAt(0).toUpperCase() + v.slice(1));
       b.type = 'button'; b.title = TIPS[v];
@@ -186,20 +201,17 @@ var IMPACT_MOCK = (function(){
     mount.appendChild(groupsMount);
     function draw(){
       groupsMount.innerHTML = '';
-      if (state.sort === 'integration'){
+      if (state.sort === 'impact'){
         groupsMount.appendChild(renderGroup(TIER_LABELS.own[0], TIER_LABELS.own[1],
           REPOS.filter(function(r){ return r.tier === 'own'; }), state.expanded));
-        ['derivative_work', 'api_user', 'fork', 'inherited'].forEach(function(it){
-          var rows = REPOS.filter(function(r){ return r.integration === it; });
-          if (rows.length) groupsMount.appendChild(renderGroup(INTEGRATION_LABELS[it],
-            TIER_LABELS.using[1], rows, state.expanded));
+        UNIFIED_GROUPS.forEach(function(g){
+          var rows = REPOS.filter(function(r){ return g.types.indexOf(r.integration) !== -1; });
+          if (rows.length) groupsMount.appendChild(renderGroup(g.label, g.gloss, rows, state.expanded));
         });
-        groupsMount.appendChild(renderGroup(TIER_LABELS.descendant[0], TIER_LABELS.descendant[1],
-          REPOS.filter(function(r){ return r.tier === 'descendant'; }), state.expanded));
       } else {
         var sorted = REPOS.slice();
         var headerOf;
-        if (state.sort === 'stars'){
+        if (state.sort === 'popularity'){
           sorted.sort(function(a, b){ return ((b.stars != null ? b.stars : -1) - (a.stars != null ? a.stars : -1)); });
           headerOf = function(r){ return starBucket(r.stars); };
         } else {

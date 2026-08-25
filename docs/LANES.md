@@ -728,6 +728,19 @@ raise it to the setup lane.
   a taste decision.
 - **Category label compacted** (2026-08-25): "(44, cited by 142)" →
   "(44, by 142)". publications.js?v=14.
+- **Impact-view refinements** (2026-08-25, three rulings while the mock
+  was under review): (1) one sort vocabulary across both panels — the
+  repos panel's Integration/Stars became Impact/Popularity, each panel
+  interpreting the names natively (category depth vs relationship depth;
+  cited_by vs stars); (2) the paper's badged archival artifact joins the
+  Repositories panel, listed first in an "Artifact & own repository"
+  group; (3) the two taxonomies normalized into ONE: the citation
+  categories' names are the group-level vocabulary for repos too (Builds
+  on it = derivative works/forks, Uses the system = API users/inherited,
+  Adopts the idea = idea-descendant repos; bibliographic categories
+  simply don't render for repos), SDV integration terms demoted to
+  per-row chips, and the page-level category facet can now govern both
+  panels. Doc + StreamIt mock updated; still stopped for design review.
 
 ## Cross-lane requests
 

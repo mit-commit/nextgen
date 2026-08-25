@@ -1,16 +1,16 @@
 {
  "paper": "gordon:asplos:2006",
  "slug": "10.1145_2016604.2016654",
- "function": "uses-benchmark",
+ "function": "uses-tool",
  "centrality": "core",
  "flags": [],
  "secondary": [
-  "uses-tool"
+  "supports-claim"
  ],
- "confidence": "medium",
- "evidence": "contexts",
- "anchored": "none",
- "note": "S2 marks the citation as influential with methodology intent, and the citing work evaluates DVFS for stream programs, strongly suggesting the cited work's stream benchmarks or infrastructure were used, but no context sentence directly anchors to the cited paper.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work uses StreamIt (the compiler/language from the cited paper) as its evaluation infrastructure for stream programs on CMPs, and cites [2] to support the claim that 'a sophisticated compiler has the potential to fetch impressive speedup benefits for Streamit programs.'",
  "title": "Evaluation of dynamic voltage and frequency scaling for stream programs",
  "year": 2011,
  "s2_isInfluential": true,
@@ -20,14 +20,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 3009,
+  "input_tokens": 4624,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 265,
+  "output_tokens": 128,
   "service_tier": "batch",
   "inference_geo": "global"
  }

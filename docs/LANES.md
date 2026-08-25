@@ -779,6 +779,24 @@ raise it to the setup lane.
   taco + badges, both Halide gateways, three StreamIt papers,
   petabricks, dmtcp). STOPPED per F1: the human spot-checks ~10 before
   waves 2-6.
+- **F1 waves 2–6 merged** (2026-08-25, human approved wave 1): five
+  batches submitted together (123 papers, ~$1.37 est., under the $20
+  line), all returned complete (123/123). Mechanical screen (ban lists,
+  present-anchoring, numeric counts, leaks): zero hits. Five reviewer
+  agents (one per wave) verified every text against its evidence pack;
+  16 texts fixed — recurring classes: present-anchored repo closers
+  ("is maintained", "is available", "carries forward"), COMMIT-internal
+  or same-author works presented as external reception (drake's Gordon
+  thesis, Finch's WingSpan, Gladshtein's own follow-ons), one leaked
+  writer instruction ("only modest claims are possible"), one numeric
+  count in prose, two shape violations (unearned second paragraph), one
+  invented "survey" label, and one over-repeated opening (the style
+  doc's twice-per-wave rule). All fix texts re-screened and their named
+  repos/artifacts verified against the packs before applying.
+  merge_wave.py --write per wave: 73 receptions updated, 50 already
+  satisfied the style doc; pilots, hand-written summaries, and
+  gscholar.json untouched. F1 complete — all 157 receptions now conform
+  to docs/summary-style.md.
 - **F2 impact-view rollout** (2026-08-25, human-ordered before F1's
   remaining waves): the approved Option-B impact view is live for ALL
   papers. New data layer (claimed): `harvest/impactview/build_repo_data.py`

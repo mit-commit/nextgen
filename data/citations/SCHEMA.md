@@ -54,8 +54,9 @@ letters, digits, `:`, `-`, `.`, `_`).
   once that scales, human-reviewed for the pilots) — so a reception
   refresh can never overwrite summary prose. Emitters fold reception.json
   into the per-paper JSON as a convenience copy; the site reads
-  `reception.json` directly. Pilot-only until the human approves the
-  seam texts.
+  `reception.json` directly. Covers every paper with at least 3 judged
+  external citations (157 of 173); papers below that threshold carry no
+  reception — a paragraph about two citations would be noise.
 
 - `records_raw` — harvested citing records before dedup (provenance only).
 - `works` — the **verified citation count**: deduped citing works, with

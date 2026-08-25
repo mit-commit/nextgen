@@ -660,6 +660,20 @@ raise it to the setup lane.
   visible impact explanation under the sliders moved into the impact
   slider's tooltip. style.css?v=10, citations.js?v=12,
   publications.js?v=12.
+- **Receptions corpus-wide** (2026-08-24 overnight, human-authorized
+  "apply this to all the papers"): reception texts generated for all 149
+  non-pilot papers with ≥3 judged external citations (16 thinner papers
+  deliberately skipped) — 13 parallel writer agents over per-paper
+  briefs (summary, function/centrality profiles, notable citing works),
+  then 13 independent verifier agents enforcing grounding, timelessness,
+  no-hype, seam, honesty, and shape; 33 texts got minimal corrective
+  edits (typical catches: overstated engagement vs an
+  exemplifies-dominated profile, group-internal works presented as
+  external reception, invented document types, leaked writer-facing
+  instructions), 1 missing text written by hand, mechanical checks clean
+  (0 banned phrases, full coverage). reception.json now holds 157
+  entries; the site renders them immediately. Non-pilot per-paper JSON
+  convenience copies refresh on the taxonomy lane's next merge run.
 
 ## Cross-lane requests
 

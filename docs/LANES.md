@@ -652,6 +652,14 @@ raise it to the setup lane.
   have (summed from index functions), not how many papers have at least
   one — e.g. "Uses the system (1,026)" corpus-wide. Centrality buttons
   keep paper counts. publications.js?v=11.
+- **Dual counts + tooltips** (2026-08-24, overnight requests): category
+  rows read "Builds on it (44, cited by 142)" — papers with such
+  citations, then the citation total; every citation control page-level
+  and in-panel carries a descriptive tooltip (sort semantics, centrality
+  definitions from the codebook, sliders, search, expand/collapse); the
+  visible impact explanation under the sliders moved into the impact
+  slider's tooltip. style.css?v=10, citations.js?v=12,
+  publications.js?v=12.
 
 ## Cross-lane requests
 

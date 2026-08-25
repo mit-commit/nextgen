@@ -1127,7 +1127,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
   // category / at each centrality (facet-style, from index.json only).
   function updateCiteToolCounts(items){
     if (!CITE_INDEX || !window.CITATIONS) return;
-    var catCounts = {}, centCounts = { core: 0, engaged: 0, peripheral: 0 };
+    var catPapers = {}, catCites = {}, centCounts = { core: 0, engaged: 0, peripheral: 0 };
     var seen = {}, withData = 0, i, f;
     for (i = 0; i < items.length; i++){
       var k = bibtexKeyOf(items[i]);
@@ -1136,9 +1136,13 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       var row = CITE_INDEX[k];
       if (!row) continue;
       withData++;
-      // total citations in each category across the shown papers
+      // per category: papers with at least one such citation, and the
+      // total citations of that kind across the shown papers
       for (f in (row.functions || {})){
-        catCounts[f] = (catCounts[f] || 0) + row.functions[f];
+        if (row.functions[f] > 0){
+          catPapers[f] = (catPapers[f] || 0) + 1;
+          catCites[f] = (catCites[f] || 0) + row.functions[f];
+        }
       }
       var ce = row.centrality || {};
       for (f in centCounts){ if (ce[f] > 0) centCounts[f]++; }
@@ -1146,7 +1150,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     if (els.citeCats && els.citeCats._catRefs){
       for (f in els.citeCats._catRefs){
         var ref = els.citeCats._catRefs[f];
-        ref.node.nodeValue = ref.label + ' (' + (catCounts[f] || 0) + ')';
+        ref.node.nodeValue = ref.label + ' (' + (catPapers[f] || 0) +
+          ', cited by ' + (catCites[f] || 0) + ')';
       }
     }
     if (els.citeCentrality){

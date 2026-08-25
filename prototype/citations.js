@@ -223,9 +223,16 @@ var CITATIONS = (function(){
     var filterRow = el('div', 'cite-filter');
     filterRow.appendChild(el('span', 'cite-filter-label', 'How central is this paper to the citing work? '));
     var btns = [];
+    var CENT_TIPS = {
+      all: 'All judged citations',
+      core: 'The citing work would be fundamentally different without this paper',
+      engaged: "Engages the paper's specifics, short of depending on it",
+      peripheral: 'A swap-out-able mention or list membership'
+    };
     function mkBtn(value, label){
       var b = el('button', 'type-toggle-btn' + (value === state.centrality ? ' active' : ''), label);
       b.type = 'button';
+      if (CENT_TIPS[value]) b.title = CENT_TIPS[value];
       b.addEventListener('click', function(){
         state.centrality = value;
         for (var j = 0; j < btns.length; j++){
@@ -249,9 +256,15 @@ var CITATIONS = (function(){
     var sortRow = el('div', 'cite-filter');
     sortRow.appendChild(el('span', 'cite-filter-label', 'Sort by '));
     var sortBtns = [];
+    var SORT_TIPS = {
+      impact: 'Order citations by what they do: building on the paper ranks above running it, above borrowing its idea, above citing it in a list',
+      recency: 'Newest citing works first, grouped by year',
+      popularity: 'Most-cited citing works first, grouped by their own citation counts'
+    };
     function mkSortBtn(value, label){
       var b = el('button', 'type-toggle-btn' + (value === state.sort ? ' active' : ''), label);
       b.type = 'button';
+      if (SORT_TIPS[value]) b.title = SORT_TIPS[value];
       b.addEventListener('click', function(){
         state.sort = value;
         for (var j = 0; j < sortBtns.length; j++){
@@ -270,6 +283,7 @@ var CITATIONS = (function(){
     sortRow.appendChild(stg);
     var expBtn = el('button', 'type-toggle-btn cite-hdr-toggle', 'Expand all');
     expBtn.type = 'button';
+    expBtn.title = 'Open or close every group below';
     expBtn.setAttribute('aria-pressed', 'false');
     expBtn.addEventListener('click', function(){
       state.expanded = !state.expanded;

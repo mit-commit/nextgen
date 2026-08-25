@@ -8,7 +8,7 @@
        To add a publication, append an entry to that file.
        To feature a paper, set "featured": true on its entry (award papers
        with a "price" are featured automatically). -->
-  <link rel="stylesheet" href="assets/css/style.css?v=9"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=10"/>
   <!-- Umami analytics (privacy-friendly, cookieless) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="0501f709-b527-45af-8727-062721122bb4"></script>
 </head>
@@ -162,35 +162,31 @@
                   <div class="filter-label">Citation panels</div>
                   <div class="cite-tools-row">Sort
                     <span class="type-toggle" id="cite-global-sort">
-                      <button type="button" class="type-toggle-btn active" data-v="impact">Impact</button>
-                      <button type="button" class="type-toggle-btn" data-v="recency">Recency</button>
-                      <button type="button" class="type-toggle-btn" data-v="popularity">Popularity</button>
+                      <button type="button" class="type-toggle-btn active" data-v="impact" title="Order citations by what they do: building on the paper ranks above running it, above borrowing its idea, above citing it in a list">Impact</button>
+                      <button type="button" class="type-toggle-btn" data-v="recency" title="Newest citing works first, grouped by year">Recency</button>
+                      <button type="button" class="type-toggle-btn" data-v="popularity" title="Most-cited citing works first, grouped by their own citation counts">Popularity</button>
                     </span>
                   </div>
                   <div class="cite-tools-row">Centrality
                     <span class="type-toggle" id="cite-global-centrality">
-                      <button type="button" class="type-toggle-btn active" data-v="all">All</button>
-                      <button type="button" class="type-toggle-btn" data-v="core">Core</button>
-                      <button type="button" class="type-toggle-btn" data-v="engaged">Engaged</button>
-                      <button type="button" class="type-toggle-btn" data-v="peripheral">Peripheral</button>
+                      <button type="button" class="type-toggle-btn active" data-v="all" title="All judged citations">All</button>
+                      <button type="button" class="type-toggle-btn" data-v="core" title="The citing work would be fundamentally different without this paper">Core</button>
+                      <button type="button" class="type-toggle-btn" data-v="engaged" title="Engages the paper's specifics, short of depending on it">Engaged</button>
+                      <button type="button" class="type-toggle-btn" data-v="peripheral" title="A swap-out-able mention or list membership">Peripheral</button>
                     </span>
                   </div>
                   <div class="cite-tools-row">
-                    <input id="cite-search" type="text" class="text-input" placeholder="Search citing works (title, author, venue)…">
+                    <input id="cite-search" type="text" class="text-input" placeholder="Search citing works (title, author, venue)…" title="Filter the rows inside every open Citations panel">
                   </div>
                 </div>
                 <div class="filter-block">
                   <div class="filter-label">Paper thresholds</div>
                   <div class="cite-tools-row">Citations ≥ <b id="cite-min-cites-label">0</b>
-                    <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0">
+                    <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0" title="Hide papers with fewer citations than this">
                   </div>
                   <div class="cite-tools-row">Impact: <b id="cite-min-impact-label">all papers</b>
-                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0">
+                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" title="Impact weighs each citation by its category — building on a paper counts more than citing it in a list. Papers without citation data are hidden once a threshold is above zero.">
                   </div>
-                  <div class="cite-tools-note">Impact weighs each citation by its
-                    category (building on a paper counts more than citing it in a
-                    list). Papers without citation data are hidden once a
-                    threshold is above zero.</div>
                 </div>
               </div>
             </div>
@@ -215,7 +211,7 @@
   <script src="assets/js/common.js"></script>
   <script src="assets/js/pubs.js"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
-  <script src="assets/js/citations.js?v=11"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=11"></script> <!-- the filters controller -->
+  <script src="assets/js/citations.js?v=12"></script>    <!-- per-paper citation view (data/citations/) -->
+  <script src="assets/js/publications.js?v=12"></script> <!-- the filters controller -->
 </body>
 </html>

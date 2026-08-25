@@ -1,0 +1,156 @@
+# Own-repo inventory -- phase B personal-account candidates
+
+76 candidates across 41 of 191 repo-less papers, via personal-account repo listings (guessed usernames confirmed to exist, all their non-fork repos scored by title-token overlap).
+
+- `amin:iccd:2009` (2009) <- **namin/metasolfeggio** (44★, created 2008) score 5, overlap: aided, computer
+    - computer-aided harmony and counterpoint
+- `amin:meng-thesis:2009` (2009) <- **namin/metasolfeggio** (44★, created 2008) score 5, overlap: aided, computer
+    - computer-aided harmony and counterpoint
+- `moeller:meng-thesis:1999` (1999) <- **TylerMoeller/fccfe** (2★, created 2018) score 4, overlap: end, front
+    - :tent::fire: Free Code Camp Front End Projects - HTML/CSS/JS projects built in 2015-2016
+- `stephenson:pldi:2003` (2003) <- **martin-martin/cn-dsml** (1★, created 2024) score 4, overlap: learning, machine
+    - Exercises from CodingNomads' Data Science and Machine Learning track
+- `stephenson:pldi:2003` (2003) <- **martin-martin/smartest_algorithm** (0★, created 2016) score 4, overlap: learning, machine
+    - Machine Learning analysis of the Enron public dataset to identify people involved in the fraud case (Udacity DAND P5)
+- `tyler:ppopp:2016` (2016) <- **shoaibkamil/distributed-halide** (2★, created 2020) score 4, overlap: distributed, halide
+    - Archived from MIT github.  This is OLD prototype code, originally by Tyler Denniston.
+- `won_continuous_2025` (2025) <- **collin/continuous_builder** (4★, created 2008) score 4, overlap: are, continuous
+    - A little class to watch the filesystem and then provide callbacks when files are saved
+- `ansel:cases:2012` (2012) <- **jansel/lendingclubchecker** (15★, created 2012) score 3, overlap: through
+    - Access and check lendingclub.com account through python API
+- `ansel:cases:2012` (2012) <- **jansel/dump-call-graph** (0★, created 2013) score 3, overlap: autotuning
+    - A simple utility library to dump call information from a Halide pipeline as JSON. Currently used for autotuning.
+- `ansel:pldi:2011` (2011) <- **taylor/pomodorish** (0★, created 2012) score 3, overlap: time
+    - little bash script for pomodor time management technique.   currently setup for alsa or pulseaudio as well as awesome notifications... other stuff is commented out
+- `ansel:pldi:2011` (2011) <- **taylor/awesome_gnome_xsession** (5★, created 2012) score 3, overlap: just
+    - Awesome with just the right about of gnome
+- `ansel:pldi:2011` (2011) <- **taylor/pair-cobbler** (3★, created 2011) score 3, overlap: just
+    - This will be the pairing setup for allowing people to easily share their screens.  Right now is just a quick dump for a few people that wanted it *now* :)
+- `bansal2025lightweight` (2025) <- **dsharlet/slinky** (15★, created 2023) score 3, overlap: locality
+    - Optimize pipelines for locality
+- `del2018` (2018) <- **emanueledelsozzo/NBodySimulationFPGA** (6★, created 2018) score 3, overlap: targeting
+    - A customizable FPGA design for N-Body Simulation targeting Amazon F1 instances
+- `jaeyeon:asplos:2026` (2026) <- **willow-ahrens/binsparse-specification** (0★, created 2023) score 3, overlap: sparse
+    - A cross-platform binary storage format for sparse data, particularly sparse matrices.
+- `mendis:pldi:2015` (2015) <- **shoaibkamil/build_bot** (0★, created 2017) score 3, overlap: halide
+    - Buildbot configuration for Halide build bots
+- `mendis:pldi:2015` (2015) <- **shoaibkamil/coli_halide_benchmarks** (1★, created 2016) score 3, overlap: halide
+    - (no description)
+- `mendis:pldi:2015` (2015) <- **shoaibkamil/Halide** (0★, created 2016) score 3, overlap: halide
+    - a language for image processing and computational photography
+- `olszewski:asplos:2012` (2012) <- **davidkoh/SNF2012** (0★, created 2014) score 3, overlap: data
+    - Final project for General Assembly Data Science course analyzing "Stop and Frisk" data from NYC in 2012. 
+- `tyler:ppopp:2016` (2016) <- **shoaibkamil/build_bot** (0★, created 2017) score 3, overlap: halide
+    - Buildbot configuration for Halide build bots
+- `tyler:ppopp:2016` (2016) <- **shoaibkamil/coli_halide_benchmarks** (1★, created 2016) score 3, overlap: halide
+    - (no description)
+- `won_continuous_2025` (2025) <- **emer/etensor** (1★, created 2025) score 3, overlap: tensor
+    - Older version of the core tensor code, used by the current version of Leabra until it gets updated
+- `agarwal:suif:1997` (1997) <- **agarwal/eliom-starter** (5★, created 2016) score 2, overlap: project
+    - Eliom starter project for those new to Ocsigen.
+- `agarwal:suif:1997` (1997) <- **agarwala/flask-first-devop-project** (0★, created 2022) score 2, overlap: project
+    - Build and deploy code a simple flask application Using Jenkins and kubernetes
+- `amarasinghe:micro:1996` (1996) <- **wilson/env** (0★, created 2026) score 2, overlap: software
+    - Software configs, aka "dotfiles" et al.
+- `amarasinghe:micro:1996` (1996) <- **wilson/tynged** (0★, created 2025) score 2, overlap: software
+    - Security is your software's destiny.
+- `amin:iccd:2009` (2009) <- **namin/llm-verifier-interface** (17★, created 2026) score 2, overlap: based
+    - Based on lectures on the LLM-Verifier Interface at the Summer School on Foundations of Programming and Software Systems (FoPSS 2026)
+- `amin:iccd:2009` (2009) <- **namin/bluespec-sandbox** (0★, created 2021) score 2, overlap: design
+    - learning Bluespec and hardware design
+- `amin:meng-thesis:2009` (2009) <- **namin/bluespec-sandbox** (0★, created 2021) score 2, overlap: design
+    - learning Bluespec and hardware design
+- `anderson:ppopp:1995` (1995) <- **Janderson/py-markowitz** (0★, created 2022) score 2, overlap: data
+    - Simple Script to show a portfolio with markowitz using yahoo data
+- `anderson:ppopp:1995` (1995) <- **Janderson/python_mt5** (12★, created 2020) score 2, overlap: data
+    - Python helper to extract data from Metatrader 5 - using new MT5 API
+- `ansel:cases:2012` (2012) <- **cchan/ordinator** (0★, created 2016) score 2, overlap: competitions
+    - Having run several academic competitions and clubs, this NodeJS package consolidates the many administrative functions I have found that these share.
+- `chen:graphics-hardware:2005` (2005) <- **mzwicker/Rendering-Algorithms-2014-Skeleton** (2★, created 2014) score 2, overlap: rendering
+    - Code skeleton for an educational ray tracer.
+- `deeds:meng-thesis:2001` (2001) <- **mdeeds/hardwired-design** (0★, created 2026) score 2, overlap: design
+    - Circuit design, schematics, layout, and models
+- `del2018` (2018) <- **emanueledelsozzo/awesome-fpga-programming** (76★, created 2022) score 2, overlap: fpgas
+    - An awesome curated list of languages and tools to program FPGAs
+- `hall:siam:1995` (1995) <- **brian-murphy/proc-design-processor** (0★, created 2017) score 2, overlap: design
+    - (no description)
+- `hall:siam:1995` (1995) <- **brian-murphy/proc-design-assembler** (0★, created 2017) score 2, overlap: design
+    - (no description)
+- `hall:siam:1995` (1995) <- **brian-murphy/proc-design-midterm** (0★, created 2017) score 2, overlap: design
+    - (no description)
+- `ishibe:xsig:2026` (2026) <- **AjayBrahmakshatriya/mpns** (0★, created 2020) score 2, overlap: network
+    - Meta Programming the Network Stack
+- `jaeyeon:asplos:2026` (2026) <- **willow-ahrens/ChainPartitioners.jl** (2★, created 2020) score 2, overlap: sparse
+    - Contiguous sparse matrix partitioners
+- `jaeyeon:asplos:2026` (2026) <- **willow-ahrens/FillEstimation** (1★, created 2017) score 2, overlap: sparse
+    - Implementation of the Phil algorithm for fill estimation of sparse matrices
+- `kotkar:hci4cid:2008` (2008) <- **samanamarasinghe/Halide-world** (0★, created 2026) score 2, overlap: world
+    - The world of Halide use. Papers, repos etc. etc. that utilizes Halide
+- `kotkar:wisard:2008` (2008) <- **samanamarasinghe/Halide-world** (0★, created 2026) score 2, overlap: world
+    - The world of Halide use. Papers, repos etc. etc. that utilizes Halide
+- `lerer:dev:2010` (2010) <- **ward/semantic-merge-conflicts-scam2023** (0★, created 2023) score 2, overlap: data
+    - Data related to paper @ International Working Conference on Source Code Analysis and Manipulation (SCAM) 2023
+- `maydan:popl:1993` (1993) <- **samanamarasinghe/Halide-world** (0★, created 2026) score 2, overlap: use
+    - The world of Halide use. Papers, repos etc. etc. that utilizes Halide
+- `moritz:ims:2000` (2000) <- **moritz/Chalice-Model** (1★, created 2011) score 2, overlap: data
+    - Perl 5 data model for blog
+- `moritz:ims:2000` (2000) <- **frank/smnls** (0★, created 2019) score 2, overlap: data
+    - Learning sentence representations from natural language inference data
+- `moritz:ims:2000` (2000) <- **frank/deep-mnist** (0★, created 2017) score 2, overlap: data
+    - Deep neural network trained on the MNIST data set
+- `moritz:lcs-tm:1999` (1999) <- **moritz/perl5-Text-Layout** (0★, created 2014) score 2, overlap: pages
+    - Perl 5 module that lays out text paragraphs on pages, with header and footer
+- `moritz:lcs-tm:1999` (1999) <- **moritz/WWW-Wikipedia-Links** (1★, created 2011) score 2, overlap: pages
+    - Perl 5 modules for extracting some links from WIkipedia pages
+- `olszewski:asplos:2012` (2012) <- **jansel/pytorch** (1★, created 2020) score 2, overlap: dynamic
+    - Tensors and Dynamic neural networks in Python with strong GPU acceleration
+- `shrestha:lcs-tr:2001` (2001) <- **samanamarasinghe/Halide-world** (0★, created 2026) score 2, overlap: use
+    - The world of Halide use. Papers, repos etc. etc. that utilizes Halide
+- `soule:debs:2013` (2013) <- **Souler/is-coronavirus-crisis-over** (0★, created 2020) score 2, overlap: static
+    - A static webpage that says "No" in various ways
+- `stephenson:pldi:2003` (2003) <- **martin-martin/learning-log** (0★, created 2019) score 2, overlap: learning
+    - a Django project to keep track of learned topics
+- `taylor:isscc:2003` (2003) <- **mtaylor/MobileCloudController** (4★, created 2011) score 2, overlap: multiple
+    - Android Application for managing multiple cloud environments
+- `taylor:micro:2002` (2002) <- **michael-taylor/mathematical-windows** (0★, created 2026) score 2, overlap: general
+    - Convert mathematical equations to SVGs, PNGs, or MathML. A general wrapper to Lasem and mtex2MML.
+- `tej:meng-thesis:2016` (2016) <- **gkanwar/lattlib** (7★, created 2021) score 2, overlap: lattice
+    - A loosely related collection of lattice field theory code.
+- `tej:meng-thesis:2016` (2016) <- **gkanwar/u1-qlm-heavy-hex** (2★, created 2024) score 2, overlap: lattice
+    - U(1) Quantum Link Model on the Heavy Hex lattice.
+- `tej:meng-thesis:2016` (2016) <- **gkanwar/flow-lectures-2** (1★, created 2025) score 2, overlap: lattice
+    - Lectures given at "Computational Methods for Lattice Field Theory" (October 28 - November 1, 2025)
+- `thea:sm-thesis:2025` (2025) <- **collin/bootstrap-polymer** (0★, created 2013) score 2, overlap: elements
+    - bootstrap components in polymer-elements
+- `thies:bmc:2007` (2007) <- **thies/paper-uk-vintages** (7★, created 2018) score 2, overlap: learning
+    - Working Paper: "Machine Learning, Architectural Style and Property Values"
+- `thies:ecoop:2005` (2005) <- **awilliams/wifi-presence** (109★, created 2020) score 2, overlap: detection
+    - Presence detection on OpenWrt routers using connect/disconnect events of WiFi clients. Events are published to MQTT with Home Assistant integration.
+- `thies:ecoop:2005` (2005) <- **mernst/ductilej** (11★, created 2015) score 2, overlap: java
+    - A Java compiler plugin that turns Java into a mostly dynamically typed language
+- `thies:ictd:2009` (2009) <- **emmabrunskill/binder-demo-data** (0★, created 2025) score 2, overlap: data
+    - (no description)
+- `thies:ictd:2009` (2009) <- **thies/talk-ml-thin-data** (0★, created 2026) score 2, overlap: data
+    - (no description)
+- `thies:ictd:2009` (2009) <- **thies/data-figures-public** (0★, created 2022) score 2, overlap: data
+    - Data and figures that I use in talks/lectures often 
+- `thies:prib:2006` (2006) <- **alee/alee** (0★, created 2021) score 2, overlap: all
+    - All about me me me
+- `thies:recombposter:2006` (2006) <- **thies/paper-uk-vintages** (7★, created 2018) score 2, overlap: learning
+    - Working Paper: "Machine Learning, Architectural Style and Property Values"
+- `unite:2026` (2026) <- **collin/merb-slice_dm_graph** (2★, created 2008) score 2, overlap: relationships
+    - A merb slice to get a slick graph view of your DataMapper Relationships. Really nice to dive into that latest greatest Merb app/slice you've been wondering about.
+- `urbanski:loc:2006` (2006) <- **urbanski/dfir-docs** (0★, created 2020) score 2, overlap: digital
+    - digital forensics and incident response docs
+- `waingold:computer:1997` (1997) <- **taylor/dotfiles** (5★, created 2009) score 2, overlap: all
+    - All my public dotfiles
+- `waingold:computer:1997` (1997) <- **Sarkar/BlueShield** (1★, created 2013) score 2, overlap: software
+    - Android software which connects to an Arduino board to share schedules on when to use electronics!
+- `waingold:lcs-tr:1997` (1997) <- **taylor/dotfiles** (5★, created 2009) score 2, overlap: all
+    - All my public dotfiles
+- `waingold:lcs-tr:1997` (1997) <- **taylor/acts_as_state_machine** (2★, created 2009) score 2, overlap: machine
+    - Fork of http://elitists.textdriven.com/svn/plugins/acts_as_state_machine/trunk
+- `waingold:lcs-tr:1997` (1997) <- **Sarkar/BlueShield** (1★, created 2013) score 2, overlap: software
+    - Android software which connects to an Arduino board to share schedules on when to use electronics!
+- `won_continuous_2025` (2025) <- **collin/gist-live** (16★, created 2008) score 2, overlap: real
+    - bookmarklet to edit gists in real-time

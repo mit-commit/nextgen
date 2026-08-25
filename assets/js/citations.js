@@ -476,6 +476,8 @@ var CITATIONS = (function(){
     if (patch.search !== undefined) gPanel.search = String(patch.search || '').toLowerCase().trim();
     panels = panels.filter(function(pn){ return document.contains(pn.el); });
     for (var i = 0; i < panels.length; i++) panels[i].sync();
+    repoPanels = repoPanels.filter(function(pn){ return document.contains(pn.el); });
+    for (var j = 0; j < repoPanels.length; j++) repoPanels[j].sync();
   }
 
   /* Fetch (through the progressive queue) the data files for a set of
@@ -608,7 +610,7 @@ var CITATIONS = (function(){
       });
       mount.appendChild(legend);
     }
-    var state = { sort: 'impact', expanded: repos.length <= 6 };
+    var state = { sort: gPanel.sort, expanded: repos.length <= 6 };
     var sortRow = el('div', 'cite-filter');
     sortRow.appendChild(el('span', 'cite-filter-label', 'Sort by '));
     var tg = el('span', 'type-toggle'), btns = [];
@@ -623,12 +625,15 @@ var CITATIONS = (function(){
       b.type = 'button'; b.title = TIPS[v];
       b.addEventListener('click', function(){
         state.sort = v;
-        btns.forEach(function(x){ x.el.className = 'type-toggle-btn' + (x.v === v ? ' active' : ''); });
+        setSortButtons(v);
         draw();
       });
       btns.push({ v: v, el: b }); tg.appendChild(b);
     });
     sortRow.appendChild(tg);
+    function setSortButtons(v){
+      btns.forEach(function(x){ x.el.className = 'type-toggle-btn' + (x.v === v ? ' active' : ''); });
+    }
     var expBtn = el('button', 'type-toggle-btn cite-hdr-toggle' + (state.expanded ? ' active' : ''),
                     state.expanded ? 'Collapse all' : 'Expand all');
     expBtn.type = 'button'; expBtn.title = 'Open or close every group below';
@@ -647,12 +652,12 @@ var CITATIONS = (function(){
       groupsMount.innerHTML = '';
       if (state.sort === 'impact'){
         REPO_GROUPS.forEach(function(g){
-          var rows = repos.filter(function(r){ return r.group === g.key; });
+          var rows = repos.filter(function(r){ return r.group === g.key && repoRowVisible(r); });
           if (rows.length) groupsMount.appendChild(
             renderGroupWith(g.label, g.gloss, rows, state.expanded, renderRepoRow));
         });
       } else {
-        var sorted = repos.slice(), headerOf;
+        var sorted = repos.filter(repoRowVisible), headerOf;
         if (state.sort === 'popularity'){
           sorted.sort(function(a, b){
             return ((b.stars != null ? b.stars : -1) - (a.stars != null ? a.stars : -1)); });
@@ -673,8 +678,24 @@ var CITATIONS = (function(){
       }
     }
     draw();
+    repoPanels.push({ el: mount, sync: function(){
+      state.sort = gPanel.sort;
+      setSortButtons(state.sort);
+      draw();
+    } });
   }
   var repoInstances = [];
+  var repoPanels = [];
+  /* unified taxonomy: repo groups share the citation categories'
+     names, so the page-level category filter maps onto them. 'own'
+     is the paper's own artifact, not reception - always visible. */
+  var REPO_FUNC = { 'builds-on': 'extends', uses: 'uses-tool',
+                    benchmarks: 'uses-benchmark', adopts: 'adopts-idea' };
+  function repoRowVisible(r){
+    if (r.group === 'own') return true;
+    if (!gPanel.categories || !gPanel.categories.length) return true;
+    return gPanel.categories.indexOf(REPO_FUNC[r.group]) !== -1;
+  }
   var repoDefaultOpen = false;
   var repoDataCache = {};
   function attachRepoToggle(metaEl, bodyParent, key, indexRow){

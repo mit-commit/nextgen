@@ -157,11 +157,11 @@
                    list itself (citation-count and impact sliders). -->
               <div class="filter-grid cite-tools">
                 <div class="filter-block">
-                  <div class="filter-label">Citation categories</div>
+                  <div class="filter-label" title="One taxonomy shared by the citation and repository panels; counts are citing papers and their citations">Impact categories</div>
                   <div id="facet-cite-cats" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label">Citation panels</div>
+                  <div class="filter-label" title="Drives every open citation and repository panel; centrality and search apply to citations">Impact panels</div>
                   <div class="cite-tools-row">Sort
                     <span class="type-toggle" id="cite-global-sort">
                       <button type="button" class="type-toggle-btn active" data-v="impact" title="Order citations by what they do: building on the paper ranks above running it, above borrowing its idea, above citing it in a list">Impact</button>
@@ -213,7 +213,7 @@
   <script src="assets/js/common.js"></script>
   <script src="assets/js/pubs.js"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
-  <script src="assets/js/citations.js?v=14"></script>    <!-- per-paper citation view (data/citations/) -->
+  <script src="assets/js/citations.js?v=15"></script>    <!-- per-paper citation view (data/citations/) -->
   <script src="assets/js/publications.js?v=16"></script> <!-- the filters controller -->
 </body>
 </html>

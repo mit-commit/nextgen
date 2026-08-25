@@ -850,6 +850,28 @@ raise it to the setup lane.
   satisfied the style doc; pilots, hand-written summaries, and
   gscholar.json untouched. F1 complete — all 157 receptions now conform
   to docs/summary-style.md.
+- **Impact tools unified in name and behavior** (2026-08-25, human
+  ruling "citation categories and citation panels now are both
+  citation/repository — names should reflect that"): the page-level tool
+  boxes are renamed "Impact categories" and "Impact panels" (tooltips
+  state the shared scope), and the sharing is now real: the page-level
+  Sort drives repository panels too (repo panels register for
+  setGlobalPanels resync; their local buttons follow), and the category
+  filter maps onto repo groups through the unified taxonomy (builds-on →
+  extends, uses → uses-tool, benchmarks → uses-benchmark, adopts →
+  adopts-idea; 'own' rows are the paper's own artifact, always visible).
+  Centrality and citing-work search stay citation-only per their
+  tooltips. FUTURE TASK (human, 2026-08-25): the Paper thresholds
+  sliders (Citations ≥, Impact) must eventually score BOTH citations and
+  repositories via a hidden composite — blocked on normalization until
+  tier-2/3 repo data reveals the repo-count distribution (tier-1 max is
+  3 repos/paper, too thin to weight).
+- **Pilot refold after fulltext rejudge** (2026-08-25, taxonomy lane
+  request): reran prototype/build_pilot_data.py --write for
+  halide:pldi:2013, taylor:micro:2002, thies:cc:2002 after the manual
+  PDF ingestion rejudged 18 rows (17 changed function/centrality).
+  Only those 3 pilot files + index.json changed; other pilots,
+  gscholar.json, reception.json untouched.
 - **F2 impact-view rollout** (2026-08-25, human-ordered before F1's
   remaining waves): the approved Option-B impact view is live for ALL
   papers. New data layer (claimed): `harvest/impactview/build_repo_data.py`

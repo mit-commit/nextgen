@@ -30,7 +30,12 @@ repos = {}
 for path in glob.glob(f'{ROOT}/data/repos/papers/*.json'):
     d = json.load(open(path))
     for r in d['repos']:
-        if r.get('group') != 'own' or r.get('artifact') or 'github.com' not in (r.get('url') or ''):
+        # own-inventory rows carry a bare "owner/repo" url (no github.com
+        # substring) rather than a full URL -- key off the normalized
+        # `name` (always owner/repo for a real GitHub ref, several slashes
+        # or none for a non-GitHub host like gitlab/bitbucket) instead.
+        name = r.get('name') or ''
+        if r.get('group') != 'own' or r.get('artifact') or name.count('/') != 1 or ' ' in name:
             continue
         e = repos.setdefault(r['name'], {'stars': r.get('stars'), 'active': r.get('active'),
                                          'archived': r.get('archived'), 'papers': set()})

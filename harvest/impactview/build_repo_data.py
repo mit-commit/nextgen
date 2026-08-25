@@ -60,7 +60,15 @@ def gh_repo(fullname, cache, token):
 
 
 def fullname_of(url):
-    part = url.split('github.com/')[-1].strip('/')
+    # own-inventory.json stores confirmed rows as a bare "owner/repo" (no
+    # scheme); verified.json stores full URLs, occasionally on a non-GitHub
+    # host (gitlab/bitbucket) that must NOT be parsed as an owner/repo pair.
+    if '://' in url:
+        if 'github.com/' not in url:
+            return None
+        part = url.split('github.com/')[-1].strip('/')
+    else:
+        part = url.strip('/')
     bits = part.split('/')
     return '/'.join(bits[:2]) if len(bits) >= 2 else None
 
@@ -95,7 +103,7 @@ def main():
                 continue
             entry = {'url': r['url'], 'group': 'own', 'role': r['role'],
                      'confidence': r['confidence'], 'evidence': r['evidence']}
-            fn = fullname_of(r['url']) if 'github.com/' in r['url'] else None
+            fn = fullname_of(r['url'])
             if fn:
                 meta = gh_repo(fn, cache, token) if token else {}
                 if meta and not meta.get('error'):

@@ -87,9 +87,19 @@ def main():
     inv_path = f'{ROOT}/harvest/repos/own-inventory.json'
     inventory = json.load(open(inv_path)) if os.path.exists(inv_path) else {}
     cache = json.load(open(GHCACHE)) if os.path.exists(GHCACHE) else {}
+    # round-8 task 3: halide-import.json's tier-2 rows (samanamarasinghe/
+    # Halide-world's own ecosystem-user index, mapped not re-judged -- stars/
+    # evidence/etc. are Halide-world's own, never refetched from GitHub here).
+    # Keyed to a single paper (halide:pldi:2013); tier-3 (162 rows) stays
+    # unfolded per the round-8 task's literal scope (567 tier-2 rows only).
+    halide_path = f'{ROOT}/harvest/ecosystems/halide-import.json'
+    halide_import = json.load(open(halide_path)) if os.path.exists(halide_path) else None
+    eco_tier2 = {}
+    if halide_import:
+        eco_tier2[halide_import['key']] = halide_import['tier2']
 
     papers = {}
-    for key in sorted(set(verified) | set(descendants) | set(inventory)):
+    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_tier2)):
         # own-inventory rows are tier-1 like verified.json's; 'website'
         # repos stay inventory-only (project pages, not impact)
         rows = verified.get(key, []) + [
@@ -168,10 +178,23 @@ def main():
                 continue
             seen.add((entry['name'].lower(), 'adopts'))
             out.append(entry)
+        # tier 2: ecosystem-user rows imported from another repo's own
+        # index (currently only halide-import.json). Mapped verbatim --
+        # no GitHub refetch, no re-judging -- skip only an exact repo the
+        # paper already carries under any other role/group.
+        for r in eco_tier2.get(key, []):
+            name_l = r['name'].lower()
+            if name_l in {n for n, _ in seen}:
+                continue
+            entry = {k: v for k, v in r.items() if v is not None}
+            out.append(entry)
+            seen.add((name_l, entry['group']))
         if out:
-            # artifact rows first, then own rows by role, then descendants
+            # artifact/own rows first, then tier-2 ecosystem rows, then
+            # tier-3 descendants
+            group_order = {'adopts': 2}
             order = {'artifact': 0, 'implementation': 1, 'benchmark': 2}
-            out.sort(key=lambda e: (1 if e.get('group') == 'adopts' else 0,
+            out.sort(key=lambda e: (group_order.get(e.get('group'), 0 if e.get('role') else 1),
                                     0 if e.get('artifact') else 1,
                                     order.get(e.get('role'), 3)))
             papers[key] = out

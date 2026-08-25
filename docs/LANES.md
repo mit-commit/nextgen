@@ -640,6 +640,9 @@ raise it to the setup lane.
   split bar and the codebook provenance footer are removed per the
   human ("keep it simple") — the COMMIT papers group itself, with its
   gloss, still carries the separation. style.css?v=7, citations.js?v=9.
+- **Group headers simplified** (2026-08-24): "Builds on it 35 — gloss…"
+  became "Builds on it (35)" with the gloss as a tooltip, per the human.
+  style.css?v=8, citations.js?v=10.
 
 ## Cross-lane requests
 

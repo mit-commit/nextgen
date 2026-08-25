@@ -127,8 +127,8 @@ var CITATIONS = (function(){
     var arrow = el('span', null, startOpen ? '▾ ' : '▸ ');
     head.appendChild(arrow);
     head.appendChild(el('span', 'cite-group-label', title));
-    head.appendChild(el('span', 'cite-group-count', ' ' + fmt(rows.length)));
-    if (gloss) head.appendChild(el('span', 'cite-group-gloss', ' — ' + gloss));
+    head.appendChild(el('span', 'cite-group-count', ' (' + fmt(rows.length) + ')'));
+    if (gloss) head.title = gloss;  // description as a tooltip, not inline
     wrap.appendChild(head);
 
     var listWrap = el('div', 'cite-group-body');

@@ -68,9 +68,9 @@ mechanic as the summary toggle. The panel shows, top to bottom:
    their separate section (the external-impact story); Recency and
    Popularity incorporate them into the main list, each row marked with a
    "COMMIT" chip.
-5. **Function groups.** Under Impact with headers: collapsible groups in
-   codebook priority order, each
-   with a plain-language label, a count, and a one-clause gloss:
+5. **Function groups.** Under Impact: collapsible groups in codebook
+   priority order, each headed "Label (N)" with its one-clause gloss as
+   a tooltip:
    - Builds on it (`extends`) — 35
    - Uses the system (`uses-tool`) — 77
    - Adopts the idea (`adopts-idea`) — 89

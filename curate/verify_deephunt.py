@@ -111,7 +111,15 @@ def build_request(key, candidates, pub):
         '\nDEEP-HUNT CANDIDATES:',
     ]
     for c in candidates:
-        parts.append(f"  - {c.get('repo') or c.get('url')}  "
+        # Always show the real https:// URL -- if only the bare "owner/repo"
+        # form is present, build one. The system prompt tells the model to
+        # echo "the URL as given" verbatim; showing it the bare form here
+        # once meant it echoed that bare form back as "url" (own-inventory.json
+        # rows with url="owner/repo", no github.com/https:// at all -- caught
+        # downstream in build_repo_data.py/gen_tier2_priority.py, fixed here
+        # at the source).
+        url = c.get('url') or ('https://github.com/' + c['repo'] if c.get('repo') else None)
+        parts.append(f"  - {url}  "
                      f"(score={c.get('score')}, confidence={c.get('confidence')}, "
                      f"stars={c.get('stars')}, created={c.get('created_at')}, "
                      f"source={c.get('source')})")

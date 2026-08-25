@@ -1334,6 +1334,48 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     }
     wireSlider(els.minCites, els.minCitesLabel, maxCites, function(v){ state.minCites = v; });
 
+    /* ================================================================
+       TEMP — "Pilot papers only" review toggle. DELETE THIS ENTIRE
+       BLOCK when the pilot phase ends; nothing outside it refers to it
+       (it inserts its own button and wraps filteredItems in place).
+       ================================================================ */
+    (function pilotOnlyTemp(){
+      var PILOT_KEYS = ['halide:pldi:2013', 'thies:cc:2002', 'taylor:micro:2002',
+        'amarasinghe:ijpp:2005', 'petkov:ipdps:2002', 'thies:toplas:2007',
+        'levison:istas:2002', 'netblocks-pldi24'];
+      var on = false;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'btn';
+      btn.textContent = 'Pilot papers only [TEMP]';
+      btn.title = 'Temporary review filter: only the 8 taxonomy-pilot papers';
+      btn.setAttribute('aria-pressed', 'false');
+      btn.style.border = '1px dashed #c60';
+      btn.style.color = '#c60';
+      var after = els.btnToggleCitations || els.btnToggleSummaries;
+      if (!after) return;
+      after.parentNode.insertBefore(btn, after.nextSibling);
+      after.parentNode.insertBefore(document.createTextNode('\u00a0\u00a0'), btn);
+      var origFilteredItems = filteredItems;
+      filteredItems = function(excludeFacet){
+        var items = origFilteredItems(excludeFacet);
+        if (!on) return items;
+        return items.filter(function(it){
+          return PILOT_KEYS.indexOf(bibtexKeyOf(it)) !== -1;
+        });
+      };
+      btn.onclick = function(){
+        on = !on;
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.style.background = on ? '#c60' : '';
+        btn.style.color = on ? '#fff' : '#c60';
+        applyFilters();
+        track('pilot-only-temp', { on: on });
+      };
+    })();
+    /* ============== end TEMP pilot-only block ============== */
+
+
     // The impact slider speaks in tiers, not raw scores: thresholds are
     // quantiles of the corpus impact distribution, labels are plain words.
     var IMPACT_TIERS = [

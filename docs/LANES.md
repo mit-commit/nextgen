@@ -614,6 +614,12 @@ raise it to the setup lane.
   properly, not as an on-the-fly scan — button dropped from the
   overview; CITATIONS.ensureData/crossCiters stay in citations.js as
   the seed of a future proper implementation. publications.js?v=8.
+- **TEMP pilot-only toggle** (2026-08-24): a "Pilot papers only [TEMP]"
+  button (dashed-orange marked) in the filter row narrows the list to
+  the 8 pilot bibtexKeys for review convenience. Deliberately one
+  self-contained, clearly-fenced block in publications.js (inserts its
+  own button, wraps filteredItems in place) — delete the block and the
+  feature is fully gone. publications.js?v=9.
 
 ## Cross-lane requests
 

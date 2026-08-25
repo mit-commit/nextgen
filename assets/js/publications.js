@@ -1160,24 +1160,30 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var box = els.citeOverview;
     if (!box) return;
     if (!CITE_INDEX || !window.CITATIONS){ box.className = 'cite-overview hidden'; return; }
-    var withData = [], totalC = 0, totalR = 0, i;
-    for (i = 0; i < items.length; i++){
+    var withData = [], totalC = 0, i;
+    var uniqRepos = {}, nUniq = 0;   // ecosystems are shared across a
+    for (i = 0; i < items.length; i++){  // project's papers: union, not sum
       var row = CITE_INDEX[bibtexKeyOf(items[i])];
       if (row){
         withData.push({ key: bibtexKeyOf(items[i]), title: items[i].title || '' });
         totalC += CITATIONS.displayCount(row);
       }
       var rrow = REPO_INDEX && REPO_INDEX[bibtexKeyOf(items[i])];
-      if (rrow) totalR += rrow.repos || 0;
+      if (rrow && rrow.rids){
+        for (var ri = 0; ri < rrow.rids.length; ri++){
+          if (!uniqRepos[rrow.rids[ri]]){ uniqRepos[rrow.rids[ri]] = 1; nUniq++; }
+        }
+      }
     }
     box.innerHTML = '';
     if (!withData.length){ box.className = 'cite-overview hidden'; return; }
     box.className = 'cite-overview';
     var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
+    l1.title = 'Citations sum each paper\u2019s count (a work citing several papers counts once per paper); repositories are distinct';
     l1.innerHTML = '<b>' + withData.length.toLocaleString('en-US') + '</b> of ' +
       items.length.toLocaleString('en-US') + ' shown papers have <b>' +
       totalC.toLocaleString('en-US') + '</b> total citations' +
-      (totalR ? ' and <b>' + totalR.toLocaleString('en-US') + '</b> repositories' : '') + '.';
+      (nUniq ? ' and <b>' + nUniq.toLocaleString('en-US') + '</b> distinct repositories' : '') + '.';
     box.appendChild(l1);
   }
 

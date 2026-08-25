@@ -280,6 +280,7 @@ def main():
         return
     os.makedirs(f'{ROOT}/data/repos/papers', exist_ok=True)
     index = {'schema': 1, 'generated': args.generated, 'papers': {}}
+    rid_of = {}
     for key, rows in papers.items():
         doc = {'schema': 1, 'key': key, 'generated': args.generated, 'repos': rows}
         with open(f'{ROOT}/data/repos/papers/{key}.json', 'w') as fh:
@@ -299,6 +300,15 @@ def main():
                                 'tiers': {k: v for k, v in tiers.items() if v}}
         if impact:
             index['papers'][key]['impact'] = impact
+        # compact unique-repo ids so the page can union across papers
+        # (ecosystems are shared; summing per-paper counts double-counts)
+        rids = []
+        for r in rows:
+            nm = (r.get('name') or r.get('url') or '').lower()
+            if nm not in rid_of:
+                rid_of[nm] = len(rid_of)
+            rids.append(rid_of[nm])
+        index['papers'][key]['rids'] = sorted(set(rids))
     with open(f'{ROOT}/data/repos/index.json', 'w') as fh:
         json.dump(index, fh, indent=1)
         fh.write('\n')

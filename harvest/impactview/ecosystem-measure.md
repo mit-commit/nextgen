@@ -1,6 +1,6 @@
 # Tier-2 ecosystem measure — all own repos
 
-52 repos. Raw candidates 810 (dependents + README/desc mentions); with the 300-per-signal giant cap: 810 to verify, est ~$8 at $0.01/judgment (generous). Dependents exist only for repos used as packages; mentions catch the rest.
+71 repos. Raw candidates 824 (dependents + README/desc mentions); with the 300-per-signal giant cap: 824 to verify, est ~$8 at $0.01/judgment (generous). Dependents exist only for repos used as packages; mentions catch the rest.
 
 | repo | stars | forks | dependents | mentions | verify (capped) |
 |------|------:|------:|-----------:|---------:|----------------:|
@@ -30,10 +30,14 @@
 | nullplay/Workload-Aware-Co-Optimization | 8 | 5 | 0 | 2 | 2 |
 | finch-tensor/Finch.jl | 245 | 31 | 0 | 2 | 2 |
 | exaloop/seq | 59 | 3 | 0 | 2 | 2 |
+| CharithYMendis/Helium | 48 | 14 | 0 | 2 | 2 |
 | BuildIt-lang/d2x | 9 | 1 | 0 | 2 | 2 |
 | ychen306/vegen | 31 | 10 | 0 | 1 | 1 |
 | willow-ahrens/Pigeon.jl | 0 | 0 | 0 | 1 | 1 |
 | tensor-compiler/taco-bench | 5 | 4 | 0 | 1 | 1 |
+| sunimalr/vimarsha | 2 | 0 | 0 | 1 | 1 |
+| sillycross/mlpds | 12 | 5 | 0 | 1 | 1 |
+| sillycross/efficient-mlp | 1 | 0 | 0 | 1 | 1 |
 | shoaibkamil/distributed-halide | 2 | 1 | 0 | 1 | 1 |
 | seq-lang/seq-benchmarks | 8 | 0 | 0 | 1 | 1 |
 | rrnewton/StreamIt | 2 | 4 | 0 | 1 | 1 |
@@ -43,16 +47,31 @@
 | radha-patel/symmetry-benchmarks | 0 | 1 | 0 | 1 | 1 |
 | petabricks/petabricks | 12 | 8 | 0 | 1 | 1 |
 | nullplay/Unified-Convolution-Framework | 10 | 0 | 0 | 1 | 1 |
+| nullplay/Continuous-Einsums | 0 | 0 | 0 | 1 | 1 |
+| malekbr/julia-to-tiramisu | 0 | 0 | 0 | 1 | 1 |
+| kevinfaacom/supertaco | 0 | 0 | 0 | 1 | 1 |
 | katsumiok/askit-artifact.git | 0 | 0 | — | 1 | 1 |
 | jbosboom/streamjit | 12 | 6 | 0 | 1 | 1 |
 | finch-tensor/FinchBenchmarks | 1 | 2 | 0 | 1 | 1 |
 | dsharlet/slinky | 15 | 5 | 0 | 1 | 1 |
 | bthies/streamit | 71 | 23 | 0 | 1 | 1 |
 | adadima/gstaco | 5 | 0 | 0 | 1 | 1 |
+| a5anka/pamla | 3 | 0 | 0 | 1 | 1 |
+| LiNaNiNa/Auto-scheduling-LI-Tiling | 0 | 0 | 0 | 1 | 1 |
 | BuildIt-lang/net-blocks-pldi24-artifacts | 4 | 1 | 0 | 1 | 1 |
+| BuildIt-lang/dynamic-by-default | 0 | 1 | 0 | 1 | 1 |
 | BuildIt-lang/d2x_cgo23_artifacts | 3 | 0 | 0 | 1 | 1 |
 | BuildIt-lang/buildit_regex | 4 | 0 | 0 | 1 | 1 |
+| BuildIt-lang/buildit-dep-template | 4 | 0 | 0 | 1 | 1 |
+| BuildIt-lang/buildit-array | 14 | 1 | 0 | 1 | 1 |
+| 20ChaituR/functional-clustering | 1 | 0 | 0 | 1 | 1 |
 | willow-ahrens/taco | 1 | 0 | 0 | 0 | 0 |
+| tdenniston/Halide | 0 | 0 | 0 | 0 | 0 |
 | stevenraphael/Halide | 0 | 0 | 0 | 0 | 0 |
 | manya-bansal/prism | 0 | 0 | — | 0 | 0 |
+| malekbr/tiramisu | 0 | 0 | 0 | 0 | 0 |
+| katherinemohr/ltram-linux | 0 | 0 | 0 | 0 | 0 |
+| gkanwar/simit-1 | 0 | 0 | 0 | 0 | 0 |
 | github.com/PythonCompilers | 0 | 0 | — | 0 | 0 |
+| derekbruening/drmemory | 0 | 0 | 0 | 0 | 0 |
+| Mascinissa/cost_model | 0 | 0 | 0 | 0 | 0 |

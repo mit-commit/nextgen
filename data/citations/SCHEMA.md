@@ -41,16 +41,21 @@ letters, digits, `:`, `-`, `.`, `_`).
 }
 ```
 
-- `reception` (optional) — a short, hand-written reception summary: what
-  kinds of work cite the paper, its notable descendants and users, and any
-  distinctive citation pattern. Plain text; paragraphs separated by a
-  blank line (`\n\n`). The view renders it at the top of the expanded
-  Citations panel. Curated in `data/citations/reception.json` (keyed by
-  `bibtexKey`, human-reviewed prose — **never machine-generated into the
-  site without review**); every emitter folds that file in, so rebuilding
-  a paper's JSON preserves its summary. A paper absent from
-  `reception.json` simply has no `reception` field. Pilot-only until the
-  human approves the pilot texts.
+- `reception` (optional) — a short reception account: what kinds of work
+  cite the paper, its notable descendants and users, and any distinctive
+  citation pattern. Plain text; paragraphs separated by a blank line
+  (`\n\n`), **written to flow seamlessly from the paper's hand-written
+  summary** — the publications page renders summary + reception as ONE
+  Summary block (reception paragraphs appended; there is no separate
+  Reception section anywhere). Storage stays two fields in two files: the
+  summary lives in `data/publications.json` (hand-written, never touched
+  by any script) and reception in `data/citations/reception.json` (keyed
+  by `bibtexKey`; regenerated each refresh cycle for non-pilot papers
+  once that scales, human-reviewed for the pilots) — so a reception
+  refresh can never overwrite summary prose. Emitters fold reception.json
+  into the per-paper JSON as a convenience copy; the site reads
+  `reception.json` directly. Pilot-only until the human approves the
+  seam texts.
 
 - `records_raw` — harvested citing records before dedup (provenance only).
 - `works` — the **verified citation count**: deduped citing works, with

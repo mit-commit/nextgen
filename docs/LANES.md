@@ -620,6 +620,22 @@ raise it to the setup lane.
   self-contained, clearly-fenced block in publications.js (inserts its
   own button, wraps filteredItems in place) — delete the block and the
   feature is fully gone. publications.js?v=9.
+- **Reception merged into Summary + expand/collapse groups**
+  (2026-08-24 ruling): the separate Reception section is gone. The
+  publications page renders summary + reception as ONE Summary block —
+  reception texts rewritten to flow seamlessly from each summary's last
+  sentence (e.g. TOPLAS's "'step towards'… first step" → "The step was
+  taken up."; the IJPP text's framing corrected to the journal-of-the-
+  language-paper it actually is). Storage stays two fields in two files
+  (summary in data/publications.json, untouched; reception in
+  data/citations/reception.json, fetched no-store by the page) so
+  regeneration can never overwrite hand-written prose; SCHEMA updated.
+  Also per the human's idea, the panels' Headers on/off toggle became
+  **Expand all / Collapse all** — groups and their headers persist in
+  both states across all three sort modes (verified: 13 impact groups /
+  1,483 rows expand, 16 recency year groups inherit the state, collapse
+  keeps headers). style.css?v=6, citations.js?v=8, publications.js?v=10.
+  Stopped after the 8 pilots for seam critique before the other 144.
 
 ## Cross-lane requests
 

@@ -59,13 +59,15 @@ mechanic as the summary toggle. The panel shows, top to bottom:
 4. **Sort modes** (approved ruling, 2026-08-24): **Impact** (default;
    codebook priority order), **Recency** (year, newest first), and
    **Popularity** (the citing work's own citation count — `cited_by` in the
-   schema — highest first, with a "N cites" chip per row). With **headers
-   on** (the default), all three modes render the same way: collapsible
-   groups, collapsed by default, the count in each header — category
-   groups under Impact, years under Recency, count buckets (1,000+ /
-   100–999 / 10–99 / 1–9 / not yet cited / count unknown) under
-   Popularity, all lazily rendered in one shared style. **Headers off**
-   gives one flat sorted list. Impact keeps COMMIT papers in
+   schema — highest first, with a "N cites" chip per row). All three modes
+   render the same way: collapsible groups with the count in each
+   header — category groups under Impact, years under Recency, count
+   buckets (1,000+ / 100–999 / 10–99 / 1–9 / not yet cited / count
+   unknown) under Popularity, lazily rendered in one shared style. An
+   **Expand all / Collapse all** button opens or closes every group
+   while headers stay visible in both states (this replaced an earlier
+   headers-on/off toggle whose off state lost the grouping context).
+   Impact keeps COMMIT papers in
    their separate section (the external-impact story); Recency and
    Popularity incorporate them into the main list, each row marked with a
    "COMMIT" chip.

@@ -350,10 +350,20 @@ function createBibLink(it){
   // If citations.js or the index is absent, CITE_INDEX stays null and the
   // page renders exactly as before.
   var CITE_INDEX = null;
+  // Reception texts (data/citations/reception.json) render as the second
+  // part of the combined Summary block; storage stays two separate fields
+  // so regenerating receptions can never overwrite hand-written summaries.
+  var RECEPTIONS = {};
   var citeIndexReady = (window.CITATIONS
-    ? CITATIONS.loadIndex().then(function(idx){
-        CITE_INDEX = (idx && idx.papers) || null;
-      })
+    ? Promise.all([
+        CITATIONS.loadIndex().then(function(idx){
+          CITE_INDEX = (idx && idx.papers) || null;
+        }),
+        fetch('data/citations/reception.json', { cache: 'no-store' })
+          .then(function(r){ return r.ok ? r.json() : {}; })
+          .then(function(rec){ RECEPTIONS = rec || {}; })
+          .catch(function(){ RECEPTIONS = {}; })
+      ])
     : Promise.resolve()
   ).catch(function(){ CITE_INDEX = null; });
 
@@ -686,8 +696,8 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
   /* ---------- Rendering one publication (same look as index) ---------- */
   // Summary text is trusted local JSON containing embedded <a> links.
-  function renderSummaryInto(container, summaryText){
-    var paras = String(summaryText).split(/\n\n+/), i, p;
+  function renderSummaryInto(container, summaryText, receptionText){
+    var paras = summaryText ? String(summaryText).split(/\n\n+/) : [], i, p;
     container.innerHTML = '';
     for (i = 0; i < paras.length; i++){
       p = document.createElement('p');
@@ -696,6 +706,16 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     }
     var links = container.getElementsByTagName('a'), j;
     for (j = 0; j < links.length; j++){ links[j].target = '_blank'; links[j].rel = 'noopener'; }
+    // Reception flows on as further paragraphs of the same Summary
+    // (plain text; written to continue seamlessly from the prose above).
+    if (receptionText){
+      var rparas = String(receptionText).split(/\n\n+/), r;
+      for (r = 0; r < rparas.length; r++){
+        p = document.createElement('p');
+        p.appendChild(document.createTextNode(rparas[r]));
+        container.appendChild(p);
+      }
+    }
   }
 
   function renderItem(it){
@@ -745,10 +765,11 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
     // Summary toggle (shown only when a summary exists); follows global default.
     var sumDiv = null;
-    if (it.summary){
+    var receptionText = RECEPTIONS[bibtexKeyOf(it)];
+    if (it.summary || receptionText){
       sumDiv = document.createElement('div');
       sumDiv.className = 'pub-summary' + (state.summaryExpanded ? ' open' : '');
-      renderSummaryInto(sumDiv, it.summary);
+      renderSummaryInto(sumDiv, it.summary, receptionText);
 
       var sumToggle = document.createElement('a');
       sumToggle.href = '#';
@@ -1230,8 +1251,6 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         for (i = 0; i < divs.length; i++){ divs[i].className = 'pub-summary' + (open ? ' open' : ''); }
         var toggles = document.querySelectorAll('.pub-summary-toggle:not(.cite-toggle)'), j;
         for (j = 0; j < toggles.length; j++){ toggles[j].textContent = open ? 'Summary \u25be' : 'Summary \u25b8'; }
-        // Reception prose inside citation panels is a summary too.
-        if (window.CITATIONS) CITATIONS.setReceptionVisible(open);
         track('summaries-toggle-all', { expanded: open });
       };
     }

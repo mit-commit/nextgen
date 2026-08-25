@@ -80,7 +80,6 @@ var CITATIONS = (function(){
   /* Page-level panel state: every open panel follows these; per-panel
      controls can still diverge afterwards. */
   var gPanel = { sort: 'impact', centrality: 'all', categories: null, search: '' };
-  var gReception = false;  // follows the page's Show summaries state
   function rowMatchesGlobal(c){
     if (gPanel.categories && gPanel.categories.length &&
         gPanel.categories.indexOf(c.function) === -1) return false;
@@ -189,33 +188,6 @@ var CITATIONS = (function(){
       (all[i].commit ? commitPapers : external).push(all[i]);
     }
 
-    /* Reception summary: hand-written prose, first in the panel. It is a
-       summary, so it follows the page's Show summaries state; the head
-       toggles it either way. */
-    if (data.reception){
-      var recWrap = el('div', 'cite-reception-wrap');
-      var recHead = el('a', 'cite-group-head cite-reception-head');
-      recHead.href = '#';
-      var recArrow = el('span', null, gReception ? '▾ ' : '▸ ');
-      recHead.appendChild(recArrow);
-      recHead.appendChild(el('span', 'cite-group-label', 'Reception'));
-      recWrap.appendChild(recHead);
-      var rec = el('div', 'cite-reception');
-      rec.style.display = gReception ? '' : 'none';
-      var paras = String(data.reception).split(/\n\n+/);
-      for (var rp = 0; rp < paras.length; rp++){
-        rec.appendChild(el('p', null, paras[rp]));
-      }
-      recHead.addEventListener('click', function(ev){
-        ev.preventDefault();
-        var show = rec.style.display === 'none';
-        rec.style.display = show ? '' : 'none';
-        recArrow.textContent = show ? '▾ ' : '▸ ';
-      });
-      recWrap.appendChild(rec);
-      mount.appendChild(recWrap);
-      receptions.push({ el: recWrap, arrow: recArrow, body: rec });
-    }
 
     /* Headline: displayed count = max(verified, Google Scholar). */
     var display = displayCount({ verified: counts.works, gscholar: gscholar });
@@ -252,7 +224,7 @@ var CITATIONS = (function(){
 
     /* Centrality filter and sort modes (apply to the judged list below). */
     state.sort = gPanel.sort;
-    state.headers = true;
+    state.expanded = false;  // groups collapsed by default; headers always shown
     var judgedExt = extDetailed.concat(extPassing);
     var centCounts = { core: 0, engaged: 0, peripheral: 0 };
     judgedExt.forEach(function(c){ if (centCounts[c.centrality] !== undefined) centCounts[c.centrality]++; });
@@ -304,19 +276,19 @@ var CITATIONS = (function(){
     stg.appendChild(mkSortBtn('recency', 'Recency'));
     stg.appendChild(mkSortBtn('popularity', 'Popularity'));
     sortRow.appendChild(stg);
-    var hdrBtn = el('button', 'type-toggle-btn active cite-hdr-toggle', 'Headers on');
-    hdrBtn.type = 'button';
-    hdrBtn.setAttribute('aria-pressed', 'true');
-    hdrBtn.addEventListener('click', function(){
-      state.headers = !state.headers;
-      hdrBtn.className = 'type-toggle-btn cite-hdr-toggle' + (state.headers ? ' active' : '');
-      hdrBtn.setAttribute('aria-pressed', state.headers ? 'true' : 'false');
-      hdrBtn.textContent = state.headers ? 'Headers on' : 'Headers off';
+    var expBtn = el('button', 'type-toggle-btn cite-hdr-toggle', 'Expand all');
+    expBtn.type = 'button';
+    expBtn.setAttribute('aria-pressed', 'false');
+    expBtn.addEventListener('click', function(){
+      state.expanded = !state.expanded;
+      expBtn.className = 'type-toggle-btn cite-hdr-toggle' + (state.expanded ? ' active' : '');
+      expBtn.setAttribute('aria-pressed', state.expanded ? 'true' : 'false');
+      expBtn.textContent = state.expanded ? 'Collapse all' : 'Expand all';
       drawList();
-      trackSafe('citations-headers', { key: key, on: state.headers });
+      trackSafe('citations-expand-groups', { key: key, on: state.expanded });
     });
     sortRow.appendChild(el('span', null, ' '));
-    sortRow.appendChild(hdrBtn);
+    sortRow.appendChild(expBtn);
     mount.appendChild(sortRow);
 
     /* The judged list, in the chosen order. */
@@ -324,13 +296,6 @@ var CITATIONS = (function(){
     mount.appendChild(groupsMount);
     var FN_RANK = {};
     FUNCTIONS.forEach(function(f, i){ FN_RANK[f.key] = i; });
-    function renderFlat(rows, showCites){
-      var ul = el('ul', 'cite-rows cite-flat');
-      for (var i = 0; i < rows.length; i++){
-        ul.appendChild(renderRow(rows[i], showCites));
-      }
-      return ul;
-    }
     function sortRows(rows){
       var sorted = rows.slice();
       if (state.sort === 'impact'){
@@ -361,45 +326,41 @@ var CITATIONS = (function(){
       }
       rows = rows.filter(rowMatchesGlobal);
       var showCites = state.sort === 'popularity';
-      if (state.headers){
-        /* All three modes: collapsible groups, collapsed by default, the
-           count in each header — categories / years / count buckets. */
-        if (state.sort === 'impact'){
-          for (var g = 0; g < FUNCTIONS.length; g++){
-            var f = FUNCTIONS[g];
-            var grows = rows.filter(function(c){ return c.function === f.key; });
-            if (grows.length) groupsMount.appendChild(renderGroup(f.label, f.gloss, grows, false));
-          }
-        } else {
-          var headerOf = (state.sort === 'recency')
-            ? function(c){ return c.year ? String(c.year) : 'no year'; }
-            : function(c){ return countBucket(c.cited_by); };
-          var sorted = sortRows(rows);
-          var order = [], byHeader = {};
-          for (var i = 0; i < sorted.length; i++){
-            var h = headerOf(sorted[i]);
-            if (!byHeader[h]){ byHeader[h] = []; order.push(h); }
-            byHeader[h].push(sorted[i]);
-          }
-          for (var j = 0; j < order.length; j++){
-            groupsMount.appendChild(renderGroup(order[j], null, byHeader[order[j]], false, showCites));
-          }
+      /* Always grouped with headers — categories / years / count buckets;
+         the Expand all / Collapse all button opens or closes every group. */
+      if (state.sort === 'impact'){
+        for (var g = 0; g < FUNCTIONS.length; g++){
+          var f = FUNCTIONS[g];
+          var grows = rows.filter(function(c){ return c.function === f.key; });
+          if (grows.length) groupsMount.appendChild(renderGroup(f.label, f.gloss, grows, state.expanded));
         }
       } else {
-        groupsMount.appendChild(renderFlat(sortRows(rows), showCites));
+        var headerOf = (state.sort === 'recency')
+          ? function(c){ return c.year ? String(c.year) : 'no year'; }
+          : function(c){ return countBucket(c.cited_by); };
+        var sorted = sortRows(rows);
+        var order = [], byHeader = {};
+        for (var i = 0; i < sorted.length; i++){
+          var h = headerOf(sorted[i]);
+          if (!byHeader[h]){ byHeader[h] = []; order.push(h); }
+          byHeader[h].push(sorted[i]);
+        }
+        for (var j = 0; j < order.length; j++){
+          groupsMount.appendChild(renderGroup(order[j], null, byHeader[order[j]], state.expanded, showCites));
+        }
       }
       var unjudged = ((state.sort === 'impact')
         ? extUnjudged : extUnjudged.concat(commitUnjudged)).filter(rowMatchesGlobal);
       if (state.centrality === 'all' && unjudged.length){
         groupsMount.appendChild(renderGroup('Not yet analyzed',
           'no usable evidence yet: title-only records, or citation snippets that never reach this paper',
-          unjudged, false));
+          unjudged, state.expanded));
       }
       var commitShown = commitPapers.filter(rowMatchesGlobal);
       if (state.sort === 'impact' && state.centrality === 'all' && commitShown.length){
         groupsMount.appendChild(renderGroup('COMMIT papers',
           'the group\'s own citing papers — Saman Amarasinghe is an author; reported apart from external impact',
-          commitShown, false));
+          commitShown, state.expanded));
       }
     }
     drawList();
@@ -427,7 +388,6 @@ var CITATIONS = (function(){
      later (filter changes) follow the global state, like summaries do. */
   var instances = [];
   var panels = [];      // loaded panel controllers, for the page-level tools
-  var receptions = []; // reception sections, following the Show summaries state
   var defaultOpen = false;
   var dataCache = {};   // key -> per-paper JSON, kept for cross-paper analysis
 
@@ -489,16 +449,6 @@ var CITATIONS = (function(){
     bodyParent.appendChild(div);
     instances.push({ el: div, setOpen: setOpen });
     if (defaultOpen) setOpen(true);
-  }
-
-  /* Reception prose follows the page's Show summaries state. */
-  function setReceptionVisible(show){
-    gReception = !!show;
-    receptions = receptions.filter(function(r){ return document.contains(r.el); });
-    for (var i = 0; i < receptions.length; i++){
-      receptions[i].body.style.display = gReception ? '' : 'none';
-      receptions[i].arrow.textContent = gReception ? '▾ ' : '▸ ';
-    }
   }
 
   function setAllOpen(open){
@@ -575,7 +525,6 @@ var CITATIONS = (function(){
     WEIGHTS: WEIGHTS,
     FUNCTIONS: FUNCTIONS,
     setGlobalPanels: setGlobalPanels,
-    setReceptionVisible: setReceptionVisible,
     ensureData: ensureData,
     crossCiters: crossCiters,
     setAllOpen: setAllOpen,

@@ -74,10 +74,13 @@ def main():
     token = os.environ.get('GITHUB_TOKEN', '')
     verified = json.load(open(f'{ROOT}/harvest/repos/verified.json'))
     artifacts = json.load(open(f'{ROOT}/harvest/artifacts/found.json'))
+    desc_path = f'{ROOT}/harvest/repos/descendants.json'
+    descendants = json.load(open(desc_path)) if os.path.exists(desc_path) else {}
     cache = json.load(open(GHCACHE)) if os.path.exists(GHCACHE) else {}
 
     papers = {}
-    for key, rows in verified.items():
+    for key in sorted(set(verified) | set(descendants)):
+        rows = verified.get(key, [])
         out = []
         seen = set()
         for r in rows:
@@ -120,10 +123,43 @@ def main():
                 'badges': art.get('badges') or [],
                 'evidence': 'badged artifact record (harvest/artifacts/found.json)',
             })
+        # tier 3: idea-descendant repos of citing works. Only located rows
+        # render — unlocated ones already appear in the Citations panel,
+        # and the unsearched widened bucket would swamp the view.
+        for r in descendants.get(key, []):
+            if not r.get('located') or not r.get('repo_url'):
+                continue
+            entry = {'url': r['repo_url'], 'group': 'adopts',
+                     'name': r.get('repo') or fullname_of(r['repo_url']),
+                     'paper': r.get('citing_title'),
+                     'evidence': r.get('evidence')}
+            fn = fullname_of(r['repo_url']) if 'github.com/' in r['repo_url'] else None
+            if fn and token:
+                meta = gh_repo(fn, cache, token)
+                if meta and not meta.get('error'):
+                    entry['name'] = meta['full_name'] or entry['name']
+                    if meta.get('description'):
+                        entry['desc'] = meta['description']
+                    if meta.get('stars') is not None:
+                        entry['stars'] = meta['stars']
+                    if meta.get('pushed'):
+                        entry['active'] = int(meta['pushed'])
+                    if meta.get('archived'):
+                        entry['archived'] = True
+            if entry.get('desc') is None and r.get('description'):
+                entry['desc'] = r['description']
+            if entry.get('stars') is None and r.get('stars') is not None:
+                entry['stars'] = r['stars']
+            # skip if this repo already appears in any role for this paper
+            if entry['name'].lower() in {n for n, _ in seen}:
+                continue
+            seen.add((entry['name'].lower(), 'adopts'))
+            out.append(entry)
         if out:
-            # artifact rows first, then by role: implementation, artifact, benchmark
+            # artifact rows first, then own rows by role, then descendants
             order = {'artifact': 0, 'implementation': 1, 'benchmark': 2}
-            out.sort(key=lambda e: (0 if e.get('artifact') else 1,
+            out.sort(key=lambda e: (1 if e.get('group') == 'adopts' else 0,
+                                    0 if e.get('artifact') else 1,
                                     order.get(e.get('role'), 3)))
             papers[key] = out
 

@@ -951,7 +951,17 @@ raise it to the setup lane.
   verified-quirks dedupe (33ffb5db): 161 rows (one og-cgo20
   artifact/implementation duplicate merged upstream, evidence folded
   into the kept rows); builder-side (name, role) dedupe kept as a
-  safety net.
+  safety net. Tier 3 folded in 2026-08-25 (repos lane's
+  harvest/repos/descendants.json, 9ef15f75): the 30 LOCATED descendant
+  repos render as "Adopts the idea" rows (GitHub-enriched, skipped if
+  the repo already appears for the paper) — 190 rows / 135 papers, 17
+  with mixed tiers (the tier bar now shows), 4 new descendants-only
+  papers. Unlocated rows deliberately not rendered: those citing works
+  already appear in the Citations panel, and the unsearched widened
+  bucket (1,060 rows) would swamp the view — revisit when its
+  search+verify wave runs. Also fixed a stale-cache bug this exposed:
+  per-paper data fetches (citations and repos) now use cache:'no-store'
+  like the indexes; in-memory caches still prevent refetch-per-expand.
 
 ## Cross-lane requests
 

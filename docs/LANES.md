@@ -674,6 +674,9 @@ raise it to the setup lane.
   (0 banned phrases, full coverage). reception.json now holds 157
   entries; the site renders them immediately. Non-pilot per-paper JSON
   convenience copies refresh on the taxonomy lane's next merge run.
+- **TACO joins the pilot button** (2026-08-25, queue task pilot-button):
+  Kjolstad:2017:TTG added to the TEMP pilot filter — 9 papers now.
+  publications.js?v=13.
 
 ## Cross-lane requests
 

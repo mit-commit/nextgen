@@ -71,7 +71,15 @@ Classify into exactly one of:
   - "fork": a GitHub fork with its own meaningful changes/commits ahead
     of upstream (not just a stale mirror).
   - "derivative_work": a separate (non-fork) project that copies or
-    substantially adapts the tool's code.
+    substantially adapts the tool's code. This INCLUDES a renamed
+    embedded fork -- a candidate found via a source-code fingerprint
+    (an internal namespace fragment, a distinctive grammar/IR file or
+    type name, a comment) rather than the tool's own name, where the
+    renamed code is corroborated by provenance (an AUTHORS/CREDITS/
+    LICENSE file naming the origin team or developers, matching
+    `@author` tags, or comments describing the origin system) -- treat
+    that combination as real derivative_work even though the package/
+    repo name no longer matches at all.
   - "api_user": imports/calls the tool as a library or dependency,
     using its published interface, without modifying its internals.
   - "inherited": depends on the tool transitively (e.g. vendors or wraps
@@ -175,6 +183,10 @@ def main():
         found_via = ', '.join(c['source'])
         if 'fork-divergence' in c['source']:
             found_via += f" (ahead_by={c.get('ahead_by')})"
+        fp_note = ''
+        if c.get('fingerprint_paths'):
+            fp_note = (f"  matched in these files (not just the repo's name/description): "
+                      f"{', '.join(c['fingerprint_paths'])}\n")
 
         prompt = (
             f"TOOL'S OWN REPO: {own_repo}\n"
@@ -183,6 +195,7 @@ def main():
             f"  description: {c.get('description')!r}\n"
             f"  stars: {c.get('stars')}\n"
             f"  found via: {found_via}\n"
+            f"{fp_note}"
         )
         resp = json.loads(call('POST', '/messages', {
             'model': MODEL, 'max_tokens': 400,

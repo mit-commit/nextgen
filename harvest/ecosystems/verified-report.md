@@ -63,6 +63,50 @@ Confirmed candidates by own repo (top 10 of 26):
 | ithemal/bhive | 7 |
 | weld-project/weld | 6 |
 
+## Signal #4: fingerprint sweep (renamed embedded forks)
+
+The human caught a real miss: `asolarlez/sketch-frontend` embeds
+StreamIt's compiler frontend/IR under renamed packages, invisible to all
+three signals above (not a literal fork, doesn't mention "bthies/
+streamit" by name, and the mentions query only matches that exact
+owner/repo string). `docs/impact-view-design.md` section 7 (written
+after that exact lesson) prescribes searching source CONTENT for
+identifiers that survive a rename, not just names: namespace fragments,
+distinctive grammar/IR file or type names, and provenance strings.
+
+`fingerprint_sweep.py` ran this for the four own repos old/embedded
+enough for the pattern to apply (streamit, taco, halide, dynamorio --
+no standalone sketch/SUIF own repo exists in this corpus, checked and
+skipped per nextgen-a2's "if any repo exists" caveat), using signatures
+pulled from each repo's own live source (fetched, not guessed):
+`streamit.frontend`/`SIRStream`/`at.dms.kjc` (streamit -- section 7's own
+worked example), `TACO_TENSOR_T_DEFINED` (taco's runtime tensor struct
+include-guard), `Halide::Internal` (Halide's IR namespace), `dr_fragment_t`/
+`dcontext_t` (DynamoRIO's core internal types).
+
+7 code-search queries -> 28 new candidate identities (capped at 100
+hits/query by GitHub's own relevance ranking) -> verified through the
+same model pass with an added embedded-fork criterion (renamed code +
+provenance/internal-identifier evidence = `derivative_work`, not just a
+name match). **26/28 confirmed (93%)** -- far higher precision than the
+other three signals, as expected: matching actual internal identifiers
+rather than names or mentions rarely fires on unrelated code.
+`asolarlez/sketch-frontend` is now in `verified.json` as `derivative_work`
+under `bthies/streamit`, closing the specific gap the human found. Other
+finds worth noting: `Granary/ARMed` and `ratel-enclave/ratel`
+(DynamoRIO-based research systems with no name resemblance to
+DynamoRIO at all), `StanfordAHA/Halide-to-Hardware_archive` (a known
+academic Halide derivative), and 8 repos embedding TACO's generated
+runtime code as a benchmark baseline rather than importing it as a
+library (correctly split into `derivative_work` vs `uses_benchmark` by
+whether the match was in the tool's own embedded source vs. a
+TACO-generated *output* file used as comparison data).
+
+Combined final total, all four signals: **292 confirmed candidates**
+(165 fork / 82 api_user / 32 derivative_work / 7 inherited / 6
+uses_benchmark) across 791 candidates ever enumerated, expanded to rows
+across 103 papers.
+
 ## Notes
 
 - **Cost**: live Sonnet calls, ~763 total across two runs (one bug-caused

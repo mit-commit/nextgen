@@ -897,7 +897,11 @@ raise it to the setup lane.
   Initial-load payload grew only by `data/repos/index.json` (~10 KB);
   per-paper files still lazy-load on expand. TEMP pilot button kept per
   F2. Browser-verified: toggles/sorts/expand-all/graceful absence all
-  exercised on localhost.
+  exercised on localhost. Rebuilt 2026-08-25 after the repos lane's
+  verified-quirks dedupe (33ffb5db): 161 rows (one og-cgo20
+  artifact/implementation duplicate merged upstream, evidence folded
+  into the kept rows); builder-side (name, role) dedupe kept as a
+  safety net.
 
 ## Cross-lane requests
 

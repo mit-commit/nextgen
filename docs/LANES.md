@@ -741,6 +741,17 @@ raise it to the setup lane.
   simply don't render for repos), SDV integration terms demoted to
   per-row chips, and the page-level category facet can now govern both
   panels. Doc + StreamIt mock updated; still stopped for design review.
+- **The sketch-frontend lesson** (2026-08-25): the human pointed at
+  asolarlez/sketch-frontend building on StreamIt's IR — verified by code
+  search (AUTHORS credits the MIT StreamIt team; sketch.compiler.* embeds
+  StreamIt's grammar/IR with renamed packages; streamit.frontend.*
+  survives in scripts and old trees). Recorded as a real derivative-work
+  row in the StreamIt mock and as a doc appendix on catching renamed
+  embedded forks: namespace archaeology, grammar/IR fingerprints,
+  provenance files, comment fingerprints, and the paper-side net —
+  including a recommendation that the idea-descendants task widen from
+  extends/adopts-idea to also include uses-tool at core centrality,
+  without which Sketch-class descendants fall through.
 
 ## Cross-lane requests
 

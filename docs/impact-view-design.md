@@ -156,7 +156,37 @@ includes a hand-written specimen for StreamIt; scaling the prose waits, per
 the standing queue ruling, on the human's critique of the 9 pilot
 summaries.
 
-## 7. Recommendation
+## 7. Appendix — catching renamed embedded forks (the sketch-frontend lesson)
+
+`asolarlez/sketch-frontend` builds on StreamIt's compiler frontend and IR,
+verified directly: its AUTHORS file credits "the MIT StreamIt team"; the
+live `sketch.compiler.*` tree carries StreamIt's grammar files
+(`StreamItLex.g`, `StreamItParserFE.g`), classes named `StreamItParser`,
+and comments like "data-flow analysis for the StreamIt front-end IR" with
+StreamIt developers' `@author` tags; older trees and launcher scripts
+still invoke the original `streamit.frontend.*` packages. A repo like this
+defeats import-signature search the moment the packages are renamed. The
+ecosystem harvests should therefore search **beyond import statements**:
+
+1. **Namespace archaeology** — the original package/namespace strings
+   survive in scripts, stack traces, generated token files, and old
+   directories (`streamit.frontend`, `at.dms.kjc`).
+2. **Grammar and IR fingerprints** — distinctive file and class names
+   travel through renames (`StreamItLex.g`, `StreamItParserFE`,
+   `SIRStream`/`SIRFilter` for StreamIt; equivalent lists per ecosystem).
+3. **Provenance files** — AUTHORS/CREDITS/LICENSE naming the origin team,
+   and origin-team email domains in `@author` tags (`cag.lcs.mit.edu`).
+4. **Comment fingerprints** — prose like "a StreamIt program" inside
+   source comments.
+5. **The paper-side net** — a citing work classified `uses-tool` or
+   `extends` at core centrality should trigger a repo lookup of *its*
+   artifact regardless of code signatures; sketch-frontend is found this
+   way from "Programming by sketching for bit-streaming programs", already
+   StreamIt's top core citing work. Note the queued idea-descendants task
+   filters on extends/adopts-idea only — **it should widen to include
+   uses-tool at core**, or Sketch-class descendants fall through.
+
+## 8. Recommendation
 
 Option B. It is the only option that satisfies both halves of the
 constraint — twin per-paper selectors, one seamless page surface — and it

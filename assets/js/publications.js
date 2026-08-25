@@ -1316,6 +1316,14 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     if (els.citeCats && window.CITATIONS){
       (function(){
         var selected = {};
+        // Same scrolling shell as the other facet boxes, so the list sits
+        // at the standard facet height instead of growing to all 11 rows.
+        var scrollWrap = document.createElement('div');
+        scrollWrap.className = 'facet-scroll';
+        var listEl = document.createElement('div');
+        listEl.className = 'facet-items';
+        scrollWrap.appendChild(listEl);
+        els.citeCats.appendChild(scrollWrap);
         for (var i = 0; i < CITATIONS.FUNCTIONS.length; i++){
           (function(f){
             var label = document.createElement('label'); label.className = 'facet-item';
@@ -1332,7 +1340,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
               if (this.checked) track('citations-category-filter', { value: f.key });
             };
             label.appendChild(cb); label.appendChild(txt);
-            els.citeCats.appendChild(label);
+            listEl.appendChild(label);
           })(CITATIONS.FUNCTIONS[i]);
         }
       })();

@@ -604,6 +604,11 @@ raise it to the setup lane.
   just "N of M shown papers have T total citations" — combined impact
   and the detailed/passing totals dropped per the human's wording.
   publications.js?v=6.
+- **Categories box height** (2026-08-24): the citation-categories list
+  now uses the same scrolling shell as the other facet boxes (~5 rows
+  visible), halving its height (299px → 149px) so all three
+  citation-tools blocks sit at equal height (176px measured).
+  publications.js?v=7.
 
 ## Cross-lane requests
 

@@ -1151,7 +1151,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       for (f in els.citeCats._catRefs){
         var ref = els.citeCats._catRefs[f];
         ref.node.nodeValue = ref.label + ' (' + (catPapers[f] || 0) +
-          ', cited by ' + (catCites[f] || 0) + ')';
+          ', by ' + (catCites[f] || 0) + ')';
       }
     }
     if (els.citeCentrality){

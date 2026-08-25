@@ -726,6 +726,8 @@ raise it to the setup lane.
   tier-2 rows, paper-only descendant rows), and the three-register
   Summary with a specimen repo sentence. Stopped for human review —
   a taste decision.
+- **Category label compacted** (2026-08-25): "(44, cited by 142)" →
+  "(44, by 142)". publications.js?v=14.
 
 ## Cross-lane requests
 

@@ -647,6 +647,11 @@ raise it to the setup lane.
   analyzed below" claimed too much (429 rows are unanalyzed) and said
   too much; the headline is now just "1,483 citations".
   style.css?v=9, citations.js?v=11.
+- **Category counts = citation totals** (2026-08-24): the categories
+  listbox now shows how many citations in each category the shown papers
+  have (summed from index functions), not how many papers have at least
+  one — e.g. "Uses the system (1,026)" corpus-wide. Centrality buttons
+  keep paper counts. publications.js?v=11.
 
 ## Cross-lane requests
 

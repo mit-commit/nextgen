@@ -1136,8 +1136,9 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       var row = CITE_INDEX[k];
       if (!row) continue;
       withData++;
+      // total citations in each category across the shown papers
       for (f in (row.functions || {})){
-        if (row.functions[f] > 0) catCounts[f] = (catCounts[f] || 0) + 1;
+        catCounts[f] = (catCounts[f] || 0) + row.functions[f];
       }
       var ce = row.centrality || {};
       for (f in centCounts){ if (ce[f] > 0) centCounts[f]++; }

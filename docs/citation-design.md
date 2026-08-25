@@ -137,8 +137,9 @@ citation-tools row (2026-08-24 request):
   at least one citation at that level (from `index.json`'s per-paper
   `centrality` counts).
 - **Citation categories**: a facet listbox of the eleven FUNCTION values
-  (Builds on it, Uses the system, …) with **paper counts** per category;
-  selecting values restricts every panel to those categories.
+  (Builds on it, Uses the system, …), each showing the **total citations
+  in that category across the shown papers**; selecting values restricts
+  every panel to those categories.
 - **Reception follows Show summaries**: the reception prose at the top of
   a panel is a summary, so it renders collapsed (a "Reception ▸" head)
   unless Show summaries is on — Show citations alone gives clean,

@@ -185,6 +185,12 @@ def build_request(key, ev):
 def parse_record(text):
     text = (text or '').strip()
     text = re.sub(r'^```(?:json)?\s*|\s*```$', '', text)
+    # A model occasionally over-escapes an apostrophe inside a JSON string
+    # ("Baron\'s thesis") -- \' is not a valid JSON escape (only " needs
+    # escaping inside a double-quoted string), so plain json.loads rejects
+    # it outright. Safe to strip everywhere: a real `\\'` (escaped
+    # backslash then a literal quote) never occurs in this schema's prose.
+    text = text.replace("\\'", "'")
     end = text.rfind('}')
     if end < 0:
         raise ValueError('no JSON object in the response')

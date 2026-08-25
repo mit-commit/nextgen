@@ -1,0 +1,150 @@
+{
+ "akkas2019": [
+  {
+   "original": {
+    "evidence": "Matches the Tiramisu compiler project that the thesis is about, but this is the official Tiramisu-Compiler org repo, not the thesis author's own implementation work.",
+    "own_group": false
+   },
+   "reconsidered": {
+    "confidence": "low",
+    "evidence": "This repo is purely the GitHub Pages website for the Tiramisu Compiler project (contains only CNAME, _config.yml, index.md, Comparison.md, etc.), with no compiler source code or GPU/memory implementation. While Akkas is a co-author on the CGO 2019 Tiramisu paper and the Tiramisu-Compiler organization is his lab group (own_group=true), this specific repo contains none of the thesis's GPU backend, cuBLAS, or CUDA streams work — making it irrelevant as an artifact for the thesis itself.",
+    "own_group": true
+   },
+   "url": "https://github.com/Tiramisu-Compiler/tiramisu-compiler.github.io",
+   "verdict": "disagreed"
+  }
+ ],
+ "baron:sm-thesis:2003": [
+  {
+   "confidence": "high",
+   "evidence": "The README and file listing confirm this is the official DynamoRIO open-source project (created ~2014, over a decade after Baron's 2003 thesis), maintained by the DynamoRIO community; Iris Baron is not listed as an author or contributor, and the thesis work (DynamoRIO-with-LogPC modifications) is not present in this repo, which simply provides the underlying platform Baron extended.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/DynamoRIO/dynamorio",
+   "verdict": "agreed"
+  }
+ ],
+ "chen:pldi:2022": [
+  {
+   "confidence": "low",
+   "evidence": "The README explicitly says 'Please cite [Revec: Program Rejuvenation through Revectorization]' as the associated paper, placing this repo with a different prior project. While Charith Mendis is a co-author on both Revec and the SuperVectorization paper (suggesting a lab connection), the repo belongs to the 'revec' GitHub organization and was created for that distinct paper, not for SuperVectorization; no file or README text ties it specifically to the PLDI 2022 SuperVectorization work.",
+   "own_group": false,
+   "role": "benchmark",
+   "url": "https://github.com/revec/VectorBench",
+   "verdict": "agreed"
+  }
+ ],
+ "gottschlich:mapl:2018": [
+  {
+   "original": {
+    "evidence": "Ithemal is a machine-learning-based instruction throughput estimator co-authored by Saman Amarasinghe's group, making it plausibly related to one of the paper's authors, but the paper itself is a position/survey paper on machine programming pillars and Ithemal is an independent tool, not the paper's own artifact.",
+    "own_group": false
+   },
+   "reconsidered": {
+    "confidence": "low",
+    "evidence": "Saman Amarasinghe and Michael Carbin are co-authors of both the Three Pillars position paper and Ithemal (per README: 'Charith Mendis, Alex Renda, Saman Amarasinghe, Michael Carbin'), placing it in the same author group. However, Ithemal is an independent research artifact with its own ICML 2019 paper and is not an implementation or artifact of the Three Pillars taxonomy paper, which itself produces no code.",
+    "own_group": true
+   },
+   "url": "https://github.com/ithemal/Ithemal",
+   "verdict": "disagreed"
+  }
+ ],
+ "ishibe:xsig:2026": [
+  {
+   "original": {
+    "evidence": "NetBlocks is a prior PLDI 2024 work on custom network stacks that shares keyword overlap and co-author Brahmakshatriya, but this artifact repo belongs to a different paper and venue, not the xSIG 2026 paper being sought.",
+    "own_group": false
+   },
+   "reconsidered": {
+    "confidence": "high",
+    "evidence": "The README explicitly states this is the artifact for the PLDI 2024 NetBlocks paper, not the xSIG 2026 paper; however, co-author Brahmakshatriya is shared between both papers and the BuildIt-lang org hosts both, confirming same group. The xSIG 2026 paper builds on NetBlocks but this repo contains only the prior work's evaluation, making it a third-party dependency rather than the xSIG paper's own implementation.",
+    "own_group": true
+   },
+   "url": "https://github.com/BuildIt-lang/net-blocks-pldi24-artifacts",
+   "verdict": "disagreed"
+  }
+ ],
+ "leger:meng-thesis:2004": [
+  {
+   "confidence": "high",
+   "evidence": "The repo is the official DynamoRIO project (created 2014, a decade after the 2004 thesis), maintained by the DynamoRIO team — not by thesis author Christopher Leger. The thesis explicitly uses DynamoRIO as an underlying platform to build upon, making this a third-party dependency, not the thesis author's own implementation artifact.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/DynamoRIO/dynamorio",
+   "verdict": "agreed"
+  }
+ ],
+ "petkov:meng-thesis:2001": [
+  {
+   "confidence": "low",
+   "evidence": "The thesis explicitly states implementation was done in the 'Nimble Compiler environment', not StreamIt. StreamIt is a separate MIT CSAIL streaming-language compiler project; bthies (Bill Thies) is a StreamIt author, not Darin Petkov, and there is no mention of unroll-and-squash or the Nimble compiler in the README or file listing.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/bthies/streamit",
+   "verdict": "agreed"
+  },
+  {
+   "confidence": "low",
+   "evidence": "This is merely an SVN mirror of the StreamIt repository owned by rrnewton, not Darin Petkov; the thesis implementation target was the Nimble Compiler, not StreamIt, so this repo has no specific connection to the unroll-and-squash contribution described in the paper.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/rrnewton/StreamIt",
+   "verdict": "agreed"
+  }
+ ],
+ "ray:phd-thesis:2023": [
+  {
+   "original": {
+    "evidence": "Python bindings for Finch.jl from the same research group, created around the same period, but is a companion tool rather than the core thesis contribution.",
+    "own_group": true
+   },
+   "reconsidered": {
+    "confidence": "high",
+    "evidence": "The repo is Python bindings for Finch.jl, a sparse tensor compiler project completely unrelated to Jessica Ray's thesis on UniTe, CoLa, SHiM, and block-based compression (JPEG/H.264/H.265/H.266). The README mentions no connection to UniTe or block-based compression, and the finch-tensor GitHub organization is a separate research group, not Ray's lab.",
+    "own_group": false
+   },
+   "url": "https://github.com/finch-tensor/finch-jl-python",
+   "verdict": "disagreed"
+  }
+ ],
+ "salsa": [
+  {
+   "confidence": "high",
+   "evidence": "The repository is a verbatim fork of the upstream BWA tool by lh3 (Heng Li); the README is identical to the original BWA README with no SALSA-specific additions, and the file listing shows no custom files related to the SALSA architecture. While the fork is under Lorenzo Di Tucci's account (first author), the content is entirely the upstream BWA codebase used as a baseline/workload source, not the paper's own artifact.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/lorenzoditucci/bwa",
+   "verdict": "agreed"
+  }
+ ],
+ "won:phd-thesis:2026": [
+  {
+   "confidence": "medium",
+   "evidence": "The README is the unmodified upstream TACO (Tensor Algebra Compiler) README from the Kjolstad/MIT group, with no thesis-specific content. The file layout matches the canonical TACO repo exactly. While 'nullplay' appears to be Jaeyeon Won's account, this is a plain fork of prior work used as a baseline or dependency, not a contribution of the thesis itself, which centers on continuous tensors, Finch extensions, and the Insum GPU compiler.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/nullplay/taco",
+   "verdict": "agreed"
+  }
+ ],
+ "wong:meng-thesis:2004": [
+  {
+   "confidence": "low",
+   "evidence": "This is a mirror of the entire MIT CSAIL StreamIt SVN repository (the broader compiler infrastructure that the thesis evaluates benchmarks on), not Jeremy Wong's specific analytical modeling work. The root listing shows only 'CVSROOT' and 'streams' top-level directories consistent with the general StreamIt project; there is no README or file suggesting Wong's scalability models or cost-metric code are present here.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/rrnewton/StreamIt",
+   "verdict": "agreed"
+  }
+ ],
+ "zhao:cgo:2008": [
+  {
+   "confidence": "high",
+   "evidence": "README explicitly states PIPA stands for 'Progressive & Intelligent Performance Analytics' and is a 2024 Python platform from Zhejiang University (ZJU-SPAIL), with no connection to the 2008 CGO paper's authors (Zhao, Cutcutache, Wong from NUS) or their DynamoRIO-based pipelined profiling work. Pure name coincidence.",
+   "own_group": false,
+   "role": "third_party",
+   "url": "https://github.com/ZJU-SPAIL/pipa",
+   "verdict": "agreed"
+  }
+ ]
+}

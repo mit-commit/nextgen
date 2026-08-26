@@ -751,7 +751,37 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
         return String(name || '').toLowerCase().indexOf(q) !== -1;
       });
     }
-    buildFacetBox(sorted, els.citeAuBox, 'citeAuthors', state.citeAuthors);
+    // 6k+ rows would render slowly and scroll forever: show the first
+    // N (default 100) plus every checked name, with a "more" row.
+    var total = sorted.length;
+    var limit = state.citeAuthorLimit || 100;
+    var display = sorted.slice(0, limit);
+    if (limit < total){
+      var inSlice = {};
+      for (var di = 0; di < display.length; di++) inSlice[display[di]] = 1;
+      for (var nm in state.citeAuthors){
+        if (state.citeAuthors[nm] && !inSlice[nm] && sorted.indexOf(nm) !== -1) display.push(nm);
+      }
+    }
+    buildFacetBox(display, els.citeAuBox, 'citeAuthors', state.citeAuthors);
+    var countEl = document.querySelector('.facet-count[data-for="facet-cite-authors"]');
+    if (countEl){
+      countEl.textContent = display.length < total
+        ? ' (' + display.length.toLocaleString('en-US') + ' of ' + total.toLocaleString('en-US') + ' displayed)'
+        : (total ? ' (' + total.toLocaleString('en-US') + ')' : '');
+    }
+    if (display.length < total && els.citeAuBox._facet && els.citeAuBox._facet.scrollWrap){
+      var moreBtn = document.createElement('button');
+      moreBtn.type = 'button';
+      moreBtn.className = 'btn facet-more-btn';
+      moreBtn.textContent = 'Show 100 more (' + (total - display.length).toLocaleString('en-US') + ' hidden)';
+      moreBtn.onclick = function(){
+        state.citeAuthorLimit = limit + 100;
+        rebuildCiteAuthorFacet();
+        updateCiteToolCounts(filteredItems(null));
+      };
+      els.citeAuBox._facet.scrollWrap.appendChild(moreBtn);
+    }
     if (els.citeAuBox._facet && els.citeAuBox._facet.scrollWrap) {
       els.citeAuBox._facet.scrollWrap.scrollTop = prevScroll;
     }
@@ -1354,8 +1384,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         var ref = els.citeCats._catRefs[f];
         var rc = catRepos[f];
         ref.node.nodeValue = ref.label + ' (' + (catPapers[f] || 0) +
-          ', cited by ' + (catCites[f] || 0) +
-          (rc ? ', ' + rc + ' repos' : '') + ')';
+          ', cited by ' + (catCites[f] || 0) + ' papers' +
+          (rc ? ' and ' + rc + ' repos' : '') + ')';
       }
     }
     if (els.citeCentrality){

@@ -463,7 +463,7 @@ var CITATIONS = (function(){
       loaded = true;
       div.appendChild(el('div', 'cite-loading', 'Loading…'));
       fetchQueue.push(function(){
-        return fetch(DATA_BASE + encodeURIComponent(key) + '.json', { cache: 'no-store' })
+        return fetch(DATA_BASE + encodeURIComponent(String(key).replace(/:/g, '_')) + '.json', { cache: 'no-store' })
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then(function(data){ dataCache[key] = data; renderView(div, key, data, indexRow); })
           .catch(function(e){
@@ -526,7 +526,7 @@ var CITATIONS = (function(){
         if (dataCache[key]) return;
         jobs.push(new Promise(function(resolve){
           fetchQueue.push(function(){
-            return fetch(DATA_BASE + encodeURIComponent(key) + '.json', { cache: 'no-store' })
+            return fetch(DATA_BASE + encodeURIComponent(String(key).replace(/:/g, '_')) + '.json', { cache: 'no-store' })
               .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
               .then(function(data){ dataCache[key] = data; })
               .catch(function(){})
@@ -766,7 +766,7 @@ var CITATIONS = (function(){
       loaded = true;
       div.appendChild(el('div', 'cite-loading', 'Loading\u2026'));
       fetchQueue.push(function(){
-        return fetch(REPO_BASE + 'papers/' + encodeURIComponent(key) + '.json', { cache: 'no-store' })
+        return fetch(REPO_BASE + 'papers/' + encodeURIComponent(String(key).replace(/:/g, '_')) + '.json', { cache: 'no-store' })
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then(function(data){ repoDataCache[key] = data; renderRepoPanel(div, data); })
           .catch(function(e){

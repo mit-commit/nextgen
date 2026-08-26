@@ -1114,6 +1114,16 @@ raise it to the setup lane.
   design doc section-7 fingerprint hunt (namespace archaeology,
   grammar/IR fingerprints, provenance files) has never run as a
   harvest — proposed to the ecosystems lane as tier-2 signal #4.
+- **Colon-free data filenames** (2026-08-26, cutover-forced): the
+  GitHub Pages build errored on ':' in data/citations and
+  data/repos/papers names (also unclonable on Windows). 294 files
+  renamed ':' -> '_' (zero collisions); keys keep their colons — only
+  the FILENAME mapping changed. Patched every path constructor:
+  citations.js (both copies, 3 fetch sites), build_pilot_data.py,
+  generate_receptions.py, build_repo_data.py, the random-settings
+  test's encoded_key, and one MECHANICAL cross-lane line in
+  curate/merge_taxonomy.py:286 (taxonomy lane: your writer now emits
+  the safe name; nothing else touched — flag if you object).
 - **Round-12 lane E: author links rejoined under the full ruling**
   (2026-08-26): join_links.py now folds BOTH sitting files (residue +
   professional tier; 1st-degree = identity evidence), and honors the

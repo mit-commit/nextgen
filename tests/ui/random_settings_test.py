@@ -441,7 +441,8 @@ def oracle_items_for(state, sort_order, F):
 
 def encoded_key(key):
     from urllib.parse import quote
-    return quote(key, safe='')  # matches encodeURIComponent for our bibtexKey charset
+    # colon-free filename scheme (GitHub Pages / Windows can't hold ':')
+    return quote(key.replace(':', '_'), safe='')
 
 
 def check_expansions(drv, items, F, problems):

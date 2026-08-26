@@ -222,7 +222,7 @@ def main():
         print(f"{key}: raw={c['records_raw']} works={c['works']} "
               f"commit={c['commit']} judged={c['judged']} gscholar={gs}")
         if args.write:
-            with open(os.path.join(out_dir, key + ".json"), "w") as f:
+            with open(os.path.join(out_dir, key.replace(":", "_") + ".json"), "w") as f:
                 json.dump(paper, f, indent=1)
                 f.write("\n")
     index["generated"] = args.generated

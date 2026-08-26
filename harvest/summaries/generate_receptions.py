@@ -70,7 +70,7 @@ def waves():
 def build_pack(key, idx, pubs, rec, repos, artifacts):
     row = idx[key]
     pub = pubs.get(key) or {}
-    d = json.load(open(f'{ROOT}/data/citations/{key}.json'))
+    d = json.load(open(f"{ROOT}/data/citations/{key.replace(':', '_')}.json"))
     ext = [c for c in d['citations'] if not c.get('commit') and c['split']]
 
     def rank(c):

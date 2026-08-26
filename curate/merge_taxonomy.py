@@ -283,7 +283,7 @@ def main():
         print(f"{key}: raw={c['records_raw']} works={c['works']} "
               f"commit={c['commit']} judged={c['judged']} gscholar={gs}")
         if args.write:
-            with open(os.path.join(OUT_DIR, key + '.json'), 'w') as fh:
+            with open(os.path.join(OUT_DIR, key.replace(':', '_') + '.json'), 'w') as fh:
                 json.dump(paper, fh, indent=1, ensure_ascii=False)
                 fh.write('\n')
 

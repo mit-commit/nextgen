@@ -352,7 +352,7 @@ def main():
     rid_of = {}
     for key, rows in papers.items():
         doc = {'schema': 1, 'key': key, 'generated': args.generated, 'repos': rows}
-        with open(f'{ROOT}/data/repos/papers/{key}.json', 'w') as fh:
+        with open(f"{ROOT}/data/repos/papers/{key.replace(':', '_')}.json", 'w') as fh:
             json.dump(doc, fh, indent=1, ensure_ascii=False)
             fh.write('\n')
         tiers = {'own': sum(1 for r in rows if r['group'] == 'own'),

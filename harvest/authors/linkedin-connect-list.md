@@ -22,6 +22,9 @@ ruled out.
 | Ali S. Meli | https://www.linkedin.com/in/ali-meli-92ab33167 | founder, Monachil Capital Partners | gordon:asplos:2002 |
 | Suzanne (Suzy) Mueller | https://www.linkedin.com/in/suzmue | SWE, Google; ex-CSAIL compilers group | mueller_sparse_2020 |
 | Somani Patnaik | https://www.linkedin.com/in/somanip | founder, specialist-care access; HBS MBA | thies:ictd:2009 |
+| Muhender Rajvee | https://www.linkedin.com/in/muhender-raj-rajvee-a65732206 | CS at MIT, Cambridge MA | Muhender:meng-thesis:2025 |
+| Max Ruttenberg | https://www.linkedin.com/in/max-r-11784565 | graduate research student, University of Washington | ugcf-isca21 |
+| Jeffrey W. Sheldon | https://www.linkedin.com/in/jeffrey-sheldon-6945052a3 | Distinguished Engineer, Broadcom Software (ex-VMware) | sheldon:lcpc:2001, thies:pldi:2001 |
 
 ## 3rd-degree or further
 

@@ -1,4 +1,12 @@
 {
- "_comment": "Hand-verified ecosystem rows the automated tier-2 signals (dependents / mentions / fork-divergence) cannot see \u2014 typically renamed embedded forks per docs/impact-view-design.md section 7. Keyed by own_repo; build_repo_data.py expands each row to every paper carrying that own repo. Row shape matches harvest/ecosystems/verified.json. (sketch-frontend graduated to the harvested pipeline via the fingerprint sweep, 7374a08a.)",
- "rows": []
+ "_comment": "Hand-verified ecosystem rows the automated tier-2 signals (dependents / mentions / fork-divergence) cannot see \u2014 typically renamed embedded forks per docs/impact-view-design.md section 7. Keyed by own_repo; build_repo_data.py expands each row to every paper carrying that own repo. Row shape matches harvest/ecosystems/verified.json. (sketch-frontend graduated to the harvested pipeline via the fingerprint sweep, 7374a08a.) Entries with own_paper are tier-1 OWN rows for that paper (for flagship papers the harvests missed).",
+ "rows": [
+  {
+   "own_paper": "tiramisu",
+   "url": "https://github.com/Tiramisu-Compiler/tiramisu",
+   "role": "implementation",
+   "confidence": "high",
+   "evidence": "The Tiramisu compiler implementation \u2014 the flagship paper's own system (verified for the project's application papers; attached here by hand, 2026-08-26)."
+  }
+ ]
 }

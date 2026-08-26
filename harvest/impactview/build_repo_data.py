@@ -126,7 +126,14 @@ def main():
     # hand-verified rows the automated signals cannot see (renamed embedded
     # forks etc.); keyed by own_repo, expanded to that ecosystem's papers
     man_path = os.path.join(HERE, 'manual-rows.json')
-    manual = json.load(open(man_path))['rows'] if os.path.exists(man_path) else []
+    manual_all = json.load(open(man_path))['rows'] if os.path.exists(man_path) else []
+    # own_paper entries are tier-1 own rows; the rest are ecosystem rows
+    manual_own = {}
+    for m in manual_all:
+        if m.get('own_paper'):
+            manual_own.setdefault(m['own_paper'], []).append(
+                dict(m, own_group=True))
+    manual = [m for m in manual_all if not m.get('own_paper')]
     # embodiment judgments (judge_embodiment.py, human-overridable):
     # ecosystem rows flow to a paper only through an own repo that
     # EMBODIES the paper's contribution. Unjudged pairs default to true.
@@ -136,10 +143,18 @@ def main():
     def embodies(key, repo):
         j = embodiment.get(key, {}).get(repo)
         return True if j is None else bool(j.get('embodies'))
+
+    # eco rows regrouped by own_repo, so a paper whose own-repo
+    # attachment postdates the hunt's expansion still gets its ecosystem
+    eco_by_repo = {}
+    for _rs in eco_verified.values():
+        for _r in _rs:
+            if _r.get('own_repo'):
+                eco_by_repo.setdefault(_r['own_repo'].lower(), {})[_r['name'].lower()] = _r
     own_map = {}
-    for k2 in set(verified) | set(inventory):
+    for k2 in set(verified) | set(inventory) | set(manual_own):
         names = set()
-        for r in verified.get(k2, []) + inventory.get(k2, []):
+        for r in verified.get(k2, []) + inventory.get(k2, []) + manual_own.get(k2, []):
             if (r.get('own_group') and r.get('role') not in ('third_party', 'website')
                     and 'github.com' in (r.get('url') or '')):
                 fn2 = fullname_of(r['url'])
@@ -148,11 +163,12 @@ def main():
         own_map[k2] = names
 
     papers = {}
-    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_verified)):
+    for key in sorted(set(verified) | set(descendants) | set(inventory) | set(eco_verified) | set(manual_own)):
         # own-inventory rows are tier-1 like verified.json's; 'website'
         # repos stay inventory-only (project pages, not impact)
         rows = verified.get(key, []) + [
-            r for r in inventory.get(key, []) if r.get('role') != 'website']
+            r for r in inventory.get(key, []) if r.get('role') != 'website'] \
+            + manual_own.get(key, [])
         out = []
         seen = set()
         for r in rows:
@@ -187,6 +203,15 @@ def main():
                 continue
             seen.add(ident)
             out.append(entry)
+        # non-GitHub Code links are project websites: render them inside
+        # the panel as a 'site' row so no separate Code button is needed
+        cu_any = all_code.get(key)
+        if cu_any and 'github.com/' not in cu_any and out:
+            dom = re.sub(r'^https?://(www\.)?', '', cu_any).split('/')[0]
+            if norm_url(cu_any) not in {norm_url(r.get('url')) for r in out}:
+                out.append({'url': cu_any, 'group': 'own', 'role': 'site',
+                            'site': True, 'name': dom,
+                            'evidence': "The project's website."})
         cu = code_links.get(key)
         if cu:
             fnc = fullname_of(cu)
@@ -250,7 +275,15 @@ def main():
         # tier 2: corpus-wide verified outside users. GitHub-enriched via
         # the shared cache (264 distinct repos); own_repo goes into the
         # evidence tooltip so multi-ecosystem papers stay legible.
-        for r in eco_verified.get(key, []) + [
+        _keyed = eco_verified.get(key, [])
+        _keyed_names = {r['name'].lower() for r in _keyed}
+        _extra = []
+        for _orp, _rowmap in eco_by_repo.items():
+            if _orp in own_map.get(key, set()):
+                for _nm, _r in _rowmap.items():
+                    if _nm not in _keyed_names:
+                        _extra.append(_r)
+        for r in _keyed + _extra + [
                 m for m in manual if m['own_repo'].lower() in own_map.get(key, set())]:
             if r.get('own_repo') and not embodies(key, r['own_repo']):
                 continue

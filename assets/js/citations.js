@@ -568,6 +568,7 @@ var CITATIONS = (function(){
     if (r.paperOnly) li.appendChild(el('span', 'cite-row-meta', ' \u2014 no repository located.'));
     if (r.badges && r.badges.length) li.appendChild(el('span', 'cite-row-meta', ' \u2014 ' + r.badges.join('; ') + '.'));
     if (r.artifact) li.appendChild(el('span', 'cite-chip', 'artifact'));
+    if (r.site) li.appendChild(el('span', 'cite-chip', 'website'));
     if (r.sdv) li.appendChild(el('span', 'cite-chip', String(r.sdv).replace(/_/g, ' ')));
     if (r.stars != null) li.appendChild(el('span', 'cite-chip', fmt(r.stars) + ' \u2605'));
     if (r.active) li.appendChild(el('span', 'cite-chip', 'active ' + r.active));

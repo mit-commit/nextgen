@@ -6,7 +6,7 @@ accounts belonging to different people who share an author's name. This
 script applies that finding, plus the links he supplied by hand. It is
 idempotent: running it twice changes nothing the second time.
 
-Four actions, matching the rules in link-overrides.json:
+Five actions, matching the rules in link-overrides.json:
 
   drop      remove every candidate whose `source` starts with "github_" for
             that person. The blog and email were scraped from the wrong
@@ -17,6 +17,8 @@ Four actions, matching the rules in link-overrides.json:
   never     empty accounts stay but are marked never_primary=true.
   human     links he supplied directly are inserted as the FIRST candidate
             with source="human"; they outrank anything harvested.
+  suppress  candidates he has ruled against get publish=false, even when
+            their tier would otherwise win.
 
 "NOT FOUND" in the drop report is normal once the drops have been applied
 upstream -- the script only counts a drop when the handle is still present.
@@ -55,10 +57,12 @@ def main():
     hold = {h["handle"] for h in ov["hold_do_not_publish"]}
     never = set(ov["never_primary_empty_accounts"])
 
+    suppress = {(s["person_id"], s["url"].rstrip("/")): s for s in ov.get("suppress", [])}
+
     human = ov.get("human_supplied", [])
     human_by_pid = {h["person_id"]: h for h in human}
 
-    removed, held, marked, added, emptied = 0, 0, 0, 0, []
+    removed, held, marked, added, suppressed, emptied = 0, 0, 0, 0, 0, []
     seen_drop = set()
 
     for person in links["people"]:
@@ -108,6 +112,15 @@ def main():
         person["candidates"] = cands
         added += 1
 
+    for person in links["people"]:
+        pid = person.get("person_id")
+        for c in person.get("candidates") or []:
+            key = (pid, (c.get("url") or "").rstrip("/"))
+            if key in suppress and c.get("publish") is not False:
+                c["publish"] = False
+                c["hold_reason"] = suppress[key]["why"]
+                suppressed += 1
+
     unmatched_human = sorted(set(human_by_pid) - {p.get("person_id") for p in links["people"]})
     missing = sorted(set(drop_by_pid) - seen_drop)
 
@@ -116,6 +129,7 @@ def main():
     print(f"candidates held           : {held}")
     print(f"empty accounts marked     : {marked}")
     print(f"links he supplied added   : {added} of {len(human)}")
+    print(f"candidates he suppressed  : {suppressed} of {len(suppress)}")
     if emptied:
         print("left with no link at all  : " + ", ".join(sorted(emptied)))
         print("  (expected -- their only link was a stranger's account; they")

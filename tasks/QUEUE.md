@@ -13,7 +13,7 @@ for that paper — it may still appear via dependency/third-party routes.
 Apply to the 4 disagreement rows in deephunt_review_resolved.json: reject
 as own_group. (Human said trust the audit trail; this closes the lane.)
 
-## OPEN — round 9 (2026-08-25)
+## OPEN — round 9 (2026-08-25/26)
 1. [sonnet] **fulltext ingest + miss audit**: sitting #2 is complete on
    his machine. (a) Ingest ~/workspace/nextgen-fulltext into the repo
    fulltext staging exactly as sitting #1 (text extraction, per-paper
@@ -41,6 +41,23 @@ as own_group. (Human said trust the audit trail; this closes the lane.)
    attribution rule as the 567; coordinator-approved).
 4. [sonnet] **deephunt closure**: apply the RULING above to the 4 rows,
    merge/log, close deephunt_review lane.
+5. [sonnet, after 1] **thesis citations from our own corpus** (human
+   ruling 2026-08-26): the ~135 no_doi papers (theses/TRs) have no
+   external citation data — but our collected full-text corpus is
+   itself a citation index for them. (a) Build per-thesis match keys:
+   normalized title n-grams + author surname + year (+ "PhD/Master's
+   thesis, MIT" markers). (b) Scan EVERY extracted full text in
+   harvest/fulltext/ (all sittings + free fetches) for reference-list
+   matches; keep candidate (citing work, thesis) pairs with the matched
+   reference string + surrounding context. (c) Model-verify pairs and
+   extract in-text citation contexts (same evidence standard as the
+   main pipeline; batch under-$20 rule). (d) Confirmed pairs enter the
+   STANDARD taxonomy classification and merge into
+   data/citations/<thesisKey>.json per SCHEMA.md — theses get real
+   citation sections on the site. (e) Report: theses with >=1 citing
+   work found, total pairs, and (for honesty) note in the report that
+   this source is our-corpus-only, a lower bound. gscholar.json already
+   supplies their displayed counts where present; max() rule unchanged.
 
 ## PARKED (needs the human)
 - Possible login sitting #3: gated on task 1's report.

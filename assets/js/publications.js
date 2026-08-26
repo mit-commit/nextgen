@@ -756,6 +756,12 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
         return String(name || '').toLowerCase().indexOf(q) !== -1;
       });
     }
+    // only names alive in the current selection (checked ones always stay)
+    if (window.CA_COUNTS){
+      sorted = sorted.filter(function(name){
+        return (window.CA_COUNTS[name] || 0) > 0 || state.citeAuthors[name];
+      });
+    }
     // 6k+ rows would render slowly and scroll forever: show the first
     // N (default 100) plus every checked name, with a "more" row.
     var total = sorted.length;
@@ -782,8 +788,7 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
       moreBtn.textContent = 'Show 100 more (' + (total - display.length).toLocaleString('en-US') + ' hidden)';
       moreBtn.onclick = function(){
         state.citeAuthorLimit = limit + 100;
-        rebuildCiteAuthorFacet();
-        updateDynamicCounts();   // refill the (n) counts the rebuild reset
+        updateDynamicCounts();   // rebuilds the facet and refills counts
       };
       els.citeAuBox._facet.scrollWrap.appendChild(moreBtn);
     }
@@ -1266,11 +1271,16 @@ for (i = 0; i < itemsT.length; i++){
 updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
 
     // Cited and Used by
-    var itemsCA = filteredItems('citeAuthors'), caCounts = {};
+    // Drill-down semantics for this 6k-name list: the facet's own
+    // selection DOES narrow it (to the selected people and their
+    // co-citers); checked names always stay visible regardless.
+    var itemsCA = filteredItems(null), caCounts = {};
     for (i = 0; i < itemsCA.length; i++){
       var cas = listImpactAuthorsOf(itemsCA[i]);
       for (j = 0; j < cas.length; j++) caCounts[cas[j]] = (caCounts[cas[j]] || 0) + 1;
     }
+    window.CA_COUNTS = caCounts;
+    rebuildCiteAuthorFacet();          // re-slice over the active names
     updateFacetCounts(els.citeAuBox, 'citeAuthors', caCounts, state.citeAuthors);
 
   }
@@ -1280,16 +1290,24 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     if (!facet) return;
 
     var itemMap = facet.itemMap;
+  var visible = 0;
   for (var val in itemMap) {
     var cnt = countsMap[val] || 0;
     var display = facet.labelFor ? facet.labelFor(val) : val;
     itemMap[val].labelNode.nodeValue = display + ' ';
     itemMap[val].textNode.nodeValue = '(' + cnt + ')';
 
-    var disabled = (cnt === 0) && !stateMap[val];
-    itemMap[val].cb.disabled = disabled;
-    itemMap[val].cb.parentNode.className = disabled ? 'facet-item disabled' : 'facet-item';
+    // values with nothing in the current selection disappear entirely
+    // (a checked box always stays visible so it can be unchecked)
+    var hidden = (cnt === 0) && !stateMap[val];
+    itemMap[val].cb.parentNode.style.display = hidden ? 'none' : '';
+    itemMap[val].cb.parentNode.className = 'facet-item';
     itemMap[val].cb.checked = !!stateMap[val];
+    if (!hidden) visible++;
+  }
+  var countEl = document.querySelector('.facet-count[data-for="' + mount.id + '"]');
+  if (countEl && mount.id !== 'facet-cite-authors'){
+    countEl.textContent = ' (' + visible.toLocaleString('en-US') + ')';
   }
 }
 
@@ -1386,13 +1404,21 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       for (f in centCounts){ if (ce[f] > 0) centCounts[f]++; }
     }
     if (els.citeCats && els.citeCats._catRefs){
+      var catVisible = 0;
       for (f in els.citeCats._catRefs){
         var ref = els.citeCats._catRefs[f];
         var rc = catRepos[f];
         ref.node.nodeValue = '(' + (catPapers[f] || 0) +
           ', cited by ' + (catCites[f] || 0) + ' papers' +
           (rc ? ' and ' + rc + ' repos' : '') + ')';
+        var catRow = ref.node.parentNode && ref.node.parentNode.closest
+          ? ref.node.parentNode.closest('label') : null;
+        var catHidden = !(catPapers[f] || 0) && !rc && !(ref.cb && ref.cb.checked);
+        if (catRow) catRow.style.display = catHidden ? 'none' : '';
+        if (!catHidden) catVisible++;
       }
+      var ccEl = document.querySelector('.facet-count[data-for="facet-cite-cats"]');
+      if (ccEl) ccEl.textContent = ' (' + catVisible + ')';
     }
     if (els.citeCentrality){
       var bs = els.citeCentrality.querySelectorAll('.type-toggle-btn');
@@ -1578,7 +1604,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
             cnt.appendChild(tn);
             txt.appendChild(cnt); txt.title = f.gloss;
             if (!els.citeCats._catRefs) els.citeCats._catRefs = {};
-            els.citeCats._catRefs[f.key] = { node: tn, label: f.label };
+            els.citeCats._catRefs[f.key] = { node: tn, label: f.label, cb: cb };
             cb.onchange = function(){
               selected[f.key] = this.checked;
               var keys = keysSelected(selected);

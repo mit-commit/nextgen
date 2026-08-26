@@ -829,6 +829,11 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
     // Artifact or source repository, when the paper points to one.
     var code = localizeURL(it.code || '');
+    // A GitHub Code link is guaranteed (by build_repo_data.py) to appear
+    // inside the Repositories panel, so the separate button would be
+    // redundant; project-site links (non-GitHub) keep the button.
+    if (code && code.indexOf('github.com') !== -1 &&
+        REPO_INDEX && REPO_INDEX[bibtexKeyOf(it)]) code = '';
     if (code) { meta.appendChild(text(' ')); var cA=document.createElement('a'); cA.href=code; cA.target='_blank'; cA.rel='noopener'; cA.className='pub-action'; cA.appendChild(text('Code')); cA.addEventListener('click', function(){ track('code-view', { key: bibtexKeyOf(it), title: titleOf(it) }); }); meta.appendChild(cA); }
 
     // Summary toggle (shown only when a summary exists); follows global default.

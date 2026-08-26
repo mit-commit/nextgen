@@ -81,6 +81,14 @@ def main():
 
     token = os.environ.get('GITHUB_TOKEN', '')
     verified = json.load(open(f'{ROOT}/harvest/repos/verified.json'))
+    # GitHub 'code' links hand-entered in publications.json are own repos
+    # by definition; inject any the harvests missed so the panel fully
+    # subsumes the page's Code button (which then hides for GitHub links)
+    code_links = {}
+    for pub in json.load(open(f'{ROOT}/data/publications.json')):
+        u = pub.get('code') or ''
+        if 'github.com/' in u and pub.get('bibtexKey'):
+            code_links[pub['bibtexKey']] = u
     artifacts = json.load(open(f'{ROOT}/harvest/artifacts/found.json'))
     desc_path = f'{ROOT}/harvest/repos/descendants.json'
     descendants = json.load(open(desc_path)) if os.path.exists(desc_path) else {}
@@ -171,6 +179,26 @@ def main():
                 continue
             seen.add(ident)
             out.append(entry)
+        cu = code_links.get(key)
+        if cu:
+            fnc = fullname_of(cu)
+            if fnc:
+                meta = gh_repo(fnc, cache, token) if token else {}
+                canon = (meta or {}).get('full_name') or fnc
+                if canon.lower() not in {n for n, _ in seen}:
+                    entry = {'url': cu, 'group': 'own',
+                             'role': 'artifact' if 'artifact' in fnc.lower() else 'implementation',
+                             'confidence': 'high', 'name': canon,
+                             'evidence': "Linked as Code on the publications page."}
+                    if meta and not meta.get('error'):
+                        if meta.get('description'):
+                            entry['desc'] = meta['description']
+                        if meta.get('stars') is not None:
+                            entry['stars'] = meta['stars']
+                        if meta.get('pushed'):
+                            entry['active'] = int(meta['pushed'])
+                    seen.add((canon.lower(), entry['role']))
+                    out.append(entry)
         art = artifacts.get(key)
         if art:
             out.insert(0, {

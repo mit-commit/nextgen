@@ -23,6 +23,10 @@ never force.
 | D EXASCALE NAMES | sonnet | `harvest/authors/exascale-names.json` | the report PDF, authors.json |
 | E SITE | fable | `assets/**`, `*.html`, `docs/impact-view-design.md` | all harvest output |
 
+Status 2026-08-26 evening: **B, C and D are complete; A is green (100/100,
+seed 42) and re-running against E's newer commits; E has rejoined the author
+links (329 of 368 people linked) and is holding for A's STOP entries.**
+
 Hard conflict rules, because these will collide otherwise:
 - **`assets/js/*` has exactly one writer: lane E.** Lane A finds UI bugs and
   writes them up in `tests/ui/report.md`; it does not patch site JS, not even
@@ -31,8 +35,6 @@ Hard conflict rules, because these will collide otherwise:
   `link-overrides.json` through `apply_link_overrides.py`. Lane B writes its
   own file; the coordinator folds it in later.
 - `publications.json` is read-only for every lane this round.
-- Lane C's four sub-tasks (a)-(d) may be split across sessions if a tab is
-  free, but each sub-task is claimed separately in docs/LANES.md.
 
 ### Lane A — UI random-settings test run
 **Read `tests/ui/SPEC.md` first; it is his full instruction.** ~100 tests
@@ -44,36 +46,7 @@ from the data files, never read off the page; if a rule is genuinely
 ambiguous, STOP and ask rather than inferring it from the implementation.
 Deliverable `tests/ui/report.md`, FIRST LINE
 `RUN COMPLETE — <n> tests, <p> passed, <f> failed, seed <s>`. Structural
-failures become STOP entries for lane E. If failures cluster in one area,
-say so and propose a targeted second run.
-
-### Lane B — academic-page hunt for the ORCID-only 158
-Every person in links.json whose best candidate is an orcid.org record. Find
-a PERMANENT academic page (faculty, lab, institutional profile) via web
-search plus the ORCID record's own employment and website fields; verify the
-page is live and is that person (name + field + institution consistent with
-their papers). Under his ruling such a page REPLACES LinkedIn, so every hit
-removes someone from the LinkedIn sittings — that is the point of the lane.
-Deliver `harvest/authors/academic-pages.json`
-{person_id, url, institution, evidence, confidence} plus found/not-found
-counts. Do NOT guess URLs. Do NOT touch LinkedIn. Do NOT edit links.json.
-
-### Lane C — data tails
-(a) authors fold + OpenAlex backstop (round-10 spec; mind the two same-name
-traps flagged in session-results.json: Michael I. Gordon, Dan Campbell).
-(b) thesis-mining fold when its verify batch returns, plus a short report.
-(c) rejudge round 2 over the sitting-2/3 evidence.
-(d) sitting-3 ingest — the 55-row retry PDFs under
-`~/workspace/nextgen-fulltext` — if not already ingested.
-
-### Lane D — exascale author names
-The 13 initials-only co-authors of amarasinghe:exascale:2009, plus Dan
-Campbell and Andrew Chien. Recover full names and 2008-09 affiliations from
-the report's own front matter, not from guesswork; leave the ambiguous ones
-unresolved and say so. Deliver `harvest/authors/exascale-names.json`
-{person_id, full_name, affiliation, evidence(page/section)} plus any
-permanent lab or faculty page found — those outrank LinkedIn. Residue
-returns to the coordinator for a sitting.
+failures become STOP entries for lane E.
 
 ### Lane E — site
 TEMP "Pilot papers only" button deletion; halide tier-3 162-row fold;
@@ -101,16 +74,42 @@ Sollee = /in/solleer; yee-lok-won merged into yee-lok-wong (= /in/yee-lok-wong);
 Y. Zibin -> Yoav Zibin; adadima belongs to Alexandra Dima, not Albert Ma.
 All applied.
 
+## CLOSED — sitting #3 (his call, 2026-08-26)
+**Abandoned deliberately, not left unfinished.** 6 of the 55 rows were
+ingested earlier; the other 49 are not worth further effort:
+- **ACM (22 rows)**: `/doi/pdf/` redirects to `/doi/abs/` on every attempt,
+  direct AND through `dl-acm-org.libproxy.mit.edu` — the entitlement is not
+  there for these DOIs. Three of them also 404 outright at the PDF path.
+  ACM's `spawn-queue.acm.org` interstitial appeared on the unproxied run,
+  which fetch() cannot follow across origins in any case.
+- **Springer (30 rows)**: these are reference-work / living-reference
+  entries, whose `/content/pdf/<doi>.pdf` path redirects to `/rwe/<doi>`.
+  Several plausibly have no PDF at all.
+- **IEEE (3 rows)**: untried.
+Judgment: 55 rows against 3,606 already ingested in sitting #2. The rejudge
+value does not justify more of his evening. `login-worklist3.json` stays in
+the repo if anyone wants to revisit; the runner iterations are not committed.
+Do NOT re-open this as a task without him asking.
+
 ## PARKED (needs the human / coordinator)
 - Sitting-1 degree backfill (Agrawal, Barrett, Cooper, Dasika, Erlingsson).
 - Professional-tier sittings: GitHub-only cohort, 26 of 98 done
   (linkedin-results-professional.json), resume at David Koh; the ORCID-only
-  158 wait on lane B.
+  cohort largely absorbed by lane B's 101 academic pages.
 - The 19 held GitHub handles: publish only when a second signal appears.
 - Johnathan Babb and Eric Wong have no link at all.
+- Lane B flagged 11 people whose ORCID/OpenAlex resolution in
+  `enriched.json` is a different person entirely; 6 remain unresolved. Worth
+  clearing so future passes do not inherit the bad steer.
+- Three names in the exascale task (P. Negi, C. Pacheco, F. Sherwood) belong
+  to other papers, not the exascale report — coordinator's spec error, still
+  need identity work.
 - Cutover: final review, then point the live site at nextgen.
 
 ## DONE (recent)
+- Round 12: academic-page hunt (101 of 141 found), exascale names (10 from
+  the report's own appendix), data tails, author links rejoined —
+  329 of 368 people now carry a link.
 - Link-overrides applied and pushed: 17 wrong accounts and their 31
   contaminated candidates dropped, 19 held, 20 never-primary, 13 links he
   supplied added, Anant's CSAIL page suppressed.

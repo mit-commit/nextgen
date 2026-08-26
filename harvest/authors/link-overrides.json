@@ -4,14 +4,21 @@
  "rule_hold": "Keep the candidate in the data but set publish:false. It may not be rendered as anyone's link until a second signal exists: the handle appears as a contributor on the paper's own repo, or on the person's homepage or LinkedIn.",
  "rule_never_primary": "Accounts with zero public repositories stay, but must never be a person's primary/rendered link. Prefer any other tier.",
  "rule_human_supplied": "Links he supplied directly, 2026-08-26, for people the audit left linkless or wrongly linked. These are authoritative: inserted as the FIRST candidate, source 'human', outranking anything harvested. Tier follows the link ruling — a faculty/institutional page is permanent-academic, otherwise linkedin.",
- "status": "Drops were applied upstream by a worker session; the hold/never-primary flags and these 13 human links apply through the script. Verified end to end against live data: 13 of 13 inserted, rerun is a no-op.",
- "effect_measured": {"people_touched": 17, "candidates_removed": 31, "human_links_added": 13, "still_linkless": ["Johnathan Babb", "Eric Wong"]},
+ "rule_suppress": "Candidates he has explicitly ruled against. Set publish:false so the renderer skips them even though the tier would otherwise win.",
+ "status": "Applied and pushed 2026-08-26: drops (upstream worker), 19 held, 20 never-primary, 13 human links, 1 suppression. Rerun is a no-op.",
+ "effect_measured": {"people_touched": 17, "candidates_removed": 31, "human_links_added": 13, "suppressed": 1, "still_linkless": ["Johnathan Babb", "Eric Wong"]},
+ "name_rulings": [
+  {"person_id": "henry-hoffman", "keep_name": "Henry Hoffman", "why": "his ruling 2026-08-26: keep this spelling. UChicago writes Hoffmann; do not 'correct' it back"}
+ ],
+ "suppress": [
+  {"person_id": "anant-agarwal", "url": "https://www.csail.mit.edu/person/anant-agarwal", "why": "his ruling 2026-08-26: use his LinkedIn, not the CSAIL page. A deliberate exception to 'academic page beats LinkedIn'"}
+ ],
  "human_supplied": [
   {"person_id": "albert-ma", "tier": "linkedin", "url": "https://www.linkedin.com/in/maalbert/"},
-  {"person_id": "anant-agarwal", "tier": "linkedin", "url": "https://www.linkedin.com/in/agarwaledu/", "note": "he also has a CSAIL page (www.csail.mit.edu/person/anant-agarwal) still in the data; under the ruling a permanent academic page would outrank this LinkedIn — his call which renders"},
+  {"person_id": "anant-agarwal", "tier": "linkedin", "url": "https://www.linkedin.com/in/agarwaledu/", "note": "his ruling 2026-08-26: this LinkedIn renders, not the CSAIL page (suppressed above)"},
   {"person_id": "dan-campbell", "tier": "linkedin", "url": "https://www.linkedin.com/in/danpcampbell/"},
   {"person_id": "daniel-sanchez", "tier": "permanent-academic", "url": "https://people.csail.mit.edu/sanchez/"},
-  {"person_id": "henry-hoffman", "tier": "permanent-academic", "url": "https://cs.uchicago.edu/people/henry-hoffmann/", "note": "UChicago spells it Hoffmann; the data says Henry Hoffman — name fix worth making"},
+  {"person_id": "henry-hoffman", "tier": "permanent-academic", "url": "https://cs.uchicago.edu/people/henry-hoffmann/", "note": "UChicago writes Hoffmann; he has ruled the data keeps Henry Hoffman"},
   {"person_id": "jason-miller", "tier": "permanent-academic", "url": "https://people.csail.mit.edu/jasonm/"},
   {"person_id": "john-hennessy", "tier": "permanent-academic", "url": "https://profiles.stanford.edu/john-hennessy"},
   {"person_id": "michael-taylor", "tier": "permanent-academic", "url": "https://people.ece.uw.edu/taylor_michael/"},

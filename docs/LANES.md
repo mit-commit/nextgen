@@ -1062,6 +1062,18 @@ raise it to the setup lane.
   student accounts doesn't work; the next lever is reading each
   thesis's own full text for repo URLs/tool names (fulltext-lane
   machinery), and pre-2008 theses predate GitHub entirely.
+- **Distinct citing works — the proper reverse index** (2026-08-26,
+  human "Lets do it!"): new harvest/impactview/build_citers.py reads
+  the merged data/citations/<key>.json files (neither generation
+  pipeline touched) and emits data/citations/citers.json — per-paper
+  distinct citing-work id lists with cross-paper identity (DOI, else
+  normalized title): 22,479 refs → 16,464 distinct works, 120KB,
+  fetched lazily AFTER first paint (boot payload unchanged; overview
+  re-renders when it arrives). Overview now: "N total citations from M
+  distinct citing works and K distinct repositories", tooltip states
+  both conventions. TACO selection: 1,008 citations / 610 distinct
+  works / 44 distinct repos. Regenerate citers.json after any citation
+  refresh.
 - **Embodiment gate** (2026-08-25, human: project papers were all
   inheriting the full project ecosystem; "some overlap is ok, if it is
   really an overlap — i.e. the new parts of the paper are captured in

@@ -419,6 +419,20 @@ function createBibLink(it){
     return vals[idx];
   };
   citeIndexReady.then(function(){ _impactVals = null; }); // recompute once real data lands
+
+  // Distinct citing works across papers (data/citations/citers.json,
+  // ~120KB): fetched AFTER boot so first paint pays nothing; the
+  // overview line re-renders when it arrives.
+  var CITERS = null, _lastOverviewItems = null;
+  citeIndexReady.then(function(){
+    return fetch('data/citations/citers.json', { cache: 'no-store' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){
+        CITERS = (d && d.papers) || null;
+        if (CITERS && _lastOverviewItems) renderCiteOverview(_lastOverviewItems);
+      })
+      .catch(function(){});
+  });
   function impactTierLabel(score){
     if (score == null || score < 0) return 'No impact data yet';
     if (score >= compositeQuantile(0.03)) return 'Top 3% by impact';
@@ -1160,18 +1174,27 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var box = els.citeOverview;
     if (!box) return;
     if (!CITE_INDEX || !window.CITATIONS){ box.className = 'cite-overview hidden'; return; }
+    _lastOverviewItems = items;
     var withData = [], totalC = 0, i;
     var uniqRepos = {}, nUniq = 0;   // ecosystems are shared across a
-    for (i = 0; i < items.length; i++){  // project's papers: union, not sum
-      var row = CITE_INDEX[bibtexKeyOf(items[i])];
+    var uniqCiters = {}, nCiters = 0; // project's papers: union, not sum
+    for (i = 0; i < items.length; i++){
+      var key = bibtexKeyOf(items[i]);
+      var row = CITE_INDEX[key];
       if (row){
-        withData.push({ key: bibtexKeyOf(items[i]), title: items[i].title || '' });
+        withData.push({ key: key, title: items[i].title || '' });
         totalC += CITATIONS.displayCount(row);
       }
-      var rrow = REPO_INDEX && REPO_INDEX[bibtexKeyOf(items[i])];
+      var rrow = REPO_INDEX && REPO_INDEX[key];
       if (rrow && rrow.rids){
         for (var ri = 0; ri < rrow.rids.length; ri++){
           if (!uniqRepos[rrow.rids[ri]]){ uniqRepos[rrow.rids[ri]] = 1; nUniq++; }
+        }
+      }
+      var cids = CITERS && CITERS[key];
+      if (cids){
+        for (var ci2 = 0; ci2 < cids.length; ci2++){
+          if (!uniqCiters[cids[ci2]]){ uniqCiters[cids[ci2]] = 1; nCiters++; }
         }
       }
     }
@@ -1179,10 +1202,11 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     if (!withData.length){ box.className = 'cite-overview hidden'; return; }
     box.className = 'cite-overview';
     var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
-    l1.title = 'Citations sum each paper\u2019s count (a work citing several papers counts once per paper); repositories are distinct';
+    l1.title = 'Citations sum each paper\u2019s count, as Scholar does; distinct citing works and repositories are counted once each (works from verified records \u2014 totals may use the higher Scholar figure)';
     l1.innerHTML = '<b>' + withData.length.toLocaleString('en-US') + '</b> of ' +
       items.length.toLocaleString('en-US') + ' shown papers have <b>' +
       totalC.toLocaleString('en-US') + '</b> total citations' +
+      (nCiters ? ' from <b>' + nCiters.toLocaleString('en-US') + '</b> distinct citing works' : '') +
       (nUniq ? ' and <b>' + nUniq.toLocaleString('en-US') + '</b> distinct repositories' : '') + '.';
     box.appendChild(l1);
   }

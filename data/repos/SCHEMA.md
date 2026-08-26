@@ -43,7 +43,11 @@ impact and never renders here.
 
 ## `index.json`
 
-One row per paper with data — `{ "repos": n, "tiers": {"own": n, …} }` —
+One row per paper with data — `{ "repos": n, "rids": [ids], "grids":
+{group: [ids]}, "cc": 1? }` — `rids` are corpus-stable repo ids for
+distinct-count unions; `grids` partitions them by shared-taxonomy group
+for the category facet counts; `cc` marks a paper whose publications.json
+Code link is covered by a row (the page hides its Code button). It is
 fetched once by the publications page to decide which papers get a
 "Repositories (N)" toggle. Papers absent simply show no toggle
 ("gracefully absent" per F2). As the tier-2 ecosystems and tier-3

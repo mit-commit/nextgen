@@ -22,6 +22,7 @@ Outputs (data/repos/SCHEMA.md documents the shape):
 """
 import argparse
 import json
+import re
 import os
 import sys
 import time
@@ -84,11 +85,18 @@ def main():
     # GitHub 'code' links hand-entered in publications.json are own repos
     # by definition; inject any the harvests missed so the panel fully
     # subsumes the page's Code button (which then hides for GitHub links)
-    code_links = {}
+    code_links = {}     # GitHub links: injected as own rows
+    all_code = {}       # every code link: coverage check -> hide button
     for pub in json.load(open(f'{ROOT}/data/publications.json')):
         u = pub.get('code') or ''
-        if 'github.com/' in u and pub.get('bibtexKey'):
+        if not u or not pub.get('bibtexKey'):
+            continue
+        all_code[pub['bibtexKey']] = u
+        if 'github.com/' in u:
             code_links[pub['bibtexKey']] = u
+
+    def norm_url(u):
+        return re.sub(r'^https?://(www\.)?', '', (u or '').lower()).rstrip('/')
     artifacts = json.load(open(f'{ROOT}/harvest/artifacts/found.json'))
     desc_path = f'{ROOT}/harvest/repos/descendants.json'
     descendants = json.load(open(desc_path)) if os.path.exists(desc_path) else {}
@@ -328,6 +336,16 @@ def main():
                                 'tiers': {k: v for k, v in tiers.items() if v}}
         if impact:
             index['papers'][key]['impact'] = impact
+        # cc=1: the paper's publications.json Code link is one of these
+        # rows (same URL, or the same GitHub repo after renames) -> the
+        # page hides its separate Code button
+        cu2 = all_code.get(key)
+        if cu2:
+            targets = {norm_url(r.get('url')) for r in rows}
+            fn3 = fullname_of(cu2) if 'github.com/' in cu2 else None
+            names = {(r.get('name') or '').lower() for r in rows}
+            if norm_url(cu2) in targets or (fn3 and fn3.lower() in names):
+                index['papers'][key]['cc'] = 1
         # compact unique-repo ids so the page can union across papers
         # (ecosystems are shared; summing per-paper counts double-counts)
         rids = []

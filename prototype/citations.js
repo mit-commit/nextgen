@@ -333,7 +333,8 @@ var CITATIONS = (function(){
       groupsMount.innerHTML = '';
       /* Impact keeps COMMIT papers apart (external-impact story);
          Recency and Popularity incorporate them, chip-marked. */
-      var rows = (state.sort === 'impact') ? judgedExt : judgedExt.concat(commitJudged);
+      var baseRows = (state.sort === 'impact') ? judgedExt : judgedExt.concat(commitJudged);
+      var rows = baseRows;
       if (state.centrality !== 'all'){
         rows = rows.filter(function(c){ return c.centrality === state.centrality; });
       }
@@ -375,6 +376,30 @@ var CITATIONS = (function(){
           'the group\'s own citing papers — Saman Amarasinghe is an author; reported apart from external impact',
           commitShown, state.expanded));
       }
+      /* Rule 5: when page-level filters hide rows, the panel says so and
+         offers the way back. */
+      var filtersOn = (gPanel.categories && gPanel.categories.length) ||
+                      gPanel.search || state.centrality !== 'all';
+      if (filtersOn){
+        var totalAll = baseRows.length + extUnjudged.length +
+          ((state.sort === 'impact') ? commitUnjudged.length + commitPapers.length : commitUnjudged.length);
+        var shownAll = rows.length +
+          ((state.centrality === 'all') ? unjudged.length : 0) +
+          ((state.sort === 'impact' && state.centrality === 'all') ? commitShown.length : 0);
+        if (shownAll < totalAll){
+          var note = el('div', 'cite-filter-note');
+          note.appendChild(document.createTextNode(
+            'filtered: ' + fmt(shownAll) + ' of ' + fmt(totalAll) + ' shown \u2014 '));
+          var clearA = el('a', null, 'clear');
+          clearA.href = '#';
+          clearA.addEventListener('click', function(ev){
+            ev.preventDefault();
+            if (onClearHook) onClearHook();
+          });
+          note.appendChild(clearA);
+          groupsMount.insertBefore(note, groupsMount.firstChild);
+        }
+      }
     }
     drawList();
 
@@ -398,6 +423,14 @@ var CITATIONS = (function(){
   var instances = [];
   var panels = [];      // loaded panel controllers, for the page-level tools
   var defaultOpen = false;
+  /* Rule 2 (evidence-view design): closed toggles wear match badges when
+     an evidence filter is active. The page registers a provider:
+     fn(kind 'cite'|'repo', key, total) -> "12 of 483" or null. */
+  var badgeProvider = null;
+  /* Rule 6: manual open/closed choices survive list re-renders. */
+  var openState = {};
+  /* Rule 5: the panel's "filtered" note clears page filters through this. */
+  var onClearHook = null;
   var dataCache = {};   // key -> per-paper JSON, kept for cross-paper analysis
 
   /* Per-paper files load lazily even under expand-all; this small queue
@@ -420,7 +453,8 @@ var CITATIONS = (function(){
     var toggle = el('a', 'pub-action pub-summary-toggle cite-toggle');
     toggle.href = '#';
     var setArrow = function(open){
-      toggle.textContent = 'Citations (' + fmt(display) + ') ' + (open ? '▾' : '▸');
+      var badge = badgeProvider ? badgeProvider('cite', key, display) : null;
+      toggle.textContent = 'Citations (' + (badge || fmt(display)) + ') ' + (open ? '▾' : '▸');
     };
     setArrow(false);
     var loaded = false;
@@ -441,6 +475,7 @@ var CITATIONS = (function(){
       pumpQueue();
     }
     function setOpen(open){
+      openState['c:' + key] = open;             // rule 6: remembered
       var isOpen = div.className.indexOf('open') !== -1;
       if (open === isOpen) return;
       div.className = 'pub-summary cite-view' + (open ? ' open' : '');
@@ -456,8 +491,10 @@ var CITATIONS = (function(){
     metaEl.appendChild(document.createTextNode(' '));
     metaEl.appendChild(toggle);
     bodyParent.appendChild(div);
-    instances.push({ el: div, setOpen: setOpen });
-    if (defaultOpen) setOpen(true);
+    instances.push({ el: div, setOpen: setOpen,
+                     relabel: function(){ setArrow(div.className.indexOf('open') !== -1); } });
+    var rememberedC = openState['c:' + key];
+    if (rememberedC !== undefined ? rememberedC : defaultOpen) setOpen(true);
   }
 
   function setAllOpen(open){
@@ -651,6 +688,20 @@ var CITATIONS = (function(){
     mount.appendChild(groupsMount);
     function draw(){
       groupsMount.innerHTML = '';
+      var visibleN = repos.filter(repoRowVisible).length;
+      if (visibleN < repos.length){
+        var rnote = el('div', 'cite-filter-note');
+        rnote.appendChild(document.createTextNode(
+          'filtered: ' + fmt(visibleN) + ' of ' + fmt(repos.length) + ' shown \u2014 '));
+        var rclear = el('a', null, 'clear');
+        rclear.href = '#';
+        rclear.addEventListener('click', function(ev){
+          ev.preventDefault();
+          if (onClearHook) onClearHook();
+        });
+        rnote.appendChild(rclear);
+        groupsMount.appendChild(rnote);
+      }
       if (state.sort === 'impact'){
         REPO_GROUPS.forEach(function(g){
           var rows = repos.filter(function(r){ return r.group === g.key && repoRowVisible(r); });
@@ -705,7 +756,8 @@ var CITATIONS = (function(){
     toggle.href = '#';
     var n = indexRow.repos;
     var setArrow = function(open){
-      toggle.textContent = 'Repositories (' + fmt(n) + ') ' + (open ? '\u25be' : '\u25b8');
+      var badge = badgeProvider ? badgeProvider('repo', key, n) : null;
+      toggle.textContent = 'Repositories (' + (badge || fmt(n)) + ') ' + (open ? '\u25be' : '\u25b8');
     };
     setArrow(false);
     var loaded = false;
@@ -726,6 +778,7 @@ var CITATIONS = (function(){
       pumpQueue();
     }
     function setOpen(open){
+      openState['r:' + key] = open;             // rule 6: remembered
       var isOpen = div.className.indexOf('open') !== -1;
       if (open === isOpen) return;
       div.className = 'pub-summary cite-view' + (open ? ' open' : '');
@@ -741,8 +794,10 @@ var CITATIONS = (function(){
     metaEl.appendChild(document.createTextNode(' '));
     metaEl.appendChild(toggle);
     bodyParent.appendChild(div);
-    repoInstances.push({ el: div, setOpen: setOpen });
-    if (repoDefaultOpen) setOpen(true);
+    repoInstances.push({ el: div, setOpen: setOpen,
+                         relabel: function(){ setArrow(div.className.indexOf('open') !== -1); } });
+    var rememberedR = openState['r:' + key];
+    if (rememberedR !== undefined ? rememberedR : repoDefaultOpen) setOpen(true);
   }
   function setAllReposOpen(open){
     repoInstances = repoInstances.filter(function(i){ return document.contains(i.el); });
@@ -751,6 +806,20 @@ var CITATIONS = (function(){
 
   return {
     attachToggle: attachToggle,
+    setBadgeProvider: function(fn){ badgeProvider = fn; },
+    refreshToggleBadges: function(){
+      instances = instances.filter(function(i){ return document.contains(i.el); });
+      repoInstances = repoInstances.filter(function(i){ return document.contains(i.el); });
+      instances.concat(repoInstances).forEach(function(i){ if (i.relabel) i.relabel(); });
+    },
+    countOpen: function(){
+      var n = 0;
+      instances.concat(repoInstances).forEach(function(i){
+        if (document.contains(i.el) && i.el.className.indexOf('open') !== -1) n++;
+      });
+      return n;
+    },
+    onClearFilters: function(cb){ onClearHook = cb; },
     attachRepoToggle: attachRepoToggle,
     setAllReposOpen: setAllReposOpen,
     setRepoDefaultOpen: function(v){ repoDefaultOpen = !!v; },

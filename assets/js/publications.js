@@ -420,6 +420,69 @@ function createBibLink(it){
   };
   citeIndexReady.then(function(){ _impactVals = null; }); // recompute once real data lands
 
+  /* Evidence-view design (2026-08-26): closed toggles wear "n of m"
+     match badges while an evidence filter is active (categories or the
+     centrality Filter-by; the citing-work search can't badge without
+     per-paper files). Panels' "filtered" notes clear through the hook. */
+  function evidenceFilterActive(){
+    return (state.citeCatKeys && state.citeCatKeys.length) ||
+           (state.citeCentralityKey && state.citeCentralityKey !== 'all');
+  }
+  var BADGE_FG = { 'extends': 'builds-on', 'uses-tool': 'uses',
+                   'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+  function badgeFor(kind, key, total){
+    if (!evidenceFilterActive()) return null;
+    var cats = state.citeCatKeys || [];
+    var cent = state.citeCentralityKey || 'all';
+    var fmtN = function(x){ return x.toLocaleString('en-US'); };
+    if (kind === 'cite'){
+      var row = CITE_INDEX && CITE_INDEX[key];
+      if (!row || !row.functions) return null;
+      var byCat = 0, i;
+      for (i = 0; i < cats.length; i++) byCat += row.functions[cats[i]] || 0;
+      var byCent = (row.centrality && row.centrality[cent]) || 0;
+      var n, approx = false;
+      if (cats.length && cent !== 'all'){ n = Math.min(byCat, byCent); approx = true; }
+      else if (cats.length){ n = byCat; }
+      else { n = byCent; }
+      return (approx ? '\u2264' : '') + fmtN(n) + ' of ' + fmtN(total);
+    }
+    // repos: only categories map onto repo groups; centrality is a
+    // citation concept, so centrality-only leaves repo toggles unbadged
+    if (!cats.length) return null;
+    var rrow = REPO_INDEX && REPO_INDEX[key];
+    if (!rrow || !rrow.grids) return '0 of ' + fmtN(total);
+    var m = 0;
+    for (var ci = 0; ci < cats.length; ci++){
+      var g = rrow.grids[BADGE_FG[cats[ci]]];
+      if (g) m += g.length;
+    }
+    return fmtN(m) + ' of ' + fmtN(total);
+  }
+  citeIndexReady.then(function(){
+    if (window.CITATIONS && CITATIONS.setBadgeProvider){
+      CITATIONS.setBadgeProvider(badgeFor);
+      CITATIONS.onClearFilters(function(){ resetEvidenceFilters(); });
+    }
+  });
+  function resetEvidenceFilters(){
+    state.citeCatKeys = []; state.citeCentralityKey = 'all';
+    if (els.citeCats){
+      var ccbs = els.citeCats.querySelectorAll('input');
+      for (var ci = 0; ci < ccbs.length; ci++) ccbs[ci].checked = false;
+    }
+    if (els.citeCentrality){
+      var cbs = els.citeCentrality.querySelectorAll('.type-toggle-btn');
+      for (var bi = 0; bi < cbs.length; bi++){
+        cbs[bi].className = 'type-toggle-btn' +
+          (cbs[bi].getAttribute('data-v') === 'all' ? ' active' : '');
+      }
+    }
+    if (els.citeSearch) els.citeSearch.value = '';
+    if (window.CITATIONS) CITATIONS.setGlobalPanels({ categories: null, search: '', centrality: 'all' });
+    applyFilters();
+  }
+
   // "Cited and Used by" facet (data/impact-authors.json, ~1MB): external
   // people who cite a paper at real depth or use one of our own repos,
   // built by harvest/impactview/build_impact_authors.py -- our own paper
@@ -1611,6 +1674,17 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
           if (patchKey === 'centrality'){
             state.citeCentralityKey = this.getAttribute('data-v');
             applyFilters();                  // the paper list follows
+          }
+          if (patchKey === 'sort' && window.CITATIONS && CITATIONS.countOpen &&
+              CITATIONS.countOpen() === 0){
+            var hint = container.parentNode.querySelector('.cite-sort-hint');
+            if (!hint){
+              hint = document.createElement('span');
+              hint.className = 'cite-sort-hint';
+              hint.textContent = ' applies to open panels \u2014 press Show citations';
+              container.parentNode.appendChild(hint);
+              setTimeout(function(){ if (hint.parentNode) hint.parentNode.removeChild(hint); }, 4000);
+            }
           }
           track('citations-global-' + patchKey, { value: this.getAttribute('data-v') });
         };

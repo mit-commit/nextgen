@@ -9,7 +9,8 @@ on or ignore.
 From sitting 2 onward each row in `linkedin-results.json` records the degree.
 Sitting-1 rows (Agrawal, Barrett, Cooper, Dasika, Erlingsson) did not, so their
 degree is unknown and is re-checked in a later sitting before they are added or
-ruled out.
+ruled out. Two more (Richard P. Sollee III, Yee Lok Wong) are 2nd-degree
+candidates awaiting his yes/no and join the list only if he confirms them.
 
 ## 2nd-degree
 
@@ -32,3 +33,4 @@ ruled out.
 |---|---|---|---|
 | Mohamed-Hicham Leghettas | https://www.linkedin.com/in/mhleghettas | student, Algeria (ESI cohort) | tiramisu-auto |
 | Lucas H. L. Ng | https://www.linkedin.com/in/lucas-ng-11b317203 | Imperial College London, MEng EIE '26 | li:fccm:2026 |
+| Binh D. Vo | https://www.linkedin.com/in/binh-vo-69a5395 | Senior Software Engineer, New York | thies:www:2002 |

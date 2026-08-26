@@ -141,3 +141,20 @@ site-citations log for the current wave state.
   `harvest/authors/build_session_sheet.py` for the pattern: gather
   candidates, construct search URLs, fetch nothing) and a human works
   through it in a browser sitting.
+
+## Pre-cutover gate: the UI combinatorial test harness
+
+Before any cutover (deploying `publications.html` to the public site, or
+after any structural change to `assets/js/publications.js` /
+`assets/js/citations.js`), run the combinatorial harness and require a
+green report:
+
+    python3 -m http.server 8123 &        # from the repo root
+    python3 tests/ui/facet_test.py       # writes tests/ui/report.md
+
+It checks ~900 cases — every single-facet value, sampled pairwise and
+3–4-way facet combinations, the sort modes and Show toggles — against an
+independent oracle computed straight from the data files. Structural
+failures STOP the cutover (round-11 task 2 precedent: the harness caught
+clearAll() orphaning facet-state closures — a class of bug invisible to
+casual clicking).

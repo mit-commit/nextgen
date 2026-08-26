@@ -27,17 +27,20 @@ through, in as few sittings as possible.
    him; the merged person carries this URL.
 
 ## OPEN — round 11
-1. [sonnet] **UI combinatorial test run**: tests/ui/facet_test.py —
-   oracle from data files (publications.json + data/citations/* +
-   data/repos/*), headless driver (playwright) against the local site;
-   coverage: every single-facet value, ~200 sampled pairwise combos,
-   ~100 random 3-4-way combos, x 3 sort modes x Show toggles on a
-   sample; verify counts, membership, sort order, header labels.
-   tests/ui/report.md with repro selections. Display-only fixes direct;
-   structural STOPs for Fable.
-2. [fable, after 1] **UI failure review**: fix or escalate; re-run to
-   green; keep the harness as the pre-cutover gate (note in
-   docs/refresh.md).
+1. [sonnet] **UI random-settings test run — read tests/ui/SPEC.md, it is
+   the full instruction from him.** ~100 individual tests over random
+   combinations of the All Papers panel controls, including individual
+   paper expansions (summary, repos, citations), checking that the All
+   Papers panel and the Publications page both make sense for that
+   setting. Controls are enumerated from the DOM at runtime, not
+   hardcoded. Oracle comes from the data files, never from the page.
+   Deliverable tests/ui/report.md, whose FIRST LINE must be
+   `RUN COMPLETE — <n> tests, <p> passed, <f> failed, seed <s>` — he
+   wants completion stated explicitly, not implied. If failures cluster,
+   propose a targeted second run.
+2. [fable, after 1] **UI failure review**: fix or escalate the STOP
+   entries; re-run to green; keep the harness as the pre-cutover gate
+   (note in docs/refresh.md).
 3. [sonnet] **data tails** (claim separately): (a) authors fold +
    OpenAlex backstop (round-10 task 1 spec); (b) thesis-mining fold when
    its verify batch returns + report; (c) rejudge round 2 over sitting-2/3
@@ -63,23 +66,22 @@ through, in as few sittings as possible.
    from the report front matter itself, not from guesswork; leave the
    ambiguous ones unresolved and say so. Deliver
    harvest/authors/exascale-names.json {person_id, full_name, affiliation,
-   evidence(page/section)} plus any permanent lab/faculty page found -
+   evidence(page/section)} plus any permanent lab/faculty page found —
    those outrank LinkedIn. Residue comes back to the coordinator.
-7. [sonnet, NEW — highest value] **academic-page hunt for the ORCID-only
-   158**: every person in links.json whose best candidate is an
-   orcid.org record. For each, find a PERMANENT academic page (faculty,
-   lab, or institutional profile) via web search + the ORCID record's own
-   employment/website fields; verify the page is live and is that person
-   (name + field + institution consistent with their papers). Under the
-   ruling a permanent academic page REPLACES LinkedIn, so every hit here
-   removes a person from the LinkedIn sittings — that is the point of the
-   task. Deliver harvest/authors/academic-pages.json {person_id, url,
-   institution, evidence, confidence} and a short report with the count
-   found vs not found. Do NOT guess URLs and do NOT touch LinkedIn.
+7. [sonnet, highest value] **academic-page hunt for the ORCID-only 158**:
+   every person in links.json whose best candidate is an orcid.org record.
+   Find a PERMANENT academic page (faculty, lab, institutional profile)
+   via web search + the ORCID record's own employment/website fields;
+   verify it is live and is that person (name + field + institution
+   consistent with their papers). Under the ruling such a page REPLACES
+   LinkedIn, so every hit removes a person from the sittings — that is the
+   point. Deliver harvest/authors/academic-pages.json {person_id, url,
+   institution, evidence, confidence} + a found/not-found count. Do NOT
+   guess URLs and do NOT touch LinkedIn.
 8. [sonnet] **audit the weak GitHub matches** flagged in
    linkedin-results-professional.json (Matthew Brown -> muglug, Johnathan
    Babb -> warmace101, Brad Chen -> vvasabi, Dan Campbell -> Danny2097 and
-   any sibling cases): handles that bear no relation to the person's name.
+   sibling cases): handles bearing no relation to the person's name.
    Re-verify or drop; a wrong GitHub link on a paper page is worse than
    none.
 

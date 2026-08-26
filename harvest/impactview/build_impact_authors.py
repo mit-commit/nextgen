@@ -82,6 +82,13 @@ def own_author_names():
     return exact, fl
 
 
+NICKNAMES = {'bill': 'william', 'bob': 'robert', 'mike': 'michael',
+             'jim': 'james', 'dave': 'david', 'dan': 'daniel',
+             'fred': 'fredrik', 'sam': 'saman', 'alex': 'alexander',
+             'chris': 'christopher', 'steve': 'steven', 'tom': 'thomas',
+             'will': 'william', 'jon': 'jonathan'}
+
+
 def is_own_author(name, exact, fl):
     f = fold(name)
     if not f:
@@ -89,7 +96,22 @@ def is_own_author(name, exact, fl):
     if f in exact:
         return True
     pair = first_last(name)
-    return pair in fl if pair else False
+    if not pair:
+        return False
+    if pair in fl:
+        return True
+    # citation metadata often reduces first names to initials
+    # ("S. Amarasinghe") or nicknames ("Bill Thies"): match those against
+    # own authors WITH THE SAME SURNAME only, so external namesakes stay
+    first, last = pair
+    for of, ol in fl:
+        if ol != last:
+            continue
+        if len(first) <= 2 and of.startswith(first[0]):
+            return True
+        if NICKNAMES.get(first) == of or NICKNAMES.get(of) == first:
+            return True
+    return False
 
 
 def own_repo_owners():

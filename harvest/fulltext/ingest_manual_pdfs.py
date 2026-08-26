@@ -71,19 +71,19 @@ def extract_text(pdf_path):
     return '\n'.join(text).strip()
 
 
-def find_matching_keys(slug):
-    """Every (key, citing-record) across the corpus whose slug matches."""
-    hits = []
+def build_slug_index():
+    """slug -> [keys], built once. A per-PDF full corpus rescan (177 files,
+    135MB) is fine for a dozen PDFs (sitting #1) but not for a sitting-2-
+    scale batch in the thousands -- same output, one pass instead of N."""
+    index = {}
     for path in glob.glob(os.path.join(CITATIONS_DIR, '*.json')):
         key = os.path.basename(path)[:-5]
         if key.startswith('.'):
             continue
         data = json.load(open(path))
         for c in data.get('citing') or []:
-            if slug_for(c) == slug:
-                hits.append(key)
-                break
-    return hits
+            index.setdefault(slug_for(c), set()).add(key)
+    return {slug: sorted(keys) for slug, keys in index.items()}
 
 
 def main():
@@ -97,11 +97,14 @@ def main():
     pdfs = sorted(glob.glob(os.path.join(pdf_dir, '*.pdf')))
     print(f'{len(pdfs)} PDFs found in {pdf_dir}', file=sys.stderr)
 
+    slug_index = build_slug_index()
+    print(f'{len(slug_index)} distinct citing-DOI slugs indexed across the corpus', file=sys.stderr)
+
     affected = []
     stats = {'ok': 0, 'stub': 0, 'extract_fail': 0}
     for pdf_path in pdfs:
         slug = os.path.basename(pdf_path)[:-4]
-        keys = find_matching_keys(slug)
+        keys = slug_index.get(slug, [])
         if not keys:
             print(f'  {slug}: no matching citing record in any harvest/citations/*.json '
                  f'-- skipped', file=sys.stderr)

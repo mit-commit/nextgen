@@ -419,8 +419,21 @@ def composite_impact_of(it, cite_index, repo_index):
     r_row = repo_index.get(key)
     if r_row:
         s += (r_row.get('repos') or 0) / 1000.0
-    if 'thesis' in str(it.get('itemType') or '').lower():
-        s -= 2  # theses demoted
+    itype = str(it.get('itemType') or '').lower()
+    if 'thesis' in itype:
+        tt = str(it.get('type') or '').lower()
+        if re.search(r'ph\.?\s*d', tt):
+            s -= 1
+        elif re.search(r's\.?\s*b', tt):
+            s -= 4
+        elif re.search(r'm\.?\s*eng', tt):
+            s -= 3
+        elif re.search(r's\.?\s*m', tt):
+            s -= 2
+        else:
+            s -= 2
+    elif itype not in ('inproceedings', 'article'):
+        s -= 5  # not a conference or journal paper
     return s
 
 

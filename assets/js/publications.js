@@ -417,7 +417,17 @@ function createBibLink(it){
     if (cRow && window.CITATIONS) s += (CITATIONS.displayCount(cRow) || 0) / 100;
     var rRow = REPO_INDEX && REPO_INDEX[key];
     if (rRow) s += (rRow.repos || 0) / 1000;
-    if (/thesis/.test(String(it.itemType || '').toLowerCase())) s -= 2;  // theses demoted
+    var _itype = String(it.itemType || '').toLowerCase();
+    if (/thesis/.test(_itype)){
+      // tiered demotion (his rule): PhD -1, SM -2, MEng -3, SB -4
+      var tt = String(it.type || '').toLowerCase();
+      s -= /ph\.?\s*d/.test(tt) ? 1
+         : (/s\.?\s*b/.test(tt) ? 4
+         : (/m\.?\s*eng/.test(tt) ? 3
+         : (/s\.?\s*m/.test(tt) ? 2 : 2)));
+    } else if (_itype !== 'inproceedings' && _itype !== 'article'){
+      s -= 5;  // not a conference or journal paper (tech reports, talks, misc)
+    }
     return s;
   };
 

@@ -366,9 +366,12 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .cite-show-topline { text-align: left; margin: 2px 0 10px; }
 .cite-show-topline .btn { font-weight: 600; padding: 6px 14px; margin: 0 36px 0 0; }
 /* Impact categories gets a taller window: ~8 of its 11 rows visible */
-#facet-cite-cats .facet-scroll { max-height: 12em; }
-/* Cited and Used by fills its column: ~11 rows before scrolling */
-#facet-cite-authors .facet-scroll { max-height: 17em; }
+#facet-cite-cats .facet-scroll { max-height: 14em; }
+/* Cited and Used by reaches the box bottom without driving the grid:
+   the block is absolutely positioned over its reserved third track
+   (grid content-sizing would otherwise inflate the rows to fit an
+   uncapped list), and the list flexes to fill it exactly */
+#facet-cite-authors .facet-scroll { max-height: none; flex: 1; min-height: 0; }
 /* inside the box, lists hug their labels instead of bottom-aligning */
 .filter-grid.cite-tools > .filter-block .facet-list { margin-top: 0; }
 .cite-tools-row .type-toggle-btn { margin-right: 3px; }
@@ -379,7 +382,17 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 
 /* Paper thresholds: now its own full-width row below the cite-tools grid;
    the two sliders get real breathing room between them */
-.paper-thresholds-row { margin-top: 10px; }
+/* thresholds live under the left+middle columns; the Cited-and-Used-by
+   column spans both rows and its list stretches to the box bottom */
+.paper-thresholds-row { margin-top: 10px; grid-column: 1 / 3; }
+.cite-tools { position: relative; }
+.cite-authors-block {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: calc((100% - 20px) * 0.9 / 3.25);   /* the 0.9fr third track */
+  display: flex; flex-direction: column;
+}
+.cite-authors-block .facet-list { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
 .paper-thresholds-sliders {
   display: flex; gap: 56px; flex-wrap: wrap; align-items: center;
 }

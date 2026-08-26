@@ -1665,7 +1665,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       els.btnToggleSummaries.onclick = function(){
         state.summaryExpanded = !state.summaryExpanded;
         var open = state.summaryExpanded;
-        els.btnToggleSummaries.textContent = open ? 'Hide summaries' : 'Show summaries';
+        els.btnToggleSummaries.textContent = open ? 'Hide All Summaries' : 'Show All Summaries';
         els.btnToggleSummaries.setAttribute('aria-pressed', open ? 'true' : 'false');
         // :not(.cite-view) / :not(.cite-toggle): the citation panels share
         // the .pub-summary box styling but have their own expand-all below.
@@ -1681,7 +1681,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       els.btnToggleCitations.onclick = function(){
         state.citationsExpanded = !state.citationsExpanded;
         var on = state.citationsExpanded;
-        els.btnToggleCitations.textContent = on ? 'Hide citations' : 'Show citations';
+        els.btnToggleCitations.textContent = on ? 'Hide All Citations' : 'Show All Citations';
         els.btnToggleCitations.setAttribute('aria-pressed', on ? 'true' : 'false');
         if (window.CITATIONS){
           CITATIONS.setDefaultOpen(on);  // items rendered later follow suit
@@ -1695,7 +1695,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       els.btnToggleRepos.onclick = function(){
         state.reposExpanded = !state.reposExpanded;
         var on = state.reposExpanded;
-        els.btnToggleRepos.textContent = on ? 'Hide repositories' : 'Show repositories';
+        els.btnToggleRepos.textContent = on ? 'Hide All Repositories' : 'Show All Repositories';
         els.btnToggleRepos.setAttribute('aria-pressed', on ? 'true' : 'false');
         if (window.CITATIONS && CITATIONS.setAllReposOpen){
           CITATIONS.setRepoDefaultOpen(on);
@@ -1730,7 +1730,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
             if (!hint){
               hint = document.createElement('span');
               hint.className = 'cite-sort-hint';
-              hint.textContent = ' applies to open panels \u2014 press Show citations';
+              hint.textContent = ' applies to open panels \u2014 press Show All Citations';
               container.parentNode.appendChild(hint);
               setTimeout(function(){ if (hint.parentNode) hint.parentNode.removeChild(hint); }, 4000);
             }

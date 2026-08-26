@@ -1,34 +1,55 @@
 {
  "cohort": "professional-tier sweep: the 274 authors whose best free-harvest link is NOT a LinkedIn and NOT a permanent academic page (158 ORCID-only, 98 GitHub-only, 12 email, 6 personal sites)",
- "his_ruling": "2026-08-26: do ALL of them, in as few sittings as possible. LinkedIn is the default link target; a permanent academic page still replaces it. Same identity bar as the residue sittings; a 1st-degree connection is itself identity evidence.",
- "split": "The ORCID-only 158 are heavily academic, so a worker pass hunts permanent faculty/lab pages for them first (no LinkedIn exposure, and under the ruling those pages win anyway). The sittings work the GitHub-only 98 first - mostly students and engineers, where LinkedIn is the right target.",
- "progress": {"cohort_size": 98, "processed": 18, "resume_after": "Sheldon Chan", "next_people": ["Matthew Drake", "Peter Finch", "Matthew Frank", "Emily Furst", "Timothy Garnett", "William Harrod"]},
- "skipped_here": [
-  {"name": "Dan Campbell", "why": "only paper is amarasinghe:exascale:2009 - belongs to the parked exascale cohort (queue round 11 task 6), and a same-name trap is already flagged in the authors data"},
-  {"name": "Andrew Chien", "why": "exascale cohort and a sitting professor - his faculty page outranks LinkedIn under the ruling"}
+ "his_ruling": "2026-08-26: do ALL of them, in as few sittings as possible. An ACTIVE FACULTY PAGE ends the question - no LinkedIn lookup needed for that person. GitHub-only people are hard; try anyway, using the GitHub account itself as evidence (real name, company, location, personal site, and repos tied to the person's paper).",
+ "method_addition": "Before or alongside the LinkedIn search, read the GitHub profile via api.github.com (name/company/location/blog). It supplies the identity anchor for the LinkedIn match AND exposes bad harvest matches - see wrong_github_matches below.",
+ "progress": {"cohort_size": 98, "processed": 26, "resume_after": "Reid Kleckner", "next_people": ["David Koh", "Pratik Kotkar", "Aryan Kumar", "Andrew Lamb", "Samuel Larsen", "Ilia Lebedev", "Victor Lee"]},
+ "skipped_faculty": [
+  {"name": "Henry Hoffmann", "why": "UChicago professor - active faculty page ends the question under his ruling. The harvested GitHub account is also wrong (see below)"},
+  {"name": "Danai Koutra", "why": "Michigan professor - faculty page, no LinkedIn lookup"},
+  {"name": "Andrew Chien", "why": "UChicago professor; also part of the exascale cohort"},
+  {"name": "Taha Arbaoui", "why": "INSA Lyon - LinkedIn recorded below but his INSA page should be the link target"}
  ],
+ "skipped_here": [
+  {"name": "Dan Campbell", "why": "only paper is amarasinghe:exascale:2009 - parked exascale cohort (queue task 6); same-name trap already flagged"}
+ ],
+ "wrong_github_matches": {
+  "note": "Found by reading the GitHub profiles. These accounts belong to different people who share the author's name. A wrong account on a paper page is worse than no link - queue task 8 should drop or re-verify them, and the same audit should run over all 98.",
+  "cases": [
+   {"person": "Henry Hoffmann", "handle": "thehen", "actually": "Henry Hoffman, a UK game developer (henryhoffman.com) - not the UChicago professor on the PetaBricks papers"},
+   {"person": "Paras Jain", "handle": "retroportalstudio", "actually": "RetroPortal Studio, India, a YouTube channel - not the ML researcher"},
+   {"person": "William Harrod", "handle": "wharrod", "actually": "netdaemon.net - no sign of the DARPA program manager on the exascale report"},
+   {"person": "Matthew Frank", "handle": "maafrank", "actually": "maafrank.github.io looks like a present-day ML engineer, not the Raw-era MIT author - verify or drop"}
+  ]
+ },
  "data_flags": [
-  {"issue": "weak GitHub auto-matches worth an audit", "examples": ["Matthew Brown -> github muglug", "Johnathan Babb -> github warmace101", "Brad Chen -> github vvasabi", "Dan Campbell -> github Danny2097"], "note": "handle bears no relation to the name; these look like name-only matches of the kind the repo lane was told to avoid. Not blocking the LinkedIn work"},
   {"person_id": "johnathan-babb", "note": "spells his name Jonathan Babb on LinkedIn; data says Johnathan"}
  ],
  "rows": [
   {"name": "Asanka Abeyweera", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/asankaabeyweera", "evidence": "Associate Director/Architect at WSO2, Colombo; 29+ mutuals including Sanjiva Weerawarana"},
   {"name": "Abdurrahman Akkas", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/abdurrahman-akkas", "evidence": "Senior Software Engineer, edge AI inference, San Mateo; only technical profile of the name"},
-  {"name": "Taha Arbaoui", "verdict": "confirmed_but_academic", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/tahaarbaoui", "evidence": "Junior Professor Chair at INSA Lyon; mutual Riyadh Baghdadi (Tiramisu co-author); LinkedIn vanity matches the harvested GitHub handle. As sitting faculty his INSA page should be the link target"},
-  {"name": "Johnathan Babb", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/jonathan-babb-0b89129", "evidence": "Cambridge MA; mutual Michael Taylor (Raw co-author); matches the MIT Raw-era record"},
+  {"name": "Taha Arbaoui", "verdict": "confirmed_but_academic", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/tahaarbaoui", "evidence": "Junior Professor Chair at INSA Lyon; mutual Riyadh Baghdadi; LinkedIn vanity matches the harvested GitHub handle. INSA page should be the link target"},
+  {"name": "Johnathan Babb", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/jonathan-babb-0b89129", "evidence": "Cambridge MA; mutual Michael Taylor (Raw co-author)"},
   {"name": "Connelly Barnes", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/connelly-barnes-b72382115", "evidence": "Senior Research Scientist at Adobe Research; mutuals Kavita Bala and Jonathan Ragan-Kelley"},
-  {"name": "Iris Baron", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/iris-baron", "evidence": "profile 'Iris Baron (Fainaru)', Program Manager at IBM Infrastructure; mutuals Doug Mohr and Greg Sullivan (the DynamoRIO/Determina circle)"},
-  {"name": "Fatima Zohra Benhamida", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/fzbenhamida", "evidence": "displays as 'Fatima Zohra B.', Technical Product Manager at Dolead, France; vanity URL matches the harvested GitHub handle FZBenhamida; mutual Riyadh Baghdadi"},
+  {"name": "Iris Baron", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/iris-baron", "evidence": "'Iris Baron (Fainaru)', Program Manager at IBM Infrastructure; mutuals Doug Mohr and Greg Sullivan"},
+  {"name": "Fatima Zohra Benhamida", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/fzbenhamida", "evidence": "'Fatima Zohra B.', Technical Product Manager at Dolead, France; vanity URL matches GitHub handle FZBenhamida; mutual Riyadh Baghdadi"},
   {"name": "Ian Bratt", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/ianbratt", "evidence": "VP of ML Technology and Fellow (Arm); 69+ mutuals including Kurt Keutzer and Cliff Young"},
-  {"name": "Matthew Brown", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/matthew-brown-0558201", "evidence": "MIT BS Computer Science and Engineering; founder/CEO of ThoughtForge, Berkeley; mutual Matteo Frigo; matches the StreamIt-era MIT record"},
-  {"name": "Derek Bruening", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/derekbruening", "evidence": "Software Engineer at Google, Troy NY; 78+ mutuals including Nand Mulchandani; vanity URL matches the harvested GitHub handle; matches bruening:vee:2012"},
-  {"name": "Sheldon Chan", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/sheldonchan", "evidence": "Director at BlackRock, Greater Boston, past researcher at MIT; vanity URL matches the harvested GitHub handle; matches thies:www:2002"},
-  {"name": "Shreya Chaudhary", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/shreya-chaudhary-", "evidence": "displays as 'Shreya C.', MIT EECS '26, Research Assistant at CSAIL; matches Chaudhary:meng-thesis:2026"},
+  {"name": "Matthew Brown", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/matthew-brown-0558201", "evidence": "MIT BS CSE; founder/CEO ThoughtForge, Berkeley; mutual Matteo Frigo; matches the StreamIt-era MIT record"},
+  {"name": "Derek Bruening", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/derekbruening", "evidence": "Software Engineer at Google, Troy NY; 78+ mutuals including Nand Mulchandani; vanity URL matches GitHub handle"},
+  {"name": "Sheldon Chan", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/sheldonchan", "evidence": "Director at BlackRock, Greater Boston, past researcher at MIT; vanity URL matches GitHub handle"},
+  {"name": "Shreya Chaudhary", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/shreya-chaudhary-", "evidence": "'Shreya C.', MIT EECS '26, Research Assistant at CSAIL; matches Chaudhary:meng-thesis:2026"},
   {"name": "Brad Chen", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/brad-chen-b86158", "evidence": "past Principal Engineer at Google Inc.; 73+ mutuals; matches the Google affiliation on ansel:pldi:2011"},
-  {"name": "Yishen Chen", "verdict": "no_link", "evidence": "no profile matching the MIT CSAIL PhD record (Yishen:phd-thesis:2026); same-name results are unrelated academics"},
-  {"name": "Tyler Denniston", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/tyler-denniston", "evidence": "creator of Vexlio, Chapel Hill; 17+ mutuals including Charles Leiserson; matches denniston:sm-thesis:2016"},
-  {"name": "Kaustubh Dighe", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/kaustubh-dighe", "evidence": "ML engineer, MIT EECS SB and MEng, Cambridge MA; mutuals Bill Thies and Hari Balakrishnan; matches Dighe:meng-thesis:2024"},
-  {"name": "Alexandra Dima", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/alexandra-dima-556280149", "evidence": "Software Engineer at Hudson River Trading, London; past MIT undergraduate TA; matches alexandra:meng-thesis:2023"},
-  {"name": "Nicholas Dow", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/nldow", "evidence": "MIT Computer Science student-athlete, BS CS/neuroscience; matches Nicholas:meng-thesis:2025"}
+  {"name": "Yishen Chen", "verdict": "no_link", "evidence": "no profile matching the MIT CSAIL PhD record (Yishen:phd-thesis:2026)"},
+  {"name": "Tyler Denniston", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/tyler-denniston", "evidence": "creator of Vexlio; 17+ mutuals including Charles Leiserson; matches denniston:sm-thesis:2016"},
+  {"name": "Kaustubh Dighe", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/kaustubh-dighe", "evidence": "ML engineer, MIT EECS SB and MEng; mutuals Bill Thies and Hari Balakrishnan; matches Dighe:meng-thesis:2024"},
+  {"name": "Alexandra Dima", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/alexandra-dima-556280149", "evidence": "SWE at Hudson River Trading, London; past MIT undergraduate TA; matches alexandra:meng-thesis:2023"},
+  {"name": "Nicholas Dow", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/nldow", "evidence": "MIT Computer Science student-athlete; matches Nicholas:meng-thesis:2025"},
+  {"name": "Matthew Drake", "verdict": "no_link", "evidence": "same-name candidates are a legal executive and an unrelated designer; the GitHub account (gtg092x, Los Angeles) gives no anchor that matches the paper record"},
+  {"name": "Emily Furst", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/emily-furst-95bb11120", "evidence": "Researcher at AMD, Seattle; 10+ mutuals including Nuwan Jayasena; consistent with her GitHub site emilyfurst.com and the UW computer-architecture track"},
+  {"name": "Timothy Garnett", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/timothy-garnett-0017325", "evidence": "technical consultant, San Mateo; 28+ mutuals including Nand Mulchandani (the Determina circle); GitHub handle tgarnett matches"},
+  {"name": "Sid Henderson", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/sid-henderson", "evidence": "VP of Global Business Development at Exotec; mutuals Sheldon Chan and David Wang; GitHub lists Osaro/SF - Osaro to Exotec is a coherent warehouse-robotics track and the vanity URL matches the handle"},
+  {"name": "Zachary Holbrook", "verdict": "no_link", "evidence": "same-name candidates (Boston sales, NYC game design) show no tie to the paper record"},
+  {"name": "Claire Hsu", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/claire-hsu-2441a4132", "evidence": "SWE at Amperos, MIT CS '20, past undergraduate researcher at MIT CSAIL; GitHub handle cehsu"},
+  {"name": "Ajay Jain", "verdict": "confirmed", "degree": "2nd", "linkedin": "https://www.linkedin.com/in/ajay-jain", "evidence": "Co-founder and CTO at Genmo - matches the company on his GitHub profile (ajayjain, ajayj.com); co-creator of DDPM/DreamFusion"},
+  {"name": "Reid Kleckner", "verdict": "confirmed", "degree": "1st", "linkedin": "https://www.linkedin.com/in/reid-kleckner-73877721", "evidence": "compiler engineer, Palo Alto; 18+ mutuals including Kim Hazelwood; the LLVM/clang Reid Kleckner"}
  ]
 }

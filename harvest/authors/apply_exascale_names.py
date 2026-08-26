@@ -59,8 +59,8 @@ def main():
         if n and n.get('permanent_page'):
             p['name'] = n['full_name']
             p['candidates'] = [{
-                'tier': 'permanent-academic' if 'stonybrook' in n['permanent_page']
-                       else 'permanent-academic-memorial',
+                'tier': 'permanent-academic-memorial' if n.get('deceased')
+                       else 'permanent-academic',
                 'source': 'exascale_report_recovery',
                 'url': n['permanent_page'],
                 'evidence': n['permanent_page_note'],

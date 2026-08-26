@@ -9,6 +9,7 @@ with the real code -- a cleverer reimplementation would just be a second
 place for the two to silently diverge.
 """
 import json
+import math
 import os
 import re
 
@@ -372,7 +373,9 @@ def impact_score(row):
     s = 0.0
     for f, n in row['functions'].items():
         s += WEIGHTS.get(f, 0) * n
-    return round(s)
+    # JS Math.round rounds halves UP; Python round() is half-to-even.
+    # A paper whose only citation is passing (0.5) scores 1 on the page.
+    return math.floor(s + 0.5)
 
 
 def cite_count_of(it, cite_index):

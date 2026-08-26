@@ -2,7 +2,7 @@ RUN COMPLETE -- 100 tests, 100 passed, 0 failed, seed 42
 
 # UI random-settings test run -- report
 
-Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.py`, computed directly from the data files. Driver: Playwright against `http://localhost:8125`.
+Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.py`, computed directly from the data files. Driver: Playwright against `http://localhost:8124`.
 
 ## Control inventory (discovered at runtime from #pubs-filters)
 

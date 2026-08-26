@@ -1383,7 +1383,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       for (f in els.citeCats._catRefs){
         var ref = els.citeCats._catRefs[f];
         var rc = catRepos[f];
-        ref.node.nodeValue = ref.label + ' (' + (catPapers[f] || 0) +
+        ref.node.nodeValue = '(' + (catPapers[f] || 0) +
           ', cited by ' + (catCites[f] || 0) + ' papers' +
           (rc ? ' and ' + rc + ' repos' : '') + ')';
       }
@@ -1565,8 +1565,12 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
             var label = document.createElement('label'); label.className = 'facet-item';
             var cb = document.createElement('input'); cb.type = 'checkbox'; cb.value = f.key;
             var txt = document.createElement('span'); txt.className = 'facet-text';
-            var tn = document.createTextNode(f.label + ' (0)');
-            txt.appendChild(tn); txt.title = f.gloss;
+            txt.appendChild(document.createTextNode(f.label + ' '));
+            var cnt = document.createElement('span');
+            cnt.className = 'cat-counts';
+            var tn = document.createTextNode('(0)');
+            cnt.appendChild(tn);
+            txt.appendChild(cnt); txt.title = f.gloss;
             if (!els.citeCats._catRefs) els.citeCats._catRefs = {};
             els.citeCats._catRefs[f.key] = { node: tn, label: f.label };
             cb.onchange = function(){

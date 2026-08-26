@@ -418,7 +418,10 @@ def check_setting(drv, setting, F, results, do_expand):
         expansion_notes = check_expansions(drv, exp_items, F, problems)
 
     ok = not problems
-    results.append({'case': setting.label, 'ok': ok, 'problems': problems,
+    label = setting.label
+    if setting.sort_order != ft.DEFAULT_SORT_ORDER:
+        label += ' sort=%r' % setting.sort_order
+    results.append({'case': label, 'ok': ok, 'problems': problems,
                      'expansions': expansion_notes})
     return ok
 
@@ -471,9 +474,19 @@ def check_expansions(drv, items, F, problems):
             txt = (m1['summaryText'] or '')
             if not txt.strip():
                 problems.append('summary for %r opened but rendered empty' % title)
+            # Bare-word match only: catch a leaked JS undefined/null/NaN
+            # without flagging legitimate prose ("undefined-value detection",
+            # "null pointer", etc.) -- exclude hyphen-adjacent matches, since
+            # those are compound words, not interpolation artifacts.
             for bad in ('undefined', 'null', 'NaN'):
-                if bad in txt:
-                    problems.append('summary for %r contains literal %r' % (title, bad))
+                for m in re.finditer(r'\b%s\b' % bad, txt):
+                    before = txt[m.start() - 1] if m.start() > 0 else ' '
+                    after = txt[m.end()] if m.end() < len(txt) else ' '
+                    if before == '-' or after == '-':
+                        continue
+                    problems.append('summary for %r contains literal %r (context: %r)'
+                                     % (title, bad, txt[max(0, m.start() - 20):m.end() + 20]))
+                    break
             html = m1['summaryHtml'] or ''
             if re.search(r'&lt;a |&lt;/a&gt;', html):
                 problems.append('summary for %r shows raw unescaped markup' % title)
@@ -650,6 +663,15 @@ def main():
 
         for i, kind in enumerate(plan):
             drv.reset()
+            # Reload the oracle's data snapshot right before each test: this
+            # is a live, actively-edited shared repo (other lanes commit to
+            # data/citations/*, data/repos/*, etc. mid-run) -- each
+            # drv.reset() re-fetches the CURRENT files from disk, so the
+            # oracle must too, or a concurrent write mid-run reads as a
+            # false site bug (an order/count mismatch that's really just
+            # oracle-vs-page looking at two different moments in time).
+            F = ft.Facts()
+            ft.F = F
             if kind == 'single':
                 setting = gen_single(rng, model, F)
             elif kind == 'multi':

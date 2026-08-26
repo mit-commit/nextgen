@@ -44,7 +44,7 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 - `mode`: ['noninteractive', 'interactive']
 
 ### Standalone buttons
-`#btn-toggle-summaries`, `#btn-toggle-citations`, `#btn-toggle-repos`, `#btn-clear`, `#btn-export-bib`, `#sort-reset`
+`#btn-clear`, `#btn-export-bib`, `#sort-reset`, `#btn-toggle-summaries`, `#btn-toggle-citations`, `#btn-toggle-repos`
 
 ## Interpretation notes (per the spec's "STOP rather than guess" instruction)
 

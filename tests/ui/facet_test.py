@@ -11,7 +11,7 @@ panel's global sort + Show-toggle buttons.
 Usage:
     python3 tests/ui/facet_test.py [--base-url http://localhost:8123] [--headed]
 
-Writes tests/ui/report.md with pass/fail counts and repro selections for
+Writes tests/ui/combinatorial-report.md with pass/fail counts and repro selections for
 every failure found.
 """
 import argparse
@@ -155,6 +155,12 @@ class Driver(object):
         self.page.wait_for_function(
             "document.getElementById('pubs-count').textContent.trim().length > 0")
         self.console_errors[:] = []
+        # This is a live, actively-edited shared repo -- reload() just
+        # re-fetched whatever's CURRENTLY on disk, so the oracle must look
+        # at the same snapshot or a concurrent commit mid-run reads as a
+        # false site bug (oracle and page compared at two different moments).
+        global F
+        F = Facts()
 
     def click_clear_button(self):
         self.page.click('#btn-clear')
@@ -630,7 +636,7 @@ def run_boot_sanity(drv, results):
 # ---------------- Report ----------------
 
 def write_report(results, base_url, phase_counts):
-    path = os.path.join(HERE, 'report.md')
+    path = os.path.join(HERE, 'combinatorial-report.md')
     test_results = [r for r in results if not r['case'].startswith('SCOPE NOTE')]
     total = len(test_results)
     failed = [r for r in test_results if not r['ok']]

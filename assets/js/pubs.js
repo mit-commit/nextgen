@@ -250,7 +250,13 @@ function localizeAssetURL(url) {
             if (r) s += (r.repos || 0) / 1000;
             return s;
           }
-          var scored = all.slice().sort(function(a, b){ return scoreOf(b) - scoreOf(a); });
+          // theses never feature -- papers only (his rule)
+          var THESIS = { mastersthesis: 1, phdthesis: 1, sciencethesis: 1, sbthesis: 1 };
+          var pool = all.filter(function(it){
+            var t = String(it.itemType || '').toLowerCase();
+            return !THESIS[t] && t.indexOf('thesis') === -1;
+          });
+          var scored = pool.sort(function(a, b){ return scoreOf(b) - scoreOf(a); });
           renderList(opts.mountFeatured, scored.slice(0, 10));
         });
       }

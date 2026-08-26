@@ -367,6 +367,10 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .cite-show-topline .btn { font-weight: 600; padding: 6px 14px; margin: 0 36px 0 0; }
 /* Impact categories gets a taller window: ~8 of its 11 rows visible */
 #facet-cite-cats .facet-scroll { max-height: 12em; }
+/* Cited and Used by fills its column: ~11 rows before scrolling */
+#facet-cite-authors .facet-scroll { max-height: 17em; }
+/* inside the box, lists hug their labels instead of bottom-aligning */
+.filter-grid.cite-tools > .filter-block .facet-list { margin-top: 0; }
 .cite-tools-row .type-toggle-btn { margin-right: 3px; }
 @media (max-width: 820px) { .cite-tools { grid-template-columns: 1fr; } }
 

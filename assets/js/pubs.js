@@ -222,17 +222,38 @@ function localizeAssetURL(url) {
   PUBS.loadAndRender = function (opts) {
     var path = (opts && opts.jsonPath) || JSON_PATH_DEFAULT;
     getJSON(path, function (arr) {
-      var featured = [];
       var all = [];
-      for (var i = 0; i < arr.length; i++) {
-        var it = arr[i];
-          all.push(it);
-        if (it.price || it.featured) featured.push(it); // featured: award paper or explicit flag
-      }
-	featured.sort((a, b) => toYear(b.year) - toYear(a.year));
+      for (var i = 0; i < arr.length; i++) all.push(arr[i]);
       if (opts && opts.filterFn) all = opts.filterFn(all) || all;
-      if (opts && opts.mountAll)      renderList(opts.mountAll, all);
-      if (opts && opts.mountFeatured) renderList(opts.mountFeatured, featured);
+      if (opts && opts.mountAll) renderList(opts.mountAll, all);
+      if (opts && opts.mountFeatured) {
+        // Featured = top 10 by his 2026-08-26 scale:
+        //   award papers: +12 - 3 per year since the award (paper year)
+        //   every paper:  +10 - 1 per year since publication
+        //   + citations/100 + repos/1000 (from the two small indexes)
+        var nowY = new Date().getFullYear();
+        Promise.all([
+          fetch('data/citations/index.json', { cache: 'no-store' })
+            .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; }),
+          fetch('data/repos/index.json', { cache: 'no-store' })
+            .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+        ]).then(function(idx){
+          var ci = (idx[0] && idx[0].papers) || {};
+          var ri = (idx[1] && idx[1].papers) || {};
+          function scoreOf(it){
+            var age = nowY - (toYear(it.year) || nowY);
+            var s = Math.max(0, 10 - age);          // recency fades to 0
+            if (it.price) s += Math.max(0, 12 - 3 * age);  // award bonus fades to 0, never negative
+            var c = ci[it.bibtexKey];
+            if (c) s += Math.max(c.verified || 0, c.gscholar || 0) / 100;
+            var r = ri[it.bibtexKey];
+            if (r) s += (r.repos || 0) / 1000;
+            return s;
+          }
+          var scored = all.slice().sort(function(a, b){ return scoreOf(b) - scoreOf(a); });
+          renderList(opts.mountFeatured, scored.slice(0, 10));
+        });
+      }
     }, function (err) {
       if (opts && opts.mountAll)      opts.mountAll.textContent = 'Failed to load publications: ' + err.message;
       if (opts && opts.mountFeatured) opts.mountFeatured.textContent = 'Failed to load featured publications: ' + err.message;

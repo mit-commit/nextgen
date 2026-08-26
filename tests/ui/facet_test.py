@@ -584,14 +584,14 @@ def run_clear_filters_bug_case(drv, results):
     ):
         r = drv.click_checkbox(box_id, value)
         cnt = parse_count(drv.read_render()['count'])
-        if r == 'clicked:True' or (cnt is not None and cnt != len(F.data)):
+        if r.lower() == 'clicked:true' or (cnt is not None and cnt != len(F.data)):
             continue  # this run's build already fixed it -- nothing to report
         problems.append('after Clear Filters, clicking %s did not filter the list '
                          '(click result=%r, paper count stayed at %s)' % (label, r, cnt))
     # Control: Authors keeps working after Clear Filters (rebuilt facet).
     r = drv.click_checkbox('facet-authors', 'Saman Amarasinghe')
     cnt = parse_count(drv.read_render()['count'])
-    control_ok = r.startswith('clicked:True') and cnt not in (None, len(F.data))
+    control_ok = r.lower().startswith('clicked:true') and cnt not in (None, len(F.data))
     if not control_ok:
         problems.append('control check failed too (Authors facet after Clear Filters, '
                          'click=%r, count=%s) -- re-verify the diagnosis by hand' % (r, cnt))

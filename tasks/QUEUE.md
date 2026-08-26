@@ -11,12 +11,15 @@ checks, GUI review, account-gated fetching. Canonical-over-fork for repos.
 LinkedIn default; permanent academic page replaces it; else best active
 site; else email. Identity POSITIVELY verified (education/timeframe);
 unconfirmables go to HIM, never dropped, never guessed.
+Added later the same day: a 1st-degree connection is itself identity
+evidence; confirmed non-1st-degree people go on
+harvest/authors/linkedin-connect-list.md for him to invite.
 
-## PRIORITY (2026-08-26, him): finish DATA TAILS and SITE tasks now.
-LinkedIn sittings are ON HOLD until he is available again — do not
-build on linkedin-results.json yet beyond schema; Fable's author-link
-render can land with what links.json + academic pages give and pick up
-LinkedIn rows later.
+## HUMAN RULINGS 2026-08-26 (LinkedIn sitting 2 close-out)
+1. Richard P. Sollee III = the /in/solleer profile — CONFIRMED by him.
+2. yee-lok-won and yee-lok-wong are ONE person — merge approved.
+3. "Y. Zibin" -> full name Yoav Zibin — rename approved.
+4. Exascale-report initials: recover full names if possible, then link.
 
 ## OPEN — round 11
 1. [sonnet] **UI combinatorial test run**: tests/ui/facet_test.py —
@@ -37,18 +40,42 @@ LinkedIn rows later.
    ~/workspace/nextgen-fulltext) if not already ingested.
 4. [fable] **site round leftovers**: TEMP "Pilot papers only" button
    deletion; halide tier-3 162-row fold; spot-render of the big panels;
-   author-name links per the RULING using links.json (LinkedIn rows join
-   later when sittings resume).
+   author-name links per the RULING, now joining linkedin-results.json
+   (60 of 74 residue people resolved) to links.json.
+5. [sonnet] **apply the sitting-2 rulings** to harvest/authors/:
+   (a) set Richard P. Sollee III to confirmed with the /in/solleer URL and
+   add him to linkedin-connect-list.md (2nd-degree) — already added to the
+   MD, so only the JSON row and any downstream join need it;
+   (b) merge person yee-lok-won into yee-lok-wong across authors.json,
+   enriched.json and links.json (papers ansel:cgo:2011 and
+   ansel:mitcsail-tr:2010 move onto the merged person); leave the merged
+   record's LinkedIn empty until he rules on the candidate;
+   (c) rename person y-zibin to Yoav Zibin and attach
+   https://www.linkedin.com/in/yoav-zibin-6392651.
+6. [sonnet] **exascale author names**: the 13 initials-only co-authors of
+   amarasinghe:exascale:2009 (W. Carlson, R. Harrison, K. Hill, Jon Hiller,
+   S. Karp, C. Koelbel, D. Koester, J. Levesque, P. Negi, C. Pacheco,
+   A. Scarpelli, F. Sherwood, A. Snavely). Recover full names + 2008-09
+   affiliations from the report itself (the DARPA IPTO ExaScale Computing
+   Study front matter lists the full study group with affiliations), not
+   from guesswork; where the report is ambiguous leave the person
+   unresolved and say so. Deliver harvest/authors/exascale-names.json
+   {person_id, full_name, affiliation, evidence(page/section)}. Several are
+   likely to have permanent lab or faculty pages, which outrank LinkedIn
+   under the ruling — record those URLs too. The residue that still needs a
+   LinkedIn lookup comes back to the coordinator for a sitting.
 
 ## PARKED (needs the human / coordinator)
-- LinkedIn sittings: ON HOLD until he returns (5 done, 69 no-link people
-  remain, then the professional-tier people).
-- Unconfirmable-identity review batches: queued to him when they exist.
+- Two identity questions still open: Yee Lok Wong candidate
+  (/in/yee-lok-wong) and the Ronald Dresklinski -> Dreslinski spelling fix.
+- Sitting-1 degree backfill (Agrawal, Barrett, Cooper, Dasika, Erlingsson)
+  so any non-1st-degree ones reach the invite list.
 - Cutover: final review, then point the live site at nextgen.
 
 ## DONE (recent)
-- LinkedIn sitting 1 start: method proven, 2 confirmed / 2 no-link
-  (linkedin-results.json).
+- LinkedIn sittings 1-2: 60 of the 74 no-link people resolved — 40
+  confirmed, no-link where nothing met the bar; 13 exascale initials parked
+  into task 6 above.
 - Author-links free harvest: 369 people — 43 academic, 237 professional,
   3 personal, 12 email, 74 nothing.
 - Authors Scholar sitting: 31 match / 2 tentative / 35 no-profile / 9

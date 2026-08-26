@@ -358,21 +358,41 @@ function createBibLink(it){
   // fetch decides which papers get a Repositories toggle; per-paper files
   // load lazily on expand. Absent index -> no toggles anywhere.
   var REPO_INDEX = null;
+  // A failed data fetch must be LOUD, and must not take siblings down
+  // with it: each fetch fails independently, logs the path, and surfaces
+  // one visible line in the overview box (dataLoadFailed collects them).
+  var DATA_LOAD_FAILURES = [];
+  function dataLoadFailed(path, err){
+    DATA_LOAD_FAILURES.push(path);
+    if (window.console) console.error('publications: failed to load ' + path, err);
+    var box = document.getElementById('cite-overview');
+    if (box){
+      var note = box.querySelector('.data-load-failures');
+      if (!note){
+        note = document.createElement('div');
+        note.className = 'cite-overview-line data-load-failures';
+        box.appendChild(note);
+        box.className = 'cite-overview';
+      }
+      note.textContent = 'Some data failed to load: ' + DATA_LOAD_FAILURES.join(', ') +
+        ' — the page is missing those features. Reload to retry.';
+    }
+  }
   var citeIndexReady = (window.CITATIONS
     ? Promise.all([
         CITATIONS.loadIndex().then(function(idx){
           CITE_INDEX = (idx && idx.papers) || null;
-        }),
+        }).catch(function(e){ CITE_INDEX = null; dataLoadFailed('data/citations/index.json', e); }),
         fetch('data/citations/reception.json', { cache: 'no-store' })
-          .then(function(r){ return r.ok ? r.json() : {}; })
+          .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then(function(rec){ RECEPTIONS = rec || {}; })
-          .catch(function(){ RECEPTIONS = {}; }),
+          .catch(function(e){ RECEPTIONS = {}; dataLoadFailed('data/citations/reception.json', e); }),
         CITATIONS.loadRepoIndex()
           .then(function(idx){ REPO_INDEX = (idx && idx.papers) || null; })
-          .catch(function(){ REPO_INDEX = null; })
+          .catch(function(e){ REPO_INDEX = null; dataLoadFailed('data/repos/index.json', e); })
       ])
     : Promise.resolve()
-  ).catch(function(){ CITE_INDEX = null; });
+  );
 
   // The paper's displayed citation count — max(verified, Google Scholar) —
   // for the list-level "Citations" sort; -1 when the paper has no data,
@@ -554,7 +574,7 @@ function createBibLink(it){
         rebuildCiteAuthorFacet();
         applyFilters();
       })
-      .catch(function(){});
+      .catch(function(e){ dataLoadFailed('data/impact-authors.json', e); });
   });
 
   // Distinct citing works across papers (data/citations/citers.json,
@@ -572,7 +592,7 @@ function createBibLink(it){
         AUTHOR_LINKS = (d && d.links) || null;
         if (AUTHOR_LINKS) applyFilters();
       })
-      .catch(function(){});
+      .catch(function(e){ dataLoadFailed('data/author-links.json', e); });
   });
   function foldAuthorName(s){
     return String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
@@ -595,7 +615,7 @@ function createBibLink(it){
         CITERS = (d && d.papers) || null;
         if (CITERS && _lastOverviewItems) renderCiteOverview(_lastOverviewItems);
       })
-      .catch(function(){});
+      .catch(function(e){ dataLoadFailed('data/citations/citers.json', e); });
   });
   function impactTierLabel(score){
     if (score == null || score < 0) return 'No impact data yet';
@@ -702,7 +722,7 @@ function createBibLink(it){
 
   // If pubs.js is loaded, reuse its localizer and bib link; else graceful fallback
     //  var localizeURL = (window.PUBS && PUBS.localizeAssetURL) ? function(u){ try{return PUBS.localizeAssetURL(u);}catch(_){return u;} } : function(u){ return u; };
-  var makeBibLink = (window.PUBS && PUBS.makeBibDownloadLink) ? PUBS.makeBibDownloadLink : function(){ var a=document.createElement('span'); return a; };
+
 
   /* ---------- Build static UI shells (kept; content dynamic) ---------- */
 
@@ -1011,6 +1031,8 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
   /* ---------- Rendering one publication (same look as index) ---------- */
   // Summary text is trusted local JSON containing embedded <a> links.
+  var makeBibLink = (window.PUBS && PUBS.makeBibDownloadLink) ? PUBS.makeBibDownloadLink : function(){ var a=document.createElement('span'); return a; };
+
   function renderSummaryInto(container, summaryText, receptionText){
     var paras = summaryText ? String(summaryText).split(/\n\n+/) : [], i, p;
     container.innerHTML = '';
@@ -1529,8 +1551,11 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         }
       }
     }
+    var keepNote = box.querySelector('.data-load-failures');
     box.innerHTML = '';
-    if (!withData.length){ box.className = 'cite-overview hidden'; return; }
+    if (keepNote) box.appendChild(keepNote);
+    if (!withData.length && !keepNote){ box.className = 'cite-overview hidden'; return; }
+    if (!withData.length){ box.className = 'cite-overview'; return; }
     box.className = 'cite-overview';
     var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
     l1.title = 'Citations sum each paper\u2019s count, as Scholar does; citing works and repositories are counted once each';

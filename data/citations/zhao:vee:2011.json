@@ -7,10 +7,40 @@
   "records_raw": 98,
   "works": 85,
   "commit": 2,
-  "judged": 67,
+  "judged": 70,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Transparent dynamic instrumentation",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2365864.2151043",
+   "cited_by": 124,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "NumaPerf",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2021,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Xin Zhao, Jin Zhou, Hui Guan et al.",
+   "url": "https://doi.org/10.1145/3447818.3460361",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
   {
    "title": "Detecting False Sharing in OpenMP Applications Using the DARWIN Framework",
    "function": "adopts-idea",
@@ -36,30 +66,30 @@
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "supports-claim",
-    "detailed-citation"
+    "positions",
+    "uses-tool"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
-   "title": "Leveraging Cache Coherence to Detect and Repair False Sharing On-the-fly",
+   "title": "CachePerf",
    "function": "positions",
    "split": "detailed",
-   "year": 2024,
-   "venue": "Micro",
-   "authors": "Vipinchandra Patel, Swarnendu Biswas, M. Chaudhuri",
-   "url": "https://doi.org/10.1109/micro61859.2024.00066",
-   "cited_by": 3,
-   "centrality": "peripheral",
+   "year": 2022,
+   "venue": "Measurement and Modeling of Computer Systems",
+   "authors": "Jin Zhou, Steven Tang, Hanmei Yang et al.",
+   "url": "https://doi.org/10.1145/3489048.3526954",
+   "cited_by": 1,
+   "centrality": "engaged",
    "confidence": "medium",
    "secondary": [
-    "exemplifies"
+    "supports-claim"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Huron: hybrid false sharing detection and repair",
@@ -120,22 +150,22 @@
    "authors": "Xu Liu, Bo Wu",
    "url": "https://doi.org/10.1145/2807591.2807648",
    "cited_by": 50,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "PREDATOR",
    "function": "positions",
    "split": "detailed",
    "year": 2014,
-   "venue": "ACM SIGPLAN Notices",
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
    "authors": "Tongping Liu, Chen Tian, Ziang Hu et al.",
-   "url": "https://doi.org/10.1145/2692916.2555244",
+   "url": "https://doi.org/10.1145/2555243.2555244",
    "cited_by": 33,
    "centrality": "engaged",
-   "confidence": "medium",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Reliable and Efficient Multithreading",
@@ -152,6 +182,23 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Whose cache line is it anyway?",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "European Conference on Computer Systems",
+   "authors": "Mihir Nanavati, Mark Spear, Nathan Taylor et al.",
+   "url": "https://doi.org/10.1145/2465351.2465366",
+   "cited_by": 26,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Precise Detection and Automatic Mitigation of False Sharing",
@@ -195,19 +242,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "NumaPerf",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2021,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Xin Zhao, Jin Zhou, Hui Guan et al.",
-   "url": "https://doi.org/10.1145/3447818.3460361",
-   "cited_by": 9,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
    "title": "ShaVe-ICE",
    "function": "supports-claim",
    "split": "detailed",
@@ -218,7 +252,7 @@
    "cited_by": 6,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Software Assists to On-chip Memory Hierarchy of Manycore Embedded Systems",
@@ -290,8 +324,8 @@
    "url": "https://doi.org/10.1145/2968447",
    "cited_by": 8,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Optimizing Job Scheduling on Multicore Computers",
@@ -331,35 +365,6 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
-  },
-  {
-   "title": "Whose cache line is it anyway?",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2013,
-   "venue": "European Conference on Computer Systems",
-   "authors": "Mihir Nanavati, Mark Spear, Nathan Taylor et al.",
-   "url": "https://doi.org/10.1145/2465351.2465366",
-   "cited_by": 26,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "secondary": [
-    "exemplifies"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "CachePerf",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2022,
-   "venue": "Measurement and Modeling of Computer Systems",
-   "authors": "Jin Zhou, Steven Tang, Hanmei Yang et al.",
-   "url": "https://doi.org/10.1145/3489048.3526954",
-   "cited_by": 1,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
   },
   {
    "title": "Optimising Dynamic Binary Modification Across ARM Microarchitectures",
@@ -490,23 +495,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Transparent dynamic instrumentation",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2012,
-   "venue": "International Conference on Virtual Execution Environments",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2151024.2151043",
-   "cited_by": 124,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
-  },
-  {
    "title": "Operator, number please : mediating access to shared resources for efficiency and isolation",
    "function": "detailed-citation",
    "split": "detailed",
@@ -577,6 +565,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Leveraging Cache Coherence to Detect and Repair False Sharing On-the-fly",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "Micro",
+   "authors": "Vipinchandra Patel, Swarnendu Biswas, M. Chaudhuri",
+   "url": "https://doi.org/10.1109/micro61859.2024.00066",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "MemPerf: Profiling Allocator-Induced Performance Slowdowns",
@@ -655,6 +656,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "A Dynamic Instrumentation Technology for IoT Devices",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2020,
+   "venue": "Advances in intelligent systems and computing",
+   "authors": "Chen Chen, Weikong Qi, Wenting Jiang et al.",
+   "url": "https://doi.org/10.1007/978-3-030-50399-4_29",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Firmware code instrumentation technology for internet of things-based services",
@@ -755,16 +769,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2017,
-   "venue": "International Conference on Virtual Execution Environments",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Amanieu d'Antras, Cosmin Gorgovan, Jim Garside et al.",
-   "url": "https://doi.org/10.1145/3050748.3050756",
+   "url": "https://doi.org/10.1145/3140607.3050756",
    "cited_by": 9,
    "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Identifying thread interference with performance variation",
@@ -809,16 +820,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2015,
-   "venue": "ACM SIGPLAN International Conference on Functional Programming",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Ryan Newton, Peter Fogg, Ali Varamesh",
-   "url": "https://doi.org/10.1145/2784731.2784734",
+   "url": "https://doi.org/10.1145/2858949.2784734",
    "cited_by": 8,
    "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Developing Graph-Based Co-Scheduling Algorithms on Multicore Computers",
@@ -834,6 +842,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "False Sharing Detection in OpenMP Applications Using OMPT API",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Lecture notes in computer science",
+   "authors": "Millad Ghane, Abid M. Malik, Barbara Chapman et al.",
+   "url": "https://doi.org/10.1007/978-3-319-24595-9_8",
+   "cited_by": 7,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Modelling and Developing Co-scheduling Strategies on Multicore Processors",
    "function": "passing-citation",
    "split": "passing",
@@ -845,6 +866,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Spin lock killed the performance star",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "International Conference of the Chilean Computer Science Society",
+   "authors": "Diego Rivera, Sebastian Blasco, Javier Bustos-Jiménez et al.",
+   "url": "https://doi.org/10.1109/sccc.2015.7416588",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Impact of Cache on Data-Sharingin Multi-Threaded Programmes",
@@ -876,16 +910,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2013,
-   "venue": "International Symposium on Computer Architecture",
+   "venue": "ACM SIGARCH Computer Architecture News",
    "authors": "Hailong Yang, Alex D. Breslow, Jason Mars et al.",
-   "url": "https://doi.org/10.1145/2485922.2485974",
+   "url": "https://doi.org/10.1145/2508148.2485974",
    "cited_by": 348,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Fast dynamic binary translation for the kernel",
@@ -982,20 +1013,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Spin lock killed the performance star",
-   "function": "unknown",
-   "split": null,
-   "year": 2015,
-   "venue": "International Conference of the Chilean Computer Science Society",
-   "authors": "Diego Rivera, Sebastian Blasco, Javier Bustos-Jiménez et al.",
-   "url": "https://doi.org/10.1109/sccc.2015.7416588",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs",
    "function": "unknown",
    "split": null,
@@ -1028,14 +1045,14 @@
    "function": "unknown",
    "split": null,
    "year": 2013,
-   "venue": "International Conference on Virtual Execution Environments",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Ning Jia, Chun Yang, Jing Wang et al.",
-   "url": "https://doi.org/10.1145/2451512.2451516",
+   "url": "https://doi.org/10.1145/2517326.2451516",
    "cited_by": 19,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract+contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Modeling and Analyzing Key Performance Factors of Shared Memory MapReduce",
@@ -1050,17 +1067,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract+contexts"
-  },
-  {
-   "title": "A Dynamic Instrumentation Technology for IoT Devices",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "Advances in intelligent systems and computing",
-   "authors": "Chen Chen, Weikong Qi, Wenting Jiang et al.",
-   "url": "https://doi.org/10.1007/978-3-030-50399-4_29",
-   "cited_by": 1,
-   "evidence": "title_only"
   },
   {
    "title": "Data-driven Spatial Locality",
@@ -1098,17 +1104,6 @@
    "authors": "Jeevan Sirkunan, Chia Yee Ooi, Nasir Shaikh-Husin et al.",
    "url": "https://doi.org/10.1016/j.sysarc.2016.12.006",
    "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "False Sharing Detection in OpenMP Applications Using OMPT API",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Lecture notes in computer science",
-   "authors": "Millad Ghane, Abid M. Malik, Barbara Chapman et al.",
-   "url": "https://doi.org/10.1007/978-3-319-24595-9_8",
-   "cited_by": 7,
    "evidence": "title_only"
   },
   {

@@ -1,31 +1,30 @@
 {
  "paper": "ansel:pact:2014",
  "slug": "10.1145_2813885.2737974",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "uses-tool",
+ "centrality": "engaged",
  "flags": [
-  "own-group",
-  "polluted-contexts"
+  "own-group"
  ],
  "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation context anchors to OpenTuner; abstract-only evidence with shared authors but no mention of the cited work.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly uses the OpenTuner-based Halide tuner (reference [4]) to tune schedules for generated Halide code for six hours each, making it a consumed infrastructure tool.",
  "title": "Helium: lifting high-performance stencil kernels from stripped x86 binaries to halide DSL code",
  "year": 2015,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2910,
+  "input_tokens": 3922,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 269,
+  "output_tokens": 113,
   "service_tier": "batch",
   "inference_geo": "global"
  }

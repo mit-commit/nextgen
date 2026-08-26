@@ -1,16 +1,18 @@
 {
  "paper": "gordon:asplos:2002",
  "slug": "10.1145_1629911.1629987",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [
-  "polluted-contexts"
+  "own-group"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract+contexts",
- "anchored": "none",
- "note": "The two S2 contexts are garbled/non-anchoring fragments that do not reference the cited work, and the possible surname match (Wong) is uncertain; insufficient evidence to assign a function.",
+ "secondary": [
+  "adopts-idea"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work uses StreamIt [10] as its stream programming language substrate throughout, describes and builds on its graph topology and rate-declaration features, and references the cited ASPLOS 2002 paper as the source of compiler optimizations enabled by explicit rate information.",
  "title": "A computing origami",
  "year": 2009,
  "s2_isInfluential": false,
@@ -20,14 +22,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2689,
+  "input_tokens": 4425,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 79,
+  "output_tokens": 129,
   "service_tier": "batch",
   "inference_geo": "global"
  }

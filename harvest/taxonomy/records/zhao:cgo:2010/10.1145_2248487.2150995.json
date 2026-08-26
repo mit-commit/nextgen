@@ -1,30 +1,32 @@
 {
  "paper": "zhao:cgo:2010",
  "slug": "10.1145_2248487.2150995",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [
   "own-group"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "Abstract mentions Umbra-related themes (memory shadowing, instrumentation) but never anchors to the cited paper specifically; no citation context available to confirm a reference.",
+ "secondary": [
+  "extends"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "Aikido is explicitly implemented as an extension to the Umbra project, uses it as infrastructure for shadow memory and mirror pages, and provides a dedicated background section describing Umbra's design.",
  "title": "Aikido",
  "year": 2012,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2781,
+  "input_tokens": 4067,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 102,
+  "output_tokens": 111,
   "service_tier": "batch",
   "inference_geo": "global"
  }

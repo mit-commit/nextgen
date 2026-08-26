@@ -7,7 +7,7 @@
   "records_raw": 74,
   "works": 71,
   "commit": 8,
-  "judged": 58,
+  "judged": 64,
   "gscholar": null
  },
  "citations": [
@@ -58,7 +58,10 @@
    "cited_by": 0,
    "centrality": "core",
    "confidence": "high",
-   "evidence": "contexts"
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A Closeness Centrality-based Circuit Partitioner for Quantum Simulations",
@@ -72,6 +75,19 @@
    "centrality": "core",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Guided Tensor Lifting",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Yixuan Li, José Wesley de Souza Magalhães, Alexander Brauckmann et al.",
+   "url": "https://doi.org/10.1145/3729330",
+   "cited_by": 3,
+   "centrality": "core",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "SparseP",
@@ -188,22 +204,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Sparseloop: An Analytical Approach To Sparse Tensor Accelerator Modeling",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 2022,
-   "venue": "Micro",
-   "authors": "Yannan Nellie Wu, Po-An Tsai, Angshuman Parashar et al.",
-   "url": "https://doi.org/10.1109/micro56248.2022.00096",
-   "cited_by": 75,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "exemplifies"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Accelerating the \"Motifs\" in Machine Learning on Modern Processors",
    "function": "adopts-idea",
    "split": "detailed",
@@ -252,6 +252,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "SpEQ: Translation of Sparse Codes using Equivalences",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2024,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Avery Laird, Bangtian Liu, Nikolaj Bjørner et al.",
+   "url": "https://doi.org/10.1145/3656445",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "SparseZETA: Intelligent Auto-tuner for Designing High-Performance SpMV Programs",
    "function": "baseline",
    "split": "detailed",
@@ -280,6 +296,25 @@
     "exemplifies"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2024,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Xiaoyan Liu, Xuegui Zheng, Hailong Yang et al.",
+   "url": "https://doi.org/10.1145/3627535.3638471",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "lineage"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Accelerating Sparse MTTKRP for Tensor Decomposition on FPGA",
@@ -322,11 +357,11 @@
    "url": "https://doi.org/10.1109/llvmhpc54804.2021.00009",
    "cited_by": 33,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
     "positions"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Capstan: A Vector RDA for Sparsity",
@@ -395,6 +430,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Heuristic Adaptability to Input Dynamics for SpMM on GPUs",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "Design Automation Conference",
+   "authors": "Guohao Dai, Guyue Huang, Shang Yang et al.",
+   "url": "https://doi.org/10.1145/3489517.3530508",
+   "cited_by": 27,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR",
    "function": "positions",
    "split": "detailed",
@@ -431,7 +479,7 @@
    "cited_by": 62,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Fast and Fusiest: An Optimal Fusion-Aware Mapper for Accelerator Design",
@@ -510,17 +558,17 @@
    "evidence": "abstract"
   },
   {
-   "title": "Enabling Efficient Sparse Multiplications on GPUs With Heuristic Adaptability",
+   "title": "A Coordinated Strategy for GNN Combining Computational Graph and Operator Optimizations",
    "function": "exemplifies",
    "split": "passing",
    "year": 2024,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Jiaming Xu, Shan Huang, Jinhao Li et al.",
-   "url": "https://doi.org/10.1109/tcad.2024.3518413",
-   "cited_by": 3,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Mingyi Li, Junmin Xiao, Kewei Zhang et al.",
+   "url": "https://doi.org/10.1145/3650200.3661896",
+   "cited_by": 4,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "LO-SpMM: Low-cost Search for High-performance SpMM Kernels on GPUs",
@@ -586,6 +634,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Sparseloop: An Analytical Approach To Sparse Tensor Accelerator Modeling",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2022,
+   "venue": "Micro",
+   "authors": "Yannan Nellie Wu, Po-An Tsai, Angshuman Parashar et al.",
+   "url": "https://doi.org/10.1109/micro56248.2022.00096",
+   "cited_by": 75,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Domain-Specific Language Abstractions for Compression",
@@ -682,22 +743,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2024,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Xiaoyan Liu, Xuegui Zheng, Hailong Yang et al.",
-   "url": "https://doi.org/10.1145/3627535.3638471",
-   "cited_by": 2,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "C2TACO: Lifting Tensor Code to TACO",
    "function": "detailed-citation",
    "split": "detailed",
@@ -711,7 +756,23 @@
    "secondary": [
     "exemplifies"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Symphony: Orchestrating Sparse and Dense Tensors with Hierarchical Heterogeneous Processing",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "ACM Transactions on Computer Systems",
+   "authors": "Michael Pellauer, Jason Clemons, Vignesh Balaji et al.",
+   "url": "https://doi.org/10.1145/3630007",
+   "cited_by": 8,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Tensor Algebra Compilation with Workspaces",
@@ -770,6 +831,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Enabling Efficient Sparse Multiplications on GPUs With Heuristic Adaptability",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Jiaming Xu, Shan Huang, Jinhao Li et al.",
+   "url": "https://doi.org/10.1109/tcad.2024.3518413",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Optimizing Deep Learning Inference via Global Analysis and Tensor Expressions",
    "function": "passing-citation",
    "split": "passing",
@@ -781,6 +855,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Sparse-Aware CARM: Rooflining Locality of Sparse Computations",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2024,
+   "venue": "Lecture notes in computer science",
+   "authors": "A. E. V. B. Coutinho, Diogo Marques, Leonel Sousa et al.",
+   "url": "https://doi.org/10.1007/978-3-031-50684-0_8",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs",
@@ -796,7 +883,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -882,20 +969,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Guided Tensor Lifting",
-   "function": "unknown",
-   "split": null,
-   "year": 2025,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Yixuan Li, José Wesley de Souza Magalhães, Alexander Brauckmann et al.",
-   "url": "https://doi.org/10.1145/3729330",
-   "cited_by": 3,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "SeQuant Framework for Symbolic and Numerical Tensor Algebra. I. Core Capabilities",
    "function": "unknown",
    "split": null,
@@ -921,48 +994,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "A Coordinated Strategy for GNN Combining Computational Graph and Operator Optimizations",
-   "function": "unknown",
-   "split": null,
-   "year": 2024,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Mingyi Li, Junmin Xiao, Kewei Zhang et al.",
-   "url": "https://doi.org/10.1145/3650200.3661896",
-   "cited_by": 4,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "SpEQ: Translation of Sparse Codes using Equivalences",
-   "function": "unknown",
-   "split": null,
-   "year": 2024,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Avery Laird, Bangtian Liu, Nikolaj Bjørner et al.",
-   "url": "https://doi.org/10.1145/3656445",
-   "cited_by": 6,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Symphony: Orchestrating Sparse and Dense Tensors with Hierarchical Heterogeneous Processing",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "venue": "ACM Transactions on Computer Systems",
-   "authors": "Michael Pellauer, Jason Clemons, Vignesh Balaji et al.",
-   "url": "https://doi.org/10.1145/3630007",
-   "cited_by": 8,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Accelerating irregular applications via efficient synchronization and data access techniques",
    "function": "unknown",
    "split": null,
@@ -970,20 +1001,6 @@
    "authors": "Χριστίνα Γιαννούλα",
    "url": "https://doi.org/10.12681/eadd/52494",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Heuristic Adaptability to Input Dynamics for SpMM on GPUs",
-   "function": "unknown",
-   "split": null,
-   "year": 2022,
-   "venue": "Design Automation Conference",
-   "authors": "Guohao Dai, Guyue Huang, Shang Yang et al.",
-   "url": "https://doi.org/10.1145/3489517.3530508",
-   "cited_by": 27,
    "flags": [
     "polluted-contexts"
    ],
@@ -1002,17 +1019,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Sparse-Aware CARM: Rooflining Locality of Sparse Computations",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "Lecture notes in computer science",
-   "authors": "A. E. V. B. Coutinho, Diogo Marques, Leonel Sousa et al.",
-   "url": "https://doi.org/10.1007/978-3-031-50684-0_8",
-   "cited_by": 1,
-   "evidence": "title_only"
   },
   {
    "title": "DietCode: Automatic Optimization for Dynamic Tensor Programs",

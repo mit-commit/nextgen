@@ -1,30 +1,33 @@
 {
  "paper": "kjolstad:2018:workspaces",
  "slug": "10.1109_sc41404.2022.00064",
- "function": "adopts-idea",
- "centrality": "engaged",
+ "function": "extends",
+ "centrality": "core",
  "flags": [
   "own-group"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "SpDISTAL extends sparse tensor algebra compilation concepts in the same research lineage as the cited workspace paper, with Kjølstad as a shared author, but the abstract provides no explicit anchor to the cited work.",
+ "secondary": [
+  "uses-tool",
+  "adopts-idea"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "SpDISTAL explicitly extends TACO (the cited paper's system) and DISTAL compilers, adopting TACO's format language and workspace-based sparse compilation techniques as the direct substrate for their distributed sparse tensor algebra compiler.",
  "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
  "year": 2022,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2598,
+  "input_tokens": 4218,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 359,
+  "output_tokens": 129,
   "service_tier": "batch",
   "inference_geo": "global"
  }

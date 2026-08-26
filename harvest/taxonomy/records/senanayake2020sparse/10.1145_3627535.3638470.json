@@ -1,16 +1,16 @@
 {
  "paper": "senanayake2020sparse",
  "slug": "10.1145_3627535.3638470",
- "function": "unknown",
- "centrality": "unknown",
- "flags": [
-  "polluted-contexts"
+ "function": "positions",
+ "centrality": "engaged",
+ "flags": [],
+ "secondary": [
+  "exemplifies"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract+contexts",
- "anchored": "none",
- "note": "The single S2 citation context does not anchor to the cited paper at all — it describes a pipelining principle with no connection to the sparse iteration space transformation framework.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work specifically names TACO's sparse iteration space transformation for load balancing, describes its overhead drawback (binary search for row index), and excludes it from baseline comparison because ASpT already outperforms it — constituting prose differentiation without direct numerical comparison against it.",
  "title": "A Row Decomposition-based Approach for Sparse Matrix Multiplication on GPUs",
  "year": 2024,
  "s2_isInfluential": false,
@@ -19,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2905,
+  "input_tokens": 4299,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 103,
+  "output_tokens": 125,
   "service_tier": "batch",
   "inference_geo": "global"
  }

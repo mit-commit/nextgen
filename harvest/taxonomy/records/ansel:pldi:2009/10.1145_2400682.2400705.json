@@ -1,28 +1,30 @@
 {
  "paper": "ansel:pldi:2009",
  "slug": "10.1145_2400682.2400705",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract describes iterative compilation and machine learning for compiler heuristics but never specifically mentions PetaBricks or its concepts; no evidence anchors to the cited work.",
+ "secondary": [
+  "baseline"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work implements long-term learning on top of PetaBricks as one of two compiler toolchains, uses it in experiments, and compares against PetaBricks default optimization level as a baseline.",
  "title": "Continuous learning of compiler heuristics",
  "year": 2013,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2669,
+  "input_tokens": 3959,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 98,
+  "output_tokens": 106,
   "service_tier": "batch",
   "inference_geo": "global"
  }

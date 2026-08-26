@@ -7,7 +7,7 @@
   "records_raw": 81,
   "works": 78,
   "commit": 13,
-  "judged": 72,
+  "judged": 77,
   "gscholar": null
  },
  "citations": [
@@ -23,13 +23,13 @@
    "centrality": "core",
    "confidence": "high",
    "secondary": [
-    "baseline",
-    "positions"
+    "positions",
+    "baseline"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Compilation of Shape Operators on Sparse Arrays",
@@ -41,14 +41,15 @@
    "url": "https://doi.org/10.1145/3689752",
    "cited_by": 3,
    "centrality": "core",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
-    "adopts-idea"
+    "adopts-idea",
+    "positions"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Compiler Support for Sparse Tensor Convolutions",
@@ -62,12 +63,12 @@
    "centrality": "core",
    "confidence": "high",
    "secondary": [
-    "positions"
+    "detailed-citation"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Mosaic: An Interoperable Compiler for Tensor Algebra",
@@ -101,12 +102,12 @@
    "confidence": "high",
    "secondary": [
     "adopts-idea",
-    "exemplifies"
+    "uses-tool"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -130,6 +131,25 @@
    "commit": true
   },
   {
+   "title": "DISTAL: the distributed tensor algebra compiler",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1145/3519939.3523437",
+   "cited_by": 29,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "uses-tool"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "SparseLNR",
    "function": "extends",
    "split": "detailed",
@@ -145,6 +165,25 @@
     "baseline"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2022,
+   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1109/sc41404.2022.00064",
+   "cited_by": 8,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "uses-tool",
+    "adopts-idea"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Dynamic Sparse Tensor Algebra Compilation",
@@ -191,15 +230,15 @@
    "authors": "Rubens Lacouture, Nathan Zhang, Ritvik Sharma et al.",
    "url": "https://doi.org/10.1145/3779212.3790165",
    "cited_by": 1,
-   "centrality": "core",
-   "confidence": "medium",
+   "centrality": "engaged",
+   "confidence": "high",
    "secondary": [
-    "extends"
+    "adopts-idea"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "CoNST: Code Generator for Sparse Tensor Networks",
@@ -215,7 +254,7 @@
    "secondary": [
     "baseline"
    ],
-   "evidence": "abstract+contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Scorch: A Library for Sparse Deep Learning",
@@ -249,12 +288,13 @@
    "centrality": "core",
    "confidence": "high",
    "secondary": [
+    "positions",
     "adopts-idea"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Stardust: Compiling Sparse Tensor Algebra to a Reconfigurable Dataflow Architecture",
@@ -346,38 +386,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "DISTAL: the distributed tensor algebra compiler",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 2022,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1145/3519939.3523437",
-   "cited_by": 29,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 2022,
-   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1109/sc41404.2022.00064",
-   "cited_by": 8,
-   "centrality": "engaged",
-   "confidence": "low",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "An Asymptotic Cost Model for Autoscheduling Sparse Tensor Programs",
@@ -441,6 +450,25 @@
    "commit": true
   },
   {
+   "title": "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2026,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Amanda Liu, Gilbert Bernstein, S.A. Kamil et al.",
+   "url": "https://doi.org/10.1145/3808261",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
    "function": "baseline",
    "split": "detailed",
@@ -452,10 +480,10 @@
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "exemplifies",
-    "uses-benchmark"
+    "positions",
+    "exemplifies"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
@@ -470,9 +498,29 @@
    "confidence": "high",
    "secondary": [
     "positions",
-    "exemplifies"
+    "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Sparsity-Specific Code Optimization using Expression Trees",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "ACM Transactions on Graphics",
+   "authors": "Philipp Herholz, Xuan Tang, Teseo Schneider et al.",
+   "url": "https://doi.org/10.1145/3520484",
+   "cited_by": 12,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions",
+    "detailed-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A High Performance Sparse Tensor Algebra Compiler in MLIR",
@@ -483,30 +531,11 @@
    "url": "https://doi.org/10.1109/llvmhpc54804.2021.00009",
    "cited_by": 33,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
     "positions"
    ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs",
-   "function": "positions",
-   "split": "detailed",
-   "year": 2026,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Amanda Liu, Gilbert Bernstein, S.A. Kamil et al.",
-   "url": "https://doi.org/10.1145/3808261",
-   "cited_by": 0,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "adopts-idea"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Fast Autoscheduling for Sparse ML Frameworks",
@@ -540,12 +569,13 @@
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "detailed-citation"
+    "detailed-citation",
+    "exemplifies"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -560,6 +590,27 @@
    "centrality": "engaged",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Looplets: A Language for Structured Coiteration",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Willow Ahrens, Daniel Donenfeld, Fredrik Kjølstad et al.",
+   "url": "https://doi.org/10.1145/3579990.3580020",
+   "cited_by": 19,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation",
+    "exemplifies"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
   },
   {
    "title": "ASaP: Automatic Software Prefetching for Sparse Tensor Computations in MLIR",
@@ -670,10 +721,7 @@
    "cited_by": 154,
    "centrality": "peripheral",
    "confidence": "high",
-   "secondary": [
-    "detailed-citation"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "EGGS: Sparsity‐Specific Code Generation",
@@ -741,7 +789,7 @@
    "cited_by": 6,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "The Dataflow Abstract Machine Simulator Framework",
@@ -774,27 +822,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Looplets: A Language for Structured Coiteration",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2023,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Willow Ahrens, Daniel Donenfeld, Fredrik Kjølstad et al.",
-   "url": "https://doi.org/10.1145/3579990.3580020",
-   "cited_by": 19,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
+   "evidence": "fulltext"
   },
   {
    "title": "Sgap: towards efficient sparse tensor algebra compilation for GPU",
@@ -821,15 +849,12 @@
    "authors": "Kalhan Koul, Jackson Melchert, Kavya Sreedhar et al.",
    "url": "https://doi.org/10.1145/3534933",
    "cited_by": 38,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "adopts-idea"
-   ],
+   "centrality": "peripheral",
+   "confidence": "high",
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "ReACT: Redundancy-Aware Code Generation for Tensor Expressions",
@@ -967,6 +992,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "RTeAAL Sim: Using Tensor Algebra to Represent and Accelerate RTL Simulation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Yan Zhu, Boru Chen, Christopher W. Fletcher et al.",
+   "url": "https://doi.org/10.1145/3779212.3790214",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "REPTILE: Performant Tiling of Recurrences",
    "function": "passing-citation",
    "split": "passing",
@@ -1048,7 +1086,7 @@
    "cited_by": 6,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
@@ -1123,6 +1161,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "FCNNLib: A Flexible Convolution Algorithm Library for Deep Learning on FPGAs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2021,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Yun Liang, Qingcheng Xiao, Liqiang Lu et al.",
+   "url": "https://doi.org/10.1109/tcad.2021.3108065",
+   "cited_by": 18,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "NDS: N-Dimensional Storage",
    "function": "passing-citation",
    "split": "passing",
@@ -1150,6 +1201,32 @@
    ],
    "evidence": "contexts",
    "commit": true
+  },
+  {
+   "title": "Distributed-Memory DMRG via Sparse and Dense Parallel Tensor Contractions",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2020,
+   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": "Ryan Levy, Edgar Solomonik, Bryan K. Clark",
+   "url": "https://doi.org/10.1109/sc41405.2020.00028",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Effective Loop Fusion in Polyhedral Compilation Using Fusion Conflict Graphs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2020,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Aravind Acharya, Uday Bondhugula, Albert Cohen",
+   "url": "https://doi.org/10.1145/3416510",
+   "cited_by": 14,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Interactive Compiler Scheduling with Strong Guarantees",
@@ -1190,76 +1267,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract+contexts"
-  },
-  {
-   "title": "RTeAAL Sim: Using Tensor Algebra to Represent and Accelerate RTL Simulation",
-   "function": "unknown",
-   "split": null,
-   "year": 2026,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Yan Zhu, Boru Chen, Christopher W. Fletcher et al.",
-   "url": "https://doi.org/10.1145/3779212.3790214",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Sparsity-Specific Code Optimization using Expression Trees",
-   "function": "unknown",
-   "split": null,
-   "year": 2022,
-   "venue": "ACM Transactions on Graphics",
-   "authors": "Philipp Herholz, Xuan Tang, Teseo Schneider et al.",
-   "url": "https://doi.org/10.1145/3520484",
-   "cited_by": 12,
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "FCNNLib: A Flexible Convolution Algorithm Library for Deep Learning on FPGAs",
-   "function": "unknown",
-   "split": null,
-   "year": 2021,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Yun Liang, Qingcheng Xiao, Liqiang Lu et al.",
-   "url": "https://doi.org/10.1109/tcad.2021.3108065",
-   "cited_by": 18,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Distributed-Memory DMRG via Sparse and Dense Parallel Tensor Contractions",
-   "function": "unknown",
-   "split": null,
-   "year": 2020,
-   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
-   "authors": "Ryan Levy, Edgar Solomonik, Bryan K. Clark",
-   "url": "https://doi.org/10.1109/sc41405.2020.00028",
-   "cited_by": 11,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Effective Loop Fusion in Polyhedral Compilation Using Fusion Conflict Graphs",
-   "function": "unknown",
-   "split": null,
-   "year": 2020,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Aravind Acharya, Uday Bondhugula, Albert Cohen",
-   "url": "https://doi.org/10.1145/3416510",
-   "cited_by": 14,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   }
  ],
  "reception": "Among the paper's citers the sparse-compilation community predominates, and its engagement is unusually direct: a large fraction of the citing works extend or build on the transformation rather than merely mention it. MLIR's sparse tensor support adopts the workspace idea, and a line of TACO-descended systems — Mosaic, SparseLNR, and compilers for sparse tensor convolutions and shape operators — extends the mechanism itself, with later work on modular and general sparse workspaces generalizing the dense scratch arrays to sparse ones. Hardware-oriented compilers such as the Sparse Abstract Machine, Stardust, CoNST, and FuseFlow build on the generated kernels and the scheduling vocabulary. The record is small but dense with successors, and the implementation lives on in the tensor-compiler/taco repository."

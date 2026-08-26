@@ -4,25 +4,27 @@
  "function": "positions",
  "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract references 'existing SIMD compilers' and 'existing SIMD vectorization methods' as comparison targets, and SLP/superword-level parallelism from Larsen & Amarasinghe is a canonical such method, but no named anchor in the evidence ties the citation specifically to the cited paper.",
+ "secondary": [
+  "adopts-idea"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work specifically describes SLP's algorithm, its seed-based approach, and limitations with disjoint memory references across multiple in-text discussions, positioning their own method as addressing SLP's shortcomings.",
  "title": "Efficient SIMD code generation for irregular kernels",
  "year": 2012,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2683,
+  "input_tokens": 4155,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 133,
+  "output_tokens": 112,
   "service_tier": "batch",
   "inference_geo": "global"
  }

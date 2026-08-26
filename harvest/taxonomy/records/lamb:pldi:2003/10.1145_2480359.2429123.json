@@ -1,28 +1,31 @@
 {
  "paper": "lamb:pldi:2003",
  "slug": "10.1145_2480359.2429123",
- "function": "passing-citation",
- "centrality": "peripheral",
+ "function": "positions",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation contexts provided and the abstract only mentions 'stream programs compiler optimizations' and 'parallelized code generation' in general terms without naming the cited paper specifically.",
+ "secondary": [
+  "uses-benchmark",
+  "detailed-citation"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly names reference [45] (the cited paper) as 'closest work' and contrasts Sigma*'s ability to handle non-linear stateful filters against the cited paper's linear-only scope, while also using its FIR filter as a benchmark.",
  "title": "Sigma*",
  "year": 2013,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2654,
+  "input_tokens": 4111,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 101,
+  "output_tokens": 431,
   "service_tier": "batch",
   "inference_geo": "global"
  }

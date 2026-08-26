@@ -7,7 +7,7 @@
   "records_raw": 309,
   "works": 238,
   "commit": 1,
-  "judged": 180,
+  "judged": 191,
   "gscholar": null
  },
  "citations": [
@@ -265,8 +265,11 @@
    "url": "https://doi.org/10.1145/3200920",
    "cited_by": 14,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Parameterized Construction of Program Representations for Sparse Dataflow Analyses",
@@ -332,6 +335,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "Simple offset assignment in presence of subword data",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2003,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Bengu Li, Rajiv Gupta",
+   "url": "https://doi.org/10.1145/951710.951715",
+   "cited_by": 15,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Symbolic bounds analysis of pointers, array indices, and accessed memory regions",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2000,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Radu Rugina, Martin Rinard",
+   "url": "https://doi.org/10.1145/358438.349325",
+   "cited_by": 147,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "The Design and Implementation of a Non-Iterative Range Analysis Algorithm on a Production Compiler",
    "function": "baseline",
    "split": "detailed",
@@ -357,11 +389,12 @@
    "url": "https://doi.org/10.1145/1347375.1347387",
    "cited_by": 20,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
-    "positions"
+    "detailed-citation",
+    "adopts-idea"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Optimum wordlength allocation",
@@ -378,22 +411,6 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
-  },
-  {
-   "title": "Saving Energy with Per-Variable Bitwidth Speculation",
-   "function": "positions",
-   "split": "detailed",
-   "year": 2025,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Tommy McMichen, David Dlott, Panitan Wongse-ammat et al.",
-   "url": "https://doi.org/10.1145/3676641.3716271",
-   "cited_by": 0,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "adopts-idea"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Synthesizing Power and Area Efficient Image Processing Pipelines on FPGAs using Customized Bit-widths",
@@ -425,6 +442,35 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Offline compression for on-chip ram",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Nathan Cooprider, John Regehr",
+   "url": "https://doi.org/10.1145/1273442.1250776",
+   "cited_by": 13,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Optimal Bitwise Register Allocation Using Integer Linear Programming",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "Lecture notes in computer science",
+   "authors": "Rajkishore Barik, Christian Grothoff, Rahul Gupta et al.",
+   "url": "https://doi.org/10.1007/978-3-540-72521-3_20",
+   "cited_by": 16,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "An automated, efficient and static bit-width optimization methodology towards maximum bit-width-to-error tradeoff with affine arithmetic model",
@@ -486,7 +532,7 @@
    "cited_by": 6,
    "centrality": "engaged",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Word-length optimization for differentiable nonlinear systems",
@@ -503,6 +549,22 @@
     "exemplifies"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "An Algorithm for Trading Off Quantization Error with Hardware Resources for MATLAB-Based FPGA Design",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2005,
+   "venue": "IEEE Transactions on Computers",
+   "authors": "Sanghamitra Roy, P. Banerjee",
+   "url": "https://doi.org/10.1109/tc.2005.106",
+   "cited_by": 48,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Bit-Width Analysis for General Applications",
@@ -538,16 +600,13 @@
    "function": "positions",
    "split": "detailed",
    "year": 2005,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Michael K. Chen, Xiaofeng Li, Ruiqi Lian et al.",
-   "url": "https://doi.org/10.1145/1065010.1065038",
+   "url": "https://doi.org/10.1145/1064978.1065038",
    "cited_by": 91,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Automated Least-Significant Bit Datapath Optimization for FPGAs",
@@ -657,6 +716,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "A Representation for Bit Section Based Analysis and Optimization",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2002,
+   "venue": "Lecture notes in computer science",
+   "authors": "Rajiv Gupta, Eduard Mehofer, Youtao Zhang",
+   "url": "https://doi.org/10.1007/3-540-45937-5_7",
+   "cited_by": 13,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Precision and error analysis of MATLAB applications during automated hardware synthesis for FPGAs",
    "function": "positions",
    "split": "detailed",
@@ -706,6 +781,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Analysis of Finite Word-Length Effects in Fixed-Point Systems",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2018,
+   "venue": "Handbook of Signal Processing Systems",
+   "authors": "Daniel Ménard, Gabriel Caffarena, J. A. Lopez et al.",
+   "url": "https://doi.org/10.1007/978-3-319-91734-4_29",
+   "cited_by": 3,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "4 Survey on Combinatorial Register Allocation and Instruction Scheduling",
    "function": "surveys",
    "split": "detailed",
@@ -744,6 +835,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "ZeroSpy: Exploring Software Inefficiency with Redundant Zeros",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2020,
+   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
+   "authors": "Xin You, Hailong Yang, Zhongzhi Luan et al.",
+   "url": "https://doi.org/10.1109/sc41405.2020.00033",
+   "cited_by": 15,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Differential Approach to Undefined Behavior Detection",
    "function": "supports-claim",
    "split": "detailed",
@@ -753,8 +857,8 @@
    "url": "https://doi.org/10.1145/2699678",
    "cited_by": 36,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Towards optimization-safe systems",
@@ -766,8 +870,8 @@
    "url": "https://doi.org/10.1145/2517349.2522728",
    "cited_by": 128,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Automatic program analysis for data parallel kernels",
@@ -970,6 +1074,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Eliminating stack overflow by abstract interpretation",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2005,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "John Regehr, Alastair Reid, Kirk Webb",
+   "url": "https://doi.org/10.1145/1113830.1113833",
+   "cited_by": 85,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Reducing Power Consumption During Online and Offline Testing",
    "function": "supports-claim",
    "split": "detailed",
@@ -987,19 +1104,13 @@
    "function": "supports-claim",
    "split": "detailed",
    "year": 2004,
-   "venue": "ASPLOS XI",
+   "venue": "ACM SIGOPS Operating Systems Review",
    "authors": "John Regehr, Alastair Reid",
-   "url": "https://doi.org/10.1145/1024393.1024410",
+   "url": "https://doi.org/10.1145/1037949.1024410",
    "cited_by": 45,
    "centrality": "peripheral",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Software-controlled operand-gating",
@@ -1046,20 +1157,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Simple offset assignment in presence of subword data",
+   "title": "An accelerated datapath width optimization scheme for area reduction of embedded systems",
    "function": "supports-claim",
    "split": "detailed",
-   "year": 2003,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Bengu Li, Rajiv Gupta",
-   "url": "https://doi.org/10.1145/951710.951715",
-   "cited_by": 15,
+   "year": 2002,
+   "venue": "15th International Symposium on System Synthesis, 2002.",
+   "authors": "Mohammad Mesbah Uddin, Yun Cao, Hiroto Yasuura",
+   "url": "https://doi.org/10.1145/581199.581208",
+   "cited_by": 2,
    "centrality": "peripheral",
    "confidence": "medium",
-   "secondary": [
-    "uses-benchmark"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Bit section instruction set extension of ARM for embedded applications",
@@ -1106,20 +1214,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Symbolic bounds analysis of pointers, array indices, and accessed memory regions",
+   "title": "Frequent value locality and value-centric data cache design",
    "function": "supports-claim",
    "split": "detailed",
    "year": 2000,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Radu Rugina, Martin Rinard",
-   "url": "https://doi.org/10.1145/349299.349325",
+   "venue": "ACM SIGOPS Operating Systems Review",
+   "authors": "Youtao Zhang, Jun Yang, Rajiv Gupta",
+   "url": "https://doi.org/10.1145/384264.379235",
    "cited_by": 147,
    "centrality": "peripheral",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "evidence": "contexts"
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "FPGA HLS Today: Successes, Challenges, and Opportunities",
@@ -1376,16 +1481,13 @@
    "function": "exemplifies",
    "split": "passing",
    "year": 2006,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "John Regehr, Usit Duongsaa",
-   "url": "https://doi.org/10.1145/1134650.1134657",
+   "url": "https://doi.org/10.1145/1159974.1134657",
    "cited_by": 28,
    "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Lower-Bound Estimation for Multi-Bitwidth Scheduling",
@@ -1424,22 +1526,6 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "abstract"
-  },
-  {
-   "title": "Reducing power consumption in memory ECC checkers",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2004,
-   "venue": "2004 International Conferce on Test",
-   "authors": "Shalini Ghosh, N. Touba, Sugato Basu",
-   "url": "https://doi.org/10.1109/itc.2004.152",
-   "cited_by": 32,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
   },
   {
    "title": "Compiler Analysis and Optimizations: What is New?",
@@ -1672,22 +1758,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "An algorithm for trading off quantization error with hardware resources for MATLAB-based FPGA design",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2004,
-   "venue": "IEEE transactions on computers",
-   "authors": "Sanghamitra Roy, P. Banerjee",
-   "url": "https://doi.org/10.1145/968280.968349",
-   "cited_by": 48,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Pointer-Range Analysis",
    "function": "detailed-citation",
    "split": "detailed",
@@ -1699,6 +1769,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Stochastic Bit-Width Approximation Using Extreme Value Theory for Customizable Processors",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "Lecture notes in computer science",
+   "authors": "Emre Özer, Andy Nisbet, David Gregg",
+   "url": "https://doi.org/10.1007/978-3-540-24723-4_17",
+   "cited_by": 21,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Widening Integer Arithmetic",
@@ -1727,19 +1810,6 @@
    "cited_by": 44,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "An accelerated datapath width optimization scheme for area reduction of embedded systems",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2002,
-   "venue": "15th International Symposium on System Synthesis, 2002.",
-   "authors": "Mohammad Mesbah Uddin, Yun Cao, Hiroto Yasuura",
-   "url": "https://doi.org/10.1145/581199.581208",
-   "cited_by": 2,
-   "centrality": "peripheral",
-   "confidence": "medium",
    "evidence": "contexts"
   },
   {
@@ -1855,17 +1925,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "ZeroSpy: Exploring Software Inefficiency with Redundant Zeros",
+   "title": "ACED",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2020,
-   "venue": "International Conference for High Performance Computing, Networking, Storage and Analysis",
-   "authors": "Xin You, Hailong Yang, Zhongzhi Luan et al.",
-   "url": "https://doi.org/10.1109/sc41405.2020.00033",
-   "cited_by": 15,
+   "year": 2018,
+   "venue": "Design Automation Conference",
+   "authors": "Angie Wang, Paul Rigge, Adam Izraelevitz et al.",
+   "url": "https://doi.org/10.1145/3195970.3195981",
+   "cited_by": 8,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "AISC: Approximate Instruction Set Computer",
@@ -1951,6 +2021,19 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Symposium on Operating Systems Principles",
+   "authors": "M. Kaminsky, M. Dahlin",
+   "url": "https://doi.org/10.1145/2517349",
+   "cited_by": 82,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Statistical analysis and modeling for error composition in approximate computation circuits",
@@ -2050,16 +2133,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2011,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Indu Bhagat, Enric Gibert, Jesús Sánchez et al.",
-   "url": "https://doi.org/10.1145/1967677.1967700",
+   "url": "https://doi.org/10.1145/2016603.1967700",
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "High-Level Synthesis for FPGAs: From Prototyping to Deployment",
@@ -2167,6 +2247,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "Energy Management Techniques for SOC Design",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2007,
+   "authors": "Hiroto Yasuura, Tohru Ishihara, Masanori Muroyama",
+   "url": "https://doi.org/10.1007/1-4020-5352-5_6",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Improved Interval-Based Characterization of Fixed-Point LTI Systems With Feedback Loops",
    "function": "passing-citation",
    "split": "passing",
@@ -2177,22 +2269,6 @@
    "cited_by": 52,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Offline compression for on-chip ram",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2007,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Nathan Cooprider, John Regehr",
-   "url": "https://doi.org/10.1145/1250734.1250776",
-   "cited_by": 13,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "contexts"
   },
   {
@@ -2234,6 +2310,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Quality Driven Dynamic Low Power Reconfiguration of Handhelds",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2006,
+   "venue": "Lecture notes in computer science",
+   "authors": "Hiren Joshi, Shantanu Singh Verma, G. K. Sharma",
+   "url": "https://doi.org/10.1007/11802839_9",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "An empirical study of a novel technique : rationed-memory compiling",
    "function": "passing-citation",
    "split": "passing",
@@ -2245,6 +2334,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Bit-Sliced Datapath for Energy-Efficient High Performance Microprocessors",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2005,
+   "venue": "Lecture notes in computer science",
+   "authors": "Sumeet S. Kumar, Prateek Pujara, Aneesh Aggarwal",
+   "url": "https://doi.org/10.1007/11574859_3",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Boosting the Performance of Multimedia Applications Using SIMD Instructions",
@@ -2351,6 +2453,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Speculative software management of datapath-width for energy optimization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2004,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Gilles Pokam, Olivier Rochecouste, André Seznec et al.",
+   "url": "https://doi.org/10.1145/998300.997175",
+   "cited_by": 12,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Unifying Bit-Width Optimisation for Fixed-Point and Floating-Point Designs",
    "function": "passing-citation",
    "split": "passing",
@@ -2394,16 +2509,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2003,
-   "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Darko Marinov, Robert O'Callahan",
-   "url": "https://doi.org/10.1145/949305.949333",
+   "url": "https://doi.org/10.1145/949343.949333",
    "cited_by": 60,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "PAM-Blox II: design and evaluation of C++ module generation for computing with FPGAs",
@@ -2496,6 +2608,22 @@
    "evidence": "abstract+contexts"
   },
   {
+   "title": "Frequent value compression in data caches",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2002,
+   "venue": "Proceedings 33rd Annual IEEE/ACM International Symposium on Microarchitecture. MICRO-33 2000",
+   "authors": "Jun Yang, Youtao Zhang, Rajiv Gupta",
+   "url": "https://doi.org/10.1109/micro.2000.898076",
+   "cited_by": 199,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "On the Limits of Automatic Processor Specialisation by Mapping Dataflow Sections on Ad-hoc Functional Units",
    "function": "passing-citation",
    "split": "passing",
@@ -2519,6 +2647,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "C Compiler Design for an Industrial Network Processor",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "LCTES/OM",
+   "authors": "Jens Wagner, Rainer Leupers",
+   "url": "https://doi.org/10.1145/384197.384218",
+   "cited_by": 35,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Categories and Subject Descriptors",
@@ -2553,34 +2697,31 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2000,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "S. Larsen, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/349299.349320",
-   "cited_by": 385,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract",
-   "commit": true
-  },
-  {
-   "title": "Frequent value locality and value-centric data cache design",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2000,
    "venue": "ACM SIGPLAN Notices",
-   "authors": "Youtao Zhang, Jun Yang, Rajiv Gupta",
-   "url": "https://doi.org/10.1145/356989.357003",
-   "cited_by": 147,
+   "authors": "S. Larsen, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/358438.349320",
+   "cited_by": 385,
    "centrality": "peripheral",
    "confidence": "high",
    "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "Saving Energy with Per-Variable Bitwidth Speculation",
+   "function": "unknown",
+   "split": null,
+   "year": 2025,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Tommy McMichen, David Dlott, Panitan Wongse-ammat et al.",
+   "url": "https://doi.org/10.1145/3676641.3716271",
+   "cited_by": 0,
+   "flags": [
     "polluted-contexts"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Static program analysis based on virtual register renaming",
@@ -2597,18 +2738,18 @@
    "evidence": "abstract"
   },
   {
-   "title": "ACED",
+   "title": "Applied Reconfigurable Computing",
    "function": "unknown",
    "split": null,
-   "year": 2018,
-   "venue": "Design Automation Conference",
-   "authors": "Angie Wang, Paul Rigge, Adam Izraelevitz et al.",
-   "url": "https://doi.org/10.1145/3195970.3195981",
-   "cited_by": 8,
+   "year": 2019,
+   "venue": "Lecture notes in computer science",
+   "authors": "ARC 2019 Darmstadt, Christian Hochberger, Brent Nelson et al.",
+   "url": "https://doi.org/10.1007/978-3-030-17227-5",
+   "cited_by": 10,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "A Bitwidth-Aware High-Level Synthesis Algorithm Using Operation Chainings for Tiled-DR Architectures",
@@ -2676,20 +2817,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "Symposium on Operating Systems Principles",
-   "authors": "M. Kaminsky, M. Dahlin",
-   "url": "https://doi.org/10.1145/2517349",
-   "cited_by": 82,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Acceleration of a bioinformatics application using high-level synthesis. (Accélération d'une application en bioinformatique utilisant une synthèse de haut niveau)",
@@ -2770,7 +2897,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Design and Implementation of Numerical Linear Algebra Algorithms on Fixed Point DSPs",
@@ -2798,7 +2925,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "A METHODOLOGY FOR HARDWARE TASKS SCHEDULING OPTIMIZED IN TIME FOR PARTIAL AND DYNAMIC RECONFIGURATION OF FPGAS",
@@ -2842,18 +2969,18 @@
    "evidence": "abstract"
   },
   {
-   "title": "Eliminating stack overflow by abstract interpretation",
+   "title": "Reducing power consumption in memory ECC checkers",
    "function": "unknown",
    "split": null,
    "year": 2005,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "John Regehr, Alastair Reid, Kirk Webb",
-   "url": "https://doi.org/10.1145/1113830.1113833",
-   "cited_by": 85,
+   "venue": "2004 International Conferce on Test",
+   "authors": "Subrata Ghosh, Swastik Basu, Nur A. Touba",
+   "url": "https://doi.org/10.1109/test.2004.1387407",
+   "cited_by": 32,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Register file optimizations for superscalar microprocessors",
@@ -2889,20 +3016,6 @@
    "authors": "Markus Rupp",
    "url": "https://openalex.org/W2181451922",
    "cited_by": 5,
-   "evidence": "abstract"
-  },
-  {
-   "title": "Speculative software management of datapath-width for energy optimization",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Gilles Pokam, Olivier Rochecouste, André Seznec et al.",
-   "url": "https://doi.org/10.1145/998300.997175",
-   "cited_by": 12,
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "abstract"
   },
   {
@@ -2972,20 +3085,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "C Compiler Design for an Industrial Network Processor",
-   "function": "unknown",
-   "split": null,
-   "year": 2001,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Jens Wagner, Rainer Leupers",
-   "url": "https://doi.org/10.1145/384198.384218",
-   "cited_by": 35,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "On signal-gating schemes for low-power adders",
    "function": "unknown",
    "split": null,
@@ -3014,48 +3113,12 @@
    "evidence": "abstract"
   },
   {
-   "title": "Frequent value compression in data caches",
-   "function": "unknown",
-   "split": null,
-   "year": 2000,
-   "venue": "Proceedings 33rd Annual IEEE/ACM International Symposium on Microarchitecture. MICRO-33 2000",
-   "authors": "Jun Yang, Youtao Zhang, Rajiv Gupta",
-   "url": "https://doi.org/10.1145/360128.360154",
-   "cited_by": 199,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Applied Reconfigurable Computing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "Lecture notes in computer science",
-   "authors": "ARC 2019 Darmstadt, Christian Hochberger, Brent Nelson et al.",
-   "url": "https://doi.org/10.1007/978-3-030-17227-5",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
    "title": "Unlocking Design Reuse with Hardware Compiler Frameworks",
    "function": "unclassified",
    "split": null,
    "year": 2019,
    "authors": "Adam M. Izraelevitz",
    "url": "https://www.semanticscholar.org/paper/3b04bfb4d5dff0284b962c253bafac65f445c408",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Analysis of Finite Word-Length Effects in Fixed-Point Systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "Handbook of Signal Processing Systems",
-   "authors": "Daniel Ménard, Gabriel Caffarena, J. A. Lopez et al.",
-   "url": "https://doi.org/10.1007/978-3-319-91734-4_29",
    "cited_by": 3,
    "evidence": "title_only"
   },
@@ -3111,16 +3174,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Energy Management Techniques for SOC Design",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "authors": "Hiroto Yasuura, Tohru Ishihara, Masanori Muroyama",
-   "url": "https://doi.org/10.1007/1-4020-5352-5_6",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
    "title": "Graphersetzung mit Anwendungen im Übersetzerbau",
    "function": "unclassified",
    "split": null,
@@ -3129,17 +3182,6 @@
    "authors": "Rubino Geiß",
    "url": "https://doi.org/10.5445/ir/1000009876",
    "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Optimal Bitwise Register Allocation Using Integer Linear Programming",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Lecture notes in computer science",
-   "authors": "Rajkishore Barik, Christian Grothoff, Rahul Gupta et al.",
-   "url": "https://doi.org/10.1007/978-3-540-72521-3_20",
-   "cited_by": 16,
    "evidence": "title_only"
   },
   {
@@ -3164,17 +3206,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Quality Driven Dynamic Low Power Reconfiguration of Handhelds",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "Lecture notes in computer science",
-   "authors": "Hiren Joshi, Shantanu Singh Verma, G. K. Sharma",
-   "url": "https://doi.org/10.1007/11802839_9",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "Signal Processing with High Complexity: Prototyping and Industrial Design",
    "function": "unclassified",
    "split": null,
@@ -3193,39 +3224,6 @@
    "authors": "João MP Cardoso",
    "url": "https://www.semanticscholar.org/paper/5aa60971187bcf977fff82b23ecda7f6ca3112d6",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Bit-Sliced Datapath for Energy-Efficient High Performance Microprocessors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2005,
-   "venue": "Lecture notes in computer science",
-   "authors": "Sumeet S. Kumar, Prateek Pujara, Aneesh Aggarwal",
-   "url": "https://doi.org/10.1007/11574859_3",
-   "cited_by": 10,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Stochastic Bit-Width Approximation Using Extreme Value Theory for Customizable Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "venue": "Lecture notes in computer science",
-   "authors": "Emre Özer, Andy Nisbet, David Gregg",
-   "url": "https://doi.org/10.1007/978-3-540-24723-4_17",
-   "cited_by": 21,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Representation for Bit Section Based Analysis and Optimization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2002,
-   "venue": "Lecture notes in computer science",
-   "authors": "Rajiv Gupta, Eduard Mehofer, Youtao Zhang",
-   "url": "https://doi.org/10.1007/3-540-45937-5_7",
-   "cited_by": 13,
    "evidence": "title_only"
   },
   {

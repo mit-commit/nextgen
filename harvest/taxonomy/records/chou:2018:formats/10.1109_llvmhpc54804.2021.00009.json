@@ -1,30 +1,30 @@
 {
  "paper": "chou:2018:formats",
  "slug": "10.1109_llvmhpc54804.2021.00009",
- "function": "positions",
+ "function": "baseline",
  "centrality": "engaged",
  "flags": [],
  "secondary": [
-  "adopts-idea"
+  "positions"
  ],
  "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract describes a new sparse tensor algebra compiler that covers a wide range of storage formats and outperforms 'state-of-the-art sparse tensor algebra compilers', strongly implying the cited OOPSLA 2018 format abstraction work is among the comparison targets and/or design influences, but no explicit naming appears in the available evidence.",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly compares performance against TACO (which incorporates the cited format abstraction work) with measured speedups (up to 20.92x, 6.39x, 13.9x), and also differentiates its approach from TACO's design; reference [7] in the citing paper corresponds to the cited OOPSLA 2018 format abstraction paper.",
  "title": "A High Performance Sparse Tensor Algebra Compiler in MLIR",
  "year": 2021,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2736,
+  "input_tokens": 3916,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 142,
+  "output_tokens": 151,
   "service_tier": "batch",
   "inference_geo": "global"
  }

@@ -7,7 +7,7 @@
   "records_raw": 125,
   "works": 94,
   "commit": 10,
-  "judged": 70,
+  "judged": 77,
   "gscholar": null
  },
  "citations": [
@@ -164,10 +164,10 @@
    "cited_by": 2,
    "centrality": "engaged",
    "confidence": "low",
-   "secondary": [
-    "supports-claim"
+   "flags": [
+    "polluted-contexts"
    ],
-   "evidence": "abstract+contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Cache-conscious scheduling of streaming applications",
@@ -186,6 +186,48 @@
    "evidence": "contexts"
   },
   {
+   "title": "Application-Tailored I/O with Streamline",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "ACM Transactions on Computer Systems",
+   "authors": "Willem de Bruijn, Herbert Bos, Henri E. Bal",
+   "url": "https://doi.org/10.1145/1963559.1963562",
+   "cited_by": 18,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Buffer Sharing in Rendezvous Programs",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Nalini Vasudevan, Stephen A. Edwards",
+   "url": "https://doi.org/10.1109/tcad.2010.2052840",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Buffer sharing in CSP-like programs",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "2009 7th IEEE/ACM International Conference on Formal Methods and Models for Co-Design",
+   "authors": "Nalini Vasudevan, Stephen A. Edwards",
+   "url": "https://doi.org/10.1109/memcod.2009.5185391",
+   "cited_by": 6,
+   "centrality": "engaged",
+   "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Model-T: Rethinking the OS for terabit speeds",
    "function": "positions",
    "split": "detailed",
@@ -200,6 +242,26 @@
     "exemplifies"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "ASPLOS XII",
+   "authors": "Michael I. Gordon, William Thies, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/1168857.1168877",
+   "cited_by": 523,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
   },
   {
    "title": "MIT Open Access Articles Cache-conscious scheduling of streaming applications",
@@ -257,6 +319,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Tutorial",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "Distributed Event-Based Systems",
+   "authors": "Scott Schneider, Martin Hirzel, Buğra Gedik",
+   "url": "https://doi.org/10.1145/2488222.2488268",
+   "cited_by": 23,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Optimizations in Stream Programming for Multimedia Applications by",
    "function": "supports-claim",
    "split": "detailed",
@@ -310,7 +388,7 @@
    "cited_by": 11,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "DSL Stream Programming on Multicore Architectures",
@@ -451,6 +529,19 @@
    "commit": true
   },
   {
+   "title": "Fusing effectful comprehensions",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2017,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Olli Saarikivi, Margus Veanes, Todd Mytkowicz et al.",
+   "url": "https://doi.org/10.1145/3140587.3062362",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Massively parallel stream processing with latency guarantees",
    "function": "detailed-citation",
    "split": "detailed",
@@ -487,7 +578,7 @@
    "cited_by": 6,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "A Study of Cache Design in Stream Processor",
@@ -558,19 +649,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Tutorial",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2013,
-   "venue": "Distributed Event-Based Systems",
-   "authors": "Scott Schneider, Martin Hirzel, Buğra Gedik",
-   "url": "https://doi.org/10.1145/2488222.2488268",
-   "cited_by": 23,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
    "title": "Reusable Software Infrastructure for Stream Processing",
    "function": "detailed-citation",
    "split": "detailed",
@@ -596,19 +674,6 @@
    "cited_by": 5,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Application-Tailored I/O with Streamline",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2011,
-   "venue": "ACM Transactions on Computer Systems",
-   "authors": "Willem de Bruijn, Herbert Bos, Henri E. Bal",
-   "url": "https://doi.org/10.1145/1963559.1963562",
-   "cited_by": 18,
-   "centrality": "peripheral",
-   "confidence": "medium",
    "evidence": "contexts"
   },
   {
@@ -652,6 +717,22 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Optimizing Stream Organization to Improve the Performance of Scientific Computing Applications on the Stream Processor",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "Lecture notes in computer science",
+   "authors": "Ying Zhang, Gen Li, Xuejun Yang et al.",
+   "url": "https://doi.org/10.1007/978-3-540-72905-1_18",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "High-Productivity Stream Programming For High-Performance Systems",
@@ -709,6 +790,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "A survey of state management in big data processing systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "The VLDB Journal",
+   "authors": "Quoc-Cuong To, Juan Soto, Volker Markl",
+   "url": "https://doi.org/10.1007/s00778-018-0514-9",
+   "cited_by": 80,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Gloss: Seamless Live Reconfiguration and Reoptimization of Stream Programs",
    "function": "passing-citation",
    "split": "passing",
@@ -726,22 +823,6 @@
    "commit": true
   },
   {
-   "title": "Fusing effectful comprehensions",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2017,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Olli Saarikivi, Margus Veanes, Todd Mytkowicz et al.",
-   "url": "https://doi.org/10.1145/3062341.3062362",
-   "cited_by": 11,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Locality-Aware Concurrency Platforms",
    "function": "passing-citation",
    "split": "passing",
@@ -752,6 +833,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "A logical memory model for scaling parallel multimedia workloads",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "International Workshop on Network and Operating System Support for Digital Audio and Video",
+   "authors": "Preben N. Olsen, Martin Nyhus, Pål Halvorsen et al.",
+   "url": "https://doi.org/10.1145/2736084.2736096",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A Monitoring System for Runtime Adaptations of Streaming Applications",
@@ -791,6 +888,19 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Locality-aware task management for unstructured parallelism",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Richard M. Yoo, Christopher J. Hughes, Changkyu Kim et al.",
+   "url": "https://doi.org/10.1145/2486159.2486175",
+   "cited_by": 34,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Scheduling and Optimizing Stream Programs on Multicore Machines by Exploiting High-Level Abstractions",
@@ -864,6 +974,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "SARA",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2009,
+   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
+   "authors": "Praveen Raghavan, Francky Catthoor",
+   "url": "https://doi.org/10.1145/1629435.1629442",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Task centric memory management for an on-chip multiprocessor",
    "function": "passing-citation",
    "split": "passing",
@@ -887,7 +1010,7 @@
    "cited_by": 10,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "A Unified Approach to Adaptive Code Selection for Modern Systems",
@@ -959,26 +1082,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2006,
-   "venue": "ASPLOS XII",
-   "authors": "Michael I. Gordon, William Thies, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/1168857.1168877",
-   "cited_by": 523,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
-  },
-  {
    "title": "Logs and Lifeguards : Accelerating Dynamic Program Monitoring",
    "function": "passing-citation",
    "split": "passing",
@@ -1008,32 +1111,32 @@
    "commit": true
   },
   {
-   "title": "A Survey of State Management in Big Data Processing Systems",
+   "title": "Stream Query Optimization",
    "function": "unknown",
    "split": null,
-   "year": 2017,
-   "venue": "arXiv (Cornell University)",
-   "authors": "Quoc-Cuong To, Juan Soto, Volker Markl",
-   "url": "https://doi.org/10.48550/arxiv.1702.01596",
-   "cited_by": 80,
+   "year": 2019,
+   "venue": "Encyclopedia of Big Data Technologies",
+   "authors": "Martin Hirzel, Robert Soulé, Buğra Gedik et al.",
+   "url": "https://doi.org/10.1007/978-3-319-77525-8_261",
+   "cited_by": 1,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
-   "title": "A logical memory model for scaling parallel multimedia workloads",
+   "title": "Achieving self-aware parallelism in stream programs",
    "function": "unknown",
    "split": null,
-   "year": 2015,
-   "venue": "International Workshop on Network and Operating System Support for Digital Audio and Video",
-   "authors": "Preben N. Olsen, Martin Nyhus, Pål Halvorsen et al.",
-   "url": "https://doi.org/10.1145/2736084.2736096",
-   "cited_by": 0,
+   "year": 2014,
+   "venue": "Cluster Computing",
+   "authors": "Yan Su, Feng Shi, Shahnawaz Talpur et al.",
+   "url": "https://doi.org/10.1007/s10586-014-0412-x",
+   "cited_by": 5,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract+contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Brief Announcement: Cache-Oblivious Scheduling of Streaming Applications",
@@ -1049,20 +1152,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Locality-aware task management for unstructured parallelism",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Richard M. Yoo, Christopher J. Hughes, Changkyu Kim et al.",
-   "url": "https://doi.org/10.1145/2486159.2486175",
-   "cited_by": 34,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Storage allocation for streaming-based register file",
    "function": "unknown",
    "split": null,
@@ -1070,20 +1159,6 @@
    "authors": "P. Raghavan, F. Catthoor",
    "url": "https://doi.org/10.1201/b11418-6",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Buffer Sharing in Rendezvous Programs",
-   "function": "unknown",
-   "split": null,
-   "year": 2010,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Nalini Vasudevan, Stephen A. Edwards",
-   "url": "https://doi.org/10.1109/tcad.2010.2052840",
-   "cited_by": 1,
    "flags": [
     "polluted-contexts"
    ],
@@ -1115,31 +1190,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Buffer sharing in CSP-like programs",
-   "function": "unknown",
-   "split": null,
-   "year": 2009,
-   "venue": "2009 7th IEEE/ACM International Conference on Formal Methods and Models for Co-Design",
-   "authors": "Nalini Vasudevan, Stephen A. Edwards",
-   "url": "https://doi.org/10.5555/1715759.1715779",
-   "cited_by": 6,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "SARA",
-   "function": "unknown",
-   "split": null,
-   "year": 2009,
-   "venue": "International Conference on Hardware/Software Codesign and System Synthesis",
-   "authors": "Praveen Raghavan, Francky Catthoor",
-   "url": "https://doi.org/10.1145/1629435.1629442",
-   "cited_by": 0,
-   "evidence": "abstract"
-  },
-  {
    "title": "Ubiquitous Stream Programming to Facilitate the Migration to Multicore Architectures",
    "function": "unknown",
    "split": null,
@@ -1152,17 +1202,6 @@
    ],
    "evidence": "contexts",
    "commit": true
-  },
-  {
-   "title": "Stream Query Optimization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "Encyclopedia of Big Data Technologies",
-   "authors": "Martin Hirzel, Robert Soulé, Buğra Gedik et al.",
-   "url": "https://doi.org/10.1007/978-3-319-77525-8_261",
-   "cited_by": 1,
-   "evidence": "title_only"
   },
   {
    "title": "S Stream Query Optimization",
@@ -1182,17 +1221,6 @@
    "authors": "B. Ferreira",
    "url": "https://www.semanticscholar.org/paper/cb186741426275ed005c1354bbaf407a0c36ec62",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Achieving self-aware parallelism in stream programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "Cluster Computing",
-   "authors": "Yan Su, Feng Shi, Shahnawaz Talpur et al.",
-   "url": "https://doi.org/10.1007/s10586-014-0412-x",
-   "cited_by": 5,
    "evidence": "title_only"
   },
   {
@@ -1233,17 +1261,6 @@
    "authors": "P. Herrero",
    "url": "https://www.semanticscholar.org/paper/11040a2c0e14b25762f581ea6bc4358543ec7f84",
    "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Optimizing Stream Organization to Improve the Performance of Scientific Computing Applications on the Stream Processor",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Lecture notes in computer science",
-   "authors": "Ying Zhang, Gen Li, Xuejun Yang et al.",
-   "url": "https://doi.org/10.1007/978-3-540-72905-1_18",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {

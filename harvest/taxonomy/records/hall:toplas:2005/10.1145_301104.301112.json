@@ -1,32 +1,33 @@
 {
  "paper": "hall:toplas:2005",
  "slug": "10.1145_301104.301112",
- "function": "positions",
- "centrality": "engaged",
+ "function": "extends",
+ "centrality": "core",
  "flags": [
   "own-group"
  ],
  "secondary": [
-  "adopts-idea"
+  "baseline",
+  "positions"
  ],
- "confidence": "medium",
- "evidence": "abstract",
+ "confidence": "high",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work's analysis 'extends array data-flow analysis for parallelization and privatization' and positions itself against 'previous work that combines predicates with array data-flow analysis,' with a shared author (Hall) linking it to the SUIF interprocedural parallelization work.",
+ "note": "The citing work explicitly builds its predicated array data-flow analysis implementation on top of the Stanford SUIF compiler's parallelization analysis system, using it as the direct substrate and also comparing results against it.",
  "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
  "year": 1999,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2650,
+  "input_tokens": 4098,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 135,
+  "output_tokens": 481,
   "service_tier": "batch",
   "inference_geo": "global"
  }

@@ -7,7 +7,7 @@
   "records_raw": 328,
   "works": 315,
   "commit": 4,
-  "judged": 231,
+  "judged": 252,
   "gscholar": null
  },
  "citations": [
@@ -33,19 +33,6 @@
    "authors": "Malik M. Khan, Protonu Basu, Gabe Rudy et al.",
    "url": "https://doi.org/10.1145/2400682.2400690",
    "cited_by": 64,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "evidence": "abstract"
-  },
-  {
-   "title": "Adaptive Source-Level Data Assignment to Dual Memory Banks",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 2012,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Alastair Murray, Björn Franke",
-   "url": "https://doi.org/10.1145/2180887.2180897",
-   "cited_by": 0,
    "centrality": "engaged",
    "confidence": "medium",
    "evidence": "abstract"
@@ -200,11 +187,12 @@
    "url": "https://doi.org/10.1145/2400682.2400705",
    "cited_by": 38,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
-    "adopts-idea"
+    "adopts-idea",
+    "supports-claim"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Portable compiler optimisation across embedded programs and microarchitectures using machine learning",
@@ -236,6 +224,40 @@
     "supports-claim"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Collective Optimization",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2008,
+   "venue": "International Conference on High Performance Embedded Architectures and Compilers",
+   "authors": "G. Fursin, O. Temam",
+   "url": "https://doi.org/10.1007/978-3-540-92990-1_5",
+   "cited_by": 45,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Feature selection and policy optimization for distributed instruction placement using reinforcement learning",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2008,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Katherine E. Coons, Behnam Robatmili, Matthew E. Taylor et al.",
+   "url": "https://doi.org/10.1145/1454115.1454122",
+   "cited_by": 21,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Instruction scheduling using evolutionary programming",
@@ -420,9 +442,12 @@
    "authors": "Amir H. Ashouri, W. Killian, John Cavazos et al.",
    "url": "https://doi.org/10.1145/3197978",
    "cited_by": 230,
-   "centrality": "peripheral",
+   "centrality": "engaged",
    "confidence": "high",
-   "evidence": "contexts"
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Machine Learning in Compiler Optimisation",
@@ -601,6 +626,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Predictive modeling methodology for compiler phase-ordering",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "PARMA-DITAM '16",
+   "authors": "Amir H. Ashouri, Andrea Bignoli, G. Palermo et al.",
+   "url": "https://doi.org/10.1145/2872421.2872424",
+   "cited_by": 29,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Fast Automatic Heuristic Construction Using Active Learning",
    "function": "supports-claim",
    "split": "detailed",
@@ -652,6 +693,22 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Adaptive Source-Level Data Assignment to Dual Memory Banks",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Alastair Murray, Björn Franke",
+   "url": "https://doi.org/10.1145/2180887.2180897",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "EVALUATION OF GCC OPTIMIZATION PARAMETERS",
@@ -852,6 +909,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "uiCA",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2022,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Andreas Abel, Jan Reineke",
+   "url": "https://doi.org/10.1145/3524059.3532396",
+   "cited_by": 27,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Automatic generation of algorithms for robust optimisation problems using Grammar-Guided Genetic Programming",
    "function": "exemplifies",
    "split": "passing",
@@ -888,7 +958,10 @@
    "cited_by": 13,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "NeurOMP: Paralelização automática de código utilizando Aprendizagem por Reforço",
@@ -1067,19 +1140,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Practical Iterative Optimization for the Data Center",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2015,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Shuangde Fang, Wenwen Xu, Yang Chen et al.",
-   "url": "https://doi.org/10.1145/2739048",
-   "cited_by": 18,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
    "title": "Analyzing and addressing false interactions during compiler optimization phase ordering",
    "function": "exemplifies",
    "split": "passing",
@@ -1204,6 +1264,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "Machine Learning Techniques in Compiler Design",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2011,
+   "authors": "Paul Lokuciejewski, P. Marwedel",
+   "url": "https://doi.org/10.1007/978-90-481-9929-7_6",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Automatic creation of tile size selection models",
    "function": "exemplifies",
    "split": "passing",
@@ -1212,19 +1284,6 @@
    "authors": "Tomofumi Yuki, Lakshminarayanan Renganarayanan, Sanjay Rajopadhye et al.",
    "url": "https://doi.org/10.1145/1772954.1772982",
    "cited_by": 57,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Collective optimization",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2010,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Grigori Fursin, Olivier Temam",
-   "url": "https://doi.org/10.1145/1880043.1880047",
-   "cited_by": 45,
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
@@ -1534,19 +1593,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Predictive modeling methodology for compiler phase-ordering",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2016,
-   "venue": "PARMA-DITAM '16",
-   "authors": "Amir H. Ashouri, Andrea Bignoli, G. Palermo et al.",
-   "url": "https://doi.org/10.1145/2872421.2872424",
-   "cited_by": 29,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
    "title": "Tuning compilations landscape",
    "function": "detailed-citation",
    "split": "detailed",
@@ -1840,8 +1886,8 @@
    "url": "https://doi.org/10.1109/qest.2004.11",
    "cited_by": 11,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Predicting Unroll Factors Using Nearest Neighbors",
@@ -1886,6 +1932,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "A Multiple Compiler Framework for Improved Performance",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "Lecture notes in computer science",
+   "authors": "Aniket Shivam, Alexandru Nicolau, Alexander V. Veidenbaum",
+   "url": "https://doi.org/10.1007/978-3-032-02436-7_12",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "CompilerDream: Learning a Compiler World Model for General Code Optimization",
    "function": "passing-citation",
    "split": "passing",
@@ -1896,7 +1955,7 @@
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "ProfiX: Improving Profile-Guided Optimization in Compilers with Graph Neural Networks",
@@ -2041,6 +2100,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "The interplay of compile-time and run-time options for performance prediction",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2021,
+   "venue": "Software Product Lines Conference",
+   "authors": "Luc Lesoil, Mathieu Acher, Xhevahire Tërnava et al.",
+   "url": "https://doi.org/10.1145/3461001.3471149",
+   "cited_by": 13,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Collaborative Filtering Approach for the Automatic Tuning of Compiler Optimisations",
    "function": "passing-citation",
    "split": "passing",
@@ -2087,8 +2159,8 @@
    "url": "https://doi.org/10.1145/3410463.3414670",
    "cited_by": 32,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Identifying Compiler and Optimization Options from Binary Code using Deep Learning Approaches",
@@ -2192,6 +2264,44 @@
    "evidence": "contexts"
   },
   {
+   "title": "Combining Software Cache Partitioning and Loop Tiling for Effective Shared Cache Management",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Kelefouras Vasilios, Keramidas Georgios, V. Nikolaos",
+   "url": "https://doi.org/10.1145/3202663",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Selecting the Best Compiler Optimizations: A Bayesian Network Approach",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "authors": "Amir H. Ashouri, G. Palermo, John Cavazos et al.",
+   "url": "https://doi.org/10.1007/978-3-319-71489-9_3",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "A methodology pruning the search space of six compiler transformations by addressing them together as one problem and by exploiting the hardware architecture details",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2017,
+   "venue": "Computing",
+   "authors": "Vasilios I. Kelefouras",
+   "url": "https://doi.org/10.1007/s00607-016-0535-4",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Study on High Performance Embedded Systems with Multiple Processors",
    "function": "passing-citation",
    "split": "passing",
@@ -2228,6 +2338,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "A high-performance matrix–matrix multiplication methodology for CPU and GPU architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2016,
+   "venue": "Journal of Supercomputing",
+   "authors": "Vasilios I. Kelefouras, A. Kritikakou, I. Mporas et al.",
+   "url": "https://doi.org/10.1007/s11227-015-1613-7",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "COBAYN",
    "function": "passing-citation",
    "split": "passing",
@@ -2238,7 +2361,20 @@
    "cited_by": 92,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Improving Computing Systems Automatic Multiobjective Optimization Through Meta-Optimization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2016,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "L. Vintan, R. Chiş, Muhammad Ali Ismail et al.",
+   "url": "https://doi.org/10.1109/tcad.2015.2501299",
+   "cited_by": 16,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "IPAS: intelligent protection against silent output corruption in scientific applications",
@@ -2266,6 +2402,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "A methodology for speeding up matrix vector multiplication for single/multi-core architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Journal of Supercomputing",
+   "authors": "Vasilios I. Kelefouras, A. Kritikakou, Elissavet Papadima et al.",
+   "url": "https://doi.org/10.1007/s11227-015-1409-9",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Autonomic Performance Optimization with Application to Self-Architecting Software Systems",
    "function": "passing-citation",
    "split": "passing",
@@ -2291,6 +2440,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Machine-Learning-based Performance Heuristics for Runtime CPU/GPU Selection",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Principles and Practice of Programming in Java",
+   "authors": "Akihiro Hayashi, Kazuaki Ishizaki, Gita Koblents et al.",
+   "url": "https://doi.org/10.1145/2807426.2807429",
+   "cited_by": 31,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Practical Iterative Optimization for the Data Center",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Shuangde Fang, Wenwen Xu, Yang Chen et al.",
+   "url": "https://doi.org/10.1145/2739048",
+   "cited_by": 18,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Matrix–Matrix Multiplication methodology for single/multi-core architectures using SIMD",
    "function": "passing-citation",
    "split": "passing",
@@ -2302,6 +2477,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "A methodology for speeding up edge and line detection algorithms focusing on memory architecture utilization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2014,
+   "venue": "Journal of Supercomputing",
+   "authors": "Vasilios I. Kelefouras, A. Kritikakou, C. Goutis",
+   "url": "https://doi.org/10.1007/s11227-013-1049-x",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Collective mind: Towards practical and collaborative auto-tuning",
@@ -2414,6 +2602,45 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Hybrid type legalization for a sparse SIMD instruction set",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Yosi Ben Asher, Nadav Rotem",
+   "url": "https://doi.org/10.1145/2509420.2509422",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "IR-level versus machine-level if-conversion for predicated architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "ODES '13",
+   "authors": "Alexander Jordan, Nikolai Kim, A. Krall",
+   "url": "https://doi.org/10.1145/2443608.2443611",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "On the Determination of Inlining Vectors for Program Optimization",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Lecture notes in computer science",
+   "authors": "Rosario Cammarota, Alexandru Nicolau, Alexander V. Veidenbaum et al.",
+   "url": "https://doi.org/10.1007/978-3-642-37051-9_9",
+   "cited_by": 7,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Towards making autotuning mainstream",
@@ -2545,6 +2772,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Towards layout-friendly high-level synthesis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2012,
+   "venue": "ACM International Symposium on Physical Design",
+   "authors": "Jason Cong, Bin Liu, Guojie Luo et al.",
+   "url": "https://doi.org/10.1145/2160916.2160952",
+   "cited_by": 18,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Automatic Static Feature Generation for Compiler Optimization Problems",
    "function": "passing-citation",
    "split": "passing",
@@ -2633,20 +2873,43 @@
    "evidence": "contexts"
   },
   {
+   "title": "Evaluating iterative optimization across 1000 datasets",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Chen Yang, Yuanjie Huang, Lieven Eeckhout et al.",
+   "url": "https://doi.org/10.1145/1806596.1806647",
+   "cited_by": 74,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Generating compiler optimizations from proofs",
    "function": "passing-citation",
    "split": "passing",
    "year": 2010,
-   "venue": "ACM-SIGACT Symposium on Principles of Programming Languages",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Ross Tate, Michael Stepp, Sorin Lerner",
-   "url": "https://doi.org/10.1145/1706299.1706345",
+   "url": "https://doi.org/10.1145/1707801.1706345",
    "cited_by": 30,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Workload characterization supporting the development of domain-specific compiler optimizations using decision trees for data mining",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "Software and Compilers for Embedded Systems",
+   "authors": "Damon Fenacci, Björn Franke, John Thomson",
+   "url": "https://doi.org/10.1145/1811212.1811219",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "A Framework for Effective Memory Optimization of High Performance Computing Applications",
@@ -2685,6 +2948,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Reducing Training Time in a One-Shot Machine Learning-Based Compiler",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2009,
+   "venue": "International Workshop on Languages and Compilers for Parallel Computing",
+   "authors": "John Thomson, M. O’Boyle, G. Fursin et al.",
+   "url": "https://doi.org/10.1007/978-3-642-13374-9_28",
+   "cited_by": 23,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Superoptimisation : provably optimal code generation using answer set programming",
@@ -2773,7 +3049,7 @@
    "cited_by": 144,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Model-guided performance tuning of parameter values: A case study with molecular dynamics visualization",
@@ -3010,16 +3286,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2005,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Keith D. Cooper, Alexander Grosul, Timothy J. Harvey et al.",
-   "url": "https://doi.org/10.1145/1065910.1065921",
+   "url": "https://doi.org/10.1145/1070891.1065921",
    "cited_by": 95,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Combining Models and Guided Empirical Search to Optimize for Multiple Levels of the Memory Hierarchy",
@@ -3111,6 +3384,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Search Space Properties for Mapping Coarse-Grain Pipelined FPGA Applications",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2003,
+   "venue": "International Workshop on Languages and Compilers for Parallel Computing",
+   "authors": "H. Ziegler, Mary W. Hall, Byoungro So",
+   "url": "https://doi.org/10.1007/978-3-540-24644-2_1",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Challenges and Complexities in Enabling Compilers to Automatically Optimize Code",
    "function": "passing-citation",
    "split": "passing",
@@ -3130,20 +3419,6 @@
    "authors": "Smaarth Dhiman, Vansh Vishnoi, Yashu Swami",
    "url": "https://doi.org/10.1109/icass69550.2026.11547433",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "uiCA",
-   "function": "unknown",
-   "split": null,
-   "year": 2022,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Andreas Abel, Jan Reineke",
-   "url": "https://doi.org/10.1145/3524059.3532396",
-   "cited_by": 27,
    "flags": [
     "polluted-contexts"
    ],
@@ -3178,20 +3453,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "The interplay of compile-time and run-time options for performance prediction",
-   "function": "unknown",
-   "split": null,
-   "year": 2021,
-   "venue": "Software Product Lines Conference",
-   "authors": "Luc Lesoil, Mathieu Acher, Xhevahire Tërnava et al.",
-   "url": "https://doi.org/10.1145/3461001.3471149",
-   "cited_by": 13,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Optimization for Risk Decision-Making Through Simulated Annealing",
    "function": "unknown",
    "split": null,
@@ -3200,20 +3461,6 @@
    "authors": "M. Eraña-Díaz, M. Cruz-Chávez, Rafael Rivera-López et al.",
    "url": "https://doi.org/10.1109/access.2020.3005084",
    "cited_by": 16,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Combining Software Cache Partitioning and Loop Tiling for Effective Shared Cache Management",
-   "function": "unknown",
-   "split": null,
-   "year": 2018,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Kelefouras Vasilios, Keramidas Georgios, V. Nikolaos",
-   "url": "https://doi.org/10.1145/3202663",
-   "cited_by": 11,
    "flags": [
     "polluted-contexts"
    ],
@@ -3244,62 +3491,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Improving Computing Systems Automatic Multiobjective Optimization Through Meta-Optimization",
-   "function": "unknown",
-   "split": null,
-   "year": 2016,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "L. Vintan, R. Chiş, Muhammad Ali Ismail et al.",
-   "url": "https://doi.org/10.1109/tcad.2015.2501299",
-   "cited_by": 16,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Machine-Learning-based Performance Heuristics for Runtime CPU/GPU Selection",
-   "function": "unknown",
-   "split": null,
-   "year": 2015,
-   "venue": "Principles and Practice of Programming in Java",
-   "authors": "Akihiro Hayashi, Kazuaki Ishizaki, Gita Koblents et al.",
-   "url": "https://doi.org/10.1145/2807426.2807429",
-   "cited_by": 31,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Hybrid type legalization for a sparse SIMD instruction set",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Yosi Ben Asher, Nadav Rotem",
-   "url": "https://doi.org/10.1145/2509420.2509422",
-   "cited_by": 4,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "IR-level versus machine-level if-conversion for predicated architectures",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "ODES '13",
-   "authors": "Alexander Jordan, Nikolai Kim, A. Krall",
-   "url": "https://doi.org/10.1145/2443608.2443611",
-   "cited_by": 5,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Query-directed adaptive heap cloning for optimizing compilers",
    "function": "unknown",
    "split": null,
@@ -3327,20 +3518,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Towards layout-friendly high-level synthesis",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "venue": "ACM International Symposium on Physical Design",
-   "authors": "Jason Cong, Bin Liu, Guojie Luo et al.",
-   "url": "https://doi.org/10.1145/2160916.2160952",
-   "cited_by": 18,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Applying support vector machines to discover just-in-time method-specific compilation strategies",
    "function": "unknown",
    "split": null,
@@ -3351,20 +3528,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Evaluating iterative optimization across 1000 datasets",
-   "function": "unknown",
-   "split": null,
-   "year": 2010,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Chen Yang, Yuanjie Huang, Lieven Eeckhout et al.",
-   "url": "https://doi.org/10.1145/1806596.1806647",
-   "cited_by": 74,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Offline library adaptation using automatically generated heuristics",
    "function": "unknown",
    "split": null,
@@ -3373,20 +3536,6 @@
    "authors": "Frédéric de Mesmay, Yevgen Voronenko, Markus Püschel",
    "url": "https://doi.org/10.1109/ipdps.2010.5470479",
    "cited_by": 21,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Workload characterization supporting the development of domain-specific compiler optimizations using decision trees for data mining",
-   "function": "unknown",
-   "split": null,
-   "year": 2010,
-   "venue": "Software and Compilers for Embedded Systems",
-   "authors": "Damon Fenacci, Björn Franke, John Thomson",
-   "url": "https://doi.org/10.1145/1811212.1811219",
-   "cited_by": 11,
    "flags": [
     "polluted-contexts"
    ],
@@ -3420,20 +3569,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Feature selection and policy optimization for distributed instruction placement using reinforcement learning",
-   "function": "unknown",
-   "split": null,
-   "year": 2008,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Katherine E. Coons, Behnam Robatmili, Matthew E. Taylor et al.",
-   "url": "https://doi.org/10.1145/1454115.1454122",
-   "cited_by": 21,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Intelligent Optimization of Parallel and Distributed Applications",
    "function": "unknown",
    "split": null,
@@ -3455,7 +3590,10 @@
    "authors": "M. Haneda, P.M.W. Knijnenburg, Harry A. G. Wijshoff",
    "url": "https://doi.org/10.1145/1088149.1088171",
    "cited_by": 22,
-   "evidence": "abstract"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Accelerating C/C++ Pointer Analysis via Compiler-Based Offline Simplifications",
@@ -3475,17 +3613,6 @@
    "venue": "Applied Soft Computing",
    "authors": "A. Zafar, Qamar Askari, M. Faheem",
    "url": "https://doi.org/10.1016/j.asoc.2026.115220",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Multiple Compiler Framework for Improved Performance",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "Lecture notes in computer science",
-   "authors": "Aniket Shivam, Alexandru Nicolau, Alexander V. Veidenbaum",
-   "url": "https://doi.org/10.1007/978-3-032-02436-7_12",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -3584,38 +3711,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Selecting the Best Compiler Optimizations: A Bayesian Network Approach",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "authors": "Amir H. Ashouri, G. Palermo, John Cavazos et al.",
-   "url": "https://doi.org/10.1007/978-3-319-71489-9_3",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A methodology pruning the search space of six compiler transformations by addressing them together as one problem and by exploiting the hardware architecture details",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "Computing",
-   "authors": "Vasilios I. Kelefouras",
-   "url": "https://doi.org/10.1007/s00607-016-0535-4",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A high-performance matrix–matrix multiplication methodology for CPU and GPU architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "Journal of Supercomputing",
-   "authors": "Vasilios I. Kelefouras, A. Kritikakou, I. Mporas et al.",
-   "url": "https://doi.org/10.1007/s11227-015-1613-7",
-   "cited_by": 24,
-   "evidence": "title_only"
-  },
-  {
    "title": "Optimizing Memory Efficiency for Many-Core Architecture.",
    "function": "unclassified",
    "split": null,
@@ -3647,17 +3742,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "A methodology for speeding up matrix vector multiplication for single/multi-core architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Journal of Supercomputing",
-   "authors": "Vasilios I. Kelefouras, A. Kritikakou, Elissavet Papadima et al.",
-   "url": "https://doi.org/10.1007/s11227-015-1409-9",
-   "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
    "title": "Autonomic Metaheuristic Optimization with Application to Run-Time Software Adaptation",
    "function": "unclassified",
    "split": null,
@@ -3686,17 +3770,6 @@
    "authors": "William F. Ogilvie, Zheng Wang, Pavlos Petoumenos et al.",
    "url": "https://www.semanticscholar.org/paper/bb969ed1684a230c6acfc910153e05b537374404",
    "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A methodology for speeding up edge and line detection algorithms focusing on memory architecture utilization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "Journal of Supercomputing",
-   "authors": "Vasilios I. Kelefouras, A. Kritikakou, C. Goutis",
-   "url": "https://doi.org/10.1007/s11227-013-1049-x",
-   "cited_by": 5,
    "evidence": "title_only"
   },
   {
@@ -3741,17 +3814,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "On the Determination of Inlining Vectors for Program Optimization",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Lecture notes in computer science",
-   "authors": "Rosario Cammarota, Alexandru Nicolau, Alexander V. Veidenbaum et al.",
-   "url": "https://doi.org/10.1007/978-3-642-37051-9_9",
-   "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
    "title": "Compiler-driven data layout transformations for network applications",
    "function": "unclassified",
    "split": null,
@@ -3769,16 +3831,6 @@
    "authors": "A. Murray",
    "url": "https://www.semanticscholar.org/paper/cba85ce9d56927bb6aaed5f5959400c9b2bc8241",
    "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Machine Learning Techniques in Compiler Design",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "Paul Lokuciejewski, P. Marwedel",
-   "url": "https://doi.org/10.1007/978-90-481-9929-7_6",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {
@@ -3817,17 +3869,6 @@
    "split": null,
    "year": 2009,
    "cited_by": null,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reducing Training Time in a One-Shot Machine Learning-Based Compiler",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "International Workshop on Languages and Compilers for Parallel Computing",
-   "authors": "John Thomson, M. O’Boyle, G. Fursin et al.",
-   "url": "https://doi.org/10.1007/978-3-642-13374-9_28",
-   "cited_by": 23,
    "evidence": "title_only"
   },
   {
@@ -3988,17 +4029,6 @@
    "authors": "Arjun Singh",
    "url": "https://www.semanticscholar.org/paper/dab761fc1fa2855ac36bf034ff4992b23b8cbbc2",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Search Space Properties for Mapping Coarse-Grain Pipelined FPGA Applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2003,
-   "venue": "International Workshop on Languages and Compilers for Parallel Computing",
-   "authors": "H. Ziegler, Mary W. Hall, Byoungro So",
-   "url": "https://doi.org/10.1007/978-3-540-24644-2_1",
-   "cited_by": 4,
    "evidence": "title_only"
   },
   {

@@ -1,14 +1,16 @@
 {
  "paper": "chou:2018:formats",
  "slug": "10.1145_3490148.3538570",
- "function": "uses-tool",
+ "function": "uses-benchmark",
  "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "contexts",
+ "secondary": [
+  "uses-tool"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work bases its SpGEMM code on TACO Sparse Matrix-Matrix Multiplication, referencing this paper (among others) as the source of that benchmark/implementation used as a workload.",
+ "note": "The citing work uses TACO Sparse Matrix-Matrix Multiplication (citing both [23] and [40], the latter being the format abstraction paper) as a workload/benchmark for their HBM simulator experiments, instrumenting its code to generate memory access traces.",
  "title": "Automatic HBM Management",
  "year": 2022,
  "s2_isInfluential": false,
@@ -17,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2574,
+  "input_tokens": 4005,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 105,
+  "output_tokens": 121,
   "service_tier": "batch",
   "inference_geo": "global"
  }

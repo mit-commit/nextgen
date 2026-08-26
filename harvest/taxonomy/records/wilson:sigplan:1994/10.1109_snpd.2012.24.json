@@ -1,30 +1,32 @@
 {
  "paper": "wilson:sigplan:1994",
  "slug": "10.1109_snpd.2012.24",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [
-  "polluted-contexts"
+  "lineage"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No evidence in the abstract or contexts anchors to the SUIF paper; the citing work discusses OpenMP parallel region reconstruction with no visible connection to SUIF.",
+ "secondary": [
+  "detailed-citation"
+ ],
+ "confidence": "medium",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work implements its technique 'based on SUIF system' and lists the cited paper in references as origin credit for SUIF, but the direct infrastructure reference points to a derivative SUIF-based compiler work.",
  "title": "Implement Improved Loop Level OpenMP Program Based on Parallel Region Reconstruction",
  "year": 2012,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2705,
+  "input_tokens": 3847,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 72,
+  "output_tokens": 331,
   "service_tier": "batch",
   "inference_geo": "global"
  }

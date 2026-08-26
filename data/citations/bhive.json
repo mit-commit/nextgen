@@ -7,7 +7,7 @@
   "records_raw": 37,
   "works": 36,
   "commit": 1,
-  "judged": 31,
+  "judged": 33,
   "gscholar": null
  },
  "citations": [
@@ -209,13 +209,13 @@
    "authors": "Andreas Abel, Jan Reineke",
    "url": "https://doi.org/10.1145/3524059.3532396",
    "cited_by": 27,
-   "centrality": "engaged",
-   "confidence": "medium",
+   "centrality": "core",
+   "confidence": "high",
    "secondary": [
-    "baseline",
-    "positions"
+    "supports-claim",
+    "baseline"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Understanding High-Level Properties of Low-Level Programs Through Transformers",
@@ -316,6 +316,21 @@
     "own-group"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Fast and Accurate Context-Aware Basic Block Timing Prediction using Transformers",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2024,
+   "authors": "Abderaouf Nassim Amalou, Élisa Fromont, Isabelle Puaut",
+   "url": "https://doi.org/10.1145/3640537.3641572",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "uses-benchmark"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A Neural Network Based GCC Cost Model for Faster Compiler Tuning",
@@ -420,6 +435,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Adaptive Data Augmentation with Bayesian Optimization for Basic Block Throughput Prediction",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "Lecture notes in computer science",
+   "authors": "Xiabing Hu, Xuezheng Xu, Deheng Yang et al.",
+   "url": "https://doi.org/10.1007/978-3-032-35248-4_12",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Benchmark on Directed Graph Representation Learning in Hardware Designs",
    "function": "passing-citation",
    "split": "passing",
@@ -491,19 +519,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Fast and Accurate Context-Aware Basic Block Timing Prediction using Transformers",
-   "function": "unknown",
-   "split": null,
-   "year": 2024,
-   "authors": "Abderaouf Nassim Amalou, Élisa Fromont, Isabelle Puaut",
-   "url": "https://doi.org/10.1145/3640537.3641572",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "At the Locus of Performance: Quantifying the Effects of Copious 3D-Stacked Cache on HPC Workloads",
    "function": "unknown",
    "split": null,
@@ -515,7 +530,21 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract+contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Reliable Basic Block Energy Accounting",
+   "function": "unknown",
+   "split": null,
+   "year": 2023,
+   "venue": "Lecture notes in computer science",
+   "authors": "Christos P. Lamprakos, Dimitrios Bouras, Francky Catthoor et al.",
+   "url": "https://doi.org/10.1007/978-3-031-46077-7_13",
+   "cited_by": 1,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Cross-Architecture Automatic Critical Path Detection For In-Core Performance Analysis",
@@ -529,28 +558,6 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
-  },
-  {
-   "title": "Adaptive Data Augmentation with Bayesian Optimization for Basic Block Throughput Prediction",
-   "function": "unclassified",
-   "split": null,
-   "year": 2026,
-   "venue": "Lecture notes in computer science",
-   "authors": "Xiabing Hu, Xuezheng Xu, Deheng Yang et al.",
-   "url": "https://doi.org/10.1007/978-3-032-35248-4_12",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reliable Basic Block Energy Accounting",
-   "function": "unclassified",
-   "split": null,
-   "year": 2023,
-   "venue": "Lecture notes in computer science",
-   "authors": "Christos P. Lamprakos, Dimitrios Bouras, Francky Catthoor et al.",
-   "url": "https://doi.org/10.1007/978-3-031-46077-7_13",
-   "cited_by": 1,
-   "evidence": "title_only"
   }
  ],
  "reception": "The suite found the use it was built for: the citing literature consists largely of work that runs on BHive rather than work that merely mentions it. Abel and Reineke validate their throughput predictors and the uiCA simulator on it, DiffTune tunes CPU-simulator parameters against its measurements, COMET uses it to explain neural cost models, and several studies of transformer models over low-level programs draw their basic blocks from it; a microbenchmarking toolkit adopts its measurement methodology. The community is small and concentrated in basic-block performance modeling, but within that community BHive serves as common ground for validation. The suite and its profiler are available at ithemal/bhive."

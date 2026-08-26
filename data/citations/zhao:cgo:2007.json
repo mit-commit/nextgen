@@ -7,7 +7,7 @@
   "records_raw": 26,
   "works": 25,
   "commit": 4,
-  "judged": 18,
+  "judged": 21,
   "gscholar": null
  },
  "citations": [
@@ -41,6 +41,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Performance driven data cache prefetching in a dynamic software optimization system",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Jean Christophe Beyler, Philippe Clauss",
+   "url": "https://doi.org/10.1145/1274971.1275000",
+   "cited_by": 19,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "PiPA",
    "function": "supports-claim",
    "split": "detailed",
@@ -57,7 +73,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "RapidMRC",
@@ -68,9 +84,25 @@
    "authors": "David Tam, Reza Azimi, Livio Soares et al.",
    "url": "https://doi.org/10.1145/1508244.1508259",
    "cited_by": 174,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Online Phase-Adaptive Data Layout Selection",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2008,
+   "venue": "Lecture notes in computer science",
+   "authors": "Chengliang Zhang, Martin Hirzel",
+   "url": "https://doi.org/10.1007/978-3-540-70592-5_14",
+   "cited_by": 20,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Write management mechanisms for systems with non-volatile memory technologies",
@@ -83,23 +115,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "Dynamic cache contention detection in multi-threaded applications",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2011,
-   "venue": "International Conference on Virtual Execution Environments",
-   "authors": "Qin Zhao, David Koh, Syed Raza et al.",
-   "url": "https://doi.org/10.1145/1952682.1952688",
-   "cited_by": 70,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
   },
   {
    "title": "MIT Open Access Articles Dynamic Cache Contention Detection in Multi-threaded Applications",
@@ -151,8 +166,8 @@
    "url": "https://doi.org/10.1145/1375634.1375648",
    "cited_by": 69,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Optimizing Performance in Highly Utilized Multicores with Intelligent",
@@ -233,6 +248,41 @@
    "evidence": "contexts"
   },
   {
+   "title": "Transparent dynamic instrumentation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2012,
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2151024.2151043",
+   "cited_by": 124,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "Dynamic cache contention detection in multi-threaded applications",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": "Qin Zhao, David Koh, Syed Raza et al.",
+   "url": "https://doi.org/10.1145/1952682.1952688",
+   "cited_by": 70,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
    "title": "Operating system management of shared caches on multicore processors",
    "function": "passing-citation",
    "split": "passing",
@@ -272,36 +322,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Transparent dynamic instrumentation",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "venue": "International Conference on Virtual Execution Environments",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2151024.2151043",
-   "cited_by": 124,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts",
-   "commit": true
-  },
-  {
-   "title": "Performance driven data cache prefetching in a dynamic software optimization system",
-   "function": "unknown",
-   "split": null,
-   "year": 2007,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Jean Christophe Beyler, Philippe Clauss",
-   "url": "https://doi.org/10.1145/1274971.1275000",
-   "cited_by": 19,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Perf-Insight : A Simple, Scalable Approach to Optimal Data Prefetching in Multicores",
    "function": "unclassified",
    "split": null,
@@ -330,17 +350,6 @@
    "authors": "Florian Schneider",
    "url": "https://doi.org/10.3929/ethz-a-005782931",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Online Phase-Adaptive Data Layout Selection",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "Lecture notes in computer science",
-   "authors": "Chengliang Zhang, Martin Hirzel",
-   "url": "https://doi.org/10.1007/978-3-540-70592-5_14",
-   "cited_by": 20,
    "evidence": "title_only"
   }
  ],

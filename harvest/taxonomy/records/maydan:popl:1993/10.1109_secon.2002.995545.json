@@ -1,14 +1,17 @@
 {
  "paper": "maydan:popl:1993",
  "slug": "10.1109_secon.2002.995545",
- "function": "uses-tool",
- "centrality": "engaged",
+ "function": "extends",
+ "centrality": "core",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "contexts",
- "anchored": "numref",
- "note": "The citing work references the Last Write Tree (LWT) concept from the cited paper as a key analytical structure used in its data flow analysis for message-passing code generation.",
+ "secondary": [
+  "uses-tool",
+  "adopts-idea"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly states it is 'largely based on work presented by Amarasinghe and Lam' and rebuilds their algorithm for generating message-passing code using linear inequalities and Last Write Trees, making the cited work the direct substrate of their contribution.",
  "title": "The Paraguin compiler - message-passing code generation using SUIF [Stanford University Intermediate Format]",
  "year": 2002,
  "s2_isInfluential": false,
@@ -17,14 +20,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2546,
+  "input_tokens": 4016,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 71,
+  "output_tokens": 129,
   "service_tier": "batch",
   "inference_geo": "global"
  }

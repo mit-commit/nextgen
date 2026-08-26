@@ -7,7 +7,7 @@
   "records_raw": 76,
   "works": 66,
   "commit": 5,
-  "judged": 52,
+  "judged": 57,
   "gscholar": null
  },
  "citations": [
@@ -28,6 +28,36 @@
    "evidence": "abstract"
   },
   {
+   "title": "Look into details",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Mohammad H. Foroozannejad, Matin Hashemi, Trevor L. Hodges et al.",
+   "url": "https://doi.org/10.1145/1755951.1755894",
+   "cited_by": 12,
+   "centrality": "core",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Exploiting coarse-grained task, data, and pipeline parallelism in stream programs",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "ASPLOS XII",
+   "authors": "Michael I. Gordon, William Thies, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/1168857.1168877",
+   "cited_by": 523,
+   "centrality": "core",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
    "title": "Cache aware optimization of stream programs",
    "function": "uses-tool",
    "split": "detailed",
@@ -36,12 +66,13 @@
    "authors": "Janis Sermulins, William Thies, Rodric Rabbah et al.",
    "url": "https://doi.org/10.1145/1065910.1065927",
    "cited_by": 77,
-   "centrality": "engaged",
-   "confidence": "medium",
+   "centrality": "peripheral",
+   "confidence": "high",
    "flags": [
-    "own-group"
+    "own-group",
+    "polluted-contexts"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -59,6 +90,21 @@
     "passing-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "StreamX10",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2012,
+   "authors": "Haitao Wei, Hong Tan, Xiaoxian Liu et al.",
+   "url": "https://doi.org/10.1145/2246056.2246057",
+   "cited_by": 9,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "StreamPI: a stream-parallel programming extension for object-oriented programming languages",
@@ -83,11 +129,28 @@
    "url": "https://doi.org/10.1145/1961296.1950406",
    "cited_by": 30,
    "centrality": "peripheral",
-   "confidence": "low",
+   "confidence": "medium",
    "secondary": [
     "exemplifies"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Buffer-space efficient and deadlock-free scheduling of stream applications on multi-core architectures",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Jongsoo Park, William J. Dally",
+   "url": "https://doi.org/10.1145/1810479.1810481",
+   "cited_by": 25,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Postscheduling buffer management trade-offs in streaming software synthesis",
@@ -101,9 +164,9 @@
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "detailed-citation"
+    "supports-claim"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Beyond single-appearance schedules",
@@ -117,6 +180,18 @@
    "centrality": "engaged",
    "confidence": "medium",
    "evidence": "abstract"
+  },
+  {
+   "title": "Fundamentals and Related Work",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2011,
+   "authors": "J. Keinert, J. Teich",
+   "url": "https://doi.org/10.1007/978-1-4419-7182-1_3",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Optimizations in Stream Programming for Multimedia Applications",
@@ -147,6 +222,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Profile-guided deployment of stream programs on multicores",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": "S. M. Farhad, Yousun Ko, Bernd Burgstaller et al.",
+   "url": "https://doi.org/10.1145/2248418.2248430",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "AdaStreams: A Type-Based Programming Extension for Stream-Parallelism with Ada 2005",
    "function": "supports-claim",
    "split": "detailed",
@@ -158,71 +249,6 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
-  },
-  {
-   "title": "Buffer-space efficient and deadlock-free scheduling of stream applications on multi-core architectures",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2010,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Jongsoo Park, William J. Dally",
-   "url": "https://doi.org/10.1145/1810479.1810481",
-   "cited_by": 25,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "uses-benchmark",
-    "detailed-citation"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Look into details",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2010,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-   "authors": "Mohammad H. Foroozannejad, Matin Hashemi, Trevor L. Hodges et al.",
-   "url": "https://doi.org/10.1145/1755888.1755894",
-   "cited_by": 12,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "secondary": [
-    "detailed-citation"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Code-size conscious pipelining of imperfectly nested loops",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2007,
-   "venue": "Medea",
-   "authors": "Mohammed Fellahi, Albert Cohen, Sid Touati",
-   "url": "https://doi.org/10.1145/1327171.1327177",
-   "cited_by": 1,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "secondary": [
-    "exemplifies"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Exploiting Coarse-Grained Task , Data , and Pipeline Parallelism in Stream Programs",
-   "function": "supports-claim",
-   "split": "detailed",
-   "venue": "ACM SIGARCH Computer Architecture News",
-   "authors": "Michael I. Gordon, W. Thies, Saman P. Amarasinghe",
-   "url": "https://doi.org/10.1145/1168919.1168877",
-   "cited_by": 523,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
   },
   {
    "title": "A programming language based on recurrence equations and polyhedral compilation for stream processing",
@@ -268,6 +294,42 @@
    "evidence": "abstract"
   },
   {
+   "title": "An empirical characterization of stream programs and its implications for language and compiler design",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2010,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "William Thies, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/1854273.1854319",
+   "cited_by": 170,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "Code-size conscious pipelining of imperfectly nested loops",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2007,
+   "venue": "Medea",
+   "authors": "Mohammed Fellahi, Albert Cohen, Sid Touati",
+   "url": "https://doi.org/10.1145/1327171.1327177",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Semantic-Preserving Transformations for Stream Program Orchestration on Multicore Architectures",
    "function": "detailed-citation",
    "split": "detailed",
@@ -281,19 +343,6 @@
     "surveys",
     "passing-citation"
    ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Efficient Compilation of Stream Programs for Heterogeneous Architectures",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2015,
-   "venue": "Software and Compilers for Embedded Systems",
-   "authors": "Rajesh K. Thakur, Y. N. Srikant",
-   "url": "https://doi.org/10.1145/2764967.2764968",
-   "cited_by": 2,
-   "centrality": "peripheral",
-   "confidence": "medium",
    "evidence": "contexts"
   },
   {
@@ -448,6 +497,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Efficient Compilation of Stream Programs for Heterogeneous Architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Software and Compilers for Embedded Systems",
+   "authors": "Rajesh K. Thakur, Y. N. Srikant",
+   "url": "https://doi.org/10.1145/2764967.2764968",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A compilation flow for parametric dataflow",
    "function": "passing-citation",
    "split": "passing",
@@ -474,6 +536,19 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Cache-oblivious scheduling of streaming pipelines",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2014,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Kunal Agrawal, Jeremy T. Fineman",
+   "url": "https://doi.org/10.1145/2612669.2612707",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Cache-conscious scheduling of streaming applications",
@@ -730,20 +805,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Cache-oblivious scheduling of streaming pipelines",
-   "function": "unknown",
-   "split": null,
-   "year": 2014,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Kunal Agrawal, Jeremy T. Fineman",
-   "url": "https://doi.org/10.1145/2612669.2612707",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Software thread integration for instruction-level parallelism",
    "function": "unknown",
    "split": null,
@@ -755,7 +816,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "FD-COMA 2013 2nd HiPEAC Workshop on Feedback-Directed Compiler Optimization for Multicore Architectures",
@@ -769,49 +830,6 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
-  },
-  {
-   "title": "Profile-guided deployment of stream programs on multicores",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-   "authors": "S. M. Farhad, Yousun Ko, Bernd Burgstaller et al.",
-   "url": "https://doi.org/10.1145/2248418.2248430",
-   "cited_by": 10,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "StreamX10",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "authors": "Haitao Wei, Hong Tan, Xiaoxian Liu et al.",
-   "url": "https://doi.org/10.1145/2246056.2246057",
-   "cited_by": 9,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "An empirical characterization of stream programs and its implications for language and compiler design",
-   "function": "unknown",
-   "split": null,
-   "year": 2010,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "William Thies, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/1854273.1854319",
-   "cited_by": 170,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract",
-   "commit": true
   },
   {
    "title": "Mapping stream programs onto multicore platforms by local search and genetic algorithm",
@@ -831,16 +849,6 @@
    "year": 2014,
    "authors": "Vu Thien, Nga Nguyen",
    "url": "https://www.semanticscholar.org/paper/2f89804f2f747d333d406ef7b56cc16aeb208b33",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Fundamentals and Related Work",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "authors": "J. Keinert, J. Teich",
-   "url": "https://doi.org/10.1007/978-1-4419-7182-1_3",
    "cited_by": 0,
    "evidence": "title_only"
   },

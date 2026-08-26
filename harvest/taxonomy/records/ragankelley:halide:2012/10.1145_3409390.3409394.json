@@ -1,14 +1,16 @@
 {
  "paper": "ragankelley:halide:2012",
  "slug": "10.1145_3409390.3409394",
- "function": "exemplifies",
- "centrality": "peripheral",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [],
- "secondary": [],
+ "secondary": [
+  "detailed-citation"
+ ],
  "confidence": "high",
- "evidence": "contexts",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "Halide is described as an example of a domain-specific language with scheduling strategies, serving as background context for the citing work's own sparse compression scheduler.",
+ "note": "The citing work implements sparse compression schedulers in Halide and uses it as the primary infrastructure for their FastText optimization, specifically crediting Halide's algorithm/schedule decoupling and scheduling primitives.",
  "title": "Devise Sparse Compression Schedulers to Enhance FastText Methods",
  "year": 2020,
  "s2_isInfluential": false,
@@ -17,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2630,
+  "input_tokens": 4397,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 66,
+  "output_tokens": 112,
   "service_tier": "batch",
   "inference_geo": "global"
  }

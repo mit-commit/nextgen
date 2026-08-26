@@ -1,28 +1,30 @@
 {
  "paper": "gordon:asplos:2002",
  "slug": "10.1145_2535932",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "positions",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract mentions Brook and FPGA streaming compilation but does not explicitly reference the cited StreamIt/ASPLOS paper; no S2 context anchors the citation.",
+ "secondary": [
+  "detailed-citation"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work specifically describes StreamIt's language features (filters, push/pop/peek, pipeline/splitjoin topologies, FIFO assumptions, dependency introduction via peek) and contrasts them with its own Brook-based approach, positioning its contribution against StreamIt's design choices.",
  "title": "Exploiting Task- and Data-Level Parallelism in Streaming Applications Implemented in FPGAs",
  "year": 2013,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2715,
+  "input_tokens": 4019,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 98,
+  "output_tokens": 126,
   "service_tier": "batch",
   "inference_geo": "global"
  }

@@ -1,28 +1,30 @@
 {
  "paper": "kjolstad:oopsla:2017",
  "slug": "10.1145_3613424.3614284",
- "function": "exemplifies",
- "centrality": "peripheral",
+ "function": "uses-tool",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation context anchors to the cited work; the abstract mentions sparse tensor algebra workloads and format completeness in terms consistent with TACO influence, but no specific reference to TACO is visible in the evidence.",
+ "secondary": [
+  "baseline"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work uses TACO [31] to generate software baselines for multiple kernels (SpMV, SpMSpM, SpKAdd) against which the TMU is evaluated, and also discusses extending TACO for compute code generation.",
  "title": "A Tensor Marshaling Unit for Sparse Tensor Algebra on General-Purpose Processors",
  "year": 2023,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2660,
+  "input_tokens": 3722,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 110,
+  "output_tokens": 120,
   "service_tier": "batch",
   "inference_geo": "global"
  }

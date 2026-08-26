@@ -1,30 +1,28 @@
 {
  "paper": "ansel:ipdps:2009",
  "slug": "10.1145_2630777.2630784",
- "function": "unknown",
- "centrality": "unknown",
- "flags": [
-  "polluted-contexts"
- ],
+ "function": "uses-tool",
+ "centrality": "core",
+ "flags": [],
  "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract does not mention DMTCP or the cited work specifically, and no citation contexts anchor to it; cannot determine function from available evidence.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work directly employs DMTCP as its primary checkpointing infrastructure for ns-3 simulations, using dmtcp_restart.sh, dmtcp_env.txt, and DMTCP callback APIs throughout the implementation.",
  "title": "Simulation speedup of ns-3 using checkpoint and restore",
  "year": 2014,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2480,
+  "input_tokens": 4281,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 98,
+  "output_tokens": 118,
   "service_tier": "batch",
   "inference_geo": "global"
  }

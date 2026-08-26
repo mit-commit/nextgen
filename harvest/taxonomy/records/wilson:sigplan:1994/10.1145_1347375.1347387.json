@@ -1,30 +1,28 @@
 {
  "paper": "wilson:sigplan:1994",
  "slug": "10.1145_1347375.1347387",
- "function": "unknown",
- "centrality": "unknown",
- "flags": [
-  "polluted-contexts"
- ],
+ "function": "uses-tool",
+ "centrality": "core",
+ "flags": [],
  "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "Abstract describes bit-width estimation for custom processors with no mention of SUIF; no evidence contexts anchor to the cited work.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly uses the SUIF1 compiler [Wilson et al. 1994] as infrastructure, converting C applications into SUIF-IR and using the SUIF front end and SUIF-to-C translator as core components of their framework.",
  "title": "A stochastic bitwidth estimation technique for compact and low-power custom processors",
  "year": 2008,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2764,
+  "input_tokens": 3753,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 94,
+  "output_tokens": 122,
   "service_tier": "batch",
   "inference_geo": "global"
  }

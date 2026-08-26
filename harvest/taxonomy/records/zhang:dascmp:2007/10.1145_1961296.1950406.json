@@ -1,30 +1,31 @@
 {
  "paper": "zhang:dascmp:2007",
  "slug": "10.1145_1961296.1950406",
- "function": "uses-benchmark",
+ "function": "positions",
  "centrality": "engaged",
  "flags": [],
  "secondary": [
-  "positions"
+  "uses-benchmark",
+  "baseline"
  ],
  "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract references StreamIt benchmark programs as the evaluation vehicle and compares against ILP approaches for stream graph orchestration, but does not explicitly name the cited paper; the StreamIt benchmarks and multicore streaming context suggest engagement, but without direct anchoring the function is inferred from domain alignment.",
+ "evidence": "fulltext",
+ "anchored": "numref",
+ "note": "The citing work references [18] (likely the cited paper) as a state-of-the-art ILP approach for orchestrating stream graphs that it compares against experimentally, and Figure 2 caption explicitly contrasts the cited work's 'integrated bottleneck resolution and actor allocation approach' with the proposed method.",
  "title": "Orchestration by approximation",
  "year": 2011,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2669,
+  "input_tokens": 4282,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 127,
+  "output_tokens": 139,
   "service_tier": "batch",
   "inference_geo": "global"
  }

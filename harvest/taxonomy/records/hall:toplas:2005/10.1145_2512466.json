@@ -1,30 +1,30 @@
 {
  "paper": "hall:toplas:2005",
  "slug": "10.1145_2512466",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [
-  "polluted-contexts"
+  "own-group"
  ],
  "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation contexts are provided and the abstract does not reference the cited paper on interprocedural parallelization analysis in SUIF; cannot determine how it is cited.",
+ "confidence": "medium",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work uses the SUIF2 compiler infrastructure as implementation substrate for their STI tool chain; the reference list cites Aigner et al. 1999 (SUIF2 overview) which shares authors Murphy and Lam with the cited paper, but the actual cited paper is Hall et al. 2005 on interprocedural parallelization in SUIF — the evidence anchors to SUIF2 infrastructure use, suggesting uses-tool, though the specific cited paper may be only tangentially related to what is actually leveraged.",
  "title": "Software thread integration for instruction-level parallelism",
  "year": 2013,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2750,
+  "input_tokens": 3651,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 103,
+  "output_tokens": 190,
   "service_tier": "batch",
   "inference_geo": "global"
  }

@@ -1,31 +1,30 @@
 {
  "paper": "chou:2018:formats",
  "slug": "10.1145_3689342",
- "function": "passing-citation",
- "centrality": "peripheral",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [
-  "lineage",
-  "polluted-contexts"
+  "lineage"
  ],
  "secondary": [],
- "confidence": "low",
- "evidence": "abstract+contexts",
- "anchored": "none",
- "note": "The S2 contexts do not anchor to the cited format abstraction paper; CoNST uses TACO as backend (lineage), but the provided contexts contain no sentence specifically about this cited work.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "CoNST lowers its constraint-solved fused loop structure to the TACO compiler's IR (citing [19] for TACO and [18] for its index notation IR, which is the cited OOPSLA paper), using TACO as the code-generation backend infrastructure.",
  "title": "CoNST: Code Generator for Sparse Tensor Networks",
  "year": 2024,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2819,
+  "input_tokens": 3849,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 237,
+  "output_tokens": 104,
   "service_tier": "batch",
   "inference_geo": "global"
  }

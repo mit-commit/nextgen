@@ -5,26 +5,27 @@
  "centrality": "engaged",
  "flags": [],
  "secondary": [
-  "adopts-idea"
+  "adopts-idea",
+  "supports-claim"
  ],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract describes a new algorithm that learns compiler heuristics using machine learning without an initial training phase, which directly positions against the iterative compilation + ML approach pioneered by the cited work, but no specific named anchor to the cited paper is present in the evidence.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly names Stephenson et al. [2003] as the only other work sharing their goal of finding human-readable compiler heuristic formulas, borrows their formula-based heuristic representation concept (adopts-idea), and cites a specific finding about search space width (supports-claim), while contrasting long-term learning's online nature against the cited work's offline learning approach.",
  "title": "Continuous learning of compiler heuristics",
  "year": 2013,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2654,
+  "input_tokens": 4155,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 122,
+  "output_tokens": 159,
   "service_tier": "batch",
   "inference_geo": "global"
  }

@@ -4,25 +4,27 @@
  "function": "uses-tool",
  "centrality": "core",
  "flags": [],
- "secondary": [],
+ "secondary": [
+  "baseline"
+ ],
  "confidence": "high",
- "evidence": "abstract+contexts",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work explicitly uses TACO's IR as the code generation backend for CoNST, making it a consumed infrastructure dependency.",
+ "note": "CoNST explicitly lowers its output to TACO's IR to generate executable code and also uses TACO as a baseline comparison in experiments, making TACO core infrastructure for the work.",
  "title": "CoNST: Code Generator for Sparse Tensor Networks",
  "year": 2024,
  "s2_isInfluential": true,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 3112,
+  "input_tokens": 4142,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 136,
+  "output_tokens": 79,
   "service_tier": "batch",
   "inference_geo": "global"
  }

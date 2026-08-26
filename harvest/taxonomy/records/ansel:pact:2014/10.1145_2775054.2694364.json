@@ -1,30 +1,30 @@
 {
  "paper": "ansel:pact:2014",
  "slug": "10.1145_2775054.2694364",
- "function": "unknown",
- "centrality": "unknown",
- "flags": [
-  "polluted-contexts"
+ "function": "baseline",
+ "centrality": "engaged",
+ "flags": [],
+ "secondary": [
+  "uses-tool"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract mentions Halide and polyhedral frameworks but does not reference OpenTuner or any autotuning framework, and no citation contexts anchor to the cited work.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "OpenTuner is used as a baseline comparison system (measured execution times and speedups vs. OpenTuner-generated Halide schedules appear in Table 2) and also as infrastructure for the Halide autotuner used in the evaluation.",
  "title": "PolyMage",
  "year": 2015,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2806,
+  "input_tokens": 4613,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 104,
+  "output_tokens": 121,
   "service_tier": "batch",
   "inference_geo": "global"
  }

@@ -7,24 +7,24 @@
  "secondary": [
   "adopts-idea"
  ],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract describes creating SIMD instructions from regular code and grouping memory operations—core ideas from the SLP paper—but does not name the cited work explicitly in the available evidence; the work appears to build on and differentiate from SLP-style vectorization by adding permutation minimization.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work specifically describes Larsen's SLP algorithm (seed identification + group merging) at two points, adopts a similar memory-operation-first grouping approach, but explicitly contrasts itself by noting Larsen does not address the permutation generation problem that this paper solves.",
  "title": "Generation of permutations for SIMD processors",
  "year": 2005,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2700,
+  "input_tokens": 3903,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 129,
+  "output_tokens": 124,
   "service_tier": "batch",
   "inference_geo": "global"
  }

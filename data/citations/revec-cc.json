@@ -7,7 +7,7 @@
   "records_raw": 12,
   "works": 12,
   "commit": 0,
-  "judged": 10,
+  "judged": 11,
   "gscholar": null
  },
  "citations": [
@@ -38,7 +38,7 @@
    "cited_by": 4,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Code Rejuvenation: From Vector Compiler Intrinsics to Portable Standardized SIMD",
@@ -106,6 +106,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Java Vector API: Benchmarking and Performance Analysis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2023,
+   "venue": "International Conference on Compiler Construction",
+   "authors": "Matteo Basso, Andrea Rosà, Luca Omini et al.",
+   "url": "https://doi.org/10.1145/3578360.3580265",
+   "cited_by": 7,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "An SLP Vectorization Method Based on Equivalent Extended Transformation",
    "function": "passing-citation",
    "split": "passing",
@@ -145,29 +158,18 @@
    "evidence": "contexts"
   },
   {
-   "title": "Java Vector API: Benchmarking and Performance Analysis",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "venue": "International Conference on Compiler Construction",
-   "authors": "Matteo Basso, Andrea Rosà, Luca Omini et al.",
-   "url": "https://doi.org/10.1145/3578360.3580265",
-   "cited_by": 7,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "PostSLP: Cross-Region Vectorization of Fully or Partially Vectorized Code",
-   "function": "unclassified",
+   "function": "unknown",
    "split": null,
    "year": 2021,
    "venue": "Lecture notes in computer science",
    "authors": "Vasileios Porpodas, Pushkar Ratnalikar",
    "url": "https://doi.org/10.1007/978-3-030-72789-5_2",
    "cited_by": 2,
-   "evidence": "title_only"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   }
  ],
  "reception": "The record of citations is thin, and much of it is brief. What gets reused is the benchmark suite: the study of vector processing for mobile devices and work combining run-time checks with compile-time analysis for control-flow auto-vectorization both draw on Revec's intrinsic-rich kernels. Elsewhere Revec appears as an example in work on moving vectorized code across instruction sets — the Lasagne static binary translator and a survey of MIMD execution on SIMD machines cite it in that role — and a journal article on code rejuvenation from vector intrinsics to portable standardized SIMD carries the rejuvenation framing forward. No external system extends the pass itself. The implementation and benchmark suite live in the revec organization on GitHub, as revec/llvm-revec and revec/VectorBench respectively."

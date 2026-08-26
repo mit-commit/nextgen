@@ -1,14 +1,16 @@
 {
  "paper": "gordon:asplos:2002",
  "slug": "10.1145_2742854.2742872",
- "function": "detailed-citation",
- "centrality": "peripheral",
+ "function": "positions",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
+ "secondary": [
+  "detailed-citation"
+ ],
  "confidence": "medium",
- "evidence": "contexts",
- "anchored": "numref",
- "note": "The citing work specifically names the cited paper's contribution (stream scheduling algorithms on RAW architecture) in a single targeted sentence, qualifying as detailed-citation rather than passing-citation, though it is peripheral to the citing work's own contribution.",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work specifically describes Gordon et al. [15],[16] as proposing stream scheduling algorithms exploiting task/data/pipeline parallelism on RAW architecture, then positions its own contribution as addressing arithmetic unit utilization which prior work (including Gordon et al.) did not optimize.",
  "title": "Scheduling stream programs with improving arithmetic unit usage on NoC-based VLIW multi-core architectures",
  "year": 2015,
  "s2_isInfluential": false,
@@ -17,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2550,
+  "input_tokens": 4071,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 109,
+  "output_tokens": 126,
   "service_tier": "batch",
   "inference_geo": "global"
  }

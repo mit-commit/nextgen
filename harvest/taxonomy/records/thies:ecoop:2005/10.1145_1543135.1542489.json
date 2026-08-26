@@ -1,28 +1,31 @@
 {
  "paper": "thies:ecoop:2005",
  "slug": "10.1145_1543135.1542489",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "supports-claim",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation contexts were provided and the abstract does not mention the cited paper specifically; cannot determine function from available evidence.",
+ "secondary": [
+  "uses-benchmark",
+  "positions"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work uses Williams et al.'s false-positive result (100,000 reported deadlocks, only 7 real) to motivate its own approach, and also uses the same Java Collections benchmarks that Williams et al. used, validating against them.",
  "title": "A randomized dynamic program analysis technique for detecting real deadlocks",
  "year": 2009,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2585,
+  "input_tokens": 3818,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 86,
+  "output_tokens": 124,
   "service_tier": "batch",
   "inference_geo": "global"
  }

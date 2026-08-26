@@ -4,25 +4,27 @@
  "function": "uses-tool",
  "centrality": "core",
  "flags": [],
- "secondary": [],
+ "secondary": [
+  "exemplifies"
+ ],
  "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract describes Galley as producing programs compiled and executed with a sparse tensor compiler, and the cited paper (TACO format abstraction) is foundational infrastructure for such compilers, but the abstract does not name it specifically.",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "Galley uses sparse tensor compilers (TACO/Finch, which build on the cited format abstraction work) as its execution engine, and cites [4,29] in this context, with the cited paper being one of those references describing sparse tensor compiler foundations.",
  "title": "Galley: Modern Query Optimization for Sparse Tensor Programs",
  "year": 2024,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2737,
+  "input_tokens": 3307,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 113,
+  "output_tokens": 127,
   "service_tier": "batch",
   "inference_geo": "global"
  }

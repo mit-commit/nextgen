@@ -7,7 +7,7 @@
   "records_raw": 34,
   "works": 33,
   "commit": 1,
-  "judged": 31,
+  "judged": 33,
   "gscholar": null
  },
  "citations": [
@@ -65,6 +65,19 @@
    "commit": true
   },
   {
+   "title": "JetCert: A Self-Adaptive Compilation Framework for Fast and Safe Code Execution",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": "Arman Cham Heidari, Mehran Alidoost Nia",
+   "url": "https://doi.org/10.1145/3735452.3735528",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Shechi: A Secure Distributed Computation Compiler Based on Multiparty Homomorphic Encryption",
    "function": "uses-tool",
    "split": "detailed",
@@ -93,11 +106,11 @@
    "url": "https://doi.org/10.1145/3696443.3708963",
    "cited_by": 1,
    "centrality": "core",
-   "confidence": "medium",
+   "confidence": "high",
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Enumerating Valid Non-Alpha-Equivalent Programs for Interpreter Testing",
@@ -152,8 +165,8 @@
    "url": "https://doi.org/10.1109/yef-ece58420.2023.10209340",
    "cited_by": 3,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "The Green Side of the Lua",
@@ -274,6 +287,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Comparing Python Code Parallelization Techniques for Spatial Transcriptomics Data",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "Telecommunications Forum",
+   "authors": "Lazar Smiljković, Miloš Radonjić, Marko Mišić et al.",
+   "url": "https://doi.org/10.1109/telfor59449.2023.10372599",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Concrete Type Inference for Code Optimization using Machine Learning with SMT Solving",
    "function": "detailed-citation",
    "split": "detailed",
@@ -323,7 +349,7 @@
    "cited_by": 0,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "GraphBLAS Mathematical Opportunities: Parallel Hypersparse, Matrix Based Graph Streaming, and Complex-Index Matrices",
@@ -442,34 +468,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "JetCert: A Self-Adaptive Compilation Framework for Fast and Safe Code Execution",
-   "function": "unknown",
-   "split": null,
-   "year": 2025,
-   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
-   "authors": "Arman Cham Heidari, Mehran Alidoost Nia",
-   "url": "https://doi.org/10.1145/3735452.3735528",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Comparing Python Code Parallelization Techniques for Spatial Transcriptomics Data",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "venue": "Telecommunications Forum",
-   "authors": "Lazar Smiljković, Miloš Radonjić, Marko Mišić et al.",
-   "url": "https://doi.org/10.1109/telfor59449.2023.10372599",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   }
  ],
  "reception": "Externally, the deepest engagement builds with the compiler itself. A line of secure-computation systems — Shechi, Decor, and a secure multiple-imputation pipeline — implements on top of Codon, and Vectron uses it as the substrate for auto-vectorizing dynamic programming; interpreter-testing work and an empirical study of the performance and energy of compiled Python treat it as a system under test. The rest of the record is thinner: Python-compilation papers such as HiPy reuse its benchmarks or compare against it, and list mentions place it among approaches to accelerating Python. The citation record is small, but its substantive uses are genuine system-building, and the compiler lives on in exaloop/codon."

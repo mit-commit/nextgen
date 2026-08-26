@@ -2,31 +2,31 @@
  "paper": "kjolstad:2018:workspaces",
  "slug": "10.1145_3779212.3790165",
  "function": "uses-tool",
- "centrality": "core",
+ "centrality": "engaged",
  "flags": [
   "own-group"
  ],
  "secondary": [
-  "extends"
+  "adopts-idea"
  ],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "Kjolstad is a shared author and the cited paper's workspace/tensor compilation work is likely infrastructure for FuseFlow's sparse compilation, but no explicit anchoring in the abstract confirms this directly.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "FuseFlow uses the TACO data structure language (citing [12,37] which includes the workspace paper) for specifying sparse tensor formats, and the related work section specifically discusses TACO's fused loop generation as foundational prior work that FuseFlow builds upon.",
  "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow",
  "year": 2025,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2770,
+  "input_tokens": 4361,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 113,
+  "output_tokens": 134,
   "service_tier": "batch",
   "inference_geo": "global"
  }

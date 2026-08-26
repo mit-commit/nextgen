@@ -7,7 +7,7 @@
   "records_raw": 22,
   "works": 22,
   "commit": 6,
-  "judged": 18,
+  "judged": 20,
   "gscholar": null
  },
  "citations": [
@@ -59,10 +59,13 @@
    "cited_by": 3,
    "centrality": "core",
    "confidence": "high",
+   "secondary": [
+    "extends"
+   ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -106,6 +109,19 @@
    "commit": true
   },
   {
+   "title": "Partial Evaluation, Whole-Program Compilation",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Chris Fallin, Maxwell Bernstein",
+   "url": "https://doi.org/10.1145/3729259",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "eCC++ : A Compiler Construction Framework for Embedded Domain-Specific Languages",
    "function": "positions",
    "split": "detailed",
@@ -120,6 +136,26 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "International Conference on Compiler Construction",
+   "authors": "Ariya Shajii, Gabriel Ramı́rez, Haris Smajlović et al.",
+   "url": "https://doi.org/10.1145/3578360.3580275",
+   "cited_by": 21,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "exemplifies"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
   },
   {
    "title": "Let It Be Optimized: Building Multi-stage Evaluators with Let-Insertion and Optimizations in Small Pieces (Functional Pearl)",
@@ -218,6 +254,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "From Natural Language to Code Generation in a Specific Domain of Application: A Systematic Map",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "Lecture notes in electrical engineering",
+   "authors": "Mohammed Imahrain, Ilham El Farissi",
+   "url": "https://doi.org/10.1007/978-981-96-0644-3_11",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "(De/Re)-Composition of Data-Parallel Computations via Multi-Dimensional Homomorphisms",
    "function": "passing-citation",
    "split": "passing",
@@ -257,23 +306,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Codon: A Compiler for High-Performance Pythonic Applications and DSLs",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2023,
-   "venue": "International Conference on Compiler Construction",
-   "authors": "Ariya Shajii, Gabriel Ramı́rez, Haris Smajlović et al.",
-   "url": "https://doi.org/10.1145/3578360.3580275",
-   "cited_by": 21,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
-  },
-  {
    "title": "SLANG.D: Fast, Modular and Differentiable Shader Programming",
    "function": "passing-citation",
    "split": "passing",
@@ -301,20 +333,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Partial Evaluation, Whole-Program Compilation",
-   "function": "unknown",
-   "split": null,
-   "year": 2025,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Chris Fallin, Maxwell Bernstein",
-   "url": "https://doi.org/10.1145/3729259",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Query Compilation Without Regrets",
    "function": "unknown",
    "split": null,
@@ -326,18 +344,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "From Natural Language to Code Generation in a Specific Domain of Application: A Systematic Map",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "Lecture notes in electrical engineering",
-   "authors": "Mohammed Imahrain, Ilham El Farissi",
-   "url": "https://doi.org/10.1007/978-981-96-0644-3_11",
-   "cited_by": 0,
-   "evidence": "title_only"
+   "evidence": "fulltext"
   }
  ],
  "reception": "External reception is thinner than the project's own lineage: outside the group, BuildIt appears mostly as an entry in the multi-stage-programming canon. Papers from that community — on partially evaluating symbolic interpreters, on multi-stage evaluators with let-insertion, and on mechanized semantics of staging annotations — cite it as the C++ point in the design space, and SABLE lists it among staging frameworks for sparse computation. eCC++ positions its embedded-DSL framework against it directly, while systems such as SLANG.D, Flan, and Exo 2 mention it in passing as related infrastructure. The citations are few but come from the community the paper addresses. The framework lives on in the BuildIt-lang/buildit repository."

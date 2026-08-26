@@ -7,7 +7,7 @@
   "records_raw": 62,
   "works": 50,
   "commit": 1,
-  "judged": 37,
+  "judged": 42,
   "gscholar": null
  },
  "citations": [
@@ -158,7 +158,7 @@
     "adopts-idea",
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Deferred methods",
@@ -190,6 +190,22 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "MT-Profiler: A Parallel Dynamic Analysis Framework Based on Two-Stage Sampling",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "Lecture notes in computer science",
+   "authors": "Zhibin Yu, Weifu Zhang, Xuping Tu",
+   "url": "https://doi.org/10.1007/978-3-642-24151-2_13",
+   "cited_by": 4,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Improving instrumentation speed via buffering",
@@ -235,6 +251,19 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Leveraging Optimization Methods for Dynamically Assisted Control-Flow Integrity Mechanisms",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2014,
+   "venue": "2014 IEEE 26th International Symposium on Computer Architecture and High Performance Computing",
+   "authors": "João Moreira, Lucas Teixeira, Edson Borin et al.",
+   "url": "https://doi.org/10.1109/sbac-pad.2014.35",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Università Della Svizzera Italiana Usi Technical Report Series in Informatics Exploiting Under-utilized Cores with Deferred Methods",
@@ -490,6 +519,32 @@
    "evidence": "abstract"
   },
   {
+   "title": "On the existence of probe effect in multi-threaded embedded programs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2014,
+   "venue": "International Conference on Embedded Software",
+   "authors": "Y. Song, Yann-Hang Lee",
+   "url": "https://doi.org/10.1145/2656045.2656062",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "ShadowVM",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Lukáš Marek, Stephen Kell, Yudi Zheng et al.",
+   "url": "https://doi.org/10.1145/2637365.2517219",
+   "cited_by": 20,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Comparison of the Influence of Different Multi-core Processors on the Runtime Overhead for Application-Level Monitoring",
    "function": "passing-citation",
    "split": "passing",
@@ -512,26 +567,38 @@
    "url": "https://doi.org/10.1109/tc.2012.182",
    "cited_by": 8,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Transparent dynamic instrumentation",
    "function": "passing-citation",
    "split": "passing",
    "year": 2012,
-   "venue": "International Conference on Virtual Execution Environments",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2151024.2151043",
+   "url": "https://doi.org/10.1145/2365864.2151043",
    "cited_by": 124,
    "centrality": "peripheral",
-   "confidence": "high",
+   "confidence": "medium",
    "flags": [
-    "own-group",
-    "polluted-contexts"
+    "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
+  },
+  {
+   "title": "Mapping parallelism to multi-cores",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2009,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Zheng Wang, Michael O’Boyle",
+   "url": "https://doi.org/10.1145/1594835.1504189",
+   "cited_by": 190,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Runtime Optimization of Binary Through Vectorization Transformations. (Optimisation de binaire à l'exécution par la vectorisation)",
@@ -541,34 +608,6 @@
    "authors": "Nabil Hallou",
    "url": "https://doi.org/10.70675/95d71994z104dz4d0dz9835zf4a7adab2954",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Leveraging Optimization Methods for Dynamically Assisted Control-Flow Integrity Mechanisms",
-   "function": "unknown",
-   "split": null,
-   "year": 2014,
-   "venue": "2014 IEEE 26th International Symposium on Computer Architecture and High Performance Computing",
-   "authors": "João Moreira, Lucas Teixeira, Edson Borin et al.",
-   "url": "https://doi.org/10.1109/sbac-pad.2014.35",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "On the existence of probe effect in multi-threaded embedded programs",
-   "function": "unknown",
-   "split": null,
-   "year": 2014,
-   "venue": "International Conference on Embedded Software",
-   "authors": "Y. Song, Yann-Hang Lee",
-   "url": "https://doi.org/10.1145/2656045.2656062",
-   "cited_by": 5,
    "flags": [
     "polluted-contexts"
    ],
@@ -597,20 +636,6 @@
    "authors": "Hyoun Kyu Cho, Tipp Moseley, Rick Hank et al.",
    "url": "https://doi.org/10.1109/cgo.2013.6494982",
    "cited_by": 23,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "ShadowVM",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Lukáš Marek, Stephen Kell, Yudi Zheng et al.",
-   "url": "https://doi.org/10.1145/2637365.2517219",
-   "cited_by": 20,
    "flags": [
     "polluted-contexts"
    ],
@@ -659,20 +684,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Mapping parallelism to multi-cores",
-   "function": "unknown",
-   "split": null,
-   "year": 2009,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Zheng Wang, Michael O’Boyle",
-   "url": "https://doi.org/10.1145/1594835.1504189",
-   "cited_by": 190,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Exploiting Hardware Monitoring in Software Engineering",
    "function": "unclassified",
    "split": null,
@@ -691,17 +702,6 @@
    "authors": "H. Cho, Tipp Moseley, R. Hank et al.",
    "url": "https://openalex.org/W2898991513",
    "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
-   "title": "MT-Profiler: A Parallel Dynamic Analysis Framework Based on Two-Stage Sampling",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "Lecture notes in computer science",
-   "authors": "Zhibin Yu, Weifu Zhang, Xuping Tu",
-   "url": "https://doi.org/10.1007/978-3-642-24151-2_13",
-   "cited_by": 4,
    "evidence": "title_only"
   }
  ],

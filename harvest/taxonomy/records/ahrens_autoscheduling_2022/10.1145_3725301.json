@@ -6,25 +6,28 @@
  "flags": [
   "own-group"
  ],
- "secondary": [],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "Galley compiles to sparse tensor compiler output and Ahrens (shared author) is co-author of both works; the cited autoscheduling paper is likely the underlying sparse tensor compiler infrastructure, but no explicit anchor in the abstract confirms this.",
+ "secondary": [
+  "detailed-citation",
+  "positions"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "Galley uses sparse tensor compilers (including cited work's ecosystem) as its execution engine and explicitly positions against autoscheduling approaches, with Ahrens as a shared author.",
  "title": "Galley: Modern Query Optimization for Sparse Tensor Programs",
  "year": 2025,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2758,
+  "input_tokens": 3328,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 126,
+  "output_tokens": 115,
   "service_tier": "batch",
   "inference_geo": "global"
  }

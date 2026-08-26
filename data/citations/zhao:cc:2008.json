@@ -7,10 +7,27 @@
   "records_raw": 74,
   "works": 59,
   "commit": 6,
-  "judged": 42,
+  "judged": 46,
   "gscholar": null
  },
  "citations": [
+  {
+   "title": "Transparent dynamic instrumentation",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "International Conference on Virtual Execution Environments",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2151024.2151043",
+   "cited_by": 124,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
   {
    "title": "Lightweight memory tracing",
    "function": "positions",
@@ -49,27 +66,28 @@
    "url": "https://doi.org/10.1145/2150976.2150993",
    "cited_by": 7,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
+    "detailed-citation",
     "exemplifies"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
-   "title": "Mapping breakpoint types: an exploratory study",
-   "function": "surveys",
+   "title": "PinADX",
+   "function": "positions",
    "split": "detailed",
-   "year": 2021,
-   "venue": "International Conference on Software Quality, Reliability and Security",
-   "authors": "Eduardo A. Fontana, Fábio Petrillo",
-   "url": "https://doi.org/10.5281/zenodo.5663903",
-   "cited_by": 2,
+   "year": 2012,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Gregory Lueck, Harish Patil, Cristiano Pereira",
+   "url": "https://doi.org/10.1145/2259016.2259032",
+   "cited_by": 26,
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "CodeHint: dynamic and interactive synthesis of code snippets",
@@ -232,19 +250,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Accelerating Dynamic Detection of Uses of Undefined Values with Static Value-Flow Analysis",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2014,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Ye Ding, Yulei Sui, Jingling Xue",
-   "url": "https://doi.org/10.1145/2544137.2544154",
-   "cited_by": 24,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "abstract"
-  },
-  {
    "title": "Fast dynamic binary translation for the kernel",
    "function": "exemplifies",
    "split": "passing",
@@ -269,6 +274,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Mapping breakpoint types: an exploratory study",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2021,
+   "venue": "2021 IEEE 21st International Conference on Software Quality, Reliability and Security (QRS)",
+   "authors": "Eduardo Andreetta Fontana, Fábio Petrillo",
+   "url": "https://doi.org/10.1109/qrs54544.2021.00110",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Debugging Nondeterministic Failures in Linux Programs through Replay Analysis",
@@ -298,19 +319,6 @@
     "positions"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "PinADX",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2012,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Gregory Lueck, Harish Patil, Cristiano Pereira",
-   "url": "https://doi.org/10.1145/2259016.2259032",
-   "cited_by": 26,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
   },
   {
    "title": "Efficient Memory Shadowing for 64-bit Architectures Citation",
@@ -343,6 +351,17 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Proceedings of the 16th ACM SIGPLAN International Conference on Software Language Engineering",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2023,
+   "url": "https://doi.org/10.1145/3623476",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Temporal Breakpoints for Multiverse Debugging",
@@ -434,6 +453,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "On the dichotomy of debugging behavior among programmers",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "International Conference on Software Engineering",
+   "authors": "Moritz Beller, Niels Spruit, Diomidis Spinellis et al.",
+   "url": "https://doi.org/10.1145/3180155.3180175",
+   "cited_by": 75,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Dealing with Reversibility of Shared Libraries in PDES",
    "function": "passing-citation",
    "split": "passing",
@@ -460,6 +492,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Transparently Mixing Undo Logs and Software Reversibility for State Recovery in Optimistic PDES",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2017,
+   "venue": "ACM Transactions on Modeling and Computer Simulation",
+   "authors": "Davide Cingolani, Alessandro Pellegrini, Francesco Quaglia",
+   "url": "https://doi.org/10.1145/3077583",
+   "cited_by": 28,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Techniques for Transparent Parallelization of Discrete Event Simulation Models",
    "function": "passing-citation",
    "split": "passing",
@@ -472,20 +517,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Transparently Mixing Undo Logs and Software Reversibility for State Recovery in Optimistic PDES",
+   "title": "Accelerating Dynamic Detection of Uses of Undefined Values with Static Value-Flow Analysis",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2015,
-   "venue": "SIGSIM Principles of Advanced Discrete Simulation",
-   "authors": "Davide Cingolani, Alessandro Pellegrini, Francesco Quaglia",
-   "url": "https://doi.org/10.1145/2769458.2769482",
-   "cited_by": 28,
+   "year": 2014,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Ye Ding, Yulei Sui, Jingling Xue",
+   "url": "https://doi.org/10.1145/2544137.2544154",
+   "cited_by": 24,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Dynamic and Interactive Synthesis of Code Snippets",
@@ -520,17 +562,17 @@
    "evidence": "abstract"
   },
   {
-   "title": "Improving software diagnosability via log enhancement",
+   "title": "Improving Software Diagnosability via Log Enhancement",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2011,
-   "venue": "ASPLOS XVI",
+   "year": 2012,
+   "venue": "ACM Transactions on Computer Systems",
    "authors": "Ding Yuan, Jing Zheng, Soyeon Park et al.",
-   "url": "https://doi.org/10.1145/1950365.1950369",
+   "url": "https://doi.org/10.1145/2110356.2110360",
    "cited_by": 157,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Spectral Fuzzing: Evaluation & Feedback",
@@ -566,6 +608,19 @@
    "commit": true
   },
   {
+   "title": "Di-DyMeLoR: Logging only Dirty Chunks for Efficient Management of Dynamic Memory Based Optimistic Simulation Objects",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2009,
+   "venue": "2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation",
+   "authors": "Alessandro Pellegrini, Roberto Vitali, Francesco Quaglia",
+   "url": "https://doi.org/10.1109/pads.2009.24",
+   "cited_by": 34,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Di-NONAME-LIB: Logging only Dirty Chunks for Efﬁcient Management of Dynamic Memory Based Optimistic Simulation Objects",
    "function": "passing-citation",
    "split": "passing",
@@ -592,18 +647,6 @@
    "commit": true
   },
   {
-   "title": "Proceedings of the 16th ACM SIGPLAN International Conference on Software Language Engineering",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "url": "https://doi.org/10.1145/3623476",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Reverse Engineering of an Obfuscated Binary",
    "function": "unknown",
    "split": null,
@@ -625,20 +668,6 @@
    "authors": "Jonathan Eyolfson",
    "url": "https://openalex.org/W2886049054",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "On the dichotomy of debugging behavior among programmers",
-   "function": "unknown",
-   "split": null,
-   "year": 2018,
-   "venue": "International Conference on Software Engineering",
-   "authors": "Moritz Beller, Niels Spruit, Diomidis Spinellis et al.",
-   "url": "https://doi.org/10.1145/3180155.3180175",
-   "cited_by": 75,
    "flags": [
     "polluted-contexts"
    ],
@@ -670,7 +699,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles",
@@ -684,7 +713,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Improving failure diagnosis via better design and analysis of log messages",
@@ -700,21 +729,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Transparent dynamic instrumentation",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "venue": "International Conference on Virtual Execution Environments",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2151024.2151043",
-   "cited_by": 124,
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract",
-   "commit": true
-  },
-  {
    "title": "Dynamic cache contention detection in multi-threaded applications",
    "function": "unknown",
    "split": null,
@@ -724,9 +738,10 @@
    "url": "https://doi.org/10.1145/1952682.1952688",
    "cited_by": 70,
    "flags": [
-    "own-group"
+    "own-group",
+    "polluted-contexts"
    ],
-   "evidence": "abstract",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -753,22 +768,8 @@
     "own-group",
     "polluted-contexts"
    ],
-   "evidence": "abstract+contexts",
+   "evidence": "fulltext",
    "commit": true
-  },
-  {
-   "title": "Di-DyMeLoR: Logging only Dirty Chunks for Efficient Management of Dynamic Memory Based Optimistic Simulation Objects",
-   "function": "unknown",
-   "split": null,
-   "year": 2009,
-   "venue": "2009 ACM/IEEE/SCS 23rd Workshop on Principles of Advanced and Distributed Simulation",
-   "authors": "Alessandro Pellegrini, Roberto Vitali, Francesco Quaglia",
-   "url": "https://doi.org/10.1109/pads.2009.24",
-   "cited_by": 34,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Path Projection : visualizing program paths",

@@ -4,25 +4,27 @@
  "function": "uses-tool",
  "centrality": "core",
  "flags": [],
- "secondary": [],
+ "secondary": [
+  "adopts-idea"
+ ],
  "confidence": "high",
- "evidence": "abstract",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work implements sparse matrix compression schedulers within Halide to accelerate FastText, using Halide as the execution infrastructure for their contribution.",
+ "note": "The citing work implements sparse matrix compression schedulers directly in Halide, using it as the core programming infrastructure for their FastText optimization contribution, and explicitly describes Halide's algorithm/schedule decoupling as the foundation of their approach.",
  "title": "Devise Sparse Compression Schedulers to Enhance FastText Methods",
  "year": 2020,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2749,
+  "input_tokens": 4262,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 96,
+  "output_tokens": 119,
   "service_tier": "batch",
   "inference_geo": "global"
  }

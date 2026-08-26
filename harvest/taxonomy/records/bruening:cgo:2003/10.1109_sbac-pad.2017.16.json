@@ -4,11 +4,13 @@
  "function": "supports-claim",
  "centrality": "peripheral",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "contexts",
- "anchored": "numref",
- "note": "The citing work references DynamoRIO (via bare bracket numbers including the cited paper) to support a specific performance claim about same-ISA dynamic binary translation achieving low slowdowns.",
+ "secondary": [
+  "baseline"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work uses DynamoRIO's measured performance numbers (1.42x slowdown) from the cited paper as a data point to characterize same-ISA DBT performance, appearing in both a comparison table and a prose sentence.",
  "title": "The Case for Flexible ISAs: Unleashing Hardware and Software",
  "year": 2017,
  "s2_isInfluential": false,
@@ -17,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2487,
+  "input_tokens": 3929,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 74,
+  "output_tokens": 118,
   "service_tier": "batch",
   "inference_geo": "global"
  }

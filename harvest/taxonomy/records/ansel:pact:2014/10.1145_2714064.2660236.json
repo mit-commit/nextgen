@@ -8,9 +8,9 @@
  ],
  "secondary": [],
  "confidence": "high",
- "evidence": "contexts",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "StreamJIT delegates all optimization decisions to OpenTuner as its core autotuning infrastructure, integrates it directly (1,087 lines of Python for integration), and even extends it with custom techniques, making OpenTuner a foundational dependency of the system.",
+ "note": "StreamJIT uses OpenTuner as its core optimization-decision infrastructure, delegates all compiler optimization choices to it, and even integrates custom OpenTuner techniques, making OpenTuner a consumed dependency throughout the system.",
  "title": "StreamJIT",
  "year": 2014,
  "s2_isInfluential": true,
@@ -19,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2772,
+  "input_tokens": 4467,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 120,
+  "output_tokens": 116,
   "service_tier": "batch",
   "inference_geo": "global"
  }

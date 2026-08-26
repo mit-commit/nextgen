@@ -1,18 +1,19 @@
 {
  "paper": "Ragan-Kelley:2017:HDA:3176926.3150211",
  "slug": "10.1145_3355089.3356506",
- "function": "detailed-citation",
- "centrality": "peripheral",
+ "function": "positions",
+ "centrality": "engaged",
  "flags": [
   "own-group"
  ],
  "secondary": [
-  "positions"
+  "adopts-idea",
+  "detailed-citation"
  ],
- "confidence": "medium",
- "evidence": "contexts",
+ "confidence": "high",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "Taichi names and describes Halide's algorithm/schedule decoupling specifically to differentiate its own approach, with author overlap (Ragan-Kelley and Durand).",
+ "note": "Taichi explicitly contrasts itself against Halide's decoupling of algorithms from schedules (dense-only, no sparsity model) while also borrowing the same decoupling principle for sparse data structures, and cites Halide's bounds inference technique for scratchpad optimization.",
  "title": "Taichi",
  "year": 2019,
  "s2_isInfluential": false,
@@ -21,14 +22,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2575,
+  "input_tokens": 4354,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 112,
+  "output_tokens": 108,
   "service_tier": "batch",
   "inference_geo": "global"
  }

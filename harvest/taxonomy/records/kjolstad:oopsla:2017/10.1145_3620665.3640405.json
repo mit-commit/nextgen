@@ -1,28 +1,30 @@
 {
  "paper": "kjolstad:oopsla:2017",
  "slug": "10.1145_3620665.3640405",
- "function": "exemplifies",
- "centrality": "peripheral",
+ "function": "uses-benchmark",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation contexts were provided and the abstract does not mention TACO or tensor algebra; the cited paper is likely a passing or exemplifying reference in the paper body, but insufficient evidence exists to determine function.",
+ "secondary": [
+  "uses-tool"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work imports TTV and TTM benchmarks from TACO, uses the same inputs as the TACO paper, and runs the TACO-generated C/C++ code to evaluate HBC against OpenMP.",
  "title": "Compiling Loop-Based Nested Parallelism for Irregular Workloads",
  "year": 2024,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2775,
+  "input_tokens": 4399,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 106,
+  "output_tokens": 117,
   "service_tier": "batch",
   "inference_geo": "global"
  }

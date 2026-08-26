@@ -7,7 +7,7 @@
   "records_raw": 33,
   "works": 27,
   "commit": 1,
-  "judged": 19,
+  "judged": 23,
   "gscholar": null
  },
  "citations": [
@@ -28,25 +28,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "PiPA",
-   "function": "extends",
-   "split": "detailed",
-   "year": 2010,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Qin Zhao, Ioana Cutcutache, Weng‐Fai Wong",
-   "url": "https://doi.org/10.1145/1880037.1880038",
-   "cited_by": 41,
-   "centrality": "core",
-   "confidence": "high",
-   "secondary": [
-    "uses-tool"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "TaintPipe: Pipelined Symbolic Taint Analysis",
    "function": "adopts-idea",
    "split": "detailed",
@@ -63,21 +44,36 @@
    "evidence": "contexts"
   },
   {
-   "title": "PROMPT: A Fast and Extensible Memory Profiling Framework",
-   "function": "baseline",
+   "title": "Alleria",
+   "function": "positions",
    "split": "detailed",
-   "year": 2024,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Ziyang Xu, Yebin Chon, Yian Su et al.",
-   "url": "https://doi.org/10.1145/3649827",
-   "cited_by": 3,
+   "year": 2019,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Hadi Brais, Preeti Ranjan Panda",
+   "url": "https://doi.org/10.1145/3358193",
+   "cited_by": 4,
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "exemplifies",
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Scalable Implementation of Efficient Locality Approximation",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2008,
+   "venue": "Lecture notes in computer science",
+   "authors": "Xipeng Shen, Jonathan Shaw",
+   "url": "https://doi.org/10.1007/978-3-540-89740-8_14",
+   "cited_by": 11,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Proposal of a Method of Hot-Path based Speculative Multithreading Targeting Entire Program",
@@ -108,6 +104,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "Unified control flow and data dependence traces",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Sriraman Tallam, Rajiv Gupta",
+   "url": "https://doi.org/10.1145/1275937.1275943",
+   "cited_by": 17,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "PROMPT: A Fast and Extensible Memory Profiling Framework",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2024,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Ziyang Xu, Yebin Chon, Yian Su et al.",
+   "url": "https://doi.org/10.1145/3649827",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "baseline"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Trace-based Behaviour Analysis of Network Servers",
    "function": "exemplifies",
    "split": "passing",
@@ -119,6 +144,24 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Transparent dynamic instrumentation",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2365864.2151043",
+   "cited_by": 124,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext",
+   "commit": true
   },
   {
    "title": "LAMPVIEW: A LOOP-AWARE TOOLSET FOR FACILITATING PARALLELIZATION",
@@ -206,6 +249,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "PiPA",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Qin Zhao, Ioana Cutcutache, Weng‐Fai Wong",
+   "url": "https://doi.org/10.1145/1880037.1880038",
+   "cited_by": 41,
+   "centrality": "engaged",
+   "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "ONTRAC: A system for efficient ONline TRACing for debugging",
    "function": "detailed-citation",
    "split": "detailed",
@@ -290,20 +349,6 @@
    "evidence": "abstract+contexts"
   },
   {
-   "title": "Alleria",
-   "function": "unknown",
-   "split": null,
-   "year": 2019,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Hadi Brais, Preeti Ranjan Panda",
-   "url": "https://doi.org/10.1145/3358193",
-   "cited_by": 4,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Framework for Evaluating Dynamic Memory Allocators Including a New Equivalence Class Based Cache-conscious Allocator",
    "function": "unknown",
    "split": null,
@@ -315,22 +360,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Transparent dynamic instrumentation",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2365864.2151043",
-   "cited_by": 124,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract",
-   "commit": true
   },
   {
    "title": "A system for debugging via online tracing and dynamic slicing",
@@ -347,20 +376,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Unified control flow and data dependence traces",
-   "function": "unknown",
-   "split": null,
-   "year": 2007,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Sriraman Tallam, Rajiv Gupta",
-   "url": "https://doi.org/10.1145/1275937.1275943",
-   "cited_by": 17,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Hardware and Application Profiling Tools",
    "function": "unclassified",
    "split": null,
@@ -369,17 +384,6 @@
    "authors": "Tomislav Janjusic, Krishna M. Kavi",
    "url": "https://doi.org/10.1016/b978-0-12-420232-0.00003-9",
    "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Scalable Implementation of Efficient Locality Approximation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "Lecture notes in computer science",
-   "authors": "Xipeng Shen, Jonathan Shaw",
-   "url": "https://doi.org/10.1007/978-3-540-89740-8_14",
-   "cited_by": 11,
    "evidence": "title_only"
   },
   {

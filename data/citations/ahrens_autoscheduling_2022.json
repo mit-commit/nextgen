@@ -7,7 +7,7 @@
   "records_raw": 46,
   "works": 43,
   "commit": 3,
-  "judged": 33,
+  "judged": 37,
   "gscholar": null
  },
  "citations": [
@@ -21,27 +21,34 @@
    "url": "https://doi.org/10.1145/3725301",
    "cited_by": 3,
    "centrality": "core",
-   "confidence": "medium",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation",
+    "positions"
+   ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
-   "title": "SparseAuto: An Auto-scheduler for Sparse Tensor Computations using Recursive Loop Nest Restructuring",
-   "function": "adopts-idea",
+   "title": "Compilation of Modular and General Sparse Workspaces",
+   "function": "uses-tool",
    "split": "detailed",
    "year": 2024,
    "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Adhitha Dias, Logan Anderson, Kirshanthan Sundararajah et al.",
-   "url": "https://doi.org/10.1145/3689730",
+   "authors": "Genghan Zhang, Olivia Hsu, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1145/3656426",
    "cited_by": 6,
-   "centrality": "core",
+   "centrality": "engaged",
    "confidence": "medium",
    "secondary": [
     "positions"
    ],
-   "evidence": "abstract"
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Fast Autoscheduling for Sparse ML Frameworks",
@@ -59,6 +66,51 @@
    ],
    "flags": [
     "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2024,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Xiaoyan Liu, Xuegui Zheng, Hailong Yang et al.",
+   "url": "https://doi.org/10.1145/3627535.3638471",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "SparseAuto: An Auto-scheduler for Sparse Tensor Computations using Recursive Loop Nest Restructuring",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2024,
+   "venue": "Proceedings of the ACM on Programming Languages",
+   "authors": "Adhitha Dias, Logan Anderson, Kirshanthan Sundararajah et al.",
+   "url": "https://doi.org/10.1145/3689730",
+   "cited_by": 6,
+   "centrality": "engaged",
+   "confidence": "low",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Zihao Ye, Ruihang Lai, Junru Shao et al.",
+   "url": "https://doi.org/10.1145/3582016.3582047",
+   "cited_by": 85,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "exemplifies"
    ],
    "evidence": "fulltext"
   },
@@ -102,7 +154,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -158,7 +210,26 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "The Sparse Abstract Machine",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Olivia Hsu, Maxwell Strange, Ritvik Sharma et al.",
+   "url": "https://doi.org/10.1145/3582016.3582051",
+   "cited_by": 38,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "exemplifies"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Correct Compilation of Semiring Contractions",
@@ -188,6 +259,25 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2025,
+   "venue": "Micro",
+   "authors": "Ritvik Sharma, Zi Yu Xue, Nathan Zhang et al.",
+   "url": "https://doi.org/10.1145/3725843.3756095",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "secondary": [
+    "passing-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "ASaP: Automatic Software Prefetching for Sparse Tensor Computations in MLIR",
@@ -229,6 +319,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Minimum Cost Loop Nests for Contraction of a Sparse Tensor with a Tensor Network",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2024,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Raghavendra Kanakagiri, Edgar Solomonik",
+   "url": "https://doi.org/10.1145/3626183.3659985",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "C2TACO: Lifting Tensor Code to TACO",
    "function": "exemplifies",
    "split": "passing",
@@ -238,8 +341,8 @@
    "url": "https://doi.org/10.1145/3624007.3624053",
    "cited_by": 5,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Optimizing Sparse Tensor Compilation for Sparse Output",
@@ -252,7 +355,7 @@
    "cited_by": 0,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Looplets: A Language for Structured Coiteration",
@@ -268,7 +371,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -283,6 +386,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Harmonia: A Unified Hierarchical Scheduling Framework for Sparse Matrix Multiplication",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "International Symposium on Computer Architecture",
+   "authors": "Jingkui Yang, Fangxin Liu, Xin Ju et al.",
+   "url": "https://doi.org/10.1109/isca66397.2026.00151",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "PANA: A Fine-Grained Runtime-Adaptive Load Balancing for Parallel SpMV on Multicore CPUs",
@@ -327,22 +443,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2025,
-   "venue": "Micro",
-   "authors": "Ritvik Sharma, Zi Yu Xue, Nathan Zhang et al.",
-   "url": "https://doi.org/10.1145/3725843.3756095",
-   "cited_by": 1,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow",
    "function": "passing-citation",
    "split": "passing",
@@ -352,11 +452,11 @@
    "url": "https://doi.org/10.1145/3779212.3790165",
    "cited_by": 1,
    "centrality": "peripheral",
-   "confidence": "medium",
+   "confidence": "high",
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "GALA: A High Performance Graph Neural Network Acceleration LAnguage and Compiler",
@@ -372,20 +472,17 @@
    "evidence": "abstract"
   },
   {
-   "title": "Compilation of Modular and General Sparse Workspaces",
+   "title": "pyATF: Constraint-Based Auto-Tuning in Python",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2024,
-   "venue": "Proceedings of the ACM on Programming Languages",
-   "authors": "Genghan Zhang, Olivia Hsu, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1145/3656426",
-   "cited_by": 6,
+   "year": 2025,
+   "venue": "International Conference on Compiler Construction",
+   "authors": "Richard Schulze, Sergei Gorlatch, Ari Rasch",
+   "url": "https://doi.org/10.1145/3708493.3712682",
+   "cited_by": 4,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "SABLE: Staging Blocked Evaluation of Sparse Matrix Computations",
@@ -424,7 +521,7 @@
    "cited_by": 9,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Mosaic: An Interoperable Compiler for Tensor Algebra",
@@ -440,19 +537,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2023,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Zihao Ye, Ruihang Lai, Junru Shao et al.",
-   "url": "https://doi.org/10.1145/3582016.3582047",
-   "cited_by": 85,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
-  },
-  {
    "title": "TeAAL: A Declarative Framework for Modeling Sparse Tensor Accelerators",
    "function": "passing-citation",
    "split": "passing",
@@ -464,22 +548,6 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "fulltext"
-  },
-  {
-   "title": "The Sparse Abstract Machine",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2023,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Olivia Hsu, Maxwell Strange, Ritvik Sharma et al.",
-   "url": "https://doi.org/10.1145/3582016.3582051",
-   "cited_by": 38,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Edinburgh Research Explorer C2TACO: Lifting Tensor Code to TACO",
@@ -521,34 +589,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "pyATF: Constraint-Based Auto-Tuning in Python",
-   "function": "unknown",
-   "split": null,
-   "year": 2025,
-   "venue": "International Conference on Compiler Construction",
-   "authors": "Richard Schulze, Sergei Gorlatch, Ari Rasch",
-   "url": "https://doi.org/10.1145/3708493.3712682",
-   "cited_by": 4,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Tetris: Accelerating Sparse Convolution by Exploiting Memory Reuse on GPU",
-   "function": "unknown",
-   "split": null,
-   "year": 2024,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Xiaoyan Liu, Xuegui Zheng, Hailong Yang et al.",
-   "url": "https://doi.org/10.1145/3627535.3638471",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Rosko: Row Skipping Outer Products for Sparse Matrix Multiplication Kernels",
    "function": "unknown",
    "split": null,
@@ -560,17 +600,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Harmonia: A Unified Hierarchical Scheduling Framework for Sparse Matrix Multiplication",
-   "function": "unclassified",
-   "split": null,
-   "year": 2026,
-   "venue": "International Symposium on Computer Architecture",
-   "authors": "Jingkui Yang, Fangxin Liu, Xin Ju et al.",
-   "url": "https://doi.org/10.1109/isca66397.2026.00151",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "ProSpec: Profile-guided Specialization for GPU Kernels",
    "function": "unclassified",
    "split": null,
@@ -579,17 +608,6 @@
    "authors": "Jiali Liang, Lin Chen, Xiangyu Zhang et al.",
    "url": "https://doi.org/10.1016/j.infsof.2025.107901",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Minimum Cost Loop Nests for Contraction of a Sparse Tensor with a Tensor Network",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Raghavendra Kanakagiri, Edgar Solomonik",
-   "url": "https://doi.org/10.1145/3626183.3659985",
-   "cited_by": 9,
    "evidence": "title_only"
   },
   {

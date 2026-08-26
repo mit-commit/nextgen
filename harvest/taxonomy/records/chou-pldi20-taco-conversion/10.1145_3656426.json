@@ -8,12 +8,12 @@
  ],
  "secondary": [
   "adopts-idea",
-  "detailed-citation"
+  "positions"
  ],
  "confidence": "high",
- "evidence": "contexts",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work directly leverages Chou et al. [15]'s format conversion code generation as infrastructure for its own compiler's compression stage, and explicitly integrates its format conversion IR into their system.",
+ "note": "The citing work explicitly builds its compiler on top of Chou et al.'s format conversion IR and code generation infrastructure, leveraging it as a consumed dependency for the compression stage while also positioning against its limitations (cannot handle dynamic out-of-order nonzeros from scattering).",
  "title": "Compilation of Modular and General Sparse Workspaces",
  "year": 2024,
  "s2_isInfluential": true,
@@ -23,14 +23,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2801,
+  "input_tokens": 4413,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 117,
+  "output_tokens": 137,
   "service_tier": "batch",
   "inference_geo": "global"
  }

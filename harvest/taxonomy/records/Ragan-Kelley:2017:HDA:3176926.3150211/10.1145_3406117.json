@@ -1,16 +1,17 @@
 {
  "paper": "Ragan-Kelley:2017:HDA:3176926.3150211",
  "slug": "10.1145_3406117",
- "function": "uses-tool",
+ "function": "extends",
  "centrality": "core",
  "flags": [],
  "secondary": [
-  "baseline"
+  "baseline",
+  "uses-tool"
  ],
  "confidence": "high",
- "evidence": "contexts",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work extends the Halide master autoscheduler as its direct substrate and also compares against Halide's official manual schedules as a baseline.",
+ "note": "The citing work explicitly extends the Halide autoscheduler (reference [8]) with novel optimization passes for GPU architectures, and compares against Halide's manual schedules from its official repository as a baseline.",
  "title": "Schedule Synthesis for Halide Pipelines on GPUs",
  "year": 2020,
  "s2_isInfluential": false,
@@ -19,14 +20,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2604,
+  "input_tokens": 3807,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 101,
+  "output_tokens": 116,
   "service_tier": "batch",
   "inference_geo": "global"
  }

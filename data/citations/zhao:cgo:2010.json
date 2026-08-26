@@ -7,7 +7,7 @@
   "records_raw": 87,
   "works": 63,
   "commit": 5,
-  "judged": 44,
+  "judged": 50,
   "gscholar": null
  },
  "citations": [
@@ -61,19 +61,19 @@
    "function": "uses-tool",
    "split": "detailed",
    "year": 2012,
-   "venue": "ASPLOS XVII",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Marek Olszewski, Qin Zhao, David Koh et al.",
-   "url": "https://doi.org/10.1145/2150976.2150995",
+   "url": "https://doi.org/10.1145/2248487.2150995",
    "cited_by": 24,
    "centrality": "core",
    "confidence": "high",
    "secondary": [
-    "detailed-citation"
+    "extends"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -94,16 +94,16 @@
    "function": "uses-tool",
    "split": "detailed",
    "year": 2011,
-   "venue": "ACM SIGPLAN Notices",
+   "venue": "International Conference on Virtual Execution Environments",
    "authors": "Qin Zhao, David Koh, Syed Raza et al.",
-   "url": "https://doi.org/10.1145/2007477.1952688",
+   "url": "https://doi.org/10.1145/1952682.1952688",
    "cited_by": 70,
    "centrality": "core",
-   "confidence": "medium",
+   "confidence": "high",
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -242,6 +242,26 @@
    "evidence": "contexts"
   },
   {
+   "title": "Detection of false sharing using machine learning",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
+   "authors": "Sanath Jayasena, Saman Amarasinghe, A.W.L.D. Abeyweera et al.",
+   "url": "https://doi.org/10.1145/2503210.2503269",
+   "cited_by": 31,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
    "title": "Fast loop-level data dependence profiling",
    "function": "supports-claim",
    "split": "detailed",
@@ -268,6 +288,35 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "The potential of sampling for dynamic analysis",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "ACM Workshop on Programming Languages and Analysis for Security",
+   "authors": "Joseph L. Greathouse, Todd Austin",
+   "url": "https://doi.org/10.1145/2166956.2166959",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2021,
+   "venue": "Lecture notes in networks and systems",
+   "authors": "Federico Palmaro, Luisa Franchina",
+   "url": "https://doi.org/10.1007/978-3-030-80129-8_66",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Wasabi: A Framework for Dynamically Analyzing WebAssembly",
@@ -405,6 +454,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Dynamically diagnosing type errors in unsafe code",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Stephen Kell",
+   "url": "https://doi.org/10.1145/3022671.2983998",
+   "cited_by": 16,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Cache Topology Aware Mapping of Stream Processing Applications onto CMPs",
    "function": "detailed-citation",
    "split": "detailed",
@@ -415,39 +477,6 @@
    "cited_by": 10,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Transparent dynamic instrumentation",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2012,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/2365864.2151043",
-   "cited_by": 124,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract",
-   "commit": true
-  },
-  {
-   "title": "Demand-driven software race detection using hardware performance counters",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2011,
-   "venue": "International Symposium on Computer Architecture",
-   "authors": "Joseph L. Greathouse, Zhiqiang Ma, Matthew I. Frank et al.",
-   "url": "https://doi.org/10.1145/2000064.2000084",
-   "cited_by": 53,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "contexts"
   },
   {
@@ -487,6 +516,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Efficient Access History for Race Detection",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2021,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Yifan Xu, Anchengcheng Zhou, Grace Q. Yin et al.",
+   "url": "https://doi.org/10.1145/3409964.3461825",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
@@ -584,7 +629,7 @@
    "cited_by": 7,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Methods for binary symbolic execution",
@@ -625,50 +670,79 @@
    "evidence": "contexts"
   },
   {
+   "title": "Transparent dynamic instrumentation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Derek Bruening, Qin Zhao, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/2365864.2151043",
+   "cited_by": 124,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "Demand-driven software race detection using hardware performance counters",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Joseph L. Greathouse, Zhiqiang Ma, Matthew I. Frank et al.",
+   "url": "https://doi.org/10.1145/2024723.2000084",
+   "cited_by": 53,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Kismet",
    "function": "passing-citation",
    "split": "passing",
    "year": 2011,
-   "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Dong‐Hwan Jeon, Saturnino Garcia, Chris Louie et al.",
-   "url": "https://doi.org/10.1145/2048066.2048108",
+   "url": "https://doi.org/10.1145/2076021.2048108",
    "cited_by": 49,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Kremlin",
    "function": "passing-citation",
    "split": "passing",
    "year": 2011,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Saturnino Garcia, Dong‐Hwan Jeon, Christopher Louie et al.",
-   "url": "https://doi.org/10.1145/1993498.1993553",
+   "url": "https://doi.org/10.1145/1993316.1993553",
    "cited_by": 85,
    "centrality": "peripheral",
    "confidence": "high",
    "flags": [
-    "polluted-contexts"
+    "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
-   "title": "Efficient Access History for Race Detection",
-   "function": "unknown",
-   "split": null,
-   "year": 2021,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Yifan Xu, Anchengcheng Zhou, Grace Q. Yin et al.",
-   "url": "https://doi.org/10.1145/3409964.3461825",
-   "cited_by": 0,
+   "title": "PiPA",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Qin Zhao, Ioana Cutcutache, Weng‐Fai Wong",
+   "url": "https://doi.org/10.1145/1880037.1880038",
+   "cited_by": 18,
+   "centrality": "peripheral",
+   "confidence": "medium",
    "flags": [
-    "polluted-contexts"
+    "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "C++ const and Immutability: An Empirical Study of Writes-Through-const",
@@ -683,36 +757,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Dynamically diagnosing type errors in unsafe code",
-   "function": "unknown",
-   "split": null,
-   "year": 2016,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Stephen Kell",
-   "url": "https://doi.org/10.1145/3022671.2983998",
-   "cited_by": 16,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Detection of false sharing using machine learning",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "2013 SC - International Conference for High Performance Computing, Networking, Storage and Analysis (SC)",
-   "authors": "Sanath Jayasena, Saman Amarasinghe, A.W.L.D. Abeyweera et al.",
-   "url": "https://doi.org/10.1145/2503210.2503269",
-   "cited_by": 31,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract",
-   "commit": true
   },
   {
    "title": "Schnauzer: scalable profiling for likely security bug sites",
@@ -790,46 +834,6 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
-  },
-  {
-   "title": "The potential of sampling for dynamic analysis",
-   "function": "unknown",
-   "split": null,
-   "year": 2011,
-   "venue": "ACM Workshop on Programming Languages and Analysis for Security",
-   "authors": "Joseph L. Greathouse, Todd Austin",
-   "url": "https://doi.org/10.1145/2166956.2166959",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "PiPA",
-   "function": "unknown",
-   "split": null,
-   "year": 2010,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Qin Zhao, Ioana Cutcutache, Weng‐Fai Wong",
-   "url": "https://doi.org/10.1145/1880037.1880038",
-   "cited_by": 18,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Beware of Unknown Areas to Notify Adversaries: Detecting Dynamic Binary Instrumentation Runtimes with Low-Level Memory Scanning",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "Lecture notes in networks and systems",
-   "authors": "Federico Palmaro, Luisa Franchina",
-   "url": "https://doi.org/10.1007/978-3-030-80129-8_66",
-   "cited_by": 0,
-   "evidence": "title_only"
   },
   {
    "title": "Data-driven Spatial Locality",

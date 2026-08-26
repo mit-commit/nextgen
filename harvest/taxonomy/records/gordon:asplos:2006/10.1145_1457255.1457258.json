@@ -1,28 +1,31 @@
 {
  "paper": "gordon:asplos:2006",
  "slug": "10.1145_1457255.1457258",
- "function": "positions",
+ "function": "baseline",
  "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "The abstract references 'existing heuristics' that their exact algorithm improves upon, which likely includes the cited ASPLOS 2006 work on stream program parallelism, but no direct naming is present in the available evidence.",
+ "secondary": [
+  "positions",
+  "detailed-citation"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "Gordon et al. [2006] is explicitly described in related work as a heuristic algorithm for exploiting task/data/pipeline parallelism, and the citing work measures throughput improvements over StreamIt 2.1 (the Gordon et al. system) with benchmarks showing 13-46% gains, constituting a direct numerical comparison.",
  "title": "Throughput-driven synthesis of embedded software for pipelined execution on multicore architectures",
  "year": 2009,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2606,
+  "input_tokens": 4130,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 112,
+  "output_tokens": 139,
   "service_tier": "batch",
   "inference_geo": "global"
  }

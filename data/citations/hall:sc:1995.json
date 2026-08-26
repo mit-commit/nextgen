@@ -7,7 +7,7 @@
   "records_raw": 222,
   "works": 176,
   "commit": 9,
-  "judged": 129,
+  "judged": 137,
   "gscholar": null
  },
  "citations": [
@@ -67,6 +67,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Reducing memory requirements of resource-constrained applications",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Priya Unnikrishnan, G. Chen, Mahmut Kandemir et al.",
+   "url": "https://doi.org/10.1145/1509288.1509289",
+   "cited_by": 1,
+   "centrality": "core",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Evaluating heuristics in automatically mapping multi-loop applications to FPGAs",
    "function": "uses-tool",
    "split": "detailed",
@@ -77,13 +90,10 @@
    "cited_by": 19,
    "centrality": "core",
    "confidence": "medium",
-   "secondary": [
-    "adopts-idea"
-   ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Reducing Synchronization Overhead for Compiler-Parallelized Codes on Software DSMs",
@@ -122,12 +132,15 @@
    "authors": "Heidi Ziegler, Mary Hall, Pedro C. Diniz",
    "url": "https://doi.org/10.1145/775832.775986",
    "cited_by": 21,
-   "centrality": "engaged",
+   "centrality": "core",
    "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Search Space Properties for Mapping Pipelined FPGA Applications ?",
@@ -179,12 +192,12 @@
    "authors": "Hwansoo Han, Chau‐Wen Tseng",
    "url": "https://doi.org/10.1109/pact.1998.727289",
    "cited_by": 29,
-   "centrality": "core",
-   "confidence": "medium",
+   "centrality": "engaged",
+   "confidence": "high",
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Compiler Optimizations for High Performance Architectures",
@@ -232,6 +245,26 @@
     "own-group"
    ],
    "evidence": "abstract"
+  },
+  {
+   "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 1999,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Sungdo Moon, Mary Hall",
+   "url": "https://doi.org/10.1145/301104.301112",
+   "cited_by": 33,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "baseline",
+    "supports-claim"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Improving Compiler and Run-Time Support for Irregular Reductions Using Local Writes",
@@ -346,6 +379,22 @@
    "evidence": "abstract"
   },
   {
+   "title": "Memory Referencing Behavior in Compiler-Parallelized Applications",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 1996,
+   "venue": "International Journal of Parallel Programming",
+   "authors": "Evan Torrie, Margaret Martonosi, Mary Hall et al.",
+   "url": "https://doi.org/10.1007/bf03356754",
+   "cited_by": 0,
+   "centrality": "core",
+   "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Translating imperative code to MapReduce",
    "function": "adopts-idea",
    "split": "detailed",
@@ -356,7 +405,7 @@
    "cited_by": 41,
    "centrality": "engaged",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Intel OpenMP C++/Fortran Compiler for Hyper-Threading Technology: Implementation and Performance",
@@ -405,25 +454,6 @@
    "confidence": "medium",
    "secondary": [
     "detailed-citation"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Evaluation of predicated array data-flow analysis for automatic parallelization",
-   "function": "baseline",
-   "split": "detailed",
-   "year": 1999,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Sungdo Moon, Mary Hall",
-   "url": "https://doi.org/10.1145/329366.301112",
-   "cited_by": 33,
-   "centrality": "core",
-   "confidence": "medium",
-   "secondary": [
-    "extends"
    ],
    "flags": [
     "own-group"
@@ -529,6 +559,25 @@
    "evidence": "abstract"
   },
   {
+   "title": "Current status of the SUIF research project",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 1996,
+   "venue": "Lecture notes in computer science",
+   "authors": "Monica S. Lam",
+   "url": "https://doi.org/10.1007/3-540-61736-1_43",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Compiling for an Heterogeneous Vector Image Processor",
    "function": "supports-claim",
    "split": "detailed",
@@ -550,8 +599,21 @@
    "url": "https://doi.org/10.1145/2851613.2851805",
    "cited_by": 7,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "API compilation for image hardware accelerators",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Fabien Coelho, François Irigoin",
+   "url": "https://doi.org/10.1145/2400682.2400708",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "API-Compiling for Image Hardware Accelerators Technical Report – MINES ParisTech A / 500 / CRI",
@@ -588,7 +650,7 @@
    "cited_by": 13,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Code and Data Structure Partitioning for Parallel and Flexible MPSoC Specification Using Designer-Controlled Recoding",
@@ -602,22 +664,6 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract+contexts"
-  },
-  {
-   "title": "MAPS",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2008,
-   "venue": "2008 45th ACM/IEEE Design Automation Conference",
-   "authors": "Jianjiang Ceng, Jerónimo Castrillón, Weihua Sheng et al.",
-   "url": "https://doi.org/10.1145/1391469.1391663",
-   "cited_by": 109,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "adopts-idea"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Charon message-passing toolkit for scienti c computationsRob",
@@ -770,25 +816,6 @@
    "commit": true
   },
   {
-   "title": "Commutativity analysis",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 1997,
-   "venue": "ACM Transactions on Programming Languages and Systems",
-   "authors": "Martin Rinard, Pedro C. Diniz",
-   "url": "https://doi.org/10.1145/267959.269969",
-   "cited_by": 154,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "exemplifies"
-   ],
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Automatic Parallelization of Affine Loops using Dependence and Cache analysis in a Binary Rewriter",
    "function": "exemplifies",
    "split": "passing",
@@ -800,6 +827,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "General data structure expansion for multi-threading",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2013,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Hongtao Yu, Hou-Jen Ko, Zhiyuan Li",
+   "url": "https://doi.org/10.1145/2499370.2462182",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Automatic extraction of multi-objective aware pipeline parallelism using genetic algorithms",
@@ -865,6 +905,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "MAPS",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2008,
+   "venue": "2008 45th ACM/IEEE Design Automation Conference",
+   "authors": "Jianjiang Ceng, Jerónimo Castrillón, Weihua Sheng et al.",
+   "url": "https://doi.org/10.1145/1391469.1391663",
+   "cited_by": 109,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "The MTSA Program Analysis System Whitepaper: July 22, 2008",
    "function": "exemplifies",
    "split": "passing",
@@ -903,6 +956,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Symbolic bounds analysis of pointers, array indices, and accessed memory regions",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2005,
+   "venue": "ACM Transactions on Programming Languages and Systems",
+   "authors": "Radu Rugina, Martin Rinard",
+   "url": "https://doi.org/10.1145/1057387.1057388",
+   "cited_by": 147,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Automatic Detection of Uninitialized Variables",
@@ -959,19 +1028,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Symbolic bounds analysis of pointers, array indices, and accessed memory regions",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2000,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Radu Rugina, Martin Rinard",
-   "url": "https://doi.org/10.1145/349299.349325",
-   "cited_by": 147,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
    "title": "Array Dataflow Analysis in Presence of Non-affine Constraints",
    "function": "exemplifies",
    "split": "passing",
@@ -1009,6 +1065,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Automatic extraction of multi-objective aware parallelism for heterogeneous MPSoCs",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "2013 IEEE 6th International Workshop on Multi-/Many-core Computing Systems (MuCoCoS)",
+   "authors": "Daniel Cordes, Michael S. Engel, Olaf Neugebauer et al.",
+   "url": "https://doi.org/10.1109/mucocos.2013.6633599",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Automatic Extraction of Task-Level Parallelism for Heterogeneous MPSoCs",
    "function": "detailed-citation",
    "split": "detailed",
@@ -1031,8 +1100,8 @@
    "url": "https://doi.org/10.1145/1878961.1879009",
    "cited_by": 49,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Runtime characterisation of irregular accesses applied to parallelisation of irregular reductions",
@@ -1222,7 +1291,7 @@
    "cited_by": 2,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Mix and Match: Reorganizing Tasks for Enhancing Data Locality",
@@ -1230,15 +1299,12 @@
    "split": "passing",
    "year": 2021,
    "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems",
-   "authors": "Xulong Tang, M. Kandemir, Mustafa Karaköy",
-   "url": "https://doi.org/10.1145/3460087",
+   "authors": "Xulong Tang, Mahmut Kandemir, Mustafa Karaköy",
+   "url": "https://doi.org/10.1145/3410220.3460103",
    "cited_by": 0,
    "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Autotuning PolyBench Benchmarks with LLVM Clang/Polly Loop Optimization Pragmas Using Bayesian Optimization",
@@ -1285,22 +1351,6 @@
    ],
    "evidence": "contexts",
    "commit": true
-  },
-  {
-   "title": "Computing with Near Data",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2018,
-   "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems",
-   "authors": "Xulong Tang, Mahmut Kandemir, Hui Zhao et al.",
-   "url": "https://doi.org/10.1145/3287321",
-   "cited_by": 12,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
   },
   {
    "title": "Enhancing computation-to-core assignment with physical location information",
@@ -1395,22 +1445,6 @@
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "General data structure expansion for multi-threading",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2013,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Hongtao Yu, Hou-Jen Ko, Zhiyuan Li",
-   "url": "https://doi.org/10.1145/2491956.2462182",
-   "cited_by": 9,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "contexts"
   },
   {
@@ -1531,6 +1565,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Lightweight barrier-based parallelization support for non-cache-coherent MPSoC platforms",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2007,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Andrea Marongiu, Luca Benini, Mahmut Kandemir",
+   "url": "https://doi.org/10.1145/1289881.1289908",
+   "cited_by": 12,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Code Generation Algorithm for Affine Partitioning Framework",
    "function": "passing-citation",
    "split": "passing",
@@ -1556,8 +1603,8 @@
    "url": "https://doi.org/10.1109/micro.2006.13",
    "cited_by": 36,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract+contexts"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Region array SSA",
@@ -1638,6 +1685,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Compiler and Middleware Support for Scalable Data Mining",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2003,
+   "venue": "Lecture notes in computer science",
+   "authors": "Gagan Agrawal, Ruoming Jin, Xiaogang Li",
+   "url": "https://doi.org/10.1007/3-540-35767-x_3",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "CONCURRENCY AND COMPUTATION : PRACTICE AND EXPERIENCE Concurrency Computat",
    "function": "passing-citation",
    "split": "passing",
@@ -1693,16 +1753,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2001,
-   "venue": "ACM SIGPLAN Notices",
+   "venue": "ACM-SIGACT Symposium on Principles of Programming Languages",
    "authors": "Mahmut Kandemir",
-   "url": "https://doi.org/10.1145/373243.360219",
+   "url": "https://doi.org/10.1145/360204.360219",
    "cited_by": 22,
    "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Analysis of Multithreaded Programs",
@@ -1743,6 +1800,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Using loop-level parallelism to parallelize vectorizable programs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "Proceedings, International Parallel and Distributed Processing Symposium (IPDPS)",
+   "authors": "D. Pressel, J. Sahu, K. Heavey",
+   "url": "https://doi.org/10.1007/3-540-45401-2_3",
+   "cited_by": null,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Automatic Parallelization of Recursive Procedures",
    "function": "passing-citation",
    "split": "passing",
@@ -1766,7 +1836,7 @@
    "cited_by": 36,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Language Extensions and Compilation Techniques for Data Intensive Computations",
@@ -1835,6 +1905,46 @@
    "evidence": "contexts"
   },
   {
+   "title": "Commutativity analysis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1996,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Martin Rinard, Pedro C. Diniz",
+   "url": "https://doi.org/10.1145/249069.231390",
+   "cited_by": 154,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "A compiler-directed distributed shared memory system",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1995,
+   "venue": "International Conference on Supercomputing",
+   "authors": "T. Chiueh, Manish Verma",
+   "url": "https://doi.org/10.1145/224538.224547",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Computing with Near Data",
+   "function": "unknown",
+   "split": null,
+   "year": 2019,
+   "venue": "Abstracts of the 2019 SIGMETRICS/Performance Joint International Conference on Measurement and Modeling of Computer Systems",
+   "authors": "Xulong Tang, Mahmut Kandemir, Hui Zhao et al.",
+   "url": "https://doi.org/10.1145/3309697.3331487",
+   "cited_by": 12,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Coexecutability for efficient verification of data model updates",
    "function": "unknown",
    "split": null,
@@ -1847,34 +1957,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "API compilation for image hardware accelerators",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Fabien Coelho, François Irigoin",
-   "url": "https://doi.org/10.1145/2400682.2400708",
-   "cited_by": 5,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Automatic extraction of multi-objective aware parallelism for heterogeneous MPSoCs",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "2013 IEEE 6th International Workshop on Multi-/Many-core Computing Systems (MuCoCoS)",
-   "authors": "Daniel Cordes, Michael S. Engel, Olaf Neugebauer et al.",
-   "url": "https://doi.org/10.1109/mucocos.2013.6633599",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Automatic parallelization for embedded multi-core systems using high level cost models",
@@ -1915,20 +1997,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Reducing memory requirements of resource-constrained applications",
-   "function": "unknown",
-   "split": null,
-   "year": 2009,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Priya Unnikrishnan, G. Chen, Mahmut Kandemir et al.",
-   "url": "https://doi.org/10.1145/1509288.1509289",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Decomposition of Task-Level Concurrency on C Programs Applied to the Design of Multiprocessor SoC",
    "function": "unknown",
    "split": null,
@@ -1937,20 +2005,6 @@
    "authors": "M. ZALFANY URFIANTO, Tsuyoshi Isshiki, Arif Ullah Khan et al.",
    "url": "https://doi.org/10.1093/ietfec/e91-a.7.1748",
    "cited_by": 17,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Lightweight barrier-based parallelization support for non-cache-coherent MPSoC platforms",
-   "function": "unknown",
-   "split": null,
-   "year": 2007,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Andrea Marongiu, Luca Benini, Mahmut Kandemir",
-   "url": "https://doi.org/10.1145/1289881.1289908",
-   "cited_by": 12,
    "flags": [
     "polluted-contexts"
    ],
@@ -2121,20 +2175,6 @@
    "commit": true
   },
   {
-   "title": "A compiler-directed distributed shared memory system",
-   "function": "unknown",
-   "split": null,
-   "year": 1995,
-   "venue": "International Conference on Supercomputing",
-   "authors": "T. Chiueh, Manish Verma",
-   "url": "https://doi.org/10.1145/224538.224547",
-   "cited_by": 10,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Controlling the granularity of automatic parallel programs",
    "function": "unclassified",
    "split": null,
@@ -2185,17 +2225,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Compiler and Middleware Support for Scalable Data Mining",
-   "function": "unclassified",
-   "split": null,
-   "year": 2003,
-   "venue": "Lecture notes in computer science",
-   "authors": "Gagan Agrawal, Ruoming Jin, Xiaogang Li",
-   "url": "https://doi.org/10.1007/3-540-35767-x_3",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "Hyper-threading Technology Architecture and Microarchitecture 4 Pre-silicon Validation of Hyper-threading Technology 16 Speculative Precomputation: Exploring the Use of Multithreading for Latency Tools 22 Intel ® Openmp C++/fortran Compiler for Hyper-threading Technology: Implementation and Performa",
    "function": "unclassified",
    "split": null,
@@ -2214,17 +2243,6 @@
    "authors": "Yuan‐Shin Hwang",
    "url": "https://doi.org/10.1016/s0167-8191(02)00114-x",
    "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Using loop-level parallelism to parallelize vectorizable programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "Proceedings, International Parallel and Distributed Processing Symposium (IPDPS)",
-   "authors": "D. Pressel, J. Sahu, K. Heavey",
-   "url": "https://doi.org/10.1007/3-540-45401-2_3",
-   "cited_by": null,
    "evidence": "title_only"
   },
   {
@@ -2320,17 +2338,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Current status of the SUIF research project",
-   "function": "unclassified",
-   "split": null,
-   "year": 1996,
-   "venue": "Lecture notes in computer science",
-   "authors": "Monica S. Lam",
-   "url": "https://doi.org/10.1007/3-540-61736-1_43",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Exact vs. Approximate Array Region Analyses",
    "function": "unclassified",
    "split": null,
@@ -2369,17 +2376,6 @@
    "authors": "Mary W. Hall, S. Hiranandani, K. Kennedy et al.",
    "url": "https://www.semanticscholar.org/paper/ea3b917b3ef6cfc2a8def0262b55479a771e35a6",
    "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Memory Referencing Behavior in Compiler-Parallelized Applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 1996,
-   "venue": "International Journal of Parallel Programming",
-   "authors": "Evan Torrie, Margaret Martonosi, Mary Hall et al.",
-   "url": "https://doi.org/10.1007/bf03356754",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {

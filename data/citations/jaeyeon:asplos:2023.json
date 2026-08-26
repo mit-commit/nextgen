@@ -7,7 +7,7 @@
   "records_raw": 39,
   "works": 39,
   "commit": 2,
-  "judged": 28,
+  "judged": 35,
   "gscholar": null
  },
  "citations": [
@@ -79,7 +79,7 @@
     "positions",
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "AutoSparse: A Source-to-Source Format and Schedule Auto- Tuning Framework for Sparse Tensor Program",
@@ -93,6 +93,19 @@
    "centrality": "engaged",
    "confidence": "high",
    "evidence": "abstract"
+  },
+  {
+   "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "Micro",
+   "authors": "Ritvik Sharma, Zi Yu Xue, Nathan Zhang et al.",
+   "url": "https://doi.org/10.1145/3725843.3756095",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "STile: Searching Hybrid Sparse Formats for Sparse Deep Learning Operators Automatically",
@@ -176,19 +189,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "A Probabilistic Perspective on Tiling Sparse Tensor Algebra",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2025,
-   "venue": "Micro",
-   "authors": "Ritvik Sharma, Zi Yu Xue, Nathan Zhang et al.",
-   "url": "https://doi.org/10.1145/3725843.3756095",
-   "cited_by": 1,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
-  },
-  {
    "title": "Scheduling Language Chronology: Past, Present, and Future",
    "function": "exemplifies",
    "split": "passing",
@@ -228,6 +228,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2024,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Charles Block, Gerasimos Gerogiannis, Charith Mendis et al.",
+   "url": "https://doi.org/10.1145/3620665.3640427",
+   "cited_by": 12,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Tailors: Accelerating Sparse Tensor Algebra by Overbooking Buffer Capacity",
    "function": "exemplifies",
    "split": "passing",
@@ -244,21 +260,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
+   "title": "Minimum Cost Loop Nests for Contraction of a Sparse Tensor with a Tensor Network",
    "function": "detailed-citation",
    "split": "detailed",
-   "year": 2026,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Jaeyeon Won, Willow Ahrens, Saman Amarasinghe et al.",
-   "url": "https://doi.org/10.1145/3779212.3790176",
-   "cited_by": 0,
+   "year": 2024,
+   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
+   "authors": "Raghavendra Kanakagiri, Edgar Solomonik",
+   "url": "https://doi.org/10.1145/3626183.3659985",
+   "cited_by": 9,
    "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract",
-   "commit": true
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Vesper: A Versatile Sparse Linear Algebra Accelerator With Configurable Compute Patterns",
@@ -274,6 +286,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Accelerating Sparse Algebra with Program Synthesis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "International Conference on Compiler Construction",
+   "authors": "José Wesley de Souza Magalhães, Shideh Hashemian, Alexander Brauckmann et al.",
+   "url": "https://doi.org/10.1145/3771775.3786281",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "DenStat: Accelerating SpMV Execution via Joint Learning of Density Maps and Statistical Features",
    "function": "passing-citation",
    "split": "passing",
@@ -287,6 +312,36 @@
    "evidence": "contexts"
   },
   {
+   "title": "Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+   "authors": "Jaeyeon Won, Willow Ahrens, Saman Amarasinghe et al.",
+   "url": "https://doi.org/10.1145/3779212.3790176",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "NICE: Deep Neural Network Acceleration via Hardware-Friendly Index Assisted Compression",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2026,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Ning Yang, Fangxin Liu, Zongwu Wang et al.",
+   "url": "https://doi.org/10.1145/3795884",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "AccelES: Accelerating Top-K SpMV for Embedding Similarity via Low-bit Pruning",
    "function": "passing-citation",
    "split": "passing",
@@ -298,6 +353,44 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "BePilot: An AI Programming Assistant for Compiler Backend Development",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "ACM Transactions on Software Engineering and Methodology",
+   "authors": "Ming Zhong, Xin Sun, Fang Lv et al.",
+   "url": "https://doi.org/10.1145/3764585",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "HYPERF: End-to-End Autotuning Framework for High-Performance Computing",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "authors": "Juseong Park, Yongwon Shin, Jung-Hyun Lee et al.",
+   "url": "https://doi.org/10.1145/3731545.3731588",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Loop Fusion in Matrix Multiplications with Sparse Dependence",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2025,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Mohammad Mahdi Salehi, Kazem Cheshmi",
+   "url": "https://doi.org/10.1145/3721145.3730427",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "The Continuous Tensor Abstraction: Where Indices Are Real",
@@ -393,8 +486,8 @@
    "url": "https://doi.org/10.1145/3627535.3638471",
    "cited_by": 2,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Challenges in Metaverse Research: An Internet of Things Perspective",
@@ -422,48 +515,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "Accelerating Sparse Algebra with Program Synthesis",
-   "function": "unknown",
-   "split": null,
-   "year": 2026,
-   "venue": "International Conference on Compiler Construction",
-   "authors": "José Wesley de Souza Magalhães, Shideh Hashemian, Alexander Brauckmann et al.",
-   "url": "https://doi.org/10.1145/3771775.3786281",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "NICE: Deep Neural Network Acceleration via Hardware-Friendly Index Assisted Compression",
-   "function": "unknown",
-   "split": null,
-   "year": 2026,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Ning Yang, Fangxin Liu, Zongwu Wang et al.",
-   "url": "https://doi.org/10.1145/3795884",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "BePilot: An AI Programming Assistant for Compiler Backend Development",
-   "function": "unknown",
-   "split": null,
-   "year": 2025,
-   "venue": "ACM Transactions on Software Engineering and Methodology",
-   "authors": "Ming Zhong, Xin Sun, Fang Lv et al.",
-   "url": "https://doi.org/10.1145/3764585",
-   "cited_by": 5,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "Morphing-based Compression for Data-centric ML Pipelines",
@@ -494,20 +545,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM",
-   "function": "unknown",
-   "split": null,
-   "year": 2024,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Charles Block, Gerasimos Gerogiannis, Charith Mendis et al.",
-   "url": "https://doi.org/10.1145/3620665.3640427",
-   "cited_by": 12,
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Accelerating Computation for Scalable Graph Neural Network Training",
    "function": "unclassified",
    "split": null,
@@ -516,38 +553,6 @@
    "authors": "Jingzhi Fang, Zhiyuan Li",
    "url": "https://doi.org/10.1007/978-981-95-5795-0_4",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "HYPERF: End-to-End Autotuning Framework for High-Performance Computing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "authors": "Juseong Park, Yongwon Shin, Jung-Hyun Lee et al.",
-   "url": "https://doi.org/10.1145/3731545.3731588",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Loop Fusion in Matrix Multiplications with Sparse Dependence",
-   "function": "unclassified",
-   "split": null,
-   "year": 2025,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Mohammad Mahdi Salehi, Kazem Cheshmi",
-   "url": "https://doi.org/10.1145/3721145.3730427",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Minimum Cost Loop Nests for Contraction of a Sparse Tensor with a Tensor Network",
-   "function": "unclassified",
-   "split": null,
-   "year": 2024,
-   "venue": "ACM Symposium on Parallelism in Algorithms and Architectures",
-   "authors": "Raghavendra Kanakagiri, Edgar Solomonik",
-   "url": "https://doi.org/10.1145/3626183.3659985",
-   "cited_by": 9,
    "evidence": "title_only"
   },
   {

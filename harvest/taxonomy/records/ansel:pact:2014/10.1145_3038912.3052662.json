@@ -1,16 +1,16 @@
 {
  "paper": "ansel:pact:2014",
  "slug": "10.1145_3038912.3052662",
- "function": "unknown",
- "centrality": "unknown",
- "flags": [
-  "polluted-contexts"
+ "function": "baseline",
+ "centrality": "engaged",
+ "flags": [],
+ "secondary": [
+  "positions"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract+contexts",
- "anchored": "none",
- "note": "The single S2 context does not mention OpenTuner or any of its specifics; it describes SBO behavior and provides no anchor to the cited work.",
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "OpenTuner is explicitly compared against BOAT in measured experiments (convergence graphs in Figures 6 and 8 show iteration-vs-performance numbers for OpenTuner vs Spearmint vs BOAT), and it is also contrasted in prose as an example of evolutionary/hill-climbing auto-tuners that require thousands of evaluations.",
  "title": "BOAT",
  "year": 2017,
  "s2_isInfluential": false,
@@ -19,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2619,
+  "input_tokens": 4274,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 102,
+  "output_tokens": 141,
   "service_tier": "batch",
   "inference_geo": "global"
  }

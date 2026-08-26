@@ -1,14 +1,16 @@
 {
  "paper": "chou-pldi20-taco-conversion",
  "slug": "10.1145_3579990.3580021",
- "function": "exemplifies",
- "centrality": "peripheral",
+ "function": "baseline",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "contexts",
+ "secondary": [
+  "positions"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "TACO is cited as one example of a tensor algebra compiler using sparse layouts, with the cited paper being one of three TACO references grouped together in a list.",
+ "note": "The citing work measures its synthesized format conversion code against TACO with specific speedup numbers (2.85x faster for COO to CSR, 1.4x slower for COO to DIA), making it a direct experimental baseline.",
  "title": "Code Synthesis for Sparse Tensor Format Conversion and Optimization",
  "year": 2023,
  "s2_isInfluential": false,
@@ -17,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2537,
+  "input_tokens": 3522,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 94,
+  "output_tokens": 117,
   "service_tier": "batch",
   "inference_geo": "global"
  }

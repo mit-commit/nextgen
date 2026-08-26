@@ -7,7 +7,7 @@
   "records_raw": 37,
   "works": 27,
   "commit": 0,
-  "judged": 20,
+  "judged": 21,
   "gscholar": null
  },
  "citations": [
@@ -21,8 +21,8 @@
    "url": "https://doi.org/10.1145/1183401.1183422",
    "cited_by": 18,
    "centrality": "core",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "SIMD-aware Word Length Optimization for Floating-point to Fixed-point Conversion targeting Embedded Processors. (Optimisation de la largeur des mots pour la conversion de virgule flottante en virgule fixe ciblant des processeurs embarqués avec support SIMD)",
@@ -40,6 +40,38 @@
    "evidence": "abstract"
   },
   {
+   "title": "Efficient Selection of Vector Instructions Using Dynamic Programming",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "Micro",
+   "authors": "Rajkishore Barik, Jisheng Zhao, Vivek Sarkar",
+   "url": "https://doi.org/10.1109/micro.2010.38",
+   "cited_by": 51,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Efficient SIMD code generation for irregular kernels",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Seonggun Kim, Hwansoo Han",
+   "url": "https://doi.org/10.1145/2370036.2145824",
+   "cited_by": 39,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Report on Compilation Techniques for Short-Vector Instructions",
    "function": "surveys",
    "split": "detailed",
@@ -49,22 +81,6 @@
    "cited_by": 0,
    "centrality": "peripheral",
    "confidence": "low",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Efficient SIMD code generation for irregular kernels",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2012,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Seonggun Kim, Hwansoo Han",
-   "url": "https://doi.org/10.1145/2145816.2145824",
-   "cited_by": 39,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "contexts"
   },
   {
@@ -120,19 +136,6 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
-  },
-  {
-   "title": "Efficient Selection of Vector Instructions Using Dynamic Programming",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2010,
-   "venue": "Micro",
-   "authors": "Rajkishore Barik, Jisheng Zhao, Vivek Sarkar",
-   "url": "https://doi.org/10.1109/micro.2010.38",
-   "cited_by": 51,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
   },
   {
    "title": "Mapping Streaming Languages to General Purpose Processors through Vectorization",
@@ -210,6 +213,22 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiling for vector-thread architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2008,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Mark Hampton, Krste Asanović",
+   "url": "https://doi.org/10.1145/1356058.1356085",
+   "cited_by": 23,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Cooperative Data and Computation Partitioning for Decentralized Architectures",
@@ -311,20 +330,6 @@
    "url": "https://openalex.org/W2143833058",
    "cited_by": 0,
    "evidence": "abstract"
-  },
-  {
-   "title": "Compiling for vector-thread architectures",
-   "function": "unknown",
-   "split": null,
-   "year": 2008,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Mark Hampton, Krste Asanović",
-   "url": "https://doi.org/10.1145/1356058.1356085",
-   "cited_by": 23,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Reducing exception management overhead with software restart markers",

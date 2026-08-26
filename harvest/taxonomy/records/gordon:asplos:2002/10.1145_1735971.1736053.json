@@ -1,30 +1,30 @@
 {
  "paper": "gordon:asplos:2002",
  "slug": "10.1145_1735971.1736053",
- "function": "unknown",
- "centrality": "unknown",
- "flags": [
-  "polluted-contexts"
+ "function": "uses-tool",
+ "centrality": "core",
+ "flags": [],
+ "secondary": [
+  "adopts-idea"
  ],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "Abstract-only evidence does not anchor to the cited paper; streaming compilation domain overlap is suggestive but insufficient to assign a function.",
+ "confidence": "medium",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "MacroSS is built on top of the StreamIt streaming language/compiler infrastructure introduced in the cited ASPLOS 2002 paper, using it as the substrate for their SIMD code generation work.",
  "title": "MacroSS",
  "year": 2010,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2839,
+  "input_tokens": 3561,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 347,
+  "output_tokens": 114,
   "service_tier": "batch",
   "inference_geo": "global"
  }

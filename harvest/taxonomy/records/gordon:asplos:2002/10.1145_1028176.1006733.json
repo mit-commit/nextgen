@@ -6,11 +6,13 @@
  "flags": [
   "own-group"
  ],
- "secondary": [],
+ "secondary": [
+  "uses-benchmark"
+ ],
  "confidence": "high",
- "evidence": "contexts",
- "anchored": "numref",
- "note": "The citing work explicitly describes using a Raw backend for the StreamIt compiler (the cited system) with automatic load balancing and scheduling, indicating infrastructure use.",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly credits the StreamIt compiler's Raw backend (reference [11]) for fully automatic load balancing, graph layout, communication scheduling, and routing, then evaluates StreamIt benchmarks on Raw hardware, directly consuming the cited system as infrastructure.",
  "title": "Evaluation of the Raw Microprocessor",
  "year": 2004,
  "s2_isInfluential": false,
@@ -19,14 +21,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2613,
+  "input_tokens": 4828,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 71,
+  "output_tokens": 95,
   "service_tier": "batch",
   "inference_geo": "global"
  }

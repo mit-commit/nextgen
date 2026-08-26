@@ -7,23 +7,10 @@
   "records_raw": 53,
   "works": 46,
   "commit": 9,
-  "judged": 40,
+  "judged": 42,
   "gscholar": null
  },
  "citations": [
-  {
-   "title": "Dedicated Hardware Accelerators for Processing of Sparse Matrices and Vectors: A Survey",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 2024,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Valentin Isaac--Chassande, Adrian Evans, Yves Durand et al.",
-   "url": "https://doi.org/10.1145/3640542",
-   "cited_by": 10,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
   {
    "title": "DX100: Programmable Data Access Accelerator for Indirection",
    "function": "uses-benchmark",
@@ -50,8 +37,11 @@
    "url": "https://doi.org/10.1145/3470496.3527379",
    "cited_by": 16,
    "centrality": "engaged",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "secondary": [
+    "uses-benchmark"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR",
@@ -205,6 +195,19 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Dedicated Hardware Accelerators for Processing of Sparse Matrices and Vectors: A Survey",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2024,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Valentin Isaac--Chassande, Adrian Evans, Yves Durand et al.",
+   "url": "https://doi.org/10.1145/3640542",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "WISE",
@@ -448,6 +451,19 @@
    "commit": true
   },
   {
+   "title": "LightNE: A Lightweight Graph Processing System for Network Embedding",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2021,
+   "venue": "SIGMOD Conference",
+   "authors": "Jiezhong Qiu, Laxman Dhulipala, Jie Tang et al.",
+   "url": "https://doi.org/10.1145/3448016.3457329",
+   "cited_by": 33,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "SpZip: Architectural Support for Effective Data Compression In Irregular Applications",
    "function": "passing-citation",
    "split": "passing",
@@ -547,6 +563,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Practical parallel hypergraph algorithms",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2020,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Julian Shun",
+   "url": "https://doi.org/10.1145/3332466.3374527",
+   "cited_by": 49,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Cimple: instruction and memory level parallelism",
    "function": "passing-citation",
    "split": "passing",
@@ -618,10 +647,7 @@
    "authors": "Ruiqin Tian, Luanzheng Guo, Jiajia Li et al.",
    "url": "https://doi.org/10.1109/llvmhpc54804.2021.00009",
    "cited_by": 33,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "DMM-GAPBS: Adapting the GAP Benchmark Suite to a Distributed Memory Model",
@@ -631,34 +657,6 @@
    "authors": "Zachary Hansen, Brody Williams, John D. Leidel et al.",
    "url": "https://doi.org/10.1109/hpec49654.2021.9622817",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "LightNE: A Lightweight Graph Processing System for Network Embedding",
-   "function": "unknown",
-   "split": null,
-   "year": 2021,
-   "venue": "SIGMOD Conference",
-   "authors": "Jiezhong Qiu, Laxman Dhulipala, Jie Tang et al.",
-   "url": "https://doi.org/10.1145/3448016.3457329",
-   "cited_by": 33,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Practical parallel hypergraph algorithms",
-   "function": "unknown",
-   "split": null,
-   "year": 2020,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Julian Shun",
-   "url": "https://doi.org/10.1145/3332466.3374527",
-   "cited_by": 49,
    "flags": [
     "polluted-contexts"
    ],

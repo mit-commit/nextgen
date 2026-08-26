@@ -4,11 +4,13 @@
  "function": "detailed-citation",
  "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "medium",
- "evidence": "contexts",
+ "secondary": [
+  "adopts-idea"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work names Halide specifically and describes its core idea (separation of Compute and Schedule), and the paper builds a Clang plugin called CustomHalide inspired by this concept.",
+ "note": "The citing work explicitly names Halide and credits its core idea of separating Compute and Schedule to reference [15] (the cited paper), then builds CustomHalide on top of Halide's auto-scheduler, giving the cited work individual attention beyond a passing list mention.",
  "title": "CustomHalide – A new plugin of clang for loop optimization",
  "year": 2023,
  "s2_isInfluential": false,
@@ -17,14 +19,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2514,
+  "input_tokens": 3928,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 75,
+  "output_tokens": 99,
   "service_tier": "batch",
   "inference_geo": "global"
  }

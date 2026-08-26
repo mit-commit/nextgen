@@ -7,7 +7,7 @@
   "records_raw": 52,
   "works": 45,
   "commit": 4,
-  "judged": 40,
+  "judged": 42,
   "gscholar": null
  },
  "citations": [
@@ -56,9 +56,9 @@
    "centrality": "engaged",
    "confidence": "medium",
    "secondary": [
-    "positions"
+    "adopts-idea"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Towards Efficient Instruction Stream Scheduling for Stencil Computation on ARM Processors",
@@ -72,6 +72,22 @@
    "centrality": "engaged",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2021,
+   "venue": "International Conference on Parallel Processing",
+   "authors": "Mingzhen Li, Yi Liu, Hailong Yang et al.",
+   "url": "https://doi.org/10.1145/3472456.3473517",
+   "cited_by": 17,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Tiramisu: A Polyhedral Compiler for Expressing Fast and Portable Code",
@@ -214,6 +230,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "DISTAL: the distributed tensor algebra compiler",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1145/3519939.3523437",
+   "cited_by": 29,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "CoCoNet: Co-Optimizing Computation and Communication for Distributed Machine Learning",
    "function": "positions",
    "split": "detailed",
@@ -256,7 +285,7 @@
    "cited_by": 14,
    "centrality": "engaged",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Loop Tiling in Large-Scale Stencil Codes at Run-Time with OPS",
@@ -274,6 +303,25 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Efficient Parallelization of MATLAB Stencil Applications for Multi-core Clusters",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2016,
+   "venue": "IEEE International Conference on High Performance Computing, Data, and Analytics",
+   "authors": "Johannes Spazier, Steffen Christgau, Bettina Schnor",
+   "url": "https://doi.org/10.1109/wolfhpc.2016.07",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Hercules: A Compiler for Productive Programming of Heterogeneous Systems",
@@ -328,17 +376,19 @@
    "evidence": "contexts"
   },
   {
-   "title": "Automatic Code Generation and Optimization of Large-scale Stencil Computation on Many-core Processors",
+   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
    "function": "exemplifies",
    "split": "passing",
-   "year": 2021,
-   "venue": "International Conference on Parallel Processing",
-   "authors": "Mingzhen Li, Yi Liu, Hailong Yang et al.",
-   "url": "https://doi.org/10.1145/3472456.3473517",
-   "cited_by": 17,
+   "year": 2022,
+   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1109/sc41404.2022.00064",
+   "cited_by": 8,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "abstract"
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Improving communication by optimizing on-node data movement with data layout",
@@ -390,6 +440,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Extending Halide to Improve Software Development for Imaging DSPs",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2017,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Sander Vocke, Henk Corporaal, Roel Jordans et al.",
+   "url": "https://doi.org/10.1145/3106343",
+   "cited_by": 15,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Edinburgh Research Explorer A shared compilation stack for distributed-memory parallelism in stencil DSLs",
@@ -479,20 +542,7 @@
    "cited_by": 11,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Extending halide to improve software development for imaging DSPs",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2016,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Vocke",
-   "url": "https://doi.org/10.1145/3106343",
-   "cited_by": 15,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "to improve software development for imaging",
@@ -518,31 +568,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "DISTAL: the distributed tensor algebra compiler",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2022,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1145/3519939.3523437",
-   "cited_by": 29,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
-   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2022,
-   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1109/sc41404.2022.00064",
-   "cited_by": 8,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
   },
   {
    "title": "Large-scale performance of a DSL-based multi-block structured-mesh application for Direct Numerical Simulation",
@@ -571,6 +596,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Delivering Performance-Portable Stencil Computations on CPUs and GPUs Using Bricks",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "International Workshop on Performance, Portability and Productivity in HPC",
+   "authors": "Tuowen Zhao, Samuel Williams, Mary W. Hall et al.",
+   "url": "https://doi.org/10.1109/p3hpc.2018.00009",
+   "cited_by": 37,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "This paper is included in the Proceedings of the 16th USENIX Symposium on Operating Systems Design and Implementation.",
    "function": "passing-citation",
    "split": "passing",
@@ -580,34 +618,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "Delivering Performance-Portable Stencil Computations on CPUs and GPUs Using Bricks",
-   "function": "unknown",
-   "split": null,
-   "year": 2018,
-   "venue": "International Workshop on Performance, Portability and Productivity in HPC",
-   "authors": "Tuowen Zhao, Samuel Williams, Mary W. Hall et al.",
-   "url": "https://doi.org/10.1109/p3hpc.2018.00009",
-   "cited_by": 37,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Efficient parallelization of MATLAB stencil applications for multi-core clusters",
-   "function": "unknown",
-   "split": null,
-   "year": 2016,
-   "venue": "IEEE International Conference on High Performance Computing, Data, and Analytics",
-   "authors": "Johannes Spazier, Steffen Christgau, Bettina Schnor",
-   "url": "https://doi.org/10.5555/3019129.3019132",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "HPAT: High Performance Analytics with Scripting Ease-of-Use",

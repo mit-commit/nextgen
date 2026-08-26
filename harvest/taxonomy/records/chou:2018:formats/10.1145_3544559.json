@@ -2,17 +2,18 @@
  "paper": "chou:2018:formats",
  "slug": "10.1145_3544559",
  "function": "adopts-idea",
- "centrality": "engaged",
+ "centrality": "core",
  "flags": [
   "own-group"
  ],
  "secondary": [
-  "exemplifies"
+  "exemplifies",
+  "detailed-citation"
  ],
  "confidence": "high",
- "evidence": "contexts",
- "anchored": "numref",
- "note": "The citing work directly extends the format abstraction concept from [18] (the cited paper) to include more sparse storage formats like COO, DIA, ELL, and hash maps, adopting the dimension level types framework while also listing it in a background context.",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work adopts the TACO-flavored sparse tensor annotation mechanism (dimension level types, orderings, bit widths) directly from the cited paper [18] and builds its MLIR sparse compiler on that format abstraction, while also crediting the cited work for enabling many additional formats like COO, DIA, ELL.",
  "title": "Compiler Support for Sparse Tensor Computations in MLIR",
  "year": 2022,
  "s2_isInfluential": false,
@@ -21,14 +22,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2619,
+  "input_tokens": 3940,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 129,
+  "output_tokens": 145,
   "service_tier": "batch",
   "inference_geo": "global"
  }

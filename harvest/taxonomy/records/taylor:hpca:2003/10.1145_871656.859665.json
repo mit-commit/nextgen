@@ -1,28 +1,30 @@
 {
  "paper": "taylor:hpca:2003",
  "slug": "10.1145_871656.859665",
- "function": "exemplifies",
- "centrality": "peripheral",
+ "function": "supports-claim",
+ "centrality": "engaged",
  "flags": [],
- "secondary": [],
- "confidence": "low",
- "evidence": "abstract",
- "anchored": "none",
- "note": "No citation context anchors to the cited paper; the abstract mentions 'tiled processing' as one of three architecture categories evaluated, and the cited paper on Scalar Operand Networks is plausibly one reference in that category, but there is no direct evidence it is cited specifically.",
+ "secondary": [
+  "exemplifies"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "numref",
+ "note": "The citing work references [16] (the cited paper) to describe the scalar operand network concept used in Raw and to cite specific speedup results (up to 12x on ILP benchmarks, >16x on streaming benchmarks), meaning a specific finding travels from the cited paper to support claims about Raw's architecture.",
  "title": "A performance analysis of PIM, stream processing, and tiled processing on memory-intensive signal processing kernels",
  "year": 2003,
  "s2_isInfluential": null,
  "s2_intents": null,
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2644,
+  "input_tokens": 4135,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 118,
+  "output_tokens": 136,
   "service_tier": "batch",
   "inference_geo": "global"
  }

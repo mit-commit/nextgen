@@ -1,30 +1,32 @@
 {
  "paper": "chou-pldi20-taco-conversion",
  "slug": "10.1145_3519939.3523442",
- "function": "passing-citation",
- "centrality": "peripheral",
+ "function": "uses-tool",
+ "centrality": "core",
  "flags": [
   "own-group"
  ],
- "secondary": [],
+ "secondary": [
+  "passing-citation"
+ ],
  "confidence": "high",
- "evidence": "contexts",
- "anchored": "numref",
- "note": "The cited paper appears only as one item among multi-paper list citations in all three contexts, with no sentence targeting it specifically; author overlap with Amarasinghe and Kjolstad confirmed.",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly builds on TACO sparse tensor compiler prior work (reference group [21,22,31,33,34] which includes the cited paper), using it as the evaluation substrate for their autoscheduler.",
  "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model",
  "year": 2022,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2689,
+  "input_tokens": 4388,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 81,
+  "output_tokens": 120,
   "service_tier": "batch",
   "inference_geo": "global"
  }

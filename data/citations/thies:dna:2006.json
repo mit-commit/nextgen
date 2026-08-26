@@ -5,28 +5,12 @@
  "codebook": "0.2",
  "counts": {
   "records_raw": 103,
-  "works": 101,
-  "commit": 1,
-  "judged": 73,
+  "works": 100,
+  "commit": 0,
+  "judged": 85,
   "gscholar": null
  },
  "citations": [
-  {
-   "title": "A Generic Sample Preparation Approach for Different Microfluidic Labs-on-Chips",
-   "function": "uses-tool",
-   "split": "detailed",
-   "year": 2022,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Sudip Poddar, G. Fink, W. Haselmayr et al.",
-   "url": "https://doi.org/10.1109/tcad.2021.3135323",
-   "cited_by": 5,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "baseline"
-   ],
-   "evidence": "contexts"
-  },
   {
    "title": "Bio-chemical Assay Locking to Thwart Bio-IP Theft",
    "function": "uses-tool",
@@ -38,7 +22,26 @@
    "cited_by": 12,
    "centrality": "engaged",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Fluigi: Microfluidic Device Synthesis for Synthetic Biology",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2014,
+   "venue": "ACM Journal on Emerging Technologies in Computing Systems",
+   "authors": "Haiyao Huang, D. Densmore",
+   "url": "https://doi.org/10.1145/2660773",
+   "cited_by": 19,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "On-Chip Dilution from Multiple Concentrations of a Sample Fluid Using Digital Microfluidics",
@@ -85,6 +88,39 @@
    "evidence": "contexts"
   },
   {
+   "title": "A Generic Sample Preparation Approach for Different Microfluidic Labs-on-Chips",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Sudip Poddar, G. Fink, W. Haselmayr et al.",
+   "url": "https://doi.org/10.1109/tcad.2021.3135323",
+   "cited_by": 5,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "baseline",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Analysis of Concentration Errors in Sample Dilution Algorithms on a Digital Microfluidic Biochip",
+   "function": "uses-benchmark",
+   "split": "detailed",
+   "year": 2014,
+   "venue": "International Conference on Applied Algorithms",
+   "authors": "N. Bera, S. Majumder, B. Bhattacharya",
+   "url": "https://doi.org/10.1007/978-3-319-04126-1_8",
+   "cited_by": 7,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "An Adaptive Low Cost Single Target Sample Preparation on Digital Microfluidic Biochips",
    "function": "baseline",
    "split": "detailed",
@@ -115,21 +151,20 @@
    "evidence": "contexts"
   },
   {
-   "title": "Architectural Design of Flow-Based Microfluidic Biochips for Multi-Target Dilution of Biochemical Fluids",
+   "title": "Multitarget Sample Preparation Using MEDA Biochips",
    "function": "baseline",
    "split": "detailed",
    "year": 2020,
-   "venue": "ACM Trans. Design Autom. Electr. Syst.",
-   "authors": "Nishant Kamal, Ankur Gupta, Ananya Singla et al.",
-   "url": "https://doi.org/10.1145/3357604",
-   "cited_by": 6,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Tung-Che Liang, Yun-Sheng Chan, Tsung-Yi Ho et al.",
+   "url": "https://doi.org/10.1109/tcad.2019.2942002",
+   "cited_by": 19,
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "detailed-citation",
     "positions"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "A Waste-Efficient Algorithm for Single-Droplet Sample Preparation on Microfluidic Chips",
@@ -191,7 +226,10 @@
    "cited_by": 9,
    "centrality": "engaged",
    "confidence": "high",
-   "evidence": "contexts"
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Multi-target Many-Reactant Sample Preparation for Reactant Minimization on Microfluidic Biochips",
@@ -268,20 +306,37 @@
    "evidence": "contexts"
   },
   {
-   "title": "Multitarget Sample Preparation Using MEDA Biochips",
+   "title": "Architectural Design of Flow-Based Microfluidic Biochips for Multi-Target Dilution of Biochemical Fluids",
    "function": "positions",
    "split": "detailed",
    "year": 2020,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Tung-Che Liang, Yun-Sheng Chan, Tsung-Yi Ho et al.",
-   "url": "https://doi.org/10.1109/tcad.2019.2942002",
-   "cited_by": 19,
+   "venue": "ACM Trans. Design Autom. Electr. Syst.",
+   "authors": "Nishant Kamal, Ankur Gupta, Ananya Singla et al.",
+   "url": "https://doi.org/10.1145/3357604",
+   "cited_by": 6,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim",
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Factorization based dilution of biochemical fluids with micro-electrode-dot-array biochips",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2019,
+   "venue": "Asia and South Pacific Design Automation Conference",
+   "authors": "Sohini Saha, Debraj Kundu, Sudip Roy et al.",
+   "url": "https://doi.org/10.1145/3287624.3287710",
+   "cited_by": 9,
    "centrality": "engaged",
    "confidence": "medium",
    "secondary": [
-    "detailed-citation"
+    "exemplifies"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Layout-Aware Solution Preparation for Biochemical Analysis on a Digital Microfluidic Biochip",
@@ -313,7 +368,7 @@
    "secondary": [
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Reliability Issues in State-of-the-Art Microfluidic Biochips: A Survey",
@@ -394,17 +449,20 @@
    "evidence": "contexts"
   },
   {
-   "title": "A performance-optimizing compiler for cyber-physical digital microfluidic biochips",
+   "title": "Sample preparation for multiple-reactant bioassays on micro-electrode-dot-array biochips",
    "function": "exemplifies",
    "split": "passing",
-   "year": 2020,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Tyson Loveless, Jason Ott, P. Brisk",
-   "url": "https://doi.org/10.1145/3368826.3377925",
-   "cited_by": 12,
+   "year": 2019,
+   "venue": "Asia and South Pacific Design Automation Conference",
+   "authors": "Tung-Che Liang, Yun-Sheng Chan, Tsung-Yi Ho et al.",
+   "url": "https://doi.org/10.1145/3287624.3287708",
+   "cited_by": 14,
    "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
+   "confidence": "medium",
+   "secondary": [
+    "supports-claim"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Test Planning in Digital Microfluidic Biochips Using Efficient Eulerization Techniques",
@@ -445,8 +503,8 @@
    "url": "https://doi.org/10.1109/vlsid57277.2023.00049",
    "cited_by": 2,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Microfluidic Design for Concentration Gradient Generation Using Artificial Neural Network",
@@ -462,17 +520,30 @@
    "evidence": "contexts"
   },
   {
-   "title": "Factorization based dilution of biochemical fluids with micro-electrode-dot-array biochips",
+   "title": "Reactant Minimization for Multi-Target Sample Preparation on Digital Microfluidic Biochips Using Network Flow Models",
    "function": "detailed-citation",
    "split": "detailed",
    "year": 2019,
-   "venue": "Asia and South Pacific Design Automation Conference",
-   "authors": "Sohini Saha, Debraj Kundu, Sudip Roy et al.",
-   "url": "https://doi.org/10.1145/3287624.3287710",
-   "cited_by": 9,
+   "venue": "International Symposium on VLSI Design, Automation and Test",
+   "authors": "Kang-Yi Fan, S. Yamashita, Juinn-Dar Huang",
+   "url": "https://doi.org/10.1109/vlsi-dat.2019.8742025",
+   "cited_by": 4,
    "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Towards a Theory of Mixing Graphs: A Characterization of Perfect Mixability",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2018,
+   "venue": "International/Italian Conference on Algorithms and Complexity",
+   "authors": "M. I. Gonzalez, M. Chrobak",
+   "url": "https://doi.org/10.1007/978-3-030-17402-6_16",
+   "cited_by": 1,
+   "centrality": "engaged",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Reactant cost minimization through target concentration selection on microfluidic biochips",
@@ -538,6 +609,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "DNA Computing",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "Lecture notes in computer science",
+   "authors": "Chengde Mao, Takashi Yokomori",
+   "url": "https://doi.org/10.1007/11925903",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Demand-Driven Multi-Target Sample Preparation on Resource-Constrained Digital Microfluidic Biochips",
    "function": "passing-citation",
    "split": "passing",
@@ -564,6 +651,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Enhanced Multigradient Dilution Preparation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2021,
+   "venue": "Algorithms for Intelligent Systems",
+   "authors": "M. Sanyal, Somenath Chakraborty",
+   "url": "https://doi.org/10.1007/978-981-16-6893-7_46",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Generic Sample Preparation for Different Microfluidic Platforms",
    "function": "passing-citation",
    "split": "passing",
@@ -575,6 +675,32 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "A Methodology for Root-Causing In-field Attacks on Microfluidic Executions",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2020,
+   "venue": "IFIP International Conference on Theoretical Computer Science",
+   "authors": "Pushpita Roy, A. Banerjee, B. Bhattacharya",
+   "url": "https://doi.org/10.1007/978-3-662-61092-3_7",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "A performance-optimizing compiler for cyber-physical digital microfluidic biochips",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2020,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Tyson Loveless, Jason Ott, P. Brisk",
+   "url": "https://doi.org/10.1145/3368826.3377925",
+   "cited_by": 12,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Lookup Table-Based Fast Reliability-Aware Sample Preparation Using Digital Microfluidic Biochips",
@@ -616,6 +742,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Debugging Errors in Microfluidic Executions",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2019,
+   "venue": "International Doctoral Symposium on Applied Computation and Security Systems",
+   "authors": "Pushpita Roy, A. Banerjee, B. Bhattacharya",
+   "url": "https://doi.org/10.1007/978-981-13-8969-6_9",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Effect of Volumetric Split-Errors on Reactant-Concentration During Sample Preparation with Microfluidic Biochips",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2019,
+   "venue": "International Doctoral Symposium on Applied Computation and Security Systems",
+   "authors": "Sudip Poddar, R. Wille, H. Rahaman et al.",
+   "url": "https://doi.org/10.1007/978-981-13-8969-6_10",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Flow-Based Passive Microfluidic Architecture for Homogeneous Mixing",
    "function": "passing-citation",
    "split": "passing",
@@ -642,30 +794,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Reactant Minimization for Multi-Target Sample Preparation on Digital Microfluidic Biochips Using Network Flow Models",
+   "title": "Generalized Error-Correcting Sample Preparation",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2019,
-   "venue": "International Symposium on VLSI Design, Automation and Test",
-   "authors": "Kang-Yi Fan, S. Yamashita, Juinn-Dar Huang",
-   "url": "https://doi.org/10.1109/vlsi-dat.2019.8742025",
-   "cited_by": 4,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Sample preparation for multiple-reactant bioassays on micro-electrode-dot-array biochips",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2019,
-   "venue": "Asia and South Pacific Design Automation Conference",
-   "authors": "Tung-Che Liang, Yun-Sheng Chan, Tsung-Yi Ho et al.",
-   "url": "https://doi.org/10.1145/3287624.3287708",
-   "cited_by": 14,
+   "year": 2018,
+   "venue": "Micro-Electrode-Dot-Array Digital Microfluidic Biochips",
+   "authors": "Zipeng Li, K. Chakrabarty, Tsung-Yi Ho et al.",
+   "url": "https://doi.org/10.1007/978-3-030-02964-7_5",
+   "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Volume Management for Pin-Constrained Continuous-Flow Microfluidic Biochips",
@@ -744,6 +883,18 @@
    "evidence": "abstract"
   },
   {
+   "title": "Compiling High-Level Languages",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2016,
+   "authors": "Paul Pop, Wajid Hassan Minhass, Jan Madsen",
+   "url": "https://doi.org/10.1007/978-3-319-29599-2_5",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Design automation of multiple-demand mixture preparation using a K-array rotary mixer on digital microfluidic biochips",
    "function": "passing-citation",
    "split": "passing",
@@ -757,6 +908,18 @@
    "evidence": "abstract"
   },
   {
+   "title": "Design Methodology for Flow-Based Microfluidic Biochips",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2016,
+   "authors": "P. Pop, W. H. Minhass, J. Madsen",
+   "url": "https://doi.org/10.1007/978-3-319-29599-2_2",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Multi-objective sample preparation algorithm for microfluidic biochips supporting various mixing models",
    "function": "passing-citation",
    "split": "passing",
@@ -766,8 +929,8 @@
    "url": "https://doi.org/10.1109/socc.2016.7905444",
    "cited_by": 8,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "SIMOP-A fast tool for generating optimum dilutions of microfluidic samples using simulation",
@@ -822,6 +985,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Reactant Minimization for Sample Preparation on Microfluidic Biochips With Various Mixing Models",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2015,
+   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+   "authors": "Chia-Hung Liu, Kuo-Cheng Shen, Juinn-Dar Huang",
+   "url": "https://doi.org/10.1109/tcad.2015.2440312",
+   "cited_by": 16,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Reactant Minimization in Sample Preparation on Digital Microfluidic Biochips",
    "function": "passing-citation",
    "split": "passing",
@@ -831,8 +1007,21 @@
    "url": "https://doi.org/10.1109/tcad.2015.2418286",
    "cited_by": 29,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Algorithmic Challenges in Digital Microfluidic Biochips: Protocols, Design, and Test",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2014,
+   "venue": "International Conference on Applied Algorithms",
+   "authors": "B. Bhattacharya, Sudip Roy, Sukanta Bhattacharjee",
+   "url": "https://doi.org/10.1007/978-3-319-04126-1_1",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Correctness Checking of Bio-chemical Protocol Realizations on a Digital Microfluidic Biochip",
@@ -844,8 +1033,8 @@
    "url": "https://doi.org/10.1109/vlsid.2014.94",
    "cited_by": 15,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Demand-driven mixture preparation and droplet streaming using digital microfluidic biochips",
@@ -858,22 +1047,6 @@
    "cited_by": 12,
    "centrality": "peripheral",
    "confidence": "low",
-   "evidence": "abstract"
-  },
-  {
-   "title": "Fluigi: Microfluidic Device Synthesis for Synthetic Biology",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2014,
-   "venue": "ACM Journal on Emerging Technologies in Computing Systems",
-   "authors": "Haiyao Huang, D. Densmore",
-   "url": "https://doi.org/10.1145/2660773",
-   "cited_by": 19,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "abstract"
   },
   {
@@ -925,8 +1098,8 @@
    "url": "https://doi.org/10.1109/vldi-dat.2013.6533817",
    "cited_by": 41,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "On Producing Linear Dilution Gradient of a Sample with a Digital Microfluidic Biochip",
@@ -1015,20 +1188,6 @@
    "authors": "Ryan Silva, Swapnil P Bhatia, D. Densmore",
    "url": "https://doi.org/10.1039/c6lc00477f",
    "cited_by": 19,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Reactant Minimization for Sample Preparation on Microfluidic Biochips With Various Mixing Models",
-   "function": "unknown",
-   "split": null,
-   "year": 2015,
-   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
-   "authors": "Chia-Hung Liu, Kuo-Cheng Shen, Juinn-Dar Huang",
-   "url": "https://doi.org/10.1109/tcad.2015.2440312",
-   "cited_by": 16,
    "flags": [
     "polluted-contexts"
    ],
@@ -1157,17 +1316,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Enhanced Multigradient Dilution Preparation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "Algorithms for Intelligent Systems",
-   "authors": "M. Sanyal, Somenath Chakraborty",
-   "url": "https://doi.org/10.1007/978-981-16-6893-7_46",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Fluid-to-cell assignment and fluid loading on programmable microfluidic devices for bioprotocol execution",
    "function": "unclassified",
    "split": null,
@@ -1190,39 +1338,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "A Methodology for Root-Causing In-field Attacks on Microfluidic Executions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "IFIP International Conference on Theoretical Computer Science",
-   "authors": "Pushpita Roy, A. Banerjee, B. Bhattacharya",
-   "url": "https://doi.org/10.1007/978-3-662-61092-3_7",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Debugging Errors in Microfluidic Executions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "International Doctoral Symposium on Applied Computation and Security Systems",
-   "authors": "Pushpita Roy, A. Banerjee, B. Bhattacharya",
-   "url": "https://doi.org/10.1007/978-981-13-8969-6_9",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Effect of Volumetric Split-Errors on Reactant-Concentration During Sample Preparation with Microfluidic Biochips",
-   "function": "unclassified",
-   "split": null,
-   "year": 2019,
-   "venue": "International Doctoral Symposium on Applied Computation and Security Systems",
-   "authors": "Sudip Poddar, R. Wille, H. Rahaman et al.",
-   "url": "https://doi.org/10.1007/978-981-13-8969-6_10",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "Scheduling algorithms for reservoir- and mixer-aware sample preparation with microfluidic biochips",
    "function": "unclassified",
    "split": null,
@@ -1234,70 +1349,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Generalized Error-Correcting Sample Preparation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "Micro-Electrode-Dot-Array Digital Microfluidic Biochips",
-   "authors": "Zipeng Li, K. Chakrabarty, Tsung-Yi Ho et al.",
-   "url": "https://doi.org/10.1007/978-3-030-02964-7_5",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Towards a Theory of Mixing Graphs: A Characterization of Perfect Mixability",
-   "function": "unclassified",
-   "split": null,
-   "year": 2018,
-   "venue": "International/Italian Conference on Algorithms and Complexity",
-   "authors": "M. I. Gonzalez, M. Chrobak",
-   "url": "https://doi.org/10.1007/978-3-030-17402-6_16",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiling High-Level Languages",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "authors": "Paul Pop, Wajid Hassan Minhass, Jan Madsen",
-   "url": "https://doi.org/10.1007/978-3-319-29599-2_5",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Design Methodology for Flow-Based Microfluidic Biochips",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "authors": "P. Pop, W. H. Minhass, J. Madsen",
-   "url": "https://doi.org/10.1007/978-3-319-29599-2_2",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Algorithmic Challenges in Digital Microfluidic Biochips: Protocols, Design, and Test",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "International Conference on Applied Algorithms",
-   "authors": "B. Bhattacharya, Sudip Roy, Sukanta Bhattacharjee",
-   "url": "https://doi.org/10.1007/978-3-319-04126-1_1",
-   "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Analysis of Concentration Errors in Sample Dilution Algorithms on a Digital Microfluidic Biochip",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "venue": "International Conference on Applied Algorithms",
-   "authors": "N. Bera, S. Majumder, B. Bhattacharya",
-   "url": "https://doi.org/10.1007/978-3-319-04126-1_8",
-   "cited_by": 7,
-   "evidence": "title_only"
-  },
-  {
    "title": "MICROFLUIDIC TEMPORAL CELL STIMULATION",
    "function": "unclassified",
    "split": null,
@@ -1305,29 +1356,6 @@
    "authors": "Natalie Andrew, D. Craig, J. P. Urbanski et al.",
    "url": "https://www.semanticscholar.org/paper/092effad854abd733e385e2afc35e94f3e0c1049",
    "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Abstraction layers for scalable microfluidic biocomputing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "Natural Computing",
-   "authors": "William Thies, John Paul Urbanski, Todd Thorsen et al.",
-   "url": "https://doi.org/10.1007/s11047-006-9032-6",
-   "cited_by": 174,
-   "evidence": "title_only",
-   "commit": true
-  },
-  {
-   "title": "DNA Computing",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "Lecture notes in computer science",
-   "authors": "Chengde Mao, Takashi Yokomori",
-   "url": "https://doi.org/10.1007/11925903",
-   "cited_by": 3,
    "evidence": "title_only"
   },
   {

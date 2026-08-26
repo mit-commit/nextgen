@@ -1,16 +1,16 @@
 {
  "paper": "ansel:pact:2014",
  "slug": "10.1145_2694344.2694364",
- "function": "uses-tool",
- "centrality": "core",
+ "function": "baseline",
+ "centrality": "engaged",
  "flags": [],
  "secondary": [
-  "detailed-citation"
+  "uses-tool"
  ],
  "confidence": "high",
- "evidence": "contexts",
+ "evidence": "fulltext",
  "anchored": "named",
- "note": "The citing work explicitly used the OpenTuner framework (and associated Halide autotuner) to generate schedules for all benchmarks, running it for 12 hours per application — direct infrastructure use.",
+ "note": "OpenTuner is explicitly used as a comparison target with measured execution times (Table 2 shows speedups over OpenTuner) and also as infrastructure to generate competing Halide schedules for benchmarks.",
  "title": "PolyMage",
  "year": 2015,
  "s2_isInfluential": true,
@@ -20,14 +20,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2604,
+  "input_tokens": 4586,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 108,
+  "output_tokens": 112,
   "service_tier": "batch",
   "inference_geo": "global"
  }

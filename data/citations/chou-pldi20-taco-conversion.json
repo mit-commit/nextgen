@@ -7,7 +7,7 @@
   "records_raw": 34,
   "works": 31,
   "commit": 7,
-  "judged": 30,
+  "judged": 31,
   "gscholar": null
  },
  "citations": [
@@ -24,12 +24,51 @@
    "confidence": "high",
    "secondary": [
     "adopts-idea",
-    "detailed-citation"
+    "positions"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2022,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Willow Ahrens, Fredrik Kjølstad, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/3519939.3523442",
+   "cited_by": 31,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "passing-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
+   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2022,
+   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
+   "url": "https://doi.org/10.1109/sc41404.2022.00064",
+   "cited_by": 8,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "extends",
+    "adopts-idea"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "UniSparse: An Intermediate Language for General Sparse Format Customization",
@@ -45,6 +84,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Code Synthesis for Sparse Tensor Format Conversion and Optimization",
+   "function": "baseline",
+   "split": "detailed",
+   "year": 2023,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Tobi Popoola, Tuowen Zhao, Aaron St. George et al.",
+   "url": "https://doi.org/10.1145/3579990.3580021",
+   "cited_by": 2,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "An Intermediate Language for General Sparse Format Customization",
    "function": "positions",
    "split": "detailed",
@@ -55,10 +110,7 @@
    "cited_by": 0,
    "centrality": "engaged",
    "confidence": "high",
-   "secondary": [
-    "detailed-citation"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Sparse Format Conversion and Code Synthesis",
@@ -89,7 +141,7 @@
    "secondary": [
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Compilation of dynamic sparse tensor algebra",
@@ -118,8 +170,8 @@
    "url": "https://doi.org/10.1145/3687480",
    "cited_by": 11,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "AlphaSparse: Generating High Performance SpMV Codes Directly from Sparse Matrices",
@@ -133,9 +185,9 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "secondary": [
-    "detailed-citation"
+    "passing-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Gamma: leveraging Gustavson’s algorithm to accelerate sparse matrix multiplication",
@@ -148,7 +200,7 @@
    "cited_by": 154,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "SpZip: Architectural Support for Effective Data Compression In Irregular Applications",
@@ -179,19 +231,6 @@
    ],
    "evidence": "contexts",
    "commit": true
-  },
-  {
-   "title": "Code Synthesis for Sparse Tensor Format Conversion and Optimization",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2023,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Tobi Popoola, Tuowen Zhao, Aaron St. George et al.",
-   "url": "https://doi.org/10.1145/3579990.3580021",
-   "cited_by": 2,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
   },
   {
    "title": "TensorIR: An Abstraction for Automatic Tensorized Program Optimization",
@@ -241,11 +280,11 @@
    "url": "https://doi.org/10.1145/3544559",
    "cited_by": 53,
    "centrality": "peripheral",
-   "confidence": "medium",
+   "confidence": "high",
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "A sparse iteration space transformation framework for sparse tensor algebra",
@@ -307,6 +346,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "RECom: A Compiler Approach to Accelerating Recommendation Model Inference with Massive Embedding Columns",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2023,
+   "authors": "Zaifeng Pan, Zhen Zheng, Feng Zhang et al.",
+   "url": "https://doi.org/10.1145/3623278.3624761",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "SparDA: Accelerating Dynamic Sparse Deep Neural Networks via Sparse-Dense Transformation",
    "function": "passing-citation",
    "split": "passing",
@@ -345,23 +396,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Autoscheduling for sparse tensor algebra with an asymptotic cost model",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2022,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Willow Ahrens, Fredrik Kjølstad, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/3519939.3523442",
-   "cited_by": 31,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "contexts",
-   "commit": true
-  },
-  {
    "title": "Sparsity-Aware Tensor Decomposition",
    "function": "passing-citation",
    "split": "passing",
@@ -373,21 +407,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "SpDISTAL: Compiling Distributed Sparse Tensor Computations",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2022,
-   "authors": "Rohan Yadav, Alex Aiken, Fredrik Kjølstad",
-   "url": "https://doi.org/10.1109/sc41404.2022.00064",
-   "cited_by": 8,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "TileSpGEMM",
@@ -452,19 +471,6 @@
    ],
    "evidence": "contexts",
    "commit": true
-  },
-  {
-   "title": "RECom: A Compiler Approach to Accelerating Recommendation Model Inference with Massive Embedding Columns",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "authors": "Zaifeng Pan, Zhen Zheng, Feng Zhang et al.",
-   "url": "https://doi.org/10.1145/3623278.3624761",
-   "cited_by": 6,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   }
  ],
  "reception": "Within the sparse-compilation literature the work registers as part of taco's format story. Successor sparse compilers position themselves relative to it: SparseTIR and UniSparse treat the generated conversion routines as a point of departure or a baseline for format customization, and the MLIR sparse-tensor compiler discusses the approach in detail. The work on compiling modular and general sparse workspaces builds on the machinery directly, and papers across sparse linear algebra — from Gamma's sparse matrix multiplication to AlphaSparse's generated SpMV codes — cite the conversion measurements as evidence that format choice and conversion cost matter. The remaining citations are brief mentions in the tensor-compiler literature. The implementation lives on in the tensor-compiler/taco repository, and an evaluated artifact accompanies the paper."

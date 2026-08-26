@@ -1,16 +1,18 @@
 {
  "paper": "thies:micro:2007",
  "slug": "10.1145_2989081.2989100",
- "function": "unknown",
- "centrality": "unknown",
+ "function": "passing-citation",
+ "centrality": "peripheral",
  "flags": [
   "polluted-contexts"
  ],
- "secondary": [],
+ "secondary": [
+  "supports-claim"
+ ],
  "confidence": "low",
- "evidence": "abstract+contexts",
- "anchored": "none",
- "note": "The citation contexts discuss DRAM refresh works and have no connection to the cited paper on coarse-grained pipeline parallelism, indicating mis-attributed contexts.",
+ "evidence": "fulltext",
+ "anchored": "numref",
+ "note": "The S2 contexts reference works on DRAM refresh and timestamps but the cited paper is about pipeline parallelism in C programs, not DRAM refresh; the contexts appear mis-attributed, making the citation anchor unclear.",
  "title": "MicroRefresh",
  "year": 2016,
  "s2_isInfluential": false,
@@ -20,14 +22,14 @@
  ],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2710,
+  "input_tokens": 3150,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 214,
+  "output_tokens": 122,
   "service_tier": "batch",
   "inference_geo": "global"
  }

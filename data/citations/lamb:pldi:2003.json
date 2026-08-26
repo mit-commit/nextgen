@@ -7,7 +7,7 @@
   "records_raw": 67,
   "works": 59,
   "commit": 11,
-  "judged": 37,
+  "judged": 41,
   "gscholar": null
  },
  "citations": [
@@ -64,25 +64,41 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
+  },
+  {
+   "title": "Programming by sketching for bit-streaming programs",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2005,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Armando Solar-Lezama, Rodric Rabbah, Rastislav Bodík et al.",
+   "url": "https://doi.org/10.1145/1064978.1065045",
+   "cited_by": 211,
+   "centrality": "core",
+   "confidence": "medium",
+   "secondary": [
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Sigma*",
    "function": "positions",
    "split": "detailed",
    "year": 2013,
-   "venue": "ACM-SIGACT Symposium on Principles of Programming Languages",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Matko Botinčan, Domagoj Babić",
-   "url": "https://doi.org/10.1145/2429069.2429123",
+   "url": "https://doi.org/10.1145/2480359.2429123",
    "cited_by": 52,
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "supports-claim",
+    "uses-benchmark",
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Sigma*: Symbolic Learning of Stream Filters",
@@ -101,8 +117,21 @@
    "evidence": "contexts"
   },
   {
-   "title": "The canals language and its compiler",
+   "title": "EventJava: An Extension of Java for Event Correlation",
    "function": "positions",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "Lecture notes in computer science",
+   "authors": "Patrick Eugster, K. R. Jayaram",
+   "url": "https://doi.org/10.1007/978-3-642-03013-0_26",
+   "cited_by": 89,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "The canals language and its compiler",
+   "function": "supports-claim",
    "split": "detailed",
    "year": 2009,
    "venue": "Software and Compilers for Embedded Systems",
@@ -110,8 +139,8 @@
    "url": "https://doi.org/10.1145/1543820.1543829",
    "cited_by": 10,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "System Support for Implicitly Parallel Programming",
@@ -368,6 +397,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Minimizing communication in rate-optimal software pipelining for stream programs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
+   "authors": "Haitao Wei, Junqing Yu, Huafei Yu et al.",
+   "url": "https://doi.org/10.1145/1772954.1772984",
+   "cited_by": 13,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Matrix-based streamization approach for improving locality and parallelism on FT64 stream processor",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2009,
+   "venue": "Journal of Supercomputing",
+   "authors": "Xuejun Yang, Jing Du, Xiaobo Yan et al.",
+   "url": "https://doi.org/10.1007/s11227-008-0186-0",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Liquid Metal: Object-Oriented Programming Across the Hardware/Software Boundary",
    "function": "passing-citation",
    "split": "passing",
@@ -431,6 +486,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Implementation and Evaluation of Jacobi Iteration on the Imagine Stream Processor",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2007,
+   "venue": "International Conference on High Performance Computing",
+   "authors": "Jing Du, Xuejun Yang, Wenjing Yang et al.",
+   "url": "https://doi.org/10.1007/978-3-540-77220-0_23",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "MPEG-2 decoding in a stream programming language",
@@ -503,22 +571,6 @@
    "commit": true
   },
   {
-   "title": "Programming by sketching for bit-streaming programs",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2005,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Armando Solar-Lezama, Rodric Rabbah, Rastislav Bodík et al.",
-   "url": "https://doi.org/10.1145/1065010.1065045",
-   "cited_by": 211,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Compositional analysis of ﬂoating-point linear numerical ﬁlters",
    "function": "passing-citation",
    "split": "passing",
@@ -570,18 +622,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Minimizing communication in rate-optimal software pipelining for stream programs",
-   "function": "unknown",
-   "split": null,
-   "year": 2010,
-   "venue": "IEEE/ACM International Symposium on Code Generation and Optimization",
-   "authors": "Haitao Wei, Junqing Yu, Huafei Yu et al.",
-   "url": "https://doi.org/10.1145/1772954.1772984",
-   "cited_by": 13,
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "SIMD code generation in data-parallel programming",
@@ -622,7 +663,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "A Productive Programming Environment for Stream Computing",
@@ -661,28 +702,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "EventJava: An Extension of Java for Event Correlation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "Lecture notes in computer science",
-   "authors": "Patrick Eugster, K. R. Jayaram",
-   "url": "https://doi.org/10.1007/978-3-642-03013-0_26",
-   "cited_by": 89,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Matrix-based streamization approach for improving locality and parallelism on FT64 stream processor",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "Journal of Supercomputing",
-   "authors": "Xuejun Yang, Jing Du, Xiaobo Yan et al.",
-   "url": "https://doi.org/10.1007/s11227-008-0186-0",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
    "title": "Applying the Z-transform for the static analysis of floating-point numerical filters",
    "function": "unclassified",
    "split": null,
@@ -691,17 +710,6 @@
    "authors": "D. Monniaux",
    "url": "https://www.semanticscholar.org/paper/de600d73d025ce4022bdbd4153cab8fcd99a6ff1",
    "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Implementation and Evaluation of Jacobi Iteration on the Imagine Stream Processor",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "International Conference on High Performance Computing",
-   "authors": "Jing Du, Xuejun Yang, Wenjing Yang et al.",
-   "url": "https://doi.org/10.1007/978-3-540-77220-0_23",
-   "cited_by": 0,
    "evidence": "title_only"
   },
   {

@@ -7,7 +7,7 @@
   "records_raw": 262,
   "works": 209,
   "commit": 14,
-  "judged": 136,
+  "judged": 151,
   "gscholar": null
  },
  "citations": [
@@ -23,6 +23,39 @@
    "centrality": "core",
    "confidence": "medium",
    "evidence": "abstract"
+  },
+  {
+   "title": "The Paraguin compiler - message-passing code generation using SUIF [Stanford University Intermediate Format]",
+   "function": "extends",
+   "split": "detailed",
+   "year": 2002,
+   "venue": "Proceedings IEEE SoutheastCon 2002 (Cat. No.02CH37283)",
+   "authors": "C. Ferner",
+   "url": "https://doi.org/10.1109/secon.2002.995545",
+   "cited_by": 10,
+   "centrality": "core",
+   "confidence": "high",
+   "secondary": [
+    "uses-tool",
+    "adopts-idea"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Reducing memory requirements of resource-constrained applications",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2009,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Priya Unnikrishnan, G. Chen, Mahmut Kandemir et al.",
+   "url": "https://doi.org/10.1145/1509288.1509289",
+   "cited_by": 1,
+   "centrality": "core",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Beyond shared memory loop parallelism in the polyhedral model",
@@ -52,27 +85,13 @@
    "centrality": "core",
    "confidence": "high",
    "secondary": [
-    "adopts-idea",
-    "detailed-citation"
+    "extends"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract",
+   "evidence": "fulltext",
    "commit": true
-  },
-  {
-   "title": "The Paraguin compiler - message-passing code generation using SUIF [Stanford University Intermediate Format]",
-   "function": "uses-tool",
-   "split": "detailed",
-   "year": 2002,
-   "venue": "Proceedings IEEE SoutheastCon 2002 (Cat. No.02CH37283)",
-   "authors": "C. Ferner",
-   "url": "https://doi.org/10.1109/secon.2002.995545",
-   "cited_by": 10,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "evidence": "contexts"
   },
   {
    "title": "SUIF Explorer",
@@ -125,6 +144,23 @@
    "commit": true
   },
   {
+   "title": "Communication optimization and code generation for distributed memory machines",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 1993,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Saman Amarasinghe, Monica S. Lam",
+   "url": "https://doi.org/10.1145/155090.155102",
+   "cited_by": 220,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
    "title": "Exposed-set Calculating Algorithm for Eliminating Redundant Communication",
    "function": "adopts-idea",
    "split": "detailed",
@@ -136,6 +172,19 @@
    "centrality": "core",
    "confidence": "medium",
    "evidence": "abstract"
+  },
+  {
+   "title": "Violated dependence analysis",
+   "function": "adopts-idea",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Nicolas Vasilache, Cédric Bastoul, Albert Cohen et al.",
+   "url": "https://doi.org/10.1145/1183401.1183448",
+   "cited_by": 43,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Loop Transformations for Reducing Data Space Requirements of Resource-Constrained Applications",
@@ -167,17 +216,20 @@
    "evidence": "contexts"
   },
   {
-   "title": "A Technique to Eliminate Redundant Inter-Processor Communication on Parallelizing Compiler TINPAR",
+   "title": "Expressing cross-loop dependencies through hyperplane data dependence analysis",
    "function": "adopts-idea",
    "split": "detailed",
-   "year": 1999,
-   "venue": "International Journal of Parallel Programming",
-   "authors": "Atsushi Kubota, Shogo Tatsumi, Toshihiko Tanaka et al.",
-   "url": "https://doi.org/10.1023/a:1018740202614",
+   "year": 2002,
+   "venue": "Proceedings of Supercomputing '94",
+   "authors": "A. Zaafrani, M.R. Ito",
+   "url": "https://doi.org/10.1109/superc.1994.344314",
    "cited_by": 1,
-   "centrality": "core",
+   "centrality": "engaged",
    "confidence": "medium",
-   "evidence": "contexts"
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "An interprocedural parallelizing compiler and its support for memory hierarchy research",
@@ -194,26 +246,6 @@
     "supports-claim"
    ],
    "evidence": "contexts"
-  },
-  {
-   "title": "Communication optimization and code generation for distributed memory machines",
-   "function": "adopts-idea",
-   "split": "detailed",
-   "year": 1993,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Saman Amarasinghe, Monica S. Lam",
-   "url": "https://doi.org/10.1145/173262.155102",
-   "cited_by": 220,
-   "centrality": "core",
-   "confidence": "medium",
-   "secondary": [
-    "uses-tool"
-   ],
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract",
-   "commit": true
   },
   {
    "title": "Enhanced Parallelization via Analyses and Transformations on Array SSA Form",
@@ -242,10 +274,9 @@
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "supports-claim",
     "detailed-citation"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Instance-wise reaching definition analysis for recursive programs using context-free transductions",
@@ -263,6 +294,22 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Interprocedural Analysis Based on Guarded Array Regions",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2001,
+   "venue": "Lecture notes in computer science",
+   "authors": "Zhiyuan Li, Junjie Gu, Gyungho Lee",
+   "url": "https://doi.org/10.1007/3-540-45403-9_7",
+   "cited_by": 3,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Array Dataflow Analysis in Presence of Non-affine Constraints",
@@ -424,6 +471,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "An exact method for analysis of value-based array data dependences",
+   "function": "positions",
+   "split": "detailed",
+   "year": 1994,
+   "venue": "Lecture notes in computer science",
+   "authors": "William Pugh, David Wonnacott",
+   "url": "https://doi.org/10.1007/3-540-57659-2_31",
+   "cited_by": 161,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Lazy array data-flow dependence analysis",
    "function": "positions",
    "split": "detailed",
@@ -433,27 +496,8 @@
    "url": "https://doi.org/10.1145/174675.177911",
    "cited_by": 44,
    "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "supports-claim"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "A practical data flow framework for array reference analysis and its use in optimizations",
-   "function": "positions",
-   "split": "detailed",
-   "year": 1993,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Evelyn Duesterwald, Rajiv Gupta, Mary Lou Soffa",
-   "url": "https://doi.org/10.1145/155090.155097",
-   "cited_by": 72,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Chapter 6. Array Dataflow Analysis",
@@ -534,6 +578,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Improved loop tiling based on the removal of spurious false dependences",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2013,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Riyadh Baghdadi, Albert Cohen, Sven Verdoolaege et al.",
+   "url": "https://doi.org/10.1145/2400682.2400711",
+   "cited_by": 13,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Efficient search-based strategies for polyhedral compilation : algorithms and experience in a production compiler. (Stratégies exploratoires efficaces pour la compilation polyédrique : algorithmes et expérience dans un compilateur de production)",
    "function": "supports-claim",
    "split": "detailed",
@@ -583,7 +643,7 @@
    "cited_by": 18,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Applications of storage mapping optimization to register promotion",
@@ -595,53 +655,24 @@
    "url": "https://doi.org/10.1145/1006209.1006244",
    "cited_by": 4,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
-   "title": "Array mapping in behavioral synthesis",
+   "title": "Compiler analysis of irregular memory accesses",
    "function": "supports-claim",
    "split": "detailed",
-   "year": 2002,
-   "venue": "Proceedings of the Eighth International Symposium on System Synthesis",
-   "authors": "H. Schmit, D.E. Thomas",
-   "url": "https://doi.org/10.1109/isss.1995.520618",
-   "cited_by": 24,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Expressing cross-loop dependencies through hyperplane data dependence analysis",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2002,
-   "venue": "Proceedings of Supercomputing '94",
-   "authors": "A. Zaafrani, M.R. Ito",
-   "url": "https://doi.org/10.1109/superc.1994.344314",
-   "cited_by": 1,
+   "year": 2000,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Yuan Lin, David Padua",
+   "url": "https://doi.org/10.1145/358438.349322",
+   "cited_by": 36,
    "centrality": "engaged",
    "confidence": "medium",
    "secondary": [
-    "adopts-idea"
+    "detailed-citation"
    ],
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Data locality enhancement by memory reduction",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2001,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Yonghong Song, Rong Xu, Cheng Wang et al.",
-   "url": "https://doi.org/10.1145/377792.377806",
-   "cited_by": 61,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "On the Automatic Parallelization of Sparse and Irregular Fortran Programs",
@@ -654,25 +685,6 @@
    "cited_by": 64,
    "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Schedule-independent storage mapping for loops",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 1998,
-   "venue": "ASPLOS VIII",
-   "authors": "Michelle Mills Strout, Larry Carter, Jeanne Ferrante et al.",
-   "url": "https://doi.org/10.1145/291069.291015",
-   "cited_by": 65,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "detailed-citation"
-   ],
    "flags": [
     "polluted-contexts"
    ],
@@ -705,6 +717,35 @@
    "evidence": "contexts"
   },
   {
+   "title": "Static analysis of upper and lower bounds on dependences and parallelism",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 1994,
+   "venue": "ACM Transactions on Programming Languages and Systems",
+   "authors": "William Pugh, David Wonnacott",
+   "url": "https://doi.org/10.1145/183432.183525",
+   "cited_by": 44,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Compiling for shared-memory and message-passing computers",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 1993,
+   "venue": "ACM Letters on Programming Languages and Systems",
+   "authors": "James R. Larus",
+   "url": "https://doi.org/10.1145/176454.176514",
+   "cited_by": 25,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "AsyncTaichi: Whole-Program Optimizations for Megakernel Sparse Computation and Differentiable Programming",
    "function": "exemplifies",
    "split": "passing",
@@ -721,20 +762,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Improved loop tiling based on the removal of spurious false dependences",
+   "title": "Near-optimal and scalable intrasignal in-place optimization for non-overlapping and irregular access schemes",
    "function": "exemplifies",
    "split": "passing",
    "year": 2013,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Riyadh Baghdadi, Albert Cohen, Sven Verdoolaege et al.",
-   "url": "https://doi.org/10.1145/2400682.2400711",
-   "cited_by": 13,
+   "venue": "ACM Transactions on Design Automation of Electronic Systems",
+   "authors": "Angeliki Kritikakou, Francky Catthoor, Vasilios Kelefouras et al.",
+   "url": "https://doi.org/10.1145/2534383",
+   "cited_by": 4,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "secondary": [
-    "supports-claim"
-   ],
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Experiences of using a dependence profiler to assist parallelization for multi-cores",
@@ -761,6 +799,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Efficient and effective array bound checking",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2005,
+   "venue": "ACM Transactions on Programming Languages and Systems",
+   "authors": "Nga Nguyen, François Irigoin",
+   "url": "https://doi.org/10.1145/1065887.1065893",
+   "cited_by": 26,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Reasoning About Program Transformations",
@@ -871,6 +922,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "A practical data flow framework for array reference analysis and its use in optimizations",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 1993,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Evelyn Duesterwald, Rajiv Gupta, Mary Lou Soffa",
+   "url": "https://doi.org/10.1145/173262.155097",
+   "cited_by": 72,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Parallel Program Graphs and their Classification",
    "function": "exemplifies",
    "split": "passing",
@@ -935,19 +999,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Violated dependence analysis",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2006,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Nicolas Vasilache, Cédric Bastoul, Albert Cohen et al.",
-   "url": "https://doi.org/10.1145/1183401.1183448",
-   "cited_by": 43,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
    "title": "Interprocedural optimisation of regular parallel computations at runtime",
    "function": "detailed-citation",
    "split": "detailed",
@@ -973,22 +1024,6 @@
    "secondary": [
     "supports-claim",
     "exemplifies"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Maximal Static Expansion",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2000,
-   "venue": "International Journal of Parallel Programming",
-   "authors": "Denis Barthou, Albert Cohen, Jean-François Collard⋆",
-   "url": "https://doi.org/10.1023/a:1007500431910",
-   "cited_by": 22,
-   "centrality": "engaged",
-   "confidence": "high",
-   "secondary": [
-    "supports-claim"
    ],
    "evidence": "contexts"
   },
@@ -1065,6 +1100,19 @@
    ],
    "evidence": "contexts",
    "commit": true
+  },
+  {
+   "title": "Computing communication sets for control parallel programs",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 1995,
+   "venue": "Lecture notes in computer science",
+   "authors": "Jeanne Ferrante, Dirk Grunwald, Harini Srinivasan",
+   "url": "https://doi.org/10.1007/bfb0025887",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "An overview of a compiler for scalable parallel machines",
@@ -1193,8 +1241,8 @@
    "url": "https://doi.org/10.1145/3178372.3179529",
    "cited_by": 6,
    "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Tiramisu : A Polyhedral Compiler with A Scheduling Language for Targeting High Performance Systems Riyadh",
@@ -1243,6 +1291,18 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Development of Intra-signal In-Place Methodology",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2014,
+   "authors": "Angeliki Kritikakou, Francky Catthoor, Costas E. Goutis",
+   "url": "https://doi.org/10.1007/978-3-319-04942-7_3",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "LDetector: A Low Overhead Race Detector For GPU Programs",
@@ -1299,13 +1359,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2013,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Hongtao Yu, Hou-Jen Ko, Zhiyuan Li",
-   "url": "https://doi.org/10.1145/2491956.2462182",
+   "url": "https://doi.org/10.1145/2499370.2462182",
    "cited_by": 9,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Model Checking Stencil Computations Written in a Partitioned Global Address Space Language",
@@ -1364,16 +1424,13 @@
    "function": "passing-citation",
    "split": "passing",
    "year": 2011,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "venue": "ACM SIGPLAN Notices",
    "authors": "Abhishek Udupa, Kaushik Sunder Rajan, William Thies",
-   "url": "https://doi.org/10.1145/1993498.1993555",
+   "url": "https://doi.org/10.1145/1993316.1993555",
    "cited_by": 22,
    "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Cooperative parallelization",
@@ -1432,6 +1489,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Iterative optimization in the polyhedral model: part ii, multidimensional time",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2008,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "L. Pouchet, Cédric Bastoul, Albert Cohen et al.",
+   "url": "https://doi.org/10.1145/1375581.1375594",
+   "cited_by": 144,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Software Pipelining in Nested Loops with Prolog-Epilog Merging",
    "function": "passing-citation",
    "split": "passing",
@@ -1458,7 +1528,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -1472,7 +1542,7 @@
    "cited_by": 1,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Deep Jam: Conversion of Coarse-Grain Parallelism to Fine-Grain and Vector Parallelism",
@@ -1526,19 +1596,6 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
-  },
-  {
-   "title": "An Improved Automatic MPI Code Generation Algorithm for Distributed Memory Machine",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2006,
-   "venue": "International Conference on Parallel and Distributed Computing: Applications and Technologies",
-   "authors": "Xue-rong Gong, Yonghong Sheng, LU Lin-sheng et al.",
-   "url": "https://doi.org/10.1109/pdcat.2006.32",
-   "cited_by": 0,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Beyond Iteration Vectors: Instancewise Relational Abstract Domains",
@@ -1653,7 +1710,7 @@
    "cited_by": 0,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "SUDS: automatic parallelization for raw processors",
@@ -1737,6 +1794,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Array Dataflow Analysis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "Lecture notes in computer science",
+   "authors": "Paul Feautrier",
+   "url": "https://doi.org/10.1007/3-540-45403-9_6",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Data locality enhancement by memory reduction",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Yonghong Song, Rong Xu, Cheng Wang et al.",
+   "url": "https://doi.org/10.1145/377792.377806",
+   "cited_by": 61,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Global optimization techniques for automatic parallelization of hybrid applications",
    "function": "passing-citation",
    "split": "passing",
@@ -1774,6 +1857,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Storage Mapping Optimization for Parallel Programs",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1999,
+   "venue": "Lecture notes in computer science",
+   "authors": "Albert Cohen, Vincent Lefèbvre",
+   "url": "https://doi.org/10.1007/3-540-48311-x_49",
+   "cited_by": 8,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "SUDS: Primitive Mechanisms for Memory Dependence Speculation",
@@ -1818,6 +1914,45 @@
    "evidence": "contexts"
   },
   {
+   "title": "Schedule-independent storage mapping for loops",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1998,
+   "venue": "ACM SIGOPS Operating Systems Review",
+   "authors": "Michelle Mills Strout, Larry Carter, Jeanne Ferrante et al.",
+   "url": "https://doi.org/10.1145/384265.291015",
+   "cited_by": 65,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "A technique to eliminate redundant inter-processor communication on parallelizing compiler TINPAR",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1997,
+   "venue": "Lecture notes in computer science",
+   "authors": "Atsushi Kubota, Shogo Tatsumi, Toshihiko Tanaka et al.",
+   "url": "https://doi.org/10.1007/bfb0024216",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Basis of parallel speculative execution",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1997,
+   "venue": "Lecture notes in computer science",
+   "authors": "Paul Feautrier",
+   "url": "https://doi.org/10.1007/bfb0002713",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Exact versus approximate array region analyses",
    "function": "passing-citation",
    "split": "passing",
@@ -1832,6 +1967,19 @@
     "exemplifies"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Optimizing storage size for static control programs in automatic parallelizers",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1997,
+   "venue": "Lecture notes in computer science",
+   "authors": "Vincent Lefèbvre, Paul Feautrier",
+   "url": "https://doi.org/10.1007/bfb0002757",
+   "cited_by": 19,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "The V-Ray technology of optimizing programs to parallel computers",
@@ -1872,6 +2020,45 @@
    "evidence": "contexts"
   },
   {
+   "title": "Array mapping in behavioral synthesis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1995,
+   "venue": "Proceedings of the Eighth International Symposium on System Synthesis",
+   "authors": "Herman Schmit, Donald E. Thomas",
+   "url": "https://doi.org/10.1145/224486.224508",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Minimal data dependence abstractions for loop transformations: Extended version",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1995,
+   "venue": "International Journal of Parallel Programming",
+   "authors": "Yiqing Yang, Corinne Ancourt, François Irigoin",
+   "url": "https://doi.org/10.1007/bf02577771",
+   "cited_by": 16,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Optimizing communications by using compile time analysis",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1994,
+   "venue": "Lecture notes in computer science",
+   "authors": "Mourad Raji Werth, Paul Feautrier",
+   "url": "https://doi.org/10.1007/3-540-58430-7_60",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Parallel Region Execution of Loops with Irregular Dependencies",
    "function": "passing-citation",
    "split": "passing",
@@ -1885,17 +2072,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Static analysis of upper and lower bounds on dependences and parallelism",
+   "title": "FIAT: A Framework for Interprocedural Analysis and Transfomation",
    "function": "passing-citation",
    "split": "passing",
-   "year": 1994,
-   "venue": "ACM Transactions on Programming Languages and Systems",
-   "authors": "William Pugh, David Wonnacott",
-   "url": "https://doi.org/10.1145/183432.183525",
-   "cited_by": 44,
+   "year": 1993,
+   "venue": "International Workshop on Languages and Compilers for Parallel Computing",
+   "authors": "Mary W. Hall, J. Mellor-Crummey, A. Carle et al.",
+   "url": "https://doi.org/10.1007/3-540-57659-2_30",
+   "cited_by": 69,
    "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Definitions of dependence distance",
@@ -1973,17 +2160,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Near-optimal and scalable intrasignal in-place optimization for non-overlapping and irregular access schemes",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "ACM Transactions on Design Automation of Electronic Systems",
-   "authors": "Angeliki Kritikakou, Francky Catthoor, Vasilios Kelefouras et al.",
-   "url": "https://doi.org/10.1145/2534383",
-   "cited_by": 4,
-   "evidence": "abstract"
-  },
-  {
    "title": "Efficient and scalable computations with sparse tensors",
    "function": "unknown",
    "split": null,
@@ -2052,17 +2228,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Reducing memory requirements of resource-constrained applications",
-   "function": "unknown",
-   "split": null,
-   "year": 2009,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Priya Unnikrishnan, G. Chen, Mahmut Kandemir et al.",
-   "url": "https://doi.org/10.1145/1509288.1509289",
-   "cited_by": 1,
-   "evidence": "abstract"
-  },
-  {
    "title": "Contributions to code optimization and high performance library generation",
    "function": "unknown",
    "split": null,
@@ -2088,18 +2253,18 @@
    "evidence": "contexts"
   },
   {
-   "title": "Iterative optimization in the polyhedral model: part ii, multidimensional time",
+   "title": "An Improved Automatic MPI Code Generation Algorithm for Distributed Memory Machine",
    "function": "unknown",
    "split": null,
-   "year": 2008,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "L. Pouchet, Cédric Bastoul, Albert Cohen et al.",
-   "url": "https://doi.org/10.1145/1375581.1375594",
-   "cited_by": 144,
+   "year": 2006,
+   "venue": "International Conference on Parallel and Distributed Computing: Applications and Technologies",
+   "authors": "Xue-rong Gong, Yonghong Sheng, LU Lin-sheng et al.",
+   "url": "https://doi.org/10.1109/pdcat.2006.32",
+   "cited_by": 0,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "On extracting coarse-grained function parallelism from c programs",
@@ -2126,20 +2291,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "Efficient and effective array bound checking",
-   "function": "unknown",
-   "split": null,
-   "year": 2005,
-   "venue": "ACM Transactions on Programming Languages and Systems",
-   "authors": "Nga Nguyen, François Irigoin",
-   "url": "https://doi.org/10.1145/1065887.1065893",
-   "cited_by": 26,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Automatic task graph generation techniques",
    "function": "unknown",
    "split": null,
@@ -2150,17 +2301,6 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Compiler analysis of irregular memory accesses",
-   "function": "unknown",
-   "split": null,
-   "year": 2000,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Yuan Lin, David Padua",
-   "url": "https://doi.org/10.1145/358438.349322",
-   "cited_by": 36,
    "evidence": "abstract"
   },
   {
@@ -2188,6 +2328,20 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
+  },
+  {
+   "title": "Maximal static expansion",
+   "function": "unknown",
+   "split": null,
+   "year": 1998,
+   "venue": "International Journal of Parallel Programming",
+   "authors": "Denis Barthou, Albert Cohen, Jean-François Collard⋆",
+   "url": "https://doi.org/10.1145/268946.268955",
+   "cited_by": 22,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Automatic Data and Computation Mapping for Distributed-Memory Machines.",
@@ -2238,20 +2392,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Compiling for shared-memory and message-passing computers",
-   "function": "unknown",
-   "split": null,
-   "year": 1993,
-   "venue": "ACM Letters on Programming Languages and Systems",
-   "authors": "James R. Larus",
-   "url": "https://doi.org/10.1145/176454.176514",
-   "cited_by": 25,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Experiences with data dependence abstractions",
    "function": "unknown",
    "split": null,
@@ -2263,7 +2403,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "AsyncTaichi: On-the-fly Inter-kernel Optimizations for Imperative and Spatially Sparse Programming",
@@ -2303,16 +2443,6 @@
    "authors": "Praveen Yedlapalli",
    "url": "https://www.semanticscholar.org/paper/bf10e7efcfb6105fbbf8790eccda17e02ef79f41",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Development of Intra-signal In-Place Methodology",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "authors": "Angeliki Kritikakou, Francky Catthoor, Costas E. Goutis",
-   "url": "https://doi.org/10.1007/978-3-319-04942-7_3",
-   "cited_by": 1,
    "evidence": "title_only"
   },
   {
@@ -2414,28 +2544,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Array Dataflow Analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "Lecture notes in computer science",
-   "authors": "Paul Feautrier",
-   "url": "https://doi.org/10.1007/3-540-45403-9_6",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Interprocedural Analysis Based on Guarded Array Regions",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "Lecture notes in computer science",
-   "authors": "Zhiyuan Li, Junjie Gu, Gyungho Lee",
-   "url": "https://doi.org/10.1007/3-540-45403-9_7",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
    "title": "A dissertation submitted in partial satisfaction of the requirements for the degree Doctor of Philosophy in Computer Science",
    "function": "unclassified",
    "split": null,
@@ -2473,17 +2581,6 @@
    "authors": "L. Carter, J. Ferrante, K. H. ogstedt et al.",
    "url": "https://www.semanticscholar.org/paper/d4336a9ef8cf4a9bbdfebec9824becc525e3a709",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Storage Mapping Optimization for Parallel Programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 1999,
-   "venue": "Lecture notes in computer science",
-   "authors": "Albert Cohen, Vincent Lefèbvre",
-   "url": "https://doi.org/10.1007/3-540-48311-x_49",
-   "cited_by": 8,
    "evidence": "title_only"
   },
   {
@@ -2525,28 +2622,6 @@
    "authors": "Paul V. Stodghill",
    "url": "https://www.semanticscholar.org/paper/016c7ea7ae3a5904dcc70f3ae021b8515e43c869",
    "cited_by": 32,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Basis of parallel speculative execution",
-   "function": "unclassified",
-   "split": null,
-   "year": 1997,
-   "venue": "Lecture notes in computer science",
-   "authors": "Paul Feautrier",
-   "url": "https://doi.org/10.1007/bfb0002713",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Optimizing storage size for static control programs in automatic parallelizers",
-   "function": "unclassified",
-   "split": null,
-   "year": 1997,
-   "venue": "Lecture notes in computer science",
-   "authors": "Vincent Lefèbvre, Paul Feautrier",
-   "url": "https://doi.org/10.1007/bfb0002757",
-   "cited_by": 19,
    "evidence": "title_only"
   },
   {
@@ -2612,28 +2687,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Computing communication sets for control parallel programs",
-   "function": "unclassified",
-   "split": null,
-   "year": 1995,
-   "venue": "Lecture notes in computer science",
-   "authors": "Jeanne Ferrante, Dirk Grunwald, Harini Srinivasan",
-   "url": "https://doi.org/10.1007/bfb0025887",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Minimal data dependence abstractions for loop transformations: Extended version",
-   "function": "unclassified",
-   "split": null,
-   "year": 1995,
-   "venue": "International Journal of Parallel Programming",
-   "authors": "Yiqing Yang, Corinne Ancourt, François Irigoin",
-   "url": "https://doi.org/10.1007/bf02577771",
-   "cited_by": 16,
-   "evidence": "title_only"
-  },
-  {
    "title": "The Design and Implementation of the Accurate ArrayData-ow Analysis in the HPC Compiler",
    "function": "unclassified",
    "split": null,
@@ -2661,17 +2714,6 @@
    "authors": "Jean-Francois Collard, P. Feautrier",
    "url": "https://www.semanticscholar.org/paper/75077d9598b29e0d10740549d21bd56ff73aea96",
    "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "An exact method for analysis of value-based array data dependences",
-   "function": "unclassified",
-   "split": null,
-   "year": 1994,
-   "venue": "Lecture notes in computer science",
-   "authors": "William Pugh, David Wonnacott",
-   "url": "https://doi.org/10.1007/3-540-57659-2_31",
-   "cited_by": 161,
    "evidence": "title_only"
   },
   {
@@ -2705,17 +2747,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Optimizing communications by using compile time analysis",
-   "function": "unclassified",
-   "split": null,
-   "year": 1994,
-   "venue": "Lecture notes in computer science",
-   "authors": "Mourad Raji Werth, Paul Feautrier",
-   "url": "https://doi.org/10.1007/3-540-58430-7_60",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "Using static analysis to derive imperative code from Alpha",
    "function": "unclassified",
    "split": null,
@@ -2723,17 +2754,6 @@
    "authors": "P. Quinton, S. Rajopadhye, D. Wilde",
    "url": "https://www.semanticscholar.org/paper/65acf9c0a2dffea25d7b19609ed99390c5f3d476",
    "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "FIAT: A Framework for Interprocedural Analysis and Transfomation",
-   "function": "unclassified",
-   "split": null,
-   "year": 1993,
-   "venue": "International Workshop on Languages and Compilers for Parallel Computing",
-   "authors": "Mary W. Hall, J. Mellor-Crummey, A. Carle et al.",
-   "url": "https://doi.org/10.1007/3-540-57659-2_30",
-   "cited_by": 69,
    "evidence": "title_only"
   },
   {

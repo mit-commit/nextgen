@@ -7,7 +7,7 @@
   "records_raw": 925,
   "works": 711,
   "commit": 34,
-  "judged": 443,
+  "judged": 513,
   "gscholar": null
  },
  "citations": [
@@ -68,7 +68,7 @@
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -88,6 +88,24 @@
     "own-group"
    ],
    "evidence": "contexts",
+   "commit": true
+  },
+  {
+   "title": "Language and Compiler Design for Streaming Applications",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "18th International Parallel and Distributed Processing Symposium, 2004. Proceedings.",
+   "authors": "Saman P. Amarasinghe, Michael I. Gordon, M. Karczmarek et al.",
+   "url": "https://doi.org/10.1007/s10766-005-3590-6",
+   "cited_by": 55,
+   "centrality": "core",
+   "confidence": "high",
+   "flags": [
+    "own-group",
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -143,6 +161,24 @@
    "commit": true
   },
   {
+   "title": "Linear analysis and optimization of stream programs",
+   "function": "uses-tool",
+   "split": "detailed",
+   "year": 2003,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Andrew A. Lamb, W. Thies, Saman P. Amarasinghe",
+   "url": "https://doi.org/10.1145/781131.781134",
+   "cited_by": 39,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "lineage",
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
+  },
+  {
    "title": "SUDS: automatic parallelization for raw processors",
    "function": "uses-tool",
    "split": "detailed",
@@ -163,19 +199,20 @@
    "function": "uses-tool",
    "split": "detailed",
    "year": 2002,
-   "venue": "ACM SIGOPS Operating Systems Review",
+   "venue": "ASPLOS X",
    "authors": "Michael I. Gordon, William Thies, Michal Karczmarek et al.",
-   "url": "https://doi.org/10.1145/635508.605428",
+   "url": "https://doi.org/10.1145/605397.605428",
    "cited_by": 339,
    "centrality": "core",
    "confidence": "high",
    "secondary": [
-    "exemplifies"
+    "detailed-citation"
    ],
    "flags": [
+    "lineage",
     "own-group"
    ],
-   "evidence": "abstract",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -285,9 +322,12 @@
    "authors": "Emmett Witchel, Sam Larsen, C. Ananian et al.",
    "url": "https://doi.org/10.1109/micro.2001.991111",
    "cited_by": 72,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
+   "centrality": "core",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "SIFt: A Compiler for Streaming Applications",
@@ -395,12 +435,12 @@
    "centrality": "core",
    "confidence": "high",
    "secondary": [
-    "extends"
+    "detailed-citation"
    ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -433,24 +473,23 @@
    "evidence": "contexts"
   },
   {
-   "title": "A general constraint-centric scheduling framework for spatial architectures",
+   "title": "Kismet",
    "function": "uses-benchmark",
    "split": "detailed",
-   "year": 2013,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Tony Nowatzki, Michael Sartin-Tarm, Lorenzo De Carli et al.",
-   "url": "https://doi.org/10.1145/2491956.2462163",
-   "cited_by": 67,
+   "year": 2011,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Dong‐Hwan Jeon, Saturnino Garcia, Chris Louie et al.",
+   "url": "https://doi.org/10.1145/2076021.2048108",
+   "cited_by": 49,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
    "secondary": [
-    "exemplifies",
-    "baseline"
+    "detailed-citation"
    ],
    "flags": [
-    "polluted-contexts"
+    "own-group"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Language and compiler support for stream programs",
@@ -472,24 +511,33 @@
    "commit": true
   },
   {
-   "title": "The sharing architecture",
+   "title": "NUPEA: Optimizing Critical Loads on Spatial Dataflow Architectures via Non-Uniform Processing-Element Access",
    "function": "positions",
    "split": "detailed",
-   "year": 2014,
-   "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
-   "authors": "Yanqi Zhou, David Wentzlaff",
-   "url": "https://doi.org/10.1145/2541940.2541950",
-   "cited_by": 26,
+   "year": 2025,
+   "venue": "International Symposium on Computer Architecture",
+   "authors": "S. Ghosh, Graham Gobieski, Keyi Zhang et al.",
+   "url": "https://doi.org/10.1145/3695053.3731061",
+   "cited_by": 1,
    "centrality": "engaged",
    "confidence": "high",
    "secondary": [
-    "adopts-idea",
     "detailed-citation"
    ],
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
+  },
+  {
+   "title": "CRIB",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Erika Gunadi, Mikko H. Lipasti",
+   "url": "https://doi.org/10.1145/2024723.2000068",
+   "cited_by": 13,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Composable Multicore Chips",
@@ -631,23 +679,33 @@
    "evidence": "contexts"
   },
   {
-   "title": "The vector-thread architecture",
+   "title": "An architecture and compiler for scalable on-chip communication",
    "function": "positions",
    "split": "detailed",
    "year": 2004,
-   "venue": "IEEE Micro",
-   "authors": "B. Krashinsky, Christopher Batten, Mark Hampton et al.",
-   "url": "https://doi.org/10.1109/mm.2004.90",
+   "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
+   "authors": "Jian Liang, A.J. Laffely, S. Srinivasan et al.",
+   "url": "https://doi.org/10.1109/tvlsi.2004.830919",
+   "cited_by": 80,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "The Vector-Thread Architecture",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Ronny Krashinsky, Christopher Batten, Mark Hampton et al.",
+   "url": "https://doi.org/10.1145/1028176.1006736",
    "cited_by": 144,
    "centrality": "engaged",
    "confidence": "high",
-   "secondary": [
-    "detailed-citation"
-   ],
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "CDE : A Compiler-driven , Dependence-Centric , Eager-executing Architecture for the Billion Transistors Era",
@@ -678,6 +736,35 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "WaveScalar",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2003,
+   "venue": "Proceedings. 36th Annual IEEE/ACM International Symposium on Microarchitecture, 2003. MICRO-36.",
+   "authors": "Steven Swanson, Ken Michelson, Andrew Schwerin et al.",
+   "url": "https://doi.org/10.1109/micro.2003.1253203",
+   "cited_by": 132,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "An interleaved cache clustered VLIW processor",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2002,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Enric Gibert, Jesús Sánchez, Antonio González",
+   "url": "https://doi.org/10.1145/514191.514222",
+   "cited_by": 19,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Architectural implications of bit-level computation in communication applications",
@@ -734,6 +821,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "CGRA Background and Related Work",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2021,
+   "venue": "Blocks, Towards Energy-efficient, Coarse-grained Reconfigurable Architectures",
+   "authors": "Mark Wijtvliet, Henk Corporaal, Akash Kumar",
+   "url": "https://doi.org/10.1007/978-3-030-79774-4_2",
+   "cited_by": 3,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Survey on Coarse-Grained Reconfigurable Architectures From a Performance Perspective",
    "function": "surveys",
    "split": "detailed",
@@ -756,8 +859,8 @@
    "url": "https://doi.org/10.1145/3357375",
    "cited_by": 235,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "High-Performance Reconfigurable Computing",
@@ -814,6 +917,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Devices and Architectures for Evolutionary Hardware",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2015,
+   "venue": "Natural computing series",
+   "authors": "Martin A. Trefzer, Andy M. Tyrrell",
+   "url": "https://doi.org/10.1007/978-3-662-44616-4_2",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Ingredients of Adaptability: A Survey of Reconfigurable Processors",
    "function": "surveys",
    "split": "detailed",
@@ -827,6 +943,18 @@
    "evidence": "abstract"
   },
   {
+   "title": "Reconfigurable Systems",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2012,
+   "authors": "Antonio Carlos Schneider Beck, Monica Pereira",
+   "url": "https://doi.org/10.1007/978-1-4614-1746-0_3",
+   "cited_by": 5,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Coarse-Grained Reconfigurable Array: Architecture and Application Mapping",
    "function": "surveys",
    "split": "detailed",
@@ -838,6 +966,22 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "abstract"
+  },
+  {
+   "title": "Towards High-Performance and Energy-Efficient Multi-core Processors",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2010,
+   "venue": "Analog circuits and signal processing/Analog circuits and signal processing series",
+   "authors": "Zhiyi Yu",
+   "url": "https://doi.org/10.1007/978-90-481-9216-8_2",
+   "cited_by": 5,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Block parallel programming for real-time applications on multi-core processors",
@@ -857,6 +1001,18 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Language-driven Exploration and Implementation of Partially Re-configurable ASIPs",
+   "function": "surveys",
+   "split": "detailed",
+   "year": 2008,
+   "authors": "Anupam Chattopadhyay, H. Meyr, Rainer Leupers et al.",
+   "url": "https://doi.org/10.1007/978-1-4020-9297-8",
+   "cited_by": 11,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "High performance and energy efficient multi-core systems for DSP applications",
@@ -1014,6 +1170,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Plasticity-on-Chip Design: Exploiting Self-Similarity for Data Communications",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2021,
+   "venue": "IEEE Transactions on Computers",
+   "authors": "Yao Xiao, Shahin Nazarian, Paul Bogdan",
+   "url": "https://doi.org/10.1109/tc.2021.3071507",
+   "cited_by": 38,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Introducing IPS: An integration processing system for scalable architecture",
    "function": "supports-claim",
    "split": "detailed",
@@ -1094,6 +1263,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Reducing NoC energy consumption through compiler-directed channel voltage scaling",
+   "function": "supports-claim",
+   "split": "detailed",
+   "year": 2006,
+   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
+   "authors": "Guangyu Chen, Feihui Li, Mahmut Kandemir et al.",
+   "url": "https://doi.org/10.1145/1133981.1134004",
+   "cited_by": 23,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "A low power architecture for embedded perception",
    "function": "supports-claim",
    "split": "detailed",
@@ -1115,12 +1300,12 @@
    "authors": "Michael Taylor, Walter Lee, Jason Miller et al.",
    "url": "https://doi.org/10.1145/1028176.1006733",
    "cited_by": 358,
-   "centrality": "peripheral",
-   "confidence": "medium",
+   "centrality": "engaged",
+   "confidence": "high",
    "flags": [
     "own-group"
    ],
-   "evidence": "contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -1240,19 +1425,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "NUPEA: Optimizing Critical Loads on Spatial Dataflow Architectures via Non-Uniform Processing-Element Access",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2025,
-   "venue": "International Symposium on Computer Architecture",
-   "authors": "S. Ghosh, Graham Gobieski, Keyi Zhang et al.",
-   "url": "https://doi.org/10.1145/3695053.3731061",
-   "cited_by": 1,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "evidence": "contexts"
-  },
-  {
    "title": "Performance Modeling and Analysis of Exposed Datapath Architectures",
    "function": "exemplifies",
    "split": "passing",
@@ -1337,6 +1509,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Allocation and Scheduling of Dataflow Graphs on Hybrid Dataflow/von Neumann Architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2023,
+   "venue": "International Conference on Formal Methods and Models for Co-Design",
+   "authors": "Anoop Bhagyanath, Nadine Kercher, Klaus Schneider",
+   "url": "https://doi.org/10.1145/3610579.3611079",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "lineage"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Consistency Constraints for Mapping Dataflow Graphs to Hybrid Dataflow/von Neumann Architectures",
    "function": "exemplifies",
    "split": "passing",
@@ -1348,6 +1536,20 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Proceedings of the 21st ACM-IEEE International Conference on Formal Methods and Models for System Design",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2023,
+   "url": "https://doi.org/10.1145/3610579",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "lineage"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A 16-nm 784-Core Digital Signal Processor Array, Assembled as a 2 × 2 Dielet With 10-μm Pitch Interdielet I/O for Runtime Multiprogram Reconfiguration",
@@ -1395,6 +1597,18 @@
    "evidence": "abstract"
   },
   {
+   "title": "Architectural Model",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2021,
+   "authors": "Mark Wijtvliet, Henk Corporaal, Akash Kumar",
+   "url": "https://doi.org/10.1007/978-3-030-79774-4_6",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Blocks: Challenging SIMDs and VLIWs With a Reconfigurable Architecture",
    "function": "exemplifies",
    "split": "passing",
@@ -1406,6 +1620,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "CGRA-EAM—Rapid Energy and Area Estimation for Coarse-grained Reconfigurable Architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2021,
+   "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+   "authors": "Mark Wijtvliet, Henk Corporaal, Akash Kumar",
+   "url": "https://doi.org/10.1145/3468874",
+   "cited_by": 12,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "The nanoPU: A Nanosecond Network Stack for Datacenters",
@@ -1509,6 +1736,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Rethinking the Memory Hierarchy for Modern Languages",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2018,
+   "venue": "Micro",
+   "authors": "Po-An Tsai, Yee Ling Gan, Daniel Sánchez",
+   "url": "https://doi.org/10.1109/micro.2018.00025",
+   "cited_by": 20,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "This Architecture Tastes Like Microarchitecture",
    "function": "exemplifies",
    "split": "passing",
@@ -1547,6 +1787,37 @@
    "evidence": "contexts"
   },
   {
+   "title": "Reconfigurable Architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2017,
+   "authors": "Mansureh S. Moghaddam, Jaemin Cho, Ki‐Young Choi",
+   "url": "https://doi.org/10.1007/978-94-017-7267-9_12",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "surveys"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "A machine learning approach to mapping streaming workloads to dynamic multicore processors",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2016,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Paul-Jules Micolet, A. Gordon Smith, Christophe Dubach",
+   "url": "https://doi.org/10.1145/2980930.2907951",
+   "cited_by": 18,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Design of self-tuning reliable embedded systems and its application in railway transportation systems. (Conception de systèmes embarqués fiables et auto-réglables : applications sur les systèmes de transport ferroviaire)",
    "function": "exemplifies",
    "split": "passing",
@@ -1557,6 +1828,41 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Introduction",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2016,
+   "venue": "Computer architecture and design methodologies",
+   "authors": "Vahid Lari",
+   "url": "https://doi.org/10.1007/978-981-10-1058-3_1",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "lineage"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Invasive Tightly Coupled Processor Arrays",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2016,
+   "venue": "Computer architecture and design methodologies",
+   "authors": "Vahid Lari",
+   "url": "https://doi.org/10.1007/978-981-10-1058-3_2",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "lineage"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "THE UNIVERSITY OF HULL",
@@ -1742,6 +2048,18 @@
    "evidence": "abstract"
   },
   {
+   "title": "New Coarse-Grained Configurable Architecture for DSP Applications",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2014,
+   "authors": "Heni Ghariani, Zied Marrakchi, Abdulfattah M. Obeid et al.",
+   "url": "https://doi.org/10.1007/978-3-319-08239-4_10",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Run-Time Scalable Hardware for Reconfigurable Systems",
    "function": "exemplifies",
    "split": "passing",
@@ -1767,6 +2085,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "The sharing architecture",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2014,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Yanqi Zhou, David Wentzlaff",
+   "url": "https://doi.org/10.1145/2654822.2541950",
+   "cited_by": 26,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "A general constraint-centric scheduling framework for spatial architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2013,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Tony Nowatzki, Michael Sartin-Tarm, Lorenzo De Carli et al.",
+   "url": "https://doi.org/10.1145/2499370.2462163",
+   "cited_by": 67,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A Hierarchical Architectural Framework for Reconfigurable Logic Computing",
    "function": "exemplifies",
    "split": "passing",
@@ -1790,7 +2134,7 @@
    "cited_by": 13,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Configuration memory based dynamic coarse grained reconfigurable multicore architecture",
@@ -1806,6 +2150,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Design of high-throughput Inter-PE communication with application-level flow control protocol for many-core architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2013,
+   "venue": "MES",
+   "authors": "Jyu-Yuan Lai, Ting-Shuo Hsu, Po‐Yu Chen et al.",
+   "url": "https://doi.org/10.1145/2489068.2489074",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Heterogeneous Multiconstraint Application Partitioner (HMAP)",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2013,
+   "venue": "2013 12th IEEE International Conference on Trust, Security and Privacy in Computing and Communications",
+   "authors": "Servesh Muralidharan, Aravind Vasudevan, Avinash Malik et al.",
+   "url": "https://doi.org/10.1109/trustcom.2013.122",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Orchestrating stream graphs using model checking",
    "function": "exemplifies",
    "split": "passing",
@@ -1816,22 +2186,6 @@
    "cited_by": 10,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Tiled-MapReduce",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2013,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Rong Chen, Haibo Chen",
-   "url": "https://doi.org/10.1145/2445572.2445575",
-   "cited_by": 117,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "contexts"
   },
   {
@@ -1846,6 +2200,32 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiler Driven Inter Block Parallelism for Multicore Processors",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "Communications in computer and information science",
+   "authors": "Kiran D.C., S. Gurunarayanan, Misra J.P.",
+   "url": "https://doi.org/10.1007/978-3-642-31686-9_50",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Compiler Efficient and Power Aware Instruction Level Parallelism for Multicore Architecture",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "Communications in computer and information science",
+   "authors": "D. C. Kiran, S. Gurunarayanan, Faizan Khaliq et al.",
+   "url": "https://doi.org/10.1007/978-3-642-32112-2_2",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Emulating a large memory sequential machine with a collection of small memory ones",
@@ -1901,6 +2281,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "P-Single Operators in Pipeline System of DF-KPI Architecture",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2012,
+   "venue": "Topics in intelligent engineering and informatics",
+   "authors": "Liberios Vokorokos, Norbert Ádám, Branislav Madoš",
+   "url": "https://doi.org/10.1007/978-3-642-30668-6_19",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "PARS — An efficient congestion-Aware Routing method for Networks-on-Chip",
@@ -1983,22 +2376,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "CRIB",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2011,
-   "venue": "International Symposium on Computer Architecture",
-   "authors": "Erika Gunadi, Mikko H. Lipasti",
-   "url": "https://doi.org/10.1145/2000064.2000068",
-   "cited_by": 13,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
    "title": "Efficient execution of sequential applications on multicore systems",
    "function": "exemplifies",
    "split": "passing",
@@ -2070,22 +2447,6 @@
    "cited_by": 15,
    "centrality": "peripheral",
    "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
-   "title": "Kismet",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2011,
-   "venue": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
-   "authors": "Dong‐Hwan Jeon, Saturnino Garcia, Chris Louie et al.",
-   "url": "https://doi.org/10.1145/2048066.2048108",
-   "cited_by": 49,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "own-group"
-   ],
    "evidence": "contexts"
   },
   {
@@ -2283,6 +2644,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Loop-Aware Instruction Scheduling with Dynamic Contention Tracking for Tiled Dataflow Architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2009,
+   "venue": "Lecture notes in computer science",
+   "authors": "Muhammad Umar Farooq, Lizy K. John",
+   "url": "https://doi.org/10.1007/978-3-642-00722-4_14",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Mapping stream programs onto heterogeneous multiprocessor systems",
    "function": "exemplifies",
    "split": "passing",
@@ -2293,7 +2667,7 @@
    "cited_by": 35,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "A coarse grained and hybrid reconfigurable architecture with flexible NoC router for variable block size motion estimation",
@@ -2335,6 +2709,19 @@
     "detailed-citation"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Compiler Controlled Speculation for Power Aware ILP Extraction in Dataflow Architectures",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2008,
+   "venue": "Lecture notes in computer science",
+   "authors": "Muhammad Umar Farooq, Lizy K. John, Margarida F. Jacome",
+   "url": "https://doi.org/10.1007/978-3-540-92990-1_24",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Counting Dependence Predictors",
@@ -2379,6 +2766,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "High performance dense linear algebra on a spatially distributed processor",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2008,
+   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+   "authors": "Jeffrey R. Diamond, Behnam Robatmili, Stephen W. Keckler et al.",
+   "url": "https://doi.org/10.1145/1345206.1345218",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Reconfigurable Architectures for Embedded Systems",
    "function": "exemplifies",
    "split": "passing",
@@ -2419,6 +2819,19 @@
     "own-group"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "3D-SoftChip: A Novel 3D Vertically Integrated Adaptive Computing System",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2007,
+   "venue": "IEEE/IFIP International Conference on Very Large Scale Integration of System-on-Chip",
+   "authors": "Chul Kim, Alex Rassau, Stefan Lachowicz et al.",
+   "url": "https://doi.org/10.1007/978-0-387-73661-7_6",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "A Coarse Grained Reconfigurable Architecture for Variable Block Size Motion Estimation",
@@ -2496,7 +2909,7 @@
    "cited_by": 150,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "DART: A Functional-Level Reconfigurable Architecture for High Energy Efficiency",
@@ -2599,22 +3012,6 @@
    "authors": "Yao Guo, Vladimir Vlassov, Raksit Ashok et al.",
    "url": "https://doi.org/10.1016/j.jpdc.2007.08.003",
    "cited_by": 0,
-   "centrality": "peripheral",
-   "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Synchronization through Communication in a Massively Parallel Processor Array",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2007,
-   "venue": "IEEE Micro",
-   "authors": "M. Butts",
-   "url": "https://doi.org/10.1109/mm.2007.92",
-   "cited_by": 51,
    "centrality": "peripheral",
    "confidence": "high",
    "flags": [
@@ -2738,7 +3135,7 @@
    "cited_by": 33,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Elastic Threads on Composable Processors",
@@ -2777,6 +3174,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Instruction scheduling for a tiled dataflow architecture",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2006,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Martha Mercaldi, Steven Swanson, Andrew Petersen et al.",
+   "url": "https://doi.org/10.1145/1168919.1168876",
+   "cited_by": 35,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Modeling instruction placement on a spatial architecture",
@@ -2973,6 +3383,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "A characterization of visual feature recognition",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2004,
+   "venue": "IEEE International Conference on Communications",
+   "authors": "Beena Mathew, A. Davis, Robin J. Evans",
+   "url": "https://doi.org/10.1109/wwc.2003.1249052",
+   "cited_by": 13,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "A co-designed virtual machine for instruction-level distributed processing",
    "function": "exemplifies",
    "split": "passing",
@@ -3011,6 +3434,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "An ultra low-power processor for sensor networks",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2004,
+   "venue": "ASPLOS XI",
+   "authors": "Virantha Ekanayake, Clinton W. Kelly, Rajit Manohar",
+   "url": "https://doi.org/10.1145/1024393.1024397",
+   "cited_by": 106,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Architectural trade-offs in dynamically reconfigurable processors",
    "function": "exemplifies",
    "split": "passing",
@@ -3040,6 +3476,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Custom wide counterflow pipelines for high-performance embedded applications",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2004,
+   "venue": "IEEE Transactions on Computers",
+   "authors": "Bruce R. Childers, Jack W. Davidson",
+   "url": "https://doi.org/10.1109/tc.2004.1261825",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Design of Clustered Superscalar Microarchitectures",
    "function": "exemplifies",
    "split": "passing",
@@ -3056,6 +3505,18 @@
    "evidence": "abstract"
   },
   {
+   "title": "Exploiting Intelligent Memory for Database Workloads",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2004,
+   "authors": "Pedro Trancoso, Josep Torrellas",
+   "url": "https://doi.org/10.1007/978-1-4419-8987-1_18",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "High-level power analysis for on-chip networks",
    "function": "exemplifies",
    "split": "passing",
@@ -3066,7 +3527,7 @@
    "cited_by": 111,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "M3T: Morphable Multithreaded Memory Tiles",
@@ -3105,6 +3566,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Portable video supercomputing",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2004,
+   "venue": "IEEE Transactions on Computers",
+   "authors": "Antonio Gentile, D.S. Wills",
+   "url": "https://doi.org/10.1109/tc.2004.48",
+   "cited_by": 37,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Ray tracing on a stream processor",
@@ -3156,19 +3630,6 @@
    "authors": "Doug Burger, Stephen W. Keckler, Kathryn S. McKinley et al.",
    "url": "https://doi.org/10.1109/mc.2004.65",
    "cited_by": 356,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
-  },
-  {
-   "title": "Static Placement, Dynamic Issue (SPDI) Scheduling for EDGE Architectures",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2004,
-   "venue": "Proceedings. 13th International Conference on Parallel Architecture and Compilation Techniques, 2004. PACT 2004.",
-   "authors": "Ramadass Nagarajan, Sundeep K. Kushwaha, Doug Burger et al.",
-   "url": "https://doi.org/10.5555/1025127.1025998",
-   "cited_by": 57,
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
@@ -3340,6 +3801,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Mapping of generalized template matching onto reconfigurable computers",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2003,
+   "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
+   "authors": "Xuejun Liang, Jack Jean",
+   "url": "https://doi.org/10.1109/tvlsi.2003.812306",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "PACT XPP—A Self-Reconfigurable Data Processing Architecture",
@@ -3518,6 +3992,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "A compiler framework for mapping applications to a coarse-grained reconfigurable computer architecture",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2001,
+   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
+   "authors": "Girish Venkataramani, Walid Najjar, Fadi Kurdahi et al.",
+   "url": "https://doi.org/10.1145/502217.502235",
+   "cited_by": 74,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Design and implementation of a PowerPC backend with optimizations for the AltiVec SIMD processor",
    "function": "exemplifies",
    "split": "passing",
@@ -3624,17 +4111,17 @@
    "evidence": "contexts"
   },
   {
-   "title": "Co-Synthesis to a Hybrid RISC/FPGA Architecture",
+   "title": "CHIMAERA",
    "function": "exemplifies",
    "split": "passing",
    "year": 2000,
-   "venue": "The Journal of VLSI Signal Processing Systems for Signal Image and Video Technology",
-   "authors": "Maya Gokhale, Janice M. Stone, Edson Gomersall",
-   "url": "https://doi.org/10.1023/a:1008141305507",
-   "cited_by": 24,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Zhi Alex Ye, Andreas Moshovos, Scott Hauck et al.",
+   "url": "https://doi.org/10.1145/342001.339687",
+   "cited_by": 249,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Decoupled Architectures for Complexity-Effective General Purpose Processors",
@@ -3678,6 +4165,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "KressArray Xplorer",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2000,
+   "venue": "Proceedings - Design Automation Conference",
+   "authors": "Reiner W. Hartenstein, Michael Herz, Thomas Hoffmann et al.",
+   "url": "https://doi.org/10.1145/368434.368597",
+   "cited_by": 48,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Next Generation On-chip Communication Networks",
    "function": "exemplifies",
    "split": "passing",
@@ -3691,6 +4191,19 @@
     "supports-claim"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Smart Memories",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2000,
+   "venue": "ACM SIGARCH Computer Architecture News",
+   "authors": "Ken Mai, Tim Paaske, Nuwan Jayasena et al.",
+   "url": "https://doi.org/10.1145/342001.339673",
+   "cited_by": 374,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Smart Memories: a modular reconfigurable architecture",
@@ -3830,6 +4343,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "REACT: Reactive environment for runtime reconfiguration",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 1998,
+   "venue": "Lecture notes in computer science",
+   "authors": "Dinesh Bhatia, Parivallal Kannan, Kuldeep S. Simha et al.",
+   "url": "https://doi.org/10.1007/bfb0055248",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Reconfigurable computer architectures",
    "function": "exemplifies",
    "split": "passing",
@@ -3932,11 +4458,14 @@
    "year": 2024,
    "venue": "arXiv.org",
    "authors": "Saugata Ghose",
-   "url": "https://doi.org/10.48550/arxiv.2408.12999",
+   "url": "https://doi.org/10.1007/978-981-97-9314-3_46",
    "cited_by": 2,
-   "centrality": "peripheral",
+   "centrality": "engaged",
    "confidence": "high",
-   "evidence": "contexts"
+   "secondary": [
+    "surveys"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A Survey on FPGA-Based Heterogeneous Clusters Architectures",
@@ -3986,6 +4515,51 @@
     "lineage"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "A Comprehensive Survey on Strategies in Multicore Architectures, Design Considerations and Challenges",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2020,
+   "venue": "International Conference Artificial Intelligence, Smart Grid and Smart City Applications",
+   "authors": "R. Radhika, N. Anusha, R. Manimegalai",
+   "url": "https://doi.org/10.1007/978-3-030-24051-6_76",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "secondary": [
+    "surveys"
+   ],
+   "evidence": "fulltext"
+  },
+  {
+   "title": "On the Relevance of Architectural Awareness for Efficient Fork/Join Support on Cluster-Based Manycores",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2014,
+   "venue": "MES",
+   "authors": "Hayder Al-Khalissi, Mladen Bereković, Andrea Marongiu",
+   "url": "https://doi.org/10.1145/2613908.2613911",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Reconciling performance and predictability on a many-core through off-line mapping",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2014,
+   "venue": "Reconfigurable Communication-centric Systems-on-Chip",
+   "authors": "Thomas Carle, Manel Djemal, Daniela Genius et al.",
+   "url": "https://doi.org/10.1109/recosoc.2014.6861367",
+   "cited_by": 1,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Innovative Operating Memory Architecture for Computers using the Data Driven Computation Model",
@@ -4041,6 +4615,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Profile-guided deployment of stream programs on multicores",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2012,
+   "venue": "ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems",
+   "authors": "S. M. Farhad, Yousun Ko, Bernd Burgstaller et al.",
+   "url": "https://doi.org/10.1145/2248418.2248430",
+   "cited_by": 10,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Priority of instructions execution and DFG mapping techniques of computer architecture with data driven computation model",
    "function": "detailed-citation",
    "split": "detailed",
@@ -4050,8 +4637,24 @@
    "url": "https://doi.org/10.1109/sisy.2011.6034376",
    "cited_by": 2,
    "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "StreamPI: a stream-parallel programming extension for object-oriented programming languages",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2011,
+   "venue": "The Journal of Supercomputing",
+   "authors": "Jingun Hong, Kirak Hong, Bernd Burgstaller et al.",
+   "url": "https://doi.org/10.1007/s11227-011-0656-7",
+   "cited_by": 5,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "lineage"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "A finite domain constraint approach for placement and routing of coarse-grained reconfigurable architectures",
@@ -4274,6 +4877,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Synchronization through Communication in a Massively Parallel Processor Array",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2007,
+   "venue": "IEEE Micro",
+   "authors": "Mike Butts",
+   "url": "https://doi.org/10.1109/mm.2007.4378781",
+   "cited_by": 51,
+   "centrality": "engaged",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Tiled microprocessors",
    "function": "detailed-citation",
    "split": "detailed",
@@ -4303,22 +4919,6 @@
    "cited_by": 19,
    "centrality": "peripheral",
    "confidence": "medium",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
-  },
-  {
-   "title": "Reducing NoC energy consumption through compiler-directed channel voltage scaling",
-   "function": "detailed-citation",
-   "split": "detailed",
-   "year": 2006,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Guangyu Chen, Feihui Li, Mahmut Kandemir et al.",
-   "url": "https://doi.org/10.1145/1133981.1134004",
-   "cited_by": 23,
-   "centrality": "peripheral",
-   "confidence": "high",
    "flags": [
     "polluted-contexts"
    ],
@@ -4374,11 +4974,14 @@
    "url": "https://doi.org/10.1109/tpds.2005.24",
    "cited_by": 72,
    "centrality": "engaged",
-   "confidence": "medium",
+   "confidence": "high",
+   "secondary": [
+    "exemplifies"
+   ],
    "flags": [
     "own-group"
    ],
-   "evidence": "abstract+contexts",
+   "evidence": "fulltext",
    "commit": true
   },
   {
@@ -4442,6 +5045,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "Static placement, dynamic issue (SPDI) scheduling for EDGE architectures",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2004,
+   "venue": "Proceedings. 13th International Conference on Parallel Architecture and Compilation Techniques, 2004. PACT 2004.",
+   "authors": "Ramadass Nagarajan, Sundeep K. Kushwaha, Doug Burger et al.",
+   "url": "https://doi.org/10.1109/pact.2004.1342543",
+   "cited_by": 57,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Versatile Tiled-Processor Architectures: The Raw Approach",
    "function": "detailed-citation",
    "split": "detailed",
@@ -4457,6 +5073,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Automatic compilation to a coarse-grained reconfigurable system-opn-chip",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2003,
+   "venue": "ACM Transactions on Embedded Computing Systems",
+   "authors": "Girish Venkataramani, Walid Najjar, Fadi Kurdahi et al.",
+   "url": "https://doi.org/10.1145/950162.950167",
+   "cited_by": 33,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "RECONFIGURABLE SYSTEM ARCHITECTURES",
    "function": "detailed-citation",
    "split": "detailed",
@@ -4466,6 +5095,26 @@
    "centrality": "engaged",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "ASOC: a scalable, single-chip communications architecture",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2002,
+   "venue": "Proceedings 2000 International Conference on Parallel Architectures and Compilation Techniques (Cat. No.PR00622)",
+   "authors": "Jian Liang, S. Swaminathan, R. Tessier",
+   "url": "https://doi.org/10.1109/pact.2000.888329",
+   "cited_by": 139,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "supports-claim",
+    "positions"
+   ],
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Exploring optimal cost-performance designs for Raw microprocessors",
@@ -4649,6 +5298,19 @@
    "commit": true
   },
   {
+   "title": "Co-Synthesis to a Hybrid RISC/FPGA Architecture",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2000,
+   "venue": "The Journal of VLSI Signal Processing Systems for Signal Image and Video Technology",
+   "authors": "Maya Gokhale, Janice M. Stone, Edson Gomersall",
+   "url": "https://doi.org/10.1007/978-1-4615-4417-3_4",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "How to build scalable on-chip ILP networks for a decentralized architecture",
    "function": "detailed-citation",
    "split": "detailed",
@@ -4791,7 +5453,7 @@
    "cited_by": 7,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "3DRA: Dynamic Data-Driven Reconfigurable Architecture",
@@ -4810,6 +5472,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Flip : Data-centric Edge CGRA Accelerator",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2023,
+   "venue": "ACM Transactions on Design Automation of Electronic Systems",
+   "authors": "Dan Wu, Peng Chen, Thilini Kaushalya Bandara et al.",
+   "url": "https://doi.org/10.1145/3631118",
+   "cited_by": 4,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "RipTide: A Programmable, Energy-Minimal Dataflow Compiler and Architecture",
    "function": "passing-citation",
    "split": "passing",
@@ -4823,6 +5498,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "Technical Difficulties and Development Trend",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2022,
+   "authors": "Leibo Liu, Shaojun Wei, Jianfeng Zhu et al.",
+   "url": "https://doi.org/10.1007/978-981-19-7636-0_3",
+   "cited_by": 0,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "täkō",
    "function": "passing-citation",
    "split": "passing",
@@ -4833,7 +5520,7 @@
    "cited_by": 16,
    "centrality": "peripheral",
    "confidence": "high",
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "Architecture synthesis methodology of run-time reconfigurable multi-task and multi-mode systems with self-assembling micro-architecture",
@@ -4907,6 +5594,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Nanocomputers",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2018,
+   "venue": "Computational Complexity",
+   "authors": "Ferdinand Peper",
+   "url": "https://doi.org/10.1007/978-1-4939-6883-1_347",
+   "cited_by": 3,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "New Direction in Computer Architecture",
@@ -4992,6 +5692,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Optimization and Mathematical Modeling in Computer Architecture",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Synthesis Lectures on Computer Architecture",
+   "authors": "Tony Nowatzki, M. Ferris, Karthikeyan Sankaralingam et al.",
+   "url": "https://doi.org/10.1007/978-3-031-01773-5",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Toward a Coherent Multicore Memory Model",
    "function": "passing-citation",
    "split": "passing",
@@ -5042,6 +5755,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Design and analysis of layered coarse-grained reconfigurable architecture",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2012,
+   "venue": "International Conference on Reconfigurable Computing and FPGAs",
+   "authors": "Zoltán Endre Rákossy, T. Naphade, Anupam Chattopadhyay",
+   "url": "https://doi.org/10.1109/reconfig.2012.6416736",
+   "cited_by": 17,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
   },
   {
    "title": "Hardware Mechanisms for Distributed Dynamic Software Analysis.",
@@ -5098,36 +5824,43 @@
    "evidence": "abstract+contexts"
   },
   {
-   "title": "Profile-guided deployment of stream programs on multicores",
+   "title": "Bit-by-Bit Pipelined and Hybrid-Grained 2D Architecture for Motion Estimation of H.264/AVC",
    "function": "passing-citation",
    "split": "passing",
-   "year": 2012,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "S. M. Farhad, Yousun Ko, Bernd Burgstaller et al.",
-   "url": "https://doi.org/10.1145/2345141.2248430",
-   "cited_by": 10,
+   "year": 2011,
+   "venue": "Journal of Signal Processing Systems",
+   "authors": "Yang Song, Ali Akoglu",
+   "url": "https://doi.org/10.1007/s11265-010-0575-5",
+   "cited_by": 7,
    "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Kilo-NOC",
    "function": "passing-citation",
    "split": "passing",
    "year": 2011,
-   "venue": "International Symposium on Computer Architecture",
+   "venue": "ACM SIGARCH Computer Architecture News",
    "authors": "Boris Grot, Joel Hestness, Stephen W. Keckler et al.",
-   "url": "https://doi.org/10.1145/2000064.2000112",
+   "url": "https://doi.org/10.1145/2024723.2000112",
    "cited_by": 138,
    "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Orchestration by approximation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2011,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "S. M. Farhad, Yousun Ko, Bernd Burgstaller et al.",
+   "url": "https://doi.org/10.1145/1961296.1950406",
+   "cited_by": 30,
+   "centrality": "peripheral",
    "confidence": "high",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "contexts"
+   "evidence": "fulltext"
   },
   {
    "title": "ARCHITECTURE OF MULTI-CORE COMPUTER WITH DATA DRIVEN COMPUTATION MODEL",
@@ -5143,6 +5876,31 @@
     "polluted-contexts"
    ],
    "evidence": "contexts"
+  },
+  {
+   "title": "Handbook of FPGA Design Security",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "authors": "Ted Huffmire, Cynthia Irvine, Thuy D. Nguyen et al.",
+   "url": "https://doi.org/10.1007/978-90-481-9157-4",
+   "cited_by": 49,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Tiled-MapReduce",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2010,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Rong Chen, Haibo Chen, Binyu Zang",
+   "url": "https://doi.org/10.1145/1854273.1854337",
+   "cited_by": 117,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Architecture Synthesis Methodology for Run-Time Reconfigurable Systems",
@@ -5255,6 +6013,19 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
+  },
+  {
+   "title": "A Cordic-Based Reconfigrable Systolic Array Processor for MIMO-OFDM Wireless Communications",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2007,
+   "venue": "SiPS ... design and implementation - IEEE Workshop on Signal Processing Systems",
+   "authors": "Katsutoshi Seki, Tomoyoshi Kobori, James Okello et al.",
+   "url": "https://doi.org/10.1109/sips.2007.4387624",
+   "cited_by": 8,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "A Structural Object Programming Model, Architecture, Chip and Tools for Reconfigurable Computing",
@@ -5386,6 +6157,32 @@
    "evidence": "contexts"
   },
   {
+   "title": "Efficient address remapping in distributed shared-memory systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2006,
+   "venue": "ACM Transactions on Architecture and Code Optimization",
+   "authors": "Lixin Zhang, Mike Parker, John Carter",
+   "url": "https://doi.org/10.1145/1138035.1138039",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "L2-Cache Hierarchical Organizations for Multi-core Architectures",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2006,
+   "venue": "Lecture notes in computer science",
+   "authors": "Mário Donato Marino",
+   "url": "https://doi.org/10.1007/11942634_9",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "On-Chip Communication in Run-Time Assembled Reconfigurable Systems",
    "function": "passing-citation",
    "split": "passing",
@@ -5453,6 +6250,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Using bus-based connections to improve field-programmable gate array density for implementing datapath circuits",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2005,
+   "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
+   "authors": "Andy Ye, Jonathan Rose",
+   "url": "https://doi.org/10.1145/1046192.1046194",
+   "cited_by": 52,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Adaptive processor: a model of stream processing",
    "function": "passing-citation",
    "split": "passing",
@@ -5503,6 +6313,32 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Min-cut program decomposition for thread-level speculation",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2004,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Troy A. Johnson, Rudolf Eigenmann, T. N. Vijaykumar",
+   "url": "https://doi.org/10.1145/996893.996851",
+   "cited_by": 108,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Opportunities and challenges in application-tuned circuits and architectures based on nanodevices",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2004,
+   "venue": "ACM International Conference on Computing Frontiers",
+   "authors": "Teng Wang, Zhenghua Qi, Csaba Andras Moritz",
+   "url": "https://doi.org/10.1145/977091.977161",
+   "cited_by": 40,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Remote and partial reconfiguration of FPGAs: tools and trends",
@@ -5663,19 +6499,6 @@
    "evidence": "abstract+contexts"
   },
   {
-   "title": "Automatic compilation to a coarse-grained reconfigurable system-opn-chip",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2003,
-   "venue": "ACM Transactions on Embedded Computing Systems",
-   "authors": "Girish Venkataramani, Walid Najjar, Fadi Kurdahi et al.",
-   "url": "https://doi.org/10.1145/950162.950167",
-   "cited_by": 33,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
-  },
-  {
    "title": "Customization of a CISC processor core for low-power applications",
    "function": "passing-citation",
    "split": "passing",
@@ -5687,6 +6510,22 @@
    "centrality": "peripheral",
    "confidence": "medium",
    "evidence": "contexts"
+  },
+  {
+   "title": "Data communication estimation and reduction for reconfigurable systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2003,
+   "venue": "Proceedings - Design Automation Conference",
+   "authors": "Adam Kaplan, Philip Brisk, Ryan Kastner",
+   "url": "https://doi.org/10.1145/775832.775987",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Dynamic Reconfiguration",
@@ -5726,6 +6565,19 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "High Performance Memory Systems",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2003,
+   "venue": "Springer: New York",
+   "authors": "H. Hadimioglu, D. Kaeli, Ashwini K. Nanda",
+   "url": "https://doi.org/10.1007/978-1-4419-8987-1",
+   "cited_by": 11,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "Laying out circuits on asynchronous cellular arrays: a step towards feasible nanocomputers?",
@@ -5778,6 +6630,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "Programming the FlexRAM parallel intelligent memory system",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2003,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Basilio B. Fraguela, Jose Renau, Paul Feautrier et al.",
+   "url": "https://doi.org/10.1145/966049.781505",
+   "cited_by": 27,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
   },
   {
    "title": "Synthesis Techniques and Optimizations for Reconfigurable Systems",
@@ -5931,6 +6796,22 @@
    "evidence": "contexts"
   },
   {
+   "title": "Task selection for a multiscalar processor",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2002,
+   "venue": "Proceedings. 31st Annual ACM/IEEE International Symposium on Microarchitecture",
+   "authors": "T. N. Vijaykumar, Gurindar S. Sohi",
+   "url": "https://doi.org/10.1109/micro.1998.742771",
+   "cited_by": 131,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "The NAPA adaptive processing architecture",
    "function": "passing-citation",
    "split": "passing",
@@ -5998,6 +6879,18 @@
    "evidence": "contexts"
   },
   {
+   "title": "Demonstrating the scalability of a molecular dynamics application on a Petaflop computer",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "authors": "George Almási, Călin Caşcaval, José G. Castaños et al.",
+   "url": "https://doi.org/10.1145/377792.377896",
+   "cited_by": 37,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Energy/Performance Design of Memory Hierarchies for Processor-in-Memory Chips⋆",
    "function": "passing-citation",
    "split": "passing",
@@ -6009,6 +6902,35 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
+  },
+  {
+   "title": "Putting Data Value Predictors to Work in Fine-Grain Parallel Processors",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "International Conference on High Performance Computing",
+   "authors": "Aneesh Aggarwal, M. Franklin",
+   "url": "https://doi.org/10.1007/3-540-45307-5_18",
+   "cited_by": null,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "Register-sensitive selection, duplication, and sequencing of instructions",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2001,
+   "venue": "International Conference on Supercomputing",
+   "authors": "Vivek Sarkar, Maurício Serrano, Barbara Sımons",
+   "url": "https://doi.org/10.1145/377792.377849",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Atlas: a dynamically parallelizing chip-multiprocessor for gigascale integration",
@@ -6023,20 +6945,17 @@
    "evidence": "abstract"
   },
   {
-   "title": "CHIMAERA",
+   "title": "Clock rate versus IPC",
    "function": "passing-citation",
    "split": "passing",
    "year": 2000,
-   "venue": "ACM SIGARCH Computer Architecture News",
-   "authors": "Zhi Alex Ye, Andreas Moshovos, Scott Hauck et al.",
-   "url": "https://doi.org/10.1145/339647.339687",
-   "cited_by": 249,
+   "venue": "Proceedings of 27th International Symposium on Computer Architecture (IEEE Cat. No.RS00201)",
+   "authors": "Vikas Agarwal, M.S. Hrishikesh, Stephen W. Keckler et al.",
+   "url": "https://doi.org/10.1145/339647.339691",
+   "cited_by": 611,
    "centrality": "peripheral",
    "confidence": "low",
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Exploiting superword level parallelism with multimedia instruction sets",
@@ -6054,19 +6973,6 @@
    ],
    "evidence": "abstract",
    "commit": true
-  },
-  {
-   "title": "KressArray Xplorer",
-   "function": "passing-citation",
-   "split": "passing",
-   "year": 2000,
-   "venue": "Proceedings - Design Automation Conference",
-   "authors": "Reiner W. Hartenstein, Michael Herz, Thomas Hoffmann et al.",
-   "url": "https://doi.org/10.1145/368434.368597",
-   "cited_by": 48,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Performance analysis and optimization of latency insensitive systems",
@@ -6106,6 +7012,19 @@
    "evidence": "contexts"
   },
   {
+   "title": "A Reconfigurable Architecture for High Speed Computation by Pipeline Processing",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1999,
+   "venue": "Lecture notes in computer science",
+   "authors": "Tsutomu Maruyama, Tsutomu Hoshino",
+   "url": "https://doi.org/10.1007/978-3-540-48302-1_62",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Kernel scheduling in reconfigurable computing",
    "function": "passing-citation",
    "split": "passing",
@@ -6122,6 +7041,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Mapping Applications onto Reconfigurable KressArrays",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1999,
+   "venue": "Lecture notes in computer science",
+   "authors": "Reiner W. Hartenstein, Michael Herz, Thomas Hoffmann et al.",
+   "url": "https://doi.org/10.1007/978-3-540-48302-1_42",
+   "cited_by": 33,
+   "centrality": "peripheral",
+   "confidence": "high",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Memory interfacing and instruction specification for reconfigurable processors",
    "function": "passing-citation",
    "split": "passing",
@@ -6135,6 +7067,22 @@
    "evidence": "abstract"
   },
   {
+   "title": "PipeRench: a co/processor for streaming multimedia acceleration",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 1999,
+   "venue": "Proceedings of the 26th International Symposium on Computer Architecture (Cat. No.99CB36367)",
+   "authors": "Seth Copen Goldstein, Herman Schmit, Matthew Moe et al.",
+   "url": "https://doi.org/10.1145/300979.300982",
+   "cited_by": 375,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "VLSI datapath choices : cell-based versus full-custom",
    "function": "passing-citation",
    "split": "passing",
@@ -6145,34 +7093,6 @@
    "centrality": "peripheral",
    "confidence": "high",
    "evidence": "contexts"
-  },
-  {
-   "title": "Allocation and Scheduling of Dataflow Graphs on Hybrid Dataflow/von Neumann Architectures",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "venue": "International Conference on Formal Methods and Models for Co-Design",
-   "authors": "Anoop Bhagyanath, Nadine Kercher, Klaus Schneider",
-   "url": "https://doi.org/10.1145/3610579.3611079",
-   "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Flip : Data-centric Edge CGRA Accelerator",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "venue": "ACM Transactions on Design Automation of Electronic Systems",
-   "authors": "Dan Wu, Peng Chen, Thilini Kaushalya Bandara et al.",
-   "url": "https://doi.org/10.1145/3631118",
-   "cited_by": 4,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
   },
   {
    "title": "HyperFPGA: An Experimental Testbed for Heterogeneous Supercomputing",
@@ -6189,18 +7109,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Proceedings of the 21st ACM-IEEE International Conference on Formal Methods and Models for System Design",
-   "function": "unknown",
-   "split": null,
-   "year": 2023,
-   "url": "https://doi.org/10.1145/3610579",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "A Mapping Method for Reconfigurable Array based on Decoupled DataFlow",
    "function": "unknown",
    "split": null,
@@ -6208,20 +7116,6 @@
    "authors": "Zihan Zhang, Jianfei Jiang, Weiguang Sheng et al.",
    "url": "https://doi.org/10.1109/bigdatasecurityhpscids52275.2021.00042",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "CGRA-EAM—Rapid Energy and Area Estimation for Coarse-grained Reconfigurable Architectures",
-   "function": "unknown",
-   "split": null,
-   "year": 2021,
-   "venue": "ACM Transactions on Reconfigurable Technology and Systems",
-   "authors": "Mark Wijtvliet, Henk Corporaal, Akash Kumar",
-   "url": "https://doi.org/10.1145/3468874",
-   "cited_by": 12,
    "flags": [
     "polluted-contexts"
    ],
@@ -6242,20 +7136,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Plasticity-on-Chip Design: Exploiting Self-Similarity for Data Communications",
-   "function": "unknown",
-   "split": null,
-   "year": 2021,
-   "venue": "IEEE Transactions on Computers",
-   "authors": "Yao Xiao, Shahin Nazarian, Paul Bogdan",
-   "url": "https://doi.org/10.1109/tc.2021.3071507",
-   "cited_by": 38,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "A Black-Box Fork-Join Latency Prediction Model for Data-Intensive Applications",
    "function": "unknown",
    "split": null,
@@ -6267,7 +7147,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "The use of a reconfigurable functional cache in a digital signal processor: power and performance",
@@ -6277,34 +7157,6 @@
    "authors": "Katherine Gossett",
    "url": "https://doi.org/10.31274/rtd-20200803-82",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Rethinking the Memory Hierarchy for Modern Languages",
-   "function": "unknown",
-   "split": null,
-   "year": 2018,
-   "venue": "Micro",
-   "authors": "Po-An Tsai, Yee Ling Gan, Daniel Sánchez",
-   "url": "https://doi.org/10.1109/micro.2018.00025",
-   "cited_by": 20,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "A machine learning approach to mapping streaming workloads to dynamic multicore processors",
-   "function": "unknown",
-   "split": null,
-   "year": 2016,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Paul-Jules Micolet, A. Gordon Smith, Christophe Dubach",
-   "url": "https://doi.org/10.1145/2980930.2907951",
-   "cited_by": 18,
    "flags": [
     "polluted-contexts"
    ],
@@ -6348,34 +7200,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "On the Relevance of Architectural Awareness for Efficient Fork/Join Support on Cluster-Based Manycores",
-   "function": "unknown",
-   "split": null,
-   "year": 2014,
-   "venue": "MES",
-   "authors": "Hayder Al-Khalissi, Mladen Bereković, Andrea Marongiu",
-   "url": "https://doi.org/10.1145/2613908.2613911",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Reconciling performance and predictability on a many-core through off-line mapping",
-   "function": "unknown",
-   "split": null,
-   "year": 2014,
-   "venue": "Reconfigurable Communication-centric Systems-on-Chip",
-   "authors": "Thomas Carle, Manel Djemal, Daniela Genius et al.",
-   "url": "https://doi.org/10.1109/recosoc.2014.6861367",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Silicon‐Based Current‐Controlled Reconfigurable Magnetoresistance Logic Combined with Non‐Volatile Memory",
    "function": "unknown",
    "split": null,
@@ -6404,20 +7228,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Design of high-throughput Inter-PE communication with application-level flow control protocol for many-core architectures",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "MES",
-   "authors": "Jyu-Yuan Lai, Ting-Shuo Hsu, Po‐Yu Chen et al.",
-   "url": "https://doi.org/10.1145/2489068.2489074",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Estimating memory locality for virtual machines on NUMA systems",
    "function": "unknown",
    "split": null,
@@ -6426,20 +7236,6 @@
    "authors": "Alexandre Milouchev",
    "url": "https://openalex.org/W2236338498",
    "cited_by": 0,
-   "evidence": "abstract"
-  },
-  {
-   "title": "Heterogeneous Multiconstraint Application Partitioner (HMAP)",
-   "function": "unknown",
-   "split": null,
-   "year": 2013,
-   "venue": "2013 12th IEEE International Conference on Trust, Security and Privacy in Computing and Communications",
-   "authors": "Servesh Muralidharan, Aravind Vasudevan, Avinash Malik et al.",
-   "url": "https://doi.org/10.1109/trustcom.2013.122",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
    "evidence": "abstract"
   },
   {
@@ -6454,20 +7250,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Design and analysis of layered coarse-grained reconfigurable architecture",
-   "function": "unknown",
-   "split": null,
-   "year": 2012,
-   "venue": "International Conference on Reconfigurable Computing and FPGAs",
-   "authors": "Zoltán Endre Rákossy, T. Naphade, Anupam Chattopadhyay",
-   "url": "https://doi.org/10.1109/reconfig.2012.6416736",
-   "cited_by": 17,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   },
   {
    "title": "High level thermal-aware scheduling for multiprocessors",
@@ -6546,20 +7328,6 @@
    "authors": "Mohammed Fellahi",
    "url": "https://openalex.org/W2288556439",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Orchestration by approximation",
-   "function": "unknown",
-   "split": null,
-   "year": 2011,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "S. M. Farhad, Yousun Ko, Bernd Burgstaller et al.",
-   "url": "https://doi.org/10.1145/1961296.1950406",
-   "cited_by": 30,
    "flags": [
     "polluted-contexts"
    ],
@@ -6649,6 +7417,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Deployment of Reconfigurable Systems",
+   "function": "unknown",
+   "split": null,
+   "year": 2010,
+   "authors": "Antonio Carlos Schneider Beck Fl., Luigi Carro",
+   "url": "https://doi.org/10.1007/978-90-481-3913-2_3",
+   "cited_by": 0,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Direct Numerical Simulation of Particulate Flows on 294912 Processor Cores",
    "function": "unknown",
    "split": null,
@@ -6660,7 +7441,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Effect of serialized routing resources on the implementation area of datapath circuits on FPGAS",
@@ -6702,7 +7483,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "A Reconfigurable Modular Architecture to Exploit Word-Level Parallelism",
@@ -6838,20 +7619,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "High performance dense linear algebra on a spatially distributed processor",
-   "function": "unknown",
-   "split": null,
-   "year": 2008,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Jeffrey R. Diamond, Behnam Robatmili, Stephen W. Keckler et al.",
-   "url": "https://doi.org/10.1145/1345206.1345218",
-   "cited_by": 10,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
    "title": "Model-based application development for massively parralel embedded systems",
    "function": "unknown",
    "split": null,
@@ -6863,6 +7630,20 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
+  },
+  {
+   "title": "Networks on Chips",
+   "function": "unknown",
+   "split": null,
+   "year": 2008,
+   "venue": "Design, Automation, and Test in Europe",
+   "authors": "Giovanni De Micheli",
+   "url": "https://doi.org/10.1007/978-1-4020-6488-3_8",
+   "cited_by": 541,
+   "flags": [
+    "polluted-contexts"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Planar Adaptive Router Microarchitecture for Tree-Based Multicast Network-on-Chip",
@@ -6945,20 +7726,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "A Cordic-Based Reconfigrable Systolic Array Processor for MIMO-OFDM Wireless Communications",
-   "function": "unknown",
-   "split": null,
-   "year": 2007,
-   "venue": "SiPS ... design and implementation - IEEE Workshop on Signal Processing Systems",
-   "authors": "Katsutoshi Seki, Tomoyoshi Kobori, James Okello et al.",
-   "url": "https://doi.org/10.1109/sips.2007.4387624",
-   "cited_by": 8,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "A Fast FPGA-Based 2-Opt Solver for Small-Scale Euclidean Traveling Salesman Problem",
    "function": "unknown",
    "split": null,
@@ -7024,7 +7791,7 @@
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Design and Application of a Scalable Embedded Systems’ Architecture with an FPGA Based Operating Infrastucture",
@@ -7035,34 +7802,6 @@
    "authors": "F. Mayer‐Lindenberg",
    "url": "https://doi.org/10.1109/dsd.2006.39",
    "cited_by": 3,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Efficient address remapping in distributed shared-memory systems",
-   "function": "unknown",
-   "split": null,
-   "year": 2006,
-   "venue": "ACM Transactions on Architecture and Code Optimization",
-   "authors": "Lixin Zhang, Mike Parker, John Carter",
-   "url": "https://doi.org/10.1145/1138035.1138039",
-   "cited_by": 2,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Instruction scheduling for a tiled dataflow architecture",
-   "function": "unknown",
-   "split": null,
-   "year": 2006,
-   "venue": "ASPLOS XII",
-   "authors": "Martha Mercaldi, Steven Swanson, Andrew Petersen et al.",
-   "url": "https://doi.org/10.1145/1168857.1168876",
-   "cited_by": 35,
    "flags": [
     "polluted-contexts"
    ],
@@ -7206,20 +7945,6 @@
    "evidence": "abstract+contexts"
   },
   {
-   "title": "Using bus-based connections to improve field-programmable gate array density for implementing datapath circuits",
-   "function": "unknown",
-   "split": null,
-   "year": 2005,
-   "venue": "IEEE Transactions on Very Large Scale Integration (vlsi) Systems",
-   "authors": "Andy Ye, Jonathan Rose",
-   "url": "https://doi.org/10.1145/1046192.1046194",
-   "cited_by": 52,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Using multi-bit logic blocks and automated packing to improve field-programmable gate array density for implementing datapath circuits",
    "function": "unknown",
    "split": null,
@@ -7228,48 +7953,6 @@
    "authors": "A.G. Ye, Jonathan Rose",
    "url": "https://doi.org/10.1109/fpt.2004.1393260",
    "cited_by": 20,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "A characterization of visual feature recognition",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "IEEE International Conference on Communications",
-   "authors": "Beena Mathew, A. Davis, Robin J. Evans",
-   "url": "https://doi.org/10.1109/wwc.2003.1249052",
-   "cited_by": 13,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "An architecture and compiler for scalable on-chip communication",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
-   "authors": "Jian Liang, A.J. Laffely, S. Srinivasan et al.",
-   "url": "https://doi.org/10.1109/tvlsi.2004.830919",
-   "cited_by": 80,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "An ultra low-power processor for sensor networks",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "ASPLOS XI",
-   "authors": "Virantha Ekanayake, Clinton W. Kelly, Rajit Manohar",
-   "url": "https://doi.org/10.1145/1024393.1024397",
-   "cited_by": 106,
    "flags": [
     "polluted-contexts"
    ],
@@ -7288,20 +7971,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Custom wide counterflow pipelines for high-performance embedded applications",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "IEEE Transactions on Computers",
-   "authors": "Bruce R. Childers, Jack W. Davidson",
-   "url": "https://doi.org/10.1109/tc.2004.1261825",
-   "cited_by": 5,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Evaluation of a multithreaded architecture for cellular computing",
@@ -7359,50 +8028,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Language and compiler design for streaming applications",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "18th International Parallel and Distributed Processing Symposium, 2004. Proceedings.",
-   "authors": "William Thies, Michael I. Gordon, Michal Karczmarek et al.",
-   "url": "https://doi.org/10.1109/ipdps.2004.1303227",
-   "cited_by": 55,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract",
-   "commit": true
-  },
-  {
-   "title": "Min-cut program decomposition for thread-level speculation",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Troy A. Johnson, Rudolf Eigenmann, T. N. Vijaykumar",
-   "url": "https://doi.org/10.1145/996841.996851",
-   "cited_by": 108,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "Opportunities and challenges in application-tuned circuits and architectures based on nanodevices",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "ACM International Conference on Computing Frontiers",
-   "authors": "Teng Wang, Zhenghua Qi, Csaba Andras Moritz",
-   "url": "https://doi.org/10.1145/977091.977161",
-   "cited_by": 40,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Platform and architecture adequacy in SoC environment: a case study",
    "function": "unknown",
    "split": null,
@@ -7428,20 +8053,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Portable video supercomputing",
-   "function": "unknown",
-   "split": null,
-   "year": 2004,
-   "venue": "IEEE Transactions on Computers",
-   "authors": "Antonio Gentile, D.S. Wills",
-   "url": "https://doi.org/10.1109/tc.2004.48",
-   "cited_by": 37,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   },
   {
    "title": "The Design of the Node for the Single Chip Message Passing (SCMP) Parallel Computer",
@@ -7499,20 +8110,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Data communication estimation and reduction for reconfigurable systems",
-   "function": "unknown",
-   "split": null,
-   "year": 2003,
-   "venue": "Proceedings - Design Automation Conference",
-   "authors": "Adam Kaplan, Philip Brisk, Ryan Kastner",
-   "url": "https://doi.org/10.1145/775832.775987",
-   "cited_by": 9,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Issues in FPGA-based configurable computer design for operating systems and multimedia applications",
    "function": "unknown",
    "split": null,
@@ -7521,36 +8118,6 @@
    "authors": "Petar Knežević, Božidar Radunović, AboBaker ElHouni",
    "url": "https://doi.org/10.1109/hicss.1999.772886",
    "cited_by": 0,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "Linear analysis and optimization of stream programs",
-   "function": "unknown",
-   "split": null,
-   "year": 2003,
-   "venue": "ACM-SIGPLAN Symposium on Programming Language Design and Implementation",
-   "authors": "Andrew A. Lamb, W. Thies, Saman P. Amarasinghe",
-   "url": "https://doi.org/10.1145/781131.781134",
-   "cited_by": 39,
-   "flags": [
-    "own-group",
-    "polluted-contexts"
-   ],
-   "evidence": "abstract",
-   "commit": true
-  },
-  {
-   "title": "Mapping of generalized template matching onto reconfigurable computers",
-   "function": "unknown",
-   "split": null,
-   "year": 2003,
-   "venue": "IEEE Transactions on Very Large Scale Integration (VLSI) Systems",
-   "authors": "Xuejun Liang, Jack Jean",
-   "url": "https://doi.org/10.1109/tvlsi.2003.812306",
-   "cited_by": 24,
    "flags": [
     "polluted-contexts"
    ],
@@ -7570,20 +8137,6 @@
    ],
    "evidence": "abstract",
    "commit": true
-  },
-  {
-   "title": "Programming the FlexRAM parallel intelligent memory system",
-   "function": "unknown",
-   "split": null,
-   "year": 2003,
-   "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
-   "authors": "Basilio B. Fraguela, Jose Renau, Paul Feautrier et al.",
-   "url": "https://doi.org/10.1145/781498.781505",
-   "cited_by": 27,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
   },
   {
    "title": "Synthesizing datapath circuits for FPGAs with emphasis on area minimization",
@@ -7620,48 +8173,6 @@
    "authors": "William J. Dally, Brucek Khailany",
    "url": "https://openalex.org/W1519132015",
    "cited_by": 46,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "WaveScalar",
-   "function": "unknown",
-   "split": null,
-   "year": 2003,
-   "venue": "Proceedings. 36th Annual IEEE/ACM International Symposium on Microarchitecture, 2003. MICRO-36.",
-   "authors": "Steven Swanson, Ken Michelson, Andrew Schwerin et al.",
-   "url": "https://doi.org/10.1109/micro.2003.1253203",
-   "cited_by": 132,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "An interleaved cache clustered VLIW processor",
-   "function": "unknown",
-   "split": null,
-   "year": 2002,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Enric Gibert, Jesús Sánchez, Antonio González",
-   "url": "https://doi.org/10.1145/514191.514222",
-   "cited_by": 19,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "ASOC: a scalable, single-chip communications architecture",
-   "function": "unknown",
-   "split": null,
-   "year": 2002,
-   "venue": "Proceedings 2000 International Conference on Parallel Architectures and Compilation Techniques (Cat. No.PR00622)",
-   "authors": "Jian Liang, S. Swaminathan, R. Tessier",
-   "url": "https://doi.org/10.1109/pact.2000.888329",
-   "cited_by": 139,
    "flags": [
     "polluted-contexts"
    ],
@@ -7761,34 +8272,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Task selection for a multiscalar processor",
-   "function": "unknown",
-   "split": null,
-   "year": 2002,
-   "venue": "Proceedings. 31st Annual ACM/IEEE International Symposium on Microarchitecture",
-   "authors": "T. N. Vijaykumar, Gurindar S. Sohi",
-   "url": "https://doi.org/10.1109/micro.1998.742771",
-   "cited_by": 131,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract+contexts"
-  },
-  {
-   "title": "A compiler framework for mapping applications to a coarse-grained reconfigurable computer architecture",
-   "function": "unknown",
-   "split": null,
-   "year": 2001,
-   "venue": "International Conference on Compilers, Architecture, and Synthesis for Embedded Systems",
-   "authors": "Girish Venkataramani, Walid Najjar, Fadi Kurdahi et al.",
-   "url": "https://doi.org/10.1145/502217.502235",
-   "cited_by": 74,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "A Software Framework for Supporting General Purpose Applications on Raw Computation Fabrics",
    "function": "unknown",
    "split": null,
@@ -7818,17 +8301,18 @@
    "evidence": "abstract+contexts"
   },
   {
-   "title": "Demonstrating the scalability of a molecular dynamics application on a Petaflop computer",
+   "title": "Embedded Software",
    "function": "unknown",
    "split": null,
    "year": 2001,
-   "authors": "George Almási, Călin Caşcaval, José G. Castaños et al.",
-   "url": "https://doi.org/10.1145/377792.377896",
-   "cited_by": 37,
+   "venue": "Lecture Notes in Computer Science",
+   "authors": "Edward A. Lee",
+   "url": "https://doi.org/10.1007/3-540-45449-7",
+   "cited_by": 2,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Memory access optimisation for reconfigurable systems",
@@ -7845,18 +8329,18 @@
    "evidence": "abstract"
   },
   {
-   "title": "Register-sensitive selection, duplication, and sequencing of instructions",
+   "title": "Spatial Computing on Self-Timed Cellular Automata",
    "function": "unknown",
    "split": null,
    "year": 2001,
-   "venue": "International Conference on Supercomputing",
-   "authors": "Vivek Sarkar, Maurício Serrano, Barbara Sımons",
-   "url": "https://doi.org/10.1145/377792.377849",
-   "cited_by": 9,
+   "venue": "Unconventional Models of Computation",
+   "authors": "Ferdinand Peper",
+   "url": "https://doi.org/10.1007/978-1-4471-0313-4_16",
+   "cited_by": 3,
    "flags": [
-    "own-group"
+    "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Title of Thesis: COMMUNICATION SCHEDULING IN EMBEDDED",
@@ -7883,19 +8367,18 @@
    "evidence": "abstract"
   },
   {
-   "title": "Clock rate versus IPC",
+   "title": "Compiling Applications for ConCISe: An Example of Automatic HW/SW Partitioning and Synthesis",
    "function": "unknown",
    "split": null,
    "year": 2000,
-   "venue": "ACM SIGARCH Computer Architecture News",
-   "authors": "Vikas Agarwal, M.S. Hrishikesh, Stephen W. Keckler et al.",
-   "url": "https://doi.org/10.1145/342001.339691",
-   "cited_by": 611,
+   "venue": "International Conference on Field-Programmable Logic and Applications",
+   "authors": "B. Kastrup, J. Trum, O. Moreira et al.",
+   "url": "https://doi.org/10.1007/3-540-44614-1_74",
+   "cited_by": 6,
    "flags": [
-    "own-group",
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "Evaluating Multi-threading in the Prototype XMT Environment",
@@ -7947,20 +8430,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Smart Memories",
-   "function": "unknown",
-   "split": null,
-   "year": 2000,
-   "venue": "ACM SIGARCH Computer Architecture News",
-   "authors": "Ken Mai, Tim Paaske, Nuwan Jayasena et al.",
-   "url": "https://doi.org/10.1145/342001.339673",
-   "cited_by": 374,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Synthesis and domain-specific optimization of KressArray-based reconfigurable computing engines (poster abstract)",
    "function": "unknown",
    "split": null,
@@ -7994,21 +8463,10 @@
    "authors": "Seth Copen Goldstein, Herman Schmit, Matthew Moe et al.",
    "url": "https://doi.org/10.1145/307338.300982",
    "cited_by": 55,
-   "evidence": "abstract"
-  },
-  {
-   "title": "PipeRench: a co/processor for streaming multimedia acceleration",
-   "function": "unknown",
-   "split": null,
-   "year": 1999,
-   "venue": "Proceedings of the 26th International Symposium on Computer Architecture (Cat. No.99CB36367)",
-   "authors": "Seth Copen Goldstein, Herman Schmit, Matthew Moe et al.",
-   "url": "https://doi.org/10.1145/300979.300982",
-   "cited_by": 375,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "SUDS: Primitive Mechanisms for Memory Dependence Speculation",
@@ -8101,37 +8559,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Technical Difficulties and Development Trend",
-   "function": "unclassified",
-   "split": null,
-   "year": 2022,
-   "authors": "Leibo Liu, Shaojun Wei, Jianfeng Zhu et al.",
-   "url": "https://doi.org/10.1007/978-981-19-7636-0_3",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Architectural Model",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "authors": "Mark Wijtvliet, Henk Corporaal, Akash Kumar",
-   "url": "https://doi.org/10.1007/978-3-030-79774-4_6",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "CGRA Background and Related Work",
-   "function": "unclassified",
-   "split": null,
-   "year": 2021,
-   "venue": "Blocks, Towards Energy-efficient, Coarse-grained Reconfigurable Architectures",
-   "authors": "Mark Wijtvliet, Henk Corporaal, Akash Kumar",
-   "url": "https://doi.org/10.1007/978-3-030-79774-4_2",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
    "title": "Traditional microarchitectures",
    "function": "unclassified",
    "split": null,
@@ -8140,17 +8567,6 @@
    "authors": "Shigeyuki Takano",
    "url": "https://doi.org/10.1016/b978-0-12-818279-6.00012-8",
    "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
-   "title": "A Comprehensive Survey on Strategies in Multicore Architectures, Design Considerations and Challenges",
-   "function": "unclassified",
-   "split": null,
-   "year": 2020,
-   "venue": "International Conference Artificial Intelligence, Smart Grid and Smart City Applications",
-   "authors": "R. Radhika, N. Anusha, R. Manimegalai",
-   "url": "https://doi.org/10.1007/978-3-030-24051-6_76",
-   "cited_by": 2,
    "evidence": "title_only"
   },
   {
@@ -8184,60 +8600,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Nanocomputers",
-   "function": "unclassified",
-   "split": null,
-   "year": 2017,
-   "venue": "Encyclopedia of Complexity and Systems Science",
-   "authors": "Ferdinand Peper",
-   "url": "https://doi.org/10.1007/978-3-642-27737-5_347-2",
-   "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Introduction",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "Computer architecture and design methodologies",
-   "authors": "Vahid Lari",
-   "url": "https://doi.org/10.1007/978-981-10-1058-3_1",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Invasive Tightly Coupled Processor Arrays",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "venue": "Computer architecture and design methodologies",
-   "authors": "Vahid Lari",
-   "url": "https://doi.org/10.1007/978-981-10-1058-3_2",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reconfigurable Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2016,
-   "authors": "Moghaddam Shahraki Mansureh, Jaemin Cho, Ki‐Young Choi",
-   "url": "https://doi.org/10.1007/978-94-017-7358-4_12-1",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Devices and Architectures for Evolutionary Hardware",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Natural computing series",
-   "authors": "Martin A. Trefzer, Andy M. Tyrrell",
-   "url": "https://doi.org/10.1007/978-3-662-44616-4_2",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "A survey of memory architecture for 3D chip multi-processors",
    "function": "unclassified",
    "split": null,
@@ -8255,16 +8617,6 @@
    "year": 2014,
    "url": "https://www.semanticscholar.org/paper/6bd81d51734c2098d92c14b242b0c65a4f3d58b5",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "New Coarse-Grained Configurable Architecture for DSP Applications",
-   "function": "unclassified",
-   "split": null,
-   "year": 2014,
-   "authors": "Heni Ghariani, Zied Marrakchi, Abdulfattah M. Obeid et al.",
-   "url": "https://doi.org/10.1007/978-3-319-08239-4_10",
-   "cited_by": 1,
    "evidence": "title_only"
   },
   {
@@ -8317,17 +8669,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Optimization and Mathematical Modeling in Computer Architecture",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Synthesis lectures on computer architecture",
-   "authors": "Tony Nowatzki, Michael C. Ferris, Karthikeyan Sankaralingam et al.",
-   "url": "https://doi.org/10.2200/s00531ed1v01y201308cac026",
-   "cited_by": 24,
-   "evidence": "title_only"
-  },
-  {
    "title": "Optimizing Tilera's Process ARCfVS Scheduling via Reinforcement Learning",
    "function": "unclassified",
    "split": null,
@@ -8335,28 +8676,6 @@
    "authors": "Deborah Hanus",
    "url": "https://openalex.org/W2564396069",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiler Driven Inter Block Parallelism for Multicore Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "Communications in computer and information science",
-   "authors": "Kiran D.C., S. Gurunarayanan, Misra J.P.",
-   "url": "https://doi.org/10.1007/978-3-642-31686-9_50",
-   "cited_by": 4,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiler Efficient and Power Aware Instruction Level Parallelism for Multicore Architecture",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "Communications in computer and information science",
-   "authors": "D. C. Kiran, S. Gurunarayanan, Faizan Khaliq et al.",
-   "url": "https://doi.org/10.1007/978-3-642-32112-2_2",
-   "cited_by": 5,
    "evidence": "title_only"
   },
   {
@@ -8389,38 +8708,6 @@
    "cited_by": 2,
    "evidence": "title_only",
    "commit": true
-  },
-  {
-   "title": "P-Single Operators in Pipeline System of DF-KPI Architecture",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "venue": "Topics in intelligent engineering and informatics",
-   "authors": "Liberios Vokorokos, Norbert Ádám, Branislav Madoš",
-   "url": "https://doi.org/10.1007/978-3-642-30668-6_19",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Reconfigurable Systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2012,
-   "authors": "Antonio Carlos Schneider Beck, Monica Pereira",
-   "url": "https://doi.org/10.1007/978-1-4614-1746-0_3",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Bit-by-Bit Pipelined and Hybrid-Grained 2D Architecture for Motion Estimation of H.264/AVC",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "Journal of Signal Processing Systems",
-   "authors": "Yang Song, Ali Akoglu",
-   "url": "https://doi.org/10.1007/s11265-010-0575-5",
-   "cited_by": 7,
-   "evidence": "title_only"
   },
   {
    "title": "Déploiement d'applications multimédia sur architecture reconfigurable à gros grain : modélisation avec la programmation par contraintes. (Deployment of multimedia applications on coarse grained reconfigurable architecture: modeling using constraint programming)",
@@ -8463,17 +8750,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "StreamPI: a stream-parallel programming extension for object-oriented programming languages",
-   "function": "unclassified",
-   "split": null,
-   "year": 2011,
-   "venue": "The Journal of Supercomputing",
-   "authors": "Jingun Hong, Kirak Hong, Bernd Burgstaller et al.",
-   "url": "https://doi.org/10.1007/s11227-011-0656-7",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
    "title": "A Superscalar software architecture model for Multi-Core Processors (MCPs)",
    "function": "unclassified",
    "split": null,
@@ -8495,48 +8771,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Deployment of Reconfigurable Systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "authors": "Antonio Carlos Schneider Beck Fl., Luigi Carro",
-   "url": "https://doi.org/10.1007/978-90-481-3913-2_3",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Handbook of FPGA Design Security",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "authors": "Ted Huffmire, Cynthia Irvine, Thuy D. Nguyen et al.",
-   "url": "https://doi.org/10.1007/978-90-481-9157-4",
-   "cited_by": 49,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Towards High-Performance and Energy-Efficient Multi-core Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2010,
-   "venue": "Analog circuits and signal processing/Analog circuits and signal processing series",
-   "authors": "Zhiyi Yu",
-   "url": "https://doi.org/10.1007/978-90-481-9216-8_2",
-   "cited_by": 5,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Loop-Aware Instruction Scheduling with Dynamic Contention Tracking for Tiled Dataflow Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2009,
-   "venue": "Lecture notes in computer science",
-   "authors": "Muhammad Umar Farooq, Lizy K. John",
-   "url": "https://doi.org/10.1007/978-3-642-00722-4_14",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
    "title": "Battery-Draining-Denial-of-Service Attack on Bluetooth Devices",
    "function": "unclassified",
    "split": null,
@@ -8554,17 +8788,6 @@
    "authors": "J. Cuvillo",
    "url": "https://www.semanticscholar.org/paper/b9ae8b14742dbc9457d96f134bf412c6d90c7b6f",
    "cited_by": 3,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Compiler Controlled Speculation for Power Aware ILP Extraction in Dataflow Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "Lecture notes in computer science",
-   "authors": "Muhammad Umar Farooq, Lizy K. John, Margarida F. Jacome",
-   "url": "https://doi.org/10.1007/978-3-540-92990-1_24",
-   "cited_by": 4,
    "evidence": "title_only"
   },
   {
@@ -8596,16 +8819,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Language-driven Exploration and Implementation of Partially Re-configurable ASIPs",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "authors": "Anupam Chattopadhyay, H. Meyr, Rainer Leupers et al.",
-   "url": "https://doi.org/10.1007/978-1-4020-9297-8",
-   "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
    "title": "Network on Chip Architectures",
    "function": "unclassified",
    "split": null,
@@ -8613,17 +8826,6 @@
    "authors": "M. Palesi, Shashi Kumar, R. Marculescu et al.",
    "url": "https://www.semanticscholar.org/paper/cc995f680b007d050c267b9b49f6a5ab1600a88b",
    "cited_by": 12,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Networks on Chips",
-   "function": "unclassified",
-   "split": null,
-   "year": 2008,
-   "venue": "Design, Automation, and Test in Europe",
-   "authors": "Giovanni De Micheli",
-   "url": "https://doi.org/10.1007/978-1-4020-6488-3_8",
-   "cited_by": 541,
    "evidence": "title_only"
   },
   {
@@ -8654,17 +8856,6 @@
    "year": 2008,
    "authors": "R. Santos, R. Azevedo, G. Araújo",
    "url": "https://www.semanticscholar.org/paper/61fe3a0eed0d933d7667235be562a077355a681e",
-   "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "3D-SoftChip: A Novel 3D Vertically Integrated Adaptive Computing System",
-   "function": "unclassified",
-   "split": null,
-   "year": 2007,
-   "venue": "IEEE/IFIP International Conference on Very Large Scale Integration of System-on-Chip",
-   "authors": "Chul Kim, Alex Rassau, Stefan Lachowicz et al.",
-   "url": "https://doi.org/10.1007/978-0-387-73661-7_6",
    "cited_by": 0,
    "evidence": "title_only"
   },
@@ -8779,17 +8970,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "L2-Cache Hierarchical Organizations for Multi-core Architectures",
-   "function": "unclassified",
-   "split": null,
-   "year": 2006,
-   "venue": "Lecture notes in computer science",
-   "authors": "Mário Donato Marino",
-   "url": "https://doi.org/10.1007/11942634_9",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
    "title": "Multipass communication systems for tiled processor architectures",
    "function": "unclassified",
    "split": null,
@@ -8880,16 +9060,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Exploiting Intelligent Memory for Database Workloads",
-   "function": "unclassified",
-   "split": null,
-   "year": 2004,
-   "authors": "Pedro Trancoso, Josep Torrellas",
-   "url": "https://doi.org/10.1007/978-1-4419-8987-1_18",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "Ph.d. Progress Report ---report #2",
    "function": "unclassified",
    "split": null,
@@ -8938,17 +9108,6 @@
    "authors": "Cesar Albenes Zeferino",
    "url": "https://openalex.org/W2340323764",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "High Performance Memory Systems",
-   "function": "unclassified",
-   "split": null,
-   "year": 2003,
-   "venue": "Springer: New York",
-   "authors": "H. Hadimioglu, D. Kaeli, Ashwini K. Nanda",
-   "url": "https://doi.org/10.1007/978-1-4419-8987-1",
-   "cited_by": 11,
    "evidence": "title_only"
   },
   {
@@ -9076,17 +9235,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Embedded Software",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "Lecture Notes in Computer Science",
-   "authors": "Edward A. Lee",
-   "url": "https://doi.org/10.1007/3-540-45449-7",
-   "cited_by": 2,
-   "evidence": "title_only"
-  },
-  {
    "title": "Kernel scheduling techniques for efficient solution space exploration in reconfigurable computing",
    "function": "unclassified",
    "split": null,
@@ -9108,17 +9256,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Putting Data Value Predictors to Work in Fine-Grain Parallel Processors",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "International Conference on High Performance Computing",
-   "authors": "Aneesh Aggarwal, M. Franklin",
-   "url": "https://doi.org/10.1007/3-540-45307-5_18",
-   "cited_by": null,
-   "evidence": "title_only"
-  },
-  {
    "title": "Resource Allocation and Scheduling in Active Memories 3 Month Report",
    "function": "unclassified",
    "split": null,
@@ -9126,17 +9263,6 @@
    "authors": "J. Mangnall, S. Quigley",
    "url": "https://www.semanticscholar.org/paper/c23b0c389d03e231c51596274fe0dbe7bb2ebe5f",
    "cited_by": 0,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Spatial Computing on Self-Timed Cellular Automata",
-   "function": "unclassified",
-   "split": null,
-   "year": 2001,
-   "venue": "Unconventional Models of Computation",
-   "authors": "Ferdinand Peper",
-   "url": "https://doi.org/10.1007/978-1-4471-0313-4_16",
-   "cited_by": 3,
    "evidence": "title_only"
   },
   {
@@ -9181,17 +9307,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "Compiling Applications for ConCISe: An Example of Automatic HW/SW Partitioning and Synthesis",
-   "function": "unclassified",
-   "split": null,
-   "year": 2000,
-   "venue": "International Conference on Field-Programmable Logic and Applications",
-   "authors": "B. Kastrup, J. Trum, O. Moreira et al.",
-   "url": "https://doi.org/10.1007/3-540-44614-1_74",
-   "cited_by": 6,
-   "evidence": "title_only"
-  },
-  {
    "title": "Performance Limits Due to Inter-Cluster Data Forwarding in Wire-Limited ILP Microprocessors",
    "function": "unclassified",
    "split": null,
@@ -9233,17 +9348,6 @@
    "evidence": "title_only"
   },
   {
-   "title": "A Reconfigurable Architecture for High Speed Computation by Pipeline Processing",
-   "function": "unclassified",
-   "split": null,
-   "year": 1999,
-   "venue": "Lecture notes in computer science",
-   "authors": "Tsutomu Maruyama, Tsutomu Hoshino",
-   "url": "https://doi.org/10.1007/978-3-540-48302-1_62",
-   "cited_by": 1,
-   "evidence": "title_only"
-  },
-  {
    "title": "Advances in the data ̄ ow computational model",
    "function": "unclassified",
    "split": null,
@@ -9262,17 +9366,6 @@
    "authors": "Walid Najjar, Edward A. Lee, Guang R. Gao",
    "url": "https://doi.org/10.1016/s0167-8191(99)00070-8",
    "cited_by": 87,
-   "evidence": "title_only"
-  },
-  {
-   "title": "Mapping Applications onto Reconfigurable KressArrays",
-   "function": "unclassified",
-   "split": null,
-   "year": 1999,
-   "venue": "Lecture notes in computer science",
-   "authors": "Reiner W. Hartenstein, Michael Herz, Thomas Hoffmann et al.",
-   "url": "https://doi.org/10.1007/978-3-540-48302-1_42",
-   "cited_by": 33,
    "evidence": "title_only"
   },
   {
@@ -9324,17 +9417,6 @@
    "authors": "J. A. Jacob",
    "url": "https://openalex.org/W138423282",
    "cited_by": 11,
-   "evidence": "title_only"
-  },
-  {
-   "title": "REACT: Reactive environment for runtime reconfiguration",
-   "function": "unclassified",
-   "split": null,
-   "year": 1998,
-   "venue": "Lecture notes in computer science",
-   "authors": "Dinesh Bhatia, Parivallal Kannan, Kuldeep S. Simha et al.",
-   "url": "https://doi.org/10.1007/bfb0055248",
-   "cited_by": 5,
    "evidence": "title_only"
   },
   {

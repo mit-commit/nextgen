@@ -6,25 +6,27 @@
  "flags": [
   "own-group"
  ],
- "secondary": [],
- "confidence": "medium",
- "evidence": "abstract",
- "anchored": "none",
- "note": "Authors overlap with cited Halide paper (Durand, Paris, Ragan-Kelley) and the work compiles recursive filters likely using Halide infrastructure, but no explicit citation context anchors to the cited paper.",
+ "secondary": [
+  "positions"
+ ],
+ "confidence": "high",
+ "evidence": "fulltext",
+ "anchored": "named",
+ "note": "The citing work explicitly builds its DSL on top of Halide [Ragan-Kelley et al. 2012/2013], using it as the underlying infrastructure for organizing computation and mapping pipelines to GPU kernels, while also noting Halide's limitation to stencil operations (positioning).",
  "title": "Compiling high performance recursive filters",
  "year": 2015,
  "s2_isInfluential": false,
  "s2_intents": [],
  "model": "claude-sonnet-4-6",
  "usage": {
-  "input_tokens": 2649,
+  "input_tokens": 3839,
   "cache_creation_input_tokens": 0,
   "cache_read_input_tokens": 0,
   "cache_creation": {
    "ephemeral_5m_input_tokens": 0,
    "ephemeral_1h_input_tokens": 0
   },
-  "output_tokens": 118,
+  "output_tokens": 107,
   "service_tier": "batch",
   "inference_geo": "global"
  }

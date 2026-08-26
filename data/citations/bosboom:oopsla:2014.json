@@ -7,29 +7,10 @@
   "records_raw": 14,
   "works": 13,
   "commit": 0,
-  "judged": 6,
+  "judged": 9,
   "gscholar": null
  },
  "citations": [
-  {
-   "title": "LaminarIR: compile-time queues for structured streams",
-   "function": "baseline",
-   "split": "detailed",
-   "year": 2015,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Yousun Ko, Bernd Burgstaller, Bernhard Scholz",
-   "url": "https://doi.org/10.1145/2813885.2737994",
-   "cited_by": 6,
-   "centrality": "engaged",
-   "confidence": "medium",
-   "secondary": [
-    "positions"
-   ],
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
   {
    "title": "RaftLib: A C++ template library for high performance stream parallel processing",
    "function": "exemplifies",
@@ -57,6 +38,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "A Backend Extension Mechanism for PQL/Java with Free Run-Time Optimisation",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2015,
+   "venue": "Lecture notes in computer science",
+   "authors": "Hilmar Ackermann, Christoph Reichenbach, Christian Müller et al.",
+   "url": "https://doi.org/10.1007/978-3-662-46663-6_6",
+   "cited_by": 2,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Autotuning GPU Compiler Parameters Using OpenTuner",
    "function": "exemplifies",
    "split": "passing",
@@ -67,6 +61,19 @@
    "centrality": "peripheral",
    "confidence": "low",
    "evidence": "abstract"
+  },
+  {
+   "title": "LaminarIR: compile-time queues for structured streams",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2015,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Yousun Ko, Bernd Burgstaller, Bernhard Scholz",
+   "url": "https://doi.org/10.1145/2737924.2737994",
+   "cited_by": 6,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
   },
   {
    "title": "RaftLib",
@@ -94,6 +101,31 @@
    "evidence": "abstract"
   },
   {
+   "title": "Dataflow Programming for Stream Processing",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2017,
+   "authors": "Marcos Paulo Rocha, Felipe M. G. França, Alexandre S. Nery et al.",
+   "url": "https://doi.org/10.1109/sbac-padw.2017.26",
+   "cited_by": 1,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
+   "title": "SPL",
+   "function": "passing-citation",
+   "split": "passing",
+   "year": 2017,
+   "venue": "ACM Transactions on Programming Languages and Systems",
+   "authors": "Martin Hirzel, Scott Schneider, Buğra Gedik",
+   "url": "https://doi.org/10.1145/3039207",
+   "cited_by": 24,
+   "centrality": "peripheral",
+   "confidence": "low",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Autotuning CUDA compiler parameters for heterogeneous applications using the OpenTuner framework",
    "function": "unknown",
    "split": null,
@@ -108,19 +140,6 @@
    "evidence": "abstract"
   },
   {
-   "title": "Dataflow Programming for Stream Processing",
-   "function": "unknown",
-   "split": null,
-   "year": 2017,
-   "authors": "Marcos Paulo Rocha, Felipe M. G. França, Alexandre S. Nery et al.",
-   "url": "https://doi.org/10.1109/sbac-padw.2017.26",
-   "cited_by": 1,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
    "title": "Generalize or Die: Operating Systems Support for Memristor-Based Accelerators",
    "function": "unknown",
    "split": null,
@@ -128,20 +147,6 @@
    "authors": "Pedro Bruel, Sai Rahul Chalamalasetti, Chris Dalton et al.",
    "url": "https://doi.org/10.1109/icrc.2017.8123649",
    "cited_by": 10,
-   "flags": [
-    "polluted-contexts"
-   ],
-   "evidence": "abstract"
-  },
-  {
-   "title": "SPL",
-   "function": "unknown",
-   "split": null,
-   "year": 2017,
-   "venue": "ACM Transactions on Programming Languages and Systems",
-   "authors": "Martin Hirzel, Scott Schneider, Buğra Gedik",
-   "url": "https://doi.org/10.1145/3039207",
-   "cited_by": 24,
    "flags": [
     "polluted-contexts"
    ],
@@ -171,17 +176,6 @@
    "url": "https://openalex.org/W2743053061",
    "cited_by": 0,
    "evidence": "abstract"
-  },
-  {
-   "title": "A Backend Extension Mechanism for PQL/Java with Free Run-Time Optimisation",
-   "function": "unclassified",
-   "split": null,
-   "year": 2015,
-   "venue": "Lecture notes in computer science",
-   "authors": "Hilmar Ackermann, Christoph Reichenbach, Christian Müller et al.",
-   "url": "https://doi.org/10.1007/978-3-662-46663-6_6",
-   "cited_by": 2,
-   "evidence": "title_only"
   }
  ],
  "reception": "External take-up of the commensal approach is limited. LaminarIR, with its compile-time queues for structured streams, measures its performance against StreamJIT, and that is the one sustained engagement in the record. The other citations are list placements: RaftLib and Streams a la carte name StreamJIT among stream programming systems, and an application of OpenTuner to GPU compiler parameters lists it among systems that delegate tuning decisions to OpenTuner. The record is small enough that reception reads as recognition among stream-language designers rather than adoption of commensal compilation elsewhere. The implementation lives in jbosboom/streamjit on GitHub."

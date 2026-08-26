@@ -7,7 +7,7 @@
   "records_raw": 19,
   "works": 18,
   "commit": 2,
-  "judged": 12,
+  "judged": 13,
   "gscholar": null
  },
  "citations": [
@@ -46,17 +46,23 @@
    "evidence": "abstract"
   },
   {
-   "title": "A machine learning approach to mapping streaming workloads to dynamic multicore processors",
+   "title": "An empirical characterization of stream programs and its implications for language and compiler design",
    "function": "uses-benchmark",
    "split": "detailed",
-   "year": 2016,
-   "venue": "ACM SIGPLAN Notices",
-   "authors": "Paul-Jules Micolet, A. Gordon Smith, Christophe Dubach",
-   "url": "https://doi.org/10.1145/2980930.2907951",
-   "cited_by": 18,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "evidence": "abstract"
+   "year": 2010,
+   "authors": "William Thies, Saman Amarasinghe",
+   "url": "https://doi.org/10.1145/1854273.1854319",
+   "cited_by": 170,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "detailed-citation"
+   ],
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext",
+   "commit": true
   },
   {
    "title": "Dynamic Reconfigurable Shaders with Load Balancing for Embedded Graphics Processing",
@@ -72,6 +78,21 @@
     "adopts-idea"
    ],
    "evidence": "abstract"
+  },
+  {
+   "title": "Flexible filters",
+   "function": "positions",
+   "split": "detailed",
+   "year": 2009,
+   "authors": "Rebecca L. Collins, Luca P. Carloni",
+   "url": "https://doi.org/10.1145/1629335.1629363",
+   "cited_by": 37,
+   "centrality": "engaged",
+   "confidence": "medium",
+   "flags": [
+    "own-group"
+   ],
+   "evidence": "fulltext"
   },
   {
    "title": "Flexible filters in stream programs",
@@ -103,6 +124,19 @@
    "evidence": "abstract"
   },
   {
+   "title": "Demand-Based Scheduling Priorities for Performance Optimisation of Stream Programs on Parallel Platforms",
+   "function": "exemplifies",
+   "split": "passing",
+   "year": 2013,
+   "venue": "Lecture notes in computer science",
+   "authors": "Vu Thien Nga Nguyen, Raimund Kirner",
+   "url": "https://doi.org/10.1007/978-3-319-03859-9_31",
+   "cited_by": 9,
+   "centrality": "peripheral",
+   "confidence": "medium",
+   "evidence": "fulltext"
+  },
+  {
    "title": "Dynamic Fine-Grain Scheduling of Pipeline Parallelism",
    "function": "exemplifies",
    "split": "passing",
@@ -116,22 +150,6 @@
     "polluted-contexts"
    ],
    "evidence": "fulltext"
-  },
-  {
-   "title": "An empirical characterization of stream programs and its implications for language and compiler design",
-   "function": "exemplifies",
-   "split": "passing",
-   "year": 2010,
-   "authors": "William Thies, Saman Amarasinghe",
-   "url": "https://doi.org/10.1145/1854273.1854319",
-   "cited_by": 170,
-   "centrality": "peripheral",
-   "confidence": "low",
-   "flags": [
-    "own-group"
-   ],
-   "evidence": "abstract",
-   "commit": true
   },
   {
    "title": "GRAMPS",
@@ -207,17 +225,18 @@
    "evidence": "abstract"
   },
   {
-   "title": "Flexible filters",
+   "title": "A machine learning approach to mapping streaming workloads to dynamic multicore processors",
    "function": "unknown",
    "split": null,
-   "year": 2009,
-   "authors": "Rebecca L. Collins, Luca P. Carloni",
-   "url": "https://doi.org/10.1145/1629335.1629363",
-   "cited_by": 37,
+   "year": 2016,
+   "venue": "ACM SIGPLAN Notices",
+   "authors": "Paul-Jules Micolet, A. Gordon Smith, Christophe Dubach",
+   "url": "https://doi.org/10.1145/2980930.2907951",
+   "cited_by": 18,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   },
   {
    "title": "FlexibleFilters: LoadBalancingthroughBackpressurefor StreamPrograms",
@@ -257,17 +276,6 @@
     "polluted-contexts"
    ],
    "evidence": "abstract"
-  },
-  {
-   "title": "Demand-Based Scheduling Priorities for Performance Optimisation of Stream Programs on Parallel Platforms",
-   "function": "unclassified",
-   "split": null,
-   "year": 2013,
-   "venue": "Lecture notes in computer science",
-   "authors": "Vu Thien Nga Nguyen, Raimund Kirner",
-   "url": "https://doi.org/10.1007/978-3-319-03859-9_31",
-   "cited_by": 9,
-   "evidence": "title_only"
   }
  ],
  "reception": "A small citation record splits between two communities. In graphics architecture, a power-aware reconfigurable rendering engine adopted the idea of reallocating pipeline resources, work on dynamic reconfigurable shaders for embedded graphics positions itself against the compile-time approach, and GRAMPS and later work on fine-grain scheduling of pipeline parallelism cite the paper as an example of mapping the graphics pipeline onto programmable parallel hardware. In the streaming community, its rendering workloads reappear as benchmarks for mapping stream programs to multicore processors. Most mentions are brief, and the paper reads in the literature as a data point on reconfigurable rendering rather than a foundation later systems built on."

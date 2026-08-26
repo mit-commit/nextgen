@@ -44,19 +44,6 @@
    "evidence": "contexts"
   },
   {
-   "title": "SHADOW: Simultaneous Multi-Threading Architecture with Asymmetric Threads",
-   "function": "supports-claim",
-   "split": "detailed",
-   "year": 2025,
-   "venue": "Micro",
-   "authors": "Ishita Chaturvedi, Bhargav Reddy Godala, Abiram Gangavaram et al.",
-   "url": "https://doi.org/10.1145/3725843.3756070",
-   "cited_by": null,
-   "centrality": "peripheral",
-   "confidence": "medium",
-   "evidence": "contexts"
-  },
-  {
    "title": "A Python-based optimization framework for high-performance genomics",
    "function": "supports-claim",
    "split": "detailed",
@@ -150,6 +137,22 @@
    "commit": true
   },
   {
+   "title": "CoroAMU: Unleashing Memory-Driven Coroutines through Latency-Aware Decoupled Operations",
+   "function": "detailed-citation",
+   "split": "detailed",
+   "year": 2025,
+   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
+   "authors": "Zhuolun Jiang, Songyue Wang, Xiaokun Pei et al.",
+   "url": "https://doi.org/10.1109/pact65351.2025.00046",
+   "cited_by": 0,
+   "centrality": "engaged",
+   "confidence": "high",
+   "secondary": [
+    "positions"
+   ],
+   "evidence": "fulltext"
+  },
+  {
    "title": "Speeding up Machine Learning Inference on Edge Devices by Improving Memory Access Patterns using Coroutines",
    "function": "detailed-citation",
    "split": "detailed",
@@ -229,18 +232,18 @@
    "evidence": "contexts"
   },
   {
-   "title": "CoroAMU: Unleashing Memory-Driven Coroutines through Latency-Aware Decoupled Operations",
+   "title": "SHADOW: Simultaneous Multi-Threading Architecture with Asymmetric Threads",
    "function": "unknown",
    "split": null,
    "year": 2025,
-   "venue": "International Conference on Parallel Architectures and Compilation Techniques",
-   "authors": "Zhuolun Jiang, Songyue Wang, Xiaokun Pei et al.",
-   "url": "https://doi.org/10.1109/pact65351.2025.00046",
-   "cited_by": 0,
+   "venue": "Micro",
+   "authors": "Ishita Chaturvedi, Bhargav Reddy Godala, Abiram Gangavaram et al.",
+   "url": "https://doi.org/10.1145/3725843.3756070",
+   "cited_by": null,
    "flags": [
     "polluted-contexts"
    ],
-   "evidence": "abstract"
+   "evidence": "fulltext"
   }
  ],
  "reception": "Outside the group's own follow-on work the citation record is small and concentrated where the paper aimed: the literature on hiding memory latency in in-memory databases. Studies of interleaving with coroutines in index joins and of cooperative multitasking in main-memory database systems cite Cimple's measurements as evidence for software latency-hiding, as do SHADOW's asymmetric-thread architecture and work on harvesting sub-microsecond CXL memory stalls. Systems that chose other routes define themselves against it — Cuckoo Trie for DRAM indexing, Phloem for fine-grain pipeline parallelism in hardware. The volume is limited, but the engagement comes from the community working the same problem."

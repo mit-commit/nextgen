@@ -8,7 +8,7 @@
        To add a publication, append an entry to that file.
        To feature a paper, set "featured": true on its entry (award papers
        with a "price" are featured automatically). -->
-  <link rel="stylesheet" href="assets/css/style.css?v=18"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=19"/>
   <!-- Umami analytics (privacy-friendly, cookieless) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="0501f709-b527-45af-8727-062721122bb4"></script>
 </head>
@@ -116,11 +116,11 @@
 
               <div class="filter-grid">
                 <div class="filter-block">
-                  <div class="filter-label" title="Filter by publication year">Years</div>
+                  <div class="filter-label" title="Filter by publication year">Years<span class="facet-count" data-for="facet-years"></span></div>
                   <div id="facet-years" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label" title="Filter by research topic, or by project / system">Topics &amp; Projects</div>
+                  <div class="filter-label" title="Filter by research topic, or by project / system">Topics &amp; Projects<span class="facet-count" data-for="facet-keywords"></span></div>
                   <div class="type-toggle" id="kw-toggle" role="group" aria-label="Filter by topic or project">
                     <button type="button" class="type-toggle-btn active" data-kwmode="topics" aria-pressed="true">Topics</button>
                     <button type="button" class="type-toggle-btn" data-kwmode="projects" aria-pressed="false">Projects</button>
@@ -128,7 +128,7 @@
                   <div id="facet-keywords" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label" title="Filter by publication type or venue">Categories</div>
+                  <div class="filter-label" title="Filter by publication type or venue">Categories<span class="facet-count" data-for="facet-types"></span></div>
                   <div class="type-toggle" id="type-toggle" role="group" aria-label="Categorize publications by">
                     <button type="button" class="type-toggle-btn active" data-mode="type" aria-pressed="true">Type</button>
                     <button type="button" class="type-toggle-btn" data-mode="venue-name" aria-pressed="false">Venue (by Name)</button>
@@ -137,7 +137,7 @@
                   <div id="facet-types" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label" title="Filter by author">Authors</div>
+                  <div class="filter-label" title="Filter by author">Authors<span class="facet-count" data-for="facet-authors"></span></div>
                   <div class="facet-sort-control">
                     <select id="author-sort" aria-label="Sort authors by">
                       <option value="first">First</option>
@@ -157,7 +157,7 @@
                    list itself (citation-count and impact sliders). -->
               <div class="filter-grid cite-tools">
                 <div class="filter-block">
-                  <div class="filter-label" title="How citing papers and outside repositories use each work — one shared taxonomy. Counts: (papers, by citations)">Impact categories</div>
+                  <div class="filter-label" title="How citing papers and outside repositories use each work — one shared taxonomy. Counts: (papers, by citations)">Impact categories<span class="facet-count" data-for="facet-cite-cats"></span></div>
                   <div id="facet-cite-cats" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
@@ -182,12 +182,35 @@
                   </div>
                 </div>
                 <div class="filter-block">
-                  <div class="filter-label" title="Hide papers below a citation count or impact tier">Paper thresholds</div>
+                  <div class="filter-label" title="External people who cite a paper at real depth (core/engaged, not a passing mention) or use one of our own repositories — never our own group's authors or repos">Cited and Used by<span class="facet-count" data-for="facet-cite-authors"></span></div>
+                  <div class="facet-sort-control">
+                    <select id="cite-author-sort" aria-label="Sort by">
+                      <option value="count" selected># papers</option>
+                      <option value="name">name</option>
+                    </select>
+                    <input id="cite-author-search" type="text" class="facet-search-input"
+                           placeholder="Filter names…" aria-label="Filter names">
+                  </div>
+                  <div id="facet-cite-authors" class="facet-list"></div>
+                </div>
+              </div>
+
+              <!-- Full-width now that Paper thresholds is its own row -->
+              <div class="filter-block paper-thresholds-row">
+                <div class="filter-label" title="Hide papers below a citation count or impact tier">Paper thresholds</div>
+                <div class="paper-thresholds-sliders">
                   <div class="cite-tools-row">Citations ≥ <b id="cite-min-cites-label">0</b>
                     <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0" title="Hide papers with fewer citations than this">
                   </div>
                   <div class="cite-tools-row">Impact: <b id="cite-min-impact-label">all papers</b>
-                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" title="One score over citing papers AND outside repositories: building on the work counts more than mentioning it. Tiers are percentiles; above zero hides papers without data.">
+                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" list="impact-tick-marks" title="One score over citing papers AND outside repositories: building on the work counts more than mentioning it. Tiers are percentiles; above zero hides papers without data.">
+                    <datalist id="impact-tick-marks">
+                      <option value="0" label="0"></option>
+                      <option value="1" label="1"></option>
+                      <option value="2" label="2"></option>
+                      <option value="3" label="3"></option>
+                      <option value="4" label="4"></option>
+                    </datalist>
                   </div>
                 </div>
               </div>
@@ -214,6 +237,6 @@
   <script src="assets/js/pubs.js"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
   <script src="assets/js/citations.js?v=17"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=23"></script> <!-- the filters controller -->
+  <script src="assets/js/publications.js?v=24"></script> <!-- the filters controller -->
 </body>
 </html>

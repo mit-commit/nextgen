@@ -1179,6 +1179,54 @@ raise it to the setup lane.
   search+verify wave runs. Also fixed a stale-cache bug this exposed:
   per-paper data fetches (citations and repos) now use cache:'no-store'
   like the indexes; in-memory caches still prevent refetch-per-expand.
+- **"Cited and Used by" facet** (2026-08-26, direct human request, not a
+  queue task): a fifth facet — external people who cite one of our
+  papers at real depth (citation centrality core/engaged, not a passing
+  mention) or use one of our own repos (data/repos/ group in
+  uses/builds-on/benchmarks/adopts) — replacing "Paper thresholds" in
+  the cite-tools grid's 3rd column; Paper thresholds moved to its own
+  full-width row below (human's choice among the layout options asked).
+  `harvest/impactview/build_impact_authors.py` builds `data/
+  impact-authors.json` (6,331 people): citing-work author names come
+  from `harvest/citations/<key>.json`'s full `authors[]` array (matched
+  back from `data/citations/<key>.json`'s judged population by the same
+  DOI/title identity `build_citers.py` uses; falls back to parsing the
+  truncated "A, B, C et al." display string only when no match); "used
+  by" repo owners resolve to their GitHub profile `name` via `GET /users/
+  {login}` (cached in `harvest/impactview/owner-profiles.json`, same
+  pattern as `ghmeta.json`), falling back to the login/org name. Own-work
+  exclusion (the human's explicit requirement — no author of one of our
+  own papers, no owner of one of our own repos) matches on first+last
+  name against `harvest/authors/authors.json`'s full 369-person set
+  (name + variants), NOT bare surname+initial (that lane's own
+  documented false-positive risk on common names) — **caught a real bug
+  this way**: exact full-string matching missed "Saman Amarasinghe" vs.
+  a citing work's "Saman P. Amarasinghe" and "Mary W. Hall" vs. "Mary
+  Hall", so the first pass showed Saman and Mary Hall themselves as
+  "external" citers of their own group's papers; first+last-only
+  matching (ignoring middle names/initials) fixed both without
+  introducing the surname-only risk. Known gap, not fixed: matches
+  against papers-we've-authored, not the live people.xml roster, so a
+  current lab member who hasn't yet authored an indexed paper (e.g. a
+  new student using the group's own tools) can still surface as
+  "external" — flagged, not solved, since fixing it risks the same
+  common-name false-positive problem for a rarer case. Front end
+  (`assets/js/publications.js`): mirrors the Authors facet exactly (sort
+  by #papers/name, name search, OR-within-facet, dynamic per-item and
+  header counts) via a new `listImpactAuthorsOf()` fed by an async
+  post-boot fetch, same lazy-load convention as `citers.json`. Also,
+  same session: every facet box (Years/Topics & Projects/Categories/
+  Authors/Impact categories/Cited and Used by) now shows an
+  "(N options)" count next to its label — generic hook in `buildFacetBox`
+  keyed by a `.facet-count[data-for=<box id>]` span, so it tracks a
+  name-search-narrowed count automatically; the Impact slider (discrete,
+  step 1) gained visible tick marks via `<input list=...>` + `<datalist>`;
+  the two Paper-thresholds sliders get a real gap now that they're not
+  crammed into a third grid column. Browser-verified end to end
+  (Playwright against a local static server): facet filtering, sort,
+  search, header counts (including live narrowing while searching),
+  Clear filters reset, tick marks rendering, mobile single-column
+  fallback, zero console errors.
 
 ## Cross-lane requests
 

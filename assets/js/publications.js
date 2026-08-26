@@ -420,6 +420,34 @@ function createBibLink(it){
   };
   citeIndexReady.then(function(){ _impactVals = null; }); // recompute once real data lands
 
+  // "Cited and Used by" facet (data/impact-authors.json, ~1MB): external
+  // people who cite a paper at real depth or use one of our own repos,
+  // built by harvest/impactview/build_impact_authors.py -- our own paper
+  // authors and our own repo owners are already excluded there. Fetched
+  // AFTER boot like citers.json; the facet (empty until then) fills in
+  // and the list re-renders once it lands.
+  var IMPACT_AUTHORS_BY_PAPER = {}, ALL_CITE_AUTHORS = [], CITE_AUTHOR_PAPER_COUNTS = {};
+  function listImpactAuthorsOf(it){ return IMPACT_AUTHORS_BY_PAPER[bibtexKeyOf(it)] || []; }
+  citeIndexReady.then(function(){
+    return fetch('data/impact-authors.json', { cache: 'no-store' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){
+        var people = (d && d.people) || [], byPaper = {}, i, j;
+        for (i = 0; i < people.length; i++){
+          CITE_AUTHOR_PAPER_COUNTS[people[i].name] = people[i].count;
+          for (j = 0; j < people[i].papers.length; j++){
+            var k = people[i].papers[j];
+            (byPaper[k] = byPaper[k] || []).push(people[i].name);
+          }
+        }
+        IMPACT_AUTHORS_BY_PAPER = byPaper;
+        ALL_CITE_AUTHORS = people.map(function(p){ return p.name; });
+        rebuildCiteAuthorFacet();
+        applyFilters();
+      })
+      .catch(function(){});
+  });
+
   // Distinct citing works across papers (data/citations/citers.json,
   // ~120KB): fetched AFTER boot so first paint pays nothing; the
   // overview line re-renders when it arrives.
@@ -449,6 +477,7 @@ function createBibLink(it){
     keywords: {},               // map of selected keyword -> true
     authors: {},                // map of selected author -> true
     types: {},                  // map of selected itemType -> true
+    citeAuthors: {},            // map of selected "Cited and Used by" name -> true
     scroll: {                   // range-controlled scroll positions (0..1)
       keywords: 0,
       authors: 0,
@@ -460,6 +489,8 @@ function createBibLink(it){
       authorSort: 'count',
       kwMode: 'topics',           // 'topics' | 'projects' — Topics & Projects facet mode
       authorQuery: '',            // free-text filter for the authors list
+      citeAuthorSort: 'count',
+      citeAuthorQuery: '',        // free-text filter for the "Cited and Used by" list
       typeMode: 'type',           // 'type' | 'venue' — how the third facet categorizes
       venueSort: 'name',          // 'name' | 'count' — venue ordering in venue mode
       summaryExpanded: false,     // global default for per-paper summaries
@@ -498,6 +529,9 @@ function createBibLink(it){
       citeCentrality: document.getElementById('cite-global-centrality'),
       citeSearch: document.getElementById('cite-search'),
       citeCats: document.getElementById('facet-cite-cats'),
+      citeAuBox: document.getElementById('facet-cite-authors'),
+      citeAuthorSort: document.getElementById('cite-author-sort'),
+      citeAuthorSearch: document.getElementById('cite-author-search'),
       minCites: document.getElementById('cite-min-cites'),
       minCitesLabel: document.getElementById('cite-min-cites-label'),
       minImpact: document.getElementById('cite-min-impact'),
@@ -617,6 +651,13 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
   // Stash references for dynamic count updates
   mount._facet = { listEl: listEl, itemMap: itemMap, scrollWrap: scrollWrap, key: facetKey, labelFor: labelFor || null };
+
+  // "N options in this box" next to the filter label — reflects the
+  // current list as built (so a name search narrows it too)
+  if (mount.id) {
+    var countEl = document.querySelector('.facet-count[data-for="' + mount.id + '"]');
+    if (countEl) countEl.textContent = list.length ? ' (' + list.length.toLocaleString('en-US') + ')' : '';
+  }
 }
 
 
@@ -683,6 +724,36 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     buildFacetBox(sorted, els.auBox, 'authors', state.authors);
     if (els.auBox._facet && els.auBox._facet.scrollWrap) {
       els.auBox._facet.scrollWrap.scrollTop = prevScroll;
+    }
+  }
+
+  // "Cited and Used by" facet: same shape as Authors, but the value list
+  // (ALL_CITE_AUTHORS) and per-paper membership (listImpactAuthorsOf) come
+  // from data/impact-authors.json instead of our own papers' author0.
+  function rebuildCiteAuthorFacet() {
+    if (!els.citeAuBox) return;
+    var prevScroll = 0;
+    if (els.citeAuBox._facet && els.citeAuBox._facet.scrollWrap) {
+      prevScroll = els.citeAuBox._facet.scrollWrap.scrollTop;
+    }
+    var sorted = ALL_CITE_AUTHORS.slice();
+    if (state.citeAuthorSort === 'name') {
+      sorted.sort(function(a, b){ return a.toLowerCase().localeCompare(b.toLowerCase()); });
+    } else {
+      sorted.sort(function(a, b){
+        var d = (CITE_AUTHOR_PAPER_COUNTS[b] || 0) - (CITE_AUTHOR_PAPER_COUNTS[a] || 0);
+        return d !== 0 ? d : a.toLowerCase().localeCompare(b.toLowerCase());
+      });
+    }
+    var q = (state.citeAuthorQuery || '').trim().toLowerCase();
+    if (q) {
+      sorted = sorted.filter(function(name){
+        return String(name || '').toLowerCase().indexOf(q) !== -1;
+      });
+    }
+    buildFacetBox(sorted, els.citeAuBox, 'citeAuthors', state.citeAuthors);
+    if (els.citeAuBox._facet && els.citeAuBox._facet.scrollWrap) {
+      els.citeAuBox._facet.scrollWrap.scrollTop = prevScroll;
     }
   }
 
@@ -1091,6 +1162,18 @@ if (auKeys.length){
       }
     }
 
+    // Cited and Used by (OR within facet)
+    if (excludeFacet !== 'citeAuthors') {
+      var caKeys = keysSelected(state.citeAuthors);
+      if (caKeys.length){
+        items = items.filter(function (it) {
+          var cas = listImpactAuthorsOf(it);
+          for (var i = 0; i < cas.length; i++) if (caKeys.indexOf(cas[i]) >= 0) return true;
+          return false;
+        });
+      }
+    }
+
     // Citation thresholds (page-level sliders); papers without data are
     // hidden once a threshold is above zero.
     if (state.minCites > 0){
@@ -1146,6 +1229,14 @@ for (i = 0; i < itemsT.length; i++){
   tCounts[ck] = (tCounts[ck] || 0) + 1;
 }
 updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
+
+    // Cited and Used by
+    var itemsCA = filteredItems('citeAuthors'), caCounts = {};
+    for (i = 0; i < itemsCA.length; i++){
+      var cas = listImpactAuthorsOf(itemsCA[i]);
+      for (j = 0; j < cas.length; j++) caCounts[cas[j]] = (caCounts[cas[j]] || 0) + 1;
+    }
+    updateFacetCounts(els.citeAuBox, 'citeAuthors', caCounts, state.citeAuthors);
 
   }
 
@@ -1305,11 +1396,15 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     state.keywords = {};
     state.authors = {};
     state.types = {};
+    state.citeAuthors = {};
     state.scroll = { keywords:0, authors:0, types:0 };
     if (els.title) els.title.value = '';
     state.authorQuery = '';
     if (els.authorSearch) els.authorSearch.value = '';
+    state.citeAuthorQuery = '';
+    if (els.citeAuthorSearch) els.citeAuthorSearch.value = '';
     rebuildAuthorFacet();
+    rebuildCiteAuthorFacet();
     applyFilters();
   }
 
@@ -1436,6 +1531,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
             listEl.appendChild(label);
           })(CITATIONS.FUNCTIONS[i]);
         }
+        var ccCountEl = document.querySelector('.facet-count[data-for="facet-cite-cats"]');
+        if (ccCountEl) ccCountEl.textContent = ' (' + CITATIONS.FUNCTIONS.length + ')';
       })();
     }
 
@@ -1503,6 +1600,25 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
         rebuildAuthorFacet();
         applyFilters();
         trackSearch('author', state.authorQuery);
+      };
+    }
+
+    if (els.citeAuthorSort) {
+      els.citeAuthorSort.value = state.citeAuthorSort;
+      els.citeAuthorSort.onchange = function(){
+        state.citeAuthorSort = this.value || 'count';
+        rebuildCiteAuthorFacet();
+        applyFilters();
+      };
+    }
+
+    if (els.citeAuthorSearch) {
+      els.citeAuthorSearch.value = state.citeAuthorQuery;
+      els.citeAuthorSearch.oninput = function(){
+        state.citeAuthorQuery = this.value || '';
+        rebuildCiteAuthorFacet();
+        applyFilters();
+        trackSearch('cite-author', state.citeAuthorQuery);
       };
     }
 

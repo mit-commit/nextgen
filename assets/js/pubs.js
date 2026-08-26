@@ -244,16 +244,6 @@ function localizeAssetURL(url) {
         //            Halide's 2023 Test-of-Time), never fully dies
         //   + citations/100 + repos/250; theses never feature
         var nowY = new Date().getFullYear();
-        function awardYearOf(it){
-          var py = toYear(it.year) || nowY;
-          var m = String(it.price || '').match(/\b(19|20)\d{2}\b/g) || [];
-          var best = py;
-          for (var i = 0; i < m.length; i++){
-            var yy = parseInt(m[i], 10);
-            if (yy >= py && yy > best) best = yy;
-          }
-          return best;
-        }
         Promise.all([
           fetch('data/citations/index.json', { cache: 'no-store' })
             .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; }),
@@ -265,21 +255,10 @@ function localizeAssetURL(url) {
           PUBS._citeIndex = ci;   // renderItem adds panel toggles from these
           PUBS._repoIndex = ri;
           function scoreOf(it){
-            var age = nowY - (toYear(it.year) || nowY);
-            var s = 10 * Math.exp(-age / 5);
-            if (it.price) s += 20 * Math.exp(-(nowY - awardYearOf(it)) / 12);
-            var c = ci[it.bibtexKey];
-            if (c) s += Math.max(c.verified || 0, c.gscholar || 0) / 100;
-            var r = ri[it.bibtexKey];
-            if (r) s += (r.repos || 0) / 250;
-            return s;
+            return SCORING.featuredOf(it, ci[it.bibtexKey], ri[it.bibtexKey], nowY);
           }
           // theses never feature -- papers only (his rule)
-          var THESIS = { mastersthesis: 1, phdthesis: 1, sciencethesis: 1, sbthesis: 1 };
-          var pool = all.filter(function(it){
-            var t = String(it.itemType || '').toLowerCase();
-            return !THESIS[t] && t.indexOf('thesis') === -1;
-          });
+          var pool = all.filter(function(it){ return !SCORING.isThesis(it); });
           var scored = pool.sort(function(a, b){ return scoreOf(b) - scoreOf(a); });
           renderList(opts.mountFeatured, scored.slice(0, 10));
         });

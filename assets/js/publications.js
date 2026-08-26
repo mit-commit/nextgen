@@ -628,8 +628,13 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
     var txt = document.createElement('span');
     txt.className = 'facet-text';
-    var textNodeValue = document.createTextNode(labelText + ' (0)');
-    txt.appendChild(textNodeValue);
+    var labelNode = document.createTextNode(labelText + ' ');
+    txt.appendChild(labelNode);
+    var cntSpan = document.createElement('span');
+    cntSpan.className = 'cat-counts';
+    var textNodeValue = document.createTextNode('(0)');
+    cntSpan.appendChild(textNodeValue);
+    txt.appendChild(cntSpan);
     txt.title = labelText; // show full label on hover (handles truncation)
 
     cb.onchange = (function (val, map, fk) {
@@ -644,7 +649,7 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     label.appendChild(txt);
     listEl.appendChild(label);
 
-    itemMap[value] = { cb: cb, textNode: textNodeValue, labelText: labelText };
+    itemMap[value] = { cb: cb, textNode: textNodeValue, labelNode: labelNode, labelText: labelText };
   }
 
   mount.appendChild(scrollWrap);
@@ -778,7 +783,7 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
       moreBtn.onclick = function(){
         state.citeAuthorLimit = limit + 100;
         rebuildCiteAuthorFacet();
-        updateCiteToolCounts(filteredItems(null));
+        updateDynamicCounts();   // refill the (n) counts the rebuild reset
       };
       els.citeAuBox._facet.scrollWrap.appendChild(moreBtn);
     }
@@ -1278,7 +1283,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
   for (var val in itemMap) {
     var cnt = countsMap[val] || 0;
     var display = facet.labelFor ? facet.labelFor(val) : val;
-    itemMap[val].textNode.nodeValue = display + ' (' + cnt + ')';
+    itemMap[val].labelNode.nodeValue = display + ' ';
+    itemMap[val].textNode.nodeValue = '(' + cnt + ')';
 
     var disabled = (cnt === 0) && !stateMap[val];
     itemMap[val].cb.disabled = disabled;

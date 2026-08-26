@@ -1202,12 +1202,12 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     if (!withData.length){ box.className = 'cite-overview hidden'; return; }
     box.className = 'cite-overview';
     var l1 = document.createElement('div'); l1.className = 'cite-overview-line';
-    l1.title = 'Citations sum each paper\u2019s count, as Scholar does; distinct citing works and repositories are counted once each (works from verified records \u2014 totals may use the higher Scholar figure)';
-    l1.innerHTML = '<b>' + withData.length.toLocaleString('en-US') + '</b> of ' +
-      items.length.toLocaleString('en-US') + ' shown papers have <b>' +
+    l1.title = 'Citations sum each paper\u2019s count, as Scholar does; citing works and repositories are counted once each';
+    l1.innerHTML = '<b>' + items.length.toLocaleString('en-US') +
+      '</b> papers have <b>' +
       totalC.toLocaleString('en-US') + '</b> total citations' +
-      (nCiters ? ' from <b>' + nCiters.toLocaleString('en-US') + '</b> distinct citing works' : '') +
-      (nUniq ? ' and <b>' + nUniq.toLocaleString('en-US') + '</b> distinct repositories' : '') + '.';
+      (nCiters ? ' from <b>' + nCiters.toLocaleString('en-US') + '</b> citing works' : '') +
+      (nUniq ? ' and <b>' + nUniq.toLocaleString('en-US') + '</b> repositories' : '') + '.';
     box.appendChild(l1);
   }
 

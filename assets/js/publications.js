@@ -390,6 +390,18 @@ function createBibLink(it){
   //            Test-of-Time counts as recent), never fully dies
   //   + citations/100 (displayed count) + repositories/1000; theses -2
   var _impactNowY = new Date().getFullYear();
+  // Venue bonus (his ruling 2026-08-26). Matching quirks: the MICRO
+  // conference tag is uppercase (the IEEE Micro magazine is not), the
+  // HPCA Workshop is not HPCA, SIGGRAPH publishes as TOG.
+  function _venueBonus(v){
+    v = String(v || '');
+    if (/\bPLDI\b/.test(v)) return 2.0;
+    if (/\bASPLOS\b|\bOOPSLA\b|\bISCA\b/.test(v)) return 1.0;
+    if (v.indexOf('HPCA Workshop') !== -1) return 0.0;
+    if (/\bCGO\b|\bMICRO\b|\bPACT\b|\bPPoPP\b|\bPOPL\b|\bSOSP\b|USENIX Security|P?VLDB|\bHPCA\b|Communications of the ACM|\bCACM\b/.test(v)) return 0.5;
+    if (/\bTOPLAS\b|Transactions on Programming Languages|\bTACO\b|Architecture and Code Optimization|Transactions on Graphics|SIGGRAPH|\bICML\b|\bICS\b|NeurIPS|MLSys|\bSC\b|Supercomputing/.test(v)) return 0.25;
+    return 0.0;
+  }
   function _awardYearOf(it){
     var py = parseInt(it.year, 10) || _impactNowY;
     var m = String(it.price || '').match(/\b(19|20)\d{2}\b/g) || [];
@@ -417,6 +429,7 @@ function createBibLink(it){
     if (cRow && window.CITATIONS) s += (CITATIONS.displayCount(cRow) || 0) / 100;
     var rRow = REPO_INDEX && REPO_INDEX[key];
     if (rRow) s += (rRow.repos || 0) / 1000;
+    s += _venueBonus(it.venue);
     var _itype = String(it.itemType || '').toLowerCase();
     if (/thesis/.test(_itype)){
       // tiered demotion (his rule): PhD -1, SM -2, MEng -3, SB -4

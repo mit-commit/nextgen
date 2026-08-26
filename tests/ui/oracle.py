@@ -402,6 +402,24 @@ def award_year_of(it):
     return best
 
 
+def venue_bonus(v):
+    v = str(v or '')
+    if re.search(r'\bPLDI\b', v):
+        return 2.0
+    if re.search(r'\bASPLOS\b|\bOOPSLA\b|\bISCA\b', v):
+        return 1.0
+    if 'HPCA Workshop' in v:
+        return 0.0
+    if re.search(r'\bCGO\b|\bMICRO\b|\bPACT\b|\bPPoPP\b|\bPOPL\b|\bSOSP\b'
+                 r'|USENIX Security|P?VLDB|\bHPCA\b|Communications of the ACM|\bCACM\b', v):
+        return 0.5
+    if re.search(r'\bTOPLAS\b|Transactions on Programming Languages|\bTACO\b'
+                 r'|Architecture and Code Optimization|Transactions on Graphics|SIGGRAPH'
+                 r'|\bICML\b|\bICS\b|NeurIPS|MLSys|\bSC\b|Supercomputing', v):
+        return 0.25
+    return 0.0
+
+
 def composite_impact_of(it, cite_index, repo_index):
     """His formula 2026-08-26: 2e^(-age/5) + [award] 5e^(-awardAge/10)
     + displayed citations/100 + repos/1000, theses -2. Every paper scores."""
@@ -419,6 +437,7 @@ def composite_impact_of(it, cite_index, repo_index):
     r_row = repo_index.get(key)
     if r_row:
         s += (r_row.get('repos') or 0) / 1000.0
+    s += venue_bonus(it.get('venue'))
     itype = str(it.get('itemType') or '').lower()
     if 'thesis' in itype:
         tt = str(it.get('type') or '').lower()

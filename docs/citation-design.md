@@ -239,7 +239,7 @@ row.
 
 `prototype/citations.html` renders `halide:pldi:2013` and
 `netblocks-pldi24` as pub-items with the citation toggle live against their
-real `data/citations/` files (built by `prototype/build_pilot_data.py` from
+real `data/citations/` files (built by `curate/build_pilot_data.py` from
 the pilot classifications). Halide exercises the full design at scale;
 NetBlocks shows the young-paper case (4 citations, no bar noise, groups
 still read cleanly). Neither has a Scholar count yet, so both display their

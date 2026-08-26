@@ -2,7 +2,7 @@
 
 This directory feeds the publications page's citation view. The design that
 consumes it is `docs/citation-design.md`; the reference implementation that
-emits it for the 8 pilot papers is `prototype/build_pilot_data.py`. The
+emits it for the 8 pilot papers is `curate/build_pilot_data.py`. The
 corpus-wide merge script (classify-corpus task) must emit exactly this shape
 for every other paper.
 
@@ -13,7 +13,7 @@ this heading.
 
 | file | written by | read by |
 |---|---|---|
-| `<bibtexKey>.json` | merge script (pilot papers: `prototype/build_pilot_data.py`) | citation view, on expand only |
+| `<bibtexKey>.json` | merge script (pilot papers: `curate/build_pilot_data.py`) | citation view, on expand only |
 | `index.json` | merge script (every run, all papers) | publications page, once at load |
 | `gscholar.json` | **the human, by hand** — never a script | merge script (folds counts into the other two) |
 | `SCHEMA.md` | design lane | you |

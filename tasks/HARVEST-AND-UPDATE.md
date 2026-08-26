@@ -71,7 +71,7 @@ the bot-wall ceiling, not a bug. Then, if he wants the accuracy:
   tier since last time. Everything else stands.
 - Pilots are frozen except on a genuine evidence upgrade, and they never go
   through `merge_taxonomy.py` — use `rejudge_pilots_with_fulltext.py` and
-  rebuild with `prototype/build_pilot_data.py --write`.
+  rebuild with `curate/build_pilot_data.py --write`.
 - Cost gate: dry-run first; anything over $20 goes to him with the number.
 
 ## Phase 5 — repositories

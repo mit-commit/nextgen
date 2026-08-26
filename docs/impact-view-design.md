@@ -2,7 +2,7 @@
 
 **Status: DRAFT, awaiting human review — this is a taste decision.** A mock
 of the recommended option runs on the StreamIt paper
-(`prototype/impact.html`, §5) with clearly-marked placeholder repository
+(`(retired) prototype/impact.html`, §5) with clearly-marked placeholder repository
 rows until the tier-2 harvest lands. Nothing here touches the live pages.
 
 Constraint set by the human while this was drafted: per paper, twin
@@ -126,11 +126,11 @@ Idea descendants beside Adopts the idea — under a single control row.
 
 ## 5. The mock
 
-`prototype/impact.html` renders the StreamIt paper (`thies:cc:2002`) with
+`(retired) prototype/impact.html` renders the StreamIt paper (`thies:cc:2002`) with
 its real Citations panel and an Option-B Repositories panel:
 
     cd ~/workspace/nextgen && python3 -m http.server 8000
-    open http://localhost:8000/prototype/impact.html
+    open http://localhost:8000/(retired) prototype/impact.html
 
 The own-repo row (`bthies/streamit`) is real per the ruling; the tier-2
 rows are **placeholders marked [PLACEHOLDER]** until the
@@ -139,7 +139,7 @@ vocabulary; the tier-3 rows use citing works actually classified
 extends/adopts-idea for StreamIt (Sponge, Flextream, STR2RTS), with
 repo fields left as placeholder or paper-only. Sorts, grouping, chips,
 tooltips, and Expand/Collapse all function against the mock data
-(`prototype/impact-mock.js`).
+(`(retired) prototype/impact-mock.js`).
 
 ## 6. The Summary's three registers
 

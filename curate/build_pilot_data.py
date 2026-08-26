@@ -9,7 +9,7 @@ harvest/taxonomy/pilot-classifications.json instead.
 Applies the human dedup ruling: fold same-work records by normalized title,
 keep the highest-evidence sibling. Excludes self-version records entirely.
 
-Usage: python3 prototype/build_pilot_data.py [--keys k1,k2,...] [--write]
+Usage: python3 curate/build_pilot_data.py [--keys k1,k2,...] [--write]
 Dry-run by default (prints counts); --write writes data/citations/ files and
 refreshes the pilot rows of data/citations/index.json.
 """

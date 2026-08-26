@@ -110,7 +110,7 @@ Rules that make this safe:
 - `harvest/authors/links.json` — written only through
   `link-overrides.json` + `apply_link_overrides.py`. Do not "simplify" that
   indirection; it exists because his rulings must survive a re-harvest.
-- The pilot classifications and `prototype/build_pilot_data.py`'s outputs.
+- The pilot classifications and `curate/build_pilot_data.py`'s outputs.
 - `publications.json` content — summaries and receptions are his voice, not
   refactorable text.
 - The frozen exceptions in `tasks/HARVEST-AND-UPDATE.md` (Anant's LinkedIn,

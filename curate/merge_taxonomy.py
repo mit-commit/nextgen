@@ -2,13 +2,13 @@
 """Fold citation-function judgments into data/citations/<bibtexKey>.json +
 index.json, per data/citations/SCHEMA.md.
 
-Two record sources, generalizing prototype/build_pilot_data.py's reference
+Two record sources, generalizing curate/build_pilot_data.py's reference
 implementation (same schema, same dedup rule -- kept in sync deliberately,
 not re-derived):
 
   - the 8 pilot papers: harvest/taxonomy/pilot-classifications.json, which
     already carries one row per citing work, including `unclassified`
-    title-only rows. Left to prototype/build_pilot_data.py -- not written
+    title-only rows. Left to curate/build_pilot_data.py -- not written
     here (see SCHEMA.md's file-ownership table).
   - every other paper: harvest/taxonomy/records/<key>/*.json (classify_
     citations.py staging output, judged rows only) plus
@@ -63,7 +63,7 @@ def is_saman(name):
     separation; see SCHEMA.md). Handles 'Saman', 'Saman P.', and 'S.' forms,
     including glued PDF-extraction artifacts, while excluding other
     Amarasinghes (Gayashan, Yasith, ...). Kept byte-identical to
-    prototype/build_pilot_data.py's copy -- the two emitters must agree."""
+    curate/build_pilot_data.py's copy -- the two emitters must agree."""
     n = re.sub(r'[^a-z]+', ' ', (name or '').lower()).strip()
     if 'amarasinghe' not in n:
         return False
@@ -246,7 +246,7 @@ def main():
     overlap = set(keys) & PILOT_KEYS
     if overlap:
         raise SystemExit(f'{sorted(overlap)} are pilot papers -- owned by '
-                         'prototype/build_pilot_data.py, not this script')
+                         'curate/build_pilot_data.py, not this script')
     if not keys:
         print('no paper has new staging records; still refreshing gscholar '
              'figures in index.json')

@@ -9,6 +9,10 @@ var CITATIONS = (function(){
   'use strict';
 
   var DATA_BASE = 'data/citations/';
+  /* Keys keep their colons (halide:pldi:2013); FILES are colon-free
+     (halide_pldi_2013.json) because GitHub Pages and Windows cannot hold
+     ':' in a path. This is the one place the mapping lives in JS. */
+  function fileKeyOf(key){ return encodeURIComponent(String(key).replace(/:/g, '_')); }
 
   /* Plain-language labels for FUNCTION values, in codebook priority order. */
   var FUNCTIONS = [
@@ -463,7 +467,7 @@ var CITATIONS = (function(){
       loaded = true;
       div.appendChild(el('div', 'cite-loading', 'Loading…'));
       fetchQueue.push(function(){
-        return fetch(DATA_BASE + encodeURIComponent(String(key).replace(/:/g, '_')) + '.json', { cache: 'no-store' })
+        return fetch(DATA_BASE + fileKeyOf(key) + '.json', { cache: 'no-store' })
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then(function(data){ dataCache[key] = data; renderView(div, key, data, indexRow); })
           .catch(function(e){
@@ -526,7 +530,7 @@ var CITATIONS = (function(){
         if (dataCache[key]) return;
         jobs.push(new Promise(function(resolve){
           fetchQueue.push(function(){
-            return fetch(DATA_BASE + encodeURIComponent(String(key).replace(/:/g, '_')) + '.json', { cache: 'no-store' })
+            return fetch(DATA_BASE + fileKeyOf(key) + '.json', { cache: 'no-store' })
               .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
               .then(function(data){ dataCache[key] = data; })
               .catch(function(){})
@@ -766,7 +770,7 @@ var CITATIONS = (function(){
       loaded = true;
       div.appendChild(el('div', 'cite-loading', 'Loading\u2026'));
       fetchQueue.push(function(){
-        return fetch(REPO_BASE + 'papers/' + encodeURIComponent(String(key).replace(/:/g, '_')) + '.json', { cache: 'no-store' })
+        return fetch(REPO_BASE + 'papers/' + fileKeyOf(key) + '.json', { cache: 'no-store' })
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
           .then(function(data){ repoDataCache[key] = data; renderRepoPanel(div, data); })
           .catch(function(e){

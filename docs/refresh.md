@@ -91,7 +91,7 @@ into `data/citations/<bibtexKey>.json` and refreshes `data/citations/
 index.json` (including every other paper's `gscholar` figure, even ones
 with no new records this run — see step 7). Never touches the 8 pilot
 `data/citations/<bibtexKey>.json` files or `gscholar.json`/`reception.json`
-themselves; those are `prototype/build_pilot_data.py`'s and the human's
+themselves; those are `curate/build_pilot_data.py`'s and the human's
 respectively.
 
 ## 7. Google Scholar counts (human, account-gated — the one truly manual step)
@@ -113,6 +113,32 @@ voice) runs in waves of ~25 papers, ordered by citation count descending;
 the human spot-checks each wave before the next one runs. See
 `docs/summary-style.md` for the approved voice and `docs/LANES.md`'s
 site-citations log for the current wave state.
+
+## 8b. Site data build (worker) — the impact-view layer
+
+After any change to the merged shards, the repo harvests, or the author
+links, regenerate the derived site files (each is idempotent):
+
+    python3 harvest/impactview/build_repo_data.py --write
+        # data/repos/papers/<key'>.json + data/repos/index.json, from
+        # harvest/repos/verified.json + descendants.json + own-inventory
+        # + harvest/ecosystems/verified.json + artifacts/found.json,
+        # gated by harvest/impactview/embodiment.json (judge_embodiment.py
+        # re-runs only when new (paper, implementation-repo) pairs appear)
+    python3 harvest/impactview/build_citers.py --write
+        # data/citations/citers.json — distinct citing works
+    python3 harvest/impactview/build_impact_authors.py --write
+        # data/impact-authors.json — the Cited-and-Used-by facet
+        # (name qualifications come from author-overrides.json, frozen)
+    python3 harvest/authors/apply_link_overrides.py && \
+    python3 harvest/authors/join_links.py --write
+        # harvest/authors/links.json (overrides are its ONLY writer)
+        # -> data/author-links.json
+    python3 harvest/impactview/gen_tier2_priority.py       # optional report
+
+Filenames under data/citations/ and data/repos/papers/ are the bibtexKey
+with ':' -> '_' (GitHub Pages cannot serve ':' paths); keys inside the
+JSON keep their colons. `docs/DATA-FLOW.md` has the full dependency map.
 
 ## 9. Verify and ship
 
@@ -137,7 +163,7 @@ site-citations log for the current wave state.
   reclassified by later automation.
 - Anything behind a login (ACM DL, IEEE Xplore, publisher full text,
   LinkedIn) — a worker prepares a worklist (see
-  `harvest/fulltext/build_login_worklist.py` and
+  `harvest/fulltext/build_login_worklist2.py` and
   `harvest/authors/build_session_sheet.py` for the pattern: gather
   candidates, construct search URLs, fetch nothing) and a human works
   through it in a browser sitting.

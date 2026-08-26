@@ -9,8 +9,8 @@ on or ignore.
 From sitting 2 onward each row in `linkedin-results.json` records the degree.
 Sitting-1 rows (Agrawal, Barrett, Cooper, Dasika, Erlingsson) did not, so their
 degree is unknown and is re-checked in a later sitting before they are added or
-ruled out. Two more (Richard P. Sollee III, Yee Lok Wong) are 2nd-degree
-candidates awaiting his yes/no and join the list only if he confirms them.
+ruled out. One 2nd-degree candidate (Yee Lok Wong) still awaits his yes/no and
+joins the list only if he confirms.
 
 ## 2nd-degree
 
@@ -26,6 +26,7 @@ candidates awaiting his yes/no and join the list only if he confirms them.
 | Muhender Rajvee | https://www.linkedin.com/in/muhender-raj-rajvee-a65732206 | CS at MIT, Cambridge MA | Muhender:meng-thesis:2025 |
 | Max Ruttenberg | https://www.linkedin.com/in/max-r-11784565 | graduate research student, University of Washington | ugcf-isca21 |
 | Jeffrey W. Sheldon | https://www.linkedin.com/in/jeffrey-sheldon-6945052a3 | Distinguished Engineer, Broadcom Software (ex-VMware) | sheldon:lcpc:2001, thies:pldi:2001 |
+| Richard P. Sollee III | https://www.linkedin.com/in/solleer | AI developer, City of Jacksonville | Richard:meng-thesis:2024 |
 
 ## 3rd-degree or further
 

@@ -18,8 +18,10 @@ IDENTITY VERIFICATION (his rule): a LinkedIn match must be POSITIVELY
 confirmed — for MIT students, the profile's education must show MIT in the
 right timeframe (degree/years consistent with the thesis/paper dates);
 for others, employer/education must match what we know (affiliation,
-co-authors, era). Name similarity alone is never enough; unverifiable →
-no link rather than a wrong link. The same bar applies to task 2's
+co-authors, era). Name similarity alone is never enough. NOT-CONFIRMABLE
+CANDIDATES ARE NOT DROPPED — they are collected with their evidence into
+a review list and ASKED OF HIM (coordinator batches these questions);
+only he settles them. The same bar and escalation apply to task 2's
 website/email candidates.
 
 ## OPEN — round 10 (2026-08-26)
@@ -38,7 +40,8 @@ website/email candidates.
    the papers/ PDFs (grep the fulltext extracts). Classify each hit per
    the RULING priority (permanent-academic / professional-site / personal
    / email) and apply the IDENTITY VERIFICATION bar with evidence per
-   row. Do NOT fetch LinkedIn or Google Scholar pages from the
+   row; put unconfirmable candidates in a his-review list, don't drop.
+   Do NOT fetch LinkedIn or Google Scholar pages from the
    worker — those are the coordinator's browser sitting. Output the
    residue list (people with no link yet) for that sitting. STOP.
 3. [fable, after 1+2 and the LinkedIn sitting land] **author links on the
@@ -54,7 +57,7 @@ website/email candidates.
 ## PARKED (needs the human / coordinator)
 - LinkedIn sitting: coordinator drives his Chrome (Premium account) for
   the residue from task 2 — human pace, small batches, education/
-  timeframe verification per the RULING.
+  timeframe verification per the RULING; unconfirmables go to him.
 - Cutover: final review, then point the live site at nextgen.
 
 ## DONE (recent)

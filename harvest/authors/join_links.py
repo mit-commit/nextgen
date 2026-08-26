@@ -36,18 +36,27 @@ def fold(s):
 
 
 def choose(person, li_row):
-    """The ruling's precedence, verified candidates only."""
-    cands = [c for c in person.get('candidates', []) if c.get('verified')]
+    """Round-12 precedence over links.json candidates (overrides already
+    materialized there): source:human above everything; publish:false is
+    never rendered; never_primary is never the chosen link; otherwise the
+    ruling's order — permanent academic page, confirmed LinkedIn, best
+    active site, email. Verified identities only."""
+    cands = [c for c in person.get('candidates', [])
+             if c.get('publish') is not False and not c.get('never_primary')
+             and (c.get('verified') or c.get('source') == 'human')]
 
-    def first(tier):
+    def first(pred, label):
         for c in cands:
-            if c.get('tier') == tier:
-                return c['url']
+            if pred(c):
+                return c['url'], label
         return None
 
-    academic = first('permanent-academic')
+    human = first(lambda c: c.get('source') == 'human', 'human')
+    if human:
+        return human
+    academic = first(lambda c: c.get('tier') == 'permanent-academic', 'permanent-academic')
     if academic:
-        return academic, 'permanent-academic'
+        return academic
     if li_row:
         verdict = li_row.get('verdict', '')
         if verdict.startswith('confirmed') and li_row.get('linkedin'):
@@ -56,19 +65,17 @@ def choose(person, li_row):
             ruled = RULED.get(fold(li_row.get('name')))
             if ruled:
                 return ruled, 'linkedin-ruled'
-    incidental = first('linkedin_incidental')  # verified via the person's
-    if incidental:                             # own site/profile linkage
-        return incidental, 'linkedin-incidental'
-    pro = first('professional')
-    if pro:
-        return pro, 'professional'
-    personal = first('personal')
-    if personal:
-        return personal, 'personal'
-    email = first('email')
+    for tier, label in (('linkedin_incidental', 'linkedin-incidental'),
+                        ('professional', 'professional'),
+                        ('personal', 'personal')):
+        hit = first(lambda c, t=tier: c.get('tier') == t, label)
+        if hit:
+            return hit
+    email = first(lambda c: c.get('tier') == 'email', 'email')
     if email:
-        return ('mailto:' + email if '@' in email and not email.startswith('mailto:')
-                else email), 'email'
+        url, label = email
+        return ('mailto:' + url if '@' in url and not url.startswith('mailto:')
+                else url), label
     return None, None
 
 
@@ -82,6 +89,11 @@ def main():
     authors = {a['person_id']: a for a in json.load(open(f'{HERE}/authors.json'))}
     li = json.load(open(f'{HERE}/linkedin-results.json'))
     li_by_name = {fold(r['name']): r for r in li['rows']}
+    # the professional-tier sittings file merges in (1st-degree = identity
+    # evidence per the ruling; its confirmed rows carry linkedin urls)
+    lp = json.load(open(f'{HERE}/linkedin-results-professional.json'))
+    for r in lp.get('rows', []):
+        li_by_name.setdefault(fold(r['name']), r)
 
     out, sources = {}, {}
     linked = 0

@@ -1114,6 +1114,22 @@ raise it to the setup lane.
   design doc section-7 fingerprint hunt (namespace archaeology,
   grammar/IR fingerprints, provenance files) has never run as a
   harvest — proposed to the ecosystems lane as tier-2 signal #4.
+- **Round-12 lane E: author links rejoined under the full ruling**
+  (2026-08-26): join_links.py now folds BOTH sitting files (residue +
+  professional tier; 1st-degree = identity evidence), and honors the
+  materialized overrides — source:human above everything, publish:false
+  never rendered, never_primary never primary. 329 of 368 people
+  linked: 13 human-supplied, 141 permanent academic pages (lane B's
+  hunt lifting them off the LinkedIn track per the ruling), 66
+  confirmed LinkedIn, 86 professional, 6 personal, 15 email. Anant
+  Agarwal exception verified (LinkedIn renders, CSAIL page
+  suppressed); frozen spellings key their links unchanged. Holding for
+  lane A's random-settings STOP entries per the lane-E spec. Also this
+  sitting's UI burst, all human-directed and browser-verified:
+  evidence-view design (one revertable commit 9b76acea), the
+  "Citations, Repositories and Summaries" box with Show All buttons,
+  drill-down semantics for every impact tool, distinct-count overview,
+  facet typography, clearAll closure fix (harness 908/908 green).
 - **Composite impact + first-reader tooltips** (2026-08-25, human task
   2): the paper-threshold Impact slider and the list-level sort (option
   renamed "Citations" -> "Impact") now share ONE composite score:

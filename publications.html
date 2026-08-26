@@ -8,7 +8,7 @@
        To add a publication, append an entry to that file.
        To feature a paper, set "featured": true on its entry (award papers
        with a "price" are featured automatically). -->
-  <link rel="stylesheet" href="assets/css/style.css?v=17"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=18"/>
   <!-- Umami analytics (privacy-friendly, cookieless) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="0501f709-b527-45af-8727-062721122bb4"></script>
 </head>
@@ -128,6 +128,15 @@
                   <div id="facet-keywords" class="facet-list"></div>
                 </div>
                 <div class="filter-block">
+                  <div class="filter-label" title="Filter by publication type or venue">Categories</div>
+                  <div class="type-toggle" id="type-toggle" role="group" aria-label="Categorize publications by">
+                    <button type="button" class="type-toggle-btn active" data-mode="type" aria-pressed="true">Type</button>
+                    <button type="button" class="type-toggle-btn" data-mode="venue-name" aria-pressed="false">Venue (by Name)</button>
+                    <button type="button" class="type-toggle-btn" data-mode="venue-count" aria-pressed="false">Venue (by # pubs)</button>
+                  </div>
+                  <div id="facet-types" class="facet-list"></div>
+                </div>
+                <div class="filter-block">
                   <div class="filter-label" title="Filter by author">Authors</div>
                   <div class="facet-sort-control">
                     <select id="author-sort" aria-label="Sort authors by">
@@ -140,15 +149,6 @@
                            placeholder="Filter names…" aria-label="Filter author names">
                   </div>
                   <div id="facet-authors" class="facet-list"></div>
-                </div>
-                <div class="filter-block">
-                  <div class="filter-label" title="Filter by publication type or venue">Categories</div>
-                  <div class="type-toggle" id="type-toggle" role="group" aria-label="Categorize publications by">
-                    <button type="button" class="type-toggle-btn active" data-mode="type" aria-pressed="true">Type</button>
-                    <button type="button" class="type-toggle-btn" data-mode="venue-name" aria-pressed="false">Venue (by Name)</button>
-                    <button type="button" class="type-toggle-btn" data-mode="venue-count" aria-pressed="false">Venue (by # pubs)</button>
-                  </div>
-                  <div id="facet-types" class="facet-list"></div>
                 </div>
               </div>
 

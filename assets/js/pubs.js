@@ -196,6 +196,16 @@ function localizeAssetURL(url) {
 
     li.appendChild(metaLine);
 
+    // Citations (N) / Repositories (M) toggles, when citations.js and
+    // the two small indexes are on the page (the home page loads them
+    // for the featured scoring; panels lazy-load their data on expand)
+    if (window.CITATIONS && PUBS._citeIndex){
+      var _cr = PUBS._citeIndex[it.bibtexKey];
+      if (_cr && CITATIONS.attachToggle) CITATIONS.attachToggle(metaLine, li, it.bibtexKey, _cr);
+      var _rr = PUBS._repoIndex && PUBS._repoIndex[it.bibtexKey];
+      if (_rr && CITATIONS.attachRepoToggle) CITATIONS.attachRepoToggle(metaLine, li, it.bibtexKey, _rr);
+    }
+
     if (it.price) {
       var price = document.createElement('div');
       price.className = 'pub-price';
@@ -252,6 +262,8 @@ function localizeAssetURL(url) {
         ]).then(function(idx){
           var ci = (idx[0] && idx[0].papers) || {};
           var ri = (idx[1] && idx[1].papers) || {};
+          PUBS._citeIndex = ci;   // renderItem adds panel toggles from these
+          PUBS._repoIndex = ri;
           function scoreOf(it){
             var age = nowY - (toYear(it.year) || nowY);
             var s = 10 * Math.exp(-age / 5);

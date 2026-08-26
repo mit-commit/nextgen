@@ -336,10 +336,11 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .facet-text { vertical-align: middle; }
 
 .facet-slider { width: 100%; margin-top: 6px; }
-/* Keep 3 columns but prevent overflow */
+/* Keep the columns but prevent overflow; Years needs ~2/3 the width of
+   the others, Topics & Projects takes the slack */
 .filter-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0,0.67fr) minmax(0,1.33fr) minmax(0,1fr) minmax(0,1fr);
   gap: 10px;
 }
 

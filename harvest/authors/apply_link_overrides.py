@@ -3,10 +3,10 @@
 
 The GitHub match audit (harvest/authors/github-match-audit.json) found 17
 accounts belonging to different people who share an author's name. This
-script applies that finding. It is idempotent: running it twice changes
-nothing the second time.
+script applies that finding, plus the links he supplied by hand. It is
+idempotent: running it twice changes nothing the second time.
 
-Three actions, matching the three rules in link-overrides.json:
+Four actions, matching the rules in link-overrides.json:
 
   drop      remove every candidate whose `source` starts with "github_" for
             that person. The blog and email were scraped from the wrong
@@ -15,6 +15,11 @@ Three actions, matching the three rules in link-overrides.json:
   hold      keep the candidate but set publish=false, so nothing renders it
             until a second signal turns up.
   never     empty accounts stay but are marked never_primary=true.
+  human     links he supplied directly are inserted as the FIRST candidate
+            with source="human"; they outrank anything harvested.
+
+"NOT FOUND" in the drop report is normal once the drops have been applied
+upstream -- the script only counts a drop when the handle is still present.
 
 Usage:
     python3 harvest/authors/apply_link_overrides.py            # dry run
@@ -50,7 +55,10 @@ def main():
     hold = {h["handle"] for h in ov["hold_do_not_publish"]}
     never = set(ov["never_primary_empty_accounts"])
 
-    removed, held, marked, emptied = 0, 0, 0, []
+    human = ov.get("human_supplied", [])
+    human_by_pid = {h["person_id"]: h for h in human}
+
+    removed, held, marked, added, emptied = 0, 0, 0, 0, []
     seen_drop = set()
 
     for person in links["people"]:
@@ -81,16 +89,39 @@ def main():
                 c["never_primary"] = True
                 marked += 1
 
+    # Separate pass: a person can be in both `drop` and `human_supplied`, and
+    # the drop branch above short-circuits once its handle is already gone.
+    for person in links["people"]:
+        h = human_by_pid.get(person.get("person_id"))
+        if h is None:
+            continue
+        cands = person.get("candidates") or []
+        url = h["url"].rstrip("/")
+        if any((c.get("url") or "").rstrip("/") == url for c in cands):
+            continue
+        cands.insert(0, {
+            "tier": h["tier"],
+            "source": "human",
+            "url": h["url"],
+            "evidence": "supplied by him 2026-08-26",
+        })
+        person["candidates"] = cands
+        added += 1
+
+    unmatched_human = sorted(set(human_by_pid) - {p.get("person_id") for p in links["people"]})
     missing = sorted(set(drop_by_pid) - seen_drop)
 
     print(f"people with drops applied : {len(seen_drop)} of {len(drop_by_pid)}")
     print(f"candidates removed        : {removed}")
     print(f"candidates held           : {held}")
     print(f"empty accounts marked     : {marked}")
+    print(f"links he supplied added   : {added} of {len(human)}")
     if emptied:
         print("left with no link at all  : " + ", ".join(sorted(emptied)))
         print("  (expected -- their only link was a stranger's account; they")
         print("   go to the academic-page hunt or the LinkedIn sittings)")
+    if unmatched_human:
+        print("HIS LINKS WITH NO MATCHING PERSON: " + ", ".join(unmatched_human))
     if missing:
         print("NOT FOUND (already applied, or person_id changed): " + ", ".join(missing))
 

@@ -6,13 +6,29 @@ papers' citing works) is itself a citation index for them: a citing work
 that names one of our theses in its reference list will say so in the same
 PDF text we already extracted.
 
-Three stages, run in order:
+Four stages, run in order:
 
     python3 curate/mine_thesis_citations.py scan
     python3 curate/mine_thesis_citations.py verify --submit --dry-run
     python3 curate/mine_thesis_citations.py verify --submit
     python3 curate/mine_thesis_citations.py verify --collect
+    python3 curate/mine_thesis_citations.py recheck-siblings --submit
+    python3 curate/mine_thesis_citations.py recheck-siblings --collect
     python3 curate/mine_thesis_citations.py fold --write
+
+`recheck-siblings` exists because many of these theses were later published
+as a near-identically-titled paper by the same first author (a normal
+thesis -> conference-paper path) -- e.g. Gordon's S.M. thesis "A
+Stream-Aware Compiler for Communication-Exposed Architectures" (2002) vs.
+the ASPLAS co-authored paper "A stream compiler for communication-exposed
+architectures" (gordon:asplos:2002). The first verify pass has no way to
+know a sibling exists, so it confirms plenty of citations that are
+actually reference-list entries for the PAPER (multi-author, no "thesis"
+in the citation text) rather than the solo-authored thesis specifically --
+measured at 435/584 (75%) of round-1 confirmations for the 25 theses with
+a detectable sibling. `recheck-siblings` re-verifies exactly that bucket
+with the sibling's own title/venue given, asking explicitly which of the
+two this citation is actually for.
 
 `scan` is mechanical and free: for each no-DOI thesis, build a match
 signature (first-author surname + significant title words + year), then
@@ -61,6 +77,7 @@ CANDIDATES_PATH = os.path.join(ROOT, 'harvest', 'fulltext', 'thesis_scan_candida
 CONFIRMED_PATH = os.path.join(ROOT, 'harvest', 'fulltext', 'thesis_confirmed.json')
 REPORT_PATH = os.path.join(ROOT, 'harvest', 'fulltext', 'thesis-mining-report.md')
 STATE_PATH = os.path.join(ROOT, 'harvest', 'fulltext', '_thesis_verify_batches.json')
+RECHECK_STATE_PATH = os.path.join(ROOT, 'harvest', 'fulltext', '_thesis_recheck_batches.json')
 REQUESTS_DUMP = os.path.join(ROOT, 'harvest', 'fulltext', '_thesis_verify_requests_dry_run.json')
 
 WINDOW = 400  # chars of context kept on each side of a surname hit
@@ -240,6 +257,10 @@ def load_state():
     return json.load(open(STATE_PATH)) if os.path.exists(STATE_PATH) else {'batches': [], 'items': {}}
 
 
+def load_recheck_state():
+    return json.load(open(RECHECK_STATE_PATH)) if os.path.exists(RECHECK_STATE_PATH) else {'batches': [], 'items': {}}
+
+
 def cmd_verify(args):
     candidates = json.load(open(CANDIDATES_PATH))
     keys = {k['key']: k for k in build_keys()}
@@ -349,6 +370,238 @@ def cmd_verify(args):
     print('pick one of --submit [--dry-run], --status, --collect')
 
 
+# ------------------------------------------------------- sibling-paper recheck
+
+SIBLING_TITLE_OVERLAP = 3
+
+
+def _norm_words(title):
+    return set(w for w in re.split(r'[^a-z0-9]+', (title or '').lower()) if len(w) >= 4)
+
+
+def _first_surname(author0):
+    first = re.split(r'\s+and\s+', author0 or '')[0].strip()
+    if ',' in first:
+        return first.split(',')[0].strip().lower()
+    parts = first.split()
+    return parts[-1].lower() if parts else ''
+
+
+def find_siblings(thesis_keys, pubs):
+    """A same-first-author, title-overlapping OTHER corpus paper -- the
+    common thesis -> conference-paper path. Returns {thesis_key: sibling_pub}."""
+    siblings = {}
+    for tk in thesis_keys:
+        tp = pubs.get(tk, {})
+        tsurname = _first_surname(tp.get('author0'))
+        if not tsurname:
+            continue
+        twords = _norm_words(tp.get('title'))
+        best = None
+        for p in pubs.values():
+            if p['bibtexKey'] == tk or _first_surname(p.get('author0')) != tsurname:
+                continue
+            overlap = len(twords & _norm_words(p.get('title')))
+            if overlap >= SIBLING_TITLE_OVERLAP and (best is None or overlap > best[1]):
+                best = (p, overlap)
+        if best:
+            siblings[tk] = best[0]
+    return siblings
+
+
+def split_ambiguous(confirmed, siblings):
+    """A confirmed pair is ambiguous when its thesis has a detectable
+    sibling paper AND the extracted context never says thesis/dissertation
+    -- exactly the shape of a reference-list entry for the SIBLING, not
+    the thesis (measured: 75% of round-1 confirmations for the 25 theses
+    with a sibling). Safe otherwise: no sibling to confuse it with, or the
+    context explicitly names this as thesis/dissertation work."""
+    safe, ambiguous = [], []
+    for x in confirmed:
+        ctx_lower = (x.get('context') or '').lower()
+        has_thesis_word = 'thesis' in ctx_lower or 'dissertation' in ctx_lower
+        if x['thesis_key'] in siblings and not has_thesis_word:
+            ambiguous.append(x)
+        else:
+            safe.append(x)
+    return safe, ambiguous
+
+
+RECHECK_SYSTEM_PROMPT = """You are re-checking a citation match for one of two possible targets that
+share the same first author and a near-identical title -- a common
+thesis -> conference/journal-paper path (the thesis work later published
+with co-authors). You are given both candidates' real titles/venues/years
+and the citing passage. Decide which one this specific citation is
+actually for.
+
+Return ONE JSON object and nothing else. No prose, no markdown fence.
+
+  {"target": "thesis"|"paper"|"neither", "context": string or null, "confidence": "high"|"medium"|"low"}
+
+target:
+  "thesis"  the citation explicitly names this as a thesis/dissertation
+            (institution, "S.M./M.Eng./PhD thesis", or matches the
+            thesis's specific (usually single-author) attribution), or
+            the paper given doesn't exist/wasn't given a match here and
+            nothing points to it instead
+  "paper"   the citation's author list/venue/format matches the published
+            paper (multiple co-authors, a conference/journal venue, no
+            thesis/dissertation language)
+  "neither" the passage doesn't clearly cite either one (a different work
+            entirely, despite the earlier name/title-overlap match)
+
+context: when target is "thesis", the actual citing sentence(s) for the
+thesis specifically. null otherwise.
+confidence: your confidence in the target call."""
+
+
+def build_recheck_request(cand, thesis, sibling, window):
+    content = (
+        f"CANDIDATE A (thesis): {thesis['title']!r}\n"
+        f"  author: {thesis['author0']}, year {thesis['year']}\n\n"
+        f"CANDIDATE B (published paper by the same first author): {sibling.get('title')!r}\n"
+        f"  authors: {sibling.get('author0')}\n"
+        f"  venue: {sibling.get('venue') or sibling.get('booktitle') or sibling.get('journal')}, "
+        f"year {sibling.get('year')}\n\n"
+        f"CITING PASSAGE:\n{window!r}"
+    )
+    custom_id = hashlib.sha1(f"recheck|{cand['thesis_key']}|{cand['slug']}".encode()).hexdigest()[:40]
+    return {
+        'custom_id': custom_id,
+        'params': {
+            'model': vr.MODEL,
+            'max_tokens': 500,
+            'system': RECHECK_SYSTEM_PROMPT,
+            'messages': [{'role': 'user', 'content': content}],
+        },
+    }
+
+
+def cmd_recheck(args):
+    pubs = {p['bibtexKey']: p for p in json.load(open(os.path.join(ROOT, 'data', 'publications.json')))}
+    confirmed = json.load(open(CONFIRMED_PATH))
+    thesis_keys = sorted(set(x['thesis_key'] for x in confirmed))
+    siblings = find_siblings(thesis_keys, pubs)
+    safe, ambiguous = split_ambiguous(confirmed, siblings)
+    print(f'{len(safe)} safe (no sibling, or already says thesis/dissertation), '
+         f'{len(ambiguous)} ambiguous across {len(siblings)} theses with a sibling', file=sys.stderr)
+
+    windows = {(c['thesis_key'], c['slug']): c['window'] for c in json.load(open(CANDIDATES_PATH))}
+    thesis_by_key = {k['key']: k for k in build_keys()}
+
+    if args.submit:
+        state = load_recheck_state()
+        done = set(state.get('items', {}).values())
+        pending = [c for c in ambiguous if f"recheck|{c['thesis_key']}|{c['slug']}" not in done]
+        requests_ = []
+        lookup = {}
+        for c in pending:
+            window = windows.get((c['thesis_key'], c['slug']), c.get('context') or '')
+            req = build_recheck_request(c, thesis_by_key[c['thesis_key']], siblings[c['thesis_key']], window)
+            requests_.append(req)
+            lookup[req['custom_id']] = f"recheck|{c['thesis_key']}|{c['slug']}"
+
+        if not requests_:
+            return print('nothing to submit')
+
+        if args.dry_run:
+            with open(REQUESTS_DUMP, 'w') as fh:
+                json.dump(requests_, fh, indent=1, ensure_ascii=False)
+            chars = sum(len(r['params']['system']) + len(r['params']['messages'][0]['content'])
+                        for r in requests_)
+            avg_tokens = (chars // len(requests_)) // 4
+            total_in = avg_tokens * len(requests_)
+            total_out = len(requests_) * 120
+            cost = total_in / 1e6 * vr.BATCH_INPUT_PER_MTOK + total_out / 1e6 * vr.BATCH_OUTPUT_PER_MTOK
+            print(f'{len(requests_)} requests, ~{avg_tokens} input tokens/request')
+            print(f'COST ESTIMATE: ~${cost:,.2f} (batch pricing)')
+            return
+
+        state.setdefault('items', {}).update(lookup)
+        for start in range(0, len(requests_), 400):
+            chunk = requests_[start:start + 400]
+            result = json.loads(vr.call('POST', '/messages/batches', {'requests': chunk}))
+            state.setdefault('batches', []).append({'id': result['id'], 'n': len(chunk),
+                                                    'created': result.get('created_at'), 'collected': False})
+            json.dump(state, open(RECHECK_STATE_PATH, 'w'), indent=1)
+            print(f'  submitted {result["id"]}  {len(chunk)} requests')
+        return
+
+    if args.status:
+        state = load_recheck_state()
+        for batch in state.get('batches', []):
+            info = json.loads(vr.call('GET', f'/messages/batches/{batch["id"]}'))
+            print(f'{batch["id"]}  {info.get("processing_status"):12s} '
+                 f'{json.dumps(info.get("request_counts", {}))}  collected={batch["collected"]}')
+        return
+
+    if args.collect:
+        state = load_recheck_state()
+        items = state.get('items', {})
+        by_pair = {f"recheck|{c['thesis_key']}|{c['slug']}": c for c in ambiguous}
+        reconfirmed_as_thesis = []
+        reclassified_paper = []
+        neither = []
+        n_failed = 0
+
+        for batch in state.get('batches', []):
+            if batch['collected']:
+                continue
+            info = json.loads(vr.call('GET', f'/messages/batches/{batch["id"]}'))
+            if info.get('processing_status') != 'ended':
+                print(f'{batch["id"]}: {info.get("processing_status")}, skipping')
+                continue
+            body = vr.call('GET', info['results_url'])
+            for line in body.splitlines():
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                pair_key = items.get(row.get('custom_id'), row.get('custom_id'))
+                cand = by_pair.get(pair_key)
+                result = row.get('result') or {}
+                if result.get('type') != 'succeeded' or cand is None:
+                    n_failed += 1
+                    continue
+                message = result.get('message') or {}
+                text = ''.join(b.get('text', '') for b in message.get('content', []))
+                try:
+                    parsed = vr.parse_record(text)
+                except Exception:
+                    n_failed += 1
+                    continue
+                target = parsed.get('target')
+                if target == 'thesis':
+                    reconfirmed_as_thesis.append({
+                        'thesis_key': cand['thesis_key'], 'slug': cand['slug'],
+                        'context': parsed.get('context') or cand.get('context'),
+                        'confidence': parsed.get('confidence'),
+                    })
+                elif target == 'paper':
+                    reclassified_paper.append(cand)
+                else:
+                    neither.append(cand)
+            batch['collected'] = True
+
+        json.dump(state, open(RECHECK_STATE_PATH, 'w'), indent=1)
+        final = safe + reconfirmed_as_thesis
+        with open(CONFIRMED_PATH, 'w') as fh:
+            json.dump(final, fh, indent=1, ensure_ascii=False)
+            fh.write('\n')
+        rejected_path = os.path.join(ROOT, 'harvest', 'fulltext', 'thesis_sibling_rejected.json')
+        with open(rejected_path, 'w') as fh:
+            json.dump({'reclassified_as_paper': reclassified_paper, 'neither': neither},
+                     fh, indent=1, ensure_ascii=False)
+            fh.write('\n')
+        print(f're-confirmed as thesis: {len(reconfirmed_as_thesis)}, '
+             f'reclassified as the sibling paper: {len(reclassified_paper)}, '
+             f'neither: {len(neither)}, failed: {n_failed}')
+        print(f'final confirmed total: {len(final)} ({len(safe)} safe + '
+             f'{len(reconfirmed_as_thesis)} re-confirmed) -> {CONFIRMED_PATH}')
+        return
+
+    print('pick one of --submit [--dry-run], --status, --collect')
+
+
 # ----------------------------------------------------------------- fold step
 
 def find_citing_record(slug):
@@ -423,6 +676,13 @@ def main():
     p.add_argument('--status', action='store_true')
     p.add_argument('--collect', action='store_true')
     p.set_defaults(func=cmd_verify)
+
+    p = sub.add_parser('recheck-siblings')
+    p.add_argument('--submit', action='store_true')
+    p.add_argument('--dry-run', action='store_true')
+    p.add_argument('--status', action='store_true')
+    p.add_argument('--collect', action='store_true')
+    p.set_defaults(func=cmd_recheck)
 
     p = sub.add_parser('fold')
     p.add_argument('--write', action='store_true')

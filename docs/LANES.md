@@ -326,6 +326,31 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   — 100/100, seed 42. **No structural findings — nothing for Lane E to fix,
   Lane E is not blocked by Lane A.**
 
+### cleanup
+
+- **Phase-2 cleanup complete** (2026-08-26, batches A–G per
+  `docs/cleanup-plan.md`): executed on an isolated worktree
+  (`cleanup` branch), one concern per commit, with both UI harnesses +
+  a golden behavioral snapshot (impact top-20, featured-10, overview
+  totals) gating every batch — final state byte-identical to the
+  pre-cleanup golden. Highlights: dead-code sweep of
+  `publications.js`/`citations.js` and the oracle; single scoring
+  module `assets/js/scoring.js` (the only JS home of the impact and
+  featured formulas; `tests/ui/oracle.py` is the deliberate mirror);
+  loud per-fetch boot failures (`.data-load-failures` line);
+  `fileKeyOf()` centralizes the colon→underscore filename mapping;
+  `reception`/`tiers`/`impact` residue stripped from shards and repo
+  index (writers + readers + oracle moved together);
+  `docs/DATA-FLOW.md` added; `docs/refresh.md` §8b site-data-build;
+  ~6MB of closed-round intermediates deleted (own listed commits);
+  `prototype/` retired, `build_pilot_data.py` promoted to `curate/`;
+  10 one-off harvest scripts moved to `harvest/attic/`; this LANES
+  split (D3). Full verification on the live repo's working tree before
+  upload: 909/909 combinatorial + 100/100 random-settings, 370-file
+  lazy-data sweep, Umami 4/4, console-clean, failure-injection retest,
+  manual click-through. Deviation on record: batch B3's `git add -u`
+  swept `docs/refresh.md` + test reports into its commit. Pending his
+  ruling: the `papers/` legacy `.ps` archive (untouched).
 
 ## Cross-lane requests
 

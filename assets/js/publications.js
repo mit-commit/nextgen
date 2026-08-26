@@ -1031,8 +1031,6 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
 
   /* ---------- Rendering one publication (same look as index) ---------- */
   // Summary text is trusted local JSON containing embedded <a> links.
-  var makeBibLink = (window.PUBS && PUBS.makeBibDownloadLink) ? PUBS.makeBibDownloadLink : function(){ var a=document.createElement('span'); return a; };
-
   function renderSummaryInto(container, summaryText, receptionText){
     var paras = summaryText ? String(summaryText).split(/\n\n+/) : [], i, p;
     container.innerHTML = '';
@@ -1106,7 +1104,6 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     if (it.year)  bits.push(String(it.year) + '.');
     if (bits.length) meta.appendChild(text(bits.join(' ') + ' '));
     // Bib + Slides
-      meta.appendChild(makeBibLink(it));
       var bibA = createBibLink(it);
       bibA.addEventListener('click', function(){ track('bib-download', { key: bibtexKeyOf(it) }); });
       meta.appendChild(bibA);

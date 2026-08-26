@@ -227,11 +227,23 @@ function localizeAssetURL(url) {
       if (opts && opts.filterFn) all = opts.filterFn(all) || all;
       if (opts && opts.mountAll) renderList(opts.mountAll, all);
       if (opts && opts.mountFeatured) {
-        // Featured = top 10 by his 2026-08-26 scale:
-        //   award papers: +12 - 3 per year since the award (paper year)
-        //   every paper:  +10 - 1 per year since publication
-        //   + citations/100 + repos/1000 (from the two small indexes)
+        // Featured = top 10 by his 2026-08-26 scale (final):
+        //   recency: 10*e^(-age/5)
+        //   award:   20*e^(-awardAge/12) -- from the AWARD year (the
+        //            latest year in the award text >= paper year, e.g.
+        //            Halide's 2023 Test-of-Time), never fully dies
+        //   + citations/100 + repos/250; theses never feature
         var nowY = new Date().getFullYear();
+        function awardYearOf(it){
+          var py = toYear(it.year) || nowY;
+          var m = String(it.price || '').match(/\b(19|20)\d{2}\b/g) || [];
+          var best = py;
+          for (var i = 0; i < m.length; i++){
+            var yy = parseInt(m[i], 10);
+            if (yy >= py && yy > best) best = yy;
+          }
+          return best;
+        }
         Promise.all([
           fetch('data/citations/index.json', { cache: 'no-store' })
             .then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; }),
@@ -242,12 +254,12 @@ function localizeAssetURL(url) {
           var ri = (idx[1] && idx[1].papers) || {};
           function scoreOf(it){
             var age = nowY - (toYear(it.year) || nowY);
-            var s = Math.max(0, 10 - age);          // recency fades to 0
-            if (it.price) s += Math.max(0, 12 - 3 * age);  // award bonus fades to 0, never negative
+            var s = 10 * Math.exp(-age / 5);
+            if (it.price) s += 20 * Math.exp(-(nowY - awardYearOf(it)) / 12);
             var c = ci[it.bibtexKey];
             if (c) s += Math.max(c.verified || 0, c.gscholar || 0) / 100;
             var r = ri[it.bibtexKey];
-            if (r) s += (r.repos || 0) / 1000;
+            if (r) s += (r.repos || 0) / 250;
             return s;
           }
           // theses never feature -- papers only (his rule)

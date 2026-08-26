@@ -214,6 +214,28 @@ def main():
     if token:
         json.dump(profiles, open(PROFILES_PATH, 'w'), indent=1)
 
+    # human-reviewable name qualifications (qualify_impact_authors.py):
+    # rename merges into the target (counts union), drop removes
+    ov_path = os.path.join(HERE, 'author-overrides.json')
+    overrides = json.load(open(ov_path)) if os.path.exists(ov_path) else {}
+    merged = {}
+    n_dropped = n_renamed = 0
+    for name, e in people.items():
+        o = overrides.get(name)
+        if o and o.get('action') == 'drop':
+            n_dropped += 1
+            continue
+        final = o['to'] if (o and o.get('action') == 'rename' and o.get('to')) else name
+        if final != name:
+            n_renamed += 1
+        t = merged.setdefault(final, {'papers': set(), 'viaCites': set(), 'viaUses': set()})
+        t['papers'] |= set(e['papers'])
+        t['viaCites'] |= set(e['viaCites'])
+        t['viaUses'] |= set(e['viaUses'])
+    if overrides:
+        print(f'overrides: {n_renamed} renamed, {n_dropped} dropped')
+    people = merged
+
     out_people = []
     for name, e in people.items():
         out_people.append({

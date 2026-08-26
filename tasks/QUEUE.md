@@ -14,6 +14,9 @@ unconfirmables go to HIM, never dropped, never guessed.
 Added later the same day: a 1st-degree connection is itself identity
 evidence; confirmed non-1st-degree people go on
 harvest/authors/linkedin-connect-list.md for him to invite.
+Added later still: the ENTIRE professional tier (274 people whose best
+link is neither LinkedIn nor a permanent academic page) is to be worked
+through, in as few sittings as possible.
 
 ## HUMAN RULINGS 2026-08-26 (LinkedIn sitting 2 close-out)
 1. Richard P. Sollee III = the /in/solleer profile — CONFIRMED by him.
@@ -42,42 +45,55 @@ harvest/authors/linkedin-connect-list.md for him to invite.
    ~/workspace/nextgen-fulltext) if not already ingested.
 4. [fable] **site round leftovers**: TEMP "Pilot papers only" button
    deletion; halide tier-3 162-row fold; spot-render of the big panels;
-   author-name links per the RULING, now joining linkedin-results.json
-   (60 of 74 residue people resolved) to links.json.
+   author-name links per the RULING, joining linkedin-results.json and
+   linkedin-results-professional.json to links.json.
 5. [sonnet] **apply the sitting-2 rulings** to harvest/authors/:
-   (a) set Richard P. Sollee III to confirmed with the /in/solleer URL
-   (already on linkedin-connect-list.md, so only the JSON row and the
-   downstream join need it);
+   (a) set Richard P. Sollee III to confirmed with the /in/solleer URL;
    (b) merge person yee-lok-won into yee-lok-wong across authors.json,
    enriched.json and links.json (papers ansel:cgo:2011 and
    ansel:mitcsail-tr:2010 move onto the merged person) and attach
-   https://www.linkedin.com/in/yee-lok-wong to the merged record;
+   https://www.linkedin.com/in/yee-lok-wong;
    (c) rename person y-zibin to Yoav Zibin and attach
    https://www.linkedin.com/in/yoav-zibin-6392651.
 6. [sonnet] **exascale author names**: the 13 initials-only co-authors of
    amarasinghe:exascale:2009 (W. Carlson, R. Harrison, K. Hill, Jon Hiller,
    S. Karp, C. Koelbel, D. Koester, J. Levesque, P. Negi, C. Pacheco,
-   A. Scarpelli, F. Sherwood, A. Snavely). Recover full names + 2008-09
-   affiliations from the report itself (the DARPA IPTO ExaScale Computing
-   Study front matter lists the full study group with affiliations), not
-   from guesswork; where the report is ambiguous leave the person
-   unresolved and say so. Deliver harvest/authors/exascale-names.json
-   {person_id, full_name, affiliation, evidence(page/section)}. Several are
-   likely to have permanent lab or faculty pages, which outrank LinkedIn
-   under the ruling — record those URLs too. The residue that still needs a
-   LinkedIn lookup comes back to the coordinator for a sitting.
+   A. Scarpelli, F. Sherwood, A. Snavely) plus Dan Campbell and Andrew
+   Chien from the same report. Recover full names + 2008-09 affiliations
+   from the report front matter itself, not from guesswork; leave the
+   ambiguous ones unresolved and say so. Deliver
+   harvest/authors/exascale-names.json {person_id, full_name, affiliation,
+   evidence(page/section)} plus any permanent lab/faculty page found -
+   those outrank LinkedIn. Residue comes back to the coordinator.
+7. [sonnet, NEW — highest value] **academic-page hunt for the ORCID-only
+   158**: every person in links.json whose best candidate is an
+   orcid.org record. For each, find a PERMANENT academic page (faculty,
+   lab, or institutional profile) via web search + the ORCID record's own
+   employment/website fields; verify the page is live and is that person
+   (name + field + institution consistent with their papers). Under the
+   ruling a permanent academic page REPLACES LinkedIn, so every hit here
+   removes a person from the LinkedIn sittings — that is the point of the
+   task. Deliver harvest/authors/academic-pages.json {person_id, url,
+   institution, evidence, confidence} and a short report with the count
+   found vs not found. Do NOT guess URLs and do NOT touch LinkedIn.
+8. [sonnet] **audit the weak GitHub matches** flagged in
+   linkedin-results-professional.json (Matthew Brown -> muglug, Johnathan
+   Babb -> warmace101, Brad Chen -> vvasabi, Dan Campbell -> Danny2097 and
+   any sibling cases): handles that bear no relation to the person's name.
+   Re-verify or drop; a wrong GitHub link on a paper page is worse than
+   none.
 
 ## PARKED (needs the human / coordinator)
 - Ronald Dresklinski -> Dreslinski spelling fix (+ Michigan faculty page)
   still needs his OK.
-- Sitting-1 degree backfill (Agrawal, Barrett, Cooper, Dasika, Erlingsson)
-  so any non-1st-degree ones reach the invite list.
+- Sitting-1 degree backfill (Agrawal, Barrett, Cooper, Dasika, Erlingsson).
+- Professional-tier sittings: GitHub-only cohort, 18 of 98 done
+  (linkedin-results-professional.json); ORCID-only 158 wait on task 7.
 - Cutover: final review, then point the live site at nextgen.
 
 ## DONE (recent)
 - LinkedIn sittings 1-2: 60 of the 74 no-link people resolved — 42
-  confirmed (both open identity questions settled by him), no-link where
-  nothing met the bar; 13 exascale initials parked into task 6 above.
+  confirmed; 13 exascale initials parked into task 6.
 - Author-links free harvest: 369 people — 43 academic, 237 professional,
   3 personal, 12 email, 74 nothing.
 - Authors Scholar sitting: 31 match / 2 tentative / 35 no-profile / 9

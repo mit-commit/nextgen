@@ -1225,6 +1225,32 @@ if (auKeys.length){
         return imp != null && imp >= state.minImpact;
       });
     }
+    // Impact categories drill the paper list down too: keep papers with
+    // at least one judged citation in a selected category, or a repo in
+    // the category's unified-taxonomy group.
+    var FG = { 'extends': 'builds-on', 'uses-tool': 'uses',
+               'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+    if (state.citeCatKeys && state.citeCatKeys.length && excludeFacet !== 'citecats'){
+      items = items.filter(function(it){
+        var k = bibtexKeyOf(it);
+        var row = CITE_INDEX && CITE_INDEX[k];
+        var rrow = REPO_INDEX && REPO_INDEX[k];
+        for (var ci = 0; ci < state.citeCatKeys.length; ci++){
+          var f = state.citeCatKeys[ci];
+          if (row && row.functions && row.functions[f] > 0) return true;
+          var g = FG[f];
+          if (g && rrow && rrow.grids && rrow.grids[g] && rrow.grids[g].length) return true;
+        }
+        return false;
+      });
+    }
+    // The centrality Filter-by drills down the same way.
+    if (state.citeCentralityKey && state.citeCentralityKey !== 'all'){
+      items = items.filter(function(it){
+        var row = CITE_INDEX && CITE_INDEX[bibtexKeyOf(it)];
+        return row && row.centrality && row.centrality[state.citeCentralityKey] > 0;
+      });
+    }
 
     return items;
   }
@@ -1463,6 +1489,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
   function clearAll(){
     // citation tools
     state.minCites = 0; state.minImpact = 0;
+    state.citeCatKeys = []; state.citeCentralityKey = 'all';
     if (els.minCites){ els.minCites.value = '0'; els.minCitesLabel.textContent = '0'; }
     if (els.minImpact){ els.minImpact.value = '0'; els.minImpactLabel.textContent = 'all papers'; }
     if (els.citeSearch) els.citeSearch.value = '';
@@ -1470,7 +1497,14 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       var ccbs = els.citeCats.querySelectorAll('input'), ci;
       for (ci = 0; ci < ccbs.length; ci++) ccbs[ci].checked = false;
     }
-    if (window.CITATIONS) CITATIONS.setGlobalPanels({ categories: null, search: '' });
+    if (window.CITATIONS) CITATIONS.setGlobalPanels({ categories: null, search: '', centrality: 'all' });
+    if (els.citeCentrality){
+      var cbs2 = els.citeCentrality.querySelectorAll('.type-toggle-btn');
+      for (var cbi = 0; cbi < cbs2.length; cbi++){
+        cbs2[cbi].className = 'type-toggle-btn' +
+          (cbs2[cbi].getAttribute('data-v') === 'all' ? ' active' : '');
+      }
+    }
     state.years = {};
     state.titleQuery = '';
     state.keywords = {};
@@ -1574,6 +1608,10 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
             var patch = {}; patch[patchKey] = this.getAttribute('data-v');
             CITATIONS.setGlobalPanels(patch);
           }
+          if (patchKey === 'centrality'){
+            state.citeCentralityKey = this.getAttribute('data-v');
+            applyFilters();                  // the paper list follows
+          }
           track('citations-global-' + patchKey, { value: this.getAttribute('data-v') });
         };
       }
@@ -1609,6 +1647,8 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
               selected[f.key] = this.checked;
               var keys = keysSelected(selected);
               CITATIONS.setGlobalPanels({ categories: keys.length ? keys : null });
+              state.citeCatKeys = keys;      // and the paper list follows
+              applyFilters();
               if (this.checked) track('citations-category-filter', { value: f.key });
             };
             label.appendChild(cb); label.appendChild(txt);

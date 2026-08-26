@@ -20,6 +20,8 @@ harvest/authors/linkedin-connect-list.md for him to invite.
 2. yee-lok-won and yee-lok-wong are ONE person — merge approved.
 3. "Y. Zibin" -> full name Yoav Zibin — rename approved.
 4. Exascale-report initials: recover full names if possible, then link.
+5. Yee Lok Wong = https://www.linkedin.com/in/yee-lok-wong — CONFIRMED by
+   him; the merged person carries this URL.
 
 ## OPEN — round 11
 1. [sonnet] **UI combinatorial test run**: tests/ui/facet_test.py —
@@ -43,13 +45,13 @@ harvest/authors/linkedin-connect-list.md for him to invite.
    author-name links per the RULING, now joining linkedin-results.json
    (60 of 74 residue people resolved) to links.json.
 5. [sonnet] **apply the sitting-2 rulings** to harvest/authors/:
-   (a) set Richard P. Sollee III to confirmed with the /in/solleer URL and
-   add him to linkedin-connect-list.md (2nd-degree) — already added to the
-   MD, so only the JSON row and any downstream join need it;
+   (a) set Richard P. Sollee III to confirmed with the /in/solleer URL
+   (already on linkedin-connect-list.md, so only the JSON row and the
+   downstream join need it);
    (b) merge person yee-lok-won into yee-lok-wong across authors.json,
    enriched.json and links.json (papers ansel:cgo:2011 and
-   ansel:mitcsail-tr:2010 move onto the merged person); leave the merged
-   record's LinkedIn empty until he rules on the candidate;
+   ansel:mitcsail-tr:2010 move onto the merged person) and attach
+   https://www.linkedin.com/in/yee-lok-wong to the merged record;
    (c) rename person y-zibin to Yoav Zibin and attach
    https://www.linkedin.com/in/yoav-zibin-6392651.
 6. [sonnet] **exascale author names**: the 13 initials-only co-authors of
@@ -66,16 +68,16 @@ harvest/authors/linkedin-connect-list.md for him to invite.
    LinkedIn lookup comes back to the coordinator for a sitting.
 
 ## PARKED (needs the human / coordinator)
-- Two identity questions still open: Yee Lok Wong candidate
-  (/in/yee-lok-wong) and the Ronald Dresklinski -> Dreslinski spelling fix.
+- Ronald Dresklinski -> Dreslinski spelling fix (+ Michigan faculty page)
+  still needs his OK.
 - Sitting-1 degree backfill (Agrawal, Barrett, Cooper, Dasika, Erlingsson)
   so any non-1st-degree ones reach the invite list.
 - Cutover: final review, then point the live site at nextgen.
 
 ## DONE (recent)
-- LinkedIn sittings 1-2: 60 of the 74 no-link people resolved — 40
-  confirmed, no-link where nothing met the bar; 13 exascale initials parked
-  into task 6 above.
+- LinkedIn sittings 1-2: 60 of the 74 no-link people resolved — 42
+  confirmed (both open identity questions settled by him), no-link where
+  nothing met the bar; 13 exascale initials parked into task 6 above.
 - Author-links free harvest: 369 people — 43 academic, 237 professional,
   3 personal, 12 email, 74 nothing.
 - Authors Scholar sitting: 31 match / 2 tentative / 35 no-profile / 9

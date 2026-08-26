@@ -514,6 +514,33 @@ function createBibLink(it){
   // Distinct citing works across papers (data/citations/citers.json,
   // ~120KB): fetched AFTER boot so first paint pays nothing; the
   // overview line re-renders when it arrives.
+  // Author-name links (data/author-links.json, ruling 2026-08-26:
+  // LinkedIn default, permanent academic page replaces it, else best
+  // active site, else email; verified identities only). Fetched after
+  // boot; names render as links on the next repaint.
+  var AUTHOR_LINKS = null;
+  citeIndexReady.then(function(){
+    return fetch('data/author-links.json', { cache: 'no-store' })
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){
+        AUTHOR_LINKS = (d && d.links) || null;
+        if (AUTHOR_LINKS) applyFilters();
+      })
+      .catch(function(){});
+  });
+  function foldAuthorName(s){
+    return String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z. ]/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+  function authorLinkFor(displayName){
+    if (!AUTHOR_LINKS) return null;
+    // "Last, First" -> "first last"; plain names fold directly
+    var nm = displayName;
+    var comma = nm.indexOf(',');
+    if (comma !== -1) nm = nm.slice(comma + 1).trim() + ' ' + nm.slice(0, comma).trim();
+    return AUTHOR_LINKS[foldAuthorName(nm)] || null;
+  }
+
   var CITERS = null, _lastOverviewItems = null;
   citeIndexReady.then(function(){
     return fetch('data/citations/citers.json', { cache: 'no-store' })
@@ -981,7 +1008,25 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     li.appendChild(t);
 
     var auth = authorsOf(it);
-    if (auth){ var al = document.createElement('div'); al.className = 'pub-authors'; al.appendChild(text(auth + '.')); li.appendChild(al); }
+    if (auth){
+      var al = document.createElement('div'); al.className = 'pub-authors';
+      var names = String(auth).split(/\s+and\s+/);
+      for (var ni = 0; ni < names.length; ni++){
+        if (ni) al.appendChild(text(' and '));
+        var href = authorLinkFor(names[ni]);
+        if (href){
+          var aa = document.createElement('a');
+          aa.className = 'pub-author-link';
+          aa.href = href; aa.target = '_blank'; aa.rel = 'noopener';
+          aa.appendChild(text(names[ni]));
+          al.appendChild(aa);
+        } else {
+          al.appendChild(text(names[ni]));
+        }
+      }
+      al.appendChild(text('.'));
+      li.appendChild(al);
+    }
 
     var ven = venueOf(it);
     if (ven){ var vl = document.createElement('div'); vl.className = 'pub-venue'; vl.appendChild(text(ven + '.')); li.appendChild(vl); }
@@ -1568,12 +1613,16 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
           (cbs2[cbi].getAttribute('data-v') === 'all' ? ' active' : '');
       }
     }
-    state.years = {};
+    // Clear facet selections IN PLACE: the checkbox handlers closed over
+    // these exact objects at build time, so reassigning `{}` orphans them
+    // (the harness's STRUCTURAL BUG: dead Years/Topics/Categories after
+    // Clear filters).
+    var facetMaps = [state.years, state.keywords, state.authors,
+                     state.types, state.citeAuthors];
+    for (var fm = 0; fm < facetMaps.length; fm++){
+      for (var fk in facetMaps[fm]) delete facetMaps[fm][fk];
+    }
     state.titleQuery = '';
-    state.keywords = {};
-    state.authors = {};
-    state.types = {};
-    state.citeAuthors = {};
     state.scroll = { keywords:0, authors:0, types:0 };
     if (els.title) els.title.value = '';
     state.authorQuery = '';

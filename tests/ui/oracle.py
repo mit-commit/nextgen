@@ -47,13 +47,6 @@ MONTH_ABBR = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
 MONTH_MAP = {'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6,
              'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12}
 
-WEIGHTS = {
-    'extends': 10, 'uses-tool': 8, 'adopts-idea': 8,
-    'uses-benchmark': 5, 'baseline': 5, 'positions': 3,
-    'surveys': 2, 'supports-claim': 2, 'exemplifies': 1,
-    'detailed-citation': 1, 'passing-citation': 0.5,
-}
-
 
 def first_defined(*vals):
     for v in vals:
@@ -365,17 +358,6 @@ def display_count(row):
     if not row:
         return 0
     return max(row.get('verified') or 0, row.get('gscholar') or 0)
-
-
-def impact_score(row):
-    if not row or not row.get('functions'):
-        return None
-    s = 0.0
-    for f, n in row['functions'].items():
-        s += WEIGHTS.get(f, 0) * n
-    # JS Math.round rounds halves UP; Python round() is half-to-even.
-    # A paper whose only citation is passing (0.5) scores 1 on the page.
-    return math.floor(s + 0.5)
 
 
 def cite_count_of(it, cite_index):

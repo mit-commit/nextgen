@@ -39,7 +39,6 @@ var CITATIONS = (function(){
     { key: 'passing-citation',  label: 'Cites it in a list',
       gloss: 'appears only inside multi-paper citation lists' }
   ];
-  var CENTRALITIES = ['core', 'engaged', 'peripheral'];
 
   function el(tag, cls, txt){
     var e = document.createElement(tag);
@@ -68,18 +67,6 @@ var CITATIONS = (function(){
 
   /* Impact score: each external judged citation weighted by what it does.
      Weights mirrored in data/citations/SCHEMA.md — change both together. */
-  var WEIGHTS = {
-    'extends': 10, 'uses-tool': 8, 'adopts-idea': 8,
-    'uses-benchmark': 5, 'baseline': 5, 'positions': 3,
-    'surveys': 2, 'supports-claim': 2, 'exemplifies': 1,
-    'detailed-citation': 1, 'passing-citation': 0.5
-  };
-  function impactScore(row){
-    if (!row || !row.functions) return null;
-    var s = 0;
-    for (var f in row.functions){ s += (WEIGHTS[f] || 0) * row.functions[f]; }
-    return Math.round(s);
-  }
 
   /* Page-level panel state: every open panel follows these; per-panel
      controls can still diverge afterwards. */
@@ -521,53 +508,7 @@ var CITATIONS = (function(){
     for (var j = 0; j < repoPanels.length; j++) repoPanels[j].sync();
   }
 
-  /* Fetch (through the progressive queue) the data files for a set of
-     papers without opening their panels; resolves when all settle. */
-  function ensureData(list){
-    var jobs = [];
-    for (var i = 0; i < list.length; i++){
-      (function(key){
-        if (dataCache[key]) return;
-        jobs.push(new Promise(function(resolve){
-          fetchQueue.push(function(){
-            return fetch(DATA_BASE + fileKeyOf(key) + '.json', { cache: 'no-store' })
-              .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-              .then(function(data){ dataCache[key] = data; })
-              .catch(function(){})
-              .then(resolve);
-          });
-        }));
-      })(list[i].key !== undefined ? list[i].key : list[i]);
-    }
-    pumpQueue();
-    return Promise.all(jobs);
-  }
 
-  /* Works citing more than one of the given papers, matched by DOI or
-     normalized title over whatever files are cached. */
-  function crossCiters(keys){
-    var byId = {};
-    for (var i = 0; i < keys.length; i++){
-      var d = dataCache[keys[i]];
-      if (!d) continue;
-      for (var j = 0; j < d.citations.length; j++){
-        var c = d.citations[j];
-        if (!c.title || c.title === 'Untitled') continue; // unauditable records
-        var id = c.doi || c.title.toLowerCase().replace(/[^a-z0-9]+/g, '');
-        if (!id) continue;
-        if (!byId[id]) byId[id] = { work: c, papers: [] };
-        if (byId[id].papers.indexOf(keys[i]) === -1) byId[id].papers.push(keys[i]);
-        if ((c.cited_by || 0) > (byId[id].work.cited_by || 0)) byId[id].work = c;
-      }
-    }
-    var out = [];
-    for (var id2 in byId){ if (byId[id2].papers.length >= 2) out.push(byId[id2]); }
-    out.sort(function(a, b){
-      return (b.papers.length - a.papers.length) ||
-             ((b.work.cited_by || 0) - (a.work.cited_by || 0));
-    });
-    return out;
-  }
 
 
   /* ==================== Repositories panel (impact view) ====================
@@ -753,7 +694,6 @@ var CITATIONS = (function(){
     return gPanel.categories.indexOf(REPO_FUNC[r.group]) !== -1;
   }
   var repoDefaultOpen = false;
-  var repoDataCache = {};
   function attachRepoToggle(metaEl, bodyParent, key, indexRow){
     var div = el('div', 'pub-summary cite-view');
     var toggle = el('a', 'pub-action pub-summary-toggle cite-toggle');
@@ -772,7 +712,7 @@ var CITATIONS = (function(){
       fetchQueue.push(function(){
         return fetch(REPO_BASE + 'papers/' + fileKeyOf(key) + '.json', { cache: 'no-store' })
           .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-          .then(function(data){ repoDataCache[key] = data; renderRepoPanel(div, data); })
+          .then(function(data){ renderRepoPanel(div, data); })
           .catch(function(e){
             loaded = false;
             div.innerHTML = '';
@@ -833,15 +773,10 @@ var CITATIONS = (function(){
     },
     countBucket: countBucket,
     displayCount: displayCount,
-    impactScore: impactScore,
-    WEIGHTS: WEIGHTS,
     FUNCTIONS: FUNCTIONS,
     setGlobalPanels: setGlobalPanels,
-    ensureData: ensureData,
-    crossCiters: crossCiters,
     setAllOpen: setAllOpen,
     setDefaultOpen: function(v){ defaultOpen = !!v; },
-    setDataBase: function(p){ DATA_BASE = p; },
     loadIndex: function(){
       // no-store: a stale cached index must never outlive a data refresh
       return fetch(DATA_BASE + 'index.json', { cache: 'no-store' })

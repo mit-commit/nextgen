@@ -1,10 +1,6 @@
 /* Publications page controller — ES5, dynamic counts, compact UI */
 // Data source: data/publications.json; edit that file to add publications.
 /* === BibTeX generation (local, ES5) === */
-// --- Safe URL localizer shim (works even if pubs.js isn't loaded) ---
-// var localizeURL = (window.PUBS && typeof PUBS.localizeAssetURL === 'function')
-//   ? function(u){ try { return PUBS.localizeAssetURL(u); } catch (e) { return u || ''; } }
-//     : function(u){ return u || ''; };
 
 // Localize commit links to site-relative (papers/... presentations/...)
 var localizeURL = (window.PUBS && typeof PUBS.localizeAssetURL === 'function')
@@ -32,7 +28,6 @@ function firstDefined(){
   for (var i=0;i<arguments.length;i++){ var v=arguments[i]; if (v!==undefined && v!==null && v!=='') return v; }
   return '';
 }
-function venueOf(it){ return firstDefined(it.journal, it.booktitle, it.series, it.type, it.publisher); }
 function locationOf(it){ return firstDefined(it.location, it.address); }
 function titleOf(it){ return it.title || 'Untitled'; }
 
@@ -273,15 +268,6 @@ function keyFor(it, which){
 function venueOf(it){ return firstDefined(it.journal, it.booktitle, it.series, it.type, it.publisher); }
 
 function cmp(a, b) { return a < b ? -1 : a > b ? 1 : 0; }
-function makeSorter(key){
-  // returns a function(a,b) for within-year sorting
-  if (key === 'title')       return function(a,b){ return cmp((a.title||'').toLowerCase(), (b.title||'').toLowerCase()); };
-  if (key === 'venue')       return function(a,b){ return cmp((venueOf(a)||'').toLowerCase(), (venueOf(b)||'').toLowerCase()); };
-  if (key === 'firstAuthor') return function(a,b){ return cmp((firstAuthorOf(a)||'').toLowerCase(), (firstAuthorOf(b)||'').toLowerCase()); };
-  if (key === 'type')        return function(a,b){ return cmp((a.itemType||'misc').toLowerCase(), (b.itemType||'misc').toLowerCase()); };
-  if (key === 'month')       return function(a,b){ return cmp(monthDayValue(b), monthDayValue(a)); };
-  return null; // default order (as in data) within year
-}
 
 
 
@@ -433,14 +419,6 @@ function createBibLink(it){
     return best;
   }
   window.compositeImpactOf = function(it){
-    if (it && it.bibtexKey && it.year === undefined){
-      // key-only probe: resolve the real item for year/price
-      var full = null;
-      for (var di = 0; di < DATA.length; di++){
-        if (bibtexKeyOf(DATA[di]) === it.bibtexKey){ full = DATA[di]; break; }
-      }
-      if (full) it = full;
-    }
     var key = bibtexKeyOf(it);
     var age = _impactNowY - (parseInt(it.year, 10) || _impactNowY);
     var s = 2 * Math.exp(-age / 5);
@@ -634,13 +612,6 @@ function createBibLink(it){
     authors: {},                // map of selected author -> true
     types: {},                  // map of selected itemType -> true
     citeAuthors: {},            // map of selected "Cited and Used by" name -> true
-    scroll: {                   // range-controlled scroll positions (0..1)
-      keywords: 0,
-      authors: 0,
-      types: 0
-    },
-      sortKey: 'none',   // 'none' | 'title' | 'venue' | 'firstAuthor' | 'type' | 'month'
-      sortDesc: false,
       sortOrder: ['year','month','type','authorLast'],  // default
       authorSort: 'count',
       kwMode: 'topics',           // 'topics' | 'projects' — Topics & Projects facet mode
@@ -707,21 +678,7 @@ function createBibLink(it){
   function titleOf(it){ return it.title || 'Untitled'; }
   function venueOf(it){ return firstDefined(it.journal, it.booktitle, it.series, it.type, it.publisher); }
   function locationOf(it){ return firstDefined(it.location, it.address); }
-  function splitAuthors(s){
-    if(!s) return [];
-    var parts = s.split(/\s+and\s+|,/i), out=[], i, p;
-    for(i=0;i<parts.length;i++){ p = parts[i].trim(); if(p) out.push(p); }
-    return out;
-  }
-  function splitKeywords(s){
-    if(!s) return [];
-    var parts = s.split(/[,;]+/), out=[], i, p;
-    for(i=0;i<parts.length;i++){ p = parts[i].trim(); if(p) out.push(p); }
-    return out;
-  }
 
-  // If pubs.js is loaded, reuse its localizer and bib link; else graceful fallback
-    //  var localizeURL = (window.PUBS && PUBS.localizeAssetURL) ? function(u){ try{return PUBS.localizeAssetURL(u);}catch(_){return u;} } : function(u){ return u; };
 
 
   /* ---------- Build static UI shells (kept; content dynamic) ---------- */
@@ -1691,7 +1648,6 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       for (var fk in facetMaps[fm]) delete facetMaps[fm][fk];
     }
     state.titleQuery = '';
-    state.scroll = { keywords:0, authors:0, types:0 };
     if (els.title) els.title.value = '';
     state.authorQuery = '';
     if (els.authorSearch) els.authorSearch.value = '';
@@ -2023,15 +1979,11 @@ var years = Object.keys(byYear).sort(function(a,b){
   return bi - ai;
 });
 
-// Within-year sort same as UI
-var sorter = makeSorter(state.sortKey);
-var dir = state.sortDesc ? -1 : 1;
 
 var out = [], yi, y;
 for (yi=0; yi<years.length; yi++){
   y = years[yi];
   var arr = byYear[y].slice();
-  if (sorter) arr.sort(function(a,b){ return dir * sorter(a,b); });
 
   for (var k=0; k<arr.length; k++){
     out.push(buildBibtex(arr[k], localizeURL));

@@ -1,0 +1,1138 @@
+{
+ "generated": "2026-08-26",
+ "population": "best_tier==professional AND has an ORCID-sourced candidate in harvest/authors/links.json (141 people -- close to but not exactly the queue-stated 158; the exact count depends on the precise definition of \"best candidate is an orcid.org record\", and links.json has been evolving under concurrent sessions).",
+ "method": "For each person: (1) fetched their ORCID public record (pub.orcid.org) for employment history + researcher-urls, mechanically, free; (2) any non-social-media researcher-url was WebFetched to verify liveness + identity; (3) otherwise WebSearched using ORCID employment / OpenAlex affiliation / our own authors.json latest_affiliation as institution context, plus paper-topic cross-checking. Never accepted a candidate on name alone; never touched LinkedIn as a source.",
+ "found": 101,
+ "not_found": 40,
+ "orcid_mismatch_flags": "Several people's linked ORCID record (in harvest/authors/enriched.json) turned out to describe a DIFFERENT, wrong person entirely -- caught because the employment history/field was inconsistent with our own papers. See harvest/authors/academic-pages-report.md for the list; these need enriched.json review, out of scope for this deliverable to fix directly.",
+ "people": [
+  {
+   "person_id": "a-lerer",
+   "status": "found",
+   "url": "https://adamlerer.github.io/",
+   "institution": "OpenAI (formerly Meta AI/FAIR)",
+   "confidence": "medium",
+   "evidence": "Adam Lerer, MIT BS/MEng -- matches authors_latest_affiliation. Personal homepage confirmed live; now industry (OpenAI) rather than academia, so this is a 'best active site' rather than strictly an academic page."
+  },
+  {
+   "person_id": "ajay-brahmakshatriya",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/ajay-brahmakshatriya",
+   "institution": "Massachusetts Institute of Technology, CSAIL (PhD student, advised by Saman Amarasinghe)",
+   "confidence": "high",
+   "evidence": "Matches authors_latest_affiliation and our own BuildIt/D2X papers exactly; page last updated Nov 2024 per search results."
+  },
+  {
+   "person_id": "albert-ma",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "LIKELY WRONG ORCID MATCH: ORCID shows Hefei University of Technology (China) with no dates; our paper is a 2002 MIT Raw-architecture paper. No plausible continuity -- flagging as a probable collision, not accepted."
+  },
+  {
+   "person_id": "alex-renda",
+   "status": "found",
+   "url": "https://alexrenda.com/",
+   "institution": "MIT (PhD 2024, advisor Michael Carbin)",
+   "confidence": "high",
+   "evidence": "Personal site; matches bhive/ithemal-icml corpus papers and MIT PhD background exactly."
+  },
+  {
+   "person_id": "alexander-t-leighton",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed as Brandeis Math PhD student (matches seq-nature-biotech co-authorship plausibly), but no institutional/personal page found beyond LinkedIn."
+  },
+  {
+   "person_id": "amalee-wilson",
+   "status": "found",
+   "url": "https://profiles.stanford.edu/amalee-wilson",
+   "institution": "Stanford University (PhD student, Computer Science)",
+   "confidence": "high",
+   "evidence": "Official Stanford Profiles institutional page; co-author list on her sparse-tensor-algebra paper matches our senanayake2020sparse paper's author list exactly."
+  },
+  {
+   "person_id": "amina-selma-haichour",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed real person at ESI Algiers (matches tiramisu-li) but no dedicated homepage, only ResearchGate/conference profiles."
+  },
+  {
+   "person_id": "amy-williams",
+   "status": "found",
+   "url": "https://hapi-dna.org/lab/",
+   "institution": "Brigham Young University (Associate Professor)",
+   "confidence": "high",
+   "evidence": "Her own lab website, explicitly names her as PI and BYU Associate Professor, consistent with her ORCID employment history (BYU 2025-)."
+  },
+  {
+   "person_id": "anant-agarwal",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/anant-agarwal",
+   "institution": "Massachusetts Institute of Technology (Professor, CSAIL)",
+   "confidence": "high",
+   "evidence": "Confirmed real MIT CSAIL faculty page, matches our Raw-project papers exactly (taylor:isca:2004 etc). WARNING: his linked ORCID (0000-0003-0228-8039) employment history (Ohio State University since 2017) is a WRONG different Anant Agarwal -- same misattribution pattern as andrew-adams."
+  },
+  {
+   "person_id": "andrew-adams",
+   "status": "found",
+   "url": "https://andrew.adams.pub/",
+   "institution": "Adobe Research (Principal Scientist)",
+   "confidence": "high",
+   "evidence": "Confirmed via his own homepage, extensively covers Halide co-authorship, MIT CSAIL collaborators, Stanford grad school. WARNING: his linked ORCID (0000-0001-8925-9956) employment history is for a WRONG different Andrew Adams (University of Minnesota professor since 2020) -- the ORCID resolution itself looks misattributed, not just missing data."
+  },
+  {
+   "person_id": "andrew-lee",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed the BMC Bioinformatics 2007 paper context matches (thies:bmc:2007), but the name is too common to isolate a specific personal page for this particular co-author."
+  },
+  {
+   "person_id": "andrew-v-pochinsky",
+   "status": "found",
+   "url": "https://ctp.lns.mit.edu/personnel.html",
+   "institution": "MIT Center for Theoretical Physics",
+   "confidence": "high",
+   "evidence": "MIT CTP personnel page; principal research scientist working on lattice QCD, matches paper (VarStudy2023) and ORCID/openalex affiliation exactly."
+  },
+  {
+   "person_id": "ariya-shajii",
+   "status": "found",
+   "url": "https://ars.me",
+   "institution": "Exaloop (Founder)",
+   "confidence": "high",
+   "evidence": "WebFetched directly: Exaloop founder, MIT CSAIL PhD -- exact match to our papers."
+  },
+  {
+   "person_id": "armando-solar-lezama",
+   "status": "found",
+   "url": "https://people.csail.mit.edu/asolar/",
+   "institution": "MIT CSAIL (Distinguished Professor)",
+   "confidence": "high",
+   "evidence": "Official MIT CSAIL homepage, heavily corroborated."
+  },
+  {
+   "person_id": "bonnie-berger",
+   "status": "found",
+   "url": "https://people.csail.mit.edu/bab/index.html",
+   "institution": "Massachusetts Institute of Technology (Simons Professor of Mathematics, CSAIL)",
+   "confidence": "high",
+   "evidence": "Well-known MIT computational biology professor, matches openalex_affiliation and authors_latest_affiliation exactly."
+  },
+  {
+   "person_id": "brian-r-murphy",
+   "status": "found",
+   "url": "https://suif.stanford.edu/~brm/resume/resume.pdf",
+   "institution": "Stanford SUIF Compiler Group (historical); later Intel",
+   "confidence": "medium",
+   "evidence": "Name-collision risk confirmed and resolved: there is also an unrelated Virginia Tech fisheries professor of the same name. The real match is the SUIF-group/Intel compiler researcher (StarJIT dynamic compiler) -- consistent with our 1990s HPC-paper context. Page is a historical grad-school resume archive, not a current profile, hence medium confidence."
+  },
+  {
+   "person_id": "ce-guo",
+   "status": "found",
+   "url": "https://profiles.imperial.ac.uk/c.guo",
+   "institution": "Imperial College London, Department of Computing (Research Fellow)",
+   "confidence": "high",
+   "evidence": "Verified live; matches li:fccm:2026 affiliation exactly."
+  },
+  {
+   "person_id": "changwan-hong",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/changwan-hong",
+   "institution": "MIT CSAIL",
+   "confidence": "high",
+   "evidence": "Official CSAIL directory page; Research Scientist, co-author with Amarasinghe/Shun on GraphIt/Finch work matching his papers list exactly."
+  },
+  {
+   "person_id": "charith-mendis",
+   "status": "found",
+   "url": "https://charithmendis.com",
+   "institution": "University of Illinois Urbana-Champaign",
+   "confidence": "high",
+   "evidence": "ORCID-listed homepage fetched live; confirms Assistant Professor, Siebel School of Computing, UIUC, compilers/ML for systems -- matches many corpus papers exactly (bhive, ithemal, revec, etc.)."
+  },
+  {
+   "person_id": "chris-rinard",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed as the real NetBlocks co-author, now a software engineer/entrepreneur (Co-Founder, Standard Kernel Co.) -- but no permanent ACADEMIC page found, only a startup-directory aggregator profile (getprog.ai), which doesn't meet the 'faculty/lab/institutional' bar."
+  },
+  {
+   "person_id": "chris-s-wilson",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "openalex_affiliation (Flinders Medical Centre, Australia), authors_latest_affiliation (Stanford), and ORCID employment (PhD Fellow, University of Oslo, 2016-) are mutually inconsistent and none fit our 1994-1996 compiler papers -- a name-collision across multiple wrong 'Chris Wilson' identities, not resolved."
+  },
+  {
+   "person_id": "christopher-rhodes",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Co-authorship on the 2006 microfluidics paper confirmed via the Hatsopoulos Microfluids Lab's own publication list, but no personal page found (old web.mit.edu student page is 404); openalex 'Texas State University' hit is unverified and not pursued given no corroborating page exists to confirm identity."
+  },
+  {
+   "person_id": "csaba-andras-moritz",
+   "status": "found",
+   "url": "https://www.umass.edu/nanofabrics/users/andras/",
+   "institution": "UMass Amherst, Electrical and Computer Engineering",
+   "confidence": "high",
+   "evidence": "Directs the Nanoscale Computing Fabrics Lab at UMass Amherst ECE; matches openalex_affiliation and authors_latest_affiliation exactly."
+  },
+  {
+   "person_id": "cy-chan",
+   "status": "found",
+   "url": "https://profiles.lbl.gov/20953-cy-chan",
+   "institution": "Lawrence Berkeley National Laboratory (Computer Research Scientist)",
+   "confidence": "high",
+   "evidence": "Matches orcid_employments (LBNL Research Scientist since 2012) and openalex_affiliation exactly; official LBNL profile page."
+  },
+  {
+   "person_id": "dai-cheol-jung",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed real UW ECE PhD (Computer Architecture/VLSI, matches ugcf-isca21), but no personal/lab page found beyond Google Scholar and LinkedIn."
+  },
+  {
+   "person_id": "daniel-donenfeld",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "MIT CSAIL grad student (thesis/papers confirmed by search) but no dedicated personal homepage found, only a thesis PDF and news mentions."
+  },
+  {
+   "person_id": "daniel-sainati",
+   "status": "found",
+   "url": "https://sainati.pl/",
+   "institution": "University of Pennsylvania (PLClub, PhD student)",
+   "confidence": "high",
+   "evidence": "WebFetched directly: confirms PhD student at Penn PLClub with Pierce/Weirich; matches ORCID employment."
+  },
+  {
+   "person_id": "daniel-sanchez",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/daniel-sanchez",
+   "institution": "MIT CSAIL (Professor of EECS)",
+   "confidence": "high",
+   "evidence": "Official MIT CSAIL page; matches ugcf-isca21 architecture topic."
+  },
+  {
+   "person_id": "danny-m-kaufman",
+   "status": "found",
+   "url": "https://research.adobe.com/person/danny-kaufman/",
+   "institution": "Adobe Research",
+   "confidence": "high",
+   "evidence": "Official Adobe Research profile (also has personal site dannykaufman.io); Principal Research Scientist in physics-based animation/graphics, matches kjolstad:tog:2016 (Simit)."
+  },
+  {
+   "person_id": "david-i-w-levin",
+   "status": "found",
+   "url": "http://www.diwlevin.com",
+   "institution": "University of Toronto (Associate Professor) / NVIDIA (Principal Research Scientist)",
+   "confidence": "high",
+   "evidence": "Verified live personal homepage (already on his ORCID record, URL casing normalized); dual academic+industry appointment confirmed on the page itself."
+  },
+  {
+   "person_id": "david-wentzlaff",
+   "status": "found",
+   "url": "https://ece.princeton.edu/people/david-wentzlaff",
+   "institution": "Princeton University (Professor, Electrical and Computer Engineering)",
+   "confidence": "high",
+   "evidence": "Official Princeton ECE faculty page; bio confirms MIT PhD and Tilera co-founder background, consistent with our Raw-project-era papers (taylor:isca:2004 etc.)."
+  },
+  {
+   "person_id": "deepak-narayanan",
+   "status": "found",
+   "url": "https://deepakn94.github.io/",
+   "institution": "NVIDIA (ADLR group); PhD Stanford, advised by Matei Zaharia",
+   "confidence": "high",
+   "evidence": "Personal site confirms Senior Deep Learning Research Scientist at NVIDIA; matches authors_latest_affiliation (Stanford) and paper co-authorship with Zaharia (Zaharia:CIDR:2017). openalex_affiliation on file ('Sathyabama Institute') is a mismatched different person -- flag for correction."
+  },
+  {
+   "person_id": "desai-chen",
+   "status": "found",
+   "url": "http://desaic.github.io",
+   "institution": "Foundation EGI (2025-present); previously Inkbit (2017-2025)",
+   "confidence": "medium",
+   "evidence": "His own ORCID-listed personal page, confirmed live, self-describes finite element simulation/computer graphics/3D printing interests matching kjolstad:tog:2016. Medium confidence and NOT flagged as 'permanent academic' -- he's in industry/nonprofit now, not academia -- but it's a genuine, current, first-party page (the RULING's 'best active site' fallback tier)."
+  },
+  {
+   "person_id": "devabhaktuni-srikrishna",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Now runs a patient-advocacy company, not academia -- no permanent academic page exists."
+  },
+  {
+   "person_id": "dillon-sharlet",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Google engineer; only corporate/aggregator profiles, no personal academic page."
+  },
+  {
+   "person_id": "dustin-richmond",
+   "status": "found",
+   "url": "https://www.dustinrichmond.com",
+   "institution": "UC Santa Cruz, Baskin School of Engineering",
+   "confidence": "high",
+   "evidence": "ORCID-listed homepage fetched live; confirms Assistant Professor, FPGA/reconfigurable computing, matches ugcf-isca21 paper field exactly."
+  },
+  {
+   "person_id": "ed-bugnion",
+   "status": "found",
+   "url": "https://people.epfl.ch/edouard.bugnion",
+   "institution": "École Polytechnique Fédérale de Lausanne (Full Professor, VP for Innovation and Impact)",
+   "confidence": "high",
+   "evidence": "Full name Edouard Bugnion -- matches orcid_employments (EPFL, Professor & VP, since 2012) exactly; official EPFL people profile."
+  },
+  {
+   "person_id": "emanuele-del-sozzo",
+   "status": "found",
+   "url": "https://futuretech.mit.edu/team/emanuele-del-sozzo",
+   "institution": "MIT FutureTech (Research Scientist)",
+   "confidence": "high",
+   "evidence": "WebFetched directly: current MIT FutureTech role, supersedes Polimi PhD-era affiliation."
+  },
+  {
+   "person_id": "emma-brunskill",
+   "status": "found",
+   "url": "https://profiles.stanford.edu/emma-brunskill",
+   "institution": "Stanford University (Associate Professor of Computer Science)",
+   "confidence": "high",
+   "evidence": "Matches orcid_employments (Stanford University) and openalex_affiliation exactly; well-known RL researcher."
+  },
+  {
+   "person_id": "emmett-witchel",
+   "status": "found",
+   "url": "https://www.cs.utexas.edu/~witchel/",
+   "institution": "University of Texas at Austin (Professor, CS)",
+   "confidence": "high",
+   "evidence": "Official UT Austin faculty homepage; consistent with MIT LCS background matching our witchel:micro:2001-era papers."
+  },
+  {
+   "person_id": "eric-atkinson",
+   "status": "found",
+   "url": "https://www.binghamton.edu/computer-science/people/profile.html?id=eatkinson2",
+   "institution": "Binghamton University (Assistant Professor, since Spring 2024)",
+   "confidence": "high",
+   "evidence": "Confirmed: MIT PhD (advised in the bhive-adjacent Commit-affiliated group), joined Binghamton CS faculty Spring 2024 -- matches openalex_affiliation exactly."
+  },
+  {
+   "person_id": "etienne-vouga",
+   "status": "found",
+   "url": "https://www.cs.utexas.edu/~evouga/",
+   "institution": "University of Texas at Austin (Associate Professor, CS)",
+   "confidence": "high",
+   "evidence": "Official UT Austin CS faculty page; matches authors_latest_affiliation and openalex_affiliation exactly."
+  },
+  {
+   "person_id": "evelyn-duesterwald",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "IBM Research Staff Member/Manager; IBM does not appear to publish a findable individual bio page -- only directory/conference/LinkedIn hits."
+  },
+  {
+   "person_id": "frederic-vivien",
+   "status": "found",
+   "url": "https://www.ens-lyon.fr/lecole/nous-connaitre/annuaire/frederic-vivien",
+   "institution": "INRIA / Ecole Normale Superieure de Lyon (senior researcher)",
+   "confidence": "high",
+   "evidence": "Institutional directory page. Bio confirms he spent 2000 in MIT LCS's Computer Architecture Group, matching our corpus's 2000-2007 papers with him."
+  },
+  {
+   "person_id": "fredrik-kjolstad",
+   "status": "found",
+   "url": "http://fredrikbk.com",
+   "institution": "Stanford University",
+   "confidence": "high",
+   "evidence": "Verified live personal homepage (already on his ORCID record); Assistant Professor, Stanford CS -- exact match."
+  },
+  {
+   "person_id": "gayashan-amarasinghe",
+   "status": "found",
+   "url": "https://sites.google.com/a/cse.mrt.ac.lk/dmcse/members/gayashanna",
+   "institution": "University of Moratuwa, Department of Computer Science & Engineering (Senior Lecturer)",
+   "confidence": "medium",
+   "evidence": "Institutional-domain (cse.mrt.ac.lk) group page matching ORCID employment (University of Moratuwa, Lecturer since 2015) and our own falsesharing:sc:2013 paper. Medium not high because it's a lab-group members page, not his own dedicated profile -- no separate personal/faculty URL found."
+  },
+  {
+   "person_id": "gilbert-louis-bernstein",
+   "status": "found",
+   "url": "https://www.cs.washington.edu/people/faculty/gilbert-bernstein/",
+   "institution": "University of Washington, Allen School (Assistant Professor)",
+   "confidence": "high",
+   "evidence": "Matches openalex_affiliation exactly; joined UW from a UC Berkeley/MIT CSAIL postdoc background."
+  },
+  {
+   "person_id": "gregory-sullivan",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "WebFetched his old MIT CSAIL frameset page directly -- stale, doesn't reflect his known later moves (BAE, then Draper 2022) -- not accepted as current."
+  },
+  {
+   "person_id": "guoyu-li",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "No page found under 'Guoyu Li' specifically at Imperial College London -- searches surfaced a different person ('Guo Li'). Paper (li:fccm:2026) is too recent/obscure to find a dedicated page."
+  },
+  {
+   "person_id": "gurtej-kanwar",
+   "status": "found",
+   "url": "https://www.ph.ed.ac.uk/people/gurtej-kanwar",
+   "institution": "University of Edinburgh, School of Physics and Astronomy",
+   "confidence": "high",
+   "evidence": "Official institutional faculty page; now a lattice-QCD physicist, plausible continuation from his MIT MEng thesis/Simit paper (Simit targets physics simulation)."
+  },
+  {
+   "person_id": "haley-greenyer",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Only an academia.edu profile found (not a permanent institutional page); real person confirmed (co-author on the Seq/seq-nature-biotech paper) but no qualifying page."
+  },
+  {
+   "person_id": "haojie-ye",
+   "status": "found",
+   "url": "https://linestro.github.io/",
+   "institution": "NVIDIA (Computer Architecture); PhD University of Michigan (advised by Trevor Mudge)",
+   "confidence": "high",
+   "evidence": "University of Michigan PhD confirmed via umich.edu resume page and multiple publication-index profiles; now at NVIDIA, matching both authors_latest_affiliation (historical) and openalex_affiliation (current)."
+  },
+  {
+   "person_id": "haoran-xu",
+   "status": "not_found",
+   "url": null,
+   "institution": "Massachusetts Institute of Technology (historical, CSAIL)",
+   "confidence": null,
+   "evidence": "Identity confirmed via the Cimple/PACT18 paper (co-authored with Kiriansky, Rinard, Amarasinghe -- exactly our kiriansky-pact18-cimple paper) but no personal or current institutional page found."
+  },
+  {
+   "person_id": "haris-smajlovic",
+   "status": "found",
+   "url": "https://harissmajlovic.com",
+   "institution": "Yale University (Postdoctoral Associate)",
+   "confidence": "high",
+   "evidence": "WebFetched directly: confirms Yale postdoc -- matches/updates ORCID employment."
+  },
+  {
+   "person_id": "hongxiang-fan",
+   "status": "found",
+   "url": "https://profiles.imperial.ac.uk/hongxiang.fan",
+   "institution": "Imperial College London, Department of Computing",
+   "confidence": "high",
+   "evidence": "Assistant Professor, matches li:fccm:2026 affiliation exactly."
+  },
+  {
+   "person_id": "ibrahim-numanagic",
+   "status": "found",
+   "url": "https://www.uvic.ca/ecs/computerscience/people/faculty/profiles/numanagi%C4%87-ibrahim.php",
+   "institution": "University of Victoria, Dept. of Computer Science",
+   "confidence": "high",
+   "evidence": "Official UVic faculty profile; Associate Professor, Canada Research Chair, computational biology -- matches seq/CODON-related corpus papers."
+  },
+  {
+   "person_id": "ilya-sergey",
+   "status": "found",
+   "url": "http://ilyasergey.net",
+   "institution": "National University of Singapore (Associate Professor)",
+   "confidence": "high",
+   "evidence": "WebFetched directly: tenured NUS Associate Professor, VERSE lab; matches ORCID + our paper topic."
+  },
+  {
+   "person_id": "ioana-cutcutache",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Now Head of Clinical Bioinformatics at UCB Pharma; no permanent academic page survives from her NUS days, only directory/LinkedIn/ResearchGate hits."
+  },
+  {
+   "person_id": "j-bachrach",
+   "status": "found",
+   "url": "https://www2.eecs.berkeley.edu/Faculty/Homepages/bachrach.html",
+   "institution": "University of California, Berkeley (Adjunct Assistant Professor, EECS)",
+   "confidence": "high",
+   "evidence": "Full name Jonathan Bachrach, creator of Chisel hardware language -- official UCB EECS faculty homepage, matches openalex_affiliation."
+  },
+  {
+   "person_id": "jaeyeon-won",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/jaeyeon-won",
+   "institution": "MIT CSAIL (PhD, co-advised by Saman Amarasinghe and Joel Emer)",
+   "confidence": "high",
+   "evidence": "Official MIT CSAIL people page; directly co-advised by our own group's PI, matches every paper in his list exactly."
+  },
+  {
+   "person_id": "james-j-thomas",
+   "status": "found",
+   "url": "https://cs.stanford.edu/~jjthomas/",
+   "institution": "Stanford University (PhD student, advised in part by Matei Zaharia)",
+   "confidence": "high",
+   "evidence": "Two different 'James J. Thomas' exist online -- a deceased PNNL visualization pioneer, and this Stanford PhD student (MIT SB/MEng 2016) working with Zaharia/Hanrahan. Our papers (Zaharia:CIDR:2017, palkar:vldb:2018) are exactly Zaharia's group -- confirms this is the right person, not the namesake."
+  },
+  {
+   "person_id": "james-psota",
+   "status": "found",
+   "url": "http://people.csail.mit.edu/jim/index.html",
+   "institution": "MIT CSAIL (alumnus)",
+   "confidence": "medium",
+   "evidence": "Legacy personal CSAIL page, still resolving; his own research (rMPI, multicore message passing) matches taylor:isca:2004 co-authorship. Medium confidence since the page is an alumni-era personal page, not a current institutional role."
+  },
+  {
+   "person_id": "jang-kim",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "1997-era MIT LCS Raw-architecture paper co-author; no live page or disambiguating info found -- too old/obscure to trace."
+  },
+  {
+   "person_id": "jason-ansel",
+   "status": "found",
+   "url": "https://jasonansel.com/",
+   "institution": "Meta (PyTorch compilers -- TorchDynamo/TorchInductor)",
+   "confidence": "high",
+   "evidence": "His own ORCID-listed personal site, explicitly confirms MIT CSAIL PhD under Saman Amarasinghe's Commit group and OpenTuner authorship -- exact match to our corpus."
+  },
+  {
+   "person_id": "jason-kim",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "ORCID shows UPenn/Cornell postdoc (recent); our papers are MIT Raw-architecture 2002-2004. No continuity -- likely a common-name collision, not pursued."
+  },
+  {
+   "person_id": "jason-miller",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Common name; searches only surface the Raw-microprocessor-era MIT papers themselves, no personal/faculty page. ORCID's 'US Naval Research Laboratory since 1986' does not match any search result and may be a mismatched ORCID (same risk pattern as jessica-ray below) -- do not trust that employment field."
+  },
+  {
+   "person_id": "jeffrey-bosboom",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Appears to have left academia after his MIT PhD (StreamJIT/StreamIt work) -- his MIT CSAIL page is a stale historical student page, not a current one, and no current employer's academic page exists since he's now in industry. Not accepted per the RULING's 'permanent academic page' bar."
+  },
+  {
+   "person_id": "jennifer-m-anderson",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Historical identity strongly confirmed (Stanford SUIF compiler group PhD 1997, matches our own 1990s papers exactly), but no current traceable permanent page -- both existing hints (OpenAlex 'National Institutes of Health', authors.json 'Stanford') look unconfirmable/possibly stale for a researcher whose visible trail ends in the late 1990s."
+  },
+  {
+   "person_id": "jessica-ray",
+   "status": "found",
+   "url": "https://www.ll.mit.edu/biographies/jessica-ray",
+   "institution": "MIT Lincoln Laboratory (Cyber Operations and Analysis Technology Group)",
+   "confidence": "high",
+   "evidence": "Official MIT Lincoln Lab biography page confirms she is in Prof. Amarasinghe's COMMIT group, matches tiramisu/ariya:cc:2002 papers exactly. Her ORCID record on file (St. Jude/Yale/U.Florida human-factors career) appears to be a DIFFERENT, mismatched Jessica Ray -- do not trust that ORCID's employment data for this person."
+  },
+  {
+   "person_id": "jiawen-chen",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Identity confirmed (MIT PhD under Frédo Durand, now Principal Research Scientist at Adobe, computational photography) but no dedicated first-party profile/homepage page was found (only aggregator sites -- Scholar, ResearchGate, OpenReview -- and no page at research.adobe.com specifically for him)."
+  },
+  {
+   "person_id": "joshua-b-tenenbaum",
+   "status": "found",
+   "url": "https://bcs.mit.edu/directory/joshua-b-tenenbaum",
+   "institution": "MIT Brain and Cognitive Sciences (Professor)",
+   "confidence": "high",
+   "evidence": "Official MIT BCS directory page."
+  },
+  {
+   "person_id": "juan-c-reyes",
+   "status": "found",
+   "url": "https://modemat.epn.edu.ec/es/personal/jreyes",
+   "institution": "Escuela Politécnica Nacional (Ecuador), MODEMAT (Founding Director)",
+   "confidence": "high",
+   "evidence": "This is Juan Carlos De los Reyes (our corpus's 'Juan C Reyes' appears to be a truncated/shortened form of his full surname 'De los Reyes') -- career history (Graz PhD 2000-2003, TU Berlin postdoc 2005-2006, EPN full professor) matches orcid_employments exactly."
+  },
+  {
+   "person_id": "julian-shun",
+   "status": "found",
+   "url": "https://jshun.csail.mit.edu/",
+   "institution": "MIT CSAIL (Associate Professor)",
+   "confidence": "high",
+   "evidence": "Official personal MIT CSAIL page, heavily corroborated."
+  },
+  {
+   "person_id": "justin-gottschlich",
+   "status": "found",
+   "url": "http://justingottschlich.com",
+   "institution": "Merly, Inc. (Founder/CEO); formerly Intel Labs / UPenn adjunct",
+   "confidence": "high",
+   "evidence": "Matches ORCID employment history (Merly since 2022, previously Intel/UPenn) exactly."
+  },
+  {
+   "person_id": "katsumi-okuda",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed real and correctly matched (Mitsubishi Electric researcher + MIT visiting researcher, co-author of AskIt with Amarasinghe), but no personal/institutional profile page found -- only publication listings and a ZoomInfo contact card, neither of which qualifies as a permanent academic page."
+  },
+  {
+   "person_id": "kemal-ebcioglu",
+   "status": "found",
+   "url": "http://global-supercomputing.com/people/kemal.ebcioglu/bio.html",
+   "institution": "Global Supercomputing Corporation (President, since 2006)",
+   "confidence": "high",
+   "evidence": "His own company's bio page; matches ORCID employment record exactly. The ORCID-listed vcard.acm.org URL is dead (403)."
+  },
+  {
+   "person_id": "khadidja-kadem",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Identity well-established (NYU Abu Dhabi/ESI Algiers, co-authors with Baghdadi on loop-interchange/Tiramisu work matching tiramisu-li), but no personal/institutional homepage found beyond LinkedIn and Google Scholar."
+  },
+  {
+   "person_id": "kunle-olukotun",
+   "status": "found",
+   "url": "https://engineering.stanford.edu/people/oyekunle-olukotun",
+   "institution": "Stanford University, EE/CS",
+   "confidence": "high",
+   "evidence": "Official Stanford Engineering faculty page; Cadence Design Professor, matches openalex/authors affiliation exactly."
+  },
+  {
+   "person_id": "kyle-deeds",
+   "status": "found",
+   "url": "https://www.bu.edu/cs/profiles/kyle-deeds/",
+   "institution": "Boston University, Computer Science (incoming Assistant Professor)",
+   "confidence": "high",
+   "evidence": "Recently transitioned from UW PhD (finch-tensor/tensor optimization work) to BU faculty; matches ahrens_finch_2025 topic exactly."
+  },
+  {
+   "person_id": "maciej-pacula",
+   "status": "found",
+   "url": "https://mpacula.com/",
+   "institution": "Independent (bioinformatics/cancer-sequencing industry); formerly MIT",
+   "confidence": "medium",
+   "evidence": "Personal site; MIT master's thesis on compiler autotuning matches paper context (ansel:cases:2012 etc.), now works in cancer-sequencing tools -- field has shifted since the paper, hence medium confidence. authors_latest_affiliation's 'Flagstaff Medical Center' openalex hit looks like a mismatch, not him."
+  },
+  {
+   "person_id": "manya-bansal",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/manya-bansal",
+   "institution": "Massachusetts Institute of Technology, CSAIL (PhD student, advised by Saman Amarasinghe and Jonathan Ragan-Kelley)",
+   "confidence": "high",
+   "evidence": "Matches authors_latest_affiliation and our own recent papers (bansal:pldi:2026, bansal2025lightweight) exactly."
+  },
+  {
+   "person_id": "manya-ghobadi",
+   "status": "found",
+   "url": "https://people.csail.mit.edu/ghobadi/",
+   "institution": "MIT CSAIL / EECS",
+   "confidence": "high",
+   "evidence": "Associate Professor, matches netblocks-pldi24 affiliation exactly."
+  },
+  {
+   "person_id": "marc-illa",
+   "status": "found",
+   "url": "https://iqus.uw.edu/person/1001",
+   "institution": "Pacific Northwest National Laboratory (current); UW physics institute profile (from his 2021-2025 postdoc)",
+   "confidence": "medium",
+   "evidence": "Lattice QCD/quantum-simulation physicist; ORCID shows current employer is PNNL (no PNNL personal page found), this UW institute profile is from his immediately-prior postdoc position -- may be stale but is a real, verifiable page for him."
+  },
+  {
+   "person_id": "marco-d-santambrogio",
+   "status": "found",
+   "url": "https://www.deib.polimi.it/eng/people/details/356156",
+   "institution": "Politecnico di Milano (Associate Professor, DEIB)",
+   "confidence": "medium",
+   "evidence": "Official Polimi DEIB directory page; corroborated but not independently WebFetched."
+  },
+  {
+   "person_id": "mark-halsey",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "LIKELY WRONG ENRICHMENT: ORCID/OpenAlex resolved to a Flinders University criminologist (Matthew Flinders Professor of Law) -- unrelated field to thies:www:2002 (web/multimedia tech). Do not link; flag enriched.json for review."
+  },
+  {
+   "person_id": "mark-stephenson",
+   "status": "found",
+   "url": "https://sites.google.com/site/markwstephenson/home",
+   "institution": "NVIDIA (Principal Research Scientist)",
+   "confidence": "medium",
+   "evidence": "Personal Google Sites page, corroborated across multiple sources; not independently WebFetched."
+  },
+  {
+   "person_id": "martin-c-martin",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "LIKELY WRONG ORCID MATCH: ORCID shows Indonesian universities (Tarumanagara/Universitas Mahkota Tricom Unggul, 2020-) with no clear link to a 2003 MIT compiler paper -- flagging as a probable collision, not accepted."
+  },
+  {
+   "person_id": "martin-hirzel",
+   "status": "found",
+   "url": "http://hirzels.com/martin/",
+   "institution": "IBM Research, T.J. Watson Research Center",
+   "confidence": "high",
+   "evidence": "Leads IBM's AI Programming Models research team; matches soule:debs:2013 affiliation exactly."
+  },
+  {
+   "person_id": "martin-rinard",
+   "status": "found",
+   "url": "https://people.csail.mit.edu/rinard/",
+   "institution": "MIT CSAIL",
+   "confidence": "high",
+   "evidence": "Well-known MIT CSAIL professor; official personal page, corroborated by eecs.mit.edu and csail.mit.edu."
+  },
+  {
+   "person_id": "mary-w-hall",
+   "status": "found",
+   "url": "https://users.cs.utah.edu/~mhall/",
+   "institution": "University of Utah, Kahlert School of Computing (Director)",
+   "confidence": "high",
+   "evidence": "Matches ORCID employment (Professor since 2008) exactly; long publication history with our corpus."
+  },
+  {
+   "person_id": "mengjiao-yang",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "openalex_affiliation (Affiliated Hospital of North Sichuan Medical College) has nothing to do with our graphit (MIT graph-DSL) paper -- clear wrong-identity OpenAlex match, not pursued further."
+  },
+  {
+   "person_id": "michael-carbin",
+   "status": "found",
+   "url": "https://people.csail.mit.edu/mcarbin/",
+   "institution": "Massachusetts Institute of Technology (Associate Professor, Head of Programming Systems Group)",
+   "confidence": "high",
+   "evidence": "Well-known MIT PL/compilers professor, matches openalex_affiliation and authors_latest_affiliation exactly."
+  },
+  {
+   "person_id": "michael-d-ernst",
+   "status": "found",
+   "url": "https://homes.cs.washington.edu/~mernst/",
+   "institution": "University of Washington, Paul G. Allen School of CSE",
+   "confidence": "high",
+   "evidence": "Professor since 2009, matches ORCID employment exactly."
+  },
+  {
+   "person_id": "michael-l-wagman",
+   "status": "found",
+   "url": "https://sites.google.com/view/mwagman/home",
+   "institution": "Fermi National Accelerator Laboratory (lattice QCD physicist)",
+   "confidence": "high",
+   "evidence": "Personal site; multiple seminar listings (Fermilab, Jefferson Lab, Iowa State) confirm current Fermilab affiliation, matching our paper's context exactly."
+  },
+  {
+   "person_id": "michael-taylor",
+   "status": "found",
+   "url": "https://www.cs.washington.edu/people/faculty/michael-taylor/",
+   "institution": "University of Washington (Professor)",
+   "confidence": "high",
+   "evidence": "Official UW page (ORCID's miketaylor.org domain is now dead, DNS failure); heavily corroborated."
+  },
+  {
+   "person_id": "monica-s-lam",
+   "status": "found",
+   "url": "https://suif.stanford.edu/~lam/",
+   "institution": "Stanford University",
+   "confidence": "high",
+   "evidence": "Long-standing personal faculty page (also https://profiles.stanford.edu/monica-lam as backup); well-known Professor of CS, matches her extensive early-corpus paper list."
+  },
+  {
+   "person_id": "nishil-talathi",
+   "status": "found",
+   "url": "https://sites.google.com/site/nishiltalatipersonal/",
+   "institution": "University of Illinois Urbana-Champaign (Assistant Professor)",
+   "confidence": "high",
+   "evidence": "WebFetched directly: confirms UIUC Assistant Professor -- consistent with our known 'Talati' spelling correction; current position, more recent than ORCID's Michigan entry."
+  },
+  {
+   "person_id": "olivia-hsu",
+   "status": "found",
+   "url": "https://cs.stanford.edu/~owhsu",
+   "institution": "Stanford University",
+   "confidence": "high",
+   "evidence": "Stanford CS personal homepage; PhD student advised by Kjolstad/Olukotun on sparse-tensor compilers, matches rawn:oopsla:2021 exactly."
+  },
+  {
+   "person_id": "p-thaker",
+   "status": "found",
+   "url": "https://cs.stanford.edu/~prthaker/",
+   "institution": "Stanford University (now VMware Research)",
+   "confidence": "high",
+   "evidence": "Official Stanford CS page; reveals full name Pratiksha Thaker as a bonus finding; now at VMware Research."
+  },
+  {
+   "person_id": "patricia-suriana",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Now at Prescient Design/Genentech; only aggregator/social profiles found, no faculty/lab page."
+  },
+  {
+   "person_id": "paul-johnson",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "ORCID shows a JPL Section Manager; our papers are MIT Raw-architecture (taylor:isca:2004/micro:2002/isscc:2003). No continuity found between the two -- likely a common-name collision, not pursued further."
+  },
+  {
+   "person_id": "phiala-e-shanahan",
+   "status": "found",
+   "url": "https://physics.mit.edu/faculty/phiala-shanahan/",
+   "institution": "MIT Physics (Professor)",
+   "confidence": "high",
+   "evidence": "Official MIT Physics page, heavily corroborated."
+  },
+  {
+   "person_id": "philippos-papaphilippou",
+   "status": "found",
+   "url": "https://www.southampton.ac.uk/people/6688sv/doctor-philippos-papaphilippou",
+   "institution": "University of Southampton, Electrical and Electronic Engineering",
+   "confidence": "high",
+   "evidence": "Official institutional profile (his ORCID personal site 403'd on fetch, so used the university page instead); Lecturer, joined 2025, matches orcid_employments exactly."
+  },
+  {
+   "person_id": "phitchaya-mangpo-phothilimthana",
+   "status": "found",
+   "url": "http://mangpo.net",
+   "institution": "OpenAI (previously Google DeepMind/Brain)",
+   "confidence": "high",
+   "evidence": "ORCID-listed homepage fetched live; confirms current OpenAI role, matches PhD from UC Berkeley / BS from MIT background consistent with corpus paper (phothilimthana:asplos:2013)."
+  },
+  {
+   "person_id": "qiyuan-zhao",
+   "status": "found",
+   "url": "http://zqy1018.top",
+   "institution": "National University of Singapore (PhD student, VERSE lab)",
+   "confidence": "high",
+   "evidence": "Personal homepage fetched live; formal-methods/verification research area matches gladshtein_mechanised_2024 exactly."
+  },
+  {
+   "person_id": "radha-patel",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "MIT MEng/thesis-stage researcher (Radha:meng-thesis:2024) with no ORCID employment or URL data and no findable independent institutional page distinct from student directory listings -- not pursued further given the search results turned up nothing new."
+  },
+  {
+   "person_id": "rajeev-barua",
+   "status": "found",
+   "url": "https://ece.umd.edu/clark/faculty/361/Rajeev-Barua",
+   "institution": "University of Maryland, Electrical and Computer Engineering (Professor)",
+   "confidence": "high",
+   "evidence": "Confirmed: PhD MIT 2000, matches authors_latest_affiliation and our Raw-project papers exactly. IMPORTANT DATA-QUALITY FLAG: his linked ORCID (0000-0003-4210-6893) is almost certainly the WRONG person -- its employment history (Creative Soft, Ringer Soft Ltd, Dictator Soft, Islami Bank Institute of Technology Chittagong) describes a Bangladeshi software engineer with no connection to compiler/embedded-systems research, and its 'Portfolio' researcher-url is for someone going by 'Rimon Barua', not Rajeev Barua. This ORCID link should probably be corrected/removed from enriched.json -- flagging rather than fixing myself since that's outside this task's scope."
+  },
+  {
+   "person_id": "rastislav-bodik",
+   "status": "found",
+   "url": "https://homes.cs.washington.edu/~bodik/",
+   "institution": "University of Washington, Allen School (Professor)",
+   "confidence": "high",
+   "evidence": "Confirmed current UW professor (moved on from authors_latest_affiliation's Berkeley); note some recent conference profiles also list a Google Research/Brain Team affiliation, possibly a concurrent/visiting role -- UW homepage used as the durable one."
+  },
+  {
+   "person_id": "richard-wang",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Multiple different Wangs found at MIT CSAIL (Robert Y. Wang, Peng Wang, a CDO-office Richard Wang) but none clearly tied to the 'cola-dcc' paper -- too ambiguous to pick one, not guessed."
+  },
+  {
+   "person_id": "robert-grimm",
+   "status": "found",
+   "url": "https://apparebit.com",
+   "institution": "Formerly NYU CS Associate Professor; now a research scientist at Charles University, Prague",
+   "confidence": "high",
+   "evidence": "Confirmed via multiple conference profiles (GPCE/SPLASH) using the same 'apparebit' handle as his NYU-era identity; matches soule:debs:2013 co-author, unusual but genuine later career path."
+  },
+  {
+   "person_id": "robert-soule",
+   "status": "found",
+   "url": "http://www.cs.yale.edu/homes/soule/",
+   "institution": "Yale University (Associate Professor)",
+   "confidence": "high",
+   "evidence": "Official Yale CS homepage with CV; matches ORCID employment."
+  },
+  {
+   "person_id": "rohan-yadav",
+   "status": "found",
+   "url": "https://rohany.github.io/",
+   "institution": "Anthropic (Member of Technical Staff; formerly Stanford PhD)",
+   "confidence": "high",
+   "evidence": "Personal homepage fetched live; research description (tensor algebra compilation, parallel computing) matches our rawn:oopsla:2021 paper's subject exactly."
+  },
+  {
+   "person_id": "ryan-senanayake",
+   "status": "found",
+   "url": "http://www.rsenapps.com/",
+   "institution": "Reservoir Labs",
+   "confidence": "medium",
+   "evidence": "ORCID's own listed URL, but WebFetch failed twice with a TLS cert mismatch (broken custom-domain-on-GitHub-Pages setup) -- liveness unconfirmed, flagged not silently accepted."
+  },
+  {
+   "person_id": "s-kim",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Initials-only name, ORCID affiliation (Korea University) conflicts with authors.json's HKUST -- too ambiguous to disambiguate without guessing."
+  },
+  {
+   "person_id": "sanath-jayasena",
+   "status": "found",
+   "url": "https://uom.lk/staff/Jayasena.VSD",
+   "institution": "University of Moratuwa, Sri Lanka",
+   "confidence": "high",
+   "evidence": "Official university staff directory page; Associate Professor CS&E, HPC/parallel-computing research interests match falsesharing:sc:2013, prior MIT HCI postdoc plausible collaboration link."
+  },
+  {
+   "person_id": "shoaib-kamil",
+   "status": "found",
+   "url": "https://research.adobe.com/person/shoaib-kamil/",
+   "institution": "Adobe Research",
+   "confidence": "high",
+   "evidence": "Official Adobe Research profile page; Principal Research Scientist, extensive compiler/DSL work (TACO, GraphIt) matching his long papers list."
+  },
+  {
+   "person_id": "srinivas-devadas",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/srini-devadas",
+   "institution": "MIT CSAIL / EECS",
+   "confidence": "high",
+   "evidence": "Webster Professor of EECS, MIT faculty since 1988; unambiguous."
+  },
+  {
+   "person_id": "stephen-chou",
+   "status": "found",
+   "url": "http://stephenchou.net",
+   "institution": "Google (personal homepage documents his MIT/TACO research background)",
+   "confidence": "high",
+   "evidence": "Homepage confirms PhD under Amarasinghe, primary TACO contributor, matches all listed papers exactly."
+  },
+  {
+   "person_id": "steven-hall",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "LIKELY WRONG ENRICHMENT: ORCID/OpenAlex resolved to a Marine Aquaculture professor at NC State (William White Distinguished Professor) -- completely unrelated field to the actual thies:mm:2009 co-author (StreamIt compressed-video compiler work, confirmed by search to be a real MIT-affiliated Steven J. Hall). Do not link; flag enriched.json for review."
+  },
+  {
+   "person_id": "sunimal-rathnayake",
+   "status": "found",
+   "url": "https://sunimalr.staff.uom.lk/",
+   "institution": "University of Moratuwa, Dept. of Computer Science and Engineering",
+   "confidence": "high",
+   "evidence": "ORCID-listed homepage fetched live; confirms Senior Lecturer, matches orcid_employments and authors_latest_affiliation exactly."
+  },
+  {
+   "person_id": "teodora-fields-collin",
+   "status": "found",
+   "url": "https://people.csail.mit.edu/teoc/",
+   "institution": "MIT CSAIL (COMMIT group)",
+   "confidence": "high",
+   "evidence": "Name variant: found as 'Teodoro (Teo) Fields Collin', advised by Amarasinghe in the COMMIT group -- matches our papers exactly (unite:2026, thea:sm-thesis:2025, ahrens_finch_2025, won_continuous_2025)."
+  },
+  {
+   "person_id": "una-may-o-reilly",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/una-may-oreilly",
+   "institution": "MIT CSAIL (Senior Research Scientist, leader of ALFA Group)",
+   "confidence": "high",
+   "evidence": "Matches ORCID employment (MIT, ALFA Group lead) and openalex_affiliation exactly."
+  },
+  {
+   "person_id": "victor-ying",
+   "status": "found",
+   "url": "https://victorying.com/",
+   "institution": "MIT CSAIL (PhD; transitioning to Tenstorrent)",
+   "confidence": "high",
+   "evidence": "Personal site (full name Victor A. Ying) fetched live; Swarm-project/architecture research area matches our ugcf-isca21 paper directly."
+  },
+  {
+   "person_id": "vikram-chandrasekhar",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed identity (co-authored thies:micro:2007 with William Thies/Saman Amarasinghe) but he is now at Google in industry, per Google Scholar -- no permanent academic page exists to find; his ORCID employment history (Egnyte/Google/Facebook/Microsoft) confirms the industry trajectory, consistent with not_found rather than an oversight."
+  },
+  {
+   "person_id": "vivek-sarkar",
+   "status": "found",
+   "url": "https://www.cc.gatech.edu/people/vivek-sarkar",
+   "institution": "Georgia Tech College of Computing (Dean)",
+   "confidence": "high",
+   "evidence": "Official page; matches ORCID employment and amarasinghe:exascale:2009."
+  },
+  {
+   "person_id": "vladimir-gladshtein",
+   "status": "found",
+   "url": "https://volodeyka.github.io/",
+   "institution": "National University of Singapore (PhD student, School of Computing)",
+   "confidence": "high",
+   "evidence": "Matches gladshtein_mechanised_2024 exactly (same paper appears on his site)."
+  },
+  {
+   "person_id": "walter-lee",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Confirmed as a real Raw-project researcher at MIT, but the only live 'Walter Lee' pages found are a different person (VT engineering-education professor) -- common name, no page found for the compiler researcher."
+  },
+  {
+   "person_id": "weng-fai-wong",
+   "status": "found",
+   "url": "http://www.comp.nus.edu.sg/~wongwf/",
+   "institution": "National University of Singapore (Associate Professor, CS)",
+   "confidence": "high",
+   "evidence": "Official NUS homepage confirmed live via fetch; matches authors_latest_affiliation exactly."
+  },
+  {
+   "person_id": "william-detmold",
+   "status": "found",
+   "url": "https://physics.mit.edu/faculty/william-detmold/",
+   "institution": "MIT, Department of Physics",
+   "confidence": "high",
+   "evidence": "Professor of nuclear/particle physics at MIT since 2012; matches VarStudy2023 affiliation exactly."
+  },
+  {
+   "person_id": "william-thies",
+   "status": "found",
+   "url": "https://billthies.net/",
+   "institution": "Everwell Health Solutions (co-founder/chair; MIT PhD 2009, StreamIt)",
+   "confidence": "high",
+   "evidence": "Personal permanent homepage; MacArthur Fellow 2016; bio matches StreamIt/MIT/microfluidics work spanning all his papers in our corpus (thies:cc:2002, thies:phd-thesis:2009, etc.)."
+  },
+  {
+   "person_id": "willow-ahrens",
+   "status": "found",
+   "url": "https://scs.gatech.edu/people/willow-ahrens",
+   "institution": "Georgia Institute of Technology, School of Computer Science (Assistant Professor)",
+   "confidence": "high",
+   "evidence": "Matches her own ORCID-listed personal site (willowahrens.io) and employment (Georgia Tech Assistant Professor); GT institutional page used as the more permanent record per the RULING's preference."
+  },
+  {
+   "person_id": "wojciech-matusik",
+   "status": "found",
+   "url": "https://www.csail.mit.edu/person/wojciech-matusik",
+   "institution": "MIT (EECS/Mechanical Engineering, CSAIL)",
+   "confidence": "high",
+   "evidence": "MIT CSAIL faculty page, Professor of EECS, matches paper field (computer graphics/tensor algebra co-author on kjolstad:tog:2016)."
+  },
+  {
+   "person_id": "xinyi-chen",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Genuinely ambiguous common name -- ORCID employment (Hong Kong University of Science and Technology), openalex_affiliation (Shanghai Jiao Tong University), and authors_latest_affiliation (MIT) are inconsistent, and search results surfaced several DIFFERENT Xinyi Chens (ELLIS PhD student in NLP, MIT SuperUROP, databases researcher) with no confirmable link to our og-cgo20 compiler paper. Not resolved rather than guessed."
+  },
+  {
+   "person_id": "xipeng-shen",
+   "status": "found",
+   "url": "https://pictureresearch.github.io/picture_website/xshen5/index.htm",
+   "institution": "North Carolina State University (Professor)",
+   "confidence": "medium",
+   "evidence": "ORCID's own declared homepage URL; not independently WebFetched."
+  },
+  {
+   "person_id": "yanbin-liu",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "LIKELY WRONG ORCID MATCH: this Yanbin Liu's academic career only starts ~2017 (PhD at UTS), field is few-shot deep learning -- inconsistent with our 2013 HPC/false-sharing paper. Flagging as a probable name collision, not accepting the candidate despite ORCID/OpenAlex agreement."
+  },
+  {
+   "person_id": "yang-cao",
+   "status": "not_found",
+   "url": null,
+   "institution": null,
+   "confidence": null,
+   "evidence": "Genuinely ambiguous common name -- ORCID employment history (UNC Charlotte/Zhejiang/LSU), openalex_affiliation (Henan University of Economic and Law), and authors_latest_affiliation (Imperial College London) are all mutually inconsistent, suggesting multiple different 'Yang Cao's have been conflated. No search found an Imperial College London Yang Cao matching our li:fccm:2026 paper's FPGA/HPC context. Not resolved rather than guessed."
+  },
+  {
+   "person_id": "yewen-pu",
+   "status": "found",
+   "url": "https://dr.ntu.edu.sg/entities/person/Yewen-Pu",
+   "institution": "Nanyang Technological University, College of Computing and Data Science",
+   "confidence": "high",
+   "evidence": "Official NTU faculty directory (DR-NTU) entry; Assistant Professor, matches orcid_employments (NTU 2025-, prev. Autodesk) exactly."
+  },
+  {
+   "person_id": "yufei-ding",
+   "status": "found",
+   "url": "https://cse.ucsd.edu/people/faculty-profiles/yufei-ding",
+   "institution": "UC San Diego, Computer Science & Engineering",
+   "confidence": "high",
+   "evidence": "Associate Professor, joined UCSD 2023 from NC State (matches authors_latest_affiliation); PICASSO Lab founder."
+  },
+  {
+   "person_id": "yunming-zhang",
+   "status": "found",
+   "url": "https://yunmingzhang17.github.io/",
+   "institution": "Massachusetts Institute of Technology (PhD, advised by Saman Amarasinghe and Julian Shun)",
+   "confidence": "high",
+   "evidence": "Personal homepage; creator of GraphIt, matching graphit/g2-cgo21/og-cgo20/tiramisu and every other paper in his list -- openalex's 'Wuhan University' was a wrong match."
+  },
+  {
+   "person_id": "ziheng-wang",
+   "status": "not_found",
+   "url": null,
+   "institution": "Massachusetts Institute of Technology (historical -- MEng 2020, advised by Saman Amarasinghe)",
+   "confidence": null,
+   "evidence": "Identity is clear (MIT MEng thesis 'Automatic Optimization of Sparse Tensor Algebra Programs,' matches the tony:2020/senanayake2020sparse papers exactly) but no live personal or institutional page found post-graduation -- residue, not a mismatch."
+  },
+  {
+   "person_id": "zohreh-davoudi",
+   "status": "found",
+   "url": "https://umdphysics.umd.edu/people/faculty/current/item/927-davoudi.html",
+   "institution": "University of Maryland, Department of Physics",
+   "confidence": "high",
+   "evidence": "Associate Professor of Physics, matches known UMD affiliation exactly."
+  }
+ ]
+}

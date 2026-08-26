@@ -14,6 +14,13 @@ replaces LinkedIn when one exists; (3) if no LinkedIn, best active
 professional or personal site; (4) last resort, a mailto: (e.g. alum.mit.edu)
 if an email can be found. Arjun Barrett: currently an MIT MEng student —
 record as such, no external identity merge.
+IDENTITY VERIFICATION (his rule): a LinkedIn match must be POSITIVELY
+confirmed — for MIT students, the profile's education must show MIT in the
+right timeframe (degree/years consistent with the thesis/paper dates);
+for others, employer/education must match what we know (affiliation,
+co-authors, era). Name similarity alone is never enough; unverifiable →
+no link rather than a wrong link. The same bar applies to task 2's
+website/email candidates.
 
 ## OPEN — round 10 (2026-08-26)
 1. [sonnet] **authors fold + backstop**: merge harvest/authors/
@@ -30,7 +37,8 @@ record as such, no external identity merge.
    commit-author emails already mined from our repos + emails printed in
    the papers/ PDFs (grep the fulltext extracts). Classify each hit per
    the RULING priority (permanent-academic / professional-site / personal
-   / email). Do NOT fetch LinkedIn or Google Scholar pages from the
+   / email) and apply the IDENTITY VERIFICATION bar with evidence per
+   row. Do NOT fetch LinkedIn or Google Scholar pages from the
    worker — those are the coordinator's browser sitting. Output the
    residue list (people with no link yet) for that sitting. STOP.
 3. [fable, after 1+2 and the LinkedIn sitting land] **author links on the
@@ -45,7 +53,8 @@ record as such, no external identity merge.
 
 ## PARKED (needs the human / coordinator)
 - LinkedIn sitting: coordinator drives his Chrome (Premium account) for
-  the residue from task 2 — human pace, small batches.
+  the residue from task 2 — human pace, small batches, education/
+  timeframe verification per the RULING.
 - Cutover: final review, then point the live site at nextgen.
 
 ## DONE (recent)

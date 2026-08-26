@@ -686,8 +686,12 @@ var CITATIONS = (function(){
   /* unified taxonomy: repo groups share the citation categories'
      names, so the page-level category filter maps onto them. 'own'
      is the paper's own artifact, not reception - always visible. */
-  var REPO_FUNC = { 'builds-on': 'extends', uses: 'uses-tool',
-                    benchmarks: 'uses-benchmark', adopts: 'adopts-idea' };
+  /* The unified taxonomy's category<->repo-group mapping — the ONE copy
+     (publications.js reads it as CITATIONS.FUNC_GROUP). */
+  var FUNC_GROUP = { 'extends': 'builds-on', 'uses-tool': 'uses',
+                     'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+  var REPO_FUNC = {};
+  for (var _fg in FUNC_GROUP) REPO_FUNC[FUNC_GROUP[_fg]] = _fg;
   function repoRowVisible(r){
     if (r.group === 'own') return true;
     if (!gPanel.categories || !gPanel.categories.length) return true;
@@ -749,6 +753,7 @@ var CITATIONS = (function(){
   }
 
   return {
+    FUNC_GROUP: FUNC_GROUP,
     attachToggle: attachToggle,
     setBadgeProvider: function(fn){ badgeProvider = fn; },
     refreshToggleBadges: function(){

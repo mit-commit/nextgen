@@ -430,8 +430,7 @@ function createBibLink(it){
     return (state.citeCatKeys && state.citeCatKeys.length) ||
            (state.citeCentralityKey && state.citeCentralityKey !== 'all');
   }
-  var BADGE_FG = { 'extends': 'builds-on', 'uses-tool': 'uses',
-                   'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+
   function badgeFor(kind, key, total){
     if (!evidenceFilterActive()) return null;
     var cats = state.citeCatKeys || [];
@@ -456,7 +455,7 @@ function createBibLink(it){
     if (!rrow || !rrow.grids) return '0 of ' + fmtN(total);
     var m = 0;
     for (var ci = 0; ci < cats.length; ci++){
-      var g = rrow.grids[BADGE_FG[cats[ci]]];
+      var g = rrow.grids[CITATIONS.FUNC_GROUP[cats[ci]]];
       if (g) m += g.length;
     }
     return fmtN(m) + ' of ' + fmtN(total);
@@ -1316,8 +1315,7 @@ if (auKeys.length){
     // Impact categories drill the paper list down too: keep papers with
     // at least one judged citation in a selected category, or a repo in
     // the category's unified-taxonomy group.
-    var FG = { 'extends': 'builds-on', 'uses-tool': 'uses',
-               'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+    var FG = window.CITATIONS ? CITATIONS.FUNC_GROUP : {};
     if (state.citeCatKeys && state.citeCatKeys.length && excludeFacet !== 'citecats'){
       items = items.filter(function(it){
         var k = bibtexKeyOf(it);
@@ -1487,8 +1485,7 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var catPapers = {}, catCites = {}, centCounts = { core: 0, engaged: 0, peripheral: 0 };
     // distinct repos per shared category across the shown papers, via
     // the unified taxonomy (function key <-> repo group)
-    var FUNC_GROUP = { 'extends': 'builds-on', 'uses-tool': 'uses',
-                       'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+    var FUNC_GROUP = window.CITATIONS ? CITATIONS.FUNC_GROUP : {};
     var catRepoIds = {}, catRepos = {};
     var seen = {}, withData = 0, i, f;
     for (i = 0; i < items.length; i++){

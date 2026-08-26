@@ -4,6 +4,9 @@
  "scope": {"accounts_checked": 198, "method": "GitHub REST profile fields (name, company, location, blog) for a sample, plus the search API batched with OR'd user: qualifiers to pull each account's top repositories. Verdict is judgment over the repo evidence: does this account do the kind of work the author's papers describe, in the right era?"},
  "why": "A name match proves nothing — every wrong account below is genuinely a person with the author's name. Repos are what separate them. A wrong GitHub account on a paper page misattributes a stranger's work to a group member, which is worse than showing no link.",
  "summary": {"wrong": 17, "uncertain": 19, "no_evidence_empty_account": 39, "looks_right": 123},
+ "human_rulings": [
+  {"2026-08-26": "adadima belongs to Alexandra Dima. The collision is resolved in her favour: Albert Ma's adadima assignment is wrong and comes out."}
+ ],
  "wrong_drop_these": [
   {"person": "Anant Agarwal", "handle": "agarwalanant", "evidence": "deep-learning coursework (Thapar workshop, dog-breed CNN), New Delhi, company OurBUS — not the MIT professor. He has a faculty page anyway"},
   {"person": "John Hennessy", "handle": "DevJHennessy", "evidence": "LiveProjectCodeSnippet, SimpleSassExample, C# exercises — a web developer, not the RISC pioneer"},
@@ -21,7 +24,7 @@
   {"person": "Paras Jain", "handle": "retroportalstudio", "evidence": "RetroPortal Studio, a YouTube tutorial channel in India — not the ML researcher"},
   {"person": "Yang Cao", "handle": "yiluheihei", "evidence": "R bioinformatics (microbiomeMarker, RevEcoR) — wrong field entirely"},
   {"person": "Eric Wong", "handle": "wsdjeg", "evidence": "SpaceVim and Chinese Vim guides — that account belongs to Wang Shidong"},
-  {"person": "Albert Ma", "handle": "adadima", "evidence": "HANDLE COLLISION: links.json gives adadima to both Albert Ma and Alexandra Dima. The repos (gstaco, python-analyze) are compiler work and the handle reads as Dima's. One of the two assignments is wrong — resolve before either is published"}
+  {"person": "Albert Ma", "handle": "adadima", "evidence": "RESOLVED BY HIM 2026-08-26: adadima is Alexandra Dima. links.json had the handle on both people; Alexandra keeps it (her repos: gstaco, python-analyze), Albert Ma's assignment is dropped and he falls back to the link ruling"}
  ],
  "uncertain_second_look": [
   {"person": "Timothy Garnett", "handle": "tgarnett", "note": "only repo is a pharmacokinetic modeler; his LinkedIn (confirmed, 1st-degree) is a data consultant, so this may be a different Tim Garnett"},

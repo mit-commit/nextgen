@@ -68,7 +68,14 @@ def extract_text(pdf_path):
             text.append(page.extract_text() or '')
         except Exception:
             continue
-    return '\n'.join(text).strip()
+    text = '\n'.join(text).strip()
+    # errors='surrogateescape' on write only rescues surrogates IN THE
+    # U+DC80-DCFF range (bytes it round-trips); a badly-encoded PDF font
+    # map can hand back lone surrogates anywhere in U+D800-DFFF, which no
+    # write-time error handler can encode -- scrub them here instead of
+    # crashing mid-batch. This is already-garbled text, nothing meaningful
+    # is lost.
+    return re.sub(r'[\ud800-\udfff]', '�', text)
 
 
 def build_slug_index():

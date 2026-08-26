@@ -385,25 +385,54 @@ def cite_count_of(it, cite_index):
     return display_count(row)
 
 
+IMPACT_NOW_Y = 2026  # mirrors new Date().getFullYear() at test time
+
+
+def award_year_of(it):
+    py = None
+    try:
+        py = int(it.get('year'))
+    except (TypeError, ValueError):
+        py = IMPACT_NOW_Y
+    best = py
+    for m in re.findall(r'\b((?:19|20)\d{2})\b', str(it.get('price') or '')):
+        yy = int(m)
+        if yy >= py and yy > best:
+            best = yy
+    return best
+
+
 def composite_impact_of(it, cite_index, repo_index):
+    """His formula 2026-08-26: 2e^(-age/5) + [award] 5e^(-awardAge/10)
+    + displayed citations/100 + repos/1000, theses -2. Every paper scores."""
     key = bibtex_key_of(it)
+    try:
+        age = IMPACT_NOW_Y - int(it.get('year'))
+    except (TypeError, ValueError):
+        age = 0
+    s = 2 * math.exp(-age / 5.0)
+    if it.get('price'):
+        s += 5 * math.exp(-(IMPACT_NOW_Y - award_year_of(it)) / 10.0)
     c_row = cite_index.get(key)
+    if c_row:
+        s += (display_count(c_row) or 0) / 100.0
     r_row = repo_index.get(key)
-    if not c_row and not r_row:
-        return None
-    c = (impact_score(c_row) or 0) if c_row else 0
-    return c + ((r_row and r_row.get('impact')) or 0)
+    if r_row:
+        s += (r_row.get('repos') or 0) / 1000.0
+    if 'thesis' in str(it.get('itemType') or '').lower():
+        s -= 2  # theses demoted
+    return s
 
 
 class ImpactQuantiles(object):
     """Mirrors impactVals()/compositeQuantile(): descending list of every
     paper's composite impact (by key present in either index), memoized."""
 
-    def __init__(self, cite_index, repo_index):
-        seen = set(cite_index.keys()) | set(repo_index.keys())
+    def __init__(self, cite_index, repo_index, items=None):
+        items = items if items is not None else load_data()
         vals = []
-        for k in seen:
-            v = composite_impact_of({'bibtexKey': k}, cite_index, repo_index)
+        for it in items:
+            v = composite_impact_of(it, cite_index, repo_index)
             if v is not None:
                 vals.append(v)
         vals.sort(reverse=True)

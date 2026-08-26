@@ -45,7 +45,7 @@
 	      &nbsp;&nbsp;
 	      <button id="btn-export-bib" type="button" class="btn" title="Download the shown papers as BibTeX">Export .bib</button>
 	      <div class="sort-multilevel">
-  <span class="sort-label" title="Group and order the list, up to four keys deep. Impact blends citations and repository use">Group & sort:</span>
+  <span class="sort-label" title="Group and order the list, up to four keys deep. Impact blends citations, repositories, awards and recency">Group & sort:</span>
   <label>1
     <select id="sort-1">
         <option value="none">None</option>
@@ -203,7 +203,7 @@
                     <input id="cite-min-cites" class="facet-slider" type="range" min="0" max="100" value="0" title="Hide papers with fewer citations than this">
                   </div>
                   <div class="cite-tools-row">Impact: <b id="cite-min-impact-label">all papers</b>
-                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" list="impact-tick-marks" title="One score over citing papers AND outside repositories: building on the work counts more than mentioning it. Tiers are percentiles; above zero hides papers without data.">
+                    <input id="cite-min-impact" class="facet-slider" type="range" min="0" max="4" step="1" value="0" list="impact-tick-marks" title="One score per paper: citations/100 + repositories/1000 + a small recency term + an award term that fades from its award year; theses rank lower. Tiers are percentiles of the whole list.">
                     <datalist id="impact-tick-marks">
                       <option value="0" label="0"></option>
                       <option value="1" label="1"></option>
@@ -238,6 +238,6 @@
   <script src="assets/js/pubs.js?v=101"></script>             <!-- for BibTeX + local URL logic -->
   <!-- v= busts stale caches: these two must always be the same vintage -->
   <script src="assets/js/citations.js?v=100"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=100"></script> <!-- the filters controller -->
+  <script src="assets/js/publications.js?v=101"></script> <!-- the filters controller -->
 </body>
 </html>

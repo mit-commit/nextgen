@@ -383,29 +383,52 @@ function createBibLink(it){
     return CITATIONS.displayCount(row); // same figure as the per-paper headline
   };
 
-  // The unified impact score: weighted citation functions plus weighted
-  // outside-repo relationships (same weight table via the shared
-  // taxonomy; repo side precomputed by build_repo_data.py). Null = the
-  // paper has neither citation nor repository data yet.
+  // The impact score (his formula, 2026-08-26): every paper scores.
+  //   recency: 2*e^(-age/5)   (a small freshness term)
+  //   award:   5*e^(-awardAge/10), from the AWARD year (the latest year
+  //            in the award text >= paper year; Halide's 2023
+  //            Test-of-Time counts as recent), never fully dies
+  //   + citations/100 (displayed count) + repositories/1000; theses -2
+  var _impactNowY = new Date().getFullYear();
+  function _awardYearOf(it){
+    var py = parseInt(it.year, 10) || _impactNowY;
+    var m = String(it.price || '').match(/\b(19|20)\d{2}\b/g) || [];
+    var best = py;
+    for (var i = 0; i < m.length; i++){
+      var yy = parseInt(m[i], 10);
+      if (yy >= py && yy > best) best = yy;
+    }
+    return best;
+  }
   window.compositeImpactOf = function(it){
+    if (it && it.bibtexKey && it.year === undefined){
+      // key-only probe: resolve the real item for year/price
+      var full = null;
+      for (var di = 0; di < DATA.length; di++){
+        if (bibtexKeyOf(DATA[di]) === it.bibtexKey){ full = DATA[di]; break; }
+      }
+      if (full) it = full;
+    }
     var key = bibtexKeyOf(it);
+    var age = _impactNowY - (parseInt(it.year, 10) || _impactNowY);
+    var s = 2 * Math.exp(-age / 5);
+    if (it.price) s += 5 * Math.exp(-(_impactNowY - _awardYearOf(it)) / 10);
     var cRow = CITE_INDEX && CITE_INDEX[key];
+    if (cRow && window.CITATIONS) s += (CITATIONS.displayCount(cRow) || 0) / 100;
     var rRow = REPO_INDEX && REPO_INDEX[key];
-    if (!cRow && !rRow) return null;
-    var c = (cRow && window.CITATIONS) ? (CITATIONS.impactScore(cRow) || 0) : 0;
-    return c + ((rRow && rRow.impact) || 0);
+    if (rRow) s += (rRow.repos || 0) / 1000;
+    if (/thesis/.test(String(it.itemType || '').toLowerCase())) s -= 2;  // theses demoted
+    return s;
   };
 
-  // Quantile thresholds over every paper's composite impact; memoized,
-  // reset when the indexes (re)load.
+  // Quantile thresholds over every paper's impact; memoized, reset when
+  // the indexes (re)load. Every paper scores now (recency is never 0).
   var _impactVals = null;
   function impactVals(){
     if (_impactVals) return _impactVals;
-    var vals = [], k, seen = {};
-    for (k in (CITE_INDEX || {})) seen[k] = 1;
-    for (k in (REPO_INDEX || {})) seen[k] = 1;
-    for (k in seen){
-      var v = compositeImpactOf({ bibtexKey: k });
+    var vals = [];
+    for (var i = 0; i < DATA.length; i++){
+      var v = compositeImpactOf(DATA[i]);
       if (v != null) vals.push(v);
     }
     vals.sort(function(a, b){ return b - a; });

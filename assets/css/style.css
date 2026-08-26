@@ -347,6 +347,7 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 /* Page-level citation tools (drive all open panels + paper thresholds) */
 .cite-tools { margin-top: 10px; grid-template-columns: minmax(0,1.2fr) minmax(0,1.15fr) minmax(0,0.9fr); }
 .cite-tools-row { margin: 4px 0; font-size: 92%; text-align: left; }
+#cite-search { width: 90%; }   /* keep clear of the neighboring lists */
 .cite-tools-row .type-toggle-btn { margin-right: 3px; }
 @media (max-width: 820px) { .cite-tools { grid-template-columns: 1fr; } }
 
@@ -357,10 +358,10 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
    the two sliders get real breathing room between them */
 .paper-thresholds-row { margin-top: 10px; }
 .paper-thresholds-sliders {
-  display: flex; gap: 32px; flex-wrap: wrap; align-items: center;
+  display: flex; gap: 56px; flex-wrap: wrap; align-items: center;
 }
 .paper-thresholds-sliders .cite-tools-row { margin: 0; }
-.paper-thresholds-sliders .facet-slider { width: 220px; }
+.paper-thresholds-sliders .facet-slider { width: 330px; }
 
 /* Aggregate citation overview between filters and the paper list */
 .cite-overview {

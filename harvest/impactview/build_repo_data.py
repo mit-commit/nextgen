@@ -388,6 +388,16 @@ def main():
                 rid_of[nm] = len(rid_of)
             rids.append(rid_of[nm])
         index['papers'][key]['rids'] = sorted(set(rids))
+        # per-shared-category distinct repo ids, for the Impact
+        # categories facet counts (papers, cited by N, M repos)
+        grids = {}
+        for r in rows:
+            g = r.get('group')
+            if g in ('builds-on', 'uses', 'benchmarks', 'adopts'):
+                nm = (r.get('name') or r.get('url') or '').lower()
+                grids.setdefault(g, set()).add(rid_of[nm])
+        if grids:
+            index['papers'][key]['grids'] = {g: sorted(v) for g, v in grids.items()}
     with open(f'{ROOT}/data/repos/index.json', 'w') as fh:
         json.dump(index, fh, indent=1)
         fh.write('\n')

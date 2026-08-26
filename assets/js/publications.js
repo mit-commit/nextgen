@@ -1314,11 +1314,27 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
   function updateCiteToolCounts(items){
     if (!CITE_INDEX || !window.CITATIONS) return;
     var catPapers = {}, catCites = {}, centCounts = { core: 0, engaged: 0, peripheral: 0 };
+    // distinct repos per shared category across the shown papers, via
+    // the unified taxonomy (function key <-> repo group)
+    var FUNC_GROUP = { 'extends': 'builds-on', 'uses-tool': 'uses',
+                       'uses-benchmark': 'benchmarks', 'adopts-idea': 'adopts' };
+    var catRepoIds = {}, catRepos = {};
     var seen = {}, withData = 0, i, f;
     for (i = 0; i < items.length; i++){
       var k = bibtexKeyOf(items[i]);
       if (seen[k]) continue;
       seen[k] = 1;
+      var rrow = REPO_INDEX && REPO_INDEX[k];
+      if (rrow && rrow.grids){
+        for (f in FUNC_GROUP){
+          var ids = rrow.grids[FUNC_GROUP[f]];
+          if (!ids) continue;
+          var bag = catRepoIds[f] || (catRepoIds[f] = {});
+          for (var gi = 0; gi < ids.length; gi++){
+            if (!bag[ids[gi]]){ bag[ids[gi]] = 1; catRepos[f] = (catRepos[f] || 0) + 1; }
+          }
+        }
+      }
       var row = CITE_INDEX[k];
       if (!row) continue;
       withData++;
@@ -1336,8 +1352,10 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     if (els.citeCats && els.citeCats._catRefs){
       for (f in els.citeCats._catRefs){
         var ref = els.citeCats._catRefs[f];
+        var rc = catRepos[f];
         ref.node.nodeValue = ref.label + ' (' + (catPapers[f] || 0) +
-          ', cited by ' + (catCites[f] || 0) + ')';
+          ', cited by ' + (catCites[f] || 0) +
+          (rc ? ', ' + rc + ' repos' : '') + ')';
       }
     }
     if (els.citeCentrality){

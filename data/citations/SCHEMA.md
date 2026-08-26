@@ -198,3 +198,10 @@ shown above is an example shape, not a real scrape.)
 Adding a brand-new paper = adding it to `data/publications.json` and
 `data/idmap.json` as today; it gets a citation view automatically the first
 time steps 1–4 give it an `index.json` row.
+
+## Reception storage (since the 2026-08-26 cleanup)
+
+Reception prose lives ONLY in `reception.json` — the page's read path and
+the artifact the human reviews. Per-paper shards no longer embed a copy;
+the 8 pilot files retain a legacy embedded copy (protected outputs,
+unchanged until their next legitimate rebuild) which no reader consumes.

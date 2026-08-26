@@ -200,8 +200,9 @@ def main():
         paper["generated"] = args.generated
         gs = (gscholar.get(key) or {}).get("count")
         paper["counts"]["gscholar"] = gs
-        if reception.get(key):
-            paper["reception"] = reception[key]
+        # reception lives only in reception.json now (see SCHEMA.md);
+        # existing pilot files keep their embedded copy untouched until
+        # their next legitimate rebuild.
         # External judged function counts: feed the page-level impact score
         # and aggregate overview without loading the per-paper file.
         fn_counts = {}

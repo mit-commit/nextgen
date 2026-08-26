@@ -264,8 +264,9 @@ def main():
         paper = build_paper(key, tax_rows, citing_list, args.generated)
         gs = (gscholar.get(key) or {}).get('count')
         paper['counts']['gscholar'] = gs
-        if reception.get(key):
-            paper['reception'] = reception[key]
+        # reception is stored ONLY in data/citations/reception.json (the
+        # page's read path and the human-review artifact); shards no
+        # longer embed a copy.
         # External judged function/centrality counts: feed the page-level
         # impact score, aggregate overview, and centrality buttons without
         # loading the per-paper file.

@@ -150,11 +150,18 @@ after any structural change to `assets/js/publications.js` /
 green report:
 
     python3 -m http.server 8123 &        # from the repo root
-    python3 tests/ui/facet_test.py       # writes tests/ui/report.md
+    python3 tests/ui/facet_test.py               # combinatorial: ~900 cases
+    python3 tests/ui/random_settings_test.py     # random-settings + expansions: 100 tests
 
-It checks ~900 cases — every single-facet value, sampled pairwise and
-3–4-way facet combinations, the sort modes and Show toggles — against an
-independent oracle computed straight from the data files. Structural
-failures STOP the cutover (round-11 task 2 precedent: the harness caught
-clearAll() orphaning facet-state closures — a class of bug invisible to
-casual clicking).
+`facet_test.py` checks every single-facet value, sampled pairwise and
+3–4-way facet combinations, the sort modes and Show toggles, against an
+independent oracle computed straight from the data files.
+`random_settings_test.py` (per his `tests/ui/SPEC.md` instruction)
+discovers every control in `#pubs-filters` at runtime, exercises ~100
+random settings (single/multi/extreme) plus per-paper Summary/
+Repositories/Citations expansions (lazy-load timing, no duplicate fetch
+on reopen, console/network cleanliness), and requires its report's first
+line to read `RUN COMPLETE — <n> tests, <p> passed, <f> failed, seed <s>`.
+Structural failures from either STOP the cutover (round-11 task 2
+precedent: `facet_test.py` caught `clearAll()` orphaning facet-state
+closures — a class of bug invisible to casual clicking).

@@ -1,7 +1,14 @@
 {
- "generated": "2026-08-26 LinkedIn sitting 1 (coordinator driving his Chrome, Premium)",
- "method": "people-search -> unique card -> /details/education/ subpage; verify education+timeframe per his ruling; 1st/2nd-degree mutuals in his own network count as strong evidence; unconfirmables -> him.",
- "progress": {"processed": 12, "of_no_link_pool": 74, "next_person_index": 12, "note": "resume from li_worklist order: after Erlingsson -> Ricardo Gayle Jr., Fae Ghodrat, Benjamin Greenwald, Yoana Gyurova, ..."},
+ "generated": "2026-08-26 LinkedIn sittings 1-2 (coordinator driving his Chrome, Premium)",
+ "method": "people-search -> unique card -> /details/education/ (fall back to /details/experience/ when a profile has no education section); verify education/employer + timeframe per his ruling; 1st/2nd-degree mutuals in his own network count as strong evidence; unconfirmables -> him.",
+ "progress": {"processed": 22, "of_no_link_pool": 74, "resume_after": "Vladimir Kiriansky", "next_people": ["C. Koelbel (PARKED, exascale)", "D. Koester (PARKED, exascale)", "Kimberly Kuo", "Jae-Wook Lee", "Christopher Leger", "Mohamed-Hicham Leghettas"]},
+ "parked": {
+  "reason": "amarasinghe:exascale:2009 co-authors appear in the data as initials only; LinkedIn people-search on an initial cannot meet the identity bar. Their full names must be recovered from the report's author list before any LinkedIn lookup.",
+  "people": ["W. Carlson", "R. Harrison", "K. Hill", "Jon Hiller", "S. Karp", "C. Koelbel", "D. Koester", "J. Levesque", "P. Negi", "C. Pacheco", "A. Scarpelli", "F. Sherwood", "A. Snavely"]
+ },
+ "data_flags": [
+  {"person_id": "ronald-dresklinski", "note": "name looks like a typo for Ronald Dreslinski (Jr.), U. Michigan CSE faculty, co-author on randomwalk-iiswc21. Per the link ruling a permanent faculty page beats LinkedIn, so this one is a data fix + academic-page link, not a LinkedIn lookup. Needs his OK on the spelling change."}
+ ],
  "rows": [
   {"name": "Sitij Agrawal", "verdict": "confirmed", "linkedin": "https://www.linkedin.com/in/sitij-agrawal-54b5288", "evidence": "MIT MEng CS 2004 + BS 2004; matches agrawal:meng-thesis:2004"},
   {"name": "Alexandro Artola", "verdict": "no_link", "evidence": "only candidate NYIT 2022-2026, wrong era (paper 2002)"},
@@ -14,6 +21,17 @@
   {"name": "Abdelkader Nadir Debbagh", "verdict": "no_link", "evidence": "both name-candidates wrong (education ministry / empty education); TIRAMISU-era ESI person not found"},
   {"name": "Sie Hendrata Dharmawan", "verdict": "no_link", "evidence": "zero people-search results; has Scholar profile (Dartmouth) as fallback"},
   {"name": "Mootaz Elnozahy", "verdict": "no_link", "evidence": "zero results for this spelling; retry variants ('M. Elnozahy', 'Elmootazbellah') next sitting"},
-  {"name": "Ulfar Erlingsson", "verdict": "confirmed", "linkedin": "https://www.linkedin.com/in/ulfar", "evidence": "Cornell PhD CS 1996-2003; Distinguished Engineer Google Cloud Security; 71 mutuals (Cliff Young)"}
+  {"name": "Ulfar Erlingsson", "verdict": "confirmed", "linkedin": "https://www.linkedin.com/in/ulfar", "evidence": "Cornell PhD CS 1996-2003; Distinguished Engineer Google Cloud Security; 71 mutuals (Cliff Young)"},
+
+  {"name": "Mathew Deeds", "verdict": "no_link", "sitting": 2, "evidence": "no candidate with MIT education or Boston area; paper is deeds:meng-thesis:2001"},
+  {"name": "Alexander Charlton", "verdict": "no_link", "sitting": 2, "evidence": "no exact-name profile tied to Imperial College London (li:fccm:2026); retry a plain-name search next sitting"},
+  {"name": "Ricardo Gayle Jr.", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/ricardo-jr-gayle-244b29184", "evidence": "MIT BS CS 2018-2022, headline 'MIT CS ... CO'22', Greater Boston, 1st-degree; matches ricardo:meng-thesis:2023"},
+  {"name": "Fae Ghodrat", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/fae-ghodrat", "evidence": "experience shows Consultant Engineer, LCS MIT, Aug 2001-Aug 2003 = the Raw era (taylor:micro:2002, taylor:isscc:2003); 1st-degree, mutual David Wentzlaff; now GPU architecture at NVIDIA. Education is Northeastern BSEE 1990-94 (staff, not student)"},
+  {"name": "Benjamin Greenwald", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/benjamingreenwald", "evidence": "MIT MS EECS 1997-2006 (+ Berkeley BA 1993-97), covering greenwald:sm-thesis:1999 and the Raw papers; 1st-degree, mutual Csaba Andras Moritz"},
+  {"name": "Yoana Gyurova", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/yoana-gyurova-ab15aa73", "evidence": "MIT MEng EECS 2014-2015 + MIT BS 2010-2014 = ygyurova:meng-thesis:2015; 1st-degree, mutual Sasa Misailovic; now PM at Meta"},
+  {"name": "Randolph Harr", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/randyharr", "evidence": "Director of Research, Synopsys 1991-2000 = the affiliation on petkov:ipdps:2002; mutual with Darin Petkov, the paper's first author"},
+  {"name": "Rawn Henry", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/rawn-henry", "evidence": "MIT MEng CS 2019-2020 + BS 2015-2019 = rawn:oopsla:2021; 1st-degree, mutuals Fredrik Kjolstad and Aart Bik; now OpenAI"},
+  {"name": "Michal Karczmarek", "verdict": "to_him", "sitting": 2, "candidate": "https://www.linkedin.com/in/michal-karczmarek-85309b58", "evidence": "unique on LinkedIn, 1st-degree, 35+ mutuals (Jamey Hicks, Stephen Lewin-Berlin), Newton MA, compiler/binary-translation career (NVIDIA Denver binary translator, now VP Eng Thor Dynamics). BUT the profile has no education section and no MIT entry anywhere, with a 2000-2008 gap; the identity bar cannot be met from the profile alone. He knows this person - one word settles it"},
+  {"name": "Vladimir Kiriansky", "verdict": "confirmed", "sitting": 2, "linkedin": "https://www.linkedin.com/in/kiriansky", "evidence": "unique, 1st-degree, 171 mutuals including the Determina founders (Nand Mulchandani, Jack Lo); matches the MIT/Determina record (kiriansky:security:2002 through vlk:phd-thesis:2019)"}
  ]
 }

@@ -108,13 +108,26 @@ def main():
     print(f'{len(slug_index)} distinct citing-DOI slugs indexed across the corpus', file=sys.stderr)
 
     affected = []
-    stats = {'ok': 0, 'stub': 0, 'extract_fail': 0}
+    stats = {'ok': 0, 'stub': 0, 'extract_fail': 0, 'skipped_cached': 0}
     for pdf_path in pdfs:
         slug = os.path.basename(pdf_path)[:-4]
         keys = slug_index.get(slug, [])
         if not keys:
             print(f'  {slug}: no matching citing record in any harvest/citations/*.json '
                  f'-- skipped', file=sys.stderr)
+            continue
+
+        # Extraction (pypdf, can be slow on a large PDF) is the expensive
+        # part -- skip it entirely, not just the write, when every key this
+        # slug maps to already has a cached "ok" sidecar. A full rerun over
+        # thousands of already-ingested PDFs must stay cheap, since a later
+        # sitting only adds a handful of genuinely new files each time.
+        if not args.refresh and all(
+            os.path.exists(os.path.join(HERE, key, slug + '.json')) and
+            json.load(open(os.path.join(HERE, key, slug + '.json'))).get('status') == 'ok'
+            for key in keys
+        ):
+            stats['skipped_cached'] += 1
             continue
 
         try:
@@ -150,7 +163,8 @@ def main():
                 json.dump(result, fh, indent=2)
             os.replace(tmp, sidecar_path)
 
-    print(f'\nextracted: {stats["ok"]} ok, {stats["stub"]} below the 2000-char floor, '
+    print(f'\n{stats["skipped_cached"]} PDFs skipped (already cached ok for every key), '
+         f'extracted: {stats["ok"]} ok, {stats["stub"]} below the 2000-char floor, '
          f'{stats["extract_fail"]} failed to extract', file=sys.stderr)
     print(f'{len(affected)} (key, slug) pairs now have fulltext evidence', file=sys.stderr)
     print(json.dumps(affected, indent=1))

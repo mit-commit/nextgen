@@ -54,7 +54,7 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 ## Summary
 
 - Total: **114**, Passed: **114**, Failed: **0**, seed=**42**
-- 30 of 114 tests were flagged for the expansion checks (>=30 target); 17 actually expanded a paper -- the gap is tests flagged for expansion that landed on an empty-result setting (nothing to expand), not a silent skip.
+- 30 of 114 tests were flagged for the expansion checks (>=30 target); 15 actually expanded a paper -- the gap is tests flagged for expansion that landed on an empty-result setting (nothing to expand), not a silent skip.
 
 No discrepancies between the live UI and the independent oracle across all 114 settings (including the expansion checks).
 

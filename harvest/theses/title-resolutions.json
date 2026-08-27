@@ -1,0 +1,28 @@
+{
+ "purpose": "Thesis title/attribution conflicts between his supplied list (harvest/theses/supervised-theses.json) and the corpus, and how they were settled.",
+ "his_rule_2026_08_27": "When names or titles are mixed up, DOWNLOAD THE THESIS AND READ THE TITLE PAGE. The PDF's own title page — author, title, degree, month/year, thesis supervisor — outranks every secondary source: his list, the group bibtex, the old theses page, and publications.json. MIT DSpace holds the official copy (dspace.mit.edu); groups.csail.mit.edu/cag/rio and commit.csail.mit.edu hold local copies of some. Read the page, do not infer from a filename or a citation.",
+ "resolved": [
+  {
+   "case": "Timothy Garnett, M.Eng., June 2003",
+   "verdict": "The CORPUS is right; his list is wrong.",
+   "title_page": "Dynamic Optimization of IA-32 Applications Under DynamoRIO",
+   "evidence": "DSpace copy (1721.1/87411) title page, and the CSAIL RIO project copy. Abstract describes two uses of DynamoRIO: interpreter optimizations under the logical-PC extension, and translating hot IA-32 traces to Itanium.",
+   "his_list_said": "Sideline Optimization of Unmodified Binaries",
+   "note": "likely a working title — Bruening's PhD has a 'Sideline Interface' section crediting Garnett's work. Keep garnett:meng-thesis:2003 as it stands."
+  },
+  {
+   "case": "Iris Baron, S.M., September 2003",
+   "verdict": "His list carried GARNETT's title by mistake.",
+   "title_page": "Dynamic Optimization of Interpreters using DynamoRIO",
+   "evidence": "DSpace copy (1721.1/87441) title page: submitted 27 June 2003, degree Master of Science, Thesis Supervisor Saman Amarasinghe.",
+   "his_list_said": "Dynamic Optimization of IA-32 Applications under DynamoRIO",
+   "note": "correct Baron's entry to the title-page title before it reaches the site."
+  }
+ ],
+ "still_to_check": [
+  {"person": "Matt Frank", "degree": "PhD", "year": 2003, "corpus_title": "SUDS: Automatic Parallelization for Raw Processors", "his_title": "Software Managed Memory Parallelism for Raw", "how": "pull the DSpace PDF and read the title page"},
+  {"person": "Michael Bedford Taylor", "degree": "PhD", "year": 2007, "corpus_title": "Tiled Microprocessors", "his_title": "The Design, Implementation and Evaluation of the Raw Scalar Operand Network", "how": "pull the DSpace PDF and read the title page"}
+ ],
+ "missing_from_corpus_still": ["Tammy Yap (MEng 1999)", "Ben Wagner (MEng 2006)", "Ceryen Tan (MEng 2009)", "Kevin Kelly (MEng 2010)"],
+ "note_on_garnett": "Garnett is NOT missing from the corpus — he is present under his real title. That earlier finding was an artifact of matching against his list's working title."
+}

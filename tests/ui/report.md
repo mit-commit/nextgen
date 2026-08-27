@@ -1,8 +1,8 @@
-RUN COMPLETE -- 100 tests, 100 passed, 0 failed, seed 42
+RUN COMPLETE -- 114 tests, 114 passed, 0 failed, seed 42
 
 # UI random-settings test run -- report
 
-Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.py`, computed directly from the data files. Driver: Playwright against `http://localhost:8124`.
+Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.py`, computed directly from the data files. Driver: Playwright against `http://localhost:8126`.
 
 ## Control inventory (discovered at runtime from #pubs-filters)
 
@@ -53,8 +53,8 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 
 ## Summary
 
-- Total: **100**, Passed: **100**, Failed: **0**, seed=**42**
-- 30 of 100 tests were flagged for the expansion checks (>=30 target); 18 actually expanded a paper -- the gap is tests flagged for expansion that landed on an empty-result setting (nothing to expand), not a silent skip.
+- Total: **114**, Passed: **114**, Failed: **0**, seed=**42**
+- 30 of 114 tests were flagged for the expansion checks (>=30 target); 19 actually expanded a paper -- the gap is tests flagged for expansion that landed on an empty-result setting (nothing to expand), not a silent skip.
 
-No discrepancies between the live UI and the independent oracle across all 100 settings (including the expansion checks).
+No discrepancies between the live UI and the independent oracle across all 114 settings (including the expansion checks).
 

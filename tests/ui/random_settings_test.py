@@ -567,6 +567,108 @@ def check_expansions(drv, items, F, problems):
     return notes
 
 
+# ---------------- Narrow-viewport pass (tasks/RESPONSIVE.md) ----------------
+# Layout-only assertions at phone/tablet widths: no horizontal scroll on
+# the page, no structural block overlapping another, every facet
+# reachable (its accordion opens and the list sits inside the viewport).
+# The oracle plays no part here -- filtering logic is the desktop run's
+# job; this pass asserts the page is USABLE at 390x844 and 768x1024.
+
+NARROW_VIEWPORTS = [(390, 844), (768, 1024)]
+NARROW_SETTINGS_PER_VIEWPORT = 6
+
+JS_NARROW_PREPARE = r"""
+() => {
+  const b = document.getElementById('btn-filters-toggle');
+  const root = document.getElementById('pubs-filters');
+  if (b && b.offsetParent && root && !root.classList.contains('filters-open')) b.click();
+  document.querySelectorAll('.filter-block').forEach(bl => {
+    let lab = null, list = null;
+    for (const c of bl.children) {
+      if (c.classList.contains('filter-label')) lab = c;
+      if (c.classList.contains('facet-list')) list = c;
+    }
+    if (lab && list && !bl.classList.contains('facet-open')) lab.click();
+  });
+  window.scrollTo(0, 0);
+}
+"""
+
+JS_NARROW_AUDIT = r"""
+() => {
+  const iw = window.innerWidth;
+  const problems = [];
+  const doc = document.documentElement;
+  if (doc.scrollWidth > iw + 1)
+    problems.push('horizontal scroll: page is ' + doc.scrollWidth + 'px in a ' + iw + 'px viewport');
+  // No structural block may paint over another (ancestor/descendant
+  // pairs excluded; 2px tolerance for adjacent borders).
+  const sels = ['.filter-block', '.facet-list', '.cite-tools-box',
+                '.cite-overview', '#pubs-results li.pub-item'];
+  const els = [];
+  sels.forEach(s => document.querySelectorAll(s).forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.width > 0 && r.height > 0) els.push({ el, r, s });
+  }));
+  for (let i = 0; i < els.length && problems.length < 6; i++) {
+    for (let j = i + 1; j < els.length && problems.length < 6; j++) {
+      const a = els[i], b = els[j];
+      if (a.el.contains(b.el) || b.el.contains(a.el)) continue;
+      const ox = Math.min(a.r.right, b.r.right) - Math.max(a.r.left, b.r.left);
+      const oy = Math.min(a.r.bottom, b.r.bottom) - Math.max(a.r.top, b.r.top);
+      if (ox > 2 && oy > 2)
+        problems.push('overlap: ' + (a.el.id || a.s) + ' x ' + (b.el.id || b.s) +
+                      ' by ' + Math.round(ox) + 'x' + Math.round(oy) + 'px');
+    }
+  }
+  // Every facet reachable: visible after the prepare pass, inside the
+  // viewport horizontally.
+  document.querySelectorAll('.facet-list').forEach(fl => {
+    const r = fl.getBoundingClientRect();
+    if (!fl.offsetParent || r.width <= 0) { problems.push('facet unreachable (not visible after opening): #' + fl.id); return; }
+    if (r.left < -1 || r.right > iw + 1)
+      problems.push('facet #' + fl.id + ' clipped: left=' + Math.round(r.left) + ' right=' + Math.round(r.right) + ' viewport=' + iw);
+  });
+  return problems;
+}
+"""
+
+
+def narrow_pass(browser, base_url, seed, results):
+    rng = random.Random(seed + 1000)
+    for (vw, vh) in NARROW_VIEWPORTS:
+        page = browser.new_page(viewport={'width': vw, 'height': vh})
+        drv = RandomDriver(page)
+        drv.goto(base_url)
+        F = ft.Facts()
+        ft.F = F
+        model = build_control_model(drv.discover())
+
+        cases = [None]  # baseline: untouched page
+        for i in range(NARROW_SETTINGS_PER_VIEWPORT):
+            gen = gen_single if i % 2 == 0 else gen_multi
+            cases.append(gen(rng, model, F) if gen is gen_single
+                         else gen(rng, model, F, rng.randint(2, 3)))
+
+        for setting in cases:
+            drv.reset()
+            page.evaluate(JS_NARROW_PREPARE)
+            page.wait_for_timeout(200)
+            label = '%dx%d %s' % (vw, vh, setting.label if setting else 'baseline')
+            problems = []
+            if setting is not None:
+                err = apply_setting(drv, setting, F)
+                if err:
+                    problems.append('apply failed at this width: %s' % err)
+            if not problems:
+                page.evaluate('() => window.scrollTo(0, 0)')
+                page.wait_for_timeout(100)
+                problems = page.evaluate(JS_NARROW_AUDIT)
+            results.append({'case': 'narrow ' + label, 'ok': not problems,
+                            'problems': problems, 'expansions': []})
+        page.close()
+
+
 # ---------------- Report ----------------
 
 def write_report(results, inventory_lines, seed, base_url, expand_budget):
@@ -685,6 +787,10 @@ def main():
                 results.append({'case': setting.label, 'ok': False, 'problems': [err], 'expansions': []})
                 continue
             check_setting(drv, setting, F, results, do_expand=expand_flags[i])
+
+        # Narrow-viewport layout pass (tasks/RESPONSIVE.md): phone and
+        # tablet widths, layout-usability assertions only.
+        narrow_pass(browser, args.base_url, args.seed, results)
 
         browser.close()
 

@@ -1,6 +1,6 @@
 # UI combinatorial test run — report
 
-Oracle: `tests/ui/oracle.py`, computed directly from `data/publications.json` + `data/citations/*` + `data/repos/*`. Driver: Playwright against `http://localhost:8124`.
+Oracle: `tests/ui/oracle.py`, computed directly from `data/publications.json` + `data/citations/*` + `data/repos/*`. Driver: Playwright against `http://localhost:8126`.
 
 ## Summary
 

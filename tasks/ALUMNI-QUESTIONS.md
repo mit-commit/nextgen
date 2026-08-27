@@ -177,3 +177,71 @@ Empty/no-profile after full checks: Ceryen Tan (empty experience), Bosboom
 'Assistant Manager Data Engineer', Paris - employer not shown), Noyola &
 Ben Romdhane (GitHub only, no employer). The ~55 still-blank are the
 hyper-common names and old no-profile UROPs from the round-3 list.
+
+## Round 6 — public web-search sweep (no LinkedIn login), by the other session
+
+Saman asked for another LinkedIn sweep of the alumni with no `url` on the
+page, so job changes can be checked going forward. This session has no
+Chrome/LinkedIn access (offered, but no browser-control tool is available
+here) — so this round used public WebSearch only, fanned out across 10
+parallel searches, one per person. A hit only counts if a search result's
+own title/snippet showed a `linkedin.com/in/...` URL; nothing was
+constructed from a name pattern. **99 of the 162 people missing a url got
+one** (77 at ✓✓, 22 at ✓ — applied but listed below for your veto since
+the anchor was weaker), plus positions for 28 of the 82 who had neither.
+
+### ✓ tier — applied, veto welcome (weaker anchor: common name, spelling
+variant, stale-looking employer, or identity inferred from a second source
+rather than the LinkedIn snippet itself)
+
+| Person | Applied URL | Why it's only ✓ |
+|---|---|---|
+| Ziheng Wang | /in/tony-wang-/ | profile is "Tony Wang"; Anthropic/Ziheng tie comes from Scholar+X, not the LinkedIn snippet itself |
+| Haoran Xu | /in/haoran-xu-2730476b/ | snippet shows old MemSQL role, not the current Stanford PhD |
+| Daniel Richman | /in/daniel-richman-074b4411a/ | Stanford matches but no MIT anchor shown |
+| Sanath Jayasena | /in/sanath-jayasena-274a8011/ | snippet shows a different employer than Moratuwa |
+| Michael D'Ambrosio | /in/mikedambrosio/ | title differs slightly ("Senior SWE" vs "Senior UI Engineer") |
+| David Dryjanski | /in/davidd8 | name shown truncated as "David D." on the snippet |
+| Rose Liu | /in/rose-liu-07bb122/ | common name, no MIT anchor in the snippet |
+| Diego Puppin | /in/diegopuppin/ | snippet shows a prior employer (Synthesia); ZoomInfo + his own already-recorded 1st-degree evidence confirms same person, current role Genesis Therapeutics |
+| Shuehan Liang | /in/shuhan-liang-73b09972/ | spelling differs (Shuhan vs Shuehan) |
+| Amy Mitby | /in/amymitby/ | no direct Synopsys/MIT anchor in the snippet |
+| Beshr Islam Bouli | /in/beshr-islambouli-9a508b216 | spelling differs slightly; MIT tie from a scholarship page, not the snippet |
+| Dominic Perno | /in/dperno/ | MIT tie from ZoomInfo/RocketReach, not the LinkedIn snippet |
+| Raymond Wu | /in/raymond-wu-05194b106/ | common name |
+| Min Zhang | /in/min-zhang-5ab3956/ | very common name |
+| Kiranmayi Bhattaram | /in/kiranbhattaram/ | profile name is the nickname "Kiran" |
+| Christopher Graves | /in/christopher-graves-00b63256/ | common name, MIT+Cambridge shown but no CSAIL specifics |
+| Eric Wong | /in/eric-wong-04aa14100 | "Student at MIT" shown but several same-name MIT profiles exist |
+| Artem Gleyzer | /in/artem-gleyzer-01598269 | matches your earlier Citadel-to-2013 finding, no MIT anchor in this snippet |
+| Ali Meli | /in/ali-meli-92ab33167/ | MIT tie inferred from summary text, not quoted directly |
+| Kenneth Lu | /in/kenneth-k-lu/ | MIT/CSAIL tie inferred from summary text |
+| Tsvetomir Petrov | /in/tpetrov/ | re-confirms your Broadcom-to-2021 finding, no MIT anchor in this logged-out view |
+| Ruben Brown | /in/ruben-e-brown-4b668233/ | MIT tie inferred from summary text |
+
+### Still not found (60) — same hard bucket as before; a logged-in sweep is
+the only way most of these move (mostly hyper-common names, or 20+ year old
+records with little public footprint):
+
+Yishen 'Tom' Chen, Steven Raphael, David Lugato, Rumen Hristov, Shirley
+Fung, Juan Carlos Reyes, Sheetal Jain, Saad Shakhshir, Elliot Waingold,
+Arjuna Wijeyekoon, Siyi Hu, Ethan H Zhou, Hoi Wai Yu, Alice Chen, Cecilia
+Chen, Emily Lu, Richard Wang, Xinyi Guo, Zachary Holbrook, Alexander
+Leighton, Haokuan Luo, Amirhossein Mirhosseini, Michael Robinson, Xinyi
+Chen, Sachin Dilip Shinde, Asra Ali, Emily Armstrong, William Huang, Rohan
+Mahajan, Latif Alam, Syed Raza, David Wen, Kevin Kelly, Ceryen Tan, Basier
+Aziz, Allyn Dimock, Jimmy Li, David Zhang, Sie Hendrata Dharmawan, Matthew
+Drake, Christopher Rhodes, Ben Wagner, Marjorie Cheng, Adam Reed, Janis
+Sermulins, Christopher Leger, Jasper Lin, Jeremy Wong, Chris Yu, Joshua
+Jacobs, Alejandro Artola, Mark Halsey, Binh Vo, Matt Yourst, Ted Allison,
+Katherine Jong, Tyler Moeller, Tammy Yap, Robert Pinder, Tom Pinckney.
+
+Three of these have a strong non-LinkedIn identity match but genuinely no
+findable `linkedin.com/in/` URL: **Amber Li** and **Kenny Yang** (both have
+an MIT CSAIL people-directory page) and **Mark Theng** (USENIX OSDI'21
+co-author page shows MIT CSAIL) — worth a direct LinkedIn search in your
+own browser if you want those closed out, since a public search engine
+just doesn't surface their profile URL at all.
+
+**Page now: 177/240 alumni have a url** (up from 78 at the start of this
+round). 63 remain, matching the lists above.

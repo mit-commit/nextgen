@@ -387,6 +387,29 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   **Desktop is NOT byte-identical in rendering: the facet/header font
   sizes changed by his explicit ruling; the layout geometry is
   otherwise unmoved (authors track verified to the pixel).**
+- **Responsive v2** (2026-08-27, `f112b87f` + `437b7f16`, per the
+  updated `tasks/RESPONSIVE.md` v2 mid-flight — the v1 work above was
+  never deployed): label tiers moved from viewport media queries to
+  `@container` queries against each facet column (thresholds measured
+  from where the real rows break: 359px full-prose, 239px badge), so a
+  narrow column degrades even in a maximised window; fixed font steps
+  replaced by `clamp()` (inputs hold 16px under the drawer
+  breakpoint); below 700px the Filters button now opens a 100svh
+  drawer with DEFERRED apply — selections update per-option counts and
+  the pinned "Show N results" button live, the list renders only on
+  the tap — plus removable active-filter chips above the results; the
+  four facet columns are an intrinsic `repeat(auto-fit,
+  minmax(220px,1fr))` grid (no media query). Logo got a 480w `srcset`;
+  the result count is an `aria-live` region. **Desktop rendering: the
+  facet columns are now four equal-width tracks instead of the
+  0.54/1.4/1.12/0.94 proportional ones (deliberate, CHANGE 3), the
+  facet type is fluid-clamped (~14px rows at wide windows), and the
+  cite-tools row is pixel-identical (authors track delta 0.0px).
+  Desktop filtering behavior unchanged — instant apply, no drawer, no
+  chips.** Gate: 909/909; random 114/114 including the drawer
+  count-match assertion at 390×844 (768×1024 has no drawer, by
+  design). Screenshots before/after at both widths delivered for his
+  review.
 
 ## Cross-lane requests
 

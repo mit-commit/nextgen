@@ -127,3 +127,26 @@ Kenny Yang.
  Tasmeem Reza → D. E. Shaw [APPLIED], Yishen Chen → Standard Kernel [was already applied].
  Rest of 'Could not identify': waiting on you — write employers next to names above whenever.
  Q4 (visiting-student sweep): still open.
+
+## Round 4 — experience-page crawl (your correction: read Experience, not headlines)
+
+You were right about Aasted — and about the method. I re-visited every
+"nothing printable" profile and read the Experience section (or top-card
+company). 17 more filled, 4 upgraded — the page now shows **141 positions**:
+
+- Matt Aasted → **Principal Software Engineer, Voxel** (Jul 2024–; ex-Google, Twitch — exactly as you said)
+- Lef Ioannidis → **Senior Research SW Engineer, Microsoft Research** (RiSE; Sep 2025–)
+- Georgi Peev → **Software Engineer, Jump Trading** (2021–; ex-Two Sigma)
+- Srikrishna Devabhaktuni → **Co-founder & Strategic Advisor, Tropos Networks**
+- Minshu Zhan → **Senior Software Engineer, BevSpot**
+- Muhender Rajvee → **AWS** · Steven Raphael → **MIT CSAIL** · Aryan Kumar → **DRW** · Raunak Chowdhury → **Timely**
+- Drew/Andrew Samnick → **Sr Principal SWE, The Hershey Company** (veto?)
+- Philip Sung → **Anthropic** (the "macrodata refinement" headline is a Severance joke)
+- Amrik Kochhar → **SWE, DoorDash** · Peyton Shields → **Co-founder, Interface (YC S25)** (ex-Citadel)
+- Hannah Kimura → **InterSystems** (MIT confirmed) · Sheetal Jain → **Engineer, NVIDIA** (MIT confirmed) · Shuehan Liang → **SWE, Google** (unique name, no MIT shown — veto?)
+- Upgrades: Dow → **Research SW Engineer, MIT CSAIL**; Greenwald → **RoonCyber**; Garnett → **T&S Advisory Solutions**; Gordon → co-founder & Chief Research Officer.
+
+Genuinely nothing current on their profiles (last role + end date in the
+roster): Petrov (Broadcom, to 2021), Gleyzer (Citadel, to 2013), Golla
+(Galaxy Digital, to 2022), Erika Lee (CodePath, to 2025), Mark Theng &
+Ricardo Gayle (empty profiles), Kenny Yang (joke entries).

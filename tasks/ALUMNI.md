@@ -1,101 +1,125 @@
 # Alumni page + alumni/author roster — worker spec (Fable)
 
-His instruction, 2026-08-27. Two deliverables:
+His instruction, 2026-08-27. Four deliverables now:
 
-1. The **Alumni section of the People page** currently lists names and
-   nothing else. Add each person's current position under their name, in a
+1. Add each alum's **current position** under their name on the People page,
    smaller font.
-2. A **spreadsheet of everyone** — alumni and paper authors — with contact
-   and status columns, for his own use.
+2. **Clean up the role vocabulary** — "Graduate Student" is not a degree, and
+   visitors are recorded under many different names.
+3. **Merge his UROP roster in** — every UROP student belongs in the alumni
+   list; add the ones missing.
+4. Build the **alumni + authors spreadsheet** for his own use.
 
-## Privacy boundary — read this before collecting anything
+## Privacy boundary — read before collecting anything
 
 `mit-commit/nextgen` and `mit-commit/commit-website` are **public repos**.
-Email addresses must not be committed to either one. A public file of
-academics' addresses is a spam list with a citation.
+Email addresses must not be committed to either. A public file of academics'
+addresses is a spam list with a citation. The UROP export he supplied is an
+internal administrative record and carries MIT addresses, phone numbers and
+home addresses — it is **especially** not for the repo.
 
-- Write the full spreadsheet **locally only**: `~/workspace/alumni-roster/`.
-  Do not `git add` it. Add the path to `.gitignore` in the same commit that
-  creates any sibling file, so a later session cannot commit it by accident.
-- If a committed artifact is wanted for the pipeline, commit a copy with the
-  email column removed and say so in the commit message.
-- The website itself gets **current position only** — never an email address,
-  never a personal phone, never a home city.
+- Full spreadsheet and the UROP source stay in `~/workspace/alumni-roster/`,
+  gitignored. Never `git add` them.
+- The website gets **name, role, years, current position**. Never an email,
+  phone, or address.
+- Emails otherwise come only from what a person published themselves — a
+  faculty page, their own site, an address on their own paper. **Never
+  construct one from a pattern**; a guessed address reaches a stranger and
+  proves nothing. Blank is the correct answer. Record a source per address.
+- No scraper aggregators, leak databases or people-search sites.
+- `alum.mit.edu` is behind his login: leave blank, list who is missing.
 
-Collection rules, which are not negotiable:
+## Deliverable 1 — current position
 
-- Take addresses only from sources the person published themselves: a faculty
-  or lab page, their own website, an address printed on their own paper, a
-  public CV. Record where each one came from.
-- **Never construct an address from a pattern.** Guessing
-  `first.last@company.com` produces wrong addresses that reach strangers, and
-  it is not evidence of anything. An empty cell is the correct answer when
-  nothing was published.
-- Do not use scraper aggregators, leak databases, or people-search sites,
-  whatever they claim about their sources.
-- The MIT alumni directory (`alum.mit.edu`) is behind his login. Leave those
-  cells empty and list who is missing — he can fill them in one sitting if he
-  wants to. Do not ask him for credentials.
+Source of alumni: `people.html` in `mit-commit/commit-website` plus any
+`data/people*.json` it reads — read the page, do not assume.
 
-## Deliverable 1 — the Alumni section
+Find each person's current position, one line ("Principal Engineer, NVIDIA").
+Preference order, same as the link ruling: active faculty/lab page, then the
+LinkedIn headline — **much of this is already recorded in
+`harvest/authors/linkedin-results.json` and
+`linkedin-results-professional.json`, check there before searching** — then
+their own site or an employer staff page.
 
-Source of truth for who is an alum: the existing People page in
-`mit-commit/commit-website` (`people.html`) plus `data/people*.json` if the
-list is data-driven — read the page, do not assume.
+Identity bar unchanged: employer or education plus timeframe must fit their
+time in the group. A wrong title under someone's name is worse than a blank.
+Unconfirmed goes on a list for him.
 
-For each alum, find their **current position** — title and organisation, one
-line, e.g. "Principal Engineer, NVIDIA" or "Associate Professor, EPFL". Order
-of preference for the source, which is the same ruling already in force for
-author links:
+Rendering: under the name, smaller and lighter, using the same `clamp()` step
+as the facet rows in `tasks/RESPONSIVE.md`. Blank positions degrade cleanly —
+no empty line, no stray separator.
 
-1. an active faculty or lab page
-2. their LinkedIn headline — much of this is already recorded in
-   `harvest/authors/linkedin-results.json` and
-   `linkedin-results-professional.json`; **check there first before searching
-   for anything**
-3. their own website or a current employer's staff page
+## Deliverable 2 — role vocabulary
 
-Identity bar, unchanged: education or employer plus timeframe must be
-consistent with their time in the group. A name match is not enough. If you
-cannot confirm the person, leave the line blank and list them for him — a
-wrong job title under someone's name is worse than a blank.
+Collapse the current free-text roles onto one canonical set:
 
-Rendering: the position goes under the name in a smaller, lighter font,
-consistent with the type scale from `tasks/RESPONSIVE.md` (use the same
-`clamp()` step as the facet rows). Blank positions must degrade cleanly — no
-empty line, no stray separator. Link the name using the link ruling if the
-People page does not already.
+    PhD · SM · MEng · UROP · Postdoc · Research Staff ·
+    Visiting Scholar · Visiting Student
 
-## Deliverable 2 — the roster spreadsheet
+Rules:
 
-One row per person, union of: everyone in `harvest/authors/authors.json`
-(paper authors, 368 after the merge) and everyone listed as an alum on the
-People page. Match the two sets by person, not by string — the same human
-must not appear twice because the page writes "Bill Thies" and the data
-writes "William Thies".
+- **"Graduate Student" is not a role.** Resolve it from evidence, not
+  assumption: `publications.json` records thesis type per person —
+  `phd-thesis`, `sm-thesis`, `meng-thesis`. Use it. A person with a PhD
+  thesis is `PhD`; with only an SM thesis, `SM`.
+- Someone who progressed (SM then PhD in the group) gets the **highest**
+  degree completed here, with the full span of years.
+- **Visitors**: collapse every variant — visiting student, visiting
+  researcher, visiting professor, exchange student, and so on — to
+  `Visiting Scholar` for someone who held a faculty or research position
+  elsewhere, `Visiting Student` for someone enrolled elsewhere.
+- Anything you cannot resolve from evidence goes on a list for him with what
+  the page currently says. **Do not guess a degree.** Getting someone's
+  qualification wrong on their group's own page is a real error.
+- Report the full before → after mapping so he can scan it in one pass.
 
-Columns, exactly these:
+## Deliverable 3 — merge the UROP roster
+
+He supplied a UROP export; the cleaned version is at
+`~/workspace/alumni-roster/urop-roster.csv` — **163 students**, being everyone
+with at least one non-cancelled term between 1997 and 2017. Four students
+whose every term was cancelled are already excluded; do not re-add them.
+
+- Every one of these belongs in the alumni list. Add whoever is missing, role
+  `UROP`, with their year span.
+- Match against existing alumni AND against `harvest/authors/authors.json`
+  **by person, not by string**: the export writes "Petkov, Darin S." where
+  the site writes "Darin Petkov". Someone already listed for a higher role
+  (they UROPed, then did an MEng here) keeps the higher role — do not
+  duplicate them, and do not demote them.
+- The export is also **evidence for the unresolved author identities**: it
+  carries real full names, class years, and MIT addresses. Two known uses:
+  the corpus spells one author **Alexandro Artola** while the UROP roster
+  says **Alejandro Artola** — likely why that sitting found nothing; and
+  Darin Petkov, Tsvetomir Petrov and Matthew DeBergalis all appear with
+  years. Check the export against the people still marked `no_link` and
+  report what it resolves. Do not edit `links.json` — report, and the
+  coordinator folds it in through `link-overrides.json`.
+
+## Deliverable 4 — the roster spreadsheet
+
+One row per person: union of `authors.json`, the People page, and the UROP
+roster. Same person must not appear twice under different spellings.
 
 | Column | Fill from |
 |---|---|
-| Name | canonical form from `authors.json`; the People page spelling if only there |
-| Email | published sources only, per the rules above; blank if none |
-| Email source | where it came from, so he can judge it |
-| URL to cite | the resolved link from `links.json` after overrides — faculty page, else LinkedIn, else best active site. Respect `publish:false` and `never_primary` |
+| Name | canonical form from `authors.json`, else the page, else the export |
+| Email | published sources only; the MIT address from his own UROP export is legitimate for this private file — mark it as such |
+| Email source | so he can judge each one |
+| URL to cite | resolved link from `links.json` after overrides; respect `publish:false` and `never_primary` |
 | Current job | as in deliverable 1 |
-| Was alumni? | yes / no — from the People page list |
+| Role | the canonical role from deliverable 2 |
+| Years | span in the group |
+| Was alumni? | yes / no |
 | Has a paper? | yes / no — present in `authors.json` |
-| Connected on LinkedIn? | `1st` / `2nd` / `3rd+` / unknown — **from the `degree` field already recorded** in the two linkedin-results files. Everyone else is `unknown`; do not open LinkedIn to find out, that is a sitting he runs, not a worker task |
+| Connected on LinkedIn? | `1st` / `2nd` / `3rd+` / unknown — **from the `degree` field already recorded** in the two linkedin-results files. Everyone else is `unknown`; do not open LinkedIn, that is a sitting he runs |
 
-Sort by: alumni first, then authors, alphabetical by surname within each.
-
-Formats: `alumni-roster.csv` and `alumni-roster.xlsx`, both in
-`~/workspace/alumni-roster/`. The xlsx gets a frozen header row, sensible
-column widths, and no formatting cleverness beyond that.
+Sort: alumni first, then authors, alphabetical by surname within each.
+Write `alumni-roster.csv` and `alumni-roster.xlsx` to
+`~/workspace/alumni-roster/`, frozen header row, sensible widths.
 
 ## Report
 
-A short summary: how many people, how many have each field filled, and the
-list of people whose current position could not be confirmed. State plainly
-what is missing rather than implying completeness — the gaps are the part he
-will act on.
+How many people, how many have each field filled, the role before→after
+mapping, who could not be confirmed, and what the UROP export resolved. State
+the gaps plainly — they are what he will act on.

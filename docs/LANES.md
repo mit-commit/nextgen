@@ -360,6 +360,34 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   old-font extraction artifact). Live verified: `.pdf` twins 200,
   `.ps` 404. nextgen ad479772, commit-website e859e25.
 
+### responsive
+
+- **Responsive pass** (2026-08-27, `20a7db11` + `8e0e4597`, per
+  `tasks/RESPONSIVE.md`): overlap bug first — `.cite-authors-block` was
+  absolutely positioned over the cite-tools grid with a hand-computed
+  width; when the ≤820px query stacked the grid it stayed pinned
+  top-right and painted over the impact-category rows (his iOS
+  screenshot). Now grid-area-anchored at desktop (pixel-identical:
+  357.2px track, verified) and in normal flow when stacked. Two latent
+  narrow bugs found under it: the unconditional multi-column
+  `grid-template-columns` redefinitions later in the sheet overrode the
+  820px stack rules (columns crushed to "2." slivers instead of
+  stacking — stack rules now live at the end of the sheet), and plain
+  `1fr` kept a min-content floor pushing the column past the viewport
+  (now `minmax(0,1fr)`). Labels degrade by CSS class per tier
+  (spans `.facet-label`/`.facet-cnt`/`.facet-detail`; full text in
+  title + aria-label); fonts 13px rows / 12px headers at desktop (the
+  one deliberate desktop change — everything else is behind max-width
+  queries), 12/11px + 16px inputs below 700px. Below 700px: Filters
+  collapses to one button with active count, accordion facets, Years
+  chips, 44px rows, sticky result count; logo capped ≤940px. Gate:
+  909/909 desktop combinatorial; random_settings 114/114 — 100 desktop
+  + a new narrow-viewport layout pass (390×844, 768×1024: no
+  horizontal scroll, no block overlap, every facet reachable).
+  **Desktop is NOT byte-identical in rendering: the facet/header font
+  sizes changed by his explicit ruling; the layout geometry is
+  otherwise unmoved (authors track verified to the pixel).**
+
 ## Cross-lane requests
 
 All resolved; moved verbatim to `docs/LANES-archive.md`. Open new requests here.

@@ -1566,14 +1566,18 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     }
   }
 
+  // Deferred apply (spec v2): while the narrow-width filter drawer is
+  // open, selections update the per-option counts and the pinned
+  // "Show N results" button, but the list itself renders only when
+  // that button commits them. Desktop never sets this.
+  var DEFER_RENDER = false;
+
   function applyFilters(){
     // recompute dynamic counts first (so user sees availability)
     updateDynamicCounts();
 
     // then produce final result set (include all active facets)
     var items = filteredItems(null);
-
-    updatePublicationCount(items.length);
 
     // sort by year desc, stable
     items.sort(function(a,b){
@@ -1586,15 +1590,99 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       return 0;
     });
 
-    renderList(els.results, items);
-
-    renderCiteOverview(items);
+    updateDrawerApply(items.length);
     updateCiteToolCounts(items);
+
+    if (!DEFER_RENDER){
+      updatePublicationCount(items.length);
+      renderList(els.results, items);
+      renderCiteOverview(items);
+      renderFilterChips();
+    }
 
     // interactive panel visibility
     els.filtersInteractive.className = (state.mode === 'interactive') ? 'filters-interactive' : 'filters-interactive hidden';
 
     updateFiltersToggleBadge();
+  }
+
+  function updateDrawerApply(n){
+    var b = document.getElementById('btn-drawer-apply');
+    if (!b) return;
+    b.textContent = 'Show ' + n.toLocaleString('en-US') + (n === 1 ? ' result' : ' results');
+  }
+
+  // Active filters as removable chips above the results (narrow widths;
+  // the desktop panel is inline so CSS hides the strip there). Each
+  // chip removes its filter through the SAME control the user set it
+  // with (cb.click()), so state, counts and panels stay in sync.
+  function renderFilterChips(){
+    var box = document.getElementById('filter-chips');
+    if (!box) return;
+    box.innerHTML = '';
+    function chip(labelText, onRemove){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'filter-chip';
+      b.title = 'Remove filter: ' + labelText;
+      b.appendChild(document.createTextNode(labelText));
+      var x = document.createElement('span'); x.className = 'chip-x';
+      x.textContent = '×';
+      b.appendChild(x);
+      b.onclick = onRemove;
+      box.appendChild(b);
+    }
+    function mapChips(stateMap, mountId){
+      var m = document.getElementById(mountId);
+      for (var k in stateMap){
+        if (!stateMap[k]) continue;
+        (function(val){
+          var it = m && m._facet && m._facet.itemMap[val];
+          chip((it && it.labelText) || val, function(){
+            if (it) it.cb.click();
+            else { delete stateMap[val]; applyFilters(); }
+          });
+        })(k);
+      }
+    }
+    mapChips(state.years, 'facet-years');
+    mapChips(state.keywords, 'facet-keywords');
+    mapChips(state.types, 'facet-types');
+    mapChips(state.authors, 'facet-authors');
+    mapChips(state.citeAuthors, 'facet-cite-authors');
+    var cks = state.citeCatKeys || [], ci;
+    for (ci = 0; ci < cks.length; ci++){
+      (function(key){
+        var ref = els.citeCats && els.citeCats._catRefs && els.citeCats._catRefs[key];
+        chip((ref && ref.label) || key, function(){ if (ref) ref.cb.click(); });
+      })(cks[ci]);
+    }
+    if ((state.titleQuery || '').trim()){
+      chip('title: “' + state.titleQuery.trim() + '”', function(){
+        state.titleQuery = '';
+        if (els.title) els.title.value = '';
+        applyFilters();
+      });
+    }
+    if (state.minCites > 0){
+      chip('citations ≥ ' + state.minCites, function(){
+        state.minCites = 0;
+        if (els.minCites){ els.minCites.value = '0'; els.minCitesLabel.textContent = '0'; }
+        applyFilters();
+      });
+    }
+    if (state.minImpact > 0){
+      chip('impact tier ≥ ' + state.minImpact, function(){
+        state.minImpact = 0;
+        if (els.minImpact){ els.minImpact.value = '0'; els.minImpactLabel.textContent = 'all papers'; }
+        applyFilters();
+      });
+    }
+    if (state.citeCentralityKey && state.citeCentralityKey !== 'all'){
+      chip('centrality: ' + state.citeCentralityKey, function(){
+        var allBtn = els.citeCentrality && els.citeCentrality.querySelector('.type-toggle-btn[data-v="all"]');
+        if (allBtn) allBtn.click();
+      });
+    }
   }
 
   // Active-filter count on the narrow-width Filters button (the button
@@ -1682,19 +1770,37 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     // Clear
       els.btnClear.onclick = function(){ clearAll(); };
 
-    // Narrow-width chrome (tasks/RESPONSIVE.md): the Filters collapse
-    // button and per-facet accordion labels. Pure class toggles — the
-    // CSS that reacts to them is all behind max-width media queries, so
-    // none of this can move the desktop layout.
+    // Narrow-width chrome (tasks/RESPONSIVE.md v2): the Filters button
+    // opens a drawer over the results with DEFERRED apply — selections
+    // update the pinned "Show N results" button live and commit on its
+    // tap, never per checkbox. Pure class toggles + a render flag; the
+    // CSS that reacts is all behind max-width media queries and the
+    // flag is only ever set here, so desktop keeps instant apply.
     var btnFiltersToggle = document.getElementById('btn-filters-toggle');
     var filtersRoot = document.getElementById('pubs-filters');
+    var btnDrawerApply = document.getElementById('btn-drawer-apply');
+    function openFilterDrawer(){
+      filtersRoot.classList.add('filters-open');
+      btnFiltersToggle.setAttribute('aria-expanded', 'true');
+      DEFER_RENDER = true;
+      applyFilters();               // fill drawer counts + the button label
+      track('filters-open-narrow', {});
+    }
+    function applyAndCloseDrawer(){
+      DEFER_RENDER = false;
+      filtersRoot.classList.remove('filters-open');
+      btnFiltersToggle.setAttribute('aria-expanded', 'false');
+      applyFilters();               // commit: one render of the list
+      window.scrollTo(0, 0);
+      track('filters-apply-narrow', {});
+    }
     if (btnFiltersToggle && filtersRoot){
       btnFiltersToggle.onclick = function(){
-        var open = filtersRoot.classList.toggle('filters-open');
-        this.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if (open) track('filters-open-narrow', {});
+        if (filtersRoot.classList.contains('filters-open')) applyAndCloseDrawer();
+        else openFilterDrawer();
       };
     }
+    if (btnDrawerApply) btnDrawerApply.onclick = applyAndCloseDrawer;
     var accBlocks = document.querySelectorAll('.filter-block');
     for (var abi = 0; abi < accBlocks.length; abi++){
       (function(block){

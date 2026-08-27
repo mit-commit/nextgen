@@ -8,7 +8,7 @@
        To add a publication, append an entry to that file.
        To feature a paper, set "featured": true on its entry (award papers
        with a "price" are featured automatically). -->
-  <link rel="stylesheet" href="assets/css/style.css?v=105"/>
+  <link rel="stylesheet" href="assets/css/style.css?v=107"/>
   <!-- Umami analytics (privacy-friendly, cookieless) -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="0501f709-b527-45af-8727-062721122bb4"></script>
 </head>
@@ -27,7 +27,10 @@
         <div style="clear:both"></div>
 	  <div id="image_window">
 
-	    <img src="assets/img/commitlogo.png" alt="The COMMIT Group">
+	    <img src="assets/img/commitlogo.png"
+	         srcset="assets/img/commitlogo-480.png 480w, assets/img/commitlogo.png 707w"
+	         sizes="(max-width: 940px) 100vw, 700px"
+	         alt="The COMMIT Group">
 	  </div>
         <div class="secbody" id="pubs-secbody">
 
@@ -223,13 +226,22 @@
               </div>
               </fieldset>
             </div>
+
+            <!-- Narrow-width drawer only (CSS hides it on desktop, where
+                 instant apply stays): selections commit on this tap. -->
+            <div class="drawer-apply">
+              <button id="btn-drawer-apply" type="button" class="btn">Show results</button>
+            </div>
           </div>
 
           <!-- Aggregate citation overview + cross-paper citers (filled by JS) -->
           <div id="cite-overview" class="cite-overview hidden"></div>
 
+          <!-- Active filters as removable chips (narrow widths only) -->
+          <div id="filter-chips" class="filter-chips" aria-label="Active filters"></div>
+
           <!-- PUBLICATIONS -->
-          <h2 class="grouphead" id="pubs-heading">Publications <span id="pubs-count"></span></h2>
+          <h2 class="grouphead" id="pubs-heading" aria-live="polite">Publications <span id="pubs-count"></span></h2>
           <div id="pubs-errors" class="switchversion" style="color:#b00;"></div>
           <div id="pubs-results"></div>
 
@@ -246,6 +258,6 @@
   <!-- v= busts stale caches: these two must always be the same vintage -->
   <script src="assets/js/scoring.js?v=1"></script>
   <script src="assets/js/citations.js?v=103"></script>    <!-- per-paper citation view (data/citations/) -->
-  <script src="assets/js/publications.js?v=108"></script> <!-- the filters controller -->
+  <script src="assets/js/publications.js?v=109"></script> <!-- the filters controller -->
 </body>
 </html>

@@ -588,7 +588,11 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .facet-item { font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem); }
 .filter-label, .facet-count { font-size: clamp(0.7rem, 0.65rem + 0.25vw, 0.8125rem); }
 @media (max-width: 699px) {
-  .facet-item { min-height: 44px; }   /* touch target */
+  /* His ruling 2026-08-27: list rows keep desktop-like density — no
+     44px touch-target padding (a little vertical slack only). The
+     whole row stays tappable; accordion headers, chips and the apply
+     button keep their full touch height. */
+  .facet-item { padding: 3px 0; }
   /* iOS Safari zooms the page when a sub-16px field takes focus */
   .text-input, .facet-search-input, .facet-sort-control select,
   .sort-multilevel select, #cite-search { font-size: 16px; }

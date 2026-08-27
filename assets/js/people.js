@@ -106,14 +106,10 @@ years.forEach(y=>{
 
   // Fill two columns
   groups.get(y).sort(byLastName).forEach((p,i)=>{
-    const bits=[];
-    if (p.title) bits.push(p.title);
-    if (p.title2) bits.push(p.title2);
-    // multi-year stint (e.g. a UROP spanning terms, or UROP-then-thesis)
-    if (p.startyear && p.year && p.startyear !== p.year) bits.push(`· ${p.startyear}–${p.year}`);
-
+    // display only the highest role; the year comes from the section header
+    // (title2/year2/startyear stay in the data for the roster, his ruling 2026-08-27)
     const li=document.createElement('li'); li.className='person';
-    li.innerHTML=`${personLink(p)} — <em>${bits.join(' ')}</em>`;
+    li.innerHTML=`${personLink(p)} — <em>${p.title||''}</em>`;
     if (p.position){
       const pos=document.createElement('div');
       pos.className='person-position';

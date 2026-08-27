@@ -512,6 +512,42 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   sitting-sized pass he should trigger separately. Historical addresses
   never became mailto: links anywhere.
 
+- **Round 2, his answers folded in** (2026-08-27, tasks/ALUMNI-QUESTIONS.md):
+  Tom Chen + Yishen Chen merged into "Yishen 'Tom' Chen" (PhD 2026); alumni
+  rows now show ONLY the highest role — no second degree, no year ranges (his
+  ruling; title2/year2/startyear stay in the XML for the roster); Kelly's
+  corpus entry DROPPED ("no, drop him"); Pinckney year 1997; Lugato → Visiting
+  Scholar; the nine page-MEngs confirmed by him. Thesis hunt for those nine:
+  Chris Yu 2004 FOUND and added (yu:meng-thesis:2004, DSpace title page says
+  Thesis Supervisor Saman P. Amarasinghe; PDF in papers/2004/); Raphael/
+  Chaudhary/Ruiz/Noyola were already in the corpus; **Birka's thesis title
+  page says supervisor Michael D. Ernst and Jacobs' says Larry Rudolph** —
+  neither added, back to him; the only DSpace Matsakis MEng is Nicholas E.
+  (1999, Paul Viola) — a different person from Niko (Nicholas D.), back to
+  him; Saraff 2024 not in DSpace. Corpus stays 331 (−Kelly +Yu).
+- **LinkedIn sitting in his browser** (his instruction; ~28 lookups; full rows
+  in `harvest/authors/linkedin-results-alumni.json`): 23 more positions
+  printed (page now shows 66) — highlights: Puppin → Principal Engineer,
+  Genesis Therapeutics; Juan Carlos Reyes → SWE, Facebook (mutuals Cuevas +
+  Agrawal; CONFIRMS the MODEMAT record was a wrong match); Senanayake (now
+  displays as "Ryan Seneca") → Sunday Robotics; Kleckner → NVIDIA (left
+  Google); Yunming Zhang → MTS, Microsoft AI; Walter Lee → Google — **and a
+  BAD LINK flag: links.json's /in/walterwlee/ is a Wells Fargo person; correct
+  profile /in/walter-lee-8059b7a3/, for the coordinator to fold via
+  link-overrides**; Chuvpilo → co-founder/CEO of Thor Dynamics (where
+  Karczmarek is VP Eng); Larsen → Meta; Qin Zhao → Google; Chakrabarti →
+  Zentropi; Changwan Hong → building Standard Kernel; Stephen Chou upgraded
+  to Staff SWE, Google. One 2nd-degree accept flagged for his veto
+  (Mitrovska → Google DeepMind). Not settled: Binh Vo (invite pending),
+  Saraff (3rd+ xAI), Jonathan Zhou (ambiguous), Ricardo Ruiz (stale) — in
+  round 2 of the questions file.
+- **Current-email pass** (his "yes"): 11 published present-day addresses
+  (faculty pages + own sites) now fill Email (current) in the roster, each
+  with its source page. Roster names normalized to his "<Last>, <First> <MI.>"
+  convention (his note on inconsistency); export spelling kept for
+  export-sourced people; multi-word surnames (Del Sozzo, Ben Romdhane, …)
+  handled. Roster: 498 people, 66 jobs, 11 current + 162 historical emails.
+
 ## Cross-lane requests
 
 All resolved; moved verbatim to `docs/LANES-archive.md`. Open new requests here.

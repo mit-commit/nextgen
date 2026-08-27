@@ -1,96 +1,72 @@
-# Alumni merge — questions for Saman
+# Alumni merge — round 2 questions for Saman
 
-Write answers under each question (anything after "A:"). Everything here came out
-of the 2026-08-27 alumni merge; details in docs/LANES.md, `### alumni`.
+Round 1 answers are all folded in (2026-08-27): Yishen 'Tom' Chen merged, Kelly's
+corpus entry dropped, Pinckney 1997, Lugato → Visiting Scholar, alumni rows now
+show only the highest role with no year ranges, Rabbah → Postman, the LinkedIn
+sitting ran (23 new positions printed), and the current-email pass ran (11
+published addresses in the roster). What's left needs you.
 
-## 1. Six alumni still say "Graduate Student" — what should they say?
+## 1. Thesis hunt for the nine MEngs you confirmed — three surprises
 
-Your thesis list has no degree for them, so I didn't guess.
+Found and ADDED: **Chris Yu 2004** ("Characterizing Function Inlining with
+Genetic Programming" — DSpace title page says Thesis Supervisor: Saman P.
+Amarasinghe). Raphael, Chaudhary, Ruiz, Noyola were already in the corpus.
 
-- Mit Kotak (left 2025)                A:
-- Tom Chen (left 2026)                 A:
-- Logan Weber (left 2024)              A:
-- Edward Wang (left 2022)              A:
-- Amadou Ngom (left 2021)              A:
-- Marek Olszewski (left 2011; his MIT PhD ~2012 is not in your list —
-  co-advised?)                         A:
+But the title pages disagree with the People page for these:
 
-## 2. Nine people show an MEng on the page that your thesis list doesn't have
+- **Adrian Birka** (MEng June 2003, "Compiler-Enforced Immutability for the
+  Java Language"): title page says supervisor **Michael D. Ernst**. Not added
+  to the corpus. Keep his page role as MEng anyway (he was your UROP in 2000)?
+  A:
+- **Joshua Jacobs** (MEng May 2002, "Improving Memory Performance through
+  Runtime Optimization"): title page says supervisor **Larry Rudolph**. Same
+  question.
+  A:
+- **Niko Matsakis**: the only Matsakis MEng in DSpace is "Nicholas E. Matsakis"
+  1999 (handwriting recognition, supervisor Paul Viola) — a DIFFERENT person
+  (Niko is Nicholas D.). Your export has Niko as UROP 2000–01; no thesis of his
+  under you is findable. Page currently says MEng 1999. What should it say?
+  A:
+- **Dhruv Saraff** (MEng 2024): no DSpace record yet. Do you have the PDF?
+  A:
 
-Confirm each is a real MEng under you (y), or tell me what it should be.
+## 2. Identity calls the sitting could not settle (not 1st-connects)
 
-- Steven Raphael (2025)                A:
-- Shreya Chaudhary (2025)              A:
-- Ricardo Ruiz (2025)                  A:
-- Dhruv Saraff (2024)                  A:
-- Patricio Noyola (2019)               A:
-- Adrian Birka (2003)                  A:
-- Joshua Jacobs (2002)                 A:
-- Chris Yu (2004; the UROP export has him Spring/Summer 2004 only)  A:
-- Niko Matsakis (1999; export has him as UROP 2000–01)              A:
+- Binh Vo — Sr SWE in NYC, MIT MS CS, but your invite is still pending (not
+  connected). Print "Senior Software Engineer" with no employer, or leave off?
+  A:
+- Dhruv Saraff — exact-spelling "Member of Technical Staff @ xAI" (UK, 3rd+, no
+  MIT shown). Is that him?
+  A:
+- Jonathan Zhou (MEng 2025, AMX thesis) — several MIT Jonathan Zhous, none
+  clearly him. Where is he?
+  A:
+- Ricardo Ruiz (MEng 2025) — closest profile is a stale "Student at MIT"
+  (Atlanta, 3rd+). Where is he?
+  A:
+- Jonathan Birnbaum (UROP 2008) — a 1st-connect "Founder & CEO at OpenYield,
+  MIT Sloan BS" surfaced (mutuals Parker McKee, Chris Rinard). Same person?
+  A:
 
-## 3. Kevin Kelly's MEng thesis (2010, "Heterogeneous Execution with PetaBricks")
+## 3. One 2nd-degree accept you may veto
 
-No copy exists in DSpace, on the web, or in papers/. The corpus entry has no PDF.
-Do you have a copy I can add?             A:
+Tamara Mitrovska — printed "Software Engineer, Google DeepMind" on a 2nd-degree
+profile (unique name; mutuals Tsvetomir Petrov and Katherine Mohr). OK?
+A:
 
-## 4. Two identity judgment calls — did I get them right?
+## 4. 1st-connects whose profiles name no employer (nothing printable)
 
-- Page "Ted Allison" = UROP export "Allison, Eric T." (2 terms, 2000)?   A:
-- Your list spells Sitij **Agarwal**; the page, corpus, and his LinkedIn say
-  **Agrawal** — I kept Agrawal. Correct?                                 A:
+Sitij Agrawal ("Software Engineer", Tarrytown NY) · Tsvetomir Petrov ("HW/SW/ML
+Architect, REMOTE ONLY") · Parker Tew ("Software Developer", NYC) · Srikrishna
+Devabhaktuni ("independent") · Nicholas Dow (stale student headline) · Ricardo
+Gayle Jr. (stale student headline) · Steven Raphael (2nd, "Student at MIT") ·
+Aryan Kumar (2nd, "CS at MIT", Santa Clara). Fill in any employers you know:
+A:
 
-## 5. Four UROPs are on the page but not in the funded-UROP export
+## 5. The rest of the alumni
 
-Kept them as-is. Real UROPs (unfunded/for-credit)? Years for the two without one?
-
-- Minshu Zhan (no year)                A:
-- Tom Pinckney (no year)               A:
-- Haoran Xu (2019)                     A:
-- Hoi Wai Yu (2024)                    A:
-
-## 6. Current-vs-alumni borderline UROPs
-
-I used "has an approved Fall 2026 term → current". Flag anyone wrong.
-
-- Kept CURRENT without a funded 2026 term (page said current):
-  Namo Samuthrsindh, Maggie Liu, Gabriela Miranda, Justin Zhang        A:
-- Put in ALUMNI 2026: Abimalek Mekuriya (single Summer 2026 term)      A:
-
-## 7. Positions I would not print — fill in any you know
-
-Left blank on the page (identity or currency didn't meet the bar):
-
-- Rodric Rabbah (press says Postman; his LinkedIn now says "building Astro AI")  A:
-- Diego Puppin (Synthesia candidate, unverified)     A:
-- Ryan Senanayake (ORCID says Reservoir Labs — acquired 2021, stale)  A:
-- Timothy Garnett ("technical consultant", no employer named)          A:
-- Reid Kleckner (LLVM's Kleckner, "compiler engineer" — Google?)       A:
-- Richard Sollee (candidate profile education hidden)                  A:
-- Yunming Zhang                        A:
-- Sam Larsen                           A:
-- Walter Lee                           A:
-- Qin Zhao                             A:
-- Changwan Hong (just left — where to?) A:
-- Also employer-less recorded titles for: Akkas, Dighe, Steele, Tew, Vo,
-  Petrov, Chakrabarti, Kiriansky, Greenwald, Agrawal                   A:
-
-## 8. A wrong-looking record in the harvest
-
-academic-pages.json equates **Juan C. Reyes** (your MEng 2004, StreamIt graph
-editor) with **Juan Carlos De los Reyes** (MODEMAT, Ecuador — an applied
-mathematician with a Graz PhD). I did not use it. Who is your Juan Reyes, and
-where is he now?                          A:
-
-## 9. Role-mapping choices you might want to override
-
-- David Lugato: "Affiliate Researcher" → **Research Staff** (he was a CEA
-  researcher visiting; **Visiting Scholar** may be truer)              A:
-- Katsumi Okuda: "Visiting Researcher" → **Visiting Scholar** (Mitsubishi)  A:
-- David Maze: kept **Research Staff 2004** with MEng 2001 as the second line
-  (not the thesis-outranks rule)                                       A:
-
-## 10. The Email (current) column is empty by design
-
-Filling it means reading each person's own published page (faculty pages, personal
-sites) — a sitting-sized pass. Should I run it?        A:
+The sitting covered your named list plus the recent MEngs (~28 lookups). Still
+position-less: most pre-2010 MEngs and nearly all UROP-only alumni (~170
+people). Want a follow-up sitting to sweep them, and if so, how far down the
+list (degree-holders only, or everyone)?
+A:

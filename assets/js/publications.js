@@ -696,14 +696,27 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     cb.type = 'checkbox';
     cb.value = value;
 
+    // Label and count as separate spans so narrow widths can degrade
+    // them by CSS class alone (tasks/RESPONSIVE.md) — same rendered
+    // text as before at desktop.
     var txt = document.createElement('span');
     txt.className = 'facet-text';
+    var labelWrap = document.createElement('span');
+    labelWrap.className = 'facet-label';
     var labelNode = document.createTextNode(labelText + ' ');
-    txt.appendChild(labelNode);
+    labelWrap.appendChild(labelNode);
+    txt.appendChild(labelWrap);
     var cntSpan = document.createElement('span');
-    cntSpan.className = 'cat-counts';
-    var textNodeValue = document.createTextNode('(0)');
-    cntSpan.appendChild(textNodeValue);
+    cntSpan.className = 'cat-counts facet-cnt';
+    var parenOpen = document.createElement('span');
+    parenOpen.className = 'facet-paren'; parenOpen.textContent = '(';
+    var numSpan = document.createElement('span');
+    numSpan.className = 'facet-num';
+    var textNodeValue = document.createTextNode('0');
+    numSpan.appendChild(textNodeValue);
+    var parenClose = document.createElement('span');
+    parenClose.className = 'facet-paren'; parenClose.textContent = ')';
+    cntSpan.appendChild(parenOpen); cntSpan.appendChild(numSpan); cntSpan.appendChild(parenClose);
     txt.appendChild(cntSpan);
     txt.title = labelText; // show full label on hover (handles truncation)
 
@@ -719,7 +732,7 @@ function buildFacetBox(list, mount, facetKey, stateMap, labelFor) {
     label.appendChild(txt);
     listEl.appendChild(label);
 
-    itemMap[value] = { cb: cb, textNode: textNodeValue, labelNode: labelNode, labelText: labelText };
+    itemMap[value] = { cb: cb, textNode: textNodeValue, labelNode: labelNode, labelText: labelText, txt: txt };
   }
 
   mount.appendChild(scrollWrap);
@@ -1407,7 +1420,12 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
     var cnt = countsMap[val] || 0;
     var display = facet.labelFor ? facet.labelFor(val) : val;
     itemMap[val].labelNode.nodeValue = display + ' ';
-    itemMap[val].textNode.nodeValue = '(' + cnt + ')';
+    itemMap[val].textNode.nodeValue = String(cnt);
+    // full text survives every CSS degradation tier
+    if (itemMap[val].txt){
+      itemMap[val].txt.title = display + ' (' + cnt + ')';
+      itemMap[val].txt.setAttribute('aria-label', display + ' (' + cnt + ')');
+    }
 
     // values with nothing in the current selection disappear entirely
     // (a checked box always stays visible so it can be unchecked)
@@ -1522,11 +1540,14 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
       for (f in els.citeCats._catRefs){
         var ref = els.citeCats._catRefs[f];
         var rc = catRepos[f];
-        ref.node.nodeValue = '(' + (catPapers[f] || 0) +
-          ', cited by ' + (catCites[f] || 0) + ' papers' +
-          (rc ? ' and ' + rc + ' repos' : '') + ')';
-        var catRow = ref.node.parentNode && ref.node.parentNode.closest
-          ? ref.node.parentNode.closest('label') : null;
+        var detText = ', cited by ' + (catCites[f] || 0) + ' papers' +
+          (rc ? ' and ' + rc + ' repos' : '');
+        ref.num.nodeValue = String(catPapers[f] || 0);
+        ref.det.nodeValue = detText;
+        // full text survives every CSS degradation tier
+        ref.txt.setAttribute('aria-label',
+          ref.label + ' (' + (catPapers[f] || 0) + detText + ')');
+        var catRow = ref.row;
         var catHidden = !(catPapers[f] || 0) && !rc && !(ref.cb && ref.cb.checked);
         if (catRow) catRow.style.display = catHidden ? 'none' : '';
         if (!catHidden) catVisible++;
@@ -1572,6 +1593,28 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
 
     // interactive panel visibility
     els.filtersInteractive.className = (state.mode === 'interactive') ? 'filters-interactive' : 'filters-interactive hidden';
+
+    updateFiltersToggleBadge();
+  }
+
+  // Active-filter count on the narrow-width Filters button (the button
+  // itself is display:none at desktop; tasks/RESPONSIVE.md).
+  function activeFilterCount(){
+    function nkeys(m){ var n = 0, k; for (k in m){ if (m[k]) n++; } return n; }
+    var n = nkeys(state.years) + nkeys(state.keywords) + nkeys(state.authors) +
+            nkeys(state.types) + nkeys(state.citeAuthors) +
+            ((state.citeCatKeys || []).length);
+    if ((state.titleQuery || '').trim()) n++;
+    if (state.minCites > 0) n++;
+    if (state.minImpact > 0) n++;
+    if (state.citeCentralityKey && state.citeCentralityKey !== 'all') n++;
+    return n;
+  }
+  function updateFiltersToggleBadge(){
+    var badge = document.getElementById('filters-active-count');
+    if (!badge) return;
+    var n = activeFilterCount();
+    badge.textContent = n ? '(' + n + ')' : '';
   }
 
   function clearAll(){
@@ -1638,6 +1681,32 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
 
     // Clear
       els.btnClear.onclick = function(){ clearAll(); };
+
+    // Narrow-width chrome (tasks/RESPONSIVE.md): the Filters collapse
+    // button and per-facet accordion labels. Pure class toggles — the
+    // CSS that reacts to them is all behind max-width media queries, so
+    // none of this can move the desktop layout.
+    var btnFiltersToggle = document.getElementById('btn-filters-toggle');
+    var filtersRoot = document.getElementById('pubs-filters');
+    if (btnFiltersToggle && filtersRoot){
+      btnFiltersToggle.onclick = function(){
+        var open = filtersRoot.classList.toggle('filters-open');
+        this.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) track('filters-open-narrow', {});
+      };
+    }
+    var accBlocks = document.querySelectorAll('.filter-block');
+    for (var abi = 0; abi < accBlocks.length; abi++){
+      (function(block){
+        var lab = null, hasList = false, ci;
+        for (ci = 0; ci < block.children.length; ci++){
+          if (block.children[ci].className.indexOf('filter-label') !== -1) lab = block.children[ci];
+          if (block.children[ci].className.indexOf('facet-list') !== -1) hasList = true;
+        }
+        if (!lab || !hasList) return;
+        lab.onclick = function(){ block.classList.toggle('facet-open'); };
+      })(accBlocks[abi]);
+    }
 
     // Global show/hide for all visible summaries
     if (els.btnToggleSummaries) {
@@ -1736,15 +1805,26 @@ updateFacetCounts(els.tyBox, 'types', tCounts, state.types);
           (function(f){
             var label = document.createElement('label'); label.className = 'facet-item';
             var cb = document.createElement('input'); cb.type = 'checkbox'; cb.value = f.key;
+            // Split spans (label / count / prose detail) so width tiers
+            // degrade the row by CSS class only (tasks/RESPONSIVE.md):
+            // '(46, cited by 153 papers and 199 repos)' -> '(46)' -> badge.
             var txt = document.createElement('span'); txt.className = 'facet-text';
-            txt.appendChild(document.createTextNode(f.label + ' '));
+            var labelWrap = document.createElement('span');
+            labelWrap.className = 'facet-label';
+            labelWrap.appendChild(document.createTextNode(f.label + ' '));
+            txt.appendChild(labelWrap);
             var cnt = document.createElement('span');
-            cnt.className = 'cat-counts';
-            var tn = document.createTextNode('(0)');
-            cnt.appendChild(tn);
+            cnt.className = 'cat-counts facet-cnt';
+            var po = document.createElement('span'); po.className = 'facet-paren'; po.textContent = '(';
+            var numSpan = document.createElement('span'); numSpan.className = 'facet-num';
+            var tnNum = document.createTextNode('0'); numSpan.appendChild(tnNum);
+            var detSpan = document.createElement('span'); detSpan.className = 'facet-detail';
+            var tnDet = document.createTextNode(''); detSpan.appendChild(tnDet);
+            var pc = document.createElement('span'); pc.className = 'facet-paren'; pc.textContent = ')';
+            cnt.appendChild(po); cnt.appendChild(numSpan); cnt.appendChild(detSpan); cnt.appendChild(pc);
             txt.appendChild(cnt); txt.title = f.gloss;
             if (!els.citeCats._catRefs) els.citeCats._catRefs = {};
-            els.citeCats._catRefs[f.key] = { node: tn, label: f.label, cb: cb };
+            els.citeCats._catRefs[f.key] = { num: tnNum, det: tnDet, txt: txt, row: label, label: f.label, cb: cb };
             cb.onchange = function(){
               selected[f.key] = this.checked;
               var keys = keysSelected(selected);

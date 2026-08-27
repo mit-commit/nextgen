@@ -266,7 +266,7 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 
 .filters-interactive.hidden { display: none !important; }
 .filter-block { margin-bottom: 10px; }
-.filter-label { font-weight: bold; margin-bottom: 6px; }
+.filter-label { font-weight: bold; margin-bottom: 6px; font-size: 12px; }
 .facet-sort-control {
   display: flex;
   align-items: center;
@@ -302,12 +302,14 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .filter-grid {
   display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
 }
-@media (max-width: 820px) { .filter-grid { grid-template-columns: 1fr; } }
+/* minmax(0,1fr), not 1fr: a plain 1fr track has a min-content floor, so
+   one wide row inflates the whole stacked column past the viewport */
+@media (max-width: 820px) { .filter-grid { grid-template-columns: minmax(0, 1fr); } .filter-grid > .filter-block { min-width: 0; } }
 
 /* Sliding (range-controlled) facet lists; show ~5 items height */
 .facet-list { border: 1px solid #ddd; border-radius: 6px; padding: 6px; }
 .facet-scroll { max-height: 7.5em; overflow: auto; }
-.facet-item { display: block; font-size: 90%; margin: 2px 0; white-space: nowrap; }
+.facet-item { display: block; font-size: 13px; margin: 2px 0; white-space: nowrap; }
 .facet-item.disabled { opacity: 0.45; }
 .facet-item input { margin-right: 6px; }
 .facet-slider { width: 100%; margin-top: 6px; }
@@ -375,10 +377,10 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 /* inside the box, lists hug their labels instead of bottom-aligning */
 .filter-grid.cite-tools > .filter-block .facet-list { margin-top: 0; }
 .cite-tools-row .type-toggle-btn { margin-right: 3px; }
-@media (max-width: 820px) { .cite-tools { grid-template-columns: 1fr; } }
+@media (max-width: 820px) { .cite-tools { grid-template-columns: minmax(0, 1fr); } }
 
 /* How many options are currently in a facet box, next to its label */
-.facet-count { font-weight: normal; color: #666; margin-left: 4px; }
+.facet-count { font-weight: normal; color: #666; margin-left: 4px; font-size: 12px; }
 
 /* Paper thresholds: now its own full-width row below the cite-tools grid;
    the two sliders get real breathing room between them */
@@ -386,10 +388,23 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
    column spans both rows and its list stretches to the box bottom */
 .paper-thresholds-row { margin-top: 10px; grid-column: 1 / 3; }
 .cite-tools { position: relative; }
+/* Anchored to its own grid AREA (grid-placement properties on an
+   absolutely positioned grid child make the area its containing block),
+   so it can never drift over the other columns at any width — the old
+   hand-computed width calc could. Still absolute so the uncapped list
+   doesn't inflate the grid rows. */
 .cite-authors-block {
-  position: absolute; top: 0; right: 0; bottom: 0;
-  width: calc((100% - 20px) * 0.9 / 3.25);   /* the 0.9fr third track */
+  position: absolute; grid-column: 3; grid-row: 1;
+  top: 0; left: 0; right: 0; bottom: 0;
   display: flex; flex-direction: column;
+}
+/* Stacked grid (narrow): back into normal flow with a capped list —
+   absolute positioning here is exactly the overlap bug. */
+@media (max-width: 820px) {
+  /* grid-column must reset too: a static child still placed in column 3
+     spawns implicit tracks and crushes the single stacked column */
+  .cite-authors-block { position: static; grid-column: auto; grid-row: auto; }
+  #facet-cite-authors .facet-scroll { max-height: 9.4em; flex: 0 1 auto; }
 }
 .cite-authors-block .facet-list { flex: 1; display: flex; flex-direction: column; min-height: 0; }
 
@@ -444,7 +459,7 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .facet-list { border: 1px solid #ddd; border-radius: 6px; padding: 6px; max-width: 100%; overflow: hidden; }
 .facet-scroll { max-height: 7.5em; overflow: auto; }
 .facet-items { display: block; }
-.facet-item { display: flex; align-items: center; gap: 6px; font-size: 120%; line-height: 1.5; margin: 0; white-space: nowrap; overflow: hidden; }
+.facet-item { display: flex; align-items: center; gap: 6px; font-size: 13px; line-height: 1.5; margin: 0; white-space: nowrap; overflow: hidden; }
 .facet-item input { flex: 0 0 auto; margin-right: 6px; }
 .facet-text { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .facet-item.disabled { opacity: 0.45; }
@@ -530,3 +545,121 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
 .cite-loading { color: #777; font-style: italic; }
 /* tier-3 rows whose citing work has no located repository */
 .repo-paper-only { opacity: 0.55; }
+
+/* ===================================================================
+   Responsive pass (tasks/RESPONSIVE.md, 2026-08-27). Everything below
+   lives behind max-width media queries; the deliberate font-size tiers
+   above (13px facet rows, 12px headers/counts) are the only rules that
+   touch the desktop view.
+   =================================================================== */
+
+/* --- Progressive label disclosure -------------------------------------
+   Rows render as spans (.facet-label / .facet-cnt / .facet-detail) and
+   degrade by CSS class only — JS never rebuilds the string. Full text
+   stays in aria-label + title at every width.
+   (.facet-cnt, not .facet-count: that name is taken by the box-header
+   count and carries a margin.) */
+@media (max-width: 1099px) {
+  .facet-detail { display: none; }   /* 'Builds on it (46)' */
+}
+@media (max-width: 699px) {
+  /* count becomes a small right-aligned badge; parens go */
+  .facet-paren { display: none; }
+  .facet-text { display: flex; align-items: center; min-width: 0; }
+  .facet-label { overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; }
+  .facet-cnt {
+    margin-left: auto; flex: 0 0 auto;
+    background: #ececec; border-radius: 10px; padding: 1px 8px;
+    font-size: 11px; color: #555;
+  }
+  .facet-item { font-size: 12px; min-height: 44px; }   /* touch target */
+  .filter-label { font-size: 11px; }
+  .facet-count { font-size: 11px; }
+  /* iOS Safari zooms the page when a sub-16px field takes focus */
+  .text-input, .facet-search-input, .facet-sort-control select,
+  .sort-multilevel select, #cite-search { font-size: 16px; }
+}
+
+/* --- Header image: never clip the logo --------------------------------
+   940px matches the existing #image_window { width: 100% } breakpoint;
+   the img itself never had a cap, so it clipped inside the window. */
+@media (max-width: 940px) {
+  #image_window img { max-width: 100%; height: auto; }
+}
+
+/* --- Stack the facet grids ---------------------------------------------
+   These must sit at the END of the stylesheet: the desktop multi-column
+   grid-template-columns rules are declared unconditionally further up,
+   so an earlier media query loses the cascade and the columns CRUSH
+   (the '2.' / 'Approximate …' effect) instead of stacking.
+   minmax(0,1fr), not 1fr: a plain 1fr keeps a min-content floor and one
+   wide row pushes the whole column past the viewport. */
+@media (max-width: 820px) {
+  .filter-grid, .filter-grid.cite-tools { grid-template-columns: minmax(0, 1fr); }
+  .filter-grid > .filter-block { min-width: 0; }
+}
+
+/* --- Small-width layout (<700px) -------------------------------------- */
+.filters-toggle { display: none; }   /* desktop: button absent */
+@media (max-width: 699px) {
+  /* The desktop 40px+40px nested paddings leave ~180px of content in a
+     390px viewport; give the width back to the content */
+  body { padding: 4px; }
+  .main { padding-left: 12px; padding-right: 12px; }
+  .secbody { padding-left: 0; padding-right: 0; }
+
+  /* Results first: Filters collapse into one button with the active
+     count; the page opens on the publication list. */
+  #filters-heading { display: none; }
+  .filters-toggle {
+    display: flex; align-items: center; min-height: 44px;
+    padding: 8px 16px; font-size: 14px; margin: 8px 0;
+  }
+  .filters-active-count { margin-left: 6px; color: #555; font-weight: normal; }
+  #pubs-filters:not(.filters-open) { display: none; }
+
+  /* One full-width accordion per facet, closed by default */
+  .filter-block:has(> .facet-list) > .filter-label {
+    cursor: pointer; min-height: 44px; display: flex; align-items: center;
+    border: 1px solid #ddd; border-radius: 6px; padding: 0 10px;
+    margin-bottom: 4px;
+  }
+  .filter-block:has(> .facet-list) > .filter-label::after {
+    content: '\25B8'; margin-left: auto; color: #888;
+  }
+  .filter-block.facet-open > .filter-label::after { content: '\25BE'; }
+  .filter-block:has(> .facet-list):not(.facet-open) > .facet-list,
+  .filter-block:has(> .facet-list):not(.facet-open) > .type-toggle,
+  .filter-block:has(> .facet-list):not(.facet-open) > .facet-sort-control {
+    display: none;
+  }
+
+  /* Years as wrapping chips, whole chip tappable */
+  #facet-years .facet-scroll { max-height: none; }
+  #facet-years .facet-items { display: flex; flex-wrap: wrap; gap: 6px; }
+  #facet-years .facet-item {
+    display: inline-flex; width: auto; min-height: 40px;
+    border: 1px solid #ccc; border-radius: 16px; padding: 2px 12px;
+    margin: 0;
+  }
+  #facet-years .facet-cnt { margin-left: 4px; }
+
+  /* Sticky result count: filtering gives feedback without scrolling */
+  #pubs-heading {
+    position: sticky; top: 0; z-index: 30;
+    background: #fff; padding: 6px 0; margin-top: 0;
+  }
+
+  /* Keep every control row inside the viewport: wrap instead of
+     overflowing (the desktop rows assume ~1300px of width) */
+  .filter-block:has(> .facet-list) > .filter-label { flex-wrap: wrap; row-gap: 2px; }
+  .cite-show-topline { display: flex; flex-wrap: wrap; gap: 6px; }
+  .cite-show-topline .btn { margin: 0; }
+  .type-toggle { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+  .cite-tools-box { padding: 4px 8px 10px; }
+  #cite-search { width: 100%; box-sizing: border-box; }
+  .text-input, .facet-search-input { max-width: 100%; box-sizing: border-box; }
+  .paper-thresholds-sliders { gap: 10px; }
+  .paper-thresholds-sliders .facet-slider,
+  .facet-slider { width: 100%; max-width: 320px; box-sizing: border-box; }
+}

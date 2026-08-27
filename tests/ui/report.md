@@ -6,7 +6,7 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 
 ## Control inventory (discovered at runtime from #pubs-filters)
 
-589 raw interactive elements found. Reduced to logical controls:
+590 raw interactive elements found. Reduced to logical controls:
 
 ### Checkbox facets
 - `#facet-years`: 35 values
@@ -44,7 +44,7 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 - `mode`: ['noninteractive', 'interactive']
 
 ### Standalone buttons
-`#btn-clear`, `#btn-export-bib`, `#sort-reset`, `#btn-toggle-summaries`, `#btn-toggle-citations`, `#btn-toggle-repos`
+`#btn-clear`, `#btn-export-bib`, `#sort-reset`, `#btn-toggle-summaries`, `#btn-toggle-citations`, `#btn-toggle-repos`, `#btn-drawer-apply`
 
 ## Interpretation notes (per the spec's "STOP rather than guess" instruction)
 

@@ -567,12 +567,13 @@ def check_expansions(drv, items, F, problems):
     return notes
 
 
-# ---------------- Narrow-viewport pass (tasks/RESPONSIVE.md) ----------------
-# Layout-only assertions at phone/tablet widths: no horizontal scroll on
-# the page, no structural block overlapping another, every facet
-# reachable (its accordion opens and the list sits inside the viewport).
-# The oracle plays no part here -- filtering logic is the desktop run's
-# job; this pass asserts the page is USABLE at 390x844 and 768x1024.
+# ---------------- Narrow-viewport pass (tasks/RESPONSIVE.md v2) -------------
+# Layout + drawer assertions at phone/tablet widths: no horizontal
+# scroll on the page, no structural block overlapping another, every
+# facet reachable, and -- where the filter drawer with deferred apply is
+# active -- the pinned "Show N results" button reflecting the same count
+# the list then shows after the tap. The oracle plays no part here;
+# filtering logic is the desktop run's job.
 
 NARROW_VIEWPORTS = [(390, 844), (768, 1024)]
 NARROW_SETTINGS_PER_VIEWPORT = 6
@@ -621,8 +622,16 @@ JS_NARROW_AUDIT = r"""
                       ' by ' + Math.round(ox) + 'x' + Math.round(oy) + 'px');
     }
   }
-  // Every facet reachable: visible after the prepare pass, inside the
-  // viewport horizontally.
+  return problems;
+}
+"""
+
+# Run only while the drawer/panel and its accordions are OPEN — a closed
+# drawer legitimately hides every facet list.
+JS_FACET_REACH = r"""
+() => {
+  const iw = window.innerWidth;
+  const problems = [];
   document.querySelectorAll('.facet-list').forEach(fl => {
     const r = fl.getBoundingClientRect();
     if (!fl.offsetParent || r.width <= 0) { problems.push('facet unreachable (not visible after opening): #' + fl.id); return; }
@@ -630,6 +639,23 @@ JS_NARROW_AUDIT = r"""
       problems.push('facet #' + fl.id + ' clipped: left=' + Math.round(r.left) + ' right=' + Math.round(r.right) + ' viewport=' + iw);
   });
   return problems;
+}
+"""
+
+
+JS_DRAWER_STATE = r"""
+() => {
+  const btn = document.getElementById('btn-filters-toggle');
+  return { drawer: !!(btn && btn.offsetParent) };
+}
+"""
+
+JS_READ_APPLY_COUNT = r"""
+() => {
+  const b = document.getElementById('btn-drawer-apply');
+  if (!b) return null;
+  const m = (b.textContent || '').replace(/,/g, '').match(/(\d+)/);
+  return m ? parseInt(m[1], 10) : null;
 }
 """
 
@@ -650,20 +676,51 @@ def narrow_pass(browser, base_url, seed, results):
             cases.append(gen(rng, model, F) if gen is gen_single
                          else gen(rng, model, F, rng.randint(2, 3)))
 
+        drawer = page.evaluate(JS_DRAWER_STATE)['drawer']
+
         for setting in cases:
             drv.reset()
-            page.evaluate(JS_NARROW_PREPARE)
-            page.wait_for_timeout(200)
             label = '%dx%d %s' % (vw, vh, setting.label if setting else 'baseline')
             problems = []
+
+            # The closed page must already be clean (hscroll/overlap).
+            page.evaluate('() => window.scrollTo(0, 0)')
+            page.wait_for_timeout(150)
+            problems += page.evaluate(JS_NARROW_AUDIT)
+
+            # Open the drawer (if this width has one) + every accordion,
+            # apply the setting through the real controls.
+            page.evaluate(JS_NARROW_PREPARE)
+            page.wait_for_timeout(200)
             if setting is not None:
                 err = apply_setting(drv, setting, F)
                 if err:
                     problems.append('apply failed at this width: %s' % err)
-            if not problems:
+
+            # Facet reachability inside the open drawer/panel.
+            if not any(p.startswith('apply failed') for p in problems):
+                reach = page.evaluate(JS_FACET_REACH)
+                problems += reach
+
+            if drawer:
+                # Deferred apply: the pinned button's count must match
+                # what the list shows after the tap commits.
+                btn_n = page.evaluate(JS_READ_APPLY_COUNT)
+                if btn_n is None:
+                    problems.append('drawer visible but no Show-N apply button')
+                else:
+                    page.click('#btn-drawer-apply')
+                    page.wait_for_timeout(400)
+                    got = ft.parse_count(drv.read_render()['count'])
+                    if got != btn_n:
+                        problems.append('deferred apply mismatch: button said %d, list shows %r'
+                                         % (btn_n, got))
+                # closed-state layout must be clean again with the
+                # setting applied (chips visible etc.)
                 page.evaluate('() => window.scrollTo(0, 0)')
-                page.wait_for_timeout(100)
-                problems = page.evaluate(JS_NARROW_AUDIT)
+                page.wait_for_timeout(150)
+                problems += page.evaluate(JS_NARROW_AUDIT)
+
             results.append({'case': 'narrow ' + label, 'ok': not problems,
                             'problems': problems, 'expansions': []})
         page.close()

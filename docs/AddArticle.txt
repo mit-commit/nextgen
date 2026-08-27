@@ -1,0 +1,75 @@
+ADDING A NEW PAPER TO THE COMMIT WEBSITE
+========================================
+Written for a human. Nothing here needs the terminal except the last step,
+and an agent can do that part too.
+
+
+STEP 1 — PUT THE PDF WHERE IT BELONGS
+-------------------------------------
+Copy the PDF into the repo:
+
+    ~/workspace/nextgen/papers/<year>/<name>.pdf
+
+Use the year the paper was published, and name the file after the citation
+key style already used in that folder (look at a neighbour: they read like
+"kjolstad-oopsla-2017.pdf"). If the folder for that year does not exist,
+make it.
+
+That is the only filing decision. Everything else the agent works out.
+
+
+STEP 2 — TELL AN AGENT
+----------------------
+Open a session (Claude Code, or Cowork pointed at ~/workspace/nextgen) and
+paste this, filling in the four lines at the top:
+
+    Add a new paper to the COMMIT site.
+
+    PDF: papers/<year>/<file>.pdf
+    Title: <full title>
+    Authors: <full author list, in order, as printed on the paper>
+    Venue and date: <e.g. OOPSLA, October 2026>
+
+    Follow tasks/HARVEST-AND-UPDATE.md, phases 1, 5 and 6, for a single
+    paper. Specifically:
+
+    1. Add the entry to data/publications.json following the conventions
+       already there — bibtexKey, type, venue, topics, project. Resolve its
+       DOI through the idmap; if there is no DOI yet (arXiv, or not yet
+       published), record it as no_doi rather than inventing one.
+    2. Write its summary in his voice. docs/summary-style.md is binding:
+       no superlatives, no present-anchoring, no numeric counts in prose.
+       Show me the summary before committing it.
+    3. Read the new paper's own reference list for citations INTO this
+       corpus. Any earlier COMMIT paper it extends or supersedes may now
+       have an incomplete summary — propose the edit for each one and show
+       me. Do not rewrite an old summary without showing me first.
+    4. Check for a repository: scan the PDF for URLs, then GitHub. Verify
+       any candidate against the paper — never accept a repo on a name
+       match alone.
+    5. Harvest citations for the new paper only (harvest_citations.py is
+       resumable and keyed per paper, so this is cheap).
+    6. Rebuild the derived data, run both UI harnesses, and report.
+
+    Do not touch anything else. If a rule is ambiguous, stop and ask.
+
+
+STEP 3 — PUBLISH
+----------------
+Once the harnesses are green, the same agent can run the cutover from
+tasks/CUTOVER.md, or you can tell it:
+
+    Migrate to the live site per tasks/CUTOVER.md, then verify the live URLs.
+
+Give GitHub Pages a couple of minutes, then check the page yourself.
+
+
+WHAT THE AGENT SHOULD COME BACK TO YOU ABOUT
+--------------------------------------------
+- the summary, before it is committed
+- any older paper whose summary it wants to change
+- an author who is new to the corpus and has no link yet
+- anything it could not verify
+
+If it comes back with none of these, be a little suspicious — a new paper
+almost always touches at least one older summary.

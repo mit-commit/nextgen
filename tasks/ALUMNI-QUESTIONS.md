@@ -150,3 +150,30 @@ Genuinely nothing current on their profiles (last role + end date in the
 roster): Petrov (Broadcom, to 2021), Gleyzer (Citadel, to 2013), Golla
 (Galaxy Digital, to 2022), Erika Lee (CodePath, to 2025), Mark Theng &
 Ricardo Gayle (empty profiles), Kenny Yang (joke entries).
+
+
+## Round 5 — your Lamb catch, and the rest of the remaining 99
+
+12 more filled (**153 positions** now): Andrew Lamb → **Staff Engineer,
+InfluxData** (your link); Darin Petkov → **SWE Manager, Google** (Zurich);
+Carloni → **Postdoc, CNIT**; Di Tucci → **Co-founder, Huxelerate** (his CSAIL
+visit is on the profile); Abdous → **Quant Developer, Squarepoint**;
+Peverelli → **Senior CPU Researcher, Huawei R&D UK**; Benmeziane → **Research
+Scientist, IBM Research**; Merouani → **PhD student, NYU**; Chaudhary → **MIT
+CSAIL**; Manlaibaatar → **Meta (PyTorch)** (GitHub company field); Ziheng
+Wang → **Stanford / Anthropic** (his GitHub bio); Youyang Gu → **independent
+data scientist** (youyanggu.com).
+
+Two data issues found:
+- **Amirhossein Mirhosseini's recorded site miramir.me is a hijacked casino-spam
+  domain** — removed his url from the page; he's not findable on LinkedIn either.
+- **Siyi Hu conflict**: the recorded GitHub (Theohhhu) says "Lecturer @ Curtin,
+  Agentic AI/RL" but LinkedIn's best match is "Senior Robotics Autonomy
+  Engineer, FieldAI" (Cambridge, mutual Edward Wang). Which (if either) is your
+  2025 visiting scholar?  A:
+
+Empty/no-profile after full checks: Ceryen Tan (empty experience), Bosboom
+(site unreachable, no LinkedIn), Leghettas (still 'Student'), Debbagh (1st,
+'Assistant Manager Data Engineer', Paris - employer not shown), Noyola &
+Ben Romdhane (GitHub only, no employer). The ~55 still-blank are the
+hyper-common names and old no-profile UROPs from the round-3 list.

@@ -97,15 +97,12 @@ years.forEach(y=>{
   h.textContent = y ? String(y) : 'Other';
   mount.appendChild(h);
 
-  // Container with two ULs
-  const container = document.createElement('div');
-  container.className = 'grid2';
-  const left = document.createElement('ul'); left.className='person';
-  const right = document.createElement('ul'); right.className='person';
-  container.appendChild(left); container.appendChild(right);
+  // One alphabetized list flowing through balanced CSS columns, so entries
+  // pack tightly whether or not they carry a position line.
+  const list = document.createElement('ul');
+  list.className = 'person alumni-cols';
 
-  // Fill two columns
-  groups.get(y).sort(byLastName).forEach((p,i)=>{
+  groups.get(y).sort(byLastName).forEach(p=>{
     // display only the highest role; the year comes from the section header
     // (title2/year2/startyear stay in the data for the roster, his ruling 2026-08-27)
     const li=document.createElement('li'); li.className='person';
@@ -116,10 +113,10 @@ years.forEach(y=>{
       pos.textContent=p.position;
       li.appendChild(pos);
     }
-    (i%2? right:left).appendChild(li);
+    list.appendChild(li);
   });
 
-  mount.appendChild(container);
+  mount.appendChild(list);
 });
 
 logDebug('Rendered alumni groups',{years: years.length});

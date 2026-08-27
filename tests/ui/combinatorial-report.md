@@ -4,13 +4,13 @@ Oracle: `tests/ui/oracle.py`, computed directly from `data/publications.json` + 
 
 ## Summary
 
-- Total cases: **908**
-- Passed: **908**
+- Total cases: **912**
+- Passed: **912**
 - Failed: **0**
 
 - boot sanity: 1 cases
 - clear-filters bug repro: 1 cases
-- single-facet values: 586 cases
+- single-facet values: 590 cases
 - pairwise combos: 200 cases
 - 3-4-way combos: 100 cases
 - sort modes + Show toggles (sample): 21 cases

@@ -411,6 +411,107 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   design). Screenshots before/after at both widths delivered for his
   review.
 
+### alumni
+
+- **Alumni page + roster** (2026-08-27, per `tasks/ALUMNI.md`). Sources: his
+  103-thesis list (`harvest/theses/supervised-theses.json`, = 92 unique people
+  after folding name variants — the file's `two_degrees_here` lists 9 but
+  Sam(uel) Larsen and Jessica (Morgan) Ray are also two-degree people, 11
+  total), and his UROP export (163 students with a non-cancelled term; the four
+  all-cancelled — Biswal, Esteban, Malchik, Raza — excluded per spec). The
+  export was taken from `~/Downloads/UROPS.xlsx` (319 term rows, 1997SU–2027FA;
+  the spec's `~/workspace/alumni-roster/urop-roster.csv` had not been placed —
+  counts match the spec exactly, so it is the same data; the derived
+  `urop-roster.csv` now sits there for his records). **Emails, phones,
+  addresses stay in `~/workspace/alumni-roster/` only; zero `@` in the repo.**
+
+- **Thesis title conflicts, settled by title pages** (his rule): Frank =
+  "SUDS: Automatic Parallelization for Raw Processors" (DSpace 1721.1/29629),
+  Taylor = "Tiled Microprocessors" (DSpace 1721.1/38924) — in both the CORPUS
+  was right and his list carried a working/paper title. Baron's corpus entry
+  already had the title-page title. All recorded in
+  `harvest/theses/title-resolutions.json`.
+
+- **4 missing theses added to publications.json** (Garnett was a false
+  missing): yap:meng-thesis:1999 ("SCAN: A Static Code Analyser for
+  JavaScheme" — title-page spelling, Analyser with s; DSpace metadata's
+  "statistic" is a cataloguing typo), wagner:meng-thesis:2006, tan:meng-
+  thesis:2009 (PDFs pulled from DSpace, title pages read, local copies in
+  papers/), and kelly:meng-thesis:2010 — **NO copy of Kelly's thesis found**
+  (not in DSpace, not on the web, not in papers/): entry added from his list
+  alone, no url, summary marked unverified. The four summaries are MY prose
+  (from the theses' own abstracts), not his. Corpus now 331 entries; gates
+  913/913 + 114/114.
+
+- **people.xml regenerated**: 21 current (Kerdphoksup, Lichtstein, Keming Miao
+  moved back to current — each has an approved 2026FA UROP term; Ege
+  Kabasakaloglu + Aarush Vailaya added, same reason) and 244 alumni (was 85):
+  13 thesis people added (Yishen Chen PhD'26+SM'21, Tammy Yap '99, Kevin Kelly
+  '10, Alex Schwendner '10, Yoana Gyurova '15, Kevin Wu '15, Min Zhang '16,
+  Malek Ben Romdhane '18, Sachin Shinde '19, Abdurrahman Akkas '19, Ricardo
+  Gayle Jr. '23, Michael Bedford Taylor PhD'07, Jonathan Ragan-Kelley PhD'14)
+  and 95 UROP-only students merged from the export with year spans. Kiriansky's
+  two entries merged (PhD 2019 + MEng 2003, UROP 2000–02 span). Thesis always
+  outranks UROP; two-degree people carry title2/year2 and the full span.
+  Roles canonicalised (PhD/SM/MEng/UROP/Postdoc/Research Staff/Visiting
+  Scholar/Visiting Student): Ph.D./MS/MENG spelling fixes; Research
+  Scientist/Programmer/Affiliate → Research Staff; Postdoctoral Associate →
+  Postdoc; Visiting Researcher (Okuda, Mitsubishi) → Visiting Scholar; all
+  "Visting Graduate Student"/"Visiting PhD student"/bare "Visiting" → Visiting
+  Student (ESI Algiers Tiramisu cohort + PoliMi + U-Mich, all enrolled
+  elsewhere). Degree-from-thesis-list resolutions: Donenfeld → SM 2023,
+  J. Ray → PhD 2023, Chou → PhD 2022, Shajii → PhD 2021, Bosboom → SM 2014,
+  and UROP→MEng for Ziheng Wang '20, Manlaibaatar '20, Watanaprakornkul '12,
+  Eric Wong '12. David Maze kept Research Staff 2004 with MEng 2001 as
+  title2. Name fixes: Mathew→Matthew Drake, Michael→Michal Karczmarek (his
+  list + LinkedIn). 19 year corrections to thesis years (Bruening 2005→2004,
+  Chuvpilo 2003→2002, Amin 2008→2009, Dow, Dighe, Dima, Hsu, Agrawal
+  2005→2004, etc. — full diff in git).
+
+- **Current positions**: 43 alumni got a `position` attribute, rendered under
+  the name in the facet-row clamp() step (people.js v110, style.css v110,
+  `.person-position`). Sources: recorded LinkedIn sittings + academic-pages
+  harvest + a small pass of faculty pages (Ragan-Kelley MIT, Amin Harvard,
+  Chandramowlishwaran UC Irvine, Matsakis AWS, M. Gordon Aarno Labs, Olszewski
+  cLabs/Celo). **Left blank + on the needs-him list (in the roster's Job
+  source column)**: Rabbah (Postman vs "building Astro AI" — in flux), Puppin
+  (Synthesia candidate, unanchored), Senanayake (stale Reservoir Labs),
+  Sollee (identity below bar), Garnett/Akkas/Kleckner/Dighe/Steele/Tew/Vo/
+  Petrov (sitting recorded a title but no employer), Changwan Hong (stale
+  CSAIL directory), Yunming Zhang, Qin Zhao, Sam Larsen, Walter Lee,
+  Chakrabarti, Kiriansky, Greenwald, Agrawal (identity confirmed, no current
+  employer recorded). **Suspected wrong match flagged**: academic-pages.json
+  equates Juan C. Reyes with Juan Carlos De los Reyes (MODEMAT Ecuador) —
+  different career/degree history; not used.
+
+- **Unresolved for him** (kept as "Graduate Student" on the page — no degree
+  in his list, not guessing): Mit Kotak '25, Tom Chen '26, Logan Weber '24,
+  Edward Wang '22, Amadou Ngom '21, Marek Olszewski '11 (his MIT PhD ~2012
+  presumably co-advised). **Page claims a degree his list lacks** (kept,
+  needs his confirm): Raphael/Chaudhary/Ruiz MEng '25, Saraff '24, Noyola
+  '19, Birka '03, Jacobs '02, Chris Yu '04, Matsakis '99. **UROPs on the page
+  but absent from the funded export** (kept): Minshu Zhan, Tom Pinckney,
+  Haoran Xu, Hoi Wai Yu. **Weak match accepted, needs his eye**: page "Ted
+  Allison" = export "Allison, Eric T." (2 terms, 2000). His list also spells
+  Sitij **Agarwal** where page/corpus/LinkedIn say **Agrawal** — kept Agrawal.
+
+- **UROP export vs no_link authors**: resolves the Artola spelling (corpus
+  "Alexandro" → export **Alejandro** Artola, UROP 2000–01) and gives class-
+  year + era anchors for Mathew Deeds, Matthew Drake, Zachary Holbrook,
+  Christopher Leger, Sie Hendrata Dharmawan, Syed Raza (all-cancelled row) —
+  evidence table WITH the historical addresses in
+  `~/workspace/alumni-roster/no-link-evidence.csv` (kept local); links.json
+  untouched per spec — coordinator folds via link-overrides.
+
+- **Roster spreadsheet**: `~/workspace/alumni-roster/alumni-roster.{csv,xlsx}`
+  — 499 people (262 alumni/current + 237 author-only), 162 historical emails
+  (each dated), 320 URL-to-cite (from data/author-links.json, i.e. after
+  overrides), 43 current jobs (each with source), 92 theses, 23 LinkedIn
+  degrees (recorded sittings only). **Email (current) is entirely blank** —
+  filling it means reading each person's own published page; that is a
+  sitting-sized pass he should trigger separately. Historical addresses
+  never became mailto: links anywhere.
+
 ## Cross-lane requests
 
 All resolved; moved verbatim to `docs/LANES-archive.md`. Open new requests here.

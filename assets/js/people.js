@@ -64,8 +64,10 @@ const alumni = Array.from(xml.querySelectorAll('alumni > person')).map(p=>({
   name: p.getAttribute('name'),
   title: p.getAttribute('title')||'',
   year: parseInt(p.getAttribute('year')||'0',10) || 0,
+  startyear: parseInt(p.getAttribute('startyear')||'0',10) || 0,
   title2: p.getAttribute('title2')||'',
   year2: parseInt(p.getAttribute('year2')||'0',10) || 0,
+  position: p.getAttribute('position')||'',
   url: p.getAttribute('url'),
   oldurl: p.getAttribute('oldurl'),
   nourl: p.getAttribute('nourl')
@@ -107,9 +109,17 @@ years.forEach(y=>{
     const bits=[];
     if (p.title) bits.push(p.title);
     if (p.title2) bits.push(p.title2);
+    // multi-year stint (e.g. a UROP spanning terms, or UROP-then-thesis)
+    if (p.startyear && p.year && p.startyear !== p.year) bits.push(`· ${p.startyear}–${p.year}`);
 
     const li=document.createElement('li'); li.className='person';
     li.innerHTML=`${personLink(p)} — <em>${bits.join(' ')}</em>`;
+    if (p.position){
+      const pos=document.createElement('div');
+      pos.className='person-position';
+      pos.textContent=p.position;
+      li.appendChild(pos);
+    }
     (i%2? right:left).appendChild(li);
   });
 

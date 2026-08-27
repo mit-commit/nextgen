@@ -1,608 +1,886 @@
 <!--
-- The order in this file does not matter. Current people are sorted by title,
-- lastname. Alumni are sorted by year, lastname. When someone graduates,
-- change their title from "Graduate Student" to "PhD" and set the year.
+- Regenerated 2026-08-27 from three sources: the previous hand-maintained list,
+- harvest/theses/supervised-theses.json (his authoritative thesis list), and his
+- UROP roster export (kept OUT of the repo; emails and addresses never go here).
 -
-- To add a person:
--   * Insert a <person> element under <current> with attributes name and title.
--   * Optionally include a url attribute.
-- To update or graduate someone:
--   * Edit their existing <person> entry.
--   * When they graduate move the entry under <alumni>, change the title to
--     "PhD", and add a year attribute.
+- Roles use the canonical vocabulary:
+-   PhD | SM | MEng | UROP | Postdoc | Research Staff |
+-   Visiting Scholar | Visiting Student
+- plus Graduate Student ONLY for entries he has not yet resolved (see docs/LANES.md).
 -
-- Structure is:
--
--   people
--     |- current   -> list of people with fields: url, name, title
--     |- alumni    -> list of people with fields: url, name, title, year
+- Alumni fields: name, title (role), year (thesis year, or last year in group),
+-   startyear (first year, for multi-year UROPs), title2/year2 (earlier degree
+-   here), url, position (current position, shown under the name; leave off when
+-   unknown).
+- To add a current person: <person name=".." title=".."/> under <current>.
+- To graduate someone: move under <alumni>, set title to the degree and year to
+-   the thesis year.
 -->
 <people>
   <current>
-
     <person
-      url="http://people.csail.mit.edu/saman/"
       name="Saman Amarasinghe"
       title="Professor"
+      url="http://people.csail.mit.edu/saman/"
       />
-
     <person
-      url="http://people.csail.mit.edu/skamil/"
       name="Shoaib Kamil"
       title="Affiliate Researcher"
+      url="http://people.csail.mit.edu/skamil/"
       />
-
     <person
-      url="http://people.csail.mit.edu/baghdadi/"
       name="Riyadh Baghdadi"
       title="Affiliate Researcher"
+      url="http://people.csail.mit.edu/baghdadi/"
       />
-
-        <person
+    <person
       name="Manya Bansal"
-      url="https://manya-bansal.github.io/"
       title="Graduate Student"
+      url="https://manya-bansal.github.io/"
       />
-
     <person
       name="Jaeyeon Won"
       title="Graduate Student"
       url="https://www.linkedin.com/in/jaeyeon-won-9385a811a/"
       />
-
     <person
-	name="Teodora Collin"
-	url="http://people.csail.mit.edu/teoc"
-        title="Graduate Student"
+      name="Teodora Collin"
+      title="Graduate Student"
+      url="http://people.csail.mit.edu/teoc"
       />
-
-          <person
-	name="Caleb Kim"
-	url="https://calebmkim.github.io/"
-        title="Graduate Student"
-      />
-
-          <person
-	name="Runsheng Bai"
-        title="Graduate Student"
-      />
-
-                <person
-	name="Juni C. Kim"
-	url="https://junic.kim/en/"
-        title="UROP"
-      />
-
-
-        <person
-	name="Daniel Quach"
-	title="UROP"
-	/>
-
-
-        <person
-	name="Justin Zhang"
-	title="UROP"
-	/>
-
     <person
-	name="Paramuth (Namo) Samuthrsindh"
-	title="UROP"
-	/>
-
-      <person
-	name="Maggie Liu"
-	title="UROP"
-	/>
-
-        <person
-	name="Gabriela Miranda"
-	title="UROP"
-	/>
-
+      name="Caleb Kim"
+      title="Graduate Student"
+      url="https://calebmkim.github.io/"
+      />
     <person
-	name="Joel Manu"
-	title="UROP"
-	/>
-
-     <person
-	name="Jacqueline Wang"
-	title="UROP"
-	/>
-
-
-
-
-
+      name="Runsheng Bai"
+      title="Graduate Student"
+      />
+    <person
+      name="Juni C. Kim"
+      title="UROP"
+      url="https://junic.kim/en/"
+      />
+    <person
+      name="Daniel Quach"
+      title="UROP"
+      />
+    <person
+      name="Justin Zhang"
+      title="UROP"
+      />
+    <person
+      name="Paramuth (Namo) Samuthrsindh"
+      title="UROP"
+      />
+    <person
+      name="Maggie Liu"
+      title="UROP"
+      />
+    <person
+      name="Gabriela Miranda"
+      title="UROP"
+      />
+    <person
+      name="Joel Manu"
+      title="UROP"
+      />
+    <person
+      name="Jacqueline Wang"
+      title="UROP"
+      />
+    <person
+      name="Prompt Kerdphoksup"
+      title="UROP"
+      />
+    <person
+      name="Gordon Lichtstein"
+      title="UROP"
+      />
+    <person
+      name="Keming Miao"
+      title="UROP"
+      />
+    <person
+      name="Ege Kabasakaloglu"
+      title="UROP"
+      />
+    <person
+      name="Aarush Vailaya"
+      title="UROP"
+      />
   </current>
 
-
   <alumni>
-
-    <person
-      name="Changwan Hong"
-      title="Research Scientist"
-      year="2026"
-      />
-
-  <person
-  name="Mit Kotak"
-  url="https://www.linkedin.com/in/mit-kotak/"
-  title="Graduate Student"
-  year="2025"
-  />
-
-    <person
-	name="Siyi Hu"
-	title="Visiting Scholar"
-  year="2025"
-	/>
-
-    <person
-	name="Steven Raphael"
-	title="MEng"
-  year="2025"
-	/>
-
-      <person
-	name="Shreya Chaudhary"
-	title="MEng"
-  year="2025"
-	/>
-
-
     <person
       name="Tom Chen"
       title="Graduate Student"
       year="2026"
       />
-        <person
-	name="Gordon Lichtstein"
-	title="UROP"
-  year="2025"
-	/>
-
-
-
-      <person
-	name="Keming 	Miao"
-	title="UROP"
-  year="2025"
-	/>
-
-
-
-      <person
-	name="Prompt Kerdphoksup"
-	title="UROP"
-  year="2025"
-	/>
-
+    <person
+      name="Yishen Chen"
+      title="PhD"
+      year="2026"
+      title2="SM"
+      year2="2021"
+      />
+    <person
+      name="Changwan Hong"
+      title="Research Staff"
+      year="2026"
+      />
+    <person
+      name="Abimalek Mekuriya"
+      title="UROP"
+      year="2026"
+      />
+    <person
+      name="Beshr Islam Bouli"
+      title="UROP"
+      year="2025"
+      />
     <person
       name="Ajay Brahmakshatriya"
+      title="PhD"
+      year="2025"
+      startyear="2020"
+      title2="SM"
+      year2="2020"
       url="https://intimeand.space"
-      title="Ph.D."
+      />
+    <person
+      name="Filippo Carloni"
+      title="Visiting Student"
+      year="2025"
+      url="https://www.linkedin.com/in/filippo-carloni/"
+      />
+    <person
+      name="Shreya Chaudhary"
+      title="MEng"
       year="2025"
       />
-
-
-      <person
+    <person
+      name="Nicholas Dow"
+      title="MEng"
+      year="2025"
+      startyear="2024"
+      />
+    <person
+      name="Rom Fradkin"
+      title="UROP"
+      year="2025"
+      />
+    <person
+      name="Siyi Hu"
+      title="Visiting Scholar"
+      year="2025"
+      />
+    <person
+      name="Tamar Korkotashvili"
+      title="UROP"
+      year="2025"
+      />
+    <person
+      name="Mit Kotak"
+      title="Graduate Student"
+      year="2025"
+      url="https://www.linkedin.com/in/mit-kotak/"
+      />
+    <person
+      name="Aryan Kumar"
+      title="MEng"
+      year="2025"
+      startyear="2024"
+      />
+    <person
+      name="Isaiah Nathaniel"
+      title="UROP"
+      year="2025"
+      />
+    <person
       name="Katsumi Okuda"
-      title="Visiting Researcher"
+      title="Visiting Scholar"
       year="2025"
       />
-
-                <person
-	name="Filippo Carloni"
-	url="https://www.linkedin.com/in/filippo-carloni/"
-        title="Visiting PhD student"
-        year="2025"
+    <person
+      name="Ana Onoprishvili"
+      title="UROP"
+      year="2025"
       />
-
-
-          <person
-	name="Ethan H Zhou"
-	title="UROP"
-  year="2025"
-  	/>
-          <person
-	name="Tasmeem Reza"
-	title="UROP"
-  year="2025"
-	/>
-
-      <person
-	name="Muhender Rajvee"
-	title="MEng"
-  year="2025"
-	/>
-	  
-      <person
-	name="Chaitanya Ravuri"
-	title="MEng"
-  year="2025"
-	/>
-	  
-        <person
-	name="Jonathan Zhou"
-  year="2025"
-	title="MEng"
-	/>
-            <person
-	name="Ricardo Ruiz"
-	title="MEng"
-  year="2025"
-
-	/>
-
-
-          <person
-	name="Nicholas Dow"
-	title="MEng"
-  year="2024"
-	/>
-
-        <person
-	name="Aryan Kumar"
-	title="MEng"
-  year="2025"
-	/>
-
-
-
-      <person
-      url="https://willowahrens.io"
+    <person
+      name="Dominic Perno"
+      title="UROP"
+      year="2025"
+      />
+    <person
+      name="Muhender Rajvee"
+      title="MEng"
+      year="2025"
+      startyear="2024"
+      />
+    <person
+      name="Steven Raphael"
+      title="MEng"
+      year="2025"
+      />
+    <person
+      name="Chaitanya Ravuri"
+      title="MEng"
+      year="2025"
+      startyear="2023"
+      />
+    <person
+      name="Tasmeem Reza"
+      title="UROP"
+      year="2025"
+      startyear="2024"
+      />
+    <person
+      name="Ricardo Ruiz"
+      title="MEng"
+      year="2025"
+      />
+    <person
+      name="Osman Siddique"
+      title="UROP"
+      year="2025"
+      />
+    <person
+      name="Ethan H Zhou"
+      title="UROP"
+      year="2025"
+      />
+    <person
+      name="Jonathan Zhou"
+      title="MEng"
+      year="2025"
+      startyear="2023"
+      />
+    <person
       name="Willow Ahrens"
       title="PhD"
       year="2024"
+      position="Assistant Professor, Georgia Tech"
+      url="https://willowahrens.io"
       />
-          <person
-            name="Kaustubh Dighe"
-	    url="https://www.linkedin.com/in/kaustubh-dighe/"
-	title="MEng"
-	year="2023"
-	/>
-
-	<person
-	name="Dhruv Saraff"
-	title="MEng"
-	year="2024"
-	/>
-
-        <person
-	name="Declan King"
-	title="UROP"
-  year ="2024"
-	/>
-
     <person
-	nourl="http://hoiwai.net"
-	name="Hoi Wai Yu"
-	title="UROP"
-  year="2024"
-	/>
-
-
-          <person
-            name="Francesco Peverelli"
-	title="Visting Graduate Student"
-	year="2024"
-	/>
-
-
-          <person
-          url="https://www.linkedin.com/in/emanueledelsozzo"
-            name="Emanuele Del Sozzo"
-	title="Visting Graduate Student"
-	year="2017"
-	/>
-
-          <person
-          url="https://www.linkedin.com/in/lorenzoditucci"
-            name="Lorenzo Di Tucci"
-	title="Visting Graduate Student"
-	year="2019"
-	/>
-      <person
-	url="https://tarushii.vercel.app"
-	name="Tarushii N. Goel"
-	title="UROP"
-  year="2024"
-	/>
-
+      name="Kaustubh Dighe"
+      title="MEng"
+      year="2024"
+      url="https://www.linkedin.com/in/kaustubh-dighe/"
+      />
     <person
-	name="Daniel Donenfeld"
-	url="https://www.linkedin.com/in/danieldonenfeld"
-      title="Graduate Student"
+      name="Tarushii N. Goel"
+      title="UROP"
+      year="2024"
+      url="https://tarushii.vercel.app"
+      />
+    <person
+      name="Hannah Kimura"
+      title="UROP"
       year="2024"
       />
-
     <person
-	name="Richard Sollee"
-	url="https://www.richardsollee.com/"
-	title="MEng"
-	year="2024"
-	/>
-
-
+      name="Declan King"
+      title="UROP"
+      year="2024"
+      />
     <person
-        name="Katherine Mohr"
-	url="https://www.linkedin.com/in/katherinemohr/"
-	title="MEng"
-	year="2024"
-	/>
-
+      name="Yogesh Koirala"
+      title="UROP"
+      year="2024"
+      />
     <person
-        name="Radha Patel"
-	title="MENG"
-	year="2024"
-	/>
-
+      name="Albert Lu"
+      title="UROP"
+      year="2024"
+      />
+    <person
+      name="Katherine Mohr"
+      title="MEng"
+      year="2024"
+      startyear="2023"
+      url="https://www.linkedin.com/in/katherinemohr/"
+      />
+    <person
+      name="Radha Patel"
+      title="MEng"
+      year="2024"
+      startyear="2023"
+      />
+    <person
+      name="Francesco Peverelli"
+      title="Visiting Student"
+      year="2024"
+      />
+    <person
+      name="Dhruv Saraff"
+      title="MEng"
+      year="2024"
+      />
+    <person
+      name="Richard Sollee"
+      title="MEng"
+      year="2024"
+      startyear="2022"
+      url="https://www.richardsollee.com/"
+      />
     <person
       name="Logan Weber"
+      title="Graduate Student"
+      year="2024"
       url="http://weberlo.github.io/"
-      title="Graduate Student"
-      year="2024"/>
-
-
-    <person name="Tamara Mitrovska"
-	    title="MEng"
-	    year="2023"/>
-
-        <person
-      nourl="http://people.csail.mit.edu/charitm"
-      name="Jessica Ray"
-      title="Graduate Student"
+      />
+    <person
+      name="Hoi Wai Yu"
+      title="UROP"
+      year="2024"
+      nourl="http://hoiwai.net"
+      />
+    <person
+      name="Krit Boonsiriseth"
+      title="UROP"
       year="2023"
       />
-
-	    <person
-	name="Alexandra Dima"
-	title="MEng"
-	year="2022"
-	/>
-
-	
     <person
-      url="http://people.csail.mit.edu/s3chou"
+      name="Alice Chen"
+      title="UROP"
+      year="2023"
+      />
+    <person
+      name="Cecilia Chen"
+      title="UROP"
+      year="2023"
+      />
+    <person
+      name="Yiming Chen"
+      title="UROP"
+      year="2023"
+      />
+    <person
+      name="Alexandra Dima"
+      title="MEng"
+      year="2023"
+      position="Software Engineer, Hudson River Trading"
+      />
+    <person
+      name="Daniel Donenfeld"
+      title="SM"
+      year="2023"
+      url="https://www.linkedin.com/in/danieldonenfeld"
+      />
+    <person
+      name="Ricardo Gayle Jr."
+      title="MEng"
+      year="2023"
+      />
+    <person
+      name="Giorgi Kldiashvili"
+      title="UROP"
+      year="2023"
+      />
+    <person
+      name="Emily Lu"
+      title="UROP"
+      year="2023"
+      />
+    <person
+      name="Josiah McMenamy"
+      title="UROP"
+      year="2023"
+      />
+    <person
+      name="Tamara Mitrovska"
+      title="MEng"
+      year="2023"
+      startyear="2022"
+      />
+    <person
+      name="Jessica Ray"
+      title="PhD"
+      year="2023"
+      startyear="2018"
+      title2="SM"
+      year2="2018"
+      position="MIT Lincoln Laboratory"
+      nourl="http://people.csail.mit.edu/charitm"
+      />
+    <person
       name="Stephen Chou"
-      title="Graduate Student"
+      title="PhD"
+      year="2022"
+      startyear="2018"
+      title2="SM"
+      year2="2018"
+      position="Google"
+      url="http://people.csail.mit.edu/s3chou"
+      />
+    <person
+      name="Raunak Chowdhury"
+      title="UROP"
       year="2022"
       />
-
-
-   <person
+    <person
+      name="Julian Hamelberg"
+      title="UROP"
+      year="2022"
+      />
+    <person
+      name="Natalie Muradyan"
+      title="UROP"
+      year="2022"
+      />
+    <person
+      name="Andi Qu"
+      title="UROP"
+      year="2022"
+      />
+    <person
+      name="Shashvat Srivastava"
+      title="UROP"
+      year="2022"
+      />
+    <person
       name="Edward Wang"
       title="Graduate Student"
       year="2022"
       />
-
-
-        <person
-	name="Zachary Holbrook"
-	title="UROP"
-	year="2019"
-	/>
-
     <person
-	name="Ziheng Wang"
-	title="UROP"
-	year="2019"
-	/>
-
-    <person
-	name="Claire C Hsu"
-      url="http://www.linkedin.com/in/claire-hsu-2441a4132/"
-	title="MEng"
-	year="2020"
-	/>
-
-     <person
-      url="http://ars.me"
-      name="Ariya Shajii"
-      title="Graduate Student"
+      name="Michael Gilbert"
+      title="UROP"
       year="2021"
       />
-
-
+    <person
+      name="Anurag Golla"
+      title="UROP"
+      year="2021"
+      startyear="2020"
+      />
+    <person
+      name="Claire C Hsu"
+      title="MEng"
+      year="2021"
+      startyear="2020"
+      position="Software Engineer, Amperos"
+      url="http://www.linkedin.com/in/claire-hsu-2441a4132/"
+      />
     <person
       name="Amadou Ngom"
       title="Graduate Student"
       year="2021"
       />
-
-
     <person
-      name="Amirhossein Mirhosseini"
-      url="http://www.miramir.me/"
-      title="Visiting"
-      year="2020"
-      />
-
-    <person
-      url="http://charithmendis.com/"
-      name="Charith Mendis"
+      name="Ariya Shajii"
       title="PhD"
+      year="2021"
+      position="Founder, Exaloop"
+      url="http://ars.me"
+      />
+    <person
+      name="Jessica Shi"
+      title="UROP"
+      year="2021"
+      startyear="2020"
+      />
+    <person
+      name="Peyton Shields"
+      title="UROP"
+      year="2021"
+      />
+    <person
+      name="Richard Wang"
+      title="UROP"
+      year="2021"
+      startyear="2020"
+      />
+    <person
+      name="Amarbold Byambajargal"
+      title="UROP"
       year="2020"
       />
-
     <person
-      url="http://people.csail.mit.edu/fred"
+      name="Xinyi Guo"
+      title="UROP"
+      year="2020"
+      />
+    <person
+      name="Matthew Ha"
+      title="UROP"
+      year="2020"
+      />
+    <person
+      name="Rawn Henry"
+      title="MEng"
+      year="2020"
+      startyear="2019"
+      position="OpenAI"
+      url="http://www.linkedin.com/in/rawn-henry-415661135/"
+      />
+    <person
+      name="Zachary Holbrook"
+      title="UROP"
+      year="2020"
+      startyear="2019"
+      />
+    <person
       name="Fredrik Kjolstad"
       title="PhD"
       year="2020"
+      position="Assistant Professor, Stanford University"
+      url="http://people.csail.mit.edu/fred"
       />
-
     <person
-      url="http://yunmingzhang.wordpress.com"
-      name="Yunming Zhang"
-      title="PhD"
+      name="Shenal Kotuwewatta"
+      title="UROP"
       year="2020"
       />
-
     <person
-      name="Suzy Mueller"
-      url="http://www.linkedin.com/in/suzy-mueller-2a014a8a/"
+      name="Alexander Leighton"
+      title="UROP"
+      year="2020"
+      startyear="2019"
+      />
+    <person
+      name="Amber Li"
+      title="UROP"
+      year="2020"
+      />
+    <person
+      name="Haokuan Luo"
+      title="UROP"
+      year="2020"
+      />
+    <person
+      name="Tugsbayasgalan Manlaibaatar"
       title="MEng"
       year="2020"
+      startyear="2019"
+      url="http://www.linkedin.com/in/tugsbayasgalan-manlaibaatar-a7b819102/"
       />
-
     <person
-	name="Rawn Henry"
-      url="http://www.linkedin.com/in/rawn-henry-415661135/"
-	title="MEng"
-	year="2020"
-	/>
-
+      name="Catherine Mei"
+      title="UROP"
+      year="2020"
+      />
     <person
-      url="http://rsenapps.com"
+      name="Charith Mendis"
+      title="PhD"
+      year="2020"
+      startyear="2015"
+      title2="SM"
+      year2="2015"
+      position="Assistant Professor, UIUC"
+      url="http://charithmendis.com/"
+      />
+    <person
+      name="Amirhossein Mirhosseini"
+      title="Visiting Student"
+      year="2020"
+      url="http://www.miramir.me/"
+      />
+    <person
+      name="Suzy Mueller"
+      title="MEng"
+      year="2020"
+      position="Software Engineer, Google"
+      url="http://www.linkedin.com/in/suzy-mueller-2a014a8a/"
+      />
+    <person
+      name="Magdalena Price"
+      title="UROP"
+      year="2020"
+      />
+    <person
+      name="Gabriel Ramirez"
+      title="UROP"
+      year="2020"
+      />
+    <person
+      name="Michael Robinson"
+      title="UROP"
+      year="2020"
+      />
+    <person
       name="Ryan Senanayake"
       title="MEng"
       year="2020"
+      startyear="2018"
+      url="http://rsenapps.com"
       />
-
     <person
-	name="Tugsbayasgalan Manlaibaatar"
-      url="http://www.linkedin.com/in/tugsbayasgalan-manlaibaatar-a7b819102/"
-	title="UROP"
-	year="2020"
-	/>
-
+      name="Ziheng Wang"
+      title="MEng"
+      year="2020"
+      />
+    <person
+      name="Yunming Zhang"
+      title="PhD"
+      year="2020"
+      url="http://yunmingzhang.wordpress.com"
+      />
+    <person
+      name="Kamel Abdous"
+      title="Visiting Student"
+      year="2019"
+      url="https://github.com/abdouskamel"
+      />
+    <person
+      name="Abdurrahman Akkas"
+      title="MEng"
+      year="2019"
+      />
     <person
       name="Hadjer Benmeziane"
-      title="Visiting"
+      title="Visiting Student"
       year="2019"
       />
-
     <person
-      url="https://nadir199.github.io/"
+      name="Xinyi Chen"
+      title="UROP"
+      year="2019"
+      />
+    <person
       name="Nadir Abdelkader Debbagh"
-      title="Visiting"
+      title="Visiting Student"
       year="2019"
+      url="https://nadir199.github.io/"
       />
-
     <person
-      url="https://github.com/abdouskamel"
-      name="Kamel Abdous"
-      title="Visiting"
+      name="Irin Ghosh"
+      title="UROP"
       year="2019"
       />
-
     <person
-      name="Massinissa Merouani"
-      title="Visiting"
+      name="Ajay Jain"
+      title="UROP"
       year="2019"
+      startyear="2018"
+      position="Co-founder &amp; CTO, Genmo"
+      url="http://ajayjain.net"
       />
-
+    <person
+      name="Vladimir Kiriansky"
+      title="PhD"
+      year="2019"
+      startyear="2000"
+      title2="MEng"
+      year2="2003"
+      url="http://people.csail.mit.edu/vlk"
+      />
     <person
       name="Mohamed-Hicham Leghettas"
-      title="Visiting"
+      title="Visiting Student"
       year="2019"
       />
-
+    <person
+      name="Massinissa Merouani"
+      title="Visiting Student"
+      year="2019"
+      />
     <person
       name="Patricio Noyola"
       title="MEng"
-      year = "2019"
+      year="2019"
+      startyear="2018"
       />
-
-
+    <person
+      name="Sachin Dilip Shinde"
+      title="MEng"
+      year="2019"
+      />
+    <person
+      name="Mark Theng"
+      title="UROP"
+      year="2019"
+      />
+    <person
+      name="Lorenzo Di Tucci"
+      title="Visiting Student"
+      year="2019"
+      url="https://www.linkedin.com/in/lorenzoditucci"
+      />
     <person
       name="Haoran Xu"
       title="UROP"
       year="2019"
       />
-
-
     <person
-      url="http://ajayjain.net"
-      name="Ajay Jain"
+      name="Kenny Yang"
       title="UROP"
+      year="2019"
+      startyear="2018"
+      />
+    <person
+      name="Malek Ben Romdhane"
+      title="MEng"
       year="2018"
       />
-
-
     <person
-      name="David Lugato"
-      title="Affiliate Researcher"
+      name="Asra Ali"
+      title="UROP"
       year="2017"
       />
-
-
-
     <person
-      url="http://people.csail.mit.edu/vlk"
-      name="Vladimir Kiriansky"
-      title="PhD"
-      year= "2019"
+      name="Emily Armstrong"
+      title="UROP"
+      year="2017"
       />
-
     <person
-      url="http://jeffreybosboom.com"
-      name="Jeffrey Bosboom"
-      title="Graduate Student"
-      year= "2017"
+      name="David Lugato"
+      title="Research Staff"
+      year="2017"
       />
-
     <person
-      url="http://people.csail.mit.edu/tyler"
+      name="Emanuele Del Sozzo"
+      title="Visiting Student"
+      year="2017"
+      position="Research Scientist, MIT FutureTech"
+      url="https://www.linkedin.com/in/emanueledelsozzo"
+      />
+    <person
+      name="Mengyuan Sun"
+      title="UROP"
+      year="2017"
+      />
+    <person
+      name="David Vargas"
+      title="UROP"
+      year="2017"
+      />
+    <person
+      name="Raymond Wu"
+      title="UROP"
+      year="2017"
+      />
+    <person
       name="Tyler Denniston"
-      title="MS"
-      year = "2016"
+      title="SM"
+      year="2016"
+      position="Founder, Vexlio"
+      url="http://people.csail.mit.edu/tyler"
       />
-
-    <person
-      name="Parker Tew"
-      title="MEng"
-      year = "2016"
-      />
-
     <person
       name="Gurtej Kanwar"
       title="MEng"
       year="2016"
+      startyear="2015"
+      position="University of Edinburgh (Physics)"
       />
-
     <person
       name="Patricia A. Suriana"
       title="MEng"
       year="2016"
       />
-
     <person
-      name="Minshu Zhan"
-      title="UROP"
+      name="Parker Tew"
+      title="MEng"
+      year="2016"
       />
-
     <person
-      url="http://www.cc.gatech.edu/~aparna/"
+      name="Min Zhang"
+      title="MEng"
+      year="2016"
+      />
+    <person
       name="Aparna Chandramowlishwaran"
       title="Postdoc"
-      year = "2015"
+      year="2015"
+      position="Professor, UC Irvine"
+      url="http://www.cc.gatech.edu/~aparna/"
       />
-
     <person
-      url="http://jasonansel.com/"
+      name="Youyang Gu"
+      title="UROP"
+      year="2015"
+      />
+    <person
+      name="Yoana Gyurova"
+      title="MEng"
+      year="2015"
+      position="Product Manager, Meta"
+      />
+    <person
+      name="William Huang"
+      title="UROP"
+      year="2015"
+      />
+    <person
+      name="Eleftherios Ioannidis"
+      title="UROP"
+      year="2015"
+      />
+    <person
+      name="Daniel Richman"
+      title="UROP"
+      year="2015"
+      />
+    <person
+      name="Nitya Subramanian"
+      title="UROP"
+      year="2015"
+      />
+    <person
+      name="Kevin Wu"
+      title="MEng"
+      year="2015"
+      />
+    <person
       name="Jason Ansel"
       title="PhD"
       year="2014"
+      startyear="2009"
+      title2="SM"
+      year2="2009"
+      position="Meta (PyTorch compilers)"
+      url="http://jasonansel.com/"
       />
-
     <person
-      url="http://people.csail.mit.edu/mareko"
-      name="Marek Olszewski"
-      title="Graduate Student"
-      year="2011"
+      name="Jeffrey Bosboom"
+      title="SM"
+      year="2014"
+      url="http://jeffreybosboom.com"
       />
-
+    <person
+      name="Rumen Hristov"
+      title="UROP"
+      year="2014"
+      />
+    <person
+      name="Rohan Mahajan"
+      title="UROP"
+      year="2014"
+      />
+    <person
+      name="Jonathan Ragan-Kelley"
+      title="PhD"
+      year="2014"
+      position="Associate Professor, MIT"
+      />
+    <person
+      name="Kiranmayi Bhattaram"
+      title="UROP"
+      year="2013"
+      />
+    <person
+      name="Christopher Graves"
+      title="UROP"
+      year="2013"
+      />
     <person
       name="Latif Alam"
       title="UROP"
       year="2012"
+      startyear="2009"
       />
-
     <person
-      name="Phumpong Watanaprakornkul"
+      name="Sanath Jayasena"
+      title="Postdoc"
+      year="2012"
+      position="Associate Professor, University of Moratuwa"
+      />
+    <person
+      name="Erika Lee"
       title="UROP"
       year="2012"
       />
@@ -610,10 +888,55 @@
       name="Phitchaya Phothilimthana"
       title="UROP"
       year="2012"
+      startyear="2011"
+      position="OpenAI"
+      />
+    <person
+      name="Chun-Kai Wang"
+      title="UROP"
+      year="2012"
+      startyear="2011"
+      />
+    <person
+      name="Phumpong Watanaprakornkul"
+      title="MEng"
+      year="2012"
+      startyear="2011"
+      position="VP, Charoen Pokphand Group"
       />
     <person
       name="Eric Wong"
+      title="MEng"
+      year="2012"
+      startyear="2011"
+      />
+    <person
+      name="Qin Zhao"
+      title="Postdoc"
+      year="2012"
+      url="http://people.csail.mit.edu/qin_zhao"
+      />
+    <person
+      name="Reid Kleckner"
+      title="MEng"
+      year="2011"
+      />
+    <person
+      name="David Koh"
       title="UROP"
+      year="2011"
+      startyear="2010"
+      />
+    <person
+      name="Marek Olszewski"
+      title="Graduate Student"
+      year="2011"
+      position="Co-founder &amp; CEO, cLabs (Celo)"
+      url="http://people.csail.mit.edu/mareko"
+      />
+    <person
+      name="Syed Raza"
+      title="MEng"
       year="2011"
       />
     <person
@@ -622,383 +945,560 @@
       year="2011"
       />
     <person
-      name="David Koh"
-      title="UROP"
-      year="2011"
-      />
-    <person
       name="David Wen"
       title="UROP"
       year="2011"
+      startyear="2010"
       />
     <person
-      name="Sanath Jayasena"
-      title="Postdoctoral Associate"
-      year="2012"
-      />
-    <person
-      url="http://people.csail.mit.edu/qin_zhao"
-      name="Qin Zhao"
-      title="Postdoctoral Associate"
-      year="2012"
-      />
-
-    <person
-      name="Syed Raza"
-      title="MEng"
-      year="2011"
-      />
-
-    <person
-      name="Reid Kleckner"
-      title="MEng"
-      year="2011"
-      />
-
-    <person
-      url="http://people.csail.mit.edu/mgordon"
       name="Michael Gordon"
       title="PhD"
       year="2010"
+      startyear="2002"
+      title2="SM"
+      year2="2002"
+      position="Co-founder, Aarno Labs"
+      url="http://people.csail.mit.edu/mgordon"
       />
-
+    <person
+      name="Kevin Kelly"
+      title="MEng"
+      year="2010"
+      />
+    <person
+      name="Alex Schwendner"
+      title="MEng"
+      year="2010"
+      position="Portfolio Manager, Tower Research Capital"
+      />
+    <person
+      name="Matt Aasted"
+      title="Research Staff"
+      year="2009"
+      />
+    <person
+      name="Nada Amin"
+      title="MEng"
+      year="2009"
+      position="Associate Professor, Harvard University"
+      url="http://www.namin.net"
+      />
+    <person
+      name="Matthew Steele"
+      title="MEng"
+      year="2009"
+      startyear="2008"
+      />
     <person
       name="Ceryen Tan"
       title="MEng"
       year="2009"
       />
-
     <person
-      name="Matt Aasted"
-      title="Research Programmer"
+      name="William Thies"
+      title="PhD"
       year="2009"
+      startyear="2000"
+      title2="MEng"
+      year2="2002"
+      position="Co-founder, Everwell Health Solutions"
+      url="http://people.csail.mit.edu/thies"
       />
-
     <person
-      name="Matthew Steele"
-      title="MEng"
-      year="2009"
+      name="Jonathan Birnbaum"
+      title="UROP"
+      year="2008"
       />
-
+    <person
+      name="Meghan Kane"
+      title="UROP"
+      year="2008"
+      />
+    <person
+      name="Amrik Kochhar"
+      title="UROP"
+      year="2008"
+      />
     <person
       name="Basier Aziz"
       title="MEng"
       year="2007"
       />
-
     <person
-      url="http://people.csail.mit.edu/thies"
-      name="William Thies"
-      title="PhD"
-      year="2009"
-      />
-
-    <person
-      url="http://people.csail.mit.edu/rabbah/"
-      name="Rodric Rabbah"
-      title="Research Scientist"
-      year="2006"
-      />
-
-    <person
-      name="Sitij Agrawal"
-      title="MEng"
-      year="2005"
-      />
-
-    <person
-      name="Ted Allison"
+      name="Michael D'Ambrosio"
       title="UROP"
-      />
-
-    <person
-      url="http://www.namin.net"
-      name="Nada Amin"
-      title="MEng"
-      year="2008"
-      />
-
-    <person
-      name="Iris Baron"
-      title="SM"
-      year="2003"
-      />
-
-    <person
-      url="http://www.ece.umd.edu/~barua/"
-      name="Rajeev Barua"
-      title="PhD"
-      year="2000"
-      />
-
-    <person
-      name="Adrian Birka"
-      title="MEng"
-      year="2003"
-      />
-
-    <person
-      url="http://www.burningcutlery.com/derek/"
-      name="Derek Bruening"
-      title="PhD"
-      year="2005"
-      />
-
-    <person
-      name="Samidh Chakrabarti"
-      title="MEng"
-      year="2002"
-      />
-
-    <person
-      name="Gleb Chuvpilo"
-      title="SM"
-      year="2003"
-      url="http://people.csail.mit.edu/chuvpilo/"
-      />
-
-    <person
-      name="Benjamin Greenwald"
-      title="SM"
-      year="1999"
-      />
-
-    <person
-      name="Matt Deeds"
-      title="MEng"
-      year="2001"
-      />
-
-    <person
-      name="Srikrishna Devabhaktuni"
-      title="SM"
-      year="1999"
-      />
-
-    <person
-      name="Sie Hendrata Dharmawan"
-      title="MEng"
-      year="2006"
-      />
-
-    <person
-      name="Mathew Drake"
-      title="MEng"
-      year="2006"
-      />
-
-    <person
-      name="Allyn Dimock"
-      title="Research Programmer"
-      startyear="2005"
       year="2007"
       />
-
     <person
-      oldurl="http://people.csail.mit.edu/mfrank"
-      name="Matthew Frank"
-      title="PhD"
-      year="2003"
+      name="Allyn Dimock"
+      title="Research Staff"
+      year="2007"
+      startyear="2005"
       />
-
     <person
-      name="Timothy Garnett"
-      title="MEng"
-      year="2003"
-      />
-
-    <person
-      name="Joshua Jacobs"
-      title="MEng"
-      year="2002"
-      />
-
-    <person
-      name="Vladimir Kiriansky"
-      title="MEng"
-      year="2003"
-      />
-
-    <person
-      name="Kimberly Kuo"
-      title="MEng"
-      year="2004"
-      />
-
-    <person
-      url="http://people.csail.mit.edu/slarsen"
-      name="Sam Larsen"
-      title2="SM"
-      year2="2000"
-      title="PhD"
-      year="2006"
-      />
-
-    <person
-      name="Andrew Lamb"
-      title="MEng"
-      year="2003"
-      />
-
-    <person
-      oldurl="http://people.csail.mit.edu/walt"
-      name="Walter Lee"
-      title="PhD"
-      year="2005"
-      />
-
-    <person
-      name="Christopher Leger"
-      title="MEng"
-      year="2004"
-      />
-
-    <person
-      name="Libby Levison"
-      title="Postdoctoral Associate"
-      year="2003"
-      />
-
-    <person
-      name="Jasper Lin"
+      name="David Dryjanski"
       title="UROP"
+      year="2007"
       />
-
     <person
-      name="Michael Karczmarek"
-      title="SM"
-      year="2002"
-      />
-
-    <person
-      name="Kenneth Lu"
+      name="Shirley Fung"
       title="UROP"
+      year="2007"
       />
-
     <person
-      name="Niko Matsakis"
-      title="MEng"
-      year="1999"
-      />
-
-    <person
-      name="David Maze"
-      title="Research Scientist"
-      year="2004"
-      title2="MEng"
-      year2="2001"
-      />
-
-    <person
-      name="Tyler Moeller"
-      title="MEng"
-      year="1999"
-      />
-
-    <person
-      url="http://www.ecs.umass.edu/ece/andras/"
-      name="Csaba Andras Moritz"
-      title="Research Scientist"
-      year="2000"
-      startyear="1997"
-      />
-
-    <person
-      name="Georgi Peev"
-      />
-
-    <person
-      name="Darin Petkov"
-      title="MEng"
-      year="2001"
-      />
-
-    <person
-      name="Tsvetomir Petrov"
-      title="MEng"
-      year="1999"
-      />
-
-    <person
-      name="Tom Pinckney"
+      name="Jimmy Li"
       title="UROP"
+      year="2007"
       />
-
     <person
-      oldurl="http://people.csail.mit.edu/diego"
-      name="Diego Puppin"
-      title="SM"
-      year="2002"
+      name="Philip Sung"
+      title="UROP"
+      year="2007"
       />
-
     <person
-      name="Juan Carlos Reyes"
-      title="MEng"
-      year="2004"
-      />
-
-    <person
-      name="Janis Sermulins"
-      title="MEng"
-      year="2005"
-      />
-
-    <person
-      name="Jeffrey Sheldon"
-      title="MEng"
-      year="2001"
-      />
-
-    <person
-      oldurl="http://people.csail.mit.edu/mstephen"
-      name="Mark Stephenson"
+      name="Michael Bedford Taylor"
       title="PhD"
-      year="2006"
-      title2="SM"
-      year2="2000"
+      year="2007"
+      position="Professor, University of Washington"
       />
-
-    <person
-      name="Shane Swenson"
-      title="MEng"
-      year="2002"
-      />
-
-    <person
-      name="Elliot Waingold"
-      title="MEng"
-      year="2000"
-      />
-
-    <person
-      name="Ben Wagner"
-      title="MEng"
-      year="2006"
-      />
-
-    <person
-      name="Jeremy Wong"
-      title="MEng"
-      year="2004"
-      />
-
-    <person
-      name="Matt Yourst"
-      />
-
-    <person
-      name="Chris Yu"
-      title="MEng"
-      year="2004"
-      />
-
     <person
       name="David Zhang"
       title="MEng"
       year="2007"
       />
-
-
+    <person
+      name="Sie Hendrata Dharmawan"
+      title="MEng"
+      year="2006"
+      startyear="2005"
+      />
+    <person
+      name="Matthew Drake"
+      title="MEng"
+      year="2006"
+      startyear="2005"
+      />
+    <person
+      name="Sam Larsen"
+      title="PhD"
+      year="2006"
+      startyear="2000"
+      title2="SM"
+      year2="2000"
+      url="http://people.csail.mit.edu/slarsen"
+      />
+    <person
+      name="Rodric Rabbah"
+      title="Research Staff"
+      year="2006"
+      url="http://people.csail.mit.edu/rabbah/"
+      />
+    <person
+      name="Christopher Rhodes"
+      title="UROP"
+      year="2006"
+      />
+    <person
+      name="Mark Stephenson"
+      title="PhD"
+      year="2006"
+      startyear="2000"
+      title2="SM"
+      year2="2000"
+      position="Principal Research Scientist, NVIDIA"
+      oldurl="http://people.csail.mit.edu/mstephen"
+      />
+    <person
+      name="Ben Wagner"
+      title="MEng"
+      year="2006"
+      startyear="2005"
+      />
+    <person
+      name="Marjorie Cheng"
+      title="UROP"
+      year="2005"
+      />
+    <person
+      name="Walter Lee"
+      title="PhD"
+      year="2005"
+      oldurl="http://people.csail.mit.edu/walt"
+      />
+    <person
+      name="Adam Reed"
+      title="UROP"
+      year="2005"
+      />
+    <person
+      name="Janis Sermulins"
+      title="MEng"
+      year="2005"
+      startyear="2003"
+      />
+    <person
+      name="Sitij Agrawal"
+      title="MEng"
+      year="2004"
+      startyear="2003"
+      />
+    <person
+      name="Derek Bruening"
+      title="PhD"
+      year="2004"
+      position="Software Engineer, Google"
+      url="http://www.burningcutlery.com/derek/"
+      />
+    <person
+      name="Kimberly Kuo"
+      title="MEng"
+      year="2004"
+      startyear="2003"
+      position="Senior Director of Product Management, Workday"
+      />
+    <person
+      name="Christopher Leger"
+      title="MEng"
+      year="2004"
+      startyear="2002"
+      />
+    <person
+      name="Jasper Lin"
+      title="UROP"
+      year="2004"
+      startyear="2002"
+      />
+    <person
+      name="David Maze"
+      title="Research Staff"
+      year="2004"
+      title2="MEng"
+      year2="2001"
+      />
+    <person
+      name="Juan Carlos Reyes"
+      title="MEng"
+      year="2004"
+      startyear="2003"
+      />
+    <person
+      name="Jeremy Wong"
+      title="MEng"
+      year="2004"
+      startyear="2002"
+      />
+    <person
+      name="Chris Yu"
+      title="MEng"
+      year="2004"
+      />
+    <person
+      name="Iris Baron"
+      title="SM"
+      year="2003"
+      position="Program Manager, IBM"
+      />
+    <person
+      name="Adrian Birka"
+      title="MEng"
+      year="2003"
+      startyear="2000"
+      />
+    <person
+      name="Matthew Frank"
+      title="PhD"
+      year="2003"
+      oldurl="http://people.csail.mit.edu/mfrank"
+      />
+    <person
+      name="Timothy Garnett"
+      title="MEng"
+      year="2003"
+      startyear="2002"
+      />
+    <person
+      name="Artem Gleyzer"
+      title="UROP"
+      year="2003"
+      />
+    <person
+      name="Andrew Lamb"
+      title="MEng"
+      year="2003"
+      />
+    <person
+      name="Libby Levison"
+      title="Postdoc"
+      year="2003"
+      position="International health consultant"
+      />
+    <person
+      name="Rose Liu"
+      title="UROP"
+      year="2003"
+      />
+    <person
+      name="Satish Ramaswamy"
+      title="UROP"
+      year="2003"
+      />
+    <person
+      name="David Ziegler"
+      title="UROP"
+      year="2003"
+      />
+    <person
+      name="Matthew Brown"
+      title="UROP"
+      year="2002"
+      position="Founder &amp; CEO, ThoughtForge"
+      />
+    <person
+      name="Samidh Chakrabarti"
+      title="MEng"
+      year="2002"
+      />
+    <person
+      name="Gleb Chuvpilo"
+      title="SM"
+      year="2002"
+      url="http://people.csail.mit.edu/chuvpilo/"
+      />
+    <person
+      name="Joshua Jacobs"
+      title="MEng"
+      year="2002"
+      />
+    <person
+      name="Sheetal Jain"
+      title="UROP"
+      year="2002"
+      startyear="2001"
+      />
+    <person
+      name="Michal Karczmarek"
+      title="SM"
+      year="2002"
+      position="VP Engineering, Thor Dynamics"
+      />
+    <person
+      name="Tazeen Mahtab"
+      title="UROP"
+      year="2002"
+      startyear="2001"
+      />
+    <person
+      name="Ali Meli"
+      title="UROP"
+      year="2002"
+      />
+    <person
+      name="Georgi Peev"
+      title="UROP"
+      year="2002"
+      startyear="1999"
+      />
+    <person
+      name="Diego Puppin"
+      title="SM"
+      year="2002"
+      oldurl="http://people.csail.mit.edu/diego"
+      />
+    <person
+      name="Saad Shakhshir"
+      title="UROP"
+      year="2002"
+      startyear="2001"
+      />
+    <person
+      name="Shane Swenson"
+      title="MEng"
+      year="2002"
+      position="CTO, Techcyte"
+      />
+    <person
+      name="Alejandro Artola"
+      title="UROP"
+      year="2001"
+      startyear="2000"
+      />
+    <person
+      name="Genevieve Cuevas"
+      title="UROP"
+      year="2001"
+      position="Notion"
+      />
+    <person
+      name="Matt Deeds"
+      title="MEng"
+      year="2001"
+      startyear="2000"
+      />
+    <person
+      name="Mark Halsey"
+      title="UROP"
+      year="2001"
+      />
+    <person
+      name="Niko Matsakis"
+      title="MEng"
+      year="2001"
+      startyear="1999"
+      position="Senior Principal Engineer, AWS"
+      />
+    <person
+      name="Darin Petkov"
+      title="MEng"
+      year="2001"
+      startyear="1998"
+      />
+    <person
+      name="Jeffrey Sheldon"
+      title="MEng"
+      year="2001"
+      position="Distinguished Engineer, Broadcom"
+      />
+    <person
+      name="Binh Vo"
+      title="UROP"
+      year="2001"
+      startyear="2000"
+      />
+    <person
+      name="Matt Yourst"
+      title="UROP"
+      year="2001"
+      startyear="2000"
+      />
+    <person
+      name="Ted Allison"
+      title="UROP"
+      year="2000"
+      />
+    <person
+      name="Rajeev Barua"
+      title="PhD"
+      year="2000"
+      position="Professor, University of Maryland"
+      url="http://www.ece.umd.edu/~barua/"
+      />
+    <person
+      name="Sheldon Chan"
+      title="UROP"
+      year="2000"
+      position="Director, BlackRock"
+      />
+    <person
+      name="Sidney Henderson"
+      title="UROP"
+      year="2000"
+      position="VP of Global Business Development, Exotec"
+      />
+    <person
+      name="Shuehan Liang"
+      title="UROP"
+      year="2000"
+      startyear="1999"
+      />
+    <person
+      name="Kenneth Lu"
+      title="UROP"
+      year="2000"
+      />
+    <person
+      name="Csaba Andras Moritz"
+      title="Research Staff"
+      year="2000"
+      startyear="1997"
+      position="Professor, UMass Amherst"
+      url="http://www.ecs.umass.edu/ece/andras/"
+      />
+    <person
+      name="Janelle Prevost"
+      title="UROP"
+      year="2000"
+      />
+    <person
+      name="Elliot Waingold"
+      title="MEng"
+      year="2000"
+      position="Microsoft"
+      />
+    <person
+      name="Srikrishna Devabhaktuni"
+      title="SM"
+      year="1999"
+      />
+    <person
+      name="Benjamin Greenwald"
+      title="SM"
+      year="1999"
+      />
+    <person
+      name="Katherine Jong"
+      title="UROP"
+      year="1999"
+      />
+    <person
+      name="Amy Mitby"
+      title="UROP"
+      year="1999"
+      />
+    <person
+      name="Tyler Moeller"
+      title="MEng"
+      year="1999"
+      />
+    <person
+      name="Tsvetomir Petrov"
+      title="MEng"
+      year="1999"
+      startyear="1998"
+      />
+    <person
+      name="Arjuna Wijeyekoon"
+      title="UROP"
+      year="1999"
+      startyear="1998"
+      />
+    <person
+      name="Tammy Yap"
+      title="MEng"
+      year="1999"
+      />
+    <person
+      name="Alexander Yip"
+      title="UROP"
+      year="1999"
+      />
+    <person
+      name="Ruben Brown"
+      title="UROP"
+      year="1998"
+      startyear="1997"
+      />
+    <person
+      name="Matthew DeBergalis"
+      title="UROP"
+      year="1998"
+      />
+    <person
+      name="Robert Pinder"
+      title="UROP"
+      year="1998"
+      />
+    <person
+      name="Andrew Samnick"
+      title="UROP"
+      year="1997"
+      />
+    <person
+      name="Tom Pinckney"
+      title="UROP"
+      />
+    <person
+      name="Minshu Zhan"
+      title="UROP"
+      />
   </alumni>
-
 </people>

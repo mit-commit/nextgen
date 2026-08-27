@@ -6,13 +6,13 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 
 ## Control inventory (discovered at runtime from #pubs-filters)
 
-590 raw interactive elements found. Reduced to logical controls:
+594 raw interactive elements found. Reduced to logical controls:
 
 ### Checkbox facets
 - `#facet-years`: 35 values
 - `#facet-keywords`: 33 values
 - `#facet-types`: 8 values
-- `#facet-authors`: 369 values
+- `#facet-authors`: 373 values
 - `#facet-cite-cats`: 11 values
 - `#facet-cite-authors`: 100 values
 
@@ -54,7 +54,7 @@ Per `tests/ui/SPEC.md` (his instruction, 2026-08-26). Oracle: `tests/ui/oracle.p
 ## Summary
 
 - Total: **114**, Passed: **114**, Failed: **0**, seed=**42**
-- 30 of 114 tests were flagged for the expansion checks (>=30 target); 19 actually expanded a paper -- the gap is tests flagged for expansion that landed on an empty-result setting (nothing to expand), not a silent skip.
+- 30 of 114 tests were flagged for the expansion checks (>=30 target); 15 actually expanded a paper -- the gap is tests flagged for expansion that landed on an empty-result setting (nothing to expand), not a silent skip.
 
 No discrepancies between the live UI and the independent oracle across all 114 settings (including the expansion checks).
 

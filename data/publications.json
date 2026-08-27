@@ -3848,6 +3848,24 @@
   "doi": "10.1039/B510127A"
  },
  {
+  "author0": "Benjamin Wagner",
+  "month": "Jun",
+  "year": "2006",
+  "title": "Collaborative Compilation",
+  "summary": "Wagner's MEng thesis observes that optimizing compilers are tuned “at the factory” against standard benchmarks, so applications outside the benchmark suite never get the heuristics tuned for them. Collaborative compilation closes that gap: it exploits the repeated compilations a Java virtual machine already performs to gather profiling information from the programs a user actually runs, then shares profile data and tuning results across users, so no individual pays the profiling overhead but everyone benefits from the tuning. The thesis works through the measurement-bias and data-quality challenges of aggregating profiles collected on users' machines and shows performance improvements on several compilation problems.\n\nThe work applies the group's machine-learning-for-compilers agenda, begun with <a href=\"papers/2003/metaopt-pldi.pdf\">Meta Optimization</a>, to profiles collected collaboratively at deployment time rather than at the factory.",
+  "url": "papers/2006/wagner-meng-thesis.pdf",
+  "type": "M.Eng. Thesis",
+  "address": "Cambridge, MA",
+  "school": "Massachusetts Institute of Technology",
+  "bibtexKey": "wagner:meng-thesis:2006",
+  "itemType": "sciencethesis",
+  "topics": [
+   "Machine Learning for Compilers",
+   "Compiler Optimization"
+  ],
+  "venue": "M.Eng. Thesis"
+ },
+ {
   "author0": "Zhao, Qin and Rabbah, Rodric and Wong, Weng-Fai",
   "title": "Dynamic memory optimization using pool allocation and prefetching",
   "summary": "This paper describes a dynamic memory optimizer built with DynamoRIO. It replaces heap allocation requests in a running binary with custom pool allocators that group data by requesting context, improving spatial locality, and exploits the resulting regularity of access patterns to insert prefetch instructions at runtime — all on unmodified programs without source code. The optimizer measures a 17% speedup over gcc -O3 on an Athlon MP and 13% on a Pentium 4. The optimizer is implemented in the DynamoRIO framework described most completely in <a href=\"papers/2004/derek-phd-thesis.pdf\">Bruening's PhD thesis</a>.",
@@ -5720,6 +5738,23 @@
   "doi": "10.1145/300979.300980"
  },
  {
+  "author0": "Tammy Yap",
+  "month": "May",
+  "year": "1999",
+  "title": "SCAN: A Static Code Analyser for JavaScheme",
+  "summary": "Yap's MEng thesis builds SCAN, a static code analyzer that examines JavaScheme code fragments without executing them, giving beginning Scheme programmers a debugging tool that complements the standard debugger. The analyzer pinpoints the exact locations of errors: it checks parenthesization and Scheme keyword structure, uses heuristics to call attention to likely typographical errors, and reports undefined variables. Its deepest layer develops and implements set-based analysis to locate potential run-time errors caused by argument type violations, so that a class of failures ordinarily discovered only by running the program is surfaced at analysis time.",
+  "url": "papers/1999/yap-meng-thesis.pdf",
+  "type": "M.Eng. Thesis",
+  "address": "Cambridge, MA",
+  "school": "Massachusetts Institute of Technology",
+  "bibtexKey": "yap:meng-thesis:1999",
+  "itemType": "sciencethesis",
+  "topics": [
+   "Program Verification"
+  ],
+  "venue": "M.Eng. Thesis"
+ },
+ {
   "author0": "Mark Stephenson and Johnathan Babb and Saman Amarasinghe",
   "title": "Bitwidth Analysis with Application to Silicon Compilation",
   "summary": "Bitwise is a compiler that minimizes bitwidth — the number of bits needed to represent each operand — for every integer and pointer in a program. It propagates static information both forward and backward through the dataflow graph and applies loop analyses that resolve the widths induced by loop-carried arithmetic, freeing programmers from declaring invariants the compiler can infer. Applied to silicon compilation through integration with the DeepC silicon compiler, bitwidth information reduces silicon area by 15-86%, improves clock speed by 3-249%, and reduces power by 46-73% on synthesized hardware.\n\nThis is the main paper of the Bitwise project; Stephenson's <a href=\"papers/2000/Mark-SM.pdf\">S.M. thesis</a> gives the most complete treatment. The silicon-compilation setting comes from the DeepC work on <a href=\"papers/1999/ToSilicon-FCCM.pdf\">parallelizing applications into silicon</a> (FCCM 1999); the implementation takes SUIF passes from the <a href=\"papers/1998/Spacetime-ASPLOS.pdf\">Raw compiler</a> and assigns arrays to memory banks with <a href=\"papers/1999/Maps-ISCA.pdf\">Maps</a>.",
@@ -6805,6 +6840,25 @@
   "venue": "ECSS Report 101909"
  },
  {
+  "author0": "Ceryen Tan",
+  "month": "Sep",
+  "year": "2009",
+  "title": "A Hybrid Static/Dynamic Approach to Scheduling Stream Programs",
+  "summary": "Tan's MEng thesis addresses a rigidity in StreamIt's execution model: the compiler analyzes data dependencies at compile time and emits a static schedule fixing where and when each actor runs, which costs nothing at run time but cannot adapt when cores turn out to be unavailable or static work estimates load-balance the machine badly. The thesis contributes a hybrid static/dynamic scheduler that keeps the static schedule as the baseline and layers lightweight dynamic load-balancing on top, adjusting actor placement to run-time conditions and correcting load imbalances while adding very little overhead.\n\nThe work extends the StreamIt scheduling line of <a href=\"papers/2006/gordon-asplos06.pdf\">the ASPLOS 2006 paper</a> toward run-time adaptivity.",
+  "url": "papers/2009/tan-meng-thesis.pdf",
+  "type": "M.Eng. Thesis",
+  "address": "Cambridge, MA",
+  "school": "Massachusetts Institute of Technology",
+  "bibtexKey": "tan:meng-thesis:2009",
+  "itemType": "sciencethesis",
+  "topics": [
+   "Stream Computing",
+   "Compiler Optimization"
+  ],
+  "project": "StreamIt",
+  "venue": "M.Eng. Thesis"
+ },
+ {
   "author0": "Lerer, A. and Ward, M. and Amarasinghe, Saman",
   "title": "Evaluation of IVR Data Collection UIs for Untrained Rural Users",
   "summary": "This paper evaluates whether untrained rural users can operate interactive voice response (IVR) interfaces, using a deployment that collected feedback from teachers in rural Uganda. Automated survey calls were delivered to over 150 teachers over several months, with the interface revised throughout the study in response to user interviews and call transcripts. Task success varied from 0% to over 75% across interface designs, and most participants could not use a touchtone or touchtone-voice hybrid interface without prior training. The paper closes with design recommendations for IVR data collection. The study builds on the <a href=\"papers/2009/patnaik-ictd09.pdf\">ICTD 2009 comparison of forms, SMS, and voice</a>, which found voice dictation to a live operator more accurate than electronic entry, and asks whether an automated system can replace the operator.",
@@ -6823,6 +6877,23 @@
   ],
   "project": "TEK",
   "venue": "DEV"
+ },
+ {
+  "author0": "Kevin Kelly",
+  "month": "May",
+  "year": "2010",
+  "title": "Heterogeneous Execution with PetaBricks",
+  "summary": "Kelly's MEng thesis, from his supervisor's records, extends PetaBricks — the language and compiler for algorithmic choice — toward execution on heterogeneous processing resources. No copy of the thesis has been located in MIT DSpace or the group's archives, so this entry records the thesis from the supervisor's own list; the full text is not available here.",
+  "type": "M.Eng. Thesis",
+  "address": "Cambridge, MA",
+  "school": "Massachusetts Institute of Technology",
+  "bibtexKey": "kelly:meng-thesis:2010",
+  "itemType": "sciencethesis",
+  "topics": [
+   "Autotuning"
+  ],
+  "project": "PetaBricks",
+  "venue": "M.Eng. Thesis"
  },
  {
   "author0": "Palkar, Shoumik and Thomas, James J. and Narayanan, Deepak and Thaker, P. and Palamuttam, R. and Negi, P. and Shanbhag, Anil and Schwarzkopf, Malte and Pirk, Holger and Amarasinghe, Saman and Madden, Sam and Zaharia, Matei",

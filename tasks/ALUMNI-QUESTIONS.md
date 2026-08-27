@@ -112,10 +112,10 @@ Kenny Yang.
 1. **Jessica Shi (UROP 2020–21)** — two candidates: a 1st-connect "PhD in
    Programming Languages at Penn" (MIT Math+CS) and a 2nd "Software Developer
    at D.E. Shaw" (mutuals Julian Shun + Changwan Hong). Which is she?
-   A:
+   A: https://www.linkedin.com/in/jessica-shi/  [APPLIED: the Penn PL PhD (1st) — printed 'PhD student, University of Pennsylvania']
 2. **Mengyuan Sun → NVIDIA and David Vargas → Vellum** are printed on ✓-level
    evidence; veto if wrong.
-   A:
+   A: Use it  [APPLIED]
 3. Any employers you know for the "nothing printable" or "could not identify"
    lists above — write them next to the names, I'll fold them in.
    A:
@@ -124,3 +124,6 @@ Kenny Yang.
    Senior Robotics Autonomy Engineer, FieldAI — one group mutual) were not
    swept to the same depth. Sweep them too?
    A:
+ Tasmeem Reza → D. E. Shaw [APPLIED], Yishen Chen → Standard Kernel [was already applied].
+ Rest of 'Could not identify': waiting on you — write employers next to names above whenever.
+ Q4 (visiting-student sweep): still open.

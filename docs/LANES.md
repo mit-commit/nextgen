@@ -351,6 +351,14 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   manual click-through. Deviation on record: batch B3's `git add -u`
   swept `docs/refresh.md` + test reports into its commit. Pending his
   ruling: the `papers/` legacy `.ps` archive (untouched).
+- **`.ps` archive ruling resolved** (2026-08-27): the 3 PDF-less `.ps`
+  files converted via ps2pdf (diego_SMT_MTEAC, sheldon-MEthesis,
+  swenson-MEthesis; links repointed in `publications.json`, gate
+  909/909 + 100/100), then on his instruction all 79 legacy
+  `.ps`/`.ps.gz` files deleted from both repos after spot-checking 6
+  ps/pdf pairs (identical page counts; text identical modulo the
+  old-font extraction artifact). Live verified: `.pdf` twins 200,
+  `.ps` 404. nextgen ad479772, commit-website e859e25.
 
 ## Cross-lane requests
 

@@ -691,15 +691,18 @@ span.exhibit-collectionSummaryWidget-count { font-size: 129%;  font-weight: bold
     display: none;
   }
 
-  /* Years as wrapping chips, whole chip tappable */
+  /* Years as wrapping chips, whole chip tappable. Compact (his ruling
+     2026-08-27): no touch-height padding — 35 of these must not eat
+     the screen. */
   #facet-years .facet-scroll { max-height: none; }
-  #facet-years .facet-items { display: flex; flex-wrap: wrap; gap: 6px; }
+  #facet-years .facet-items { display: flex; flex-wrap: wrap; gap: 4px; }
   #facet-years .facet-item {
-    display: inline-flex; width: auto; min-height: 40px;
-    border: 1px solid #ccc; border-radius: 16px; padding: 2px 12px;
+    display: inline-flex; width: auto;
+    border: 1px solid #ccc; border-radius: 12px; padding: 1px 8px;
     margin: 0;
   }
-  #facet-years .facet-cnt { margin-left: 4px; }
+  #facet-years .facet-item input { margin-right: 2px; }
+  #facet-years .facet-cnt { margin-left: 3px; }
 
   /* Sticky result count: filtering gives feedback without scrolling */
   #pubs-heading {

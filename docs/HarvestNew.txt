@@ -1,0 +1,99 @@
+PERIODIC HARVEST AND UPDATE
+===========================
+Written for a human. This is the every-few-months refresh: new citations,
+new repositories, new people, and the summaries that need revisiting
+because of them.
+
+
+HOW OFTEN
+---------
+Quarterly is the right cadence. Citations accrue slowly and the indexes
+themselves lag by weeks, so a monthly run costs the same effort and returns
+very little new. Run it monthly only in the months after a paper lands, when
+early citations matter to you.
+
+
+HOW TO RUN IT
+-------------
+Open a session in ~/workspace/nextgen and say:
+
+    harvest and update
+
+That phrase is the trigger. The full plan lives in
+tasks/HARVEST-AND-UPDATE.md — eight phases, from intake through to the live
+site — and every settled ruling is already written down there, so you should
+not have to re-answer questions you have answered before.
+
+Work runs in parallel lanes with separate file ownership; the pattern is in
+tasks/QUEUE.md. Four or five sessions can run at once without colliding.
+
+
+WHAT IT WILL ASK YOU FOR
+------------------------
+Only these. Everything else runs unattended:
+
+1. New papers since last time — PDFs filed as in AddArticle.txt, plus title,
+   authors, venue, year.
+2. Anything else that changed — new group members, a paper that moved from
+   arXiv to a venue, a repo renamed or newly public.
+3. Approval for any batch classification job over $20. It will show you the
+   dry-run number first.
+4. Whether you want a full-text login sitting this round (see below).
+5. A spot check of the first wave of summaries, and a look at the rendered
+   pages before cutover.
+
+Expect the whole thing to take a day or two of wall-clock, mostly unattended.
+
+
+THE FULL-TEXT SITTING — OPTIONAL, AND WORTH UNDERSTANDING
+---------------------------------------------------------
+Free sources yield about 8% of paywalled papers; that is the bot-wall
+ceiling, not a bug. Reading the actual full text flips roughly two thirds of
+the prior judgments, so it materially improves the reception data.
+
+Getting it requires you: a logged-in browser, on the MIT proxy hosts, running
+a paste-in script that downloads PDFs at human pace. Publisher facts learned
+the hard way, all recorded in the playbook:
+
+  - ACM must be reached through dl-acm-org.libproxy.mit.edu. Direct
+    dl.acm.org redirects PDFs to the abstract page.
+  - Springer reference-work entries often have no PDF at all.
+  - The runner must read the PDF link off the landing page rather than
+    assume a URL shape.
+
+Skip it when the remaining tail is small — a few dozen papers is not worth
+an evening.
+
+
+SCHEDULING IT AUTOMATICALLY
+---------------------------
+Claude can run this on a timer, two ways:
+
+  Cowork (easiest): open Claude Desktop, start a Cowork task pointed at the
+  repo, type /schedule, and answer the prompts. Scheduled Cowork tasks run
+  in the cloud, so your laptop can be closed. Available on all paid plans.
+
+  Claude Code: go to claude.ai/code/scheduled, or use the Scheduled panel in
+  the desktop app, and save the prompt with a cadence.
+
+A caution worth taking seriously: do not schedule the whole refresh
+unattended. The phases that need your judgment — summary voice, identity
+calls, cost approvals — are exactly the ones that go quietly wrong without
+you. What works well on a timer is the PREPARATION:
+
+    Every first Monday, in ~/workspace/nextgen: run phases 1 and 2 of
+    tasks/HARVEST-AND-UPDATE.md only — identifiers and the citations
+    harvest. Do not classify, do not write summaries, do not touch the
+    site. Report what is new and what it would cost to process.
+
+Then you read the report and decide whether to run the rest. The expensive,
+judgment-heavy work stays on your say-so; the fetching happens while you
+sleep.
+
+
+WHAT NOT TO REDO
+----------------
+Recorded in tasks/QUEUE.md so an agent does not reopen them:
+  - the abandoned sitting-3 tail
+  - GitHub handles held as unverified pending a second signal
+  - the frozen pilot classifications

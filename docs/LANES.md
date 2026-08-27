@@ -548,6 +548,26 @@ Full lane histories live verbatim in `docs/LANES-archive.md` (split 2026-08-26, 
   export-sourced people; multi-word surnames (Del Sozzo, Ben Romdhane, …)
   handled. Roster: 498 people, 66 jobs, 11 current + 162 historical emails.
 
+- **Round 3, the big sweep** (2026-08-27, his instruction "do a good sweep in
+  linkedIn, and the web"): ~90 more lookups in his browser over every
+  position-less degree-holder and UROP. The page now carries **123 positions**
+  (43 → 66 → 123 today). His round-2 rulings applied first: **Birka, Jacobs,
+  Matsakis, Saraff → UROP, no thesis** (Birka's thesis was Ernst's, Jacobs'
+  was Rudolph's — kept out of the corpus per his answer; the DSpace "Matsakis
+  1999" MEng is a different person, Nicholas E., supervised by Viola); Vo left
+  off (not a connection); Saraff→xAI, J.Zhou→MIT CSAIL, Ruiz→Indeed,
+  Birnbaum→OpenYield, Agrawal→Exegy via the profile links he supplied (his
+  supplied jzhou08 address went into the LOCAL roster only). Sweep highlights:
+  Matt Deeds (a recorded no_link) resolved — SWE-in-Test at Google, MIT MEng
+  on the card; Matthew Frank → Principal Architect, NVIDIA; Chuvpilo → CEO of
+  Thor Dynamics; DeBergalis (UROP '98) → CEO, Apollo GraphQL; Wijeyekoon
+  (UROP '98) → VP of Fintech, Visa; ~25 more UROP-era placements with
+  era-mutual anchors. Findings table (with confidence tiers and links) written
+  into tasks/ALUMNI-QUESTIONS.md per his ask; evidence rows in
+  harvest/authors/linkedin-results-alumni.json. Still open: Jessica Shi (two
+  candidates), the hyper-common names with no MIT anchor (~30, listed), and
+  the visiting-student cohort (not swept to depth).
+
 ## Cross-lane requests
 
 All resolved; moved verbatim to `docs/LANES-archive.md`. Open new requests here.

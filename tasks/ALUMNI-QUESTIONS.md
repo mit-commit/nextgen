@@ -1,249 +1,274 @@
-# Alumni merge — round 3: sweep results + what still needs you
+# Alumni LinkedIn review — consolidated (round 7)
 
-Everything from rounds 1–2 is applied. Per your instruction I swept LinkedIn (in
-your browser) and the web for the position-less alumni: ~90 lookups this round on
-top of the ~28 before. The page now shows **123 positions** (was 43 this
-morning). Full evidence rows: `harvest/authors/linkedin-results-alumni.json`.
+Rounds 1-6 (his own logged-in LinkedIn/web sweeps, plus round 6's public
+web-search pass) are folded into the single table below — 241 alumni, one
+row each, instead of the scattered per-round tables/lists this file used
+to carry. Full clickable version with the same columns (plus a separate
+"Other link" column) is at `~/workspace/alumni-roster/alumni-linkedin-review.xlsx`
+(gitignored, not in the repo, same convention as `alumni-roster.xlsx`) —
+click "LinkedIn," check it's really them, then tell me what to fix.
 
-Rulings applied this round: Birka, Jacobs, Matsakis, Saraff → **UROP, no thesis**
-(Birka's and Jacobs' theses were Ernst's and Rudolph's per their title pages, and
-stay OUT of the corpus per your answer); Yishen 'Tom' Chen → Standard Kernel;
-Vo left off; Sollee/Saraff/Zhou/Ruiz/Birnbaum/Mitrovska resolved via the profile
-links you gave.
+"LinkedIn" links to the `url` recorded on the People page today (only
+when it's an actual `linkedin.com` link — a few alumni have a personal
+site or old CSAIL page instead, in `alumni-linkedin-review.xlsx`'s "Other
+link" column but not shown here). "COMMIT paper/thesis" is their own
+paper or thesis in this corpus, if `harvest/authors/authors.json` has one
+on record — for context on people from a while back; blank means no
+authored paper found (common for UROPs).
 
-## The sweep table
+## Open items for you
 
-Confidence: ✓✓ = 1st-connect or profile top-card (printed on the page);
-✓ = 2nd/3rd with an MIT-era anchor (printed, veto welcome); ? = plausible but
-not printed; — = no identifiable profile.
+- **Employers for the still-unresolved names** (the "no link found" rows
+  below with no position either) — write them next to a name whenever
+  you know one, I'll fold them in.
+- **Q4, still open**: you said "sweep the 1st set" for the nine visiting
+  students (Carloni, Peverelli, Di Tucci, Mirhosseini, Benmeziane,
+  Debbagh, Abdous, Merouani, Leghettas) — most of these already got
+  filled in rounds 4-5 per the table below; flag here if any specific one
+  still needs a fresh pass.
 
-| Person (role, year) | Found | Conf | Link / anchor |
-|---|---|---|---|
-| Matthew Frank (PhD 03) | Principal Architect, NVIDIA | ✓✓ | /in/matthewifrank/ |
-| Gleb Chuvpilo (SM 02) | Co-founder & CEO, Thor Dynamics | ✓✓ | search card, 30+ mutuals |
-| Matt Deeds (MEng 01) | SWE in Test, Google | ✓✓ | card shows MIT MEng EECS |
-| David Maze (RS/MEng) | App Infrastructure Engineer, Howso | ✓✓ | mutual Matsakis |
-| Kevin Wu (MEng 15) | Staff Engineer, Amplitude | ✓✓ | MIT MEng shown; mutual Minshu Zhan |
-| Patricia Suriana (MEng 16) | Sr ML Scientist, Prescient Design/Genentech | ✓✓ | mutual Baghdadi |
-| Katsumi Okuda (Vis. Scholar) | Senior Expert, Mitsubishi Electric | ✓✓ | 1st; Mitsubishi affiliation on his papers |
-| David Lugato (Vis. Scholar) | Research Director, CEA | ✓ | 2nd; Pessac FR; mutuals Kjolstad+Chou |
-| Daniel Donenfeld (SM 23) | Compiler Engineer, NVIDIA | ✓✓ | /in/danieldonenfeld |
-| Ajay Brahmakshatriya (PhD 25) | Founder & CEO, Build4Sim | ✓✓ | 1st, 36+ mutuals |
-| Mit Kotak / Logan Weber / Amadou Ngom / Edward Wang | PhD students, MIT (other groups) | ✓ | headlines/cards |
-| Jonathan Zhou (MEng 25) | MIT CSAIL | ✓✓ | your link /in/jonathanzhou08/ |
-| Ricardo Ruiz (MEng 25) | Indeed | ✓✓ | your link /in/ricardo-ruiz-1612a8213/ |
-| Dhruv Saraff (UROP 24) | MTS, xAI | ✓✓ | your link /in/dhruv-saraff/ |
-| Sitij Agrawal (MEng 04) | Client Success Manager, Exegy | ✓✓ | /in/sitij-agrawal-54b5288/ |
-| Parker Tew (MEng 16) | Software Developer, PDT Partners | ✓✓ | /in/parker-tew-b6217465 |
-| Yishen 'Tom' Chen (PhD 26) | Standard Kernel | ✓✓ | your answer |
-| Meghan Kane (UROP 08) | Doctoral researcher, MDC Berlin | ✓ | 2nd; MIT Math+CS shown |
-| Rom Fradkin (UROP 25) | SWE, Jane Street | ✓✓ | 1st |
-| Osman Siddique (UROP 25) | CTO, Sciloop (YC); MIT '27 | ✓ | 2nd |
-| Tarushii Goel (UROP 24) | MTS, Thinking Machines | ✓ | 2nd; mutual Isola |
-| Yiming Chen (UROP 23) | PhD @ Oxford (Rhodes) | ✓ | 2nd; mutual Chris Rinard |
-| Michael D'Ambrosio (UROP 07) | Senior UI Engineer, Advisor360 | ✓ | 2nd; MIT MEng shown |
-| Matt DeBergalis (UROP 98) | CEO, Apollo GraphQL | ✓ | 2nd; mutual Jeremy Brown |
-| David Dryjanski (UROP 07) | Founder, AI Realty Kit | ✓ | 2nd; mutuals Aziz + Fung |
-| Shirley Fung (UROP 07) | Co-founder & Patent Agent, Akona IP | ✓✓ | 1st |
-| Irin Ghosh (UROP 19) | Engineering, Glean | ✓ | 2nd |
-| Julian Hamelberg (UROP 22) | Sr SWE, NVIDIA | ✓ | 2nd; mutual Petrov |
-| Rumen Hristov (UROP 14) | Co-founder, Emerald Innovations | ✓✓ | 1st |
-| Matthew Ha (UROP 20) | SWE, Vetcove | ✓✓ | 1st; MIT BE shown |
-| Shenal Kotuwewatta (UROP 20) | Sr SWE, Meta | ✓✓ | 1st |
-| Giorgi Kldiashvili (UROP 23) | SWE, Databricks | ✓ | 2nd; mutual Dima |
-| Rose Liu (UROP 03) | SWE, Google | ✓✓ | 1st; past MIT PhD candidate |
-| Catherine Mei (UROP 20) | SWE, Dropbox | ✓ | 2nd |
-| Amy Mitby (UROP 99) | Applications Consultant, Synopsys | ✓ | 3rd+ but unique name |
-| Josiah McMenamy (UROP 23) | SWE, Aria Networks | ✓ | 2nd |
-| Natalie Muradyan (UROP 22) | SWE, D. E. Shaw | ✓ | 2nd; MIT MEng shown; mutual Petrov |
-| Magdalena Price (UROP 20) | SWE, Google (Serverless) | ✓✓ | 1st |
-| Andi Qu (UROP 22) | Quant Researcher, Citadel Securities | ✓ | 2nd; mutual Petrov |
-| Gabe Ramirez (UROP 20) | Technical Lead, Jump Trading | ✓✓ | 1st; mutual Syed Raza |
-| Daniel Richman (UROP 15) | PhD student, Stanford | ✓✓ | 1st; mutual Suriana |
-| Saad Shakhshir (UROP 01–02) | CEO & Co-founder, ImpactX Partners | ✓✓ | 1st; mutual Bill Thies |
-| Shashvat Srivastava (UROP 22) | SWE, Voleon | ✓ | 2nd; mutual Edward Wang |
-| Nitya Subramanian (UROP 15) | CEO, Para | ✓✓ | 1st; mutual Olszewski |
-| Chun-Kai Wang (UROP 11–12) | Applied Scientist, Amazon | ✓✓ | 1st |
-| Arjuna Wijeyekoon (UROP 98–99) | VP of Fintech, Visa | ✓✓ | 1st |
-| Elena Tatarchenko (UROP 11) | SWE, Render | ✓✓ | 1st; mutual Ansel |
-| David Koh (UROP 10–11) | CTO, Musubi | ✓✓ | 1st; mutual Olszewski |
-| Haoran Xu (UROP 19) | PhD student, Stanford | ✓✓ | 1st; mutual Kiriansky |
-| Alexander Yip (UROP 99) | Principal Architect, Aviatrix | ✓ | 2nd; PDOS-circle mutuals |
-| David Ziegler (UROP 03) | Principal SWE, Google (Spanner) | ✓ | 2nd; MIT MEng shown |
-| Jonathan Birnbaum (UROP 08) | Founder & CEO, OpenYield | ✓✓ | your link /in/jonbirn/ |
-| Mengyuan Sun (UROP 17) | SWE, NVIDIA | ✓ (veto?) | 2nd; past CSAIL intern |
-| David Vargas (UROP 17) | Founding Engineer, Vellum | ✓ (veto?) | 3rd+; MIT Math+CS shown |
+## Consolidated table (241 alumni)
 
-**Identity confirmed but nothing printable** (1st-connects, headline names no
-employer): Benjamin Greenwald (Sr Security Researcher), Timothy Garnett
-(independent consultant — both printed as-is), Tsvetomir Petrov (HW/SW/ML
-architect), Matthew Aasted (SWE, SF), Artem Gleyzer (financial services, NJ),
-Anurag Golla (Crypto+AI, Denver), Lef Ioannidis (correctness/security, Redmond),
-Mark Theng (blank), Minshu Zhan (Sr SWE, Orlando), Georgi Peev (market risk),
-Srikrishna Devabhaktuni (independent), Nicholas Dow / Ricardo Gayle (stale
-student headlines), Muhender Rajvee / Steven Raphael / Aryan Kumar (still "at
-MIT"), Raunak Chowdhury (MIT '24), Drew Samnick (Sr Principal SWE, Seattle —
-2nd, mutual Brian Murphy).
-
-**Students, still at MIT or elsewhere** (no position printed): Mekuriya, Beshr
-Islambouli (ML @ Jump Trading), Korkotashvili, Nathaniel, Onoprishvili (intern @
-Nooks), Boonsiriseth, Cecilia Chen, Declan King, Koirala, Emily Lu, Tasmeem
-Reza (MIT | DE Shaw), Michael Gilbert (NVIDIA intern), Alexander Leighton (math
-PhD student).
-
-**Could not identify** (no profile with an MIT-era anchor): Yishen Chen has no
-LinkedIn (resolved by you), Tammy Yap, Janis Sermulins, Allyn Dimock, Tyler
-Moeller, Christopher Leger, Sie Hendrata Dharmawan, Matthew Drake, Ben Wagner,
-Min Zhang, Eric Wong, Ceryen Tan (stale student profile), Syed Raza, Kevin
-Kelly, Basier Aziz, David Zhang, Jeremy Wong, Zachary Holbrook, Latif Alam,
-Hoi Wai Yu, Xinyi Chen, Marjorie Cheng, Dominic Perno, Ethan Zhou, Amber Li,
-Haokuan Luo, Rohan Mahajan, Katherine Jong, Matt Yourst, Jasper Lin, Tom
-Pinckney, Kenneth Lu, and the hyper-common names I could not anchor: Mark
-Halsey, William Huang, Jimmy Li, Robert Pinder, Janelle Prevost, Satish
-Ramaswamy, Adam Reed, Christopher Rhodes, Michael Robinson, Ruben Brown,
-Richard Wang, Raymond Wu, David Wen, Kenny Yang, Philip Sung ("macrodata
-refinement" — probably him, no employer), Alice Chen, Hannah Kimura (probable
-InterSystems), Shuehan Liang (probable Google), Sheetal Jain (probable NVIDIA),
-Erika Lee, Amrik Kochhar, Peyton Shields (probable Interface, YC S25),
-Kenny Yang.
-
-## Questions
-
-1. **Jessica Shi (UROP 2020–21)** — two candidates: a 1st-connect "PhD in
-   Programming Languages at Penn" (MIT Math+CS) and a 2nd "Software Developer
-   at D.E. Shaw" (mutuals Julian Shun + Changwan Hong). Which is she?
-   A: https://www.linkedin.com/in/jessica-shi/  [APPLIED: the Penn PL PhD (1st) — printed 'PhD student, University of Pennsylvania']
-2. **Mengyuan Sun → NVIDIA and David Vargas → Vellum** are printed on ✓-level
-   evidence; veto if wrong.
-   A: Use it  [APPLIED]
-3. Any employers you know for the "nothing printable" or "could not identify"
-   lists above — write them next to the names, I'll fold them in.
-   A:
-4. The nine **visiting students** (Carloni, Peverelli, Di Tucci, Mirhosseini,
-   Benmeziane, Debbagh, Abdous, Merouani, Leghettas) and Siyi Hu (probable:
-   Senior Robotics Autonomy Engineer, FieldAI — one group mutual) were not
-   swept to the same depth. Sweep them too?
-   A: Sweep the 1st set.
- Tasmeem Reza → D. E. Shaw [APPLIED], Yishen Chen → Standard Kernel [was already applied].
- Rest of 'Could not identify': waiting on you — write employers next to names above whenever.
- Q4 (visiting-student sweep): still open.
-
-## Round 4 — experience-page crawl (your correction: read Experience, not headlines)
-
-You were right about Aasted — and about the method. I re-visited every
-"nothing printable" profile and read the Experience section (or top-card
-company). 17 more filled, 4 upgraded — the page now shows **141 positions**:
-
-- Matt Aasted → **Principal Software Engineer, Voxel** (Jul 2024–; ex-Google, Twitch — exactly as you said)
-- Lef Ioannidis → **Senior Research SW Engineer, Microsoft Research** (RiSE; Sep 2025–)
-- Georgi Peev → **Software Engineer, Jump Trading** (2021–; ex-Two Sigma)
-- Srikrishna Devabhaktuni → **Co-founder & Strategic Advisor, Tropos Networks**
-- Minshu Zhan → **Senior Software Engineer, BevSpot**
-- Muhender Rajvee → **AWS** · Steven Raphael → **MIT CSAIL** · Aryan Kumar → **DRW** · Raunak Chowdhury → **Timely**
-- Drew/Andrew Samnick → **Sr Principal SWE, The Hershey Company** (veto?)
-- Philip Sung → **Anthropic** (the "macrodata refinement" headline is a Severance joke)
-- Amrik Kochhar → **SWE, DoorDash** · Peyton Shields → **Co-founder, Interface (YC S25)** (ex-Citadel)
-- Hannah Kimura → **InterSystems** (MIT confirmed) · Sheetal Jain → **Engineer, NVIDIA** (MIT confirmed) · Shuehan Liang → **SWE, Google** (unique name, no MIT shown — veto?)
-- Upgrades: Dow → **Research SW Engineer, MIT CSAIL**; Greenwald → **RoonCyber**; Garnett → **T&S Advisory Solutions**; Gordon → co-founder & Chief Research Officer.
-
-Genuinely nothing current on their profiles (last role + end date in the
-roster): Petrov (Broadcom, to 2021), Gleyzer (Citadel, to 2013), Golla
-(Galaxy Digital, to 2022), Erika Lee (CodePath, to 2025), Mark Theng &
-Ricardo Gayle (empty profiles), Kenny Yang (joke entries).
-
-
-## Round 5 — your Lamb catch, and the rest of the remaining 99
-
-12 more filled (**153 positions** now): Andrew Lamb → **Staff Engineer,
-InfluxData** (your link); Darin Petkov → **SWE Manager, Google** (Zurich);
-Carloni → **Postdoc, CNIT**; Di Tucci → **Co-founder, Huxelerate** (his CSAIL
-visit is on the profile); Abdous → **Quant Developer, Squarepoint**;
-Peverelli → **Senior CPU Researcher, Huawei R&D UK**; Benmeziane → **Research
-Scientist, IBM Research**; Merouani → **PhD student, NYU**; Chaudhary → **MIT
-CSAIL**; Manlaibaatar → **Meta (PyTorch)** (GitHub company field); Ziheng
-Wang → **Stanford / Anthropic** (his GitHub bio); Youyang Gu → **independent
-data scientist** (youyanggu.com).
-
-Two data issues found:
-- **Amirhossein Mirhosseini's recorded site miramir.me is a hijacked casino-spam
-  domain** — removed his url from the page; he's not findable on LinkedIn either.
-- **Siyi Hu conflict**: the recorded GitHub (Theohhhu) says "Lecturer @ Curtin,
-  Agentic AI/RL" but LinkedIn's best match is "Senior Robotics Autonomy
-  Engineer, FieldAI" (Cambridge, mutual Edward Wang). Which (if either) is your
-  2025 visiting scholar?  A: No, I gave the info directly to an agent —
-  she's about to be Assistant Professor at Xi'an Jiaotong-Liverpool
-  University [applied to people.xml directly, 2026-08-28].
-
-Empty/no-profile after full checks: Ceryen Tan (empty experience), Bosboom
-(site unreachable, no LinkedIn), Leghettas (still 'Student'), Debbagh (1st,
-'Assistant Manager Data Engineer', Paris - employer not shown), Noyola &
-Ben Romdhane (GitHub only, no employer). The ~55 still-blank are the
-hyper-common names and old no-profile UROPs from the round-3 list.
-
-## Round 6 — public web-search sweep (no LinkedIn login), by the other session
-
-Saman asked for another LinkedIn sweep of the alumni with no `url` on the
-page, so job changes can be checked going forward. This session has no
-Chrome/LinkedIn access (offered, but no browser-control tool is available
-here) — so this round used public WebSearch only, fanned out across 10
-parallel searches, one per person. A hit only counts if a search result's
-own title/snippet showed a `linkedin.com/in/...` URL; nothing was
-constructed from a name pattern. **99 of the 162 people missing a url got
-one** (77 at ✓✓, 22 at ✓ — applied but listed below for your veto since
-the anchor was weaker), plus positions for 28 of the 82 who had neither.
-
-### ✓ tier — applied, veto welcome (weaker anchor: common name, spelling
-variant, stale-looking employer, or identity inferred from a second source
-rather than the LinkedIn snippet itself)
-
-| Person | Applied URL | Why it's only ✓ |
-|---|---|---|
-| Ziheng Wang | /in/tony-wang-/ | profile is "Tony Wang"; Anthropic/Ziheng tie comes from Scholar+X, not the LinkedIn snippet itself |
-| Haoran Xu | /in/haoran-xu-2730476b/ | snippet shows old MemSQL role, not the current Stanford PhD |
-| Daniel Richman | /in/daniel-richman-074b4411a/ | Stanford matches but no MIT anchor shown |
-| Sanath Jayasena | /in/sanath-jayasena-274a8011/ | snippet shows a different employer than Moratuwa |
-| Michael D'Ambrosio | /in/mikedambrosio/ | title differs slightly ("Senior SWE" vs "Senior UI Engineer") |
-| David Dryjanski | /in/davidd8 | name shown truncated as "David D." on the snippet |
-| Rose Liu | /in/rose-liu-07bb122/ | common name, no MIT anchor in the snippet |
-| Diego Puppin | /in/diegopuppin/ | snippet shows a prior employer (Synthesia); ZoomInfo + his own already-recorded 1st-degree evidence confirms same person, current role Genesis Therapeutics |
-| Shuehan Liang | /in/shuhan-liang-73b09972/ | spelling differs (Shuhan vs Shuehan) |
-| Amy Mitby | /in/amymitby/ | no direct Synopsys/MIT anchor in the snippet |
-| Beshr Islam Bouli | /in/beshr-islambouli-9a508b216 | spelling differs slightly; MIT tie from a scholarship page, not the snippet |
-| Dominic Perno | /in/dperno/ | MIT tie from ZoomInfo/RocketReach, not the LinkedIn snippet |
-| Raymond Wu | /in/raymond-wu-05194b106/ | common name |
-| Min Zhang | /in/min-zhang-5ab3956/ | very common name |
-| Kiranmayi Bhattaram | /in/kiranbhattaram/ | profile name is the nickname "Kiran" |
-| Christopher Graves | /in/christopher-graves-00b63256/ | common name, MIT+Cambridge shown but no CSAIL specifics |
-| Eric Wong | /in/eric-wong-04aa14100 | "Student at MIT" shown but several same-name MIT profiles exist |
-| Artem Gleyzer | /in/artem-gleyzer-01598269 | matches your earlier Citadel-to-2013 finding, no MIT anchor in this snippet |
-| Ali Meli | /in/ali-meli-92ab33167/ | MIT tie inferred from summary text, not quoted directly |
-| Kenneth Lu | /in/kenneth-k-lu/ | MIT/CSAIL tie inferred from summary text |
-| Tsvetomir Petrov | /in/tpetrov/ | re-confirms your Broadcom-to-2021 finding, no MIT anchor in this logged-out view |
-| Ruben Brown | /in/ruben-e-brown-4b668233/ | MIT tie inferred from summary text |
-
-### Still not found (60) — same hard bucket as before; a logged-in sweep is
-the only way most of these move (mostly hyper-common names, or 20+ year old
-records with little public footprint):
-
-Yishen 'Tom' Chen, Steven Raphael, David Lugato, Rumen Hristov, Shirley
-Fung, Juan Carlos Reyes, Sheetal Jain, Saad Shakhshir, Elliot Waingold,
-Arjuna Wijeyekoon, Siyi Hu, Ethan H Zhou, Hoi Wai Yu, Alice Chen, Cecilia
-Chen, Emily Lu, Richard Wang, Xinyi Guo, Zachary Holbrook, Alexander
-Leighton, Haokuan Luo, Amirhossein Mirhosseini, Michael Robinson, Xinyi
-Chen, Sachin Dilip Shinde, Asra Ali, Emily Armstrong, William Huang, Rohan
-Mahajan, Latif Alam, Syed Raza, David Wen, Kevin Kelly, Ceryen Tan, Basier
-Aziz, Allyn Dimock, Jimmy Li, David Zhang, Sie Hendrata Dharmawan, Matthew
-Drake, Christopher Rhodes, Ben Wagner, Marjorie Cheng, Adam Reed, Janis
-Sermulins, Christopher Leger, Jasper Lin, Jeremy Wong, Chris Yu, Joshua
-Jacobs, Alejandro Artola, Mark Halsey, Binh Vo, Matt Yourst, Ted Allison,
-Katherine Jong, Tyler Moeller, Tammy Yap, Robert Pinder, Tom Pinckney.
-
-Three of these have a strong non-LinkedIn identity match but genuinely no
-findable `linkedin.com/in/` URL: **Amber Li** and **Kenny Yang** (both have
-an MIT CSAIL people-directory page) and **Mark Theng** (USENIX OSDI'21
-co-author page shows MIT CSAIL) — worth a direct LinkedIn search in your
-own browser if you want those closed out, since a public search engine
-just doesn't surface their profile URL at all.
-
-**Page now: 177/240 alumni have a url** (up from 78 at the start of this
-round). 63 remain, matching the lists above.
+| Name | Role | Years | Position | LinkedIn | Notes | COMMIT paper/thesis |
+|---|---|---|---|---|---|---|
+| Yishen 'Tom' Chen | PhD (was SM) | 2026 | Standard Kernel |  | round6: not found — Multiple 'Yishen Chen' LinkedIn profiles found (Los Angeles ops manager, Crake Asset Management, Lexington MA with no v… |  |
+| Changwan Hong | Research Staff | 2026 | Building Standard Kernel | [link](https://www.linkedin.com/in/changwanhong/) | round6 ✓✓ — Snippet shows MIT affiliation and explicitly mentions he is 'working on a project at Standard Kernel Co.' | [A sparse iteration space transformation framework for spars…](https://github.com/mit-commit/nextgen/blob/main/papers/2020/oopsla2020.pdf) |
+| Abimalek Mekuriya | UROP | 2026 | Student, CS & Math @ MIT | [link](https://www.linkedin.com/in/abimalek/) | round6 ✓✓ — Title match, parallel/distributed systems interests |  |
+| Beshr Islam Bouli | UROP | 2025 | MIT CS&E student | [link](https://www.linkedin.com/in/beshr-islambouli-9a508b216) | round6 ✓ (veto welcome) — Corroborated via jusoor.ngo scholarship page + Codeforces; spelling differs slightly |  |
+| Ajay Brahmakshatriya | PhD (was SM) | 2020–2025 | Founder & CEO, Build4Sim | [other link](https://intimeand.space) | round3 sweep: Founder & CEO, Build4Sim [✓✓] — 1st, 36+ mutuals | [Democratizing High-Performance DSL Development with the Bui…](https://github.com/mit-commit/nextgen/blob/main/papers/2025/ajay-phd-thesis.pdf) |
+| Filippo Carloni | Visiting Student | 2025 | Postdoctoral Researcher, CNIT | [link](https://www.linkedin.com/in/filippo-carloni/) | pre-existing link, no sweep notes on file |  |
+| Shreya Chaudhary | MEng | 2025 | MIT CSAIL | [link](https://www.linkedin.com/in/shreya-chaudhary-) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Towards a Flexible Python Framework for Developing Domain-S…](https://github.com/mit-commit/nextgen/blob/main/papers/2026/2026_shreya_chaudhary_meng_thesis.pdf) |
+| Nicholas Dow | MEng | 2024–2025 | Research Software Engineer, MIT CSAIL | [link](https://www.linkedin.com/in/nldow) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Optimizing Scheduling for Stream Structured Programming for…](https://github.com/mit-commit/nextgen/blob/main/papers/2025/Nick_Dow_MEng_Thesis.pdf) |
+| Rom Fradkin | UROP | 2025 | Software Engineer, Jane Street | [link](https://www.linkedin.com/in/rom-fradkin/) | round6 ✓✓ — Title itself reads 'Rom Fradkin - Software Engineer - Jane Street \| LinkedIn', with CS & Math background from MIT noted. |  |
+| Siyi Hu | Visiting Scholar | 2025 | Assistant Professor, Xi'an Jiaotong-Liverpool University |  | round6: not found — Only MIT Siyi Hu found is unrelated LIDS/Aero-Astro PhD, not COMMIT visiting scholar | [Accelerating Microservice Network Stacks on Kubernetes via …](https://github.com/mit-commit/nextgen/blob/main/papers/2026/ishibe-xsig26-microservice-dsl.pdf) |
+| Tamar Korkotashvili | UROP | 2025 | Student at MIT | [link](https://www.linkedin.com/in/tamar-korkotashvili) | round6 ✓✓ — Title match |  |
+| Mit Kotak | Graduate Student | 2025 | PhD student, MIT | [link](https://www.linkedin.com/in/mit-kotak/) | round3 sweep: PhD students, MIT (other groups) [✓] — headlines/cards |  |
+| Aryan Kumar | MEng | 2024–2025 | DRW | [link](https://www.linkedin.com/in/aryan-kumar100) | round4/5: DRW | [Automatic Conversion of C and C++ Programs to the BuildIt M…](https://github.com/mit-commit/nextgen/blob/main/papers/2025/Kumar_Aryan_MEng_Thesis.pdf) |
+| Isaiah Nathaniel | UROP | 2025 | Student, EECS and Math at MIT | [link](https://www.linkedin.com/in/isaiah-nathaniel/) | round6 ✓✓ — Title match + MIT StartLabs team page |  |
+| Katsumi Okuda | Visiting Scholar | 2025 | Senior Expert, Mitsubishi Electric | [link](https://www.linkedin.com/in/katsumi-okuda-738b0128b/) | round6 ✓✓ — Profile shows 'Visiting Researcher - Massachusetts Institute of Technology' with prior role as Researcher at Mitsubishi Electri… | [AskIt: Unified Programming Interface for Programming with L…](https://github.com/mit-commit/nextgen/blob/main/papers/2024/askit-cgo24.pdf) |
+| Ana Onoprishvili | UROP | 2025 | Student at MIT | [link](https://www.linkedin.com/in/ana-onoprishvili) | round6 ✓✓ — Title match + designftw.mit.edu roster |  |
+| Dominic Perno | UROP | 2025 | MIT CS student 2023-2027 | [link](https://www.linkedin.com/in/dperno/) | round6 ✓ (veto welcome) — ZoomInfo/RocketReach tie to mit.edu email + Next House job |  |
+| Muhender Rajvee | MEng | 2024–2025 | Amazon Web Services | [link](https://www.linkedin.com/in/muhender-raj-rajvee-a65732206) | round4/5: AWS | [Converting PyTorch Models to StreamIt Pipelines](https://github.com/mit-commit/nextgen/blob/main/papers/2025/RAJVEE_MUHENDER_MEng_Thesis.pdf) |
+| Steven Raphael | MEng | 2025 | MIT CSAIL |  | round6: not found — Only other Steven Raphaels turned up (Berkeley public policy professor, founder of 'required viewing', ERM employee) — … |  |
+| Chaitanya Ravuri | MEng | 2023–2025 | OpenAI | [link](https://www.linkedin.com/in/cravuri) | round6 ✓✓ — Snippet/profile: 'Chaitanya Ravuri - OpenAI', Member of Technical Staff at OpenAI, MS CS from MIT (2024-2025). | [Eliminating Hallucination-Induced Errors in Code Generation…](https://github.com/mit-commit/nextgen/blob/main/papers/2025/Chaitanya_Ravuri_MEng_Thesis.pdf) |
+| Tasmeem Reza | UROP | 2024–2025 | D. E. Shaw | [link](https://www.linkedin.com/in/tasmeem-reza-6325ba118/) | round6 ✓✓ — Title: 'Tasmeem Reza - The D. E. Shaw Group \| LinkedIn', located Cambridge, MIT background. |  |
+| Ricardo Ruiz | MEng | 2025 | Indeed | [link](https://www.linkedin.com/in/ricardo-ruiz-1612a8213/) | round3 sweep: Indeed [✓✓] — your link /in/ricardo-ruiz-1612a8213/ | [Applied Compiler Optimizations for Proving Code](https://github.com/mit-commit/nextgen/blob/main/papers/2025/Ricardo_Ruiz_SB_Thesis.pdf) |
+| Osman Siddique | UROP | 2025 | CTO, Sciloop (YC) | [link](https://www.linkedin.com/in/osman-siddiquer/) | round6 ✓✓ — Title: 'Osman Siddique - Sciloop (YC F25) \| LinkedIn'; described as Co-Founder/CTO at Sciloop, MIT background, four years rese… |  |
+| Ethan H Zhou | UROP | 2025 |  |  | round6: not found — Common name, no anchor |  |
+| Jonathan Zhou | MEng | 2023–2025 | MIT CSAIL | [link](https://www.linkedin.com/in/jonathanzhou08/) | round3 sweep: MIT CSAIL [✓✓] — your link /in/jonathanzhou08/ | [Performance Analysis of the Apple AMX Matrix Accelerator](https://github.com/mit-commit/nextgen/blob/main/papers/2025/Jonathan_Zhou_SB_Thesis.pdf) |
+| Willow Ahrens | PhD | 2024 | Assistant Professor, Georgia Tech | [other link](https://willowahrens.io) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [Sparse and Structured Tensor Programming](https://github.com/mit-commit/nextgen/blob/main/papers/2024/willow-phd-thesis.pdf) |
+| Kaustubh Dighe | MEng | 2024 | Machine Learning Engineer, Google | [link](https://www.linkedin.com/in/kaustubh-dighe/) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Fast Multistage Compilation of Machine Learning Computation…](https://github.com/mit-commit/nextgen/blob/main/papers/2024/Dighe_MEng_Thesis.pdf) |
+| Tarushii N. Goel | UROP | 2024 | Member of Technical Staff, Thinking Machines | [other link](https://tarushii.vercel.app) | pre-existing link, no sweep notes on file |  |
+| Hannah Kimura | UROP | 2024 | Software Developer, InterSystems | [link](https://www.linkedin.com/in/hannah-kimura/) | round6 ✓✓ — Title: 'Hannah Kimura - InterSystems \| LinkedIn', profile shows Cloud Engineer at InterSystems (close match to 'Software Devel… |  |
+| Declan King | UROP | 2024 | Researcher, RLE at MIT, accepted Meta 2026 SWE internship | [link](https://www.linkedin.com/in/declan-andrew-king/) | round6 ✓✓ — Title match + Delta Tau Delta MIT roster |  |
+| Yogesh Koirala | UROP | 2024 | Founded Lamina Labs (YC) | [link](https://www.linkedin.com/in/yogesh-koirala/) | round6 ✓✓ — Title match + MITeri site |  |
+| Albert Lu | UROP | 2024 | SWE @ Google | [link](https://www.linkedin.com/in/albertlu00/) | round6 ✓✓ — Title match: SWE @ Google \| CS @ MIT |  |
+| Katherine Mohr | MEng | 2023–2024 | PhD student, Stanford University | [link](https://www.linkedin.com/in/katherinemohr/) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [On-Stack Replacement Across User-Kernel Boundaries](https://github.com/mit-commit/nextgen/blob/main/papers/2024/mohr-kmohr-meng-eecs-2024-thesis.pdf) |
+| Radha Patel | MEng | 2023–2024 | Citadel | [link](https://www.linkedin.com/in/radha-rpatel/) | round6 ✓✓ — Title: 'Radha Patel - Citadel \| LinkedIn'; snippet confirms MIT CS BS 2023/MS 2024, advised by Willow Ahrens and Saman Amarasi… | [A System To Exploit Symmetry in Common Tensor Kernels](https://github.com/mit-commit/nextgen/blob/main/papers/2024/Radha-MEng-Thesis.pdf) |
+| Francesco Peverelli | Visiting Student | 2024 | Senior CPU Researcher, Huawei R&D UK | [link](https://it.linkedin.com/in/francesco-peverelli-0a382013a) | round6 ✓✓ — Title: 'Francesco Peverelli - Postdoctoral Researcher - Huawei'; company anchor (Huawei) matches, though listed title differs s… |  |
+| Dhruv Saraff | UROP | 2024 | Member of Technical Staff, xAI | [link](https://www.linkedin.com/in/dhruv-saraff/) | round3 sweep: MTS, xAI [✓✓] — your link /in/dhruv-saraff/ |  |
+| Richard Sollee | MEng | 2022–2024 | AI Developer, City of Jacksonville | [other link](https://www.richardsollee.com/) | pre-existing link, no sweep notes on file |  |
+| Logan Weber | Graduate Student | 2024 | PhD student, MIT | [other link](http://weberlo.github.io/) | round3 sweep: PhD students, MIT (other groups) [✓] — headlines/cards |  |
+| Hoi Wai Yu | UROP | 2024 |  | [other link](http://hoiwai.net) | round6: not found — No matching profile; close names are different people |  |
+| Krit Boonsiriseth | UROP | 2023 | MIT CSAIL researcher/student | [link](https://th.linkedin.com/in/krit-boonsiriseth-a83528202) | round6 ✓✓ — CSAIL people page + GitHub + IMO record corroborate |  |
+| Alice Chen | UROP | 2023 |  |  | round6: not found — Common name, search budget exhausted |  |
+| Cecilia Chen | UROP | 2023 |  |  | round6: not found — Common name, search budget exhausted |  |
+| Yiming Chen | UROP | 2023 | PhD student, Oxford (Rhodes Scholar) | [link](https://www.linkedin.com/in/yimingchen9/) | round6 ✓✓ — Title: 'Yiming Chen - Rhodes Scholar \| PhD in ML @ Oxford VGG'; corroborated by MIT EECS news of her being a 2025 Rhodes Schol… |  |
+| Alexandra Dima | MEng | 2023 | Software Engineer, Hudson River Trading | [link](https://www.linkedin.com/in/alexandra-dima-556280149) | links.json (professional/github_profile): GitHub account resolved via surname_match_verified_owner (never name alone) | [GSTACO: A Generalized Sparse Tensor Algebra Compiler](https://github.com/mit-commit/nextgen/blob/main/papers/2023/alexandra-meng-thesis.pdf) |
+| Daniel Donenfeld | SM | 2023 | Compiler Engineer, NVIDIA | [link](https://www.linkedin.com/in/danieldonenfeld) | round3 sweep: Compiler Engineer, NVIDIA [✓✓] — /in/danieldonenfeld | [Unified Compilation for Lossless Compression and Sparse Com…](https://github.com/mit-commit/nextgen/blob/main/papers/2023/donenfeld-sm-thesis.pdf) |
+| Ricardo Gayle Jr. | MEng | 2023 |  | [link](https://www.linkedin.com/in/ricardo-jr-gayle-244b29184) | pre-existing link, no sweep notes on file | [Halide in Molecular Dynamics](https://github.com/mit-commit/nextgen/blob/main/papers/2023/ricardo-meng-thesis.pdf) |
+| Giorgi Kldiashvili | UROP | 2023 | Software Engineer, Databricks | [link](https://www.linkedin.com/in/kldiashvilig/) | round6 ✓✓ — Title: 'Giorgi Kldiashvili - Databricks \| LinkedIn'; snippet notes MIT CS senior with Databricks experience. |  |
+| Emily Lu | UROP | 2023 |  |  | round6: not found — Common name, search budget exhausted |  |
+| Josiah McMenamy | UROP | 2023 | Software Engineer, Aria Networks | [link](https://www.linkedin.com/in/josiah-mc/) | round6 ✓✓ — Title itself: 'Josiah McMenamy - SWE @ Aria Networks \| MIT CS Alum'. |  |
+| Tamara Mitrovska | MEng | 2022–2023 | Software Engineer, Google DeepMind | [link](https://www.linkedin.com/in/tamara-mitrovska-729682202/) | links.json (professional/web_search): GitHub profile matching an MIT SuperUROP scholar who completed an M.Eng. thesis (tamara:meng-thesis:2… | [Implementing BREeze - a High-Performance Regular Expression…](https://github.com/mit-commit/nextgen/blob/main/papers/2023/tamara-meng-thesis.pdf) |
+| Jessica Ray | PhD (was SM) | 2018–2023 | MIT Lincoln Laboratory | [link](https://www.linkedin.com/in/jessica-ray-25555419b/) | round6 ✓✓ — Title: 'Jessica Ray - MIT Lincoln Laboratory'; snippet confirms PhD in the COMMIT group under Saman Amarasinghe, later technica… | [A Universal Tensor Abstraction and its Application to and I…](https://github.com/mit-commit/nextgen/blob/main/papers/2023/Jessica_Ray_dissertation.pdf) |
+| Chris Rinard | UROP | 2023 |  | [link](https://www.linkedin.com/in/rinard/) | links.json (professional/orcid): ORCID resolved via shared_work (never name alone) | [NetBlocks: Staging Layouts for High-Performance Custom Host…](https://github.com/mit-commit/nextgen/blob/main/papers/2024/PLDI24_NetBlocks.pdf) |
+| Stephen Chou | PhD (was SM) | 2018–2022 | Staff Software Engineer, Google | [other link](http://people.csail.mit.edu/s3chou) | links.json (professional/orcid): ORCID resolved via shared_work (never name alone) | [Format Abstractions for the Compilation of Sparse Tensor Al…](https://github.com/mit-commit/nextgen/blob/main/papers/2022/chou-phd-thesis.pdf) |
+| Raunak Chowdhury | UROP | 2022 | Timely | [link](https://www.linkedin.com/in/raunak-chowdhury/) | round6 ✓✓ — Title: 'Raunak Chowdhury - Timely \| LinkedIn'; snippet confirms MIT 2023 graduate located in NYC metro area. |  |
+| Julian Hamelberg | UROP | 2022 | Senior Software Engineer, NVIDIA | [link](https://www.linkedin.com/in/jshjulian) | round6 ✓✓ — Search result title itself reads 'Julian Hamelberg - Senior Software Engineer @ NVIDIA' |  |
+| Natalie Muradyan | UROP | 2022 | Software Engineer, D. E. Shaw | [link](https://www.linkedin.com/in/natalie-muradyan-5600451a3/) | round6 ✓✓ — Title 'Natalie Muradyan - The D. E. Shaw Group \| LinkedIn'; snippet also notes MIT education |  |
+| Andi Qu | UROP | 2022 | Quantitative Researcher, Citadel Securities | [link](https://www.linkedin.com/in/andiqu/) | round6 ✓✓ — Title 'Andi Qu - Citadel Securities \| LinkedIn'; snippet notes MIT education |  |
+| Shashvat Srivastava | UROP | 2022 | Software Engineer, Voleon | [link](https://www.linkedin.com/in/shashvatsrivastava/) | round6 ✓✓ — Title 'Shashvat Srivastava - The Voleon Group \| LinkedIn'; snippet notes MIT education |  |
+| Edward Wang | Graduate Student | 2022 | PhD student, MIT | [link](https://www.linkedin.com/in/edward-c-wang/) | round6 ✓✓ — Bio matches CSAIL person-page bio for the compilers/Coq/type-systems Edward Wang |  |
+| Michael Gilbert | UROP | 2021 | SWE Intern at NVIDIA, MEng MIT 2023 | [link](https://www.linkedin.com/in/gilbert-mike/) | round6 ✓✓ — eems.mit.edu lab bio confirms UROP/SuperUROP + MEng |  |
+| Anurag Golla | UROP | 2020–2021 | Crypto + AI | [link](https://www.linkedin.com/in/anuraggolla) | round6 ✓✓ — MIT 2017-2021, Deep Compiler Group CSAIL |  |
+| Claire C Hsu | MEng | 2020–2021 | Software Engineer, Amperos | [link](http://www.linkedin.com/in/claire-hsu-2441a4132/) | pre-existing link, no sweep notes on file |  |
+| Amadou Ngom | Graduate Student | 2021 | PhD student, MIT | [link](https://www.linkedin.com/in/amadou-ngom/) | round6 ✓✓ — Title 'Amadou Ngom - PhD at MIT'; ties him to MIT COMMIT group co-advised by Saman Amarasinghe |  |
+| Ariya Shajii | PhD | 2021 | Founder, Exaloop | [other link](http://ars.me) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [High-Performance Computational Genomics](https://github.com/mit-commit/nextgen/blob/main/papers/2021/ariya-shajii-phd-thesis.pdf) |
+| Jessica Shi | UROP | 2020–2021 | PhD student, University of Pennsylvania | [link](https://www.linkedin.com/in/jessica-shi/) | round6 ✓✓ — Title 'Jessica Shi - University of Pennsylvania \| LinkedIn'; snippet notes PhD at Penn, undergrad MIT math/CS | [An Attempt to Generate Code for Symmetric Tensor Computatio…](https://github.com/mit-commit/nextgen/blob/main/https://arxiv.org/pdf/2110.00186) |
+| Peyton Shields | UROP | 2021 | Co-founder, Interface (YC S25) | [link](https://www.linkedin.com/in/peyton-shields/) | round6 ✓✓ — Title 'Peyton Shields - Interface \| LinkedIn'; confirms co-founder of Interface (YC S25) and MIT education |  |
+| Richard Wang | UROP | 2020–2021 |  |  | round6: not found — Common name, no anchor | [Domain-Specific Language Abstractions for Compression](https://github.com/mit-commit/nextgen/blob/main/papers/2021/jess-dcc2021.pdf) |
+| Amarbold Byambajargal | UROP | 2020 | TA EECS Communication Lab MIT | [link](https://www.linkedin.com/in/amarbold0314/) | round6 ✓✓ — Explicit CSAIL UROP Feb-May 2020 mention |  |
+| Xinyi Guo | UROP | 2020 |  |  | round6: not found — No MIT anchor among 30+ same-name profiles |  |
+| Matthew Ha | UROP | 2020 | Software Engineer, Vetcove | [link](https://www.linkedin.com/in/matthew-ha-483a4895/) | round6 ✓✓ — Title 'Matthew Ha - Vetcove \| LinkedIn'; notes prior MIT CSAIL experience and MIT 2017-2021 |  |
+| Rawn Henry | MEng | 2019–2020 | OpenAI | [link](http://www.linkedin.com/in/rawn-henry-415661135/) | pre-existing link, no sweep notes on file | [A Framework for Computing on Sparse Tensors based on Operat…](https://github.com/mit-commit/nextgen/blob/main/papers/2020/rawn_2020.pdf) |
+| Zachary Holbrook | UROP | 2019–2020 |  |  | round6: not found — No MIT anchor | [ProgGen: Automatic Dataset Generation for the Halide Domain…](https://github.com/mit-commit/nextgen/blob/main/papers/2021/HolbrookZacharyN-meng-eecs-2021.pdf) |
+| Fredrik Kjolstad | PhD | 2020 | Assistant Professor, Stanford University | [other link](http://people.csail.mit.edu/fred) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [Sparse Tensor Algebra Compilation](https://github.com/mit-commit/nextgen/blob/main/papers/2020/kjolstad-thesis.pdf) |
+| Shenal Kotuwewatta | UROP | 2020 | Senior Software Engineer, Meta | [link](https://www.linkedin.com/in/shenalsanthush/) | round6 ✓✓ — Title 'Shenal Kotuwewatta - Meta \| LinkedIn'; notes MIT CS double major |  |
+| Alexander Leighton | UROP | 2019–2020 |  |  | round6: not found — No MIT anchor |  |
+| Amber Li | UROP | 2020 |  |  | round6 ✓ (veto welcome) — CSAIL people page confirms but no linkedin url found |  |
+| Haokuan Luo | UROP | 2020 |  |  | round6: not found — Hudson River Trading found but no MIT anchor in snippet |  |
+| Tugsbayasgalan Manlaibaatar | MEng | 2019–2020 | Meta (PyTorch) | [link](http://www.linkedin.com/in/tugsbayasgalan-manlaibaatar-a7b819102/) | links.json (professional/github_profile): GitHub account resolved via exact_profile_name_from_discovered_contributor (never name alone) | [Optimizing Parallel Graph Algorithms by Extending the Graph…](https://github.com/mit-commit/nextgen/blob/main/papers/2020/tugsuu_2020.pdf) |
+| Catherine Mei | UROP | 2020 | Software Engineer, Dropbox | [link](https://www.linkedin.com/in/catherine-mei-280231190/) | round6 ✓✓ — Title 'Catherine Mei - SWE @ Dropbox \| EECS & BCS @ MIT'. Note: a second similar profile also surfaced, flagged |  |
+| Charith Mendis | PhD (was SM) | 2015–2020 | Assistant Professor, UIUC | [other link](http://charithmendis.com/) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [Towards Automated Construction of Compiler Optimizations](https://github.com/mit-commit/nextgen/blob/main/papers/2020/mendis-thesis.pdf) |
+| Amirhossein Mirhosseini | Visiting Student | 2020 |  |  | round6: not found — dblp confirms research area but no anchored LinkedIn found; budget ran out before U-Michigan targeted query |  |
+| Suzy Mueller | MEng | 2020 | Software Engineer, Google | [link](http://www.linkedin.com/in/suzy-mueller-2a014a8a/) | pre-existing link, no sweep notes on file |  |
+| Magdalena Price | UROP | 2020 | Software Engineer, Google | [link](https://www.linkedin.com/in/magdalena-a-price/) | round6 ✓✓ — Title 'Magdalena Price - Google \| LinkedIn'; notes MIT MEng AI 2021-2022 |  |
+| Gabriel Ramirez | UROP | 2020 | Technical Lead, Jump Trading | [link](https://www.linkedin.com/in/g-ramirez/) | round6 ✓✓ — Title 'Gabe Ramirez - Jump Trading \| LinkedIn'; notes MIT education and Jump Trading internship-to-fulltime | [Codon: A Framework for Pythonic Domain-Specific Languages](https://github.com/mit-commit/nextgen/blob/main/papers/2021/RamirezGabrielL-meng-eecs-2021.pdf) |
+| Michael Robinson | UROP | 2020 |  |  | round6: not found — Extremely common name, no anchor |  |
+| Ryan Senanayake | MEng | 2018–2020 | GPU & Accelerated Compute, Sunday Robotics | [other link](http://rsenapps.com) | links.json (linkedin_incidental/openalex_homepage): from the person's own public ORCID researcher-urls | [A Unified Iteration Space Transformation Framework for Spar…](https://github.com/mit-commit/nextgen/blob/main/papers/2020/ryan_2020.pdf) |
+| Ziheng Wang | MEng | 2020 | Stanford / Anthropic | [link](https://www.linkedin.com/in/tony-wang-/) | round6 ✓ (veto welcome) — Google Scholar 'Tony (Ziheng) Wang' shows MIT-verified email and Stanford affiliation; LinkedIn title matches Sta… | [Automatic Optimization of Sparse Tensor Algebra Programs](https://github.com/mit-commit/nextgen/blob/main/papers/2020/tony_2020.pdf) |
+| Yunming Zhang | PhD | 2020 | Member of Technical Staff, Microsoft AI | [other link](http://yunmingzhang.wordpress.com) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [GraphIt: Optimizing the Performance and Improving the Progr…](https://github.com/mit-commit/nextgen/blob/main/papers/2020/yunming-thesis.pdf) |
+| Kamel Abdous | Visiting Student | 2019 | Quantitative Developer, Squarepoint | [other link](https://github.com/abdouskamel) | links.json (linkedin_incidental/github_blog): from the GitHub profile's own "website" field | [TIRAMISU: A Polyhedral Compiler for Dense and Sparse Deep L…](https://github.com/mit-commit/nextgen/blob/main/https://arxiv.org/pdf/2005.04091) |
+| Abdurrahman Akkas | MEng | 2019 | Senior Software Engineer, Meta | [link](https://www.linkedin.com/in/abdurrahman-akkas) | links.json (professional/github_profile): GitHub account resolved via exact_profile_name_from_discovered_contributor (never name alone) | [Efficient Memory and GPU Operations for Tiramisu Compiler](https://github.com/mit-commit/nextgen/blob/main/papers/2019/akkas.pdf) |
+| Hadjer Benmeziane | Visiting Student | 2019 | Research Scientist, IBM Research | [link](https://www.linkedin.com/in/hadjer-benmeziane/) | round6 ✓✓ — Title 'Hadjer Benmeziane - IBM \| LinkedIn', corroborated by research.ibm.com profile |  |
+| Xinyi Chen | UROP | 2019 |  |  | round6: not found — 1800+ same-name profiles, no anchor | [Optimizing Ordered Graph Algorithms with GraphIt](https://github.com/mit-commit/nextgen/blob/main/papers/2020/yunming-cgo20.pdf) |
+| Nadir Abdelkader Debbagh | Visiting Student | 2019 |  | [other link](https://nadir199.github.io/) | pre-existing link, no sweep notes on file |  |
+| Irin Ghosh | UROP | 2019 | Engineering, Glean | [link](https://www.linkedin.com/in/irin-ghosh-ba079721b/) | round6 ✓✓ — Title 'Irin Ghosh - Glean \| LinkedIn'; notes MIT double major CS&E and MEng AI, MIT CSAIL internship |  |
+| Ajay Jain | UROP | 2018–2019 | Co-founder & CTO, Genmo | [other link](http://ajayjain.net) | links.json (professional/github_profile): GitHub account resolved via exact_profile_name_from_discovered_contributor (never name alone) | [Revec: Program Rejuvenation Through Revectorization](https://github.com/mit-commit/nextgen/blob/main/papers/2019/revec-cc.pdf) |
+| Vladimir Kiriansky | PhD (was MEng) | 2000–2019 | VMware | [other link](http://people.csail.mit.edu/vlk) | pre-existing link, no sweep notes on file | [Secure Execution Environment via Program Shepherding](https://github.com/mit-commit/nextgen/blob/main/papers/2003/vlk-MEthesis.pdf) |
+| Mohamed-Hicham Leghettas | Visiting Student | 2019 |  | [link](https://www.linkedin.com/in/mhleghettas) | pre-existing link, no sweep notes on file | [A Deep Learning Based Cost Model for Automatic Code Optimiz…](https://github.com/mit-commit/nextgen/blob/main/papers/2021/tiramisu_autoscheduler.pdf) |
+| Massinissa Merouani | Visiting Student | 2019 | PhD student, NYU | [link](https://www.linkedin.com/in/merouani-massinissa/) | round6 ✓✓ — NYU Abu Dhabi CS PhD candidate, ML for compilers, matches | [A Deep Learning Based Cost Model for Automatic Code Optimiz…](https://github.com/mit-commit/nextgen/blob/main/papers/2021/tiramisu_autoscheduler.pdf) |
+| Patricio Noyola | MEng | 2018–2019 | Cambridge MA | [link](https://www.linkedin.com/in/patricio-noyola-57a11810a/) | round6 ✓✓ — MIT SuperUROP + TACO thesis match | [A Tensor Algebra Compiler Library Interface and Runtime](https://github.com/mit-commit/nextgen/blob/main/papers/2019/Patricio_thesis.pdf) |
+| Sachin Dilip Shinde | MEng | 2019 |  |  | round6: not found — No MIT match found | [SuperTaco: Taco Tensor Algebra Kernels on Distributed Syste…](https://github.com/mit-commit/nextgen/blob/main/papers/2019/thesis-shinde.pdf) |
+| Mark Theng | UROP | 2019 |  |  | round6 ✓ (veto welcome) — USENIX OSDI21 CSAIL co-author confirmed but no linkedin url found in snippet |  |
+| Lorenzo Di Tucci | Visiting Student | 2019 | Co-founder, Huxelerate | [link](https://www.linkedin.com/in/lorenzoditucci) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [SALSA: A Domain Specific Architecture for Sequence Alignment](https://github.com/mit-commit/nextgen/blob/main/papers/2020/salsa.pdf) |
+| Haoran Xu | UROP | 2019 | PhD student, Stanford University | [link](https://www.linkedin.com/in/haoran-xu-2730476b/) | round6 ✓ (veto welcome) — MemSQL shown (past role); corroborated by personal site as Stanford PhD/MIT undergrad | [Cimple: Instruction and Memory Level Parallelism: A DSL for…](https://github.com/mit-commit/nextgen/blob/main/papers/2018/kiriansky-pact18-cimple.pdf) |
+| Kenny Yang | UROP | 2018–2019 |  |  | round6 ✓ (veto welcome) — CSAIL people directory page exists but no linkedin url surfaced |  |
+| Malek Ben Romdhane | MEng | 2018 | SWE intern at Google | [link](https://www.linkedin.com/in/malekbr/) | round6 ✓✓ — Explicit MIT Muslim Student Association mention | [Extending the Capabilities of Tiramisu](https://github.com/mit-commit/nextgen/blob/main/papers/2018/thesis_malek.pdf) |
+| Asra Ali | UROP | 2017 |  |  | round6: not found — Google Scholar mit.edu email exists but no linkedin url anchored |  |
+| Emily Armstrong | UROP | 2017 |  |  | round6: not found — No MIT anchor |  |
+| David Lugato | Visiting Scholar | 2017 | Research Director, CEA |  | round6: not found — No linkedin.com/in URL surfaced | [Taco: A Tool to Generate Tensor Algebra Kernels](https://github.com/mit-commit/nextgen/blob/main/papers/2017/kjolstad-ase17-taco.pdf) |
+| Emanuele Del Sozzo | Visiting Student | 2017 | Research Scientist, MIT FutureTech | [link](https://www.linkedin.com/in/emanueledelsozzo) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [A Common Backend for Hardware Acceleration on FPGA](https://github.com/mit-commit/nextgen/blob/main/papers/2018/frost_workshop.pdf) |
+| Mengyuan Sun | UROP | 2017 | Software Engineer, NVIDIA | [link](https://www.linkedin.com/in/mgysun/) | round6 ✓✓ — NVIDIA match |  |
+| David Vargas | UROP | 2017 | Founding Engineer, Vellum | [link](https://www.linkedin.com/in/dvargas92495/) | round6 ✓✓ — Vellum + MIT match |  |
+| Raymond Wu | UROP | 2017 | Instagram | [link](https://www.linkedin.com/in/raymond-wu-05194b106/) | round6 ✓ (veto welcome) — MIT education shown, Jersey City, but common name |  |
+| Tyler Denniston | SM | 2016 | Founder, Vexlio | [other link](http://people.csail.mit.edu/tyler) | links.json (professional/github_profile): GitHub account resolved via exact_profile_name_from_discovered_contributor (never name alone) | [Terapixel Image Processing and Simulation with Distributed …](https://github.com/mit-commit/nextgen/blob/main/papers/2016/denniston-sm-thesis.pdf) |
+| Gurtej Kanwar | MEng | 2015–2016 | University of Edinburgh (Physics) | [link](https://www.linkedin.com/in/gurtej-kanwar-9a4b5b56/) | round6 ✓✓ — Edinburgh Chancellor's Fellow + MIT Physics PhD match | [Linear Algebra on Lattices: Simit Language Extensions with …](https://github.com/mit-commit/nextgen/blob/main/papers/2016/tej-thesis.pdf) |
+| Patricia A. Suriana | MEng | 2016 | Senior ML Scientist, Prescient Design (Genentech) | [link](https://www.linkedin.com/in/patricia-suriana/) | round6 ✓✓ — Prescient Design/Genentech exact match |  |
+| Parker Tew | MEng | 2016 | Software Developer, PDT Partners | [link](https://www.linkedin.com/in/parker-tew-b6217465) | round3 sweep: Software Developer, PDT Partners [✓✓] — /in/parker-tew-b6217465 |  |
+| Minshu Zhan | UROP | 2016 | Senior Software Engineer, BevSpot | [link](https://www.linkedin.com/in/minshu-zhan-0b3b1a1a/) | round6 ✓✓ — BevSpot + MIT MEng CS 2013-2014 |  |
+| Min Zhang | MEng | 2016 | Hedge fund analyst NY | [link](https://www.linkedin.com/in/min-zhang-5ab3956/) | round6 ✓ (veto welcome) — MIT education shown but very common name | [Experimental Implementations of Stereo Matching Algorithms …](https://github.com/mit-commit/nextgen/blob/main/papers/2016/min-zhang-meng-thesis.pdf) |
+| Aparna Chandramowlishwaran | Postdoc | 2015 | Professor, UC Irvine | [other link](http://www.cc.gatech.edu/~aparna/) | pre-existing link, no sweep notes on file |  |
+| Youyang Gu | UROP | 2015 | Independent data scientist | [link](https://www.linkedin.com/in/youyanggu/) | round6 ✓✓ — MIT education, well-known covid forecaster |  |
+| Yoana Gyurova | MEng | 2015 | Product Manager, Meta | [link](https://www.linkedin.com/in/yoana-gyurova-ab15aa73) | pre-existing link, no sweep notes on file | [Efficient and Proven Verification of Unreliable Hardware Ex…](https://github.com/mit-commit/nextgen/blob/main/papers/2015/ygyurova-meng-thesis.pdf) |
+| William Huang | UROP | 2015 |  |  | round6: not found — No MIT anchor |  |
+| Eleftherios Ioannidis | UROP | 2015 | Senior Research Software Engineer, Microsoft Research | [link](https://www.linkedin.com/in/elefthei/) | round6 ✓✓ — Microsoft Research RiSE match |  |
+| Daniel Richman | UROP | 2015 | PhD student, Stanford University | [link](https://www.linkedin.com/in/daniel-richman-074b4411a/) | round6 ✓ (veto welcome) — Stanford University match but no explicit MIT anchor, common name |  |
+| Nitya Subramanian | UROP | 2015 | CEO, Para | [link](https://www.linkedin.com/in/nityas1/) | round6 ✓✓ — CEO Para + MIT background |  |
+| Kevin Wu | MEng | 2015 | Staff Engineer, Amplitude | [link](https://www.linkedin.com/in/kevin-wu-10120646) | round6 ✓✓ — Amplitude + MIT MEng CS 2014-2015 | [DeepTuner: A System for Search Technique Recommendation in …](https://github.com/mit-commit/nextgen/blob/main/papers/2015/kevinwu-meng-thesis.pdf) |
+| Jason Ansel | PhD (was SM) | 2009–2014 | Meta (PyTorch compilers) | [other link](http://jasonansel.com/) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [Autotuning Programs with Algorithmic Choice](https://github.com/mit-commit/nextgen/blob/main/papers/2014/ansel-phd-thesis.pdf) |
+| Jeffrey Bosboom | SM | 2014 |  | [other link](http://jeffreybosboom.com) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [StreamJIT: A Commensal Compiler for High-Performance Stream…](https://github.com/mit-commit/nextgen/blob/main/papers/2014/jbosboom-sm-thesis.pdf) |
+| Rumen Hristov | UROP | 2014 | Co-founder, Emerald Innovations |  | round6: not found — No matching LinkedIn URL found despite Crunchbase/TheOrg confirmation |  |
+| Rohan Mahajan | UROP | 2014 |  |  | round6: not found — Only 'MIT' India college match, wrong institution |  |
+| Jonathan Ragan-Kelley | PhD | 2014 | Associate Professor, MIT | [link](https://www.linkedin.com/in/jonathanrk/) | round6 ✓✓ — MIT direct match | [Decoupling Algorithms from the Organization of Computation …](https://github.com/mit-commit/nextgen/blob/main/papers/2014/jrkthesis.pdf) |
+| Kiranmayi Bhattaram | UROP | 2013 | SWE Pilot.com (per ZoomInfo now Watch Duty) | [link](https://www.linkedin.com/in/kiranbhattaram/) | round6 ✓ (veto welcome) — Nickname 'Kiran' match, explicit MIT CSAIL work history |  |
+| Christopher Graves | UROP | 2013 | Google, Cambridge MA | [link](https://www.linkedin.com/in/christopher-graves-00b63256/) | round6 ✓ (veto welcome) — MIT education + Cambridge location |  |
+| Latif Alam | UROP | 2009–2012 |  |  | round6: not found — Found profile has no MIT connection at all |  |
+| Sanath Jayasena | Postdoc | 2012 | Associate Professor, University of Moratuwa | [link](https://www.linkedin.com/in/sanath-jayasena-274a8011/) | round6 ✓ (veto welcome) — Only candidate; snippet shows different employer than Moratuwa | [Detection of False Sharing Using Machine Learning](https://github.com/mit-commit/nextgen/blob/main/papers/2013/falsesharing-sc13.pdf) |
+| Erika Lee | UROP | 2012 | CodePath instructor, San Francisco | [link](https://www.linkedin.com/in/erika-k-lee/) | round6 ✓✓ — Explicit MIT + CodePath match, re-confirms PI's prior finding |  |
+| Phitchaya Phothilimthana | UROP | 2011–2012 | OpenAI | [link](https://www.linkedin.com/in/phitchaya-mangpo-phothilimthana-64415b82/) | round6 ✓✓ — OpenAI exact match |  |
+| Chun-Kai Wang | UROP | 2011–2012 | Applied Scientist, Amazon | [link](https://www.linkedin.com/in/chun-kai-wang-7a3b742b/) | round6 ✓✓ — Snippet title 'Chun-kai Wang - Applied Scientist at Amazon' matches confirmed employer |  |
+| Phumpong Watanaprakornkul | MEng | 2011–2012 | VP, Charoen Pokphand Group | [link](https://www.linkedin.com/in/phumpong) | pre-existing link, no sweep notes on file | [Distributed Data as a Choice in PetaBricks](https://github.com/mit-commit/nextgen/blob/main/papers/2012/yod-meng-thesis.pdf) |
+| Eric Wong | MEng | 2011–2012 | Student at MIT (per LinkedIn title) | [link](https://www.linkedin.com/in/eric-wong-04aa14100) | round6 ✓ (veto welcome) — Genuine MIT anchor but several same-name MIT profiles exist | [Optimizations in Stream Programming for Multimedia Applicat…](https://github.com/mit-commit/nextgen/blob/main/papers/2012/ewong-meng-thesis.pdf) |
+| Qin Zhao | Postdoc | 2012 | Software Engineer, Google | [other link](http://people.csail.mit.edu/qin_zhao) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Dynamic memory optimization using pool allocation and prefe…](https://github.com/mit-commit/nextgen/blob/main/papers/2005/zhao-wbia05-pool.pdf) |
+| Reid Kleckner | MEng | 2011 | Compiler Engineer, NVIDIA | [link](https://www.linkedin.com/in/reid-kleckner-73877721) | links.json (professional/github_profile): GitHub account resolved via surname_match_verified_owner (never name alone) | [Optimization of Naive Dynamic Binary Instrumentation Tools](https://github.com/mit-commit/nextgen/blob/main/papers/2011/rnk-meng-thesis.pdf) |
+| David Koh | UROP | 2010–2011 | CTO, Musubi | [link](https://www.linkedin.com/in/david-koh-b911b415) | round6 ✓✓ — Result titled 'David Koh - Musubi'; RocketReach corroborates MIT CS&E 2007-2011 and Musubi CTO role | [Dynamic Cache Contention Detection in Multi-threaded Applic…](https://github.com/mit-commit/nextgen/blob/main/papers/2011/zhao-vee11-cache-contention.pdf) |
+| Marek Olszewski | Graduate Student | 2011 | Co-founder & CEO, cLabs (Celo) | [other link](http://people.csail.mit.edu/mareko) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [PetaBricks: A Language and Compiler for Algorithmic Choice](https://github.com/mit-commit/nextgen/blob/main/papers/2009/ansel-pldi09.pdf) |
+| Syed Raza | MEng | 2011 |  |  | round6: not found — No MIT anchor |  |
+| Elena Tatarchenko | UROP | 2011 | Software Engineer, Render | [link](https://www.linkedin.com/in/elena-tatarchenko/) | round6 ✓✓ — Result titled 'Elena Tatarchenko - Render \| LinkedIn'; snippet confirms MIT education |  |
+| David Wen | UROP | 2010–2011 |  |  | round6: not found — No MIT anchor |  |
+| Michael Gordon | PhD (was SM) | 2002–2010 | Co-founder & Chief Research Officer, Aarno Labs | [other link](http://people.csail.mit.edu/mgordon) | pre-existing link, no sweep notes on file |  |
+| Kevin Kelly | MEng | 2010 |  |  | round6: not found — No MIT anchor |  |
+| Alex Schwendner | MEng | 2010 | Portfolio Manager, Tower Research Capital | [link](https://www.linkedin.com/in/alexschwendner) | pre-existing link, no sweep notes on file | [Distributed Functional Programming in Scheme](https://github.com/mit-commit/nextgen/blob/main/papers/2010/alexrs-meng-thesis.pdf) |
+| Matt Aasted | Research Staff | 2009 | Principal Software Engineer, Voxel | [link](https://www.linkedin.com/in/mattaasted) | round4/5: Principal Software Engineer, Voxel |  |
+| Nada Amin | MEng | 2009 | Associate Professor, Harvard University | [other link](http://www.namin.net) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [Computer-Aided Design for Multilayer Microfluidic Chips](https://github.com/mit-commit/nextgen/blob/main/papers/2009/amin-meng-thesis.pdf) |
+| Matthew Steele | MEng | 2008–2009 | Software Engineer, Google | [link](https://www.linkedin.com/in/mdsteele/) | round6 ✓✓ — Result titled 'Matthew Steele - Google \| LinkedIn'; snippet shows MIT education 2004-2009 |  |
+| Ceryen Tan | MEng | 2009 |  |  | round6: not found — Search budget exhausted before this query ran |  |
+| William Thies | PhD (was MEng) | 2000–2009 | Co-founder, Everwell Health Solutions | [other link](http://people.csail.mit.edu/thies) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | [Language and Compiler Support for Stream Programs](https://github.com/mit-commit/nextgen/blob/main/papers/2009/thies-phd-thesis.pdf) |
+| Jonathan Birnbaum | UROP | 2008 | Founder & CEO, OpenYield | [link](https://www.linkedin.com/in/jonbirn/) | round3 sweep: Founder & CEO, OpenYield [✓✓] — your link /in/jonbirn/ |  |
+| Meghan Kane | UROP | 2008 | Doctoral researcher, MDC Berlin | [link](https://www.linkedin.com/in/meghanmkane/) | round6 ✓✓ — Result titled 'Meghan Kane - Max Delbrück Center \| LinkedIn'; matches MDC Berlin doctoral researcher role |  |
+| Amrik Kochhar | UROP | 2008 | Software Engineer, DoorDash | [link](https://www.linkedin.com/in/amrikkochhar) | round4/5: SWE, DoorDash |  |
+| Basier Aziz | MEng | 2007 |  |  | round6: not found — Search budget exhausted before this query ran |  |
+| Michael D'Ambrosio | UROP | 2007 | Senior UI Engineer, Advisor360 | [link](https://www.linkedin.com/in/mikedambrosio/) | round6 ✓ (veto welcome) — Profile shows 'Senior Software Engineer at Advisor360' (ZoomInfo) in Westlake, OH — same employer but title diffe… |  |
+| Allyn Dimock | Research Staff | 2005–2007 |  |  | round6: not found — Search budget exhausted before this query ran |  |
+| David Dryjanski | UROP | 2007 | Founder, AI Realty Kit | [link](https://www.linkedin.com/in/davidd8) | round6 ✓ (veto welcome) — Result titled 'David D. - AI Realty Kit'; company matches but name shown truncated as 'David D.' |  |
+| Shirley Fung | UROP | 2007 | Co-founder & Patent Agent, Akona IP |  | round6: not found — Multiple Shirley Fung LinkedIn profiles found (LA, HK, Estée Lauder, Morgan Stanley, etc.) but none anchored to Akona I… |  |
+| Jimmy Li | UROP | 2007 |  |  | round6: not found — No MIT anchor |  |
+| Philip Sung | UROP | 2007 | Anthropic | [link](https://www.linkedin.com/in/sunphil) | round4/5: Anthropic |  |
+| Michael Bedford Taylor | PhD | 2007 | Professor, University of Washington | [link](https://www.linkedin.com/in/michael-taylor-32212816/) | round6 ✓✓ — Result titled 'Michael Taylor - University of Washington - Paul G. Allen School of Computer Science & Engineering \| LinkedIn' |  |
+| David Zhang | MEng | 2007 |  |  | round6: not found — CSAIL David Zhang found is a 2025-era researcher, too recent to be the 2007 alum |  |
+| Sie Hendrata Dharmawan | MEng | 2005–2006 |  |  | round6: not found — Plausible non-LinkedIn bio match but no linkedin url found | [Understanding Program Structure and Behavior](https://github.com/mit-commit/nextgen/blob/main/papers/2006/dharmawan-meng-thesis.pdf) |
+| Matthew Drake | MEng | 2005–2006 |  |  | round6: not found — MIT mentioned but no CSAIL/compiler anchor or year corroboration | [Stream Programming for Image and Video Compression](https://github.com/mit-commit/nextgen/blob/main/papers/2006/madrake-meng-thesis.pdf) |
+| Sam Larsen | PhD (was SM) | 2000–2006 | Software Engineer, Meta | [other link](http://people.csail.mit.edu/slarsen) | pre-existing link, no sweep notes on file |  |
+| Rodric Rabbah | Research Staff | 2006 | Head of Product, Postman | [other link](http://people.csail.mit.edu/rabbah/) | links.json (professional/github_profile): GitHub account resolved via exact_profile_name_from_discovered_contributor (never name alone) | [Language and Compiler Design for Streaming                 …](https://github.com/mit-commit/nextgen/blob/main/http://dx.doi.org/10.1007/s10766-005-3590-6) |
+| Christopher Rhodes | UROP | 2006 |  |  | round6: not found — Weak/ambiguous MIT patent mention only | [Digital microfluidics using soft lithography](https://github.com/mit-commit/nextgen/blob/main/papers/2006/urbanski-loc06.pdf) |
+| Mark Stephenson | PhD (was SM) | 2000–2006 | Principal Research Scientist, NVIDIA | [link](https://www.linkedin.com/in/mark-stephenson-7380737/) | round6 ✓✓ — Result titled 'Mark Stephenson - NVIDIA \| LinkedIn'; corroborated by NVIDIA research page and MIT PhD 2006 | [Automating the Construction of Compiler Heuristics Using Ma…](https://github.com/mit-commit/nextgen/blob/main/papers/2006/stephenson_phdthesis.pdf) |
+| Ben Wagner | MEng | 2005–2006 |  |  | round6: not found — No MIT connection found |  |
+| Marjorie Cheng | UROP | 2005 |  |  | round6: not found — No MIT connection |  |
+| Walter Lee | PhD | 2005 | Software Engineer, Google | [link](https://www.linkedin.com/in/walter-lee-8059b7a3/) | links.json (linkedin_incidental/github_blog): from the GitHub profile's own "website" field | [Software orchestration of Instruction Level parallelism on …](https://github.com/mit-commit/nextgen/blob/main/https://dspace.mit.edu/bitstream/handle/1721.1/33862/66280771-MIT.pdf) |
+| Adam Reed | UROP | 2005 |  |  | round6: not found — No MIT/CSAIL anchor; MIT CSAIL Adams found are different people |  |
+| Janis Sermulins | MEng | 2003–2005 |  |  | round6: not found — Strong dblp/ResearchGate identity match to MIT compilers thesis but no linkedin url found | [Cache Optimizations for Stream Programs](https://github.com/mit-commit/nextgen/blob/main/papers/2005/sermulins-meng-thesis.pdf) |
+| Sitij Agrawal | MEng | 2003–2004 | Client Success Manager, Exegy | [link](https://www.linkedin.com/in/sitij-agrawal-54b5288) | round3 sweep: Client Success Manager, Exegy [✓✓] — /in/sitij-agrawal-54b5288/ | [Linear State-Space Analysis and Optimization of StreamIt Pr…](https://github.com/mit-commit/nextgen/blob/main/papers/2004/sitij-meng-thesis.pdf) |
+| Derek Bruening | PhD | 2004 | Software Engineer, Google | [other link](http://www.burningcutlery.com/derek/) | links.json (professional/github_profile): GitHub account resolved via exact_profile_name_from_discovered_contributor (never name alone) | [Efficient, Transparent, and Comprehensive Runtime Code Mani…](https://github.com/mit-commit/nextgen/blob/main/papers/2004/derek-phd-thesis.pdf) |
+| Kimberly Kuo | MEng | 2003–2004 | Senior Director of Product Management, Workday | [link](https://www.linkedin.com/in/kimberlykuo) | pre-existing link, no sweep notes on file | [The StreamIt Development Tool:  A Programming Environment f…](https://github.com/mit-commit/nextgen/blob/main/papers/2004/kkuo-meng-thesis.pdf) |
+| Christopher Leger | MEng | 2002–2004 |  |  | round6: not found — No MIT education anchor in any candidate | [An API for Dynamic Partial Evaluation under DynamoRIO](https://github.com/mit-commit/nextgen/blob/main/papers/2004/cl-meng-thesis.pdf) |
+| Jasper Lin | UROP | 2002–2004 |  |  | round6: not found — No MIT education listed | [A Stream Compiler For Communication-Exposed Architectures](https://github.com/mit-commit/nextgen/blob/main/papers/2002/streamit-asplos.pdf) |
+| David Maze | Research Staff (was MEng) | 2004 | Application Infrastructure Engineer, Howso | [link](https://www.linkedin.com/in/david-maze-0801923/) | round6 ✓✓ — Result titled 'David Maze - Application Infrastructure Engineer - Howso \| LinkedIn', exact title match plus MIT MEng | [A Flexible Compilation Infrastructure for VLIW and SIMD Arc…](https://github.com/mit-commit/nextgen/blob/main/papers/2001/maze-MEthesis.pdf) |
+| Juan Carlos Reyes | MEng | 2003–2004 | Software Engineer, Facebook |  | round6: not found — No search result showed a linkedin.com/in/ URL itself anchored to Facebook/Meta + MIT |  |
+| Jeremy Wong | MEng | 2002–2004 |  |  | round6: not found — No matching Jeremy Wong with MIT anchor | [Modeling the Scalability of Acyclic Stream Programs](https://github.com/mit-commit/nextgen/blob/main/papers/2004/wong-meng-thesis.pdf) |
+| Chris Yu | MEng | 2004 |  |  | round6: not found — No MIT connection |  |
+| Iris Baron | SM | 2003 | Program Manager, IBM | [link](https://www.linkedin.com/in/iris-baron) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Dynamic Optimization of Interpreters using DynamoRIO](https://github.com/mit-commit/nextgen/blob/main/papers/2003/iris-SMthesis.pdf) |
+| Matthew Frank | PhD | 2003 | Principal Architect, NVIDIA | [link](https://www.linkedin.com/in/matthewifrank/) | round3 sweep: Principal Architect, NVIDIA [✓✓] — /in/matthewifrank/ | [SUDS: Automatic Parallelization for Raw Processors](https://github.com/mit-commit/nextgen/blob/main/papers/2003/mfrank-thesis.pdf) |
+| Timothy Garnett | MEng | 2002–2003 | Technical Consultant, T&S Advisory Solutions | [link](https://www.linkedin.com/in/timothy-garnett-0017325) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Dynamic Optimization of IA-32 Applications Under DynamoRIO](https://github.com/mit-commit/nextgen/blob/main/papers/2003/garnett-meng-thesis.pdf) |
+| Artem Gleyzer | UROP | 2003 | Financial Services Professional | [link](https://www.linkedin.com/in/artem-gleyzer-01598269) | round6 ✓ (veto welcome) — Consistent with PI's prior Citadel-through-2013 finding, no explicit MIT anchor in snippet itself |  |
+| Andrew Lamb | MEng | 2003 | Staff Engineer, InfluxData | [link](https://www.linkedin.com/in/andrewalamb/) | round6 ✓✓ — Profile in Boston, MIT EECS 1998-2002; discusses InfluxData/InfluxDB 3.0 work | [Linear Analysis and Optimization of Stream Programs](https://github.com/mit-commit/nextgen/blob/main/papers/2003/aalamb-meng-thesis.pdf) |
+| Libby Levison | Postdoc | 2003 | International health consultant | [link](https://www.linkedin.com/in/libby-levison-phd-mph-a6a2028) | pre-existing link, no sweep notes on file | [The TEK Search Engine](https://github.com/mit-commit/nextgen/blob/main/papers/2001/dyd-tek.pdf) |
+| Rose Liu | UROP | 2003 | Software Engineer, Google | [link](https://www.linkedin.com/in/rose-liu-07bb122/) | round6 ✓ (veto welcome) — Result titled 'Rose Liu - Google \| LinkedIn' matches employer, but common name with no MIT anchor visible in sni… |  |
+| Satish Ramaswamy | UROP | 2003 | Head of Quant Research, Seldon Capital | [link](https://www.linkedin.com/in/satish-ramaswamy-a46583a/) | round6 ✓✓ — Explicit MIT SB Math + EECS MEng listed |  |
+| David Ziegler | UROP | 2003 | Principal Software Engineer, Google | [link](https://www.linkedin.com/in/david-ziegler-55446b268/) | round6 ✓✓ — Snippet: 'David Ziegler - Software Engineer on Spanner at Google', located Los Altos, attended MIT |  |
+| Matthew Brown | UROP | 2002 | Founder & CEO, ThoughtForge | [link](https://www.linkedin.com/in/matthew-brown-0558201) | links.json (linkedin/human): supplied by him 2026-08-26 | [StreamIt: A Compiler for Streaming Applications](https://github.com/mit-commit/nextgen/blob/main/papers/2001/StreamIt-TM-622.pdf) |
+| Samidh Chakrabarti | MEng | 2002 | Trustworthy AI, Zentropi | [link](https://www.linkedin.com/in/samidh) | pre-existing link, no sweep notes on file | [Low-Bandwidth Web Access with Tandem Proxies](https://github.com/mit-commit/nextgen/blob/main/papers/2002/samidh-MEthesis.pdf) |
+| Gleb Chuvpilo | SM | 2002 | Co-founder & CEO, Thor Dynamics | [other link](http://people.csail.mit.edu/chuvpilo/) | round3 sweep: Co-founder & CEO, Thor Dynamics [✓✓] — search card, 30+ mutuals |  |
+| Joshua Jacobs | UROP | 2002 |  |  | round6: not found — Closest candidate studied at CMU not MIT |  |
+| Sheetal Jain | UROP | 2001–2002 | Engineer, NVIDIA |  | round6: not found — Several Sheetal Jain LinkedIn profiles found but none anchored to NVIDIA or MIT |  |
+| Michal Karczmarek | SM | 2002 | VP Engineering, Thor Dynamics | [link](https://www.linkedin.com/in/michal-karczmarek-85309b58) | pre-existing link, no sweep notes on file | [Constrained and Phased Scheduling of Synchronous Data Flow …](https://github.com/mit-commit/nextgen/blob/main/papers/2002/karczma-thesis-SM.pdf) |
+| Tazeen Mahtab | UROP | 2001–2002 |  | [link](https://www.linkedin.com/in/tazeen-mahtab-1214b68) | pre-existing link, no sweep notes on file | [Searching the World Wide Web in Low-Connectivity Communities](https://github.com/mit-commit/nextgen/blob/main/papers/2002/www2002-tek.pdf) |
+| Ali Meli | UROP | 2002 | Founder & CIO, Monachil Capital Partners LP | [link](https://www.linkedin.com/in/ali-meli-92ab33167/) | round6 ✓ (veto welcome) — Snippet indicates MIT study; inferred not directly quoted |  |
+| Georgi Peev | UROP | 1999–2002 | Software Engineer, Jump Trading | [link](https://www.linkedin.com/in/georgepf) | round4/5: Software Engineer, Jump Trading |  |
+| Diego Puppin | SM | 2002 | Principal Engineer, Genesis Therapeutics | [link](https://www.linkedin.com/in/diegopuppin/) | round6 ✓ (veto welcome) — Snippet shows Synthesia not Genesis Therapeutics; ZoomInfo corroborates same person, possible stale snippet | [Convergent Scheduling: A Flexible and Extensible Scheduling…](https://github.com/mit-commit/nextgen/blob/main/papers/2002/diego-thesis.pdf) |
+| Saad Shakhshir | UROP | 2001–2002 | CEO & Co-founder, ImpactX Partners |  | round6: not found — No linkedin.com/in URL found for the MIT-affiliated one | [Searching the World Wide Web in Low-Connectivity Communities](https://github.com/mit-commit/nextgen/blob/main/papers/2002/www2002-tek.pdf) |
+| Shane Swenson | MEng | 2002 | CTO, Techcyte | [link](https://www.linkedin.com/in/shane-swenson/) | round6 ✓✓ — Techcyte CTO confirmed via press |  |
+| Alejandro Artola | UROP | 2000–2001 |  |  | round6: not found — No MIT connection among candidates |  |
+| Genevieve Cuevas | UROP | 2001 | Notion | [link](https://www.linkedin.com/in/genevievecuevas) | round6 ✓✓ — Title itself: Notion match |  |
+| Matt Deeds | MEng | 2000–2001 | Software Engineer in Test, Google | [link](https://www.linkedin.com/in/matt-deeds-3829435/) | round6 ✓✓ — Google SWE-in-Test + MIT MEng EECS 1996-2001 |  |
+| Mark Halsey | UROP | 2001 |  |  | round6: not found — No MIT anchor | [Searching the World Wide Web in Low-Connectivity Communities](https://github.com/mit-commit/nextgen/blob/main/papers/2002/www2002-tek.pdf) |
+| Niko Matsakis | UROP | 2000–2001 | Senior Principal Engineer, AWS | [link](https://www.linkedin.com/in/nicholas-matsakis-615614/) | round6 ✓✓ — AWS + Rust lead, MIT undergrad corroborated |  |
+| Darin Petkov | MEng | 1998–2001 | Software Engineering Manager, Google | [link](https://www.linkedin.com/in/darinpetkov) | round4/5: SWE Manager, Google | [Efficient Pipelining of Nested Loops:  Unroll-and-Squash](https://github.com/mit-commit/nextgen/blob/main/papers/2001/petkov-MEthesis.pdf) |
+| Jeffrey Sheldon | MEng | 2001 | Distinguished Engineer, Broadcom | [link](https://www.linkedin.com/in/jeffrey-sheldon-6945052a3/) | round6 ✓✓ — Broadcom + MIT education |  |
+| Binh Vo | UROP | 2000–2001 |  |  | round6: not found — No MIT anchor among candidates |  |
+| Matt Yourst | UROP | 2000–2001 |  |  | round6: not found — No MIT connection |  |
+| Ted Allison | UROP | 2000 |  |  | round6: not found — No MIT anchor |  |
+| Rajeev Barua | PhD | 2000 | Professor, University of Maryland | [other link](http://www.ece.umd.edu/~barua/) | links.json (linkedin_incidental/openalex_homepage): from the person's own public ORCID researcher-urls | [Maps: A Compiler-Managed Memory System for Software-Exposed…](https://github.com/mit-commit/nextgen/blob/main/papers/2000/Barua-PhD.pdf) |
+| Adrian Birka | UROP | 2000 | Principal Engineer, SingleStore | [link](https://www.linkedin.com/in/adrian-birka-03448258/) | round6 ✓✓ — MIT PAG group publication + dblp OOPSLA04 with Michael Ernst confirms MEng |  |
+| Sheldon Chan | UROP | 2000 | Director, BlackRock | [link](https://www.linkedin.com/in/sheldonchan) | links.json (professional/github_profile): GitHub account resolved via exact_name_search (never name alone) | [Searching the World Wide Web in Low-Connectivity Communities](https://github.com/mit-commit/nextgen/blob/main/papers/2002/www2002-tek.pdf) |
+| Sidney Henderson | UROP | 2000 | VP of Global Business Development, Exotec | [link](https://www.linkedin.com/in/sid-henderson/) | round6 ✓✓ — Exotec + MIT education |  |
+| Shuehan Liang | UROP | 1999–2000 | Software Engineer, Google | [link](https://www.linkedin.com/in/shuhan-liang-73b09972/) | round6 ✓ (veto welcome) — Spelling differs (Shuhan vs Shuehan), Google match but no MIT anchor shown |  |
+| Kenneth Lu | UROP | 2000 |  | [link](https://www.linkedin.com/in/kenneth-k-lu/) | round6 ✓ (veto welcome) — Inferred MIT CSAIL connection from summary text |  |
+| Csaba Andras Moritz | Research Staff | 1997–2000 | Professor, UMass Amherst | [other link](http://www.ecs.umass.edu/ece/andras/) | links.json (professional/orcid): ORCID resolved via orcid (never name alone) | Parallelizing Applications into Smart Memories |
+| Janelle Prevost | UROP | 2000 | Managing Director, BNY Mellon | [link](https://www.linkedin.com/in/janelle-prevost) | round6 ✓✓ — mit.edu archived course page confirms username prevostj, BS Math 2000/CS&E 2001/MEng 2001 | [Searching the World Wide Web in Low-Connectivity Communities](https://github.com/mit-commit/nextgen/blob/main/papers/2002/www2002-tek.pdf) |
+| Elliot Waingold | MEng | 2000 | Microsoft |  | round6: not found — Wiza confirms Microsoft+MIT but no linkedin.com/in URL surfaced |  |
+| Srikrishna Devabhaktuni | SM | 1999 | Co-founder & Strategic Advisor, Tropos Networks | [link](https://www.linkedin.com/in/devabhaktuni-srikrishna-1703b52/) | round6 ✓✓ — Tropos Networks co-founder, MIT MS EECS corroborated | [Softspec: Software-based Speculative Parallelism via Stride…](https://github.com/mit-commit/nextgen/blob/main/papers/1999/Sri-SM.pdf) |
+| Benjamin Greenwald | SM | 1999 | Senior Security Researcher, RoonCyber | [link](https://www.linkedin.com/in/benjamingreenwald) | pre-existing link, no sweep notes on file | [A Technique for Compilation to Exposed Memory Hierarchy](https://github.com/mit-commit/nextgen/blob/main/papers/1999/ben-SM.pdf) |
+| Katherine Jong | UROP | 1999 |  |  | round6: not found — No MIT connection |  |
+| Amy Mitby | UROP | 1999 | Applications Consultant, Synopsys | [link](https://www.linkedin.com/in/amymitby/) | round6 ✓ (veto welcome) — Mountain View near Synopsys HQ but no direct anchor in snippet |  |
+| Tyler Moeller | MEng | 1999 |  |  | round6: not found — No MIT connection |  |
+| Tsvetomir Petrov | MEng | 1998–1999 | Broadcom Inc. | [link](https://www.linkedin.com/in/tpetrov/) | round6 ✓ (veto welcome) — Reconfirms prior PI finding, no MIT anchor in logged-out snippet |  |
+| Arjuna Wijeyekoon | UROP | 1998–1999 | VP of Fintech, Visa |  | round6: not found — ZoomInfo confirms Visa role but no linkedin.com/in URL surfaced |  |
+| Tammy Yap | MEng | 1999 |  |  | round6: not found — No MIT connection |  |
+| Alexander Yip | UROP | 1999 | Principal Architect, Aviatrix | [link](https://www.linkedin.com/in/alexsyip/) | round6 ✓✓ — Aviatrix match, ZoomInfo corroborates |  |
+| Ruben Brown | UROP | 1997–1998 | Technical Leader, Meta | [link](https://www.linkedin.com/in/ruben-e-brown-4b668233/) | round6 ✓ (veto welcome) — MIT mention inferred from snippet text, Arlington MA |  |
+| Matthew DeBergalis | UROP | 1998 | CEO, Apollo GraphQL | [link](https://www.linkedin.com/in/debergalis/) | round6 ✓✓ — Apollo GraphQL CEO match |  |
+| Robert Pinder | UROP | 1998 |  |  | round6: not found — Search budget exhausted before this query ran |  |
+| Tom Pinckney | UROP | 1997 |  |  | round6: not found — Search budget exhausted before this query ran |  |
+| Andrew Samnick | UROP | 1997 | Senior Principal Software Engineer, The Hershey Company | [link](https://www.linkedin.com/in/drew-samnick) | round4/5: Sr Principal SWE, The Hershey Company |  |

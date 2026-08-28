@@ -123,7 +123,7 @@ Kenny Yang.
    Benmeziane, Debbagh, Abdous, Merouani, Leghettas) and Siyi Hu (probable:
    Senior Robotics Autonomy Engineer, FieldAI — one group mutual) were not
    swept to the same depth. Sweep them too?
-   A:
+   A: Sweep the 1st set.
  Tasmeem Reza → D. E. Shaw [APPLIED], Yishen Chen → Standard Kernel [was already applied].
  Rest of 'Could not identify': waiting on you — write employers next to names above whenever.
  Q4 (visiting-student sweep): still open.
@@ -170,10 +170,9 @@ Two data issues found:
 - **Siyi Hu conflict**: the recorded GitHub (Theohhhu) says "Lecturer @ Curtin,
   Agentic AI/RL" but LinkedIn's best match is "Senior Robotics Autonomy
   Engineer, FieldAI" (Cambridge, mutual Edward Wang). Which (if either) is your
-  2025 visiting scholar?  A: neither — she's about to be Assistant Professor
-  at Xi'an Jiaotong-Liverpool University [APPLIED to people.xml directly by
-  him; also settles round 6's "not found" listing for her, since none of the
-  candidates public search turned up were actually her].
+  2025 visiting scholar?  A: No, I gave the info directly to an agent —
+  she's about to be Assistant Professor at Xi'an Jiaotong-Liverpool
+  University [applied to people.xml directly, 2026-08-28].
 
 Empty/no-profile after full checks: Ceryen Tan (empty experience), Bosboom
 (site unreachable, no LinkedIn), Leghettas (still 'Student'), Debbagh (1st,

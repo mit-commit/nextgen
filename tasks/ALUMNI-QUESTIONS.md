@@ -170,7 +170,10 @@ Two data issues found:
 - **Siyi Hu conflict**: the recorded GitHub (Theohhhu) says "Lecturer @ Curtin,
   Agentic AI/RL" but LinkedIn's best match is "Senior Robotics Autonomy
   Engineer, FieldAI" (Cambridge, mutual Edward Wang). Which (if either) is your
-  2025 visiting scholar?  A:
+  2025 visiting scholar?  A: neither — she's about to be Assistant Professor
+  at Xi'an Jiaotong-Liverpool University [APPLIED to people.xml directly by
+  him; also settles round 6's "not found" listing for her, since none of the
+  candidates public search turned up were actually her].
 
 Empty/no-profile after full checks: Ceryen Tan (empty experience), Bosboom
 (site unreachable, no LinkedIn), Leghettas (still 'Student'), Debbagh (1st,
